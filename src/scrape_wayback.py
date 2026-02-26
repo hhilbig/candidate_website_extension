@@ -70,7 +70,7 @@ def query_cdx(url: str, start_date: str, end_date: str,
         "output": "json",
         "fl": "timestamp,original,statuscode,mimetype",
         "filter": ["statuscode:200", "mimetype:text/html"],
-        "collapse": "timestamp:8",  # One snapshot per day
+        "collapse": "timestamp:6",  # One snapshot per month
         "limit": 10000,
     }
 
