@@ -1,5 +1,5 @@
 """
-Shared utilities: rate limiting, checkpointing, logging, CSV I/O.
+Shared utilities: rate limiting, checkpointing, logging, CSV I/O, URL caching.
 """
 
 import csv
@@ -8,13 +8,16 @@ import os
 import time
 from pathlib import Path
 
+import pandas as pd
 import yaml
 
 logger = logging.getLogger(__name__)
 
 
 def load_config(config_path: str = "config/config.yaml") -> dict:
-    """Load YAML configuration."""
+    """Load YAML configuration. Also loads .env if present."""
+    from dotenv import load_dotenv
+    load_dotenv()
     with open(config_path, "r", encoding="utf-8") as f:
         return yaml.safe_load(f)
 
@@ -99,6 +102,68 @@ def append_csv(filepath: str, rows: list[dict]):
         if write_header:
             writer.writeheader()
         writer.writerows(rows)
+
+
+class URLCache:
+    """CSV-backed cache for URL lookups, keyed by (candidate, state, year, source).
+
+    Avoids re-querying APIs for candidates whose URLs were already found in a
+    previous run. Each source writes its own cache file under data/url_cache/.
+    """
+
+    def __init__(self, cache_dir: str, source_name: str, ttl_days: int = 90):
+        self.cache_dir = cache_dir
+        self.source_name = source_name
+        self.ttl_days = ttl_days
+        self.cache_path = os.path.join(cache_dir, f"{source_name}.csv")
+        self._cache: dict[tuple, str] = {}
+        self._load()
+
+    def _load(self):
+        """Load cached URLs from disk."""
+        if not os.path.exists(self.cache_path):
+            return
+        try:
+            df = pd.read_csv(self.cache_path, dtype=str).fillna("")
+            now = time.time()
+            for _, row in df.iterrows():
+                # Skip expired entries
+                cached_at = float(row.get("cached_at", 0))
+                if self.ttl_days > 0 and (now - cached_at) > self.ttl_days * 86400:
+                    continue
+                key = (row["candidate"], row["state"], str(row["year"]))
+                self._cache[key] = row.get("url", "")
+            logger.info(f"URLCache[{self.source_name}]: loaded {len(self._cache)} entries")
+        except Exception as e:
+            logger.warning(f"URLCache[{self.source_name}]: failed to load cache: {e}")
+
+    def get(self, candidate: str, state: str, year: int) -> str | None:
+        """Return cached URL or None if not cached."""
+        key = (candidate, state, str(year))
+        if key in self._cache:
+            return self._cache[key]
+        return None
+
+    def put(self, candidate: str, state: str, year: int, url: str):
+        """Store a URL in the cache and append to disk."""
+        key = (candidate, state, str(year))
+        self._cache[key] = url
+        os.makedirs(self.cache_dir, exist_ok=True)
+
+        write_header = not os.path.exists(self.cache_path)
+        with open(self.cache_path, "a", newline="", encoding="utf-8") as f:
+            writer = csv.DictWriter(
+                f, fieldnames=["candidate", "state", "year", "url", "cached_at"]
+            )
+            if write_header:
+                writer.writeheader()
+            writer.writerow({
+                "candidate": candidate,
+                "state": state,
+                "year": str(year),
+                "url": url,
+                "cached_at": str(time.time()),
+            })
 
 
 def setup_logging(level: str = "INFO"):

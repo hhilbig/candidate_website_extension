@@ -3,8 +3,9 @@
 Build candidate rosters for House and Senate races.
 
 Sources:
-  - FEC bulk candidate files: candidate names, state, party
-  - Ballotpedia: campaign website URLs (via BeautifulSoup scraping)
+  - FEC bulk candidate files: candidate names, state, party, committee IDs
+  - Multi-source waterfall for campaign website URLs:
+    OpenFEC API → Wikidata
 
 Usage:
     python -m src.build_candidate_roster --office house --year 2022
@@ -15,16 +16,15 @@ import argparse
 import io
 import logging
 import os
-import re
-import time
 import zipfile
 from typing import Optional
 
 import pandas as pd
 import requests
-from bs4 import BeautifulSoup
 
-from .utils import RateLimiter, load_config, setup_logging
+from .name_utils import clean_name
+from .url_sources import build_default_sources, run_waterfall
+from .utils import load_config, setup_logging
 
 logger = logging.getLogger(__name__)
 
@@ -43,14 +43,6 @@ PARTY_MAP = {"DEM": "D", "REP": "R", "DFL": "D"}  # DFL = Minnesota Democrats
 
 # FEC office codes
 OFFICE_MAP = {"H": "house", "S": "senate", "P": "president"}
-
-# FEC nicknames: quoted strings preceded by whitespace (not mid-word apostrophes)
-# Matches: CRUZ, RAFAEL EDWARD "TED" → TED
-# Avoids: O'ROURKE (apostrophe is part of name, not a quote)
-NICKNAME_PATTERN = re.compile(r'(?<=\s)["\']([A-Za-z]+)["\']')
-
-# Suffixes to strip before constructing Ballotpedia URLs
-NAME_SUFFIXES = {"jr", "jr.", "sr", "sr.", "ii", "iii", "iv", "v"}
 
 
 def download_fec_candidates(year: int, config: dict) -> Optional[pd.DataFrame]:
@@ -128,7 +120,7 @@ def build_fec_roster(year: int, office: str, config: dict) -> pd.DataFrame:
 
     Returns:
         DataFrame with columns: candidate, state, district, office, year, party,
-        website_url, fec_raw_name
+        website_url, fec_raw_name, cand_pcc, cand_id
     """
     fec_office = "H" if office == "house" else "S"
     df = download_fec_candidates(year, config)
@@ -143,297 +135,25 @@ def build_fec_roster(year: int, office: str, config: dict) -> pd.DataFrame:
 
     # Keep raw name for nickname extraction; parse clean name
     df["fec_raw_name"] = df["cand_name"].fillna("")
-    df["candidate"] = df["cand_name"].apply(_clean_name)
+    df["candidate"] = df["cand_name"].apply(clean_name)
     df["state"] = df["cand_office_st"]
     df["district"] = df["cand_office_district"].fillna("")
     df["year"] = year
     df["office"] = office
 
-    # Website URL: filled later by Ballotpedia lookup
+    # Website URL: filled later by URL waterfall
     df["website_url"] = ""
 
+    # Keep cand_pcc and cand_id for OpenFEC lookups
+    df["cand_pcc"] = df["cand_pcc"].fillna("")
+    df["cand_id"] = df["cand_id"].fillna("")
+
     cols = ["candidate", "state", "district", "office", "year", "party",
-            "website_url", "fec_raw_name"]
+            "website_url", "fec_raw_name", "cand_pcc", "cand_id"]
     roster = df[cols].copy()
     roster = roster.drop_duplicates(subset=["candidate", "state", "district"])
 
     logger.info(f"FEC roster: {len(roster)} {office} candidates for {year}")
-    return roster
-
-
-def _clean_name(raw: str) -> str:
-    """Convert FEC name format to readable name.
-
-    Strips quoted nicknames and extra whitespace.
-    'CRUZ, RAFAEL EDWARD "TED"' → 'Rafael Edward Cruz'
-    """
-    if pd.isna(raw):
-        return ""
-    # Remove quoted nicknames before parsing
-    cleaned = re.sub(r'["\'][A-Za-z]+["\']', '', raw)
-    # FEC: "LASTNAME, FIRSTNAME MIDDLE SUFFIX"
-    parts = cleaned.split(",", 1)
-    if len(parts) == 2:
-        last = parts[0].strip().title()
-        first = " ".join(parts[1].split()).strip().title()
-        return f"{first} {last}"
-    return " ".join(cleaned.split()).strip().title()
-
-
-def _extract_nickname(fec_name: str) -> Optional[str]:
-    """
-    Extract nickname from FEC name if present.
-
-    FEC format: 'CRUZ, RAFAEL EDWARD "TED"' → "Ted"
-    """
-    match = NICKNAME_PATTERN.search(fec_name)
-    if match:
-        return match.group(1).strip().title()
-    return None
-
-
-def _name_to_ballotpedia_slug(name: str, state: str = "") -> list[str]:
-    """
-    Convert a cleaned candidate name to Ballotpedia URL slug(s) to try.
-
-    Returns a list of slugs ordered by likelihood:
-      1. Full name (e.g., "Michael_F_Bennet")
-      2. First + Last only (e.g., "Michael_Bennet") — most common on Ballotpedia
-      3. State disambiguation variants of both
-
-    Strips suffixes (Jr, III, etc.) and handles apostrophes/hyphens.
-    """
-    # Remove suffixes (Jr, III, etc.)
-    words = name.split()
-    words = [w for w in words if w.lower().rstrip(".") not in NAME_SUFFIXES]
-
-    slugs = []
-    state_name = _state_abbrev_to_name(state) if state else None
-
-    # First + Last only (most likely to match Ballotpedia)
-    if len(words) >= 2:
-        first_last = f"{words[0]}_{words[-1]}"
-        slugs.append(first_last)
-        if state_name:
-            slugs.append(f"{first_last}_({state_name})")
-
-    # Full name (may include middle initial/name)
-    full = "_".join(words)
-    if full not in slugs:
-        slugs.append(full)
-        if state_name:
-            slugs.append(f"{full}_({state_name})")
-
-    return slugs
-
-
-# State abbreviation → full name mapping
-_STATE_NAMES = {
-    "AL": "Alabama", "AK": "Alaska", "AZ": "Arizona", "AR": "Arkansas",
-    "CA": "California", "CO": "Colorado", "CT": "Connecticut", "DE": "Delaware",
-    "FL": "Florida", "GA": "Georgia", "HI": "Hawaii", "ID": "Idaho",
-    "IL": "Illinois", "IN": "Indiana", "IA": "Iowa", "KS": "Kansas",
-    "KY": "Kentucky", "LA": "Louisiana", "ME": "Maine", "MD": "Maryland",
-    "MA": "Massachusetts", "MI": "Michigan", "MN": "Minnesota", "MS": "Mississippi",
-    "MO": "Missouri", "MT": "Montana", "NE": "Nebraska", "NV": "Nevada",
-    "NH": "New Hampshire", "NJ": "New Jersey", "NM": "New Mexico", "NY": "New York",
-    "NC": "North Carolina", "ND": "North Dakota", "OH": "Ohio", "OK": "Oklahoma",
-    "OR": "Oregon", "PA": "Pennsylvania", "RI": "Rhode Island", "SC": "South Carolina",
-    "SD": "South Dakota", "TN": "Tennessee", "TX": "Texas", "UT": "Utah",
-    "VT": "Vermont", "VA": "Virginia", "WA": "Washington", "WV": "West Virginia",
-    "WI": "Wisconsin", "WY": "Wyoming", "DC": "District of Columbia",
-    "AS": "American Samoa", "GU": "Guam", "MP": "Northern Mariana Islands",
-    "PR": "Puerto Rico", "VI": "U.S. Virgin Islands",
-}
-
-
-def _state_abbrev_to_name(abbrev: str) -> Optional[str]:
-    """Convert 2-letter state abbreviation to full name."""
-    return _STATE_NAMES.get(abbrev.upper())
-
-
-def _extract_campaign_website(page_url: str, session: requests.Session,
-                               rate_limiter: RateLimiter) -> Optional[str]:
-    """
-    Fetch a Ballotpedia candidate page and extract the campaign website URL.
-
-    Looks for links with text "Campaign website" or "Official website" in
-    the candidate infobox.
-
-    Returns:
-        Campaign website URL string, or None if not found.
-    """
-    rate_limiter.wait()
-
-    try:
-        response = session.get(page_url, timeout=(15, 30))
-        if response.status_code == 404:
-            return None
-        response.raise_for_status()
-    except requests.RequestException as e:
-        logger.debug(f"Failed to fetch {page_url}: {e}")
-        return None
-
-    soup = BeautifulSoup(response.text, "html.parser")
-
-    # Collect all website links, prioritizing campaign over official
-    campaign_url = None
-    official_url = None
-
-    for link in soup.find_all("a"):
-        text = link.get_text(strip=True).lower()
-        href = link.get("href", "")
-        if not href.startswith("http"):
-            continue
-        if text in ("campaign website", "campaign site"):
-            campaign_url = href
-            break  # Best match, stop looking
-        elif text == "official website" and official_url is None:
-            official_url = href
-
-    if campaign_url:
-        return campaign_url
-    if official_url:
-        return official_url
-
-    # Fallback: look in infobox table for "Website" row
-    for td in soup.find_all("td"):
-        if "website" in td.get_text(strip=True).lower():
-            link = td.find_next("a", href=True)
-            if link and link["href"].startswith("http"):
-                return link["href"]
-
-    return None
-
-
-def _search_ballotpedia(name: str, state: str, session: requests.Session,
-                         rate_limiter: RateLimiter) -> Optional[str]:
-    """
-    Search Ballotpedia's MediaWiki API for a candidate page.
-
-    Returns:
-        The page title of the best match, or None.
-    """
-    rate_limiter.wait()
-
-    state_name = _state_abbrev_to_name(state) or state
-    query = f"{name} {state_name}"
-
-    try:
-        response = session.get(
-            "https://ballotpedia.org/wiki/api.php",
-            params={
-                "action": "query",
-                "list": "search",
-                "srsearch": query,
-                "format": "json",
-                "srlimit": 5,
-            },
-            timeout=(15, 30),
-        )
-        response.raise_for_status()
-        data = response.json()
-    except requests.RequestException as e:
-        logger.debug(f"Ballotpedia search failed for '{query}': {e}")
-        return None
-
-    results = data.get("query", {}).get("search", [])
-    if not results:
-        return None
-
-    # Try to match by last name — only accept short titles that look like
-    # person names (not bills, elections, or other long article titles)
-    last_name = name.split()[-1].lower() if name.split() else ""
-    for result in results:
-        title = result.get("title", "")
-        # Person pages are typically short (< 6 words) and contain the last name
-        if last_name and last_name in title.lower() and len(title.split()) <= 5:
-            return title
-
-    return None
-
-
-def fill_urls_from_ballotpedia(roster: pd.DataFrame, config: dict) -> pd.DataFrame:
-    """
-    For each candidate with an empty website_url, look up their Ballotpedia
-    page and extract the campaign website URL.
-
-    Uses direct name → URL construction first, then MediaWiki search as fallback.
-    """
-    bp_config = config.get("ballotpedia", {})
-    rate_limit = bp_config.get("rate_limit_seconds", 1.0)
-    max_retries = bp_config.get("max_retries", 2)
-    user_agent = bp_config.get("user_agent", "CandidateWebsiteExtension/1.0 (Academic Research)")
-
-    missing = roster[roster["website_url"] == ""].index
-    if len(missing) == 0:
-        logger.info("All candidates already have website URLs")
-        return roster
-
-    logger.info(f"Looking up Ballotpedia URLs for {len(missing)} candidates")
-
-    session = requests.Session()
-    session.headers.update({"User-Agent": user_agent})
-    rate_limiter = RateLimiter(min_delay=rate_limit, backoff_factor=2, backoff_max=60)
-
-    n_found = 0
-    n_search_fallback = 0
-    n_failed = 0
-
-    for idx in missing:
-        row = roster.loc[idx]
-        name = row["candidate"]
-        state = row["state"]
-        fec_raw = row.get("fec_raw_name", "")
-
-        # Build list of name variants to try
-        slugs = _name_to_ballotpedia_slug(name, state)
-
-        # If FEC name has a nickname, also try nickname + last name
-        if fec_raw:
-            nickname = _extract_nickname(fec_raw)
-            if nickname:
-                last_name = name.split()[-1] if name.split() else ""
-                if last_name:
-                    nick_name = f"{nickname} {last_name}"
-                    slugs = _name_to_ballotpedia_slug(nick_name, state) + slugs
-
-        # Try direct URL construction
-        found = False
-        for slug in slugs:
-            url = f"https://ballotpedia.org/{slug}"
-            website = _extract_campaign_website(url, session, rate_limiter)
-            if website:
-                roster.at[idx, "website_url"] = website
-                logger.debug(f"Found URL for {name}: {website}")
-                n_found += 1
-                found = True
-                break
-
-        if found:
-            continue
-
-        # Fallback: MediaWiki search
-        title = _search_ballotpedia(name, state, session, rate_limiter)
-        if title:
-            url = f"https://ballotpedia.org/{title.replace(' ', '_')}"
-            website = _extract_campaign_website(url, session, rate_limiter)
-            if website:
-                roster.at[idx, "website_url"] = website
-                logger.debug(f"Found URL for {name} (via search): {website}")
-                n_found += 1
-                n_search_fallback += 1
-                continue
-
-        n_failed += 1
-        logger.debug(f"No campaign website found for {name} ({state})")
-
-    session.close()
-
-    logger.info(
-        f"Ballotpedia URL lookup complete: {n_found} found "
-        f"({n_search_fallback} via search fallback), {n_failed} not found"
-    )
     return roster
 
 
@@ -444,9 +164,9 @@ def build_roster(office: str, year: int, config: dict) -> pd.DataFrame:
     Build a complete candidate roster for an office and year.
 
     Strategy:
-      - Build FEC roster (names, state, party, raw FEC name)
-      - Look up campaign website URLs from Ballotpedia
-      - Drop candidates with no URL found
+      - Build FEC roster (names, state, party, committee IDs)
+      - Run multi-source URL waterfall (OpenFEC → Wikidata)
+      - Drop helper columns and candidates with no URL found
     """
     if office not in ("house", "senate"):
         raise ValueError(f"Unsupported office: {office}. Use 'house' or 'senate'.")
@@ -455,12 +175,13 @@ def build_roster(office: str, year: int, config: dict) -> pd.DataFrame:
     if roster.empty:
         return roster
 
-    # Look up campaign website URLs from Ballotpedia
-    roster = fill_urls_from_ballotpedia(roster, config)
+    # Run multi-source URL waterfall
+    sources = build_default_sources()
+    roster = run_waterfall(roster, config, sources)
 
-    # Drop the fec_raw_name helper column
-    if "fec_raw_name" in roster.columns:
-        roster = roster.drop(columns=["fec_raw_name"])
+    # Drop helper columns
+    helper_cols = ["fec_raw_name", "cand_pcc", "cand_id"]
+    roster = roster.drop(columns=[c for c in helper_cols if c in roster.columns])
 
     # Drop candidates with no website URL
     n_before = len(roster)
@@ -485,7 +206,7 @@ def save_roster(roster: pd.DataFrame, office: str, year: int, config: dict):
 
 def main():
     parser = argparse.ArgumentParser(
-        description="Build candidate rosters from FEC + Ballotpedia."
+        description="Build candidate rosters from FEC + multi-source URL lookup."
     )
     parser.add_argument("--office", type=str, required=True,
                         choices=["house", "senate"])

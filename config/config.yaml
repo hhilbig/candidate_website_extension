@@ -26,16 +26,16 @@ scraping:
   skip_extensions: [".pdf", ".jpg", ".png", ".gif", ".mp3", ".mp4", ".zip"]
   exclude_domains: ["twitter.com", "facebook.com", "instagram.com", "youtube.com"]
 
-# Ballotpedia settings (for campaign website URL lookup)
-ballotpedia:
-  rate_limit_seconds: 1.0       # Respectful rate limiting (1 req/sec)
-  max_retries: 2
-  user_agent: "CandidateWebsiteExtension/1.0 (Academic Research)"
-
 # Candidate roster sources
 roster:
   fec_bulk_url: "https://www.fec.gov/files/bulk-downloads/{year}/cn{year}.zip"
-  ballotpedia_base: "https://ballotpedia.org"
+
+# URL source waterfall (tried in order; skipped if API key missing)
+url_sources:
+  openfec:
+    rate_limit_seconds: 3.6       # 1000 req/hr with registered key (~17/min)
+    env_var: "OPENFEC_API_KEY"    # Free at https://api.open.fec.gov/signup/
+  wikidata: {}                    # No key needed; single SPARQL query
 
 # Output settings
 output:
