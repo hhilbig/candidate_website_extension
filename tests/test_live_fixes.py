@@ -29,7 +29,7 @@ from src.extract_text import (
 from src.scrape_wayback import (
     query_cdx,
     _normalize_url,
-    _dedup_snapshots_monthly,
+    _dedup_snapshots,
     _sample_snapshots_stratified,
 )
 
@@ -40,7 +40,117 @@ def header(msg):
     print(f"{'='*60}")
 
 
-# ── Test 1: CDX text parsing + monthly dedup (Issues 1 + 3) ──
+# ── Test 0: _dedup_snapshots bucket_months behavior ──
+
+def test_dedup_quarterly():
+    """
+    _dedup_snapshots with bucket_months=3 keeps one per (URL, quarter).
+    12 monthly snapshots for the same URL → 4 quarterly snapshots.
+    """
+    header("TEST 0a: _dedup_snapshots quarterly (bucket_months=3)")
+
+    snapshots = []
+    for month in range(1, 13):
+        snapshots.append({
+            "timestamp": f"2022{month:02d}15120000",
+            "original_url": "http://example.com/",
+            "wayback_url": f"https://web.archive.org/web/2022{month:02d}15120000/http://example.com/",
+        })
+
+    result = _dedup_snapshots(snapshots, bucket_months=3)
+    print(f"  Input: {len(snapshots)} snapshots (12 months, same URL)")
+    print(f"  Output: {len(result)} snapshots")
+
+    assert len(result) == 4, f"FAIL: Expected 4 quarterly snapshots, got {len(result)}"
+
+    # Each kept snapshot should be the latest in its quarter (month 3, 6, 9, 12)
+    kept_months = [s["timestamp"][4:6] for s in result]
+    assert kept_months == ["03", "06", "09", "12"], (
+        f"FAIL: Expected months [03, 06, 09, 12], got {kept_months}"
+    )
+    print(f"  Kept months: {kept_months} (latest per quarter)")
+    print("  PASS: Quarterly dedup keeps 1 per quarter")
+
+
+def test_dedup_monthly_compat():
+    """
+    _dedup_snapshots with bucket_months=1 matches old monthly behavior.
+    12 monthly snapshots → 12 kept.
+    """
+    header("TEST 0b: _dedup_snapshots monthly compat (bucket_months=1)")
+
+    snapshots = []
+    for month in range(1, 13):
+        # Two snapshots per month — dedup should keep only the later one
+        snapshots.append({
+            "timestamp": f"2022{month:02d}01120000",
+            "original_url": "http://example.com/",
+            "wayback_url": f"https://web.archive.org/web/2022{month:02d}01120000/http://example.com/",
+        })
+        snapshots.append({
+            "timestamp": f"2022{month:02d}15120000",
+            "original_url": "http://example.com/",
+            "wayback_url": f"https://web.archive.org/web/2022{month:02d}15120000/http://example.com/",
+        })
+
+    result = _dedup_snapshots(snapshots, bucket_months=1)
+    print(f"  Input: {len(snapshots)} snapshots (2 per month, 12 months)")
+    print(f"  Output: {len(result)} snapshots")
+
+    assert len(result) == 12, f"FAIL: Expected 12 monthly snapshots, got {len(result)}"
+
+    # Each kept snapshot should be the 15th (later timestamp)
+    for s in result:
+        assert s["timestamp"][6:8] == "15", (
+            f"FAIL: Should keep later timestamp, got day {s['timestamp'][6:8]}"
+        )
+    print("  PASS: Monthly compat keeps 1 per month (latest timestamp)")
+
+
+def test_dedup_yearly():
+    """_dedup_snapshots with bucket_months=12 keeps one per year."""
+    header("TEST 0c: _dedup_snapshots yearly (bucket_months=12)")
+
+    snapshots = []
+    for month in range(1, 13):
+        snapshots.append({
+            "timestamp": f"2022{month:02d}15120000",
+            "original_url": "http://example.com/",
+            "wayback_url": f"https://web.archive.org/web/2022{month:02d}15120000/http://example.com/",
+        })
+
+    result = _dedup_snapshots(snapshots, bucket_months=12)
+    print(f"  Input: {len(snapshots)} snapshots (12 months)")
+    print(f"  Output: {len(result)} snapshots")
+
+    assert len(result) == 1, f"FAIL: Expected 1 yearly snapshot, got {len(result)}"
+    assert result[0]["timestamp"][4:6] == "12", "FAIL: Should keep December (latest)"
+    print("  PASS: Yearly dedup keeps 1 per year")
+
+
+def test_dedup_multiple_urls():
+    """Quarterly dedup with multiple distinct URLs preserves each URL's snapshots."""
+    header("TEST 0d: _dedup_snapshots quarterly with multiple URLs")
+
+    snapshots = []
+    for url in ["http://example.com/", "http://example.com/about"]:
+        for month in range(1, 7):  # Jan-Jun = 2 quarters
+            snapshots.append({
+                "timestamp": f"2022{month:02d}15120000",
+                "original_url": url,
+                "wayback_url": f"https://web.archive.org/web/2022{month:02d}15120000/{url}",
+            })
+
+    result = _dedup_snapshots(snapshots, bucket_months=3)
+    print(f"  Input: {len(snapshots)} snapshots (2 URLs × 6 months)")
+    print(f"  Output: {len(result)} snapshots")
+
+    # 2 URLs × 2 quarters = 4
+    assert len(result) == 4, f"FAIL: Expected 4, got {len(result)}"
+    print("  PASS: 2 URLs × 2 quarters = 4 snapshots")
+
+
+# ── Test 1: CDX text parsing + quarterly dedup (Issues 1 + 3) ──
 
 def test_cdx_text_parsing():
     """
@@ -48,7 +158,7 @@ def test_cdx_text_parsing():
     multiple snapshots now that we use text format and Python-side dedup.
     Previously failed with truncated JSON or returned only 1 home-page snapshot.
     """
-    header("TEST 1: CDX text parsing + monthly dedup")
+    header("TEST 1: CDX text parsing + quarterly dedup")
 
     config = {
         "max_retries": 2,
@@ -89,15 +199,17 @@ def test_cdx_text_parsing():
     else:
         print("  NOTE: Only 1 unique URL — site may just have the home page archived")
 
-    # Verify monthly dedup is working — check that no (url, month) pair appears twice
+    # Verify quarterly dedup is working — check that no (url, quarter) pair appears twice
     seen = set()
     for snap in snapshots:
         norm = _normalize_url(snap["original_url"])
-        month = snap["timestamp"][:6]
-        key = (norm, month)
-        assert key not in seen, f"FAIL: Duplicate (url, month) after dedup: {key}"
+        year = snap["timestamp"][:4]
+        month = int(snap["timestamp"][4:6])
+        bucket = f"{year}Q{(month - 1) // 3}"
+        key = (norm, bucket)
+        assert key not in seen, f"FAIL: Duplicate (url, quarter) after dedup: {key}"
         seen.add(key)
-    print("  PASS: No duplicate (url, month) pairs")
+    print("  PASS: No duplicate (url, quarter) pairs")
 
     print("  PASS: CDX text parsing works correctly")
     return snapshots
@@ -546,6 +658,10 @@ if __name__ == "__main__":
 
     tests = [
         test_normalize_url,
+        test_dedup_quarterly,
+        test_dedup_monthly_compat,
+        test_dedup_yearly,
+        test_dedup_multiple_urls,
         test_nav_dedup,
         test_frame_url_resolution,
         test_frame_condition_fix,

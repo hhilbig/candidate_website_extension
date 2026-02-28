@@ -17,7 +17,7 @@ Primary source for archived web content.
 
 - **Endpoint**: `https://web.archive.org/cdx/search/cdx`
 - **Query strategy**: For each candidate URL, query all snapshots within the election-year window (January 1 through December 31).
-- **Deduplication**: Python-side monthly dedup — one snapshot per (normalized URL, month), keeping the latest timestamp. No server-side `collapse` parameter, which was dropping subpages.
+- **Deduplication**: Python-side dedup with configurable bucket size (default quarterly, i.e. one snapshot per normalized URL per 3-month window), keeping the latest timestamp per bucket. Set `snapshot_dedup_months` in config (1=monthly, 3=quarterly, 12=yearly). No server-side `collapse` parameter, which was dropping subpages.
 
 ### Candidate Rosters
 
@@ -47,7 +47,7 @@ Adapted from the Di Tella et al. `_scraper.py` with the following improvements:
 ### CDX Query
 - Query CDX API with `matchType=prefix` to capture subdomains and path variations.
 - Filter to `statuscode:200` and `mimetype:text/html`.
-- Deduplicate Python-side: one snapshot per (normalized URL, month), keeping latest timestamp per group.
+- Deduplicate Python-side: one snapshot per (normalized URL, time bucket), keeping latest timestamp per group. Bucket size is configurable via `snapshot_dedup_months` (default 3 = quarterly).
 
 ### Page Fetching
 - Strip Wayback Machine toolbar HTML using known markers (`<!-- END WAYBACK TOOLBAR INSERT -->`, `<!-- FILE ARCHIVED ON`).
@@ -89,6 +89,7 @@ One CSV per candidate per year, stored in `data/snapshots/{office}/{year}/`.
 | `date` | Wayback snapshot timestamp (YYYYMMDDHHMMSS) |
 | `urlkey` | Original website URL |
 | `snap_url` | Full Wayback URL of this page |
+| `page_type` | Page category: `homepage`, `issues`, `biography`, `news`, `endorsements`, `constituent_services`, `action`, `other` |
 | `data_source` | `wayback_cdx` |
 | `n_tags` | Reserved (HTML tag count, for compatibility) |
 | `n_clean_tags` | Reserved |

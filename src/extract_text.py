@@ -5,13 +5,135 @@ Strips Wayback toolbar, extracts visible text, handles frames/iframes.
 """
 
 import logging
+import re
 from typing import Optional
-from urllib.parse import urljoin
+from urllib.parse import urljoin, urlparse
 
 from bs4 import BeautifulSoup
 from bs4.element import Comment
 
 logger = logging.getLogger(__name__)
+
+
+# ── Page-type classification ─────────────────────────────────────────
+
+PAGE_TYPE_PATTERNS: dict[str, set[str]] = {
+    "issues": {"issues", "issue", "the-issues", "on-the-issues", "platform",
+               "priorities", "agenda", "positions", "plan", "legislation",
+               "proven-leader", "issues-and-legislation"},
+    "biography": {"about", "bio", "biography", "story", "our-story", "background"},
+    "news": {"news", "press", "press-releases", "press-release", "newsroom",
+             "media", "media-center", "blog", "category", "articles",
+             "updates", "in-the-news", "pressreleases", "press-room"},
+    "endorsements": {"endorsements", "supporters", "campaign-supporters",
+                     "endorsement"},
+    "constituent_services": {"constituentservices", "services", "district",
+                             "offices", "casework", "resources", "help"},
+    "action": {"donate", "contribute", "volunteer", "get-involved",
+               "take-action", "join", "support", "events", "event", "calendar"},
+}
+
+# CMS router segments to strip before classification
+# These are generic path components added by ColdFusion, PHP, ASP.NET, etc.
+CMS_NOISE_SEGMENTS = {
+    "index.cfm", "index.php", "default.aspx", "index.asp", "index.aspx",
+    "public", "site", "pages",
+}
+
+# Prefixes that need startswith matching (e.g., "meet-ted" -> biography)
+PAGE_TYPE_PREFIXES: dict[str, list[str]] = {
+    "biography": ["meet-", "meet_"],
+}
+
+# Priority order: lower index = higher priority
+PAGE_TYPE_PRIORITY: list[str] = [
+    "homepage", "issues", "biography", "news",
+    "endorsements", "constituent_services", "action", "other",
+]
+
+
+def classify_page_type(snap_url: str) -> str:
+    """
+    Classify a Wayback snapshot URL into a page-type category.
+
+    Extracts the first path segment from the original URL embedded in the
+    Wayback URL and matches against known patterns.
+
+    Args:
+        snap_url: Full Wayback URL (e.g., https://web.archive.org/web/20200601/https://example.com/issues).
+
+    Returns:
+        One of PAGE_TYPE_PRIORITY values: homepage, issues, biography, news,
+        endorsements, constituent_services, action, or other.
+    """
+    # Extract original URL from Wayback format
+    # Format: https://web.archive.org/web/TIMESTAMP/ORIGINAL_URL
+    match = re.match(r"https?://web\.archive\.org/web/\d+[^/]*/(.+)", snap_url)
+    if match:
+        original_url = match.group(1)
+    else:
+        original_url = snap_url
+
+    # Parse the path from the original URL
+    try:
+        parsed = urlparse(original_url if "://" in original_url else "http://" + original_url)
+        path = parsed.path.strip("/")
+    except Exception:
+        return "other"
+
+    # Empty path or index files -> homepage
+    if not path:
+        return "homepage"
+
+    # Split into all segments and strip CMS noise (routers, generic prefixes)
+    segments = [s.lower() for s in path.split("/") if s]
+    segments = [s for s in segments if s not in CMS_NOISE_SEGMENTS]
+
+    # Nothing left after noise removal -> homepage
+    if not segments:
+        return "homepage"
+
+    first_segment = segments[0]
+
+    # Check for homepage patterns
+    if first_segment in ("home", "") or re.match(r"^index\.\w+$", first_segment):
+        return "homepage"
+
+    # Check exact-match patterns
+    for page_type, patterns in PAGE_TYPE_PATTERNS.items():
+        if first_segment in patterns:
+            return page_type
+
+    # Check prefix patterns (e.g., "meet-ted" -> biography)
+    for page_type, prefixes in PAGE_TYPE_PREFIXES.items():
+        for prefix in prefixes:
+            if first_segment.startswith(prefix):
+                return page_type
+
+    return "other"
+
+
+def prioritize_subpage_urls(urls: list[str]) -> list[str]:
+    """
+    Sort subpage URLs by page-type priority (issues first, action last).
+
+    This ensures that substantively important pages (issues, biography)
+    are always within the subpage cap, even if the homepage has >50 links.
+
+    Args:
+        urls: List of Wayback subpage URLs.
+
+    Returns:
+        Same URLs sorted by priority (highest-priority types first).
+        Within the same priority tier, original order is preserved.
+    """
+    priority_map = {pt: i for i, pt in enumerate(PAGE_TYPE_PRIORITY)}
+
+    def sort_key(url: str) -> int:
+        page_type = classify_page_type(url)
+        return priority_map.get(page_type, len(PAGE_TYPE_PRIORITY))
+
+    return sorted(urls, key=sort_key)
 
 # Wayback Machine markers
 WAYBACK_TOOLBAR_END = "<!-- END WAYBACK TOOLBAR INSERT -->"

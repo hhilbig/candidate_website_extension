@@ -27,10 +27,12 @@ from bs4 import BeautifulSoup
 from tqdm import tqdm
 
 from .extract_text import (
+    classify_page_type,
     extract_frame_content,
     extract_visible_text,
     get_subpage_urls,
     is_wayback_page,
+    prioritize_subpage_urls,
     strip_wayback_toolbar,
 )
 from .utils import (
@@ -50,7 +52,7 @@ CDX_API = "https://web.archive.org/cdx/search/cdx"
 
 
 def query_cdx(url: str, start_date: str, end_date: str,
-               config: dict) -> list[dict]:
+               config: dict, dedup_months: int = 3) -> list[dict]:
     """
     Query Wayback Machine CDX API for snapshots of a URL.
 
@@ -59,6 +61,7 @@ def query_cdx(url: str, start_date: str, end_date: str,
         start_date: YYYYMMDD start of window.
         end_date: YYYYMMDD end of window.
         config: Wayback config dict.
+        dedup_months: Dedup bucket size in months (1=monthly, 3=quarterly).
 
     Returns:
         List of snapshot dicts with timestamp, original URL, wayback URL.
@@ -107,9 +110,12 @@ def query_cdx(url: str, start_date: str, end_date: str,
                 )
 
             raw_count = len(snapshots)
-            snapshots = _dedup_snapshots_monthly(snapshots)
+            snapshots = _dedup_snapshots(snapshots, bucket_months=dedup_months)
+            label = {1: "monthly", 3: "quarterly", 12: "yearly"}.get(
+                dedup_months, f"{dedup_months}-month"
+            )
             logger.info(
-                f"CDX returned {raw_count} records, {len(snapshots)} after monthly dedup"
+                f"CDX returned {raw_count} records, {len(snapshots)} after {label} dedup"
             )
             return snapshots
 
@@ -132,9 +138,14 @@ def _normalize_url(url: str) -> str:
     return url
 
 
-def _dedup_snapshots_monthly(snapshots: list[dict]) -> list[dict]:
+def _dedup_snapshots(snapshots: list[dict], bucket_months: int = 3) -> list[dict]:
     """
-    Deduplicate snapshots to one per (normalized URL, month).
+    Deduplicate snapshots to one per (normalized URL, time bucket).
+
+    Args:
+        snapshots: List of snapshot dicts with timestamp and original_url.
+        bucket_months: Size of dedup window in months.
+            1 = monthly (one per month), 3 = quarterly, 12 = yearly.
 
     Keeps the snapshot with the latest timestamp per group (more likely
     to be a complete capture). Returns sorted by timestamp.
@@ -142,8 +153,10 @@ def _dedup_snapshots_monthly(snapshots: list[dict]) -> list[dict]:
     groups: dict[tuple[str, str], dict] = {}
     for snap in snapshots:
         norm_url = _normalize_url(snap["original_url"])
-        month = snap["timestamp"][:6]  # YYYYMM
-        key = (norm_url, month)
+        year = snap["timestamp"][:4]
+        month = int(snap["timestamp"][4:6])
+        bucket = f"{year}Q{(month - 1) // bucket_months}"
+        key = (norm_url, bucket)
         if key not in groups or snap["timestamp"] > groups[key]["timestamp"]:
             groups[key] = snap
     return sorted(groups.values(), key=lambda s: s["timestamp"])
@@ -272,8 +285,9 @@ def scrape_snapshot(wayback_url: str, session: requests.Session,
     results.append({"snap_url": wayback_url, "snap_content": text})
     urls_explored.add(wayback_url)
 
-    # Scrape subpages
-    subpage_urls = [u for u in subpage_urls if u not in urls_explored][:max_subpages]
+    # Prioritize subpages by page type (issues/biography first, action last)
+    subpage_urls = [u for u in subpage_urls if u not in urls_explored]
+    subpage_urls = prioritize_subpage_urls(subpage_urls)[:max_subpages]
     for sub_url in subpage_urls:
         sub_soup = fetch_page(sub_url, session, rate_limiter)
         if sub_soup is None:
@@ -332,15 +346,18 @@ def process_candidate(candidate: dict, config: dict,
     start_date = f"{year}0101"
     end_date = f"{year}1231"
 
+    scrape_cfg = config.get("scraping", {})
+    dedup_months = scrape_cfg.get("snapshot_dedup_months", 3)
+
     logger.info(f"Querying CDX for {name} ({state}, {office} {year}): {website_url}")
-    snapshots = query_cdx(website_url, start_date, end_date, wb_config)
+    snapshots = query_cdx(website_url, start_date, end_date, wb_config,
+                          dedup_months=dedup_months)
 
     if not snapshots:
         logger.info(f"No snapshots found for {name}")
         return 0
 
-    scrape_cfg = config.get("scraping", {})
-    max_snapshots = scrape_cfg.get("max_snapshots_per_candidate", 200)
+    max_snapshots = scrape_cfg.get("max_snapshots_per_candidate", 50)
     if len(snapshots) > max_snapshots:
         logger.warning(
             f"Capping {name} from {len(snapshots)} to {max_snapshots} snapshots"
@@ -378,6 +395,7 @@ def process_candidate(candidate: dict, config: dict,
                     "date": snap["timestamp"],
                     "urlkey": website_url,
                     "snap_url": page["snap_url"],
+                    "page_type": classify_page_type(page["snap_url"]),
                     "data_source": "wayback_cdx",
                     "n_tags": 0,
                     "n_clean_tags": 0,

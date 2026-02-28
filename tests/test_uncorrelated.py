@@ -67,18 +67,23 @@ def fetch_snapshot(url: str) -> BeautifulSoup | None:
         return None
 
 
-def check_monthly_dedup(snapshots: list[dict]) -> bool:
-    """Verify no (normalized URL, month) pair appears twice."""
+def check_dedup(snapshots: list[dict], bucket_months: int = 3) -> bool:
+    """Verify no (normalized URL, bucket) pair appears twice."""
     seen = set()
     for snap in snapshots:
         norm = _normalize_url(snap["original_url"])
-        month = snap["timestamp"][:6]
-        key = (norm, month)
+        year = snap["timestamp"][:4]
+        month = int(snap["timestamp"][4:6])
+        bucket = f"{year}Q{(month - 1) // bucket_months}"
+        key = (norm, bucket)
         if key in seen:
-            print(f"    FAIL: Duplicate (url, month): {key}")
+            print(f"    FAIL: Duplicate (url, bucket): {key}")
             return False
         seen.add(key)
-    print(f"    Monthly dedup OK — {len(seen)} unique (url, month) pairs")
+    label = {1: "monthly", 3: "quarterly", 12: "yearly"}.get(
+        bucket_months, f"{bucket_months}-month"
+    )
+    print(f"    {label.capitalize()} dedup OK — {len(seen)} unique (url, bucket) pairs")
     return True
 
 
@@ -173,7 +178,7 @@ def test_mccain():
     assert len(snapshots) > 0, "FAIL: No snapshots for mccain.senate.gov in 2008"
 
     # Monthly dedup check
-    assert check_monthly_dedup(snapshots), "FAIL: Monthly dedup broken"
+    assert check_dedup(snapshots), "FAIL: Dedup broken"
 
     # Fix A: stratified sampling (McCain should have many records)
     check_stratified_sampling(snapshots, max_snapshots=200)
@@ -215,7 +220,7 @@ def test_aoc():
     print(f"  CDX returned {len(snapshots)} snapshots for {url_used}")
     assert len(snapshots) > 0, f"FAIL: No snapshots for AOC at {url_used}"
 
-    assert check_monthly_dedup(snapshots), "FAIL: Monthly dedup broken"
+    assert check_dedup(snapshots), "FAIL: Dedup broken"
     check_stratified_sampling(snapshots, max_snapshots=200)
 
     n_subpages = check_subpage_discovery(snapshots, "AOC")
@@ -254,7 +259,7 @@ def test_tim_scott():
     print(f"  CDX returned {len(snapshots)} snapshots for {url_used}")
     assert len(snapshots) > 0, f"FAIL: No snapshots for Tim Scott at {url_used}"
 
-    assert check_monthly_dedup(snapshots), "FAIL: Monthly dedup broken"
+    assert check_dedup(snapshots), "FAIL: Dedup broken"
     check_stratified_sampling(snapshots, max_snapshots=200)
 
     n_subpages = check_subpage_discovery(snapshots, "Tim Scott")

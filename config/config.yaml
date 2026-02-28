@@ -23,10 +23,11 @@ wayback:
 
 # Scraping behavior
 scraping:
+  snapshot_dedup_months: 3      # Dedup window: 1=monthly, 3=quarterly, 12=yearly
   max_subpage_depth: 1          # How many levels of internal links to follow
   max_subpages: 50              # Max subpages per snapshot
   threads: 8                    # Parallel threads for scraping
-  max_snapshots_per_candidate: 200  # Cap snapshots per candidate (pathological sites)
+  max_snapshots_per_candidate: 50   # Cap snapshots per candidate (pathological sites)
   text_separator: "#+#"         # Separator between text chunks
   skip_extensions: [".pdf", ".jpg", ".png", ".gif", ".mp3", ".mp4", ".zip"]
   exclude_domains: ["twitter.com", "facebook.com", "instagram.com", "youtube.com"]
@@ -41,6 +42,13 @@ url_sources:
     rate_limit_seconds: 6.0       # 1000 req/hr with registered key (~10/min, with headroom)
     env_var: "OPENFEC_API_KEY"    # Free at https://api.open.fec.gov/signup/
   wikidata: {}                    # No key needed; single SPARQL query
+
+# LLM page-type classification (Layer 2)
+classification:
+  llm_model: "gpt-5-nano"
+  max_text_words: 200        # First N words sent to LLM
+  batch_delay_seconds: 0.05  # Delay between API calls
+  env_var: "OPENAI_API_KEY"
 
 # Output settings
 output:
