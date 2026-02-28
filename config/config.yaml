@@ -1,6 +1,9 @@
 # ── Candidate Website Extension Configuration ──
 
 # Which offices and years to scrape
+# House starts at 2018 because ICPSR 226001 (Di Tella et al.) already covers 2002-2016.
+# Senate covers all years (no prior data exists).
+# Governor races are out of scope.
 scope:
   house:
     years: [2018, 2020, 2022, 2024]
@@ -15,6 +18,7 @@ wayback:
   backoff_max_seconds: 360      # Max backoff (6 minutes, for 429 responses)
   timeout_connect: 30           # Connection timeout (seconds)
   timeout_read: 120             # Read timeout (seconds)
+  inter_candidate_delay: 2.0    # Seconds between candidates (single-threaded mode)
   user_agent: "CandidateWebsiteExtension/1.0 (Academic Research)"
 
 # Scraping behavior
@@ -22,6 +26,7 @@ scraping:
   max_subpage_depth: 1          # How many levels of internal links to follow
   max_subpages: 50              # Max subpages per snapshot
   threads: 8                    # Parallel threads for scraping
+  max_snapshots_per_candidate: 200  # Cap snapshots per candidate (pathological sites)
   text_separator: "#+#"         # Separator between text chunks
   skip_extensions: [".pdf", ".jpg", ".png", ".gif", ".mp3", ".mp4", ".zip"]
   exclude_domains: ["twitter.com", "facebook.com", "instagram.com", "youtube.com"]
@@ -33,7 +38,7 @@ roster:
 # URL source waterfall (tried in order; skipped if API key missing)
 url_sources:
   openfec:
-    rate_limit_seconds: 3.6       # 1000 req/hr with registered key (~17/min)
+    rate_limit_seconds: 6.0       # 1000 req/hr with registered key (~10/min, with headroom)
     env_var: "OPENFEC_API_KEY"    # Free at https://api.open.fec.gov/signup/
   wikidata: {}                    # No key needed; single SPARQL query
 

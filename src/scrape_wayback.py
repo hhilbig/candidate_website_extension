@@ -15,6 +15,7 @@ import argparse
 import csv
 import logging
 import os
+import re
 import time
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime
@@ -62,16 +63,15 @@ def query_cdx(url: str, start_date: str, end_date: str,
     Returns:
         List of snapshot dicts with timestamp, original URL, wayback URL.
     """
+    limit = 10000
     params = {
         "url": url,
         "matchType": "prefix",
         "from": start_date,
         "to": end_date,
-        "output": "json",
         "fl": "timestamp,original,statuscode,mimetype",
         "filter": ["statuscode:200", "mimetype:text/html"],
-        "collapse": "timestamp:6",  # One snapshot per month
-        "limit": 10000,
+        "limit": limit,
     }
 
     session = _make_session(config)
@@ -82,23 +82,38 @@ def query_cdx(url: str, start_date: str, end_date: str,
         try:
             response = session.get(CDX_API, params=params, timeout=timeout)
             response.raise_for_status()
-            data = response.json()
+            text = response.text.strip()
 
-            if not data or len(data) < 2:
+            if not text:
                 return []
 
-            headers = data[0]
+            # CDX text format: one record per line, space-separated fields
             snapshots = []
-            for row in data[1:]:
-                record = dict(zip(headers, row))
+            for line in text.splitlines():
+                fields = line.split(" ", 3)
+                if len(fields) != 4:
+                    logger.debug(f"Skipping malformed CDX line: {line[:80]}")
+                    continue
+                timestamp, original, statuscode, mimetype = fields
                 snapshots.append({
-                    "timestamp": record["timestamp"],
-                    "original_url": record["original"],
-                    "wayback_url": f"https://web.archive.org/web/{record['timestamp']}/{record['original']}",
+                    "timestamp": timestamp,
+                    "original_url": original,
+                    "wayback_url": f"https://web.archive.org/web/{timestamp}/{original}",
                 })
+
+            if len(snapshots) >= limit:
+                logger.warning(
+                    f"CDX hit {limit}-record limit for {url} — results may be truncated"
+                )
+
+            raw_count = len(snapshots)
+            snapshots = _dedup_snapshots_monthly(snapshots)
+            logger.info(
+                f"CDX returned {raw_count} records, {len(snapshots)} after monthly dedup"
+            )
             return snapshots
 
-        except requests.RequestException as e:
+        except (requests.RequestException, ValueError) as e:
             logger.warning(f"CDX query failed (attempt {attempt + 1}/{max_retries}): {e}")
             if attempt < max_retries - 1:
                 wait = (attempt + 1) * 10
@@ -108,6 +123,78 @@ def query_cdx(url: str, start_date: str, end_date: str,
                 return []
 
     return []
+
+
+def _normalize_url(url: str) -> str:
+    """Normalize a URL for deduplication: lowercase, strip www. and trailing /."""
+    url = url.lower().rstrip("/")
+    url = re.sub(r"^(https?://)www\.", r"\1", url)
+    return url
+
+
+def _dedup_snapshots_monthly(snapshots: list[dict]) -> list[dict]:
+    """
+    Deduplicate snapshots to one per (normalized URL, month).
+
+    Keeps the snapshot with the latest timestamp per group (more likely
+    to be a complete capture). Returns sorted by timestamp.
+    """
+    groups: dict[tuple[str, str], dict] = {}
+    for snap in snapshots:
+        norm_url = _normalize_url(snap["original_url"])
+        month = snap["timestamp"][:6]  # YYYYMM
+        key = (norm_url, month)
+        if key not in groups or snap["timestamp"] > groups[key]["timestamp"]:
+            groups[key] = snap
+    return sorted(groups.values(), key=lambda s: s["timestamp"])
+
+
+def _sample_snapshots_stratified(snapshots: list[dict], max_snapshots: int) -> list[dict]:
+    """
+    Sample up to max_snapshots preserving temporal diversity across months.
+
+    Groups snapshots by month (YYYYMM), then round-robins across months
+    until the budget is filled. Within each month, snapshots are sorted
+    by timestamp and drawn in order, so unique URLs are prioritized
+    before repeat-month draws.
+
+    Returns sorted by timestamp.
+    """
+    if len(snapshots) <= max_snapshots:
+        return snapshots
+
+    from collections import defaultdict
+
+    by_month: dict[str, list[dict]] = defaultdict(list)
+    for snap in snapshots:
+        month = snap["timestamp"][:6]
+        by_month[month].append(snap)
+
+    # Sort each month's snapshots by timestamp
+    months_sorted = sorted(by_month.keys())
+    for m in months_sorted:
+        by_month[m].sort(key=lambda s: s["timestamp"])
+
+    # Round-robin: draw one snapshot per month until budget filled
+    selected = []
+    indices = {m: 0 for m in months_sorted}
+    while len(selected) < max_snapshots:
+        added_this_round = False
+        for m in months_sorted:
+            if len(selected) >= max_snapshots:
+                break
+            if indices[m] < len(by_month[m]):
+                selected.append(by_month[m][indices[m]])
+                indices[m] += 1
+                added_this_round = True
+        if not added_this_round:
+            break  # all months exhausted
+
+    logger.info(
+        f"Stratified sampling: {len(snapshots)} -> {len(selected)} snapshots "
+        f"across {len(months_sorted)} months"
+    )
+    return sorted(selected, key=lambda s: s["timestamp"])
 
 
 # ── Page fetching ────────────────────────────────────────────────────
@@ -218,7 +305,8 @@ def scrape_snapshot(wayback_url: str, session: requests.Session,
 # ── Candidate processing ────────────────────────────────────────────
 
 def process_candidate(candidate: dict, config: dict,
-                      progress: ProgressTracker) -> int:
+                      progress: ProgressTracker,
+                      rate_limiter: RateLimiter) -> int:
     """
     Scrape all snapshots for a single candidate.
 
@@ -226,6 +314,7 @@ def process_candidate(candidate: dict, config: dict,
         candidate: Dict with candidate, state, district, office, year, party, website_url.
         config: Full config dict.
         progress: ProgressTracker for resumability.
+        rate_limiter: Shared RateLimiter instance.
 
     Returns:
         Number of snapshots scraped.
@@ -250,12 +339,15 @@ def process_candidate(candidate: dict, config: dict,
         logger.info(f"No snapshots found for {name}")
         return 0
 
+    scrape_cfg = config.get("scraping", {})
+    max_snapshots = scrape_cfg.get("max_snapshots_per_candidate", 200)
+    if len(snapshots) > max_snapshots:
+        logger.warning(
+            f"Capping {name} from {len(snapshots)} to {max_snapshots} snapshots"
+        )
+        snapshots = _sample_snapshots_stratified(snapshots, max_snapshots)
+
     session = _make_session(wb_config)
-    rate_limiter = RateLimiter(
-        min_delay=wb_config.get("rate_limit_seconds", 0.1),
-        backoff_factor=wb_config.get("backoff_factor", 2),
-        backoff_max=wb_config.get("backoff_max_seconds", 360),
-    )
 
     output_dir = os.path.join(out_config.get("snapshots_dir", "data/snapshots"), office, str(year))
     os.makedirs(output_dir, exist_ok=True)
@@ -273,6 +365,8 @@ def process_candidate(candidate: dict, config: dict,
             rows = []
             for page in pages:
                 content = page["snap_content"]
+                if not content:
+                    continue
                 rows.append({
                     "candidate": name,
                     "state": state,
@@ -346,13 +440,23 @@ def run_scrape(roster_path: str, config: dict, threads: int = 8):
     candidates = roster.to_dict("records")
     total_scraped = 0
 
+    wb_config = config.get("wayback", {})
+    rate_limiter = RateLimiter(
+        min_delay=wb_config.get("rate_limit_seconds", 0.1),
+        backoff_factor=wb_config.get("backoff_factor", 2),
+        backoff_max=wb_config.get("backoff_max_seconds", 360),
+    )
+    inter_delay = wb_config.get("inter_candidate_delay", 2.0)
+
     if threads == 1:
-        for cand in tqdm(candidates, desc="Scraping candidates"):
-            total_scraped += process_candidate(cand, config, progress)
+        for i, cand in enumerate(tqdm(candidates, desc="Scraping candidates")):
+            total_scraped += process_candidate(cand, config, progress, rate_limiter)
+            if i < len(candidates) - 1:
+                time.sleep(inter_delay)
     else:
         with ThreadPoolExecutor(max_workers=threads) as executor:
             futures = {
-                executor.submit(process_candidate, cand, config, progress): cand
+                executor.submit(process_candidate, cand, config, progress, rate_limiter): cand
                 for cand in candidates
             }
             for future in tqdm(as_completed(futures), total=len(futures),

@@ -41,6 +41,31 @@ def _tag_visible(element) -> bool:
     return True
 
 
+def _deduplicate_text_segments(segments: list[str], max_repeats: int = 2) -> list[str]:
+    """
+    Remove boilerplate text segments (nav menus, footers) that repeat excessively.
+
+    Segments appearing more than max_repeats times are removed entirely.
+    Consecutive duplicate segments are also collapsed.
+    """
+    # Count occurrences
+    counts: dict[str, int] = {}
+    for seg in segments:
+        counts[seg] = counts.get(seg, 0) + 1
+
+    # Remove segments appearing > max_repeats times (only for segments >= 5 chars)
+    filtered = [seg for seg in segments
+                if len(seg) < 5 or counts[seg] <= max_repeats]
+
+    # Remove consecutive duplicates
+    deduped = []
+    for seg in filtered:
+        if not deduped or seg != deduped[-1]:
+            deduped.append(seg)
+
+    return deduped
+
+
 def extract_visible_text(soup: BeautifulSoup, separator: str = "#+#") -> str:
     """
     Extract visible text from parsed HTML.
@@ -55,6 +80,7 @@ def extract_visible_text(soup: BeautifulSoup, separator: str = "#+#") -> str:
     texts = soup.find_all(string=True)
     visible = filter(_tag_visible, texts)
     cleaned = [t.strip() for t in visible if len(t.strip()) > 2]
+    cleaned = _deduplicate_text_segments(cleaned)
     return separator.join(cleaned)
 
 
@@ -63,9 +89,14 @@ def get_subpage_urls(soup: BeautifulSoup, base_url: str,
     """
     Find internal links (subpages) within the same domain.
 
+    Handles three link formats found in Wayback pages:
+    1. Already-rewritten Wayback URLs (web.archive.org/web/TIMESTAMP/...)
+    2. Absolute original-domain URLs (https://example.com/about)
+    3. Relative URLs (/about, contact.html)
+
     Args:
         soup: Parsed page HTML.
-        base_url: The snapshot's home URL (Wayback format).
+        base_url: The snapshot's Wayback URL (e.g., https://web.archive.org/web/20200601/https://pelosi.house.gov/).
         exclude_domains: Domains to skip (social media, etc.).
 
     Returns:
@@ -74,23 +105,50 @@ def get_subpage_urls(soup: BeautifulSoup, base_url: str,
     if exclude_domains is None:
         exclude_domains = ["twitter.com", "facebook.com", "instagram.com", "youtube.com"]
 
-    # Extract the original domain from the Wayback URL
-    # Format: https://web.archive.org/web/TIMESTAMP/http://example.com/page
+    # Extract the original domain and Wayback prefix from the base URL
     original_domain = _extract_domain(base_url)
     if not original_domain:
         return []
 
+    domain_bare = original_domain.replace("www.", "")
+
+    # Extract Wayback prefix and original URL for resolving relative links
+    # base_url: https://web.archive.org/web/TIMESTAMP/http://site.com/path/page.html
+    parts = base_url.split("/")
+    wayback_prefix = None
+    original_url = None
+    if len(parts) >= 6 and "web.archive.org" in base_url:
+        wayback_prefix = "/".join(parts[:5])  # https://web.archive.org/web/TIMESTAMP
+        original_url = "/".join(parts[5:])    # http://site.com/path/page.html
+
     links = set()
     for tag in soup.find_all(["a", "area"], href=True):
-        href = tag["href"]
-        # Only keep links within the same domain that go through Wayback
-        if "web.archive.org" not in href:
-            continue
-        if original_domain.replace("www.", "") not in href:
+        href = tag["href"].strip()
+        if not href or href.startswith("#") or href.startswith("mailto:") or href.startswith("javascript:"):
             continue
         if any(excl in href for excl in exclude_domains):
             continue
-        links.add(href)
+
+        # Case 1: Already a Wayback URL
+        if "web.archive.org" in href:
+            if domain_bare in href:
+                links.add(href)
+            continue
+
+        # Case 2 & 3: Relative or absolute original-domain URL — resolve to Wayback format
+        if wayback_prefix and original_url:
+            # Check if it's an absolute URL for a different domain
+            if href.startswith("http://") or href.startswith("https://"):
+                href_domain = href.split("://")[1].split("/")[0].replace("www.", "")
+                if domain_bare not in href_domain:
+                    continue  # external link
+                # Absolute URL for same domain — prepend Wayback prefix
+                resolved = wayback_prefix + "/" + href
+            else:
+                # Relative URL — resolve against the original URL, then prepend Wayback prefix
+                resolved = wayback_prefix + "/" + urljoin(original_url, href)
+
+            links.add(resolved)
 
     return list(links)
 
@@ -114,7 +172,8 @@ def _extract_domain(wayback_url: str) -> Optional[str]:
 
 def extract_frame_content(soup: Optional[BeautifulSoup], base_url: str,
                           separator: str = "#+#",
-                          fetch_fn=None) -> tuple[str, list[str]]:
+                          fetch_fn=None,
+                          max_depth: int = 3) -> tuple[str, list[str]]:
     """
     Recursively extract content from frames/iframes.
 
@@ -123,22 +182,23 @@ def extract_frame_content(soup: Optional[BeautifulSoup], base_url: str,
         base_url: Wayback URL of this page.
         separator: Text chunk separator.
         fetch_fn: Callable(url) -> BeautifulSoup for fetching frame URLs.
+        max_depth: Maximum recursion depth for nested frames.
 
     Returns:
         (text_content, list_of_subpage_urls)
     """
-    if soup is None:
+    if soup is None or max_depth <= 0:
         return "", []
 
     frames = soup.find_all("frame") + soup.find_all("iframe")
     text = extract_visible_text(soup, separator)
     subpages = get_subpage_urls(soup, base_url)
 
-    if not frames or text:
-        # No frames, or page has content outside frames
+    if not frames:
+        # No frames — return direct text content
         return text, subpages
 
-    # Page is frame-based with no direct content; recurse into frames
+    # Frame elements found; recurse into frames and combine with page text
     all_text = ""
     all_subpages = list(subpages)
 
@@ -153,15 +213,19 @@ def extract_frame_content(soup: Optional[BeautifulSoup], base_url: str,
 
         frame_soup = fetch_fn(frame_url)
         if frame_soup is None:
+            logger.warning(f"Could not fetch frame content: {frame_url}")
             continue
 
         frame_text, frame_subpages = extract_frame_content(
-            frame_soup, frame_url, separator, fetch_fn
+            frame_soup, frame_url, separator, fetch_fn, max_depth - 1
         )
         all_text += (separator if all_text and frame_text else "") + frame_text
         all_subpages.extend(frame_subpages)
 
-    return text + all_text, list(set(all_subpages))
+    combined_text = text + all_text
+    if frames and not combined_text.strip():
+        logger.warning(f"Frame-based page yielded no text: {base_url}")
+    return combined_text, list(set(all_subpages))
 
 
 def _resolve_frame_url(frame_src: str, base_url: str) -> str:
@@ -171,10 +235,14 @@ def _resolve_frame_url(frame_src: str, base_url: str) -> str:
     if "web/20" in frame_src:
         return "https://web.archive.org" + ("/" if not frame_src.startswith("/") else "") + frame_src
 
-    # Relative URL: resolve against base
-    domain = _extract_domain(base_url)
-    if domain:
-        base_prefix = base_url.split(domain)[0] + domain
-        return base_prefix + ("/" if not frame_src.startswith("/") else "") + frame_src
+    # Relative URL: extract Wayback prefix and original URL, then use urljoin
+    # base_url format: https://web.archive.org/web/TIMESTAMP/http://site.com/path/page.html
+    parts = base_url.split("/")
+    if len(parts) >= 6 and "web.archive.org" in base_url:
+        # parts[0:5] = ['https:', '', 'web.archive.org', 'web', 'TIMESTAMP']
+        wayback_prefix = "/".join(parts[:5])  # https://web.archive.org/web/TIMESTAMP
+        original_url = "/".join(parts[5:])    # http://site.com/path/page.html
+        resolved = urljoin(original_url, frame_src)
+        return wayback_prefix + "/" + resolved
 
     return frame_src

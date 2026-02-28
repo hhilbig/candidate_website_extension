@@ -5,6 +5,7 @@ Shared utilities: rate limiting, checkpointing, logging, CSV I/O, URL caching.
 import csv
 import logging
 import os
+import threading
 import time
 from pathlib import Path
 
@@ -23,7 +24,7 @@ def load_config(config_path: str = "config/config.yaml") -> dict:
 
 
 class RateLimiter:
-    """Token-bucket rate limiter with exponential backoff."""
+    """Thread-safe rate limiter with exponential backoff."""
 
     def __init__(self, min_delay: float = 0.1, backoff_factor: float = 2,
                  backoff_max: float = 360):
@@ -32,25 +33,32 @@ class RateLimiter:
         self.backoff_max = backoff_max
         self.last_request_time: float = 0
         self._current_delay = min_delay
+        self._lock = threading.Lock()
 
     def wait(self):
-        """Wait the appropriate amount before next request."""
-        elapsed = time.time() - self.last_request_time
-        if elapsed < self._current_delay:
-            time.sleep(self._current_delay - elapsed)
-        self.last_request_time = time.time()
+        """Wait the appropriate amount before next request (thread-safe)."""
+        with self._lock:
+            now = time.time()
+            elapsed = now - self.last_request_time
+            wait_time = max(0, self._current_delay - elapsed)
+            # Reserve this slot so the next thread queues behind us
+            self.last_request_time = now + wait_time
+        if wait_time > 0:
+            time.sleep(wait_time)
 
     def backoff(self):
         """Increase delay after a rate-limit response."""
-        self._current_delay = min(
-            self._current_delay * self.backoff_factor,
-            self.backoff_max
-        )
-        logger.warning(f"Rate limited. Backing off to {self._current_delay:.1f}s")
+        with self._lock:
+            self._current_delay = min(
+                self._current_delay * self.backoff_factor,
+                self.backoff_max
+            )
+            logger.warning(f"Rate limited. Backing off to {self._current_delay:.1f}s")
 
     def reset(self):
         """Reset delay to minimum after successful request."""
-        self._current_delay = self.min_delay
+        with self._lock:
+            self._current_delay = self.min_delay
 
 
 class ProgressTracker:
@@ -59,6 +67,7 @@ class ProgressTracker:
     def __init__(self, progress_file: str):
         self.progress_file = progress_file
         self._completed: set[str] = set()
+        self._lock = threading.Lock()
         self._load()
 
     def _load(self):
@@ -72,20 +81,22 @@ class ProgressTracker:
 
     def is_done(self, url: str) -> bool:
         """Check if a URL has already been scraped."""
-        return url in self._completed
+        with self._lock:
+            return url in self._completed
 
     def mark_done(self, row: dict):
         """Append a completed row to the checkpoint file."""
-        write_header = not os.path.exists(self.progress_file)
-        os.makedirs(os.path.dirname(self.progress_file), exist_ok=True)
+        with self._lock:
+            write_header = not os.path.exists(self.progress_file)
+            os.makedirs(os.path.dirname(self.progress_file), exist_ok=True)
 
-        with open(self.progress_file, "a", newline="", encoding="utf-8") as f:
-            writer = csv.DictWriter(f, fieldnames=list(row.keys()))
-            if write_header:
-                writer.writeheader()
-            writer.writerow(row)
+            with open(self.progress_file, "a", newline="", encoding="utf-8") as f:
+                writer = csv.DictWriter(f, fieldnames=list(row.keys()))
+                if write_header:
+                    writer.writeheader()
+                writer.writerow(row)
 
-        self._completed.add(row.get("url", ""))
+            self._completed.add(row.get("url", ""))
 
 
 def append_csv(filepath: str, rows: list[dict]):

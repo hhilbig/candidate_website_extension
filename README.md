@@ -1,6 +1,16 @@
 # Candidate Website Extension
 
-Extends the Di Tella, Galiani, and Torrens (2025) U.S. House candidate website corpus (2002-2016) forward to 2018-2024 and across offices to Senate and gubernatorial races. Scrapes archived candidate websites from the Wayback Machine and extracts visible text for downstream analysis. Uses [ScrapeGraphAI](https://github.com/ScrapeGraphAI/Scrapegraph-ai) for intelligent roster building from Ballotpedia.
+Extends the Di Tella, Kotti, Le Pennec, and Pons (2025) U.S. House candidate website corpus (2002-2016) forward to 2018-2024 and across offices to Senate races. Scrapes archived candidate websites from the Wayback Machine and extracts visible text for downstream analysis. Uses an OpenFEC + Wikidata waterfall to discover candidate website URLs.
+
+## Scope
+
+This project collects data that is **not** already in the ICPSR 226001 dataset:
+
+| Office | Years | Source | Status |
+|--------|-------|--------|--------|
+| House 2002-2016 | ICPSR 226001 (Di Tella et al.) | Already collected | DO NOT re-collect |
+| House 2018-2024 | This project (FEC + OpenFEC + Wikidata + Wayback) | To collect |
+| Senate 2002-2024 | This project (FEC + OpenFEC + Wikidata + Wayback) | To collect |
 
 ## Installation
 
@@ -8,7 +18,6 @@ Extends the Di Tella, Galiani, and Torrens (2025) U.S. House candidate website c
 git clone https://github.com/hhilbig/candidate_website_extension.git
 cd candidate_website_extension
 pip install -r requirements.txt
-playwright install  # Required for ScrapeGraphAI browser automation
 ```
 
 ## Quick Start
@@ -16,14 +25,11 @@ playwright install  # Required for ScrapeGraphAI browser automation
 ### 1. Build a candidate roster
 
 ```bash
-# House candidates for 2022 (FEC + Ballotpedia)
+# House candidates for 2022
 python -m src.build_candidate_roster --office house --year 2022
 
 # Senate candidates for all available years
 python -m src.build_candidate_roster --office senate --years 2002-2024
-
-# Governor candidates (Ballotpedia via ScrapeGraphAI)
-python -m src.build_candidate_roster --office governor --year 2022
 ```
 
 ### 2. Scrape websites from Wayback Machine
@@ -46,7 +52,7 @@ Edit `config/config.yaml` to adjust:
 - **scope**: Which offices and years to process
 - **wayback**: Rate limits, timeouts, retry behavior
 - **scraping**: Thread count, subpage crawl depth, excluded domains
-- **scrapegraph**: LLM model for Ballotpedia extraction (requires API key for the chosen LLM provider)
+- **url_sources**: OpenFEC API key, Wikidata settings
 - **output**: Directory paths for all outputs
 
 ## Output Format
@@ -58,7 +64,7 @@ Scraped data lands in `data/snapshots/{office}/{year}/` as CSV files (one per ca
 | `candidate` | Candidate name |
 | `state` | State abbreviation |
 | `district` | District number (House only) |
-| `office` | `house`, `senate`, or `governor` |
+| `office` | `house` or `senate` |
 | `year` | Election year |
 | `party` | `D` or `R` |
 | `date` | Snapshot timestamp |
@@ -77,10 +83,14 @@ candidate_website_extension/
 ├── config/
 │   └── config.yaml                    # Configuration
 ├── src/
+│   ├── build_candidate_roster.py      # FEC roster builder + URL waterfall
 │   ├── scrape_wayback.py              # Core Wayback Machine scraper
-│   ├── build_candidate_roster.py      # FEC/Ballotpedia roster builder
 │   ├── extract_text.py                # HTML → text extraction
-│   └── utils.py                       # Rate limiting, checkpointing, logging
+│   ├── name_utils.py                  # Candidate name normalization
+│   ├── utils.py                       # Rate limiting, checkpointing, logging
+│   └── url_sources/                   # URL discovery modules
+│       ├── openfec.py                 # OpenFEC API
+│       └── wikidata.py                # Wikidata SPARQL
 └── data/                              # Output directory (.gitignored)
     ├── rosters/                        # Candidate roster CSVs
     ├── snapshots/{office}/{year}/      # Scraped website content
@@ -91,4 +101,4 @@ candidate_website_extension/
 
 This project extends:
 
-> Di Tella, Rafael, Sebastian Galiani, and Gustavo Torrens. 2025. "Replication Data for: The Economics of Populism." ICPSR 226001-V1. https://doi.org/10.3886/E226001V1
+> Di Tella, Rafael, Laura Kotti, Caroline Le Pennec, and Vincent Pons. 2025. "Replication Data for: The Economics of Populism." ICPSR 226001-V1. https://doi.org/10.3886/E226001V1
