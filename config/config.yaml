@@ -23,11 +23,8 @@ wayback:
 
 # Scraping behavior
 scraping:
-  snapshot_dedup_months: 3      # Dedup window: 1=monthly, 3=quarterly, 12=yearly
   max_subpage_depth: 1          # How many levels of internal links to follow
-  max_subpages: 50              # Max subpages per snapshot
   threads: 8                    # Parallel threads for scraping
-  max_snapshots_per_candidate: 50   # Cap snapshots per candidate (pathological sites)
   text_separator: "#+#"         # Separator between text chunks
   skip_extensions: [".pdf", ".jpg", ".png", ".gif", ".mp3", ".mp4", ".zip"]
   exclude_domains: ["twitter.com", "facebook.com", "instagram.com", "youtube.com"]

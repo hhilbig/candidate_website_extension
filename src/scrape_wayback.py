@@ -12,13 +12,11 @@ Usage:
 """
 
 import argparse
-import csv
 import logging
 import os
 import re
 import time
 from concurrent.futures import ThreadPoolExecutor, as_completed
-from datetime import datetime
 from typing import Optional
 
 import pandas as pd
@@ -30,9 +28,7 @@ from .extract_text import (
     classify_page_type,
     extract_frame_content,
     extract_visible_text,
-    get_subpage_urls,
     is_wayback_page,
-    prioritize_subpage_urls,
     strip_wayback_toolbar,
 )
 from .utils import (
@@ -52,7 +48,7 @@ CDX_API = "https://web.archive.org/cdx/search/cdx"
 
 
 def query_cdx(url: str, start_date: str, end_date: str,
-               config: dict, dedup_months: int = 3) -> list[dict]:
+               config: dict) -> list[dict]:
     """
     Query Wayback Machine CDX API for snapshots of a URL.
 
@@ -61,7 +57,6 @@ def query_cdx(url: str, start_date: str, end_date: str,
         start_date: YYYYMMDD start of window.
         end_date: YYYYMMDD end of window.
         config: Wayback config dict.
-        dedup_months: Dedup bucket size in months (1=monthly, 3=quarterly).
 
     Returns:
         List of snapshot dicts with timestamp, original URL, wayback URL.
@@ -69,7 +64,7 @@ def query_cdx(url: str, start_date: str, end_date: str,
     limit = 10000
     params = {
         "url": url,
-        "matchType": "prefix",
+        "matchType": "exact",
         "from": start_date,
         "to": end_date,
         "fl": "timestamp,original,statuscode,mimetype",
@@ -109,14 +104,11 @@ def query_cdx(url: str, start_date: str, end_date: str,
                     f"CDX hit {limit}-record limit for {url} — results may be truncated"
                 )
 
-            raw_count = len(snapshots)
-            snapshots = _dedup_snapshots(snapshots, bucket_months=dedup_months)
-            label = {1: "monthly", 3: "quarterly", 12: "yearly"}.get(
-                dedup_months, f"{dedup_months}-month"
-            )
-            logger.info(
-                f"CDX returned {raw_count} records, {len(snapshots)} after {label} dedup"
-            )
+            logger.info(f"CDX returned {len(snapshots)} records for {url}")
+            if len(snapshots) > 1000:
+                logger.warning(
+                    f"Large CDX result: {len(snapshots)} records for {url}"
+                )
             return snapshots
 
         except (requests.RequestException, ValueError) as e:
@@ -267,7 +259,6 @@ def scrape_snapshot(wayback_url: str, session: requests.Session,
     """
     scrape_cfg = config.get("scraping", {})
     separator = scrape_cfg.get("text_separator", "#+#")
-    max_subpages = scrape_cfg.get("max_subpages", 50)
     exclude_domains = scrape_cfg.get("exclude_domains", [])
 
     results = []
@@ -285,9 +276,7 @@ def scrape_snapshot(wayback_url: str, session: requests.Session,
     results.append({"snap_url": wayback_url, "snap_content": text})
     urls_explored.add(wayback_url)
 
-    # Prioritize subpages by page type (issues/biography first, action last)
     subpage_urls = [u for u in subpage_urls if u not in urls_explored]
-    subpage_urls = prioritize_subpage_urls(subpage_urls)[:max_subpages]
     for sub_url in subpage_urls:
         sub_soup = fetch_page(sub_url, session, rate_limiter)
         if sub_soup is None:
@@ -346,23 +335,12 @@ def process_candidate(candidate: dict, config: dict,
     start_date = f"{year}0101"
     end_date = f"{year}1231"
 
-    scrape_cfg = config.get("scraping", {})
-    dedup_months = scrape_cfg.get("snapshot_dedup_months", 3)
-
     logger.info(f"Querying CDX for {name} ({state}, {office} {year}): {website_url}")
-    snapshots = query_cdx(website_url, start_date, end_date, wb_config,
-                          dedup_months=dedup_months)
+    snapshots = query_cdx(website_url, start_date, end_date, wb_config)
 
     if not snapshots:
         logger.info(f"No snapshots found for {name}")
         return 0
-
-    max_snapshots = scrape_cfg.get("max_snapshots_per_candidate", 50)
-    if len(snapshots) > max_snapshots:
-        logger.warning(
-            f"Capping {name} from {len(snapshots)} to {max_snapshots} snapshots"
-        )
-        snapshots = _sample_snapshots_stratified(snapshots, max_snapshots)
 
     session = _make_session(wb_config)
 
