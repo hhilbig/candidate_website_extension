@@ -15,6 +15,19 @@ from bs4.element import Comment
 logger = logging.getLogger(__name__)
 
 
+# ── CJK spam detection ──────────────────────────────────────────────
+
+def is_cjk_spam(text: str, threshold: float = 0.3) -> bool:
+    """Return True if more than `threshold` fraction of characters are CJK.
+
+    Parked/expired domains often serve Japanese or Chinese SEO spam.
+    """
+    if not text:
+        return False
+    cjk_count = sum(1 for c in text if '\u3000' <= c <= '\u9fff')
+    return cjk_count / len(text) > threshold
+
+
 # ── Page-type classification ─────────────────────────────────────────
 
 PAGE_TYPE_PATTERNS: dict[str, set[str]] = {

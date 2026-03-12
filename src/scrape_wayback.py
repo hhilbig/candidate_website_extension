@@ -28,6 +28,7 @@ from .extract_text import (
     classify_page_type,
     extract_frame_content,
     extract_visible_text,
+    is_cjk_spam,
     is_wayback_page,
     strip_wayback_toolbar,
 )
@@ -361,6 +362,9 @@ def process_candidate(candidate: dict, config: dict,
             for page in pages:
                 content = page["snap_content"]
                 if not content:
+                    continue
+                if is_cjk_spam(content):
+                    logger.debug(f"Skipping CJK spam for {name}: {page['snap_url'][:80]}")
                     continue
                 rows.append({
                     "candidate": name,
