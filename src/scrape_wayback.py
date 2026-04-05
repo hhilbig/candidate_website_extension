@@ -48,6 +48,11 @@ logger = logging.getLogger(__name__)
 CDX_API = "https://web.archive.org/cdx/search/cdx"
 
 
+class WaybackConnectionRefused(Exception):
+    """Raised when CDX API refuses connections after all retries."""
+    pass
+
+
 def query_cdx(url: str, start_date: str, end_date: str,
                config: dict) -> list[dict]:
     """
@@ -114,11 +119,16 @@ def query_cdx(url: str, start_date: str, end_date: str,
 
         except (requests.RequestException, ValueError) as e:
             logger.warning(f"CDX query failed (attempt {attempt + 1}/{max_retries}): {e}")
+            is_conn_refused = "Connection refused" in str(e)
             if attempt < max_retries - 1:
                 wait = (attempt + 1) * 10
                 time.sleep(wait)
             else:
                 logger.error(f"CDX query failed after {max_retries} attempts for {url}")
+                if is_conn_refused:
+                    raise WaybackConnectionRefused(
+                        f"CDX connection refused after {max_retries} attempts for {url}"
+                    )
                 return []
 
     return []
@@ -337,7 +347,7 @@ def process_candidate(candidate: dict, config: dict,
     end_date = f"{year}1231"
 
     logger.info(f"Querying CDX for {name} ({state}, {office} {year}): {website_url}")
-    snapshots = query_cdx(website_url, start_date, end_date, wb_config)
+    snapshots = query_cdx(website_url, start_date, end_date, wb_config)  # may raise WaybackConnectionRefused
 
     if not snapshots:
         logger.info(f"No snapshots found for {name}")
@@ -448,9 +458,28 @@ def run_scrape(roster_path: str, config: dict, threads: int = 8):
     )
     inter_delay = wb_config.get("inter_candidate_delay", 2.0)
 
+    consecutive_conn_refused = 0
+    conn_refused_threshold = 5
+    pause_seconds = 48 * 3600  # 2 days
+
     if threads == 1:
         for i, cand in enumerate(tqdm(candidates, desc="Scraping candidates")):
-            total_scraped += process_candidate(cand, config, progress, rate_limiter)
+            try:
+                total_scraped += process_candidate(cand, config, progress, rate_limiter)
+                consecutive_conn_refused = 0
+            except WaybackConnectionRefused:
+                consecutive_conn_refused += 1
+                logger.warning(
+                    f"Connection refused ({consecutive_conn_refused}/{conn_refused_threshold})"
+                )
+                if consecutive_conn_refused >= conn_refused_threshold:
+                    logger.warning(
+                        f"Wayback Machine refusing connections. "
+                        f"Pausing for {pause_seconds // 3600} hours before resuming."
+                    )
+                    time.sleep(pause_seconds)
+                    consecutive_conn_refused = 0
+                    logger.info("Resuming after pause.")
             if i < len(candidates) - 1:
                 time.sleep(inter_delay)
     else:
