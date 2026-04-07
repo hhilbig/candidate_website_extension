@@ -18,6 +18,7 @@ import re
 import time
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from typing import Optional
+from urllib.parse import urlparse
 
 import pandas as pd
 import requests
@@ -49,8 +50,25 @@ CDX_API = "https://web.archive.org/cdx/search/cdx"
 
 
 class WaybackConnectionRefused(Exception):
-    """Raised when CDX API refuses connections after all retries."""
+    """Raised when Wayback Machine refuses connections after all retries."""
     pass
+
+
+# Domains that are clearly not candidate campaign websites.
+# Candidates with these URLs got a bad match from the URL waterfall.
+SKIP_DOMAINS = {
+    "google.com", "www.google.com",
+    "facebook.com", "www.facebook.com",
+    "twitter.com", "www.twitter.com", "x.com",
+    "instagram.com", "www.instagram.com",
+    "youtube.com", "www.youtube.com",
+    "linkedin.com", "www.linkedin.com",
+    "wikipedia.org", "en.wikipedia.org",
+    "ballotpedia.org",
+    "opensecrets.org", "www.opensecrets.org",
+    "fec.gov", "www.fec.gov",
+    "votesmart.org", "justfacts.votesmart.org",
+}
 
 
 def query_cdx(url: str, start_date: str, end_date: str,
@@ -256,6 +274,8 @@ def fetch_page(url: str, session: requests.Session,
     except requests.exceptions.InvalidSchema:
         return None
     except requests.RequestException as e:
+        if "Connection refused" in str(e):
+            raise WaybackConnectionRefused(f"Connection refused fetching {url}")
         logger.debug(f"Failed to fetch {url}: {e}")
         return None
 
@@ -342,6 +362,12 @@ def process_candidate(candidate: dict, config: dict,
     state = candidate["state"]
     website_url = candidate["website_url"]
 
+    # Skip generic/non-campaign URLs
+    domain = urlparse(website_url).netloc.lower()
+    if domain in SKIP_DOMAINS:
+        logger.info(f"Skipping {name}: generic domain {domain}")
+        return 0
+
     # Election-year window: Jan 1 to Dec 31
     start_date = f"{year}0101"
     end_date = f"{year}1231"
@@ -410,6 +436,9 @@ def process_candidate(candidate: dict, config: dict,
                 "scrape_error": 0,
             })
 
+        except WaybackConnectionRefused:
+            session.close()
+            raise
         except Exception as e:
             logger.error(f"Error scraping {name} snapshot {wb_url}: {e}")
             progress.mark_done({
