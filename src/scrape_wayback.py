@@ -137,15 +137,17 @@ def query_cdx(url: str, start_date: str, end_date: str,
 
         except (requests.RequestException, ValueError) as e:
             logger.warning(f"CDX query failed (attempt {attempt + 1}/{max_retries}): {e}")
-            is_conn_refused = "Connection refused" in str(e)
+            err_str = str(e)
+            is_wayback_down = ("Connection refused" in err_str
+                               or "timed out" in err_str)
             if attempt < max_retries - 1:
                 wait = (attempt + 1) * 10
                 time.sleep(wait)
             else:
                 logger.error(f"CDX query failed after {max_retries} attempts for {url}")
-                if is_conn_refused:
+                if is_wayback_down:
                     raise WaybackConnectionRefused(
-                        f"CDX connection refused after {max_retries} attempts for {url}"
+                        f"CDX unreachable after {max_retries} attempts for {url}"
                     )
                 return []
 
@@ -274,8 +276,9 @@ def fetch_page(url: str, session: requests.Session,
     except requests.exceptions.InvalidSchema:
         return None
     except requests.RequestException as e:
-        if "Connection refused" in str(e):
-            raise WaybackConnectionRefused(f"Connection refused fetching {url}")
+        err_str = str(e)
+        if "Connection refused" in err_str or "timed out" in err_str:
+            raise WaybackConnectionRefused(f"Wayback unreachable fetching {url}")
         logger.debug(f"Failed to fetch {url}: {e}")
         return None
 
@@ -362,7 +365,10 @@ def process_candidate(candidate: dict, config: dict,
     state = candidate["state"]
     website_url = candidate["website_url"]
 
-    # Skip generic/non-campaign URLs
+    # Skip missing or generic/non-campaign URLs
+    if not website_url or website_url.lower() in ("n/a", "na", "none", ""):
+        logger.info(f"Skipping {name}: no URL")
+        return 0
     domain = urlparse(website_url).netloc.lower()
     if domain in SKIP_DOMAINS:
         logger.info(f"Skipping {name}: generic domain {domain}")
