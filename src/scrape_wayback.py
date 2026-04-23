@@ -495,7 +495,7 @@ def run_scrape(roster_path: str, config: dict, threads: int = 8):
 
     consecutive_conn_refused = 0
     conn_refused_threshold = 5
-    pause_seconds = 48 * 3600  # 2 days
+    pause_seconds = 6 * 3600  # 6 hours
 
     if threads == 1:
         for i, cand in enumerate(tqdm(candidates, desc="Scraping candidates")):
