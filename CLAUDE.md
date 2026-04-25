@@ -25,3 +25,17 @@ Do NOT re-collect House 2002-2016 — already in ICPSR dataset. Governor races a
 - **Never compress a year currently being scraped** — wait until the year is fully done
 - **Never run overlapping tar/compress commands** on the same files — race conditions destroyed Senate 2016+2018 data on Mar 12
 - **Compress completed years** to save disk space (droplet has 24GB total)
+
+## Agent-facing files
+
+- `KNOWLEDGE_BASE.md` — substantive reference: research question,
+  identification strategy, data coverage, current state. Read this
+  before making design decisions.
+- `MEMORY.md` — `[LEARN:*]` tagged lessons from past sessions. Loaded
+  every session. Append when corrected.
+- `quality_reports/plans/` — approved per-task plans. Draft one (from
+  `templates/plan.md`) before any non-trivial work and wait for
+  approval.
+- `quality_reports/session_logs/` — per-session work notes using
+  `templates/session-log.md`. Write after plan approval, at major
+  decisions, and at wrap-up.
