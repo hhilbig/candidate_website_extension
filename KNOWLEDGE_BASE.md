@@ -99,18 +99,18 @@ Queue script: `run_scrape_queue.sh` on droplet (untracked, lives only on
 droplet). Original order was Senate 2004-2024 → House 2018-2024 → re-scrape
 Senate 2016, 2018.
 
-**2026-04-26 decision: cut the queue short after Senate 2018.** The only
-output-changing commit between the March scrapes and now is the CJK spam
-filter (`e5d1341`, Mar 11). All April commits are reliability-only
-(auto-pause). Re-scraping Senate 2020/2022/2024 (already CJK-filtered in
-March) is wasted compute. The duplicate Senate 2016/2018 re-scrape block at
-the end of the script is also redundant once those years complete in the
-main loop. House 2018-2024 still needs to be collected separately — it has
-never been scraped.
+**2026-04-26 plan: let the main loop run to completion, kill before the
+redundant tail block.** Senate 2020/2022/2024 will be re-scraped in the
+main loop (modest churn — already CJK-filtered in March, so the only
+real gain is the auto-pause robustness). House 2018-2024 will be collected
+in the same run. The duplicate Senate 2016/2018 re-scrape block at the end
+of `run_scrape_queue.sh` is genuinely redundant and will be killed before
+it starts.
 
-Watcher: `/root/queue_killer.sh` (PID 1775926, launched 2026-04-26 20:10
-UTC) polls `logs/scrape_queue.log` every 60s and kills queue PID 1751785
-when `DONE  senate 2018` appears with a date ≥ 2026-04-26. Logs to
+Watcher: `/root/queue_killer.sh` v2 (PID 1777508, launched 2026-04-26
+23:29 UTC, replacing v1 which was killed at 23:29 UTC) polls
+`logs/scrape_queue.log` every 60s and kills queue PID 1751785 when
+`DONE  house 2024` appears with a date ≥ 2026-04-26. Logs to
 `/root/queue_killer.log`.
 
 | Year | Status | Notes |
@@ -122,15 +122,16 @@ when `DONE  senate 2018` appears with a date ≥ 2026-04-26. Logs to
 | Senate 2010 | Done (Mar 12 tar) | Pre-restart, not requeued |
 | Senate 2012 | Done (Mar 12 tar) | Pre-restart, not requeued |
 | Senate 2014 | Done in restart (Apr 26 08:32 UTC) | New tar pending |
-| Senate 2016 | In progress (Apr 26) | Stuck on Marco Rubio (424 CDX records, ~6h) |
-| Senate 2018 | Queued — will run after 2016 | Then watcher kills the queue |
-| Senate 2020 | Done (Mar 24 tar) — **NOT re-scraping** | Already CJK-filtered in March; no re-scrape value |
-| Senate 2022 | Done (Mar 24 tar) — **NOT re-scraping** | Already CJK-filtered in March; no re-scrape value |
-| Senate 2024 | Done (Mar 24 tar) — **NOT re-scraping** | Already CJK-filtered in March; no re-scrape value |
-| House 2018 | NOT YET COLLECTED | 4.8M progress file from earlier abandoned run; needs separate queue run |
-| House 2020 | NOT YET COLLECTED | ~3000+ candidates expected |
-| House 2022 | NOT YET COLLECTED | ~3000+ candidates expected |
-| House 2024 | NOT YET COLLECTED | ~3000+ candidates expected |
+| Senate 2016 | In progress (9% at 23:25 UTC) | Slow — outliers like Rubio took ~6h |
+| Senate 2018 | Queued | Will run after 2016 |
+| Senate 2020 | Queued for re-scrape | Will overwrite Mar 24 tar |
+| Senate 2022 | Queued for re-scrape | Will overwrite Mar 24 tar |
+| Senate 2024 | Queued for re-scrape | Will overwrite Mar 24 tar |
+| House 2018 | Queued | 4.8M progress file from earlier abandoned run — will resume |
+| House 2020 | Queued | ~3000+ candidates expected |
+| House 2022 | Queued | ~3000+ candidates expected |
+| House 2024 | Queued | Watcher kills queue immediately after |
+| Senate 2016/2018 re-scrape (tail block) | **NOT running** | Watcher kills queue before this starts |
 
 ### 4.3 Pace observations
 
@@ -157,14 +158,10 @@ the worst-case runtime.
 
 ## 6. Open questions / TODO
 
-- [ ] **Set up a separate House 2018-2024 scrape run** after the current
-  queue is killed post-Senate-2018. Need a new queue script with just
-  `for year in 2018 2020 2022 2024; do run_year house $year; done`.
-  House 2018 has a 4.8M progress file from earlier — will resume from
-  partial state.
-- [ ] Compress the new Senate 2004/2006/2008/2014 snapshot dirs once the
-  queue is dead (avoid the Mar-12 race-condition failure mode — never
-  compress a year that is currently being scraped).
+- [ ] Compress all new Senate (2004/2006/2008/2014/2016/2018/2020/2022/2024)
+  and House (2018/2020/2022/2024) snapshot dirs once the watcher fires
+  and the queue is dead (avoid the Mar-12 race-condition failure mode —
+  never compress a year that is currently being scraped).
 - [ ] Apply CJK spam filter as a post-process to existing Senate
   2002/2004/2006/2008/2010/2012/2014 tarballs — same effect as a
   re-scrape, in seconds rather than days.
