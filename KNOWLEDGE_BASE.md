@@ -80,8 +80,10 @@ Methodological choices that matter for downstream identification:
 
 ## 4. Current state
 
-Status as of 2026-04-25 — verify against `logs/scrape_queue.log` on the
-droplet before relying on these.
+Status as of 2026-04-25 22:40 UTC. Verify against `logs/scrape_queue.log`
+on the droplet before relying on these.
+
+### 4.1 Code components
 
 | Component | Status |
 |---|---|
@@ -90,10 +92,45 @@ droplet before relying on these.
 | `src/extract_text.py` (HTML → visible text) | Built |
 | `src/classify_pages_llm.py` (LLM page-type tagger) | Built — usage unverified |
 | `src/probe_german_feasibility.py` (sister-repo probe) | Built (commit 170eabf) |
-| Senate 2002-2014 snapshots | Tarballs on droplet from March; 2004/2006/2008/2014 currently being re-scraped (Apr 23 restart) |
-| Senate 2016-2024 snapshots | Done in March; present as tar.gz on droplet |
-| House 2018-2024 snapshots | Not in current Apr 23 restart queue. House 2018 progress file exists from earlier run. |
-| Re-scrape of Senate 2016 / 2018 | Pending — not in current queue |
+
+### 4.2 Scrape queue (Apr 23 restart)
+
+Queue script: `run_scrape_queue.sh` on droplet. Order is Senate 2004,
+2006, 2008, 2014, 2016, 2018, 2020, 2022, 2024 → House 2018, 2020, 2022,
+2024 → re-scrape Senate 2016, 2018. Senate 2002, 2010, 2012 are
+intentionally skipped in the script (already done in March).
+
+| Year | Status | Notes |
+|---|---|---|
+| Senate 2002 | Done (Mar 12 tar) | Pre-restart, not requeued |
+| Senate 2004 | Done in restart (Apr 25) | New tar pending |
+| Senate 2006 | Done in restart (Apr 25) | New tar pending |
+| Senate 2008 | Done in restart (Apr 25) | New tar pending |
+| Senate 2010 | Done (Mar 12 tar) | Pre-restart, not requeued |
+| Senate 2012 | Done (Mar 12 tar) | Pre-restart, not requeued |
+| Senate 2014 | In progress (~30% at 22:36 UTC) | Hitting `Connection refused` burst |
+| Senate 2016 | Queued | Will run in main loop AND re-scrape pass — duplicate work, see §6 |
+| Senate 2018 | Queued | Will run in main loop AND re-scrape pass — duplicate work, see §6 |
+| Senate 2020 | Done (Mar 24 tar) → queued for re-scrape | Pre-auto-pause / pre-CJK-filter code |
+| Senate 2022 | Done (Mar 24 tar) → queued for re-scrape | Pre-auto-pause / pre-CJK-filter code |
+| Senate 2024 | Done (Mar 24 tar) → queued for re-scrape | Pre-auto-pause / pre-CJK-filter code |
+| House 2018 | Queued; 4.8M progress file from Apr 23 | Will resume from partial state |
+| House 2020 | Queued | ~3000+ candidates expected |
+| House 2022 | Queued | ~3000+ candidates expected |
+| House 2024 | Queued | ~3000+ candidates expected |
+
+### 4.3 Pace observations
+
+Apr 23 restart pace is uneven:
+
+- Senate 2004: 130 cands → ~2 days (likely many auto-pause cycles)
+- Senate 2006: 215 cands → ~1.5 hours
+- Senate 2008: 284 cands → ~2 hours
+
+ETA for the full queue is hard to estimate — house years (3000+ each)
+could take a long time. The auto-pause feature (6h sleep after 5
+consecutive Wayback `Connection refused` errors) is what dominates
+the worst-case runtime.
 
 ---
 
@@ -107,12 +144,19 @@ droplet before relying on these.
 
 ## 6. Open questions / TODO
 
-- [ ] Verify why the 2026-04-23 droplet queue restart skipped Senate
-  2010/2012 and dropped House 2018-2024 entirely.
+- [ ] **Senate 2016 & 2018 are queued twice** in `run_scrape_queue.sh`
+  (once in the main 2004-2024 loop, once in the explicit re-scrape
+  block at the end). Decide whether to remove the redundant re-scrape
+  block before the queue reaches it.
+- [ ] Compress the new Senate 2004/2006/2008 snapshot dirs once the
+  queue has clearly moved past them (avoid the Mar-12 race-condition
+  failure mode).
 - [ ] Document the OpenFEC vs Wikidata hit-rate for each cycle once a
   roster build completes.
 - [ ] Decide whether to add a Playwright fallback for JS-rendered post-2018
   candidate sites.
-- [ ] Re-scrape Senate 2016 and 2018 (flagged in MEMORY notes from March).
 - [ ] Confirm `classify_pages_llm.py` is being run on completed years and
   document its model + cost profile.
+- [ ] Monitor whether the auto-pause logic (6h sleep on 5 consecutive
+  `Connection refused` errors) triggers correctly during the current
+  Senate 2014 burst at 22:36 UTC — verify after a few hours.
