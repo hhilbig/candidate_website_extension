@@ -70,3 +70,19 @@
 - KNOWLEDGE_BASE.md updated as above.
 - No `[LEARN:*]` entries added — this was a one-shot decision, not
   a generalizable lesson.
+
+---
+
+## Addendum 23:29 UTC — decision reversed
+
+User reversed the "kill after Senate 2018" decision: instead, let the
+full main loop run (Senate 2016-2024 + House 2018-2024), and only kill
+before the trailing redundant Senate 2016/2018 re-scrape block.
+
+- Killed watcher v1 (PID 1775926).
+- Launched watcher v2 (PID 1777508) with trigger `DONE  house 2024`.
+- KNOWLEDGE_BASE.md §4.2 + §4.2 status table + §6 TODO updated to
+  reflect new plan (commit `0d3a304`).
+
+The "Open threads" section above is now stale — there is no separate
+House run to set up; House will run inside the current queue.

@@ -80,7 +80,7 @@ Methodological choices that matter for downstream identification:
 
 ## 4. Current state
 
-Status as of 2026-04-25 22:40 UTC. Verify against `logs/scrape_queue.log`
+Status as of 2026-04-26 23:30 UTC. Verify against `logs/scrape_queue.log`
 on the droplet before relying on these.
 
 ### 4.1 Code components
@@ -137,14 +137,18 @@ Watcher: `/root/queue_killer.sh` v2 (PID 1777508, launched 2026-04-26
 
 Apr 23 restart pace is uneven:
 
-- Senate 2004: 130 cands → ~2 days (likely many auto-pause cycles)
+- Senate 2004: 130 cands → ~2 days (many auto-pause cycles, suspected)
 - Senate 2006: 215 cands → ~1.5 hours
 - Senate 2008: 284 cands → ~2 hours
+- Senate 2014: 493 cands → ~10h45m
+- Senate 2016: 511 cands → 9% in 14.5h, slow because of presidential-
+  aspirant outliers (Marco Rubio took ~6h on a single 424-record
+  archive)
 
-ETA for the full queue is hard to estimate — house years (3000+ each)
-could take a long time. The auto-pause feature (6h sleep after 5
-consecutive Wayback `Connection refused` errors) is what dominates
-the worst-case runtime.
+ETA for the remaining queue is hard to estimate — long-serving
+incumbents and presidential aspirants spike to multi-hour scrapes
+each, and house years (3000+ each) compound this. Worst case: ~2-3
+weeks. Best case: ~1 week.
 
 ---
 
