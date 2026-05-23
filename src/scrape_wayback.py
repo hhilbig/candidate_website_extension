@@ -68,7 +68,89 @@ SKIP_DOMAINS = {
     "opensecrets.org", "www.opensecrets.org",
     "fec.gov", "www.fec.gov",
     "votesmart.org", "justfacts.votesmart.org",
+    "gmail.com", "www.gmail.com",
+    "aol.com", "www.aol.com",
+    "yahoo.com", "www.yahoo.com",
+    "hotmail.com", "www.hotmail.com",
+    "outlook.com", "www.outlook.com",
+    "gofundme.com", "www.gofundme.com",
 }
+
+INVALID_URL_VALUES = {
+    "", "n/a", "na", "none", "nan", "null", "not available",
+}
+
+INVALID_URL_PHRASES = (
+    "no active website",
+    "no website",
+    "none established",
+    "not up",
+    "not set up",
+    "under construction",
+    "in progress",
+    "to be determined",
+)
+
+
+def _domain_is_skipped(domain: str) -> bool:
+    """Return True for generic domains that are not campaign websites."""
+    domain = domain.lower().strip(".")
+    return any(domain == d or domain.endswith(f".{d}") for d in SKIP_DOMAINS)
+
+
+def _clean_campaign_url(raw_url) -> Optional[str]:
+    """
+    Return a URL safe to query in CDX, or None for contact/bad URL artifacts.
+
+    The roster waterfall sometimes puts email addresses, free-text notes, or
+    multiple URLs into the website field. Querying those strings can resolve to
+    generic domains like aol.com and produce thousands of irrelevant captures.
+    """
+    if raw_url is None or pd.isna(raw_url):
+        return None
+
+    value = str(raw_url).strip()
+    if not value:
+        return None
+
+    candidates = [p.strip() for p in re.split(r"[;,]", value) if p.strip()]
+    for candidate in candidates or [value]:
+        cleaned = _clean_single_campaign_url(candidate)
+        if cleaned:
+            return cleaned
+    return None
+
+
+def _clean_single_campaign_url(value: str) -> Optional[str]:
+    """Validate one URL-like roster value."""
+    value = re.sub(r"^(https?)//", r"\1://", value.strip(), flags=re.IGNORECASE)
+    lower = value.lower().strip()
+
+    if lower in INVALID_URL_VALUES:
+        return None
+    if any(phrase in lower for phrase in INVALID_URL_PHRASES):
+        return None
+    if re.search(r"\s", value):
+        return None
+
+    parse_value = value
+    if "://" not in parse_value:
+        parse_value = f"https://{parse_value}"
+
+    parsed = urlparse(parse_value)
+    domain = (parsed.hostname or "").lower().strip(".")
+    if not parsed.scheme or parsed.scheme not in {"http", "https"}:
+        return None
+    if not domain or "." not in domain:
+        return None
+    if "@" in parsed.netloc:
+        return None
+    if not re.fullmatch(r"[a-z0-9.-]+", domain):
+        return None
+    if _domain_is_skipped(domain):
+        return None
+
+    return value
 
 
 def query_cdx(url: str, start_date: str, end_date: str,
@@ -363,15 +445,11 @@ def process_candidate(candidate: dict, config: dict,
     office = candidate["office"]
     year = int(candidate["year"])
     state = candidate["state"]
-    website_url = candidate["website_url"]
+    website_url = _clean_campaign_url(candidate.get("website_url"))
 
     # Skip missing or generic/non-campaign URLs
-    if not website_url or website_url.lower() in ("n/a", "na", "none", ""):
-        logger.info(f"Skipping {name}: no URL")
-        return 0
-    domain = urlparse(website_url).netloc.lower()
-    if domain in SKIP_DOMAINS:
-        logger.info(f"Skipping {name}: generic domain {domain}")
+    if not website_url:
+        logger.info(f"Skipping {name}: invalid or missing URL")
         return 0
 
     # Election-year window: Jan 1 to Dec 31
@@ -384,6 +462,20 @@ def process_candidate(candidate: dict, config: dict,
     if not snapshots:
         logger.info(f"No snapshots found for {name}")
         return 0
+
+    scrape_cfg = config.get("scraping", {})
+    bucket_months = int(scrape_cfg.get("snapshot_dedup_bucket_months", 3))
+    max_snapshots = int(scrape_cfg.get("max_snapshots_per_candidate", 200))
+    original_count = len(snapshots)
+    snapshots = _dedup_snapshots(snapshots, bucket_months=bucket_months)
+    dedup_count = len(snapshots)
+    if max_snapshots > 0:
+        snapshots = _sample_snapshots_stratified(snapshots, max_snapshots)
+    if len(snapshots) != original_count:
+        logger.info(
+            f"Snapshot selection for {name}: {original_count} CDX records -> "
+            f"{dedup_count} after dedup -> {len(snapshots)} selected"
+        )
 
     session = _make_session(wb_config)
 

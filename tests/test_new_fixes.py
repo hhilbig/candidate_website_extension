@@ -158,6 +158,74 @@ def test_snapshot_cap():
     print("  PASS: Snapshot cap works correctly")
 
 
+# ── Issue B2: Bad URL filtering ──
+
+def test_bad_url_filtering():
+    """Email/free-text roster artifacts should not be queried against CDX."""
+    header("Issue B2: Bad URL filtering")
+
+    from src.scrape_wayback import _clean_campaign_url, process_candidate
+    from src.utils import RateLimiter
+
+    bad_urls = [
+        "https://sitkasilk@aol.com",
+        "https://www.hughesforcongress25@gmail.com",
+        "https://n/a (none established yet)",
+        "https://www.david mcsweeney.com",
+        "https://gallegly@gallegly_com",
+        "https://facebook.com/angel.sides3; gofundme.com/voteangel",
+    ]
+    for url in bad_urls:
+        assert _clean_campaign_url(url) is None, f"FAIL: bad URL accepted: {url}"
+        print(f"  Rejected bad URL: {url}")
+
+    assert _clean_campaign_url(
+        "https://young4ky.com; young4ky.org"
+    ) == "https://young4ky.com"
+    assert _clean_campaign_url(
+        "http//www.bryancaforio.com/"
+    ) == "http://www.bryancaforio.com/"
+    print("  Cleaned valid multi/fixable URLs")
+
+    with tempfile.TemporaryDirectory() as tmpdir:
+        tracker = ProgressTracker(os.path.join(tmpdir, "progress.csv"))
+        config = {
+            "wayback": {
+                "max_retries": 1,
+                "timeout_connect": 5,
+                "timeout_read": 10,
+                "user_agent": "test",
+            },
+            "scraping": {
+                "max_snapshots_per_candidate": 200,
+                "snapshot_dedup_bucket_months": 3,
+                "text_separator": "#+#",
+                "exclude_domains": [],
+            },
+            "output": {
+                "snapshots_dir": os.path.join(tmpdir, "snapshots"),
+                "progress_dir": tmpdir,
+            },
+        }
+        candidate = {
+            "candidate": "Lynette Hinz",
+            "state": "AK",
+            "district": "",
+            "office": "house",
+            "year": 2020,
+            "party": "IND",
+            "website_url": "https://sitkasilk@aol.com",
+        }
+
+        with patch("src.scrape_wayback.query_cdx") as mock_cdx:
+            n_scraped = process_candidate(candidate, config, tracker, RateLimiter(min_delay=0.0))
+            assert n_scraped == 0, f"FAIL: expected no scrape, got {n_scraped}"
+            assert mock_cdx.call_count == 0, "FAIL: bad URL was queried against CDX"
+            print("  process_candidate skipped bad URL before CDX")
+
+    print("  PASS: Bad URL filtering works correctly")
+
+
 # ── Issue C: Frame recursion depth limit ──
 
 def test_frame_depth_limit():
@@ -351,6 +419,7 @@ if __name__ == "__main__":
     tests = [
         test_progress_tracker_thread_safety,
         test_snapshot_cap,
+        test_bad_url_filtering,
         test_frame_depth_limit,
         test_empty_content_filtering,
         test_short_segment_dedup,

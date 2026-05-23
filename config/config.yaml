@@ -24,6 +24,8 @@ wayback:
 # Scraping behavior
 scraping:
   max_subpage_depth: 1          # How many levels of internal links to follow
+  max_snapshots_per_candidate: 200
+  snapshot_dedup_bucket_months: 3
   threads: 8                    # Parallel threads for scraping
   text_separator: "#+#"         # Separator between text chunks
   skip_extensions: [".pdf", ".jpg", ".png", ".gif", ".mp3", ".mp4", ".zip"]
