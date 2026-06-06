@@ -35,3 +35,7 @@ Thumbs.db
 # Outputs
 *.csv
 !config/*.yaml
+
+# Agent instructions (keep local, contain operational/infra details)
+CLAUDE.md
+AGENTS.md
