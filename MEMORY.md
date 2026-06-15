@@ -41,3 +41,24 @@ Untagged `[LEARN]` entries are legacy.
   point, write an external watcher script that polls the log and kills
   the queue PID when a target line appears. The 30-second `sleep`
   between iterations gives a clean kill window.
+- `[LEARN:scraping] 2026-06-15` — The pre-`59e752c` scraper choked on
+  roster "URLs" that are actually email addresses or free text
+  (`sitkasilk@aol.com`, `...@gmail.com`, `n/a`): CDX resolves them to
+  generic domains and returns the 10000-record limit, producing huge
+  irrelevant captures and stalls. Fix = `_clean_campaign_url` +
+  snapshot dedup/caps (commit `59e752c`). Always run this version for
+  new scrapes; the droplet was upgraded to it 2026-06-15.
+- `[LEARN:bash-ops] 2026-06-15` — A queue script with top-level `set -e`
+  dies *before* its FAIL/Slack branch when the scraper exits nonzero, so
+  failures go silent. Wrap the scraper call in `set +e` / `set -e`. The
+  Apr-30 House queue stalled silently mid-2020 (~May 19) for this class
+  of reason and nobody noticed for ~6 weeks. Pair the queue with a
+  death/stall watcher (`watch_house_queue.sh`) that Slacks when the
+  process vanishes with no "queue complete" line.
+- `[LEARN:infra] 2026-06-15` — macOS ships rsync 2.6.9 (no `--info=*`).
+  For mac↔droplet snapshot transfers use a tar-pipe
+  (`ssh A 'cd r && tar czf - path' | ssh B 'cd r && tar xzf -'`) or
+  rsync with `--stats`. Droplet has no Tailscale, so mac2→droplet must
+  route through the local Mac. Verify a transfer by comparing file count
+  AND total bytes on both ends (du differs by FS block rounding; byte
+  sum does not).

@@ -80,75 +80,64 @@ Methodological choices that matter for downstream identification:
 
 ## 4. Current state
 
-Status as of 2026-04-26 23:30 UTC. Verify against `logs/scrape_queue.log`
-on the droplet before relying on these.
+Status as of 2026-06-15 (verified live against droplet + mac2). Verify
+against `logs/scrape_queue.log` on the droplet before relying on these.
 
 ### 4.1 Code components
 
 | Component | Status |
 |---|---|
 | `src/build_candidate_roster.py` (FEC + OpenFEC + Wikidata waterfall) | Built |
-| `src/scrape_wayback.py` (CDX + snapshot fetch + auto-pause) | Built, in production |
+| `src/scrape_wayback.py` (CDX + snapshot fetch + auto-pause + URL cleaning + snapshot caps) | Built, in production; droplet upgraded to canonical `main` 2026-06-15 |
 | `src/extract_text.py` (HTML → visible text) | Built |
 | `src/classify_pages_llm.py` (LLM page-type tagger) | Built — usage unverified |
-| `src/probe_german_feasibility.py` (sister-repo probe) | Built (commit 170eabf) |
+| `src/probe_german_feasibility.py` (sister-repo probe) | Built |
 
-### 4.2 Scrape queue (Apr 23 restart)
+The URL-cleaning + snapshot-cap logic (commit `59e752c`, `_clean_campaign_url`
+/ `_dedup_snapshots` / `_sample_snapshots_stratified`, config keys
+`max_snapshots_per_candidate: 200` + `snapshot_dedup_bucket_months: 3`) was
+authored on mac2 and is now on `main` and on the droplet. All 6 tests in
+`tests/test_new_fixes.py` pass on the droplet.
 
-Queue script: `run_scrape_queue.sh` on droplet (untracked, lives only on
-droplet). Original order was Senate 2004-2024 → House 2018-2024 → re-scrape
-Senate 2016, 2018.
+### 4.2 House scrape — current (2026-06-15)
 
-**2026-04-26 plan: let the main loop run to completion, kill before the
-redundant tail block.** Senate 2020/2022/2024 will be re-scraped in the
-main loop (modest churn — already CJK-filtered in March, so the only
-real gain is the auto-pause robustness). House 2018-2024 will be collected
-in the same run. The duplicate Senate 2016/2018 re-scrape block at the end
-of `run_scrape_queue.sh` is genuinely redundant and will be killed before
-it starts.
+The Apr-30 House-first pivot stalled silently mid-2020 on the droplet
+(~May 19) and was never restarted; meanwhile House 2020 was finished
+separately on mac2 (May 24). Reconciled 2026-06-15.
 
-Watcher: `/root/queue_killer.sh` v2 (PID 1777508, launched 2026-04-26
-23:29 UTC, replacing v1 which was killed at 23:29 UTC) polls
-`logs/scrape_queue.log` every 60s and kills queue PID 1751785 when
-`DONE  house 2024` appears with a date ≥ 2026-04-26. Logs to
-`/root/queue_killer.log`.
+Active queue script: **`run_house_2022_2024.sh`** on droplet (untracked).
+Scrapes only the two remaining cycles (2018/2020 already complete). Launched
+2026-06-15 20:35 CEST. Watcher: **`watch_house_queue.sh`** (droplet) Slacks
+on silent death (process gone with no "queue complete" line) or >1h stall.
 
-| Year | Status | Notes |
+| Cycle | Status | Location |
 |---|---|---|
-| Senate 2002 | Done (Mar 12 tar) | Pre-restart, not requeued |
-| Senate 2004 | Done in restart (Apr 25) | New tar pending |
-| Senate 2006 | Done in restart (Apr 25) | New tar pending |
-| Senate 2008 | Done in restart (Apr 25) | New tar pending |
-| Senate 2010 | Done (Mar 12 tar) | Pre-restart, not requeued |
-| Senate 2012 | Done (Mar 12 tar) | Pre-restart, not requeued |
-| Senate 2014 | Done in restart (Apr 26 08:32 UTC) | New tar pending |
-| Senate 2016 | In progress (9% at 23:25 UTC) | Slow — outliers like Rubio took ~6h |
-| Senate 2018 | Queued | Will run after 2016 |
-| Senate 2020 | Queued for re-scrape | Will overwrite Mar 24 tar |
-| Senate 2022 | Queued for re-scrape | Will overwrite Mar 24 tar |
-| Senate 2024 | Queued for re-scrape | Will overwrite Mar 24 tar |
-| House 2018 | Queued | 4.8M progress file from earlier abandoned run — will resume |
-| House 2020 | Queued | ~3000+ candidates expected |
-| House 2022 | Queued | ~3000+ candidates expected |
-| House 2024 | Queued | Watcher kills queue immediately after |
-| Senate 2016/2018 re-scrape (tail block) | **NOT running** | Watcher kills queue before this starts |
+| House 2018 | ✅ Complete (1765 files) | droplet `data/snapshots/house/2018.tar.gz` (572M) |
+| House 2020 | ✅ Complete (1880 files, 2002/3155 w/ snapshots) | droplet `2020.tar.gz` (197M) + uncompressed on mac2 |
+| House 2022 | ⏳ In progress (3569 cands) | droplet, scraping now with fixed scraper |
+| House 2024 | ⏸ Queued (3463 cands) | droplet, runs after 2022 |
 
-### 4.3 Pace observations
+House 2020 was consolidated mac2 → droplet (tar-pipe; verified 1880 files /
+1,288,894,636 bytes identical). The droplet's old inferior 2020 partial
+(old scraper, captured email-URL junk) was deleted after verification.
 
-Apr 23 restart pace is uneven:
+### 4.3 Senate — deferred, NOT touched 2026-06-15
 
-- Senate 2004: 130 cands → ~2 days (many auto-pause cycles, suspected)
-- Senate 2006: 215 cands → ~1.5 hours
-- Senate 2008: 284 cands → ~2 hours
-- Senate 2014: 493 cands → ~10h45m
-- Senate 2016: 511 cands → 9% in 14.5h, slow because of presidential-
-  aspirant outliers (Marco Rubio took ~6h on a single 424-record
-  archive)
+Senate is out of scope for the House push. Droplet still holds March
+tarballs (2002/2010/2012/2020/2022/2024) plus Apr-rescrape pairs for
+2004/2006/2008/2014 where uncompressed dir vs `.tar.gz` provenance is
+ambiguous (tarballs look like complete March copies; some dirs are tiny
+Apr fragments). **Do not delete either copy without per-year disentangling.**
+Senate 2016 = partial rescrape (~83/511); Senate 2018 = still missing.
 
-ETA for the remaining queue is hard to estimate — long-serving
-incumbents and presidential aspirants spike to multi-hour scrapes
-each, and house years (3000+ each) compound this. Worst case: ~2-3
-weeks. Best case: ~1 week.
+### 4.4 Pace observations
+
+- House 2020 (mac2): ~3155 cands over ~4 days at ~90-260 s/it; tail dominated
+  by big-CDX outliers.
+- [LEARN:scraping] Long-serving incumbents / presidential aspirants spike to
+  multi-hour single-candidate scrapes (424+ CDX records). Account for ~5-10
+  such outliers per cycle; tqdm ETAs after one outlier are useless.
+- Expect House 2022 + 2024 to take roughly 1-2 weeks combined, outlier-dependent.
 
 ---
 
@@ -162,15 +151,22 @@ weeks. Best case: ~1 week.
 
 ## 6. Open questions / TODO
 
-- [ ] Compress all new Senate (2004/2006/2008/2014/2016/2018/2020/2022/2024)
-  and House (2018/2020/2022/2024) snapshot dirs once the watcher fires
-  and the queue is dead (avoid the Mar-12 race-condition failure mode —
-  never compress a year that is currently being scraped).
-- [ ] Apply CJK spam filter as a post-process to existing Senate
-  2002/2004/2006/2008/2010/2012/2014 tarballs — same effect as a
-  re-scrape, in seconds rather than days.
-- [ ] Document the OpenFEC vs Wikidata hit-rate for each cycle once a
-  roster build completes.
+- [ ] Monitor House 2022 → 2024 scrape (droplet `run_house_2022_2024.sh`,
+  watcher `watch_house_queue.sh`). Compress each year on completion
+  (verify tarball file-count before deleting the dir; never compress a
+  year currently scraping — Mar-12 race rule).
+- [ ] Off-machine backup of completed House data: 2018 currently exists
+  ONLY on the droplet (single copy). 2020 is on droplet + mac2. Consider
+  pushing tarballs off-box.
+- [ ] Senate disentangling (deferred): per-year decide tarball vs
+  uncompressed-dir provenance for 2004/2006/2008/2014; resume Senate 2016
+  (~83/511); clean-start Senate 2018 (missing). Apply CJK spam filter as a
+  post-process to old Senate March tarballs (2002–2014).
+- [ ] mac2 git hygiene: mac2's `main` is on rewritten pre-scrub history
+  and never re-fetched; code is safe (identical to `main`), but `git fetch
+  && git reset --hard origin/main` would clean it up (untracked run scripts
+  are preserved). Do after the scrape.
+- [ ] Document the OpenFEC vs Wikidata hit-rate for each cycle.
 - [ ] Decide whether to add a Playwright fallback for JS-rendered post-2018
   candidate sites.
 - [ ] Confirm `classify_pages_llm.py` is being run on completed years and
