@@ -139,6 +139,39 @@ Senate 2016 = partial rescrape (~83/511); Senate 2018 = still missing.
   such outliers per cycle; tqdm ETAs after one outlier are useless.
 - Expect House 2022 + 2024 to take roughly 1-2 weeks combined, outlier-dependent.
 
+### 4.5 Data quality (House 2022, observed mid-run 2026-06-17 at 2057/3569)
+
+Verdict: **usable, good quality.** Metrics from the in-progress 2022 log +
+output:
+
+- **Capture rate ≈ 63%** of candidates yield ≥1 snapshot (1285 captured of
+  ~2057 processed). Matches House 2020 (2002/3155 = 63%) almost exactly. The
+  ~29% "no snapshots found" + ~3% invalid-URL are normal (challengers / minor
+  candidates with no archived site, or bad roster URLs).
+- **Temporal spread:** snapshots/candidate cluster at 3–4 across the election
+  year (the 3-month dedup buckets working as designed). Cap of 200 never binds
+  (max observed 8).
+- **Page depth:** 4187 selected snapshots → ~22,600 page rows (~5.4 pages per
+  snapshot = homepage + depth-1 subpages). So each captured candidate is a
+  real site crawl, not a single landing page.
+- **Text richness:** median 1888 chars/page, mean 3658, max 79K. Only ~1% of
+  rows <50 chars (nav-only/junk). High signal-to-noise.
+- **Corruption negligible:** 4 snapshot-level errors (`scrape_error=1`) of
+  4183 completed.
+- **Output schema** (per-candidate CSV `data/snapshots/house/<year>/<name>
+  (<state>).csv`): candidate,state,district,office,year,party,stage,date,
+  urlkey,snap_url,page_type,data_source,n_tags,n_clean_tags,text_snap_content,
+  n_char,n_words. One row per page.
+
+**Residual loss (recoverable): ~30 candidates (~1.5%) per cycle** whose CDX
+query failed after 3 retries due to Wayback "connection refused" (Wayback is
+much flakier now — 2430 refusals in a 37h run at threads=1, vs ~0 in March;
+the Retry(3)+6h-auto-pause logic absorbs nearly all). These candidates are
+left **unmarked** in the progress file (verified), so a resume re-attempts
+them. Recover via a targeted mini-roster of the failed URLs (grep
+`CDX query failed after 3 attempts` from the year log) — NOT a full-roster
+resume (which re-queries all 3569 and re-incurs refusals). See §6 TODO.
+
 ---
 
 ## 5. Literature anchors (in `literature/`)
@@ -155,6 +188,12 @@ Senate 2016 = partial rescrape (~83/511); Senate 2018 = still missing.
   watcher `watch_house_queue.sh`). Compress each year on completion
   (verify tarball file-count before deleting the dir; never compress a
   year currently scraping — Mar-12 race rule).
+- [ ] **Recovery sweep after the queue finishes** (see §4.5): for each
+  cycle, grep `CDX query failed after 3 attempts` from `logs/house_<year>.log`,
+  build a mini-roster of just those candidate URLs, and re-run the scraper on
+  it (ProgressTracker skips done snapshots). Recovers the ~1.5% of candidates
+  lost to transient Wayback connection-refused. Do this BEFORE compressing
+  each year.
 - [ ] Off-machine backup of completed House data: 2018 currently exists
   ONLY on the droplet (single copy). 2020 is on droplet + mac2. Consider
   pushing tarballs off-box.

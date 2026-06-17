@@ -62,3 +62,21 @@ Untagged `[LEARN]` entries are legacy.
   route through the local Mac. Verify a transfer by comparing file count
   AND total bytes on both ends (du differs by FS block rounding; byte
   sum does not).
+- `[LEARN:scraping] 2026-06-17` — Wayback "Connection refused" is far worse
+  now than the March threads=1≈0 note: a 37h House-2022 run logged ~2430
+  refusals. Retry(3) + 6h-auto-pause (fires after 5 consecutive refused
+  candidates) absorbs nearly all; net loss ≈30 candidates/cycle (~1.5%) whose
+  CDX query failed after 3 attempts. CRITICAL: a failed CDX raises
+  `WaybackConnectionRefused`, which `run_scrape` catches and skips WITHOUT
+  calling `mark_done`, so the candidate stays unmarked → a resume re-attempts
+  it. Recover via a targeted mini-roster of the `CDX query failed after 3
+  attempts` URLs (grep the year log), NOT a full-roster resume (re-queries all
+  ~3569 and re-incurs refusals). Per-snapshot download errors instead get
+  marked `scrape_error=1` (only 4 in 2022) and are NOT auto-retried.
+- `[LEARN:data] 2026-06-17` — Healthy House capture profile (use as a sanity
+  baseline): ~63% of candidates yield ≥1 snapshot (rest have no archived
+  site); 3–4 snapshots/candidate across the election year (3-month dedup
+  buckets); each snapshot → ~5 page rows (homepage + depth-1 subpages);
+  median ~1900 chars/page; <1% of rows <50 chars. If capture rate drops well
+  below ~60% or pages/snapshot collapses to ~1, suspect a scraper/URL
+  regression, not just "no data".
