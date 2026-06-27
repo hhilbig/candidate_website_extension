@@ -80,3 +80,20 @@ Untagged `[LEARN]` entries are legacy.
   median ~1900 chars/page; <1% of rows <50 chars. If capture rate drops well
   below ~60% or pages/snapshot collapses to ~1, suspect a scraper/URL
   regression, not just "no data".
+- `[LEARN:scraping] 2026-06-27` — The mini-roster recovery trick (grep
+  `CDX query failed after 3 attempts` → clean-match → re-scrape) ONLY works
+  when the ORIGINAL run used the URL-cleaning scraper (`_clean_campaign_url`,
+  on the droplet since Jun 15). Pre-cleaning runs (e.g. Senate 2020/22/24,
+  scraped mid-March) log RAW failed URLs — junk like `https://none`,
+  facebook links, trailing `;`/`,`, missing-colon `https//...` — which the
+  cleaner can't match, so `build_recovery_roster.py` fails loud on ~14-20
+  unmatched (by design). For those years use a FULL-roster re-run
+  (`--office senate --year YYYY` after extracting the tarball into place):
+  the current scraper cleans the junk, recovers the legit trailing-punct
+  URLs, and the 6h-pause handles refusals. Near-empty years (most candidates
+  refused) make a full re-run ≈ the needed work anyway.
+- `[LEARN:data] 2026-06-27` — CJK spam in the old Senate tarballs is
+  empirically negligible (2008: 0.0%, 2014: 0.4%, 2022/2024: 0.0% of rows),
+  so the long-planned CJK post-process is a deferred low-priority hygiene
+  pass, not a blocker. `is_cjk_spam` (src/extract_text.py, threshold 0.3) is
+  already applied per-page in any NEW scrape.

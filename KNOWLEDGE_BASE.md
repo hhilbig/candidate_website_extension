@@ -105,30 +105,61 @@ The Apr-30 House-first pivot stalled silently mid-2020 on the droplet
 (~May 19) and was never restarted; meanwhile House 2020 was finished
 separately on mac2 (May 24). Reconciled 2026-06-15.
 
-Active queue script: **`run_house_2022_2024.sh`** on droplet (untracked).
-Scrapes only the two remaining cycles (2018/2020 already complete). Launched
-2026-06-15 20:35 CEST. Watcher: **`watch_house_queue.sh`** (droplet) Slacks
-on silent death (process gone with no "queue complete" line) or >1h stall.
+**House 2018–2024 is COMPLETE** (recovered, compressed, audited 2026-06-26).
+All four years are `.tar.gz` on the droplet under `data/snapshots/house/`.
 
-| Cycle | Status | Location |
-|---|---|---|
-| House 2018 | ✅ Complete (1765 files) | droplet `data/snapshots/house/2018.tar.gz` (572M) |
-| House 2020 | ✅ Complete (1880 files, 2002/3155 w/ snapshots) | droplet `2020.tar.gz` (197M) + uncompressed on mac2 |
-| House 2022 | ⏳ In progress (3569 cands) | droplet, scraping now with fixed scraper |
-| House 2024 | ⏸ Queued (3463 cands) | droplet, runs after 2022 |
+| Cycle | Captured / roster | Tarball | Off-box copy |
+|---|---|---|---|
+| House 2018 | — | 599M | mac2 `~/backups/.../house/2018.tar.gz` (sha256-verified) |
+| House 2020 | 1880 files | 206M | mac2 (backup added 2026-06-27) |
+| House 2022 | 2253 / 3569 (63.1%) | 43M | — |
+| House 2024 | 1777 / 3463 (51.3%) | 49M | — |
 
-House 2020 was consolidated mac2 → droplet (tar-pipe; verified 1880 files /
-1,288,894,636 bytes identical). The droplet's old inferior 2020 partial
-(old scraper, captured email-URL junk) was deleted after verification.
+A 2026-06-26 recovery sweep recovered 292 snapshots from 132 CDX-failed
+candidates (see §4.5). House 2024's lower capture is Wayback archival
+recency, not a defect. Off-box backups: only 2018 + 2020 are on mac2 so far.
 
-### 4.3 Senate — deferred, NOT touched 2026-06-15
+### 4.3 Senate — IN PROGRESS (audited live 2026-06-27)
 
-Senate is out of scope for the House push. Droplet still holds March
-tarballs (2002/2010/2012/2020/2022/2024) plus Apr-rescrape pairs for
-2004/2006/2008/2014 where uncompressed dir vs `.tar.gz` provenance is
-ambiguous (tarballs look like complete March copies; some dirs are tiny
-Apr fragments). **Do not delete either copy without per-year disentangling.**
-Senate 2016 = partial rescrape (~83/511); Senate 2018 = still missing.
+Full per-year state and the completion plan are in the approved plan
+`quality_reports/plans/` + this session's log. Reconciled inventory:
+
+| Year | Roster | Captured | Other copy | Action |
+|---|---|---|---|---|
+| 2002 | 72 | 31 (tar) | — | complete — leave |
+| 2004 | 130 | 79 (tar) | +2-file Apr dir | merge dir→tar |
+| 2006 | 215 | 131 (tar) | +1-file Apr dir | merge |
+| 2008 | 284 | 195 (tar) | +5-file Apr dir | merge |
+| 2010 | 409 | 223 (tar) | — | complete — leave |
+| 2012 | 430 | 257 (tar) | — | complete — leave |
+| 2014 | 493 | 290 (tar) | +33-file Apr dir | merge |
+| 2016 | 511 | 73 (dir) | progress exists | resume scrape |
+| 2018 | 561 | 0 | roster exists | fresh scrape |
+| 2020 | 572 | 64 (tar) | — | **full re-run** |
+| 2022 | 693 | 132 (tar) | — | **full re-run** |
+| 2024 | 707 | 37 (tar) | — | **full re-run** |
+
+**Correction (overturns the prior "2020/22/24 complete, just need CJK"
+note):** the logs show those three years ran their full rosters in
+mid-March but 488/491/654 candidates hit Wayback "CDX connection refused"
+(old scraper, no auto-pause), so only 64/132/37 were captured. They are
+near-empty and need re-scraping, NOT a CJK pass.
+
+- [LEARN:scraping] The Senate 2020/22/24 March runs predate
+  `_clean_campaign_url`, so the failed-URL log lines are RAW values
+  (`https://none`, facebook URLs, trailing `;`/`,`, missing-colon
+  `https//...`). `scripts/build_recovery_roster.py` (log-grep + clean-match)
+  therefore CANNOT cleanly match them (it correctly fails loud on ~14-20
+  unmatched). Use a **full-roster re-run** (`--office senate --year YYYY`
+  after extracting the tarball) instead: the current scraper cleans the junk
+  URLs, recovers the legit trailing-punctuation ones, and the 6h-pause
+  absorbs refusals. The mini-roster builder is the right tool only when the
+  original run already used the URL-cleaning scraper (e.g. House 2022/2024).
+- [LEARN:data] CJK spam in the old Senate tarballs is empirically
+  negligible (2008: 0.0%, 2014: 0.4%, 2022/2024: 0.0%) — the CJK
+  post-process is a deferred low-priority hygiene pass, not a blocker.
+- **Do not delete either copy** (tarball or April dir) for 2004/06/08/14
+  until the merge is verified (Mar-12 rule).
 
 ### 4.4 Pace observations
 
@@ -139,38 +170,47 @@ Senate 2016 = partial rescrape (~83/511); Senate 2018 = still missing.
   such outliers per cycle; tqdm ETAs after one outlier are useless.
 - Expect House 2022 + 2024 to take roughly 1-2 weeks combined, outlier-dependent.
 
-### 4.5 Data quality (House 2022, observed mid-run 2026-06-17 at 2057/3569)
+### 4.5 Data quality (House 2022 + 2024, FINAL post-recovery 2026-06-26)
 
-Verdict: **usable, good quality.** Metrics from the in-progress 2022 log +
-output:
+Verdict: **usable, good quality, both years.** Final metrics after the
+recovery sweep (`quality_check.py`):
 
-- **Capture rate ≈ 63%** of candidates yield ≥1 snapshot (1285 captured of
-  ~2057 processed). Matches House 2020 (2002/3155 = 63%) almost exactly. The
-  ~29% "no snapshots found" + ~3% invalid-URL are normal (challengers / minor
-  candidates with no archived site, or bad roster URLs).
-- **Temporal spread:** snapshots/candidate cluster at 3–4 across the election
-  year (the 3-month dedup buckets working as designed). Cap of 200 never binds
-  (max observed 8).
-- **Page depth:** 4187 selected snapshots → ~22,600 page rows (~5.4 pages per
-  snapshot = homepage + depth-1 subpages). So each captured candidate is a
-  real site crawl, not a single landing page.
-- **Text richness:** median 1888 chars/page, mean 3658, max 79K. Only ~1% of
-  rows <50 chars (nav-only/junk). High signal-to-noise.
-- **Corruption negligible:** 4 snapshot-level errors (`scrape_error=1`) of
-  4183 completed.
+| | 2022 | 2024 |
+|---|---|---|
+| roster | 3569 | 3463 |
+| valid URL (cleanable) | 3467 (97.1%) | 3358 (97.0%) |
+| captured (≥1 snap) | 2253 (**63.1%**) | 1777 (**51.3%**) |
+| capture / valid-URL | 65.0% | 52.9% |
+| page rows | 46,158 | 39,152 |
+| snaps/cand (median, mean) | 4, 3.20 | 4, 3.32 |
+| pages/snap (median, mean) | 4, 6.42 | 4, 6.64 |
+| n_char (median) | 2371 | 2748 |
+| <50-char rows | 0.3% | 0.4% |
+| scrape errors | 0 | 0 |
+
+- **Temporal spread / page depth:** snapshots/candidate cluster at ~4; each
+  snapshot is ~6 page rows (homepage + depth-1 subpages) — real site crawls,
+  not single landing pages. The 200-snapshot cap never binds (max 10).
+- **Text richness high, corruption nil** in both years (0 `scrape_error`).
+- **2024 capture (51%) runs ~12 pts below 2022/2020 (63%) — this is Wayback
+  archival recency, NOT a defect.** Roster URL quality is identical (~97%
+  valid both years); among valid-URL candidates the gap persists (52.9% vs
+  65.0%) and the "no snapshots found" bucket is larger for 2024 (1183 vs
+  972). Web.archive.org has simply crawled/indexed less of the recent 2024
+  cycle. A re-pass 6–12 mo out could recover more as Wayback backfills.
 - **Output schema** (per-candidate CSV `data/snapshots/house/<year>/<name>
   (<state>).csv`): candidate,state,district,office,year,party,stage,date,
   urlkey,snap_url,page_type,data_source,n_tags,n_clean_tags,text_snap_content,
   n_char,n_words. One row per page.
 
-**Residual loss (recoverable): ~30 candidates (~1.5%) per cycle** whose CDX
-query failed after 3 retries due to Wayback "connection refused" (Wayback is
-much flakier now — 2430 refusals in a 37h run at threads=1, vs ~0 in March;
-the Retry(3)+6h-auto-pause logic absorbs nearly all). These candidates are
-left **unmarked** in the progress file (verified), so a resume re-attempts
-them. Recover via a targeted mini-roster of the failed URLs (grep
-`CDX query failed after 3 attempts` from the year log) — NOT a full-roster
-resume (which re-queries all 3569 and re-incurs refusals). See §6 TODO.
+**Recovery sweep (DONE 2026-06-26):** the residual CDX-failed candidates
+(48 in 2022, 84 in 2024 — Wayback "connection refused" after 3 retries) were
+recovered via targeted mini-rosters built from `CDX query failed after 3
+attempts for <url>` log lines, matched to roster rows via `_clean_campaign_url`,
+re-run with a fresh progress file (`run_recovery_sweep.sh`). Recovered **292
+snapshots** (2022: 105 from 50 cands; 2024: 187 from 86). Confirmed transient:
+the first retried candidate returned 7 records immediately. NOT a full-roster
+resume (which re-queries all ~3.5k and re-incurs refusals).
 
 ---
 
@@ -184,19 +224,16 @@ resume (which re-queries all 3569 and re-incurs refusals). See §6 TODO.
 
 ## 6. Open questions / TODO
 
-- [ ] Monitor House 2022 → 2024 scrape (droplet `run_house_2022_2024.sh`,
-  watcher `watch_house_queue.sh`). Compress each year on completion
-  (verify tarball file-count before deleting the dir; never compress a
-  year currently scraping — Mar-12 race rule).
-- [ ] **Recovery sweep after the queue finishes** (see §4.5): for each
-  cycle, grep `CDX query failed after 3 attempts` from `logs/house_<year>.log`,
-  build a mini-roster of just those candidate URLs, and re-run the scraper on
-  it (ProgressTracker skips done snapshots). Recovers the ~1.5% of candidates
-  lost to transient Wayback connection-refused. Do this BEFORE compressing
-  each year.
-- [ ] Off-machine backup of completed House data: 2018 currently exists
-  ONLY on the droplet (single copy). 2020 is on droplet + mac2. Consider
-  pushing tarballs off-box.
+- [x] ~~Monitor House 2022 → 2024 scrape; compress each year on completion.~~
+  DONE. Queue finished 2026-06-20 (2022 06-18, 2024 06-20). Both compressed
+  2026-06-26 to `data/snapshots/house/{2022,2024}.tar.gz` (43 M / 49 M),
+  file-counts verified (2253 / 1777) before dir deletion.
+- [x] ~~Recovery sweep after the queue finishes.~~ DONE 2026-06-26 — 292
+  snapshots recovered (see §4.5). **House 2018–2024 collection now COMPLETE.**
+- [x] ~~Off-machine backup of 2018.~~ DONE 2026-06-26 — `2018.tar.gz`
+  (599 MB) streamed to mac2 `~/backups/candidate_website_extension/house/`,
+  sha256-verified. NOTE: **2020.tar.gz is now droplet-only** (the May mac2
+  copy was cleaned up) — back it up to mac2 too (cheap, same path).
 - [ ] Senate disentangling (deferred): per-year decide tarball vs
   uncompressed-dir provenance for 2004/2006/2008/2014; resume Senate 2016
   (~83/511); clean-start Senate 2018 (missing). Apply CJK spam filter as a
