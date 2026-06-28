@@ -119,31 +119,35 @@ A 2026-06-26 recovery sweep recovered 292 snapshots from 132 CDX-failed
 candidates (see §4.5). House 2024's lower capture is Wayback archival
 recency, not a defect. Off-box backups: only 2018 + 2020 are on mac2 so far.
 
-### 4.3 Senate — IN PROGRESS (audited live 2026-06-27)
+### 4.3 Senate — COMPLETE (2002–2024, finished 2026-06-28)
 
-Full per-year state and the completion plan are in the approved plan
-`quality_reports/plans/` + this session's log. Reconciled inventory:
+All 12 even years are `.tar.gz` on the droplet under `data/snapshots/senate/`
+(also backed up to mac2 `~/backups/.../senate/`). Final per-year captures
+(captured / roster; "captured" = candidates with ≥1 snapshot):
 
-| Year | Roster | Captured | Other copy | Action |
+| Year | Roster | Captured | % valid-URL | How finished |
 |---|---|---|---|---|
-| 2002 | 72 | 31 (tar) | — | complete — leave |
-| 2004 | 130 | 79 (tar) | +2-file Apr dir | merge dir→tar |
-| 2006 | 215 | 131 (tar) | +1-file Apr dir | merge |
-| 2008 | 284 | 195 (tar) | +5-file Apr dir | merge |
-| 2010 | 409 | 223 (tar) | — | complete — leave |
-| 2012 | 430 | 257 (tar) | — | complete — leave |
-| 2014 | 493 | 290 (tar) | +33-file Apr dir | merge |
-| 2016 | 511 | 73 (dir) | progress exists | resume scrape |
-| 2018 | 561 | 0 | roster exists | fresh scrape |
-| 2020 | 572 | 64 (tar) | — | **full re-run** |
-| 2022 | 693 | 132 (tar) | — | **full re-run** |
-| 2024 | 707 | 37 (tar) | — | **full re-run** |
+| 2002 | 72 | 31 | — | pre-existing (complete) |
+| 2004 | 130 | 81 | — | merged April dir (+2) |
+| 2006 | 215 | 132 | — | merged April dir (+1) |
+| 2008 | 284 | 200 | — | merged April dir (+5) |
+| 2010 | 409 | 223 | — | pre-existing (complete) |
+| 2012 | 430 | 257 | — | pre-existing (complete) |
+| 2014 | 493 | 323 | — | merged April dir (+33) |
+| 2016 | 511 | 297 | 60.1% | resume scrape (was 73) |
+| 2018 | 561 | 265 | 49.0% | fresh scrape (was 0) |
+| 2020 | 572 | 321 | 57.5% | full re-run (was 64) |
+| 2022 | 693 | 435 | 64.4% | full re-run (was 132) |
+| 2024 | 707 | 361 | 52.5% | full re-run (was 37) |
 
-**Correction (overturns the prior "2020/22/24 complete, just need CJK"
-note):** the logs show those three years ran their full rosters in
-mid-March but 488/491/654 candidates hit Wayback "CDX connection refused"
-(old scraper, no auto-pause), so only 64/132/37 were captured. They are
-near-empty and need re-scraping, NOT a CJK pass.
+Quality (2016–2024, `scripts/quality_check.py`): **0 scrape errors** all
+years; capture 49–64% of valid-URL candidates (Senate norm, matches House);
+median ~2,500 chars/page; <1% low-text rows. The 2020/22/24 re-runs each
+re-tarred to a verified superset of the old near-empty tarball (0 old
+candidates lost). **House 2002–2016 stays excluded (ICPSR).**
+
+**The full ICPSR extension data collection is now COMPLETE:**
+House 2018–2024 + Senate 2002–2024.
 
 - [LEARN:scraping] The Senate 2020/22/24 March runs predate
   `_clean_campaign_url`, so the failed-URL log lines are RAW values
@@ -230,20 +234,24 @@ resume (which re-queries all ~3.5k and re-incurs refusals).
   file-counts verified (2253 / 1777) before dir deletion.
 - [x] ~~Recovery sweep after the queue finishes.~~ DONE 2026-06-26 — 292
   snapshots recovered (see §4.5). **House 2018–2024 collection now COMPLETE.**
-- [x] ~~Off-machine backup of 2018.~~ DONE 2026-06-26 — `2018.tar.gz`
-  (599 MB) streamed to mac2 `~/backups/candidate_website_extension/house/`,
-  sha256-verified. NOTE: **2020.tar.gz is now droplet-only** (the May mac2
-  copy was cleaned up) — back it up to mac2 too (cheap, same path).
-- [ ] Senate disentangling (deferred): per-year decide tarball vs
-  uncompressed-dir provenance for 2004/2006/2008/2014; resume Senate 2016
-  (~83/511); clean-start Senate 2018 (missing). Apply CJK spam filter as a
-  post-process to old Senate March tarballs (2002–2014).
+- [x] ~~Off-machine backup of House 2018 + 2020.~~ DONE — `2018.tar.gz`
+  (2026-06-26) + `2020.tar.gz` (2026-06-27) streamed to mac2
+  `~/backups/candidate_website_extension/house/`, both sha256-verified.
+- [x] ~~Senate completion.~~ DONE 2026-06-28 — merged April dirs
+  (2004/06/08/14), resumed 2016, fresh-scraped 2018, full-re-ran
+  2020/22/24. All 12 years tarballed + backed up to mac2 (§4.3). The
+  CJK post-process is DEFERRED (empirically <0.5% of rows, see §4.3).
+  **Full ICPSR extension data collection COMPLETE (House 2018–24 +
+  Senate 2002–24).**
 - [ ] mac2 git hygiene: mac2's `main` is on rewritten pre-scrub history
   and never re-fetched; code is safe (identical to `main`), but `git fetch
   && git reset --hard origin/main` would clean it up (untracked run scripts
-  are preserved). Do after the scrape.
+  are preserved). Now due (scrape finished).
 - [ ] Document the OpenFEC vs Wikidata hit-rate for each cycle.
 - [ ] Decide whether to add a Playwright fallback for JS-rendered post-2018
   candidate sites.
-- [ ] Confirm `classify_pages_llm.py` is being run on completed years and
-  document its model + cost profile.
+- [ ] `classify_pages_llm.py` has never been run (no `data/page_type_llm.csv`
+  on the droplet). Decide whether to run it on the completed House+Senate
+  years and document its model (gpt-5-nano) + cost profile.
+- [ ] (Deferred, low priority) CJK post-process over the pre-2026-03-11
+  tarballs — <0.5% of rows; `is_cjk_spam` already filters new scrapes.
