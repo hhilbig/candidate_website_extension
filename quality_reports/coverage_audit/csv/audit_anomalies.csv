@@ -1,0 +1,28 @@
+office,year,candidate,reason_code,detail
+house,2018,-,duplicate_page_rows,21
+house,2018,"Eddie ""Mr Maga"" Hamilton",extreme_snapshots,9299
+house,2018,GU,zero_capture_state,3 roster cands
+house,2020,-,duplicate_page_rows,135
+house,2020,Arturo Pacheo Reyes,extreme_snapshots,9552
+house,2020,GU,zero_capture_state,4 roster cands
+house,2022,-,duplicate_page_rows,10
+house,2024,-,duplicate_page_rows,42
+senate,2002,-,captured_not_in_roster,1 captured files unmatched to roster
+senate,2002,Lindsey Olin Graham,extreme_snapshots,226
+senate,2002,AL,zero_capture_state,3 roster cands
+senate,2004,John F Kerry,extreme_snapshots,265
+senate,2004,ME,zero_capture_state,3 roster cands
+senate,2006,-,duplicate_page_rows,11
+senate,2006,John F Kerry,extreme_snapshots,224
+senate,2006,AR,zero_capture_state,3 roster cands
+senate,2008,John S Mccain,extreme_snapshots,447
+senate,2008,IN,zero_capture_state,3 roster cands
+senate,2010,Barack Obama,extreme_snapshots,154
+senate,2010,VA,zero_capture_state,4 roster cands
+senate,2012,Tammy Baldwin,extreme_snapshots,189
+senate,2014,Al Franken,extreme_snapshots,368
+senate,2016,Ronald Harold Johnson,extreme_snapshots,450
+senate,2016,MS,zero_capture_state,4 roster cands
+senate,2020,AK,zero_capture_state,4 roster cands
+senate,2022,Kelly Tshibaka,extreme_snapshots,260
+senate,2024,Michael J Rogers,extreme_snapshots,190
