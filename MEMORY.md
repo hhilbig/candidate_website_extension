@@ -97,3 +97,14 @@ Untagged `[LEARN]` entries are legacy.
   so the long-planned CJK post-process is a deferred low-priority hygiene
   pass, not a blocker. `is_cjk_spam` (src/extract_text.py, threshold 0.3) is
   already applied per-page in any NEW scrape.
+- `[LEARN:data] 2026-06-30` — Thin candidate-years (~10% of the panel, <800
+  chars) are mostly NOT recoverable, so don't build a Playwright fallback.
+  Probe finding: the archived HTML of thin sites holds almost no text
+  (raw HTML 2–53 KB but <60 chars extracted — `Loading…`/Wix/Squarespace/React
+  shells). The text is client-rendered and Wayback did not archive the SPA
+  backend calls, so it is absent from the archive (not an extraction bug);
+  the remainder are genuinely empty (parked / coming-soon / 404 = correct
+  zeros). Recovering would add noisy, MNAR text — so we FLAG via the panel
+  `text_quality` column instead: usable (n_char≥1500) 85.1% / thin 9.4% /
+  empty 5.5%, uniform 80–89% usable across all 16 office-years. Raw `n_char`
+  retained for re-thresholding. (`scripts/build_panel.py`.)

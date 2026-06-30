@@ -248,8 +248,14 @@ resume (which re-queries all ~3.5k and re-incurs refusals).
   && git reset --hard origin/main` would clean it up (untracked run scripts
   are preserved). Now due (scrape finished).
 - [ ] Document the OpenFEC vs Wikidata hit-rate for each cycle.
-- [ ] Decide whether to add a Playwright fallback for JS-rendered post-2018
-  candidate sites.
+- [x] ~~Decide whether to add a Playwright fallback for JS-rendered sites.~~
+  DECIDED 2026-06-30: **not worth it.** Probed the thin candidate-years (~10%
+  of the panel, <800 chars): the archived HTML holds almost no text
+  (`Loading…`/Wix/Squarespace/React shells) — content is client-rendered and
+  Wayback did not archive the SPA backend calls, so it is not recoverable even
+  by rendering; the rest are genuinely empty (parked/coming-soon/404). Flagged
+  instead via the panel's `text_quality` column (usable/thin/empty); see
+  `quality_reports/panel_build_2026-06-29.md`.
 - [ ] `classify_pages_llm.py` has never been run (no `data/page_type_llm.csv`
   on the droplet). Decide whether to run it on the completed House+Senate
   years and document its model (gpt-5-nano) + cost profile.
