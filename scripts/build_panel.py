@@ -21,6 +21,7 @@ import argparse
 import glob
 import io
 import os
+import re
 import tarfile
 
 import pandas as pd
@@ -30,7 +31,28 @@ PT_PRIORITY = {"homepage": 0, "issues": 1, "biography": 2, "news": 3,
                "endorsements": 4, "constituent_services": 5, "action": 6, "other": 7}
 META_COLS = ["candidate", "state", "district", "office", "year", "party", "stage",
              "sel_date", "n_snapshots_available", "n_pages", "page_types", "urlkey",
-             "n_char", "n_words"]
+             "n_char", "n_words", "text_quality"]
+
+# Placeholder / JS-shell / error markers — content that isn't real site text.
+# Applied only to short texts so a long real page mentioning "loading" is safe.
+PLACEHOLDER_RE = re.compile(
+    r"\b(loading|coming soon|under construction|site is being (built|updated)|"
+    r"check back|domain (is )?for sale|buy this domain|godaddy|namecheap|parked|"
+    r"enable javascript|requires javascript|page not found|404|403 forbidden|"
+    r"account suspended|website coming)\b", re.I)
+
+
+def text_quality(text, n_char):
+    """Tier a candidate-year's collapsed text. Thresholds documented in
+    quality_reports/panel_build_2026-06-29.md; raw n_char is kept so downstream
+    can re-threshold."""
+    if n_char < 100:
+        return "empty"
+    if n_char < 1500 and PLACEHOLDER_RE.search(str(text)[:2000]):
+        return "empty"
+    if n_char < 1500:
+        return "thin"
+    return "usable"
 
 
 def collapse_candidate(df, sep):
@@ -56,6 +78,7 @@ def collapse_candidate(df, sep):
     text = sep.join(snap["text_snap_content"].astype(str).tolist())
 
     first = snap.iloc[0]
+    total_nchar = int(snap["n_char"].sum())
     return {
         "candidate": first["candidate"], "state": first["state"],
         "district": first.get("district", ""), "office": first["office"],
@@ -64,7 +87,8 @@ def collapse_candidate(df, sep):
         "n_snapshots_available": int(n_snaps), "n_pages": int(len(snap)),
         "page_types": ";".join(sorted(snap["page_type"].astype(str).unique())),
         "urlkey": first.get("urlkey", ""),
-        "text": text, "n_char": int(snap["n_char"].sum()), "n_words": int(snap["n_words"].sum()),
+        "text": text, "n_char": total_nchar, "n_words": int(snap["n_words"].sum()),
+        "text_quality": text_quality(text, total_nchar),
     }
 
 
@@ -112,6 +136,10 @@ def main():
     print(f"snapshots collapsed: median {int(panel['n_snapshots_available'].median())} "
           f"mean {panel['n_snapshots_available'].mean():.1f} max {int(panel['n_snapshots_available'].max())}")
     print(f"single-snapshot candidate-years: {(panel['n_snapshots_available'] == 1).sum()}")
+    tq = panel["text_quality"].value_counts()
+    print("text_quality: " + "  ".join(
+        f"{k}={tq.get(k, 0)} ({100*tq.get(k, 0)/len(panel):.1f}%)"
+        for k in ("usable", "thin", "empty")))
     print(f"empty-text rows: {(panel['n_char'] == 0).sum()}  -> {args.out_dir}/")
 
 

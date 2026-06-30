@@ -43,7 +43,8 @@ the raw tarballs; the raw data is untouched.
 | `data/panel/panel_candidate_year_meta.csv` (1.3 MB) | same rows **without** `text` | committed at `quality_reports/coverage_audit/csv/` |
 
 Schema: `candidate, state, district, office, year, party, stage, sel_date,
-n_snapshots_available, n_pages, page_types, urlkey, [text,] n_char, n_words`.
+n_snapshots_available, n_pages, page_types, urlkey, [text,] n_char, n_words,
+text_quality`.
 
 **On the full panel's storage:** it is **deterministically regenerable** in
 ~3 min from the committed `scripts/build_panel.py` + the tarballs (which are on
@@ -58,12 +59,39 @@ Pull it from the droplet or rebuild locally when needed.
   scraping, so "longest-text" is chosen from the latest-per-quarter snapshots,
   not all Wayback captures. The latest late-campaign capture is usually also the
   most complete, so the bias is minor; not re-scraped.
-- **Thin sites exist:** p10 text is ~800 chars; a few candidate-years (e.g.
-  placeholder/parked pages captured thousands of times) collapse to a short
-  page. `n_char` / `n_snapshots_available` let downstream filter these.
 - **Panel = captured candidate-years only.** Left-join to
   `data/rosters/roster_{office}_{year}.csv` for the full candidate set
   (un-captured → NA text).
+
+## Text quality flag (the thin-site question)
+
+~10% of candidate-years have <800 chars. We probed the cause: 998/1,055 are
+homepage-only, and the archived HTML of the thin ones contains almost no text
+(e.g. raw HTML 2–53 KB but <60 chars of actual text — `Loading…`, Wix/
+Squarespace/React shells). **The content is client-rendered by JavaScript and
+Wayback generally did not archive the backend calls these single-page apps make,
+so it is not recoverable from the archive** — not a fixable extraction bug. The
+remainder are genuinely empty (parked / "coming soon" / 404), which are *correct*
+zeros. Decision (with the user): **flag, don't chase** — recovering noisy SPA
+text would add measurement error, and the thinness is plausibly
+missing-not-at-random (candidate sophistication / era).
+
+Each row carries `text_quality`:
+
+| Tier | Rule | Count | Share |
+|---|---|--:|--:|
+| `usable` | `n_char >= 1500` | 9,026 | 85.1% |
+| `thin` | `100 <= n_char < 1500`, no placeholder marker | 992 | 9.4% |
+| `empty` | `n_char < 100`, or placeholder/JS-shell/404 marker | 583 | 5.5% |
+
+Placeholder markers: parked/for-sale, coming-soon, under-construction, 404/403,
+`loading`/`enable javascript` (applied only to texts <1,500 chars). **Raw
+`n_char` is kept so downstream can re-threshold.** Usable share is uniform
+across all 16 office-years (80–89%), so the thin tail does **not** concentrate in
+particular cycles and does not bias cross-year comparisons; within-year it may
+still correlate with candidate type, so treat `text_quality != usable` as a
+robustness dimension. Recommended default: analyze `usable`, sensitivity-check by
+adding `thin`, exclude `empty`.
 
 ## Verification done
 
