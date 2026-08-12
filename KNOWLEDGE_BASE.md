@@ -261,3 +261,28 @@ resume (which re-queries all ~3.5k and re-incurs refusals).
   years and document its model (gpt-5-nano) + cost profile.
 - [ ] (Deferred, low priority) CJK post-process over the pre-2026-03-11
   tarballs — <0.5% of rows; `is_cjk_spam` already filters new scrapes.
+- [x] ~~Ask Pons whether he already collected this, and where to release.~~
+  ANSWERED 2026-07-05. He has **only 2018 House**, nothing else, and had
+  planned it for a new project but not started — so no duplication and no
+  scoop risk. Venue recommendation: **Dataverse**. He did **not** answer the
+  copyright question for the scraped text, so the rights posture is still ours
+  to decide (see below).
+- [x] ~~Resolve ICPSR's snapshot→candidate aggregation rule.~~ SOLVED
+  2026-08-12: drop empty pages → mean over pages within a snapshot day → mean
+  over snapshot days. Verified **exact on 13,020/13,020** ICPSR rows. Their
+  grain includes `data_source` (same candidate-year-stage can appear twice,
+  distinguished only by name casing). See
+  `quality_reports/icpsr_variable_extension_2026-08-12.md`.
+- [x] ~~Extend ICPSR's coded variables to our years.~~ DONE 2026-08-12,
+  partially. Shipped `data/deliverable/panel_icpsr_compat.csv` (10,601 rows):
+  `icpsr_n_char`/`icpsr_n_words` reproduce **exactly**; `icpsr_ttr_approx`/
+  `icpsr_mattr_approx` (window 200) reproduce to corr 0.999. **Topics are NOT
+  reproducible** from the shipped artifacts (idf vector, model inference step,
+  and the `websites_topics/` intermediates are all absent — best reconstruction
+  barely beats predicting the mean). `entropy`, `subordinates`, `n_tags`,
+  `n_clean_tags` also not reproducible.
+- [ ] **Rights posture for the Dataverse deposit** — the open blocker on
+  release. Pons did not address copyright for the scraped website text.
+  Recommendation on record: mirror ICPSR 226001's rights statement and keep
+  `snap_url` provenance on every row (noting they distribute derived scores,
+  not text, so it is an imperfect precedent).
