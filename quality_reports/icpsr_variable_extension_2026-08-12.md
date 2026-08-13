@@ -1,5 +1,13 @@
 # Extending ICPSR 226001's coded variables to our corpus
 
+> **SUPERSEDED by `icpsr_variable_extension_2026-08-13.md`.** This report
+> concluded that topics, `entropy` and `subordinates` were not reproducible.
+> That was correct about the *public deposit* and wrong about the world: Pons
+> pointed us to `7_topics.py` and `4_complexity.R` in the full replication
+> package, and all three then reproduced. Kept as the record of what the deposit
+> alone supports. The aggregation-rule finding here stands and was later
+> confirmed against their source.
+
 **Date:** 2026-08-12
 **Plan:** `quality_reports/plans/2026-08-12_icpsr-variable-extension.md` (approved)
 **Code:** `scripts/icpsr_replicate_coding.py`

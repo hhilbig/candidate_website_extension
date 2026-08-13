@@ -31,11 +31,24 @@ ICPSR's *own text* before being applied to ours. Full evidence:
 - `icpsr_n_char` — mean characters. **Exact** reproduction (100.00%).
 - `icpsr_n_words` — mean words, `re.findall(r'\w+', text.lower())`. **Exact**
   (100.00%).
-- `icpsr_ttr_approx` — type-token ratio. **Approximate**: corr 0.9990, median
-  ratio 1.0015 vs their `TTR`. Not bit-exact; their TTR comes from a different
-  preprocessing stage than their `n_words`.
-- `icpsr_mattr_approx` — moving-average TTR, **window 200** (fitted against
-  their values). corr 0.9982, median ratio 1.0000 vs their `MATTR`.
+- `icpsr_ttr_approx` — type-token ratio. corr 0.9997, median ratio 1.0000.
+- `icpsr_mattr_approx` — moving-average TTR, **window 200**, falling back to TTR
+  for documents under one window. corr 0.9995, median ratio 0.9999.
+  TTR/MATTR use a different tokenizer from `n_words` (strip `'s`, drop
+  punctuation/symbols/numbers/URLs, lowercase, keep `^[a-zA-Z]+$`), which is why
+  they are near-exact rather than exact: quanteda tokenises on ICU word
+  boundaries.
+- `icpsr_entropy_approx` — **not** a document statistic. It is the
+  term-count-weighted mean of *per-word* Google Books entropy, from
+  `ngrams_en_2008.csv`. corr 0.9978, median ratio 0.9997.
+- `icpsr_topic_*` — 31 columns, one per consolidated Manifesto category, summing
+  to 1. Produced by ICPSR's own classifier: `TfidfVectorizer` + `SVC(rbf, C=20,
+  probability=True, random_state=2163)` trained on Manifesto Project
+  quasi-sentences (corpus version 2021-1). MAE 0.0054 against their published
+  values, versus 0.0296 for a predict-the-mean baseline; top-1 agreement 88%.
+  **Note the topic document rule differs from the complexity rule**: all page
+  text for the candidate-year is concatenated with spaces, and `data_source` is
+  not part of the key.
 - `icpsr_n_valid_snap`, `icpsr_n_valid_pages` — snapshot-days and pages entering
   the aggregate.
 
@@ -63,19 +76,29 @@ Verified **exact on 13,020 of 13,020 rows (100.00%)** for `n_char`, `n_words`,
 `Adams, Sandy`). Our `date` is a `YYYYMMDDHHMMSS` timestamp and is truncated to
 the day before aggregating, to match their day-level snapshot grain.
 
-### Not reproducible
+### Not shipped
 
-- **Topics** (31 Manifesto-style proportions). `topic_words.csv` alone is
-  insufficient: `tfidf_weight` is an alphabetical column index rather than a
-  weight, the idf vector and the model's document-inference step are absent, and
-  `websites_topics/`, `topics_complexity/`, `embeddings/` are empty in the
-  download. Best reconstruction scored MAE 0.0272 against a 0.0302
-  predict-the-mean baseline. Would need the full package (DOI 10.3886/E232001V1).
-- **`entropy`, `subordinates`** — not recoverable from text; their `entropy`
-  correlates *negatively* (-0.32) with word-frequency entropy, so it is likely
-  syntactic. Omitted rather than approximated.
 - **`n_tags`, `n_clean_tags`** — HTML-structure counts fixed at scrape time; the
   cleaned text has the `#+#` separators stripped and the archived HTML is gone.
+  Not recoverable in principle.
+- **`entropy_missing`** — corr 0.952, below the 0.99 bar used for every other
+  column. It is the share of tokens absent from the Google Books dictionary, so
+  it is the most tokenizer-sensitive measure, and it is a diagnostic.
+- **`subordinates`** — the definition is known (POS tag `IN` divided by
+  `n_words`) but ICPSR used openNLP's Maxent tagger; nltk's perceptron tagger
+  gives corr 0.9752. That is a related measure from a different model, not
+  theirs.
+
+All three can be produced on request, clearly labelled.
+
+### Inputs and licensing
+
+`--topics` needs the Manifesto Project training corpus, which is
+**redistribution-restricted** and therefore not committed — ICPSR excluded it
+from their own deposit for the same reason. Fetch it with
+`--fetch-manifesto` and your own API key at `~/.manifesto_api_key`.
+`ngrams_en_2008.csv` and `sub_topics_mapping.csv` come from openICPSR project
+226001 and live under `data/external/` (gitignored).
 
 ## How to merge
 

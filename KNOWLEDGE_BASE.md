@@ -273,14 +273,27 @@ resume (which re-queries all ~3.5k and re-incurs refusals).
   grain includes `data_source` (same candidate-year-stage can appear twice,
   distinguished only by name casing). See
   `quality_reports/icpsr_variable_extension_2026-08-12.md`.
-- [x] ~~Extend ICPSR's coded variables to our years.~~ DONE 2026-08-12,
-  partially. Shipped `data/deliverable/panel_icpsr_compat.csv` (10,601 rows):
-  `icpsr_n_char`/`icpsr_n_words` reproduce **exactly**; `icpsr_ttr_approx`/
-  `icpsr_mattr_approx` (window 200) reproduce to corr 0.999. **Topics are NOT
-  reproducible** from the shipped artifacts (idf vector, model inference step,
-  and the `websites_topics/` intermediates are all absent — best reconstruction
-  barely beats predicting the mean). `entropy`, `subordinates`, `n_tags`,
-  `n_clean_tags` also not reproducible.
+- [x] ~~Extend ICPSR's coded variables to our years.~~ DONE 2026-08-13.
+  Pons pointed us to `7_topics.py` in the **full** replication package
+  (openICPSR 226001, `US/US Code/`), which overturned the 08-12 verdict that
+  topics/`entropy`/`subordinates` were unreproducible. `panel_icpsr_compat.csv`
+  (10,601 rows, 48 cols) now ships: `icpsr_n_char`/`icpsr_n_words` **exact**;
+  `icpsr_ttr_approx`/`icpsr_mattr_approx` corr 0.9997/0.9995 ratio 1.0000;
+  `icpsr_entropy_approx` corr 0.9978; **31 `icpsr_topic_*` columns** at MAE
+  0.0054 vs a 0.0296 predict-the-mean baseline. Key insights: their `entropy` is
+  a per-word **Google Books** lookup, not a document statistic; their "topic
+  model" is a **supervised RBF-kernel SVM** trained on Manifesto Project
+  quasi-sentences (corpus version 2021-1, identified by vocabulary match), so no
+  linear projection of `topic_words.csv` could reproduce it. Report:
+  `quality_reports/icpsr_variable_extension_2026-08-13.md`.
+  Not shipped: `n_tags`/`n_clean_tags` (HTML gone), `entropy_missing` (corr
+  0.952), `subordinates` (corr 0.975 — openNLP Maxent tagger vs nltk).
+- [ ] **Check whether our corpus differs systematically from ICPSR's.** Identical
+  coding on a different corpus still breaks the series at 2016/2018. Known
+  differences: median `n_char` jumps 51% at the boundary, our snapshot density is
+  uneven, they carry third parties and we are R/D only. Sharpest test is the
+  **House 2018 overlap** (76 candidates in both corpora), which holds candidates
+  and year fixed and varies only the scrape.
 - [ ] **Rights posture for the Dataverse deposit** — the open blocker on
   release. Pons did not address copyright for the scraped website text.
   Recommendation on record: mirror ICPSR 226001's rights statement and keep
