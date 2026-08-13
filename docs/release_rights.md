@@ -1,6 +1,13 @@
-# Rights statement for the Dataverse deposit — DRAFT, needs Hanno's decision
+# Rights statement for the Dataverse deposit
 
-**Status:** draft. Not agreed. This is the last open item before release.
+**Status: DECIDED 2026-08-13 (Hanno).** Mirror ICPSR 226001's posture: CC BY 4.0
+on our compilation, explicit `snap_url` provenance, and a takedown route. The
+final wording is in `docs/RELEASE_README.md`.
+
+Outstanding: a contact address for the takedown clause, and a check with UC
+Davis research-data/scholarly-communications. That check moved from "worth
+doing" to "the thing to do" once Pons confirmed no legal review sat behind the
+precedent.
 
 ## The question
 
@@ -9,7 +16,19 @@ pages were written by campaigns and are, in principle, copyrighted. Pons was
 asked about this on 2026-07-05 and did not answer that part of the question, so
 the decision is ours.
 
-## The precedent, which is stronger than I first thought
+## Pons's answer (2026-08-13)
+
+Asked directly whether he ran the website text past a research data office or
+legal, he replied:
+
+> "We did not involve anyone on the legal side."
+
+So the rights assertion in their README §3.1 is the authors' own judgment. It is
+not a cleared or reviewed position. The precedent below is real — the deposit is
+public, licensed CC BY 4.0, and passed openICPSR intake — but it carries no legal
+review behind it, and it should not be treated as though it does.
+
+## The precedent, weaker than it first looked
 
 ICPSR 226001 **does** distribute the full scraped website text — `websites_clean`
 is text, not scores — and their README §3.1 states:
@@ -21,10 +40,12 @@ is text, not scores — and their README §3.1 states:
 > licenses that allow republication for academic purposes."
 
 So a peer-reviewed AEA-linked deposit of exactly this material, from the same
-source (Internet Archive), already exists under CC BY 4.0. That is a direct
-precedent and it survived openICPSR's own review.
+source (Internet Archive), already exists under CC BY 4.0 and passed openICPSR
+intake. That is a real precedent for what a repository will accept. It is not
+evidence that anyone with legal training looked at it — Pons has confirmed
+nobody did.
 
-## What I recommend
+## The decision
 
 **Mirror their posture, and be more explicit about provenance than they were.**
 
@@ -65,20 +86,23 @@ Three components:
 I am not a lawyer and this is not legal advice. Two things worth weighing that I
 cannot resolve:
 
-- Whether UC Davis has a research-data or scholarly-communications office that
-  should sign off. Most universities do, and a five-minute check there is
-  cheaper than a later problem.
+- **UC Davis research-data / scholarly-communications sign-off. Now the main
+  open item.** Pons confirmed (2026-08-13) that no legal review sat behind the
+  ICPSR deposit, so mirroring it means relying on a peer's unreviewed judgment.
+  That may well be correct — campaign websites are political speech meant for
+  public circulation, the pages are already public via the Internet Archive, and
+  the use is non-commercial academic research — but it is a judgment, not a
+  clearance, and the library check is close to free.
 - Whether Harvard Dataverse imposes its own terms that interact with CC BY 4.0.
   Their deposit agreement should be read before upload.
 
-## The alternative, if you want lower risk
+## The alternative that was considered and NOT taken
 
 Release the **derived variables and the roster** openly, and place the **full
 text** behind a request form or a restricted-access tier that Dataverse
 supports. This keeps the reproducibility benefit for the coded variables while
 limiting bulk redistribution of the raw copy.
 
-I do not recommend this as the default, because it is more cautious than the
-existing ICPSR precedent requires and it substantially reduces the value of the
-release — the text is the part nobody else has. But it is the option to take if
-you want the conservative path.
+Not taken. It is more cautious than the existing ICPSR precedent requires and it
+substantially reduces the value of the release, since the text is the part
+nobody else has. Recorded here so the choice is visible rather than implicit.

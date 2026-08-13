@@ -127,6 +127,23 @@ Identifiers: `cand_id` (FEC) is populated for 100% of captured candidate-years;
 `bonica_rid` (DIME) for 81%, the gap being 2024, which the DIME release we used
 does not cover.
 
+## Terms of use
+
+This dataset is released under a Creative Commons Attribution 4.0 International
+(CC BY 4.0) licence, which applies to the compilation, the derived variables,
+and the documentation. This matches the licence of openICPSR 226001, from which
+this dataset is extended.
+
+The website text is an extract of publicly archived pages captured by the
+Internet Archive's Wayback Machine. Each row records `snap_url`, the exact
+archived URL from which its text was taken, so every observation is traceable to
+its public source and can be re-fetched. The material is redistributed for
+non-commercial academic research.
+
+Copyright in the underlying campaign material remains with its authors. If you
+are a rights-holder and wish material removed, contact <CONTACT ADDRESS> and we
+will act on substantiated requests.
+
 ## Citation
 
 If you use this dataset, please cite it and the original:
