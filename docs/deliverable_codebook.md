@@ -52,10 +52,21 @@ ICPSR's *own text* before being applied to ours. Full evidence:
 - `icpsr_n_valid_snap`, `icpsr_n_valid_pages` — snapshot-days and pages entering
   the aggregate.
 
-**Prefer `icpsr_mattr_approx` over `icpsr_ttr_approx` for cross-year work.** TTR
-falls mechanically as documents lengthen; median document length rises 51% at the
-2016/2018 boundary between their data and ours, moving TTR 6.9% but MATTR only
-2.5%.
+**Prefer `icpsr_mattr_approx` over `icpsr_ttr_approx` for cross-year
+*distributions*, but not for candidate-level comparison between the two
+corpora.** TTR falls mechanically as documents lengthen; median document length
+rises 51% at the 2016/2018 boundary, moving TTR 6.9% but MATTR only 2.5%. On the
+41 candidates present in *both* corpora, however, MATTR medians agree to 2%
+while the **per-candidate correlation is about zero** — for one candidate in one
+year the two collections give unrelated values, because MATTR is dominated by
+which specific pages each scraper captured. See
+`quality_reports/corpus_comparability_2026-08-13.md`.
+
+**Do not pool raw `icpsr_n_char` / `icpsr_n_words` across the 2016/2018
+boundary** without adjustment. Ours run 1.5–1.65× theirs on the same candidates,
+driven mainly by crawl depth (we take 4–10 pages per snapshot-day, they take
+1.0 in 2002–2012 and 3.0 in 2014–2016), not by candidate behaviour. Note their
+own series also breaks internally at 2014 when their crawl depth changed.
 
 **Filter short documents first.** 20.8% of candidate-years have <200 words, i.e.
 below one MATTR window, so their MATTR degrades to plain TTR; 224 rows (2.1%)

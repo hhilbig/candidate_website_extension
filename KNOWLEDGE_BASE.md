@@ -288,12 +288,20 @@ resume (which re-queries all ~3.5k and re-incurs refusals).
   `quality_reports/icpsr_variable_extension_2026-08-13.md`.
   Not shipped: `n_tags`/`n_clean_tags` (HTML gone), `entropy_missing` (corr
   0.952), `subordinates` (corr 0.975 — openNLP Maxent tagger vs nltk).
-- [ ] **Check whether our corpus differs systematically from ICPSR's.** Identical
-  coding on a different corpus still breaks the series at 2016/2018. Known
-  differences: median `n_char` jumps 51% at the boundary, our snapshot density is
-  uneven, they carry third parties and we are R/D only. Sharpest test is the
-  **House 2018 overlap** (76 candidates in both corpora), which holds candidates
-  and year fixed and varies only the scrape.
+- [x] ~~Check whether our corpus differs systematically from ICPSR's.~~ DONE
+  2026-08-13 — `quality_reports/corpus_comparability_2026-08-13.md`. Yes, it
+  does. **Crawl depth is the main real difference**: ours 4–10 pages per
+  snapshot-day vs their 1.0 (2002–2012) and 3.0 (2014–2016), which drives the
+  1.5–1.65× length ratio on the 41 overlapping House 2018 candidates. **Their
+  own series breaks internally at 2014** (crawl depth 1.0→3.0), and **ours
+  breaks across scraper versions** (Oct–Nov capture share swings 6.3%–55.2%;
+  deduped years are flatter). **Their 2018 is anomalous** (0% Oct–Nov vs their
+  usual ~50%), so the overlap ratios are an upper bound. **MATTR medians agree
+  to 2% but its per-candidate correlation across corpora is ~0** — safe for
+  distributions, unsafe per candidate. Page concentration: 0.78% of
+  snapshot-days hold 24.5% of all pages (max 20,946 pages in one day).
+- [ ] Consider shipping a page-count flag so users can exclude runaway
+  snapshot-days (see the comparability report).
 - [ ] **Rights posture for the Dataverse deposit** — the open blocker on
   release. Pons did not address copyright for the scraped website text.
   Recommendation on record: mirror ICPSR 226001's rights statement and keep
