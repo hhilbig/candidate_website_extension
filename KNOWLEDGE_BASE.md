@@ -289,10 +289,15 @@ resume (which re-queries all ~3.5k and re-incurs refusals).
   Not shipped: `n_tags`/`n_clean_tags` (HTML gone), `entropy_missing` (corr
   0.952), `subordinates` (corr 0.975 — openNLP Maxent tagger vs nltk).
 - [x] ~~Check whether our corpus differs systematically from ICPSR's.~~ DONE
-  2026-08-13 — `quality_reports/corpus_comparability_2026-08-13.md`. Yes, it
-  does. **Crawl depth is the main real difference**: ours 4–10 pages per
-  snapshot-day vs their 1.0 (2002–2012) and 3.0 (2014–2016), which drives the
-  1.5–1.65× length ratio on the 41 overlapping House 2018 candidates. **Their
+  2026-08-13 — `quality_reports/corpus_comparability_2026-08-13.md`. **The
+  length gap was a MISSING CLEANING STEP, not crawl depth.** ICPSR's
+  `websites_clean` is the output of a boilerplate filter in
+  `2_website_aggregation.R` (keep only `#+#` tags with ≥10 words containing
+  `[?!.]` and `[A-Z]`; drop all digits). Applying it: boundary step 51% → 0.9%
+  (their 2016 median n_char 1,624 vs our 2018 1,638), overlap ratio 1.65 →
+  1.003, per-candidate corr 0.60 → 0.856. We still capture 8.75× their pages,
+  so depth is real but does not propagate — deeper crawling adds boilerplate and
+  their filter removes it. **Their
   own series breaks internally at 2014** (crawl depth 1.0→3.0), and **ours
   breaks across scraper versions** (Oct–Nov capture share swings 6.3%–55.2%;
   deduped years are flatter). **Their 2018 is anomalous** (0% Oct–Nov vs their

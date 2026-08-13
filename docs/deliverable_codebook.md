@@ -102,11 +102,29 @@ Verified **exact on 13,020 of 13,020 rows (100.00%)** for `n_char`, `n_words`,
 `Adams, Sandy`). Our `date` is a `YYYYMMDDHHMMSS` timestamp and is truncated to
 the day before aggregating, to match their day-level snapshot grain.
 
+### Text cleaning (applied before every measure)
+
+ICPSR's `websites_clean` is the **output** of a boilerplate filter in
+`2_website_aggregation.R`, and both `4_complexity.R` and `7_topics.py` read that
+cleaned file. Every column above is therefore computed on cleaned text:
+
+1. strip URLs; normalise `&amp;` and curly apostrophes
+2. keep only letters and punctuation — **all digits are dropped**
+3. split on `#+#` into "tags" (visual components) → `icpsr_n_tags`
+4. keep only tags with **≥10 words containing `[?!.]` and `[A-Z]`** →
+   `icpsr_n_clean_tags`
+5. rejoin the survivors, then count
+
+Step 4 removes navigation, menus and button labels. Skipping it inflates
+`n_char` by roughly 1.5× and makes the values incomparable to theirs.
+
+Validated indirectly (we have no copy of their pre-cleaning text): the surviving
+ratio `n_clean_tags/n_tags` matches at the median (0.147 both), median `n_tags`
+46 vs their 44, and their cleaned text contains no digits, colons or double
+spaces across 20,000 sampled pages.
+
 ### Not shipped
 
-- **`n_tags`, `n_clean_tags`** — HTML-structure counts fixed at scrape time; the
-  cleaned text has the `#+#` separators stripped and the archived HTML is gone.
-  Not recoverable in principle.
 - **`entropy_missing`** — corr 0.952, below the 0.99 bar used for every other
   column. It is the share of tokens absent from the Google Books dictionary, so
   it is the most tokenizer-sensitive measure, and it is a diagnostic.

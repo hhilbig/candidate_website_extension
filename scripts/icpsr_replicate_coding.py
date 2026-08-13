@@ -82,6 +82,41 @@ WORDLIKE_RE = re.compile(r"[A-Za-z]+(?:['\-][A-Za-z]+)*")
 # Variables carried directly on ICPSR's per-page rows
 PAGE_VARS = ["n_char", "n_words", "n_tags", "n_clean_tags"]
 
+# --------------------------------------------------------------------------
+# ICPSR's text cleaning (2_website_aggregation.R), which runs BEFORE anything
+# is counted. Their websites_clean.csv -- the input to both 4_complexity.R and
+# 7_topics.py -- is the OUTPUT of this step, so every coded variable must be
+# computed on cleaned text. Applying the coding to raw text inflates n_char by
+# roughly 1.5x and is not comparable to their published values.
+#
+# Verified indirectly (we have no copy of their pre-cleaning text): the
+# surviving-tag ratio n_clean_tags/n_tags matches theirs at the median (0.147
+# both), median n_tags 46 vs their 44, and applying it removes the apparent
+# 51% length jump at the 2016/2018 boundary.
+CLEAN_URL_RE = re.compile(r"(f|ht)(tp)(s?)(://)([^( |#)]*)")
+# R's "([a-zA-Z.?!\'-,;]|[#\+#])+": inside the class '-, is an apostrophe-to-
+# comma range, which also admits ( ) * + . Digits are dropped entirely.
+CLEAN_KEEP_RE = re.compile(r"([a-zA-Z.?!'\-,;]|[#+#])+")
+CLEAN_SEP_RE = re.compile(r"#\+#")
+CLEAN_MIN_WORDS = 10
+CLEAN_SENT_RE = re.compile(r"[?!.]")
+CLEAN_CAP_RE = re.compile(r"[A-Z]")
+
+
+def icpsr_clean_text(raw: str) -> dict:
+    """Their nine cleaning steps. Returns cleaned text plus tag counts."""
+    txt = CLEAN_URL_RE.sub("", raw)
+    txt = (txt.replace("&amp;", "and")
+              .replace("\u00e2\u20ac\u2122", "'")
+              .replace("\u2019", "'"))
+    txt = " ".join(m.group(0) for m in CLEAN_KEEP_RE.finditer(txt))
+    tags = CLEAN_SEP_RE.split(txt)
+    kept = [t for t in tags
+            if len(TOKEN_RE.findall(t)) >= CLEAN_MIN_WORDS
+            and CLEAN_SENT_RE.search(t) and CLEAN_CAP_RE.search(t)]
+    return {"text": re.sub(r"\s+", " ", " ".join(kept)).strip(),
+            "n_tags": len(tags), "n_clean_tags": len(kept)}
+
 
 # --------------------------------------------------------------------------
 # core coding
@@ -247,13 +282,24 @@ def train_topic_model(manifesto_path: Path, mapping_path: Path):
 
 
 def page_measures(text: str, mattr_window: int,
-                  ngrams: tuple[dict, set] | None = None) -> dict:
+                  ngrams: tuple[dict, set] | None = None,
+                  clean: bool = False) -> dict:
     """Text-derived measures for a single page.
+
+    Set clean=True for OUR raw text, which has not been through
+    2_website_aggregation.R. ICPSR's own stored text is already cleaned, so
+    validation against it passes clean=False.
 
     n_words and the lexical-diversity measures use different tokenizers,
     matching 4_complexity.R.
     """
-    out = {"n_char": len(text), "n_words": len(tokenize(text))}
+    out = {}
+    if clean:
+        c = icpsr_clean_text(text)
+        text = c["text"]
+        out["n_tags"], out["n_clean_tags"] = c["n_tags"], c["n_clean_tags"]
+    out["n_char"] = len(text)
+    out["n_words"] = len(tokenize(text))
     lex = lexdiv_tokens(text)
     n = len(lex)
     if n == 0:
@@ -428,19 +474,28 @@ def run_apply(corpus: Path, out: Path, mattr_window: int,
 
     cols = ["candidate_icpsr", "name_key", "cand_id", "state", "district_id",
             "office", "year", "stage", "party", "data_source", "date",
-            "n_char", "text_snap_content"]
+            "page_type", "n_char", "text_snap_content"]
     have = set(pf.schema_arrow.names)
     use = [c for c in cols if c in have]
     missing = [c for c in cols if c not in have]
     if missing:
         print(f"  note: absent from corpus, skipped: {missing}")
 
+    # Depth-controlled variant. ICPSR's 2002-2012 crawl is effectively
+    # homepage-only (median 1 page per snapshot-day), so a homepage-only value
+    # holds crawl depth fixed and is directly comparable to their early years.
+    has_home = "page_type" in use
+    if not has_home:
+        print("  note: no page_type column; _home variant skipped")
+
     topics = None
     if topic_model is not None:
         pipe, clean, class_names = topic_model
         topic_keys: list[str] = []
+        topic_kind: list[str] = []
         topic_probs: list[np.ndarray] = []
         batch_keys: list[str] = []
+        batch_kind: list[str] = []
         batch_docs: list[str] = []
 
         def flush_topics():
@@ -448,9 +503,11 @@ def run_apply(corpus: Path, out: Path, mattr_window: int,
                 return
             topic_probs.append(pipe.predict_proba(batch_docs))
             topic_keys.extend(batch_keys)
+            topic_kind.extend(batch_kind)
             batch_keys.clear()
+            batch_kind.clear()
             batch_docs.clear()
-            print(f"    topics scored: {len(topic_keys):,}", flush=True)
+            print(f"    topic docs scored: {len(topic_keys):,}", flush=True)
 
     frames = []
     for i in range(pf.num_row_groups):
@@ -458,24 +515,42 @@ def run_apply(corpus: Path, out: Path, mattr_window: int,
         g = g[g.n_char > 0]
         if g.empty:
             continue
+        # Apply ICPSR's cleaning once per page, then feed the CLEANED text to
+        # everything downstream -- their websites_clean.csv is the cleaned file,
+        # and both 4_complexity.R and 7_topics.py read it.
+        cleaned = [icpsr_clean_text(t) for t in g.text_snap_content]
+        ctexts = [c["text"] for c in cleaned]
         if topic_model is not None:
             # Topics use ICPSR's own document rule from 7_topics.py: all page
             # text for the candidate-year joined by a space. Note this is a
             # DIFFERENT aggregation from the complexity two-level mean.
             kc = [c for c in ("candidate_icpsr", "state", "office", "year")
                   if c in g.columns]
-            batch_keys.append("|".join(str(g[c].iloc[0]) for c in kc))
-            batch_docs.append(clean(" ".join(g.text_snap_content)))
+            ck_i = "|".join(str(g[c].iloc[0]) for c in kc)
+            batch_keys.append(ck_i)
+            batch_kind.append("all")
+            batch_docs.append(clean(" ".join(ctexts)))
+            if has_home:
+                hp = [t for t, pt in zip(ctexts, g.page_type)
+                      if pt == "homepage"]
+                if hp:
+                    batch_keys.append(ck_i)
+                    batch_kind.append("home")
+                    batch_docs.append(clean(" ".join(hp)))
             if len(batch_docs) >= 400:
                 flush_topics()
-        meas = pd.DataFrame([page_measures(t, mattr_window, ngrams)
-                             for t in g.text_snap_content], index=g.index)
+        meas = pd.DataFrame(
+            [{**page_measures(t, mattr_window, ngrams),
+              "n_tags": c["n_tags"], "n_clean_tags": c["n_clean_tags"]}
+             for t, c in zip(ctexts, cleaned)], index=g.index)
         # The corpus already carries n_char/n_words computed by our own
         # pipeline. Drop those copies here and use the recomputed ones, so the
         # aggregate is built from ICPSR's definitions throughout. (Our columns
         # are untouched in the corpus itself; this only affects this output.)
+        if has_home:
+            g["is_home"] = (g.page_type == "homepage")
         g = g.drop(columns=[c for c in ("text_snap_content", "n_char", "n_words",
-                                        "n_tags", "n_clean_tags")
+                                        "n_tags", "n_clean_tags", "page_type")
                             if c in g.columns])
         # Our `date` is a Wayback YYYYMMDDHHMMSS timestamp; ICPSR's snapshot
         # grain is the DAY. Truncate so "mean over snapshot dates" means the
@@ -486,11 +561,17 @@ def run_apply(corpus: Path, out: Path, mattr_window: int,
         if (i + 1) % 1000 == 0 or i + 1 == pf.num_row_groups:
             print(f"  row group {i+1}/{pf.num_row_groups}", flush=True)
 
+    topics_home = None
     if topic_model is not None:
         flush_topics()
-        topics = pd.DataFrame(np.vstack(topic_probs),
-                              columns=[f"icpsr_topic_{c}" for c in class_names],
-                              index=topic_keys)
+        allp = pd.DataFrame(np.vstack(topic_probs),
+                            columns=[f"icpsr_topic_{c}" for c in class_names])
+        allp["ck"], allp["kind"] = topic_keys, topic_kind
+        topics = (allp[allp.kind == "all"].drop(columns=["kind"])
+                  .set_index("ck"))
+        hp = allp[allp.kind == "home"].drop(columns=["kind"]).set_index("ck")
+        if len(hp):
+            topics_home = hp.add_suffix("_home")
 
     pages = pd.concat(frames, ignore_index=True)
     del frames
@@ -500,12 +581,14 @@ def run_apply(corpus: Path, out: Path, mattr_window: int,
                if c in pages.columns]
     pages["ck"] = pages[keycols].astype(str).agg("|".join, axis=1)
 
-    vals = ["n_char", "n_words", "ttr", "mattr"]
+    vals = ["n_char", "n_words", "n_tags", "n_clean_tags", "ttr", "mattr"]
     if ngrams:
         vals += ["entropy"]   # entropy_missing not shipped (corr ~0.95)
     agg = icpsr_aggregate(pages, vals, date_col="snap_day")
     agg = agg.rename(columns={"n_char": "icpsr_n_char",
                               "n_words": "icpsr_n_words",
+                              "n_tags": "icpsr_n_tags",
+                              "n_clean_tags": "icpsr_n_clean_tags",
                               "ttr": "icpsr_ttr_approx",
                               "mattr": "icpsr_mattr_approx",
                               "entropy": "icpsr_entropy_approx"})
@@ -517,10 +600,27 @@ def run_apply(corpus: Path, out: Path, mattr_window: int,
     n_page = pages.groupby("ck").size().rename("icpsr_n_valid_pages")
     crawl = snapshot_page_stats(pages)
     res = meta.join(agg).join(n_snap).join(n_page).join(crawl)
+
+    if has_home:
+        hp = pages[pages.is_home]
+        agg_h = icpsr_aggregate(hp, vals, date_col="snap_day").rename(
+            columns={"n_char": "icpsr_n_char", "n_words": "icpsr_n_words",
+                     "n_tags": "icpsr_n_tags",
+                     "n_clean_tags": "icpsr_n_clean_tags",
+                     "ttr": "icpsr_ttr_approx", "mattr": "icpsr_mattr_approx",
+                     "entropy": "icpsr_entropy_approx"}).add_suffix("_home")
+        res = (res.join(agg_h)
+                  .join(hp.groupby("ck").snap_day.nunique()
+                          .rename("icpsr_n_valid_snap_home"))
+                  .join(hp.groupby("ck").size().rename("icpsr_n_valid_pages_home")))
+        print(f"homepage-only variant: {len(agg_h):,} candidate-years covered "
+              f"({100*len(agg_h)/len(res):.1f}%)")
     if topics is not None:
         res = res.join(topics)
         bad = int((res[topics.columns].sum(axis=1).sub(1).abs() > 1e-9).sum())
         print(f"topic rows failing the sum-to-1 check: {bad}")
+    if topics_home is not None:
+        res = res.join(topics_home)
     res = res.reset_index(drop=True)
 
     dup = res.duplicated(subset=keycols).sum()

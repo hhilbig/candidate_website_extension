@@ -103,11 +103,50 @@ by spaces — produces exactly **13,020 documents, matching their file count**.
 Note the topic document rule is *different* from the complexity rule: plain text
 concatenation, and `data_source` is not in the key.
 
+## Result 2b: their text is cleaned first, and we had missed it
+
+Found after the first version of this report, and it changes every coded value
+we produce.
+
+`websites_clean` — the file that `4_complexity.R` and `7_topics.py` both read —
+is the *output* of a cleaning step in `2_website_aggregation.R`. Before anything
+is counted, they strip URLs, keep only letters and punctuation (dropping all
+digits), split the text on `#+#` into "tags", and **keep only tags with at least
+10 words that contain sentence punctuation and a capital letter**. That removes
+navigation, menus and button labels. `n_tags` and `n_clean_tags` are the counts
+before and after that filter.
+
+Our text never had this applied, so our first pass computed every variable on
+raw text that still held the boilerplate. `n_char` came out about 1.5× too high,
+and TTR, MATTR, entropy and the topics all inherited the error, since they are
+computed downstream of the same text.
+
+The validation in this report did not catch it because it ran our coding against
+*their* text, which was already cleaned. That test cannot detect a missing
+preprocessing step: the step had already been applied to the input.
+
+We hold no copy of their pre-cleaning text, so the fix is validated indirectly on
+five signals: the surviving-tag ratio `n_clean_tags/n_tags` matches at the median
+(0.147 both), median `n_tags` is 46 against their 44, and their cleaned text
+contains no digits, no colons and no double spaces in 20,000 sampled pages —
+three structural predictions from reading their regex, all confirmed.
+
+Applying the filter moves the boundary ratio from 1.51 to 0.81 and puts our
+2020–2024 within 2% of their 2016 level. Details in
+`quality_reports/corpus_comparability_2026-08-13.md`.
+
+**`n_tags` and `n_clean_tags` are therefore shippable after all.** They fall out
+of the filter directly. The claim below that they were unrecoverable rested on
+the `#+#` separators being absent — they are absent from *their* cleaned file,
+but our corpus still carries them.
+
 ## Result 3: what is still not shipped
 
-- **`n_tags`, `n_clean_tags`** — HTML-structure counts fixed at scrape time. The
-  archived HTML is gone and the cleaned text has `#+#` stripped. Not recoverable
-  in principle.
+- ~~**`n_tags`, `n_clean_tags`**~~ — **superseded, these are now shipped.** The
+  original claim was that the archived HTML is gone and the `#+#` separators are
+  stripped. The separators are absent from *their* cleaned file; our corpus still
+  has them, and both counts fall out of their filter (see Result 2b). I
+  generalised from their file to ours without checking.
 - **`entropy_missing`** — reproduces at corr 0.952, below the 0.99 bar applied
   to everything else. It is the share of tokens absent from the Google Books
   dictionary, so it is the measure most sensitive to tokenizer edge cases, and

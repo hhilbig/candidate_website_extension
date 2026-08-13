@@ -1,5 +1,21 @@
 # Is our corpus comparable to ICPSR 226001's?
 
+> **REVISED 2026-08-13 (same day). The original diagnosis was wrong.**
+>
+> This report attributed the 51% document-length gap at the 2016/2018 boundary
+> to crawl depth. It is not depth. ICPSR's `websites_clean` — the input to both
+> `4_complexity.R` and `7_topics.py` — is the output of a **boilerplate filter**
+> in `2_website_aggregation.R` that we had never applied. Their text keeps only
+> `#+#` segments with at least 10 words containing sentence punctuation and a
+> capital letter, and drops all digits. Ours kept navigation, menus and buttons.
+>
+> Applying their filter closes the gap: their 2016 median `n_char` is 1,624 and
+> our 2018 is 1,638, a **0.9% step**. On the 41 overlapping candidates the ratio
+> goes from 1.65 to **1.003** and the per-candidate correlation from 0.60 to
+> **0.856**. We still capture 8.75× their pages, so depth is real but does not
+> propagate: deeper crawling adds boilerplate, and their filter removes it. The
+> depth analysis below is retained as description. See "Correction" at the end.
+
 **Date:** 2026-08-13
 **Code:** scratch analysis over `data/deliverable/raw_corpus_icpsr.parquet` and
 ICPSR's `websites_clean.parquet`
@@ -170,6 +186,113 @@ specific pages each scraper happened to capture.
   non-overlaps, so the overlap set is not a random sample of their 2018.
 - Nothing here tests topic values across corpora. That would need their 2018
   topic values, which exist for only 76 candidates.
+
+## Correction: the length gap is a missing cleaning step, not crawl depth
+
+Added after the analysis above, and it supersedes its central claim.
+
+**What the depth hypothesis predicted, and what happened.** If deeper crawling
+drove the length gap, holding depth fixed should shrink it. We built a
+homepage-only variant to test exactly that, since ICPSR's 2002–2012 crawl is
+effectively homepage-only. Holding depth fixed made the gap **wider**:
+
+| | Their 2016 | Our 2018 | Ratio |
+|---|---|---|---|
+| Full crawl | 1,624 | 2,452 | 1.51 |
+| Homepage only | 1,237 | 2,145 | **1.73** |
+
+Our homepages are themselves 1.7× longer than theirs, so depth was never the
+mechanism. That result falsified the hypothesis this report was built on.
+
+**The actual cause.** `2_website_aggregation.R` runs nine steps before anything
+is counted:
+
+1. strip URLs
+2. normalise `&amp;` and curly apostrophes
+3. `str_extract_all("([a-zA-Z.?!\'-,;]|[#\+#])+")` — **keep only letters and
+   punctuation; all digits are dropped**
+4. split on `#+#` into "tags" (visual components)
+5. `n_tags` = number of components
+6. **keep only components with ≥10 words that contain `[?!.]` and `[A-Z]`**
+7. `n_clean_tags` = number surviving
+8. rejoin survivors with spaces, `str_squish`
+9. *then* compute `n_char` and `n_words`
+
+Step 6 removes navigation, menus and button labels. Our text never had it
+applied, so our counts included that material and theirs did not.
+
+**Why the earlier validation did not catch it.** We validated our coding against
+their published values using *their* text — which was already cleaned. That test
+cannot detect a missing preprocessing step, because the step had already been
+applied to the input. The test was sound; the inference drawn from it was too
+broad.
+
+**Evidence that our implementation of their filter is right.** We hold no copy of
+their pre-cleaning text, so this is validated indirectly, on five independent
+signals:
+
+| Check | ICPSR | Ours |
+|---|---|---|
+| `n_clean_tags / n_tags`, median | 0.147 | 0.147 |
+| median `n_tags` | 44.0 | 46.0 |
+| cleaned text containing a digit | 0.000% | 0.000% |
+| containing a colon | 0.000% | 0.000% |
+| containing a double space | 0.000% | 0.000% |
+
+The digit, colon and double-space rates are structural predictions from reading
+their regex, checked on 20,000 of their pages. All hold.
+
+**Effect on the boundary.** Median `n_char` per candidate-year, House
+(final figures from the full rebuild):
+
+| | 2014 | 2016 (theirs) | 2018 | 2020 | 2022 | 2024 |
+|---|---|---|---|---|---|---|
+| uncleaned (as first shipped) | 1,540 | 1,624 | 2,452 | 2,555 | 2,491 | 2,782 |
+| **cleaned** | 1,540 | 1,624 | **1,638** | 1,847 | 1,815 | 2,054 |
+
+Their 2016 to our 2018 is a **0.9% step**, against 51% before. Median
+`n_clean_tags` matches exactly at 7.0 on both sides of the boundary, and the
+upward trend continues sensibly through 2024.
+
+**Effect on the 41 overlapping candidates**, the design that holds candidate and
+year fixed:
+
+| Measure | Before cleaning | After cleaning |
+|---|---|---|
+| `n_char` ratio | 1.65 | **1.003** |
+| `n_char` per-candidate corr | 0.60 | **0.856** |
+| `n_words` ratio | 1.54 | 1.056 |
+| `n_words` per-candidate corr | 0.65 | **0.879** |
+| `TTR` ratio / corr | 0.92 / 0.25 | 0.984 / 0.390 |
+| `MATTR` ratio / corr | 0.98 / −0.09 | 1.000 / **0.217** |
+
+`n_char` and `n_words` are now comparable both in level and per candidate.
+**MATTR is not.** Cleaning lifted its correlation from −0.09 to 0.217, still
+weak, so the near-zero figure was not a boilerplate artifact: MATTR is
+inherently unstable at the candidate level between two different scrapes,
+because it depends on which specific pages each one caught. TTR behaves the
+same way at 0.39.
+
+**Why depth stopped mattering.** We still capture 8.75× their pages on the
+overlapping candidates, and the length ratio is nonetheless 1.00. Deeper
+crawling adds mostly boilerplate, and their filter removes exactly that. This is
+the resolution of the whole question: crawl depth is a real difference between
+the collections that does not propagate into the coded variables once the
+cleaning is applied.
+
+**A new signal the cleaning exposes.** 610 candidate-years (5.8%) have *no* page
+surviving the filter — parked domains and navigation-only captures. They are
+concentrated in early Senate years (13.3% in 2014, 12.5% in 2012). Their coded
+columns are missing rather than zero, which is the honest encoding: we have a
+capture but no substantive prose.
+
+**What this changes in the conclusions above.** Recommendation 1 ("do not pool
+raw `n_char`/`n_words` across the boundary") stands, but the reason is the
+cleaning step, not crawl depth, and it is now fixed rather than a caveat. The
+descriptive depth facts — their 2014 break, our swing across scraper versions,
+their anomalous 2018 — remain accurate as descriptions. `n_tags` and
+`n_clean_tags`, previously called unrecoverable, fall straight out of steps 5
+and 7, because our text retains the `#+#` separators theirs had already lost.
 
 ## Glossary
 
