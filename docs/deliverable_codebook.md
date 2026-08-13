@@ -51,6 +51,21 @@ ICPSR's *own text* before being applied to ours. Full evidence:
   not part of the key.
 - `icpsr_n_valid_snap`, `icpsr_n_valid_pages` — snapshot-days and pages entering
   the aggregate.
+- `icpsr_max_pages_1day` — largest page count on any single snapshot-day for this
+  candidate-year. Median 5, p90 29, p99 142, maximum 20,946.
+- `icpsr_share_pages_runaway` — share of this candidate-year's pages that came
+  from snapshot-days with more than 100 pages.
+- `icpsr_runaway_flag` — `icpsr_max_pages_1day > 100`. True for 184
+  candidate-years (1.74%), concentrated in the raw-CDX years (senate 2002 6.5%,
+  senate 2010 5.8%, senate 2006 5.3%).
+
+  A small number of candidate-days produced runaway crawls: 0.78% of
+  snapshot-days hold 24.5% of all pages. The two-level mean already absorbs most
+  of this, since a day contributes one value however many pages it holds —
+  dropping flagged rows moves median `icpsr_n_char` only from 2,558 to 2,530.
+  Treat the flag as a robustness filter, not a required correction. The raw
+  maximum is exposed so you can set your own threshold rather than inheriting
+  the 100-page one.
 
 **Prefer `icpsr_mattr_approx` over `icpsr_ttr_approx` for cross-year
 *distributions*, but not for candidate-level comparison between the two

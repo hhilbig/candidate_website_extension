@@ -300,8 +300,12 @@ resume (which re-queries all ~3.5k and re-incurs refusals).
   to 2% but its per-candidate correlation across corpora is ~0** — safe for
   distributions, unsafe per candidate. Page concentration: 0.78% of
   snapshot-days hold 24.5% of all pages (max 20,946 pages in one day).
-- [ ] Consider shipping a page-count flag so users can exclude runaway
-  snapshot-days (see the comparability report).
+- [x] ~~Ship a page-count flag so users can exclude runaway snapshot-days.~~
+  DONE 2026-08-13: `icpsr_max_pages_1day`, `icpsr_share_pages_runaway`,
+  `icpsr_runaway_flag` (>100 pages in one day; 184 candidate-years, 1.74%).
+  Excluding flagged rows moves median `icpsr_n_char` only 2,558 -> 2,530, so the
+  two-level mean was already absorbing most of it. Raw max exposed so users can
+  set their own threshold.
 - [ ] **Rights posture for the Dataverse deposit** — the open blocker on
   release. Pons did not address copyright for the scraped website text.
   Recommendation on record: mirror ICPSR 226001's rights statement and keep

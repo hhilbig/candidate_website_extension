@@ -296,6 +296,35 @@ def icpsr_aggregate(pages: pd.DataFrame, value_cols: list[str],
     return per_snap.groupby(group_col).mean()
 
 
+# A small number of candidate-days produced runaway crawls: corpus-wide, 0.78%
+# of snapshot-days hold 24.5% of all pages, with a maximum of 20,946 pages in one
+# day. 100 is roughly the 99th percentile (p99 = 93). The two-level mean limits
+# the damage -- a day contributes one value however many pages it holds -- but
+# users should be able to exclude these. See
+# quality_reports/corpus_comparability_2026-08-13.md.
+RUNAWAY_PAGES = 100
+
+
+def snapshot_page_stats(pages: pd.DataFrame, group_col: str = "ck",
+                        date_col: str = "snap_day") -> pd.DataFrame:
+    """Per-candidate crawl-size diagnostics, so runaway days can be filtered.
+
+    Returns the largest single-day page count, the share of the candidate's
+    pages coming from runaway days, and a boolean flag. The raw maximum is
+    exposed so users can pick their own threshold rather than inheriting ours.
+    """
+    per_day = pages.groupby([group_col, date_col]).size().rename("n")
+    by_cand = per_day.groupby(group_col)
+    out = pd.DataFrame({
+        "icpsr_max_pages_1day": by_cand.max(),
+        "icpsr_share_pages_runaway": (
+            per_day.where(per_day > RUNAWAY_PAGES, 0).groupby(group_col).sum()
+            / by_cand.sum()),
+    })
+    out["icpsr_runaway_flag"] = out.icpsr_max_pages_1day > RUNAWAY_PAGES
+    return out
+
+
 def icpsr_key(df: pd.DataFrame) -> pd.Series:
     """ICPSR's candidate grain, including data_source.
 
@@ -486,7 +515,8 @@ def run_apply(corpus: Path, out: Path, mattr_window: int,
     n_snap = (pages.groupby("ck").snap_day.nunique()
                    .rename("icpsr_n_valid_snap"))
     n_page = pages.groupby("ck").size().rename("icpsr_n_valid_pages")
-    res = meta.join(agg).join(n_snap).join(n_page)
+    crawl = snapshot_page_stats(pages)
+    res = meta.join(agg).join(n_snap).join(n_page).join(crawl)
     if topics is not None:
         res = res.join(topics)
         bad = int((res[topics.columns].sum(axis=1).sub(1).abs() > 1e-9).sum())
