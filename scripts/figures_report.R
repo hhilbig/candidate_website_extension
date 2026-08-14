@@ -44,32 +44,78 @@ save_fig <- function(p, name, width, height) {
 }
 
 # --------------------------------------------------------------- fig-coverage
-# What share of the candidates we attempted actually yielded text, by
-# office-year. The point of the figure is that coverage is neither complete nor
-# constant, and is thinnest in the early Senate years.
+# Coverage for both collections on one axis, 2002 to 2024.
+#
+# The denominator is the ballot, not either project's roster: every Democratic
+# and Republican candidate in the MIT general-election returns. That is the only
+# denominator observable for both, so grey (Di Tella et al., House 2002-2016)
+# and blue (this dataset) are directly comparable.
+#
+# Two lines per series. Solid counts candidates. Dashed weights each candidate by
+# the votes they received, which answers a different question: not "what share of
+# candidates do we have" but "what share of the votes cast went to a candidate
+# whose website we have". A missed candidate with 200,000 votes should not count
+# the same as one with 8,000.
 
+cb <- read_csv(file.path(data_dir, "coverage_vs_ballot.csv"),
+               show_col_types = FALSE) |>
+  mutate(label = if_else(office == "house", "House", "Senate"),
+         series = paste(source, office))
+
+cb_long <- cb |>
+  select(label, series, source, year, pct_cand, pct_votes) |>
+  pivot_longer(c(pct_cand, pct_votes), names_to = "weight", values_to = "pct") |>
+  mutate(weight = factor(weight, c("pct_cand", "pct_votes"),
+                         c("candidates", "voters")))
+
+# Direct labels, placed by hand so they sit clear of both line types.
+cb_lab <- tibble(
+  label  = c("House", "House", "Senate"),
+  source = c("icpsr", "extension", "extension"),
+  year   = c(2009, 2021, 2015),
+  pct    = c(47, 88, 38),
+  text   = c("Di Tella et al.", "this dataset", "this dataset"))
+
+p_cov <- ggplot(cb_long, aes(x = year, y = pct,
+                             group = interaction(series, weight))) +
+  geom_line(aes(color = source, linetype = weight), linewidth = 0.7) +
+  geom_point(data = filter(cb_long, weight == "candidates"),
+             aes(color = source), size = 1.6) +
+  geom_text(data = cb_lab, aes(x = year, y = pct, label = text,
+                               color = source),
+            size = 3.1, fontface = "bold",
+            inherit.aes = FALSE, show.legend = FALSE) +
+  facet_wrap(~label, ncol = 2) +
+  scale_color_manual(values = c(icpsr = GREY, extension = DARK)) +
+  scale_linetype_manual(values = c(candidates = "solid", voters = "22")) +
+  scale_x_continuous(breaks = seq(2002, 2024, 6)) +
+  scale_y_continuous(limits = c(0, 100), breaks = c(0, 25, 50, 75, 100)) +
+  labs(x = NULL, y = "Captured (% of ballot)") +
+  theme_report()
+
+# Explain the two line types once, inside the House panel, instead of a legend.
+key <- tibble(label = "House", year = c(2003.2, 2003.2), pct = c(22, 12),
+              weight = factor(c("candidates", "voters"),
+                              c("candidates", "voters")),
+              text = c("share of candidates", "share of votes cast"))
+p_cov <- p_cov +
+  geom_line(data = key |> mutate(x1 = year - 0.9, x2 = year + 1.9) |>
+              pivot_longer(c(x1, x2), values_to = "xx") |>
+              mutate(series = "key"),
+            aes(x = xx, y = pct, group = weight, linetype = weight),
+            color = "grey35", linewidth = 0.6, inherit.aes = FALSE) +
+  geom_text(data = key |> mutate(series = "key"),
+            aes(x = year + 2.4, y = pct, label = text), hjust = 0, size = 2.7,
+            color = "grey35", inherit.aes = FALSE)
+save_fig(p_cov, "coverage_by_office_year", 7.6, 3.8)
+
+# Absolute counts alongside the rate: a high rate on 50 candidates is not the
+# same evidence as a high rate on 527. Roster-based, so this one is about this
+# release only.
 cov <- read_csv(file.path(data_dir, "coverage_by_office_year.csv"),
                 show_col_types = FALSE) |>
   mutate(label = if_else(office == "house", "House", "Senate"))
 
-lab_pts <- cov |>
-  group_by(office) |>
-  filter(year == min(year) | year == max(year)) |>
-  ungroup()
-
-p_cov <- ggplot(cov, aes(x = year, y = pct_of_url)) +
-  geom_line(color = BLUE, linewidth = 0.65) +
-  geom_point(color = BLUE, size = 1.8) +
-  geom_text(data = lab_pts, aes(label = sprintf("%.0f", pct_of_url)),
-            vjust = -1.1, size = 3.0, color = "grey20") +
-  facet_wrap(~label, ncol = 2, scales = "free_x") +
-  scale_y_continuous(limits = c(0, 100), breaks = c(0, 25, 50, 75, 100)) +
-  labs(x = NULL, y = "Captured (% with a usable URL)") +
-  theme_report()
-save_fig(p_cov, "coverage_by_office_year", 7.6, 3.6)
-
-# Absolute counts alongside the rate: a high rate on 72 candidates is not the
-# same evidence as a high rate on 693.
 cnt <- cov |>
   select(label, year, roster, captured) |>
   pivot_longer(c(roster, captured), names_to = "what", values_to = "n") |>
@@ -222,6 +268,7 @@ cf <- read_csv(file.path(data_dir, "cfscore_correlations.csv"),
                show_col_types = FALSE)
 
 cf_long <- cf |>
+  filter(topic %in% KEY_TOPICS) |>          # same subset as the party-gap figure
   select(topic, Pooled = r_all, Democrats = r_D, Republicans = r_R) |>
   pivot_longer(-topic, names_to = "which", values_to = "r") |>
   mutate(which = factor(which, c("Pooled", "Democrats", "Republicans")),
@@ -240,7 +287,7 @@ p_cf <- ggplot(cf_long, aes(x = r, y = topic)) +
        y = NULL) +
   theme_report(11) +
   theme(axis.text.y = element_text(size = 8))
-save_fig(p_cf, "external_validity_cfscore", 8.4, 6.4)
+save_fig(p_cf, "external_validity_cfscore", 8.4, 4.4)
 
 # ------------------------------------------------------------- fig-welfare-arc
 # Welfare State attention over the full merged series. Shown only for a LARGE

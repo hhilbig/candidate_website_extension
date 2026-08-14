@@ -229,6 +229,19 @@ all retained snapshots — the un-collapsed corpus for re-scoring.
 - **2018 = ours** (ICPSR's 2018 is too sparse). **Senate standalone** (no
   district framework). **At-large** House districts → `district_id` `ST01`; one
   House candidate has NA `district_id` (unparseable FEC district).
+- **`on_ballot`** / **`general_votes`** (in `release_roster.csv` and
+  `panel_icpsr_compat.csv`): did this candidate appear on the general election
+  ballot, and with how many votes. Matched to the MIT Election Data and Science
+  Lab returns (House doi:10.7910/DVN/IG0UN2, Senate doi:10.7910/DVN/PEJ5QU) on
+  state, district and year, then on surname with a compatible first name.
+  Only 2,946 of 9,944 captured candidate-years are on the ballot; the rest filed
+  with the FEC and lost or left a primary. Capture rates differ sharply between
+  the two groups (84% against 52%), so restrict on this column before treating
+  the corpus as a sample of general election candidates. `general_votes` is
+  missing where `on_ballot` is false. The panel's match uses clean "Last, First"
+  names and is the more reliable of the two; the roster's uses raw FEC display
+  names, which are noisier.
+
 - **`text_quality`** (usable 85.1% / thin 9.4% / empty 5.5%): thin/empty are
   JS-rendered or placeholder/parked sites whose text Wayback did not archive —
   plausibly missing-not-at-random; filter or robustness-test, don't impute.

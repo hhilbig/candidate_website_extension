@@ -109,6 +109,11 @@ boilerplate and the cleaning removes them.
 ## Known limitations
 
 1. **Selection.** 41% of attempted candidate-years have no text. Use the roster.
+   And note what the corpus is a sample *of*: only 2,946 of the 9,944 captured
+   candidate-years reached a general election ballot. The rest filed with the FEC
+   and lost or left a primary. Capture rates differ between the two (84% against
+   52%), so restrict on `on_ballot` before treating this as a sample of general
+   election candidates.
 2. **Missing rather than zero.** 546 candidate-years (5.5%) have no page
    surviving the cleaning filter, typically parked domains and
    navigation-only captures.
