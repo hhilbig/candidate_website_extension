@@ -18,9 +18,9 @@ one, so this release supplies 2018 instead.
 |---|---|---|---|
 | `raw_corpus.parquet` | snapshot × page | 1,101,303 | 1.3 GB |
 | `panel_candidate_year.csv` | candidate × year, with text | 9,944 | 376 MB |
-| `panel_icpsr_compat.csv` | candidate × year, coded variables | 9,944 | 14 MB |
+| `panel_icpsr_compat.csv` | candidate × year, coded variables | 9,944 | 15 MB |
 | `candidate_crosswalk.csv` | candidate × year, identifiers | 9,944 | 2.4 MB |
-| `release_roster.csv` | candidate × year, all attempted | 16,945 | 1.2 MB |
+| `release_roster.csv` | candidate × year, all attempted | 16,945 | 1.4 MB |
 
 Start with `release_roster.csv` if you care about selection, and
 `panel_icpsr_compat.csv` if you want ready-made variables.
@@ -185,7 +185,7 @@ If you use this dataset, please cite it and the original:
 
 ## Reproduction
 
-Code: <repository URL>. The pipeline rebuilds every derived file from the raw
+Code: https://github.com/hhilbig/candidate_website_extension. The pipeline rebuilds every derived file from the raw
 corpus. Two inputs are **not** redistributed here because their licences forbid
 it, matching the original deposit: the Manifesto Project training corpus (free
 registration at manifesto-project.wzb.eu) and the Google Books n-gram
