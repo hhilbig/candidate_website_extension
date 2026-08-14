@@ -75,13 +75,42 @@ def name_parts(raw: str, comma_form: bool) -> tuple[str, str]:
     return ("".join(lt), (ft[0] if ft else ""))
 
 
+def last_variants(raw: str) -> list[tuple[str, str]]:
+    """Plausible (last, first) splits for a "First Middle Last" ballot name.
+
+    The ballot writes "DEBBIE WASSERMAN SCHULTZ" and "ALEXANDRIA OCASIO-CORTEZ";
+    the collections write "Wasserman Schultz, Debbie". Taking only the final
+    token as the surname silently drops every multi-word surname, so try the
+    last one, two and three tokens and let the caller accept any of them.
+    """
+    s = re.sub(r'"[^"]*"', " ", str(raw))
+    s = re.sub(r"[^A-Za-z ]", " ", s).lower()
+    toks = [w for w in s.split() if w not in SUFFIX]
+    if not toks:
+        return [("", "")]
+    out = []
+    for k in (1, 2, 3):
+        if len(toks) > k:
+            out.append(("".join(toks[-k:]), toks[0]))
+    if not out:                                   # single-token name
+        out.append(("".join(toks), ""))
+    return out
+
+
 def keys(df: pd.DataFrame, name: str, comma: bool) -> pd.DataFrame:
-    """Add last/first/initial columns used for the ballot match."""
+    """Add last/first/initial columns used for the ballot match.
+
+    Collection rows (comma form) get one surname. Ballot rows also get
+    `lasts`, every plausible surname split, because their name format hides
+    where the surname begins.
+    """
     parts = [name_parts(v, comma) for v in df[name]]
     df = df.copy()
     df["last"] = [p[0] for p in parts]
     df["first"] = [p[1] for p in parts]
     df["fi"] = df["first"].str[:1]
+    if not comma:
+        df["lasts"] = [last_variants(v) for v in df[name]]
     return df
 
 
@@ -146,27 +175,42 @@ def match(b: pd.DataFrame, c: pd.DataFrame) -> pd.Series:
     disagrees. Requiring uniqueness on both sides keeps it from merging two
     different people who happen to share a surname in one district.
     """
-    race = ["year", "office", "state_po", "district", "last"]
-    bk = list(map(tuple, b[race].astype(str).values))
-    ck = list(map(tuple, c[race].astype(str).values))
+    return pd.Series(_hits(b, c), index=b.index)
 
+
+def _compatible(g: str, f: str) -> bool:
+    """Two first names that plausibly belong to the same person."""
+    return (g == f or (bool(g) and bool(f)
+                       and (g.startswith(f) or f.startswith(g)))
+            or (bool(g[:1]) and g[:1] == f[:1]))
+
+
+def _hits(b: pd.DataFrame, c: pd.DataFrame) -> list[bool]:
+    rc = ["year", "office", "state_po", "district"]
     by_race: dict[tuple, list[str]] = {}
-    for k, f in zip(ck, c["first"]):
-        by_race.setdefault(k, []).append(f)
+    for k, last, f in zip(map(tuple, c[rc].astype(str).values), c["last"],
+                          c["first"]):
+        by_race.setdefault(k + (last,), []).append(f)
     b_count: dict[tuple, int] = {}
-    for k in bk:
-        b_count[k] = b_count.get(k, 0) + 1
+    for k, variants in zip(map(tuple, b[rc].astype(str).values), b["lasts"]):
+        for last, _ in variants:
+            b_count[k + (last,)] = b_count.get(k + (last,), 0) + 1
 
-    def ok(k: tuple, f: str) -> bool:
-        firsts = by_race.get(k)
-        if not firsts:
-            return False
-        if len(set(firsts)) == 1 and b_count.get(k, 0) == 1:
-            return True                      # one of each: surname is enough
-        return any(g == f or (g and f and (g.startswith(f) or f.startswith(g)))
-                   or (g[:1] and g[:1] == f[:1]) for g in firsts)
-
-    return pd.Series([ok(k, f) for k, f in zip(bk, b["first"])], index=b.index)
+    out = []
+    for k, variants in zip(map(tuple, b[rc].astype(str).values), b["lasts"]):
+        got = False
+        for last, first in variants:
+            firsts = by_race.get(k + (last,))
+            if not firsts:
+                continue
+            if len(set(firsts)) == 1 and b_count.get(k + (last,), 0) == 1:
+                got = True
+                break
+            if any(_compatible(g, first) for g in firsts):
+                got = True
+                break
+        out.append(got)
+    return out
 
 
 def reverse_match(c: pd.DataFrame, b: pd.DataFrame) -> pd.DataFrame:
@@ -175,13 +219,14 @@ def reverse_match(c: pd.DataFrame, b: pd.DataFrame) -> pd.DataFrame:
     Returns on_ballot and general_votes. Same compatibility rule as match(),
     read the other way.
     """
-    race = ["year", "office", "state_po", "district", "last"]
-    bk = list(map(tuple, b[race].astype(str).values))
-    ck = list(map(tuple, c[race].astype(str).values))
-
+    rc = ["year", "office", "state_po", "district"]
     by_race: dict[tuple, list[tuple[str, int]]] = {}
-    for k, f, v in zip(bk, b["first"], b["candidatevotes"]):
-        by_race.setdefault(k, []).append((f, int(v)))
+    for k, variants, v in zip(map(tuple, b[rc].astype(str).values), b["lasts"],
+                              b["candidatevotes"]):
+        for last, first in variants:
+            by_race.setdefault(k + (last,), []).append((first, int(v)))
+    ck = [tuple(x) + (l,) for x, l
+          in zip(c[rc].astype(str).values, c["last"])]
     c_count: dict[tuple, int] = {}
     for k in ck:
         c_count[k] = c_count.get(k, 0) + 1
@@ -192,12 +237,10 @@ def reverse_match(c: pd.DataFrame, b: pd.DataFrame) -> pd.DataFrame:
         if not cands:
             hit.append(False), votes.append(pd.NA)
             continue
-        if len(cands) == 1 and c_count.get(k, 0) == 1:
+        if len({x[1] for x in cands}) == 1 and c_count.get(k, 0) == 1:
             hit.append(True), votes.append(cands[0][1])
             continue
-        ok = [v for g, v in cands
-              if g == f or (g and f and (g.startswith(f) or f.startswith(g)))
-              or (g[:1] and g[:1] == f[:1])]
+        ok = [v for g, v in cands if _compatible(g, f)]
         hit.append(bool(ok))
         votes.append(max(ok) if ok else pd.NA)
     return pd.DataFrame({"on_ballot": hit, "general_votes": votes},
@@ -293,14 +336,13 @@ def main() -> int:
             print(f"  {x.office:<6} {x.year}  {x.n_matched:>4}/{x.n_ballot:<4} "
                   f"= {x.pct_cand:5.1f}%   votes {x.pct_votes:5.1f}%")
 
-    # How many collection rows never found a ballot row? A high number means the
-    # matcher is failing, not that the candidates were absent from the ballot.
-    for lbl, c, col in (("ICPSR", t, "in_icpsr"), ("ours", o, "in_ours")):
-        key = ["year", "office", "state_po", "district", "last", "fi"]
-        onb = set(map(tuple, b[key].astype(str).values))
-        miss = sum(tuple(v) not in onb for v in c[key].astype(str).values)
-        print(f"\n{lbl}: {miss:,}/{len(c):,} ({100*miss/len(c):.1f}%) rows found "
-              f"no ballot row")
+    # How many collection rows are not on the ballot? Read from the same
+    # matcher, not a stricter key, or the number is an artifact of the key.
+    for lbl, c in (("ICPSR", t), ("ours", o)):
+        rev = reverse_match(c, b)
+        miss = int((~rev.on_ballot).sum())
+        print(f"\n{lbl}: {miss:,}/{len(c):,} ({100*miss/len(c):.1f}%) not on a "
+              f"general-election ballot")
     print(f"\nwrote {OUT/'coverage_vs_ballot.csv'}")
     print("\nannotating the released tables with on_ballot / general_votes:")
     annotate(b)

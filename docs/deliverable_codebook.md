@@ -233,8 +233,14 @@ all retained snapshots — the un-collapsed corpus for re-scoring.
   `panel_icpsr_compat.csv`): did this candidate appear on the general election
   ballot, and with how many votes. Matched to the MIT Election Data and Science
   Lab returns (House doi:10.7910/DVN/IG0UN2, Senate doi:10.7910/DVN/PEJ5QU) on
-  state, district and year, then on surname with a compatible first name.
-  Only 2,946 of 9,944 captured candidate-years are on the ballot; the rest filed
+  state, district and year, then on surname with a compatible first name. The
+  returns write "DEBBIE WASSERMAN SCHULTZ" where the roster writes "Wasserman
+  Schultz, Debbie", so the last one, two and three name tokens are each tried as
+  the surname; without that, every multi-word surname was missed (91 candidates,
+  including Ocasio-Cortez and McMorris Rodgers). Scoring every unmatched row
+  against the names in its own race leaves 13 close pairs the rule still misses,
+  mostly married and maiden name variants, so sensitivity is about 99%.
+  Only 3,037 of 9,944 captured candidate-years are on the ballot; the rest filed
   with the FEC and lost or left a primary. Capture rates differ sharply between
   the two groups (84% against 52%), so restrict on this column before treating
   the corpus as a sample of general election candidates. `general_votes` is

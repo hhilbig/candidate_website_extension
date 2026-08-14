@@ -329,6 +329,21 @@ def page_measures(text: str, mattr_window: int,
     return out
 
 
+def election_day(year: int) -> int:
+    """YYYYMMDD of the federal general election: Tuesday after the first Monday.
+
+    Wanted because roughly a fifth of archived pages post-date the vote, and a
+    site can change or lapse once the campaign is over.
+    """
+    import datetime as _dt
+    d = _dt.date(int(year), 11, 1)
+    while d.weekday() != 1:
+        d += _dt.timedelta(days=1)
+    if d.day == 1:
+        d += _dt.timedelta(days=7)
+    return int(d.strftime("%Y%m%d"))
+
+
 def icpsr_aggregate(pages: pd.DataFrame, value_cols: list[str],
                     group_col: str = "ck",
                     date_col: str = "date") -> pd.DataFrame:
@@ -549,6 +564,8 @@ def run_apply(corpus: Path, out: Path, mattr_window: int,
         # are untouched in the corpus itself; this only affects this output.)
         if has_home:
             g["is_home"] = (g.page_type == "homepage")
+        g["is_preelec"] = (g["date"].astype(str).str.slice(0, 8).astype(int)
+                           <= election_day(g["year"].iloc[0]))
         g = g.drop(columns=[c for c in ("text_snap_content", "n_char", "n_words",
                                         "n_tags", "n_clean_tags", "page_type")
                             if c in g.columns])
@@ -615,6 +632,33 @@ def run_apply(corpus: Path, out: Path, mattr_window: int,
                   .join(hp.groupby("ck").size().rename("icpsr_n_valid_pages_home")))
         print(f"homepage-only variant: {len(agg_h):,} candidate-years covered "
               f"({100*len(agg_h)/len(res):.1f}%)")
+    pe = pages[pages.is_preelec]
+    if len(pe):
+        agg_p = icpsr_aggregate(pe, vals, date_col="snap_day").rename(
+            columns={"n_char": "icpsr_n_char", "n_words": "icpsr_n_words",
+                     "n_tags": "icpsr_n_tags",
+                     "n_clean_tags": "icpsr_n_clean_tags",
+                     "ttr": "icpsr_ttr_approx", "mattr": "icpsr_mattr_approx",
+                     "entropy": "icpsr_entropy_approx"}).add_suffix("_preelec")
+        res = (res.join(agg_p)
+                  .join(pe.groupby("ck").snap_day.nunique()
+                          .rename("icpsr_n_valid_snap_preelec"))
+                  .join(pe.groupby("ck").size()
+                          .rename("icpsr_n_valid_pages_preelec")))
+        print(f"pre-election variant: {len(agg_p):,} candidate-years covered "
+              f"({100*len(agg_p)/len(res):.1f}%); "
+              f"{100*(1-pages.is_preelec.mean()):.1f}% of pages post-date the vote")
+
+    # Snapshot timing. Without these the panel gives no way to tell WHEN in the
+    # cycle a candidate is observed, which is the dimension the original paper
+    # is about.
+    day = pages.groupby("ck").snap_day
+    res = (res.join(day.min().rename("icpsr_first_snap_day"))
+              .join(day.max().rename("icpsr_last_snap_day")))
+    span = (pd.to_datetime(res.icpsr_last_snap_day, format="%Y%m%d")
+            - pd.to_datetime(res.icpsr_first_snap_day, format="%Y%m%d")).dt.days
+    res["icpsr_snap_span_days"] = span
+
     if topics is not None:
         res = res.join(topics)
         bad = int((res[topics.columns].sum(axis=1).sub(1).abs() > 1e-9).sum())
