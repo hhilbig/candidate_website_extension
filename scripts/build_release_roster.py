@@ -25,6 +25,7 @@ import pandas as pd
 REPO = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO))
 from src.scrape_wayback import _clean_campaign_url  # noqa: E402
+from drop_no_race_senate import senate_races, in_scope  # noqa: E402
 ROSTERS = REPO / "data/rosters"
 CROSSWALK = REPO / "quality_reports/coverage_audit/csv/candidate_crosswalk.csv"
 KEY = ["candidate", "state", "office", "year"]
@@ -52,6 +53,16 @@ def main() -> int:
     r = load_rosters()
     print(f"rosters: {len(r):,} candidate-years across "
           f"{r.source_file.nunique()} office-years")
+
+    # Senate seats rotate in thirds, so only about 33 states vote each cycle.
+    # The FEC candidate files list anyone with a registered committee, so a
+    # roster built from them carries candidates in state-years with no election
+    # at all -- Al Franken appears for MN 2010, 2016 and 2022. Drop them.
+    before = len(r)
+    r = r[in_scope(r, senate_races())].reset_index(drop=True)
+    if before != len(r):
+        print(f"dropped {before - len(r):,} Senate rows in state-years with no "
+              f"Senate election")
 
     # "Usable URL" must mean exactly what the scraper meant, so use its own
     # cleaner rather than a lookalike test. It rejects placeholders like

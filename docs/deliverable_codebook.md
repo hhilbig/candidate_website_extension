@@ -11,11 +11,11 @@ unreproducible referred to the data-only download and no longer applies.
 
 | File | Grain | Rows | Committed? |
 |---|---|---|---|
-| `raw_corpus_icpsr.parquet` | snapshot × page (ICPSR `websites_clean` schema) | 1,175,582 | no (1.5 GB; regenerable) |
-| `panel_candidate_year_icpsr.csv` | candidate × year (pre-score, **with text**) | 10,601 | no (424 MB) |
-| `panel_candidate_year_icpsr_meta.csv` | same, **without `text`** | 10,601 | yes (3 MB) |
-| `candidate_crosswalk.csv` | candidate × year — the id/convention bridge | 10,601 | yes (2.5 MB) |
-| `panel_icpsr_compat.csv` | candidate × year — ICPSR-compatible coded columns | 10,601 | yes (1.6 MB, copy at `quality_reports/coverage_audit/csv/`) |
+| `raw_corpus_icpsr.parquet` | snapshot × page (ICPSR `websites_clean` schema) | 1,101,303 | no (1.5 GB; regenerable) |
+| `panel_candidate_year_icpsr.csv` | candidate × year (pre-score, **with text**) | 9,944 | no (424 MB) |
+| `panel_candidate_year_icpsr_meta.csv` | same, **without `text`** | 9,944 | yes (3 MB) |
+| `candidate_crosswalk.csv` | candidate × year — the id/convention bridge | 9,944 | yes (2.5 MB) |
+| `panel_icpsr_compat.csv` | candidate × year — ICPSR-compatible coded columns | 9,944 | yes (1.6 MB, copy at `quality_reports/coverage_audit/csv/`) |
 
 All are regenerable in ~8 min via the pipeline in "Regeneration" below.
 
@@ -67,8 +67,8 @@ ICPSR's *own text* before being applied to ours. Full evidence:
   candidate-year. Median 5, p90 29, p99 142, maximum 20,946.
 - `icpsr_share_pages_runaway` — share of this candidate-year's pages that came
   from snapshot-days with more than 100 pages.
-- `icpsr_runaway_flag` — `icpsr_max_pages_1day > 100`. True for 184
-  candidate-years (1.74%), concentrated in the raw-CDX years (senate 2002 6.5%,
+- `icpsr_runaway_flag` — `icpsr_max_pages_1day > 100`. True for 171
+  candidate-years (1.72%), concentrated in the raw-CDX years (senate 2002 6.5%,
   senate 2010 5.8%, senate 2006 5.3%).
 
   A small number of candidate-days produced runaway crawls: 0.78% of

@@ -16,18 +16,31 @@ one, so this release supplies 2018 instead.
 
 | File | Grain | Rows | Size |
 |---|---|---|---|
-| `raw_corpus.parquet` | snapshot × page | 1,175,582 | 1.4 GB |
-| `panel_candidate_year.csv` | candidate × year, with text | 10,601 | 405 MB |
-| `panel_icpsr_compat.csv` | candidate × year, coded variables | 10,601 | 16 MB |
-| `candidate_crosswalk.csv` | candidate × year, identifiers | 10,601 | 2.4 MB |
-| `release_roster.csv` | candidate × year, all attempted | 18,250 | 2 MB |
+| `raw_corpus.parquet` | snapshot × page | 1,101,303 | 1.3 GB |
+| `panel_candidate_year.csv` | candidate × year, with text | 9,944 | 376 MB |
+| `panel_icpsr_compat.csv` | candidate × year, coded variables | 9,944 | 14 MB |
+| `candidate_crosswalk.csv` | candidate × year, identifiers | 9,944 | 2.4 MB |
+| `release_roster.csv` | candidate × year, all attempted | 16,945 | 1.2 MB |
 
 Start with `release_roster.csv` if you care about selection, and
 `panel_icpsr_compat.csv` if you want ready-made variables.
 
+## Scope: which candidate-years are included
+
+General-election candidates of the two major parties, House 2018–2024 and
+Senate 2002–2024.
+
+Senate seats rotate in thirds, so only about a third of states vote in any
+cycle. The rosters were built from FEC filings, which list anyone with a
+registered committee regardless of whether their state held an election that
+year. Those candidate-years are excluded, using the MIT Election Data and
+Science Lab's statewide Senate returns (doi:10.7910/DVN/PEJ5QU) as the record of
+which states voted. This removed 1,305 roster rows and 657 captured
+candidate-years. House needs no equivalent rule.
+
 ## Coverage, and why the roster matters
 
-We captured 10,601 candidate-years, 58% of the 18,250 we attempted, and 60%
+We captured 9,944 candidate-years, 59% of the 16,945 we attempted, and 60.5%
 of those for which we found a usable campaign URL. Coverage is not random: it
 depends on whether a campaign had a website and whether the Wayback Machine
 archived it.
@@ -40,7 +53,7 @@ there is no way to see who is missing.
 | Office | Years | Attempted | Captured | % of those with a URL |
 |---|---|---|---|---|
 | House | 2018–2024 | 13,175 | 7,675 | 53–65% |
-| Senate | 2002–2024 | 5,075 | 2,925 | 44–72% |
+| Senate | 2002–2024 | 3,770 | 2,268 | 45–76% |
 
 An audit found no systematic partisan capture bias (mean Democrat–Republican
 difference 1.3 percentage points).
@@ -96,8 +109,8 @@ boilerplate and the cleaning removes them.
 
 ## Known limitations
 
-1. **Selection.** 42% of attempted candidate-years have no text. Use the roster.
-2. **Missing rather than zero.** 610 candidate-years (5.8%) have no page
+1. **Selection.** 41% of attempted candidate-years have no text. Use the roster.
+2. **Missing rather than zero.** 546 candidate-years (5.5%) have no page
    surviving the cleaning filter, typically parked domains and
    navigation-only captures.
    Their coded columns are empty, not 0.
@@ -108,7 +121,7 @@ boilerplate and the cleaning removes them.
    later ones were deduplicated to roughly one per three months. Normalise
    before comparing snapshot counts across years. `icpsr_n_valid_snap` gives the
    count used.
-5. **Runaway crawls.** 0.78% of snapshot-days hold 24.5% of all pages. Exclude
+5. **Runaway crawls.** 0.73% of snapshot-days hold 24.9% of all pages. Exclude
    them with `icpsr_runaway_flag`, or set your own threshold with
    `icpsr_max_pages_1day`. The two-level averaging already absorbs most of this.
 6. **General election only.** No primary-stage websites, so this does not
