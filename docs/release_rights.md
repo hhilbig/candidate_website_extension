@@ -17,9 +17,12 @@ The contact question is settled: Harvard Dataverse gives every dataset a
 publishing an address. The clause points at that, so no separately monitored
 address goes on a public page.
 
-Outstanding: the UC Davis research-data/scholarly-communications check. That
-moved from "worth doing" to "the thing to do" once Pons confirmed no legal
-review sat behind the precedent.
+**Decided 2026-08-14 (Hanno): no UC Davis check.** The release proceeds on our
+own judgment. What that means, stated plainly so nobody later assumes otherwise:
+no one with legal training has reviewed this deposit, and the same is true of
+the ICPSR and CampaignView precedents it rests on. The reasoning for going ahead
+is in "The decision" below, and it is a judgment about political speech that is
+already public, not a clearance.
 
 ## The question
 
@@ -108,13 +111,15 @@ Three components:
 I am not a lawyer and this is not legal advice. Two things worth weighing that I
 cannot resolve:
 
-- **UC Davis research-data / scholarly-communications sign-off. Now the main
-  open item.** Pons confirmed (2026-08-13) that no legal review sat behind the
-  ICPSR deposit, so mirroring it means relying on a peer's unreviewed judgment.
-  That may well be correct — campaign websites are political speech meant for
-  public circulation, the pages are already public via the Internet Archive, and
-  the use is non-commercial academic research — but it is a judgment, not a
-  clearance, and the library check is close to free.
+- **Whether the judgment is right.** Declined the UC Davis check on 2026-08-14,
+  so this stays unresolved by design. The case for going ahead: campaign websites
+  are political speech meant for public circulation, the pages are already public
+  via the Internet Archive, every row is traceable to its archived source, the
+  use is non-commercial academic research, and two peer deposits of comparable
+  material exist (openICPSR 226001 under CC BY 4.0, CampaignView on Harvard
+  Dataverse under CC0). The case against: none of those deposits was reviewed
+  either, so the precedent is a description of what repositories accept rather
+  than evidence that the position is sound.
 - Whether Harvard Dataverse imposes its own terms that interact with CC BY 4.0.
   Their deposit agreement should be read before upload.
 
