@@ -106,26 +106,18 @@ ours <- filter(b, source == "extension")
 p_bound <- ggplot() +
   annotate("rect", xmin = 2016.5, xmax = 2018.5, ymin = -Inf, ymax = Inf,
            fill = BAND, alpha = 0.08) +
-  annotate("text", x = 2017.5, y = 2750, label = "boundary",
-           size = 2.9, color = "grey45") +
-  geom_line(data = ours, aes(x = year, y = uncleaned), color = RED,
-            linewidth = 0.6, linetype = "22") +
-  geom_point(data = ours, aes(x = year, y = uncleaned), color = RED, size = 1.6) +
-  annotate("text", x = 2024.2, y = tail(ours$uncleaned, 1),
-           label = "without replicating\ntheir text cleaning", hjust = 0,
-           size = 2.9, color = RED, lineheight = 0.95) +
   geom_line(data = icpsr, aes(x = year, y = cleaned), color = GREY,
             linewidth = 0.75) +
   geom_point(data = icpsr, aes(x = year, y = cleaned), color = GREY, size = 1.8) +
   geom_line(data = ours, aes(x = year, y = cleaned), color = DARK,
             linewidth = 0.85) +
   geom_point(data = ours, aes(x = year, y = cleaned), color = DARK, size = 2.0) +
-  annotate("text", x = 2009, y = 1180, label = "ICPSR 226001",
+  annotate("text", x = 2008, y = 1150, label = "Di Tella et al.",
            size = 3.1, color = GREY) +
-  annotate("text", x = 2021, y = 1430, label = "this dataset",
+  annotate("text", x = 2021.5, y = 1500, label = "this dataset",
            size = 3.1, color = DARK, fontface = "bold") +
-  scale_x_continuous(breaks = seq(2002, 2024, 4), limits = c(2002, 2028)) +
-  scale_y_continuous(limits = c(0, 3000), labels = comma) +
+  scale_x_continuous(breaks = seq(2002, 2024, 4), limits = c(2002, 2025)) +
+  scale_y_continuous(limits = c(0, 2400), labels = comma) +
   labs(x = NULL, y = "Median characters") +
   theme_report()
 save_fig(p_bound, "boundary_continuity", 7.4, 4.2)
@@ -166,27 +158,33 @@ save_fig(p_val, "validation_scatter", 7.8, 5.0)
 
 tp <- read_csv(file.path(data_dir, "topic_by_party.csv"), show_col_types = FALSE)
 
+KEY_TOPICS <- c(
+  "Welfare State", "Labour Groups", "Equality", "Education", "Social Groups",
+  "Democracy", "Market Regulation", "Sustainability", "Multiculturalism",
+  "Free Market Economy", "Economic Planning", "Military", "Law and Order",
+  "Traditional Morality", "National Way of Life", "Political Authority")
+
 gap <- tp |>
+  filter(topic %in% KEY_TOPICS) |>
   pivot_wider(names_from = party, values_from = share) |>
   mutate(gap = (D - R) * 100) |>
   group_by(topic) |>
-  summarise(mean_gap = mean(gap), lo = min(gap), hi = max(gap),
-            consistent = mean(sign(gap) == sign(mean(gap))), .groups = "drop") |>
+  summarise(mean_gap = mean(gap), .groups = "drop") |>
   mutate(topic = fct_reorder(topic, mean_gap),
          lean = if_else(mean_gap > 0, "D", "R"))
 
-p_gap <- ggplot(gap, aes(y = topic)) +
+p_gap <- ggplot(gap, aes(x = mean_gap, y = topic)) +
   geom_vline(xintercept = 0, color = "grey70", linewidth = 0.4) +
-  geom_linerange(aes(xmin = lo, xmax = hi, color = lean),
-                 linewidth = 0.5, alpha = 0.35) +
-  geom_point(aes(x = mean_gap, color = lean), size = 2.1) +
+  geom_segment(aes(x = 0, xend = mean_gap, yend = topic, color = lean),
+               linewidth = 0.5) +
+  geom_point(aes(color = lean), size = 2.4) +
   scale_color_manual(values = c(D = DARK, R = RED)) +
   scale_x_continuous(labels = function(x) sprintf("%+g", x)) +
   labs(x = "Democratic minus Republican attention (percentage points)",
        y = NULL) +
   theme_report(11) +
-  theme(axis.text.y = element_text(size = 8.5))
-save_fig(p_gap, "topics_party_gap", 7.4, 6.4)
+  theme(axis.text.y = element_text(size = 9))
+save_fig(p_gap, "topics_party_gap", 7.2, 4.6)
 
 # The single cleanest series, shown on its own because it is the one panel
 # where the gap is large, consistent, and visible in every year.
@@ -254,13 +252,9 @@ save_fig(p_cf, "external_validity_cfscore", 8.4, 6.4)
 ws <- read_csv(file.path(data_dir, "welfare_series.csv"), show_col_types = FALSE)
 
 p_ws <- ggplot(ws, aes(x = year, y = share)) +
-  annotate("rect", xmin = 2019.4, xmax = 2020.6, ymin = -Inf, ymax = Inf,
-           fill = BAND, alpha = 0.10) +
-  annotate("text", x = 2020, y = 3.2, label = "COVID-19", size = 2.8,
-           color = "grey45") +
   geom_line(aes(group = source, color = source), linewidth = 0.8) +
   geom_point(aes(color = source), size = 1.9) +
-  annotate("text", x = 2008, y = 3.2, label = "ICPSR 226001",
+  annotate("text", x = 2008, y = 3.2, label = "Di Tella et al.",
            size = 3.0, color = GREY) +
   annotate("text", x = 2022, y = 6.6, label = "this dataset",
            size = 3.0, color = DARK, fontface = "bold") +
