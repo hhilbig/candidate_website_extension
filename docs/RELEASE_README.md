@@ -114,7 +114,21 @@ boilerplate and the cleaning removes them.
    support designs that need primary-election positions.
 7. **Party scope.** Democratic and Republican candidates only. The original
    includes third parties.
-8. **One spurious record.** `Exon, J James` (NE Senate 2002) appears in the
+8. **The topic columns measure attention, not ideology.** They separate the
+   parties well: pooled across candidates, attention to welfare, equality and
+   labour rises as DIME CF-scores get more liberal (r up to −0.27), and
+   attention to constitutionalism and national way of life rises as they get
+   more conservative (r up to +0.17). *Within* a party this nearly vanishes —
+   mean |r| of about 0.03, and among Republicans the signs match the pooled
+   direction only about half the time. Do not use them as a within-party
+   ideology proxy.
+
+   This is a property of the measure rather than of this extension. Running the
+   same test on ICPSR 226001's own published topics against their own ideology
+   score — which is derived from the same text, so an upper bound — gives mean
+   |r| of 0.033 within Democrats and 0.049 within Republicans, the same
+   near-zero result.
+9. **One spurious record.** `Exon, J James` (NE Senate 2002) appears in the
    corpus but not the roster; he left the Senate in 1997 and was not a 2002
    candidate. Drop it.
 

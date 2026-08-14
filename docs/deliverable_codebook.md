@@ -1,10 +1,11 @@
 # Deliverable codebook — ICPSR/DIME-compatible candidate-website data
 
-**Built:** 2026-07-01 · **Updated:** 2026-08-12 (ICPSR-compatible coded columns)
-· **Scope:** House 2018–2024 + Senate 2002–2024 (extends ICPSR 226001, Di
-Tella/Kotti/Le Pennec/Pons). **Ideology scoring is deferred** — no
-ideology/populism score columns are produced. **Topics are not reproducible**
-from the shipped ICPSR artifacts (see below).
+**Built:** 2026-07-01 · **Updated:** 2026-08-14 · **Scope:** House 2018–2024 +
+Senate 2002–2024 (extends ICPSR 226001, Di Tella/Kotti/Le Pennec/Pons).
+**Ideology scoring is deferred** — no ideology/populism score columns are
+produced. Topics **are** reproduced, using the original authors' classifier
+obtained from their replication package; the earlier note that they were
+unreproducible referred to the data-only download and no longer applies.
 
 ## Products (droplet `data/deliverable/`)
 
@@ -49,6 +50,17 @@ ICPSR's *own text* before being applied to ours. Full evidence:
   **Note the topic document rule differs from the complexity rule**: all page
   text for the candidate-year is concatenated with spaces, and `data_source` is
   not part of the key.
+
+  **These measure issue attention, not position, and not within-party
+  ideology.** Pooled, they track DIME CF-scores in the expected directions
+  (Welfare State r = −0.27, Equality −0.25, Constitutionalism +0.17). Within
+  party the relationship nearly vanishes: mean |r| ≈ 0.03, and among Republicans
+  the sign agrees with the pooled direction 52% of the time, i.e. chance.
+  The same holds in ICPSR's own data — their published topics correlate with
+  their own text-derived ideology score at mean |r| = 0.033 within Democrats and
+  0.049 within Republicans — so this is a limit of the instrument, not of this
+  extension. Ours in fact reach a higher pooled correlation against an
+  *external* measure (0.27) than theirs do against their own internal one (0.16).
 - `icpsr_n_valid_snap`, `icpsr_n_valid_pages` — snapshot-days and pages entering
   the aggregate.
 - `icpsr_max_pages_1day` — largest page count on any single snapshot-day for this
