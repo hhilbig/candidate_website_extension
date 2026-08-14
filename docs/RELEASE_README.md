@@ -172,8 +172,8 @@ its public source and can be re-fetched. The material is redistributed for
 non-commercial academic research.
 
 Copyright in the underlying campaign material remains with its authors. If you
-are a rights-holder and wish material removed, contact <CONTACT ADDRESS> and we
-will act on substantiated requests.
+are a rights-holder and wish material removed, use the Contact Owner control on
+this dataset's Dataverse record. Substantiated requests will be acted on.
 
 ## Citation
 

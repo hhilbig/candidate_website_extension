@@ -1,13 +1,25 @@
 # Rights statement for the Dataverse deposit
 
-**Status: DECIDED 2026-08-13 (Hanno).** Mirror ICPSR 226001's posture: CC BY 4.0
-on our compilation, explicit `snap_url` provenance, and a takedown route. The
-final wording is in `docs/RELEASE_README.md`.
+**Status: DECIDED 2026-08-13 (Hanno), amended 2026-08-14.** CC BY 4.0 on our
+compilation, explicit `snap_url` provenance, and a takedown route. The final
+wording is in `docs/RELEASE_README.md`.
 
-Outstanding: a contact address for the takedown clause, and a check with UC
-Davis research-data/scholarly-communications. That check moved from "worth
-doing" to "the thing to do" once Pons confirmed no legal review sat behind the
-precedent.
+The 2026-08-13 entry described this as mirroring ICPSR 226001. That was wrong,
+and the correction matters for how the posture is defended. Reading their README
+directly on 2026-08-14 shows it contains **no takedown route, no contact, and no
+mention of copyright in the underlying material at all** — the words takedown,
+removal, contact and copyright do not appear. Their entire rights text is the
+§3.1 assertion quoted below. So our posture is not a match to the precedent; it
+goes beyond it on the one point that costs us nothing.
+
+The contact question is settled: Harvard Dataverse gives every dataset a
+**Contact Owner** control that relays a message to the depositor without
+publishing an address. The clause points at that, so no separately monitored
+address goes on a public page.
+
+Outstanding: the UC Davis research-data/scholarly-communications check. That
+moved from "worth doing" to "the thing to do" once Pons confirmed no legal
+review sat behind the precedent.
 
 ## The question
 
@@ -28,7 +40,7 @@ not a cleared or reviewed position. The precedent below is real — the deposit 
 public, licensed CC BY 4.0, and passed openICPSR intake — but it carries no legal
 review behind it, and it should not be treated as though it does.
 
-## The precedent, weaker than it first looked
+## The precedent, weaker still on a direct read
 
 ICPSR 226001 **does** distribute the full scraped website text — `websites_clean`
 is text, not scores — and their README §3.1 states:
@@ -39,15 +51,23 @@ is text, not scores — and their README §3.1 states:
 > produced by the authors, available in the public domain, or distributed under
 > licenses that allow republication for academic purposes."
 
+That is the whole of it. There is no acknowledgement that campaign pages are
+copyrighted by the campaigns, no removal route, and no contact. The two
+exclusions they do make (the French Agenda Project and the Manifesto Project
+Database) are both cases where a *data provider* imposed redistribution terms,
+not cases about the scraped website text.
+
 So a peer-reviewed AEA-linked deposit of exactly this material, from the same
 source (Internet Archive), already exists under CC BY 4.0 and passed openICPSR
 intake. That is a real precedent for what a repository will accept. It is not
 evidence that anyone with legal training looked at it — Pons has confirmed
-nobody did.
+nobody did — and it is not a model for how to word the rights section, because
+on this question it says nothing.
 
 ## The decision
 
-**Mirror their posture, and be more explicit about provenance than they were.**
+**Take their licence, and go further than they did on provenance and on
+recourse.**
 
 Three components:
 
@@ -61,9 +81,11 @@ Three components:
    material for non-commercial academic research, not republishing campaign
    websites as such.
 
-3. **Offer a takedown route.** A named contact and a commitment to remove
-   material on a substantiated request from a rights-holder. Cheap, and it is
-   what makes the posture defensible in practice rather than only in principle.
+3. **Offer a takedown route.** A commitment to remove material on a
+   substantiated request from a rights-holder, reachable through Dataverse's own
+   Contact Owner control. ICPSR 226001 offers nothing equivalent. It is cheap,
+   it needs no address that someone has to remember to monitor, and it is what
+   makes the posture defensible in practice rather than only in principle.
 
 ## Draft text for the deposit
 
@@ -78,8 +100,8 @@ Three components:
 > academic research.
 >
 > Copyright in the underlying campaign material remains with its authors. If you
-> are a rights-holder and wish material removed, contact <address> and we will
-> act on substantiated requests.
+> are a rights-holder and wish material removed, use the Contact Owner control on
+> this dataset's Dataverse record. Substantiated requests will be acted on.
 
 ## What I am not able to tell you
 
