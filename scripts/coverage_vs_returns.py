@@ -254,6 +254,8 @@ def annotate(b: pd.DataFrame) -> None:
          "candidate_icpsr", "state", "district_id"),
         (REPO / "data/deliverable/release_roster.csv",
          "candidate", "state", "district"),
+        (REPO / "quality_reports/coverage_audit/csv/candidate_crosswalk.csv",
+         "candidate_icpsr", "state", "district_id"),
     ]
     panel_map: dict | None = None
     for path, namecol, statecol, distcol in targets:

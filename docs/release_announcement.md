@@ -17,7 +17,9 @@ support. Concrete numbers rather than "coverage varies".
 >
 > You get the full text, a candidate-year panel, and coded variables that merge directly into the ICPSR data: length, lexical diversity, word complexity, and 31 topic proportions computed with their own classifier. FEC ids for everyone, DIME ids for 81%.
 >
-> On coverage: we tried 16,945 candidate-years and got 9,944, so about 59%. Whether a candidate shows up depends on whether the campaign had a findable website and whether the Internet Archive captured it. It's thinnest in the early Senate years: 2002 has 50 candidates in the roster and 21 captured, while 2022 has 527 and 338. There's a roster file listing everyone we tried, so you can use that as the denominator instead of treating this as a census.
+> On coverage: we tried 16,945 candidate-years and got 9,944, so about 59%. Measured against the general election ballot instead, it's 67-75% of House candidates from 2018 on, against 44-60% for the ICPSR years. Whether a candidate shows up depends on whether the campaign had a findable website and whether the Internet Archive captured it. It's thinnest in the early Senate years: 2002 has 50 candidates in the roster and 21 captured, while 2022 has 527 and 338.
+>
+> One thing to know before using it as a sample: only 3,037 of the 9,944 candidate-years reached a general election ballot. The rest filed with the FEC and lost or left a primary, and the two groups are captured at very different rates (84% vs 52%). There's an on_ballot flag, and a roster file listing everyone we tried, so you can pick your own denominator instead of treating this as a census.
 >
 > Comparisons across candidates, and pooled years, are more reliable than year-to-year changes for a single candidate.
 >
@@ -31,7 +33,7 @@ support. Concrete numbers rather than "coverage varies".
 >
 > Extends Pons et al (ICPSR) forwards, backwards, and to the Senate. 9,944 candidate-years, 1.10M archived pages, with coded variables that merge straight into theirs.
 >
-> Coverage is about 59%, and a roster file lists everyone we tried, including the misses.
+> Coverage is about 59% of everyone we tried, or 67-75% of House general election candidates. A roster file lists everyone we tried, including the misses.
 >
 > [link]
 
@@ -49,10 +51,13 @@ support. Concrete numbers rather than "coverage varies".
 > You get the full text, a candidate-year panel, and variables that merge directly into theirs: length, lexical diversity, word complexity, and 31 topic proportions from their classifier. FEC ids for everyone, DIME ids for 81%.
 
 **4/**
-> On coverage: we tried 16,945 candidate-years and got 9,944, about 59%. A candidate shows up only if the campaign had a findable website and the Internet Archive captured it. Neither is under our control.
+> On coverage: we tried 16,945 candidate-years and got 9,944, about 59%. Against the general election ballot it's 67-75% of House candidates from 2018 on, against 44-60% for the ICPSR years. A candidate shows up only if the campaign had a findable website and the Internet Archive captured it.
 
 **5/**
 > It's thinnest in the early Senate years: 2002 has 50 candidates in the roster and 21 captured, 2022 has 527 and 338. The roster file lists everyone we tried, so you can use it as the denominator rather than treating this as a census.
+
+**5b/**
+> Worth knowing before treating it as a sample: only 3,037 of the 9,944 candidate-years reached a general election ballot. The rest filed with the FEC and lost a primary. Capture rates differ a lot between the two (84% vs 52%), so there's an on_ballot flag.
 
 **6/**
 > Practical upshot: comparisons across candidates, and pooled years, are more reliable than year-to-year changes for a single candidate.
@@ -77,6 +82,13 @@ Archive, and the deposit carries the source URL for every row. Two peer
 projects release comparable verbatim text: ICPSR 226001, and CampaignView on
 Harvard Dataverse under CC0.
 
-**Numbers used above, all verified:** 9,944 captured candidate-years; 16,945
-attempted; 1,101,303 page rows; Senate 2002 roster 50 / captured 21; Senate
-2022 roster 527 / captured 338; FEC ids 100%; DIME ids 81%; 31 topic columns.
+**Do not imply the corpus is a sample of general election candidates.** Only
+3,037 of 9,944 captured candidate-years reached a ballot. Every draft above says
+so; keep it that way.
+
+**Numbers used above, all verified 2026-08-14:** 9,944 captured candidate-years;
+16,945 attempted; 1,101,303 page rows; 3,037 on a general election ballot;
+capture 84% of ballot candidates against 52% of the rest; House ballot coverage
+67-75% (ours, 2018-2024) against 44-60% (ICPSR, 2002-2016); Senate 2002 roster
+50 / captured 21; Senate 2022 roster 527 / captured 338; FEC ids 100%; DIME ids
+81%; 31 topic columns.
