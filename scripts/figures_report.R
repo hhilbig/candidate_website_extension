@@ -209,3 +209,65 @@ p_welfare <- ggplot(welfare, aes(x = year, y = share, group = party)) +
 save_fig(p_welfare, "topics_welfare_state", 7.2, 4.0)
 
 message("\nall figures written to ", out_dir)
+
+# ------------------------------------------------------- fig-external-validity
+# Do the topic measures agree with an ideology measure built from something
+# else entirely? DIME CF-scores come from campaign finance and share no input
+# with the website text, so agreement is external evidence rather than internal
+# consistency.
+#
+# Reported honestly in two halves. Pooled across parties the expected ordering
+# appears. WITHIN party it largely disappears, which is a limitation users need:
+# these measures separate parties, they do not track ideological variation
+# inside a party.
+
+cf <- read_csv(file.path(data_dir, "cfscore_correlations.csv"),
+               show_col_types = FALSE)
+
+cf_long <- cf |>
+  select(topic, Pooled = r_all, Democrats = r_D, Republicans = r_R) |>
+  pivot_longer(-topic, names_to = "which", values_to = "r") |>
+  mutate(which = factor(which, c("Pooled", "Democrats", "Republicans")),
+         topic = fct_reorder(topic, if_else(which == "Pooled", r, NA_real_),
+                             .fun = function(x) mean(x, na.rm = TRUE)))
+
+p_cf <- ggplot(cf_long, aes(x = r, y = topic)) +
+  geom_vline(xintercept = 0, color = "grey70", linewidth = 0.4) +
+  geom_point(aes(color = which), size = 1.9) +
+  facet_wrap(~which, ncol = 3) +
+  scale_color_manual(values = c(Pooled = DARK, Democrats = BLUE,
+                                Republicans = RED)) +
+  scale_x_continuous(limits = c(-0.32, 0.32),
+                     breaks = c(-0.25, 0, 0.25)) +
+  labs(x = "Correlation with DIME CF-score (higher = more conservative)",
+       y = NULL) +
+  theme_report(11) +
+  theme(axis.text.y = element_text(size = 8))
+save_fig(p_cf, "external_validity_cfscore", 8.4, 6.4)
+
+# ------------------------------------------------------------- fig-welfare-arc
+# Welfare State attention over the full merged series. Shown only for a LARGE
+# topic: the two classifier runs differ by about 0.005 in absolute terms, which
+# is negligible against a series running 4-9% but comparable to the level of a
+# topic like Multiculturalism at 1.4%. Small topics therefore cannot support
+# cross-boundary trend claims, and none are shown here.
+
+ws <- read_csv(file.path(data_dir, "welfare_series.csv"), show_col_types = FALSE)
+
+p_ws <- ggplot(ws, aes(x = year, y = share)) +
+  annotate("rect", xmin = 2019.4, xmax = 2020.6, ymin = -Inf, ymax = Inf,
+           fill = BAND, alpha = 0.10) +
+  annotate("text", x = 2020, y = 3.2, label = "COVID-19", size = 2.8,
+           color = "grey45") +
+  geom_line(aes(group = source, color = source), linewidth = 0.8) +
+  geom_point(aes(color = source), size = 1.9) +
+  annotate("text", x = 2008, y = 3.2, label = "ICPSR 226001",
+           size = 3.0, color = GREY) +
+  annotate("text", x = 2022, y = 6.6, label = "this dataset",
+           size = 3.0, color = DARK, fontface = "bold") +
+  scale_color_manual(values = c(icpsr = GREY, extension = DARK)) +
+  scale_x_continuous(breaks = seq(2002, 2024, 4)) +
+  scale_y_continuous(limits = c(2.5, 10.5)) +
+  labs(x = NULL, y = "Welfare State (% of topic attention, House)") +
+  theme_report()
+save_fig(p_ws, "welfare_state_series", 7.2, 4.0)
