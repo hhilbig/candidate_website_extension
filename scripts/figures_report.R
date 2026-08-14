@@ -31,7 +31,7 @@ theme_report <- function(fontsize = 13) {
       panel.border = element_rect(color = "grey70"),
       axis.ticks = element_blank(),
       legend.position = "none",
-      plot.margin = margin(8, 14, 8, 8)
+      plot.margin = margin(8, 14, 8, 12)
     )
 }
 
@@ -64,8 +64,7 @@ p_cov <- ggplot(cov, aes(x = year, y = pct_of_url)) +
             vjust = -1.1, size = 3.0, color = "grey20") +
   facet_wrap(~label, ncol = 2, scales = "free_x") +
   scale_y_continuous(limits = c(0, 100), breaks = c(0, 25, 50, 75, 100)) +
-  labs(x = NULL,
-       y = "Captured (% of candidates with a usable URL)") +
+  labs(x = NULL, y = "Captured (% with a usable URL)") +
   theme_report()
 save_fig(p_cov, "coverage_by_office_year", 7.6, 3.6)
 
@@ -127,7 +126,7 @@ p_bound <- ggplot() +
            size = 3.1, color = DARK, fontface = "bold") +
   scale_x_continuous(breaks = seq(2002, 2024, 4), limits = c(2002, 2028)) +
   scale_y_continuous(limits = c(0, 3000), labels = comma) +
-  labs(x = NULL, y = "Median characters per candidate-year") +
+  labs(x = NULL, y = "Median characters") +
   theme_report()
 save_fig(p_bound, "boundary_continuity", 7.4, 4.2)
 
@@ -268,6 +267,6 @@ p_ws <- ggplot(ws, aes(x = year, y = share)) +
   scale_color_manual(values = c(icpsr = GREY, extension = DARK)) +
   scale_x_continuous(breaks = seq(2002, 2024, 4)) +
   scale_y_continuous(limits = c(2.5, 10.5)) +
-  labs(x = NULL, y = "Welfare State (% of topic attention, House)") +
+  labs(x = NULL, y = "Welfare State (% of attention)") +
   theme_report()
 save_fig(p_ws, "welfare_state_series", 7.2, 4.0)
