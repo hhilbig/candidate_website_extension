@@ -1,8 +1,8 @@
-# Deliverable codebook — ICPSR/DIME-compatible candidate-website data
+# Deliverable codebook: ICPSR/DIME-compatible candidate-website data
 
 **Built:** 2026-07-01 · **Updated:** 2026-08-14 · **Scope:** House 2018–2024 +
 Senate 2002–2024 (extends ICPSR 226001, Di Tella/Kotti/Le Pennec/Pons).
-**Ideology scoring is deferred** — no ideology/populism score columns are
+**Ideology scoring is deferred.** No ideology or populism score columns are
 produced. Topics **are** reproduced, using the original authors' classifier
 obtained from their replication package; the earlier note that they were
 unreproducible referred to the data-only download and no longer applies.
@@ -56,9 +56,9 @@ ICPSR's *own text* before being applied to ours. Full evidence:
   (Welfare State r = −0.27, Equality −0.25, Constitutionalism +0.17). Within
   party the relationship nearly vanishes: mean |r| ≈ 0.03, and among Republicans
   the sign agrees with the pooled direction 52% of the time, i.e. chance.
-  The same holds in ICPSR's own data — their published topics correlate with
+  The same holds in ICPSR's own data. Their published topics correlate with
   their own text-derived ideology score at mean |r| = 0.033 within Democrats and
-  0.049 within Republicans — so this is a limit of the instrument, not of this
+  0.049 within Republicans, so this is a limit of the instrument, not of this
   extension. Ours in fact reach a higher pooled correlation against an
   *external* measure (0.27) than theirs do against their own internal one (0.16).
 - `icpsr_n_valid_snap`, `icpsr_n_valid_pages` — snapshot-days and pages entering
@@ -73,7 +73,7 @@ ICPSR's *own text* before being applied to ours. Full evidence:
 
   A small number of candidate-days produced runaway crawls: 0.78% of
   snapshot-days hold 24.5% of all pages. The two-level mean already absorbs most
-  of this, since a day contributes one value however many pages it holds —
+  of this, since a day contributes one value however many pages it holds:
   dropping flagged rows moves median `icpsr_n_char` only from 2,558 to 2,530.
   Treat the flag as a robustness filter, not a required correction. The raw
   maximum is exposed so you can set your own threshold rather than inheriting
@@ -84,7 +84,7 @@ ICPSR's *own text* before being applied to ours. Full evidence:
 corpora.** TTR falls mechanically as documents lengthen; median document length
 rises 51% at the 2016/2018 boundary, moving TTR 6.9% but MATTR only 2.5%. On the
 41 candidates present in *both* corpora, however, MATTR medians agree to 2%
-while the **per-candidate correlation is about zero** — for one candidate in one
+while the **per-candidate correlation is about zero**. For one candidate in one
 year the two collections give unrelated values, because MATTR is dominated by
 which specific pages each scraper captured. See
 `quality_reports/corpus_comparability_2026-08-13.md`.
@@ -121,7 +121,7 @@ ICPSR's `websites_clean` is the **output** of a boilerplate filter in
 cleaned file. Every column above is therefore computed on cleaned text:
 
 1. strip URLs; normalise `&amp;` and curly apostrophes
-2. keep only letters and punctuation — **all digits are dropped**
+2. keep only letters and punctuation, so **all digits are dropped**
 3. split on `#+#` into "tags" (visual components) → `icpsr_n_tags`
 4. keep only tags with **≥10 words containing `[?!.]` and `[A-Z]`** →
    `icpsr_n_clean_tags`
@@ -150,7 +150,7 @@ All three can be produced on request, clearly labelled.
 ### Inputs and licensing
 
 `--topics` needs the Manifesto Project training corpus, which is
-**redistribution-restricted** and therefore not committed — ICPSR excluded it
+**redistribution-restricted** and therefore not committed. ICPSR excluded it
 from their own deposit for the same reason. Fetch it with
 `--fetch-manifesto` and your own API key at `~/.manifesto_api_key`.
 `ngrams_en_2008.csv` and `sub_topics_mapping.csv` come from openICPSR project
@@ -160,7 +160,7 @@ from their own deposit for the same reason. Fetch it with
 
 - **To DIME:** join `cand_id` → DIME `Cand.ID` (exact 1:1), or use the carried
   **`bonica_rid`**. 100% of rows have `cand_id`; 81% have `bonica_rid` (the gap
-  is 2024 + a few 2022 — local DIME ends at 2022; use a newer DIME release for
+  is 2024 plus a few 2022, because local DIME ends at 2022. Use a newer release for
   those).
 - **To the ICPSR website panel (House):** **vertical stack** — our House
   2018–2024 rows append below ICPSR's House ≤2016. No year overlap (we replace
@@ -202,7 +202,7 @@ Text quality (panel_meta only): `text_quality` (usable/thin/empty),
 `page_types`, `urlkey`.
 
 ### `panel_candidate_year_icpsr.csv`
-All of the above **plus `text`** — the concatenated longest-text snapshot
+All of the above **plus `text`**, the concatenated longest-text snapshot
 (pages joined by `#+#`, homepage first). One text blob per candidate-year.
 
 ### `raw_corpus_icpsr.parquet` (ICPSR `websites_clean` schema + our ids)
@@ -211,7 +211,7 @@ district, district_id, office, year, party (democrat/republican), stage,
 data_source, date (Wayback YYYYMMDDHHMMSS), urlkey, snap_url, page_type,
 n_char, n_words, n_tags, n_clean_tags (legacy=0), n_snap (distinct snapshots
 for the candidate-year), text_snap_content`. One row per scraped page across
-all retained snapshots — the un-collapsed corpus for re-scoring.
+all retained snapshots: the un-collapsed corpus for re-scoring.
 
 ## Decisions & caveats
 
@@ -221,7 +221,7 @@ all retained snapshots — the un-collapsed corpus for re-scoring.
   stops at 2018**, so it cannot be applied to 2020–2024 without a construction
   break, and refitting needs primary-stage text we never collected.
 - **The snapshot→candidate aggregation rule is now KNOWN** (resolved 2026-08-12,
-  verified exact on all 13,020 ICPSR rows — see the section above). Score the
+  verified exact on all 13,020 ICPSR rows; see the section above). Score the
   `raw_corpus_icpsr.parquet` under that rule, not our longest-text panel, to
   avoid a construction break at the 2016→2018 boundary.
 - **DIME ≤2022.** 2024 (and a few 2022) candidates lack `bonica_rid`/cfscore
@@ -265,10 +265,10 @@ all retained snapshots — the un-collapsed corpus for re-scoring.
   names, which are noisier.
 
 - **`text_quality`** (usable 85.1% / thin 9.4% / empty 5.5%): thin/empty are
-  JS-rendered or placeholder/parked sites whose text Wayback did not archive —
+  JS-rendered or placeholder/parked sites whose text Wayback did not archive,
   plausibly missing-not-at-random; filter or robustness-test, don't impute.
 - **No column codebook exists for ICPSR's own score columns** (`score` vs
-  `score_all`, `nuance_score`, `mnir`) — undocumented in the download.
+  `score_all`, `nuance_score`, `mnir`), which the download does not document.
 
 ## Regeneration
 
