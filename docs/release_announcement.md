@@ -1,7 +1,7 @@
 # Release announcement drafts
 
-Social posts for the v1 release. Not yet posted — the deposit does not exist,
-so every version below needs a link before it goes out.
+Social posts for the v1 release. Not yet posted, since the deposit does not
+exist; every version below needs a link before it goes out.
 
 Coverage framing follows `hannohilbig.com/localparties/` (CLARA): state the
 denominator, name where it is thinnest, and say what the data can and cannot
@@ -15,7 +15,7 @@ support. Concrete numbers rather than "coverage varies".
 >
 > It extends the ICPSR data by Pons et al backwards and forwards in time, and adds Senate candidates, who weren't covered before. Archived campaign website text for 10,601 candidate-years, around 1.18 million pages, all from the Wayback Machine.
 >
-> You get the full text, a candidate-year panel, and coded variables that merge directly into the ICPSR data — length, lexical diversity, word complexity, and 31 topic proportions computed with their own classifier. FEC ids for everyone, DIME ids for 81%.
+> You get the full text, a candidate-year panel, and coded variables that merge directly into the ICPSR data: length, lexical diversity, word complexity, and 31 topic proportions computed with their own classifier. FEC ids for everyone, DIME ids for 81%.
 >
 > On coverage: we tried 18,250 candidate-years and got 10,601, so about 58%. Whether a candidate shows up depends on whether the campaign had a findable website and whether the Internet Archive captured it. It's thinnest in the early Senate years: 2002 has 72 candidates in the roster and 30 captured, while 2022 has 693 and 435. There's a roster file listing everyone we tried, so you can use that as the denominator instead of treating this as a census.
 >
