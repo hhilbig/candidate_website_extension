@@ -30,8 +30,7 @@ Start with `release_roster.csv` if you care about selection, and
 General-election candidates of the two major parties, House 2018–2024 and
 Senate 2002–2024.
 
-Senate seats rotate in thirds, so only about a third of states vote in any
-cycle. The rosters were built from FEC filings, which list anyone with a
+Senate seats rotate in thirds, so only about 33 states vote in any cycle. The rosters were built from FEC filings, which list anyone with a
 registered committee regardless of whether their state held an election that
 year. Those candidate-years are excluded, using the MIT Election Data and
 Science Lab's statewide Senate returns (doi:10.7910/DVN/PEJ5QU) as the record of

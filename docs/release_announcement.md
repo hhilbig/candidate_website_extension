@@ -29,7 +29,7 @@ support. Concrete numbers rather than "coverage varies".
 
 > New dataset: archived campaign website text for US House and Senate candidates, 2002–2024.
 >
-> Extends Pons et al (ICPSR) forwards, backwards, and to the Senate. 9,944 candidate-years, 1.18M archived pages, with coded variables that merge straight into theirs.
+> Extends Pons et al (ICPSR) forwards, backwards, and to the Senate. 9,944 candidate-years, 1.10M archived pages, with coded variables that merge straight into theirs.
 >
 > Coverage is about 59%, and a roster file lists everyone we tried, including the misses.
 >
@@ -61,7 +61,7 @@ support. Concrete numbers rather than "coverage varies".
 
 ## Notes
 
-**Do not claim it merges seamlessly without qualification.** It does now, but
+**Do not claim the merge is effortless.** It does now, but
 only because the release replicates a text-cleaning step in the original
 pipeline that is easy to miss. Skipping it inflates document length by about
 half. That belongs in the documentation, not a post, but do not write anything
