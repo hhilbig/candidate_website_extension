@@ -229,6 +229,22 @@ all retained snapshots — the un-collapsed corpus for re-scoring.
 - **2018 = ours** (ICPSR's 2018 is too sparse). **Senate standalone** (no
   district framework). **At-large** House districts → `district_id` `ST01`; one
   House candidate has NA `district_id` (unparseable FEC district).
+- **`*_preelec`** (9 columns): every coded measure recomputed on pages archived
+  on or before election day, defined as the Tuesday after the first Monday in
+  November. 22.6% of pages post-date the vote, rising to 42.8% for House 2020,
+  and a lapsed or hijacked domain is no longer campaign material. Present for
+  92.1% of candidate-years; missing where a candidate has no pre-election
+  snapshot (242 cases beyond the 546 with no text at all). It correlates 0.985
+  with the all-year value and moves the yearly median by under 2% except Senate
+  2006 (-8.3%) and Senate 2018 (-4.2%), so it matters for individual candidates
+  more than for aggregates. Use it when the question is about the campaign
+  rather than the calendar year.
+- **`icpsr_first_snap_day`**, **`icpsr_last_snap_day`**,
+  **`icpsr_snap_span_days`**: when in the cycle the candidate was observed, as
+  YYYYMMDD integers and the span in days. The median span is 248 days, so a
+  candidate-year usually pools captures across most of the year rather than
+  representing one moment. Per-page timestamps are in the page-level corpus.
+
 - **`on_ballot`** / **`general_votes`** (in `release_roster.csv` and
   `panel_icpsr_compat.csv`): did this candidate appear on the general election
   ballot, and with how many votes. Matched to the MIT Election Data and Science

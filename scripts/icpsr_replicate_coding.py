@@ -655,6 +655,8 @@ def run_apply(corpus: Path, out: Path, mattr_window: int,
     day = pages.groupby("ck").snap_day
     res = (res.join(day.min().rename("icpsr_first_snap_day"))
               .join(day.max().rename("icpsr_last_snap_day")))
+    for c in ("icpsr_first_snap_day", "icpsr_last_snap_day"):
+        res[c] = pd.to_numeric(res[c], errors="coerce").astype("Int64")
     span = (pd.to_datetime(res.icpsr_last_snap_day, format="%Y%m%d")
             - pd.to_datetime(res.icpsr_first_snap_day, format="%Y%m%d")).dt.days
     res["icpsr_snap_span_days"] = span
@@ -670,8 +672,9 @@ def run_apply(corpus: Path, out: Path, mattr_window: int,
     dup = res.duplicated(subset=keycols).sum()
     print(f"key {keycols}: {len(res):,} rows, {dup} duplicates")
     for c in [c for c in res.columns if c.startswith("icpsr_")]:
-        print(f"  {c:<22} missing {res[c].isna().sum():>5}  "
-              f"median {res[c].median():.4f}")
+        col = pd.to_numeric(res[c], errors="coerce")
+        med = "n/a" if col.notna().sum() == 0 else f"{col.median():.4f}"
+        print(f"  {c:<22} missing {res[c].isna().sum():>5}  median {med}")
 
     out.parent.mkdir(parents=True, exist_ok=True)
     res.to_csv(out, index=False)
