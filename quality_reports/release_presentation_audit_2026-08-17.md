@@ -10,9 +10,11 @@ release README and codebook
 The release has a clear structure and useful documentation, but the current
 files are not ready for deposit. The roster builder assigns the FEC file year
 to every candidate without checking the candidate's recorded election year.
-This creates many false candidate-years. A same-year check against the official
-FEC candidate files removes 2,577 of 9,944 panel rows, or 25.9%. This changes
-the sample, every headline count, and several coverage claims.
+This creates many suspect candidate-years. A same-year name screen against the
+official FEC candidate files flags 2,577 of 9,944 panel rows, or 25.9%. That is
+a screening count, not an exact deletion count: reviewed identity mappings and
+ballot exceptions can rescue some rows. The defect still changes the sample,
+every headline count, and several coverage claims.
 
 The release package also contains known non-campaign text. Examples include AOL,
 Yahoo, Facebook, Google, and a law-firm website. The README identifies only the
@@ -65,7 +67,7 @@ This comparison shows the effect on the current files:
 | 2024 | 2,042 | 1,398 | 644 | 31.5% |
 | **Total** | **9,944** | **7,367** | **2,577** | **25.9%** |
 
-The roster has the same problem at a larger scale. A same-year FEC check retains
+The roster has the same problem at a larger scale. The same-year screen retains
 9,845 of 16,945 rows and removes 7,100, or 41.9%.
 
 This is not a cosmetic definition issue. The panel assigns website captures to
@@ -111,7 +113,7 @@ manual decisions, and rerun all downstream products. Review every row where
 The release README promises `raw_corpus.parquet`, but the current file is named
 `raw_corpus_icpsr.parquet`. It also promises `candidate_crosswalk.csv`, but that
 file remains under `quality_reports/coverage_audit/csv/`. The deliverable
-directory contains three `.prefilter` backups that are not part of the published
+directory contains four `.prefilter` backups that are not part of the published
 file list and must not be uploaded.
 
 **Required repair:** create one staging directory containing exactly the five
@@ -164,8 +166,9 @@ validation history into a short methods appendix or a separate technical note.
 The release README links the GitHub repository and says the pipeline rebuilds
 every derived file. The repository's `requirements.txt` omits dependencies used
 by that pipeline: `numpy`, `pyarrow`, `nltk`, `scikit-learn`, and the test runner
-`pytest`. Both available project Python environments lacked `pytest`; the
-declared test suite could not run. One environment also lacked `pyarrow`, so it
+`pytest`. Both available project Python environments lacked `pytest`, and the
+repository documented no test runner or offline/live split. One environment
+also lacked `pyarrow`, so it
 could not read the largest release file.
 
 The tests also mix offline unit checks and live Wayback checks without markers
@@ -236,4 +239,3 @@ incorrect candidate-year assignment.
 6. Assemble the final staging directory and manifest.
 7. Test reproduction from a clean environment.
 8. Perform the final visual and copy edit only after every number is stable.
-

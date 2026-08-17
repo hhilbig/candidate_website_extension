@@ -17,8 +17,10 @@
 
 ## Main finding
 
-The roster builder does not filter `cand_election_yr`. A same-year FEC check
-removes 2,577 of 9,944 panel rows and 7,100 of 16,945 roster rows. The release
+The roster builder does not filter `cand_election_yr`. A same-year FEC screen
+flags 2,577 of 9,944 panel rows and 7,100 of 16,945 roster rows. These are
+screening counts rather than exact deletion counts because reviewed aliases and
+ballot exceptions can rescue rows. The release
 must be rebuilt before deposit.
 
 Several stored captures also contain unrelated AOL, Yahoo, Facebook, Google,
@@ -39,4 +41,3 @@ does contain `pyarrow`.
 
 Approve a separate repair plan for roster filtering, capture adjudication, and
 the full release rebuild.
-

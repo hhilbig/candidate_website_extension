@@ -1,0 +1,12 @@
+year,office,state,cand_id,action,reason
+2018,house,TX,H8TX22206,exclude,Expired campaign domain served movie-piracy spam
+2018,house,WI,H8WI07096,exclude,Email address was parsed as AOL and captured unrelated AOL content
+2018,house,MT,H8MT01174,exclude,Malformed URL produced an error page rather than campaign content
+2018,house,NV,H8NV03135,exclude,Email-like Facebook URL captured the generic Facebook site
+2020,house,HI,H2HI02144,exclude,Email-like Facebook URLs captured the generic Facebook site
+2018,house,TN,H6TN09415,exclude,Email address was parsed as Yahoo and captured unrelated Yahoo content
+2018,house,DC,H0DC00165,exclude,Generic Google URL captured unrelated Google content
+2002,senate,NE,S8NE00026,exclude,Email address was parsed as a law-firm website
+2020,house,TX,H8TX22206,exclude,Expired campaign domain served non-campaign content
+2018,house,LA,H8LA01122,retain,Malformed stored URL resolves to a genuine campaign domain
+2018,house,AK,H4AK00057,retain,Google Sites URL contains genuine campaign content

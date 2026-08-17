@@ -128,7 +128,13 @@ def build_fec_roster(year: int, office: str, config: dict) -> pd.DataFrame:
     if df is None:
         return pd.DataFrame()
 
-    # Filter to office, D/R, active candidates
+    # A cycle file contains active committees from other election years.  The
+    # candidate's Form 2 election year, not the bulk-file cycle, defines the
+    # candidate-year universe.
+    df = df[df["cand_election_yr"] == str(year)].copy()
+
+    # Keep all same-year D/R candidates.  CAND_STATUS is descriptive and is
+    # not a ballot or candidacy-universe filter.
     df = df[df["cand_office"] == fec_office].copy()
     df = df[df["cand_pty_affiliation"].isin(PARTY_MAP.keys())].copy()
     df["party"] = df["cand_pty_affiliation"].map(PARTY_MAP)
@@ -149,9 +155,10 @@ def build_fec_roster(year: int, office: str, config: dict) -> pd.DataFrame:
     df["cand_id"] = df["cand_id"].fillna("")
 
     cols = ["candidate", "state", "district", "office", "year", "party",
-            "website_url", "fec_raw_name", "cand_pcc", "cand_id"]
+            "website_url", "fec_raw_name", "cand_pcc", "cand_id",
+            "cand_election_yr", "cand_status"]
     roster = df[cols].copy()
-    roster = roster.drop_duplicates(subset=["candidate", "state", "district"])
+    roster = roster.drop_duplicates(subset=["cand_id"])
 
     logger.info(f"FEC roster: {len(roster)} {office} candidates for {year}")
     return roster
@@ -180,7 +187,7 @@ def build_roster(office: str, year: int, config: dict) -> pd.DataFrame:
     roster = run_waterfall(roster, config, sources)
 
     # Drop helper columns
-    helper_cols = ["fec_raw_name", "cand_pcc", "cand_id"]
+    helper_cols = ["fec_raw_name", "cand_pcc"]
     roster = roster.drop(columns=[c for c in helper_cols if c in roster.columns])
 
     # Drop candidates with no website URL

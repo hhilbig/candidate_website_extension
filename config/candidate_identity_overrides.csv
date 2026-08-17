@@ -1,0 +1,12 @@
+year,office,state,source_cand_id,canonical_cand_id,action,reason
+2018,house,IL,H6IL01175,H2IL01182,retain_ballot_override,Same person; later FEC ID is the 2018 ballot candidate
+2018,house,NV,H4NV04017,H8NV04059,retain_ballot_override,Same person; later FEC ID is the 2018 ballot candidate
+2018,house,CO,H6CO01208,H8CO01162,retain_ballot_override,Same person; later FEC ID is the 2018 ballot candidate
+2018,house,CA,H0CA42209,H2CA37023,retain_ballot_override,Same person; later FEC ID is the 2018 ballot candidate
+2020,house,AZ,H8AZ02201,H8AZ02201,retain_ballot_override,Verified 2020 general-ballot candidate; no same-year replacement FEC ID found
+2020,house,KS,H8KS04187,H8KS04112,retain_ballot_override,Same person; later FEC ID is the 2020 ballot candidate
+2022,house,CA,H0CA34131,H2CA34079,retain_ballot_override,Same person; later FEC ID is the 2022 ballot candidate
+2022,house,WA,H8WA09054,H8WA09054,exclude_false_ballot_match,Sarah Smith was incorrectly matched to Adam Smith
+2024,house,CA,H2CA28162,H4CA31147,retain_ballot_override,Same person; later FEC ID is the 2024 ballot candidate
+2024,house,CA,H2CA34079,H4CA34083,retain_ballot_override,Same person; later FEC ID is the 2024 ballot candidate
+2024,house,MO,H2MO01179,H4MO01142,retain_ballot_override,Same person; later FEC ID is the 2024 ballot candidate
