@@ -36,6 +36,14 @@ def main() -> int:
     assert not roster.candidate_cycle_id.duplicated().any()
     assert roster.captured.sum() == len(panel)
     assert ids[0] <= set(roster.candidate_cycle_id)
+    captured_roster = roster[roster.captured].set_index("candidate_cycle_id")
+    panel_ballot = coded.set_index("candidate_cycle_id")[["on_ballot", "general_votes"]]
+    captured_roster = captured_roster.reindex(panel_ballot.index)
+    assert captured_roster.on_ballot.equals(panel_ballot.on_ballot)
+    votes_equal = (pd.to_numeric(captured_roster.general_votes, errors="coerce")
+                   .fillna(-1).eq(pd.to_numeric(panel_ballot.general_votes,
+                                               errors="coerce").fillna(-1)))
+    assert votes_equal.all()
     assert coded.icpsr_compatible.equals(coded.on_ballot)
     assert panel.loc[~panel.on_ballot, "stage"].isna().all()
     assert panel.loc[~panel.on_ballot, "data_source"].eq("election_year_wayback").all()

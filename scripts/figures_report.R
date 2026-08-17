@@ -12,8 +12,8 @@ suppressPackageStartupMessages({
   library(scales)
 })
 
-data_dir <- "quality_reports/figures/data"
-out_dir <- "quality_reports/figures"
+data_dir <- Sys.getenv("FIGURE_DATA_DIR", "quality_reports/figures/data")
+out_dir <- Sys.getenv("FIGURE_OUT_DIR", "quality_reports/figures")
 dir.create(out_dir, showWarnings = FALSE, recursive = TRUE)
 
 BLUE <- "#2f6f9f"
@@ -251,8 +251,6 @@ p_welfare <- ggplot(welfare, aes(x = year, y = share, group = party)) +
   theme_report()
 save_fig(p_welfare, "topics_welfare_state", 7.2, 4.0)
 
-message("\nall figures written to ", out_dir)
-
 # ------------------------------------------------------- fig-external-validity
 # Do the topic measures agree with an ideology measure built from something
 # else entirely? DIME CF-scores come from campaign finance and share no input
@@ -273,7 +271,8 @@ cf_long <- cf |>
   pivot_longer(-topic, names_to = "which", values_to = "r") |>
   mutate(which = factor(which, c("Pooled", "Democrats", "Republicans")),
          topic = fct_reorder(topic, if_else(which == "Pooled", r, NA_real_),
-                             .fun = function(x) mean(x, na.rm = TRUE)))
+                             .fun = function(x) mean(x, na.rm = TRUE),
+                             .na_rm = TRUE))
 
 p_cf <- ggplot(cf_long, aes(x = r, y = topic)) +
   geom_vline(xintercept = 0, color = "grey70", linewidth = 0.4) +
@@ -311,3 +310,5 @@ p_ws <- ggplot(ws, aes(x = year, y = share)) +
   labs(x = NULL, y = "Welfare State (% of attention)") +
   theme_report()
 save_fig(p_ws, "welfare_state_series", 7.2, 4.0)
+
+message("\nall figures written to ", out_dir)

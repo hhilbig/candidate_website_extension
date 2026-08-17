@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Build the tidy CSVs behind the coverage and validation figures.
 
-Four outputs, written to quality_reports/figures/data/:
+Seven outputs, written to the requested output directory:
 
   coverage_by_office_year.csv  roster, url found, captured -- the denominator
   boundary_nchar.csv           median n_char by office-year, cleaned AND
@@ -9,12 +9,15 @@ Four outputs, written to quality_reports/figures/data/:
   validation_pairs.csv         our recomputed values against ICPSR's published
                                values, on ICPSR's own text
   topic_by_party.csv           topic shares by party and year, for face validity
+  coverage_vs_ballot.csv       capture rates against independent ballot returns
+  cfscore_correlations.csv     topic correlations with DIME CF-scores
+  welfare_series.csv           ICPSR and extension House welfare attention
 
 The uncleaned series exists to show what the release would look like without
 replicating ICPSR's boilerplate filter: it is the difference between a series
 that joins at the 2016/2018 boundary and one that jumps ~50%.
 
-Usage: python scripts/figure_data.py [--sample-cands 400]
+Usage: python scripts/figure_data.py --release-dir build/release_candidate
 """
 from __future__ import annotations
 
@@ -30,6 +33,7 @@ REPO = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO / "scripts"))
 from icpsr_replicate_coding import (  # noqa: E402
     icpsr_clean_text, page_measures, icpsr_aggregate, icpsr_key, load_ngrams)
+from coverage_vs_returns import ballot, match, theirs  # noqa: E402
 
 ICPSR = Path.home() / ("Library/CloudStorage/Dropbox/Research/19_Great_Recession"
                        "/data/candidate_websites/226001-V1")
@@ -37,8 +41,8 @@ OUT = REPO / "quality_reports/figures/data"
 TOPIC_PREFIX = "icpsr_topic_"
 
 
-def coverage(out: Path) -> None:
-    r = pd.read_csv(REPO / "data/deliverable/release_roster.csv", low_memory=False)
+def coverage(release_dir: Path, out: Path) -> None:
+    r = pd.read_csv(release_dir / "release_roster.csv", low_memory=False)
     g = (r.groupby(["office", "year"])
            .agg(roster=("captured", "size"),
                 has_url=("has_url", "sum"),
@@ -51,9 +55,9 @@ def coverage(out: Path) -> None:
           f"{g.captured.sum():,}/{g.roster.sum():,} captured")
 
 
-def boundary(out: Path) -> None:
+def boundary(release_dir: Path, out: Path) -> None:
     """Median n_char per candidate-year, cleaned vs uncleaned, plus ICPSR."""
-    pf = pq.ParquetFile(REPO / "data/deliverable/raw_corpus_icpsr.parquet")
+    pf = pq.ParquetFile(release_dir / "raw_corpus.parquet")
     rows = []
     for i in range(pf.num_row_groups):
         g = pf.read_row_group(i, columns=["candidate_icpsr", "state", "office",
@@ -126,8 +130,8 @@ def validation(out: Path, n_cand: int) -> None:
         print(f"  {var:<8} n={len(g):4d} corr={np.corrcoef(g.published, g.ours)[0,1]:.4f}")
 
 
-def topics_by_party(out: Path) -> None:
-    p = pd.read_csv(REPO / "data/deliverable/panel_icpsr_compat.csv",
+def topics_by_party(release_dir: Path, out: Path) -> None:
+    p = pd.read_csv(release_dir / "panel_icpsr_compat.csv",
                     low_memory=False)
     tcols = [c for c in p.columns
              if c.startswith(TOPIC_PREFIX) and not c.endswith("_home")]
@@ -144,19 +148,101 @@ def topics_by_party(out: Path) -> None:
     print(f"topics: {g.topic.nunique()} topics, {len(g)//n_t} party-office-years")
 
 
+def coverage_vs_ballot(release_dir: Path, out: Path) -> None:
+    """Coverage using the independent general-election ballot denominator."""
+    b = ballot()
+    t = theirs()
+    b["in_icpsr"] = match(b, t)
+    p = pd.read_csv(release_dir / "panel_icpsr_compat.csv", low_memory=False)
+    rows = []
+    for (office, year), g in b.groupby(["office", "year"]):
+        icpsr_hit = g.in_icpsr
+        if icpsr_hit.any():
+            rows.append({
+                "office": office, "year": year, "source": "icpsr",
+                "n_ballot": len(g), "n_matched": int(icpsr_hit.sum()),
+                "pct_cand": 100 * icpsr_hit.mean(),
+                "votes_total": int(g.candidatevotes.sum()),
+                "votes_matched": int(g.loc[icpsr_hit, "candidatevotes"].sum()),
+                "pct_votes": 100 * g.loc[icpsr_hit, "candidatevotes"].sum()
+                / g.candidatevotes.sum(),
+            })
+        q = p[(p.office == office) & (p.year == year) & p.on_ballot]
+        if not q.empty:
+            matched_votes = int(pd.to_numeric(q.general_votes, errors="coerce").sum())
+            rows.append({
+                "office": office, "year": year, "source": "extension",
+                "n_ballot": len(g), "n_matched": len(q),
+                "pct_cand": 100 * len(q) / len(g),
+                "votes_total": int(g.candidatevotes.sum()),
+                "votes_matched": matched_votes,
+                "pct_votes": 100 * matched_votes / g.candidatevotes.sum(),
+            })
+    result = pd.DataFrame(rows).sort_values(["office", "source", "year"])
+    result.to_csv(out / "coverage_vs_ballot.csv", index=False)
+    ext = result[result.source.eq("extension")]
+    print(f"ballot coverage: {int(ext.n_matched.sum()):,} captured ballot candidates")
+
+
+def cfscore_correlations(release_dir: Path, out: Path) -> None:
+    p = pd.read_csv(release_dir / "panel_icpsr_compat.csv", low_memory=False)
+    x = pd.read_csv(release_dir / "candidate_crosswalk.csv", low_memory=False,
+                    usecols=["candidate_cycle_id", "cfscore"])
+    p = p.merge(x, on="candidate_cycle_id", how="left", validate="one_to_one")
+    tcols = [c for c in p if c.startswith(TOPIC_PREFIX) and not c.endswith("_home")]
+    rows = []
+    for col in tcols:
+        row = {"topic": col.removeprefix(TOPIC_PREFIX)}
+        for label, mask in (("all", pd.Series(True, index=p.index)),
+                            ("D", p.party.eq("democrat")),
+                            ("R", p.party.eq("republican"))):
+            q = p.loc[mask, [col, "cfscore"]].dropna()
+            row[f"r_{label}"] = q[col].corr(q.cfscore)
+        rows.append(row)
+    pd.DataFrame(rows).to_csv(out / "cfscore_correlations.csv", index=False)
+    print(f"CF-score correlations: {len(rows)} topics")
+
+
+def welfare_series(release_dir: Path, out: Path) -> None:
+    topics = pd.read_csv(ICPSR / "candidates_topics.csv", low_memory=False)
+    complexity = pd.read_csv(ICPSR / "candidates_complexity.csv", low_memory=False)
+    complexity = complexity[(complexity.stage == 2)
+                            & complexity.data_source.eq("general_wayback")]
+    old = topics.merge(complexity[["candidate", "year", "stage"]],
+                       on=["candidate", "year", "stage"], how="inner")
+    old = old.groupby("year")["Welfare State"].mean().mul(100).reset_index(name="share")
+    old["source"] = "icpsr"
+
+    p = pd.read_csv(release_dir / "panel_icpsr_compat.csv", low_memory=False)
+    p = p[p.office.eq("house")]
+    new = (p.groupby("year")[f"{TOPIC_PREFIX}Welfare State"].mean().mul(100)
+             .reset_index(name="share"))
+    new["source"] = "extension"
+    pd.concat([old, new], ignore_index=True)[["year", "source", "share"]].to_csv(
+        out / "welfare_series.csv", index=False)
+    print("welfare series: ICPSR House plus repaired House extension")
+
+
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--sample-cands", type=int, default=400)
+    ap.add_argument("--release-dir", type=Path,
+                    default=REPO / "build/release_candidate")
+    ap.add_argument("--out-dir", type=Path,
+                    default=REPO / "quality_reports/figures/data")
     ap.add_argument("--skip-boundary", action="store_true",
                     help="the boundary pass reads the whole corpus (~10 min)")
     a = ap.parse_args()
-    OUT.mkdir(parents=True, exist_ok=True)
-    print("coverage ..."); coverage(OUT)
-    print("topics ..."); topics_by_party(OUT)
-    print("validation ..."); validation(OUT, a.sample_cands)
+    a.out_dir.mkdir(parents=True, exist_ok=True)
+    print("coverage ..."); coverage(a.release_dir, a.out_dir)
+    print("ballot coverage ..."); coverage_vs_ballot(a.release_dir, a.out_dir)
+    print("topics ..."); topics_by_party(a.release_dir, a.out_dir)
+    print("CF-score correlations ..."); cfscore_correlations(a.release_dir, a.out_dir)
+    print("welfare series ..."); welfare_series(a.release_dir, a.out_dir)
+    print("validation ..."); validation(a.out_dir, a.sample_cands)
     if not a.skip_boundary:
-        print("boundary (full corpus pass) ..."); boundary(OUT)
-    print(f"\nwrote to {OUT}")
+        print("boundary (full corpus pass) ..."); boundary(a.release_dir, a.out_dir)
+    print(f"\nwrote to {a.out_dir}")
     return 0
 
 

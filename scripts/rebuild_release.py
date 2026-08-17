@@ -176,6 +176,16 @@ def _roster(fec: pd.DataFrame, selected: pd.DataFrame, out_dir: Path) -> None:
                                  "candidate_cycle_id"])
     r.loc[r.candidate_cycle_id.isin(alias_ids), "on_ballot"] = True
 
+    # Captured rows must carry the same ballot decision and vote total in every
+    # release product. The old roster's name match is not authoritative after
+    # candidate-ID canonicalization.
+    ballot_meta = selected.set_index("candidate_cycle_id")[["on_ballot",
+                                                             "general_votes"]]
+    captured_rows = r.candidate_cycle_id.isin(ballot_meta.index)
+    aligned = ballot_meta.reindex(r.loc[captured_rows, "candidate_cycle_id"])
+    r.loc[captured_rows, "on_ballot"] = aligned.on_ballot.to_numpy()
+    r.loc[captured_rows, "general_votes"] = aligned.general_votes.to_numpy()
+
     r["captured"] = r.candidate_cycle_id.isin(captured)
     decisions = pd.read_csv(CAPTURE_DECISIONS, dtype={"cand_id": str})
     invalid = set((decisions[decisions.action.eq("exclude")].cand_id + "-"
