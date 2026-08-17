@@ -276,6 +276,8 @@ cf_long <- cf |>
 
 p_cf <- ggplot(cf_long, aes(x = r, y = topic)) +
   geom_vline(xintercept = 0, color = "grey70", linewidth = 0.4) +
+  geom_segment(aes(x = 0, xend = r, yend = topic, color = which),
+               linewidth = 0.45) +
   geom_point(aes(color = which), size = 1.9) +
   facet_wrap(~which, ncol = 3) +
   scale_color_manual(values = c(Pooled = DARK, Democrats = BLUE,
