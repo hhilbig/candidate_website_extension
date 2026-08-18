@@ -88,13 +88,17 @@ can impose alternative thresholds.
 - MIT Election Data and Science Lab Senate returns: DOI `10.7910/DVN/PEJ5QU`
 - ICPSR comparison dataset: DOI `10.3886/E226001V1`
 
-The linked repository contains the collection and release-building code. Create
-an environment from `requirements-release.txt`, place the documented source
-archives and public source files at their configured paths, and run:
+The linked repository contains the collection and release-building code. Use
+CPython 3.14.3 and the exact package lock in `requirements-release.txt`.
+Different Pandas or PyArrow versions can produce a different Parquet schema and
+checksum even when the rows are unchanged. Place the documented source archives
+and public source files at their configured paths, then run:
 
 ```bash
-python scripts/rebuild_release.py --out-dir build/release_candidate
-python scripts/validate_release.py build/release_candidate
+python3 -m venv .venv-release
+.venv-release/bin/python -m pip install -r requirements-release.txt
+.venv-release/bin/python scripts/rebuild_release.py --out-dir build/release_candidate
+.venv-release/bin/python scripts/validate_release.py build/release_candidate
 ```
 
 The command writes the five data files and `manifest.json` to a separate
