@@ -70,8 +70,8 @@ Creative Commons Attribution 4.0 International license (CC BY 4.0). Copyright
 in the underlying campaign material remains with its authors. Each text row
 records `snap_url`, its archived source URL.
 
-Rights-holders may request removal using the contact information on the
-openICPSR record. We will act on substantiated requests.
+Rights-holders may request removal through the Contact Owner control on the
+Dataverse record. We will act on substantiated requests.
 
 ## Sources
 
