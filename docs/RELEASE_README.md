@@ -2,8 +2,7 @@
 
 This release contains archived campaign-website text for Democratic and
 Republican U.S. House and Senate candidates. It covers House elections from
-2018 through 2024 and Senate elections from 2002 through 2024. The repository
-is supporting code, not part of the deposit.
+2018 through 2024 and Senate elections from 2002 through 2024.
 
 ## Files
 
@@ -74,24 +73,9 @@ records `snap_url`, its archived source URL.
 Rights-holders may request removal through the Contact Owner control on the
 Dataverse record. We will act on substantiated requests.
 
-## Sources and reproduction
+## Sources
 
 - FEC candidate master files: <https://www.fec.gov/campaign-finance-data/candidate-master-file-description/>
 - MIT House returns: DOI `10.7910/DVN/IG0UN2`
 - MIT Senate returns: DOI `10.7910/DVN/PEJ5QU`
 - ICPSR comparison data: DOI `10.3886/E226001V1`
-
-The release was built with CPython 3.14.3 and the package versions in
-`requirements-release.txt`. Other Pandas or PyArrow versions may change the
-Parquet schema and checksum. After placing the documented source files at their
-configured paths, run:
-
-```bash
-python3 -m venv .venv-release
-.venv-release/bin/python -m pip install -r requirements-release.txt
-.venv-release/bin/python scripts/rebuild_release.py --out-dir build/release_candidate
-.venv-release/bin/python scripts/validate_release.py build/release_candidate
-```
-
-The build writes the five data files and manifest to a separate staging
-directory without overwriting the current release.
