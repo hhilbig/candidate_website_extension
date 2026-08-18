@@ -19,7 +19,7 @@ re-scrape the House years already covered by ICPSR 226001.
 - [Website](https://www.hannohilbig.com/candidatewebsites/): coverage and
   validation results
 
-The repository supports the release but is not part of the Dataverse deposit.
+The repository supports the release but is not part of the openICPSR deposit.
 
 ## Rebuild and validate the release
 
@@ -69,7 +69,7 @@ collection schema and rules.
 Please cite this release and the original dataset that it extends:
 
 > Hilbig, Hanno. 2026. “U.S. Congressional Candidate Websites, 2002–2024.”
-> Version 1.0.0. Harvard Dataverse.
+> Version 1.0.0. openICPSR.
 
 > Di Tella, Rafael, Randy Kotti, Caroline Le Pennec, and Vincent Pons. 2025.
 > “Keep Your Enemies Closer: Strategic Platform Adjustments during U.S. and
