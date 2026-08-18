@@ -1,8 +1,10 @@
 # Knowledge base — Candidate Website Extension
 
-Substantive reference for the project. Update this when design decisions,
-data structures, or literature anchors change. Keep `CLAUDE.md` short by
-pushing detail here.
+Internal project history and operational notes. Sections dated before
+2026-08-18 preserve the state at that time and are not current release
+documentation. For current population rules, products, counts, and build
+instructions, use [the release README](docs/RELEASE_README.md) and
+[codebook](docs/deliverable_codebook.md).
 
 ---
 
@@ -16,8 +18,9 @@ is a panel of archived candidate-website text that downstream projects can
 score (e.g., for populism, issue salience, valence) and merge with election
 returns.
 
-Primary deliverable: per-candidate snapshot CSVs at
-`data/snapshots/{office}/{year}/`, schema documented in `SPEC.md` §5.
+The public deliverables are the five data files listed in
+`docs/RELEASE_README.md`. Per-candidate snapshot CSVs under
+`data/snapshots/{office}/{year}/` are collection inputs, not release files.
 
 ---
 
@@ -29,15 +32,16 @@ snapshot CSVs.
 
 Methodological choices that matter for downstream identification:
 
-- **Coverage cutoffs.** We collect Democratic and Republican general-election
-  candidates only (`stage=2`). Primary candidates require flipping
-  `stage=1` in the roster.
+- **Population.** The release includes Democratic and Republican candidates
+  whose FEC-recorded election year equals the target year, plus reviewed
+  general-election ballot exceptions. Ballot status is an attribute, not a
+  population filter.
 - **Snapshot window.** CDX queries are constrained to the election year
   itself (Jan 1 – Dec 31), `matchType=exact` on the base URL. Subpages
   arrive via in-page link following, one level deep.
-- **Snapshot retention.** No temporal dedup, no per-candidate snapshot cap
-  (matches the original ICPSR scraper). Downstream code is expected to
-  pick e.g. the longest-text snapshot per candidate.
+- **Snapshot retention.** Collection uses three-month buckets and a
+  200-snapshot cap per candidate. The release panel selects the snapshot date
+  with the largest total extracted text.
 
 ---
 

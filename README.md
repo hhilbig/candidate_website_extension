@@ -1,104 +1,76 @@
 # Candidate Website Extension
 
-Extends the Di Tella, Kotti, Le Pennec, and Pons (2025) U.S. House candidate website corpus (2002-2016) forward to 2018-2024 and across offices to Senate races. Scrapes archived candidate websites from the Wayback Machine and extracts visible text for downstream analysis. Uses an OpenFEC + Wikidata waterfall to discover candidate website URLs.
+This repository builds a dataset of archived US congressional campaign
+websites. It extends the House candidate corpus assembled by Di Tella, Kotti,
+Le Pennec, and Pons (2025) from 2018 through 2024 and adds Senate candidates
+from 2002 through 2024. The release contains 7,353 captured candidate-years
+drawn from 799,058 archived pages.
 
-## Scope
+The candidate population consists of Democratic and Republican House and
+Senate candidates whose FEC-recorded election year equals the target year,
+plus reviewed general-election ballot exceptions. The collection did not
+re-scrape the House years already covered by ICPSR 226001.
 
-This project collects data that is **not** already in the ICPSR 226001 dataset:
+## Release documentation
 
-| Office | Years | Source | Status |
-|--------|-------|--------|--------|
-| House 2002-2016 | ICPSR 226001 (Di Tella et al.) | Already collected | DO NOT re-collect |
-| House 2018-2024 | This project (FEC + OpenFEC + Wikidata + Wayback) | To collect |
-| Senate 2002-2024 | This project (FEC + OpenFEC + Wikidata + Wayback) | To collect |
+- [Release README](docs/RELEASE_README.md): population, five-file inventory,
+  construction, limitations, terms of use, and reproduction commands
+- [Codebook](docs/deliverable_codebook.md): fields, keys, and missing values
+- [Website](https://www.hannohilbig.com/candidatewebsites/): coverage and
+  validation results
 
-## Installation
+The repository supports the release but is not part of the Dataverse deposit.
+
+## Rebuild and validate the release
+
+The release build uses CPython 3.14.3 and the locked packages in
+`requirements-release.txt`. Source archives and public source files must be at
+the paths documented in the build configuration.
 
 ```bash
-git clone https://github.com/hhilbig/candidate_website_extension.git
-cd candidate_website_extension
+python3 -m venv .venv-release
+.venv-release/bin/python -m pip install -r requirements-release.txt
+.venv-release/bin/python scripts/rebuild_release.py --out-dir build/release_candidate
+.venv-release/bin/python scripts/validate_release.py build/release_candidate
+```
+
+The build writes the five data products and `manifest.json` to a separate
+staging directory. It does not overwrite an existing release.
+
+## Run the collection pipeline
+
+The collection commands use public data services and may make live network
+requests. Install their dependencies with:
+
+```bash
 pip install -r requirements.txt
 ```
 
-## Quick Start
-
-### 1. Build a candidate roster
+Build a candidate roster:
 
 ```bash
-# House candidates for 2022
 python -m src.build_candidate_roster --office house --year 2022
-
-# Senate candidates for all available years
 python -m src.build_candidate_roster --office senate --years 2002-2024
 ```
 
-### 2. Scrape websites from Wayback Machine
+Retrieve archived sites from the Wayback Machine:
 
 ```bash
-# Scrape using a roster file
 python -m src.scrape_wayback --office house --year 2022
-
-# Or specify a roster directly
 python -m src.scrape_wayback --roster data/rosters/roster_senate_2020.csv
-
-# Control parallelism and logging
-python -m src.scrape_wayback --office house --year 2022 --threads 4 --log-level DEBUG
 ```
 
-## Configuration
-
-Edit `config/config.yaml` to adjust:
-
-- **scope**: Which offices and years to process
-- **wayback**: Rate limits, timeouts, retry behavior
-- **scraping**: Thread count, subpage crawl depth, excluded domains
-- **url_sources**: OpenFEC API key, Wikidata settings
-- **output**: Directory paths for all outputs
-
-## Output Format
-
-Scraped data lands in `data/snapshots/{office}/{year}/` as CSV files (one per candidate). Each row is a single page from a single Wayback Machine snapshot:
-
-| Column | Description |
-|--------|-------------|
-| `candidate` | Candidate name |
-| `state` | State abbreviation |
-| `district` | District number (House only) |
-| `office` | `house` or `senate` |
-| `year` | Election year |
-| `party` | `D` or `R` |
-| `date` | Snapshot timestamp |
-| `text_snap_content` | Extracted visible text |
-| `n_char` / `n_words` | Text length metrics |
-
-See [SPEC.md](SPEC.md) for the full schema and detailed specification.
-
-## Project Structure
-
-```
-candidate_website_extension/
-├── README.md                          # This file
-├── SPEC.md                            # Detailed specification
-├── requirements.txt                   # Python dependencies
-├── config/
-│   └── config.yaml                    # Configuration
-├── src/
-│   ├── build_candidate_roster.py      # FEC roster builder + URL waterfall
-│   ├── scrape_wayback.py              # Core Wayback Machine scraper
-│   ├── extract_text.py                # HTML → text extraction
-│   ├── name_utils.py                  # Candidate name normalization
-│   ├── utils.py                       # Rate limiting, checkpointing, logging
-│   └── url_sources/                   # URL discovery modules
-│       ├── openfec.py                 # OpenFEC API
-│       └── wikidata.py                # Wikidata SPARQL
-└── data/                              # Output directory (.gitignored)
-    ├── rosters/                        # Candidate roster CSVs
-    ├── snapshots/{office}/{year}/      # Scraped website content
-    └── progress/                       # Checkpoint files for resumability
-```
+`config/config.yaml` controls office-years, rate limits, retry behavior, crawl
+depth, URL sources, and output paths. [SPEC.md](SPEC.md) documents the
+collection schema and rules.
 
 ## Citation
 
-This project extends:
+Please cite this release and the original dataset that it extends:
 
-> Di Tella, Rafael, Laura Kotti, Caroline Le Pennec, and Vincent Pons. 2025. "Replication Data for: The Economics of Populism." ICPSR 226001-V1. https://doi.org/10.3886/E226001V1
+> Hilbig, Hanno. 2026. “U.S. Congressional Candidate Websites, 2002–2024.”
+> Version 1.0.0. Harvard Dataverse.
+
+> Di Tella, Rafael, Randy Kotti, Caroline Le Pennec, and Vincent Pons. 2025.
+> “Keep Your Enemies Closer: Strategic Platform Adjustments during U.S. and
+> French Elections.” openICPSR 226001. <https://doi.org/10.3886/E226001V1>

@@ -1,5 +1,10 @@
 # Specification: Candidate Website Extension
 
+This file documents the collection pipeline and its intermediate CSV output.
+The current release population, products, and field definitions are documented
+in [the release README](docs/RELEASE_README.md) and
+[codebook](docs/deliverable_codebook.md).
+
 ## 1. Goal
 
 Extend the Di Tella, Kotti, Le Pennec, and Pons (2025) U.S. House candidate website corpus (ICPSR 226001-V1, covering 2002-2016) in two directions:
@@ -7,7 +12,8 @@ Extend the Di Tella, Kotti, Le Pennec, and Pons (2025) U.S. House candidate webs
 1. **Forward in time**: House candidate websites for 2018, 2020, 2022, 2024.
 2. **Across offices**: Senate candidate websites for 2002-2024.
 
-This repo handles **scraping only**. Downstream analysis (LLM scoring, merging with election data) stays in the parent research project.
+The repository also contains the release-building, validation, and
+ICPSR-compatibility code.
 
 ## 2. Data Sources
 
@@ -17,7 +23,9 @@ Primary source for archived web content.
 
 - **Endpoint**: `https://web.archive.org/cdx/search/cdx`
 - **Query strategy**: For each candidate URL, query with `matchType=exact` for all snapshots within the election-year window (January 1 through December 31). Exact matching returns only captures of the base URL itself; subpages are discovered via link following during scraping, matching the original ICPSR methodology.
-- **Deduplication**: No temporal dedup is applied to CDX records, matching the original ICPSR scraper methodology. All snapshots within the election-year window are retained. Content dedup within each snapshot removes duplicate page texts. The CDX API `limit` parameter (10,000) provides an implicit upper bound per query.
+- **Deduplication**: CDX records are grouped into three-month buckets before
+  retrieval, and at most 200 snapshots are selected per candidate. Content
+  deduplication within each snapshot removes duplicate page text.
 
 ### Candidate Rosters
 
@@ -33,12 +41,15 @@ FEC filings do not directly include candidate website URLs in the bulk `cn.txt` 
 
 | Office     | Years         | Est. candidates/cycle | Total est. |
 |------------|---------------|-----------------------|------------|
-| House      | 2018-2024     | ~800-900 (general, D+R) | ~3,500   |
-| Senate     | 2002-2024     | ~60-70 (general, D+R)   | ~700     |
+| House      | 2018-2024     | Democratic and Republican FEC candidates | 4 cycles |
+| Senate     | 2002-2024     | Democratic and Republican FEC candidates | 12 cycles |
 
 House 2002-2016 is already covered by ICPSR 226001 and is **not** re-collected.
 
-Scope is limited to Democratic and Republican general-election candidates. Primary candidates can be added by setting `stage=1` in the roster.
+The release population consists of Democratic and Republican candidates whose
+FEC-recorded election year equals the target year, plus reviewed
+general-election ballot exceptions. General-election status is an attribute,
+not a population filter.
 
 ## 4. Scraping Approach
 
@@ -47,7 +58,8 @@ Adapted from the Di Tella et al. `_scraper.py` with the following improvements:
 ### CDX Query
 - Query CDX API with `matchType=exact` on the base URL only, matching the original ICPSR scraper methodology. Subpages are discovered via link following in `scrape_snapshot()`, not via CDX. Using `prefix` would return every archived subpage URL (potentially 10,000+ records per candidate), while `exact` returns only homepage snapshots (typically tens to low hundreds).
 - Filter to `statuscode:200` and `mimetype:text/html`.
-- No temporal deduplication: all CDX records are retained, matching the original ICPSR scraper. No snapshot cap per candidate.
+- Group snapshots into three-month buckets and select no more than 200 per
+  candidate.
 
 ### Page Fetching
 - Strip Wayback Machine toolbar HTML using known markers (`<!-- END WAYBACK TOOLBAR INSERT -->`, `<!-- FILE ARCHIVED ON`).
@@ -70,7 +82,8 @@ Adapted from the Di Tella et al. `_scraper.py` with the following improvements:
 - All threads share a single thread-safe rate limiter. Each thread maintains its own HTTP session.
 
 ### Known Limitations
-- **JavaScript-rendered sites**: Post-2018 candidates increasingly use React/Next.js. Wayback Machine captures may be incomplete for these. A future extension could add a Playwright/Selenium fallback.
+- **JavaScript-rendered sites**: Wayback Machine captures may contain empty
+  shells when archived JavaScript cannot be reconstructed.
 - **Social media replacing websites**: Some 2022-2024 candidates lack standalone websites.
 - **Flash content**: Pre-2010 sites using Flash are captured as blank pages; filtered out by text length.
 
@@ -98,7 +111,9 @@ One CSV per candidate per year, stored in `data/snapshots/{office}/{year}/`.
 | `n_char` | Character count of extracted text |
 | `n_words` | Word count of extracted text |
 
-Multiple snapshots per candidate are retained. Downstream deduplication selects the longest-text snapshot per candidate.
+Multiple snapshots per candidate are retained in the collection output. The
+release panel selects the snapshot date with the largest total amount of
+extracted text.
 
 ## 6. Candidate Roster Pipeline
 
@@ -160,6 +175,11 @@ python -m src.scrape_wayback --roster data/rosters/roster_senate_2020.csv --thre
 
 ## 10. Citation
 
-If using this data, cite the original dataset:
+If using this data, cite this release and the original dataset:
 
-> Di Tella, Rafael, Laura Kotti, Caroline Le Pennec, and Vincent Pons. 2025. "Replication Data for: The Economics of Populism." ICPSR 226001-V1. https://doi.org/10.3886/E226001V1
+> Hilbig, Hanno. 2026. “U.S. Congressional Candidate Websites, 2002–2024.”
+> Version 1.0.0. Harvard Dataverse.
+
+> Di Tella, Rafael, Randy Kotti, Caroline Le Pennec, and Vincent Pons. 2025.
+> “Keep Your Enemies Closer: Strategic Platform Adjustments during U.S. and
+> French Elections.” openICPSR 226001. <https://doi.org/10.3886/E226001V1>

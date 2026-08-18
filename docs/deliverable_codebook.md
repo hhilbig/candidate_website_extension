@@ -2,11 +2,12 @@
 
 ## Keys and missing values
 
-`candidate_cycle_id` is the primary key for all candidate-year products and the
-foreign key in the raw corpus. It combines the canonical FEC candidate ID and
-election year. `cand_id` may recur across years. Empty CSV cells and Parquet
-nulls are missing values; empty strings in archived text fields represent an
-empty extracted string, not an imputed value.
+`candidate_cycle_id` is the primary key in every candidate-year file and the
+foreign key in the raw corpus. It combines the canonical FEC candidate ID with
+the election year. A `cand_id` can therefore appear in more than one year.
+Empty CSV cells and Parquet nulls denote missing values. An empty string in an
+archived text field means that extraction returned no text; it is not an
+imputed value.
 
 ## `raw_corpus.parquet`
 
@@ -69,10 +70,10 @@ ID.
 
 ## `panel_icpsr_compat.csv`
 
-One row is one captured candidate-year. The file has 7,353 rows. Its identity
-and population fields have the same meanings as in the candidate-year panel.
-`icpsr_compatible` equals `on_ballot` and identifies rows that meet the
-general-election population convention.
+One row is one captured candidate-year. The file has 7,353 rows. Identity and
+population fields have the same meanings as in `panel_candidate_year.csv`.
+`icpsr_compatible` is identical to `on_ballot`; it identifies candidates
+matched to an official major-party general-election return.
 
 The remaining fields form repeated measurement families:
 
@@ -94,9 +95,9 @@ The remaining fields form repeated measurement families:
 | `icpsr_first_snap_day`, `icpsr_last_snap_day` | First and last valid snapshot dates |
 | `icpsr_snap_span_days` | Days between first and last valid snapshots |
 
-Topic shares are proportions. They are missing when no valid text supports the
-measure. Counts are nonnegative; lexical measures are missing when the required
-text is absent.
+Topic shares are proportions and are missing when no valid text supports the
+measure. Counts are nonnegative. Lexical-diversity measures are missing when
+the required text is absent.
 
 ## `candidate_crosswalk.csv`
 

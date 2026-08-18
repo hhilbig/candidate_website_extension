@@ -1,5 +1,11 @@
 # Release presentation audit
 
+> **Historical audit, resolved.** This report describes the pre-repair release
+> candidate. Commit `ca9069e` rebuilt the population, removed invalid captures,
+> repaired identity handling and labels, and regenerated the five products.
+> Use `docs/RELEASE_README.md` and the current validation output for release
+> decisions. The findings below are preserved as provenance.
+
 **Date:** 2026-08-17  
 **Scope:** the five data products listed in `docs/RELEASE_README.md`, plus the
 release README and codebook  

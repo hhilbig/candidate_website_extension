@@ -126,8 +126,7 @@ variables dropped and why. Update `docs/deliverable_codebook.md`, replacing the
 - `KNOWLEDGE_BASE.md` §6 — record the Pons outcome (Dataverse, no duplication)
   and the resolved aggregation rule.
 - `quality_reports/icpsr_variable_extension_<date>.md` — **new.** Findings.
-- Read-only inputs, ICPSR package at
-  `~/Library/CloudStorage/Dropbox/Research/19_Great_Recession/data/candidate_websites/226001-V1/`:
+- Read-only inputs in the local ICPSR 226001 package directory:
   `websites_clean.parquet`, `candidates_topics.csv`, `candidates_complexity.csv`,
   `topic_words.csv`, `_scraper.py`. **Never write to this directory.**
 

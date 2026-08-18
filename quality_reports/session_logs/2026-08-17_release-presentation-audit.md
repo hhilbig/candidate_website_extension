@@ -1,5 +1,9 @@
 # Session log — 2026-08-17
 
+> **Historical session record.** The release described here was repaired in
+> commit `ca9069e`. Current counts and population rules are in
+> `docs/RELEASE_README.md`. The original record below is unchanged.
+
 **Session type:** release audit  
 **Plan:** `quality_reports/plans/2026-08-17_release-presentation-audit.md`
 
