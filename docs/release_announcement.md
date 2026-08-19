@@ -98,18 +98,17 @@ publishing it on any platform.
 > Topic attention among Democratic and Republican House general-election
 > candidates in 2024. Topics measure emphasis, not policy position.
 
-**Website length and lexical diversity**
+**Website length by party**
 
-> Median website length and lexical diversity among Democratic and Republican
-> House general-election candidates. Websites became longer from 2002 through
-> 2024, while lexical diversity changed little. The source changes between 2016
-> and 2018.
+> Median word count among Democratic and Republican House general-election
+> candidates. The party difference falls from 61 words in 2002 to 7 in 2024.
+> The source changes between 2016 and 2018.
 
 ## Posting notes
 
 - Use the four-figure carousel in this order: long-run partisan issue gaps,
-  coverage against the ballot, the 2024 party agendas, and website length and
-  lexical diversity.
+  coverage against the ballot, the 2024 party agendas, and website length by
+  party.
 - Do not describe the topic measures as positions. They measure attention to 31
   Manifesto Project categories.
 - Do not describe the corpus as a census or as a sample limited to general

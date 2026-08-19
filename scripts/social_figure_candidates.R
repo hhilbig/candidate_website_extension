@@ -158,45 +158,42 @@ p6 <- ggplot(displacement, aes(value, topic)) +
   theme_social(11)
 save_candidate(p6, "proposal_06_homepage_vs_full_site", 7.2, 4.8)
 
-evolution <- read_csv(file.path(data_dir, "website_evolution.csv"),
-                      show_col_types = FALSE) |>
-  mutate(
-    measure = factor(measure, c("Website length", "Lexical diversity"))
-  ) |>
-  group_by(measure) |>
-  mutate(change = 100 * (value / value[year == 2002] - 1)) |>
-  ungroup()
+lengths <- read_csv(file.path(data_dir, "website_length_by_party.csv"),
+                    show_col_types = FALSE) |>
+  mutate(party = recode(party,
+                        democrat = "Democrats",
+                        republican = "Republicans"))
 
-evolution_labels <- evolution |>
+length_labels <- lengths |>
   filter(year == 2024) |>
-  mutate(label = if_else(
-    measure == "Website length",
-    sprintf("+%.0f%% (%.0f words)", change, value),
-    sprintf("%.1f%%", change)
-  ))
+  mutate(
+    label = sprintf("%s: %.0f", party, median_words),
+    label_y = median_words + if_else(party == "Democrats", 18, -18)
+  )
 
-p7 <- ggplot(evolution, aes(year, change, group = source, color = source)) +
+p7 <- ggplot(lengths,
+             aes(year, median_words, group = interaction(source, party),
+                 color = party)) +
   annotate("rect", xmin = 2016.5, xmax = 2017.5,
            ymin = -Inf, ymax = Inf, fill = BAND, alpha = 0.10, color = NA) +
-  geom_hline(yintercept = 0, color = "grey75", linewidth = 0.4) +
   geom_line(linewidth = 0.65) +
   geom_point(size = 1.7) +
-  geom_text(data = evolution_labels, aes(label = label),
-            color = "grey20", hjust = 1.08, vjust = -0.7, size = 3.0) +
-  facet_wrap(~measure, ncol = 2) +
-  scale_color_manual(values = c("Di Tella et al." = GREY,
-                                "This release" = DARK)) +
+  geom_text(data = length_labels,
+            aes(y = label_y, label = label),
+            color = "grey20", hjust = 1.05, size = 3.1) +
+  scale_color_manual(values = c("Democrats" = DARK,
+                                "Republicans" = GREY)) +
   scale_x_continuous(breaks = seq(2002, 2024, 6),
                      limits = c(2002, 2025)) +
-  scale_y_continuous(breaks = c(0, 50, 100, 150),
-                     limits = c(-10, 170)) +
+  scale_y_continuous(breaks = seq(0, 400, 100),
+                     limits = c(0, 400)) +
   labs(
-    title = "Campaign Websites Became Longer, but Not More Diverse",
+    title = "Campaign Websites Grew Longer and Converged in Length",
     x = NULL,
-    y = "Change from 2002 median (%)"
+    y = "Median website length (words)"
   ) +
   theme_social() +
   theme(plot.title = element_text(face = "bold", size = 15, hjust = 0))
-save_candidate(p7, "proposal_07_length_and_lexical_diversity", 7.8, 4.6)
+save_candidate(p7, "proposal_07_website_length_by_party", 7.2, 4.6)
 
 message("all internal proposal figures written to ", out_dir)

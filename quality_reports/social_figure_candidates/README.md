@@ -27,7 +27,7 @@ snapshot selected for the candidate-year panel.
 | 4 | 2024 party agendas | Democrats devote 17.8% of attention to welfare, compared with 5.5% for Republicans. Republicans devote more attention to political authority, law and order, and the military. | Best simple standalone social post. |
 | 5 | Party-agenda distance | The share of attention that would need to be reallocated to align the parties rises from 20.8% in 2018 to 27.8% in 2024. | Interesting follow-up; define the measure in the post. |
 | 6 | Homepage replication | Full-site and homepage party gaps correlate at .867 and have the same sign for 26 of 31 topics. | Shows that deep-page crawl composition does not create the main party pattern. |
-| 7 | Website length and lexical diversity | Median House website length rises from 138 to 345 words between 2002 and 2024, while median lexical diversity changes from .687 to .669. | A non-topic result and a cross-source comparability check. |
+| 7 | Website length by party | Median House website length rises for both parties between 2002 and 2024. The Democratic–Republican difference narrows from 61 to 7 words. | A non-topic result and a cross-source comparability check. |
 | 8 | Homepage versus full site | Homepages contain 3.9 points less welfare attention and more identity and broad political language than full sites. | Interesting, but the descriptive interpretation is less secure because page roles differ. |
 | 9 | Vote-weighted party gaps | Vote weighting barely changes the main gaps: welfare is +8.7 points unweighted and +7.9 weighted. | Methodological follow-up. |
 | 10 | Topic attention and CF-scores | Pooled correlations follow the expected partisan ordering, but within-party correlations are weak. | Honest external validation; not a lead figure. |
@@ -40,7 +40,7 @@ Use four panels:
 1. Long-run partisan issue gaps.
 2. Coverage against the official ballot.
 3. The 2024 agenda comparison.
-4. Website length and lexical diversity.
+4. Website length by party.
 
 The first and third figures show what the data can reveal. The second states
 who is represented. The fourth adds a non-topic result and marks the source

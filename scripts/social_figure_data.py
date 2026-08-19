@@ -109,8 +109,8 @@ def combined_house_topics(
     ), counts
 
 
-def website_evolution(panel: pd.DataFrame, icpsr_dir: Path) -> pd.DataFrame:
-    """Build comparable House series for length and lexical diversity."""
+def website_length_by_party(panel: pd.DataFrame, icpsr_dir: Path) -> pd.DataFrame:
+    """Build a comparable House series of median website length by party."""
     old = pd.read_csv(
         icpsr_dir / "candidates_complexity.csv", low_memory=False
     )
@@ -120,12 +120,10 @@ def website_evolution(panel: pd.DataFrame, icpsr_dir: Path) -> pd.DataFrame:
         & old.party.isin(PARTIES)
     ]
     old_year = (
-        old.groupby("year")
+        old.groupby(["year", "party"])
         .agg(
             median_words=("n_words", "median"),
-            median_mattr=("MATTR", "median"),
-            n_words=("n_words", "count"),
-            n_mattr=("MATTR", "count"),
+            n=("n_words", "count"),
         )
         .reset_index()
     )
@@ -137,30 +135,19 @@ def website_evolution(panel: pd.DataFrame, icpsr_dir: Path) -> pd.DataFrame:
         & panel.party.isin(PARTIES)
     ]
     new_year = (
-        new.groupby("year")
+        new.groupby(["year", "party"])
         .agg(
             median_words=("icpsr_n_words", "median"),
-            median_mattr=("icpsr_mattr_approx", "median"),
-            n_words=("icpsr_n_words", "count"),
-            n_mattr=("icpsr_mattr_approx", "count"),
+            n=("icpsr_n_words", "count"),
         )
         .reset_index()
     )
     new_year["source"] = "This release"
 
-    wide = pd.concat([old_year, new_year], ignore_index=True)
-    words = wide[["year", "source", "median_words", "n_words"]].rename(
-        columns={"median_words": "value", "n_words": "n"}
-    )
-    words["measure"] = "Website length"
-    mattr = wide[["year", "source", "median_mattr", "n_mattr"]].rename(
-        columns={"median_mattr": "value", "n_mattr": "n"}
-    )
-    mattr["measure"] = "Lexical diversity"
-    out = pd.concat([words, mattr], ignore_index=True)
+    out = pd.concat([old_year, new_year], ignore_index=True)
     assert out.n.min() >= 100, "headline House year cell below 100"
-    assert out.value.notna().all(), "missing annual median"
-    return out.sort_values(["measure", "year"])
+    assert out.median_words.notna().all(), "missing annual median"
+    return out.sort_values(["party", "year"])
 
 
 def party_gap(frame: pd.DataFrame, value: str = "share") -> pd.DataFrame:
@@ -192,8 +179,8 @@ def main() -> int:
     assert np.allclose(sums, 1, atol=1e-8), "topic shares do not sum to one"
 
     combined, counts = combined_house_topics(panel, args.icpsr_dir)
-    evolution = website_evolution(panel, args.icpsr_dir)
-    evolution.to_csv(args.out_dir / "website_evolution.csv", index=False)
+    lengths = website_length_by_party(panel, args.icpsr_dir)
+    lengths.to_csv(args.out_dir / "website_length_by_party.csv", index=False)
     gaps = party_gap(combined)
     gaps[gaps.topic.isin(LONG_RUN_TOPICS)].to_csv(
         args.out_dir / "long_run_topic_gaps.csv", index=False
