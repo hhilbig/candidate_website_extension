@@ -68,6 +68,7 @@ def semantic_checks(release_dir: Path, data_dir: Path) -> dict[str, int]:
     p = panel[panel.party.isin(["democrat", "republican"])
               & panel[topic_cols[0]].notna()].copy()
     p["party"] = p.party.map({"democrat": "D", "republican": "R"})
+    p = p[p.on_ballot].copy()
     expected_topics = (p.groupby(["party", "office", "year"])[topic_cols]
                        .mean().reset_index()
                        .melt(id_vars=["party", "office", "year"],
@@ -79,6 +80,7 @@ def semantic_checks(release_dir: Path, data_dir: Path) -> dict[str, int]:
 
     scores = crosswalk[["candidate_cycle_id", "cfscore"]]
     q = panel.merge(scores, on="candidate_cycle_id", how="left", validate="one_to_one")
+    q = q[q.on_ballot].copy()
     expected_cf = []
     for col in topic_cols:
         row = {"topic": col.removeprefix(TOPIC_PREFIX)}
@@ -92,12 +94,13 @@ def semantic_checks(release_dir: Path, data_dir: Path) -> dict[str, int]:
     assert_close(cf, pd.DataFrame(expected_cf), ["topic"], ["r_all", "r_D", "r_R"])
 
     welfare = pd.read_csv(data_dir / "welfare_series.csv")
-    expected_welfare = (panel[panel.office.eq("house")].groupby("year")
+    expected_welfare = (panel[panel.office.eq("house") & panel.on_ballot]
+                        .groupby(["year", "party"])
                         [f"{TOPIC_PREFIX}Welfare State"].mean().mul(100)
                         .reset_index(name="share"))
     expected_welfare["source"] = "extension"
     assert_close(welfare[welfare.source.eq("extension")], expected_welfare,
-                 ["year", "source"], ["share"])
+                 ["year", "party", "source"], ["share"])
 
     boundary = pd.read_csv(data_dir / "boundary_nchar.csv")
     extension_keys = boundary[boundary.source.eq("extension")][["office", "year"]]

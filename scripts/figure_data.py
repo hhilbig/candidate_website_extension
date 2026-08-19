@@ -61,9 +61,9 @@ def boundary(release_dir: Path, out: Path) -> None:
     rows = []
     for i in range(pf.num_row_groups):
         g = pf.read_row_group(i, columns=["candidate_icpsr", "state", "office",
-                                          "year", "date", "n_char",
+                                          "year", "date", "n_char", "on_ballot",
                                           "text_snap_content"]).to_pandas()
-        g = g[g.n_char > 0]
+        g = g[g.on_ballot & (g.n_char > 0)]
         if g.empty:
             continue
         raw = g.n_char.to_numpy(float)
@@ -87,7 +87,8 @@ def boundary(release_dir: Path, out: Path) -> None:
     agg["source"] = "extension"
 
     t = pd.read_csv(ICPSR / "candidates_complexity.csv")
-    t = t[(t.stage == 2) & (t.data_source == "general_wayback")]
+    t = t[(t.stage == 2) & (t.data_source == "general_wayback")
+          & t.party.isin(["democrat", "republican"])]
     th = (t.groupby("year").n_char.median().reset_index()
             .rename(columns={"n_char": "cleaned"}))
     th["office"], th["uncleaned"], th["source"] = "house", np.nan, "icpsr"
@@ -137,7 +138,8 @@ def topics_by_party(release_dir: Path, out: Path) -> None:
              if c.startswith(TOPIC_PREFIX) and not c.endswith("_home")]
     # The compat panel carries ICPSR's party coding ("democrat"/"republican"),
     # not the raw FEC "D"/"R".
-    p = p[p.party.isin(["democrat", "republican"]) & p[tcols[0]].notna()].copy()
+    p = p[p.on_ballot & p.party.isin(["democrat", "republican"])
+          & p[tcols[0]].notna()].copy()
     p["party"] = p.party.map({"democrat": "D", "republican": "R"})
     g = (p.groupby(["party", "office", "year"])[tcols].mean().reset_index()
            .melt(id_vars=["party", "office", "year"],
@@ -189,6 +191,7 @@ def cfscore_correlations(release_dir: Path, out: Path) -> None:
     x = pd.read_csv(release_dir / "candidate_crosswalk.csv", low_memory=False,
                     usecols=["candidate_cycle_id", "cfscore"])
     p = p.merge(x, on="candidate_cycle_id", how="left", validate="one_to_one")
+    p = p[p.on_ballot].copy()
     tcols = [c for c in p if c.startswith(TOPIC_PREFIX) and not c.endswith("_home")]
     rows = []
     for col in tcols:
@@ -207,20 +210,23 @@ def welfare_series(release_dir: Path, out: Path) -> None:
     topics = pd.read_csv(ICPSR / "candidates_topics.csv", low_memory=False)
     complexity = pd.read_csv(ICPSR / "candidates_complexity.csv", low_memory=False)
     complexity = complexity[(complexity.stage == 2)
-                            & complexity.data_source.eq("general_wayback")]
-    old = topics.merge(complexity[["candidate", "year", "stage"]],
+                            & complexity.data_source.eq("general_wayback")
+                            & complexity.party.isin(["democrat", "republican"])]
+    old = topics.merge(complexity[["candidate", "year", "stage", "party"]],
                        on=["candidate", "year", "stage"], how="inner")
-    old = old.groupby("year")["Welfare State"].mean().mul(100).reset_index(name="share")
+    old = (old.groupby(["year", "party"])["Welfare State"].mean().mul(100)
+           .reset_index(name="share"))
     old["source"] = "icpsr"
 
     p = pd.read_csv(release_dir / "panel_icpsr_compat.csv", low_memory=False)
-    p = p[p.office.eq("house")]
-    new = (p.groupby("year")[f"{TOPIC_PREFIX}Welfare State"].mean().mul(100)
+    p = p[p.office.eq("house") & p.on_ballot
+          & p.party.isin(["democrat", "republican"])]
+    new = (p.groupby(["year", "party"])[f"{TOPIC_PREFIX}Welfare State"].mean().mul(100)
              .reset_index(name="share"))
     new["source"] = "extension"
-    pd.concat([old, new], ignore_index=True)[["year", "source", "share"]].to_csv(
+    pd.concat([old, new], ignore_index=True)[["year", "party", "source", "share"]].to_csv(
         out / "welfare_series.csv", index=False)
-    print("welfare series: ICPSR House plus repaired House extension")
+    print("welfare series: comparable D/R House ballot samples")
 
 
 def main() -> int:

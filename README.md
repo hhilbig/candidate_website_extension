@@ -68,8 +68,9 @@ collection schema and rules.
 
 Please cite this release and the original dataset that it extends:
 
-> Hilbig, Hanno. 2026. “U.S. Congressional Candidate Websites, 2002–2024.”
-> Version 1.0.0. Harvard Dataverse.
+> Hilbig, Hanno. 2026. “U.S. House (2018–2024) and Senate (2002–2024)
+> Candidate Websites.” Version 1.0. Harvard Dataverse.
+> <https://doi.org/10.7910/DVN/BZ2JRS>
 
 > Di Tella, Rafael, Randy Kotti, Caroline Le Pennec, and Vincent Pons. 2025.
 > “Keep Your Enemies Closer: Strategic Platform Adjustments during U.S. and

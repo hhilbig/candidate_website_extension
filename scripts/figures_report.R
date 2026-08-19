@@ -195,12 +195,9 @@ save_fig(p_val, "validation_scatter", 7.8, 5.0)
 # topic measures carry signal, the partisan gaps should line up with what we
 # know about the two parties' issue agendas.
 #
-# Plotting the six topic time series directly is a poor test: before 2018 our
-# data is Senate-only, and the 2002 Senate has 30 captured candidates, so the
-# early years swing wildly on tiny samples. Instead take the Democratic minus
-# Republican gap within each of the 16 office-years, and show its mean and
-# range across them. Direction AND consistency in one figure, using all 31
-# topics rather than a chosen few.
+# Use House general-election candidates only. This keeps the denominator stable
+# across the four years and avoids giving small Senate cells the same weight as
+# House cells with hundreds of candidates.
 
 tp <- read_csv(file.path(data_dir, "topic_by_party.csv"), show_col_types = FALSE)
 
@@ -211,18 +208,19 @@ KEY_TOPICS <- c(
   "Traditional Morality", "National Way of Life", "Political Authority")
 
 gap <- tp |>
-  filter(topic %in% KEY_TOPICS) |>
+  filter(office == "house", topic %in% KEY_TOPICS) |>
   pivot_wider(names_from = party, values_from = share) |>
   mutate(gap = (D - R) * 100) |>
   group_by(topic) |>
-  summarise(mean_gap = mean(gap), .groups = "drop") |>
+  summarise(mean_gap = mean(gap), min_gap = min(gap), max_gap = max(gap),
+            .groups = "drop") |>
   mutate(topic = fct_reorder(topic, mean_gap),
          lean = if_else(mean_gap > 0, "D", "R"))
 
 p_gap <- ggplot(gap, aes(x = mean_gap, y = topic)) +
   geom_vline(xintercept = 0, color = "grey70", linewidth = 0.4) +
-  geom_segment(aes(x = 0, xend = mean_gap, yend = topic, color = lean),
-               linewidth = 0.5) +
+  geom_segment(aes(x = min_gap, xend = max_gap, yend = topic, color = lean),
+               linewidth = 0.65) +
   geom_point(aes(color = lean), size = 2.4) +
   scale_color_manual(values = c(D = DARK, R = RED)) +
   scale_x_continuous(labels = function(x) sprintf("%+g", x)) +
@@ -235,7 +233,7 @@ save_fig(p_gap, "topics_party_gap", 7.2, 4.6)
 # The single cleanest series, shown on its own because it is the one panel
 # where the gap is large, consistent, and visible in every year.
 welfare <- tp |>
-  filter(topic == "Welfare State") |>
+  filter(office == "house", topic == "Welfare State") |>
   group_by(party, year) |>
   summarise(share = mean(share) * 100, .groups = "drop")
 w_ends <- welfare |> group_by(party) |> filter(year == max(year)) |> ungroup()
@@ -282,8 +280,8 @@ p_cf <- ggplot(cf_long, aes(x = r, y = topic)) +
   facet_wrap(~which, ncol = 3) +
   scale_color_manual(values = c(Pooled = DARK, Democrats = BLUE,
                                 Republicans = RED)) +
-  scale_x_continuous(limits = c(-0.32, 0.32),
-                     breaks = c(-0.25, 0, 0.25)) +
+  scale_x_continuous(limits = c(-0.36, 0.36),
+                     breaks = c(-0.3, 0, 0.3)) +
   labs(x = "Correlation with DIME CF-score (higher = more conservative)",
        y = NULL) +
   theme_report(11) +
@@ -291,24 +289,25 @@ p_cf <- ggplot(cf_long, aes(x = r, y = topic)) +
 save_fig(p_cf, "external_validity_cfscore", 8.4, 4.4)
 
 # ------------------------------------------------------------- fig-welfare-arc
-# Welfare State attention over the full merged series. Shown only for a LARGE
-# topic: the two classifier runs differ by about 0.005 in absolute terms, which
-# is negligible against a series running 4-9% but comparable to the level of a
-# topic like Multiculturalism at 1.4%. Small topics therefore cannot support
-# cross-boundary trend claims, and none are shown here.
+# Welfare State attention over the full merged House series, split by party and
+# restricted to general-election candidates on both sides of the 2016/2018
+# handoff. Separate line segments mark the change in source dataset.
 
 ws <- read_csv(file.path(data_dir, "welfare_series.csv"), show_col_types = FALSE)
 
-p_ws <- ggplot(ws, aes(x = year, y = share)) +
-  geom_line(aes(group = source, color = source), linewidth = 0.8) +
-  geom_point(aes(color = source), size = 1.9) +
-  annotate("text", x = 2008, y = 3.2, label = "Di Tella et al.",
-           size = 3.0, color = GREY) +
-  annotate("text", x = 2022, y = 6.6, label = "this dataset",
-           size = 3.0, color = DARK, fontface = "bold") +
-  scale_color_manual(values = c(icpsr = GREY, extension = DARK)) +
-  scale_x_continuous(breaks = seq(2002, 2024, 4)) +
-  scale_y_continuous(limits = c(2.5, 10.5)) +
+p_ws <- ggplot(ws, aes(x = year, y = share, color = party,
+                       group = interaction(party, source))) +
+  annotate("rect", xmin = 2016.5, xmax = 2018.5, ymin = -Inf, ymax = Inf,
+           fill = BAND, alpha = 0.08) +
+  geom_line(linewidth = 0.8) +
+  geom_point(size = 1.9) +
+  geom_text(data = ws |> group_by(party) |> filter(year == max(year)) |>
+              ungroup(),
+            aes(label = if_else(party == "democrat", "Democrats", "Republicans")),
+            hjust = -0.25, size = 3.0, fontface = "bold") +
+  scale_color_manual(values = c(democrat = DARK, republican = RED)) +
+  scale_x_continuous(breaks = seq(2002, 2024, 4), limits = c(2002, 2027)) +
+  scale_y_continuous(limits = c(0, 20), expand = expansion(mult = c(0, 0.08))) +
   labs(x = NULL, y = "Welfare State (% of attention)") +
   theme_report()
 save_fig(p_ws, "welfare_state_series", 7.2, 4.0)

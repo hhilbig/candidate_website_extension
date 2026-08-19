@@ -1,22 +1,23 @@
 # Release announcement drafts
 
-These drafts are not ready to post until the Dataverse record exists. Replace
-`<DATAVERSE_URL>` with the final record URL before posting.
+The dataset was published on Harvard Dataverse on August 19, 2026. The landing
+page and DOI below are live. Review the final post and attached figures before
+publishing it on any platform.
 
 ## Long post
 
-> I am releasing a dataset of archived campaign website text for US House and
-> Senate candidates.
+> I am releasing a dataset of archived campaign website text for U.S. House and
+> Senate candidates. It contains 799,058 pages for 7,353 candidate-years.
 >
 > The dataset extends the House candidate corpus assembled by Di Tella et al.
-> (ICPSR 226001). It adds House elections from 2018 through 2024 and Senate
-> elections from 2002 through 2024. The release contains 7,353 captured
-> candidate-years and 799,058 archived pages from the Wayback Machine.
+> (ICPSR 226001). Their data cover House elections from 2002 through 2016. This
+> release adds House elections from 2018 through 2024 and Senate elections from
+> 2002 through 2024. The two datasets are designed to be appended by rows.
 >
 > The files include page-level text, a candidate-year panel, and measures that
-> can be appended to the ICPSR data: document length, lexical diversity, and
-> attention to 31 Manifesto Project topics. FEC candidate IDs
-> are available for every candidate-year; DIME IDs are available for 79 percent.
+> match the ICPSR data: document length, lexical diversity, and attention to 31
+> Manifesto Project topics. FEC candidate IDs are available for every captured
+> candidate-year; DIME IDs are available for 79 percent.
 >
 > Coverage is selective. Of 9,848 candidate-years with a recorded URL attempt,
 > 7,353, or 75 percent, yielded archived text. Among general election ballot
@@ -24,38 +25,44 @@ These drafts are not ready to post until the Dataverse record exists. Replace
 > candidates, it is 69 percent. The roster lists every attempted candidate, so
 > researchers can choose and report the denominator that fits their design.
 >
-> Coverage is thinnest in the early Senate years: 13 of 28 candidates were
-> captured in 2002, compared with 237 of 337 in 2022. Comparisons across
-> candidates and pooled years are more reliable than year-to-year changes for a
-> single candidate.
+> The data also recover familiar partisan differences in topic attention. Among
+> House general-election candidates, the Democratic-minus-Republican gap in
+> welfare-state attention increases from 1.5 percentage points in 2002 to 12.3
+> points in 2024. The same partisan topic profile appears in House and Senate
+> campaigns from 2018 through 2024 (r = .92 across 31 topics).
 >
-> <DATAVERSE_URL>
+> The release records uneven archival coverage directly. I would treat
+> comparisons across candidates and pooled years as more reliable than
+> within-candidate changes over time.
+>
+> https://www.hannohilbig.com/candidatewebsites/
+> https://doi.org/10.7910/DVN/BZ2JRS
 
 ## Short post
 
-> New dataset: archived campaign website text for US House and Senate
-> candidates, 2002–2024. It extends ICPSR 226001 with 7,353 candidate-years and
-> 799,058 Wayback Machine pages. The release includes the full text, coded
-> variables, and a roster of all 9,848 URL attempts. Overall capture is 75
-> percent. <DATAVERSE_URL>
+> New dataset: 799,058 archived campaign-website pages for 7,353 U.S. House and
+> Senate candidate-years. Extends ICPSR 226001, with page-level text, 31 topic
+> measures, and a roster of 9,848 URL attempts.
+> https://doi.org/10.7910/DVN/BZ2JRS
 
 ## Thread version
 
 **1/**
-> I am releasing a dataset of archived campaign website text for US House and
+> I am releasing a dataset of archived campaign website text for U.S. House and
 > Senate candidates: 7,353 candidate-years and 799,058 pages from the Wayback
-> Machine. <DATAVERSE_URL>
+> Machine. https://www.hannohilbig.com/candidatewebsites/
 
 **2/**
 > The dataset extends the House candidate corpus assembled by Di Tella et al.
-> (ICPSR 226001). It adds House elections from 2018 through 2024 and Senate
-> elections from 2002 through 2024.
+> (ICPSR 226001). Their data cover House elections from 2002 through 2016. This
+> release adds House elections from 2018 through 2024 and Senate elections from
+> 2002 through 2024. The two datasets are designed to be combined.
 
 **3/**
 > The files include page-level text, a candidate-year panel, and measures that
-> can be appended to the ICPSR data: length, lexical diversity, and attention to
-> 31 Manifesto Project topics. FEC candidate IDs are available
-> for all rows and DIME IDs for 79 percent.
+> match the ICPSR data: length, lexical diversity, and attention to 31 Manifesto
+> Project topics. FEC candidate IDs are available for every captured
+> candidate-year and DIME IDs for 79 percent.
 
 **4/**
 > Of 9,848 candidate-years with a recorded URL attempt, 7,353, or 75 percent,
@@ -64,16 +71,43 @@ These drafts are not ready to post until the Dataverse record exists. Replace
 > candidates.
 
 **5/**
-> Coverage is thinnest in the early Senate years: 13 of 28 candidates were
-> captured in 2002, compared with 237 of 337 in 2022. The roster lists every
-> attempted candidate and supports alternative coverage denominators.
+> Among House general-election candidates, the Democratic-minus-Republican gap
+> in welfare-state attention increases from 1.5 percentage points in 2002 to
+> 12.3 in 2024. Topic attention measures emphasis, not policy position.
 
 **6/**
-> I would treat comparisons across candidates and pooled years as more reliable
-> than year-to-year changes for a single candidate.
+> The partisan topic profile also appears in both chambers from 2018 through
+> 2024: House and Senate gaps correlate at .92 across 31 topics. I would treat
+> pooled comparisons as more reliable than within-candidate changes over time.
+
+## Figure captions
+
+**Long-run partisan issue gaps**
+
+> Democratic minus Republican topic attention among House general-election
+> candidates. The band marks the change from Di Tella et al. (2002–2016) to
+> this release (2018–2024).
+
+**Coverage against the ballot**
+
+> Share of Democratic and Republican general-election candidates with captured
+> websites. Dashed lines weight candidates by votes received.
+
+**The 2024 party agendas**
+
+> Topic attention among Democratic and Republican House general-election
+> candidates in 2024. Topics measure emphasis, not policy position.
+
+**House–Senate replication**
+
+> Democratic minus Republican topic-attention gaps in House and Senate
+> campaigns, 2018–2024. Across 31 topics, the two profiles correlate at .92.
 
 ## Posting notes
 
+- Use the four-figure carousel in this order: long-run partisan issue gaps,
+  coverage against the ballot, the 2024 party agendas, and House–Senate
+  replication.
 - Do not describe the topic measures as positions. They measure attention to 31
   Manifesto Project categories.
 - Do not describe the corpus as a census or as a sample limited to general
