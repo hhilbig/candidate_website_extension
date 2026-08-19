@@ -158,4 +158,45 @@ p6 <- ggplot(displacement, aes(value, topic)) +
   theme_social(11)
 save_candidate(p6, "proposal_06_homepage_vs_full_site", 7.2, 4.8)
 
+evolution <- read_csv(file.path(data_dir, "website_evolution.csv"),
+                      show_col_types = FALSE) |>
+  mutate(
+    measure = factor(measure, c("Website length", "Lexical diversity"))
+  ) |>
+  group_by(measure) |>
+  mutate(change = 100 * (value / value[year == 2002] - 1)) |>
+  ungroup()
+
+evolution_labels <- evolution |>
+  filter(year == 2024) |>
+  mutate(label = if_else(
+    measure == "Website length",
+    sprintf("+%.0f%% (%.0f words)", change, value),
+    sprintf("%.1f%%", change)
+  ))
+
+p7 <- ggplot(evolution, aes(year, change, group = source, color = source)) +
+  annotate("rect", xmin = 2016.5, xmax = 2017.5,
+           ymin = -Inf, ymax = Inf, fill = BAND, alpha = 0.10, color = NA) +
+  geom_hline(yintercept = 0, color = "grey75", linewidth = 0.4) +
+  geom_line(linewidth = 0.65) +
+  geom_point(size = 1.7) +
+  geom_text(data = evolution_labels, aes(label = label),
+            color = "grey20", hjust = 1.08, vjust = -0.7, size = 3.0) +
+  facet_wrap(~measure, ncol = 2) +
+  scale_color_manual(values = c("Di Tella et al." = GREY,
+                                "This release" = DARK)) +
+  scale_x_continuous(breaks = seq(2002, 2024, 6),
+                     limits = c(2002, 2025)) +
+  scale_y_continuous(breaks = c(0, 50, 100, 150),
+                     limits = c(-10, 170)) +
+  labs(
+    title = "Campaign Websites Became Longer, but Not More Diverse",
+    x = NULL,
+    y = "Change from 2002 median (%)"
+  ) +
+  theme_social() +
+  theme(plot.title = element_text(face = "bold", size = 15, hjust = 0))
+save_candidate(p7, "proposal_07_length_and_lexical_diversity", 7.8, 4.6)
+
 message("all internal proposal figures written to ", out_dir)
