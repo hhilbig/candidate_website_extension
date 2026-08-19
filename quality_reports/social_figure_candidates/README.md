@@ -35,18 +35,17 @@ snapshot selected for the candidate-year panel.
 
 ## Public carousel
 
-Use four panels:
+Use three panels:
 
 1. Long-run partisan issue gaps.
 2. Coverage against the official ballot.
 3. The 2024 agenda comparison.
-4. Website length by party.
 
 The first and third figures show what the data can reveal. The second states
-who is represented. The fourth adds a non-topic result and marks the source
-change.
+who is represented. Keep the website-length figure as an internal candidate;
+it is not part of the public carousel.
 
-Upload the four numbered PNG files in `release_carousel` in this order.
+Upload the three numbered PNG files in `release_carousel` in this order.
 
 ## Interpretation limits
 
