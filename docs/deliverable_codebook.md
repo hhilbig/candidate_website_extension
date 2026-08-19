@@ -2,12 +2,10 @@
 
 ## Keys and missing values
 
-`candidate_cycle_id` is the primary key in every candidate-year file and the
-foreign key in the raw corpus. It combines the canonical FEC candidate ID with
-the election year. A `cand_id` can therefore appear in more than one year.
-Empty CSV cells and Parquet nulls denote missing values. An empty string in an
-archived text field means that extraction returned no text; it is not an
-imputed value.
+`candidate_cycle_id`, which combines the canonical FEC candidate ID and election
+year, links all five files. A `cand_id` can appear in more than one year. Empty
+CSV cells and Parquet nulls denote missing values. An empty archived-text string
+means that extraction returned no text.
 
 ## `raw_corpus.parquet`
 
@@ -49,15 +47,11 @@ One row is one archived page at one snapshot date. The file has 799,058 rows.
 One row is one captured candidate-year. The file has 7,353 rows and selects the
 snapshot date with the greatest total extracted text.
 
-Identity and population fields are `candidate_cycle_id`, `source_cand_id`,
-`cand_id`, `cand_election_yr`, `cand_status`, `universe_source`, `candidate`,
-`state`, `district`, `office`, `year`, `party`, `on_ballot`, `stage`,
-`data_source`, and `candidate_year_stage`. `source_cand_id` records the FEC ID
-attached to the original capture when a reviewed mapping changed the canonical
-ID.
+The file repeats the identity and population fields defined above.
 
 | Field | Definition |
 |---|---|
+| `source_cand_id` | FEC ID attached to the original capture when it differs from the reviewed canonical ID |
 | `sel_date` | Selected Internet Archive snapshot timestamp |
 | `n_snapshots_available` | Distinct snapshot dates observed for the candidate-year |
 | `n_pages` | Pages included from the selected snapshot |
@@ -70,10 +64,8 @@ ID.
 
 ## `panel_icpsr_compat.csv`
 
-One row is one captured candidate-year. The file has 7,353 rows. Identity and
-population fields have the same meanings as in `panel_candidate_year.csv`.
-`icpsr_compatible` is identical to `on_ballot`; it identifies candidates
-matched to an official major-party general-election return.
+One row is one captured candidate-year. The file has 7,353 rows and repeats the
+panel's identity fields. `icpsr_compatible` is identical to `on_ballot`.
 
 The remaining fields form repeated measurement families:
 
@@ -101,8 +93,8 @@ the required text is absent.
 
 ## `candidate_crosswalk.csv`
 
-One row is one captured candidate-year. The file has 7,353 rows. It contains
-the shared identity and population fields plus the following links:
+One row is one captured candidate-year. The file has 7,353 rows and adds these
+links to the shared identity fields:
 
 | Field | Definition |
 |---|---|
@@ -136,12 +128,3 @@ rows and is the denominator for collection coverage.
 | `on_ballot` | General-election ballot match |
 | `general_votes` | General-election votes; missing off ballot |
 | `stage`, `data_source` | Population labels defined above |
-
-## Integrity checks
-
-The three candidate-year products contain the same 7,353 unique
-`candidate_cycle_id` values. All are present in the roster and raw corpus. The
-roster marks exactly 7,353 rows as captured. The raw file contains no candidate
-outside that set. Every ordinary row has `cand_election_yr == year`; reviewed
-ballot identity exceptions are explicitly labeled. No candidate-status code is
-used to select the population.

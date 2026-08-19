@@ -1,8 +1,8 @@
 # U.S. candidate campaign websites, 2002–2024
 
 This release contains archived campaign-website text for Democratic and
-Republican U.S. House and Senate candidates. It covers House elections from
-2018 through 2024 and Senate elections from 2002 through 2024.
+Republican U.S. House candidates from 2018 through 2024 and Senate candidates
+from 2002 through 2024.
 
 ## Files
 
@@ -14,54 +14,48 @@ Republican U.S. House and Senate candidates. It covers House elections from
 | `candidate_crosswalk.csv` | 7,353 | 36 | Captured candidate-year and identifiers |
 | `release_roster.csv` | 9,848 | 20 | Candidate-year with a recorded URL attempt |
 
-The deposit also contains this README, the codebook, and `manifest.json`.
-The manifest records each data file's byte size and SHA-256 checksum.
+The deposit also contains this README, the codebook, and a manifest with each
+data file's byte size and SHA-256 checksum.
 
 ## Population
 
-The roster includes major-party candidates whose election year in the FEC
-candidate master file equals the target year and for whom the collection
-recorded a URL attempt. Reviewed general-election candidates with a missing or
-superseded same-year FEC identifier are retained through an identity crosswalk.
-Candidate status is metadata, not a filter. Senate candidates are included only
-when their state held a Senate election that year.
+The roster includes major-party candidates whose FEC election year equals the
+target year and for whom the collection recorded a URL attempt. An identity
+crosswalk retains reviewed general-election candidates with missing or
+superseded FEC identifiers. FEC
+candidate status is metadata, not a filter. Senate candidates enter the roster
+only when their state held a Senate election that year.
 
-Of 9,848 attempted candidate-years, 7,353 have a valid capture. The roster is
-the denominator for collection coverage; it is not a list of every FEC filer
-without a campaign URL. Of the captured candidates, 3,032 match an official
-major-party general-election return and 4,321 do not. Ballot candidates have
-`stage = 2` and `data_source = general_wayback`; other same-year candidates
-have a missing `stage` and `data_source = election_year_wayback`.
+Of 9,848 URL attempts, 7,353 yielded a valid capture. Among the captured
+candidates, 3,032 match an official major-party general-election return and
+4,321 do not. Ballot candidates have `stage = 2` and
+`data_source = general_wayback`; other same-year candidates have a missing
+`stage` and `data_source = election_year_wayback`. Use the roster as the
+coverage denominator. It excludes FEC filers without a recorded URL attempt.
 
 ## Construction and quality control
 
-Each panel row uses the snapshot date with the most extracted text, breaking
-ties in favor of the later date. Pages are ordered with the homepage first,
-followed by substantive page types. The raw Parquet file retains the page-level
-text and metadata.
+Each panel row selects the snapshot date with the most extracted text, breaking
+ties in favor of the later date. The raw Parquet file retains every page and
+snapshot used to make that selection.
 
-Candidate identities use FEC IDs and the reviewed mappings in
-`config/candidate_identity_overrides.csv`; cleaned names alone are never used
-to identify people. Ballot flags and votes come from MIT Election Data and
+Candidate identities use FEC IDs and reviewed mappings; cleaned names alone
+never identify people. Ballot flags and votes come from MIT Election Data and
 Science Lab returns.
 
-The release excludes captures demonstrably unrelated to the assigned campaign,
-while retaining those candidates in the roster with
-`capture_status = invalid_capture_excluded`. Genuine campaign pages with
-malformed stored URLs are retained through manual overrides. The decisions are
-recorded in `config/capture_adjudication.csv`.
+The release excludes captures unrelated to the assigned campaign and labels
+them `invalid_capture_excluded` in the roster. Manual overrides retain verified
+campaign pages with malformed stored URLs.
 
 ## Use and limitations
 
-Use `candidate_cycle_id` as the cross-file key. Use `on_ballot` when an analysis
-requires general-election candidates; `icpsr_compatible` has the same meaning
-in the ICPSR-compatible panel. Use the roster, not the captured panel, to study
-capture selection.
+Use `candidate_cycle_id` to merge files, `on_ballot` to select general-election
+candidates, and the roster to study capture selection. `icpsr_compatible` is
+identical to `on_ballot`.
 
 Archived pages may be incomplete or may reflect a domain that changed ownership
-after an election. The corpus reports what campaigns published, not statements
-verified by the researchers. Text quality and coverage vary by candidate and
-year; raw length and quality fields support alternative thresholds.
+after an election. The corpus records campaign text; it does not verify the
+claims in that text. Coverage and text quality vary by candidate and year.
 
 ## Terms of use
 
@@ -70,8 +64,7 @@ Creative Commons Attribution 4.0 International license (CC BY 4.0). Copyright
 in the underlying campaign material remains with its authors. Each text row
 records `snap_url`, its archived source URL.
 
-Rights-holders may request removal through the Contact Owner control on the
-Dataverse record. We will act on substantiated requests.
+Rights-holders may request removal through Dataverse's Contact Owner control.
 
 ## Sources
 

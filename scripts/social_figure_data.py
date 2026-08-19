@@ -258,7 +258,10 @@ def main() -> int:
     )
     topics = topic_columns(panel)
     assert len(topics) == 31
-    sums = panel[topics].sum(axis=1)
+    supported = panel[topics].notna().all(axis=1)
+    unsupported = panel[topics].isna().all(axis=1)
+    assert (supported | unsupported).all(), "partially missing topic vector"
+    sums = panel.loc[supported, topics].sum(axis=1)
     assert np.allclose(sums, 1, atol=1e-8), "topic shares do not sum to one"
 
     combined, counts = combined_house_topics(panel, args.icpsr_dir)

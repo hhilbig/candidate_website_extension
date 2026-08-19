@@ -35,10 +35,11 @@ Verified findings (see quality_reports/icpsr_variable_extension_2026-08-12.md):
   * topics = a supervised SVM trained on Manifesto Project quasi-sentences,
     not a topic model. MAE 0.0054 against their published values, versus a
     0.0296 predict-the-mean baseline; top-1 topic agreement 88%.
+  * n_tags / n_clean_tags = counts of `#+#`-delimited visible-text components
+    before and after the replicated text filter. The original HTML is absent,
+    so these are compatibility measures rather than literal HTML-tag counts.
 
   Deliberately NOT shipped:
-  * n_tags / n_clean_tags -- HTML-structure counts fixed at scrape time; the
-    archived HTML is gone and the cleaned text has `#+#` stripped.
   * entropy_missing -- corr 0.952, below the 0.99 bar; a diagnostic only.
   * subordinates -- defined as POS tag `IN` / n_words, but ICPSR used openNLP's
     Maxent tagger. nltk's perceptron tagger gives corr 0.975, so this would be a
@@ -479,6 +480,17 @@ def run_validate(mattr_window: int, sample: int, ngrams_path: Path) -> int:
 # --------------------------------------------------------------------------
 # apply
 # --------------------------------------------------------------------------
+def queue_topic_document(keys: list[str], kinds: list[str], docs: list[str],
+                         ck: str, kind: str, document: str) -> bool:
+    """Queue a topic document only if the model input contains text."""
+    if not document.strip():
+        return False
+    keys.append(ck)
+    kinds.append(kind)
+    docs.append(document)
+    return True
+
+
 def run_apply(corpus: Path, out: Path, mattr_window: int,
               ngrams_path: Path, topic_model=None) -> int:
     ngrams = load_ngrams(ngrams_path) if ngrams_path.exists() else None
@@ -542,16 +554,14 @@ def run_apply(corpus: Path, out: Path, mattr_window: int,
             kc = [c for c in ("candidate_icpsr", "state", "office", "year")
                   if c in g.columns]
             ck_i = "|".join(str(g[c].iloc[0]) for c in kc)
-            batch_keys.append(ck_i)
-            batch_kind.append("all")
-            batch_docs.append(clean(" ".join(ctexts)))
+            queue_topic_document(batch_keys, batch_kind, batch_docs, ck_i,
+                                 "all", clean(" ".join(ctexts)))
             if has_home:
                 hp = [t for t, pt in zip(ctexts, g.page_type)
                       if pt == "homepage"]
                 if hp:
-                    batch_keys.append(ck_i)
-                    batch_kind.append("home")
-                    batch_docs.append(clean(" ".join(hp)))
+                    queue_topic_document(batch_keys, batch_kind, batch_docs,
+                                         ck_i, "home", clean(" ".join(hp)))
             if len(batch_docs) >= 400:
                 flush_topics()
         meas = pd.DataFrame(

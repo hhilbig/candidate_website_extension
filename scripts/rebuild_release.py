@@ -20,6 +20,7 @@ import pandas as pd
 REPO = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO))
 
+from scripts.build_panel import collapse_candidate  # noqa: E402
 from scripts.drop_no_race_senate import in_scope, senate_races  # noqa: E402
 from scripts.icpsr_replicate_coding import icpsr_clean_text  # noqa: E402
 from src.build_candidate_roster import PARTY_MAP  # noqa: E402
@@ -32,6 +33,14 @@ CURRENT_CROSSWALK = REPO / "quality_reports/coverage_audit/csv/candidate_crosswa
 IDENTITY = REPO / "config/candidate_identity_overrides.csv"
 CAPTURE_DECISIONS = REPO / "config/capture_adjudication.csv"
 PANEL_KEY = ["candidate", "state", "office", "year"]
+PANEL_COLUMNS = [
+    "candidate", "state", "district", "office", "year", "party", "sel_date",
+    "n_snapshots_available", "n_pages", "page_types", "urlkey", "text",
+    "n_char", "n_words", "text_quality", "source_cand_id", "cand_id",
+    "candidate_cycle_id", "cand_election_yr", "cand_status",
+    "universe_source", "on_ballot", "stage", "data_source",
+    "candidate_year_stage",
+]
 
 
 def load_fec(years: list[int]) -> pd.DataFrame:
@@ -100,18 +109,28 @@ def captured_release_rows(fec: pd.DataFrame) -> pd.DataFrame:
     return stage_semantics(selected)
 
 
-def _panel_products(selected: pd.DataFrame, out_dir: Path) -> None:
-    meta = selected[PANEL_KEY + [
-        "source_cand_id", "cand_id", "candidate_cycle_id", "cand_election_yr",
-        "cand_status", "universe_source", "on_ballot", "stage", "data_source",
-        "candidate_year_stage",
-    ]].drop_duplicates(PANEL_KEY)
+def _blank_unsupported_topics(coded: pd.DataFrame) -> pd.DataFrame:
+    """Remove classifier output when no cleaned text supports the measure."""
+    out = coded.copy()
+    base_topics = [c for c in out if c.startswith("icpsr_topic_")
+                   and not c.endswith("_home")]
+    home_topics = [c for c in out if c.startswith("icpsr_topic_")
+                   and c.endswith("_home")]
+    assert len(base_topics) == len(home_topics) == 31
 
-    panel = pd.read_csv(CURRENT / "panel_candidate_year.csv")
-    panel = panel.drop(columns=[c for c in ("stage", "data_source", "candidate_year_stage")
-                                if c in panel])
-    panel = panel.merge(meta, on=PANEL_KEY, how="inner", validate="one_to_one")
-    panel.to_csv(out_dir / "panel_candidate_year.csv", index=False)
+    base_support = out[["icpsr_n_char", "icpsr_n_words"]].notna().all(axis=1)
+    home_support = out[["icpsr_n_char_home",
+                        "icpsr_n_words_home"]].notna().all(axis=1)
+    out.loc[~base_support, base_topics] = pd.NA
+    out.loc[~home_support, home_topics] = pd.NA
+    return out
+
+
+def _panel_products(selected: pd.DataFrame, panel: pd.DataFrame,
+                    out_dir: Path) -> None:
+    assert panel.candidate_cycle_id.is_unique
+    assert set(panel.candidate_cycle_id) == set(selected.candidate_cycle_id)
+    panel[PANEL_COLUMNS].to_csv(out_dir / "panel_candidate_year.csv", index=False)
 
     coded = pd.read_csv(CURRENT / "panel_icpsr_compat.csv", low_memory=False,
                         dtype={"cand_id": str})
@@ -124,6 +143,7 @@ def _panel_products(selected: pd.DataFrame, out_dir: Path) -> None:
     coded = coded.merge(add, on=["year", "source_cand_id"], how="inner",
                         validate="one_to_one")
     coded["icpsr_compatible"] = coded.on_ballot
+    coded = _blank_unsupported_topics(coded)
     coded.to_csv(out_dir / "panel_icpsr_compat.csv", index=False)
 
     cw_cols = [c for c in selected.columns if not c.endswith("_x") and not c.endswith("_y")]
@@ -212,20 +232,40 @@ def _roster(fec: pd.DataFrame, selected: pd.DataFrame, out_dir: Path) -> None:
         out_dir / "release_roster.csv", index=False)
 
 
-def _raw(selected: pd.DataFrame, out_dir: Path) -> None:
+def _correct_raw_counts(d: pd.DataFrame) -> pd.DataFrame:
+    """Recompute every published page count from the preserved text."""
+    out = d.copy()
+    texts = out["text_snap_content"].fillna("").astype(str)
+    out["n_char"] = texts.map(len)
+    out["n_words"] = texts.map(lambda text: len(text.split()))
+    cleaned = texts.map(icpsr_clean_text)
+    out["n_tags"] = cleaned.map(lambda x: x["n_tags"])
+    out["n_clean_tags"] = cleaned.map(lambda x: x["n_clean_tags"])
+    assert out["n_char"].ge(0).all()
+    assert out["n_words"].ge(0).all()
+    assert out["n_tags"].ge(1).all()
+    assert out["n_clean_tags"].between(0, out["n_tags"]).all()
+    return out
+
+
+def _raw(selected: pd.DataFrame, out_dir: Path) -> pd.DataFrame:
     import pyarrow as pa
     import pyarrow.parquet as pq
 
     source = CURRENT / "raw_corpus_icpsr.parquet"
     target = out_dir / "raw_corpus.parquet"
     pf = pq.ParquetFile(source)
-    lookup = selected.set_index(["year", "source_cand_id"])[[
-        "cand_id", "candidate_cycle_id", "cand_election_yr", "cand_status",
+    lookup_cols = [
+        "candidate", "state", "district", "office", "party", "cand_id",
+        "candidate_cycle_id", "cand_election_yr", "cand_status",
         "universe_source", "on_ballot", "stage", "data_source",
         "candidate_year_stage",
-    ]]
+    ]
+    lookup = selected.set_index(["year", "source_cand_id"])[lookup_cols]
+    assert lookup.index.is_unique
     writer = None
     kept = 0
+    panel_rows = []
     for i in range(pf.num_row_groups):
         d = pf.read_row_group(i).to_pandas()
         if d.empty:
@@ -235,16 +275,27 @@ def _raw(selected: pd.DataFrame, out_dir: Path) -> None:
             continue
         m = lookup.loc[key]
         for col in m.index:
-            d[col] = m[col]
+            if col not in PANEL_KEY + ["district", "party"]:
+                d[col] = m[col]
         d["cand_id"] = m.cand_id
-        # The scraper's legacy tag fields were placeholders. Reconstruct the
-        # ICPSR-compatible component counts from the preserved `#+#`-delimited
-        # text instead of publishing false zeros.
-        cleaned = d["text_snap_content"].fillna("").map(icpsr_clean_text)
-        d["n_tags"] = cleaned.map(lambda x: x["n_tags"])
-        d["n_clean_tags"] = cleaned.map(lambda x: x["n_clean_tags"])
-        assert d["n_tags"].ge(1).all()
-        assert d["n_clean_tags"].between(0, d["n_tags"]).all()
+        d = _correct_raw_counts(d)
+
+        # Build the selected candidate-year row from these corrected counts.
+        # Display identity and party fields come from the canonical selection,
+        # while page text and snapshot choice come from the raw corpus.
+        panel_input = d.copy()
+        for col in ("candidate", "state", "district", "office", "party"):
+            panel_input[col] = m[col]
+        panel_row = collapse_candidate(panel_input, "#+#")
+        if panel_row is None:
+            raise AssertionError(f"no non-empty page text for {key}")
+        for col in ("source_cand_id", "cand_id", "candidate_cycle_id",
+                    "cand_election_yr", "cand_status", "universe_source",
+                    "on_ballot", "stage", "data_source",
+                    "candidate_year_stage"):
+            panel_row[col] = key[1] if col == "source_cand_id" else m[col]
+        panel_rows.append(panel_row)
+
         for col in ("cand_id", "candidate_cycle_id", "cand_election_yr",
                     "cand_status", "universe_source", "data_source",
                     "candidate_year_stage"):
@@ -260,6 +311,11 @@ def _raw(selected: pd.DataFrame, out_dir: Path) -> None:
         raise RuntimeError("no raw corpus rows survived the release filter")
     writer.close()
     print(f"raw corpus: {kept:,}/{pf.metadata.num_rows:,} rows")
+    panel = pd.DataFrame(panel_rows)
+    assert len(panel) == len(selected)
+    assert panel.candidate_cycle_id.is_unique
+    print(f"reconstructed panel: {len(panel):,} candidate-years")
+    return panel
 
 
 def _manifest(out_dir: Path) -> None:
@@ -291,12 +347,12 @@ def main() -> int:
     fec = load_fec(years)
     selected = captured_release_rows(fec)
     print(f"captured candidate-years: {len(selected):,}")
-    _panel_products(selected, a.out_dir)
+    panel = _raw(selected, a.out_dir)
+    _panel_products(selected, panel, a.out_dir)
     _roster(fec, selected, a.out_dir)
-    _raw(selected, a.out_dir)
-    _manifest(a.out_dir)
     shutil.copy2(REPO / "docs/RELEASE_README.md", a.out_dir / "README.md")
     shutil.copy2(REPO / "docs/deliverable_codebook.md", a.out_dir / "codebook.md")
+    _manifest(a.out_dir)
     print(f"wrote release candidate to {a.out_dir}")
     return 0
 
