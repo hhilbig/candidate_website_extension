@@ -55,10 +55,24 @@ def main() -> int:
 
     raw = pq.ParquetFile(base / "raw_corpus.parquet")
     raw_ids = set()
+    tag_rows = 0
+    nonzero_tags = 0
     for i in range(raw.num_row_groups):
-        t = raw.read_row_group(i, columns=["candidate_cycle_id"])
+        t = raw.read_row_group(
+            i, columns=["candidate_cycle_id", "n_tags", "n_clean_tags"]
+        )
         raw_ids.update(t.column(0).to_pylist())
+        tags = t.column(1).to_pandas()
+        clean_tags = t.column(2).to_pandas()
+        assert tags.notna().all() and clean_tags.notna().all()
+        assert tags.ge(1).all()
+        assert clean_tags.ge(0).all()
+        assert clean_tags.le(tags).all()
+        tag_rows += len(tags)
+        nonzero_tags += int(tags.gt(0).sum())
     assert raw_ids == ids[0]
+    assert tag_rows == raw.metadata.num_rows
+    assert nonzero_tags == raw.metadata.num_rows
 
     manifest = json.loads((base / "manifest.json").read_text())
     assert {x["file"] for x in manifest} == DATA_FILES

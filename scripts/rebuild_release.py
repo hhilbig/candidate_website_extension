@@ -21,6 +21,7 @@ REPO = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO))
 
 from scripts.drop_no_race_senate import in_scope, senate_races  # noqa: E402
+from scripts.icpsr_replicate_coding import icpsr_clean_text  # noqa: E402
 from src.build_candidate_roster import PARTY_MAP  # noqa: E402
 from src.name_utils import clean_name  # noqa: E402
 from src.release_universe import apply_capture_adjudication, select_captured_universe  # noqa: E402
@@ -236,6 +237,14 @@ def _raw(selected: pd.DataFrame, out_dir: Path) -> None:
         for col in m.index:
             d[col] = m[col]
         d["cand_id"] = m.cand_id
+        # The scraper's legacy tag fields were placeholders. Reconstruct the
+        # ICPSR-compatible component counts from the preserved `#+#`-delimited
+        # text instead of publishing false zeros.
+        cleaned = d["text_snap_content"].fillna("").map(icpsr_clean_text)
+        d["n_tags"] = cleaned.map(lambda x: x["n_tags"])
+        d["n_clean_tags"] = cleaned.map(lambda x: x["n_clean_tags"])
+        assert d["n_tags"].ge(1).all()
+        assert d["n_clean_tags"].between(0, d["n_tags"]).all()
         for col in ("cand_id", "candidate_cycle_id", "cand_election_yr",
                     "cand_status", "universe_source", "data_source",
                     "candidate_year_stage"):

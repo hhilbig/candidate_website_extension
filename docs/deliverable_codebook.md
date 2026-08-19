@@ -39,8 +39,8 @@ One row is one archived page at one snapshot date. The file has 799,058 rows.
 | `page_type` | Page classification such as homepage, issues, biography, or other |
 | `n_char` | Extracted character count for the page |
 | `n_words` | Extracted word count for the page |
-| `n_tags` | HTML tag count before tag cleaning |
-| `n_clean_tags` | HTML tag count after tag cleaning |
+| `n_tags` | Number of `#+#`-delimited visible-text components before the ICPSR-compatible text filter |
+| `n_clean_tags` | Number of those components retained by the ICPSR-compatible text filter |
 | `n_snap` | Number of distinct snapshot dates available for the candidate-year |
 | `text_snap_content` | Extracted page text |
 
@@ -84,7 +84,7 @@ The remaining fields form repeated measurement families:
 | `district_id` | State and two-digit House district; missing for Senate |
 | `general_votes` | Candidate votes in the matched general-election return; missing off ballot |
 | `icpsr_n_char*`, `icpsr_n_words*` | Mean extracted character and word counts |
-| `icpsr_n_tags*`, `icpsr_n_clean_tags*` | Mean HTML tag counts before and after cleaning |
+| `icpsr_n_tags*`, `icpsr_n_clean_tags*` | Mean visible-text component counts before and after the ICPSR-compatible text filter |
 | `icpsr_ttr_approx*`, `icpsr_mattr_approx*`, `icpsr_entropy_approx*` | Approximate lexical-diversity measures |
 | `icpsr_n_valid_snap*`, `icpsr_n_valid_pages*` | Valid snapshot and page counts |
 | `icpsr_max_pages_1day`, `icpsr_share_pages_runaway`, `icpsr_runaway_flag` | Diagnostics for unusually dense single-day crawls |

@@ -29,6 +29,9 @@ DISPLAY_TOPICS = [
     "National Way of Life",
 ]
 LONG_RUN_TOPICS = ["Welfare State", "Equality", "Law and Order", "Military"]
+SITE_PAGE_TYPES = ["issues", "biography", "news", "action", "endorsements"]
+MARGIN_BREAKS = [-0.001, 10, 20, 30, 40, 60, 100]
+MARGIN_LABELS = ["0–10", "10–20", "20–30", "30–40", "40–60", "60–100"]
 
 
 def topic_columns(frame: pd.DataFrame) -> list[str]:
@@ -160,6 +163,81 @@ def party_gap(frame: pd.DataFrame, value: str = "share") -> pd.DataFrame:
     return wide
 
 
+def site_development_by_race_margin(
+    roster: pd.DataFrame, selected_panel: pd.DataFrame
+) -> tuple[pd.DataFrame, dict[str, int]]:
+    """Summarize captured House-site structure by two-party vote margin."""
+    race_key = ["state", "district", "year"]
+    eligible = roster[
+        roster.office.eq("house")
+        & roster.year.isin([2018, 2020, 2022, 2024])
+        & roster.party.isin(["D", "R"])
+        & roster.on_ballot
+    ].copy()
+    races = (
+        eligible.groupby(race_key)
+        .agg(
+            n_candidates=("candidate_cycle_id", "size"),
+            n_parties=("party", "nunique"),
+            n_votes=("general_votes", "count"),
+            max_votes=("general_votes", "max"),
+            min_votes=("general_votes", "min"),
+            total_votes=("general_votes", "sum"),
+        )
+        .reset_index()
+    )
+    races = races[
+        races.n_candidates.eq(2)
+        & races.n_parties.eq(2)
+        & races.n_votes.eq(2)
+        & races.total_votes.gt(0)
+    ].copy()
+    races["race_margin"] = (
+        100 * (races.max_votes - races.min_votes) / races.total_votes
+    )
+    races["margin_bin"] = pd.cut(
+        races.race_margin,
+        MARGIN_BREAKS,
+        labels=MARGIN_LABELS,
+        include_lowest=True,
+    )
+
+    sites = eligible[eligible.captured].merge(
+        races[race_key + ["margin_bin"]],
+        on=race_key,
+        how="inner",
+        validate="many_to_one",
+    )
+    sites = sites.merge(
+        selected_panel[["candidate_cycle_id", "page_types"]],
+        on="candidate_cycle_id",
+        how="inner",
+        validate="one_to_one",
+    )
+    assert sites.page_types.notna().all(), "missing page types in figure sample"
+    split_types = sites.page_types.str.split(";")
+    for page_type in SITE_PAGE_TYPES:
+        sites[page_type] = split_types.map(lambda values: page_type in values)
+    sites["developed_site"] = sites[SITE_PAGE_TYPES].sum(axis=1).ge(3)
+
+    summary = (
+        sites.groupby("margin_bin", observed=False)
+        .agg(
+            captured_candidates=("candidate_cycle_id", "size"),
+            share_developed=("developed_site", "mean"),
+        )
+        .reset_index()
+    )
+    summary["share_developed"] *= 100
+    assert summary.captured_candidates.gt(0).all()
+    counts = {
+        "eligible_two_party_house_races": int(len(races)),
+        "eligible_two_party_house_candidates": int(2 * len(races)),
+        "captured_candidates_in_eligible_races": int(len(sites)),
+    }
+    return summary, counts
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--release-dir", type=Path, required=True)
@@ -173,6 +251,11 @@ def main() -> int:
         args.release_dir / "candidate_crosswalk.csv",
         usecols=["candidate_cycle_id", "cfscore"],
     )
+    roster = pd.read_csv(args.release_dir / "release_roster.csv", low_memory=False)
+    selected_panel = pd.read_csv(
+        args.release_dir / "panel_candidate_year.csv",
+        usecols=["candidate_cycle_id", "page_types"],
+    )
     topics = topic_columns(panel)
     assert len(topics) == 31
     sums = panel[topics].sum(axis=1)
@@ -181,6 +264,12 @@ def main() -> int:
     combined, counts = combined_house_topics(panel, args.icpsr_dir)
     lengths = website_length_by_party(panel, args.icpsr_dir)
     lengths.to_csv(args.out_dir / "website_length_by_party.csv", index=False)
+    site_development, site_counts = site_development_by_race_margin(
+        roster, selected_panel
+    )
+    site_development.to_csv(
+        args.out_dir / "site_development_by_race_margin.csv", index=False
+    )
     gaps = party_gap(combined)
     gaps[gaps.topic.isin(LONG_RUN_TOPICS)].to_csv(
         args.out_dir / "long_run_topic_gaps.csv", index=False
@@ -315,6 +404,7 @@ def main() -> int:
             ),
         }
     )
+    counts.update(site_counts)
     (args.out_dir / "analysis_counts.json").write_text(
         json.dumps(counts, indent=2) + "\n", encoding="utf-8"
     )

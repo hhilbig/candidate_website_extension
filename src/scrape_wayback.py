@@ -513,8 +513,10 @@ def process_candidate(candidate: dict, config: dict,
                     "snap_url": page["snap_url"],
                     "page_type": classify_page_type(page["snap_url"]),
                     "data_source": "wayback_cdx",
-                    "n_tags": 0,
-                    "n_clean_tags": 0,
+                    # These ICPSR-compatible component counts are populated
+                    # during release coding from the preserved `#+#` text.
+                    "n_tags": None,
+                    "n_clean_tags": None,
                     "text_snap_content": content,
                     "n_char": len(content),
                     "n_words": len(content.split()),

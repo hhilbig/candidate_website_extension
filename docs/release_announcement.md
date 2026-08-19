@@ -98,16 +98,18 @@ publishing it on any platform.
 > Topic attention among Democratic and Republican House general-election
 > candidates in 2024. Topics measure emphasis, not policy position.
 
-**Document-length continuity**
+**Race competitiveness and website development**
 
-> Median characters among Democratic and Republican House general-election
-> candidates. The source changes between 2016 and 2018.
+> Share of captured House campaign websites with at least three of five
+> dedicated page types. The sample contains 1,977 candidates in two-party
+> general-election races from 2018 through 2024. The relationship is
+> descriptive.
 
 ## Posting notes
 
 - Use the four-figure carousel in this order: long-run partisan issue gaps,
-  coverage against the ballot, the 2024 party agendas, and document-length
-  continuity.
+  coverage against the ballot, the 2024 party agendas, and race competitiveness
+  and website development.
 - Do not describe the topic measures as positions. They measure attention to 31
   Manifesto Project categories.
 - Do not describe the corpus as a census or as a sample limited to general
