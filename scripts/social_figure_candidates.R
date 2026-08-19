@@ -166,7 +166,6 @@ development <- read_csv(
     margin_bin,
     c("0–10", "10–20", "20–30", "30–40", "40–60", "60–100")
   ))
-n_development_sites <- sum(development$captured_candidates)
 
 p_development <- ggplot(
   development,
@@ -174,29 +173,16 @@ p_development <- ggplot(
 ) +
   geom_line(color = DARK, linewidth = 0.75) +
   geom_point(color = DARK, size = 2.2) +
-  geom_text(
-    aes(label = sprintf("%.1f", share_developed)),
-    vjust = -0.8, size = 3.0, color = "grey20"
-  ) +
   scale_y_continuous(
     limits = c(0, 60), breaks = c(0, 20, 40, 60),
     labels = function(x) paste0(x, "%")
   ) +
   labs(
     title = "Closer Races Had Fuller Campaign Websites",
-    subtitle = "Share of captured sites with at least 3 of 5 dedicated page types",
-    x = "Two-party vote margin (percentage points)", y = NULL,
-    caption = paste(
-      sprintf("House general elections, 2018–2024 (n = %s). Types: issues,",
-              scales::comma(n_development_sites)),
-      "biography, news, action, endorsements."
-    )
+    x = "Two-party vote margin (percentage points)",
+    y = "Sites with at least 3 page types (%)"
   ) +
-  theme_social() +
-  theme(
-    plot.subtitle = element_text(size = 11, color = "grey30"),
-    plot.caption = element_text(size = 8.5, color = "grey35", hjust = 0)
-  )
+  theme_social()
 save_carousel(p_development, "04_race_competitiveness")
 
 distance <- read_csv(file.path(data_dir, "agenda_distance.csv"),
