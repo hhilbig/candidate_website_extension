@@ -78,8 +78,10 @@ p2 <- ggplot(a24, aes(y = topic)) +
   geom_text(data = filter(a24, topic == "Welfare State"),
             aes(x = republican, label = "Republicans"),
             color = GREY, nudge_y = 0.28, size = 3.0) +
-  labs(x = "Share of topic attention (%)", y = NULL) +
-  theme_social()
+  labs(title = "What the Parties Emphasized in 2024",
+       x = "Share of topic attention (%)", y = NULL) +
+  theme_social() +
+  theme(plot.title = element_text(face = "bold", size = 15, hjust = 0))
 save_candidate(p2, "proposal_02_2024_agenda", 7.2, 4.6)
 
 distance <- read_csv(file.path(data_dir, "agenda_distance.csv"),

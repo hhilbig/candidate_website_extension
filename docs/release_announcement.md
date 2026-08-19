@@ -98,16 +98,16 @@ publishing it on any platform.
 > Topic attention among Democratic and Republican House general-election
 > candidates in 2024. Topics measure emphasis, not policy position.
 
-**House–Senate replication**
+**Document-length continuity**
 
-> Democratic minus Republican topic-attention gaps in House and Senate
-> campaigns, 2018–2024. Across 31 topics, the two profiles correlate at .92.
+> Median characters among Democratic and Republican House general-election
+> candidates. The source changes between 2016 and 2018.
 
 ## Posting notes
 
 - Use the four-figure carousel in this order: long-run partisan issue gaps,
-  coverage against the ballot, the 2024 party agendas, and House–Senate
-  replication.
+  coverage against the ballot, the 2024 party agendas, and document-length
+  continuity at the source boundary.
 - Do not describe the topic measures as positions. They measure attention to 31
   Manifesto Project categories.
 - Do not describe the corpus as a census or as a sample limited to general
