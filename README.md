@@ -7,13 +7,13 @@ from 2002 through 2024. The release contains 7,353 captured candidate-years
 drawn from 799,058 archived pages.
 
 The candidate population consists of Democratic and Republican House and
-Senate candidates whose FEC-recorded election year equals the target year,
-plus reviewed general-election ballot exceptions. The collection did not
-re-scrape the House years already covered by ICPSR 226001.
+Senate candidates whose election year recorded by the FEC equals the target
+year, plus reviewed general election ballot exceptions. The collection did not
+scrape House years already covered by ICPSR 226001.
 
 ## Release documentation
 
-- [Release README](docs/RELEASE_README.md): population, five-file inventory,
+- [Release README](docs/RELEASE_README.md): population, inventory of five files,
   construction, limitations, terms of use, and reproduction commands
 - [Codebook](docs/deliverable_codebook.md): fields, keys, and missing values
 - [Website](https://www.hannohilbig.com/candidatewebsites/): coverage and
@@ -60,7 +60,7 @@ python -m src.scrape_wayback --office house --year 2022
 python -m src.scrape_wayback --roster data/rosters/roster_senate_2020.csv
 ```
 
-`config/config.yaml` controls office-years, rate limits, retry behavior, crawl
+`config/config.yaml` controls offices and years, rate limits, retry behavior, crawl
 depth, URL sources, and output paths. [SPEC.md](SPEC.md) documents the
 collection schema and rules.
 
@@ -69,7 +69,7 @@ collection schema and rules.
 Please cite this release and the original dataset that it extends:
 
 > Hilbig, Hanno. 2026. “U.S. House (2018–2024) and Senate (2002–2024)
-> Candidate Websites.” Version 1.0. Harvard Dataverse.
+> Candidate Websites.” Version 2.0. Harvard Dataverse.
 > <https://doi.org/10.7910/DVN/BZ2JRS>
 
 > Di Tella, Rafael, Randy Kotti, Caroline Le Pennec, and Vincent Pons. 2025.
