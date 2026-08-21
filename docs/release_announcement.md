@@ -3,44 +3,39 @@
 Harvard Dataverse has published Version 2.0. The text below refers to that
 version.
 
-## Long post
+## LinkedIn post
 
-> I am releasing a dataset of archived campaign website text for U.S. House and
-> Senate candidates. It contains 799,058 pages for 7,353 candidate-years.
->
-> The dataset extends the House candidate corpus assembled by Di Tella et al.
-> (ICPSR 226001). Their data cover House elections from 2002 through 2016. This
-> release adds House elections from 2018 through 2024 and Senate elections from
-> 2002 through 2024. The House panels can be appended to form one long panel.
->
-> The files include text from each page, a panel by candidate and year, FEC
-> identifiers, and measures of document length, lexical diversity, and attention to 31
-> Manifesto Project topics. DIME IDs are available for 79 percent of captured
-> candidate-years.
->
-> Of 9,848 candidate-years with a recorded URL attempt, 7,353 yielded archived
-> text. Capture rates are 84 percent among candidates in general elections and 69
-> percent among other same-year FEC candidates. The roster records the
-> denominator for each group.
->
-> Among House candidates in general elections, the Democratic minus Republican
-> gap in welfare state attention increases from 1.5 percentage points in 2002 to 12.3
-> points in 2024. The same partisan topic profile appears in House and Senate
-> campaigns from 2018 through 2024 (r = .92 across 31 topics).
->
-> The release records uneven archival coverage directly. I would treat
-> comparisons across candidates and pooled years as more reliable than
-> changes within candidates over time.
->
-> https://www.hannohilbig.com/candidatewebsites/
-> https://doi.org/10.7910/DVN/BZ2JRS
+Here is another dataset: archived campaign website text for US House and Senate candidates. It contains ~800k pages and covers about 7,300 candidate-years. The dataset extends the House candidate corpus collected by Di Tella et al. (ICPSR 226001), which covers 2002–2016. My dataset covers House candidates from 2018–2024, and adds Senate election candidates from 2002–2024.
 
-## Short post
+The data include extracted text from each page, along with a bunch of derived variables: FEC identifiers and measures of document length, lexical diversity, and topic attention for 31 topics. These measures follow Di Tella et al., so the two House panels can be combined and analyzed as one dataset.
 
-> New dataset: 799,058 archived campaign website pages for 7,353 U.S. House and
-> Senate candidate-years. Extends ICPSR 226001, with text from each page, 31 topic
-> measures, and a roster of 9,848 URL attempts.
-> https://doi.org/10.7910/DVN/BZ2JRS
+Coverage is incomplete because the Wayback Machine archives pages selectively. Of 9,848 candidates with a recorded URL attempt, 7,353 have archived text. Among candidates in official general election returns, House coverage ranges from 69 to 76 percent from 2018 to 2024. Senate coverage rises from 17 percent in 2002 to about 70 percent after 2008.
+
+Comparisons across candidates or pooled observations are likely more reliable than analyses of changes within units such as party-district cells.
+
+I also ran some validation checks and included examples of analyses that can be conducted with these data. For example, the data can be used to track candidate attention to different topics, as well as changes in D-R attention differences over time. The D-R gap in welfare state attention increases from 1.5 percentage points in 2002 to 12.3 points in 2024. Another application is examining the amount of information provided by candidates on their websites. Descriptively, candidates in closer races tend to provide a larger set of page types than candidates in less competitive races.
+
+Data: https://doi.org/10.7910/DVN/BZ2JRS
+
+Documentation and findings: https://www.hannohilbig.com/candidatewebsites/
+
+## Twitter/X thread
+
+### 1/3
+
+Here is another dataset: archived campaign website text for US House and Senate candidates. It contains about 800,000 pages for 7,353 candidate-years and extends the Di Tella et al. House corpus through 2024.
+
+https://doi.org/10.7910/DVN/BZ2JRS
+
+### 2/3
+
+The data include extracted text from each page, FEC identifiers, document length, lexical diversity, and attention to 31 topics. The release adds House candidates from 2018–2024 and Senate candidates from 2002–2024.
+
+### 3/3
+
+Coverage varies over time. House coverage is 69–76% from 2018–2024; Senate coverage is about 70% after 2008. The site includes validation checks and descriptive examples on topic attention and website structure.
+
+https://www.hannohilbig.com/candidatewebsites/
 
 ## Figure captions
 

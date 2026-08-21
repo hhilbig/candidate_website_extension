@@ -65,12 +65,26 @@ gaps <- read_csv(file.path(data_dir, "long_run_topic_gaps.csv"),
     direction = if_else(gap >= 0, "More Democratic", "More Republican")
   )
 
+gap_source_labels <- tibble(
+  topic = factor(c("Welfare State", "Welfare State"), levels(gaps$topic)),
+  source = c("Di Tella et al.", "This release"),
+  year = c(2008.5, 2020.5),
+  gap = c(7.0, 8.8),
+  text = c("Di Tella et al.", "this dataset")
+)
+
 p1 <- ggplot(gaps, aes(year, gap, group = source, color = source)) +
   annotate("rect", xmin = 2016.5, xmax = 2017.5,
            ymin = -Inf, ymax = Inf, fill = BAND, alpha = 0.10, color = NA) +
   geom_hline(yintercept = 0, color = "grey70", linewidth = 0.4) +
   geom_line(linewidth = 0.65) +
   geom_point(size = 1.7) +
+  geom_text(
+    data = gap_source_labels,
+    aes(year, gap, label = text, color = source),
+    size = 3.0, fontface = "bold", inherit.aes = FALSE,
+    show.legend = FALSE
+  ) +
   facet_wrap(~topic, scales = "free_y", ncol = 2) +
   scale_color_manual(values = c("Di Tella et al." = GREY,
                                 "This release" = DARK)) +
@@ -126,6 +140,14 @@ coverage_key <- tibble(
   text = c("Share of candidates", "Share of votes cast")
 )
 
+coverage_source_labels <- tibble(
+  chamber = c("House", "House", "Senate"),
+  source = c("icpsr", "extension", "extension"),
+  year = c(2009, 2021, 2015),
+  pct = c(47, 88, 38),
+  text = c("Di Tella et al.", "this dataset", "this dataset")
+)
+
 p_coverage <- ggplot(
   coverage,
   aes(year, pct, group = interaction(series, weight))
@@ -133,6 +155,12 @@ p_coverage <- ggplot(
   geom_line(aes(color = source, linetype = weight), linewidth = 0.7) +
   geom_point(data = filter(coverage, weight == "Candidates"),
              aes(color = source), size = 1.6) +
+  geom_text(
+    data = coverage_source_labels,
+    aes(year, pct, label = text, color = source),
+    size = 3.0, fontface = "bold", inherit.aes = FALSE,
+    show.legend = FALSE
+  ) +
   geom_line(
     data = coverage_key |>
       mutate(x1 = year - 0.9, x2 = year + 1.9) |>
