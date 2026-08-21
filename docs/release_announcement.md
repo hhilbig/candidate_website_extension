@@ -21,19 +21,23 @@ Documentation and findings: https://www.hannohilbig.com/candidatewebsites/
 
 ## Twitter/X thread
 
-### 1/3
+### 1/2
 
-Here is another dataset: archived campaign website text for US House and Senate candidates. It contains about 800,000 pages and 7,353 candidate-years. It extends the Di Tella et al. House corpus (2002–2016) through 2024 and adds Senate candidates from 2002–2024.
+Here is another dataset: archived campaign website text for US House and Senate candidates. It contains ~800k pages and covers about 7,300 candidate-years. The dataset extends the House candidate corpus collected by Di Tella et al. (ICPSR 226001), which covers 2002–2016. My dataset covers House candidates from 2018–2024, and adds Senate election candidates from 2002–2024.
 
-### 2/3
+The data include extracted text from each page, along with a bunch of derived variables: FEC identifiers and measures of document length, lexical diversity, and topic attention for 31 topics. These measures follow Di Tella et al., so the two House panels can be combined and analyzed as one dataset.
 
-The data include extracted text from each page, FEC identifiers, and measures of document length, lexical diversity, and attention to 31 topics. The measures follow Di Tella et al., so the two House panels can be combined and analyzed as one dataset.
+### 2/2
 
-### 3/3
+Coverage is incomplete because the Wayback Machine archives pages selectively. Of 9,848 candidates with a recorded URL attempt, 7,353 have archived text. Among candidates in official general election returns, House coverage ranges from 69 to 76 percent from 2018 to 2024. Senate coverage rises from 17 percent in 2002 to about 70 percent after 2008.
 
-Coverage is incomplete: 7,353 of 9,848 URL attempts yielded text. The D–R gap in welfare state attention rises from 1.5 points in 2002 to 12.3 in 2024. Candidates in closer races also tend to provide more page types.
+Comparisons across candidates or pooled observations are likely more reliable than analyses of changes within units such as party-district cells.
 
-https://www.hannohilbig.com/candidatewebsites/
+I also ran some validation checks and included examples of analyses that can be conducted with these data. For example, the data can be used to track candidate attention to different topics, as well as changes in D-R attention differences over time. The D-R gap in welfare state attention increases from 1.5 percentage points in 2002 to 12.3 points in 2024. Another application is examining the amount of information provided by candidates on their websites. Descriptively, candidates in closer races tend to provide a larger set of page types than candidates in less competitive races.
+
+Data: https://doi.org/10.7910/DVN/BZ2JRS
+
+Documentation and findings: https://www.hannohilbig.com/candidatewebsites/
 
 ## Figure captions
 
