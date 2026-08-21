@@ -23,17 +23,15 @@ Documentation and findings: https://www.hannohilbig.com/candidatewebsites/
 
 ### 1/3
 
-Here is another dataset: archived campaign website text for US House and Senate candidates. It contains about 800,000 pages for 7,353 candidate-years and extends the Di Tella et al. House corpus through 2024.
-
-https://doi.org/10.7910/DVN/BZ2JRS
+Here is another dataset: archived campaign website text for US House and Senate candidates. It contains about 800,000 pages and 7,353 candidate-years. It extends the Di Tella et al. House corpus (2002–2016) through 2024 and adds Senate candidates from 2002–2024.
 
 ### 2/3
 
-The data include extracted text from each page, FEC identifiers, document length, lexical diversity, and attention to 31 topics. The release adds House candidates from 2018–2024 and Senate candidates from 2002–2024.
+The data include extracted text from each page, FEC identifiers, and measures of document length, lexical diversity, and attention to 31 topics. The measures follow Di Tella et al., so the two House panels can be combined and analyzed as one dataset.
 
 ### 3/3
 
-Coverage varies over time. House coverage is 69–76% from 2018–2024; Senate coverage is about 70% after 2008. The site includes validation checks and descriptive examples on topic attention and website structure.
+Coverage is incomplete: 7,353 of 9,848 URL attempts yielded text. The D–R gap in welfare state attention rises from 1.5 points in 2002 to 12.3 in 2024. Candidates in closer races also tend to provide more page types.
 
 https://www.hannohilbig.com/candidatewebsites/
 
