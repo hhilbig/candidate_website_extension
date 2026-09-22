@@ -56,6 +56,13 @@ from scripts.import_candidate_extraction_v2 import (
     validate_run_metadata_against_all_output,
 )
 from src.candidate_endorsement_line_ledger import get_line_ledger_contract
+from src.candidate_endorsement_round4_release import (
+    ROUND4_RECORD_RESOLUTION_METHOD,
+    ROUND4_RECORD_RESOLUTION_STATUS,
+)
+from scripts.import_candidate_extraction_v2 import (  # noqa: E402
+    TRUNCATED_PARSE_STATUS,
+)
 from scripts.hive.extract_candidate_pages_vllm import (
     RAW_STRUCTURAL_WHITESPACE_VALIDATOR_ID,
     RAW_STRUCTURAL_WHITESPACE_VALIDATOR_SPEC_SHA256,
@@ -125,6 +132,24 @@ def stable_rank(seed: int, *values: Any) -> str:
 def _require(condition: Any, message: str) -> None:
     if not bool(condition):
         raise HandcodeInputError(message)
+
+
+def _repaired_window_identities(manifest: Mapping[str, Any]) -> dict[str, str]:
+    """Map each window a repair recovered to that attempt's generation identity."""
+    identities: dict[str, str] = {}
+    for attempt in manifest.get("seed_vary_repair") or []:
+        for window in attempt.get("windows") or []:
+            if window.get("repaired") is not True:
+                continue
+            document_id = str(window.get("document_id"))
+            _require(
+                document_id not in identities,
+                f"{document_id} is recorded as repaired by two attempts",
+            )
+            identities[document_id] = str(
+                attempt.get("repair_generation_config_sha256")
+            )
+    return identities
 
 
 def _typed_equal(left: Any, right: Any) -> bool:
@@ -201,6 +226,18 @@ def _segment_id(row: Mapping[str, Any]) -> str:
     return _require_sha256(row.get("segment_id") or row.get("document_id"), "segment_id")
 
 
+def _is_cap_limited(row: Mapping[str, Any]) -> bool:
+    """Report whether this window reached the output cap and was never finished.
+
+    Such a window has no parsed output and no extraction, so every replay that
+    reads a complete answer has to skip it. Its page is ineligible for sampling.
+    """
+    return (
+        row.get("parse_status") == TRUNCATED_PARSE_STATUS
+        and row.get("finish_reason") == "length"
+    )
+
+
 def _processing_is_valid(row: Mapping[str, Any]) -> bool:
     validation = row.get("validation")
     schema_valid = row.get("schema_valid") is True or (
@@ -253,13 +290,31 @@ def build_parent_pages(
     strict_private_provenance = (
         manifest.get("extraction_contract_sha256") is not None
     )
-    validated_ledger = manifest.get("_validated_endorsement_line_ledger")
+    repaired_identities = _repaired_window_identities(manifest)
+    round4_ledger = manifest.get("_validated_endorsement_round4_ledger")
+    round4_enabled = isinstance(round4_ledger, Mapping)
+    validated_ledger = (
+        round4_ledger
+        if round4_enabled
+        else manifest.get("_validated_endorsement_line_ledger")
+    )
     ledger_enabled = isinstance(validated_ledger, Mapping)
-    ledger_parent_summaries = (
-        validated_ledger.get("parent_summaries", {})
-        if ledger_enabled else {}
+    if round4_enabled:
+        ledger_parent_summaries = {
+            str(item["parent_document_id"]): item
+            for item in round4_ledger.get("parents", [])
+        } or round4_ledger.get("parent_summaries", {})
+    else:
+        ledger_parent_summaries = (
+            validated_ledger.get("parent_summaries", {}) if ledger_enabled else {}
+        )
+    endorsement_architecture = (
+        "endorsement_round4_record_ledger_v1"
+        if round4_enabled
+        else "endorsement_parent_line_ledger_v1"
     )
     grouped: dict[str, list[dict[str, Any]]] = defaultdict(list)
+    cap_withheld_parents: set[str] = set()
     seen_segments: set[str] = set()
     parsed_by_segment: dict[str, Any] = {}
     for row in rows:
@@ -276,7 +331,19 @@ def build_parent_pages(
             f"{row.get('candidate_cycle_id')}\n{route}\n{raw_text_sha256}"
         )
         _require(parent_id == expected_parent_id, f"{parent_id} is not deterministic")
-        _require(_processing_is_valid(row), f"{segment_id} did not process successfully")
+        if _is_cap_limited(row):
+            # A window that reached the output cap was never read to the end.
+            # It is a recorded terminal outcome, not a processing error, so the
+            # page stays in the bundle and every count check stays exact. The
+            # page is marked here and removed at the sampling step: in a recall
+            # task its lost text would count as a model miss, which measures a
+            # known gap rather than model behaviour.
+            cap_withheld_parents.add(parent_id)
+        else:
+            _require(
+                _processing_is_valid(row),
+                f"{segment_id} did not process successfully",
+            )
         source_text = row.get("source_text")
         _require(isinstance(source_text, str) and bool(source_text), f"{segment_id} lacks source text")
         segment_hash = _require_sha256(
@@ -298,7 +365,7 @@ def build_parent_pages(
             f"{parent_id}\n{row.get('segment_index')}\n{start}\n{end}\n{segment_hash}"
         )
         _require(segment_id == expected_segment_id, f"{segment_id} is not deterministic")
-        if strict_private_provenance:
+        if strict_private_provenance and not _is_cap_limited(row):
             parsed, _ = validate_private_output_provenance(
                 row, source_text, segment_id
             )
@@ -327,6 +394,12 @@ def build_parent_pages(
             "structured_decoding_disable_any_whitespace",
         ):
             expected = _route_value(manifest.get(field), route)
+            if field == "generation_config_sha256" and segment_id in repaired_identities:
+                # A window a seed-vary repair recovered carries its attempt's
+                # identity, which differs from the primary one only in the seed.
+                # The expected value comes from the bundle's repair attestation,
+                # not from the row, so a row cannot claim an unrecorded repair.
+                expected = repaired_identities[segment_id]
             if expected is not None:
                 _require(
                     _typed_equal(row.get(field), expected),
@@ -452,7 +525,7 @@ def build_parent_pages(
         for row in parent_rows:
             segment_id = _segment_id(row)
             extraction = row.get("extraction")
-            if strict_private_provenance:
+            if strict_private_provenance and not _is_cap_limited(row):
                 recomputed_extraction, recomputed_withheld, recomputed_alignment = (
                     align_extraction_exact_spans(
                         route,
@@ -495,7 +568,7 @@ def build_parent_pages(
                     )
                     _require(
                         row.get("extraction_architecture")
-                        == "endorsement_parent_line_ledger_v1",
+                        == endorsement_architecture,
                         f"{segment_id} endorsement architecture differs",
                     )
                 else:
@@ -506,30 +579,41 @@ def build_parent_pages(
                         "raw-output replay",
                     )
                 extraction = recomputed_extraction
-            validation = validate_extraction(
-                route,
-                extraction,
-                str(row["source_text"]),
-                "2.1",
-                endorsement_context_provenance=row.get(
-                    "endorsement_context_provenance"
-                ),
-                segment_start_char=int(row["segment_start_char"]),
-                parent_source_text=reconstructed,
-            )
-            if row.get("validation") is not None:
+            if _is_cap_limited(row):
+                # The answer was cut off, so there is no extraction to validate.
+                # The stored validation records that outcome and the page is
+                # already ineligible for sampling.
                 _require(
-                    _typed_equal(row["validation"], validation),
-                    f"{segment_id} validation differs from replay",
+                    (row.get("validation") or {}).get("status")
+                    == TRUNCATED_PARSE_STATUS
+                    and row.get("extraction") is None,
+                    f"{segment_id} is cap limited but carries an extraction",
                 )
-            _require(
-                validation["schema_valid"] is True,
-                f"{segment_id} has an invalid v2.1 schema",
-            )
-            _require(
-                validation["n_supported"] == validation["n_items"],
-                f"{segment_id} has a non-exact evidence span",
-            )
+            else:
+                validation = validate_extraction(
+                    route,
+                    extraction,
+                    str(row["source_text"]),
+                    "2.1",
+                    endorsement_context_provenance=row.get(
+                        "endorsement_context_provenance"
+                    ),
+                    segment_start_char=int(row["segment_start_char"]),
+                    parent_source_text=reconstructed,
+                )
+                if row.get("validation") is not None:
+                    _require(
+                        _typed_equal(row["validation"], validation),
+                        f"{segment_id} validation differs from replay",
+                    )
+                _require(
+                    validation["schema_valid"] is True,
+                    f"{segment_id} has an invalid v2.1 schema",
+                )
+                _require(
+                    validation["n_supported"] == validation["n_items"],
+                    f"{segment_id} has a non-exact evidence span",
+                )
 
         if strict_private_provenance and not (
             route == "endorsements" and ledger_enabled
@@ -582,11 +666,24 @@ def build_parent_pages(
                 )
         elif strict_private_provenance:
             ledger_parent = ledger_parent_summaries.get(parent_id)
-            _require(
-                isinstance(ledger_parent, Mapping)
-                and ledger_parent.get("public_coverage_complete") is True,
-                f"{parent_id} lacks complete endorsement ledger coverage",
-            )
+            if round4_enabled:
+                # Round four reports coverage per parent, and 277 of 2,583
+                # parents are publicly incomplete for a typed reason. They are
+                # still real pages with real records, so they stay eligible for
+                # the validation sample. Excluding them would bias precision
+                # upward and would hide from recall exactly the pages where the
+                # extraction misses the most.
+                _require(
+                    isinstance(ledger_parent, Mapping)
+                    and not ledger_parent.get("retry_required"),
+                    f"{parent_id} lacks a settled round-four parent summary",
+                )
+            else:
+                _require(
+                    isinstance(ledger_parent, Mapping)
+                    and ledger_parent.get("public_coverage_complete") is True,
+                    f"{parent_id} lacks complete endorsement ledger coverage",
+                )
             _require(
                 all(row.get("record_variants") == [] for row in parent_rows),
                 f"{parent_id} exposes superseded endorsement variants",
@@ -620,6 +717,7 @@ def build_parent_pages(
                     "equivalent_overlap",
                     "equivalent_semantics_distinct_exact_evidence",
                     "line_ledger_single_record",
+                    ROUND4_RECORD_RESOLUTION_STATUS,
                 },
                 f"{record_id} has an invalid resolution status",
             )
@@ -627,11 +725,14 @@ def build_parent_pages(
             _require(isinstance(payload, dict), f"{record_id} lacks its resolved item")
             key = LIST_KEY_BY_VERSION["2.1"][route]
             if route == "endorsements" and ledger_enabled:
+                expected_status, expected_method = (
+                    (ROUND4_RECORD_RESOLUTION_STATUS, ROUND4_RECORD_RESOLUTION_METHOD)
+                    if round4_enabled
+                    else ("line_ledger_single_record", "two_stage_parent_line_ledger_v1")
+                )
                 _require(
-                    resolved.get("resolution_status")
-                    == "line_ledger_single_record"
-                    and resolved.get("resolution_method")
-                    == "two_stage_parent_line_ledger_v1"
+                    resolved.get("resolution_status") == expected_status
+                    and resolved.get("resolution_method") == expected_method
                     and payload.get("record_evidence_carrier_segment_id")
                     == _segment_id(row),
                     f"{record_id} ledger record identity differs",
@@ -687,6 +788,7 @@ def build_parent_pages(
             })
         records.sort(key=lambda value: value["record_id"])
         pages.append({
+            "has_cap_limited_window": parent_id in cap_withheld_parents,
             "parent_document_id": parent_id,
             "candidate_cycle_id": str(first.get("candidate_cycle_id") or ""),
             "candidate_icpsr": str(first.get("candidate_icpsr") or ""),
@@ -758,13 +860,29 @@ def build_parent_pages(
         "user_message_template_sha256": manifest.get(
             "user_message_template_sha256"
         ),
-        "endorsement_line_ledger_contract_sha256": (
-            get_line_ledger_contract()["line_ledger_contract_sha256"]
-            if ledger_enabled else None
+        "endorsement_architecture": (
+            endorsement_architecture if ledger_enabled else None
         ),
+        "endorsement_line_ledger_contract_sha256": (
+            None
+            if round4_enabled or not ledger_enabled
+            else get_line_ledger_contract()["line_ledger_contract_sha256"]
+        ),
+        "endorsement_round4_production_contract_sha256": (
+            validated_ledger["summary"]["round4_production_contract_sha256"]
+            if round4_enabled else None
+        ),
+        # The line ledger reports one coverage boolean for the corpus. Round
+        # four reports an accounting gate instead, because a parent can be
+        # publicly incomplete and still fully accounted with a typed reason.
         "endorsement_line_ledger_public_coverage_complete": (
-            validated_ledger["summary"]["public_coverage_complete"]
-            if ledger_enabled else None
+            None
+            if round4_enabled or not ledger_enabled
+            else validated_ledger["summary"]["public_coverage_complete"]
+        ),
+        "endorsement_round4_all_model_records_accounted": (
+            validated_ledger["summary"]["all_model_records_accounted"]
+            if round4_enabled else None
         ),
         "raw_structural_whitespace_validator_id": (
             RAW_STRUCTURAL_WHITESPACE_VALIDATOR_ID
@@ -977,19 +1095,43 @@ def load_frozen_bundle(bundle_dir: Path) -> tuple[list[dict[str, Any]], dict[str
     segment_path, segment_spec = _safe_bundle_file(bundle_dir, manifest.get("segments_file"))
     rows = _read_jsonl(segment_path)
     _require(int(segment_spec.get("rows", -1)) == len(rows), "segment row count differs")
-    try:
-        validated_ledger = load_endorsement_line_ledger_bundle(
-            bundle_dir, manifest, rows
+    # One bundle carries one endorsement architecture. Round four replaces the
+    # line ledger and reports an accounting gate instead of a coverage boolean:
+    # a parent can be publicly incomplete and still fully accounted, and every
+    # gap carries a typed reason.
+    if manifest.get("endorsement_round4_record_ledger") is not None:
+        from scripts.import_candidate_extraction_v2 import (
+            load_endorsement_round4_ledger_bundle,
         )
-    except (OSError, EOFError, json.JSONDecodeError, ValueError) as error:
-        raise HandcodeInputError(
-            f"bundle endorsement line-ledger replay differs: {error}"
-        ) from error
-    _require(
-        validated_ledger["summary"].get("public_coverage_complete") is True,
-        "bundle endorsement line-ledger coverage is incomplete",
-    )
-    manifest["_validated_endorsement_line_ledger"] = validated_ledger
+
+        try:
+            validated_ledger = load_endorsement_round4_ledger_bundle(
+                bundle_dir, manifest, rows
+            )
+        except (OSError, EOFError, json.JSONDecodeError, ValueError) as error:
+            raise HandcodeInputError(
+                f"bundle endorsement round-four replay differs: {error}"
+            ) from error
+        _require(
+            validated_ledger["summary"].get("all_model_records_accounted") is True
+            and int(validated_ledger["summary"].get("unaccounted_outputs", -1)) == 0,
+            "bundle endorsement round-four accounting is incomplete",
+        )
+        manifest["_validated_endorsement_round4_ledger"] = validated_ledger
+    else:
+        try:
+            validated_ledger = load_endorsement_line_ledger_bundle(
+                bundle_dir, manifest, rows
+            )
+        except (OSError, EOFError, json.JSONDecodeError, ValueError) as error:
+            raise HandcodeInputError(
+                f"bundle endorsement line-ledger replay differs: {error}"
+            ) from error
+        _require(
+            validated_ledger["summary"].get("public_coverage_complete") is True,
+            "bundle endorsement line-ledger coverage is incomplete",
+        )
+        manifest["_validated_endorsement_line_ledger"] = validated_ledger
     try:
         selected_context_census = validate_endorsement_context_manifest(
             manifest.get("endorsement_context_provenance"),
@@ -1044,9 +1186,21 @@ def load_frozen_bundle(bundle_dir: Path) -> tuple[list[dict[str, Any]], dict[str
             manifest.get("run_metadata_aggregate"), recomputed_metadata
         ):
             raise ValueError("bundle run-metadata aggregate differs")
+        # A window a seed-vary repair recovered shows its repair row here and
+        # its primary row in the primary run metadata. The metadata is
+        # therefore compared against what the primary run alone produced. A
+        # bundle with no repair carries the same numbers in both.
+        recomputed_all_output = all_output_aggregate(rows)
+        primary_equivalent = manifest.get("primary_equivalent_output_aggregate")
+        if primary_equivalent is None and not manifest.get("seed_vary_repair"):
+            primary_equivalent = recomputed_all_output
+        _require(
+            isinstance(primary_equivalent, Mapping),
+            "bundle primary-equivalent output aggregate is absent",
+        )
         validate_run_metadata_against_all_output(
             recomputed_metadata,
-            all_output_aggregate(rows),
+            primary_equivalent,
             "bundle run metadata aggregate",
         )
     except ValueError as error:
@@ -1056,7 +1210,9 @@ def load_frozen_bundle(bundle_dir: Path) -> tuple[list[dict[str, Any]], dict[str
     return pages, {
         "bundle_manifest": manifest,
         "bundle_manifest_sha256": sha256_file(manifest_path),
-        "segments_file": str(segment_path.relative_to(bundle_dir)),
+        "segments_file": str(
+            segment_path.resolve().relative_to(Path(bundle_dir).resolve())
+        ),
         "segments_file_sha256": sha256_file(segment_path),
         "technical_checks": technical,
         "known_omissions": omissions,
@@ -1792,7 +1948,18 @@ def build_task_html(task_json: Path, output_html: Path, builder: Path = HANDCODE
             f"{completed.stderr.strip() or completed.stdout.strip()}"
         )
     _require(output_html.is_file(), f"shared builder did not create {output_html}")
-    _require(output_html.stat().st_size > task_json.stat().st_size, f"{output_html} is too small")
+    # The app must carry the whole task, not a truncated copy. The task file is
+    # indented and the app embeds the same data compactly, so the app can be the
+    # smaller file. Compare against the compact form the app actually holds.
+    compact = json.dumps(
+        json.loads(task_json.read_text(encoding="utf-8")),
+        separators=(",", ":"),
+        ensure_ascii=False,
+    )
+    _require(
+        output_html.stat().st_size > len(compact.encode("utf-8")),
+        f"{output_html} is too small for its task data",
+    )
 
 
 def _selection_summary(
@@ -1998,9 +2165,28 @@ def write_handcode_package(
         "endorsement_context_provenance_spec_sha256": bundle_info[
             "bundle_manifest"
         ].get("endorsement_context_provenance_spec_sha256"),
-        "endorsement_line_ledger_contract_sha256": get_line_ledger_contract()[
-            "line_ledger_contract_sha256"
-        ],
+        # The manifest must name the architecture that produced these records.
+        # A batch drawn from a round-four bundle carries the round-four contract,
+        # never the line-ledger one.
+        "endorsement_architecture": bundle_info["bundle_manifest"].get(
+            "endorsement_round4_record_ledger"
+        ) is not None and "endorsement_round4_record_ledger_v1"
+        or "endorsement_parent_line_ledger_v1",
+        "endorsement_line_ledger_contract_sha256": (
+            None
+            if bundle_info["bundle_manifest"].get("endorsement_round4_record_ledger")
+            is not None
+            else get_line_ledger_contract()["line_ledger_contract_sha256"]
+        ),
+        "endorsement_round4_production_contract_sha256": (
+            (
+                bundle_info["bundle_manifest"]["endorsement_round4_record_ledger"]
+                ["summary"]["round4_production_contract_sha256"]
+            )
+            if bundle_info["bundle_manifest"].get("endorsement_round4_record_ledger")
+            is not None
+            else None
+        ),
         "user_message_template_id": bundle_info["bundle_manifest"].get(
             "user_message_template_id"
         ),
@@ -2128,22 +2314,32 @@ def prepare_handcode_selection(
     )
     _require(bool(excluded_parent_ids), "at least one prior tuning parent ID is required")
     pages, bundle_info = load_frozen_bundle(bundle_dir)
+    # A page holding a window that reached the output cap is ineligible. Part of
+    # its text was never read, so a recall task on it would count a known gap as
+    # a model miss. This is separate from the tuning exclusions, and the
+    # manifest records it separately.
+    cap_limited_parent_ids = {
+        str(page["parent_document_id"])
+        for page in pages
+        if page.get("has_cap_limited_window")
+    }
+    sampling_excluded_ids = set(excluded_parent_ids) | cap_limited_parent_ids
     available_ids = {page["parent_document_id"] for page in pages}
     _require(
         bool(available_ids & excluded_parent_ids),
         "none of the supplied tuning parent IDs occur in the bundle",
     )
     pool_observed_levels = precision_pool_observed_levels(
-        pages, excluded_parent_ids
+        pages, sampling_excluded_ids
     )
-    precision = select_precision_records(pages, excluded_parent_ids, seed)
+    precision = select_precision_records(pages, sampling_excluded_ids, seed)
     precision_parent_ids = {
         record["page"]["parent_document_id"]
         for route_records in precision.values()
         for record in route_records
     }
     recall = select_recall_pages(
-        pages, excluded_parent_ids | precision_parent_ids, seed
+        pages, sampling_excluded_ids | precision_parent_ids, seed
     )
     sampled_parent_ids = {
         item["page"]["parent_document_id"]
