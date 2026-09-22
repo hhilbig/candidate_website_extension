@@ -1,0 +1,45 @@
+{
+  "version": "candidate_extraction_accuracy_check_provenance_v1",
+  "task_id": "candidate_extraction_accuracy_2026_09_18",
+  "coder": "model",
+  "coder_detail": "Claude Opus subagent, run from the Claude Code session on 2026-09-20. Hanno asked for model coding to stand as an interim gold standard.",
+  "is_human_validation": false,
+  "human_validation_note": "These labels are AI-coded. They are not the approved human validation, which is 240 items in four batches of 60 drawn from a frozen bundle. Do not report them as human accuracy and do not let them satisfy a release criterion that requires human coding.",
+  "sample": {
+    "items": 100,
+    "by_route": {
+      "issues": 34,
+      "biography": 33,
+      "endorsements": 33
+    },
+    "seed": 20260918,
+    "drawn_from": "the production records, before the release bundle existed"
+  },
+  "result": {
+    "accurate": 80,
+    "evidence_yes_content_no": 16,
+    "evidence_no_content_no": 3,
+    "evidence_no_content_yes": 1,
+    "accuracy": 0.8,
+    "wald_95_interval": [
+      0.72,
+      0.88
+    ],
+    "by_route_accuracy": {
+      "biography": 0.9090909090909091,
+      "issues": 0.8235294117647058,
+      "endorsements": 0.6666666666666666
+    }
+  },
+  "files": {
+    "task": {
+      "file": "candidate_extraction_accuracy_2026_09_18.task.json",
+      "sha256": "f9075a9049c19e46f29aace025edac286fc1b3f2f09ed42cb42122a8e3f95abc"
+    },
+    "results": {
+      "file": "candidate_extraction_accuracy_2026_09_18_results.json",
+      "sha256": "3d74f6efc30d6b88b666e309d4da2efc58acb3d7706b2a6405dae2f15ddd9cc5"
+    }
+  },
+  "recorded_utc": "2026-09-21T00:39:41.518291+00:00"
+}

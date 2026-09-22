@@ -1,0 +1,834 @@
+{
+ "task_id": "candidate_extraction_accuracy_2026_09_18",
+ "format": "handcode-results-v1",
+ "exported_at": "2026-09-21T00:38:27Z",
+ "n_items": 100,
+ "n_complete": 100,
+ "responses": [
+  {
+   "item_id": "05d2bd5bd7205578fc5d37753b5df2e4090a0e6d4c4b5a876e730a2f8c5d0fbc:facts:1",
+   "status": "complete",
+   "answers": {
+    "evidence_supports": "yes",
+    "content_correct": "yes"
+   }
+  },
+  {
+   "item_id": "0974ac10922ef0714ba062167803a721954cb2fb21e52b9decacc188a7fea17a:facts:3",
+   "status": "complete",
+   "answers": {
+    "evidence_supports": "yes",
+    "content_correct": "yes"
+   }
+  },
+  {
+   "item_id": "0a9b644ec6bf3ae7f15b8dda2e8f45d0787436cafee4ec52662b2c66d0854f59:facts:4",
+   "status": "complete",
+   "answers": {
+    "evidence_supports": "yes",
+    "content_correct": "yes",
+    "notes": "Page says he attended Villanova Law School and passed the bar in 1982 but never states that a degree was awarded."
+   }
+  },
+  {
+   "item_id": "0cd22f0dd5d4be02a118592b89276d60924fc9447c30117c45611955559b20db:facts:6",
+   "status": "complete",
+   "answers": {
+    "evidence_supports": "yes",
+    "content_correct": "yes"
+   }
+  },
+  {
+   "item_id": "13471b9464351226bcc46eb8e323f3e684eae6beb22f3f50962c3b5fbf85df7a:facts:25",
+   "status": "complete",
+   "answers": {
+    "evidence_supports": "yes",
+    "content_correct": "yes"
+   }
+  },
+  {
+   "item_id": "139a8c5f38dd033bf6fa7af2dff0b91e3844275c7cd197eabb2143e5e08aca7e:facts:10",
+   "status": "complete",
+   "answers": {
+    "evidence_supports": "yes",
+    "content_correct": "yes"
+   }
+  },
+  {
+   "item_id": "142b7bca1d32c91b09c17aaebaf92ab7e70c4f17284b3f57d690b457ea7409dd:facts:17",
+   "status": "complete",
+   "answers": {
+    "evidence_supports": "yes",
+    "content_correct": "yes"
+   }
+  },
+  {
+   "item_id": "25594c80d128b2ada5a4c96921b09cc441804d1acb10f46f125a421f78e92a78:facts:12",
+   "status": "complete",
+   "answers": {
+    "evidence_supports": "yes",
+    "content_correct": "yes"
+   }
+  },
+  {
+   "item_id": "25fa788e0624a179b19ae7176b6cb320085a8bb23b49a283425eaa1d55abec10:facts:5",
+   "status": "complete",
+   "answers": {
+    "evidence_supports": "yes",
+    "content_correct": "yes"
+   }
+  },
+  {
+   "item_id": "2d051ea4142d51b391a4a21eb7ec0a115285c4740beb417257af848533d8f974:facts:1",
+   "status": "complete",
+   "answers": {
+    "evidence_supports": "yes",
+    "content_correct": "yes"
+   }
+  },
+  {
+   "item_id": "36a9f43758f553dafa1c8d25b478c54be50604c24edb39b6664a46dd040e4706:facts:6",
+   "status": "complete",
+   "answers": {
+    "evidence_supports": "yes",
+    "content_correct": "yes"
+   }
+  },
+  {
+   "item_id": "36c2fa1c9a498484966afbb6c9ba65d7a303adca52545f0932a4a18a225b7f90:facts:25",
+   "status": "complete",
+   "answers": {
+    "evidence_supports": "yes",
+    "content_correct": "yes"
+   }
+  },
+  {
+   "item_id": "37a07546bf1790ad8aeca89f54e3b803777014656d83ea0baafa75710a2a12bf:facts:5",
+   "status": "complete",
+   "answers": {
+    "evidence_supports": "yes",
+    "content_correct": "no",
+    "notes": "The marked sentence only describes the podcast's aim; the 'Host' role and the public-service classification are inferred from the adjacent 'Podcast w/ Leo Dunson' line."
+   }
+  },
+  {
+   "item_id": "4d7beda84679cb9f2fd7a3808922dddcde7857ae8c8107c4854c14ff96d88b19:facts:9",
+   "status": "complete",
+   "answers": {
+    "evidence_supports": "yes",
+    "content_correct": "yes"
+   }
+  },
+  {
+   "item_id": "539046293f2b5f512a995923248d863acf3b498cb3dfa4e52c1995ed4355423b:facts:12",
+   "status": "complete",
+   "answers": {
+    "evidence_supports": "yes",
+    "content_correct": "yes"
+   }
+  },
+  {
+   "item_id": "539046293f2b5f512a995923248d863acf3b498cb3dfa4e52c1995ed4355423b:facts:5",
+   "status": "complete",
+   "answers": {
+    "evidence_supports": "yes",
+    "content_correct": "yes"
+   }
+  },
+  {
+   "item_id": "53c52a8964a5eaea0c4afa3f6640ff98d3b909296f4a03d048196e99032de9d9:facts:0",
+   "status": "complete",
+   "answers": {
+    "evidence_supports": "yes",
+    "content_correct": "yes",
+    "notes": "The relationship field repeats the descriptor 'A third-generation Arizonan' instead of a geographic relationship phrase such as 'raised in'."
+   }
+  },
+  {
+   "item_id": "57491d5ce1c7eaeabfef41d339ae6b9c897bdded1af272fdb04abec8a751c953:facts:2",
+   "status": "complete",
+   "answers": {
+    "evidence_supports": "yes",
+    "content_correct": "yes"
+   }
+  },
+  {
+   "item_id": "65d97f22b59bae5d0d0e947857a53bceaab4d81e48ad2d51a5ce81eef9f57d18:facts:1",
+   "status": "complete",
+   "answers": {
+    "evidence_supports": "yes",
+    "content_correct": "yes"
+   }
+  },
+  {
+   "item_id": "786d6dfdc0e037787537ade4779aa4f8947d8e58e18525a1b2017556629c0b9b:facts:16",
+   "status": "complete",
+   "answers": {
+    "evidence_supports": "yes",
+    "content_correct": "yes"
+   }
+  },
+  {
+   "item_id": "855f02d1078d514d9e03a1104b09d2d823bb351f1b5a6269aec04d591cfab43b:facts:15",
+   "status": "complete",
+   "answers": {
+    "evidence_supports": "yes",
+    "content_correct": "yes"
+   }
+  },
+  {
+   "item_id": "8659fafd345a6b2102c0e1a6a013fd6679fb7fa49f340c6a8a9f4d62b16887dd:facts:14",
+   "status": "complete",
+   "answers": {
+    "evidence_supports": "yes",
+    "content_correct": "yes"
+   }
+  },
+  {
+   "item_id": "a09a7ae72b67e443d70bc95cad3159a71072e879ed740f4708b20954565a84ee:facts:7",
+   "status": "complete",
+   "answers": {
+    "evidence_supports": "yes",
+    "content_correct": "no",
+    "notes": "The value records a courtroom nickname, 'the tax killer', which is not an occupation."
+   }
+  },
+  {
+   "item_id": "a21cfee6f233ad6efe35fc8c95e3e473df3b7e167d6816aa1bc0e580f233869d:facts:7",
+   "status": "complete",
+   "answers": {
+    "evidence_supports": "yes",
+    "content_correct": "no",
+    "notes": "The value omits the organisation, so 'guides international security agenda' has no referent; the page ties it to the NATO Parliamentary Assembly."
+   }
+  },
+  {
+   "item_id": "ab21dd68b67fd8892f70bab4f8dde13010d9ecda19ccd4da656db59992309327:facts:5",
+   "status": "complete",
+   "answers": {
+    "evidence_supports": "yes",
+    "content_correct": "yes"
+   }
+  },
+  {
+   "item_id": "adad9c1dea36a7cf1d8d8a8d170dad909bf6ac16d5acdee48e8a40470a76bb5c:facts:11",
+   "status": "complete",
+   "answers": {
+    "evidence_supports": "yes",
+    "content_correct": "yes"
+   }
+  },
+  {
+   "item_id": "b137fb3a4f50277bdd252ca0bb5c57e65541efe91f8fc88f963a96dcb8f78a2e:facts:12",
+   "status": "complete",
+   "answers": {
+    "evidence_supports": "yes",
+    "content_correct": "yes"
+   }
+  },
+  {
+   "item_id": "c4b68a21172aae149b3aaa56cd42789b89e01d230e3bdfd242041920d7185805:facts:8",
+   "status": "complete",
+   "answers": {
+    "evidence_supports": "yes",
+    "content_correct": "yes"
+   }
+  },
+  {
+   "item_id": "c5d564801122d32cf62501430bca246421c55fac3cceef280c2c95b7eaebd728:facts:13",
+   "status": "complete",
+   "answers": {
+    "evidence_supports": "yes",
+    "content_correct": "yes"
+   }
+  },
+  {
+   "item_id": "e25cd7c645184f7db47d5fc230da089ac8db5f4269f04f223be328d500189ca5:facts:14",
+   "status": "complete",
+   "answers": {
+    "evidence_supports": "yes",
+    "content_correct": "yes"
+   }
+  },
+  {
+   "item_id": "edd32024b6f646805e8a68e4e0f1342dcaf41cf58971f71facd5f2e9fb1a7b29:facts:1",
+   "status": "complete",
+   "answers": {
+    "evidence_supports": "yes",
+    "content_correct": "yes"
+   }
+  },
+  {
+   "item_id": "ef57ef4211a12e8273dd0c117ea9a85a6095a17947de0cbf81457c5d87660de4:facts:2",
+   "status": "complete",
+   "answers": {
+    "evidence_supports": "yes",
+    "content_correct": "yes"
+   }
+  },
+  {
+   "item_id": "fe0558cfd997a6d1dc086c5b994b0fe3bd17aa19271d9ba6e2c699e596ad88c2:facts:1",
+   "status": "complete",
+   "answers": {
+    "evidence_supports": "yes",
+    "content_correct": "yes"
+   }
+  },
+  {
+   "item_id": "00ff43a7fb8da4e2fb4e4c9eaecf79addb471923742526ce664e5a0459008bc1",
+   "status": "complete",
+   "answers": {
+    "evidence_supports": "yes",
+    "content_correct": "no",
+    "notes": "A sitting Berkeley Heights councilwoman is a government_official, not other_individual."
+   }
+  },
+  {
+   "item_id": "039530d156dc928e2475f13e46de851e40a3aa9e41f4d67b5e827a1323eaad6e",
+   "status": "complete",
+   "answers": {
+    "evidence_supports": "yes",
+    "content_correct": "yes"
+   }
+  },
+  {
+   "item_id": "10a329d9d914cb3b754b6bbfdca52ed00a2ab1b14a055e92763de77b5d6ca1dc",
+   "status": "complete",
+   "answers": {
+    "evidence_supports": "yes",
+    "content_correct": "no",
+    "notes": "Derek Stanford is listed under the heading 'State Senators', so the category should be government_official."
+   }
+  },
+  {
+   "item_id": "1124202cc492a2ef750c06f7ced7ee96fa6bbf42d8045f610a6f342878ac8017",
+   "status": "complete",
+   "answers": {
+    "evidence_supports": "no",
+    "content_correct": "no",
+    "notes": "The marked span attaches VaShone Huff's title 'Founder, Audience of One' to the next name; the page lists Broderick Huggins as 'Bishop, Simply Church House of Prayer'."
+   }
+  },
+  {
+   "item_id": "1d2af4159bcc81afe481c3e99a37799c71baefa510ed4c6699b924ca5cb211a5",
+   "status": "complete",
+   "answers": {
+    "evidence_supports": "yes",
+    "content_correct": "yes"
+   }
+  },
+  {
+   "item_id": "2adbcee16ec4b43d2f2b48d5932b8246497ca7ecb898f3368c9c0e5c8f8942f9",
+   "status": "complete",
+   "answers": {
+    "evidence_supports": "yes",
+    "content_correct": "yes"
+   }
+  },
+  {
+   "item_id": "343a01c61a015b556d93414430ad56a13ce6f53adbf01a4ee533867f1fc833e7",
+   "status": "complete",
+   "answers": {
+    "evidence_supports": "yes",
+    "content_correct": "no",
+    "notes": "A sitting Racine alder listed under 'Elected Officials' is a government_official, not other_individual."
+   }
+  },
+  {
+   "item_id": "55d5a6404332010094c62154ca5463bcfea326183c362e6cbbdf7debe9c7446a",
+   "status": "complete",
+   "answers": {
+    "evidence_supports": "yes",
+    "content_correct": "yes"
+   }
+  },
+  {
+   "item_id": "5a26eb8b95bb4d00dd012135aec11b1337e768a3f17c8a037860ab6c1fad5241",
+   "status": "complete",
+   "answers": {
+    "evidence_supports": "yes",
+    "content_correct": "yes"
+   }
+  },
+  {
+   "item_id": "5c079b8af1ce109d9e734c34ad185cf1a744054212d80e88a8fc142f94226117",
+   "status": "complete",
+   "answers": {
+    "evidence_supports": "yes",
+    "content_correct": "yes"
+   }
+  },
+  {
+   "item_id": "6bbec06313c519626b556daf523da876e27dc2c3edfbe9d631c765a12530d847",
+   "status": "complete",
+   "answers": {
+    "evidence_supports": "yes",
+    "content_correct": "yes"
+   }
+  },
+  {
+   "item_id": "6bde00ddf9ada04bccd33d8393bb03bd088bd1c03ff01b9dc1630278736dce78",
+   "status": "complete",
+   "answers": {
+    "evidence_supports": "yes",
+    "content_correct": "yes"
+   }
+  },
+  {
+   "item_id": "82be7ecb315a5fa66733822afb167a86c79f36ea82fd36e1f8fe7ef16a1fbce7",
+   "status": "complete",
+   "answers": {
+    "evidence_supports": "yes",
+    "content_correct": "no",
+    "notes": "The sitting State Senate Minority Leader is a government_official, not other_individual."
+   }
+  },
+  {
+   "item_id": "89661b8703ab84bfcdf999c9e6fdf98f0e4b3540c470d07429c8371563f137a7",
+   "status": "complete",
+   "answers": {
+    "evidence_supports": "yes",
+    "content_correct": "no",
+    "notes": "The endorser_name carries the retirement marker '(ret)', and a retired school board member is recorded with a current title in the other_individual category."
+   }
+  },
+  {
+   "item_id": "8ea403ab2773a782ce138d8006147ef7a22db20cd6bb6eed329633f87e1572c0",
+   "status": "complete",
+   "answers": {
+    "evidence_supports": "yes",
+    "content_correct": "yes"
+   }
+  },
+  {
+   "item_id": "9f88457c17e75e63b1a4c889a9c65bdf876adf7032965615f8d9abfd72ad0045",
+   "status": "complete",
+   "answers": {
+    "evidence_supports": "yes",
+    "content_correct": "no",
+    "notes": "The office 'Former Highland County Commissioner' sits in affiliation while title is null, and a former county commissioner is categorised as other_individual."
+   }
+  },
+  {
+   "item_id": "9fa3e31f3c34b793e827ca3922caa3413555b05204e221281281b333b797b01b",
+   "status": "complete",
+   "answers": {
+    "evidence_supports": "yes",
+    "content_correct": "no",
+    "notes": "A sitting U.S. Congressman is a government_official, not other_individual."
+   }
+  },
+  {
+   "item_id": "a0ed876af4ace4568bf4dfa5c4882a4056a32d1ada522fd1dc03c34a6d54532a",
+   "status": "complete",
+   "answers": {
+    "evidence_supports": "yes",
+    "content_correct": "yes",
+    "notes": "The marked span runs on into the next endorser's title 'Douglas County Sheriff', although the title assigned to Jeff Davis is correct."
+   }
+  },
+  {
+   "item_id": "a26de27f0dc042a11aecb391a5ba2dad534b490c7970933c5624d1c073ea6210",
+   "status": "complete",
+   "answers": {
+    "evidence_supports": "yes",
+    "content_correct": "no",
+    "notes": "A sitting Edwards County sheriff is a government_official, not other_individual."
+   }
+  },
+  {
+   "item_id": "a357c535ebcc341491f1f434e5a4541557c272ea6d72fe2882c1da8b40f5e004",
+   "status": "complete",
+   "answers": {
+    "evidence_supports": "yes",
+    "content_correct": "yes"
+   }
+  },
+  {
+   "item_id": "b167415542ef49edc4a292252e3a4045996820141bf3556b6cf556d07e528726",
+   "status": "complete",
+   "answers": {
+    "evidence_supports": "yes",
+    "content_correct": "yes"
+   }
+  },
+  {
+   "item_id": "b903b3f0ce48798d1fbf0be3fa75a7e36b13cbc488ccaf4666553f554c0c3b30",
+   "status": "complete",
+   "answers": {
+    "evidence_supports": "yes",
+    "content_correct": "yes"
+   }
+  },
+  {
+   "item_id": "be856c6fda07fe4106a1c93b4576cf48d9a58842e82c89ae3bc138c7c0778139",
+   "status": "complete",
+   "answers": {
+    "evidence_supports": "yes",
+    "content_correct": "no",
+    "notes": "A sitting U.S. Representative is a government_official, not other_individual."
+   }
+  },
+  {
+   "item_id": "bf34ef5380509273cf2f819b87fb75b95549de2954f2194a0492686759a4f70b",
+   "status": "complete",
+   "answers": {
+    "evidence_supports": "yes",
+    "content_correct": "yes"
+   }
+  },
+  {
+   "item_id": "c49a311c7a185806992471eb4099055653b4bcdc549a94c3e82a10c7481301b7",
+   "status": "complete",
+   "answers": {
+    "evidence_supports": "yes",
+    "content_correct": "yes"
+   }
+  },
+  {
+   "item_id": "c4adbd7bbf10bfb275971e95b812e0255866ea32f4280cef731a0c755927fd60",
+   "status": "complete",
+   "answers": {
+    "evidence_supports": "yes",
+    "content_correct": "yes"
+   }
+  },
+  {
+   "item_id": "c51e9dbb1ebe37a076886611a6b057c8480be962dfecbbd25366db939337f53c",
+   "status": "complete",
+   "answers": {
+    "evidence_supports": "yes",
+    "content_correct": "yes"
+   }
+  },
+  {
+   "item_id": "c72551f265075d9710825e467b7c35e0aa201e298e9e3dec08e8ffc0b8656d97",
+   "status": "complete",
+   "answers": {
+    "evidence_supports": "yes",
+    "content_correct": "yes"
+   }
+  },
+  {
+   "item_id": "cc0277bb9287f92ef15cfa1487e0bbd1eff1b9253e544026ad450016e5fa500c",
+   "status": "complete",
+   "answers": {
+    "evidence_supports": "yes",
+    "content_correct": "yes"
+   }
+  },
+  {
+   "item_id": "d8f56bdcb2325ddce3f9f3badd73bcb6f36f6e8eaf18750ca66e611fd1001ca2",
+   "status": "complete",
+   "answers": {
+    "evidence_supports": "yes",
+    "content_correct": "yes"
+   }
+  },
+  {
+   "item_id": "dc1d823e72885aa1e623eb186da651aa0db211f689a6f75aa871b92253ce8a4e",
+   "status": "complete",
+   "answers": {
+    "evidence_supports": "no",
+    "content_correct": "no",
+    "notes": "This page lists the name first and the title second, so 'Atlanta City Council Member' belongs to Michael Julian Bond, not to Debbie Buckner."
+   }
+  },
+  {
+   "item_id": "e201c868cd3c7902f328701c6a22d3344a3a307f5e56087be5b0ed3dcaca0c46",
+   "status": "complete",
+   "answers": {
+    "evidence_supports": "yes",
+    "content_correct": "yes"
+   }
+  },
+  {
+   "item_id": "e898cf03f2beb781cb8f72c5675fdfef6c752184ba6db542ba370abfda17d75b",
+   "status": "complete",
+   "answers": {
+    "evidence_supports": "yes",
+    "content_correct": "yes"
+   }
+  },
+  {
+   "item_id": "1442b3e297e6afd9b8a3115a8cd719c3a3d0cf4fe3b096ae39bc254af7773cbb:issue_blocks:6",
+   "status": "complete",
+   "answers": {
+    "evidence_supports": "yes",
+    "content_correct": "yes"
+   }
+  },
+  {
+   "item_id": "15e5cafdbd5bd3f2136da2455dc63f9356c3458526f2b5ee7f3260bb2ead32c0:issue_blocks:12",
+   "status": "complete",
+   "answers": {
+    "evidence_supports": "yes",
+    "content_correct": "yes"
+   }
+  },
+  {
+   "item_id": "1beb625233a2d550814c4b11cf983e529827cf8878a4a6e39836c0200545167f:issue_blocks:23",
+   "status": "complete",
+   "answers": {
+    "evidence_supports": "yes",
+    "content_correct": "yes"
+   }
+  },
+  {
+   "item_id": "2b9c77ee889f6292df75e8f00bf85d122dab7f8eea7e3aeeffae37772bdb5230:issue_blocks:2",
+   "status": "complete",
+   "answers": {
+    "evidence_supports": "yes",
+    "content_correct": "yes",
+    "notes": "The claim is literally faithful but records a rhetorical wish rather than a policy position."
+   }
+  },
+  {
+   "item_id": "30742bea3cd9f02bfef16a732d3e870a195a2c21901b1ddf742091435e7f9c70:issue_blocks:15",
+   "status": "complete",
+   "answers": {
+    "evidence_supports": "yes",
+    "content_correct": "yes"
+   }
+  },
+  {
+   "item_id": "38171e12f5a15cc5677f8ff3e1c814a0a4b9054ec7b3bfcf736702a5c9f97ddc:issue_blocks:19",
+   "status": "complete",
+   "answers": {
+    "evidence_supports": "yes",
+    "content_correct": "yes"
+   }
+  },
+  {
+   "item_id": "3a4624d66795f19d3c888fd53273a08e98eb7c51d5eedd9b17de359456d71341:issue_blocks:8",
+   "status": "complete",
+   "answers": {
+    "evidence_supports": "no",
+    "content_correct": "yes",
+    "notes": "The marked words describe a provision of the Affordable Care Act, not a position stated by the candidate."
+   }
+  },
+  {
+   "item_id": "463655f2b5a9180850cc0b9c8afc30683913c65b7dfc8e8b92fe81103e22ce4a:issue_blocks:21",
+   "status": "complete",
+   "answers": {
+    "evidence_supports": "yes",
+    "content_correct": "yes"
+   }
+  },
+  {
+   "item_id": "4726021e3c2b34b9a50efa6ff29c87d5b578597f11363e65cd268ee51214d5cc:issue_blocks:34",
+   "status": "complete",
+   "answers": {
+    "evidence_supports": "yes",
+    "content_correct": "yes"
+   }
+  },
+  {
+   "item_id": "4730313eebb63a9606abecfb167db53188fcb75a60d51fcd7eb21f342959086c:issue_blocks:7",
+   "status": "complete",
+   "answers": {
+    "evidence_supports": "yes",
+    "content_correct": "yes"
+   }
+  },
+  {
+   "item_id": "482fec82bf23c926a50ab4b08d65a0de1d749415d97b9765d209d84837563cd7:issue_blocks:27",
+   "status": "complete",
+   "answers": {
+    "evidence_supports": "yes",
+    "content_correct": "yes"
+   }
+  },
+  {
+   "item_id": "52694d6262c6cdc035b9ca401e23cdd10cafd76e1e3bf5fee43f82269eaea9f9:issue_blocks:1",
+   "status": "complete",
+   "answers": {
+    "evidence_supports": "yes",
+    "content_correct": "yes"
+   }
+  },
+  {
+   "item_id": "55c1d934c5e8e0b42ff3c9ff5d11663742f6877d69a22e48cb2c0ea8d27e6131:issue_blocks:20",
+   "status": "complete",
+   "answers": {
+    "evidence_supports": "yes",
+    "content_correct": "no",
+    "notes": "The sentence is a future promise, 'Ben will fight', so statement_kind current_action does not fit."
+   }
+  },
+  {
+   "item_id": "5a68f7815cdefdef1d7bf2eb82d8001f238470ec8b1972ce4740265edeba19a6:issue_blocks:7",
+   "status": "complete",
+   "answers": {
+    "evidence_supports": "yes",
+    "content_correct": "no",
+    "notes": "'Ed will fight to ensure' is a future commitment, not current conduct, so current_action is wrong."
+   }
+  },
+  {
+   "item_id": "61a182a0ec2698b6fc8226bd77fea438ee3e76045cd329b5d3a601db382f5def:issue_blocks:26",
+   "status": "complete",
+   "answers": {
+    "evidence_supports": "yes",
+    "content_correct": "no",
+    "notes": "'Carlucci will take similarly aggressive action' is a future promise, so current_action is wrong, and the claim drops the subject."
+   }
+  },
+  {
+   "item_id": "6450c93b8efe12dcceee8ceaed1ceebab4cf7c780835b1710f485b5d18fb45ed:issue_blocks:21",
+   "status": "complete",
+   "answers": {
+    "evidence_supports": "yes",
+    "content_correct": "yes"
+   }
+  },
+  {
+   "item_id": "691a2f712604293e174fc655787e055b33135e65e88c7c36d402d2a8ce1ae848:issue_blocks:2",
+   "status": "complete",
+   "answers": {
+    "evidence_supports": "yes",
+    "content_correct": "yes"
+   }
+  },
+  {
+   "item_id": "6d3af52b125065aaa4b7985a1372dbcfc99bd0b7ca7dc758f8f9c30d07e7fa66:issue_blocks:7",
+   "status": "complete",
+   "answers": {
+    "evidence_supports": "yes",
+    "content_correct": "yes"
+   }
+  },
+  {
+   "item_id": "7ce18f74c9b7d5626f700648a3d01f1f9db0da0a2486fc5a8f7f0ae2ee99a957:issue_blocks:7",
+   "status": "complete",
+   "answers": {
+    "evidence_supports": "yes",
+    "content_correct": "yes"
+   }
+  },
+  {
+   "item_id": "81e5c4bcb0186ae2d796446a6348c2ec6410175ad56bcb63287d344f5a25420f:issue_blocks:13",
+   "status": "complete",
+   "answers": {
+    "evidence_supports": "yes",
+    "content_correct": "yes"
+   }
+  },
+  {
+   "item_id": "8a2e3740e6890116c52dde6c4f84bc44721568b9922ec25614ce882081d295ba:issue_blocks:36",
+   "status": "complete",
+   "answers": {
+    "evidence_supports": "yes",
+    "content_correct": "yes"
+   }
+  },
+  {
+   "item_id": "9217b7b24bc37167dea17bb3674a11cf2d74e66846daa35679a06cf5a0fc0fc4:issue_blocks:1",
+   "status": "complete",
+   "answers": {
+    "evidence_supports": "yes",
+    "content_correct": "yes"
+   }
+  },
+  {
+   "item_id": "96d087a1b13e98f4203d17e9ff737420ac64b4af47e390c807ec984e8601fbea:issue_blocks:4",
+   "status": "complete",
+   "answers": {
+    "evidence_supports": "yes",
+    "content_correct": "no",
+    "notes": "The claim states what the bill would do rather than a candidate position, and the marked text does not state support."
+   }
+  },
+  {
+   "item_id": "9e25bf235a3cfc7cc1da564f316054f3bdf312f672df185bd7d1d9a898b83508:issue_blocks:20",
+   "status": "complete",
+   "answers": {
+    "evidence_supports": "yes",
+    "content_correct": "yes"
+   }
+  },
+  {
+   "item_id": "a0e1ee3262e7bec7594b00ef409a45e564df21aa2f9d688682214630a8901eb4:issue_blocks:18",
+   "status": "complete",
+   "answers": {
+    "evidence_supports": "yes",
+    "content_correct": "yes"
+   }
+  },
+  {
+   "item_id": "a61e086925abf27d9a48c52e5dd4286db4c7e8fd0500240812063eb89180c572:issue_blocks:5",
+   "status": "complete",
+   "answers": {
+    "evidence_supports": "no",
+    "content_correct": "no",
+    "notes": "The marked words list qualities a statesperson needs; 'supports being battle tested and strategic' is not a policy statement."
+   }
+  },
+  {
+   "item_id": "c34d6366f388dba6f2d3b3b30711afe48559759728b6c66a3eb5dbe27abfc360:issue_blocks:11",
+   "status": "complete",
+   "answers": {
+    "evidence_supports": "yes",
+    "content_correct": "yes"
+   }
+  },
+  {
+   "item_id": "e0b2c082bb183f124d01167f7e3adaa14b3dc6571178871616dbb29c3c4ddce5:issue_blocks:14",
+   "status": "complete",
+   "answers": {
+    "evidence_supports": "yes",
+    "content_correct": "yes"
+   }
+  },
+  {
+   "item_id": "e1b497184934cba47156fcbe9e56672de0a7cca88ef62e7d690e77126216ed03:issue_blocks:9",
+   "status": "complete",
+   "answers": {
+    "evidence_supports": "yes",
+    "content_correct": "yes"
+   }
+  },
+  {
+   "item_id": "e591d41a67253f04bfbd15421bb670a8682fb84f7e05144863722371d5569073:issue_blocks:1",
+   "status": "complete",
+   "answers": {
+    "evidence_supports": "yes",
+    "content_correct": "yes",
+    "notes": "The record captures campaign boilerplate about why she is running rather than a policy statement."
+   }
+  },
+  {
+   "item_id": "f85d2aa33bf194ee602717d5f07b243e97308a335cf0c26369c92a8790bc06dd:issue_blocks:9",
+   "status": "complete",
+   "answers": {
+    "evidence_supports": "yes",
+    "content_correct": "yes"
+   }
+  },
+  {
+   "item_id": "f9551a05be2d6e6f6cb55009ae5804196a5c65f5a63c4187220c31720d781356:issue_blocks:13",
+   "status": "complete",
+   "answers": {
+    "evidence_supports": "yes",
+    "content_correct": "yes"
+   }
+  },
+  {
+   "item_id": "fcdc8a19c9325dd97de9ee7c9749e0297f90e07ec7f28ae7ec3df67bc7124c9b:issue_blocks:10",
+   "status": "complete",
+   "answers": {
+    "evidence_supports": "yes",
+    "content_correct": "yes"
+   }
+  },
+  {
+   "item_id": "fcf1b037d3e92d0f6d1223ea27bac2a3c182beffb6095b4fc125f31f82dd5eff:issue_blocks:21",
+   "status": "complete",
+   "answers": {
+    "evidence_supports": "yes",
+    "content_correct": "yes"
+   }
+  }
+ ]
+}

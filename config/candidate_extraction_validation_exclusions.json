@@ -1,0 +1,1983 @@
+{
+ "version": "candidate_extraction_validation_tuning_exclusions_v1",
+ "created_utc": "2026-09-22T05:53:43.882077+00:00",
+ "purpose": "Parent documents used in earlier AI-assisted or pilot reviews. The human validation sample must not include them, so it stays independent of every page the pipeline was tuned or checked on.",
+ "rule": "Every 64-hex parent_document_id of the frozen corpus found in a listed source file.",
+ "source_files": {
+  "build/private_candidate_endorsement_40_parent_selection_20260827/pilot40_selection.json": {
+   "parent_documents": 40,
+   "sha256": "5e6b0908f12cd59560699079fe19ea190303b0a8a14b9cebc1792761ed0567e6"
+  },
+  "build/private_candidate_endorsement_40_parent_selection_20260827/selection.json": {
+   "parent_documents": 120,
+   "sha256": "ef378019b0216a3ef8d1cb7ab9777c6d4f383e383857b3da013802430932202d"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/adjudicated/parent_04.json": {
+   "parent_documents": 1,
+   "sha256": "140573cc11484574cbf5d1d508810d0f5d1387e5ab80c251a8ecc4f8093a8af4"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/adjudicated/parent_05.json": {
+   "parent_documents": 1,
+   "sha256": "c374eba1ca2670897e12ffc53dfeb470f00fb7bf77d1055459359e1381e3c4e5"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/adjudicated/parent_07.json": {
+   "parent_documents": 1,
+   "sha256": "c643d2a44dd6992305e358602aae6425dc82396d817cf9948777e2bde1c4ab1e"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/adjudicated/parent_10.json": {
+   "parent_documents": 1,
+   "sha256": "6345cb0f3688c015ced78ddee87d6986c78e218477217245f82ab6df0a58c4eb"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/adjudicated/parent_11.json": {
+   "parent_documents": 1,
+   "sha256": "338186aac7604e81eaaa3aed89701e7a646f1d6456a2920e78ddd7a5ae83cba7"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/adjudicated/parent_13.json": {
+   "parent_documents": 1,
+   "sha256": "e76a5be3cbb7f04faab1040a63132136762d437d5e0e01943593fe1273cf10c9"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/adjudicated/parent_14.json": {
+   "parent_documents": 1,
+   "sha256": "21766642a13d6c0dc2f53083a2bf6b22c640f1a32a947a834a63519e4f8c1291"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/adjudicated/parent_15.json": {
+   "parent_documents": 1,
+   "sha256": "99c7e041d995e2e7c911e7e297a401f717f928c3655446d86143e6df024e3e3e"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/adjudicated/parent_17.json": {
+   "parent_documents": 1,
+   "sha256": "d5382bae226d79b68147d7834c78d1f927b0a60a345bab7fe2e6a7dfb3424b57"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/adjudicated/parent_18.json": {
+   "parent_documents": 1,
+   "sha256": "326a8b8dc7546de6e00aa61de3d1be7c82524e273602ff0d9f1a76f6576d7135"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/adjudicated/parent_20.json": {
+   "parent_documents": 1,
+   "sha256": "3acb0450989e0ff44bee321917a84a72e5873821a87ff60ec818974e201f908f"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/adjudicated/parent_21.json": {
+   "parent_documents": 1,
+   "sha256": "f70232bb979dd600b17735a138f5d575560f4ef59066944ccd8e92d551efd569"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/adjudicated/parent_23.json": {
+   "parent_documents": 1,
+   "sha256": "2b76d0fabb0883641f4b5af7960c240f38f620ada9a81b74c00535d6a6829580"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/adjudicated/parent_25.json": {
+   "parent_documents": 1,
+   "sha256": "db34c967b08bc61f85e0e58d2e5369c1267429020a1e497a401cbf2ce95e789c"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/adjudicated/parent_26.json": {
+   "parent_documents": 1,
+   "sha256": "7a994966787e58ca1b41b19d3a4630bb226f6e013cdb88d6006abf5eeb72357a"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/adjudicated/parent_30.json": {
+   "parent_documents": 1,
+   "sha256": "bac6c4c827920df940c7cd9475676f54d1fabf3d4e103667be1647087c4f960f"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/adjudicated/parent_32.json": {
+   "parent_documents": 1,
+   "sha256": "1d3e06d5810480c7469a91deaeacefe4977e9766c98e6beace23056866a39fb5"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/adjudicated/parent_33.json": {
+   "parent_documents": 1,
+   "sha256": "648575fb7ff37e48a4784e0ad879acf4fdcd76169ea02de8e3b34e52d78d88da"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/adjudicated/parent_34.json": {
+   "parent_documents": 1,
+   "sha256": "f5ee2d131370eb121ced26a770ada5f267db5ea27912196d5dde32239e2788c7"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/adjudicated/parent_35.json": {
+   "parent_documents": 1,
+   "sha256": "5472c9760666bcd1c5e7bc13bca0e42efc7d1ec18011ad78b7f858bb3278d729"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/adjudicated/parent_38.json": {
+   "parent_documents": 1,
+   "sha256": "0fae118e60a48f9bfb5be485c0387d69a919f2bf9cab1a2bf021b1809c2249c4"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/adjudicated/parent_40.json": {
+   "parent_documents": 1,
+   "sha256": "52de458bcaa2e1b43f29263b815d1594b9dff246ba27fd250b8b8049aa409736"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/adjudicated_v2/parent_04.json": {
+   "parent_documents": 1,
+   "sha256": "140573cc11484574cbf5d1d508810d0f5d1387e5ab80c251a8ecc4f8093a8af4"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/adjudicated_v2/parent_05.json": {
+   "parent_documents": 1,
+   "sha256": "c374eba1ca2670897e12ffc53dfeb470f00fb7bf77d1055459359e1381e3c4e5"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/adjudicated_v2/parent_07.json": {
+   "parent_documents": 1,
+   "sha256": "c4af501786c728f3dfd6187a6e9d482ac3f6cce19894688afd416456399c1593"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/adjudicated_v2/parent_10.json": {
+   "parent_documents": 1,
+   "sha256": "6345cb0f3688c015ced78ddee87d6986c78e218477217245f82ab6df0a58c4eb"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/adjudicated_v2/parent_11.json": {
+   "parent_documents": 1,
+   "sha256": "338186aac7604e81eaaa3aed89701e7a646f1d6456a2920e78ddd7a5ae83cba7"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/adjudicated_v2/parent_13.json": {
+   "parent_documents": 1,
+   "sha256": "e76a5be3cbb7f04faab1040a63132136762d437d5e0e01943593fe1273cf10c9"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/adjudicated_v2/parent_14.json": {
+   "parent_documents": 1,
+   "sha256": "21766642a13d6c0dc2f53083a2bf6b22c640f1a32a947a834a63519e4f8c1291"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/adjudicated_v2/parent_15.json": {
+   "parent_documents": 1,
+   "sha256": "99c7e041d995e2e7c911e7e297a401f717f928c3655446d86143e6df024e3e3e"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/adjudicated_v2/parent_17.json": {
+   "parent_documents": 1,
+   "sha256": "d5382bae226d79b68147d7834c78d1f927b0a60a345bab7fe2e6a7dfb3424b57"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/adjudicated_v2/parent_18.json": {
+   "parent_documents": 1,
+   "sha256": "326a8b8dc7546de6e00aa61de3d1be7c82524e273602ff0d9f1a76f6576d7135"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/adjudicated_v2/parent_20.json": {
+   "parent_documents": 1,
+   "sha256": "3acb0450989e0ff44bee321917a84a72e5873821a87ff60ec818974e201f908f"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/adjudicated_v2/parent_21.json": {
+   "parent_documents": 1,
+   "sha256": "ca6d7602e76d2e2abf7d5196585bc62c6c2b0e8a2b4689653830e937b8155e40"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/adjudicated_v2/parent_23.json": {
+   "parent_documents": 1,
+   "sha256": "2b76d0fabb0883641f4b5af7960c240f38f620ada9a81b74c00535d6a6829580"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/adjudicated_v2/parent_25.json": {
+   "parent_documents": 1,
+   "sha256": "db34c967b08bc61f85e0e58d2e5369c1267429020a1e497a401cbf2ce95e789c"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/adjudicated_v2/parent_26.json": {
+   "parent_documents": 1,
+   "sha256": "7a994966787e58ca1b41b19d3a4630bb226f6e013cdb88d6006abf5eeb72357a"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/adjudicated_v2/parent_30.json": {
+   "parent_documents": 1,
+   "sha256": "bac6c4c827920df940c7cd9475676f54d1fabf3d4e103667be1647087c4f960f"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/adjudicated_v2/parent_32.json": {
+   "parent_documents": 1,
+   "sha256": "1d3e06d5810480c7469a91deaeacefe4977e9766c98e6beace23056866a39fb5"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/adjudicated_v2/parent_33.json": {
+   "parent_documents": 1,
+   "sha256": "648575fb7ff37e48a4784e0ad879acf4fdcd76169ea02de8e3b34e52d78d88da"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/adjudicated_v2/parent_34.json": {
+   "parent_documents": 1,
+   "sha256": "f5ee2d131370eb121ced26a770ada5f267db5ea27912196d5dde32239e2788c7"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/adjudicated_v2/parent_35.json": {
+   "parent_documents": 1,
+   "sha256": "25b10a4a4dfe4ef0b6623e8c6b844871fa9e777b2ca21d6f6fec65cc0fbfa84d"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/adjudicated_v2/parent_38.json": {
+   "parent_documents": 1,
+   "sha256": "0fae118e60a48f9bfb5be485c0387d69a919f2bf9cab1a2bf021b1809c2249c4"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/adjudicated_v2/parent_40.json": {
+   "parent_documents": 1,
+   "sha256": "52de458bcaa2e1b43f29263b815d1594b9dff246ba27fd250b8b8049aa409736"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/ai_reviewed_results.json": {
+   "parent_documents": 40,
+   "sha256": "ea8029317a5551b36dc13298506ae090f439c1c7ea84343e567f0b7a1e7a9058"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/ai_reviewed_results_v2.json": {
+   "parent_documents": 40,
+   "sha256": "56abd8a8f34f2ab3f13498b838792f714784430747a7405d08810e6ca4887704"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/blind/parent_01.json": {
+   "parent_documents": 1,
+   "sha256": "663edd32998caf402f3b630479f54245a91f4aca31acd2f28c1c6219042c1411"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/blind/parent_02.json": {
+   "parent_documents": 1,
+   "sha256": "8a85e397243f3f788229123670c4535206069378145a3ec725d790da0ccab547"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/blind/parent_03.json": {
+   "parent_documents": 1,
+   "sha256": "59faf2d3c8fa2ef676504134efd7109cea7e2e04c7f7a04bc23a3b951043111e"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/blind/parent_04.json": {
+   "parent_documents": 1,
+   "sha256": "7674855c7389990a504243b7ca0a9c61a5b828612ae54752b2a577dee4758f62"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/blind/parent_05.json": {
+   "parent_documents": 1,
+   "sha256": "5c23789d1de752afacc12941fb52120931186826eb9c33ba1ac950525948b847"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/blind/parent_06.json": {
+   "parent_documents": 1,
+   "sha256": "836ac919102930e4eed96bf7b8824a022c3634c4a2f09f7bc47ff0e9636ffb88"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/blind/parent_07.json": {
+   "parent_documents": 1,
+   "sha256": "3c176529e79214397ee3f7c7ea8418a137b6933d45c8e46b5f03b1b1c1a5aa29"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/blind/parent_08.json": {
+   "parent_documents": 1,
+   "sha256": "4bc2b8884302c5519afd71f0c02c22600431e17a55cc38b0d96fddc575719ee4"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/blind/parent_09.json": {
+   "parent_documents": 1,
+   "sha256": "587d9e4d1dfa6a1b6db566dec9c33be18511b133817fb2965369854a3760a6b2"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/blind/parent_10.json": {
+   "parent_documents": 1,
+   "sha256": "f03eacaca52e5765a0adba7fb02b3170a846cb146ffbed071e5b8bc88fc78a1c"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/blind/parent_11.json": {
+   "parent_documents": 1,
+   "sha256": "e4a92abf7a54538a042e62862318158cee68dfc97e31c8d1c4764fb7e1227d01"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/blind/parent_12.json": {
+   "parent_documents": 1,
+   "sha256": "ccc044478af14ce378801147a11d831f3248e68249b133306d1ca7e3a9bb38af"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/blind/parent_13.json": {
+   "parent_documents": 1,
+   "sha256": "058854ea7d630ef8b2d6e30843991c75ddd6d9ed8efd72a0be66d7ac45739b0f"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/blind/parent_14.json": {
+   "parent_documents": 1,
+   "sha256": "cfa880dc428bfcaf7df01707e7afd3a2ea2f62609601274b95823374f92c63aa"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/blind/parent_15.json": {
+   "parent_documents": 1,
+   "sha256": "6ec1fbad99ae7d4cb0c824991c63d509d8adabf3419458eae3c73c683d5cdbed"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/blind/parent_16.json": {
+   "parent_documents": 1,
+   "sha256": "e8b43fe5f94e97d2cd28896821c1161e23eff5010517c4e0fcb22bf070e6057d"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/blind/parent_17.json": {
+   "parent_documents": 1,
+   "sha256": "e54af9c18918b2630c3a174507e2a8001367b806850b1f92ea428a5fe0d8d7a5"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/blind/parent_18.json": {
+   "parent_documents": 1,
+   "sha256": "b17bbf87e890ac15f444493888e6cc49be434eccc9bda13fde3bed0cba7dceac"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/blind/parent_19.json": {
+   "parent_documents": 1,
+   "sha256": "ae079ba1a1691a64fa72081b4d629e8006b92a4c657d1cfd89bec4034c8400f3"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/blind/parent_20.json": {
+   "parent_documents": 1,
+   "sha256": "2a40ad52265c105fb52a2a3cfa76bb56380da3d1063bea3a7a9b57d078071d0f"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/blind/parent_21.json": {
+   "parent_documents": 1,
+   "sha256": "c8b13eb7dd499fd5a6f12f04ab2692e074af943b7428d1dea48b737fd8e4399e"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/blind/parent_22.json": {
+   "parent_documents": 1,
+   "sha256": "56086c82617d800cd88255a6fe7b2e3c316dcdd4d76651d66e9156db65d311bc"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/blind/parent_23.json": {
+   "parent_documents": 1,
+   "sha256": "c6248b6fa57b00e19b8fde90dcfd82350486ee1c2af907a048028dd35d6cc7c9"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/blind/parent_24.json": {
+   "parent_documents": 1,
+   "sha256": "8521a5a0162a557ec310f647df4185262d502e5c6c71751d6199985cd4a41997"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/blind/parent_25.json": {
+   "parent_documents": 1,
+   "sha256": "31bb8cdd07b39bc327025ff0ef3e5703fa745f1ca2ebf683b03d332ca96aee15"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/blind/parent_26.json": {
+   "parent_documents": 1,
+   "sha256": "f8ae7f115a6b073281cc911409e90ed6fd8c9e5a6609bcab3176eacc5b969dab"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/blind/parent_27.json": {
+   "parent_documents": 1,
+   "sha256": "c04e6f8e7144945fe8510960516398c1972a6a4fc22f0ff95a174e62113eabc9"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/blind/parent_28.json": {
+   "parent_documents": 1,
+   "sha256": "e43455e203f7da1e6fcf84de1f9999dde20e6a7e29053a4d4ddd46331fd6ff9d"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/blind/parent_29.json": {
+   "parent_documents": 1,
+   "sha256": "9de51f692dcbd12d27029b3bc17a83fa4f4f305ad3d0672992a2e50ebb0b54b2"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/blind/parent_30.json": {
+   "parent_documents": 1,
+   "sha256": "149ad4d179e86491065dfa627e02f5ccb5b989f5561f2e4a44a266fbe129dd35"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/blind/parent_31.json": {
+   "parent_documents": 1,
+   "sha256": "f8aba1f25ec9c2ab1012c865050e80a2533a32f355efe16d41dd6d8fb9b2249b"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/blind/parent_32.json": {
+   "parent_documents": 1,
+   "sha256": "1894ca882b81e49cdee0d769fb3bf75464167b98bd9000a6b0362ab8fba67666"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/blind/parent_33.json": {
+   "parent_documents": 1,
+   "sha256": "026cf61cbc7817333e6c108bd46ad606c7e53fb05892907ee873410649112970"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/blind/parent_34.json": {
+   "parent_documents": 1,
+   "sha256": "27a0c10e78641b7a9dfb79c6b4a738caa49bd415c8f949bea86e86934deb2ebf"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/blind/parent_35.json": {
+   "parent_documents": 1,
+   "sha256": "721920ee5c79ba8d12eebee8e494a8322c749ae0c91395b2651c704ea0cf1729"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/blind/parent_36.json": {
+   "parent_documents": 1,
+   "sha256": "11a9e10628793fb33fbd9363f79e9b37a60981552e0a504d3341565ef290fdb1"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/blind/parent_37.json": {
+   "parent_documents": 1,
+   "sha256": "2a454229efdc87feb4ea973cb1de4232418d805045bf46d2af723d7b02da2de3"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/blind/parent_38.json": {
+   "parent_documents": 1,
+   "sha256": "6a8fd53fe090295734a417077eafc843c05c3ed2d39ce384e249b070fa509703"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/blind/parent_39.json": {
+   "parent_documents": 1,
+   "sha256": "f6a3cd15b344e0d0dd939fe5df9471e069e661c163a623cfbe648c0424468d0c"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/blind/parent_40.json": {
+   "parent_documents": 1,
+   "sha256": "e1bfecdcee7eafe3560557f927a93e51da9fb6d20cefcd43009b970fefe20edd"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/context_audit/parent_10.json": {
+   "parent_documents": 1,
+   "sha256": "964285927135ec5597df448e5355b75b6ba65a91a224eec27f36d1f21a321ea3"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/context_audit/parent_13.json": {
+   "parent_documents": 1,
+   "sha256": "ca6df50076018a3f104dde728e6f692ad8df44aa64ebc59ff4926e0f892d5608"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/context_audit/parent_18.json": {
+   "parent_documents": 1,
+   "sha256": "54b9f4017e87d93958a470aeda80b04707fd6e1af2a70717be04ee1332676990"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/context_audit/parent_20.json": {
+   "parent_documents": 1,
+   "sha256": "2721f88c25a07499744b0f743b944e78ad2a4270ad93b49408610e36ce9d41dd"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/context_audit/parent_32.json": {
+   "parent_documents": 1,
+   "sha256": "2609c64988576977d7afacb4d1f49d8518afec1cce067631d79c1ac3d10fef3a"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/context_audit/parent_34.json": {
+   "parent_documents": 1,
+   "sha256": "ab634173c06958b6096ea3cdb02782fb8041938c2691079f2ee7d63f0214a46f"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/context_audit/parent_40.json": {
+   "parent_documents": 1,
+   "sha256": "762990cd4bbef16a8f130d1f6df52e0766fd475222a805c0ae59d321ccc1bd3c"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/context_audit_strict_source_first/parent_10.json": {
+   "parent_documents": 1,
+   "sha256": "958450f6f129112e96279b0f1316e101043c2b48eb4f4e2e7c96b6e6347525ec"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/context_audit_strict_source_first/parent_13.json": {
+   "parent_documents": 1,
+   "sha256": "e7c767175a55e3a041a845a043ba6b41311ba8d4fded5a6749206bc27d43e0f2"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/context_audit_strict_source_first/parent_18.json": {
+   "parent_documents": 1,
+   "sha256": "32a7e7905290f6b288996f4381ca33eaa793aec45cee0bdfdcbe601c20b856ca"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/context_audit_strict_source_first/parent_20.json": {
+   "parent_documents": 1,
+   "sha256": "eeeb1c6ce1e6cfef350e987c1f159c17ae6bb548b41867eb072a66e3ccb46003"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/context_audit_strict_source_first/parent_32.json": {
+   "parent_documents": 1,
+   "sha256": "8e3908799391fea35a558b6eaad702444573e7344aa0a9e5cec0d2f280477ddf"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/context_audit_strict_source_first/parent_34.json": {
+   "parent_documents": 1,
+   "sha256": "3241d43694fbf4fd422e78e0a567d1f6c6a8399316f79b12568b7929436a6613"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/context_audit_strict_source_first/parent_40.json": {
+   "parent_documents": 1,
+   "sha256": "762990cd4bbef16a8f130d1f6df52e0766fd475222a805c0ae59d321ccc1bd3c"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/manifest.json": {
+   "parent_documents": 40,
+   "sha256": "6aa1197028e99445790801dd14ad83d49e299e774c74dcc1759bfd219c51329c"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/seed_audit/parent_01.json": {
+   "parent_documents": 1,
+   "sha256": "00ffa0373f119e236a6d15de4c9964072c215ee56448c51fc7664c766562d1b1"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/seed_audit/parent_02.json": {
+   "parent_documents": 1,
+   "sha256": "ff898c57ac0185f0eb34f67a4d33017d5bae3d55925583697600fa7cc1d48c4e"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/seed_audit/parent_03.json": {
+   "parent_documents": 1,
+   "sha256": "9563fc5e10960d54233eaa1744a3013d0bccb8ab4bef578d0497e5e9cdb03e43"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/seed_audit/parent_04.json": {
+   "parent_documents": 1,
+   "sha256": "4b561bd80b55df52af131b2c004afb9e92497d5a775cfff07068311b59f25601"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/seed_audit/parent_05.json": {
+   "parent_documents": 1,
+   "sha256": "387fd581f9ba5654e021d05ac089e04e475529baee1a47482714e9c541dfe4fd"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/seed_audit/parent_06.json": {
+   "parent_documents": 1,
+   "sha256": "07bb242d116d4d03c1efdaa3ccce00808cdf59701e6dc2bcdc0e9393d2333b8c"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/seed_audit/parent_07.json": {
+   "parent_documents": 1,
+   "sha256": "d308f11d3533d1fdbc6a08517c1b6bcb7a8bbe1a3e902448a5bafab10d82f1d2"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/seed_audit/parent_08.json": {
+   "parent_documents": 1,
+   "sha256": "0975f24cbc288c69f40ed3a91d2141146385643d56395a9951209a7152544baf"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/seed_audit/parent_09.json": {
+   "parent_documents": 1,
+   "sha256": "65febe4c05dde8d3adc8f59b64d57a502404856cf3d1976be646c53655008f55"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/seed_audit/parent_10.json": {
+   "parent_documents": 1,
+   "sha256": "5099c7c81ca9ab7b50eaf31403ddd6127ec0b93913f6ad32121552704e841c5b"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/seed_audit/parent_11.json": {
+   "parent_documents": 1,
+   "sha256": "f2a329cbbf37b868fb443704e38f9206a0c955a28c8331f4ae06cc258fb83cca"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/seed_audit/parent_12.json": {
+   "parent_documents": 1,
+   "sha256": "cd5864cb8d4a639543ab275edfa99108165a8bf2e87aa1ff7f1fc3b40ac65265"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/seed_audit/parent_13.json": {
+   "parent_documents": 1,
+   "sha256": "148b3af2d9bc40e05dfa0ed1b603f987f09dd06d9a2c02ff2bc75bbf94ee0007"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/seed_audit/parent_14.json": {
+   "parent_documents": 1,
+   "sha256": "07630be303f7f0234290ba3902d1e559a0560101c1ab67b1dc60cc1abc56acce"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/seed_audit/parent_15.json": {
+   "parent_documents": 1,
+   "sha256": "0908fc8b233f697a2169c568f149290d339106f1f14e843bc1bd7e212c7b466c"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/seed_audit/parent_16.json": {
+   "parent_documents": 1,
+   "sha256": "525eaaaa4f660f8f12dbbccaaad054b82cf3f875de01d9f7d06dd175861e775b"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/seed_audit/parent_17.json": {
+   "parent_documents": 1,
+   "sha256": "ff97562591dc60feb63474a5eeab72a6e819167058438029ef5b6ef96813fa26"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/seed_audit/parent_18.json": {
+   "parent_documents": 1,
+   "sha256": "23ae18551c57dcfd4e0fd51c40afc5f4f67f285f6c49d99daaf338694b630315"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/seed_audit/parent_19.json": {
+   "parent_documents": 1,
+   "sha256": "66e784e20d6c0680948bdd77ca9460ded5ce51bbf5bc08be60c6345d6d620bf7"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/seed_audit/parent_20.json": {
+   "parent_documents": 1,
+   "sha256": "0ffccecef6e8edb29dea53e6b6a59756ccff2fc0ec0295bb78a49d3fd1d8c372"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/seed_audit/parent_21.json": {
+   "parent_documents": 1,
+   "sha256": "a9503d9b1eeb16e7a44129fc0bcb666abf9aee8b80909da6d4f5fadcd0828438"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/seed_audit/parent_22.json": {
+   "parent_documents": 1,
+   "sha256": "0697b55ee68db03a7f4bc845211c58e99cfed2a773f98dd105587080a9e0182f"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/seed_audit/parent_23.json": {
+   "parent_documents": 1,
+   "sha256": "f78e8c147c2be1bc3f439b45e43ef7bfb5c6459861de89ca4acad1c9482532e5"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/seed_audit/parent_24.json": {
+   "parent_documents": 1,
+   "sha256": "e636248ab918af3a56e57dcd468a996f3ef57a1f1031a78f511d72bc5d62e860"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/seed_audit/parent_25.json": {
+   "parent_documents": 1,
+   "sha256": "87969238491890a2f73c20dac0251fc479b80be211d5d269242a84d0566fab4b"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/seed_audit/parent_26.json": {
+   "parent_documents": 1,
+   "sha256": "dfa606555d438d188ec5714957600c1ff62c82957b1d16f23587878cfd111ecb"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/seed_audit/parent_27.json": {
+   "parent_documents": 1,
+   "sha256": "2a2441e3ecbef80d36fb979965ce6c1a1c6d573ca4fdc3b40c320e8872b54329"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/seed_audit/parent_28.json": {
+   "parent_documents": 1,
+   "sha256": "784a51688b432fd732f60d0631d12151751d5c30373582002f573c6651ff6f44"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/seed_audit/parent_29.json": {
+   "parent_documents": 1,
+   "sha256": "8ed0e9a127e656201683c5242de878c912fda3358b79b208f74a779fb0632d66"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/seed_audit/parent_30.json": {
+   "parent_documents": 1,
+   "sha256": "6fdcec2322b8301eb20c8ba39512d7cced4147f82385ebe586694839a4179429"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/seed_audit/parent_31.json": {
+   "parent_documents": 1,
+   "sha256": "1201ef6eb9c4cb6f9017e8e31be0c249d9a61acb1899137a8cc5a5d8df427dc4"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/seed_audit/parent_32.json": {
+   "parent_documents": 1,
+   "sha256": "c577f2ba3f9c66f0e7302468810aa2a98e06c235fcbfadaa9fd07156dd8a262a"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/seed_audit/parent_33.json": {
+   "parent_documents": 1,
+   "sha256": "0d598d64c150e2a14f5bd40bb39662b5481e7bd0220ba95773aa0aeb0a5fc7b2"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/seed_audit/parent_34.json": {
+   "parent_documents": 1,
+   "sha256": "47c0d0d24efbe3cb73f5b7b7b9a03d36308f8e372e296a5a37c8f26966e5d672"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/seed_audit/parent_35.json": {
+   "parent_documents": 1,
+   "sha256": "5864e77a2e974eab838903afcdecef566d5923526a7af5046219097df3d5d478"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/seed_audit/parent_36.json": {
+   "parent_documents": 1,
+   "sha256": "d2e81d2b5dfdd502c007f403e6fbeca7e240f8d45f89a3274d7510f3b9899816"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/seed_audit/parent_37.json": {
+   "parent_documents": 1,
+   "sha256": "e123faa24527b372243ac3182734a56e803dd95061716bb56557f6fa4efa0f72"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/seed_audit/parent_38.json": {
+   "parent_documents": 1,
+   "sha256": "1328ba5384ed1aa1cc2561f3680986d8338a0e71e781ea88f8579df4dd19b66b"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/seed_audit/parent_39.json": {
+   "parent_documents": 1,
+   "sha256": "d04550471a19dceab7549dfbc96cd0e062f7331191768ed116443ebe509dac8c"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/seed_audit/parent_40.json": {
+   "parent_documents": 1,
+   "sha256": "405752c37f6acf454f217fc8e986d8e7a0bf742decc2e0e820e8e049f361c74c"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/seeded/parent_01.json": {
+   "parent_documents": 1,
+   "sha256": "20193459e75b813823840dfc8b514b87c42a6a102524ff27a501055dfadc3a68"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/seeded/parent_02.json": {
+   "parent_documents": 1,
+   "sha256": "a188375a6af4b9c01515357169e638552226a590e829a1eb404d131c074292a1"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/seeded/parent_03.json": {
+   "parent_documents": 1,
+   "sha256": "760196f0566fb063939120679f06f97afbc6743a2430af75c77f34c1f03dff6b"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/seeded/parent_04.json": {
+   "parent_documents": 1,
+   "sha256": "556895517ae0abe0606e68de070f8e7c2dee3b19d13dfc22dbb23f27650165f7"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/seeded/parent_05.json": {
+   "parent_documents": 1,
+   "sha256": "8ffcc67def8e6b73aea663ff3a52ca896f3b477658e5ca51dc435fb72bddadb1"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/seeded/parent_06.json": {
+   "parent_documents": 1,
+   "sha256": "273267128467f870a3eeeaee0538c0fec8c38bebf5c6a0b6c2de353932ff9fb2"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/seeded/parent_07.json": {
+   "parent_documents": 1,
+   "sha256": "16cf41fbc4407415ed90d9eff2a58af423c5d0752dfe0b0c65b66fdf0dcde55f"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/seeded/parent_08.json": {
+   "parent_documents": 1,
+   "sha256": "977fb2b82a38a833d489c0b61ca61f8747683118e02151054436c401486c9a50"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/seeded/parent_09.json": {
+   "parent_documents": 1,
+   "sha256": "cc5c7441b6b87297ce7782def8b019967a4dfeb50216b28a2cefac4e3f2cf98f"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/seeded/parent_10.json": {
+   "parent_documents": 1,
+   "sha256": "bc74f6c392b57645a7ee620b89b9d01d3bb67f715726e2cfd14b3ac0d02d82c8"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/seeded/parent_11.json": {
+   "parent_documents": 1,
+   "sha256": "69da7effe3687d05f2a635ab193975aae55decc1d879076912750c57bdf0fcdc"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/seeded/parent_12.json": {
+   "parent_documents": 1,
+   "sha256": "0b26d116e8e230ed80230179f04c6d2954ed9e9ed1a4e1bcca8e0395b6b68a68"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/seeded/parent_13.json": {
+   "parent_documents": 1,
+   "sha256": "c7a88c1b548f96c7e971b7eab6c83c435c9db92b763424ec0fd2a096f4dbb22e"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/seeded/parent_14.json": {
+   "parent_documents": 1,
+   "sha256": "d6f136af010906e1ac895a8713278a8d0d2b8ea8dd5d74b62ec457ccc8360798"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/seeded/parent_15.json": {
+   "parent_documents": 1,
+   "sha256": "631aaefd1e926d52377e30fbb385e5c69af3a1931604e954c5187e4f31ead288"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/seeded/parent_16.json": {
+   "parent_documents": 1,
+   "sha256": "6d73461e81b455adf206d350631d77964976aa918b14a95bb75b3a0bda2b1cea"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/seeded/parent_17.json": {
+   "parent_documents": 1,
+   "sha256": "7c4658b5d14aa6f6dcaeafd5dd53db1be9b97651dc4448875a30730a5f2e1da7"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/seeded/parent_18.json": {
+   "parent_documents": 1,
+   "sha256": "b4c7ff8f598cbaf64a5e4df3b439d9ed4be6e7ef63848b2f3fec34cac425a526"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/seeded/parent_19.json": {
+   "parent_documents": 1,
+   "sha256": "f2fce309a82fe55ddcc4405f5e98aa8a3305c93160aa1741ba1ec4d1f6d94608"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/seeded/parent_20.json": {
+   "parent_documents": 1,
+   "sha256": "5499815edb2ecef987ffd56b1298338894ecd6d7e8f90a9228471e26cc701332"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/seeded/parent_21.json": {
+   "parent_documents": 1,
+   "sha256": "86a02ae11c7ff11643d0f70b29d61b0cec12846d8d0dccbc0b6aaec2b2c871e8"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/seeded/parent_22.json": {
+   "parent_documents": 1,
+   "sha256": "1f681bfe3cdabf8f6871988311de3865ab070be2aa8a3ebc436f5ab6219d17a1"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/seeded/parent_23.json": {
+   "parent_documents": 1,
+   "sha256": "5331c146159807dc58be26408c062940fe684123751cabcd36b8b7701b543c4d"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/seeded/parent_24.json": {
+   "parent_documents": 1,
+   "sha256": "e859b3db6e8e818cd24692105be6f942a8029aacd2fca20d11be8135c9078678"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/seeded/parent_25.json": {
+   "parent_documents": 1,
+   "sha256": "8087f57c6a2ad4480364545b1a81a4654f73727a723494dcbc2cd6d9ad7fffb1"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/seeded/parent_26.json": {
+   "parent_documents": 1,
+   "sha256": "1733777083421cc6b8ea197e4e8c8422f52e2af5f12af605350c4bdf7cebb8db"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/seeded/parent_27.json": {
+   "parent_documents": 1,
+   "sha256": "e955a7b3e7b51fd94590bfccce97cea963fc127a965803988236204ad095363a"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/seeded/parent_28.json": {
+   "parent_documents": 1,
+   "sha256": "aa6252869ecd0d3bce0c9e1b792b81927cccda110a2d681c8889b7c1ef26a29c"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/seeded/parent_29.json": {
+   "parent_documents": 1,
+   "sha256": "6d7afaf6790f536c83253582a46e43af514dac56ec0872e816ead29b4251aa64"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/seeded/parent_30.json": {
+   "parent_documents": 1,
+   "sha256": "049705f90f9f3fd73edd435c631f57d87c47c8bf6e20a072e26f4942e4cd90a8"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/seeded/parent_31.json": {
+   "parent_documents": 1,
+   "sha256": "1723476f91a5caeabc26edc09488a8f3a4facf71afcd803d692a35751c7f21b4"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/seeded/parent_32.json": {
+   "parent_documents": 1,
+   "sha256": "83f20dbbb5f81cc8cde351535239eef0a42541f1412b9e8c6bc45ea79cbf29ae"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/seeded/parent_33.json": {
+   "parent_documents": 1,
+   "sha256": "80715bcc872be7a4891af48771241f4dbf3739d7575d20965f43f4f3e76f7034"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/seeded/parent_34.json": {
+   "parent_documents": 1,
+   "sha256": "0864e5a9a388375883b24b9eac68f29e5a5b3feb372a1ea2a7a711cdee99d38e"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/seeded/parent_35.json": {
+   "parent_documents": 1,
+   "sha256": "a3e197920264ebe20abdf29a79f9e2a152d348149a15d7b43624881ec11686b6"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/seeded/parent_36.json": {
+   "parent_documents": 1,
+   "sha256": "fec93cadca98284abc894c40154bc64cbc5d3498a7f7a8691f12174363398ca2"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/seeded/parent_37.json": {
+   "parent_documents": 1,
+   "sha256": "14edb2d1225b3e062b918492595ab0b83b2dbcd6e2edb06e9259a68253727b77"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/seeded/parent_38.json": {
+   "parent_documents": 1,
+   "sha256": "cf09f913843fc6d550d1ce4a61855fc7761b6ff1432cd6f1ffd26528e171583e"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/seeded/parent_39.json": {
+   "parent_documents": 1,
+   "sha256": "e895fea22fcda3dc18ac7fa77d1de79af4945b62fb8d1786460b528ae607027c"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/seeded/parent_40.json": {
+   "parent_documents": 1,
+   "sha256": "7b4031e3b84a7efa684563fe76eae8c3fada2f495e9eeace2fea899fa061e424"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/source/parent_01.json": {
+   "parent_documents": 1,
+   "sha256": "24212b8a2ebb4808aab90d8016a403ccd5d65264df256c3d7d5372f047ede382"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/source/parent_02.json": {
+   "parent_documents": 1,
+   "sha256": "8d2cd663512c8958b1af06d0f0f609582626b055f59e0ca69ca9f0e61973af6c"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/source/parent_03.json": {
+   "parent_documents": 1,
+   "sha256": "1b173a8810e8584807b0e843cce0bda8a1bcdb695df1dab2598c29283365f4ad"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/source/parent_04.json": {
+   "parent_documents": 1,
+   "sha256": "58a870924cb5fe02103df7f92a2447486814f0cd889fbb8b94f5b12cd0d826a2"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/source/parent_05.json": {
+   "parent_documents": 1,
+   "sha256": "a59d599e4136835244f3798b21fcb1a9cd468b553d61cc15859f4656b30d065d"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/source/parent_06.json": {
+   "parent_documents": 1,
+   "sha256": "981b075f0bb2f9b069fe98b261955af99e11c457913c1ecd932289a486d31603"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/source/parent_07.json": {
+   "parent_documents": 1,
+   "sha256": "25b76aac3a219438e0a5fcaf59fb2b43bad68991f30d8a7a394368636dca6903"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/source/parent_08.json": {
+   "parent_documents": 1,
+   "sha256": "afd2d069cf7ce0951a4edddc72fa11306b76704022b5031a297e580703c49476"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/source/parent_09.json": {
+   "parent_documents": 1,
+   "sha256": "f4a92024b9134999f7542eb03cbb2b1f415e6ae7718c7ee4dcc26cfa570f3e24"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/source/parent_10.json": {
+   "parent_documents": 1,
+   "sha256": "fd48989c836ce083e45c3f6f54aca812d3b0c16c8bc4f4418a240dd6df2ed521"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/source/parent_11.json": {
+   "parent_documents": 1,
+   "sha256": "604c73033235bf4d92190ff975fccc38190261c4f6570a055476fd06e262236c"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/source/parent_12.json": {
+   "parent_documents": 1,
+   "sha256": "be22d55f0b31eba5074f5d868bb0cdb7bcbe3a812b72576ed395b43421a6d351"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/source/parent_13.json": {
+   "parent_documents": 1,
+   "sha256": "d186ba616108a7a18487e38287d08af687266b905819ecdc108afe6a56a3338f"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/source/parent_14.json": {
+   "parent_documents": 1,
+   "sha256": "b9e00e3bd04b21a69b769037adb577385caf3b2eb649751f4d64dcb75956e298"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/source/parent_15.json": {
+   "parent_documents": 1,
+   "sha256": "dd2777dd87d8ddc88461e90df26be1164aca18bf51379c0d745ed678dc6056f2"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/source/parent_16.json": {
+   "parent_documents": 1,
+   "sha256": "f734d5c1188095583c2427b27e71793de7bf618a47f0ed8a219125bb298a08ca"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/source/parent_17.json": {
+   "parent_documents": 1,
+   "sha256": "4dd1689925cbc9edba3aa329003ad3d0151b45b0ecdc0deb4a39f099993b4737"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/source/parent_18.json": {
+   "parent_documents": 1,
+   "sha256": "74245f3755d5efac145570f30341a9fee239e5f9704332d23a3055eaf282ac5f"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/source/parent_19.json": {
+   "parent_documents": 1,
+   "sha256": "dd46ffba613fd9ef5c80ca37bb1ff4618e8c6b8cf1eb16a2d80708aa4c5d90c1"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/source/parent_20.json": {
+   "parent_documents": 1,
+   "sha256": "da403014a6ded900426618896cd9138ec096f370ee4e6710868123ac64bac45d"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/source/parent_21.json": {
+   "parent_documents": 1,
+   "sha256": "669c9b6848d58ac4c5898fb6ed5f7b2f7d008ff52fa50784994feecbafe7d82c"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/source/parent_22.json": {
+   "parent_documents": 1,
+   "sha256": "66ada5b284a72ebf6ee63f9359bd75be9e80d9ad8901ea3461f83dbe9443abe8"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/source/parent_23.json": {
+   "parent_documents": 1,
+   "sha256": "658177b8f81ccbfc6f08b403e5b9061d9acdf3a23b9481035da05114471f66e4"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/source/parent_24.json": {
+   "parent_documents": 1,
+   "sha256": "6428ef435d2e19b1f344cc80e7308a0dbf268b1c27e2002b6d3f5e4018a051e2"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/source/parent_25.json": {
+   "parent_documents": 1,
+   "sha256": "5e9d4def098fb943bc0c38248cba20cccd3e70623a7e9aceec41b0b36595b2d7"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/source/parent_26.json": {
+   "parent_documents": 1,
+   "sha256": "9bfb4bda4d54dbdb8e70f39b4c9ea4d9c5441a5e081d49e2f9824427fec396aa"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/source/parent_27.json": {
+   "parent_documents": 1,
+   "sha256": "6cd07033d1233a8c7d9b1e3c6f0b4db122e418a288be5adcda6986b59d17f29e"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/source/parent_28.json": {
+   "parent_documents": 1,
+   "sha256": "09ae43378318143f01c491faa9c14f73f9f21d6d3b868ea252274f60c9b24441"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/source/parent_29.json": {
+   "parent_documents": 1,
+   "sha256": "ec472fc6f2428518a17d4c162041a4b2b52ce77848c98d7399ddb92cd6c7bd89"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/source/parent_30.json": {
+   "parent_documents": 1,
+   "sha256": "82eef67fcd3239d3fca1f4b8a603e0d285c042f773f9920e7fd953481fd578e3"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/source/parent_31.json": {
+   "parent_documents": 1,
+   "sha256": "3b2b1ca728a7cc25ab885854436b457194576e7e2d8e9de7eb34553cd9df6ef1"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/source/parent_32.json": {
+   "parent_documents": 1,
+   "sha256": "dbf681f07bf597c89edacfb436fc64f8433a5c46c87be3843dec185a2832e66a"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/source/parent_33.json": {
+   "parent_documents": 1,
+   "sha256": "4ef702c5dc3d5ed7fdfa0cbbfc140d31b972a1fdf14ea7c8ffe2fe2dbf5d7dbc"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/source/parent_34.json": {
+   "parent_documents": 1,
+   "sha256": "3cd03d89e64cde3e712bc9d28438d03b9f2742c672e410a68e7bb8f72b0d8612"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/source/parent_35.json": {
+   "parent_documents": 1,
+   "sha256": "51c6775ead6b1826c25f3f25076276dc2d454374b36e62fa4045ae9618038d1b"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/source/parent_36.json": {
+   "parent_documents": 1,
+   "sha256": "9ffa0c7ffd7a3ca8743f55640b63d0b17778b21f2eab414ab3148d0735795efc"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/source/parent_37.json": {
+   "parent_documents": 1,
+   "sha256": "e666a9fad53630c7665120d1999a3452b76c18e24939178c68f9a1e8efb25985"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/source/parent_38.json": {
+   "parent_documents": 1,
+   "sha256": "df0297a4e25ee869f413f2dda0d0efae674a277cf937df5fcab6b22967700a81"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/source/parent_39.json": {
+   "parent_documents": 1,
+   "sha256": "526ef1b814518cfb7ddbbabf5768d127bfdbf8cae22a8c5cfce6f810d7d53acf"
+  },
+  "build/private_candidate_endorsement_codex_ai_review_20260914a/source/parent_40.json": {
+   "parent_documents": 1,
+   "sha256": "fcbc0a9547254ce74dc7ee419b341be7330e83027e9659db79a0ec10f82b8c27"
+  },
+  "build/private_candidate_endorsement_codex_context_evaluation_20260914a/disagreements.json": {
+   "parent_documents": 40,
+   "sha256": "d966845f76e643a76532b0162df59c67342317ede625c04be35e4e2c148c0e53"
+  },
+  "build/private_candidate_endorsement_codex_context_evaluation_20260914a/paired_comparison.json": {
+   "parent_documents": 15,
+   "sha256": "ea9e083cba468d9fe4145dbf883f3b9ad26424405af7eab0362305c8daac9d45"
+  },
+  "build/private_candidate_endorsement_codex_context_evaluation_20260914a/provisional_draft.json": {
+   "parent_documents": 40,
+   "sha256": "d3383decb8794f04776312781b4ffb48e6e629473824849e9ae8d1512fe0373b"
+  },
+  "build/private_candidate_endorsement_codex_diagnostic_20260914a/disagreements.json": {
+   "parent_documents": 40,
+   "sha256": "d27c9974771157ff92592329a47cf6f6ca15d12fdc2966b6ff10b038ff258a47"
+  },
+  "build/private_candidate_endorsement_codex_diagnostic_20260914a/evaluator_slot_replay.json": {
+   "parent_documents": 9,
+   "sha256": "c9672deca40003b36fa641b6cd1da78b3acdf37b5747d5d50549114788546c14"
+  },
+  "build/private_candidate_endorsement_codex_diagnostic_20260914a/source_trace.json": {
+   "parent_documents": 18,
+   "sha256": "a66ab703d704295f9e6c559cbcfa707a69440ae1870171d058ed70d7ac3235ab"
+  },
+  "build/private_candidate_endorsement_codex_human_review_20260914a/task.json": {
+   "parent_documents": 40,
+   "sha256": "1c4386709f0045f1f91a8d7638401fdcf3a06d0c615754969c89943365b799d5"
+  },
+  "build/private_candidate_endorsement_codex_source_audit_20260914a/source_context_date_audit.json": {
+   "parent_documents": 40,
+   "sha256": "5fda2f926ad3f1e278d26cb94502a69a6ef87e1cba6da807e93e065011285f04"
+  },
+  "build/private_candidate_endorsement_independent40_ai_coded_review_20260914a/candidate_endorsement_independent40_human_review_20260914a_results.json": {
+   "parent_documents": 40,
+   "sha256": "b3528d39062e3025902828cd8b23b00c709e0295416378de106d43afcb612ecd"
+  },
+  "build/private_candidate_endorsement_independent40_codex_comparison_20260914a/comparison.json": {
+   "parent_documents": 40,
+   "sha256": "255cc66330be5cea1b1b0bb05afe88dcb222247264723e1dba0f82586af99f0a"
+  },
+  "build/private_candidate_endorsement_independent40_codex_comparison_20260914a/private_adjudication_evidence.json": {
+   "parent_documents": 21,
+   "sha256": "ae8ad6153f198ba6d89281cdf6776f9923cf4cfaf6b360d282dba01cec4e6188"
+  },
+  "build/private_candidate_endorsement_independent40_codex_comparison_20260914a/seed_audit_reviewed_reference.json": {
+   "parent_documents": 40,
+   "sha256": "54f3fb130bc1a61e5ec7e23d23303fbe13b0a25bafa0f85a9764b3c630cfb2fe"
+  },
+  "build/private_candidate_endorsement_independent40_codex_review_20260914a/adjudicated/decision_receipt.json": {
+   "parent_documents": 14,
+   "sha256": "cee7a3f1c9d2884406342b57a4d0f4d8525159b782315206385852eb22ae170d"
+  },
+  "build/private_candidate_endorsement_independent40_codex_review_20260914a/adjudicated/parent_04.json": {
+   "parent_documents": 1,
+   "sha256": "07d33d7facb7d0bb256e87fcbd524fe20051442f4ed088e6c460e9e173008928"
+  },
+  "build/private_candidate_endorsement_independent40_codex_review_20260914a/adjudicated/parent_07.json": {
+   "parent_documents": 1,
+   "sha256": "f980d68222958ed1428318945180ade6f1cee7cb56d9659012f35c81a088d31d"
+  },
+  "build/private_candidate_endorsement_independent40_codex_review_20260914a/adjudicated/parent_12.json": {
+   "parent_documents": 1,
+   "sha256": "eefb167d1ccf1c32152261fa70e6489dd74d7db39193aa6fe0d7593f0f170f85"
+  },
+  "build/private_candidate_endorsement_independent40_codex_review_20260914a/adjudicated/parent_14.json": {
+   "parent_documents": 1,
+   "sha256": "6ae679d67b018ad3673e5a12d29fd7be43ba58889263ec58478fa1637fa71972"
+  },
+  "build/private_candidate_endorsement_independent40_codex_review_20260914a/adjudicated/parent_15.json": {
+   "parent_documents": 1,
+   "sha256": "501e25468a5ea83d76859d5c14d7b74f9f31de71a6003c3db462843173841143"
+  },
+  "build/private_candidate_endorsement_independent40_codex_review_20260914a/adjudicated/parent_16.json": {
+   "parent_documents": 1,
+   "sha256": "d6fb721f3d8cd0c7315c66d734a0c42d485a06afc7e019233f1d49ebb6d5c8ca"
+  },
+  "build/private_candidate_endorsement_independent40_codex_review_20260914a/adjudicated/parent_18.json": {
+   "parent_documents": 1,
+   "sha256": "1c12c24fba57559e39f33cf166ffa6e21c1940132edb149a056823d3368c3206"
+  },
+  "build/private_candidate_endorsement_independent40_codex_review_20260914a/adjudicated/parent_20.json": {
+   "parent_documents": 1,
+   "sha256": "116e61fa274567f076b99d062f489ef4558a2c145bff01a408468e14b71ca469"
+  },
+  "build/private_candidate_endorsement_independent40_codex_review_20260914a/adjudicated/parent_21.json": {
+   "parent_documents": 1,
+   "sha256": "ec364c1777d07780a51926478c244d576f28c1635a3b032bce6366068114b5f1"
+  },
+  "build/private_candidate_endorsement_independent40_codex_review_20260914a/adjudicated/parent_27.json": {
+   "parent_documents": 1,
+   "sha256": "2d2ecf4f8fabd452087611a53dfe1f91ebe060f1dab3d5bce35272454c89b254"
+  },
+  "build/private_candidate_endorsement_independent40_codex_review_20260914a/adjudicated/parent_28.json": {
+   "parent_documents": 1,
+   "sha256": "8a5906b2e44d689939dca6c6dda2b7511ef3d93f8bb4fd07ea88fe4a376a8e48"
+  },
+  "build/private_candidate_endorsement_independent40_codex_review_20260914a/adjudicated/parent_31.json": {
+   "parent_documents": 1,
+   "sha256": "6d74c868c9d9aedbf75247dcad489d070acc1fa25b6f1087da8fb8ab46f82b70"
+  },
+  "build/private_candidate_endorsement_independent40_codex_review_20260914a/adjudicated/parent_32.json": {
+   "parent_documents": 1,
+   "sha256": "b134c7c837fdbe9cfe5290f02e68809aa37969f7cf59b802f9c57fd9d145cd41"
+  },
+  "build/private_candidate_endorsement_independent40_codex_review_20260914a/adjudicated/parent_39.json": {
+   "parent_documents": 1,
+   "sha256": "53ba675a7070e33af39957d3283b33438da4096811417d952b8679c0b2887983"
+  },
+  "build/private_candidate_endorsement_independent40_codex_review_20260914a/blind/parent_01.json": {
+   "parent_documents": 1,
+   "sha256": "ce11e59952148a786c86bdb26f8d567b182c8339d7491adc63c823650db7feb4"
+  },
+  "build/private_candidate_endorsement_independent40_codex_review_20260914a/blind/parent_02.json": {
+   "parent_documents": 1,
+   "sha256": "cf40a56daeefdb0903c9e9c4afd78f55c15eedb6e4590737229fbf38bdb9222d"
+  },
+  "build/private_candidate_endorsement_independent40_codex_review_20260914a/blind/parent_03.json": {
+   "parent_documents": 1,
+   "sha256": "32f35482da15c5f6354d3d4dac7a545966508f43cdc593609a919cbc7d66fdd8"
+  },
+  "build/private_candidate_endorsement_independent40_codex_review_20260914a/blind/parent_04.json": {
+   "parent_documents": 1,
+   "sha256": "78c9eb4abbafb74682fa703925dd5205b59ea824dbab3088357d325cf453ffaf"
+  },
+  "build/private_candidate_endorsement_independent40_codex_review_20260914a/blind/parent_05.json": {
+   "parent_documents": 1,
+   "sha256": "613acbac1b955b27d3813a660fd46997798bc5d30b950a9974bd0757a86d6a3b"
+  },
+  "build/private_candidate_endorsement_independent40_codex_review_20260914a/blind/parent_06.json": {
+   "parent_documents": 1,
+   "sha256": "98e52a8c8ded183839fb3b5a5aa50171477037064dd67b6b4642c84aa68a7038"
+  },
+  "build/private_candidate_endorsement_independent40_codex_review_20260914a/blind/parent_07.json": {
+   "parent_documents": 1,
+   "sha256": "ccf942076f6874658fd62d56d63a53380b5bb1bd24d088f4af904c0529e33632"
+  },
+  "build/private_candidate_endorsement_independent40_codex_review_20260914a/blind/parent_08.json": {
+   "parent_documents": 1,
+   "sha256": "2b70c7c61970c7a1e72840d96000fecb167b6d8f498ee203f0ed0c42e8ccf466"
+  },
+  "build/private_candidate_endorsement_independent40_codex_review_20260914a/blind/parent_09.json": {
+   "parent_documents": 1,
+   "sha256": "00b41cda5c2f0e6c01bf2fb4ed727c7fdf871f612af793352c06677f0579ccca"
+  },
+  "build/private_candidate_endorsement_independent40_codex_review_20260914a/blind/parent_10.json": {
+   "parent_documents": 1,
+   "sha256": "42488b2c4af5cc0299c17a8a982319d071d804a43640c37edd8a1fe93c2c742b"
+  },
+  "build/private_candidate_endorsement_independent40_codex_review_20260914a/blind/parent_11.json": {
+   "parent_documents": 1,
+   "sha256": "cdec701aef7edd78b97d5d4c6c24ef93ecceb0615de1a03f01e8fff5804282c6"
+  },
+  "build/private_candidate_endorsement_independent40_codex_review_20260914a/blind/parent_12.json": {
+   "parent_documents": 1,
+   "sha256": "9f7bac56baeb1ba5b62c914d417e7b942fa8276a52fc66036dbfce5cb4f6aca4"
+  },
+  "build/private_candidate_endorsement_independent40_codex_review_20260914a/blind/parent_13.json": {
+   "parent_documents": 1,
+   "sha256": "0e8cd91dadf1d557b38b1d764db854332f58d1471b3a142d4d7976124ac60658"
+  },
+  "build/private_candidate_endorsement_independent40_codex_review_20260914a/blind/parent_14.json": {
+   "parent_documents": 1,
+   "sha256": "103e75c40237b0e38bfe673db8a8012539489d6c1a20426a01e784b036776b6c"
+  },
+  "build/private_candidate_endorsement_independent40_codex_review_20260914a/blind/parent_15.json": {
+   "parent_documents": 1,
+   "sha256": "e20b14ec7aa509b3dc3c7bb2c60990fac75fa66a2360143eeb8acbd350834f27"
+  },
+  "build/private_candidate_endorsement_independent40_codex_review_20260914a/blind/parent_16.json": {
+   "parent_documents": 1,
+   "sha256": "1ad15dbbf9e5037926eff48471bbe4c98006c0d8f4bd7633dac7bdca9ad98080"
+  },
+  "build/private_candidate_endorsement_independent40_codex_review_20260914a/blind/parent_17.json": {
+   "parent_documents": 1,
+   "sha256": "1c38173e0c525ab2f296c55e98a05ecf21d24457f52b934e5b7f90f0f38bce5a"
+  },
+  "build/private_candidate_endorsement_independent40_codex_review_20260914a/blind/parent_18.json": {
+   "parent_documents": 1,
+   "sha256": "b56fdbb77c2bcf0c50d8c99bc250021d92807021fc8ab9afd4eec6b674de1dc4"
+  },
+  "build/private_candidate_endorsement_independent40_codex_review_20260914a/blind/parent_19.json": {
+   "parent_documents": 1,
+   "sha256": "8a495c6951afaa74b05eadba935d7d0aa52edfa5d4efa85a5202c0ce96706236"
+  },
+  "build/private_candidate_endorsement_independent40_codex_review_20260914a/blind/parent_20.json": {
+   "parent_documents": 1,
+   "sha256": "45c87c3221b2d815056025c4c07bb9108425f27362a7e7eeffc92a5a9bef0556"
+  },
+  "build/private_candidate_endorsement_independent40_codex_review_20260914a/blind/parent_21.json": {
+   "parent_documents": 1,
+   "sha256": "79852e25ca7c6843b87483e5085dd3edcbd494c084040bfab9e5bd1bd608ec26"
+  },
+  "build/private_candidate_endorsement_independent40_codex_review_20260914a/blind/parent_22.json": {
+   "parent_documents": 1,
+   "sha256": "1d83633ccba6c8e12e06bafc1a4af878a886f0ce70c3ac4c34b70763cab444dd"
+  },
+  "build/private_candidate_endorsement_independent40_codex_review_20260914a/blind/parent_23.json": {
+   "parent_documents": 1,
+   "sha256": "a91a75f69a1fe21bd101ac8157bc345bd8be28f6dae198d15a368a0deab46002"
+  },
+  "build/private_candidate_endorsement_independent40_codex_review_20260914a/blind/parent_24.json": {
+   "parent_documents": 1,
+   "sha256": "6bc276aae0f0b80056e36c7a53caca284b1c11dbb341f0c057e06378da48e760"
+  },
+  "build/private_candidate_endorsement_independent40_codex_review_20260914a/blind/parent_25.json": {
+   "parent_documents": 1,
+   "sha256": "31191a1e8d37593dc4c21596cd8622b4e675e19ba4cfbfbd42b3f209efe9da72"
+  },
+  "build/private_candidate_endorsement_independent40_codex_review_20260914a/blind/parent_26.json": {
+   "parent_documents": 1,
+   "sha256": "911fd0fa1a670693e57f8d4b76196aaa57a7a21eabf4f52afda91668b7aa307a"
+  },
+  "build/private_candidate_endorsement_independent40_codex_review_20260914a/blind/parent_27.json": {
+   "parent_documents": 1,
+   "sha256": "00a87bfc012e824e848df90a9a8dffc2eae7b831e6454a97a47b38dd7e10dd89"
+  },
+  "build/private_candidate_endorsement_independent40_codex_review_20260914a/blind/parent_28.json": {
+   "parent_documents": 1,
+   "sha256": "549c02942a81bc739f08febc3b446227d7896d15cd415dc03f7d47bcb2c1d337"
+  },
+  "build/private_candidate_endorsement_independent40_codex_review_20260914a/blind/parent_29.json": {
+   "parent_documents": 1,
+   "sha256": "26aa8050099a4f83c75d0234ebfa0a3dc1c6d7ab002ef5d7ca20d6795d3745c0"
+  },
+  "build/private_candidate_endorsement_independent40_codex_review_20260914a/blind/parent_30.json": {
+   "parent_documents": 1,
+   "sha256": "69ab0716aabc49cff31721e539208abe5276fd3336da762ede34fb0472136678"
+  },
+  "build/private_candidate_endorsement_independent40_codex_review_20260914a/blind/parent_31.json": {
+   "parent_documents": 1,
+   "sha256": "eb9c1b9c702aff72f780869beaa420b71c4a96c66fb94166317a0479293ed799"
+  },
+  "build/private_candidate_endorsement_independent40_codex_review_20260914a/blind/parent_32.json": {
+   "parent_documents": 1,
+   "sha256": "5a41c322d044809c4e427d25321f3e72a0423cb04429bafb09eb2caef37c35a2"
+  },
+  "build/private_candidate_endorsement_independent40_codex_review_20260914a/blind/parent_33.json": {
+   "parent_documents": 1,
+   "sha256": "605b7b196af6259b984053d62fac732a1cafeec0ff4fe7084150a918c1975470"
+  },
+  "build/private_candidate_endorsement_independent40_codex_review_20260914a/blind/parent_34.json": {
+   "parent_documents": 1,
+   "sha256": "b6b26d6dc5853d962442f918b0bbe9798d4b688081fd8fd61f58bc63db735db7"
+  },
+  "build/private_candidate_endorsement_independent40_codex_review_20260914a/blind/parent_35.json": {
+   "parent_documents": 1,
+   "sha256": "862b3212f1871415b559de55ef32d674752b26d85034bb07176cc4b78f7da7de"
+  },
+  "build/private_candidate_endorsement_independent40_codex_review_20260914a/blind/parent_36.json": {
+   "parent_documents": 1,
+   "sha256": "2faca701312375bee3868812cae69fa30c6859355a65ea41fdfeb57e5a03c295"
+  },
+  "build/private_candidate_endorsement_independent40_codex_review_20260914a/blind/parent_37.json": {
+   "parent_documents": 1,
+   "sha256": "4ffeead51c9fe0fdf8903d58b54f0011e97f8d7ecae70f9792d0ff914341d8f3"
+  },
+  "build/private_candidate_endorsement_independent40_codex_review_20260914a/blind/parent_38.json": {
+   "parent_documents": 1,
+   "sha256": "dc304335c6c557ef914bbc59fc116e00a06490a81ecf9e0278e8a78aa913966d"
+  },
+  "build/private_candidate_endorsement_independent40_codex_review_20260914a/blind/parent_39.json": {
+   "parent_documents": 1,
+   "sha256": "cc091800def30985635f7a5646bbb197e5dbe47fbffbe5430461534f1dcbc164"
+  },
+  "build/private_candidate_endorsement_independent40_codex_review_20260914a/blind/parent_40.json": {
+   "parent_documents": 1,
+   "sha256": "73be702aedfc12943ea302fc8d13ac54a7749f277eb672cdb47338c2a0b796c3"
+  },
+  "build/private_candidate_endorsement_independent40_codex_review_20260914a/blind_reviewed_reference.json": {
+   "parent_documents": 40,
+   "sha256": "8d6f5dbad5fbd2dc392bc1ad45f0048bad5fac4d9552d5f677e08d293cebcb79"
+  },
+  "build/private_candidate_endorsement_independent40_codex_review_20260914a/final_ai_reference/ai_reviewed_reference.json": {
+   "parent_documents": 40,
+   "sha256": "2ff01fdd64310a46e9fbb7b27c9bfa3b847e8cbcf1e857daf82e775cc45b2473"
+  },
+  "build/private_candidate_endorsement_independent40_codex_review_20260914a/manifest.json": {
+   "parent_documents": 40,
+   "sha256": "3a9261150894e753993719865e18c93c8b60085bc18d233473e073768d33d0d2"
+  },
+  "build/private_candidate_endorsement_independent40_codex_review_20260914a/review_template.json": {
+   "parent_documents": 40,
+   "sha256": "6613d47c56a47555aa6c264a74464d9ee121bface7d71f3ea32d62a861e31e2d"
+  },
+  "build/private_candidate_endorsement_independent40_codex_review_20260914a/seed_audit/parent_01.json": {
+   "parent_documents": 1,
+   "sha256": "afc411998f85c8bb6afb23854b6a3f6135448be863605d2b5a45e8a7ea04c13c"
+  },
+  "build/private_candidate_endorsement_independent40_codex_review_20260914a/seed_audit/parent_02.json": {
+   "parent_documents": 1,
+   "sha256": "69a759b404fe1abf61dacf95b8ace3bc9d7d1ea9d7c7f4283042e1d7d9757def"
+  },
+  "build/private_candidate_endorsement_independent40_codex_review_20260914a/seed_audit/parent_03.json": {
+   "parent_documents": 1,
+   "sha256": "008eb8c5749d5bc1b0ea3596f6891920bf3bdfc12adf869451bcb9a615e4f0de"
+  },
+  "build/private_candidate_endorsement_independent40_codex_review_20260914a/seed_audit/parent_04.json": {
+   "parent_documents": 1,
+   "sha256": "af3688f5fc0e25ab8106ace52db5f90416091331b35c1b647fae12f8010f56a2"
+  },
+  "build/private_candidate_endorsement_independent40_codex_review_20260914a/seed_audit/parent_05.json": {
+   "parent_documents": 1,
+   "sha256": "9d0ce4424c3db1a7b63d9262727e54a7a69b6407f63265bdd3a73e77e065713c"
+  },
+  "build/private_candidate_endorsement_independent40_codex_review_20260914a/seed_audit/parent_06.json": {
+   "parent_documents": 1,
+   "sha256": "fb3e9176f015a040ea3fbff28a583ff61d1bb8ac3c7e3f864903f1c0c284da35"
+  },
+  "build/private_candidate_endorsement_independent40_codex_review_20260914a/seed_audit/parent_07.json": {
+   "parent_documents": 1,
+   "sha256": "94951d1506a0b454d26d95dd114c650bd5ead8065d52651f28c534e5f0b75145"
+  },
+  "build/private_candidate_endorsement_independent40_codex_review_20260914a/seed_audit/parent_08.json": {
+   "parent_documents": 1,
+   "sha256": "58b8f0d2b8daf68cbdd05b7b41132eff4e35ed52ffe69fed9975cf91b3716e65"
+  },
+  "build/private_candidate_endorsement_independent40_codex_review_20260914a/seed_audit/parent_09.json": {
+   "parent_documents": 1,
+   "sha256": "0ba3324ba6885dcde344db5ed6f4ba9b469ce4273a45cf77fa8fa4e305eb1c50"
+  },
+  "build/private_candidate_endorsement_independent40_codex_review_20260914a/seed_audit/parent_10.json": {
+   "parent_documents": 1,
+   "sha256": "d917235ff8f371deb65c864237b93bd1c944012fa0866fb6699d304504590314"
+  },
+  "build/private_candidate_endorsement_independent40_codex_review_20260914a/seed_audit/parent_11.json": {
+   "parent_documents": 1,
+   "sha256": "7792f6baa129341113ce03497b88f77d7a5028e41f47e94f37a11e7bc75bee96"
+  },
+  "build/private_candidate_endorsement_independent40_codex_review_20260914a/seed_audit/parent_12.json": {
+   "parent_documents": 1,
+   "sha256": "bf37b933feb656cb33a8ddbe90be470f8b0cc911dd04e851d309c1fb647b4ccc"
+  },
+  "build/private_candidate_endorsement_independent40_codex_review_20260914a/seed_audit/parent_13.json": {
+   "parent_documents": 1,
+   "sha256": "aa9f194714a1008064c6540343c9cec952f7b896dfac22fab7626750e9e00dd4"
+  },
+  "build/private_candidate_endorsement_independent40_codex_review_20260914a/seed_audit/parent_14.json": {
+   "parent_documents": 1,
+   "sha256": "92e8e467587a90366e4f145c775329b20fb58b4bc036b92294ab320a9348eb96"
+  },
+  "build/private_candidate_endorsement_independent40_codex_review_20260914a/seed_audit/parent_15.json": {
+   "parent_documents": 1,
+   "sha256": "fa1b809a4ebd57a8d850c42e6bfb3d19ec399ab2f28cd0d5c91d2a16b17c1bd8"
+  },
+  "build/private_candidate_endorsement_independent40_codex_review_20260914a/seed_audit/parent_16.json": {
+   "parent_documents": 1,
+   "sha256": "f5ee14f74cdde4a73f23b810b43cf43aa79cbce1b0de345b81b3f08201c3dc62"
+  },
+  "build/private_candidate_endorsement_independent40_codex_review_20260914a/seed_audit/parent_17.json": {
+   "parent_documents": 1,
+   "sha256": "b7a300c032b58fc423e56c74d7af941718afe4f34764a6ec58b8c422f1673095"
+  },
+  "build/private_candidate_endorsement_independent40_codex_review_20260914a/seed_audit/parent_18.json": {
+   "parent_documents": 1,
+   "sha256": "10570a06e61781ae4bc27e9e9b030e981dbc0e81309e2f4ddd1e7ddec2520888"
+  },
+  "build/private_candidate_endorsement_independent40_codex_review_20260914a/seed_audit/parent_19.json": {
+   "parent_documents": 1,
+   "sha256": "16973827c418abcc47dd76af23f1ed88c31cb3e803d4938c9a647ee662444520"
+  },
+  "build/private_candidate_endorsement_independent40_codex_review_20260914a/seed_audit/parent_20.json": {
+   "parent_documents": 1,
+   "sha256": "2d47d805eb93592ac7031361aca9426fe03b8153ce933c1cfc5ebc7370ae8619"
+  },
+  "build/private_candidate_endorsement_independent40_codex_review_20260914a/seed_audit/parent_21.json": {
+   "parent_documents": 1,
+   "sha256": "471578f099a6929747e4b7e89ce7d02f13d00ea41d620f4d9bb86fa0699c3c3c"
+  },
+  "build/private_candidate_endorsement_independent40_codex_review_20260914a/seed_audit/parent_22.json": {
+   "parent_documents": 1,
+   "sha256": "2c3a44b200997762c88412dc9715aefde26c8664ce38679f25f5d34e7eeebff0"
+  },
+  "build/private_candidate_endorsement_independent40_codex_review_20260914a/seed_audit/parent_23.json": {
+   "parent_documents": 1,
+   "sha256": "65fd8a40573440b7f90f4a058e8b20fcc3d73465fc6cbe1ff40e58d1334210f7"
+  },
+  "build/private_candidate_endorsement_independent40_codex_review_20260914a/seed_audit/parent_24.json": {
+   "parent_documents": 1,
+   "sha256": "3b6668833029260ef00054b1349a3181452fed34c88c2d601d6f1131f1eb31c6"
+  },
+  "build/private_candidate_endorsement_independent40_codex_review_20260914a/seed_audit/parent_25.json": {
+   "parent_documents": 1,
+   "sha256": "cbd85d0842642278da1d6c7c71cb326563d0be2169bb284fc1f1c58cd13a80f7"
+  },
+  "build/private_candidate_endorsement_independent40_codex_review_20260914a/seed_audit/parent_26.json": {
+   "parent_documents": 1,
+   "sha256": "9aaaac18f04897ea3326ddd3ed880e6bf6f53f4671eff362cce87082d0348866"
+  },
+  "build/private_candidate_endorsement_independent40_codex_review_20260914a/seed_audit/parent_27.json": {
+   "parent_documents": 1,
+   "sha256": "1effda69db177aea35fd61405296d608e066995ba7dcb5ffada07093ad5a6981"
+  },
+  "build/private_candidate_endorsement_independent40_codex_review_20260914a/seed_audit/parent_28.json": {
+   "parent_documents": 1,
+   "sha256": "31cb65e5fa1f46a6cae073ca1f0b1bfdd811acb98d545dac677c4ccd0cd75724"
+  },
+  "build/private_candidate_endorsement_independent40_codex_review_20260914a/seed_audit/parent_29.json": {
+   "parent_documents": 1,
+   "sha256": "7d0f031b3174097a2ed01b9afdfa30131335c158e8b89c4f21983bec36b79990"
+  },
+  "build/private_candidate_endorsement_independent40_codex_review_20260914a/seed_audit/parent_30.json": {
+   "parent_documents": 1,
+   "sha256": "462b8ae51be964fb1c078431018bd9bcadb6a179afc0a0a5b387db7d6cf09a7c"
+  },
+  "build/private_candidate_endorsement_independent40_codex_review_20260914a/seed_audit/parent_31.json": {
+   "parent_documents": 1,
+   "sha256": "2a48ef2a8246969535bdd6447933afbc68bfcbc65e31347d22eae362249f9dea"
+  },
+  "build/private_candidate_endorsement_independent40_codex_review_20260914a/seed_audit/parent_32.json": {
+   "parent_documents": 1,
+   "sha256": "8ba9b8742c046e586862b93ff1e091472d94738178ecb19d24ef6724e98d1e88"
+  },
+  "build/private_candidate_endorsement_independent40_codex_review_20260914a/seed_audit/parent_33.json": {
+   "parent_documents": 1,
+   "sha256": "f821c7ed6a5b7c31d34e4dda21eef52510041f966ae9054dbb89a613f51ab394"
+  },
+  "build/private_candidate_endorsement_independent40_codex_review_20260914a/seed_audit/parent_34.json": {
+   "parent_documents": 1,
+   "sha256": "ca08bfa0a5503b31b8ade72983b074fabf5b2d6958f6d679a3d8f2574f384de5"
+  },
+  "build/private_candidate_endorsement_independent40_codex_review_20260914a/seed_audit/parent_35.json": {
+   "parent_documents": 1,
+   "sha256": "0a050a249dfbf3037ff3d8d70d73a009ac1e708fa9521993924c077afd6a44bb"
+  },
+  "build/private_candidate_endorsement_independent40_codex_review_20260914a/seed_audit/parent_36.json": {
+   "parent_documents": 1,
+   "sha256": "7c5b4d8fed7026b578470a953b0185372368e09a00b6c2012d60bfdf51aa0992"
+  },
+  "build/private_candidate_endorsement_independent40_codex_review_20260914a/seed_audit/parent_37.json": {
+   "parent_documents": 1,
+   "sha256": "87921a88e30e5b9a4ae59bff0e51a6a8839de49b157412c2824c7bdeac5525da"
+  },
+  "build/private_candidate_endorsement_independent40_codex_review_20260914a/seed_audit/parent_38.json": {
+   "parent_documents": 1,
+   "sha256": "c1b1624feaa1a775b882945b97a3e94f95104986dfa05c4ea2cc8d9bdd007f26"
+  },
+  "build/private_candidate_endorsement_independent40_codex_review_20260914a/seed_audit/parent_39.json": {
+   "parent_documents": 1,
+   "sha256": "b0d6b73f25bc69773bd336c6a5606374a40e4dfb0e5ffbf879ae613cd5227375"
+  },
+  "build/private_candidate_endorsement_independent40_codex_review_20260914a/seed_audit/parent_40.json": {
+   "parent_documents": 1,
+   "sha256": "36223b3dc209441aa1db1a6d76b2e2ab730a467e50d2ac27b1d5dc12fe12b412"
+  },
+  "build/private_candidate_endorsement_independent40_codex_review_20260914a/source/parent_01.json": {
+   "parent_documents": 1,
+   "sha256": "ce0cc7da00142ed9fff31da2f4d1b00f7831ec04eeaecfe30171a9ba0ade7184"
+  },
+  "build/private_candidate_endorsement_independent40_codex_review_20260914a/source/parent_02.json": {
+   "parent_documents": 1,
+   "sha256": "4bc7412f7b706e3fc7ffa568e9245eba714a759042f5138d38e2c713b3750b35"
+  },
+  "build/private_candidate_endorsement_independent40_codex_review_20260914a/source/parent_03.json": {
+   "parent_documents": 1,
+   "sha256": "8fe897a2ac082bcd608d457a76e41337386c639e0eeb09f2497e29d9aa38014e"
+  },
+  "build/private_candidate_endorsement_independent40_codex_review_20260914a/source/parent_04.json": {
+   "parent_documents": 1,
+   "sha256": "994462bfaa687fa41048ca0f3d2785d1e3eea0ff2ac37a7617bbd642a2e6834b"
+  },
+  "build/private_candidate_endorsement_independent40_codex_review_20260914a/source/parent_05.json": {
+   "parent_documents": 1,
+   "sha256": "736fcefa989e625c37676bb3466c407b0e22ebefc596c3f64aea59aeb9134826"
+  },
+  "build/private_candidate_endorsement_independent40_codex_review_20260914a/source/parent_06.json": {
+   "parent_documents": 1,
+   "sha256": "b122c066c23af6bac44f32f1278ae68f44298b119b781dfbdc0f5f3574ce54e3"
+  },
+  "build/private_candidate_endorsement_independent40_codex_review_20260914a/source/parent_07.json": {
+   "parent_documents": 1,
+   "sha256": "fb298c360d4f339abee01d4234dc3652e7548acf1b146b992f672005f2bc7383"
+  },
+  "build/private_candidate_endorsement_independent40_codex_review_20260914a/source/parent_08.json": {
+   "parent_documents": 1,
+   "sha256": "eb66e9356e94169cd3548b92dafc661fd6b7c53195acc06a7aa0c233906de691"
+  },
+  "build/private_candidate_endorsement_independent40_codex_review_20260914a/source/parent_09.json": {
+   "parent_documents": 1,
+   "sha256": "4d31f8170d1a3d3f74dd6a50c11dcedef3a94c2aca7ba2a811c9717a05b9f961"
+  },
+  "build/private_candidate_endorsement_independent40_codex_review_20260914a/source/parent_10.json": {
+   "parent_documents": 1,
+   "sha256": "99f795554944b6a7ea8bfe501ec77b835ff3799bf646575a26f823cc79a4b1b1"
+  },
+  "build/private_candidate_endorsement_independent40_codex_review_20260914a/source/parent_11.json": {
+   "parent_documents": 1,
+   "sha256": "2b002de36e5de96002ec5b5e42452454338744f80fd69853653f37d9969b1057"
+  },
+  "build/private_candidate_endorsement_independent40_codex_review_20260914a/source/parent_12.json": {
+   "parent_documents": 1,
+   "sha256": "38536aa8cb807ca29fc25456bcd96bcfdb09dd4a682063c5171ed751ea31550f"
+  },
+  "build/private_candidate_endorsement_independent40_codex_review_20260914a/source/parent_13.json": {
+   "parent_documents": 1,
+   "sha256": "cce03a47a8aa9cb858e53a478982414ee385d21e5aca596c4ee69708767b6f50"
+  },
+  "build/private_candidate_endorsement_independent40_codex_review_20260914a/source/parent_14.json": {
+   "parent_documents": 1,
+   "sha256": "d9cb59d8d3d7d5b42b2523474676f336ef3c86f052a9be77a1bd8cf75d86c4db"
+  },
+  "build/private_candidate_endorsement_independent40_codex_review_20260914a/source/parent_15.json": {
+   "parent_documents": 1,
+   "sha256": "7104c6cded39fdd6d688ecce0ee8de64523029e639d9bda5663b5ee90d76eb4d"
+  },
+  "build/private_candidate_endorsement_independent40_codex_review_20260914a/source/parent_16.json": {
+   "parent_documents": 1,
+   "sha256": "e34954a6d0e4346ac6bff488acfcf6709949b36acc3f527edffb979e8e678d8e"
+  },
+  "build/private_candidate_endorsement_independent40_codex_review_20260914a/source/parent_17.json": {
+   "parent_documents": 1,
+   "sha256": "1759ceed61bd0b02aa5ed8ee95de3872ff197bab74ea47493fa64fe64aae268e"
+  },
+  "build/private_candidate_endorsement_independent40_codex_review_20260914a/source/parent_18.json": {
+   "parent_documents": 1,
+   "sha256": "944c3884717d469e61ce76986128ac7a338caccb44868de100369b5b6c182fbf"
+  },
+  "build/private_candidate_endorsement_independent40_codex_review_20260914a/source/parent_19.json": {
+   "parent_documents": 1,
+   "sha256": "226061d1be494415364b6bdf27825dfd5eda419453544c46df529ef199a67bd2"
+  },
+  "build/private_candidate_endorsement_independent40_codex_review_20260914a/source/parent_20.json": {
+   "parent_documents": 1,
+   "sha256": "a9e155465cecbc620cb41eac0f40d973cecb3deefa8b4cafc66181d5dca3bdb3"
+  },
+  "build/private_candidate_endorsement_independent40_codex_review_20260914a/source/parent_21.json": {
+   "parent_documents": 1,
+   "sha256": "8175c8b3b02e66eb51644395fb0098af0ec059a851778e7893e35fc045de38f8"
+  },
+  "build/private_candidate_endorsement_independent40_codex_review_20260914a/source/parent_22.json": {
+   "parent_documents": 1,
+   "sha256": "d93c590ef303d427661561c991ce7715590bce0ebec386df396636ef3ce66077"
+  },
+  "build/private_candidate_endorsement_independent40_codex_review_20260914a/source/parent_23.json": {
+   "parent_documents": 1,
+   "sha256": "539dfe811ae7e59e0b8712d1e4371d0f9a7d3b9d9bb1f637ec1892e06ec464c2"
+  },
+  "build/private_candidate_endorsement_independent40_codex_review_20260914a/source/parent_24.json": {
+   "parent_documents": 1,
+   "sha256": "4d2d2a251b1e8b2d6e40143697156a20a7e43abee3d506893dbcf78b05cfff1b"
+  },
+  "build/private_candidate_endorsement_independent40_codex_review_20260914a/source/parent_25.json": {
+   "parent_documents": 1,
+   "sha256": "2319a454379dbb33bd521ff7a4b4e66aa97305f5d6dd762d60c3d8eeb957a335"
+  },
+  "build/private_candidate_endorsement_independent40_codex_review_20260914a/source/parent_26.json": {
+   "parent_documents": 1,
+   "sha256": "41f998c361aacfc4afc9e4fbc7c4b7e772ab85691bc725a012f86942f9952415"
+  },
+  "build/private_candidate_endorsement_independent40_codex_review_20260914a/source/parent_27.json": {
+   "parent_documents": 1,
+   "sha256": "140d6c413a284e815ca1aa3c00f681a66e2bbb720a39987bd74a4b513101b5ca"
+  },
+  "build/private_candidate_endorsement_independent40_codex_review_20260914a/source/parent_28.json": {
+   "parent_documents": 1,
+   "sha256": "c19bff4a08665025ca336dd0ef3c027706249db0b80fb10300749587beb3b09f"
+  },
+  "build/private_candidate_endorsement_independent40_codex_review_20260914a/source/parent_29.json": {
+   "parent_documents": 1,
+   "sha256": "448f7d55fbd191bc0c5b0f080078dfe4db8e3143cb62b8eb9b67f356a18354d4"
+  },
+  "build/private_candidate_endorsement_independent40_codex_review_20260914a/source/parent_30.json": {
+   "parent_documents": 1,
+   "sha256": "cb60ad71eeb4d60c86d740347f8ece98b1757c13642941ac8fcc456551c3ed07"
+  },
+  "build/private_candidate_endorsement_independent40_codex_review_20260914a/source/parent_31.json": {
+   "parent_documents": 1,
+   "sha256": "8b16fc101e26b0712ef82d75dd363e94fc1c2d63f2fc5e7051c435d27d8d7149"
+  },
+  "build/private_candidate_endorsement_independent40_codex_review_20260914a/source/parent_32.json": {
+   "parent_documents": 1,
+   "sha256": "0d1093d3ea04ecd557c01a9903ad9c063655aa34b9a7a8238d37fc27244a9f89"
+  },
+  "build/private_candidate_endorsement_independent40_codex_review_20260914a/source/parent_33.json": {
+   "parent_documents": 1,
+   "sha256": "be55599dfb5f95ff6cce794ca348a79db29bfe7b9a64e581cffe29692b124f56"
+  },
+  "build/private_candidate_endorsement_independent40_codex_review_20260914a/source/parent_34.json": {
+   "parent_documents": 1,
+   "sha256": "5472ce71cdc47607c09b088c0aeea9fe8c89dfe6a2f476675f9afdc9ee3c286f"
+  },
+  "build/private_candidate_endorsement_independent40_codex_review_20260914a/source/parent_35.json": {
+   "parent_documents": 1,
+   "sha256": "2d2a86884bf75e01a91002502e47b7a2466b7d7158a9194cc55458cf24404cbb"
+  },
+  "build/private_candidate_endorsement_independent40_codex_review_20260914a/source/parent_36.json": {
+   "parent_documents": 1,
+   "sha256": "afa491273469dcca2447cbb93ef6f5f94c34ac4e9aa30363f37959e11a9b724d"
+  },
+  "build/private_candidate_endorsement_independent40_codex_review_20260914a/source/parent_37.json": {
+   "parent_documents": 1,
+   "sha256": "502a4c3317dbdb37a56caaf5fd6e008955d4c648a6f27432ca7a67fce51bbba8"
+  },
+  "build/private_candidate_endorsement_independent40_codex_review_20260914a/source/parent_38.json": {
+   "parent_documents": 1,
+   "sha256": "a4d08705e2eb15e314b8be6b2a19b15087246f02f799290e4b90a68398c5facd"
+  },
+  "build/private_candidate_endorsement_independent40_codex_review_20260914a/source/parent_39.json": {
+   "parent_documents": 1,
+   "sha256": "543d308a5e5e681f82bf5177b8d82ff99884ce2043310bb8679649b256c194c0"
+  },
+  "build/private_candidate_endorsement_independent40_codex_review_20260914a/source/parent_40.json": {
+   "parent_documents": 1,
+   "sha256": "5687eda4b0930aab52c3cd8a588489a77f937464b969b129708237e9d4c4cb8e"
+  },
+  "build/private_candidate_endorsement_independent40_evaluation_20260914a/private_disagreements.json": {
+   "parent_documents": 40,
+   "sha256": "6d3a22aa67c344c6de282c78cd39715dc7a785e3030f54a327fa6deebdfc58be"
+  },
+  "build/private_candidate_endorsement_independent40_human_review_20260914a/task.json": {
+   "parent_documents": 40,
+   "sha256": "e0320a3551455d0fb4c267fac671d92ef235792f2944509acfcd0417406aa0be"
+  },
+  "build/private_candidate_endorsement_independent40_model_review_20260914a/provisional_conversion_report.json": {
+   "parent_documents": 16,
+   "sha256": "e33eee9d3f5d7d65681683b4570a489bda917ccb7285fdc00f4721cfca8af22a"
+  },
+  "build/private_candidate_endorsement_independent40_model_review_20260914a/provisional_draft.json": {
+   "parent_documents": 40,
+   "sha256": "3d763f659f67bdf5acac45de3ee67bee731457927c11aef4b35a2a8cc00d2bc1"
+  },
+  "build/private_candidate_endorsement_independent40_model_review_20260914a/task.json": {
+   "parent_documents": 40,
+   "sha256": "483f88f4bbb557c9252990cff9192afd2e5cabe6aa34b8d97358c6d6dfada1e5"
+  },
+  "build/private_candidate_endorsement_independent40_selection_20260914a/selected_sources.json": {
+   "parent_documents": 40,
+   "sha256": "f487dd6137f4235abfeae15333684aa804687d9666f2c8112623fb78ff44cf3e"
+  },
+  "build/private_candidate_endorsement_independent40_selection_20260914a/selection.json": {
+   "parent_documents": 40,
+   "sha256": "33e81123f6318e2cbcbd3f3f8cd02899111d574de3911a314495073cf45257f6"
+  },
+  "build/private_candidate_endorsement_recall40_human_truth_20260828/results.json": {
+   "parent_documents": 40,
+   "sha256": "0192339258ad40cd8b5b341c16c236e2222c5d014def2a7e4744e09041fb76db"
+  },
+  "build/private_candidate_endorsement_recall40_human_truth_20260828/task.json": {
+   "parent_documents": 40,
+   "sha256": "d7b216398e8e72c8de76c526a78112f70a77933aa94d5794e85bf4f4114e90db"
+  },
+  "build/private_candidate_endorsement_recall40_name_truth_amendment_20260906a/artifact/task.json": {
+   "parent_documents": 40,
+   "sha256": "dc1662798e7a676a9e8ec1281b5e0b6976286435c1564ac4e092cefcb550a83e"
+  },
+  "build/private_candidate_endorsement_recall40_name_truth_amendment_20260906a/results_ai_coded_draft.json": {
+   "parent_documents": 40,
+   "sha256": "1b461c191c1a8394c54f0f66f6bed56e9da5ced84fb8777a3aa0e2d4169f4c6d"
+  },
+  "build/private_candidate_endorsement_recall40_round2_a3_20260901/task.json": {
+   "parent_documents": 2,
+   "sha256": "cabbbf52640151a809e7fc614474025861bf2448bed97cfce3f98e5ac69f0f36"
+  },
+  "build/private_candidate_endorsement_recall40_round2_human_truth_20260905/results.json": {
+   "parent_documents": 40,
+   "sha256": "08d29d93b554d38c3687bdc1831595af4fe8ec334ffe757dadfe979fd1d51d54"
+  },
+  "build/private_candidate_endorsement_recall40_round2_human_truth_20260905/task.json": {
+   "parent_documents": 40,
+   "sha256": "d7a5b3ca8c94c6ffda185fdc9e62b5f2f6af844a20c3ef70e28508ac2a121f03"
+  },
+  "build/private_candidate_endorsement_recall40_round2_selection_20260901/selection.json": {
+   "parent_documents": 40,
+   "sha256": "cda7d58561c439aee65dbb4be391c6c9edcbc86a7209625512bf12c619cebdac"
+  },
+  "build/private_candidate_endorsement_recall40_round3_ai_first_cut_20260907a/disagreements.json": {
+   "parent_documents": 18,
+   "sha256": "709a36f853cb0478fc6336ae9b244d4b44a3c1bc4f89ea1ebeb3a8a92170fee9"
+  },
+  "build/private_candidate_endorsement_recall40_round3_ai_first_cut_20260907b/disagreements.json": {
+   "parent_documents": 18,
+   "sha256": "709a36f853cb0478fc6336ae9b244d4b44a3c1bc4f89ea1ebeb3a8a92170fee9"
+  },
+  "build/private_candidate_endorsement_recall40_round4_human_review_20260907a/provisional_conversion_report.json": {
+   "parent_documents": 13,
+   "sha256": "5c4afc20b9020208678a56e47ee7cd58476a22e611d673fdf125d67423b4a737"
+  },
+  "build/private_candidate_endorsement_recall40_round4_human_review_20260907a/provisional_draft.json": {
+   "parent_documents": 40,
+   "sha256": "80cf8c4d0ae0bd9677414af52b4bbe51fdbc268e6f61dc8ad63b5c75b222d780"
+  },
+  "build/private_candidate_endorsement_recall40_round4_human_review_20260907a/task.json": {
+   "parent_documents": 40,
+   "sha256": "c92cb24a4c692f839f009b40f4be898e729db669da4c2e11e25fdec53fd195ea"
+  },
+  "build/private_candidate_endorsement_recall40_round4_human_review_20260907b/provisional_conversion_report.json": {
+   "parent_documents": 13,
+   "sha256": "5c4afc20b9020208678a56e47ee7cd58476a22e611d673fdf125d67423b4a737"
+  },
+  "build/private_candidate_endorsement_recall40_round4_human_review_20260907b/provisional_draft.json": {
+   "parent_documents": 40,
+   "sha256": "80cf8c4d0ae0bd9677414af52b4bbe51fdbc268e6f61dc8ad63b5c75b222d780"
+  },
+  "build/private_candidate_endorsement_recall40_round4_human_review_20260907b/task.json": {
+   "parent_documents": 40,
+   "sha256": "c92cb24a4c692f839f009b40f4be898e729db669da4c2e11e25fdec53fd195ea"
+  },
+  "build/private_candidate_endorsement_recall40_round4_stage_b_regression_20260907a/disagreements.json": {
+   "parent_documents": 18,
+   "sha256": "f33b446dfaf6cee2ca4087adedc5cc1e1468ddd0ef020f579efd7e88a9dd7f15"
+  },
+  "build/private_candidate_endorsement_recall40_sample_round3_selection_20260907/selection.json": {
+   "parent_documents": 40,
+   "sha256": "c39c3a9d6a733740b842911c1666fe4f567aaae6bf8e25dba29fdab339527792"
+  },
+  "build/private_candidate_endorsement_recall40_sample_round3_selection_20260907b/selection.json": {
+   "parent_documents": 40,
+   "sha256": "e41cd15f3c17660588710642b1a0f82bf82e9473097c285377ba4e30bee84300"
+  },
+  "validation/accuracy_check_2026-09-18/candidate_extraction_accuracy_2026_09_18.task.json": {
+   "parent_documents": 97,
+   "sha256": "f9075a9049c19e46f29aace025edac286fc1b3f2f09ed42cb42122a8e3f95abc"
+  }
+ },
+ "parent_document_count": 368,
+ "parent_document_ids": [
+  "00e64d898621b11757352dcb3efb2b652b35f93aeddced1b17ea8f989d8bb319",
+  "00f6117c087946ca8bcec4309627ce651213d49fd639cd927bd7d7ca3817bb67",
+  "020f5b6c094ffd4d3adec893370b655d2fc71e85abf25422e3113deae8b69486",
+  "02e8e47cd7ac17cd3ef6c225235c547195c5ca78e23e0cfa96cea3602dbcd979",
+  "03086638dbc782a957ed416dfea20d1981ecf4d393e537c274a8931f52090174",
+  "030e79b7bcb253ece259dd733cc46f96a9b743ef830f4d1320da834ca14e226b",
+  "05b9f4677a27f7a0978bd1576e7b7d148058352b4587f61f9b0d1a3ecd90dcc7",
+  "05f73bd8cb9a81434ac82efd28bc599bb813aa92ff1cb4a5caea676bfd3c7b34",
+  "071d38abec415b23a50ca9e1b3a882189d4bdede48f27528db7fa1220fa364ad",
+  "07881e9ed5ffa5d4ffd691803f148006481f6664b31dfcc5373b37e03eb5819b",
+  "08855bdb42dd6e2394ea1f8a9aa321460192b07a6448405f7e2d746bceced2b2",
+  "08aaa9adc08123135423f8fedbf9967fec3b0504ba40b347c5e0f7d2fdc60517",
+  "09a55912d2e29316ba6ead9187515095760442de039d745d18c173b2b27d3baa",
+  "0a2931e270c00c0038f9b13624aa09b68482305d21ff8f489b5b7189ec698b60",
+  "0aa1c3c0597429501bd875a437a974ea6a326e980215aacc7d1b41841e418d2a",
+  "0aabab91b5de94ac743dae4db6112e3c508624d752e4fcfb29672a1166f3a9a0",
+  "0d21d89a15924a76af6748f0bab278145712e78dc6aa9a594c783bb97342288b",
+  "0d91f949e45269599fe92cd8e2e4dc1bef90880bf1f34ef5f2e01420db81c8a8",
+  "0f1cb69da5c80b5e3eda43da128c1190b9d97e319d6b416e105c3f3cc97d0898",
+  "108baa434254591bc54360f337f04a490cc9938cd730f552eaeb229f9972d6d6",
+  "10f46d0c8d77862e47936fc59481164365bd89b38c01f36ccbf3777f5304448f",
+  "117bff7ad9e7250224f5502792df01bfc860e9bf5d9a9640f1697a2136d995f6",
+  "11b1bd11a67d19259c20d3c591a5c08ec65a44ce8eb97b12eb2541f5326ff14e",
+  "123f591704671f2bec6c758fc2f09fd1e3b515bcbc5109a33a1dff8cccb092e0",
+  "1291fb9c9a2a32c1101affcadd49f76931f4be96298b3636ffe02a58c5280b5e",
+  "13ba48a6b168753c180c61ba0955561e64eddd24babd71246efebe597bb4403c",
+  "13cfc7a659610aac46b7e2d63a49e75d4aab5ed965a8ab66425dcced366dd2ea",
+  "13da3bba8fba57a352c76e3e0e482c57e3fea7395f18239abd4924a37c6c4e69",
+  "13de7ab31ce466b61a4237ff645314926b70b5f21f2162d38d66474f15ab02f2",
+  "148b23a0e18c236dbb0a060e64b670340251415595626debb09180cd6e80c114",
+  "14f0fcb716cce478151a8da063758fb868380506de193f0457438882b606b329",
+  "15cccf56917802ca00f268762544d1e1a451e8113a3839e73d29fb900054588b",
+  "167be6a3f1849afe47ec9e4b94f0c7e86d311635d24c53ba1777648cd94d2989",
+  "1789169e82870c8c4493b227af5a4f068e430a31172edf1b7588041455333907",
+  "18b3ddf303fe63f39172aaec9f7197d59b00a4f5c058d85930e57ed977cc1db9",
+  "19fe22eb337b09ffb898bf94611c76f7f370f223ebf701c4c2c545cc7979eb9e",
+  "1ad6e9ce9ecd391d78418f3f07db6bbf1ceb8df0b996cd61d1bdee68224f4f42",
+  "1b4f1b7e93f02d13de77e3aa7ea28a59863ca30e398c32a77aabbaacd823bb31",
+  "1b6592de69e0e8a036392fb202f1e1877f2882875210a6f6d75ed6c044c696b0",
+  "1b8f20300dea2fa8c1cb4680de5d42a656d6e38bb43a010d43ccd98a0d998e41",
+  "1cf712573128dcd64fc8815e1f94e6495453df6b01d69703c07828e58349b0ee",
+  "1d068bcac6a44e4eb94deea018014f742e2c1c4ace3ff96ccf1f9ef52a073129",
+  "1e06e1bf48429b6f601cc1eaca827cc283148f5e73704e1bd0c4e01b43c21be5",
+  "1e17c84b151c8319ceece1e09f90e36f0485303275534f34b4a7fb3a9f53f2cd",
+  "1ea852ffc16e5d601fb5cf3771368b5ff77f279f243a8d29b9929b8c07c5efdc",
+  "1fcba1bea5f3eea8c4b4cb9d7a44e0d1ca9c97f036c51ae353b4098370e3d962",
+  "1ff2baa79212ca0dfd2760afdd23f07f40e108d185c42536c7b8e9a18a7faa91",
+  "205c42533cc017ebb880ceea18cacf328676f01c1963566ed9e7b64d9d74b1a5",
+  "207fcaf4ee87afec3c66df5a90428560aa8b71ba08fd6bf694c748f18191ddce",
+  "224e50a733a3b64938f099b303e97d0cf67f90b7736e9734386611fd578dbd72",
+  "2475b1155eced90e218e9c09fbc47b2495a277751f429adf795041ee541b3ce8",
+  "2511e35f2c7523f48d97c52f0da1af7d2c4aa3b90ebd9a7ae90f002829a33716",
+  "255319f11ee42f55b68a76b9c89d9cb8a77ba5e4249d6262f4b905bd32fd09c2",
+  "25747c12fdda2b2d97977042bdc68a685a662333279b7932c9aa98ebc4285d63",
+  "25e41c6bce8b8a1d656d48276ff84a78578145039972da2fad22c622ebd345d5",
+  "26fd0a4c67d3c3b3e17b4ad90e869d4682780952b559b25978cae946689d2565",
+  "2859deaf6f0bb6eac33e1f9d172a7aedc17076bbbde21b47d2c0900c81e77901",
+  "2860348e7bd7cf128d021b66f5bdd49b142c1148ff616f977becbb3ef3a6ab21",
+  "29bf6bf2af4d2aefd37c64b5529d263d72a4bc74c0235917c91b27eb9a209554",
+  "29f52496b754379b2c4fded5d5f19135379c76a9154586015ba142805e8d7e95",
+  "2a4cc9bd64cf812d9c89d5d04121f2cc5d995e8620a522e2c3477c64023712fb",
+  "2ad2b5bc5188169be59f0e4121bdbdb13dc37ca74f404e576f790a3be8e5a10c",
+  "2b512b51adb48ea16f1aa27dde15e109a4006f67fcdf1af51281564f000482d4",
+  "2b773f22c10d6fa544d0e1464e8687e78293cc38e08989afe14ce8ba66dfe92b",
+  "2b97141e1b28f5dd2304afb49f78c879dd3286a6a2c6ffb6c04b451da4df6b7b",
+  "2c3f3865738d9126bdbbbaae232c55c6b732ff8fd88146836415021e92b4287d",
+  "2d713f84febbb747fcee9ad871b09f429e96d490df81e5330cbbcb7e8e8db1a9",
+  "2d74e1603e887150aed4ef45e964d295c2cf5f1b405fc8930aa8d248f5fc4e17",
+  "2dfbd058c05d8166f35650ad8a102f258d782b6e6ce598266a33dba6f58dfa2b",
+  "2eec718aaa64cc36ae943c11cb40c340527bce3d3a0d1f53203c451227aef29b",
+  "2ef6549da0f577e4852430d3550d93d52d36cdda4513bfc76ca46f3966a700cd",
+  "30b6f4bd4cec47688ca1027f6ff52942d2b48c6ce2a16553b8dd21e736c4e9cd",
+  "319246391d22dbbae698a1b4c082bd2ce1b050037862382c12ec85ef778079f5",
+  "31c2cb02199f30b475fc2ab84163ac8586ad6397d0867fad3a377f8c27eef3b7",
+  "31ec87d12e864fa30ce1a04355725648bc45c8e84c836e75c772da8552eaa3cb",
+  "33402cbbce674555c9cbefe543cd43d5c0cf2a481b0532eb4f76d567ae2b2160",
+  "34b4ea834a0608c0814b023395a7cbb366b372a597c63807ae1a9b64fa24dc68",
+  "3532929b48e56c55687f314662125b2d2ddec13ea8e9b12e06749cc1e1cf4685",
+  "35e8e64b016b40c9ac257c26a3f272d8d1575f74e89cbec4d5a1cbbdebe28956",
+  "365324c7082aa7fe48bfe68b74e13f60f43d7f13670b0b1260f3115deb13a541",
+  "36a70aea836eff6aa03aa6f19bfa75e4dc6edcb228a96db399913f379f6e6f72",
+  "374416bbdce98043d7c59b8c99cf2a95f486c2e76b065153941ec63816b1f40f",
+  "374436936be56087e1d1c4645257ea95c11f4cec3c2699749cf54cbce7f28561",
+  "38f84ae2ae772656eaf81639fb037b59a58a9b3e68d99b4f2244e2b4b30d14bd",
+  "392ee0e0cf53354555196d4408baac5e4774e8407b1d03a5f8649ef1d38586e5",
+  "39fc84540b3536cef1ae742aa1511eeed884c15dd7d26c775dcdaa0bdd8ea603",
+  "3c817eb601dea2bfcae11bc02fd98fd3adc6985affd9eaeba40ad643dae768ea",
+  "3dd2f22625d52289c07fc1eb2f411815f31103024a0795bcc01401aaa1bb3225",
+  "3e5d0869bbe55306bfd9aa6dd704141d5accc74d1c3a737e82cc28c288cce8a6",
+  "3e9fa8ebe452a1900ddee91210ca86e142f9a9edbf0143af7adde972371ed350",
+  "3ec357a960f6ed2e07d00e2c639b019309318ce6c2a3e22915535ec755e002ee",
+  "3f595a19394d7a35e65682c6248ba71517bc818c004c22b35d572ec68ecd274e",
+  "3fbc06656d6dedb9a83b99fad03c046bae11b6b2ba3169c2f2fa723dec7d8dc3",
+  "4090a98d5ffc7b386ca8263d881db276db8d8156e865ad33d32e791e6eb868b2",
+  "40b7c77492762bd9edcc23b050bd4fc3a0d2c42a303e2193bf28123929f87f3c",
+  "413638703720b7c2e54204ddf94a73e2de0749342aba0fe8e50a18b8cd2ee077",
+  "425e624827826049ac63a3f6b58d78cbfb74444869ee1d376e7578ec2f9e9c7a",
+  "444a6c28683edfcec0e94c32a6e2e8e3027d2998f5f116d00df14668a8e66323",
+  "44d50d4354add04d05ba53085b8eeccf1cf7c9563936c2cfb26f22ed9187a8e7",
+  "4542cb44dfc984e9295a58a41ac7f1ade4cd9edf08c7442576ce5a1d8d199259",
+  "47972b23a917374a2dbd2e2c4dbb727c0ec0c1fe88454779674a280663c66ff6",
+  "47c75578bc54a0b14d809836bf39f3b5c33941c230694ed832de57921db27e82",
+  "4935304dfd9c4f30781aa069af4763449bfb3e131ad8a03f9d604eb461effec8",
+  "495d5a91a32aac2ae34ff71751ae7ac1bc366a1fed32a3c827ee8d49bc677444",
+  "49c8881770c385cedb8b31a715d183e9dc5d01ac128496b148d7f411c70ff166",
+  "49d0777a6ee0285346891c18f42746b4768c4f749e608bc9bd7cc6787f349c5f",
+  "4b178c26908cf01972375a098bb86e69fa0545575b0808572cd6c80a8f4af584",
+  "4b9cbb4bcff9392cf9a902a920786b2b5cf9564bf570b6e409e255e02c17b622",
+  "4c9b282d6271e9d02d257641d9c3f3f610ba2ed0cfaffe86cbd90fe12be50dd2",
+  "4d2e8eb13983803563ffbbb893c9bb508b9e0261cc0f968d8bf9d7b9092828a8",
+  "4e84e9f7a37280488d113fc9af2201cc0b5e7ff7265ce83096029cfc578c6ce5",
+  "4ed1eabf2a64d764502306d81035d3545d1328eaf584fd2afba61f87be293750",
+  "4eeee2c89e5a95a09e23feffe1bbb7ef6e88e34c15cbbff99404cb3e8fc13c83",
+  "4f5ec45438d45f68a2e3779fbad1c69ad6a1beca766a32a46f767251bd141126",
+  "507708362cb996c56f2121bcc24ac4e0f80df3bd84530d28d70d46fd9f45c6be",
+  "51fffec259f0636eb0061e266eac6630567ef781a95a0538d685ef0f55d35b08",
+  "523395c34e7c4c74513b175af9ab642ba8bd7f01862d63a44bf57eb7d47322fc",
+  "525d79a35a7027a5483099b797fde57d2973e4455180f8a1fa5ac238054951a3",
+  "527d042529356af83b6deb09df583b7b79393a053ad97e4d4ab4c3c57a14afcb",
+  "52a9d202f95fe5ec596a2ef9c250f0fe4ced77c375a021c314f88272f4709ac3",
+  "535e078fc2fa4c5c14464d6c343ebc63214ae2cacfa075fbb316fb5db8948b3d",
+  "53f2aa9468da00bdfd24fc15fc58c6fee3b931d853b79b93c457c77859282d4a",
+  "5425f9890041efc62fd4dd602bcd63c2703eb606b656752c4958ea766c4b2c77",
+  "56b82765aa7b926f83faf614cbc0c28c93609048c5162d4cf5914e3e36dd9840",
+  "56e28856725b7b0ecf1c658cd97c5b52f8883c89d23f236dcab7f5b87c436dd3",
+  "573e564d72b3380106ae096a3018548a4695c0e436468825d7d9aa6344039f82",
+  "57680ac0ad7bd1ced02241cae332113d086822fc6bba15afad87ee3ad7427859",
+  "57bd8f33192aabc91e455f5923212ddd69b2da07fc9497da95e4babe65e8d76d",
+  "59b26a967cc751d382a7308cc9e1f7d7106cfaec6ae425212a56b98c9cf227dc",
+  "59ba8c5a8fa2d3801611180db249484c7584bfeb09d8940c46b1dde2125b936a",
+  "5c89beef0f7ad7703a25b7f7b9bf5c1955f3e10ce3b77b557813d01c85c80f92",
+  "5f6e6a69d3db5fb094beadec6f0ad70a5e869466595a5e4c02675b234dfa5168",
+  "5fdfd0aeb2c30110466dd74a661ece7261229cf7b887a24e3a57aaac64a27681",
+  "6020d72d14009c2b955a40ec859bce9ee0eff515c0626f7fc9c9b5940e8bcaf1",
+  "6043372faf8670b4efa10faf0406c713b69d658289ed5dff9df50556698d0de0",
+  "62dd9d4710a69250e4b908aa60293106d0d719214d39b38794fd466bce193566",
+  "639162c510b76e2137a2fcd62ed78aec9a20429646a5707f78111de52113c4e7",
+  "63b3b8791bced482542bdf1250c1e86d9406000daa187373acc8cd619cf707f9",
+  "65a3f74783f1f4545933157271c79c8b195ba221807b1b2a0790454471ba5440",
+  "65d7d5259e840af8b4870dbcdb75026ab0b77c4c4cb8f5ba327431947c521173",
+  "65e187ccadba252f51cadd47a00c9d7aea901c4bbbd256004d4fe24350ab66fd",
+  "69ec616fbe586e4f6364de7b5da00f5a02c3f7d679a05272d944594362d70301",
+  "6a2cb00f071525008dff29bd574cc93cea5b73bf0744f473288fb9d1b78857c1",
+  "6bc501c6dc7a47970bf149220a8e71fd450a4d8f6eb9b60729306d7ba79a0dc2",
+  "6c7f6a9eecf9807aa929c9d4ffc9b8d8893835069c2b80231076d69ab1ce5beb",
+  "6c92903ec05a3e7ebc40597e2bbdf20062345f37c01a52d44791e46bbb33b331",
+  "6caa2e02e048751eec289a63d896eeab8fb1b5eef59c41acccfef3eef6fec610",
+  "6cadd63d522388dfa07dba5bec7b5af31478a18c5a3193e62ff3c0af2962d44a",
+  "6cf777524e6cedc3fc1931fceca64d2c104d1f76093516640f321518ddf7972b",
+  "6eaf994a67696faaa0136ba65c19ba0f3dc7137841f7231ae79c417fb3d6a9ed",
+  "6f0b29a75e3a51a8213c3b7259b96be786258d07b9b1a378cacc91c5429a0148",
+  "70893b94aae8b99e76b9cea181a443573cf762d4be8b76cbdf4cc0b3de322506",
+  "718ab220739be065bd6602313a301a482d668f2b1fb39fd0b74388ce196fb79f",
+  "71b7c8217b4f59aecaab3ebe30c0ef9e93b18f85b558b0b47b9abdabb1cc9fad",
+  "727e0297e396c561b5fdf8a1adef44159b0a8241a4932ccc53db7d4e6c7dae2f",
+  "731492f7e01267d1cedfb08080c727c8dae78b4ced3c9716d7d56916df7049ea",
+  "750cad7acf9803c6e40b2be732dc708bfb46c5ccafe42be1489afc8e143329c0",
+  "7701c3efab28554f59f1f554f128d46f73964c89abc5009a03e807c7892f1caf",
+  "781289e7df4710bcb2bb73831cae60e436890374e6c625b020be03dc7fd5de65",
+  "78369d422a92376ce70f5ff0540196392237097cc9f15d28664e759cc142496d",
+  "78791a4eae4c75c827caf5bd3750e47e69ff6e3f18ddf6697184083dcec5ea0a",
+  "795e25525c59c3fa59cc0ffcda88472a813ff4f39bebfaf0065c9d6184e0304b",
+  "7b2f1b0c04c298e9c9f836ff7f9bcc40d9aa748a0fae78f249852dcf46a07862",
+  "7baebeee66e2d1f03016c8d5fc939a6d451fffda7d86ec4734035fcc53f4c251",
+  "7ca81446337923ffdbc063be4cfa1d4878c342272c2bdf56627137cb030b4710",
+  "7d0d35d7a2beb5e0f736f4afc82bc2442e3097416238c557a4455efc13f0846f",
+  "7e02ba789170c8bab8491a561716e4d21f8890c51b94aca274a0844707583232",
+  "800a0a280575e2f9df0e966d4ea712a384d8d5796fcad30ffd17015a794bf327",
+  "8183014f5c4f31ce614da0a17aba89d2e31c17aa2e3227618277518310b4361b",
+  "82194f5b01ffafcedbe7c53b097fcb38f4b210b76bef91e77f898676befc2d2f",
+  "855fb2814dbf23d8eb013097ff91fb3e97431958e110504c678a2e176b531639",
+  "86209e5e73561f9feb9a8c5cdf0232388d2f76d3fa061868690fc8bd5aef3fc8",
+  "863e075fd992323ac9c6bbe75fe78cbd125f820787e7fcd79c49ac3ea8e471e3",
+  "867118899060069674d07022e66eb40cb694b474f03edbbe3874d6a789891ba6",
+  "872906ba2edcea7e650c79b4f35f467346854b12b47fab99054bd0ac16db54a9",
+  "873256221c9e8b83f7a9888901743fefc4abc888319d8e395d135c4d00fd125f",
+  "874cd05a708d91e9510c5886ae8756e31cdc67ca9951a129e467865eb790a2f4",
+  "88546eebab4cd16ff2c154213434f635781c8baa038f366f526fded18a1e2142",
+  "892e758c94c62c5450835ccd8ff0201141fd4d3a65d7063ceecdfbe99e1cde28",
+  "898d914a04047aa6641d85579b488d131e0791e22891e6c9b23c17ff1bff08aa",
+  "89d52e2d71b06b3cf1161083927a8e12052c3f72a012dfeb45b7ef94af7260a2",
+  "8aab9eb118d5c94680af0164bc84aa22572f1b7dd01c4b34a7a7a1a4fedf8116",
+  "8b0d547a125415215b5b97da74c079b41d7b520408791b6d02a43b164d461dac",
+  "8b20f2f283ae6201c3b3339dd7b0cb3a4f8f20db89b3abab6742cdedc277f096",
+  "8bbbdb48c6018660ebd7e590ab5408201e0b51507975e0aef587f9cde5663b1c",
+  "8d4f5545f475f9d3b11f66e72292aa95c5532a1bc4b18fb14cb1892cdffba36b",
+  "8e6e84c923d57ae25fb1e3a55e7a861a587aa1561106723cfad4d4c3d9092262",
+  "8ebfb18675d94014a76d7e0e15f5fc86bbb498c8e81ac0bb812f21bb90ea3d26",
+  "8efb3b21d7bdd50cf3e91cf9dc944d93990dce9ae8c3b3588d6c9ab5171ae182",
+  "8effc8266c1ff38f70d3367a1a92accf1ab15242eb49c796a76d0b561d2a4417",
+  "8f52edbfb86e198a6e2e1d767ec578ce8a81505edcb4bf1f89a09b69d509f29b",
+  "8f975c6a9d68c98f826773ea69d646f3df17e14544af794f5ca39c9723cdff07",
+  "90b1ed62c1baaeb4da99dfd41dfeb71ded9986c6ef9a5c3df7c227d32d536f56",
+  "912989ccd114be4ad85bf130246e662f7ad5575dc8cae3b1a7ef9b7ab83c47eb",
+  "922533544a3382ffb0e4974baf34bb3a7916ecdb7c9b11b80957a5da74e3527a",
+  "923eda229571272e2495897bedc12d95ccce8b552809bb03318458efa2e440c1",
+  "92ede733bca91c7471b2fa647c201e4c1267e756276700ac35dcaba037056f25",
+  "93654123a6468ff497308213d6ee36686c8259a31e9ecf583d0953e963d67c60",
+  "95813054e9ca3af6e491621c838480fdd38ca93d9dd9df9c3ff17a5dd090ef94",
+  "95cb8cebced298cd7daf62368aa7aeba594c4ef645429ad24e878d52f743e3e6",
+  "9795dcb51e74a9a50c478365b3033b286c5c933f5204a313eb395f9d520b2c6b",
+  "97a2e8edfb92be29377e42b6e42a2a1dedd6c2c2c49e525c931269d94b73e3e1",
+  "98346dffffba2e3a330b0de3f48b53e10c5e8bb7f5cd40dd0f3dd69a4b72554a",
+  "98b68f41ba99343aea0a0a6f8c822f72eaaf5db6ea27efc94aa6033134f6ed60",
+  "9a68a8b365804d6329842d4db2695e2698e241bf016f6f4a9490e6beca89c562",
+  "9a77b952e28f3b8efe68b09fd657541f5ff73c919deeae963efa3eae34d946d8",
+  "9a9f726053845c499cc33114303df75b4020f86232282885f11ded66e63a3f8d",
+  "9c37615c243620566a883090153a03d1813001ab4f48c8d5e0e6293eab301e0d",
+  "9cbb8ed6523d36781c619db3e55200132cd2a444eb7c235da70bfb4708d87b1a",
+  "9cd9d627f7bc67eccbe9df0ab304a9cb767f6e62b734147c1d363c7297958994",
+  "9d160155157402af98cbe5fb8fac770192d09190ce509b6024ae376f875b1c8f",
+  "9dfb3f4c30c452644cca5e9f826109ff68cd997717cd0ab50bb6b3dd43fb3e9c",
+  "9e9bc4eb4a5ccc81e058b1d161bd8d660229689357b3cb718b77cf4c924a4cf4",
+  "a1b9fc3bd73ca007163f07869a44a4711930539e878a6fae096b0d84756dc057",
+  "a1cb78902a24782f0944bc89b1c5bbe33f463517c05bc4b0dcd4dde320e67ee4",
+  "a24d97875c44f86dc7011ccd5498ff40911fbccad4155e108f44afae2f0c91aa",
+  "a3523ef6fdeda88c61f2e53cb6dac5a785a9e6eb31a5f017b4b506687ef5d3fe",
+  "a3dce108b7f3fe41aebd9d17fe5a00251205d124dcd2138da6d3613ccc23d215",
+  "a5b33eed1b53af5f9b8c9ffe7a1d7696b4bae486c885e811577ff5163b0ed7da",
+  "a61c36a2f029de333d9616d49726935376eedf1f43aae839cf919dce3bea1753",
+  "a6c65e1df132dd6f6d3db92243ee83a2632f4f045990763b1e006ee1d1396d78",
+  "a7660be5c541b7dbd45e61faa42a1687402e4023a17f3ebde853e9722024261b",
+  "a7e9a3a041812d049141fcc22689829fbb9274a1b54ef8e661d42404f0a1771f",
+  "a8c0d79f5c26ac45d32d51460f007246a87dccfa5c316f6cbfaedcd15b5de435",
+  "a8ddbc5ba91ff86a22cd2967d596f274d904f28edc26fa6ebedd17e438535fa8",
+  "a92ac4acb7dcb46e6623fbcf2f2eb8e79162e77dde8148f9e2836d6f294492d9",
+  "aa1382f54f9c9a4ca795d1406bf6514d1fbadc1f918dff15080e762798188ebc",
+  "ab64a10eeaf827f47918cb2ce1c12abd0d5ceaddea001632e1ccc4c5b466ed01",
+  "ac6879bd35cee00d177f2402126ad8d9fb19230c5e6897cc6e7d3fd5e43422f9",
+  "ac72657aac885df07ea1a852e3a1fdfa41cd0d166c20ce04057c77aac7a5724a",
+  "ace70c24d7ac08060940cff13d6716419e8c4cffc44ba14f19e196b046957337",
+  "ad7414f179e743a59302d19053e9fa4a41f57a2ff6a4e83eafccd1fe6642f956",
+  "ad9cfbba6b548d85aef72fe59fbec7ce92ecc38b7f5245bf671f949ed2e44ac1",
+  "ada15a0be94c99bf4ce385dddb965959e23a5c9811bc75baaac0df4a825882a8",
+  "adc86a745e4a77fa9c82c086dd100da2f2350b42831fc6d744f4d9c764081842",
+  "ae5f3d5997a52d9cbed7d9988a178fbd49db388a7afcdcb238958e4b2850ef03",
+  "af8c88eed658f100e27739f94b1bbcc3d0590a7cda10b4bcdf93aaed1e016f36",
+  "b1275e8c580d43806aa1a179d305e2a645adde122dbc63e626afe1615a4413f8",
+  "b19bb3702c68a06c3d78490694228f3e3fc9309750e7079425bfce6a06c7420a",
+  "b1b3170b34afaffb186417824f70c3471a0a7d4fa3451bdee3bb6140d797e19d",
+  "b1d90af892981f58e46d0fa68ee7615a4a842f25baf5147bbc93581b405575da",
+  "b3d4b304018548c76af6cf4d21bf8a62d73cfceaa6078b00df00cba5ceffea42",
+  "b3f205b873ad6aaa2d8004ef22fdf978da970aae4c3bc4e03eee84c31b12c87b",
+  "b49fd8a55243da5c0e0d13bf15cbd9e100d0486ac2b2f634538f049194d1114c",
+  "b4e13f997e9f4f88a03c91bdbf64b5e7ac98ff197fa25b633066f222c6b695a7",
+  "b5063b373a8cb58f6f683cef3a42dfc01d9d25e10cc3d1de1c470ba338fb4d5f",
+  "b51ee5c78d594418a88181f4aa2d1c503dcca6d8f9b22e8bc8780cab73a14d14",
+  "b5ec823970f4d3271f20d493c59f3f418106c4c823b77d0c1628501f24881b7a",
+  "b6d2c255191e41956704890d41908f63f9516a1808cb611e108274bf93d5dd8e",
+  "b7671bf62e401890fcf877c23abf2298d6f365829172eb6d7691976a446a4f5e",
+  "b76d0f817d1cc814a1d1c09789b3359f98e9ef5c213e9705686941f32172f501",
+  "b7cb0b8a3714139c3e99ce7cea1a9f1d5b3bd7a8313a8db1b22171611224ee67",
+  "ba7010a82069581fc6e24001ffc2a420a4edf9bd194adcb4fb0fa98bc354d967",
+  "bb0e395a170e411a78ca383242771654f81b0a10f7ef68844179d0567cc36555",
+  "bb1df846f4cc53cf744c5aba2fdfb49a55f237da0c4ac4f8f30d9f4f72c27c04",
+  "bbb8727ea5d6dbb4b45e1befba4d5b84927c875993bdf47f8dd48ca2f86fd8fa",
+  "bc8ff9f95319fd29d9554cb86faf1497879699a2f93dbe042b10bc82addba2b4",
+  "bce9e4b9897bed665772197d7bf84219b189ce5c628b4cabe80eb70dcbc6af17",
+  "bcf6fa0f99d2db1bffd824f8c0a0da5bf50310a1b78231fe4dea67a376f28bad",
+  "bd53448bf0096c8fc2dfa7dd72112219cc619bb23b8da1f40aac0dc0d8df3de4",
+  "bde769b647a95cde1da1c979e995d65dfb0827802fd0347e69c790e4a41e7e43",
+  "bedac695b6c47b0626b26e909f6b19bbed28981306b76194fc4aaf0bfc834a7e",
+  "bf8fba53961f9168eec32921bf9e33c330a3383b9a7a4e96d034591c82ce6424",
+  "bf94e758e4c08f6e0ba5a8f3c923d541cf8af7f2dde60e7e379614c547fda20b",
+  "bfa8f681e840dc43954ee87510dcd32bc61bdb35c8e9179b3481a23a0a76eae5",
+  "bfb5877b329cf113e28343486076e300de1a48f7e2ec7adc24934977f0697fc5",
+  "c108bcc914814abc0852542c3afe431af9c1fb957fed8c003c3880672ca0497a",
+  "c171eb1138b6df82e3ee7db58ec43df53dfdb2c9a2691cc5f7c439c02f4b9fcd",
+  "c4b2ce2b16a6210cce909da45e8a07f225bc25ac7f06ac91cf198d034b1a2131",
+  "c678567809aa27649a32314ed4cfb69339c3964f8f2db9a5d668cba72d15a9cf",
+  "c6acc59d8839b782a3ddb602869a160a1beafdbc49d965ea383ffbc4ec73fe42",
+  "c6c67060e6bca8a492d37a0446de3f5ac11196b827a4fd9418930206dd248cb8",
+  "c747569bce886d9ffbd006ddf635d24767b9dc4931d47d3a497cc677f73052ae",
+  "c764ebe3a6b300541c0cdf95d20104624b099b05259fed66f7f0bb663e51b5ea",
+  "c8aba21ecc6eb3c1a7b03352e98476b540937479fd0fd3a215077ba19fc8ce1f",
+  "c93a0f3c27c5ed241366d70ef1bd47e071e33da69e42825aa5d0f564ee016fd6",
+  "c9f4b3602e5a09518f24f48c8582fe5c99137eba5579647c54ee5edd14c50984",
+  "ca1c1a742c2a6097ac6c2084c5123a97ddc3237d63b5f44d9b4fd09c5e767a89",
+  "ccdc918cda23a13dafe1e43d386e32a5f28d1c3baff49c5e7182e61e529dab29",
+  "ccf36c936a076e5ab6b979997bcd677ddda96a742f4f70df924452feb6948a7b",
+  "cd348758d69c1b6c9edcf20db14e9e72d0a37ae6695335d80fb1a6f8d6e952a4",
+  "cdffaf88ea5e563f818a19d903940f47b3382c5009793d03ea2113dfd39e6148",
+  "cf1b2591fb312b6e40f61d03a464353365c3b0d0ffbdf45bbe450ea55de4b28d",
+  "cf27461a786f67372bd39a9eba54884c06dbca3eecfe9db7645a87a31f258922",
+  "cf407493d7a715d3aee8913d7c5745570d48e05cc6544ba354c49be7ceaddfb9",
+  "cf62af32b9e5cc985a35e2244d6d3e33cd6bb17720c152ef857cd7283b57491c",
+  "cfc0e110a7de9a95941c46bccae37a910cc90cb8f896cda463176e3b258df38d",
+  "d0511796a6b35c192740bda2451de11d23f58000faecfdffcbe017fc046b40be",
+  "d061aeee466e97241b1e30ebc32fae9fdbef3eceb786d6da1a2f596b0d2f9224",
+  "d1297a3ba0df224433a0ff48a52577d16cc23648add60a6f23ba8b8a38534a9e",
+  "d220653583e0961993351ca12db13a222f5081f456d80f34aa1b9803e06cad35",
+  "d25eef13eacff1fb10062718eb106ea9c37b875963b9f6b10668fe3624f98d63",
+  "d2628271a91fd7d566f0952d763508ba9a6350ff04a22aae2e06ed6108ba9d92",
+  "d369b13cadc24e825e1bb9d4b9e8d979a4ede8c5a1b0a5bd74437069ab3e6877",
+  "d3e2117889c4077eee3a8f66f2170007700188d26e09f25827effc4c6cf4c512",
+  "d51f40c6b80be9ed33a9fe80d781fe862b42ea988f909f9c8fa8af18476b9d4b",
+  "d52138e461a708b3fa17663cf77149dcc92f790ae98f5fab5346115110ee4f62",
+  "d5e23d1708d8798fc0ea9baf89a08afd9f2e8172a42bc483cf8defa2b184f380",
+  "d5f2298b6e037f90dd3b70dc28b0365dafcf81e0aca9abfa0708225882ebd1de",
+  "d750720a3547d27137247f334026c9360b434c85b74ddb09ed356a0d246367db",
+  "d84f9a99ea4a31a075314b9a0d363075d0f240820714f6338e8d7d038653f119",
+  "d8a935fce506c7ff96aa1676907002e094de0b042e14001bb4cac11b08054eb4",
+  "d8e17d8cbb2183f07a83d85b09e1789f50826bcd648c63c746cb5d4b822fe28c",
+  "d9baa861d0a1c878bdf07201af338d407beeac3f64c7913550b951600d28783f",
+  "dada5ab326dfacc2f10b2a7c95da6aeaedbb561241560f5c642686fba8418225",
+  "db41aad51ed9b3648b330bb47a43fd4f46b21c30bc3941f392ce9c6aa379cce0",
+  "db5fca3a08b41ae43945a19c2761cdef64ab15680d6703291b9875e71964f587",
+  "dbea9dc51345f835d3b6e088780cae3482a52ba2d73be65f1ceb91a98e52a964",
+  "dcd3ae859c8f64cd9bb8b7e5009b9899661c00ad534de4f2ba07272d7dad8514",
+  "dd522306f6757657b876213b2adb647773872e4bae1a57beefa199d91129d40d",
+  "dde8c310ebac11a28fbd520f97a445183cc428cb33a97a0532e5457edaf3eb57",
+  "de5b3ccef08fe6def6d51917b4d0ee39619c1f91a8037addb65f9d88fa452bd9",
+  "de8ce9287ca26007f9fb91139c9fee5cfbdf9dc50929df912ba014774060d06a",
+  "df51f2a3059fa370e84fa672374f117abad0031ae79a3e65081f718b3cc239e4",
+  "dfa6b25952fc199f0aa842b2d828a65a3531445551757d45a460ce6e98480f04",
+  "dfd6e0e788ab71f475ef7af67acf7a18f9eb9c135a68c48961f36fd70f1c906d",
+  "e0722060c47b892cc09393361f1450015d8d6c930430d00af403a2f80dd20665",
+  "e1b7c83c2f83ac2fcdf2cc5ff1fbab213d94cd6a7a1b5a35c47d976c18317930",
+  "e1fd8bec52f884b9c79ab584c3b2d8321c9b2a6bf7df3a82262b8c0aa8d72121",
+  "e27c05a2bf4fb63cffe72afcd19460bbf8befeb450a928a8bdf46a9f041791ff",
+  "e3534db8ab5b2715bd3b8d34240c82f7202cbbb3cd2281aec5e4fa6cf6079f26",
+  "e3a46828424f4719b7e6cd9346172cdf07991b6d30c2080924ea1597214e9f8d",
+  "e3fa6abe54c630de596ecf902ca01264478acace71591a460ee90339086b3d7d",
+  "e40c1c8158fa3c9e369137e280ec430661a22e7581e7cd43c1674b0404a30088",
+  "e42b51e03f0980f7a5666e64bb82fa3b9cb7daf0a6ec98ef593b0ee50cd4fedf",
+  "e4c5d4d03e03979ba8ffc1d8a34d21a461db043ecd87c83e70061a48b6b9eb91",
+  "e637f5b30a2a1ac5d121dd7bcdefb19c356e3ffb199a0aa1c44c8c146985804f",
+  "e67a16c70bd24db7688bcbb0f7fa956ce852441cb8701e48bc279d64cb33ea16",
+  "e6b520b8b32007f8fe4bd5cd867157ab47727289944df987732902100b53eddf",
+  "e74d79681795d207c701d18a3da79382f71abf7fc851f69713358993daa528e6",
+  "e7d97ca6131fbb2839b956f6c0185b1b47c68c3e9a7e971b444ccca3f61868ed",
+  "e7de7ca792f0d4fb201733693e6d5270175d455c946fdc9474f6b1523eb79ac7",
+  "e7e2f13a6820db57dabb5e79cd0ee43009c61c381305485a124e471329d7c689",
+  "e8d524546ed19debce50f791a7d7d11a751b63bdae2be3d8bc032e6793ca35f7",
+  "e918278164f91239810d08e4e622b97fb0ef3e7dd850e4f50f5e9af999e99e44",
+  "e9a24d334c141792ad2413dbe796ace71874765baa697db9493fedd8e94ed6a6",
+  "e9c7388fe1fc930cb239db85be690f239e6cf78979f92098616e7879cc31ad65",
+  "eb89386111af9ab92f915161933a2120f05d9319563c512af963ffca40394e53",
+  "eba3d5e6318ebbbf90f291be90b633e15cee576ade16de04c440c1b1ea949b70",
+  "ec1dcd02f1c96da84efbdf498624bf81b22fd89f96ac8db84418fddbc2bee880",
+  "ecddbcd743b3095b481c302e17bf77d9e243b010c6294148718ee886e0f6a62b",
+  "ee113cf8c45268046eb693db10b8cbe8c6173b094f329c43f91f411a49de4dbd",
+  "ee998013efddca121a04a65f020c76e3e3dbb08ae34c537a2582931419d2565d",
+  "ef24d97c53a9b3e03336d30176f1732d4b0834e8e40015c488a997b345f943b4",
+  "ef32051d9f8d620fbd13494d55051ebaeee883250d187674615c2a79e6907da3",
+  "ef65c54e76fd9e58196d82445518c4e8fbc96b3543cc63305390f302b0879044",
+  "f078206b3619fbe6f7ca814e02e5d6d7786ef829cf55d43ebe5089d9242d2d01",
+  "f08f815f45da4b183cd700b4c25c15fbe95b61ecd37a25a7d83183c1e5d18885",
+  "f09eac1fe83a410c20ee952c5651447cf0334e354d0ef96ddd8854aea0f8095f",
+  "f0ae8fe62cf89feaae732fa412103df2537a1f3d613dc3872cd1f81bfb543081",
+  "f18ebba5d1d3dcc6e8857d12f9d36e81d465db67c05f5a66cec91a2d0493f029",
+  "f25a0d7c2526c606ddcda33cff7181c4d201e868e64c5ff2b6800a578352a428",
+  "f2b97a53e8620ed552e3dca34d927675ccbb1f2992c77e9394f8c7df988e1af5",
+  "f367155af0435710b21ed30f8ce63feb6c04f025279ab12e9e8ffe45f28a0701",
+  "f3791cd1a6dff91e3386ade37ed00f0eb08d6e363fd31324ebd317c139524e24",
+  "f3d60691d5745b7264d1e2992b872586f92916b1372ab5bdfbdf9756fffcf083",
+  "f3e8b36a223ca273157b9a0fee08660d4e3bf77f8d388db14bc422dba387959d",
+  "f4c4f2cbe5abac12d5f3ff5dbe8168cf0e5d42451092e460094157d42654083c",
+  "f60381ca7ab4deab7bd6878c9a2e56913420c27784c4e734b19d6267603337f3",
+  "f7848893e12bfa71009eb447c38ee92728465651bb5bca3b31f573200ce61d00",
+  "f8109f7c8f20cd8ff88ce0874031692777908a90c7d2356b5e9e33ebbdf0338c",
+  "f9f5c6d960ed14468abf55c6833a35b057a8ed0549616019ac2d8b169333fbef",
+  "f9f8d6c4ac909fecdf87821cc2c87dca1bb4a1c1b1c58c5d744f4d8e88780c44",
+  "fa6e060f4af18c158cc19fe3a6a684ceff5f4ef333bdf00a7ee9bbb0df5d5921",
+  "fbeb7737befb21cad791f5056c19994f0281cc1fbf3d53a38d6204a5ad5f34b5",
+  "fd24580aafed1eefd5b2af72ae21091edd90274e736b85bd9debc3eb95979318",
+  "fd2c599cace814fc13b2f7ad8eda8fc73ef35c7a36038ae3d01ca4cb9cc466e0",
+  "ff2d7f101fea467afcce2f0923a359714e1b65352f235997f4f1b726944a326f"
+ ]
+}

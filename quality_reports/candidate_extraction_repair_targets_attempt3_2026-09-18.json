@@ -1,0 +1,108 @@
+{
+  "attempt_index": 3,
+  "created_from": "quality_reports/candidate_extraction_repair_manifest_attempt2_2026-09-17.json",
+  "created_from_attempt_index": 2,
+  "primary_seed": 20260824,
+  "reason": "output_truncated: greedy decoding repeated one item and reached the output cap, so an identical rerun returns identical bytes",
+  "repair_manifest_version": "candidate_extraction_seed_vary_repair_v1",
+  "repair_seed": 20260918,
+  "target_count": 24,
+  "targets": [
+    {
+      "chunk": "chunk_00056.jsonl.gz",
+      "document_id": "c98de00ee3865991cacb9de05b1d6db2918dae8138edacca99779843131f46c8"
+    },
+    {
+      "chunk": "chunk_00167.jsonl.gz",
+      "document_id": "e4661df2da3a6f998f60c4a5f1d22c91a5be63e7059d0adfb3f629c09a3d75eb"
+    },
+    {
+      "chunk": "chunk_00198.jsonl.gz",
+      "document_id": "4ddc89301abed0ad3551941b3c12538b63dca41f52432b7880972b7f1fcde58b"
+    },
+    {
+      "chunk": "chunk_00205.jsonl.gz",
+      "document_id": "920600594e9d9ccc6ba161cc85c02b5e13d9fa213ad24ebb6bf690b7038e63e7"
+    },
+    {
+      "chunk": "chunk_00219.jsonl.gz",
+      "document_id": "f7681af2a0bb214b2a4a08df069a0c41d66b00efc0a3416e2c68d67037f2210f"
+    },
+    {
+      "chunk": "chunk_00234.jsonl.gz",
+      "document_id": "e33f9a55ca51a5ac5594a9debbb731db147d748214f07e1a711596b88bf0930e"
+    },
+    {
+      "chunk": "chunk_00286.jsonl.gz",
+      "document_id": "bc66a1211886dfa5a84f440a0c75209f3b6946deb5409972eb09df128a87f9fe"
+    },
+    {
+      "chunk": "chunk_00290.jsonl.gz",
+      "document_id": "772093e0470f02dacd45616257c97b84ce2ded53e4e05403cfcda4da14672d14"
+    },
+    {
+      "chunk": "chunk_00293.jsonl.gz",
+      "document_id": "a3dba72eac1402d41204641cc2cffb4f60297ae97176c40afeb5a5eeba5c8950"
+    },
+    {
+      "chunk": "chunk_00309.jsonl.gz",
+      "document_id": "2dd02eccf533290dba4efcf0c69fa18bb546a4e52de89ce4001fe28d321be113"
+    },
+    {
+      "chunk": "chunk_00353.jsonl.gz",
+      "document_id": "38115bedd86cf1977960434dc91eb029948fdad9a2f6b0fb1c55a0d7a3881e14"
+    },
+    {
+      "chunk": "chunk_00396.jsonl.gz",
+      "document_id": "b66b44148ff5b758058f602e75ed3fb344c22054a64b6d1e911a1fa5ee9eba36"
+    },
+    {
+      "chunk": "chunk_00401.jsonl.gz",
+      "document_id": "c9f9f6b359db7655598e0eafe83640394e1620c810662f8e573a7337755b6bed"
+    },
+    {
+      "chunk": "chunk_00406.jsonl.gz",
+      "document_id": "8bcedbb7cd166f70aeb58454ecd254aef39a69b2be71e74f926b6932f793ac6a"
+    },
+    {
+      "chunk": "chunk_00412.jsonl.gz",
+      "document_id": "6dad0df808d6d7886c1b8d1285b31ed6ac316b94815c1b69dd2f95cb1a15c5c9"
+    },
+    {
+      "chunk": "chunk_00453.jsonl.gz",
+      "document_id": "d7e6d5ea9a81a2fe91073562b1d0d2f5a640e83fd33d30ebc72667e14abc6321"
+    },
+    {
+      "chunk": "chunk_00468.jsonl.gz",
+      "document_id": "f98cd0b0ca2ea531417b12bbbc8a87ad869a2cd638e1685ad504ecd399d4cf3b"
+    },
+    {
+      "chunk": "chunk_00491.jsonl.gz",
+      "document_id": "e9a57d8633a36949546daf826c88ccaf394e5ae7c4f2de1ea34a04fac0a792d5"
+    },
+    {
+      "chunk": "chunk_00493.jsonl.gz",
+      "document_id": "78333e7b21ddfd6376dda3960eaa89ef50d5db40f63bc69ce2c9d8d0ff9a0a39"
+    },
+    {
+      "chunk": "chunk_00501.jsonl.gz",
+      "document_id": "7838ff5fbd6ae9e16aec8d3167f28cf79ed10cf89f9769de56bcb1d78bf5983d"
+    },
+    {
+      "chunk": "chunk_00514.jsonl.gz",
+      "document_id": "be8f82883378f60c092fb6105b553eb98e6ddf18b7b721c4edeedd5dbfc803a5"
+    },
+    {
+      "chunk": "chunk_00521.jsonl.gz",
+      "document_id": "3c036fea4bbf08ca95d2814893fcc70247702409cd4f0ccc0f88497bb3a578f1"
+    },
+    {
+      "chunk": "chunk_00541.jsonl.gz",
+      "document_id": "ed56e23e9d0a25b0647591be065a91944261d13a35c97b2b59ea62eb02f2f068"
+    },
+    {
+      "chunk": "chunk_00564.jsonl.gz",
+      "document_id": "69db97e0f68c1de7f9a6dff6aebb0734fee516e0d1bb869a1905da5f43383125"
+    }
+  ]
+}
