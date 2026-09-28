@@ -1476,3 +1476,159 @@ def test_shared_template_builds_self_contained_html(tmp_path: Path) -> None:
     assert "candidate_extraction_template_test" in html
     assert "localStorage" in html
     assert html_path.stat().st_size > task_path.stat().st_size
+
+
+def test_every_precision_question_states_its_rule() -> None:
+    """A coder cannot judge a record against a rule the task never states.
+
+    The September 22, 2026 model-coded pass ran on tasks with no help text.
+    14 of 20 auditable `heading_correct` failures were contract-correct nulls.
+    """
+    from scripts.build_candidate_extraction_handcode import (
+        _precision_instructions,
+        _precision_questions,
+    )
+
+    for route in ("issues", "biography", "endorsements"):
+        questions = _precision_questions(route)
+        for question in questions:
+            help_text = question.get("help")
+            assert isinstance(help_text, str) and len(help_text) >= 40, (
+                f"{route}.{question['id']} states no rule"
+            )
+        instructions = _precision_instructions(route)
+        assert "What the model was told to extract" in instructions
+        assert "Review rule" in instructions
+
+    issue_help = {
+        question["id"]: question["help"] for question in _precision_questions("issues")
+    }
+    assert "occurs exactly once" in issue_help["heading_correct"]
+    assert "more than once" in issue_help["heading_correct"]
+
+    biography_help = {
+        question["id"]: question["help"]
+        for question in _precision_questions("biography")
+    }
+    for field in BIOGRAPHY_FIELDS_V2:
+        assert field in biography_help["field_correct"]
+
+    endorsement_help = {
+        question["id"]: question["help"]
+        for question in _precision_questions("endorsements")
+    }
+    for category in ("private_individual", "government_official", "labor_union"):
+        assert category in endorsement_help["entity_category_correct"]
+
+
+def test_recall_and_omission_tasks_state_eligibility() -> None:
+    from scripts.build_candidate_extraction_handcode import (
+        known_omission_task,
+        recall_task,
+    )
+
+    for route in ("issues", "biography", "endorsements"):
+        page = _page(
+            route,
+            1,
+            [{"statement_kind": "support", "claim": "A claim", "source_heading": None}]
+            if route == "issues"
+            else [{"field": "occupation", "value": "Teacher", "timing": "current"}]
+            if route == "biography"
+            else [
+                {
+                    "endorser_name": "A Union",
+                    "entity_type": "organization",
+                    "endorser_category": "labor_union",
+                }
+            ],
+        )
+        payload = recall_task(route, f"recall_{route}", [page])
+        assert "What the model was told to extract" in payload["instructions"]
+        for question in payload["questions"]:
+            assert isinstance(question.get("help"), str) and question["help"]
+
+    omission_page = _page(
+        "issues",
+        1,
+        [{"statement_kind": "support", "claim": "A claim", "source_heading": None}],
+    )
+    record = omission_page["records"][0]
+    pair = {
+        "item_id": "item-1",
+        "record": record,
+        "omission": {
+            "omission_id": "o1",
+            "route": "issues",
+            "page": omission_page,
+            "expected_type": "support",
+            "expected_value": "A claim",
+            "evidence": omission_page["source_text"][:11],
+            "matched_record_ids": [record["record_id"]],
+            "parent_document_id": omission_page["parent_document_id"],
+        },
+    }
+    task = known_omission_task("known_omissions", [pair])
+    helps = {question["id"]: question.get("help") for question in task["questions"]}
+    assert "any one of its links" in helps["semantic_recovery_confirmed"]
+
+
+def test_the_whole_chain_reads_one_schema_version() -> None:
+    """The importer, packager, builder and scorer must agree on the version.
+
+    Version 2.2 differs from 2.1 only in the alignment spec. Each script chose
+    its version independently before 2026-09-27, and a mismatch produced a
+    report the next stage silently refused.
+    """
+    from scripts.build_candidate_extraction_handcode import (
+        SCHEMA_VERSION as builder_version,
+    )
+    from scripts.build_candidate_extraction_release import (
+        SCHEMA_VERSION as packager_version,
+    )
+    from scripts.import_candidate_extraction_v2 import (
+        SCHEMA_VERSION as importer_version,
+    )
+    from scripts.score_candidate_extraction_handcode import (
+        SCHEMA_VERSION as scorer_version,
+    )
+
+    versions = {
+        "importer": importer_version,
+        "packager": packager_version,
+        "builder": builder_version,
+        "scorer": scorer_version,
+    }
+    assert len(set(versions.values())) == 1, versions
+    assert set(versions.values()) <= {"2.1", "2.2"}
+
+
+def test_no_aligner_call_omits_its_schema_version() -> None:
+    """An omitted `schema_version` defaults to 2.1 and silently misaligns.
+
+    This cost three runs: the packager, the hand-code builder and the importer
+    each called the aligner without it, and grep for the literal "2.1" cannot
+    find an omitted argument. The chain scripts must pass it explicitly.
+    """
+    import re
+    from pathlib import Path
+
+    for name in (
+        "scripts/import_candidate_extraction_v2.py",
+        "scripts/build_candidate_extraction_release.py",
+        "scripts/build_candidate_extraction_handcode.py",
+    ):
+        source = Path(name).read_text(encoding="utf-8")
+        for match in re.finditer(r"align_extraction_exact_spans\(", source):
+            depth = 0
+            for index in range(match.end() - 1, len(source)):
+                if source[index] == "(":
+                    depth += 1
+                elif source[index] == ")":
+                    depth -= 1
+                    if depth == 0:
+                        call = source[match.end() : index]
+                        break
+            assert "schema_version" in call, (
+                f"{name} calls the aligner without a schema version"
+            )

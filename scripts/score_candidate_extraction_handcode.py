@@ -26,7 +26,12 @@ from typing import Any, Iterable, Mapping
 REPO_ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(REPO_ROOT))
 
+# The scorer reads one schema version, and it must be the version the bundle
+# and the hand-code manifest carry. The packager's human-validation gate now
+# requires the report's version to equal the bundle's, so a mismatch here fails
+# closed instead of producing a report the packager silently rejects.
 from scripts.build_candidate_extraction_handcode import (
+    SCHEMA_VERSION,
     BIOGRAPHY_FIELDS_V2,
     BIOGRAPHY_PER_FIELD,
     ENDORSEMENT_PRECISION_N,
@@ -474,8 +479,8 @@ def load_handcode_manifest(handcode_dir: Path) -> tuple[dict[str, Any], str]:
         "handcode manifest format differs",
     )
     _require(
-        str(manifest.get("schema_version")) == "2.1",
-        "handcode schema is not v2.1",
+        str(manifest.get("schema_version")) == SCHEMA_VERSION,
+        f"handcode schema is not v{SCHEMA_VERSION}",
     )
     _require(
         manifest.get("generation_config_sha256")
@@ -1051,7 +1056,7 @@ def score_handcode_results(
     exported_times = sorted(str(result.get("exported_at")) for result in results.values())
     return {
         "format": "candidate-extraction-human-validation-v2",
-        "schema_version": "2.1",
+        "schema_version": SCHEMA_VERSION,
         "status": "passed" if overall_passed else "failed",
         "independent_human_only": True,
         "coding_source": "human",

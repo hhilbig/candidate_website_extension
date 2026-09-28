@@ -18,7 +18,7 @@ import tempfile
 from collections import Counter, defaultdict
 from pathlib import Path
 from typing import Any
-from urllib.parse import urlsplit
+from urllib.parse import urlsplit, urlparse
 
 import pandas as pd
 import pyarrow as pa
@@ -106,6 +106,13 @@ from src.candidate_extraction import (  # noqa: E402
 )
 
 
+# The packager reads one schema version, chosen the same way the importer
+# chooses it. Version 2.2 differs from 2.1 only in the alignment spec, so every
+# table, check and validation call below applies unchanged to both.
+SCHEMA_VERSION = os.environ.get("CANDIDATE_EXTRACTION_SCHEMA_VERSION", "2.1")
+if SCHEMA_VERSION not in ("2.1", "2.2"):
+    raise RuntimeError(f"this packager reads 2.1 and 2.2, not {SCHEMA_VERSION}")
+
 ROUTES = ("issues", "biography", "endorsements")
 # The two endorsement architectures.  The line ledger is the historical
 # three-pass implementation.  Round four is the selected production
@@ -134,9 +141,22 @@ EXPECTED_MODEL_REVISION = "e89b16ebf1988b3d6befa7de50abc2d76f26eb09"
 EXPECTED_RUNTIME_LOCK_SHA256 = (
     "4f46101fa493e38b312af034b8d740c612bd0001bab4cb0f624f4a9e1c49f5b3"
 )
-EXPECTED_EXTRACTION_CONTRACT_SHA256 = (
-    "82530ab0f4126e1640dcffbe48a66bffdfab1538fc40240b5f3e55ab0eed5574"
-)
+# The approved extraction contract, one per schema version. Version 2.2 shares
+# every generation input with 2.1; only the alignment spec, and therefore the
+# contract hash, differs. Keeping both literals here means an accidental edit to
+# any contract input still fails closed rather than silently changing the value.
+APPROVED_EXTRACTION_CONTRACT_SHA256 = {
+    "2.1": "82530ab0f4126e1640dcffbe48a66bffdfab1538fc40240b5f3e55ab0eed5574",
+    "2.2": "b0bdd1662e204e855f6e63fe0c1ffc4e378b8ede55353a464b33f5ed6ed3343b",
+}
+EXPECTED_EXTRACTION_CONTRACT_SHA256 = APPROVED_EXTRACTION_CONTRACT_SHA256[
+    SCHEMA_VERSION
+]
+# The official-government-host rule removes this many parent documents from the
+# approved corpus. Asserting it means a change in the corpus or the rule fails
+# closed rather than quietly shipping a different population.
+EXPECTED_EXCLUDED_PARENT_DOCUMENTS = 631
+EXTENSION_MANIFEST_FILENAME = "candidate_extraction_manifest.json"
 EXPECTED_PARENT_COUNTS = {
     "issues": 14_326,
     "biography": 6_962,
@@ -434,7 +454,10 @@ def _load_human_validation(
     if report.get("status") == "pending":
         return report, {route: False for route in ROUTES}
     _require(report.get("status") == "passed", "human validation status is not passed")
-    _require(report.get("schema_version") == "2.1", "human validation schema is not v2.1")
+    _require(
+        report.get("schema_version") == SCHEMA_VERSION,
+        f"human validation schema is not v{SCHEMA_VERSION}",
+    )
     _require(report.get("independent_human_only") is True, "validation is not human-only")
     _require(report.get("coding_source") == "human", "validation coding source is not human")
     _require(report.get("human_only_attestation") == "confirmed_at_scoring", "human-only attestation is absent")
@@ -546,7 +569,10 @@ def load_bundle(
     _require(manifest_path.is_file(), "frozen bundle lacks bundle_manifest.json")
     manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
     _require(isinstance(manifest, dict), "bundle manifest must be an object")
-    _require(str(manifest.get("schema_version")) == "2.1", "bundle schema is not v2.1")
+    _require(
+        str(manifest.get("schema_version")) == SCHEMA_VERSION,
+        f"bundle schema is not v{SCHEMA_VERSION}",
+    )
     if production:
         _require(
             manifest.get("source_corpus_sha256")
@@ -789,7 +815,84 @@ def _load_core(core_release_dir: Path) -> tuple[pd.DataFrame, pd.DataFrame, str]
     schema = set(pq.ParquetFile(raw_path).schema_arrow.names)
     _require(not (required - schema), f"raw corpus lacks columns: {sorted(required - schema)}")
     raw = pq.read_table(raw_path, columns=sorted(required)).to_pandas()
+    # The population filter does NOT run here. The packager checks several
+    # equalities between the bundle and the core corpus, and the bundle was
+    # built from the unfiltered export, so filtering one side breaks them.
+    # Official government pages are dropped from the released tables instead,
+    # which is where the release population is defined. See _drop_excluded_hosts.
     return universe, raw, sha256_file(raw_path)
+
+
+EXCLUDED_HOST_SUFFIX = ".gov"
+EXCLUDED_HOST_RULE_ID = "official_government_host_not_a_campaign_website_v1"
+
+
+def _url_host(url: Any) -> str:
+    """Return the archived target's host, not the Wayback host."""
+    text = str(url or "")
+    if not text:
+        return ""
+    match = re.match(r"https?://web\.archive\.org/web/\d+[^/]*/(.+)", text)
+    target = match.group(1) if match else text
+    if "://" not in target:
+        target = "http://" + target
+    return urlparse(target).netloc.lower()
+
+
+def _drop_excluded_hosts(raw: pd.DataFrame) -> tuple[pd.DataFrame, dict[str, Any]]:
+    """Report which core rows sit on an official government host.
+
+    Hanno approved dropping them on 2026-09-24. The population is campaign
+    websites, and an official House or Senate page is a different object. Four
+    of these hosts also carry the wrong candidate, for example
+    `billnelson.senate.gov` filed under a Nebraska candidate named Nelson.
+
+    This returns the kept rows and a report. The caller uses the report to
+    filter the released tables; it must not filter the core corpus, because the
+    packager checks equalities between the bundle and that corpus.
+    """
+    hosts = raw["snap_url"].map(_url_host)
+    excluded = hosts.str.endswith(EXCLUDED_HOST_SUFFIX, na=False)
+    target = raw.loc[excluded]
+    report = {
+        "rule_id": EXCLUDED_HOST_RULE_ID,
+        "host_suffix": EXCLUDED_HOST_SUFFIX,
+        "excluded_raw_rows": int(excluded.sum()),
+        "excluded_hosts": sorted(set(hosts[excluded])),
+        "excluded_candidate_years": sorted(
+            set(target["candidate_cycle_id"].astype(str))
+        ),
+    }
+    return raw.loc[~excluded].copy(), report
+
+
+def excluded_parent_document_ids(raw: pd.DataFrame) -> tuple[set[str], dict[str, Any]]:
+    """Return the parent IDs to drop from the released tables, and the report."""
+    _kept, report = _drop_excluded_hosts(raw)
+    hosts = raw["snap_url"].map(_url_host)
+    excluded = raw.loc[hosts.str.endswith(EXCLUDED_HOST_SUFFIX, na=False)].copy()
+    if excluded.empty:
+        report["excluded_parent_documents"] = 0
+        return set(), report
+    # Only the three extraction routes become parent documents, so restrict to
+    # them; otherwise the reported count includes page types the release never
+    # carries and stops matching the released tables.
+    excluded = excluded.loc[excluded["page_type"].isin(ROUTES)].copy()
+    text = excluded["text_snap_content"].fillna("").astype(str)
+    excluded = excluded.loc[text.str.strip().ne("")].copy()
+    # itertuples renames a leading-underscore column to a positional name, so
+    # the digest column must not start with one.
+    excluded["raw_text_sha"] = (
+        excluded["text_snap_content"].fillna("").astype(str).map(sha256_text)
+    )
+    ids = {
+        sha256_text(
+            f"{row.candidate_cycle_id}\n{row.page_type}\n{row.raw_text_sha}"
+        )
+        for row in excluded.itertuples()
+    }
+    report["excluded_parent_documents"] = len(ids)
+    return ids, report
 
 
 def _core_source_state(raw: pd.DataFrame) -> dict[tuple[str, str], dict[str, int]]:
@@ -1879,7 +1982,7 @@ def _validate_item(
             route,
             {LIST_KEYS[route]: [item]},
             source_text,
-            "2.1",
+            SCHEMA_VERSION,
             endorsement_context_provenance=endorsement_context_provenance,
             segment_start_char=segment_start_char,
             parent_source_text=parent_source_text,
@@ -2554,6 +2657,7 @@ def _tables_from_inputs(
                         source_text,
                         endorsement_context_provenance=context_provenance,
                         segment_start_char=start,
+                        schema_version=SCHEMA_VERSION,
                     )
                 )
                 expected_alignment_values = {
@@ -2576,7 +2680,7 @@ def _tables_from_inputs(
                     route,
                     recomputed_extraction,
                     source_text,
-                    "2.1",
+                    SCHEMA_VERSION,
                     endorsement_context_provenance=context_provenance,
                     segment_start_char=start,
                     parent_source_text=expected["source_text"],
@@ -3317,6 +3421,35 @@ def _tables_from_inputs(
     }
 
 
+def filter_released_tables(
+    tables: dict[str, Any], excluded_parents: set[str]
+) -> dict[str, Any]:
+    """Drop the excluded parents from every released table.
+
+    The population rule applies to the released files, not to the bundle or the
+    core corpus, so the packager's bundle-vs-core equalities stay intact. Each
+    table keyed by `parent_document_id` is filtered; the status table is keyed
+    by candidate-year and route, so it is left whole and the documents table
+    carries the population.
+    """
+    if not excluded_parents:
+        return tables
+    filtered: dict[str, Any] = {}
+    for name, table in tables.items():
+        if name.endswith(".csv"):
+            filtered[name] = table
+            continue
+        if "parent_document_id" not in table.column_names:
+            filtered[name] = table
+            continue
+        keep = [
+            value not in excluded_parents
+            for value in table.column("parent_document_id").to_pylist()
+        ]
+        filtered[name] = table.filter(pa.array(keep))
+    return filtered
+
+
 def prepare_release_tables(
     core_release_dir: Path,
     bundle_dir: Path,
@@ -3433,8 +3566,26 @@ def prepare_release_tables(
         statuses = tables["candidate_extraction_status.csv"]
         _require(len(statuses) == EXPECTED_UNIVERSE_ROWS * len(ROUTES), "status table is not rectangular")
         _require(not statuses["extraction_status"].eq("failed").any(), "release has a failed extraction status")
+    # The population filter runs after the frozen corpus checks, so those checks
+    # still prove the corpus is the approved one. Hanno approved dropping
+    # official government pages on 2026-09-24. The expected count is asserted,
+    # so a change in what the rule removes fails closed instead of passing.
+    excluded_parents, excluded_host_report = excluded_parent_document_ids(raw)
+    if production:
+        _require(
+            len(excluded_parents) == EXPECTED_EXCLUDED_PARENT_DOCUMENTS,
+            "the official-government-host rule removes an unexpected count",
+        )
+    before = {
+        name: int(len(value)) for name, value in tables.items()
+    }
+    tables = filter_released_tables(tables, excluded_parents)
+    excluded_host_report["released_rows_before"] = before
+    excluded_host_report["released_rows_after"] = {
+        name: int(len(value)) for name, value in tables.items()
+    }
     summary = {
-        "schema_version": "2.1",
+        "schema_version": SCHEMA_VERSION,
         "source_corpus_sha256": raw_sha256,
         "endorsement_architecture": _endorsement_architecture(manifest),
         "endorsement_route_contract_sha256": _endorsement_route_contract(
@@ -3485,6 +3636,7 @@ def prepare_release_tables(
         "rows": {
             name: int(len(value)) for name, value in tables.items()
         },
+        "excluded_official_government_hosts": excluded_host_report,
         "route_validation_passed": route_passed,
         "release_ready": all(route_passed.values())
         and not tables["candidate_extraction_status.csv"]["extraction_status"].eq("failed").any(),
@@ -3547,7 +3699,17 @@ def build_release(
         allow_withheld_validation=allow_withheld_validation,
     )
     write_release_tables(tables, output_dir)
-    summary["manifest_entries"] = extension_manifest_entries(output_dir)
+    entries = extension_manifest_entries(output_dir)
+    summary["manifest_entries"] = entries
+    # The release validator reads this inventory through --manifest, so the
+    # packager writes it. Before 2026-09-27 the summary carried the entries but
+    # nothing wrote the file, and the 2026-09-25 inventory had to be rebuilt by
+    # hand, which is not reproducible.
+    manifest_path = output_dir / EXTENSION_MANIFEST_FILENAME
+    manifest_path.write_text(
+        json.dumps(entries, indent=2, sort_keys=True) + "\n", encoding="utf-8"
+    )
+    summary["manifest_file"] = EXTENSION_MANIFEST_FILENAME
     return summary
 
 

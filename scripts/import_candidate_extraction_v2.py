@@ -144,7 +144,13 @@ from scripts.import_candidate_endorsement_line_ledger_a3_handcode import (  # no
 )
 
 
-SCHEMA_VERSION = "2.1"
+# The importer binds its contract at module load. Version 2.2 differs from 2.1
+# only in the alignment spec, so a 2.2 import reads the same generation fields
+# and the same stored model outputs. The default stays 2.1 so every existing
+# call keeps its behaviour; the 2.2 re-alignment sets this variable.
+SCHEMA_VERSION = os.environ.get("CANDIDATE_EXTRACTION_SCHEMA_VERSION", "2.1")
+if SCHEMA_VERSION not in ("2.1", "2.2"):
+    raise RuntimeError(f"this importer reads 2.1 and 2.2, not {SCHEMA_VERSION}")
 LIST_KEYS = LIST_KEY_BY_VERSION[SCHEMA_VERSION]
 SEGMENTS_FILENAME = "segments_enriched.jsonl.gz"
 ENDORSEMENT_LINE_LEDGER_FILENAME = "endorsement_line_ledger_private.jsonl.gz"
@@ -295,7 +301,11 @@ HISTORICAL_STAGE_A_RUN_METADATA_VERSION = (
 HISTORICAL_STAGE_A_GENERATION_CONFIG_VERSION = (
     "candidate_endorsement_line_ledger_generation_v2"
 )
-EXPECTED_GENERATION_CONFIG_SHA256 = (
+# The frozen v2.1 generation identity. The alignment spec sits inside the
+# generation config, so version 2.2 necessarily has its own hash. The 2.1
+# literal stays as a fail-closed assertion: an accidental edit to any contract
+# input still breaks the build instead of changing this value silently.
+FROZEN_V2_1_GENERATION_CONFIG_SHA256 = (
     "edfe53dd421acb30f1da4bc17404be4b5415a3d6060b77650c448d76edafc13f"
 )
 EXPECTED_GENERATION_SEED = 20260824
@@ -551,6 +561,28 @@ def _typed_equal(left: Any, right: Any) -> bool:
             for left_item, right_item in zip(left, right, strict=True)
         )
     return left == right
+
+
+EXPECTED_GENERATION_CONFIG_SHA256 = sha256_text(
+    canonical_json(EXPECTED_GENERATION_CONFIG)
+)
+if SCHEMA_VERSION == "2.1" and (
+    EXPECTED_GENERATION_CONFIG_SHA256 != FROZEN_V2_1_GENERATION_CONFIG_SHA256
+):
+    raise RuntimeError(
+        "the v2.1 generation config differs from its frozen SHA-256"
+    )
+
+
+def generation_config_for_seed(seed: int) -> tuple[dict[str, Any], str]:
+    """Return the generation config for one seed and its hash.
+
+    A seed-vary repair keeps every field except the seed, so its identity is
+    this block with the seed replaced. The caller uses it to map a repair run's
+    hash across schema versions.
+    """
+    config = {**EXPECTED_GENERATION_CONFIG, "seed": int(seed)}
+    return config, sha256_text(canonical_json(config))
 
 
 def validate_generation_config_identity(
@@ -4550,9 +4582,37 @@ def validate_run_metadata(output_dir: Path) -> list[dict[str, Any]]:
     for path in paths:
         row = json.loads(path.read_text())
         expected = frozen_run_metadata_identity()
+        # A 2.2 bundle is built by re-aligning a 2.1 inference run. Generation
+        # is identical between the versions, so the run metadata legitimately
+        # still declares 2.1 for the four version-bearing fields. Accepting the
+        # 2.1 values keeps the provenance honest: no 2.2 inference run happened.
+        realigned_from_2_1 = False
+        if SCHEMA_VERSION == "2.2":
+            source_identity = get_extraction_contract("2.1")
+            inherited = {
+                "schema_version": "2.1",
+                "extraction_contract_sha256": source_identity[
+                    "extraction_contract_sha256"
+                ],
+                "alignment_id": source_identity["alignment_id"],
+                "alignment_spec_sha256": source_identity["alignment_spec_sha256"],
+            }
+            if all(
+                _typed_equal(row.get(key), value)
+                for key, value in inherited.items()
+            ):
+                realigned_from_2_1 = True
+                expected = {
+                    key: value
+                    for key, value in expected.items()
+                    if key not in inherited
+                }
         for key, value in expected.items():
             if not _typed_equal(row.get(key), value):
                 raise ValueError(f"{path.name}: wrong {key}")
+        if realigned_from_2_1:
+            row["realigned_from_schema_version"] = "2.1"
+            row["realigned_to_schema_version"] = SCHEMA_VERSION
         if row.get("outputs_complete_for_selected_shard") is not True:
             raise ValueError(f"{path.name}: shard outputs are not attested complete")
         generation = row.get("generation") or {}
@@ -5268,6 +5328,7 @@ def validate_output_row(
             str(source["source_text"]),
             endorsement_context_provenance=context_provenance,
             segment_start_char=int(source["segment_start_char"]),
+            schema_version=SCHEMA_VERSION,
         )
         alignment_status = str(alignment["status"])
         expected_alignment_values = {

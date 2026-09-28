@@ -19,6 +19,7 @@ import csv
 import gzip
 import hashlib
 import json
+import os
 import subprocess
 import sys
 from collections import Counter, defaultdict
@@ -81,7 +82,13 @@ RECALL_ZERO_TARGET = 5
 RECALL_MULTI_TARGET = 5
 OPTIONAL_ENDORSEMENT_TARGET = 20
 HEX64 = set("0123456789abcdef")
-V2_1_CONTRACT = get_extraction_contract("2.1")
+# The builder reads one schema version, chosen the same way the importer and
+# packager choose it. Version 2.2 differs from 2.1 only in the alignment spec,
+# so the sample, the tasks and every check below apply unchanged to both.
+SCHEMA_VERSION = os.environ.get("CANDIDATE_EXTRACTION_SCHEMA_VERSION", "2.1")
+if SCHEMA_VERSION not in ("2.1", "2.2"):
+    raise RuntimeError(f"this builder reads 2.1 and 2.2, not {SCHEMA_VERSION}")
+V2_1_CONTRACT = get_extraction_contract(SCHEMA_VERSION)
 
 HANDCODE_BUILDER = (
     Path.home() / ".agents" / "skills" / "handcode" / "scripts" / "build_task.py"
@@ -535,6 +542,7 @@ def build_parent_pages(
                             "endorsement_context_provenance"
                         ),
                         segment_start_char=int(row["segment_start_char"]),
+                        schema_version=SCHEMA_VERSION,
                     )
                 )
                 expected_replay = {
@@ -594,7 +602,7 @@ def build_parent_pages(
                     route,
                     extraction,
                     str(row["source_text"]),
-                    "2.1",
+                    SCHEMA_VERSION,
                     endorsement_context_provenance=row.get(
                         "endorsement_context_provenance"
                     ),
@@ -723,7 +731,7 @@ def build_parent_pages(
             )
             payload = resolved.get("item")
             _require(isinstance(payload, dict), f"{record_id} lacks its resolved item")
-            key = LIST_KEY_BY_VERSION["2.1"][route]
+            key = LIST_KEY_BY_VERSION[SCHEMA_VERSION][route]
             if route == "endorsements" and ledger_enabled:
                 expected_status, expected_method = (
                     (ROUND4_RECORD_RESOLUTION_STATUS, ROUND4_RECORD_RESOLUTION_METHOD)
@@ -1020,7 +1028,10 @@ def load_frozen_bundle(bundle_dir: Path) -> tuple[list[dict[str, Any]], dict[str
     _require(manifest_path.is_file(), "bundle_manifest.json is absent")
     manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
     _require(isinstance(manifest, dict), "bundle manifest is not an object")
-    _require(str(manifest.get("schema_version")) == "2.1", "bundle schema is not v2.1")
+    _require(
+        str(manifest.get("schema_version")) == SCHEMA_VERSION,
+        f"bundle schema is not v{SCHEMA_VERSION}",
+    )
     _require(
         manifest.get("source_corpus_sha256")
         == FROZEN_SUFFIX_P_SOURCE_CORPUS_SHA256,
@@ -1576,57 +1587,305 @@ def _resolved_record_display(record: Mapping[str, Any]) -> dict[str, Any]:
 
 
 def _precision_questions(route: str) -> list[dict[str, Any]]:
+    """Return the dimensions, each with the extraction rule it tests.
+
+    The help text restates the production prompt in `src/candidate_extraction.py`.
+    A coder who does not see the rule cannot judge the record against it. The
+    September 22, 2026 model-coded pass proved the cost: 14 of 20 auditable
+    `heading_correct` failures were contract-correct nulls.
+    """
     if route == "biography":
         return [
-            {"id": "fact_present", "label": "Is this fact stated on the page?", "type": "yesno"},
-            {"id": "value_faithful", "label": "Does the value faithfully describe the stated fact?", "type": "yesno"},
-            {"id": "field_correct", "label": "Is the biography field correct?", "type": "yesno"},
-            {"id": "timing_correct", "label": "Is the timing label correct?", "type": "yesno"},
-            {"id": "relationship_correct", "label": "Is the local-roots relationship correct or correctly null?", "type": "yesno"},
-            {"id": "evidence_supports_fact", "label": "Does the highlighted evidence support the full fact?", "type": "yesno"},
+            {
+                "id": "fact_present",
+                "label": "Is this fact stated on the page?",
+                "type": "yesno",
+                "help": (
+                    "Yes when the page states the fact about the candidate. "
+                    "No when the page does not state it, or states it about "
+                    "another person. Family facts are not eligible."
+                ),
+            },
+            {
+                "id": "value_faithful",
+                "label": "Does the value faithfully describe the stated fact?",
+                "type": "yesno",
+                "help": (
+                    "The value must be a concise faithful description of the "
+                    "page's fact. No when it adds, drops, or alters meaning."
+                ),
+            },
+            {
+                "id": "field_correct",
+                "label": "Is the biography field correct?",
+                "type": "yesno",
+                "help": (
+                    "The only allowed fields are occupation, education, "
+                    "elected_office_experience, public_service_experience, "
+                    "military_service, and local_roots. There is no residual "
+                    "other category. Judge the field against the page, not "
+                    "against what the field name suggests."
+                ),
+            },
+            {
+                "id": "timing_correct",
+                "label": "Is the timing label correct?",
+                "type": "yesno",
+                "help": (
+                    "Timing is current, former, or unclear, judged at the "
+                    "archived capture date. It applies to occupation, "
+                    "elected_office_experience, public_service_experience, and "
+                    "local_roots. For education and military_service, timing "
+                    "may be null unless the page states a decision-relevant "
+                    "current or former distinction. Past tense on the page "
+                    "must not become current."
+                ),
+            },
+            {
+                "id": "relationship_correct",
+                "label": "Is the local-roots relationship correct or correctly null?",
+                "type": "yesno",
+                "help": (
+                    "relationship must be null for every field except "
+                    "local_roots. For local_roots it must state the page's "
+                    "geographic relationship, for example born in, raised in, "
+                    "moved to, lived in, works in, or represented, and that "
+                    "relationship string must appear verbatim inside the "
+                    "evidence. A bare place name is invalid."
+                ),
+            },
+            {
+                "id": "evidence_supports_fact",
+                "label": "Does the highlighted evidence support the full fact?",
+                "type": "yesno",
+                "help": (
+                    "The evidence is one exact span of the page. Yes when it "
+                    "supports every part of the record. No when it supports "
+                    "only part of it, or when it supports a different fact."
+                ),
+            },
         ]
     if route == "issues":
         return [
-            {"id": "statement_present", "label": "Is this policy statement present on the page?", "type": "yesno"},
-            {"id": "claim_faithful", "label": "Does the claim faithfully describe the page statement?", "type": "yesno"},
-            {"id": "kind_correct", "label": "Is the statement-kind label correct?", "type": "yesno"},
-            {"id": "heading_correct", "label": "Is the source heading exact, or correctly null?", "type": "yesno"},
-            {"id": "evidence_supports_statement", "label": "Does the highlighted evidence support the claim?", "type": "yesno"},
+            {
+                "id": "statement_present",
+                "label": "Is this policy statement present on the page?",
+                "type": "yesno",
+                "help": (
+                    "A statement must say what the candidate supports, "
+                    "opposes, proposes, did, or is doing. The candidate's "
+                    "approval, praise, welcome, disapproval, or rejection of a "
+                    "policy outcome counts. A statement in an introductory "
+                    "summary or in a sentence fragment counts. A bare link "
+                    "title, a statement about the opponent's conduct, and a "
+                    "prediction that states no position do not count."
+                ),
+            },
+            {
+                "id": "claim_faithful",
+                "label": "Does the claim faithfully describe the page statement?",
+                "type": "yesno",
+                "help": (
+                    "The claim must be a concise faithful description of the "
+                    "page's statement. It must not add a topic label or an "
+                    "ideology label."
+                ),
+            },
+            {
+                "id": "kind_correct",
+                "label": "Is the statement-kind label correct?",
+                "type": "yesno",
+                "help": (
+                    "statement_kind is support, oppose, proposal, past_action, "
+                    "current_action, or unclear. Use past_action or "
+                    "current_action only for conduct, never for a preference."
+                ),
+            },
+            {
+                "id": "heading_correct",
+                "label": "Is the source heading exact, or correctly null?",
+                "type": "yesno",
+                "help": (
+                    "IMPORTANT: null is correct in two cases. The record takes "
+                    "the nearest heading ONLY when that exact heading string "
+                    "occurs exactly once in the page text. When there is no "
+                    "heading, or when the exact heading occurs zero times or "
+                    "more than once, null is the correct answer. A heading "
+                    "that also appears in a navigation menu is therefore not "
+                    "unique, and null is correct. Count the occurrences before "
+                    "you answer no. The model read one window of this page, "
+                    "not the whole page shown here, and it applied the "
+                    "uniqueness test inside that window. You cannot see the "
+                    "window boundaries, so you cannot prove a null wrong. "
+                    "Answer yes for a null heading unless the page has no "
+                    "such heading anywhere. Judge a non-null heading "
+                    "normally: it must be copied exactly and be the nearest "
+                    "heading above the evidence."
+                ),
+            },
+            {
+                "id": "evidence_supports_statement",
+                "label": "Does the highlighted evidence support the claim?",
+                "type": "yesno",
+                "help": (
+                    "The evidence is one exact span of the page. Yes when it "
+                    "supports the claim as written."
+                ),
+            },
         ]
     return [
-        {"id": "endorser_present", "label": "Is the named endorser present on the page?", "type": "yesno"},
-        {"id": "name_correct", "label": "Is the endorser name copied and separated correctly?", "type": "yesno"},
-        {"id": "entity_category_correct", "label": "Are entity type and endorser category correct?", "type": "yesno"},
-        {"id": "optional_fields_correct", "label": "Are title, affiliation, and jurisdiction correct or correctly null?", "type": "yesno"},
-        {"id": "record_evidence_supports_identity", "label": "Does record evidence support the endorser identity?", "type": "yesno"},
-        {"id": "combined_record_context_support", "label": "Do record and context evidence together establish this endorsement?", "type": "yesno"},
+        {
+            "id": "endorser_present",
+            "label": "Is the named endorser present on the page?",
+            "type": "yesno",
+            "help": (
+                "Yes when the named person or entity appears on the page. The "
+                "candidate's own statements, calls to endorse, and generic "
+                "supporter counts are not endorsements."
+            ),
+        },
+        {
+            "id": "name_correct",
+            "label": "Is the endorser name copied and separated correctly?",
+            "type": "yesno",
+            "help": (
+                "endorser_name identifies the person or entity only. Title, "
+                "affiliation, and jurisdiction belong in their own fields and "
+                "must not sit inside the name."
+            ),
+        },
+        {
+            "id": "entity_category_correct",
+            "label": "Are entity type and endorser category correct?",
+            "type": "yesno",
+            "help": (
+                "entity_type is individual, organization, or unclear. "
+                "endorser_category is private_individual, government_official, "
+                "party_official, labor_union, media_outlet, "
+                "other_organization, other_individual, or unclear. Judge both "
+                "from the page alone. unclear is correct when the page gives "
+                "no basis to choose; unclear is wrong when the page states the "
+                "basis."
+            ),
+        },
+        {
+            "id": "optional_fields_correct",
+            "label": "Are title, affiliation, and jurisdiction correct or correctly null?",
+            "type": "yesno",
+            "help": (
+                "These three fields are separate and nullable. They must never "
+                "be combined into a generic organization field and must never "
+                "be inferred. Null is correct whenever the page does not state "
+                "the value."
+            ),
+        },
+        {
+            "id": "record_evidence_supports_identity",
+            "label": "Does record evidence support the endorser identity?",
+            "type": "yesno",
+            "help": (
+                "record_evidence is one exact name-bearing span. It may "
+                "include adjacent title or jurisdiction text to make it "
+                "unique. Yes when it establishes who the endorser is."
+            ),
+        },
+        {
+            "id": "combined_record_context_support",
+            "label": "Do record and context evidence together establish this endorsement?",
+            "type": "yesno",
+            "help": (
+                "support_mode is explicit_text only when record_evidence "
+                "itself states support; a bare name never qualifies. "
+                "Otherwise support_mode is page_or_section_context and the "
+                "context evidence must establish why the name-bearing record "
+                "is an endorsement."
+            ),
+        },
     ]
 
 
 def _precision_instructions(route: str) -> str:
-    special = {
+    """Return the review rule plus the route's extraction contract.
+
+    The contract belongs in the task. The coder judges a record against the
+    rule the model was given, not against a personal standard.
+    """
+    contract = {
         "biography": (
+            "### What the model was told to extract\n"
+            "Concrete biographical facts the candidate states on the campaign "
+            "website. The only allowed fields are occupation, education, "
+            "elected_office_experience, public_service_experience, "
+            "military_service, and local_roots. There is no other category, "
+            "and family facts are excluded.\n"
+            "- timing is current, former, or unclear for occupation, "
+            "elected_office_experience, public_service_experience, and "
+            "local_roots. It may be null for education and military_service.\n"
+            "- relationship is null for every field except local_roots, and "
+            "its text must appear verbatim in the evidence.\n"
+            "- value is a concise faithful description. evidence is one exact "
+            "unique span of the page.\n\n"
+            "### Review rule\n"
+            "- Judge only the archived page shown here.\n"
+            "- Answer each dimension independently.\n"
+            "- Read the help text on a question before you answer no.\n"
+            "- Use Notes when a no answer needs clarification.\n"
             "- Timing describes the claim at the archived capture date.\n"
             "- Local roots require the stated relationship. Do not infer current residence."
         ),
         "issues": (
+            "### What the model was told to extract\n"
+            "Distinct policy statements the candidate makes on the campaign "
+            "website. A statement must say what the candidate supports, "
+            "opposes, proposes, did, or is doing. Approval, praise, welcome, "
+            "disapproval, or rejection of a policy outcome counts. Statements "
+            "in introductory summaries and in candidate-attributed sentence "
+            "fragments count. Coordinated sentences and lists are split into "
+            "separate records.\n"
+            "- statement_kind is support, oppose, proposal, past_action, "
+            "current_action, or unclear. past_action and current_action are "
+            "for conduct only, never for a preference.\n"
+            "- source_heading is the nearest heading, copied exactly, ONLY "
+            "when that exact heading occurs once in the page text. It is null "
+            "when there is no heading or when the heading is not unique.\n"
+            "- claim is a concise faithful description. evidence is one exact "
+            "unique span of the page.\n\n"
+            "### Review rule\n"
+            "- Judge only the archived page shown here.\n"
+            "- Answer each dimension independently.\n"
+            "- Read the help text on a question before you answer no.\n"
+            "- Use Notes when a no answer needs clarification.\n"
             "- Check the claim, statement kind, nearest heading, and evidence separately.\n"
+            "- A null heading is almost always correct. Read that question's help.\n"
             "- Do not infer a topic or ideology label."
         ),
         "endorsements": (
+            "### What the model was told to extract\n"
+            "Endorsements of the candidate from the campaign website. The "
+            "candidate's own statements, calls to endorse, and generic "
+            "supporter counts are not endorsements.\n"
+            "- endorser_name identifies the person or entity only.\n"
+            "- entity_type is individual, organization, or unclear.\n"
+            "- endorser_category is private_individual, government_official, "
+            "party_official, labor_union, media_outlet, other_organization, "
+            "other_individual, or unclear.\n"
+            "- title, affiliation, and jurisdiction are separate nullable "
+            "fields. They are never combined and never inferred.\n"
+            "- record_evidence is one exact unique name-bearing span.\n"
+            "- support_mode is explicit_text only when record_evidence itself "
+            "states support. A bare name never qualifies.\n\n"
+            "### Review rule\n"
+            "- Judge only the archived page shown here.\n"
+            "- Answer each dimension independently.\n"
+            "- Read the help text on a question before you answer no.\n"
+            "- Use Notes when a no answer needs clarification.\n"
             "- A bare name needs support from exact segment or parent-page context, "
             "or from the explicitly labeled classifier-qualified historical "
             "endorsement-page URL context.\n"
             "- Do not infer title, affiliation, jurisdiction, or organization."
         ),
-    }[route]
-    return (
-        "### Review rule\n"
-        "- Judge only the archived page shown here.\n"
-        "- Answer each dimension independently.\n"
-        "- Use Notes when a no answer needs clarification.\n"
-        f"{special}"
-    )
+    }
+    return contract[route]
 
 
 def precision_task(route: str, task_id: str, records: list[dict[str, Any]]) -> dict[str, Any]:
@@ -1709,11 +1968,13 @@ def recall_task(route: str, task_id: str, pages: list[dict[str, Any]]) -> dict[s
         "task_id": task_id,
         "title": f"Candidate extraction v2: {route} complete-page recall",
         "instructions": (
+            f"{_recall_eligibility(route)}\n\n"
             "### Review rule\n"
             "- Read the complete archived page.\n"
             "- Compare every eligible fact with all model records.\n"
             "- Answer yes only when no eligible record is missing.\n"
             "- If no, add each missed record with exact evidence.\n"
+            "- Do not list a near-duplicate of a record the model already has.\n"
             "- Empty model output is valid only when the page has no eligible record."
         ),
         "items": items,
@@ -1722,11 +1983,22 @@ def recall_task(route: str, task_id: str, pages: list[dict[str, Any]]) -> dict[s
                 "id": "all_requested_records_captured",
                 "label": "Did the model capture every eligible record on this page?",
                 "type": "yesno",
+                "help": (
+                    "Eligibility is defined above, under what the model was "
+                    "told to extract. Navigation menus, link lists, and news "
+                    "teasers are not eligible. A page that holds no eligible "
+                    "record is complete, so answer yes."
+                ),
             },
             {
                 "id": "missed_records",
                 "label": "Missed eligible records",
                 "type": "structured",
+                "help": (
+                    "One row for each eligible record the page states and the "
+                    "model does not hold. Copy the evidence exactly from the "
+                    "page."
+                ),
                 "required": True,
                 "show_if": {
                     "question": "all_requested_records_captured",
@@ -1740,6 +2012,47 @@ def recall_task(route: str, task_id: str, pages: list[dict[str, Any]]) -> dict[s
             },
         ],
     }
+
+
+def _recall_eligibility(route: str) -> str:
+    """Return what the route counts as an eligible record.
+
+    A recall coder cannot report a miss without the eligibility rule. The
+    September 22, 2026 model-coded pass ran without it.
+    """
+    return {
+        "issues": (
+            "### What the model was told to extract\n"
+            "Every distinct policy statement the candidate makes on the page. "
+            "A statement must say what the candidate supports, opposes, "
+            "proposes, did, or is doing. Approval, praise, welcome, "
+            "disapproval, or rejection of a policy outcome counts. Statements "
+            "in introductory summaries and in candidate-attributed sentence "
+            "fragments count. A coordinated sentence or a list becomes one "
+            "record for each distinct policy object or action. A short summary "
+            "clause still counts when a later section covers the same topic. "
+            "A link title that states no position, the opponent's conduct, and "
+            "a prediction that states no position are not eligible."
+        ),
+        "biography": (
+            "### What the model was told to extract\n"
+            "Every concrete biographical fact the candidate states on the "
+            "page, in six fields only: occupation, education, "
+            "elected_office_experience, public_service_experience, "
+            "military_service, and local_roots. Each specific public, civic, "
+            "community, health, emergency-response, or nonprofit project counts "
+            "separately, including a one-off initiative. Family facts, a street "
+            "address, and any other category are not eligible."
+        ),
+        "endorsements": (
+            "### What the model was told to extract\n"
+            "Every endorsement of the candidate on the page, whether it sits "
+            "in a list or in prose. The candidate's own statements, calls to "
+            "endorse, and generic supporter counts are not endorsements. An "
+            "award, a letter grade, and a percentage rating are not "
+            "endorsements."
+        ),
+    }[route]
 
 
 def known_omission_pairs(
@@ -1824,11 +2137,22 @@ def known_omission_task(
                 "id": "semantic_recovery_confirmed",
                 "label": "Does this linked model record recover the known omitted fact?",
                 "type": "yesno",
+                "help": (
+                    "Yes when the linked record carries the same fact as the "
+                    "known omission. One omission can carry several linked "
+                    "records; judge this link only. The omission counts as "
+                    "recovered when any one of its links is confirmed, so a "
+                    "no here does not fail the omission."
+                ),
             },
             {
                 "id": "recovery_evidence_confirmed",
                 "label": "Does exact page evidence support this semantic recovery?",
                 "type": "yesno",
+                "help": (
+                    "Yes when an exact span of the page supports the recovery "
+                    "you just confirmed."
+                ),
             },
         ],
     }
@@ -2152,7 +2476,7 @@ def write_handcode_package(
     assignment_batches = build_assignment_batches(task_entries)
     manifest = {
         "format": "candidate-extraction-handcode-v2",
-        "schema_version": "2.1",
+        "schema_version": SCHEMA_VERSION,
         "seed": seed,
         "batch_size": batch_size,
         "bundle_manifest_sha256": bundle_info["bundle_manifest_sha256"],
