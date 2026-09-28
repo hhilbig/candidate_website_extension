@@ -65,6 +65,9 @@ GENERATION_CONFIG_VERSION = "candidate_extraction_generation_v2"
 STRUCTURED_DECODING_MODE = "json_schema"
 STRUCTURED_DECODING_BACKEND = "xgrammar"
 STRUCTURED_DECODING_DISABLE_ANY_WHITESPACE = True
+# Version 2.2 differs from 2.1 only in the alignment spec. Every generation
+# input is the same object, so every branch written for 2.1 applies to both.
+V2_ALIGNED_VERSIONS = ("2.1", "2.2")
 RAW_STRUCTURAL_WHITESPACE_VALIDATOR_ID = (
     "xgrammar_fixed_separator_json_whitespace_v1"
 )
@@ -348,7 +351,7 @@ def generation_config_payload(
         "route_json_schema_sha256": contract["json_schema_sha256"],
     }
     generation_config_version = LEGACY_GENERATION_CONFIG_VERSION
-    if schema_version == "2.1":
+    if schema_version in V2_ALIGNED_VERSIONS:
         generation_config_version = GENERATION_CONFIG_VERSION
         structured_decoding.update({
             "backend": STRUCTURED_DECODING_BACKEND,
@@ -380,7 +383,7 @@ def generation_config_payload(
         "compact_repair": bool(args.compact_repair),
         "structured_decoding": structured_decoding,
     }
-    if schema_version == "2.1":
+    if schema_version in V2_ALIGNED_VERSIONS:
         payload.update({
             "inference_display_escape_id": contract[
                 "inference_display_escape_id"
@@ -553,7 +556,7 @@ def chunk_is_complete(
         if not isinstance(route_value, str):
             return False
         route = route_value
-        if version == "2.1":
+        if version in V2_ALIGNED_VERSIONS:
             source_identity_fields = (
                 "document_id",
                 "candidate_cycle_id",
@@ -579,7 +582,7 @@ def chunk_is_complete(
             return False
         if row.get("extraction_contract_sha256") != contract["extraction_contract_sha256"]:
             return False
-        if version == "2.1":
+        if version in V2_ALIGNED_VERSIONS:
             contract_identity = {
                 "model_id": MODEL_ID,
                 "runtime_lock_sha256": RUNTIME_LOCK_SHA256,
@@ -813,9 +816,9 @@ def chunk_is_complete(
                 or validation.get("schema_valid") is not True
             ):
                 return False
-        if version == "2.1" and expected_generation_config_sha256 is None:
+        if version in V2_ALIGNED_VERSIONS and expected_generation_config_sha256 is None:
             return False
-        if version == "2.1" and expected_max_output_tokens is None:
+        if version in V2_ALIGNED_VERSIONS and expected_max_output_tokens is None:
             return False
         if expected_generation_config_sha256 is not None:
             if not json_value_equal_typed(
@@ -1176,7 +1179,7 @@ def build_user_message(
     urls = record.get("source_urls") or []
     url = urls[0] if urls else ""
     version = canonical_schema_version(schema_version)
-    if version == "2.1":
+    if version in V2_ALIGNED_VERSIONS:
         candidate_id = record.get("candidate_icpsr")
         if not isinstance(candidate_id, str) or not candidate_id.strip():
             raise ValueError("v2.1 input requires a nonempty candidate_icpsr field")
@@ -1507,7 +1510,7 @@ def main() -> int:
     prompts = get_prompts(schema_version)
     schemas = get_schemas(schema_version)
     contract = get_extraction_contract(schema_version)
-    if schema_version == "2.1" and args.max_output_tokens < V2_1_MIN_OUTPUT_TOKENS:
+    if schema_version in V2_ALIGNED_VERSIONS and args.max_output_tokens < V2_1_MIN_OUTPUT_TOKENS:
         raise ValueError(
             "v2.1 requires max-output-tokens of at least "
             f"{V2_1_MIN_OUTPUT_TOKENS}"
@@ -1708,7 +1711,7 @@ def main() -> int:
                 ).hexdigest()
                 if segment_hash != observed_hash:
                     raise ValueError(f"{record['document_id']}: segment text hash mismatch")
-            if schema_version == "2.1" and route == "endorsements":
+            if schema_version in V2_ALIGNED_VERSIONS and route == "endorsements":
                 provenance_errors = endorsement_context_provenance_errors(
                     record.get("endorsement_context_provenance"),
                     segment_source_text=record["source_text"],
@@ -1734,7 +1737,7 @@ def main() -> int:
                 raise ValueError(
                     f"{record['document_id']}: unsafe source token budget {prompt_budget}"
                 )
-            if schema_version == "2.1":
+            if schema_version in V2_ALIGNED_VERSIONS:
                 trimmed = str(record["source_text"])
                 display_text = inference_display_escape(trimmed)
                 display_provenance = inference_display_provenance(trimmed)
@@ -1801,7 +1804,7 @@ def main() -> int:
                 raw_completion_text = completion.text
                 text = (
                     raw_completion_text
-                    if schema_version == "2.1"
+                    if schema_version in V2_ALIGNED_VERSIONS
                     else raw_completion_text.strip()
                 )
                 finish_reason = str(completion.finish_reason or "")
@@ -1852,7 +1855,7 @@ def main() -> int:
                     "input_tokens_used": meta["input_tokens_used"],
                     "input_chars_used": meta["input_chars_used"],
                 }
-                if schema_version == "2.1":
+                if schema_version in V2_ALIGNED_VERSIONS:
                     row.update({
                         "structured_decoding_backend": (
                             STRUCTURED_DECODING_BACKEND
@@ -1903,7 +1906,7 @@ def main() -> int:
                     ]
                 canonical_text = text
                 structural_whitespace = None
-                if schema_version == "2.1":
+                if schema_version in V2_ALIGNED_VERSIONS:
                     structural_whitespace = validate_raw_structural_whitespace(
                         text
                     )
@@ -1935,7 +1938,7 @@ def main() -> int:
                             f"non-stop generation finish reason: {finish_reason or 'missing'}"
                         )
                     if (
-                        schema_version == "2.1"
+                        schema_version in V2_ALIGNED_VERSIONS
                         and structural_whitespace is not None
                         and not structural_whitespace[
                             "raw_structural_whitespace_validation_passed"
@@ -1945,7 +1948,7 @@ def main() -> int:
                             "raw JSON does not use xgrammar fixed separators"
                         )
                     parsed_extraction = strict_json_loads(canonical_text)
-                    if schema_version == "2.1":
+                    if schema_version in V2_ALIGNED_VERSIONS:
                         strict_json_parsed_outputs += 1
                         row["model_extraction"] = parsed_extraction
                         row["model_extraction_sha256"] = hashlib.sha256(

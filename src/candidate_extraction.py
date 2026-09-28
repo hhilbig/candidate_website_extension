@@ -20,7 +20,7 @@ MODEL_ID = "Qwen/Qwen3.6-27B-FP8"
 MODEL_REVISION = "e89b16ebf1988b3d6befa7de50abc2d76f26eb09"
 RUNTIME_LOCK_SHA256 = "4f46101fa493e38b312af034b8d740c612bd0001bab4cb0f624f4a9e1c49f5b3"
 ROUTES = ("issues", "biography", "endorsements")
-SCHEMA_VERSIONS = ("1.0", "2.0", "2.1")
+SCHEMA_VERSIONS = ("1.0", "2.0", "2.1", "2.2")
 DEFAULT_SCHEMA_VERSION = "2.1"
 
 # Legacy v1 constants are public because the importer for the frozen failed
@@ -155,6 +155,26 @@ ALIGNMENT_METHOD_UNIQUE = EXACT_ALIGNMENT_ID
 ALIGNMENT_METHOD_UNIQUE_DISPLAY = (
     "unique_exact_inference_display_substring_v1"
 )
+EXACT_ALIGNMENT_ID_V2_2 = "unique_exact_unicode_or_typographic_variant_substring_v1"
+ALIGNMENT_METHOD_UNIQUE_TYPOGRAPHIC = (
+    "unique_exact_typographic_variant_substring_v1"
+)
+TYPOGRAPHIC_VARIANT_FOLD_ID = "length_preserving_typographic_variant_fold_v1"
+# Every entry maps one code point to exactly one code point, so a folded
+# offset is the source offset. The fold is a search aid only: the released
+# span is always the source slice, never the model string.
+TYPOGRAPHIC_VARIANT_FOLD_MAP = {
+    "\u2018": "'", "\u2019": "'", "\u201a": "'", "\u201b": "'",
+    "\u2032": "'", "\u00b4": "'", "\u0060": "'",
+    "\u201c": '"', "\u201d": '"', "\u201e": '"', "\u201f": '"',
+    "\u2033": '"',
+    "\u2010": "-", "\u2011": "-", "\u2012": "-", "\u2013": "-",
+    "\u2014": "-", "\u2015": "-", "\u2212": "-", "\u00ad": "-",
+    "\u00a0": " ", "\u2002": " ", "\u2003": " ", "\u2004": " ",
+    "\u2005": " ", "\u2006": " ", "\u2007": " ", "\u2008": " ",
+    "\u2009": " ", "\u200a": " ", "\u202f": " ", "\u205f": " ",
+    "\u3000": " ",
+}
 ALIGNMENT_METHOD_AMBIGUOUS = "ambiguous_exact_unicode_substring"
 ALIGNMENT_METHOD_MISSING = "missing_exact_unicode_substring"
 ALIGNMENT_METHOD_NOT_APPLICABLE = "not_applicable"
@@ -1266,20 +1286,27 @@ SCHEMAS_V2_1: dict[str, dict[str, Any]] = {
 }
 
 
+# Version 2.2 reuses every generation input of 2.1: the same prompts, the same
+# JSON schemas, the same user-message template. Only the alignment spec differs.
+# A stored 2.1 model output is therefore a valid 2.2 input, and a re-alignment
+# needs no new inference.
 PROMPTS_BY_VERSION = {
     "1.0": PROMPTS_V1,
     "2.0": PROMPTS_V2,
     "2.1": PROMPTS_V2_1,
+    "2.2": PROMPTS_V2_1,
 }
 SCHEMAS_BY_VERSION = {
     "1.0": SCHEMAS_V1,
     "2.0": SCHEMAS_V2,
     "2.1": SCHEMAS_V2_1,
+    "2.2": SCHEMAS_V2_1,
 }
 LIST_KEY_BY_VERSION = {
     "1.0": {"issues": "issue_blocks", "biography": "facts", "endorsements": "endorsements"},
     "2.0": {"issues": "issue_blocks", "biography": "facts", "endorsements": "endorsements"},
     "2.1": {"issues": "issue_blocks", "biography": "facts", "endorsements": "endorsements"},
+    "2.2": {"issues": "issue_blocks", "biography": "facts", "endorsements": "endorsements"},
 }
 
 # Compatibility aliases: old import/repair scripts intentionally remain on v1.
@@ -1293,6 +1320,7 @@ def canonical_schema_version(schema_version: str) -> str:
         "1": "1.0", "v1": "1.0", "1.0": "1.0",
         "2": "2.0", "v2": "2.0", "2.0": "2.0",
         "2.1": "2.1", "v2.1": "2.1",
+        "2.2": "2.2", "v2.2": "2.2",
     }
     try:
         return aliases[str(schema_version).lower()]
@@ -1481,6 +1509,41 @@ EXACT_ALIGNMENT_SPEC = {
 }
 EXACT_ALIGNMENT_SPEC_SHA256 = _sha256_text(_canonical_json(EXACT_ALIGNMENT_SPEC))
 
+# Version 2.2 adds one search fallback and changes nothing else. When neither
+# the exact search nor the inference-display search finds the span, the
+# aligner folds a fixed set of typographic variants and searches again. It
+# still demands exactly one occurrence, and it still stores the source slice,
+# so the released evidence remains an exact substring of the page.
+EXACT_ALIGNMENT_SPEC_V2_2 = {
+    **EXACT_ALIGNMENT_SPEC,
+    "alignment_id": EXACT_ALIGNMENT_ID_V2_2,
+    "matching": (
+        EXACT_ALIGNMENT_SPEC["matching"]
+        + ";_when_neither_exists_allow_only_length_preserving_typographic_"
+        "variant_matches_whose_source_slice_is_stored_as_the_final_excerpt"
+    ),
+    "typographic_variant_fold_id": TYPOGRAPHIC_VARIANT_FOLD_ID,
+    "typographic_variant_fold_map": dict(
+        sorted(TYPOGRAPHIC_VARIANT_FOLD_MAP.items())
+    ),
+    "typographic_variant_rule": (
+        "one_code_point_maps_to_one_code_point_so_offsets_are_preserved;_the_"
+        "released_excerpt_is_always_the_source_slice_never_the_model_string"
+    ),
+    "normalization": "search_only_typographic_variant_fold_never_stored",
+}
+EXACT_ALIGNMENT_SPEC_V2_2_SHA256 = _sha256_text(
+    _canonical_json(EXACT_ALIGNMENT_SPEC_V2_2)
+)
+
+
+def alignment_identity(schema_version: str) -> tuple[str, str]:
+    """Return the alignment id and spec hash the version uses."""
+    version = canonical_schema_version(schema_version)
+    if version == "2.2":
+        return EXACT_ALIGNMENT_ID_V2_2, EXACT_ALIGNMENT_SPEC_V2_2_SHA256
+    return EXACT_ALIGNMENT_ID, EXACT_ALIGNMENT_SPEC_SHA256
+
 SEMANTIC_VALIDATION_SPEC = {
     "issues": {
         "source_heading_role": "exact_provenance_not_overlap_semantic_identity",
@@ -1550,10 +1613,11 @@ def computed_contract_hashes(schema_version: str) -> dict[str, Any]:
         "prompt_sha256": prompt_hashes,
         "json_schema_sha256": schema_hashes,
     }
-    if version == "2.1":
+    if version in ("2.1", "2.2"):
+        alignment_id, alignment_spec_sha256 = alignment_identity(version)
         contract.update({
-            "alignment_id": EXACT_ALIGNMENT_ID,
-            "alignment_spec_sha256": EXACT_ALIGNMENT_SPEC_SHA256,
+            "alignment_id": alignment_id,
+            "alignment_spec_sha256": alignment_spec_sha256,
             "semantic_validation_spec_sha256": SEMANTIC_VALIDATION_SPEC_SHA256,
             "endorsement_context_provenance_spec_sha256": (
                 ENDORSEMENT_CONTEXT_PROVENANCE_SPEC_SHA256
@@ -1634,6 +1698,13 @@ FROZEN_V2_1_MODEL_ITEM_REPETITION_SPEC_SHA256 = (
 FROZEN_V2_1_CONTRACT_SHA256 = (
     "82530ab0f4126e1640dcffbe48a66bffdfab1538fc40240b5f3e55ab0eed5574"
 )
+# Version 2.2 shares every 2.1 generation hash. Only these two differ.
+FROZEN_V2_2_ALIGNMENT_SPEC_SHA256 = (
+    "f9179f01fe426bce150d8a5efefefa04a67c67ead7e3ee5c240fb42db9993733"
+)
+FROZEN_V2_2_CONTRACT_SHA256 = (
+    "b0bdd1662e204e855f6e63fe0c1ffc4e378b8ede55353a464b33f5ed6ed3343b"
+)
 
 
 def get_extraction_contract(schema_version: str = DEFAULT_SCHEMA_VERSION) -> dict[str, Any]:
@@ -1646,6 +1717,15 @@ def get_extraction_contract(schema_version: str = DEFAULT_SCHEMA_VERSION) -> dic
             raise RuntimeError("v2 extraction JSON schema differs from its frozen SHA-256")
         if contract["extraction_contract_sha256"] != FROZEN_V2_CONTRACT_SHA256:
             raise RuntimeError("v2 extraction contract differs from its frozen SHA-256")
+    if version == "2.2" and FROZEN_V2_2_CONTRACT_SHA256:
+        if contract["prompt_sha256"] != FROZEN_V2_1_PROMPT_SHA256:
+            raise RuntimeError("v2.2 extraction prompt differs from the frozen v2.1 SHA-256")
+        if contract["json_schema_sha256"] != FROZEN_V2_1_SCHEMA_SHA256:
+            raise RuntimeError("v2.2 extraction JSON schema differs from the frozen v2.1 SHA-256")
+        if contract["alignment_spec_sha256"] != FROZEN_V2_2_ALIGNMENT_SPEC_SHA256:
+            raise RuntimeError("v2.2 exact-alignment spec differs from its frozen SHA-256")
+        if contract["extraction_contract_sha256"] != FROZEN_V2_2_CONTRACT_SHA256:
+            raise RuntimeError("v2.2 extraction contract differs from its frozen SHA-256")
     if version == "2.1" and FROZEN_V2_1_CONTRACT_SHA256:
         if contract["prompt_sha256"] != FROZEN_V2_1_PROMPT_SHA256:
             raise RuntimeError("v2.1 extraction prompt differs from its frozen SHA-256")
@@ -1907,6 +1987,57 @@ def exact_inference_display_occurrence_spans(
         if source_span not in mapped:
             mapped.append(source_span)
     return mapped
+
+
+TYPOGRAPHIC_VARIANT_FOLD_TABLE = str.maketrans(TYPOGRAPHIC_VARIANT_FOLD_MAP)
+
+
+def typographic_variant_fold(text: str) -> str:
+    """Fold typographic variants to their ASCII equivalent, length preserved.
+
+    Every mapping replaces one code point with one code point, so index i of
+    the result comes from index i of the input. The caller can therefore use a
+    folded offset as a source offset without a boundary table.
+
+    This is a search aid, not normalization. `exact_typographic_variant_
+    occurrence_spans` returns source spans, and the caller stores the source
+    slice. The released evidence stays an exact substring of the page.
+    """
+    if not isinstance(text, str):
+        raise TypeError("text must be a string")
+    folded = text.translate(TYPOGRAPHIC_VARIANT_FOLD_TABLE)
+    if len(folded) != len(text):
+        raise AssertionError("typographic fold changed the string length")
+    return folded
+
+
+def exact_typographic_variant_occurrence_spans(
+    source_text: str, model_excerpt: str
+) -> list[tuple[int, int]]:
+    """Enumerate source spans that match the excerpt up to typographic variants.
+
+    The model is told to copy an exact span. It sometimes returns a straight
+    apostrophe where the page carries a curly one, and the exact search then
+    withholds a record whose content is on the page. This search accepts that
+    one class of difference and nothing else.
+
+    Each returned span is verified: folding the source slice must reproduce
+    the folded excerpt, and the slice must have the excerpt's length.
+    """
+    if not isinstance(source_text, str) or not isinstance(model_excerpt, str):
+        return []
+    if not model_excerpt:
+        return []
+    folded_source = typographic_variant_fold(source_text)
+    folded_excerpt = typographic_variant_fold(model_excerpt)
+    spans: list[tuple[int, int]] = []
+    for start, end in exact_occurrence_spans(folded_source, folded_excerpt):
+        if end - start != len(model_excerpt):
+            raise AssertionError("typographic fold span has the wrong length")
+        if typographic_variant_fold(source_text[start:end]) != folded_excerpt:
+            raise AssertionError("typographic fold span does not round-trip")
+        spans.append((start, end))
+    return spans
 
 
 def normalized_evidence(text: str) -> str:
@@ -2776,6 +2907,7 @@ def align_extraction_exact_spans(
     endorsement_context_provenance: Mapping[str, Any] | None = None,
     segment_start_char: int = 0,
     fixed_anchor_spans: Mapping[int, Mapping[str, tuple[int, int]]] | None = None,
+    schema_version: str = "2.1",
 ) -> tuple[dict[str, Any] | None, list[dict[str, Any]], dict[str, Any]]:
     """Create a separate exact-aligned extraction and retain every failure.
 
@@ -2790,6 +2922,23 @@ def align_extraction_exact_spans(
         raise ValueError(f"unknown extraction route: {route}")
     if not isinstance(source_text, str):
         raise TypeError("source_text must be a string")
+    alignment_version = canonical_schema_version(schema_version)
+    if alignment_version not in ("2.1", "2.2"):
+        raise ValueError(
+            f"exact alignment is defined for 2.1 and 2.2, not {schema_version}"
+        )
+    active_alignment_id, active_alignment_spec_sha256 = alignment_identity(
+        alignment_version
+    )
+    typographic_fallback_enabled = alignment_version == "2.2"
+
+    def _typographic_spans(excerpt: Any) -> list[tuple[int, int]]:
+        """Return the third-fallback spans, empty unless 2.2 is active."""
+        if not typographic_fallback_enabled:
+            return []
+        if not isinstance(excerpt, str) or not excerpt:
+            return []
+        return exact_typographic_variant_occurrence_spans(source_text, excerpt)
     if not isinstance(segment_start_char, int) or isinstance(segment_start_char, bool):
         raise TypeError("segment_start_char must be an integer")
     context_provenance_errors: list[str] = []
@@ -2821,8 +2970,8 @@ def align_extraction_exact_spans(
     )
     if not root_valid:
         report = {
-            "alignment_id": EXACT_ALIGNMENT_ID,
-            "alignment_spec_sha256": EXACT_ALIGNMENT_SPEC_SHA256,
+            "alignment_id": active_alignment_id,
+            "alignment_spec_sha256": active_alignment_spec_sha256,
             "source_text_sha256": _sha256_text(source_text),
             "model_extraction_sha256": model_hash,
             "original_model_extraction_sha256": model_hash,
@@ -3263,9 +3412,44 @@ def align_extraction_exact_spans(
                 if not spans and isinstance(excerpt, str) and excerpt
                 else []
             )
+            typographic_spans = (
+                _typographic_spans(excerpt)
+                if not spans and not display_spans
+                else []
+            )
             if len(spans) == 1:
                 start, end = spans[0]
                 method = ALIGNMENT_METHOD_UNIQUE
+            elif len(typographic_spans) == 1 and not display_spans:
+                start, end = typographic_spans[0]
+                final_excerpt = source_text[start:end]
+                method = ALIGNMENT_METHOD_UNIQUE_TYPOGRAPHIC
+                aligned_item[text_field] = final_excerpt
+                adjustment = {
+                    "source_model_item_id": raw_id,
+                    "item_index": item_index,
+                    "text_field": text_field,
+                    "model_excerpt": excerpt,
+                    "model_excerpt_sha256": _sha256_text(str(excerpt)),
+                    "model_source_exact_match_count": 0,
+                    "model_display_exact_boundary_match_count": 0,
+                    "alignment_disposition": "typographic_variant_source_slice",
+                    "typographic_variant_fold_id": TYPOGRAPHIC_VARIANT_FOLD_ID,
+                    "final_excerpt": final_excerpt,
+                    "final_excerpt_sha256": _sha256_text(final_excerpt),
+                    "final_start_char": start,
+                    "final_end_char": end,
+                    "final_exact_match_count": 1,
+                    "final_alignment_method": method,
+                    "typographic_fold_roundtrip_valid": (
+                        typographic_variant_fold(final_excerpt)
+                        == typographic_variant_fold(str(excerpt))
+                    ),
+                }
+                adjustment["display_anchor_adjustment_id"] = _sha256_text(
+                    _canonical_json(adjustment)
+                )
+                item_display_anchor_adjustments.append(adjustment)
             elif len(display_spans) == 1:
                 start, end = display_spans[0]
                 final_excerpt = source_text[start:end]
@@ -3352,7 +3536,11 @@ def align_extraction_exact_spans(
                 failed_methods.append(method)
             aligned_item[start_field] = start
             aligned_item[end_field] = end
-            match_count = len(spans) if spans else len(display_spans)
+            match_count = (
+                len(spans)
+                if spans
+                else len(display_spans) or len(typographic_spans)
+            )
             aligned_item[count_field] = match_count
             aligned_item[method_field] = method
             anchor_diagnostics[text_field] = {
@@ -3365,6 +3553,12 @@ def align_extraction_exact_spans(
                 "final_start_char": start,
                 "final_end_char": end,
             }
+            # 2.1 rows must stay byte-reproducible, so the extra diagnostic
+            # appears only when the 2.2 fallback is active.
+            if typographic_fallback_enabled:
+                anchor_diagnostics[text_field][
+                    "typographic_variant_match_count"
+                ] = len(typographic_spans)
 
         if route == "endorsements" and endorsement_context_provenance is not None:
             has_complete_line = endorsement_context_provenance.get(
@@ -3476,8 +3670,8 @@ def align_extraction_exact_spans(
     else:
         status = "complete"
     report = {
-        "alignment_id": EXACT_ALIGNMENT_ID,
-        "alignment_spec_sha256": EXACT_ALIGNMENT_SPEC_SHA256,
+        "alignment_id": active_alignment_id,
+        "alignment_spec_sha256": active_alignment_spec_sha256,
         "source_text_sha256": _sha256_text(source_text),
         "model_extraction_sha256": model_hash,
         "original_model_extraction_sha256": model_hash,
@@ -3810,6 +4004,7 @@ def _v2_1_endorsement_item(
         and item.get("record_evidence_alignment_method") in {
             ALIGNMENT_METHOD_UNIQUE,
             ALIGNMENT_METHOD_UNIQUE_DISPLAY,
+            ALIGNMENT_METHOD_UNIQUE_TYPOGRAPHIC,
         }
         and len(record_spans) == 1
         and record_spans[0] == (
@@ -3909,6 +4104,7 @@ def _v2_1_endorsement_item(
                 and context_method in {
                     ALIGNMENT_METHOD_UNIQUE,
                     ALIGNMENT_METHOD_UNIQUE_DISPLAY,
+                    ALIGNMENT_METHOD_UNIQUE_TYPOGRAPHIC,
                 }
                 and isinstance(local_start, int)
                 and not isinstance(local_start, bool)
@@ -4023,6 +4219,7 @@ def _v2_1_item(
             and method in {
                 ALIGNMENT_METHOD_UNIQUE,
                 ALIGNMENT_METHOD_UNIQUE_DISPLAY,
+                ALIGNMENT_METHOD_UNIQUE_TYPOGRAPHIC,
             }
             and len(spans) == 1
             and spans[0] == (item.get(start_field), item.get(end_field))

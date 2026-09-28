@@ -540,3 +540,194 @@ def test_quote_normalized_repair_preserves_mapping_and_removes_quotes(tmp_path: 
     original = 'The Wyden-authored\n“Secure Rural Schools Act"\n– brought funding.'
     normalized = 'The Wyden-authored Secure Rural Schools Act – brought funding.'
     assert reanchor_normalized_evidence(normalized, original) == original
+
+
+def test_typographic_fold_preserves_length_and_offsets() -> None:
+    from src.candidate_extraction import (
+        TYPOGRAPHIC_VARIANT_FOLD_MAP,
+        exact_typographic_variant_occurrence_spans,
+        typographic_variant_fold,
+    )
+
+    for source_char, folded_char in TYPOGRAPHIC_VARIANT_FOLD_MAP.items():
+        assert len(source_char) == 1 and len(folded_char) == 1
+
+    source = "We protect Nevada’s families — today, and tomorrow."
+    assert len(typographic_variant_fold(source)) == len(source)
+
+    excerpt = "Nevada's families - today, and tomorrow."
+    spans = exact_typographic_variant_occurrence_spans(source, excerpt)
+    assert len(spans) == 1
+    start, end = spans[0]
+    assert end - start == len(excerpt)
+    assert source[start:end] == "Nevada’s families — today, and tomorrow."
+
+
+def test_version_2_2_recovers_a_typographic_span_and_stores_the_source_slice() -> None:
+    """The fallback returns the page's own text, never the model's string."""
+    from src.candidate_extraction import (
+        ALIGNMENT_METHOD_UNIQUE_TYPOGRAPHIC,
+        align_extraction_exact_spans,
+    )
+
+    source = (
+        "Health Care\n"
+        "Ensuring every Arizonan has health insurance’s full protection.\n"
+    )
+    model = {
+        "issue_blocks": [
+            {
+                "source_heading": "Health Care",
+                "claim": "The candidate supports universal health insurance.",
+                "statement_kind": "support",
+                "evidence": "Ensuring every Arizonan has health insurance's full protection.",
+            }
+        ]
+    }
+
+    _aligned, withheld, report = align_extraction_exact_spans(
+        "issues", model, source, schema_version="2.1"
+    )
+    assert report["aligned_item_count"] == 0
+    assert len(withheld) == 1
+
+    aligned, withheld, report = align_extraction_exact_spans(
+        "issues", model, source, schema_version="2.2"
+    )
+    assert report["aligned_item_count"] == 1
+    assert withheld == []
+    item = aligned["issue_blocks"][0]
+    assert item["evidence_alignment_method"] == ALIGNMENT_METHOD_UNIQUE_TYPOGRAPHIC
+    start, end = item["evidence_start_char"], item["evidence_end_char"]
+    assert source[start:end] == item["evidence"]
+    assert "’" in item["evidence"], "the stored text is the page's, not the model's"
+
+
+def test_version_2_2_shares_every_generation_hash_with_2_1() -> None:
+    """A stored 2.1 model output is a valid 2.2 input, so no re-inference."""
+    from src.candidate_extraction import get_extraction_contract
+
+    v21 = get_extraction_contract("2.1")
+    v22 = get_extraction_contract("2.2")
+    for field in (
+        "model_id",
+        "model_revision",
+        "runtime_lock_sha256",
+        "prompt_sha256",
+        "json_schema_sha256",
+        "user_message_template_sha256",
+        "semantic_validation_spec_sha256",
+    ):
+        assert v21[field] == v22[field], field
+    assert v21["alignment_spec_sha256"] != v22["alignment_spec_sha256"]
+    assert v21["extraction_contract_sha256"] != v22["extraction_contract_sha256"]
+
+
+def test_version_2_2_still_withholds_an_ambiguous_or_absent_span() -> None:
+    from src.candidate_extraction import align_extraction_exact_spans
+
+    source = "Nothing on this page matches the claim at all.\n"
+    model = {
+        "issue_blocks": [
+            {
+                "source_heading": None,
+                "claim": "The candidate supports a jobs programme.",
+                "statement_kind": "support",
+                "evidence": "We will build a jobs programme.",
+            }
+        ]
+    }
+    _aligned, withheld, report = align_extraction_exact_spans(
+        "issues", model, source, schema_version="2.2"
+    )
+    assert report["aligned_item_count"] == 0
+    assert len(withheld) == 1
+    assert withheld[0]["reason"] == "missing_exact_span"
+
+
+def test_version_2_1_alignment_stays_byte_reproducible() -> None:
+    """A 2.2 code path must never change a 2.1 row.
+
+    The importer re-runs the aligner and demands typed equality with the
+    stored output. One extra diagnostic key in the 2.1 report would reject
+    every existing chunk, so the 2.2 fields appear only under 2.2.
+    """
+    from src.candidate_extraction import align_extraction_exact_spans
+
+    source = "Health Care\nWe will lower drug prices for every family.\n"
+    model = {
+        "issue_blocks": [
+            {
+                "source_heading": "Health Care",
+                "claim": "The candidate supports lower drug prices.",
+                "statement_kind": "support",
+                "evidence": "We will lower drug prices for every family.",
+            },
+            {
+                "source_heading": None,
+                "claim": "The candidate supports a policy the page omits.",
+                "statement_kind": "support",
+                "evidence": "This sentence is absent from the page.",
+            },
+        ]
+    }
+    _a21, w21, r21 = align_extraction_exact_spans(
+        "issues", model, source, schema_version="2.1"
+    )
+    for withheld in w21:
+        for anchor in (withheld.get("anchors") or {}).values():
+            assert "typographic_variant_match_count" not in anchor
+    assert "typographic_variant_match_count" not in json.dumps(r21)
+
+    _a22, w22, _r22 = align_extraction_exact_spans(
+        "issues", model, source, schema_version="2.2"
+    )
+    assert any(
+        "typographic_variant_match_count" in anchor
+        for withheld in w22
+        for anchor in (withheld.get("anchors") or {}).values()
+    )
+
+
+def test_user_message_is_identical_under_2_1_and_2_2() -> None:
+    """Version 2.2 must not change a single byte the model sees.
+
+    Every branch in the runner written for 2.1 now covers 2.2 through
+    V2_ALIGNED_VERSIONS. If a branch were missed, the user message would fall
+    through to the v1 path and its stored hash would stop matching.
+    """
+    from scripts.hive.extract_candidate_pages_vllm import build_user_message
+
+    record = {
+        "candidate_icpsr": "Smith, Jane",
+        "candidate_cycle_id": "H8XX00001-2020",
+        "state": "XX",
+        "office": "house",
+        "year": 2020,
+        "party": "democrat",
+        "route": "issues",
+        "source_urls": [
+            "https://web.archive.org/web/20200101000000/https://example.org/issues"
+        ],
+        "segment_index": 0,
+        "segment_count": 1,
+        "segment_start_char": 0,
+        "segment_end_char": 16,
+    }
+    text = "We back reform."
+    assert build_user_message(dict(record), text, "2.1") == build_user_message(
+        dict(record), text, "2.2"
+    )
+
+
+def test_every_runner_version_branch_covers_2_2() -> None:
+    """No `== "2.1"` dispatch may remain in the runner."""
+    from pathlib import Path
+
+    source = Path("scripts/hive/extract_candidate_pages_vllm.py").read_text(
+        encoding="utf-8"
+    )
+    assert 'version == "2.1"' not in source, (
+        "a version branch still excludes 2.2"
+    )
+    assert "V2_ALIGNED_VERSIONS" in source
