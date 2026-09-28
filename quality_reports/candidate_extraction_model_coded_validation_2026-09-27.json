@@ -1,0 +1,373 @@
+{
+ "all_thresholds_met": false,
+ "bundle_manifest_sha256": "9574e9dcbdeade4c91a50e687afba5308e13c5b3e9b19f473c77fce2171ea3f1",
+ "coder": "claude-opus-5",
+ "coding_source": "model",
+ "endorsement_architecture": "endorsement_round4_record_ledger_v1",
+ "format": "candidate-extraction-model-coded-validation-v1",
+ "generated_at": "2026-09-28T06:14:07+00:00",
+ "independent_human_only": false,
+ "known_omissions": {
+  "confirmed_n": 11,
+  "items": [
+   {
+    "confirmed_record_ids": [
+     "7cd1c5644accc541837ad7478d48aa6492b8fec76619846f16de23bc3e1bc7bb"
+    ],
+    "omission_id": "097bb69cbcdc4893cc1dda73da75cd8c5af97670b1dba65d7c7c5d844582fd1a",
+    "record_link_confirmations": [
+     {
+      "pair_confirmed": true,
+      "record_id": "7cd1c5644accc541837ad7478d48aa6492b8fec76619846f16de23bc3e1bc7bb",
+      "recovery_evidence_confirmed": true,
+      "semantic_recovery_confirmed": true
+     }
+    ],
+    "semantic_recovery_confirmed": true
+   },
+   {
+    "confirmed_record_ids": [
+     "30ad9cc27e74fdea8a78883692d737accfc26ad2968539407e89283812c40aa6"
+    ],
+    "omission_id": "0f830f072163d4f3c765a05ed085a25afe3ae4f9caafd9d8c0fcfdbed07d67a7",
+    "record_link_confirmations": [
+     {
+      "pair_confirmed": true,
+      "record_id": "30ad9cc27e74fdea8a78883692d737accfc26ad2968539407e89283812c40aa6",
+      "recovery_evidence_confirmed": true,
+      "semantic_recovery_confirmed": true
+     }
+    ],
+    "semantic_recovery_confirmed": true
+   },
+   {
+    "confirmed_record_ids": [
+     "6e250cfcf38934ebee9a3e5468b3b1a638e39b02d5a7d370316015c42c574fce"
+    ],
+    "omission_id": "44ffde27c603b1b001c1d759e886312a8dfcf1dbe1f3303c3298712c9520f16a",
+    "record_link_confirmations": [
+     {
+      "pair_confirmed": true,
+      "record_id": "6e250cfcf38934ebee9a3e5468b3b1a638e39b02d5a7d370316015c42c574fce",
+      "recovery_evidence_confirmed": true,
+      "semantic_recovery_confirmed": true
+     }
+    ],
+    "semantic_recovery_confirmed": true
+   },
+   {
+    "confirmed_record_ids": [
+     "c8fe60022032ac758b823d5e4461b7619c047131816c06a832c817f332336c2a"
+    ],
+    "omission_id": "4a22ef54190208153e2ac4ecfdf556c145ef6389b6d0d7930fa238970b2a7f77",
+    "record_link_confirmations": [
+     {
+      "pair_confirmed": true,
+      "record_id": "c8fe60022032ac758b823d5e4461b7619c047131816c06a832c817f332336c2a",
+      "recovery_evidence_confirmed": true,
+      "semantic_recovery_confirmed": true
+     }
+    ],
+    "semantic_recovery_confirmed": true
+   },
+   {
+    "confirmed_record_ids": [
+     "929091287ec7c4991567dade9e2e83ad3bd8e4ec5009b8164955d2f349af98a3"
+    ],
+    "omission_id": "4fae87997214234a73a517ee09334637f84ba6771627ad0d11e25e2268c18bce",
+    "record_link_confirmations": [
+     {
+      "pair_confirmed": true,
+      "record_id": "929091287ec7c4991567dade9e2e83ad3bd8e4ec5009b8164955d2f349af98a3",
+      "recovery_evidence_confirmed": true,
+      "semantic_recovery_confirmed": true
+     }
+    ],
+    "semantic_recovery_confirmed": true
+   },
+   {
+    "confirmed_record_ids": [
+     "5ac2fa99bdf751b03087b88132ce97a7b89eff59814fe189333a72ce4df7d763"
+    ],
+    "omission_id": "5790a44a0ae50327bc18975380b71b2972f795de3ff5f3afc49ac6432a4b6c52",
+    "record_link_confirmations": [
+     {
+      "pair_confirmed": true,
+      "record_id": "5ac2fa99bdf751b03087b88132ce97a7b89eff59814fe189333a72ce4df7d763",
+      "recovery_evidence_confirmed": true,
+      "semantic_recovery_confirmed": true
+     }
+    ],
+    "semantic_recovery_confirmed": true
+   },
+   {
+    "confirmed_record_ids": [
+     "1f7a3eefd9c4a2768f8941f8dfb37d2d0aaa549c12239e17ec1e4eac05b903b4"
+    ],
+    "omission_id": "5f266ab26feec40d236f46151199b63a8914dda3dce28457d9e51dc4116d178a",
+    "record_link_confirmations": [
+     {
+      "pair_confirmed": true,
+      "record_id": "1f7a3eefd9c4a2768f8941f8dfb37d2d0aaa549c12239e17ec1e4eac05b903b4",
+      "recovery_evidence_confirmed": true,
+      "semantic_recovery_confirmed": true
+     },
+     {
+      "pair_confirmed": false,
+      "record_id": "3ebd141f4137acf0dc90d42b5f740d813edf778471fe918cea65302d2a94b364",
+      "recovery_evidence_confirmed": false,
+      "semantic_recovery_confirmed": false
+     },
+     {
+      "pair_confirmed": false,
+      "record_id": "6c3fff2014c143ef32473497d8da90651c295caa12397f961856160916bbb9cd",
+      "recovery_evidence_confirmed": false,
+      "semantic_recovery_confirmed": false
+     },
+     {
+      "pair_confirmed": false,
+      "record_id": "d3e4c455bb10e7a3b5163e870b6584e2cbd4706dba5549065d2351478abcc4f9",
+      "recovery_evidence_confirmed": false,
+      "semantic_recovery_confirmed": false
+     }
+    ],
+    "semantic_recovery_confirmed": true
+   },
+   {
+    "confirmed_record_ids": [
+     "018f4af665631b455fd0d511b09353c288989c2211b8a5df45d7155494be0401"
+    ],
+    "omission_id": "75c4981ccc726837d14bd7cd293ba5b7659b98e469f6f169062d48da5a8636a3",
+    "record_link_confirmations": [
+     {
+      "pair_confirmed": true,
+      "record_id": "018f4af665631b455fd0d511b09353c288989c2211b8a5df45d7155494be0401",
+      "recovery_evidence_confirmed": true,
+      "semantic_recovery_confirmed": true
+     }
+    ],
+    "semantic_recovery_confirmed": true
+   },
+   {
+    "confirmed_record_ids": [
+     "7c15e932f0e7d7dbd828a1b2b14ca0d83806848965ff7171d9cff4c0e38d49f8"
+    ],
+    "omission_id": "9463bc0ef49bee0681b127670fd00388152f27072925df6887ddf413ff90ef4a",
+    "record_link_confirmations": [
+     {
+      "pair_confirmed": true,
+      "record_id": "7c15e932f0e7d7dbd828a1b2b14ca0d83806848965ff7171d9cff4c0e38d49f8",
+      "recovery_evidence_confirmed": true,
+      "semantic_recovery_confirmed": true
+     }
+    ],
+    "semantic_recovery_confirmed": true
+   },
+   {
+    "confirmed_record_ids": [
+     "0870d1ab9b45291a20a9e7dab2ec07089f9b4f495e64f10baf9cb90bbb38aa33",
+     "fa9d1c6d9a1bf563194ec169e48eaa2f16f344cf2562354ddfc37fb19245d190"
+    ],
+    "omission_id": "ba030aeb76c37933642e91f0f42dccd481390ad7d3cecb40d1596ca5c8947bfd",
+    "record_link_confirmations": [
+     {
+      "pair_confirmed": true,
+      "record_id": "fa9d1c6d9a1bf563194ec169e48eaa2f16f344cf2562354ddfc37fb19245d190",
+      "recovery_evidence_confirmed": true,
+      "semantic_recovery_confirmed": true
+     },
+     {
+      "pair_confirmed": true,
+      "record_id": "0870d1ab9b45291a20a9e7dab2ec07089f9b4f495e64f10baf9cb90bbb38aa33",
+      "recovery_evidence_confirmed": true,
+      "semantic_recovery_confirmed": true
+     }
+    ],
+    "semantic_recovery_confirmed": true
+   },
+   {
+    "confirmed_record_ids": [
+     "fa2e7bc9d736db6a3eeda1f60d27abd2b3df9655c286ceca54e975bc86830d83"
+    ],
+    "omission_id": "db9755e1cba48f8d54d204eee80b2defdb9145decd55b4d6ef3c63193c7263bf",
+    "record_link_confirmations": [
+     {
+      "pair_confirmed": true,
+      "record_id": "fa2e7bc9d736db6a3eeda1f60d27abd2b3df9655c286ceca54e975bc86830d83",
+      "recovery_evidence_confirmed": true,
+      "semantic_recovery_confirmed": true
+     }
+    ],
+    "semantic_recovery_confirmed": true
+   }
+  ],
+  "meets_threshold": true,
+  "omission_n": 11
+ },
+ "release_gate_note": "The release gate accepts human coding only. This report is an interim estimate and does not replace human_validation.json.",
+ "release_gate_satisfied": false,
+ "routes": {
+  "biography": {
+   "all_dimension_accuracy": 0.7333333333333333,
+   "all_dimension_accurate_n": 44,
+   "complete_page_recall": 0.45,
+   "complete_pages_n": 9,
+   "meets_thresholds": {
+    "all_dimension_accuracy": false,
+    "complete_page_recall": false,
+    "minimum_subtype_accuracy": false
+   },
+   "minimum_subtype_accuracy": 0.7,
+   "missed_records_total": 18,
+   "per_question_accuracy": {
+    "evidence_supports_fact": 0.9166666666666666,
+    "fact_present": 1.0,
+    "field_correct": 0.9333333333333333,
+    "relationship_correct": 1.0,
+    "timing_correct": 0.8666666666666667,
+    "value_faithful": 0.9833333333333333
+   },
+   "precision_n": 60,
+   "recall_n": 20,
+   "subtype_accuracy": {
+    "education": {
+     "all_dimension_accuracy": 0.8,
+     "n": 10
+    },
+    "elected_office_experience": {
+     "all_dimension_accuracy": 0.7,
+     "n": 10
+    },
+    "local_roots": {
+     "all_dimension_accuracy": 0.7,
+     "n": 10
+    },
+    "military_service": {
+     "all_dimension_accuracy": 0.8,
+     "n": 10
+    },
+    "occupation": {
+     "all_dimension_accuracy": 0.7,
+     "n": 10
+    },
+    "public_service_experience": {
+     "all_dimension_accuracy": 0.7,
+     "n": 10
+    }
+   }
+  },
+  "endorsements": {
+   "all_dimension_accuracy": 0.48333333333333334,
+   "all_dimension_accurate_n": 29,
+   "complete_page_recall": 0.6,
+   "complete_pages_n": 12,
+   "meets_thresholds": {
+    "all_dimension_accuracy": false,
+    "complete_page_recall": false,
+    "minimum_subtype_accuracy": false
+   },
+   "minimum_subtype_accuracy": 0.0,
+   "missed_records_total": 13,
+   "per_question_accuracy": {
+    "combined_record_context_support": 0.85,
+    "endorser_present": 1.0,
+    "entity_category_correct": 0.6666666666666666,
+    "name_correct": 0.9666666666666667,
+    "optional_fields_correct": 0.8166666666666667,
+    "record_evidence_supports_identity": 0.7833333333333333
+   },
+   "precision_n": 60,
+   "recall_n": 20,
+   "subtype_accuracy": {
+    "government_official": {
+     "all_dimension_accuracy": 0.5,
+     "n": 8
+    },
+    "labor_union": {
+     "all_dimension_accuracy": 0.6666666666666666,
+     "n": 6
+    },
+    "media_outlet": {
+     "all_dimension_accuracy": 0.6666666666666666,
+     "n": 6
+    },
+    "other_individual": {
+     "all_dimension_accuracy": 0.2,
+     "n": 15
+    },
+    "other_organization": {
+     "all_dimension_accuracy": 1.0,
+     "n": 6
+    },
+    "party_official": {
+     "all_dimension_accuracy": 0.5714285714285714,
+     "n": 7
+    },
+    "private_individual": {
+     "all_dimension_accuracy": 0.5714285714285714,
+     "n": 7
+    },
+    "unclear": {
+     "all_dimension_accuracy": 0.0,
+     "n": 5
+    }
+   }
+  },
+  "issues": {
+   "all_dimension_accuracy": 0.5833333333333334,
+   "all_dimension_accurate_n": 35,
+   "complete_page_recall": 0.5,
+   "complete_pages_n": 10,
+   "meets_thresholds": {
+    "all_dimension_accuracy": false,
+    "complete_page_recall": false,
+    "minimum_subtype_accuracy": false
+   },
+   "minimum_subtype_accuracy": 0.0,
+   "missed_records_total": 52,
+   "per_question_accuracy": {
+    "claim_faithful": 1.0,
+    "evidence_supports_statement": 1.0,
+    "heading_correct": 0.9833333333333333,
+    "kind_correct": 0.8833333333333333,
+    "statement_present": 0.6666666666666666
+   },
+   "precision_n": 60,
+   "recall_n": 20,
+   "subtype_accuracy": {
+    "current_action": {
+     "all_dimension_accuracy": 0.3,
+     "n": 10
+    },
+    "oppose": {
+     "all_dimension_accuracy": 0.5454545454545454,
+     "n": 11
+    },
+    "past_action": {
+     "all_dimension_accuracy": 0.9,
+     "n": 10
+    },
+    "proposal": {
+     "all_dimension_accuracy": 1.0,
+     "n": 10
+    },
+    "support": {
+     "all_dimension_accuracy": 0.7,
+     "n": 10
+    },
+    "unclear": {
+     "all_dimension_accuracy": 0.0,
+     "n": 9
+    }
+   }
+  }
+ },
+ "seed": 20260922,
+ "thresholds": {
+  "all_dimension_accuracy_minimum": 0.9,
+  "complete_page_recall_minimum": 0.9,
+  "known_omissions_expected": 11,
+  "subtype_accuracy_minimum": 0.8
+ },
+ "validation_dir": "validation/release_validation_2026-09-27"
+}

@@ -22,27 +22,207 @@ Retain the attempt count across sessions. Existing research criteria, acquisitio
 
 ## Resume here
 
-Updated September 18, 2026 at 15:55 UTC.
+Updated September 27, 2026 at 14:30 PDT.
 
-Both full inference runs are complete: one-stage output holds all 587 chunks, and Stage B holds all 671.
-Repair attempt 2 completed. Repair attempt 3 runs now.
+Track 2 now has a version 2.2 bundle and a version 2.2 release package. The alignment
+repair recovered 33,061 records. The seven validation tasks are rebuilt from that bundle.
+The model-coded pass has NOT been run on them yet. That is the next action.
+Track 4 collects on schedule under the droplet cron.
 
-| Job | Slurm id | State | Scope | Where |
-|---|---|---|---|---|
-| Round-four Stage B, shards 0 to 5 | 23503614 | COMPLETED | 504 of 671 chunks | `.../v2_1_endorsement_round4_production_stage_b_outputs_20260916a` |
-| Round-four Stage B, shards 6 and 7 | 23508575 | COMPLETED | the remaining 167 chunks | same output directory |
-| One-stage pilot, shard 0 | 23503350 | COMPLETED | 1,800 windows, 30 chunks | `.../v2_1_full_hive_output_20260916p` |
-| One-stage shards 1 to 18 | 23507129 | COMPLETED | 33,000 windows | same output directory |
-| One-stage shard 13 | 23639520_13 | COMPLETED | the 12 chunks it owed | same output directory |
-| One-stage shard 19 | 23639699_19 | COMPLETED | the 3 chunks it owed | same output directory |
-| Repair attempt 2, first submission | 23639752 | TIMEOUT after 2 hours | 19 chunks of 33 | `.../v2_1_seed_vary_repair_20260917a` |
-| Repair attempt 2, submissions 2 to 6 | 23648499, 23648684, 23648887, 23649088, 23649113, 23654548 | CANCELLED or FAILED in seconds | the queue, then the ordered comparison | none |
-| Repair attempt 2, final submission | 23655140 | COMPLETED in 1h51 | the remaining 15 chunks | same repair directory |
-| Repair attempt 3 | 23717478 | RUNNING since 08:40 PDT | 24 windows in 24 chunks | `.../v2_1_seed_vary_repair_attempt3_20260918a` |
+| Item | State |
+|---|---|
+| One-stage and Stage B inference | Complete. 35,213 windows, 587 chunks, 671 Stage B chunks |
+| Seed-vary repair | Closed after three attempts. 21 of 36 windows recovered; 10 windows withheld |
+| Schema version 2.2 | Implemented and tested. Adds one typographic search fallback to the aligner |
+| Re-alignment pass | Complete. `build/hive_candidate_extraction/v2_2_full_hive_output_20260923` plus both repair directories |
+| Version 2.2 bundle | Built September 25, 2026. `bundle_20260924_v22`. Both automatic gates pass |
+| Release package | Built September 25, 2026. `release_20260925_v22`. Six tables plus the manifest inventory |
+| Official `.gov` exclusion | Applied. 631 parent pages dropped, 488 issues and 143 biography |
+| Validation batches | Rebuilt September 27, 2026. `validation/release_validation_2026-09-27`, 255 items in seven batches |
+| Model-coded validation | **NOT run on the 2.2 tasks.** The September 22 pass used the superseded 2.1 tasks |
+| Human validation | Not started. The coding rules are now in the tasks, so it is no longer blocked |
+| 2026 collection | Running daily. 34,749 pages, 10,095 snapshots, 64 GiB free |
 
-**Stage B chunks are assigned by `chunk_index % 8 == shard_index`.**
-One-stage chunks are assigned by `chunk_index % 20 == shard_index`.
-A missing chunk therefore tells you which shard still owes it.
+### Next action: run the model-coded pass on the 2.2 tasks
+
+Seven batches under `validation/release_validation_2026-09-27`. Spawn one Opus agent for each,
+as on September 22. Each agent reads the task's own `instructions` and per-question `help`,
+answers strictly, writes a `handcode-results-v1` file beside the task, and verifies with
+`~/.agents/skills/handcode/scripts/summarize_results.py`. Then score with
+`scripts/summarize_candidate_extraction_model_coding.py`, which writes a model-coded report and
+never touches the bundle's human gate.
+
+This needs about 40 minutes with the machine awake. It died once already when the machine slept.
+
+### The two model-coded passes are only partly comparable
+
+The seed is unchanged at 20260922, but the sample moved, because 33,061 previously withheld
+records are now eligible. Shared items between the September 22 and September 27 samples:
+
+| Task | Items | Same sample | Shared |
+|---|---:|---|---:|
+| precision issues | 60 | no | 22 |
+| precision biography | 60 | no | 52 |
+| precision endorsements | 60 | yes | 60 |
+| recall issues | 20 | yes | 20 |
+| recall biography | 20 | yes | 20 |
+| recall endorsements | 20 | yes | 20 |
+| known omissions | 15 | no | 13 |
+
+Endorsement precision and all three recall tasks are directly comparable. Issue precision is
+not: two thirds of its records differ, because the issue route recovered the most content.
+Do not present the issue numbers as a before-and-after.
+
+### What version 2.2 changed, and how the identity chain was kept honest
+
+The alignment spec sits inside the frozen generation config, so re-aligning a corpus gives it a
+new generation identity. Version 2.2 shares every generation input with 2.1: the same prompts,
+the same JSON schemas, the same user-message template, the same model, seed and token budget.
+A test asserts the user message is byte-identical under both versions on all three routes.
+
+Generation was not re-run. The re-stamped run metadata, both repair manifests and the release
+record all carry `realigned_from_schema_version` and a note saying so. Two shard metadata files,
+13 and 19, were partial resume runs whose chunk membership is not recorded, so their alignment
+aggregates still describe the 2.1 run; they are annotated, and the aggregate bound still holds.
+
+Four scripts now read the schema version from `CANDIDATE_EXTRACTION_SCHEMA_VERSION`, default 2.1:
+the importer, the packager, the hand-code builder and the Hive runner. The runner also uses
+`V2_ALIGNED_VERSIONS` at 15 branch sites. A test fails if any `== "2.1"` dispatch reappears there.
+
+**Watch for omitted arguments, not just literals.** Three failures came from
+`align_extraction_exact_spans` being called without `schema_version`, which grep for `"2.1"`
+cannot find. Check call sites directly.
+
+### Deferred items
+
+- The packager computes `manifest_entries` but never writes them. The September 25 inventory was
+  reconstructed by hand. The packager should write the file itself.
+- The scorer has not been checked for 2.2. Its human-validation report must match the bundle
+  version, and the packager gate now enforces that.
+- The endorsement record-evidence span defect: in 17 of 60 sampled records the span crosses two
+  list entries. Found September 22, not yet addressed.
+- Repo size is 6.6 GB. `data/deliverable` holds 1.7 GB that is regenerable in about 8 minutes.
+  Hanno has not chosen between compressing and deleting. Do not delete without his word.
+
+
+### Decision needed 1: the coding tasks do not state the coding rules
+
+The seven validation tasks give five bullets of instruction and no help text on any question.
+They never state the allowed values, the null rules, or the heading uniqueness rule.
+The coder must guess the codebook from the model records.
+I proved the effect on `source_heading`: 14 of 20 auditable failures are contract-correct nulls.
+Issue record accuracy rises from 0.35 to 0.52 when that dimension is dropped.
+Hanno will hit the same gap if he codes these batches by hand.
+
+Smallest correction: put the route contract in the instructions and the rule for each
+dimension in that question's help text, in `scripts/build_candidate_extraction_handcode.py`,
+then rebuild the seven tasks. The bundle, the sample and the frozen identities do not change.
+
+### Decision needed 2: withheld records, not missed content, cause the low recall
+
+The aligner drops a model record when its evidence is not an exact page substring.
+It withholds 40,895 issue items, 13.2 percent of that route. 38,666 give `missing_exact_span`.
+I tested 4,000 of them: 68.9 percent differ only in punctuation form, for example a straight
+apostrophe for a curly one, and 10.4 percent differ only in whitespace.
+The rule is deliberate. Version 2.1 never normalizes whitespace and punctuation.
+The model disobeys the copy instruction; the pipeline fails closed and works as designed.
+
+Three options are written up in
+[the validation report](../quality_reports/candidate_extraction_model_coded_validation_2026-09-22.md):
+accept the loss, extend the alignment search while still storing the source slice, or run
+inference again. Option 2 is the smallest correction that keeps the verbatim guarantee.
+It changes `alignment_spec_sha256` and needs one new alignment pass over the stored outputs.
+It needs no new inference. I did not start it.
+
+### Decision needed 3: 542 pages are official government sites, not campaign sites
+
+The release population is campaign websites. 542 of the 23,871 parent pages sit on a
+`.gov` host, which is 2.27 percent. They cover 26 candidate-years and produce 7,637
+records: 5,723 issue records and 1,914 biography records. 18 distinct hosts are involved,
+for example `chu.house.gov`, `mikulski.senate.gov` and `vitter.senate.gov`.
+
+Four of the 18 hosts also carry the wrong candidate. `billnelson.senate.gov` is filed under
+Nelson, E Benjamin of Nebraska; Bill Nelson is a Florida senator. `foster.house.gov` is filed
+under Foster, Steven of Georgia; Bill Foster represents Illinois. `sullivan.senate.gov` is filed
+under Sullivan, Dan with state MA; Dan Sullivan represents Alaska. `oversight.house.gov` is a
+committee site and is filed under a California candidate.
+
+I checked whether this points to a wider linkage defect and it does not. Of 2,669 hosts in the
+corpus, only 5 serve candidates in more than one state, and 3 of those 5 are the same person who
+really ran in two states. A name test on all 23,871 pages puts a part of the candidate's name in
+the host for 95.5 percent, and the residual is nicknames such as `debfornebraska` for Debra
+Fischer. The defect is confined to official government hosts.
+
+Smallest correction: exclude `.gov` hosts from the release population and rebuild. This removes
+the scope violation and the four wrong-person links in one step. It drops 26 candidate-years.
+I did not make this change. It changes the approved population, so it needs approval.
+
+### Verified: the heading failures are a coding-task defect, not an extraction defect
+
+The model-coded pass marked 20 issue records wrong on `heading_correct`. I resolved each one
+against the segment the record came from, which is where the contract evaluates uniqueness.
+13 of the 20 headings occur zero times or several times in every segment of their page, so the
+contract requires null and the model is correct. Several of the remaining 7 are note text, not a
+heading. The coder never saw the uniqueness rule. Blocker 1 fixes that.
+
+The same coder found that no non-null heading was wrong. The model under-reports headings; it
+does not corrupt them.
+
+### Resolved: the 2026 URL discovery never ran, September 24, 2026
+
+Two independent defects stopped the URL waterfall. Both are fixed.
+
+**1. No OpenFEC key on the droplet.** `src/url_sources/openfec.py` reads
+`OPENFEC_API_KEY` and falls back to `DEMO_KEY`. The droplet set neither, so every
+lookup returned `no_registered_key`: 3,302 of 3,689 candidates. A valid key existed in
+`.claude/settings.local.json` on Hanno's machine, inside a Bash permission rule. That
+file is gitignored and was never committed, so nothing leaked. The key now sits at
+`/root/.openfec_api_key`, mode 0600, and `run_collect_2026.sh` exports it and exits 1
+if the file is unreadable.
+
+**2. `--lookup-limit 0` means zero lookups.** In `src/collection_2026_roster.py`,
+`selected = candidates if limit is None else candidates[:limit]`. The cron script
+passed `0` on every Monday refresh, and the argparse default is `0` as well. The
+refresh therefore looked up nothing even when a key was present. The script now passes
+`4000`, which covers the roster of 3,689 with headroom.
+
+**The coverage correction.** A full refresh ran 2026-09-23 22:25 to 2026-09-24 02:45
+UTC, about four hours at the registered-key rate limit of 3.6 seconds per request.
+
+| Field | Before | After |
+|---|---:|---:|
+| `found` | 137 | 2,419 |
+| `incomplete_no_registered_key` | 3,302 | 0 |
+| `source_error` | 250 | 102 |
+| `no_result` | not reported | 1,168 |
+| Candidates with a website | 778 | 2,440 |
+
+OpenFEC supplies 2,404 of the URLs. Website coverage is 66 percent, not 21 percent.
+**Do not cite the earlier figure of 2,911 candidates without a website. It measured the
+defect, not the candidates.** The true count is 1,168.
+
+Two limits on the new number. The files under `data/exports/` still hold the 22:00
+state and show the old counts until a run regenerates them; the live roster is
+`data/rosters/current.csv`. And no page has been fetched from the 1,662 new URLs yet,
+so every collection count up to 2026-09-23, including 15,428 pages and 185 paired
+candidates, belongs to the 778-URL era.
+
+### Incident: an edit to a running shell script killed a collector run
+
+On 2026-09-23 at about 19:47 UTC I patched `run_collect_2026.sh` while the 16:00 cron
+instance was still executing it. Bash reads a script by byte offset, so inserting ten
+lines near the top moved the offsets under the running shell. It resumed mid-line and
+died with `syntax error near unexpected token 'then'`. The collector stopped 3h47m into
+its six hours, wrote no `status_20260923.json`, and logged no completion line.
+
+Nothing was lost beyond that run's remaining time, because the collector resumes from
+its work-status table. The script file itself stayed valid. I started a replacement run
+by hand on 2026-09-24 at 02:50 UTC with the new 2,440-URL roster.
+
+**Rule: never edit a shell script while an instance of it is running.** Patch a copy and
+swap it, or wait for the run to finish.
+
+### Where the Hive artifacts live
 
 Everything lives under `/nfs/hive/scratch/hhilbig/candidate_extraction`, not under Hive home, which sits at
 18 GB of a 20 GB quota. The runner the repair executes is
@@ -429,34 +609,41 @@ endorsement row it checks the superseded status against the one-stage ladder, ta
 from the parent summary, and requires the row's own round-four block to match the ledger's parent summary
 on every field, so a row cannot claim a coverage it does not have.
 
-### Share of the release complete, September 18, 2026
+### Share of the release complete, September 22, 2026
 
-About 45 percent of the whole release is complete. The weights below are a judgment about total effort
+About 50 percent of the whole release is complete. The weights are a judgment about total effort
 per track, not a measurement. Re-estimate them when a track's step list changes.
 
 | Track | Weight of the whole | Complete within the track | Contribution |
 |---|---:|---:|---:|
 | 1. Historical House/Senate correction | 20% | 100% | 20% |
-| 2. Extracted variables | 25% | 60% | 15% |
+| 2. Extracted variables | 25% | 70% | 17.5% |
 | 3. Full mayoral extension | 40% | 15% | 6% |
-| 4. 2026 collection | 15% | 35% | 5% |
-| **Total** | **100%** | | **about 45%** |
+| 4. 2026 collection | 15% | 45% | 6.75% |
+| **Total** | **100%** | | **about 50%** |
 
-Track 2 holds because step 1 is frozen and step 2 is nearly done: both full runs are complete and only the
-seed-vary repair remains. Steps 3 to 5 are the package build, the human validation, and the deposit.
-Track 3 is low because step 1 has assessed 96 of 1,700 city-years.
+Track 2 moved from 60 to 70 percent. Steps 1 to 3 are complete: the package exists and the
+validation batches exist. Step 4, validation, is built but it does not pass. Step 5 is the deposit.
+Track 3 is unchanged at 164 of 1,700 city-years. Track 4 moved from 35 to 45 percent because the
+daily cron now collects without a gap and the corpus holds 15,428 pages.
 
 | Remaining time | Estimate |
 |---|---|
-| Agent work | 40 to 70 hours |
-| Hanno's own work | 6 to 12 hours, mostly the 240 validation tasks in four batches of 60 |
+| Agent work | 40 to 65 hours |
+| Hanno's own work | 10 to 14 hours, plus two decisions now |
 | Wall-clock floor | Late December 2026, set by the 2026 collection endpoint |
 
-The largest source of uncertainty is the 1,604 unassessed mayoral city-years. The cost per city-year is
-measured on 96 cases, which are large cities with good records, so the remaining cases can be slower.
+Hanno's own work is larger than the September 18 estimate of 6 to 12 hours. The reason is the
+recall batches. 180 precision items and 15 omission items take about one minute each. The 60 recall
+pages take about eight minutes each, because each one needs a full page read. That is 20 to 28
+sessions of 30 minutes.
+
+The largest source of uncertainty is the 1,536 unassessed mayoral city-years. The cost per city-year
+is measured on 164 cases, which are large cities with good records, so the rest can be slower.
 
 The 2026 collection track cannot finish before its endpoint, whatever else is done. Tracks 2 and 3 can
-reach a reviewable deposit well before that date.
+reach a reviewable deposit well before that date. Track 2 waits on a decision, not on a machine.
+
 
 ### Repair attempt 2 recovered 12 of its 36 windows
 
@@ -858,10 +1045,10 @@ Replace each row with current evidence after a material result or before a hando
 | Track and next step | Output or verification evidence | Blocker and failed repair count | Next action |
 |---|---|---|---|
 | Extraction: step 1, production integration | **Complete September 15, 2026.** Freeze record [candidate_extraction_production_freeze.md](candidate_extraction_production_freeze.md). Replay `quality_reports/candidate_endorsement_round4_release_replay_2026-09-15.json`. Census `quality_reports/candidate_endorsement_round4_production_census_2026-09-15.json`. 100 focused tests and 108 regression tests pass | No blocker; zero failed repair attempts | Request full-run authority for step 2 using the census in the freeze record |
-| Extraction: step 2, full extraction | **Stage A complete September 16, 2026.** Array 23487528, four shards, all COMPLETED: 320 of 320 output chunks, 19,142 outputs, all parsed, zero technical failures. **Stage B complete September 17, 2026: 671 of 671 chunks published.** **One-stage complete September 17, 2026: 587 of 587 chunks published, 35,213 rows.** The complete audit finds 36 cap-limited windows and no other defect class: `quality_reports/candidate_extraction_one_stage_audit_full_2026-09-17.json`. **Seed-vary repair: attempt 2 is job 23655140 on `high`, pending.** The first pass, job 23639752, recovered 10 of the 21 windows it attempted and timed out with 11 chunks unprocessed. **The importer and the runner now carry the repair identity per attempt, and the target builder scopes a later attempt from the previous attestation** (19 new tests; 278 pass across the nine relevant test files). Hanno approved a third seed, 20260918 | **Step 3 packaging cannot start.** The packager refuses a row that did not finish with `stop`, and the bundled run metadata does not yet carry the repair identity. Repair-run failures: 23639410, 23639700, 23639752, 23649113, all fixed and verified; five further submissions were queue moves | When 23655140 finishes, build attempt 3's target list from its attestation and submit it with seed 20260918 into a separate output directory |
+| Extraction: steps 2 to 4 | **Inference complete September 17, 2026**: 587 one-stage chunks, 35,213 rows, 671 Stage B chunks. **Seed-vary repair closed**: 21 of 36 windows recovered over three seeds; 10 windows lose content and are withheld as `failed_output_cap_unrepaired`. **Round-four record ledger imported**: 153,132 endorsement records. **Release package built September 20, 2026** (six files). **Validation batches built September 22, 2026**: 251 items in seven batches, `validation/release_validation_2026-09-22/`. **Model-coded validation complete September 22, 2026** and it fails: issues 0.35, biography 0.73, endorsements 0.50 record accuracy against a 0.90 criterion; known omissions pass 11 of 11. Report `quality_reports/candidate_extraction_model_coded_validation_2026-09-22.md`, numbers in the matching `.json`, scored by `scripts/summarize_candidate_extraction_model_coding.py` | **Two blockers await a decision, see `Resume here`.** 1: the tasks state no coding rules, so 14 of 20 auditable heading failures are coder errors. 2: the exact-span rule withholds 13.2 percent of issue records, and 68.9 percent of a 4,000-item sample differ only in punctuation form. Zero failed repair attempts on either blocker | Fix blocker 1 and rebuild the seven tasks. Do not ask Hanno to hand-code before that. Wait for his choice on blocker 2 |
 | Mayoral: step 1, official population | **164/1,700 city-years assessed.** Pittsburgh, Mesa, Chandler and Scottsdale are closed. **Maricopa County is readable**: index script plus 85 official candidate rows across 19 elections. `quality_reports/mayoral_maricopa_county_mayoral_results_2026-09-16.tsv`. 46 tests pass | 1,536 city-years remain open. **Gilbert is blocked on one source**: the town's "Voter History 1981 to present" PDF returns HTTP 403 to every command-line fetch and to the automated browser, and no archive holds it. Hanno approved the download; his own browser can read it | Ask Hanno to save the PDF, or accept that Gilbert 2010 to 2019 stay unwritten. Then close Glendale, then Phoenix |
 | Mayoral: step 2, integrate evidence | **Complete September 16, 2026.** Batch verification and failure classification in `quality_reports/mayoral_indexed_capture_20260915/`, proposal reconciliation in `quality_reports/mayoral_inventory_19_2026-09-14/reconciliation_with_completed_batch_2026-09-16.json`, and `coverage_gaps.csv` now a hashed build output. 61 tests pass | No blocker; zero failed repair attempts | The remaining roster join depends on step 1 finishing the population |
-| 2026: capacity decision | **Resolved September 16, 2026. Full collection is enabled.** Hanno resized the volume to 100 GiB; `resize2fs /dev/sdb` grew the filesystem online with no downtime. `forecast` now reports `storage_fits: true` and `enable-full` wrote `full_enabled.json` | No blocker; zero failed repair attempts | The Codex heartbeat collects on the approved monthly cadence to the 2026-12-26 endpoint. Watch free space as the corpus grows |
+| 2026: daily collection | **Collecting on schedule.** The droplet cron `~/run_collect_2026.sh` runs at 09:00 America/Los_Angeles and is the sole owner. Runs of September 21 and 22 both report `rc=0`. Status `logs/status_20260922.json`: 15,428 pages, 3,208 snapshots, 3,689 candidates, 227 events, 212 paired captures, 0 unfinished attempts, 69.8 GiB free | No blocker; zero failed repair attempts. 135 work items stay retryable | Let the cron run to the 2026-12-26 endpoint. Check free space and the daily `rc` line weekly |
 
 ### Resolved: line-ledger regeneration after Stage A3
 
