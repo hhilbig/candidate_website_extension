@@ -12,6 +12,7 @@ import pyarrow.parquet as pq
 import pytest
 
 from scripts.build_candidate_extraction_release import (
+    EXTENSION_MANIFEST_FILENAME,
     ENDORSEMENT_COLUMNS,
     EXPECTED_EXTRACTION_CONTRACT_SHA256,
     LINE_LEDGER_ENDORSEMENT_ARCHITECTURE,
@@ -1314,7 +1315,15 @@ def test_builds_and_validates_all_six_public_outputs(tmp_path: Path) -> None:
     core, bundle, _ = _write_fixture(tmp_path)
     release = tmp_path / "release"
     summary = build_release(core, bundle, release, production=False)
-    assert set(path.name for path in release.iterdir()) == set(PUBLIC_FILES)
+    # The packager writes the six public files plus its own inventory, which the
+    # validator reads through --manifest.
+    assert set(path.name for path in release.iterdir()) == set(PUBLIC_FILES) | {
+        EXTENSION_MANIFEST_FILENAME
+    }
+    assert summary["manifest_file"] == EXTENSION_MANIFEST_FILENAME
+    assert json.loads(
+        (release / EXTENSION_MANIFEST_FILENAME).read_text(encoding="utf-8")
+    ) == summary["manifest_entries"]
     assert summary["release_ready"] is True
     assert summary["generation_config_sha256"] == GENERATION_HASH
 
@@ -1401,8 +1410,7 @@ def test_builds_and_validates_all_six_public_outputs(tmp_path: Path) -> None:
     assert endorsements.column("record_evidence_parent_start_char").to_pylist() == [0]
     assert endorsements.column("record_evidence_exact_match_count").to_pylist() == [1]
 
-    manifest_path = release / "manifest.json"
-    manifest_path.write_text(json.dumps(extension_manifest_entries(release)), encoding="utf-8")
+    manifest_path = release / EXTENSION_MANIFEST_FILENAME
     validated = validate_candidate_extraction_release(
         release, core, bundle, manifest_path, production=False
     )
@@ -1425,7 +1433,7 @@ def test_release_manifest_requires_typed_integer_counts(
     target[field] = (
         mistype if mistype is True else str(target[field])
     )
-    manifest_path = release / "manifest.json"
+    manifest_path = release / EXTENSION_MANIFEST_FILENAME
     manifest_path.write_text(json.dumps(entries), encoding="utf-8")
     with pytest.raises(AssertionError, match=f"manifest {field} differs"):
         validate_candidate_extraction_release(
@@ -1492,7 +1500,7 @@ def test_release_validator_rejects_blank_public_anchor_bytes(
             pa.array([blank], type=evidence_field.type),
         )
         pq.write_table(tampered, issue_path)
-        manifest_path = release / "manifest.json"
+        manifest_path = release / EXTENSION_MANIFEST_FILENAME
         manifest_path.write_text(
             json.dumps(extension_manifest_entries(release)),
             encoding="utf-8",
@@ -1653,7 +1661,7 @@ def test_refuses_excluded_biography_fields_and_unpassed_validation(tmp_path: Pat
         pending_status.source_observability.eq("observed_extractable"),
         "extraction_status",
     ].eq("withheld_validation").all()
-    manifest_output = second_release / "manifest.json"
+    manifest_output = second_release / EXTENSION_MANIFEST_FILENAME
     manifest_output.write_text(
         json.dumps(extension_manifest_entries(second_release)), encoding="utf-8"
     )
@@ -1748,7 +1756,7 @@ def test_withholds_distinct_payloads_from_overlapping_segments(tmp_path: Path) -
         segments.parent_document_id.eq(first["parent_document_id"]),
         "withheld_overlap_conflict_group_count",
     ].tolist() == [1, 1]
-    output_manifest = release / "manifest.json"
+    output_manifest = release / EXTENSION_MANIFEST_FILENAME
     output_manifest.write_text(json.dumps(extension_manifest_entries(release)))
     validated = validate_candidate_extraction_release(
         release, core, bundle, output_manifest, production=False
@@ -1894,7 +1902,7 @@ def test_all_withheld_items_are_accounted_but_never_reported_as_zero(
         & status.route.eq("issues"),
         "extraction_status",
     ].item() == "withheld_validation"
-    output_manifest = release / "manifest.json"
+    output_manifest = release / EXTENSION_MANIFEST_FILENAME
     output_manifest.write_text(json.dumps(extension_manifest_entries(release)))
     validated = validate_candidate_extraction_release(
         release, core, bundle, output_manifest, production=False
@@ -2017,7 +2025,7 @@ def test_validator_refuses_a_manifest_hash_change(tmp_path: Path) -> None:
     build_release(core, bundle, release, production=False)
     entries = extension_manifest_entries(release)
     entries[0]["sha256"] = "0" * 64
-    manifest_path = release / "manifest.json"
+    manifest_path = release / EXTENSION_MANIFEST_FILENAME
     manifest_path.write_text(json.dumps(entries), encoding="utf-8")
     with pytest.raises(AssertionError, match="manifest hash differs"):
         validate_candidate_extraction_release(
@@ -2037,7 +2045,7 @@ def test_validator_refuses_extra_manifest_inventory(tmp_path: Path) -> None:
         "bytes": 1,
         "sha256": "0" * 64,
     })
-    manifest_path = release / "manifest.json"
+    manifest_path = release / EXTENSION_MANIFEST_FILENAME
     manifest_path.write_text(json.dumps(entries), encoding="utf-8")
     with pytest.raises(AssertionError, match="exactly the six extension files"):
         validate_candidate_extraction_release(
@@ -2055,7 +2063,7 @@ def test_builder_and_validator_refuse_extra_disk_files(tmp_path: Path) -> None:
 
     release = tmp_path / "release"
     build_release(core, bundle, release, production=False)
-    manifest_path = release / "manifest.json"
+    manifest_path = release / EXTENSION_MANIFEST_FILENAME
     manifest_path.write_text(
         json.dumps(extension_manifest_entries(release)), encoding="utf-8"
     )
@@ -2456,3 +2464,77 @@ def test_cap_withheld_row_is_accepted_only_with_its_attestation(
         match="generation_config_sha256 differs|no repair attestation",
     ):
         build_release(core, bundle, tmp_path / "release-repaired", production=False)
+
+
+def test_official_government_hosts_leave_the_release_population() -> None:
+    """Hanno approved dropping .gov pages on 2026-09-24.
+
+    The population is campaign websites. Four of these hosts also carried the
+    wrong candidate, for example billnelson.senate.gov under a Nebraska
+    candidate named Nelson.
+    """
+    import pandas as pd
+
+    from scripts.build_candidate_extraction_release import (
+        _drop_excluded_hosts,
+        _url_host,
+    )
+
+    assert _url_host(
+        "https://web.archive.org/web/20180101000000/https://chu.house.gov/issues"
+    ) == "chu.house.gov"
+    assert _url_host(
+        "https://web.archive.org/web/20180101000000/https://www.smithforcongress.com/"
+    ) == "www.smithforcongress.com"
+
+    raw = pd.DataFrame(
+        {
+            "candidate_cycle_id": ["A", "B", "C"],
+            "snap_url": [
+                "https://web.archive.org/web/20180101000000/https://chu.house.gov/issues",
+                "https://web.archive.org/web/20180101000000/https://billnelson.senate.gov/x",
+                "https://web.archive.org/web/20180101000000/https://smithforcongress.com/",
+            ],
+        }
+    )
+    kept, report = _drop_excluded_hosts(raw)
+    assert list(kept["candidate_cycle_id"]) == ["C"]
+    assert report["excluded_raw_rows"] == 2
+    assert report["excluded_hosts"] == ["billnelson.senate.gov", "chu.house.gov"]
+    assert report["excluded_candidate_years"] == ["A", "B"]
+
+
+def test_approved_contract_hashes_match_the_computed_contracts() -> None:
+    """The packager's approved hashes must be the real contract hashes.
+
+    Both are literals so an accidental edit to a contract input fails closed.
+    This test is what keeps the literals honest.
+    """
+    from src.candidate_extraction import get_extraction_contract
+    from scripts.build_candidate_extraction_release import (
+        APPROVED_EXTRACTION_CONTRACT_SHA256,
+    )
+
+    for version, approved in APPROVED_EXTRACTION_CONTRACT_SHA256.items():
+        assert (
+            get_extraction_contract(version)["extraction_contract_sha256"] == approved
+        ), f"the approved {version} contract hash is stale"
+
+
+def test_the_packager_writes_its_manifest_inventory() -> None:
+    """The validator reads this file, so the packager must write it.
+
+    Before 2026-09-27 the summary carried the entries but no file was written,
+    and the 2026-09-25 inventory had to be rebuilt by hand.
+    """
+    import inspect
+
+    from scripts.build_candidate_extraction_release import (
+        EXTENSION_MANIFEST_FILENAME,
+        build_release,
+    )
+
+    source = inspect.getsource(build_release)
+    assert "EXTENSION_MANIFEST_FILENAME" in source
+    assert "write_text" in source
+    assert EXTENSION_MANIFEST_FILENAME == "candidate_extraction_manifest.json"
