@@ -129,7 +129,7 @@ def _check_extension_manifest(directory: Path) -> None:
 def expected_mime(name: str) -> str:
     suffix = Path(name).suffix.lower()
     fixed = {
-        ".csv": "text/comma-separated-values",
+        ".csv": "text/csv",
         ".parquet": "application/octet-stream",
         ".md": "text/markdown",
         ".json": "application/json",

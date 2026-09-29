@@ -45,7 +45,7 @@ def _remote_version(directory: Path) -> dict:
         if path.name == "dataverse_draft_verification.json":
             continue
         if path.suffix == ".csv":
-            mime = "text/comma-separated-values"
+            mime = "text/csv"
         elif path.suffix == ".parquet":
             mime = "application/octet-stream"
         elif path.suffix == ".md":
