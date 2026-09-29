@@ -2538,3 +2538,187 @@ def test_the_packager_writes_its_manifest_inventory() -> None:
     assert "EXTENSION_MANIFEST_FILENAME" in source
     assert "write_text" in source
     assert EXTENSION_MANIFEST_FILENAME == "candidate_extraction_manifest.json"
+
+
+def _model_coded_report(bundle_dir: Path) -> dict:
+    import scripts.build_candidate_extraction_release as release
+
+    manifest = bundle_dir / "bundle_manifest.json"
+    manifest.write_text("{}\n", encoding="utf-8")
+    routes = {}
+    for route, names in release.RELEASED_DIMENSIONS.items():
+        routes[route] = {
+            "precision_n": 60,
+            "recall_n": 20,
+            "record_recall": 0.93,
+            "dimension_accuracy": {name: 0.95 for name in names},
+        }
+    return {
+        "format": release.MODEL_CODED_VALIDATION_FORMAT,
+        "coding_source": "model",
+        "bundle_manifest_sha256": release.sha256_file(manifest),
+        "known_omissions": {"omission_n": 11, "confirmed_n": 11},
+        "routes": routes,
+    }
+
+
+def _write_report(tmp_path: Path, report: dict) -> Path:
+    path = tmp_path / "model_coded.json"
+    path.write_text(json.dumps(report), encoding="utf-8")
+    return path
+
+
+def test_model_coded_gate_passes_routes_for_the_exact_bundle(tmp_path: Path) -> None:
+    import scripts.build_candidate_extraction_release as release
+
+    report = _model_coded_report(tmp_path)
+    _loaded, passed, accuracy = release.load_model_coded_validation(
+        _write_report(tmp_path, report), tmp_path
+    )
+    assert passed == {route: True for route in release.ROUTES}
+    assert set(accuracy["endorsements"]["dimension_accuracy"]) == set(
+        release.RELEASED_DIMENSIONS["endorsements"]
+    )
+
+
+def test_model_coded_gate_fails_a_route_below_record_recall(tmp_path: Path) -> None:
+    import scripts.build_candidate_extraction_release as release
+
+    report = _model_coded_report(tmp_path)
+    report["routes"]["issues"]["record_recall"] = 0.89
+    _loaded, passed, _accuracy = release.load_model_coded_validation(
+        _write_report(tmp_path, report), tmp_path
+    )
+    assert passed["issues"] is False
+    assert passed["biography"] is True
+
+
+@pytest.mark.parametrize(
+    "change",
+    [
+        lambda r: r.update(bundle_manifest_sha256="0" * 64),
+        lambda r: r.update(coding_source="human"),
+        lambda r: r["known_omissions"].update(confirmed_n=10),
+        lambda r: r["routes"]["biography"]["dimension_accuracy"].pop("field_correct"),
+    ],
+)
+def test_model_coded_gate_refuses_a_mismatched_report(tmp_path: Path, change) -> None:
+    import scripts.build_candidate_extraction_release as release
+
+    report = _model_coded_report(tmp_path)
+    change(report)
+    with pytest.raises(release.ReleaseInputError):
+        release.load_model_coded_validation(_write_report(tmp_path, report), tmp_path)
+
+
+def test_wrong_candidate_site_is_dropped_only_for_the_listed_candidate_year() -> None:
+    """Hanno approved dropping another candidate's archived site on 2026-09-28."""
+    from scripts.build_candidate_extraction_release import (
+        excluded_parent_document_ids,
+    )
+
+    def url(host: str) -> str:
+        return f"https://web.archive.org/web/20200101000000/https://{host}/issues"
+
+    raw = pd.DataFrame(
+        {
+            "candidate_cycle_id": [
+                "H0AL02160-2020", "H6MD04209-2020", "H0OH01099-2020", "X-2020",
+            ],
+            "page_type": ["issues"] * 4,
+            "text_snap_content": ["one", "two", "three", "four"],
+            "snap_url": [
+                url("anthonybrown.com"),
+                url("www.anthonybrown.com"),
+                url("kateforcongress.com"),
+                url("chu.house.gov"),
+            ],
+        }
+    )
+    ids, report = excluded_parent_document_ids(raw)
+    assert report["wrong_candidate_raw_rows"] == 1
+    assert report["wrong_candidate_parent_documents"] == 1
+    assert report["official_government_parent_documents"] == 1
+    assert len(ids) == 2
+
+
+def _long_table(name: str, rows: list[dict]) -> pa.Table:
+    from scripts.build_candidate_extraction_release import TABLE_SCHEMAS
+
+    return pa.Table.from_pylist(rows, schema=TABLE_SCHEMAS[name])
+
+
+def test_public_record_rules_null_withheld_kinds_and_key_repeats() -> None:
+    from scripts.build_candidate_extraction_release import apply_public_record_rules
+
+    issues = _long_table("candidate_issue_statements.parquet", [
+        {"candidate_cycle_id": "A", "evidence": "Cut  taxes.", "statement_kind": "support"},
+        {"candidate_cycle_id": "A", "evidence": "cut taxes.", "statement_kind": "current_action"},
+        {"candidate_cycle_id": "B", "evidence": "Cut taxes.", "statement_kind": "unclear"},
+    ])
+    biography = _long_table("candidate_biography_facts.parquet", [
+        {"candidate_cycle_id": "A", "field": "education", "value": "MBA"},
+    ])
+    endorsements = _long_table("candidate_endorsements.parquet", [
+        {"candidate_cycle_id": "A", "endorser_name": "Sierra Club"},
+    ])
+    tables = apply_public_record_rules({
+        "candidate_issue_statements.parquet": issues,
+        "candidate_biography_facts.parquet": biography,
+        "candidate_endorsements.parquet": endorsements,
+    })
+    out = tables["candidate_issue_statements.parquet"]
+    assert out.column("statement_kind").to_pylist() == ["support", None, None]
+    keys = out.column("candidate_record_key").to_pylist()
+    assert keys[0] == keys[1] != keys[2]
+    assert tables["candidate_biography_facts.parquet"].column(
+        "candidate_record_key"
+    ).null_count == 0
+
+
+def test_status_is_recounted_after_page_exclusions() -> None:
+    from scripts.build_candidate_extraction_release import (
+        EXCLUDED_STATUS,
+        STATUS_COLUMNS,
+        TABLE_SCHEMAS,
+        filter_released_tables,
+        reconcile_status_with_released_tables,
+    )
+
+    documents = pa.Table.from_pylist([
+        {"parent_document_id": "p1", "candidate_cycle_id": "A", "route": "issues",
+         "withheld_overlap_conflict_group_count": 0},
+        {"parent_document_id": "p2", "candidate_cycle_id": "B", "route": "issues",
+         "withheld_overlap_conflict_group_count": 0},
+    ], schema=TABLE_SCHEMAS["candidate_extraction_documents.parquet"])
+    segments = pa.Table.from_pylist([
+        {"segment_id": "s1", "parent_document_id": "p1", "candidate_cycle_id": "A", "route": "issues"},
+        {"segment_id": "s2", "parent_document_id": "p2", "candidate_cycle_id": "B", "route": "issues"},
+    ], schema=TABLE_SCHEMAS["candidate_extraction_segments.parquet"])
+    issues = _long_table("candidate_issue_statements.parquet", [
+        {"parent_document_id": "p1", "candidate_cycle_id": "A"},
+        {"parent_document_id": "p2", "candidate_cycle_id": "B"},
+    ])
+    status = pd.DataFrame([
+        {"candidate_cycle_id": cid, "route": "issues",
+         "source_observability": "observed_extractable",
+         "extraction_status": "observed_positive", "n_raw_pages": 1,
+         "n_documents": 1, "n_segments": 1, "n_records": 1,
+         "n_withheld_overlap_conflict_groups": 0}
+        for cid in ("A", "B")
+    ], columns=STATUS_COLUMNS)
+    tables = {
+        "candidate_extraction_status.csv": status,
+        "candidate_extraction_documents.parquet": documents,
+        "candidate_extraction_segments.parquet": segments,
+        "candidate_issue_statements.parquet": issues,
+        "candidate_biography_facts.parquet": _long_table("candidate_biography_facts.parquet", []),
+        "candidate_endorsements.parquet": _long_table("candidate_endorsements.parquet", []),
+    }
+    filtered = filter_released_tables(tables, {"p1"})
+    result = reconcile_status_with_released_tables(filtered, {"p1"}, documents)
+    out = result["candidate_extraction_status.csv"].set_index("candidate_cycle_id")
+    assert out.loc["A", "extraction_status"] == EXCLUDED_STATUS
+    assert out.loc["A", ["n_documents", "n_segments", "n_records"]].tolist() == [0, 0, 0]
+    assert out.loc["B", "extraction_status"] == "observed_positive"
+    assert out.loc["B", "n_records"] == 1

@@ -8,30 +8,23 @@ corrected core Dataverse release.
 
 ## Current state
 
-The corrected core data have been submitted to Dataverse separately. This
-extension is not yet publishable and does not alter that submission. The issue
-and biography rerun, the endorsement line ledger, and the independent human
-validation must all finish before these six extension files can be deposited.
+The corrected core data were published separately as Dataverse version 3.0.
+This extension is released with the core files as version 4.0 and does not
+change any core file. It uses extraction schema version 2.2, built from bundle
+`bundle_20260924_v22`.
 
-The endorsement pilot has completed the first two model passes. The reviewed
-suffix-f Stage-A2 run left 14 exact source-line dependencies: eight invalid
-continuation-owner assignments and six interface-role disagreements across
-three parent pages. Those rows form a frozen Stage-A3 human adjudication task.
-The task and its HTML app are authenticated, but no human results or imported
-Stage-A3 artifact exists. Stage B is therefore forbidden. The 14-row task is
-part of constructing the extraction and is separate from the later 240-task
-independent validation sample. No release package or final validation app has
-been generated.
+The extension was validated by a model coder, not by humans. The section
+"Validation and release rule" below gives the rule, the results, and the
+columns that were withheld because the check did not support them.
 
-A local package with a pending global human gate or any `failed`
-candidate-route is validation material, not a release. A release-ready package
-may still contain route-level `withheld_validation` rows when no public record
-can be released but every private model item and overlap conflict is fully
-accounted. The release validator must report `release_ready = true` before
-deposit.
+A release-ready package may still contain route-level `withheld_validation`
+rows. In this release that status marks 23 candidate-year routes where no
+extracted item aligned exactly to the page text, so no record could be
+released. Every private model item and overlap conflict is accounted for.
 
-Version 2.0 remains a compatibility format for prior audit artifacts. Only
-schema version 2.1 is eligible for this extension.
+Schema version 2.0 remains a compatibility format for prior audit artifacts.
+Schema version 2.2 shares every generation input with 2.1 and adds one
+typographic fallback to the aligner.
 
 ## Files, row units, and joins
 
@@ -100,7 +93,8 @@ material.
 | `observed_positive` | The route passed the technical and human gates and at least one exact aligned record was released. Other model items or overlap-conflict groups may be fully accounted and withheld privately. |
 | `observed_zero` | Every observed segment passed the technical and human gates, and the route produced no record. This is a measured zero. |
 | `failed` | At least one segment has missing output, truncation, parse failure, invalid schema, an output array at its route cap, or a repeated model item that triggers the pre-alignment guard. No failed route can be called an observed zero. |
-| `withheld_validation` | Either the global human gate is pending, or that gate passed but this candidate-route has no public record and at least one fully accounted private model item or overlap-conflict group was withheld. The first case is nonpublishable; the second is honest route-level missingness and does not by itself block a release-ready package. |
+| `withheld_validation` | Either the release gate is pending, or that gate passed but this candidate-route has no public record and at least one fully accounted private model item or overlap-conflict group was withheld. The first case is nonpublishable; the second is honest route-level missingness and does not by itself block a release-ready package. |
+| `excluded_not_campaign_site` | Every document for this candidate-route was excluded because its host is an official government site or the archived site is not the candidate's. The route has no released records. |
 
 Any truncated input, parse or schema failure, pre-alignment guard failure, or
 missing output makes the candidate-route `failed`. A missing, ambiguous, or semantically unsupported
@@ -708,9 +702,25 @@ that is meant to count observed content.
 
 ```text
 record_id, parent_document_id, segment_id, source_segment_ids,
-candidate_cycle_id, variant_count, overlap_resolution,
+candidate_cycle_id, candidate_record_key, variant_count, overlap_resolution,
 overlap_resolution_method, source_model_item_id
 ```
+
+**Repeated records.** A row is one record on one parent document, and each
+archived version of a page is its own parent document when its text differs at
+all. A page that changed only a date or a banner therefore yields the same
+records again. About half of all rows repeat a record already present for the
+same candidate-year: 52 percent of issue rows, 49 percent of biography rows,
+and 60 percent of endorsement rows. Candidates with many archived versions,
+mostly in years before 2018, carry the most repeats.
+
+`candidate_record_key` identifies a record within a candidate-year across page
+versions. It is a SHA-256 hash of `candidate_cycle_id`, the route, and the
+record's key text after case folding and whitespace collapse: `evidence` for
+issues, `field` and `value` for biography, and `endorser_name` for
+endorsements. Keep one row per `candidate_record_key` before counting
+statements, facts, or endorsers per candidate. Counting raw rows measures how
+often the campaign's pages were archived, not what the campaign said.
 
 All shared identifiers are required. `record_id` is unique within and across
 the three long tables. `segment_id` identifies the canonical segment;
@@ -734,24 +744,43 @@ evidence_exact_match_count, evidence_alignment_method
 `claim` is a concise faithful statement derived from the exact `evidence`.
 `source_heading` preserves the nearest exact heading when one is available.
 `statement_kind` is one of `support`, `oppose`, `proposal`, `past_action`,
-`current_action`, or `unclear`. The extension does not add a normalized topic,
+`current_action`, or `unclear`, but the last two values are withheld:
+`statement_kind` is null on those rows. The extension does not add a normalized topic,
 issue taxonomy, or ideology field.
+
+Not every issue row states a position. The model-coded check on September 28,
+2026 found no position in 20 of 60 sampled records. Weighted by each kind's
+share of the table, about one row in five states no position. The three
+patterns are press-release link titles or bare issue names, text about another
+person such as an attack on an opponent, and quoted third-party endorsements.
+`claim` and `evidence` matched the page in all 60 records, so the text is
+faithful even when it states no position. `statement_kind` was correct in 53 of
+60, and all seven errors were `current_action` rows that hold a future
+promise. `unclear` rows stated no position in 9 of 9. Both kinds are therefore
+withheld, and those rows keep their claim and evidence with a null kind.
 
 ### `candidate_biography_facts.parquet`
 
 The exact column order is the shared fields above followed by:
 
 ```text
-field, value, timing, relationship, evidence, evidence_start_char,
+field, value, relationship, evidence, evidence_start_char,
 evidence_end_char, evidence_parent_start_char, evidence_parent_end_char,
 evidence_exact_match_count, evidence_alignment_method
 ```
 
 `field` is one of `occupation`, `education`, `elected_office_experience`,
-`public_service_experience`, `military_service`, or `local_roots`. `timing` is
-one of `current`, `former`, or `unclear`. It is required for occupation,
-elected-office experience, public-service experience, and local roots; it may
-be null for education or military service.
+`public_service_experience`, `military_service`, or `local_roots`. The field
+list has no residual category, so a fact that fits none of the six goes to the
+nearest one. In practice that is usually `public_service_experience`, which
+also holds facts such as party activism. The model-coded check found `field`
+wrong on 3 of 10 sampled `public_service_experience` records and on 1 of 50
+records in the other five fields.
+
+The extraction also codes a `timing` value (`current`, `former`, or
+`unclear`). **This field is not released.** The model-coded check on September
+28, 2026 found it wrong on 8 of 60 sampled records, in both directions. The
+model keys on past-tense narration, not on the state at the capture date.
 
 `relationship` is required only for `local_roots` and must itself be a
 verbatim substring of `evidence`. It records the page's stated relationship to
@@ -764,8 +793,7 @@ states at the capture date, not present-day truth.
 The exact column order is the shared fields above followed by:
 
 ```text
-endorser_name, entity_type, title, affiliation,
-jurisdiction, record_evidence, record_evidence_start_char,
+endorser_name, entity_type, record_evidence, record_evidence_start_char,
 record_evidence_end_char, record_evidence_parent_start_char,
 record_evidence_parent_end_char, endorsement_context_evidence,
 endorsement_context_evidence_start_char,
@@ -786,7 +814,17 @@ inventory_owner_segment_id, record_evidence_carrier_segment_id,
 target_block_alignment_method, target_block_exact_match_count
 ```
 
-`entity_type` is `individual`, `organization`, or `unclear`.
+`title`, `affiliation` and `jurisdiction` are extracted but **not released**.
+`record_evidence` holds the whole source block, not a name span. A block whose
+boundary reaches into the neighbouring entry puts that neighbour's line into
+the evidence, and the three fields can then describe another person. The
+model-coded check on September 28, 2026 found them wrong on 11 of 60 sampled
+records. A user who needs a stated title can read it from `record_evidence`.
+`endorser_name` is not affected and was correct in 58 of 60 sampled records.
+
+`entity_type` is `individual`, `organization`, or `unclear`. The model-coded
+check did not score it separately. A name-pattern scan found it consistent
+with the endorser name in nearly all rows, but it has no measured accuracy.
 
 #### Why there is no endorser category
 
@@ -803,14 +841,14 @@ itself. The same records carry `government_official` correctly when the line
 names the office. Anyone filtering on `government_official` would therefore
 undercount officials, and would not see that they had.
 
-`entity_type`, `title`, `affiliation`, `jurisdiction` and the evidence text are
-released, so a user who needs a category can build one from published fields and
-state their own rule. That is more honest than shipping a field whose error
+`entity_type` and the evidence text are released, so a user who needs a
+category can build one from published fields and state their own rule. That is more honest than shipping a field whose error
 depends on how a campaign laid out its endorsement page.
 
-`title`, `affiliation`, and `jurisdiction` are optional and use null when the
-page does not state the information. `record_evidence` identifies the endorser
-and any recorded attributes. `endorsement_context_evidence` establishes that
+`record_evidence` identifies the endorser and any attributes the page states.
+Not every endorsement row is an endorsement. The model-coded check found 9 of
+60 sampled records without support for an endorsement, and the model also
+captures ratings and awards, such as an interest-group grade. `endorsement_context_evidence` establishes that
 the record is an endorsement rather than a bare name.
 
 `support_mode` is `explicit_text` when `record_evidence` contains a direct
@@ -1040,99 +1078,86 @@ The extension also excludes a standalone current-residence field, street
 addresses, and post-office-box addresses. An address-like local-roots value or
 evidence span fails semantic validation and is withheld.
 
-Local-roots, occupation, and office or service timing describe the archived
+Local-roots, occupation, and office or service facts describe the archived
 page at its capture date. They must not be interpreted as the candidate's
 current residence, current job, or current office. Short exact evidence spans
 and source URLs remain public for auditability, subject to the exclusions
 above.
 
 Issue records preserve the source's own claims and headings. They do not infer
-ideology. Endorsement records separate the endorser's entity type,
-substantive category, title, affiliation, and jurisdiction. They do not expose
-the legacy generic `organization` field.
+ideology. Endorsement records release the endorser's name and entity type with
+the evidence text. They do not expose the legacy generic `organization` field.
 
-## Independent human validation and release gates
+## Validation and release rule
 
-The 14-row Stage-A3 task is not a validation sample. It resolves a bounded set
-of extraction dependencies before Stage B can run, so those rows help construct
-the endorsement output. The independent release validation begins only after
-the complete extraction bundle is frozen. Its samples must not reuse Stage-A3
-rows as holdout evidence.
+The approved plan required independent human validation of every route. That
+validation was not carried out. On September 28, 2026 the release rule was
+changed: the release uses a model-coded check, and it publishes only the
+columns that the check supports. The check is an estimate from one model coder
+per sample. It is not human validation, and users should treat its figures as
+approximate.
 
-The earlier AI-assisted audit is tuning evidence only. It cannot satisfy the
-release gate, and all tuning parent IDs are excluded from validation samples.
-The provisional human workload is capped at 240 sampled tasks in four
-resumable batches of 60. The first batch is timed before the remaining batches
-are assigned. The 11 known-omission link confirmations remain separate
-required tasks. The support code is dormant until the complete extraction
-bundle is frozen and validated; no app or assignment has been generated.
+**Design.** Seven batches drawn with seed 20260922 from the frozen bundle: 60
+precision records per route, stratified by statement kind or field or
+endorser category, 20 complete-page recall pages per route, and the 11 known
+omissions. A separate Claude Opus agent coded each batch against the coding
+rules written into the task. Sampled parents exclude all tuning parents.
 
-| Route or task | Required sample |
-|---|---:|
-| Batch 1: biography precision | 60 records, 10 for each of the six released fields; record active coding time |
-| Batch 2: issue precision | 60 records, stratified by year, party, length, segmentation, heading availability, and statement kind |
-| Batch 3: endorsement precision | 60 records, covering every observed entity type, category, support mode, and context source scope, with at least 20 non-null examples each for title, affiliation, and jurisdiction |
-| Batch 4: complete-page recall | 20 parent documents per route, including at least 5 zero-result and 5 multi-window pages per route |
+**Gate.** Each route passes when it has at least 60 precision records and 20
+recall pages, record-level recall is at least 0.90, and all 11 known omissions
+are confirmed. The per-column figures below are published and do not gate the
+release; the column decisions were made from them.
 
-The endorsement route has an additional private 40-parent inference pilot before
-any full endorsement inference run. This pilot uses an untouched sample and
-tests exhaustive endorser presence plus exact record and context support. It
-does not validate entity type, category, title, affiliation, or jurisdiction,
-does not count toward Batch 4, and cannot authorize release. A passing pilot may
-support a later decision to run full endorsement inference privately. The exact
-selection, matching, failure, and access rules are frozen in
-`quality_reports/candidate_endorsement_40_parent_recall_pilot_selection_spec_2026-08-26.json`.
+| Route | Record recall | Checked dimension | Correct, of 60 |
+|---|---:|---|---:|
+| Issues | 0.91 | text states a position | 40 |
+| Issues | | `claim` faithful to the evidence | 60 |
+| Issues | | `evidence` supports the statement | 60 |
+| Issues | | `source_heading` correct | 59 |
+| Issues | | `statement_kind` correct | 53 |
+| Biography | 0.94 | fact present | 60 |
+| Biography | | `value` faithful | 59 |
+| Biography | | `field` correct | 56 |
+| Biography | | `relationship` correct | 60 |
+| Biography | | evidence supports the fact | 55 |
+| Endorsements | 0.98 | endorser present | 60 |
+| Endorsements | | `endorser_name` correct | 58 |
+| Endorsements | | record evidence identifies the endorser | 47 |
+| Endorsements | | record and context support an endorsement | 51 |
 
-Before that pilot is selected, the pipeline seals an independent 80-parent
-endorsement candidate pool for the later Batch-4 draw. After the complete
-private bundle is frozen, the final 20 endorsement recall pages must be drawn
-only from that sealed pool. The final draw requires at least five technically
-complete zero-record pages and five technically complete pages with at least
-two Stage-B input batches. If the sealed pool cannot satisfy those rules, that
-release version fails; the pipeline cannot replace pages or change the seed.
-The pool and the 40-parent pilot use disjoint duplicate-content components.
+The known-omission check confirmed 11 of 11. Precision samples are stratified,
+so a per-route figure is not a population rate. Weighted by each statement
+kind's share of the table, about 80 percent of issue rows state a position.
 
-The repaired eight-parent prerequisite is authenticated under residual-repair
+**Withheld columns.** Biography `timing` (wrong on 8 of 60), endorsement
+`title`, `affiliation` and `jurisdiction` (wrong on 11 of 60), and the
+endorser category (withheld since September 20, 2026). Their definitions stay
+in this codebook so that users know what was extracted and why it is absent.
+
+**Excluded pages.** Official government hosts (`.gov`) are not campaign
+websites and are excluded: 631 parent documents. Three candidate-years are
+excluded because the archived site is not the candidate's: `H0AL02160-2020`
+(`anthonybrown.com`, a different candidate in Maryland, 36 parent documents),
+`S2GA00167-2022` (`gagop.org`, the Georgia Republican Party, 3), and
+`H8IN07291-2018` (`borderlessu.com`, a web studio's placeholder page, 1). The
+status table keeps these candidate-year routes. Their counts are recomputed
+from the released tables, and a route whose documents were all excluded has
+`extraction_status = excluded_not_campaign_site`.
+
+**Development provenance.** The endorsement route was developed with a
+private 40-parent recall pilot, frozen in
+`quality_reports/candidate_endorsement_40_parent_recall_pilot_selection_spec_2026-08-26.json`,
+and a 14-row Stage-A3 adjudication. Neither is a validation sample. The
+repaired eight-parent prerequisite is authenticated under residual-repair
 contract `37dd3a17f5b70e377df4e2b9f1c8213d7909b5838cf99b6c28676e7ac7c8c4fc`.
-Its human-coded results and imported repair artifact are required provenance;
-the repair cannot be regenerated from model output alone or reused for another
-residual run. It authorizes only the next bounded inference gate.
-
-The current line-ledger prompt and schema catalog bindings include
+The line-ledger prompt and schema catalog bindings include
 `276ca9a244a582ec74022b99e18ad1fcf163535fead962bf4f4eba36d37447ca`
 and `825e67b8e39acbddc6ea571dde19639a24ba096047f8751a4beb70b8dcc76023`.
 
-Precision and recall samples use disjoint parent documents. A passing
-`human_validation.json` must attest `independent_human_only = true`,
-`coding_source = human`, exclusion of the tuning audit, and completion of all
-tasks. It must also confirm the semantic recovery and public record links for
-all 11 known omissions.
-
-Scoring reloads the frozen private bundle and deterministically rebuilds the
-holdout from the recorded seed, tuning exclusions, and batch size. It requires
-typed-exact agreement for the selection summary, ordered task inventory,
-sample metadata, every task payload, and every rendered HTML app. The replay
-also binds the exact shared builder and template hashes. Coordinated edits to a
-task or HTML file and its self-declared hash therefore cannot substitute or
-cherry-pick the holdout. The passing validation report records the replay
-hashes.
-
-The predeclared gates are:
-
-1. 100 percent schema, hash, linkage, source coverage, and exact-span validity.
-2. At least 90 percent all-dimension record accuracy for each route.
-3. At least 80 percent accuracy for every sampled released subtype or
-   category.
-4. At least 90 percent complete-page recall for each route.
-5. For endorsements, 100 percent sampled endorser presence and 100 percent
-   combined record-plus-context support.
-6. Human confirmation of all 11 known omissions and every linked recovered
-   record.
-
-If any route fails, that route must be revised and rerun, then evaluated on a
-new untouched holdout. Individual failed sample records cannot be patched into
-a passing release. Until all routes pass, `withheld_validation` is the correct
-status and the extension must not be deposited.
+The frozen report is
+`quality_reports/candidate_extraction_model_coded_validation_2026-09-27.json`
+in the project repository. The release summary carries the same per-column
+figures in `released_column_accuracy`.
 
 ## Glossary
 

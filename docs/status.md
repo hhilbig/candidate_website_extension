@@ -22,12 +22,83 @@ Retain the attempt count across sessions. Existing research criteria, acquisitio
 
 ## Resume here
 
-Updated September 27, 2026 at 14:30 PDT.
+Updated September 28, 2026.
 
-Track 2 now has a version 2.2 bundle and a version 2.2 release package. The alignment
-repair recovered 33,061 records. The seven validation tasks are rebuilt from that bundle.
-The model-coded pass has NOT been run on them yet. That is the next action.
+The model-coded pass on the version 2.2 tasks is complete (commit `9fa3f66`). Report:
+`quality_reports/candidate_extraction_model_coded_validation_2026-09-27.md`. It fails the
+old all-dimension criteria on every route. Known omissions pass 11 of 11.
+
+### Release rule decided by Hanno, September 28, 2026
+
+Release the variables that the model-coded check supports. Drop the others. Human
+validation is not required for this release.
+
+| Table | Released | Dropped | Evidence (model-coded, 60 records per route) |
+|---|---|---|---|
+| Documents, segments, status | All columns | None | No model judgment |
+| Issues | All columns | None | `claim`, `evidence` 60/60; heading 59/60; kind 53/60 |
+| Biography | `field` with documented caveat, `value`, `relationship`, evidence | `timing` | timing wrong 8/60; field wrong 4/60, 3 of them in `public_service_experience` |
+| Endorsements | `endorser_name`, `entity_type`, evidence, context | `title`, `affiliation`, `jurisdiction`; category already withheld | optional fields wrong 11/60; name 58/60 |
+
+The codebook states two record-level caveats: about one issue row in five states no
+position, and 9 of 60 endorsement rows lack support for an endorsement.
+
+Done on September 28 (uncommitted): the column lists in
+`scripts/build_candidate_extraction_release.py`, the codebook sections, and removal of
+the unreleased line-span flag. Release tests pass (97).
+
+**Model-coded gate added, September 28 (Hanno approved the edit).** The packager and the
+validator take `--model-coded-validation`. It accepts the model-coded report only for the exact
+bundle, with at least 60 precision and 20 recall items per route, record recall at least 0.90,
+and 11 of 11 known omissions. Tests: 103 pass, including six for the new gate.
+
+**Release package built:** `build/hive_candidate_extraction/release_20260928_v22_model`, from
+`bundle_20260924_v22` with `CANDIDATE_EXTRACTION_SCHEMA_VERSION=2.2`, 38 minutes, peak 9 GB.
+All three routes pass; `release_ready` is true. Row counts equal the September 25 package:
+287,961 issues, 104,435 biography, 153,132 endorsements. The dropped columns are absent.
+Status: 5,691 candidate-year routes `observed_positive`, 376 `observed_zero`, 23 still
+`withheld_validation`. The gate does not cause this: all 318 model items on those routes failed exact alignment, so no record survives. Build summary beside the directory.
+The release validator (`scripts/validate_candidate_extraction_release.py` with the same option) passes: exit 0, `release_ready` true.
+
+Hanno approved on September 28: commit, the wrong-site exclusion, and publication as Dataverse
+version 4.0 (core 3.0 files unchanged, extension added, README replaced; no 2026 data).
+
+**Pre-release audit, September 28.** Checks on the released columns found:
+- About half of all rows repeat a record within the same candidate-year, because each archived
+  page version is its own parent document (issues 52%, biography 49%, endorsements 60%). Fix:
+  new column `candidate_record_key` in all three record tables, documented in the codebook.
+- The status table still reported `observed_positive` and old counts for about 30 routes whose
+  pages were excluded. Fix: counts recomputed; fully excluded routes get
+  `excluded_not_campaign_site`.
+- Two more non-candidate sites, `gagop.org` and `borderlessu.com` (no records). Added to the
+  exclusion list. `kateforcongress.com` is two real candidates and stays.
+- `statement_kind` is null for `current_action` and `unclear` (Hanno approved).
+- No problems found in endorser names, `entity_type` patterns, or biography values beyond a few
+  trivial values such as "None" (8 rows).
+
+**Final package:** `build/hive_candidate_extraction/release_20260928c_v22_model`. Build and validator
+pass (`release_ready` true). Rows: issues 287,427, biography 104,331, endorsements 153,108,
+documents 23,200, segments 34,346. Status table agrees with the record tables (0 mismatches).
+
+**Independent review, four Sonnet agents, September 28.** Joins, keys, manifest hashes, and a sample
+of about 11,000 offsets are sound. The long technical codebook contradicted the data (wrong counts,
+wrong endorsement overlap strings, stale pipeline text), so the deposit ships a new short codebook,
+`docs/candidate_extraction_codebook.md` (published as `candidate_extraction_codebook.md`), written in
+Hanno's voice with a coverage table and a known-limitations section. The long document stays in
+the repository only. Documented, not fixed: about 800 rows with encoding errors from the archived
+pages, family-member biography facts, committee posts under elected office, supporter lists and
+broken names on a few endorsement pages, short topic labels among issue statements.
+
+**Deposit folder:** `build/release_v4_0_candidate`, 19 files (core 3.0 files hard-linked and unchanged,
+six extension files, extension manifest, extraction codebook, new README). Local manifest checks pass.
+Next: stage the unpublished Dataverse draft, verify, show Hanno the file list, publish on approval.
+
+Open, not yet decided: drop the rows on `anthonybrown.com` and `kateforcongress.com`,
+which serve pages under the wrong candidate.
+
 Track 4 collects on schedule under the droplet cron.
+
+### Superseded September 27 notes
 
 | Item | State |
 |---|---|

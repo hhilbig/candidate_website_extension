@@ -17,7 +17,7 @@ import sys
 import tempfile
 from collections import Counter, defaultdict
 from pathlib import Path
-from typing import Any
+from typing import Any, Iterable
 from urllib.parse import urlsplit, urlparse
 
 import pandas as pd
@@ -156,6 +156,23 @@ EXPECTED_EXTRACTION_CONTRACT_SHA256 = APPROVED_EXTRACTION_CONTRACT_SHA256[
 # approved corpus. Asserting it means a change in the corpus or the rule fails
 # closed rather than quietly shipping a different population.
 EXPECTED_EXCLUDED_PARENT_DOCUMENTS = 631
+# Hanno approved on 2026-09-28 dropping candidate-years whose archived site is
+# another candidate's. Only one case is confirmed: Thomas Brown (AL, 2020) has
+# 803 rows from anthonybrown.com, Anthony Brown's Maryland site. The pages name
+# Anthony Brown and Maryland thousands of times and never Thomas or Alabama.
+# kateforcongress.com was also suspected, but its two candidate-years are two
+# real candidates named Kate in different years, so it is not excluded.
+#
+# A name audit on 2026-09-28 found two more archived sites that are not the
+# candidate's site: gagop.org, the Georgia Republican Party, and
+# borderlessu.com, a web studio's placeholder page. Neither produced records.
+WRONG_CANDIDATE_SITES = frozenset({
+    ("H0AL02160-2020", "anthonybrown.com"),
+    ("S2GA00167-2022", "gagop.org"),
+    ("H8IN07291-2018", "borderlessu.com"),
+})
+WRONG_CANDIDATE_RULE_ID = "archived_site_is_not_this_candidates_site_v1"
+EXPECTED_WRONG_CANDIDATE_PARENT_DOCUMENTS = 40
 EXTENSION_MANIFEST_FILENAME = "candidate_extraction_manifest.json"
 EXPECTED_PARENT_COUNTS = {
     "issues": 14_326,
@@ -193,10 +210,16 @@ SUPPORT_MODES = {"explicit_text", "page_or_section_context"}
 SOURCE_OBSERVABILITY = {
     "not_observed", "observed_empty", "observed_extractable"
 }
+EXCLUDED_STATUS = "excluded_not_campaign_site"
 EXTRACTION_STATUSES = {
     "observed_positive", "observed_zero", "not_extracted_no_source",
-    "failed", "withheld_validation",
+    "failed", "withheld_validation", EXCLUDED_STATUS,
 }
+# Hanno decided on 2026-09-28 to withhold these two statement kinds. In the
+# model-coded check `current_action` was right on 3 of 10 records: the model
+# gives it to future promises. `unclear` stated no position on 9 of 9. The rows
+# stay, because their claim and evidence are faithful; only the kind is null.
+WITHHELD_STATEMENT_KINDS = frozenset({"current_action", "unclear"})
 
 ISSUE_ITEM_FIELDS = {
     "source_heading", "source_heading_start_char", "source_heading_end_char",
@@ -323,7 +346,7 @@ SEGMENT_COLUMNS = (
 )
 COMMON_RECORD_COLUMNS = (
     "record_id", "parent_document_id", "segment_id", "source_segment_ids",
-    "candidate_cycle_id", "variant_count", "overlap_resolution",
+    "candidate_cycle_id", "candidate_record_key", "variant_count", "overlap_resolution",
     "overlap_resolution_method", "source_model_item_id",
 )
 ISSUE_COLUMNS = COMMON_RECORD_COLUMNS + (
@@ -335,8 +358,12 @@ ISSUE_COLUMNS = COMMON_RECORD_COLUMNS + (
     "source_heading_alignment_method", "evidence_exact_match_count",
     "evidence_alignment_method",
 )
+# `timing` is validated but not released. The 2026-09-28 model-coded check
+# found it wrong on 8 of 60 sampled records, in both directions: an ongoing
+# role coded `former` and a birthplace coded `current`. Hanno decided on
+# 2026-09-28 to release only the columns the check supports.
 BIOGRAPHY_COLUMNS = COMMON_RECORD_COLUMNS + (
-    "field", "value", "timing", "relationship", "evidence",
+    "field", "value", "relationship", "evidence",
     "evidence_start_char", "evidence_end_char", "evidence_parent_start_char",
     "evidence_parent_end_char", "evidence_exact_match_count",
     "evidence_alignment_method",
@@ -350,9 +377,15 @@ BIOGRAPHY_COLUMNS = COMMON_RECORD_COLUMNS + (
 # are released, so a user can recode the category from the published evidence.
 # Hanno decided on 2026-09-20 to withhold the field rather than ship it or
 # re-run the categorisation.
+#
+# `title`, `affiliation` and `jurisdiction` are also validated but not released.
+# `record_evidence` is the whole source block, not a name span, so a block whose
+# boundary takes in a neighbouring entry's line lets these fields be copied from
+# that neighbour. The 2026-09-28 model-coded check found them wrong on 11 of 60
+# sampled records. Hanno decided on 2026-09-28 to drop them. A user can still
+# read a stated title from `record_evidence`.
 ENDORSEMENT_COLUMNS = COMMON_RECORD_COLUMNS + (
-    "endorser_name", "entity_type", "title",
-    "affiliation", "jurisdiction", "record_evidence",
+    "endorser_name", "entity_type", "record_evidence",
     "record_evidence_start_char", "record_evidence_end_char",
     "record_evidence_parent_start_char", "record_evidence_parent_end_char",
     "endorsement_context_evidence", "endorsement_context_evidence_start_char",
@@ -560,6 +593,85 @@ def _load_human_validation(
             ])
         passed[route] = all(checks)
     return report, passed
+
+
+# Release rule revised 2026-09-28 at Hanno's instruction. The release no longer
+# waits for human validation. It accepts the model-coded report for the exact
+# bundle, and the column lists above carry only the variables that report
+# supports. The report gates the routes on the checks that do not depend on a
+# column choice: sample sizes, record-level recall, and all 11 known omissions.
+# Per-column accuracy is published in the release summary, not gated, because
+# the column decision is Hanno's and is recorded with the column lists.
+MODEL_CODED_VALIDATION_FORMAT = "candidate-extraction-model-coded-validation-v1"
+MODEL_CODED_RECORD_RECALL_MINIMUM = 0.90
+MODEL_CODED_EXPECTED_OMISSIONS = 11
+# The validated dimensions that describe a released column.
+RELEASED_DIMENSIONS = {
+    "issues": (
+        "statement_present", "claim_faithful", "kind_correct",
+        "heading_correct", "evidence_supports_statement",
+    ),
+    "biography": (
+        "fact_present", "value_faithful", "field_correct",
+        "relationship_correct", "evidence_supports_fact",
+    ),
+    "endorsements": (
+        "endorser_present", "name_correct",
+        "record_evidence_supports_identity",
+        "combined_record_context_support",
+    ),
+}
+
+
+def load_model_coded_validation(
+    path: Path, bundle_dir: Path
+) -> tuple[dict[str, Any], dict[str, bool], dict[str, Any]]:
+    """Gate the routes on a model-coded report for this exact bundle."""
+    report = json.loads(path.read_text(encoding="utf-8"))
+    _require(isinstance(report, dict), "model-coded validation must be an object")
+    _require(
+        report.get("format") == MODEL_CODED_VALIDATION_FORMAT,
+        "model-coded validation format is not recognised",
+    )
+    _require(report.get("coding_source") == "model", "validation coding source is not model")
+    _require(
+        report.get("bundle_manifest_sha256")
+        == sha256_file(bundle_dir / "bundle_manifest.json"),
+        "model-coded validation used a different bundle",
+    )
+    omissions = report.get("known_omissions") or {}
+    _require(
+        omissions.get("omission_n") == MODEL_CODED_EXPECTED_OMISSIONS
+        and omissions.get("confirmed_n") == MODEL_CODED_EXPECTED_OMISSIONS,
+        "model-coded validation did not confirm all 11 known omissions",
+    )
+    routes = report.get("routes")
+    _require(isinstance(routes, dict), "model-coded validation lacks route results")
+    passed: dict[str, bool] = {}
+    released_accuracy: dict[str, Any] = {}
+    for route in ROUTES:
+        result = routes.get(route)
+        _require(isinstance(result, dict), f"model-coded validation lacks {route}")
+        passed[route] = (
+            int(result.get("precision_n", 0)) >= 60
+            and int(result.get("recall_n", 0)) >= 20
+            and float(result.get("record_recall", -1))
+            >= MODEL_CODED_RECORD_RECALL_MINIMUM
+        )
+        dimensions = result.get("dimension_accuracy") or {}
+        _require(
+            all(name in dimensions for name in RELEASED_DIMENSIONS[route]),
+            f"model-coded validation lacks a released {route} dimension",
+        )
+        released_accuracy[route] = {
+            "precision_n": int(result["precision_n"]),
+            "record_recall": float(result["record_recall"]),
+            "dimension_accuracy": {
+                name: float(dimensions[name])
+                for name in RELEASED_DIMENSIONS[route]
+            },
+        }
+    return report, passed, released_accuracy
 
 
 def load_bundle(
@@ -870,9 +982,25 @@ def excluded_parent_document_ids(raw: pd.DataFrame) -> tuple[set[str], dict[str,
     """Return the parent IDs to drop from the released tables, and the report."""
     _kept, report = _drop_excluded_hosts(raw)
     hosts = raw["snap_url"].map(_url_host)
-    excluded = raw.loc[hosts.str.endswith(EXCLUDED_HOST_SUFFIX, na=False)].copy()
+    official = hosts.str.endswith(EXCLUDED_HOST_SUFFIX, na=False)
+    bare_hosts = hosts.fillna("").str.removeprefix("www.")
+    wrong_candidate = pd.Series(
+        [
+            (str(cid), host) in WRONG_CANDIDATE_SITES
+            for cid, host in zip(raw["candidate_cycle_id"], bare_hosts)
+        ],
+        index=raw.index,
+    )
+    report["wrong_candidate_rule_id"] = WRONG_CANDIDATE_RULE_ID
+    report["wrong_candidate_sites"] = sorted(
+        f"{cid} {host}" for cid, host in WRONG_CANDIDATE_SITES
+    )
+    report["wrong_candidate_raw_rows"] = int(wrong_candidate.sum())
+    excluded = raw.loc[official | wrong_candidate].copy()
+    excluded["wrong_candidate"] = wrong_candidate[official | wrong_candidate]
     if excluded.empty:
         report["excluded_parent_documents"] = 0
+        report["wrong_candidate_parent_documents"] = 0
         return set(), report
     # Only the three extraction routes become parent documents, so restrict to
     # them; otherwise the reported count includes page types the release never
@@ -891,7 +1019,15 @@ def excluded_parent_document_ids(raw: pd.DataFrame) -> tuple[set[str], dict[str,
         )
         for row in excluded.itertuples()
     }
+    wrong_ids = {
+        sha256_text(
+            f"{row.candidate_cycle_id}\n{row.page_type}\n{row.raw_text_sha}"
+        )
+        for row in excluded.loc[excluded["wrong_candidate"]].itertuples()
+    }
     report["excluded_parent_documents"] = len(ids)
+    report["wrong_candidate_parent_documents"] = len(wrong_ids)
+    report["official_government_parent_documents"] = len(ids - wrong_ids)
     return ids, report
 
 
@@ -3446,8 +3582,125 @@ def filter_released_tables(
             value not in excluded_parents
             for value in table.column("parent_document_id").to_pylist()
         ]
-        filtered[name] = table.filter(pa.array(keep))
+        filtered[name] = table.filter(pa.array(keep, pa.bool_()))
     return filtered
+
+
+# The key text that makes two records the same statement. Rows repeat because
+# each archived version of a page is its own parent document, and pages that
+# differ only in a date or a banner yield the same records again.
+RECORD_KEY_FIELDS = {
+    "candidate_issue_statements.parquet": ("evidence",),
+    "candidate_biography_facts.parquet": ("field", "value"),
+    "candidate_endorsements.parquet": ("endorser_name",),
+}
+
+
+def _normalize_key_text(value: Any) -> str:
+    return " ".join(str(value or "").casefold().split())
+
+
+def candidate_record_key(candidate_cycle_id: str, route: str, parts: Iterable[Any]) -> str:
+    text = "\n".join(
+        [candidate_cycle_id, route, *(_normalize_key_text(part) for part in parts)]
+    )
+    return sha256_text(text)
+
+
+def apply_public_record_rules(tables: dict[str, Any]) -> dict[str, Any]:
+    """Withhold unreliable statement kinds and add the repeat key."""
+    result = dict(tables)
+    for name, fields in RECORD_KEY_FIELDS.items():
+        table = result[name]
+        route = TABLE_ROUTES[name]
+        columns = {field: table.column(field).to_pylist() for field in fields}
+        keys = [
+            candidate_record_key(
+                str(cid), route, [columns[field][index] for field in fields]
+            )
+            for index, cid in enumerate(table.column("candidate_cycle_id").to_pylist())
+        ]
+        position = table.schema.get_field_index("candidate_record_key")
+        table = table.set_column(
+            position, table.schema.field(position), pa.array(keys, pa.string())
+        )
+        if name == "candidate_issue_statements.parquet":
+            position = table.schema.get_field_index("statement_kind")
+            kinds = [
+                None if kind in WITHHELD_STATEMENT_KINDS else kind
+                for kind in table.column("statement_kind").to_pylist()
+            ]
+            table = table.set_column(
+                position, table.schema.field(position), pa.array(kinds, pa.string())
+            )
+        result[name] = table
+    return result
+
+
+TABLE_ROUTES = {
+    "candidate_issue_statements.parquet": "issues",
+    "candidate_biography_facts.parquet": "biography",
+    "candidate_endorsements.parquet": "endorsements",
+}
+
+
+def reconcile_status_with_released_tables(
+    tables: dict[str, Any], excluded_parents: set[str], before_documents: Any
+) -> dict[str, Any]:
+    """Recount status rows touched by the page exclusions.
+
+    The status table is keyed by candidate-year and route, so the exclusion
+    filter cannot drop its rows. Without this step a route whose documents
+    were all excluded still reported `observed_positive` and its old counts.
+    """
+    if not excluded_parents:
+        return tables
+    touched = {
+        (str(cid), str(route))
+        for pid, cid, route in zip(
+            before_documents.column("parent_document_id").to_pylist(),
+            before_documents.column("candidate_cycle_id").to_pylist(),
+            before_documents.column("route").to_pylist(),
+        )
+        if pid in excluded_parents
+    }
+    documents = tables["candidate_extraction_documents.parquet"]
+    doc_counts: Counter = Counter()
+    conflict_counts: Counter = Counter()
+    for cid, route, conflicts in zip(
+        documents.column("candidate_cycle_id").to_pylist(),
+        documents.column("route").to_pylist(),
+        documents.column("withheld_overlap_conflict_group_count").to_pylist(),
+    ):
+        doc_counts[(cid, route)] += 1
+        conflict_counts[(cid, route)] += int(conflicts or 0)
+    segments = tables["candidate_extraction_segments.parquet"]
+    segment_counts = Counter(zip(
+        segments.column("candidate_cycle_id").to_pylist(),
+        segments.column("route").to_pylist(),
+    ))
+    record_counts: Counter = Counter()
+    for name, route in TABLE_ROUTES.items():
+        for cid in tables[name].column("candidate_cycle_id").to_pylist():
+            record_counts[(cid, route)] += 1
+    status = tables["candidate_extraction_status.csv"].copy()
+    for index, row in status.iterrows():
+        key = (str(row["candidate_cycle_id"]), str(row["route"]))
+        if key not in touched:
+            continue
+        status.at[index, "n_documents"] = doc_counts[key]
+        status.at[index, "n_segments"] = segment_counts[key]
+        status.at[index, "n_records"] = record_counts[key]
+        status.at[index, "n_withheld_overlap_conflict_groups"] = conflict_counts[key]
+        if doc_counts[key] == 0:
+            status.at[index, "extraction_status"] = EXCLUDED_STATUS
+        elif record_counts[key] == 0 and row["extraction_status"] == "observed_positive":
+            status.at[index, "extraction_status"] = (
+                "withheld_validation" if conflict_counts[key] else "observed_zero"
+            )
+    result = dict(tables)
+    result["candidate_extraction_status.csv"] = status
+    return result
 
 
 def prepare_release_tables(
@@ -3456,11 +3709,19 @@ def prepare_release_tables(
     *,
     production: bool = True,
     allow_withheld_validation: bool = False,
+    model_coded_validation: Path | None = None,
 ) -> tuple[dict[str, Any], dict[str, Any]]:
     universe, raw, raw_sha256 = _load_core(core_release_dir)
     manifest, rows, validation, route_passed = load_bundle(
         bundle_dir, production=production
     )
+    validation_source = "human"
+    released_accuracy: dict[str, Any] | None = None
+    if model_coded_validation is not None:
+        validation, route_passed, released_accuracy = load_model_coded_validation(
+            model_coded_validation, bundle_dir
+        )
+        validation_source = "model"
     if production:
         _validate_run_metadata_entries(manifest)
         _validate_seed_vary_repair(manifest)
@@ -3547,7 +3808,7 @@ def prepare_release_tables(
             )
         _require(manifest.get("known_omission_gate") is True, "bundle did not recover every known omission")
         if not allow_withheld_validation:
-            _require(all(route_passed.values()), "human-only release validation did not pass")
+            _require(all(route_passed.values()), f"{validation_source} release validation did not pass")
     tables = _tables_from_inputs(universe, raw, raw_sha256, manifest, rows, route_passed)
     if production:
         document_counts = Counter(tables["candidate_extraction_documents.parquet"].column("route").to_pylist())
@@ -3573,13 +3834,24 @@ def prepare_release_tables(
     excluded_parents, excluded_host_report = excluded_parent_document_ids(raw)
     if production:
         _require(
-            len(excluded_parents) == EXPECTED_EXCLUDED_PARENT_DOCUMENTS,
-            "the official-government-host rule removes an unexpected count",
+            excluded_host_report["official_government_parent_documents"]
+            == EXPECTED_EXCLUDED_PARENT_DOCUMENTS
+            and excluded_host_report["wrong_candidate_parent_documents"]
+            == EXPECTED_WRONG_CANDIDATE_PARENT_DOCUMENTS
+            and len(excluded_parents)
+            == EXPECTED_EXCLUDED_PARENT_DOCUMENTS
+            + EXPECTED_WRONG_CANDIDATE_PARENT_DOCUMENTS,
+            "the host exclusion rules remove an unexpected count",
         )
     before = {
         name: int(len(value)) for name, value in tables.items()
     }
+    before_documents = tables["candidate_extraction_documents.parquet"]
     tables = filter_released_tables(tables, excluded_parents)
+    tables = reconcile_status_with_released_tables(
+        tables, excluded_parents, before_documents
+    )
+    tables = apply_public_record_rules(tables)
     excluded_host_report["released_rows_before"] = before
     excluded_host_report["released_rows_after"] = {
         name: int(len(value)) for name, value in tables.items()
@@ -3633,6 +3905,8 @@ def prepare_release_tables(
         ),
         "raw_structural_whitespace_gate_passed": True,
         "human_validation_sha256": sha256_text(json.dumps(validation, sort_keys=True, separators=(",", ":"))),
+        "validation_source": validation_source,
+        "released_column_accuracy": released_accuracy,
         "rows": {
             name: int(len(value)) for name, value in tables.items()
         },
@@ -3691,12 +3965,14 @@ def build_release(
     *,
     production: bool = True,
     allow_withheld_validation: bool = False,
+    model_coded_validation: Path | None = None,
 ) -> dict[str, Any]:
     tables, summary = prepare_release_tables(
         core_release_dir,
         bundle_dir,
         production=production,
         allow_withheld_validation=allow_withheld_validation,
+        model_coded_validation=model_coded_validation,
     )
     write_release_tables(tables, output_dir)
     entries = extension_manifest_entries(output_dir)
@@ -3723,12 +3999,18 @@ def main(argv: list[str] | None = None) -> int:
         action="store_true",
         help="Build a nonpublishable sampling package from pending human validation.",
     )
+    parser.add_argument(
+        "--model-coded-validation",
+        type=Path,
+        help="Gate the release on this model-coded report instead of human validation.",
+    )
     args = parser.parse_args(argv)
     summary = build_release(
         args.core_release_dir,
         args.bundle_dir,
         args.output_dir,
         allow_withheld_validation=args.allow_withheld_validation,
+        model_coded_validation=args.model_coded_validation,
     )
     print(json.dumps(summary, indent=2, sort_keys=True))
     return 0

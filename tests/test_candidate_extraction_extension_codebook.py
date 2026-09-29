@@ -218,12 +218,9 @@ def test_extension_codebook_matches_frozen_public_contract() -> None:
         for value in line_ledger_values:
             assert str(value) in text
 
-    assert "not yet publishable" in text
     normalized_text = re.sub(r"\s+", " ", text)
-    assert (
-        "corrected core data have been submitted to Dataverse separately"
-        in normalized_text
-    )
+    assert "It is not human validation" in normalized_text
+    assert "Biography `timing` (wrong on 8 of 60)" in normalized_text
     assert (
         "fully accounted conflict is withholding rather than a technical failure"
         in normalized_text
@@ -280,16 +277,41 @@ def test_extension_codebook_matches_frozen_public_contract() -> None:
         "generation, user-template, token, and alignment values"
         in normalized_text
     )
-    assert "capped at 240 sampled tasks in four resumable batches of 60" in (
-        normalized_text
+    # The release rule changed on 2026-09-28 from human validation to a
+    # model-coded check, so the codebook must say so and name the gate.
+    assert "and all 11 known omissions are confirmed" in normalized_text
+    assert "record-level recall is at least 0.90" in normalized_text
+    assert "Neither is a validation sample" in normalized_text
+
+
+def test_public_codebook_names_every_status_and_released_variable() -> None:
+    """The short codebook ships with the data, so it must cover the public schema."""
+    from scripts.build_candidate_extraction_release import (
+        BIOGRAPHY_COLUMNS,
+        COMMON_RECORD_COLUMNS,
+        ENDORSEMENT_COLUMNS,
+        EXTRACTION_STATUSES,
+        ISSUE_COLUMNS,
     )
-    assert "No release package or final validation app has been generated" in (
-        normalized_text
-    )
-    assert "The 14-row Stage-A3 task is not a validation sample" in (
-        normalized_text
-    )
-    assert "separate from the later 240-task independent validation sample" in (
-        normalized_text
-    )
-    assert "Stage B is therefore forbidden" in normalized_text
+
+    text = (REPO / "docs" / "candidate_extraction_codebook.md").read_text(encoding="utf-8")
+    for status in EXTRACTION_STATUSES - {"failed"}:
+        assert f"`{status}`" in text, status
+    substantive = (
+        set(ISSUE_COLUMNS) | set(BIOGRAPHY_COLUMNS) | set(ENDORSEMENT_COLUMNS)
+    ) - set(COMMON_RECORD_COLUMNS)
+    offsets_or_lineage = {
+        name for name in substantive
+        if name.endswith(("_char", "_exact_match_count", "_alignment_method", "_url", "_path"))
+        or name in {
+            "line_inventory_id", "source_line_id", "stage_a_batch_id", "stage_a_slot",
+            "stage_b_batch_id", "stage_b_slot", "model_record_index",
+            "carrier_alignment_source_model_item_id", "inventory_owner_segment_id",
+            "record_evidence_carrier_segment_id", "endorsement_context_id",
+            "endorsement_context_record_distance_chars",
+        }
+    }
+    for column in sorted(substantive - offsets_or_lineage) + list(COMMON_RECORD_COLUMNS):
+        assert f"`{column}`" in text, column
+    for withheld in ("`timing`", "`title`", "`affiliation`", "`jurisdiction`"):
+        assert f"| {withheld} |" not in text

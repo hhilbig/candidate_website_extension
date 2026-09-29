@@ -393,6 +393,7 @@ def validate_candidate_extraction_release(
     manifest_path: Path,
     *,
     production: bool = True,
+    model_coded_validation: Path | None = None,
 ) -> dict[str, Any]:
     _require(release_dir.is_dir(), f"release directory is absent: {release_dir}")
     allowed_inventory = set(PUBLIC_FILES)
@@ -407,7 +408,10 @@ def validate_candidate_extraction_release(
     missing = [name for name in PUBLIC_FILES if not (release_dir / name).is_file()]
     _require(not missing, f"release files are absent: {missing}")
     expected, build_summary = prepare_release_tables(
-        core_release_dir, bundle_dir, production=production
+        core_release_dir,
+        bundle_dir,
+        production=production,
+        model_coded_validation=model_coded_validation,
     )
     status = pd.read_csv(
         release_dir / "candidate_extraction_status.csv",
@@ -516,6 +520,11 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--core-release-dir", type=Path, required=True)
     parser.add_argument("--bundle-dir", type=Path, required=True)
     parser.add_argument("--manifest", type=Path, required=True)
+    parser.add_argument(
+        "--model-coded-validation",
+        type=Path,
+        help="Validate a release gated on this model-coded report.",
+    )
     args = parser.parse_args(argv)
     try:
         summary = validate_candidate_extraction_release(
@@ -523,6 +532,7 @@ def main(argv: list[str] | None = None) -> int:
             args.core_release_dir,
             args.bundle_dir,
             args.manifest,
+            model_coded_validation=args.model_coded_validation,
         )
     except (AssertionError, ReleaseInputError) as error:
         raise SystemExit(f"candidate extraction validation failed: {error}") from error
