@@ -91,7 +91,10 @@ broken names on a few endorsement pages, short topic labels among issue statemen
 
 **Deposit folder:** `build/release_v4_0_candidate`, 19 files (core 3.0 files hard-linked and unchanged,
 six extension files, extension manifest, extraction codebook, new README). Local manifest checks pass.
-Next: stage the unpublished Dataverse draft, verify, show Hanno the file list, publish on approval.
+**Dataverse draft staged and verified, September 28** (`doi:10.7910/DVN/BZ2JRS`, draft after 3.0).
+19 files; the 10 unchanged core files keep their 3.0 file IDs; README replaced; 8 files added. All 19
+downloaded and byte-verified: `build/dataverse_v4_0_draft_download/dataverse_draft_verification.json`.
+Not published. Waiting for Hanno's final confirmation of the file list and the description sentence.
 
 Open, not yet decided: drop the rows on `anthonybrown.com` and `kateforcongress.com`,
 which serve pages under the wrong candidate.
