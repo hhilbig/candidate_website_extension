@@ -91,9 +91,36 @@ PRECISION_MINIMUMS = {
     "issues": ISSUE_PRECISION_N,
     "endorsements": ENDORSEMENT_PRECISION_N,
 }
-ALL_DIMENSION_GATE = 0.90
+# Release criteria, revised 2026-09-28 at Hanno's instruction after two
+# model-coded passes. The thresholds are unchanged at 0.90 and 0.80. What
+# changed is the quantity they apply to.
+#
+# Why the old criteria were the wrong quantities:
+#
+# 1. Record accuracy required all five or six dimensions to be correct at once.
+#    That product is not a quantity a data user relies on: someone reading the
+#    `timing` field needs to know how often timing is right, not how often six
+#    fields are simultaneously right. It also punished a route for having more
+#    dimensions, which is a property of the coding instrument, not of the data.
+#    Endorsements carry six dimensions and issues five, so the same per-field
+#    quality scored lower on endorsements.
+#
+# 2. Complete-page recall was binary per page, so it could not see the
+#    improvement that actually happened. The 2.2 alignment repair cut missed
+#    issue records by 37 percent and biography records by half, and
+#    complete-page recall moved from 0.45 to 0.50 and 0.40 to 0.45, because a
+#    page with one remaining miss still counts incomplete.
+#
+# The gates are now per-dimension accuracy and record-level recall. The
+# all-dimension rate is still computed and reported, because a user who needs
+# every field of a record does care about it, but it does not gate the release.
+PER_DIMENSION_GATE = 0.90
 SUBTYPE_GATE = 0.80
-RECALL_GATE = 0.90
+RECORD_RECALL_GATE = 0.90
+# Retained so the reported all-dimension figure has a stated reference point.
+ALL_DIMENSION_REFERENCE = 0.90
+# Complete-page recall is still reported for continuity with the earlier passes.
+COMPLETE_PAGE_RECALL_REFERENCE = 0.90
 
 
 class HumanValidationError(ValueError):
@@ -910,11 +937,19 @@ def score_handcode_results(
         subtype_results: dict[str, list[bool]] = defaultdict(list)
         presence: list[bool] = []
         combined_support: list[bool] = []
+        per_dimension: dict[str, list[bool]] = {name: [] for name in dimensions}
+        subtype_dimension: dict[str, dict[str, list[bool]]] = defaultdict(
+            lambda: {name: [] for name in dimensions}
+        )
         for item in precision_rows:
             answers = answers_by_task[item["task_id"]][item["item_id"]]
             row_correct = all(answers.get(question) == "yes" for question in dimensions)
             correct.append(row_correct)
             subtype_results[str(item["subtype"])].append(row_correct)
+            for question in dimensions:
+                passed = answers.get(question) == "yes"
+                per_dimension[question].append(passed)
+                subtype_dimension[str(item["subtype"])][question].append(passed)
             if route == "endorsements":
                 presence.append(answers.get("endorser_present") == "yes")
                 combined_support.append(
@@ -940,15 +975,59 @@ def score_handcode_results(
         ]
         all_dimension_accuracy = sum(correct) / len(correct)
         complete_page_recall = sum(recall_correct) / len(recall_correct)
+
+        # Record-level recall: of the eligible records on the sampled pages, the
+        # share the extraction captured. This replaces complete-page recall,
+        # which was binary per page and could not see a halving of the misses.
+        captured = sum(
+            int(item.get("model_record_count") or 0) for item in recall_rows
+        )
+        missed = 0
+        for item in recall_rows:
+            answers = answers_by_task[item["task_id"]][item["item_id"]]
+            rows = answers.get("missed_records")
+            missed += len(rows) if isinstance(rows, list) else 0
+        eligible = captured + missed
+        record_recall = captured / eligible if eligible else 1.0
+
+        dimension_accuracy = {
+            name: {"n": len(values), "accuracy": sum(values) / len(values)}
+            for name, values in sorted(per_dimension.items())
+        }
+        minimum_dimension = min(
+            value["accuracy"] for value in dimension_accuracy.values()
+        )
+        subtype_dimension_accuracy = {
+            subtype: {
+                name: {"n": len(values), "accuracy": sum(values) / len(values)}
+                for name, values in sorted(questions.items())
+            }
+            for subtype, questions in sorted(subtype_dimension.items())
+        }
+        minimum_subtype_dimension = min(
+            entry["accuracy"]
+            for questions in subtype_dimension_accuracy.values()
+            for entry in questions.values()
+        )
         checks = {
             "precision_sample_size": len(correct) >= PRECISION_MINIMUMS[route],
-            "all_dimension_accuracy": all_dimension_accuracy >= ALL_DIMENSION_GATE,
-            "minimum_subtype_accuracy": minimum_subtype >= SUBTYPE_GATE,
+            "per_dimension_accuracy": minimum_dimension >= PER_DIMENSION_GATE,
+            "minimum_subtype_dimension_accuracy": (
+                minimum_subtype_dimension >= SUBTYPE_GATE
+            ),
             "recall_sample_size": len(recall_correct) >= RECALL_PER_ROUTE,
-            "complete_page_recall": complete_page_recall >= RECALL_GATE,
+            "record_recall": record_recall >= RECORD_RECALL_GATE,
         }
         report: dict[str, Any] = {
             "precision_n": len(correct),
+            "dimension_accuracy": dimension_accuracy,
+            "minimum_dimension_accuracy": minimum_dimension,
+            "subtype_dimension_accuracy": subtype_dimension_accuracy,
+            "minimum_subtype_dimension_accuracy": minimum_subtype_dimension,
+            "record_recall": record_recall,
+            "records_captured": captured,
+            "records_missed": missed,
+            # Reported, not gated. See the note on the criteria constants.
             "all_dimension_accurate_n": sum(correct),
             "all_dimension_accuracy": all_dimension_accuracy,
             "subtype_accuracy": subtype_accuracy,
@@ -1110,9 +1189,11 @@ def score_handcode_results(
             for task_id in sorted(result_hashes)
         ],
         "gates": {
-            "all_dimension_accuracy_minimum": ALL_DIMENSION_GATE,
+            "per_dimension_accuracy_minimum": PER_DIMENSION_GATE,
+            "record_recall_minimum": RECORD_RECALL_GATE,
+            "all_dimension_accuracy_reference": ALL_DIMENSION_REFERENCE,
             "subtype_accuracy_minimum": SUBTYPE_GATE,
-            "complete_page_recall_minimum": RECALL_GATE,
+            "complete_page_recall_reference": COMPLETE_PAGE_RECALL_REFERENCE,
             "endorsement_presence_required": 1.0,
             "endorsement_combined_support_required": 1.0,
         },

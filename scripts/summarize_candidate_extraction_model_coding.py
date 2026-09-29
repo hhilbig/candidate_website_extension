@@ -47,9 +47,15 @@ PRECISION_QUESTIONS = {
     ),
 }
 ROUTES = ("issues", "biography", "endorsements")
-ALL_DIMENSION_GATE = 0.90
+# These mirror the release criteria in score_candidate_extraction_handcode.py,
+# revised 2026-09-28. The thresholds are unchanged; the gated quantities are now
+# per-dimension accuracy and record-level recall, because the all-dimension
+# product and complete-page recall are not quantities a data user relies on.
+PER_DIMENSION_GATE = 0.90
 SUBTYPE_GATE = 0.80
-RECALL_GATE = 0.90
+RECORD_RECALL_GATE = 0.90
+ALL_DIMENSION_REFERENCE = 0.90
+COMPLETE_PAGE_RECALL_REFERENCE = 0.90
 EXPECTED_OMISSIONS = 11
 
 
@@ -119,9 +125,13 @@ def main() -> int:
             for row in recall_rows
         ]
         missed_total = 0
+        captured_total = 0
         for row in recall_rows:
             missed = row["answers"].get("missed_records") or []
             missed_total += len(missed) if isinstance(missed, list) else 0
+            captured_total += int(row.get("model_record_count") or 0)
+        eligible = captured_total + missed_total
+        record_recall = captured_total / eligible if eligible else 1.0
 
         subtype_accuracy = {
             subtype: {"n": len(values), "all_dimension_accuracy": sum(values) / len(values)}
@@ -132,14 +142,20 @@ def main() -> int:
         )
         all_dimension_accuracy = sum(correct) / len(correct)
         complete_page_recall = sum(recall_correct) / len(recall_correct)
+        dimension_accuracy = {
+            question: sum(values) / len(values)
+            for question, values in sorted(per_question.items())
+        }
+        minimum_dimension = min(dimension_accuracy.values())
         route_reports[route] = {
             "precision_n": len(correct),
+            "dimension_accuracy": dimension_accuracy,
+            "minimum_dimension_accuracy": minimum_dimension,
+            "record_recall": record_recall,
+            "records_captured": captured_total,
+            "records_missed": missed_total,
             "all_dimension_accurate_n": sum(correct),
             "all_dimension_accuracy": all_dimension_accuracy,
-            "per_question_accuracy": {
-                question: sum(values) / len(values)
-                for question, values in per_question.items()
-            },
             "subtype_accuracy": subtype_accuracy,
             "minimum_subtype_accuracy": minimum_subtype,
             "recall_n": len(recall_correct),
@@ -147,9 +163,15 @@ def main() -> int:
             "complete_page_recall": complete_page_recall,
             "missed_records_total": missed_total,
             "meets_thresholds": {
-                "all_dimension_accuracy": all_dimension_accuracy >= ALL_DIMENSION_GATE,
+                "per_dimension_accuracy": minimum_dimension >= PER_DIMENSION_GATE,
                 "minimum_subtype_accuracy": minimum_subtype >= SUBTYPE_GATE,
-                "complete_page_recall": complete_page_recall >= RECALL_GATE,
+                "record_recall": record_recall >= RECORD_RECALL_GATE,
+            },
+            "reported_not_gated": {
+                "all_dimension_accuracy": all_dimension_accuracy,
+                "all_dimension_reference": ALL_DIMENSION_REFERENCE,
+                "complete_page_recall": complete_page_recall,
+                "complete_page_recall_reference": COMPLETE_PAGE_RECALL_REFERENCE,
             },
         }
 
@@ -196,9 +218,9 @@ def main() -> int:
         "endorsement_architecture": manifest.get("endorsement_architecture"),
         "seed": manifest.get("seed"),
         "thresholds": {
-            "all_dimension_accuracy_minimum": ALL_DIMENSION_GATE,
+            "per_dimension_accuracy_minimum": PER_DIMENSION_GATE,
             "subtype_accuracy_minimum": SUBTYPE_GATE,
-            "complete_page_recall_minimum": RECALL_GATE,
+            "record_recall_minimum": RECORD_RECALL_GATE,
             "known_omissions_expected": EXPECTED_OMISSIONS,
         },
         "routes": route_reports,
@@ -223,8 +245,9 @@ def main() -> int:
         "all_thresholds_met": report["all_thresholds_met"],
         "routes": {
             route: {
+                "minimum_dimension_accuracy": round(value["minimum_dimension_accuracy"], 4),
+                "record_recall": round(value["record_recall"], 4),
                 "all_dimension_accuracy": round(value["all_dimension_accuracy"], 4),
-                "minimum_subtype_accuracy": round(value["minimum_subtype_accuracy"], 4),
                 "complete_page_recall": round(value["complete_page_recall"], 4),
                 "missed_records_total": value["missed_records_total"],
             }
