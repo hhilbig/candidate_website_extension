@@ -2486,6 +2486,9 @@ def test_official_government_hosts_leave_the_release_population() -> None:
     assert _url_host(
         "https://web.archive.org/web/20180101000000/https://www.smithforcongress.com/"
     ) == "www.smithforcongress.com"
+    assert _url_host(
+        "https://web.archive.org/web/20060805082618/http://billnelson.senate.gov:80/about/"
+    ) == "billnelson.senate.gov"
 
     raw = pd.DataFrame(
         {

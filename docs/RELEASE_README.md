@@ -1,6 +1,6 @@
 # U.S. House (2018–2024) and Senate (2002–2024) candidate websites
 
-This staged release contains archived campaign website text for Democratic and
+This release contains archived campaign website text for Democratic and
 Republican U.S. House candidates from 2018 through 2024 and U.S. Senate
 candidates from 2002 through 2024. It extends the House candidate data in ICPSR
 226001 through 2024 and adds a Senate series. Version 4.0 adds six files of
@@ -31,21 +31,21 @@ The other 4,316 captured candidate-years are same-year federal FEC candidates
 that were not matched to those returns.
 
 The release also contains this README, the codebook, and `manifest.json`. The
-manifest records each data file's row and column count, byte size, and SHA-256
-checksum.
+manifest records each of these eight data files' row and column count, byte
+size, and SHA-256 checksum.
 
 Version 4.0 adds six files of extracted variables, described in
 `candidate_extraction_codebook.md` and inventoried in
 `candidate_extraction_manifest.json`.
 
-| File | Rows | One row represents |
-|---|---:|---|
-| `candidate_extraction_status.csv` | 45,123 | One candidate-year and route (issues, biography, endorsements) |
-| `candidate_extraction_documents.parquet` | 23,200 | One distinct page text for a candidate-year and route |
-| `candidate_extraction_segments.parquet` | 34,346 | One model input window within a page |
-| `candidate_issue_statements.parquet` | 287,427 | One issue statement on one page |
-| `candidate_biography_facts.parquet` | 104,331 | One biography fact on one page |
-| `candidate_endorsements.parquet` | 153,108 | One endorser named on one page |
+| File | Rows | Columns | One row represents |
+|---|---:|---:|---|
+| `candidate_extraction_status.csv` | 45,123 | 9 | One candidate-year and route (issues, biography, endorsements) |
+| `candidate_extraction_documents.parquet` | 23,200 | 47 | One distinct page text for a candidate-year and route |
+| `candidate_extraction_segments.parquet` | 34,346 | 76 | One model input window within a page |
+| `candidate_issue_statements.parquet` | 287,427 | 26 | One issue statement on one page |
+| `candidate_biography_facts.parquet` | 104,331 | 20 | One biography fact on one page |
+| `candidate_endorsements.parquet` | 153,108 | 45 | One endorser named on one page |
 
 Every extracted record quotes the page it comes from. The records were checked
 by a model coder, not by hand, and about half of all rows repeat a record from
@@ -181,7 +181,7 @@ and `R`; the crosswalk also includes `party_full`.
 
 - Wayback coverage is selective. Missing pages and dates need not be random
   across candidates, years, parties, or types of website.
-- The staged data record released successful pages and a partial historical
+- The released data record successful pages and a partial historical
   URL roster. They do not contain complete CDX availability, failure, retry, or
   legacy cap-binding logs.
 - The collection covers the election year. A page captured after Election Day
@@ -202,7 +202,9 @@ and `R`; the crosswalk also includes `party_full`.
 The compilation, derived variables, and documentation are released under the
 Creative Commons Attribution 4.0 International license (CC BY 4.0). Copyright
 in the underlying campaign material remains with its authors. Each text row
-records `snap_url`, the archived source URL.
+records `snap_url`, the archived source URL. Each extracted record links through
+`parent_document_id` to its page in `candidate_extraction_documents.parquet`,
+which lists the archived URLs in `wayback_urls`.
 
 Rights holders may request removal through the deposit owner's contact
 channel.

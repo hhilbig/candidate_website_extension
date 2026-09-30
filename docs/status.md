@@ -96,6 +96,21 @@ six extension files, extension manifest, extraction codebook, new README). Local
 downloaded and byte-verified: `build/dataverse_v4_0_draft_download/dataverse_draft_verification.json`.
 Not published. Waiting for Hanno's final confirmation of the file list and the description sentence.
 
+**Open, September 28 (late).** A fresh-reader check found 23 `.gov` documents still released
+(`billnelson.senate.gov:80` under S6NE00095-2006 and other official pages with a `:80` port). Cause:
+`_url_host` compared the network location, not the host name. Fixed in the builder
+(`EXPECTED_EXCLUDED_PARENT_DOCUMENTS` 631 to 654, test added; 112 tests pass; not yet committed).
+The rebuild was stopped at Hanno's request because it used too much memory (peak about 9 GB).
+Hanno approved adding the description sentence (text below). **September 30:** the build and
+validator were restarted in the background into
+`build/hive_candidate_extraction/release_20260930_v22_model` (log files beside it: `.summary.json`,
+`.stderr`, `.validate.json`). Check first: if `.validate.json` shows `release_ready` true, continue
+from the count update. If the run was interrupted, delete that directory and its side files and rerun
+the same two commands (see the September 28 entries). Then update every count in `docs/candidate_extraction_codebook.md` and `docs/RELEASE_README.md`
+from the new files (row counts, status counts, coverage table, per-key totals, `.gov` count 654,
+heading null share, encoding rows), re-assemble `build/release_v4_0_candidate`, re-stage the draft
+with `--resume-draft`, then ask Hanno for the final publish confirmation.
+
 Open, not yet decided: drop the rows on `anthonybrown.com` and `kateforcongress.com`,
 which serve pages under the wrong candidate.
 
@@ -1823,3 +1838,6 @@ The existing daily Codex automation remains active with the monthly schedule. Ch
 
 **Next action:** refresh available capacity and the monthly forecast, then resolve the capacity decision under the existing approval rules.
 Once capacity is available and the storage check passes, enable full collection under the approved monthly schedule.
+
+Approved Dataverse description sentence, to append to the dataset description before publishing:
+"Version 4.0 adds issue statements, biography facts, and endorsements extracted from the archived pages, each quoted from its source page."

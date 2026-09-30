@@ -155,7 +155,7 @@ EXPECTED_EXTRACTION_CONTRACT_SHA256 = APPROVED_EXTRACTION_CONTRACT_SHA256[
 # The official-government-host rule removes this many parent documents from the
 # approved corpus. Asserting it means a change in the corpus or the rule fails
 # closed rather than quietly shipping a different population.
-EXPECTED_EXCLUDED_PARENT_DOCUMENTS = 631
+EXPECTED_EXCLUDED_PARENT_DOCUMENTS = 654
 # Hanno approved on 2026-09-28 dropping candidate-years whose archived site is
 # another candidate's. Only one case is confirmed: Thomas Brown (AL, 2020) has
 # 803 rows from anthonybrown.com, Anthony Brown's Maryland site. The pages name
@@ -940,7 +940,12 @@ EXCLUDED_HOST_RULE_ID = "official_government_host_not_a_campaign_website_v1"
 
 
 def _url_host(url: Any) -> str:
-    """Return the archived target's host, not the Wayback host."""
+    """Return the archived target's host name, not the Wayback host.
+
+    The port is dropped. Until 2026-09-28 the rule compared the network
+    location, so `billnelson.senate.gov:80` did not end in `.gov` and 23
+    official Senate and House pages stayed in the release.
+    """
     text = str(url or "")
     if not text:
         return ""
@@ -948,7 +953,7 @@ def _url_host(url: Any) -> str:
     target = match.group(1) if match else text
     if "://" not in target:
         target = "http://" + target
-    return urlparse(target).netloc.lower()
+    return (urlparse(target).hostname or "").lower()
 
 
 def _drop_excluded_hosts(raw: pd.DataFrame) -> tuple[pd.DataFrame, dict[str, Any]]:

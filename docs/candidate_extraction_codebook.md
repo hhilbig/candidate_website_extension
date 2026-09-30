@@ -6,7 +6,7 @@ This document describes six files, added in version 4.0, that hold issue stateme
 
 We extracted three kinds of records from every page that the core corpus classifies as an issues, biography, or endorsements page (`page_type`). An open-weight language model (Qwen3.6-27B, FP8) read each page in overlapping windows and returned structured records. Every released record carries a quote from the page, and we release a record only if that quote appears in the page text exactly once. Records whose quote could not be located are withheld, not corrected.
 
-The records are text, not codes. A record says what the page says: a claim and the sentence it rests on, a biographical fact, or the name of an endorser. We do not assign topics, ideology, or endorser categories.
+Most variables reproduce what the page says: a paraphrased claim and the sentence it rests on, a biographical fact in short form, or the name of an endorser. Three variables are codes assigned by the model: the kind of issue statement, the biography field, and whether an endorser is a person or an organization. We do not assign topics, ideology, or endorser categories.
 
 | File | One row is | Rows |
 |---|---|---:|
@@ -29,7 +29,7 @@ Each distinct version of a page is its own document, and a page that changed onl
 
 `candidate_cycle_id` links every file to `candidate_year_universe.csv`. The status table has exactly three rows per universe candidate-year. Documents join to status on (`candidate_cycle_id`, `route`), segments and records join to documents on `parent_document_id`, and a record joins to the window that carries it on `segment_id`. `source_segment_ids` lists every overlapping window that returned the same record. `record_id` is unique across the three record tables.
 
-The documents table codes party as `democrat` and `republican`; the core files use `D` and `R`. Integer offset columns contain nulls, so read them as nullable integers (`Int64` in pandas).
+The documents table codes party as `democrat` and `republican`, as `raw_corpus.parquet` does; the universe, crosswalk, and provenance files use `D` and `R`. Offset columns can be null, so read them as nullable integers (`Int64` in pandas).
 
 ## Status and coverage
 
@@ -43,7 +43,7 @@ The status table separates a candidate who said nothing from a page we never saw
 | `withheld_validation` | Pages were read, but no record could be matched exactly to the page text | 23 |
 | `excluded_not_campaign_site` | All pages were excluded (see below) | 33 |
 
-`not_extracted_no_source` is not a zero. Most candidate-years have no page of a given type, either because the site had none or because the Wayback Machine did not archive it. Among the 7,348 captured candidate-years, the share with at least one record is as follows.
+`not_extracted_no_source` is not a zero. Most candidate-years have no page of a given type, because the site had none, the Wayback Machine did not archive it, or the crawler did not reach it. Among the 7,348 captured candidate-years, the share with at least one record is as follows.
 
 | Office and years | Captured | Issues | Biography | Endorsements |
 |---|---:|---:|---:|---:|
@@ -56,7 +56,7 @@ Coverage is similar by party for issues and biography. Endorsement records are m
 
 ## Excluded pages
 
-We excluded pages that are not the candidate's campaign site. Official government pages (`.gov` hosts) account for 631 documents. Three candidate-years were archived from another site: `H0AL02160-2020` points to `anthonybrown.com`, a different candidate's site in Maryland; `S2GA00167-2022` points to the Georgia Republican Party; and `H8IN07291-2018` points to a web studio's placeholder page. These three account for 40 documents. The status table keeps their rows with recounted totals.
+We excluded pages that are not the candidate's campaign site. Official government pages (`.gov` hosts) account for 631 documents. Three candidate-years were archived from another site: `H0AL02160-2020` points to `anthonybrown.com`, a different candidate's site in Maryland; `S2GA00167-2022` points to the Georgia Republican Party; and `H8IN07291-2018` points to a web studio's placeholder page. These three account for 40 documents. The status table keeps their rows; `n_documents`, `n_segments`, and `n_records` count only released documents, and `n_raw_pages` still counts all pages in the core corpus.
 
 ## Variables
 
@@ -75,7 +75,7 @@ We excluded pages that are not the candidate's campaign site. Official governmen
 
 ### Offsets
 
-Every quoted field (`evidence`, `source_heading`, `record_evidence`, `endorsement_context_evidence`) comes with four offsets. `*_start_char` and `*_end_char` index the window; `*_parent_start_char` and `*_parent_end_char` index the whole page. Offsets are zero-based, half-open Python code-point indices into the page text after one change: every `#+#` separator in `text_snap_content` is replaced by a line feed. A record's own quote (`evidence`, `record_evidence`) occurs exactly once in the page. A context quote, such as a repeated "Endorsements" heading, can occur more than once, and `*_exact_match_count` gives the number of occurrences. `*_alignment_method` records how a quote was found. Most are exact matches; about 9 percent of issue quotes matched only after curly and straight quotation marks were treated as equal.
+Every quoted field (`evidence`, `source_heading`, `record_evidence`, `endorsement_context_evidence`) comes with four offsets. `*_start_char` and `*_end_char` index the window; `*_parent_start_char` and `*_parent_end_char` index the whole page. Offsets are zero-based, half-open Python code-point indices into the page text after one change: every `#+#` separator in `text_snap_content` is replaced by a line feed. To recover a page's text, match `raw_text_sha256` in the documents table to the SHA-256 hash of the UTF-8 encoded `text_snap_content` in `raw_corpus.parquet`. Offsets are null when the quoted field is null. Endorsement context found elsewhere on the page, outside the model's window, has page offsets but no window offsets. A record's own quote (`evidence`, `record_evidence`) occurs exactly once in the page. A context quote, such as a repeated "Endorsements" heading, can occur more than once, and `*_exact_match_count` gives the number of occurrences. `*_alignment_method` records how a quote was found. About 9 percent of issue quotes were located only after curly and straight quotation marks were treated as equal; the released quote is still the page's own text.
 
 ### `candidate_issue_statements.parquet`
 
@@ -114,7 +114,7 @@ A fact describes the page at its capture date, not the candidate's current statu
 
 ### Documents, segments, and status
 
-The documents table gives each page's candidate, party, state, office, year, route, Wayback and original URLs, first and last capture timestamps, character count, and record counts. The segments table gives each window's position in the page, processing status, and output counts. Both tables also record the model, prompt, schema, and alignment specification behind every row as identifiers and SHA-256 hashes; these are constant within this release. The status table gives, for each candidate-year and route, whether pages were observed (`source_observability`), the `extraction_status` above, and counts of pages, documents, windows, records, and withheld overlap conflicts.
+The documents table gives each page's candidate, party, state, office, year, route, first and last capture timestamps, character count, and record counts. The same text often appears in several captures, so `wayback_urls` and `original_urls` are lists, and `n_raw_occurrences` counts the corpus rows that carry this text. The segments table gives each window's position in the page, processing status, and output counts. Both tables also record the model, prompt, schema, and alignment specification behind every row as identifiers and SHA-256 hashes; these are constant within this release. The status table gives, for each candidate-year and route, whether pages were observed (`source_observability`), the `extraction_status` above, and counts of pages, documents, windows, records, and withheld overlap conflicts.
 
 ## Validation
 
@@ -133,18 +133,18 @@ We did not validate the records by hand. Instead, a separate language model (Cla
 | | | Evidence identifies the endorser | 47 |
 | | | Record is an endorsement | 51 |
 
-The sample is stratified by statement kind, field, and endorser category, so these are not population rates. Weighted by each kind's share, about 80 percent of issue rows state a position. All seven statement-kind errors were `current_action`, which we withheld. The same check led us to withhold biography timing (wrong in 8 of 60), endorser titles, affiliations, and jurisdictions (wrong in 11 of 60), and endorser categories. `entity_type` was not scored.
+The sample is stratified by statement kind, field, and endorser category, so these are not population rates. Weighted by each kind's share, about 80 percent of issue rows state a position. All seven statement-kind errors were `current_action`, which we withheld. The same check led us to withhold biography timing (wrong in 8 of 60) and endorser titles, affiliations, and jurisdictions (wrong in 11 of 60). An earlier check led us to withhold endorser categories. `entity_type` was not scored.
 
 ## Known limitations
 
 Before using the records, users should know where the extraction is weakest. We list the problems we found in our own review, with their size.
 
-Issue statements include text that states no position. The most common forms are press-release titles, bare topic labels ("Healthcare"), and passages about an opponent. About 3 percent of distinct statements have three words or fewer; some are real positions ("I am pro-life") and many are not. Counts of statements per candidate also reflect page length: Democratic candidate-years average 74 distinct statements and Republican candidate-years 45.
+Issue statements include text that states no position. The most common forms are press-release titles, bare topic labels ("Healthcare"), and passages about an opponent. About 3 percent of distinct statements have three words or fewer; some are real positions ("I am pro-life") and many are not. Counts of statements per candidate also differ by party: Democratic candidate-years average 74 distinct statements and Republican candidate-years 45. Comparisons of counts across candidates should account for this.
 
 Biography facts sometimes describe a family member. We found about 30 military-service facts that belong to a parent or spouse and about 50 occupation values that are only family roles ("mother"). About a fifth of distinct `elected_office_experience` values are committee or caucus posts, not offices. `public_service_experience` collects facts that fit no other field, including legislative accomplishments. A missing field is not evidence that the candidate lacks it.
 
-Endorsement lists vary in kind. Some sites list hundreds of private supporters, a few list visitor comments, and pages laid out as tables can yield broken names ("Tawil Melanie"). About 15 percent of sampled rows were not endorsements, mostly interest-group ratings and awards. Counts of endorsers therefore measure a site's list format as much as elite support.
+Endorsement lists vary in kind. Some sites list hundreds of private supporters, a few list visitor comments, and pages laid out as tables can yield broken names ("Tawil Melanie"). In the validation sample, 9 of 60 rows were not supported as endorsements, and the model also captured interest-group ratings and awards. Counts of endorsers therefore measure a site's list format as much as elite support.
 
 About 800 rows contain encoding errors carried over from the archived pages, such as "JuliÃ¡n". They are concentrated in about 50 candidate-years, and one 2010 Senate site accounts for 561 of them. We did not repair them, because each quote must match the page text exactly.
 
-The source pages are the Wayback Machine captures in the core corpus. Pages that load their text with JavaScript were often archived without it, and those candidates have no records.
+The source pages are the Wayback Machine captures in the core corpus. Pages that load their text with JavaScript were often archived without it, and those candidates often have no records.
