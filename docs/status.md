@@ -1912,3 +1912,12 @@ run `tests/test_build_mayoral_top_two_coverage.py`.
 terminal HTTP errors, 70 pending (`stop_reason` `decoded_budget`, 132,321,056 of 134,217,728 decoded
 bytes). Verifier valid, terminal, 0 errors: `quality_reports/mayoral_indexed_capture_20260930/verification_2026-10-01.json`.
 16.6 MB stored on the droplet volume. The 70 pending captures need a separate budget approval.
+
+**Disk full during the mayoral run, October 1.** City agents' downloads filled the Mac data volume
+(about 6 GB free at the start). The workflow was stopped, agent downloads in `/private/tmp/claude-501`
+deleted (session folders kept), and 16 superseded extraction builds (about 1 GB, list in
+`build/hive_candidate_extraction/MOVED_TO_MAC2_20261001.txt`) moved to
+`mac2:~/backups/candidate_website_extension/hive_candidate_extraction_archive_20261001/` after a
+checksum comparison. Free space: 14 GB. The workflow resumed from run `wf_4b25945a-15c` (finished
+agents return cached results). `build/agent_tmp_cleanup.sh` (detached, log `build/agent_tmp_cleanup.log`)
+deletes agent downloads older than 30 minutes; stop it after the workflow ends.
