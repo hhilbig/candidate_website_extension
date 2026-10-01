@@ -1884,3 +1884,17 @@ Wall-clock floor: November 17 for Track 4, then 1 to 2 days of exports. Largest 
 **Version 4.0 submitted for review, September 30.** Hanno's account has the Root Dataset Editor role,
 which cannot publish. The draft (19 files) was submitted with the API `submitForReview` call; Harvard
 Dataverse curators publish it. Check `versions/:latest-published` for version 4.0 before posting.
+
+**Mayoral track restarted, September 30.** Hanno decided: keep the full scope (100 cities, 2010 to
+September 14, 2026), parallelize the population step with smaller agents, run the 439-capture batch.
+- All mayoral work committed in `6915eac`, including the hand-verified calendars and results under
+  `data/municipal_discovery/top100_coverage/inputs/` (force-added; `data/` is ignored).
+- 439-capture batch: approval `quality_reports/mayoral_inventory_19_2026-09-14/acquisition_approved_2026-09-30/`,
+  run on the droplet in `/mnt/mayoral_wayback_full_snapshots/indexed_capture_20260930/run`, one worker,
+  same limits as the 214 batch (128 MiB cap; expect a byte-limit stop near 350 captures).
+- Population step: workflow `mayoral-city-population` (Sonnet research, independent Sonnet verify, one
+  repair pass) writes to `data/municipal_discovery/top100_coverage/staging/`. Pilot on six cities (Chicago,
+  Phoenix, Philadelphia, Columbus, Charlotte, Denver). Staged files enter `config/mayoral_top_two_build.json`
+  only after my check and a clean build. 88 cities remain without any calendar.
+- Known failure, unrelated: `tests/test_merge_municipal_temporal_validation.py` fails 5 of 18 under the
+  current pandas string dtype.
