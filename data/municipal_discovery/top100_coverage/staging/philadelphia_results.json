@@ -1,0 +1,126 @@
+[
+ {
+  "city_name": "Philadelphia",
+  "state_abb": "PA",
+  "roster_place_fips": "4260000",
+  "election_date": "2011-11-08",
+  "election_type": "regular",
+  "stage": "general",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "source_url": "https://vote.phila.gov/files/election-results/2011_General_WD.csv",
+  "source_locator": "Column sums of the three MAYOR columns over all 1,687 ward-division rows (66 wards)",
+  "certification_source_url": "https://vote.phila.gov/resources-data/past-election-results/archived-data-sets/",
+  "additional_source_urls": [
+   "https://vote.phila.gov/resources-data/past-election-results/archived-data-sets/"
+  ],
+  "verification_note": "Citywide totals are summed from the ward and division file by the City Commissioners. Nutter 136,532 (Democratic), Brown 39,597 (Republican), Rahman 6,580. Nutter won the general election. The file is not marked as a certified report.",
+  "candidates": [
+   {
+    "name": "Michael A. Nutter",
+    "role": "winner",
+    "votes": 136532,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Karen Brown",
+    "role": "runner_up",
+    "votes": 39597,
+    "candidate_year_id": ""
+   }
+  ]
+ },
+ {
+  "city_name": "Philadelphia",
+  "state_abb": "PA",
+  "roster_place_fips": "4260000",
+  "election_date": "2015-11-03",
+  "election_type": "regular",
+  "stage": "general",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "source_url": "https://vote.phila.gov/files/election-results/2015_GENERAL/2015_GENERAL_-_WARD_RESULTS_-_PUBLIC.xlsx",
+  "source_locator": "Sheet 'Precint-level Data', RACE = MAYOR, sum of VOTES by candidate across wards 1-66",
+  "certification_source_url": "https://vote.phila.gov/resources-data/past-election-results/archived-data-sets/",
+  "additional_source_urls": [
+   "https://vote.phila.gov/resources-data/past-election-results/archived-data-sets/"
+  ],
+  "verification_note": "Citywide totals are summed from precinct rows. Kenney 203,730 (Democratic), Bailey 31,563 (Republican), James Foster 1,713, Osborne Hart 1,234, Boris Kindij 321. Kenney won.",
+  "candidates": [
+   {
+    "name": "Jim Kenney",
+    "role": "winner",
+    "votes": 203730,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Melissa Murray Bailey",
+    "role": "runner_up",
+    "votes": 31563,
+    "candidate_year_id": ""
+   }
+  ]
+ },
+ {
+  "city_name": "Philadelphia",
+  "state_abb": "PA",
+  "roster_place_fips": "4260000",
+  "election_date": "2019-11-05",
+  "election_type": "regular",
+  "stage": "general",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "source_url": "https://vote.phila.gov/files/raw-data/2019_general.csv",
+  "source_locator": "Rows with CATEGORY = MAYOR, sum of VOTE COUNT by SELECTION across all wards, divisions and vote types",
+  "certification_source_url": "https://vote.phila.gov/resources-data/past-election-results/archived-data-sets/",
+  "additional_source_urls": [
+   "https://vote.phila.gov/resources-data/past-election-results/archived-data-sets/"
+  ],
+  "verification_note": "Citywide totals are summed from division rows. Kenney 234,749 (Democratic), Ciancaglini 56,710 (Republican). Kenney won. Write-in votes are not in this file.",
+  "candidates": [
+   {
+    "name": "Jim Kenney",
+    "role": "winner",
+    "votes": 234749,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Billy Ciancaglini",
+    "role": "runner_up",
+    "votes": 56710,
+    "candidate_year_id": ""
+   }
+  ]
+ },
+ {
+  "city_name": "Philadelphia",
+  "state_abb": "PA",
+  "roster_place_fips": "4260000",
+  "election_date": "2023-11-07",
+  "election_type": "regular",
+  "stage": "general",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "source_url": "https://vote.phila.gov/media/2023_General_Results.xlsx",
+  "source_locator": "Sheet 'Totals', row COUNTY TOTALS, mayor columns",
+  "certification_source_url": "https://vote.phila.gov/resources-data/past-election-results/archived-data-sets/",
+  "additional_source_urls": [
+   "https://vote.phila.gov/resources-data/past-election-results/archived-data-sets/"
+  ],
+  "verification_note": "Official county totals row. Parker 232,075 (Democratic), Oh 75,677 (Republican), write-in 2,849. Parker won. The row equals the sum of the precinct rows only for the Totals sheet's own COUNTY TOTALS line.",
+  "candidates": [
+   {
+    "name": "Cherelle L. Parker",
+    "role": "winner",
+    "votes": 232075,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "David Oh",
+    "role": "runner_up",
+    "votes": 75677,
+    "candidate_year_id": ""
+   }
+  ]
+ }
+]

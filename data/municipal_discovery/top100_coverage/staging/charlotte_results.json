@@ -1,0 +1,250 @@
+[
+ {
+  "city_name": "Charlotte",
+  "state_abb": "NC",
+  "roster_place_fips": "3712000",
+  "election_date": "2011-11-08",
+  "election_type": "regular",
+  "stage": "general",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "source_url": "https://s3.amazonaws.com/dl.ncsbe.gov/ENRS/2011_11_08/results_pct_20111108.zip",
+  "source_locator": "Mecklenburg County rows, contest CITY OF CHARLOTTE MAYOR; Total Votes summed over all precincts and vote types",
+  "certification_source_url": "https://www.charlottenc.gov/files/sharedassets/city/v/4/city-government/leadership/documents/council/mayor-council-history-1991-2027.pdf",
+  "additional_source_urls": [
+   "https://www.charlottenc.gov/files/sharedassets/city/v/4/city-government/leadership/documents/council/mayor-council-history-1991-2027.pdf"
+  ],
+  "verification_note": "North Carolina State Board of Elections official results file for the 2011-11-08 election. Citywide Charlotte mayor totals summed over all Mecklenburg precincts: Anthony Foxx 56252; Scott Stone 26985. Write-in votes were far fewer than the runner-up. Charlotte uses partisan primaries followed by a plurality general election, so the general election decided the office. The city clerk's mayor and council history lists the winner as elected on this date.",
+  "candidates": [
+   {
+    "name": "Anthony Foxx",
+    "role": "winner",
+    "votes": 56252,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Scott Stone",
+    "role": "runner_up",
+    "votes": 26985,
+    "candidate_year_id": ""
+   }
+  ]
+ },
+ {
+  "city_name": "Charlotte",
+  "state_abb": "NC",
+  "roster_place_fips": "3712000",
+  "election_date": "2013-11-05",
+  "election_type": "regular",
+  "stage": "general",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "source_url": "https://s3.amazonaws.com/dl.ncsbe.gov/ENRS/2013_11_05/results_sort_20131105.zip",
+  "source_locator": "Mecklenburg County rows, contest CITY OF CHARLOTTE MAYOR; Total Votes summed over all precincts and vote types",
+  "certification_source_url": "https://www.charlottenc.gov/files/sharedassets/city/v/4/city-government/leadership/documents/council/mayor-council-history-1991-2027.pdf",
+  "additional_source_urls": [
+   "https://www.charlottenc.gov/files/sharedassets/city/v/4/city-government/leadership/documents/council/mayor-council-history-1991-2027.pdf"
+  ],
+  "verification_note": "North Carolina State Board of Elections official results file for the 2013-11-05 election. Citywide Charlotte mayor totals summed over all Mecklenburg precincts: Patrick D. Cannon 51130; Edwin B. Peacock III 45036. Write-in votes were far fewer than the runner-up. Charlotte uses partisan primaries followed by a plurality general election, so the general election decided the office. The city clerk's mayor and council history lists the winner as elected on this date. The Mecklenburg rows of the NCSBE 2013 results_sort file were summed by candidate; the 2013 results_pct file is marked Data Unavailable. Patrick Cannon resigned March 26, 2014.",
+  "candidates": [
+   {
+    "name": "Patrick D. Cannon",
+    "role": "winner",
+    "votes": 51130,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Edwin B. Peacock III",
+    "role": "runner_up",
+    "votes": 45036,
+    "candidate_year_id": ""
+   }
+  ]
+ },
+ {
+  "city_name": "Charlotte",
+  "state_abb": "NC",
+  "roster_place_fips": "3712000",
+  "election_date": "2015-11-03",
+  "election_type": "regular",
+  "stage": "general",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "source_url": "https://s3.amazonaws.com/dl.ncsbe.gov/ENRS/2015_11_03/results_pct_20151103.zip",
+  "source_locator": "Mecklenburg County rows, contest CITY OF CHARLOTTE MAYOR; Total Votes summed over all precincts and vote types",
+  "certification_source_url": "https://www.charlottenc.gov/files/sharedassets/city/v/4/city-government/leadership/documents/council/mayor-council-history-1991-2027.pdf",
+  "additional_source_urls": [
+   "https://www.charlottenc.gov/files/sharedassets/city/v/4/city-government/leadership/documents/council/mayor-council-history-1991-2027.pdf"
+  ],
+  "verification_note": "North Carolina State Board of Elections official results file for the 2015-11-03 election. Citywide Charlotte mayor totals summed over all Mecklenburg precincts: Jennifer Roberts 41690; Edwin B. Peacock III 37967. Write-in votes were far fewer than the runner-up. Charlotte uses partisan primaries followed by a plurality general election, so the general election decided the office. The city clerk's mayor and council history lists the winner as elected on this date.",
+  "candidates": [
+   {
+    "name": "Jennifer Roberts",
+    "role": "winner",
+    "votes": 41690,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Edwin B. Peacock III",
+    "role": "runner_up",
+    "votes": 37967,
+    "candidate_year_id": ""
+   }
+  ]
+ },
+ {
+  "city_name": "Charlotte",
+  "state_abb": "NC",
+  "roster_place_fips": "3712000",
+  "election_date": "2017-11-07",
+  "election_type": "regular",
+  "stage": "general",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "source_url": "https://s3.amazonaws.com/dl.ncsbe.gov/ENRS/2017_11_07/results_pct_20171107.zip",
+  "source_locator": "Mecklenburg County rows, contest CITY OF CHARLOTTE MAYOR; Total Votes summed over all precincts and vote types",
+  "certification_source_url": "https://www.charlottenc.gov/files/sharedassets/city/v/4/city-government/leadership/documents/council/mayor-council-history-1991-2027.pdf",
+  "additional_source_urls": [
+   "https://www.charlottenc.gov/files/sharedassets/city/v/4/city-government/leadership/documents/council/mayor-council-history-1991-2027.pdf"
+  ],
+  "verification_note": "North Carolina State Board of Elections official results file for the 2017-11-07 election. Citywide Charlotte mayor totals summed over all Mecklenburg precincts: Vi Lyles 72073; Kenny Smith 49652. Write-in votes were far fewer than the runner-up. Charlotte uses partisan primaries followed by a plurality general election, so the general election decided the office. The city clerk's mayor and council history lists the winner as elected on this date.",
+  "candidates": [
+   {
+    "name": "Vi Lyles",
+    "role": "winner",
+    "votes": 72073,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Kenny Smith",
+    "role": "runner_up",
+    "votes": 49652,
+    "candidate_year_id": ""
+   }
+  ]
+ },
+ {
+  "city_name": "Charlotte",
+  "state_abb": "NC",
+  "roster_place_fips": "3712000",
+  "election_date": "2019-11-05",
+  "election_type": "regular",
+  "stage": "general",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "source_url": "https://s3.amazonaws.com/dl.ncsbe.gov/ENRS/2019_11_05/results_pct_20191105.zip",
+  "source_locator": "Mecklenburg County rows, contest CITY OF CHARLOTTE MAYOR; Total Votes summed over all precincts and vote types",
+  "certification_source_url": "https://www.charlottenc.gov/files/sharedassets/city/v/4/city-government/leadership/documents/council/mayor-council-history-1991-2027.pdf",
+  "additional_source_urls": [
+   "https://www.charlottenc.gov/files/sharedassets/city/v/4/city-government/leadership/documents/council/mayor-council-history-1991-2027.pdf"
+  ],
+  "verification_note": "North Carolina State Board of Elections official results file for the 2019-11-05 election. Citywide Charlotte mayor totals summed over all Mecklenburg precincts: Vi Lyles 70886; David Michael Rice 20459. Write-in votes were far fewer than the runner-up. Charlotte uses partisan primaries followed by a plurality general election, so the general election decided the office. The city clerk's mayor and council history lists the winner as elected on this date.",
+  "candidates": [
+   {
+    "name": "Vi Lyles",
+    "role": "winner",
+    "votes": 70886,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "David Michael Rice",
+    "role": "runner_up",
+    "votes": 20459,
+    "candidate_year_id": ""
+   }
+  ]
+ },
+ {
+  "city_name": "Charlotte",
+  "state_abb": "NC",
+  "roster_place_fips": "3712000",
+  "election_date": "2022-07-26",
+  "election_type": "regular",
+  "stage": "general",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "source_url": "https://s3.amazonaws.com/dl.ncsbe.gov/ENRS/2022_07_26/results_pct_20220726.zip",
+  "source_locator": "Mecklenburg County rows, contest CITY OF CHARLOTTE MAYOR; Total Votes summed over all precincts and vote types",
+  "certification_source_url": "https://www.charlottenc.gov/files/sharedassets/city/v/4/city-government/leadership/documents/council/mayor-council-history-1991-2027.pdf",
+  "additional_source_urls": [
+   "https://www.charlottenc.gov/files/sharedassets/city/v/4/city-government/leadership/documents/council/mayor-council-history-1991-2027.pdf"
+  ],
+  "verification_note": "North Carolina State Board of Elections official results file for the 2022-07-26 election. Citywide Charlotte mayor totals summed over all Mecklenburg precincts: Vi Alexander Lyles 49624; Stephanie de Sarachaga-Bilbao 22646. Write-in votes were far fewer than the runner-up. Charlotte uses partisan primaries followed by a plurality general election, so the general election decided the office. The city clerk's mayor and council history lists the winner as elected on this date. The 2021 municipal elections were postponed to 2022 by state law because of delayed census data; the partisan primary was May 17, 2022 and the July 26, 2022 general election decided the office.",
+  "candidates": [
+   {
+    "name": "Vi Alexander Lyles",
+    "role": "winner",
+    "votes": 49624,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Stephanie de Sarachaga-Bilbao",
+    "role": "runner_up",
+    "votes": 22646,
+    "candidate_year_id": ""
+   }
+  ]
+ },
+ {
+  "city_name": "Charlotte",
+  "state_abb": "NC",
+  "roster_place_fips": "3712000",
+  "election_date": "2023-11-07",
+  "election_type": "regular",
+  "stage": "general",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "source_url": "https://s3.amazonaws.com/dl.ncsbe.gov/ENRS/2023_11_07/results_pct_20231107.zip",
+  "source_locator": "Mecklenburg County rows, contest CITY OF CHARLOTTE MAYOR; Total Votes summed over all precincts and vote types",
+  "certification_source_url": "https://www.charlottenc.gov/files/sharedassets/city/v/4/city-government/leadership/documents/council/mayor-council-history-1991-2027.pdf",
+  "additional_source_urls": [
+   "https://www.charlottenc.gov/files/sharedassets/city/v/4/city-government/leadership/documents/council/mayor-council-history-1991-2027.pdf"
+  ],
+  "verification_note": "North Carolina State Board of Elections official results file for the 2023-11-07 election. Citywide Charlotte mayor totals summed over all Mecklenburg precincts: Vi Lyles 64564; Misun Kim 18713. Write-in votes were far fewer than the runner-up. Charlotte uses partisan primaries followed by a plurality general election, so the general election decided the office. The city clerk's mayor and council history lists the winner as elected on this date.",
+  "candidates": [
+   {
+    "name": "Vi Lyles",
+    "role": "winner",
+    "votes": 64564,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Misun Kim",
+    "role": "runner_up",
+    "votes": 18713,
+    "candidate_year_id": ""
+   }
+  ]
+ },
+ {
+  "city_name": "Charlotte",
+  "state_abb": "NC",
+  "roster_place_fips": "3712000",
+  "election_date": "2025-11-04",
+  "election_type": "regular",
+  "stage": "general",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "source_url": "https://s3.amazonaws.com/dl.ncsbe.gov/ENRS/2025_11_04/results_pct_20251104.zip",
+  "source_locator": "Mecklenburg County rows, contest CITY OF CHARLOTTE MAYOR; Total Votes summed over all precincts and vote types",
+  "certification_source_url": "https://www.charlottenc.gov/files/sharedassets/city/v/4/city-government/leadership/documents/council/mayor-council-history-1991-2027.pdf",
+  "additional_source_urls": [
+   "https://www.charlottenc.gov/files/sharedassets/city/v/4/city-government/leadership/documents/council/mayor-council-history-1991-2027.pdf"
+  ],
+  "verification_note": "North Carolina State Board of Elections official results file for the 2025-11-04 election. Citywide Charlotte mayor totals summed over all Mecklenburg precincts: Vi Lyles 92537; Terrie D. Donovan 33533. Write-in votes were far fewer than the runner-up. Charlotte uses partisan primaries followed by a plurality general election, so the general election decided the office. The city clerk's mayor and council history lists the winner as elected on this date.",
+  "candidates": [
+   {
+    "name": "Vi Lyles",
+    "role": "winner",
+    "votes": 92537,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Terrie D. Donovan",
+    "role": "runner_up",
+    "votes": 33533,
+    "candidate_year_id": ""
+   }
+  ]
+ }
+]

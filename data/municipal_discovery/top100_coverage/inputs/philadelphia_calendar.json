@@ -1,0 +1,217 @@
+[
+ {
+  "city_id": "4260000",
+  "year": 2010,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://vote.phila.gov/files/election-results/2010_General_WD.csv",
+  "additional_source_urls": [
+   "https://vote.phila.gov/resources-data/past-election-results/archived-data-sets/",
+   "https://vote.phila.gov/files/election-results/2010_Primary_WD.csv",
+   "https://vote.phila.gov/about-us"
+  ],
+  "note": "The City Commissioners general election results file for this year was opened and searched for the word mayor. It has no mayoral contest. The primary results file for this year was also opened and has no mayoral contest. The City Commissioners page states that each Commissioner serves a four-year term that coincides with the municipal election cycle for Mayor and City Council. The files for 2011, 2015, 2019 and 2023 each contain a mayoral contest, which gives a four-year cycle in odd years. No mayoral election is recorded in this year."
+ },
+ {
+  "city_id": "4260000",
+  "year": 2011,
+  "status": "complete",
+  "expected_election_dates": [
+   "2011-11-08"
+  ],
+  "source_url": "https://vote.phila.gov/files/election-results/2011_General_WD.csv",
+  "additional_source_urls": [
+   "https://vote.phila.gov/resources-data/past-election-results/archived-data-sets/"
+  ],
+  "note": "The Philadelphia City Commissioners general election results file records a citywide mayoral contest on this date. Winner and runner-up are in philadelphia_results.json."
+ },
+ {
+  "city_id": "4260000",
+  "year": 2012,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://vote.phila.gov/files/election-results/2012_General_WD.csv",
+  "additional_source_urls": [
+   "https://vote.phila.gov/resources-data/past-election-results/archived-data-sets/"
+  ],
+  "note": "The City Commissioners general election results file for this year was opened and contains no mayoral contest. Mayoral elections fell in 2011, 2015, 2019 and 2023, a four-year cycle."
+ },
+ {
+  "city_id": "4260000",
+  "year": 2013,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://vote.phila.gov/files/election-results/2013_General_-_Results_for_Website_1.xlsx",
+  "additional_source_urls": [
+   "https://vote.phila.gov/resources-data/past-election-results/archived-data-sets/"
+  ],
+  "note": "The City Commissioners general election results file for this year was opened and contains no mayoral contest. Mayoral elections fell in 2011, 2015, 2019 and 2023, a four-year cycle."
+ },
+ {
+  "city_id": "4260000",
+  "year": 2014,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://vote.phila.gov/files/election-results/2014_General_Election_-_Complete_Precinct-Level_Results.xls",
+  "additional_source_urls": [
+   "https://vote.phila.gov/resources-data/past-election-results/archived-data-sets/",
+   "https://vote.phila.gov/files/election-results/2014_Primary_Election_-_Full_Results_by_Precinct.xlsx",
+   "https://vote.phila.gov/about-us"
+  ],
+  "note": "The City Commissioners general election results file for this year was opened and searched for the word mayor. It has no mayoral contest. The primary results file for this year was also opened and has no mayoral contest. The City Commissioners page states that each Commissioner serves a four-year term that coincides with the municipal election cycle for Mayor and City Council. The files for 2011, 2015, 2019 and 2023 each contain a mayoral contest, which gives a four-year cycle in odd years. No mayoral election is recorded in this year."
+ },
+ {
+  "city_id": "4260000",
+  "year": 2015,
+  "status": "complete",
+  "expected_election_dates": [
+   "2015-11-03"
+  ],
+  "source_url": "https://vote.phila.gov/files/election-results/2015_GENERAL/2015_GENERAL_-_WARD_RESULTS_-_PUBLIC.xlsx",
+  "additional_source_urls": [
+   "https://vote.phila.gov/resources-data/past-election-results/archived-data-sets/"
+  ],
+  "note": "The Philadelphia City Commissioners general election results file records a citywide mayoral contest on this date. Winner and runner-up are in philadelphia_results.json."
+ },
+ {
+  "city_id": "4260000",
+  "year": 2016,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://vote.phila.gov/files/election-results/2016_GENERAL/2016_GENERAL_-_RESULTS_-_RECANVASS.xlsx",
+  "additional_source_urls": [
+   "https://vote.phila.gov/resources-data/past-election-results/archived-data-sets/",
+   "https://vote.phila.gov/files/election-results/2016_PRIMARY/2016_PRIMARY_-_RESULTS_-_PUBLIC.xlsx",
+   "https://vote.phila.gov/about-us"
+  ],
+  "note": "The City Commissioners general election results file for this year was opened and searched for the word mayor. It has no mayoral contest. The primary results file for this year was also opened and has no mayoral contest. The City Commissioners page states that each Commissioner serves a four-year term that coincides with the municipal election cycle for Mayor and City Council. The files for 2011, 2015, 2019 and 2023 each contain a mayoral contest, which gives a four-year cycle in odd years. No mayoral election is recorded in this year."
+ },
+ {
+  "city_id": "4260000",
+  "year": 2017,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://vote.phila.gov/files/election-results/2017_GENERAL/2017_GENERAL_-_MAJOR_OFFICES.xlsx",
+  "additional_source_urls": [
+   "https://vote.phila.gov/resources-data/past-election-results/archived-data-sets/"
+  ],
+  "note": "The City Commissioners general election results file for this year was opened and contains no mayoral contest. Mayoral elections fell in 2011, 2015, 2019 and 2023, a four-year cycle."
+ },
+ {
+  "city_id": "4260000",
+  "year": 2018,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://vote.phila.gov/files/raw-data/2018_general.csv",
+  "additional_source_urls": [
+   "https://vote.phila.gov/resources-data/past-election-results/archived-data-sets/",
+   "https://vote.phila.gov/files/election-results/2018_PRIMARY/2018_PRIMARY_-_CITY_WARD_PRECINCT_OFFICIAL_RESULTS.xlsx",
+   "https://vote.phila.gov/about-us"
+  ],
+  "note": "The City Commissioners general election results file for this year was opened and searched for the word mayor. It has no mayoral contest. The primary results file for this year was also opened and has no mayoral contest. The City Commissioners page states that each Commissioner serves a four-year term that coincides with the municipal election cycle for Mayor and City Council. The files for 2011, 2015, 2019 and 2023 each contain a mayoral contest, which gives a four-year cycle in odd years. No mayoral election is recorded in this year."
+ },
+ {
+  "city_id": "4260000",
+  "year": 2019,
+  "status": "complete",
+  "expected_election_dates": [
+   "2019-11-05"
+  ],
+  "source_url": "https://vote.phila.gov/files/raw-data/2019_general.csv",
+  "additional_source_urls": [
+   "https://vote.phila.gov/resources-data/past-election-results/archived-data-sets/"
+  ],
+  "note": "The Philadelphia City Commissioners general election results file records a citywide mayoral contest on this date. Winner and runner-up are in philadelphia_results.json."
+ },
+ {
+  "city_id": "4260000",
+  "year": 2020,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://vote.phila.gov/files/raw-data/2020_general.xlsx",
+  "additional_source_urls": [
+   "https://vote.phila.gov/resources-data/past-election-results/archived-data-sets/",
+   "https://vote.phila.gov/files/raw-data/2020_primary.csv",
+   "https://vote.phila.gov/about-us"
+  ],
+  "note": "The City Commissioners general election results file for this year was opened and searched for the word mayor. It has no mayoral contest. The primary results file for this year was also opened and has no mayoral contest. The City Commissioners page states that each Commissioner serves a four-year term that coincides with the municipal election cycle for Mayor and City Council. The files for 2011, 2015, 2019 and 2023 each contain a mayoral contest, which gives a four-year cycle in odd years. No mayoral election is recorded in this year."
+ },
+ {
+  "city_id": "4260000",
+  "year": 2021,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://vote.phila.gov/files/raw-data/2021_general.xlsx",
+  "additional_source_urls": [
+   "https://vote.phila.gov/resources-data/past-election-results/archived-data-sets/",
+   "https://vote.phila.gov/files/raw-data/2021_primary.xlsx",
+   "https://vote.phila.gov/about-us"
+  ],
+  "note": "The City Commissioners general election results file for this year was opened and searched for the word mayor. It has no mayoral contest. The primary results file for this year was also opened and has no mayoral contest. The City Commissioners page states that each Commissioner serves a four-year term that coincides with the municipal election cycle for Mayor and City Council. The files for 2011, 2015, 2019 and 2023 each contain a mayoral contest, which gives a four-year cycle in odd years. No mayoral election is recorded in this year."
+ },
+ {
+  "city_id": "4260000",
+  "year": 2022,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://vote.phila.gov/files/raw-data/2022_general.xlsx",
+  "additional_source_urls": [
+   "https://vote.phila.gov/resources-data/past-election-results/archived-data-sets/",
+   "https://vote.phila.gov/files/raw-data/2022_Primary_Results_Major_Office.xlsx",
+   "https://vote.phila.gov/about-us"
+  ],
+  "note": "The City Commissioners general election results file for this year was opened and searched for the word mayor. It has no mayoral contest. The primary results file for this year was also opened and has no mayoral contest. The City Commissioners page states that each Commissioner serves a four-year term that coincides with the municipal election cycle for Mayor and City Council. The files for 2011, 2015, 2019 and 2023 each contain a mayoral contest, which gives a four-year cycle in odd years. No mayoral election is recorded in this year."
+ },
+ {
+  "city_id": "4260000",
+  "year": 2023,
+  "status": "complete",
+  "expected_election_dates": [
+   "2023-11-07"
+  ],
+  "source_url": "https://vote.phila.gov/media/2023_General_Results.xlsx",
+  "additional_source_urls": [
+   "https://vote.phila.gov/resources-data/past-election-results/archived-data-sets/"
+  ],
+  "note": "The Philadelphia City Commissioners general election results file records a citywide mayoral contest on this date. Winner and runner-up are in philadelphia_results.json."
+ },
+ {
+  "city_id": "4260000",
+  "year": 2024,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://vote.phila.gov/media/24_General_Totals.xlsx",
+  "additional_source_urls": [
+   "https://vote.phila.gov/resources-data/past-election-results/archived-data-sets/",
+   "https://vote.phila.gov/media/24_Primary_Totals.xlsx",
+   "https://vote.phila.gov/about-us"
+  ],
+  "note": "The City Commissioners general election results file for this year was opened and searched for the word mayor. It has no mayoral contest. The primary results file for this year was also opened and has no mayoral contest. The City Commissioners page states that each Commissioner serves a four-year term that coincides with the municipal election cycle for Mayor and City Council. The files for 2011, 2015, 2019 and 2023 each contain a mayoral contest, which gives a four-year cycle in odd years. No mayoral election is recorded in this year."
+ },
+ {
+  "city_id": "4260000",
+  "year": 2025,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://vote.phila.gov/media/25_General_Totals.xlsx",
+  "additional_source_urls": [
+   "https://vote.phila.gov/resources-data/past-election-results/archived-data-sets/",
+   "https://vote.phila.gov/media/25_Primary_Totals.xlsx",
+   "https://vote.phila.gov/about-us"
+  ],
+  "note": "The City Commissioners general election results file for this year was opened and searched for the word mayor. It has no mayoral contest. The primary results file for this year was also opened and has no mayoral contest. The City Commissioners page states that each Commissioner serves a four-year term that coincides with the municipal election cycle for Mayor and City Council. The files for 2011, 2015, 2019 and 2023 each contain a mayoral contest, which gives a four-year cycle in odd years. No mayoral election is recorded in this year."
+ },
+ {
+  "city_id": "4260000",
+  "year": 2026,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://vote.phila.gov/files/SampleBallot/2026_Primary/0780a986-6673-4dc8-bd67-47d22d2ef4d0.pdf",
+  "additional_source_urls": [
+   "https://vote.phila.gov/voting/important-dates-for-voters/",
+   "https://vote.phila.gov/about-us",
+   "https://vote.phila.gov/resources-data/past-election-results/archived-data-sets/"
+  ],
+  "note": "The official sample ballot for the May 19, 2026 primary was opened. It lists governor, lieutenant governor, congress, state house, party committee offices and a charter question, and no mayoral contest. The 2026 general election on November 3, 2026 falls after the cutoff. The archive index has no 2026 data set. The City Commissioners page states that each Commissioner serves a four-year term that coincides with the municipal election cycle for Mayor and City Council. The files for 2011, 2015, 2019 and 2023 each contain a mayoral contest, which gives a four-year cycle in odd years. The next mayoral election after 2023 is therefore in 2027, and no mayoral election is recorded in 2026."
+ }
+]

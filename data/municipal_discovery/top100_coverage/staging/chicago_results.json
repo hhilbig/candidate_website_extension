@@ -1,0 +1,126 @@
+[
+ {
+  "city_name": "Chicago",
+  "state_abb": "IL",
+  "roster_place_fips": "1714000",
+  "election_date": "2011-02-22",
+  "election_type": "regular",
+  "stage": "general",
+  "verification_status": "verified_decisive",
+  "certification_status": "certified",
+  "source_url": "https://app.chicagoelections.gov/documents/proclamations/Proc-2011-02-22.pdf",
+  "source_locator": "Total for Mayor, 2570 of 2570 precincts counted",
+  "certification_source_url": "https://app.chicagoelections.gov/documents/proclamations/Proc-2011-02-22.pdf",
+  "additional_source_urls": [
+   "https://ilga.gov/Documents/legislation/ilcs/documents/001000050K2A-1.2.htm"
+  ],
+  "verification_note": "Chicago Board of Election Commissioners tabulated statement and proclamation of the canvass for the February 22, 2011 Municipal General Election. Rahm Emanuel received 326,331 of 590,391 votes (55.27 percent), a majority, so he was elected outright and no runoff followed. The runner-up is Gery J. Chico with 141,228 votes.",
+  "candidates": [
+   {
+    "name": "Rahm Emanuel",
+    "role": "winner",
+    "votes": 326331,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Gery J. Chico",
+    "role": "runner_up",
+    "votes": 141228,
+    "candidate_year_id": ""
+   }
+  ]
+ },
+ {
+  "city_name": "Chicago",
+  "state_abb": "IL",
+  "roster_place_fips": "1714000",
+  "election_date": "2015-04-07",
+  "election_type": "regular",
+  "stage": "runoff",
+  "verification_status": "verified_decisive",
+  "certification_status": "certified",
+  "source_url": "https://app.chicagoelections.gov/documents/proclamations/Proc-2015-04-07.pdf",
+  "source_locator": "Mayor row, 2069 of 2069 precincts counted (scanned image; read by OCR)",
+  "certification_source_url": "https://app.chicagoelections.gov/documents/proclamations/Proc-2015-04-07.pdf",
+  "additional_source_urls": [
+   "https://ilga.gov/Documents/legislation/ilcs/documents/001000050K2A-1.2.htm"
+  ],
+  "verification_note": "Chicago Board of Election Commissioners tabulated statement and proclamation of the canvass for the April 7, 2015 Municipal Runoff Election. The February 24, 2015 general election produced no majority, so the runoff decided the office. The PDF is a scanned image, and the figures were read by OCR and checked: 332,171 plus 258,562 is 590,733, which matches the printed Mayor total (re-read at 400 dpi OCR after a checker flagged the earlier digit; 332,171 divided by 590,733 is 56.23 percent), and the shares 56.23 and 43.77 percent match.",
+  "candidates": [
+   {
+    "name": "Rahm Emanuel",
+    "role": "winner",
+    "votes": 332171,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Jesus \"Chuy\" Garcia",
+    "role": "runner_up",
+    "votes": 258562,
+    "candidate_year_id": ""
+   }
+  ]
+ },
+ {
+  "city_name": "Chicago",
+  "state_abb": "IL",
+  "roster_place_fips": "1714000",
+  "election_date": "2019-04-02",
+  "election_type": "regular",
+  "stage": "runoff",
+  "verification_status": "verified_decisive",
+  "certification_status": "certified",
+  "source_url": "https://app.chicagoelections.gov/documents/proclamations/Proc-2019-04-02.pdf",
+  "source_locator": "Mayor row, 2069 of 2069 precincts counted",
+  "certification_source_url": "https://app.chicagoelections.gov/documents/proclamations/Proc-2019-04-02.pdf",
+  "additional_source_urls": [
+   "https://ilga.gov/Documents/legislation/ilcs/documents/001000050K2A-1.2.htm"
+  ],
+  "verification_note": "Chicago Board of Election Commissioners tabulated statement and proclamation of the canvass for the April 2, 2019 Municipal Run-Off Elections. The February 26, 2019 general election produced no majority, so the runoff decided the office.",
+  "candidates": [
+   {
+    "name": "Lori Lightfoot",
+    "role": "winner",
+    "votes": 386039,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Toni Preckwinkle",
+    "role": "runner_up",
+    "votes": 137765,
+    "candidate_year_id": ""
+   }
+  ]
+ },
+ {
+  "city_name": "Chicago",
+  "state_abb": "IL",
+  "roster_place_fips": "1714000",
+  "election_date": "2023-04-04",
+  "election_type": "regular",
+  "stage": "runoff",
+  "verification_status": "verified_decisive",
+  "certification_status": "certified",
+  "source_url": "https://app.chicagoelections.gov/documents/proclamations/Proc-2023-04-04.pdf",
+  "source_locator": "Mayor row, 1291 of 1291 precincts reported",
+  "certification_source_url": "https://app.chicagoelections.gov/documents/proclamations/Proc-2023-04-04.pdf",
+  "additional_source_urls": [
+   "https://ilga.gov/Documents/legislation/ilcs/documents/001000050K2A-1.2.htm"
+  ],
+  "verification_note": "Chicago Board of Election Commissioners tabulated statement and proclamation of the canvass for the April 4, 2023 Municipal Runoff Election. The February 28, 2023 general election produced no majority, so the runoff decided the office.",
+  "candidates": [
+   {
+    "name": "Brandon Johnson",
+    "role": "winner",
+    "votes": 319481,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Paul Vallas",
+    "role": "runner_up",
+    "votes": 293033,
+    "candidate_year_id": ""
+   }
+  ]
+ }
+]

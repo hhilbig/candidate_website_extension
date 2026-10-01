@@ -1,0 +1,126 @@
+[
+ {
+  "city_name": "Columbus",
+  "state_abb": "OH",
+  "roster_place_fips": "3918000",
+  "election_date": "2011-11-08",
+  "election_type": "regular",
+  "stage": "general",
+  "verification_status": "verified_decisive",
+  "certification_status": "certified",
+  "source_url": "https://vote.franklincountyohio.gov/getmedia/06a23469-76e3-4f03-8983-be2a17e3b89c/Official_Franklin_County_Summary_Includes_Overlaps",
+  "source_locator": "Summary report 'For Mayor CITY OF COLUMBUS', 759 of 759 precincts, page 2 of 8",
+  "certification_source_url": "https://vote.franklincountyohio.gov/getmedia/06a23469-76e3-4f03-8983-be2a17e3b89c/Official_Franklin_County_Summary_Includes_Overlaps",
+  "additional_source_urls": [
+   "https://www.vote.franklincountyohio.gov/candidates/elected-officials"
+  ],
+  "verification_note": "Franklin County official final summary including overlap counties, run date 11/30/11, for the November 8, 2011 general election lists Coleman 127651 (69.92%), Earl Smith 54092 (29.63%) and write-ins 814. The nonpartisan November general election is the decisive stage. The document is an official final canvass report.",
+  "candidates": [
+   {
+    "name": "Michael B. Coleman",
+    "role": "winner",
+    "votes": 127651,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Earl Smith",
+    "role": "runner_up",
+    "votes": 54092,
+    "candidate_year_id": ""
+   }
+  ]
+ },
+ {
+  "city_name": "Columbus",
+  "state_abb": "OH",
+  "roster_place_fips": "3918000",
+  "election_date": "2015-11-03",
+  "election_type": "regular",
+  "stage": "general",
+  "verification_status": "verified_decisive",
+  "certification_status": "certified",
+  "source_url": "https://vote.franklincountyohio.gov/getmedia/622116a9-a824-4c6a-b2d1-4430064e2a25/2015-General-Official-Results-Most-Populous-Summary",
+  "source_locator": "Franklin County Most Populous official results, page 2, 'For Mayor - City of Columbus', 719 of 719 precincts",
+  "certification_source_url": "https://vote.franklincountyohio.gov/getmedia/622116a9-a824-4c6a-b2d1-4430064e2a25/2015-General-Official-Results-Most-Populous-Summary",
+  "additional_source_urls": [
+   "https://www.vote.franklincountyohio.gov/candidates/elected-officials"
+  ],
+  "verification_note": "The Most Populous county official results for the November 3, 2015 general election (read by OCR of the scanned PDF, with the figures cross-checked against the official precinct spreadsheet total) list Ginther 95676 (58.85%), Scott 65236 (40.13%) and write-ins 1661. The Franklin County Only summary shows 94108 and 63877, so the Most Populous report carries the citywide total including overlap counties.",
+  "candidates": [
+   {
+    "name": "Andrew J. Ginther",
+    "role": "winner",
+    "votes": 95676,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Zach Scott",
+    "role": "runner_up",
+    "votes": 65236,
+    "candidate_year_id": ""
+   }
+  ]
+ },
+ {
+  "city_name": "Columbus",
+  "state_abb": "OH",
+  "roster_place_fips": "3918000",
+  "election_date": "2019-11-05",
+  "election_type": "regular",
+  "stage": "general",
+  "verification_status": "verified_decisive",
+  "certification_status": "certified",
+  "source_url": "https://vote.franklincountyohio.gov/getmedia/d122f432-050a-4a78-95ee-7707d72a973d/Franklin-County-s-Official-Canvass-Most-Populous-County",
+  "source_locator": "Summary Results Report page 7 of 56, 'CO For Mayor City of Columbus', 551 of 551 precincts",
+  "certification_source_url": "https://vote.franklincountyohio.gov/getmedia/d122f432-050a-4a78-95ee-7707d72a973d/Franklin-County-s-Official-Canvass-Most-Populous-County",
+  "additional_source_urls": [
+   "https://www.vote.franklincountyohio.gov/candidates/elected-officials"
+  ],
+  "verification_note": "The Most Populous county official results for the November 5, 2019 general election list Ginther 77096 (93.57%) and write-in totals of 5296. Within the write-ins, Jeff Leopard is the only named certified write-in candidate with 451 votes. The other 4845 write-in votes are not assigned to a certified candidate. Leopard is recorded as runner-up because he has the second-most votes among named candidates.",
+  "candidates": [
+   {
+    "name": "Andrew J. Ginther",
+    "role": "winner",
+    "votes": 77096,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Jeff Leopard",
+    "role": "runner_up",
+    "votes": 451,
+    "candidate_year_id": ""
+   }
+  ]
+ },
+ {
+  "city_name": "Columbus",
+  "state_abb": "OH",
+  "roster_place_fips": "3918000",
+  "election_date": "2023-11-07",
+  "election_type": "regular",
+  "stage": "general",
+  "verification_status": "verified_decisive",
+  "certification_status": "certified",
+  "source_url": "https://vote.franklincountyohio.gov/getmedia/88f8e129-564f-4373-927b-4883fbbe1e5a/Franklin-s-Official-Canvass-MP",
+  "source_locator": "Franklin's Official Canvass, Franklin County Most Populous, 'CO For Mayor City of Columbus'",
+  "certification_source_url": "https://vote.franklincountyohio.gov/getmedia/88f8e129-564f-4373-927b-4883fbbe1e5a/Franklin-s-Official-Canvass-MP",
+  "additional_source_urls": [
+   "https://www.vote.franklincountyohio.gov/candidates/elected-officials"
+  ],
+  "verification_note": "The Most Populous county official canvass for the November 7, 2023 general election lists Ginther 137475 (63.40%), Motil 76989 (35.51%) and write-in totals of 2360. The Franklin County Only canvass shows 134279 and 75395, so the Most Populous report carries the citywide total including overlap counties.",
+  "candidates": [
+   {
+    "name": "Andrew J. Ginther",
+    "role": "winner",
+    "votes": 137475,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Joe Motil",
+    "role": "runner_up",
+    "votes": 76989,
+    "candidate_year_id": ""
+   }
+  ]
+ }
+]

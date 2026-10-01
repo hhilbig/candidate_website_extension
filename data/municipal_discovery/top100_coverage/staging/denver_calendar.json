@@ -1,0 +1,197 @@
+[
+ {
+  "city_id": "0820000",
+  "year": 2010,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.denvergov.org/files/assets/public/v/1/clerk-and-recorder/documents/elections-division/2025/report_electionturnouthistorical_2025-11-24.pdf",
+  "additional_source_urls": [
+   "https://www.denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Denver-Clerk-and-Recorder/Elections-Division/Upcoming-Elections"
+  ],
+  "note": "The Denver Elections Division historical election list shows only the November general election, the August state primary and a May 4 Council District 1 special vacancy election in 2010. It shows no mayoral election. Denver holds municipal elections every fourth year."
+ },
+ {
+  "city_id": "0820000",
+  "year": 2011,
+  "status": "complete",
+  "expected_election_dates": [
+   "2011-06-07"
+  ],
+  "source_url": "https://web.archive.org/web/20110507104618if_/http://www.denvergov.org/Portals/639/documents/ElectionPDFs/Summary_Report_Denver_Unofficialfinal.pdf",
+  "additional_source_urls": [
+   "https://www.denvergov.org/files/assets/public/v/1/clerk-and-recorder/documents/elections-division/2025/report_electionturnouthistorical_2025-11-24.pdf"
+  ],
+  "note": "The Denver Elections Division history lists a May 3 municipal general election and a June 7 municipal run-off in 2011. The run-off decided the mayoral office. The results are in denver_results.json."
+ },
+ {
+  "city_id": "0820000",
+  "year": 2012,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.denvergov.org/files/assets/public/v/1/clerk-and-recorder/documents/elections-division/2025/report_electionturnouthistorical_2025-11-24.pdf",
+  "additional_source_urls": [
+   "https://www.denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Denver-Clerk-and-Recorder/Elections-Division/Upcoming-Elections"
+  ],
+  "note": "The Denver Elections Division historical election list for 2008 to 2025 shows no municipal election in this year. Denver holds municipal elections every fourth year (2011, 2015, 2019, 2023)."
+ },
+ {
+  "city_id": "0820000",
+  "year": 2013,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.denvergov.org/files/assets/public/v/1/clerk-and-recorder/documents/elections-division/2025/report_electionturnouthistorical_2025-11-24.pdf",
+  "additional_source_urls": [
+   "https://www.denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Denver-Clerk-and-Recorder/Elections-Division/Upcoming-Elections"
+  ],
+  "note": "The Denver Elections Division historical election list for 2008 to 2025 shows no municipal election in this year. Denver holds municipal elections every fourth year (2011, 2015, 2019, 2023)."
+ },
+ {
+  "city_id": "0820000",
+  "year": 2014,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.denvergov.org/files/assets/public/v/1/clerk-and-recorder/documents/elections-division/2025/report_electionturnouthistorical_2025-11-24.pdf",
+  "additional_source_urls": [
+   "https://www.denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Denver-Clerk-and-Recorder/Elections-Division/Upcoming-Elections"
+  ],
+  "note": "The Denver Elections Division historical election list for 2008 to 2025 shows no municipal election in this year. Denver holds municipal elections every fourth year (2011, 2015, 2019, 2023)."
+ },
+ {
+  "city_id": "0820000",
+  "year": 2015,
+  "status": "complete",
+  "expected_election_dates": [
+   "2015-05-05"
+  ],
+  "source_url": "https://www.denvergov.org/media/denverapps/electionresults/pdfs/20150505/Summary_Report_Denver_FinalUnofficial.pdf",
+  "additional_source_urls": [
+   "https://www.denvergov.org/files/assets/public/v/1/clerk-and-recorder/documents/elections-division/2025/report_electionturnouthistorical_2025-11-24.pdf"
+  ],
+  "note": "The Denver Elections Division history lists a May 5 municipal general election and a June 2 run-off in 2015. Michael Hancock won a majority on May 5, so the mayoral office was decided in that general election. The June 2 run-off summary has no mayoral contest."
+ },
+ {
+  "city_id": "0820000",
+  "year": 2016,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.denvergov.org/files/assets/public/v/1/clerk-and-recorder/documents/elections-division/2025/report_electionturnouthistorical_2025-11-24.pdf",
+  "additional_source_urls": [
+   "https://www.denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Denver-Clerk-and-Recorder/Elections-Division/Upcoming-Elections"
+  ],
+  "note": "The Denver Elections Division historical election list for 2008 to 2025 shows no municipal election in this year. Denver holds municipal elections every fourth year (2011, 2015, 2019, 2023)."
+ },
+ {
+  "city_id": "0820000",
+  "year": 2017,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.denvergov.org/files/assets/public/v/1/clerk-and-recorder/documents/elections-division/2025/report_electionturnouthistorical_2025-11-24.pdf",
+  "additional_source_urls": [
+   "https://www.denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Denver-Clerk-and-Recorder/Elections-Division/Upcoming-Elections"
+  ],
+  "note": "The Denver Elections Division historical election list for 2008 to 2025 shows no municipal election in this year. Denver holds municipal elections every fourth year (2011, 2015, 2019, 2023)."
+ },
+ {
+  "city_id": "0820000",
+  "year": 2018,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.denvergov.org/files/assets/public/v/1/clerk-and-recorder/documents/elections-division/2025/report_electionturnouthistorical_2025-11-24.pdf",
+  "additional_source_urls": [
+   "https://www.denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Denver-Clerk-and-Recorder/Elections-Division/Upcoming-Elections"
+  ],
+  "note": "The Denver Elections Division historical election list for 2008 to 2025 shows no municipal election in this year. Denver holds municipal elections every fourth year (2011, 2015, 2019, 2023)."
+ },
+ {
+  "city_id": "0820000",
+  "year": 2019,
+  "status": "complete",
+  "expected_election_dates": [
+   "2019-06-04"
+  ],
+  "source_url": "https://www.denvergov.org/media/denverapps/electionresults/pdfs/20190604/Summary_Report_Denver_FinalOfficialResults.pdf",
+  "additional_source_urls": [
+   "https://www.denvergov.org/files/assets/public/v/1/clerk-and-recorder/documents/elections-division/2025/report_electionturnouthistorical_2025-11-24.pdf"
+  ],
+  "note": "The Denver Elections Division history lists a May 7 municipal general election and a June 4 run-off in 2019. No candidate had a majority on May 7, so the June 4 run-off decided the mayoral office."
+ },
+ {
+  "city_id": "0820000",
+  "year": 2020,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.denvergov.org/files/assets/public/v/1/clerk-and-recorder/documents/elections-division/2025/report_electionturnouthistorical_2025-11-24.pdf",
+  "additional_source_urls": [
+   "https://www.denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Denver-Clerk-and-Recorder/Elections-Division/Upcoming-Elections"
+  ],
+  "note": "The Denver Elections Division historical election list for 2008 to 2025 shows no municipal election in this year. Denver holds municipal elections every fourth year (2011, 2015, 2019, 2023)."
+ },
+ {
+  "city_id": "0820000",
+  "year": 2021,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.denvergov.org/files/assets/public/v/1/clerk-and-recorder/documents/elections-division/2025/report_electionturnouthistorical_2025-11-24.pdf",
+  "additional_source_urls": [
+   "https://www.denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Denver-Clerk-and-Recorder/Elections-Division/Upcoming-Elections"
+  ],
+  "note": "The Denver Elections Division historical election list for 2008 to 2025 shows no municipal election in this year. Denver holds municipal elections every fourth year (2011, 2015, 2019, 2023)."
+ },
+ {
+  "city_id": "0820000",
+  "year": 2022,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.denvergov.org/files/assets/public/v/1/clerk-and-recorder/documents/elections-division/2025/report_electionturnouthistorical_2025-11-24.pdf",
+  "additional_source_urls": [
+   "https://www.denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Denver-Clerk-and-Recorder/Elections-Division/Upcoming-Elections"
+  ],
+  "note": "The Denver Elections Division historical election list for 2008 to 2025 shows no municipal election in this year. Denver holds municipal elections every fourth year (2011, 2015, 2019, 2023)."
+ },
+ {
+  "city_id": "0820000",
+  "year": 2023,
+  "status": "complete",
+  "expected_election_dates": [
+   "2023-06-06"
+  ],
+  "source_url": "https://www.denvergov.org/media/denverapps/electionresults/pdfs/20230606/Summary_Report_FinalOfficial.pdf",
+  "additional_source_urls": [
+   "https://www.denvergov.org/files/assets/public/v/1/clerk-and-recorder/documents/elections-division/2025/report_electionturnouthistorical_2025-11-24.pdf"
+  ],
+  "note": "The Denver Elections Division history lists an April 4 municipal general election and a June 6 run-off in 2023. No candidate had a majority on April 4, so the June 6 run-off decided the mayoral office."
+ },
+ {
+  "city_id": "0820000",
+  "year": 2024,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.denvergov.org/files/assets/public/v/1/clerk-and-recorder/documents/elections-division/2025/report_electionturnouthistorical_2025-11-24.pdf",
+  "additional_source_urls": [
+   "https://www.denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Denver-Clerk-and-Recorder/Elections-Division/Upcoming-Elections"
+  ],
+  "note": "The Denver Elections Division historical election list for 2008 to 2025 shows no municipal election in this year. Denver holds municipal elections every fourth year (2011, 2015, 2019, 2023)."
+ },
+ {
+  "city_id": "0820000",
+  "year": 2025,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.denvergov.org/files/assets/public/v/1/clerk-and-recorder/documents/elections-division/2025/report_electionturnouthistorical_2025-11-24.pdf",
+  "additional_source_urls": [
+   "https://www.denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Denver-Clerk-and-Recorder/Elections-Division/Upcoming-Elections"
+  ],
+  "note": "The Denver Elections Division historical election list shows only the November 4 coordinated election in 2025. It shows no mayoral election. Denver holds municipal elections every fourth year, so the next is April 2027."
+ },
+ {
+  "city_id": "0820000",
+  "year": 2026,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Denver-Clerk-and-Recorder/Elections-Division/Upcoming-Elections",
+  "additional_source_urls": [
+   "https://www.denvergov.org/files/assets/public/v/1/clerk-and-recorder/documents/elections-division/2025/report_electionturnouthistorical_2025-11-24.pdf"
+  ],
+  "note": "The Denver Elections Division upcoming elections page states that Denver holds a municipal election every fourth April, with the next in April 2027. The only 2026 election listed is the November 3 general election, which has no mayoral contest."
+ }
+]

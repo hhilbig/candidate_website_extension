@@ -1,0 +1,163 @@
+[
+ {
+  "city_name": "Phoenix",
+  "state_abb": "AZ",
+  "roster_place_fips": "0455000",
+  "election_date": "2011-11-08",
+  "election_type": "regular",
+  "stage": "runoff",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "source_url": "https://www.phoenix.gov/content/dam/phoenix/cityclerksite/documents/elections/sumcw1111.pdf",
+  "source_locator": "Citywide Summary, Results by Race, MAYOR, TOTAL VOTES CAST column",
+  "certification_source_url": "https://web-prod.phoenix.gov/administration/departments/cityclerk/programs-services/elections/past-election-results.html",
+  "additional_source_urls": [
+   "https://www.phoenix.gov/content/dam/phoenix/cityclerksite/documents/elections/sumcw0811.pdf",
+   "https://www.phoenix.gov/cityclerk/services/election-information/city-election-results"
+  ],
+  "verification_note": "City clerk official results for the November 8, 2011 runoff list Greg Stanton 94,765 and Wes Gullett 74,320 with 128 of 128 precincts counted. The August 30, 2011 first round had no majority winner (Stanton 53,553 of 141,300), so the runoff is decisive.",
+  "candidates": [
+   {
+    "name": "Greg Stanton",
+    "role": "winner",
+    "votes": 94765,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Wes Gullett",
+    "role": "runner_up",
+    "votes": 74320,
+    "candidate_year_id": ""
+   }
+  ]
+ },
+ {
+  "city_name": "Phoenix",
+  "state_abb": "AZ",
+  "roster_place_fips": "0455000",
+  "election_date": "2015-08-25",
+  "election_type": "regular",
+  "stage": "primary_nominating",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "source_url": "https://www.phoenix.gov/content/dam/phoenix/cityclerksite/documents/elections/citywide%20summary_official.pdf",
+  "source_locator": "Citywide Summary, MAYOR race, TOTAL VOTES CAST column",
+  "certification_source_url": "https://web-prod.phoenix.gov/administration/departments/cityclerk/programs-services/elections/past-election-results.html",
+  "additional_source_urls": [
+   "https://www.phoenix.gov/cityclerk/services/election-information/city-election-results"
+  ],
+  "verification_note": "City clerk official results for the August 25, 2015 mayor and council election list Greg Stanton 85,629 (65.31 percent), Anna Maria Brennan 38,118 and Matthew Jette 7,356 with 125 of 125 precincts counted. Stanton won a majority in the first round. The 2026 clerk candidate packet cites City Charter Chapter XII Section 16: if no candidate receives a majority of votes for an office, the top two advance to a runoff. A majority winner is therefore elected in the first round. This packet states the current rule; the same structure is visible in the 2011 and 2018 contests, which went to runoffs without a majority.",
+  "candidates": [
+   {
+    "name": "Greg Stanton",
+    "role": "winner",
+    "votes": 85629,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Anna Maria Brennan",
+    "role": "runner_up",
+    "votes": 38118,
+    "candidate_year_id": ""
+   }
+  ],
+  "decisive_stage_source_url": "https://web-prod.phoenix.gov/content/dam/phoenix/cityclerksite/documents/elections/2026_Candidate_Information_Packet.pdf"
+ },
+ {
+  "city_name": "Phoenix",
+  "state_abb": "AZ",
+  "roster_place_fips": "0455000",
+  "election_date": "2019-03-12",
+  "election_type": "special",
+  "stage": "runoff",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "source_url": "https://www.phoenix.gov/content/dam/phoenix/cityclerksite/documents/elections/citywide%20summary%20results%20031219.pdf",
+  "source_locator": "Citywide Summary, Results by Race, MAYOR, TOTAL VOTES CAST column",
+  "certification_source_url": "https://web-prod.phoenix.gov/administration/departments/cityclerk/programs-services/elections/past-election-results.html",
+  "additional_source_urls": [
+   "https://www.phoenix.gov/content/dam/phoenix/cityclerksite/documents/elections/final%20phoenix%20summary%20report_11062018.pdf",
+   "https://www.phoenix.gov/cityclerk/services/election-information/city-election-results"
+  ],
+  "verification_note": "City clerk official results for the March 12, 2019 special election (mayoral runoff) list Kate Gallego 106,216 (58.44 percent) and Daniel Valenzuela 75,532 with 125 of 125 precincts counted. The November 6, 2018 first round had no majority winner (Gallego 171,035 of 384,454), so this runoff is decisive. The index labels the election special because it filled a mayoral vacancy.",
+  "candidates": [
+   {
+    "name": "Kate Gallego",
+    "role": "winner",
+    "votes": 106216,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Daniel Valenzuela",
+    "role": "runner_up",
+    "votes": 75532,
+    "candidate_year_id": ""
+   }
+  ]
+ },
+ {
+  "city_name": "Phoenix",
+  "state_abb": "AZ",
+  "roster_place_fips": "0455000",
+  "election_date": "2020-11-03",
+  "election_type": "regular",
+  "stage": "primary_nominating",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "source_url": "https://www.phoenix.gov/content/dam/phoenix/cityclerksite/documents/elections/phoenix%20election%20summary%20report-votes%20cast.pdf",
+  "source_locator": "Citywide Summary, Phoenix-Mayor, Total column",
+  "certification_source_url": "https://web-prod.phoenix.gov/administration/departments/cityclerk/programs-services/elections/past-election-results.html",
+  "additional_source_urls": [
+   "https://www.phoenix.gov/cityclerk/services/election-information/city-election-results"
+  ],
+  "verification_note": "City clerk results for the November 3, 2020 mayor and council election list Kate Gallego 349,959 (60.70 percent), Merissa Hamilton 152,172 and Tim Seay 72,280, plus 2,169 write-ins. Gallego won a majority in the first round, so no runoff followed. The 2026 clerk candidate packet cites City Charter Chapter XII Section 16: if no candidate receives a majority of votes for an office, the top two advance to a runoff. A majority winner is therefore elected in the first round. This packet states the current rule; the same structure is visible in the 2011 and 2018 contests, which went to runoffs without a majority.",
+  "candidates": [
+   {
+    "name": "Kate Gallego",
+    "role": "winner",
+    "votes": 349959,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Merissa Hamilton",
+    "role": "runner_up",
+    "votes": 152172,
+    "candidate_year_id": ""
+   }
+  ],
+  "decisive_stage_source_url": "https://web-prod.phoenix.gov/content/dam/phoenix/cityclerksite/documents/elections/2026_Candidate_Information_Packet.pdf"
+ },
+ {
+  "city_name": "Phoenix",
+  "state_abb": "AZ",
+  "roster_place_fips": "0455000",
+  "election_date": "2024-11-05",
+  "election_type": "regular",
+  "stage": "primary_nominating",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "source_url": "https://www.phoenix.gov/content/dam/phoenix/cityclerksite/documents/elections/11-05-2024-1%20final%20official%20summary%20report-phoenix.pdf",
+  "source_locator": "Citywide Summary, Phoenix-Mayor, Total column",
+  "certification_source_url": "https://web-prod.phoenix.gov/administration/departments/cityclerk/programs-services/elections/past-election-results.html",
+  "additional_source_urls": [
+   "https://www.phoenix.gov/cityclerk/services/election-information/city-election-results",
+   "https://web-prod.phoenix.gov/content/dam/phoenix/cityclerksite/documents/elections/2026_Candidate_Information_Packet.pdf"
+  ],
+  "verification_note": "City clerk final official summary for the November 5, 2024 mayor and council election lists Kate Gallego 346,144 (62.04 percent) and Matt Evans 210,698, plus 1,069 write-ins. Gallego won a majority in the first round, so no runoff followed. The 2026 clerk candidate packet cites City Charter Chapter XII Section 16: if no candidate receives a majority of votes for an office, the top two advance to a runoff. A majority winner is therefore elected in the first round. This packet states the current rule; the same structure is visible in the 2011 and 2018 contests, which went to runoffs without a majority.",
+  "candidates": [
+   {
+    "name": "Kate Gallego",
+    "role": "winner",
+    "votes": 346144,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Matt Evans",
+    "role": "runner_up",
+    "votes": 210698,
+    "candidate_year_id": ""
+   }
+  ],
+  "decisive_stage_source_url": "https://web-prod.phoenix.gov/content/dam/phoenix/cityclerksite/documents/elections/2026_Candidate_Information_Packet.pdf"
+ }
+]

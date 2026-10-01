@@ -1,0 +1,207 @@
+[
+ {
+  "city_id": "3712000",
+  "year": 2010,
+  "additional_source_urls": [
+   "https://library.ncleg.net/EnactedLegislation/SessionLaws/HTML/1999-2000/SL2000-26.html"
+  ],
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.charlottenc.gov/files/sharedassets/city/v/4/city-government/leadership/documents/council/mayor-council-history-1991-2027.pdf",
+  "note": "The city charter sets two-year mayoral terms with regular elections in odd-numbered years. The city clerk mayor and council history lists no mayoral election in this year."
+ },
+ {
+  "city_id": "3712000",
+  "year": 2011,
+  "additional_source_urls": [
+   "https://library.ncleg.net/EnactedLegislation/SessionLaws/HTML/1999-2000/SL2000-26.html"
+  ],
+  "status": "complete",
+  "expected_election_dates": [
+   "2011-11-08"
+  ],
+  "source_url": "https://www.charlottenc.gov/files/sharedassets/city/v/4/city-government/leadership/documents/council/mayor-council-history-1991-2027.pdf",
+  "note": "The Charlotte city clerk mayor and council history lists the mayor as elected on this date. Winner and runner-up are in charlotte_results.json."
+ },
+ {
+  "city_id": "3712000",
+  "year": 2012,
+  "additional_source_urls": [
+   "https://library.ncleg.net/EnactedLegislation/SessionLaws/HTML/1999-2000/SL2000-26.html"
+  ],
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.charlottenc.gov/files/sharedassets/city/v/4/city-government/leadership/documents/council/mayor-council-history-1991-2027.pdf",
+  "note": "The city charter sets two-year mayoral terms with regular elections in odd-numbered years. The city clerk mayor and council history lists no mayoral election in this year."
+ },
+ {
+  "city_id": "3712000",
+  "year": 2013,
+  "additional_source_urls": [
+   "https://library.ncleg.net/EnactedLegislation/SessionLaws/HTML/1999-2000/SL2000-26.html"
+  ],
+  "status": "complete",
+  "expected_election_dates": [
+   "2013-11-05"
+  ],
+  "source_url": "https://www.charlottenc.gov/files/sharedassets/city/v/4/city-government/leadership/documents/council/mayor-council-history-1991-2027.pdf",
+  "note": "The Charlotte city clerk mayor and council history lists the mayor as elected on this date. Winner and runner-up are in charlotte_results.json."
+ },
+ {
+  "city_id": "3712000",
+  "year": 2014,
+  "additional_source_urls": [
+   "https://library.ncleg.net/EnactedLegislation/SessionLaws/HTML/1999-2000/SL2000-26.html"
+  ],
+  "status": "indirect_selection",
+  "expected_election_dates": [],
+  "source_url": "https://www.charlottenc.gov/files/sharedassets/city/v/4/city-government/leadership/documents/council/mayor-council-history-1991-2027.pdf",
+  "note": "Mayor Patrick Cannon resigned March 26, 2014. The city clerk history records that City Council appointed Daniel Clodfelter, vote dated April 7, 2014, for the unexpired term. No mayoral election took place in this year."
+ },
+ {
+  "city_id": "3712000",
+  "year": 2015,
+  "additional_source_urls": [
+   "https://library.ncleg.net/EnactedLegislation/SessionLaws/HTML/1999-2000/SL2000-26.html"
+  ],
+  "status": "complete",
+  "expected_election_dates": [
+   "2015-11-03"
+  ],
+  "source_url": "https://www.charlottenc.gov/files/sharedassets/city/v/4/city-government/leadership/documents/council/mayor-council-history-1991-2027.pdf",
+  "note": "The Charlotte city clerk mayor and council history lists the mayor as elected on this date. Winner and runner-up are in charlotte_results.json."
+ },
+ {
+  "city_id": "3712000",
+  "year": 2016,
+  "additional_source_urls": [
+   "https://library.ncleg.net/EnactedLegislation/SessionLaws/HTML/1999-2000/SL2000-26.html"
+  ],
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.charlottenc.gov/files/sharedassets/city/v/4/city-government/leadership/documents/council/mayor-council-history-1991-2027.pdf",
+  "note": "The city charter sets two-year mayoral terms with regular elections in odd-numbered years. The city clerk mayor and council history lists no mayoral election in this year."
+ },
+ {
+  "city_id": "3712000",
+  "year": 2017,
+  "additional_source_urls": [
+   "https://library.ncleg.net/EnactedLegislation/SessionLaws/HTML/1999-2000/SL2000-26.html"
+  ],
+  "status": "complete",
+  "expected_election_dates": [
+   "2017-11-07"
+  ],
+  "source_url": "https://www.charlottenc.gov/files/sharedassets/city/v/4/city-government/leadership/documents/council/mayor-council-history-1991-2027.pdf",
+  "note": "The Charlotte city clerk mayor and council history lists the mayor as elected on this date. Winner and runner-up are in charlotte_results.json."
+ },
+ {
+  "city_id": "3712000",
+  "year": 2018,
+  "additional_source_urls": [
+   "https://library.ncleg.net/EnactedLegislation/SessionLaws/HTML/1999-2000/SL2000-26.html"
+  ],
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.charlottenc.gov/files/sharedassets/city/v/4/city-government/leadership/documents/council/mayor-council-history-1991-2027.pdf",
+  "note": "The city charter sets two-year mayoral terms with regular elections in odd-numbered years. The city clerk mayor and council history lists no mayoral election in this year."
+ },
+ {
+  "city_id": "3712000",
+  "year": 2019,
+  "additional_source_urls": [
+   "https://library.ncleg.net/EnactedLegislation/SessionLaws/HTML/1999-2000/SL2000-26.html"
+  ],
+  "status": "complete",
+  "expected_election_dates": [
+   "2019-11-05"
+  ],
+  "source_url": "https://www.charlottenc.gov/files/sharedassets/city/v/4/city-government/leadership/documents/council/mayor-council-history-1991-2027.pdf",
+  "note": "The Charlotte city clerk mayor and council history lists the mayor as elected on this date. Winner and runner-up are in charlotte_results.json."
+ },
+ {
+  "city_id": "3712000",
+  "year": 2020,
+  "additional_source_urls": [
+   "https://library.ncleg.net/EnactedLegislation/SessionLaws/HTML/1999-2000/SL2000-26.html"
+  ],
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.charlottenc.gov/files/sharedassets/city/v/4/city-government/leadership/documents/council/mayor-council-history-1991-2027.pdf",
+  "note": "The city charter sets two-year mayoral terms with regular elections in odd-numbered years. The city clerk mayor and council history lists no mayoral election in this year."
+ },
+ {
+  "city_id": "3712000",
+  "year": 2021,
+  "additional_source_urls": [
+   "https://www.charlottenc.gov/files/sharedassets/city/v/4/city-government/leadership/documents/council/mayor-council-history-1991-2027.pdf",
+   "https://s3.amazonaws.com/dl.ncsbe.gov/ENRS/2021_11_02/results_pct_20211102.zip"
+  ],
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.ncsbe.gov/news/press-releases/2021/06/28/elections-postponed-several-north-carolina-municipalities",
+  "note": "The State Board of Elections press release lists Charlotte among municipalities whose 2021 elections were postponed to 2022. The NCSBE November 2, 2021 results file has no Charlotte mayor contest. The delayed election was held July 26, 2022."
+ },
+ {
+  "city_id": "3712000",
+  "year": 2022,
+  "additional_source_urls": [
+   "https://library.ncleg.net/EnactedLegislation/SessionLaws/HTML/1999-2000/SL2000-26.html"
+  ],
+  "status": "complete",
+  "expected_election_dates": [
+   "2022-07-26"
+  ],
+  "source_url": "https://www.charlottenc.gov/files/sharedassets/city/v/4/city-government/leadership/documents/council/mayor-council-history-1991-2027.pdf",
+  "note": "The Charlotte city clerk mayor and council history lists the mayor as elected on this date. Winner and runner-up are in charlotte_results.json. The election was delayed from 2021 by state law."
+ },
+ {
+  "city_id": "3712000",
+  "year": 2023,
+  "additional_source_urls": [
+   "https://library.ncleg.net/EnactedLegislation/SessionLaws/HTML/1999-2000/SL2000-26.html"
+  ],
+  "status": "complete",
+  "expected_election_dates": [
+   "2023-11-07"
+  ],
+  "source_url": "https://www.charlottenc.gov/files/sharedassets/city/v/4/city-government/leadership/documents/council/mayor-council-history-1991-2027.pdf",
+  "note": "The Charlotte city clerk mayor and council history lists the mayor as elected on this date. Winner and runner-up are in charlotte_results.json."
+ },
+ {
+  "city_id": "3712000",
+  "year": 2024,
+  "additional_source_urls": [
+   "https://library.ncleg.net/EnactedLegislation/SessionLaws/HTML/1999-2000/SL2000-26.html"
+  ],
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.charlottenc.gov/files/sharedassets/city/v/4/city-government/leadership/documents/council/mayor-council-history-1991-2027.pdf",
+  "note": "The city charter sets two-year mayoral terms with regular elections in odd-numbered years. The city clerk mayor and council history lists no mayoral election in this year."
+ },
+ {
+  "city_id": "3712000",
+  "year": 2025,
+  "additional_source_urls": [
+   "https://library.ncleg.net/EnactedLegislation/SessionLaws/HTML/1999-2000/SL2000-26.html"
+  ],
+  "status": "complete",
+  "expected_election_dates": [
+   "2025-11-04"
+  ],
+  "source_url": "https://www.charlottenc.gov/files/sharedassets/city/v/4/city-government/leadership/documents/council/mayor-council-history-1991-2027.pdf",
+  "note": "The Charlotte city clerk mayor and council history lists the mayor as elected on this date. Winner and runner-up are in charlotte_results.json."
+ },
+ {
+  "city_id": "3712000",
+  "year": 2026,
+  "additional_source_urls": [
+   "https://library.ncleg.net/EnactedLegislation/SessionLaws/HTML/1999-2000/SL2000-26.html",
+   "https://www.charlottenc.gov/City-Government/Leadership/Mayor"
+  ],
+  "status": "indirect_selection",
+  "expected_election_dates": [],
+  "source_url": "https://www.charlottenc.gov/files/sharedassets/city/v/4/city-government/leadership/documents/council/mayor-council-history-1991-2027.pdf",
+  "note": "Mayor Vi Lyles announced resignation on May 7, 2026, effective June 30, 2026. The city clerk history records that City Council elected Robert Harrington to serve the remainder of the term to December 6, 2027. No mayoral election took place before September 14, 2026."
+ }
+]
