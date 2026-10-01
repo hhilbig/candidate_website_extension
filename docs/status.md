@@ -1907,3 +1907,8 @@ Full run started for the other 82 cities: workflow run `wf_4b25945a-15c`, script
 Integration per city: compare duplicates of already-verified records (keep the existing record),
 mark superseded unresolved records explicitly, register in `config/mayoral_top_two_build.json`, build,
 run `tests/test_build_mayoral_top_two_coverage.py`.
+
+**439-capture batch stopped at its byte budget, October 1.** 355 fetched, 11 capture mismatches, 3
+terminal HTTP errors, 70 pending (`stop_reason` `decoded_budget`, 132,321,056 of 134,217,728 decoded
+bytes). Verifier valid, terminal, 0 errors: `quality_reports/mayoral_indexed_capture_20260930/verification_2026-10-01.json`.
+16.6 MB stored on the droplet volume. The 70 pending captures need a separate budget approval.

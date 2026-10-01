@@ -1,0 +1,45 @@
+{
+  "acquisition_complete": false,
+  "attempts": 369,
+  "candidate_year_count": 11,
+  "candidate_years": [
+    "23981__2017",
+    "34073__2021",
+    "35633__2017",
+    "42163__2016",
+    "50593__2013",
+    "55954__2021",
+    "71315__2014",
+    "71383__2014",
+    "73900__2011",
+    "74035__2011",
+    "74133__2011"
+  ],
+  "charged_decoded_bytes": 132321056,
+  "decoded_bytes": 132321056,
+  "errors": [],
+  "fetched_keys": 355,
+  "http_hops": 380,
+  "ledger_sha256": "a775bb7596fa0c414fd4f50c2447498b0253c45bfa7e88a7c7d16eb20bee5848",
+  "manifest_sha256": "0f6804c4529784baf1ee2b5f0c3ab7fc867de20087acb8b4cc7c1bb2fcb3d0b4",
+  "queue_rows": 439,
+  "queue_sha256": "9a8cfa723d8aeaa665382b8ee4ac44eb7e4e2c54e0aef7fd56c6610761f60aaa",
+  "raw_files": 380,
+  "raw_stored_bytes": 14927073,
+  "started_attempts": 0,
+  "statuses": {
+    "capture_mismatch": 11,
+    "fetched": 355,
+    "pending": 70,
+    "terminal_http": 3
+  },
+  "terminal_verification": true,
+  "text_files": 366,
+  "text_stored_bytes": 1670194,
+  "total_stored_bytes": 16597267,
+  "url_relations": {
+    "exact": 325,
+    "index_returned_url_variant": 114
+  },
+  "valid": true
+}
