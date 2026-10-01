@@ -1,0 +1,32 @@
+{
+  "contract_version": "mayoral_indexed_capture_batch_v1",
+  "approval": {
+    "status": "approved",
+    "approved_by": "user",
+    "approved_on": "2026-09-14",
+    "approved_batches": {
+      "exact": 107,
+      "index_returned_url_variant": 107
+    }
+  },
+  "approved_queue_path": "quality_reports/mayoral_inventory_22_2026-09-14/acquisition_proposal/proposed_captures.csv",
+  "approved_queue_sha256": "4eeaafc8681c0664673b1eab239053aacff8c67eb8b39d788289665991d12418",
+  "proposal_manifest_path": "quality_reports/mayoral_inventory_22_2026-09-14/acquisition_proposal/manifest.json",
+  "proposal_manifest_sha256": "db9faf097048af9582fc7b322d744ab5dc5b6f19e1f333b44d17832f1bf60620",
+  "proposal_inventory_dispositions_path": "quality_reports/mayoral_inventory_22_2026-09-14/acquisition_proposal/inventory_dispositions.json",
+  "proposal_inventory_dispositions_sha256": "366a9b7bf47273af1bee07b1809cbf5d8a2478205eb2acd40babe67bef0898f6",
+  "preserve_original_proposal_bytes": true,
+  "selected_capture_keys": 214,
+  "approved_url_relations": [
+    "exact",
+    "index_returned_url_variant"
+  ],
+  "approved_limits": {
+    "workers": 1,
+    "attempts_per_capture": 3,
+    "max_response_decoded_bytes": 2097152,
+    "max_tranche_decoded_bytes": 134217728,
+    "min_volume_free_bytes": 8000000000
+  },
+  "success_contract": "Require HTTP 200 HTML with nonempty extracted text at the exact requested replay timestamp and exact indexed original_url. Preserve url_relation labels and treat redirected URL or timestamp substitutions as capture_mismatch."
+}

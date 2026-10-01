@@ -1,0 +1,20 @@
+{
+  "version": "saved_mayoral_capture_supplement_v1",
+  "input_sha256": "3408dbcdd182661f2a38b522f23126eca7c01e9dfd45e06c0fd8a368497d0634",
+  "ledger_sha256": "540f4d8eac1e8abb72ecab56e658eb66cd364ceb0978abe60877679fac8fce0c",
+  "script_sha256": "fbd42230c1a1d0a27d05718d3befcc7b5ff9cbe548f8be6739797d9320d0e48a",
+  "input_rows": 120,
+  "output_rows": 120,
+  "ledger_rows_scanned": 291044,
+  "selected_captures": 37,
+  "url_matches": {
+    "exact": 25,
+    "variant": 12
+  },
+  "statuses": {
+    "not_found_in_saved_corpus": 83,
+    "saved_capture_content_confirmed_reuse_pending": 26,
+    "saved_capture_content_unresolved_reuse_pending": 11
+  },
+  "limitations": "Saved corpus absence is not archive absence; content signals do not complete domain-reuse checks or confer human approval."
+}

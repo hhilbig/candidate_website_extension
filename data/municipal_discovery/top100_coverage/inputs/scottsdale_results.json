@@ -1,0 +1,142 @@
+[
+ {
+  "city_name": "Scottsdale",
+  "state_abb": "AZ",
+  "roster_place_fips": "0465000",
+  "election_date": "2012-08-28",
+  "election_type": "regular",
+  "stage": "primary_nominating",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "source_url": "https://elections.maricopa.gov/asset/jcr:6cb1c607-574e-49f5-8d8f-0a56fc328d07/08-28-2012%20Final%20Precinct%20Text%20File.txt",
+  "source_locator": "Document '08-28-2012 Final Precinct Text File.txt', contest 'MAYOR - CITY OF SCOTTSDALE'. Votes are the citywide total; precinct-level files are summed over all precincts.",
+  "certification_source_url": "https://elections.maricopa.gov/results-and-data/historic-results.html?year=2012",
+  "additional_source_urls": [
+   "https://elections.maricopa.gov/results-and-data/historic-results.html?year=2012",
+   "https://www.scottsdaleaz.gov/elections",
+   "https://www.scottsdaleaz.gov/elections/historical-election-results",
+   "https://www.scottsdaleaz.gov/docs/default-source/scottsdaleaz/elections/candidate-handbook.pdf"
+  ],
+  "verification_note": "Maricopa County official results list Jim Lane 21837, John Washington 10161, Drew Bernhardt 7367 under 'MAYOR - CITY OF SCOTTSDALE'. The write-in line took 83 votes. Total mayoral votes 39448; the winner took 55.4 percent. Lane took a majority of the mayoral vote at the primary, so no mayoral contest appeared at the November general election, and the county file for that general confirms this. Scottsdale's candidate handbook states that to be elected at the primary a candidate must receive a majority of all legal votes cast for that race, and that a general election is held to elect any office that remains unfilled after the primary.",
+  "candidates": [
+   {
+    "name": "Jim Lane",
+    "role": "winner",
+    "votes": 21837,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "John Washington",
+    "role": "runner_up",
+    "votes": 10161,
+    "candidate_year_id": ""
+   }
+  ],
+  "decisive_stage_source_url": "https://www.scottsdaleaz.gov/docs/default-source/scottsdaleaz/elections/candidate-handbook.pdf"
+ },
+ {
+  "city_name": "Scottsdale",
+  "state_abb": "AZ",
+  "roster_place_fips": "0465000",
+  "election_date": "2016-11-08",
+  "election_type": "regular",
+  "stage": "general",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "source_url": "https://elections.maricopa.gov/asset/jcr:2735191f-5a1b-4365-b833-ee746615262c/11-08-2016%20Final%20Summary%20Report%20NOV%202016.txt",
+  "source_locator": "Document '11-08-2016 Final Summary Report NOV 2016.txt', contest 'CITY OF SCOTTSDALE - MAYOR'. Votes are the citywide total; precinct-level files are summed over all precincts.",
+  "certification_source_url": "https://elections.maricopa.gov/results-and-data/historic-results.html?year=2016",
+  "additional_source_urls": [
+   "https://elections.maricopa.gov/results-and-data/historic-results.html?year=2016",
+   "https://www.scottsdaleaz.gov/elections",
+   "https://www.scottsdaleaz.gov/elections/historical-election-results",
+   "https://www.scottsdaleaz.gov/docs/default-source/scottsdaleaz/elections/candidate-handbook.pdf"
+  ],
+  "verification_note": "Maricopa County official results list Jim Lane 66582, Bob Littlefield 37716 under 'CITY OF SCOTTSDALE - MAYOR'. The write-in line took 269 votes. Total mayoral votes 104567; the winner took 63.7 percent. No mayoral contest appears in the August 2016 county file, and the city's own historical election results page lists no August 2016 primary, so the November general is the decisive stage. Neither official source labels this a special election, so the election type is recorded as regular.",
+  "candidates": [
+   {
+    "name": "Jim Lane",
+    "role": "winner",
+    "votes": 66582,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Bob Littlefield",
+    "role": "runner_up",
+    "votes": 37716,
+    "candidate_year_id": ""
+   }
+  ],
+  "decisive_stage_source_url": "https://www.scottsdaleaz.gov/docs/default-source/scottsdaleaz/elections/candidate-handbook.pdf"
+ },
+ {
+  "city_name": "Scottsdale",
+  "state_abb": "AZ",
+  "roster_place_fips": "0465000",
+  "election_date": "2020-11-03",
+  "election_type": "regular",
+  "stage": "general",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "source_url": "https://elections.maricopa.gov/asset/jcr:cebd0be2-4c55-4410-95f7-14f2b8dd2397/11-03-2020-2b%20Final%20SOV%20and%20Official%20Canvass%20Report%20NOV2020.txt",
+  "source_locator": "Document '11-03-2020-2b Final SOV and Official Canvass Report NOV2020.txt', contest 'Scottsdale-Mayor'. Votes are the citywide total; precinct-level files are summed over all precincts.",
+  "certification_source_url": "https://elections.maricopa.gov/results-and-data/historic-results.html?year=2020",
+  "additional_source_urls": [
+   "https://elections.maricopa.gov/results-and-data/historic-results.html?year=2020",
+   "https://www.scottsdaleaz.gov/elections",
+   "https://www.scottsdaleaz.gov/elections/historical-election-results",
+   "https://www.scottsdaleaz.gov/docs/default-source/scottsdaleaz/elections/candidate-handbook.pdf"
+  ],
+  "verification_note": "Maricopa County official results list David Ortega 72467, Lisa Borowsky 66571 under 'Scottsdale-Mayor'. The write-in line took 346 votes. Total mayoral votes 139384; the winner took 52.0 percent. At the August 4, 2020 primary five candidates split the mayoral vote and the leader, David Ortega, took 15076 of 71112 votes, which is not a majority. The office therefore went to the general election, which is the decisive stage. Scottsdale's candidate handbook states that to be elected at the primary a candidate must receive a majority of all legal votes cast for that race, and that a general election is held to elect any office that remains unfilled after the primary.",
+  "candidates": [
+   {
+    "name": "David Ortega",
+    "role": "winner",
+    "votes": 72467,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Lisa Borowsky",
+    "role": "runner_up",
+    "votes": 66571,
+    "candidate_year_id": ""
+   }
+  ],
+  "decisive_stage_source_url": "https://www.scottsdaleaz.gov/docs/default-source/scottsdaleaz/elections/candidate-handbook.pdf"
+ },
+ {
+  "city_name": "Scottsdale",
+  "state_abb": "AZ",
+  "roster_place_fips": "0465000",
+  "election_date": "2024-11-05",
+  "election_type": "regular",
+  "stage": "general",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "source_url": "https://elections.maricopa.gov/asset/jcr:5c8a38fd-0d5a-4fa1-83cb-8b13e5ff089c/11-05-2024-2b%20Final%20SOV%20and%20Official%20Canvass%20Report.txt",
+  "source_locator": "Document '11-05-2024-2b Final SOV and Official Canvass Report.txt', contest 'Scottsdale-Mayor'. Votes are the citywide total; precinct-level files are summed over all precincts.",
+  "certification_source_url": "https://elections.maricopa.gov/results-and-data/historic-results.html?year=2024",
+  "additional_source_urls": [
+   "https://elections.maricopa.gov/results-and-data/historic-results.html?year=2024",
+   "https://www.scottsdaleaz.gov/elections",
+   "https://www.scottsdaleaz.gov/elections/historical-election-results",
+   "https://www.scottsdaleaz.gov/docs/default-source/scottsdaleaz/elections/candidate-handbook.pdf"
+  ],
+  "verification_note": "Maricopa County official results list Lisa Borowsky 71089, David Ortega 59900 under 'Scottsdale-Mayor'. The write-in line took 306 votes. Total mayoral votes 131295; the winner took 54.1 percent. At the July 30, 2024 primary the leader, David Ortega, took 24596 of 60559 votes, which is not a majority, so the office went to the general election. Scottsdale's candidate handbook states that to be elected at the primary a candidate must receive a majority of all legal votes cast for that race, and that a general election is held to elect any office that remains unfilled after the primary.",
+  "candidates": [
+   {
+    "name": "Lisa Borowsky",
+    "role": "winner",
+    "votes": 71089,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "David Ortega",
+    "role": "runner_up",
+    "votes": 59900,
+    "candidate_year_id": ""
+   }
+  ],
+  "decisive_stage_source_url": "https://www.scottsdaleaz.gov/docs/default-source/scottsdaleaz/elections/candidate-handbook.pdf"
+ }
+]

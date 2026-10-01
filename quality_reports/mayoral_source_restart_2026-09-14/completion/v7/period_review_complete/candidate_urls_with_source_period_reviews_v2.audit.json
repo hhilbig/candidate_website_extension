@@ -1,0 +1,15 @@
+{
+  "rows": 1385,
+  "reviewed_rows": 30,
+  "supported_leads": 21,
+  "pending_period_evidence": 9,
+  "original_fields_preserved": true,
+  "website_acceptance_changes": 0,
+  "ai_accepted_rows": 41,
+  "inputs": {
+    "quality_reports/mayoral_source_restart_2026-09-14/completion/v7/attribution_review_complete/candidate_urls_with_capture_reviews.csv": "a6e59bd0aaa1972eee9ff80cf52292c14dc6f57988154ce06c861ccd8959ea51",
+    "quality_reports/mayoral_source_restart_2026-09-14/completion/v7/new_lead_followup/new_lead_followup_review_v3.json": "ffcbfa2b739d21c7ca41f4162cac0484553e3c38d5d488839d16e0129867a408"
+  },
+  "output_sha256": "dd0975776cb68681343c1e8c7ff6fb5fb7b66fea7c24c886ee93df45812449fd",
+  "script_sha256": "34ffbb416043343deb2e265dd32fd0cd4391eb61c582f66ed93c72d854c035ce"
+}

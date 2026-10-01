@@ -1,0 +1,1977 @@
+{
+  "task_id": "mayoral_url_archiveit_adjudication_20260824",
+  "title": "Archive-It mayoral URL adjudication",
+  "instructions": "### What to decide\n- Review the named candidate, mayoral contest, claimed URL, collection metadata, and archive evidence.\n- The machine-proposed grade is context only. No claim is accepted until you code it here.\n- If collection metadata identifies the original campaign domain but the claimed URL is an archive-container path, enter the original domain as the corrected URL.\n- Code URL type for the URL you accept (the corrected URL when one is entered).\n\n### Evidence grades\n- A: an election-period capture of the exact URL identifies the candidate, mayoral campaign, and city.\n- B: a contemporaneous official source links the URL and archived content confirms the campaign.\n- C: a source supports the URL, but no qualifying campaign capture exists.\n- D: domain shape, registration data, or current content provides only a lead.\n- Only grades A and B count as strict coverage.\n\n### Scope\n- The task contains every Archive-It candidate-domain claim.\n- The inclusion-reason field identifies proposed strict positives and the deterministic 10% non-strict audit subset.",
+  "items": [
+    {
+      "id": "archiveit_claim_0ea25310dd4e585689be3c20",
+      "label": "eric garcetti (2013)",
+      "display": [
+        {
+          "label": "Candidate and contest",
+          "format": "badges",
+          "content": {
+            "Name": "eric garcetti",
+            "City": "los angeles",
+            "State": "CA",
+            "Election": "2013-05",
+            "Round": "primary | general",
+            "Collection": "5903",
+            "Candidate-year ID": "69968__2013"
+          }
+        },
+        {
+          "label": "URL and source evidence",
+          "format": "json",
+          "content": {
+            "Claimed exact URL": "http://www.ericgarcetti.com/",
+            "Raw URL": "http://www.ericgarcetti.com/",
+            "Site root": "http://www.ericgarcetti.com/",
+            "Original URL(s) mentioned in collection metadata": "",
+            "Collection metadata description": "Los Angeles Area Municipal Elections, March 5, 2013 | Los Angeles Area Municipal Elections, May 21, 2013 | Los Angeles Area Municipal Elections, March 7, 2017",
+            "Archive capture replay": "https://wayback.archive-it.org/5903/20130519153035id_/http://www.ericgarcetti.com/",
+            "Archive calendar": "https://wayback.archive-it.org/5903/*/http://www.ericgarcetti.com/",
+            "Collection record": "https://archive-it.org/collections/5903"
+          }
+        },
+        {
+          "label": "Archive validation",
+          "format": "json",
+          "content": {
+            "Machine-proposed grade (not an acceptance decision)": "A",
+            "Machine URL type": "candidate_owned_custom_domain",
+            "Temporal validation status": "grade_a_content_confirmed_pending_review",
+            "Archive query status": "checked",
+            "Validation reason": "grade_a_exact_url_election_period_content_confirmed",
+            "Nearest capture timestamp": "20130519153035.0",
+            "Nearest capture distance (days)": "4.0",
+            "Within 365-day headline window": "yes",
+            "Within sensitivity window": "yes",
+            "Candidate identity in capture": "yes",
+            "Mayoral campaign in capture": "yes",
+            "City in capture": "yes",
+            "Domain reuse status": "same_candidate_only",
+            "Inclusion reason": "proposed_strict_positive"
+          }
+        },
+        {
+          "label": "Collection evidence text",
+          "format": "text",
+          "content": "Garcetti, Eric (2013-03-05) | Garcetti, Eric (2013-05-21) | Garcetti, Eric (2017-03-07) | Garcetti, Eric | Primary Election | Los Angeles Mayor | 2013 | General Election | 2017"
+        }
+      ]
+    },
+    {
+      "id": "archiveit_claim_b6b7f7081a42196cf14953d3",
+      "label": "wendy greuel (2013)",
+      "display": [
+        {
+          "label": "Candidate and contest",
+          "format": "badges",
+          "content": {
+            "Name": "wendy greuel",
+            "City": "los angeles",
+            "State": "CA",
+            "Election": "2013-05",
+            "Round": "primary | general",
+            "Collection": "5903",
+            "Candidate-year ID": "70132__2013"
+          }
+        },
+        {
+          "label": "URL and source evidence",
+          "format": "json",
+          "content": {
+            "Claimed exact URL": "http://www.wendygreuel.org/",
+            "Raw URL": "http://www.wendygreuel.org/",
+            "Site root": "http://www.wendygreuel.org/",
+            "Original URL(s) mentioned in collection metadata": "",
+            "Collection metadata description": "Los Angeles Area Municipal Elections, March 5, 2013 | Los Angeles Area Municipal Elections, May 21, 2013 | California Primary Election, June 3, 2014",
+            "Archive capture replay": "https://wayback.archive-it.org/5903/20130519153037id_/http://www.wendygreuel.org/",
+            "Archive calendar": "https://wayback.archive-it.org/5903/*/http://www.wendygreuel.org/",
+            "Collection record": "https://archive-it.org/collections/5903"
+          }
+        },
+        {
+          "label": "Archive validation",
+          "format": "json",
+          "content": {
+            "Machine-proposed grade (not an acceptance decision)": "A",
+            "Machine URL type": "candidate_owned_custom_domain",
+            "Temporal validation status": "grade_a_content_confirmed_pending_review",
+            "Archive query status": "checked",
+            "Validation reason": "grade_a_exact_url_election_period_content_confirmed",
+            "Nearest capture timestamp": "20130519153037.0",
+            "Nearest capture distance (days)": "4.0",
+            "Within 365-day headline window": "yes",
+            "Within sensitivity window": "yes",
+            "Candidate identity in capture": "yes",
+            "Mayoral campaign in capture": "yes",
+            "City in capture": "yes",
+            "Domain reuse status": "same_candidate_only",
+            "Inclusion reason": "proposed_strict_positive"
+          }
+        },
+        {
+          "label": "Collection evidence text",
+          "format": "text",
+          "content": "Greuel, Wendy J. (2013-03-05) | Greuel, Wendy J. (2013-05-21) | Greuel, Wendy J. (2014-06-03) | Greuel, Wendy J. | Primary Election | Los Angeles Mayor | 2013 | General Election | 2014 | Democratic Party | U.S. House of Representatives"
+        }
+      ]
+    },
+    {
+      "id": "archiveit_claim_6e11b72659a511edfc611ee0",
+      "label": "david hernandez (2017)",
+      "display": [
+        {
+          "label": "Candidate and contest",
+          "format": "badges",
+          "content": {
+            "Name": "david hernandez",
+            "City": "los angeles",
+            "State": "CA",
+            "Election": "2017-03",
+            "Round": "primary",
+            "Collection": "5903",
+            "Candidate-year ID": "70145__2017"
+          }
+        },
+        {
+          "label": "URL and source evidence",
+          "format": "json",
+          "content": {
+            "Claimed exact URL": "http://www.davidformayor2017.com/",
+            "Raw URL": "http://www.davidformayor2017.com/",
+            "Site root": "http://www.davidformayor2017.com/",
+            "Original URL(s) mentioned in collection metadata": "",
+            "Collection metadata description": "Los Angeles Area Municipal Elections, March 7, 2017",
+            "Archive capture replay": "https://wayback.archive-it.org/5903/20170224233537id_/http://www.davidformayor2017.com/",
+            "Archive calendar": "https://wayback.archive-it.org/5903/*/http://www.davidformayor2017.com/",
+            "Collection record": "https://archive-it.org/collections/5903"
+          }
+        },
+        {
+          "label": "Archive validation",
+          "format": "json",
+          "content": {
+            "Machine-proposed grade (not an acceptance decision)": "A",
+            "Machine URL type": "candidate_owned_custom_domain",
+            "Temporal validation status": "grade_a_content_confirmed_pending_review",
+            "Archive query status": "checked",
+            "Validation reason": "grade_a_exact_url_election_period_content_confirmed",
+            "Nearest capture timestamp": "20170224233537.0",
+            "Nearest capture distance (days)": "19.0",
+            "Within 365-day headline window": "yes",
+            "Within sensitivity window": "yes",
+            "Candidate identity in capture": "yes",
+            "Mayoral campaign in capture": "yes",
+            "City in capture": "yes",
+            "Domain reuse status": "no_additional_capture",
+            "Inclusion reason": "proposed_strict_positive"
+          }
+        },
+        {
+          "label": "Collection evidence text",
+          "format": "text",
+          "content": "Hernandez, David R. (2017-03-07) | Hernandez, David R. | Los Angeles Mayor | 2017 | Primary Election"
+        }
+      ]
+    },
+    {
+      "id": "archiveit_claim_6ab7e1601e1eca73a780461c",
+      "label": "diane 'pinky' harman (2017)",
+      "display": [
+        {
+          "label": "Candidate and contest",
+          "format": "badges",
+          "content": {
+            "Name": "diane 'pinky' harman",
+            "City": "los angeles",
+            "State": "CA",
+            "Election": "2017-03",
+            "Round": "primary",
+            "Collection": "5903",
+            "Candidate-year ID": "70144__2017"
+          }
+        },
+        {
+          "label": "URL and source evidence",
+          "format": "json",
+          "content": {
+            "Claimed exact URL": "http://harmanformayor2017.com/",
+            "Raw URL": "http://harmanformayor2017.com/",
+            "Site root": "http://harmanformayor2017.com/",
+            "Original URL(s) mentioned in collection metadata": "",
+            "Collection metadata description": "Los Angeles Area Municipal Elections, March 7, 2017",
+            "Archive capture replay": "https://wayback.archive-it.org/5903/20170224233723id_/http://harmanformayor2017.com/",
+            "Archive calendar": "https://wayback.archive-it.org/5903/*/http://harmanformayor2017.com/",
+            "Collection record": "https://archive-it.org/collections/5903"
+          }
+        },
+        {
+          "label": "Archive validation",
+          "format": "json",
+          "content": {
+            "Machine-proposed grade (not an acceptance decision)": "A",
+            "Machine URL type": "candidate_owned_custom_domain",
+            "Temporal validation status": "grade_a_content_confirmed_pending_review",
+            "Archive query status": "checked",
+            "Validation reason": "grade_a_exact_url_election_period_content_confirmed",
+            "Nearest capture timestamp": "20170224233723.0",
+            "Nearest capture distance (days)": "19.0",
+            "Within 365-day headline window": "yes",
+            "Within sensitivity window": "yes",
+            "Candidate identity in capture": "yes",
+            "Mayoral campaign in capture": "yes",
+            "City in capture": "yes",
+            "Domain reuse status": "no_additional_capture",
+            "Inclusion reason": "proposed_strict_positive"
+          }
+        },
+        {
+          "label": "Collection evidence text",
+          "format": "text",
+          "content": "Harman, Diane (Pinky) (2017-03-07) | Harman, Diane (Pinky) | 2017 | Primary Election | Los Angeles Mayor"
+        }
+      ]
+    },
+    {
+      "id": "archiveit_claim_d2b75740f3179f391671104c",
+      "label": "eric garcetti (2017)",
+      "display": [
+        {
+          "label": "Candidate and contest",
+          "format": "badges",
+          "content": {
+            "Name": "eric garcetti",
+            "City": "los angeles",
+            "State": "CA",
+            "Election": "2017-03",
+            "Round": "primary | general",
+            "Collection": "5903",
+            "Candidate-year ID": "69968__2017"
+          }
+        },
+        {
+          "label": "URL and source evidence",
+          "format": "json",
+          "content": {
+            "Claimed exact URL": "http://www.ericgarcetti.com/",
+            "Raw URL": "http://www.ericgarcetti.com/",
+            "Site root": "http://www.ericgarcetti.com/",
+            "Original URL(s) mentioned in collection metadata": "",
+            "Collection metadata description": "Los Angeles Area Municipal Elections, March 5, 2013 | Los Angeles Area Municipal Elections, May 21, 2013 | Los Angeles Area Municipal Elections, March 7, 2017",
+            "Archive capture replay": "https://wayback.archive-it.org/5903/20170224234612id_/https://www.ericgarcetti.com/",
+            "Archive calendar": "https://wayback.archive-it.org/5903/*/http://www.ericgarcetti.com/",
+            "Collection record": "https://archive-it.org/collections/5903"
+          }
+        },
+        {
+          "label": "Archive validation",
+          "format": "json",
+          "content": {
+            "Machine-proposed grade (not an acceptance decision)": "A",
+            "Machine URL type": "candidate_owned_custom_domain",
+            "Temporal validation status": "grade_a_content_confirmed_pending_review",
+            "Archive query status": "checked",
+            "Validation reason": "grade_a_exact_url_election_period_content_confirmed",
+            "Nearest capture timestamp": "20170224234612.0",
+            "Nearest capture distance (days)": "19.0",
+            "Within 365-day headline window": "yes",
+            "Within sensitivity window": "yes",
+            "Candidate identity in capture": "yes",
+            "Mayoral campaign in capture": "yes",
+            "City in capture": "yes",
+            "Domain reuse status": "same_candidate_only",
+            "Inclusion reason": "proposed_strict_positive"
+          }
+        },
+        {
+          "label": "Collection evidence text",
+          "format": "text",
+          "content": "Garcetti, Eric (2013-03-05) | Garcetti, Eric (2013-05-21) | Garcetti, Eric (2017-03-07) | Garcetti, Eric | Primary Election | Los Angeles Mayor | 2013 | General Election | 2017"
+        }
+      ]
+    },
+    {
+      "id": "archiveit_claim_ffe501bc24abac4796aa4267",
+      "label": "eric preven (2017)",
+      "display": [
+        {
+          "label": "Candidate and contest",
+          "format": "badges",
+          "content": {
+            "Name": "eric preven",
+            "City": "los angeles",
+            "State": "CA",
+            "Election": "2017-03",
+            "Round": "primary",
+            "Collection": "5903",
+            "Candidate-year ID": "69971__2017"
+          }
+        },
+        {
+          "label": "URL and source evidence",
+          "format": "json",
+          "content": {
+            "Claimed exact URL": "http://www.ericpreven.com/",
+            "Raw URL": "http://www.ericpreven.com/",
+            "Site root": "http://www.ericpreven.com/",
+            "Original URL(s) mentioned in collection metadata": "",
+            "Collection metadata description": "Los Angeles Area Municipal Elections, June 3, 2014 | Los Angeles Area Municipal Elections, March 3, 2015 | Los Angeles Area Municipal Elections, March 7, 2017",
+            "Archive capture replay": "https://wayback.archive-it.org/5903/20170301032345id_/http://www.ericpreven.com/",
+            "Archive calendar": "https://wayback.archive-it.org/5903/*/http://www.ericpreven.com/",
+            "Collection record": "https://archive-it.org/collections/5903"
+          }
+        },
+        {
+          "label": "Archive validation",
+          "format": "json",
+          "content": {
+            "Machine-proposed grade (not an acceptance decision)": "A",
+            "Machine URL type": "candidate_owned_custom_domain",
+            "Temporal validation status": "grade_a_content_confirmed_pending_review",
+            "Archive query status": "checked",
+            "Validation reason": "grade_a_exact_url_election_period_content_confirmed",
+            "Nearest capture timestamp": "20170301032345.0",
+            "Nearest capture distance (days)": "14.0",
+            "Within 365-day headline window": "yes",
+            "Within sensitivity window": "yes",
+            "Candidate identity in capture": "yes",
+            "Mayoral campaign in capture": "yes",
+            "City in capture": "yes",
+            "Domain reuse status": "no_additional_capture",
+            "Inclusion reason": "proposed_strict_positive"
+          }
+        },
+        {
+          "label": "Collection evidence text",
+          "format": "text",
+          "content": "Preven, Eric (2014-06-03) | Preven, Eric (2015-03-03) | Preven, Eric (2017-03-07) | Preven, Eric | Primary Election | Los Angeles County Board of Supervisors | 2014 | Los Angeles City Council | 2015 | 2017 | Los Angeles Mayor"
+        }
+      ]
+    },
+    {
+      "id": "archiveit_claim_66c1b61e1fb5a4301b533acb",
+      "label": "frantz pierre (2017)",
+      "display": [
+        {
+          "label": "Candidate and contest",
+          "format": "badges",
+          "content": {
+            "Name": "frantz pierre",
+            "City": "los angeles",
+            "State": "CA",
+            "Election": "2017-03",
+            "Round": "primary",
+            "Collection": "5903",
+            "Candidate-year ID": "70152__2017"
+          }
+        },
+        {
+          "label": "URL and source evidence",
+          "format": "json",
+          "content": {
+            "Claimed exact URL": "http://frantzformayor.com/",
+            "Raw URL": "http://frantzformayor.com/",
+            "Site root": "http://frantzformayor.com/",
+            "Original URL(s) mentioned in collection metadata": "",
+            "Collection metadata description": "Los Angeles Area Municipal Elections, March 7, 2017",
+            "Archive capture replay": "https://wayback.archive-it.org/5903/20170301032332id_/http://frantzformayor.com/",
+            "Archive calendar": "https://wayback.archive-it.org/5903/*/http://frantzformayor.com/",
+            "Collection record": "https://archive-it.org/collections/5903"
+          }
+        },
+        {
+          "label": "Archive validation",
+          "format": "json",
+          "content": {
+            "Machine-proposed grade (not an acceptance decision)": "A",
+            "Machine URL type": "candidate_owned_custom_domain",
+            "Temporal validation status": "grade_a_content_confirmed_pending_review",
+            "Archive query status": "checked",
+            "Validation reason": "grade_a_exact_url_election_period_content_confirmed",
+            "Nearest capture timestamp": "20170301032332.0",
+            "Nearest capture distance (days)": "14.0",
+            "Within 365-day headline window": "yes",
+            "Within sensitivity window": "yes",
+            "Candidate identity in capture": "yes",
+            "Mayoral campaign in capture": "yes",
+            "City in capture": "yes",
+            "Domain reuse status": "no_additional_capture",
+            "Inclusion reason": "proposed_strict_positive"
+          }
+        },
+        {
+          "label": "Collection evidence text",
+          "format": "text",
+          "content": "Pierre, Frantz (2017-03-07) | Pierre, Frantz | 2017 | Primary Election | Los Angeles Mayor"
+        }
+      ]
+    },
+    {
+      "id": "archiveit_claim_8a08ed721beb4e829ee0fc2e",
+      "label": "mitchell jack schwartz (2017)",
+      "display": [
+        {
+          "label": "Candidate and contest",
+          "format": "badges",
+          "content": {
+            "Name": "mitchell jack schwartz",
+            "City": "los angeles",
+            "State": "CA",
+            "Election": "2017-03",
+            "Round": "primary",
+            "Collection": "5903",
+            "Candidate-year ID": "70162__2017"
+          }
+        },
+        {
+          "label": "URL and source evidence",
+          "format": "json",
+          "content": {
+            "Claimed exact URL": "https://schwartzformayor.com/",
+            "Raw URL": "https://schwartzformayor.com/",
+            "Site root": "https://schwartzformayor.com/",
+            "Original URL(s) mentioned in collection metadata": "",
+            "Collection metadata description": "Los Angeles Area Municipal Elections, March 7, 2017",
+            "Archive capture replay": "https://wayback.archive-it.org/5903/20170224234519id_/https://schwartzformayor.com/",
+            "Archive calendar": "https://wayback.archive-it.org/5903/*/https://schwartzformayor.com/",
+            "Collection record": "https://archive-it.org/collections/5903"
+          }
+        },
+        {
+          "label": "Archive validation",
+          "format": "json",
+          "content": {
+            "Machine-proposed grade (not an acceptance decision)": "A",
+            "Machine URL type": "candidate_owned_custom_domain",
+            "Temporal validation status": "grade_a_content_confirmed_pending_review",
+            "Archive query status": "checked",
+            "Validation reason": "grade_a_exact_url_election_period_content_confirmed",
+            "Nearest capture timestamp": "20170224234519.0",
+            "Nearest capture distance (days)": "19.0",
+            "Within 365-day headline window": "yes",
+            "Within sensitivity window": "yes",
+            "Candidate identity in capture": "yes",
+            "Mayoral campaign in capture": "yes",
+            "City in capture": "yes",
+            "Domain reuse status": "no_additional_capture",
+            "Inclusion reason": "proposed_strict_positive"
+          }
+        },
+        {
+          "label": "Collection evidence text",
+          "format": "text",
+          "content": "Schwartz, Mitchell Jack (2017-03-07) | Schwartz, Mitchell Jack | 2017 | Primary Election | Los Angeles Mayor"
+        }
+      ]
+    },
+    {
+      "id": "archiveit_claim_2db409a74ed002f8c8fac013",
+      "label": "paul amori (2017)",
+      "display": [
+        {
+          "label": "Candidate and contest",
+          "format": "badges",
+          "content": {
+            "Name": "paul amori",
+            "City": "los angeles",
+            "State": "CA",
+            "Election": "2017-03",
+            "Round": "primary",
+            "Collection": "5903",
+            "Candidate-year ID": "70165__2017"
+          }
+        },
+        {
+          "label": "URL and source evidence",
+          "format": "json",
+          "content": {
+            "Claimed exact URL": "http://vote4love.com/",
+            "Raw URL": "http://vote4love.com/",
+            "Site root": "http://vote4love.com/",
+            "Original URL(s) mentioned in collection metadata": "",
+            "Collection metadata description": "Los Angeles Area Municipal Elections, March 7, 2017",
+            "Archive capture replay": "https://wayback.archive-it.org/5903/20170224235117id_/http://vote4love.com/",
+            "Archive calendar": "https://wayback.archive-it.org/5903/*/http://vote4love.com/",
+            "Collection record": "https://archive-it.org/collections/5903"
+          }
+        },
+        {
+          "label": "Archive validation",
+          "format": "json",
+          "content": {
+            "Machine-proposed grade (not an acceptance decision)": "A",
+            "Machine URL type": "candidate_owned_custom_domain",
+            "Temporal validation status": "grade_a_content_confirmed_pending_review",
+            "Archive query status": "checked",
+            "Validation reason": "grade_a_exact_url_election_period_content_confirmed",
+            "Nearest capture timestamp": "20170224235117.0",
+            "Nearest capture distance (days)": "19.0",
+            "Within 365-day headline window": "yes",
+            "Within sensitivity window": "yes",
+            "Candidate identity in capture": "yes",
+            "Mayoral campaign in capture": "yes",
+            "City in capture": "yes",
+            "Domain reuse status": "same_candidate_only",
+            "Inclusion reason": "proposed_strict_positive"
+          }
+        },
+        {
+          "label": "Collection evidence text",
+          "format": "text",
+          "content": "Amori, Paul E. (2017-03-07) | Amori, Paul E. | 2017 | Primary Election | Los Angeles Mayor"
+        }
+      ]
+    },
+    {
+      "id": "archiveit_claim_77ad7eee8ad8ada9a5bd16dd",
+      "label": "cerissa brown (2021)",
+      "display": [
+        {
+          "label": "Candidate and contest",
+          "format": "badges",
+          "content": {
+            "Name": "cerissa brown",
+            "City": "birmingham",
+            "State": "AL",
+            "Election": "2021-08",
+            "Round": "",
+            "Collection": "16766",
+            "Candidate-year ID": "369__2021"
+          }
+        },
+        {
+          "label": "URL and source evidence",
+          "format": "json",
+          "content": {
+            "Claimed exact URL": "http://www.cerissabrown.com/",
+            "Raw URL": "http://www.cerissabrown.com/",
+            "Site root": "http://www.cerissabrown.com/",
+            "Original URL(s) mentioned in collection metadata": "",
+            "Collection metadata description": "\"Running for mayor was never on my radar. But when my calls to the current mayor were ignored, I found out lots of us feel the same way: regular people, sidelined by the powers that be. There\u2019s a lack of transparency in the city, and residents don\u2019t feel like anybody is listening.\" | \"Hi! I am Cerissa A. Brown. And I am running for mayor of Birmingham. Now \u2014 I don\u2019t look like a politician. I think that\u2019s a good thing.\" | \"I\u2019m not a career politician. I\u2019m a neighbor, an activist, and a champion for us. Service is my life, and Birmingham deserves a mayor who will serve this city.\"",
+            "Archive capture replay": "https://wayback.archive-it.org/16766/20210707153635id_/http://www.cerissabrown.com/",
+            "Archive calendar": "https://wayback.archive-it.org/16766/*/http://www.cerissabrown.com/",
+            "Collection record": "https://archive-it.org/collections/16766"
+          }
+        },
+        {
+          "label": "Archive validation",
+          "format": "json",
+          "content": {
+            "Machine-proposed grade (not an acceptance decision)": "A",
+            "Machine URL type": "candidate_owned_custom_domain",
+            "Temporal validation status": "grade_a_content_confirmed_pending_review",
+            "Archive query status": "checked",
+            "Validation reason": "grade_a_exact_url_election_period_content_confirmed",
+            "Nearest capture timestamp": "20210707153635.0",
+            "Nearest capture distance (days)": "39.0",
+            "Within 365-day headline window": "yes",
+            "Within sensitivity window": "yes",
+            "Candidate identity in capture": "yes",
+            "Mayoral campaign in capture": "yes",
+            "City in capture": "yes",
+            "Domain reuse status": "same_candidate_only",
+            "Inclusion reason": "proposed_strict_positive"
+          }
+        },
+        {
+          "label": "Collection evidence text",
+          "format": "text",
+          "content": "Cerissa A Brown for Mayor | Home - Cerissa A Brown | Cerissa A Brown for Mayor (Birmingham, Ala.) | Brown, Cerissa A | Mayors -- Election -- Alabama -- Birmingham -- 21st century | Birmingham (Ala.) -- Politics and government -- 21st century | Mayors -- Alabama -- Birmingham | Birmingham (Ala.) Mayor"
+        }
+      ]
+    },
+    {
+      "id": "archiveit_claim_a936daee6ba3462e6256d069",
+      "label": "chris woods (2021)",
+      "display": [
+        {
+          "label": "Candidate and contest",
+          "format": "badges",
+          "content": {
+            "Name": "chris woods",
+            "City": "birmingham",
+            "State": "AL",
+            "Election": "2021-08",
+            "Round": "",
+            "Collection": "16766",
+            "Candidate-year ID": "371__2021"
+          }
+        },
+        {
+          "label": "URL and source evidence",
+          "format": "json",
+          "content": {
+            "Claimed exact URL": "https://www.chriswoodsformayor.com/",
+            "Raw URL": "https://www.chriswoodsformayor.com/",
+            "Site root": "https://www.chriswoodsformayor.com/",
+            "Original URL(s) mentioned in collection metadata": "",
+            "Collection metadata description": "\"Chris Woods For Mayor, Bringing the Magic Back.\" | \"My vision for Birmingham is to unite people from all walks of life including Independents, Democrats, Republicans, Libertarians, Business Leaders and Nonprofit groups to  support public education, create transparent government, reverse the troubling rise in crime, and provide a working environment where people from all levels can get ahead. If we come together as one people united together with a common purpose, Birmingham can become the All-American city that she is destined to be. Together we will identify and tackle community-wide challenges and achieve uncommon results. Together we will make Birmingham a better place to live, learn, and earn.\" \u200b",
+            "Archive capture replay": "https://wayback.archive-it.org/16766/20210707153635id_/https://www.chriswoodsformayor.com/",
+            "Archive calendar": "https://wayback.archive-it.org/16766/*/https://www.chriswoodsformayor.com/",
+            "Collection record": "https://archive-it.org/collections/16766"
+          }
+        },
+        {
+          "label": "Archive validation",
+          "format": "json",
+          "content": {
+            "Machine-proposed grade (not an acceptance decision)": "A",
+            "Machine URL type": "candidate_owned_custom_domain",
+            "Temporal validation status": "grade_a_content_confirmed_pending_review",
+            "Archive query status": "checked",
+            "Validation reason": "grade_a_exact_url_election_period_content_confirmed",
+            "Nearest capture timestamp": "20210707153635.0",
+            "Nearest capture distance (days)": "39.0",
+            "Within 365-day headline window": "yes",
+            "Within sensitivity window": "yes",
+            "Candidate identity in capture": "yes",
+            "Mayoral campaign in capture": "yes",
+            "City in capture": "yes",
+            "Domain reuse status": "same_candidate_only",
+            "Inclusion reason": "proposed_strict_positive"
+          }
+        },
+        {
+          "label": "Collection evidence text",
+          "format": "text",
+          "content": "Chris Woods for Mayor | Home l Chris Woods for Mayor | Chris Woods for Mayor (Ala.) | Woods, Christopher | Mayors -- Election -- Alabama -- Birmingham -- 21st century | Birmingham (Ala.) -- Politics and government -- 21st century | Mayors -- Alabama -- Birmingham | Birmingham (Ala.) Mayor"
+        }
+      ]
+    },
+    {
+      "id": "archiveit_claim_37cfcbc1faede79f7eb42dea",
+      "label": "lashunda scales (2021)",
+      "display": [
+        {
+          "label": "Candidate and contest",
+          "format": "badges",
+          "content": {
+            "Name": "lashunda scales",
+            "City": "birmingham",
+            "State": "AL",
+            "Election": "2021-08",
+            "Round": "",
+            "Collection": "16766",
+            "Candidate-year ID": "329__2021"
+          }
+        },
+        {
+          "label": "URL and source evidence",
+          "format": "json",
+          "content": {
+            "Claimed exact URL": "https://scalesbhm2021.com/",
+            "Raw URL": "https://scalesbhm2021.com/",
+            "Site root": "https://scalesbhm2021.com/",
+            "Original URL(s) mentioned in collection metadata": "",
+            "Collection metadata description": "\"We know She works!\" | \"Lashunda Scales is a proud native, resident and product of the Birmingham City Schools system in Birmingham, Alabama. She is a former three-term Birmingham City Council Member for District 1, and currently serves as the President Pro-Tem of the Jefferson County Commission and Commissioner for District 1.\" | \u201cWorking together, we can make the city of Birmingham one of the most livable cities in the nation with unlimited opportunities.\u201d",
+            "Archive capture replay": "https://wayback.archive-it.org/16766/20210707153639id_/https://scalesbhm2021.com/",
+            "Archive calendar": "https://wayback.archive-it.org/16766/*/https://scalesbhm2021.com/",
+            "Collection record": "https://archive-it.org/collections/16766"
+          }
+        },
+        {
+          "label": "Archive validation",
+          "format": "json",
+          "content": {
+            "Machine-proposed grade (not an acceptance decision)": "A",
+            "Machine URL type": "candidate_owned_custom_domain",
+            "Temporal validation status": "grade_a_content_confirmed_pending_review",
+            "Archive query status": "checked",
+            "Validation reason": "grade_a_exact_url_election_period_content_confirmed",
+            "Nearest capture timestamp": "20210707153639.0",
+            "Nearest capture distance (days)": "39.0",
+            "Within 365-day headline window": "yes",
+            "Within sensitivity window": "yes",
+            "Candidate identity in capture": "yes",
+            "Mayoral campaign in capture": "yes",
+            "City in capture": "yes",
+            "Domain reuse status": "same_candidate_only",
+            "Inclusion reason": "proposed_strict_positive"
+          }
+        },
+        {
+          "label": "Collection evidence text",
+          "format": "text",
+          "content": "Elect Lashunda Scales Bhm Mayor 2021 | ScalesBhm2021 | Scales, Lashunda | Friends To Elect Lashunda Scales for Mayor of Birmingham | Mayors -- Election -- Alabama -- Birmingham -- 21st century | Birmingham (Ala.) -- Politics and government -- 21st century | Mayors -- Alabama -- Birmingham | Birmingham (Ala.) Mayor | Scales, Lashunda"
+        }
+      ]
+    },
+    {
+      "id": "archiveit_claim_99f7826e94c23362de819635",
+      "label": "randall woodfin (2021)",
+      "display": [
+        {
+          "label": "Candidate and contest",
+          "format": "badges",
+          "content": {
+            "Name": "randall woodfin",
+            "City": "birmingham",
+            "State": "AL",
+            "Election": "2021-08",
+            "Round": "",
+            "Collection": "16766",
+            "Candidate-year ID": "391__2021"
+          }
+        },
+        {
+          "label": "URL and source evidence",
+          "format": "json",
+          "content": {
+            "Claimed exact URL": "https://www.randallwoodfin.com/",
+            "Raw URL": "https://www.randallwoodfin.com/",
+            "Site root": "https://www.randallwoodfin.com/",
+            "Original URL(s) mentioned in collection metadata": "",
+            "Collection metadata description": "\u201cFrom fairly early in my youth, I had been committed to the idea that I wanted to serve Birmingham in the most meaningful way possible. I wanted to bring people and businesses and organizations across our city together to make Birmingham the very best it can be \u2014 a place where every citizen has opportunities to develop their potential to its fullest. I wanted to be responsible for charting Birmingham\u2019s course into a future of innovation and progress, while beginning to achieve at last the goals of equality and inclusion that are ingrained in our civic character. I wanted to be Mayor.\u201d",
+            "Archive capture replay": "https://wayback.archive-it.org/16766/20210827142715id_/https://www.randallwoodfin.com/",
+            "Archive calendar": "https://wayback.archive-it.org/16766/*/https://www.randallwoodfin.com/",
+            "Collection record": "https://archive-it.org/collections/16766"
+          }
+        },
+        {
+          "label": "Archive validation",
+          "format": "json",
+          "content": {
+            "Machine-proposed grade (not an acceptance decision)": "A",
+            "Machine URL type": "candidate_owned_custom_domain",
+            "Temporal validation status": "grade_a_content_confirmed_pending_review",
+            "Archive query status": "checked",
+            "Validation reason": "grade_a_exact_url_election_period_content_confirmed",
+            "Nearest capture timestamp": "20210827142715.0",
+            "Nearest capture distance (days)": "12.0",
+            "Within 365-day headline window": "yes",
+            "Within sensitivity window": "yes",
+            "Candidate identity in capture": "yes",
+            "Mayoral campaign in capture": "yes",
+            "City in capture": "yes",
+            "Domain reuse status": "same_candidate_only",
+            "Inclusion reason": "proposed_strict_positive"
+          }
+        },
+        {
+          "label": "Collection evidence text",
+          "format": "text",
+          "content": "Randall Woodfin for Mayor | Committee to Elect Randall Woodfin | Woodfin, Randall | Mayors -- Election -- Alabama -- Birmingham -- 21st century | Birmingham (Ala.) -- Politics and government -- 21st century | Mayors -- Alabama -- Birmingham | Birmingham (Ala.) Mayor"
+        }
+      ]
+    },
+    {
+      "id": "archiveit_claim_77da47c0627790adb74a11a4",
+      "label": "william bell (2021)",
+      "display": [
+        {
+          "label": "Candidate and contest",
+          "format": "badges",
+          "content": {
+            "Name": "william bell",
+            "City": "birmingham",
+            "State": "AL",
+            "Election": "2021-08",
+            "Round": "",
+            "Collection": "16766",
+            "Candidate-year ID": "359__2021"
+          }
+        },
+        {
+          "label": "URL and source evidence",
+          "format": "json",
+          "content": {
+            "Claimed exact URL": "https://bellforbirmingham.com/",
+            "Raw URL": "https://bellforbirmingham.com/",
+            "Site root": "https://bellforbirmingham.com/",
+            "Original URL(s) mentioned in collection metadata": "",
+            "Collection metadata description": "\"William Bell is the leader we need to lead Birmingham out of this time of challenges.\" | \"Bell is a leader, a pioneer in local representation, and one of the most respected and effective public servants in our city.\" | Priorities: more, better jobs; safer neighborhoods; and remove blight.",
+            "Archive capture replay": "https://wayback.archive-it.org/16766/20210707153639id_/https://bellforbirmingham.com/",
+            "Archive calendar": "https://wayback.archive-it.org/16766/*/https://bellforbirmingham.com/",
+            "Collection record": "https://archive-it.org/collections/16766"
+          }
+        },
+        {
+          "label": "Archive validation",
+          "format": "json",
+          "content": {
+            "Machine-proposed grade (not an acceptance decision)": "A",
+            "Machine URL type": "candidate_owned_custom_domain",
+            "Temporal validation status": "grade_a_content_confirmed_pending_review",
+            "Archive query status": "checked",
+            "Validation reason": "grade_a_exact_url_election_period_content_confirmed",
+            "Nearest capture timestamp": "20210707153639.0",
+            "Nearest capture distance (days)": "39.0",
+            "Within 365-day headline window": "yes",
+            "Within sensitivity window": "yes",
+            "Candidate identity in capture": "yes",
+            "Mayoral campaign in capture": "yes",
+            "City in capture": "yes",
+            "Domain reuse status": "same_candidate_only",
+            "Inclusion reason": "proposed_strict_positive"
+          }
+        },
+        {
+          "label": "Collection evidence text",
+          "format": "text",
+          "content": "Bell For Birmingham | Build Birmingham Better | Committee to Elect William Bell | Bell, William | Mayors -- Election -- Alabama -- Birmingham -- 21st century | Birmingham (Ala.) -- Politics and government -- 21st century | Mayors -- Alabama -- Birmingham | Birmingham (Ala,) Mayor"
+        }
+      ]
+    },
+    {
+      "id": "archiveit_claim_5dfc75a00aa30c7e7ac15637",
+      "label": "antonio villaraigosa (2001)",
+      "display": [
+        {
+          "label": "Candidate and contest",
+          "format": "badges",
+          "content": {
+            "Name": "antonio villaraigosa",
+            "City": "los angeles",
+            "State": "CA",
+            "Election": "2001-06",
+            "Round": "general",
+            "Collection": "5903",
+            "Candidate-year ID": "69915__2001"
+          }
+        },
+        {
+          "label": "URL and source evidence",
+          "format": "json",
+          "content": {
+            "Claimed exact URL": "http://digital.library.ucla.edu/websites/2001_996_002/",
+            "Raw URL": "http://digital.library.ucla.edu/websites/2001_996_002/",
+            "Site root": "http://digital.library.ucla.edu/",
+            "Original URL(s) mentioned in collection metadata": "http://www.villaraigosaformayor.com",
+            "Collection metadata description": "Los Angeles Area Municipal Elections, June 5, 2001. | Captured June 5, 2001 from http://www.villaraigosaformayor.com with manual download of individual files.",
+            "Archive capture replay": "https://wayback.archive-it.org/5903/20160422181743id_/http://digital.library.ucla.edu/websites/2001_996_002/",
+            "Archive calendar": "https://wayback.archive-it.org/5903/*/http://digital.library.ucla.edu/websites/2001_996_002/",
+            "Collection record": "https://archive-it.org/collections/5903"
+          }
+        },
+        {
+          "label": "Archive validation",
+          "format": "json",
+          "content": {
+            "Machine-proposed grade (not an acceptance decision)": "C",
+            "Machine URL type": "candidate_subdomain_or_shared_host_path",
+            "Temporal validation status": "outside_headline_and_sensitivity_windows",
+            "Archive query status": "checked",
+            "Validation reason": "outside_headline_and_sensitivity_windows",
+            "Nearest capture timestamp": "20160422181743.0",
+            "Nearest capture distance (days)": "5425.0",
+            "Within 365-day headline window": "no",
+            "Within sensitivity window": "no",
+            "Candidate identity in capture": "yes",
+            "Mayoral campaign in capture": "yes",
+            "City in capture": "yes",
+            "Domain reuse status": "no_additional_capture",
+            "Inclusion reason": "deterministic_non_strict_audit"
+          }
+        },
+        {
+          "label": "Collection evidence text",
+          "format": "text",
+          "content": "Villaraigosa, Antonio R. (2001-06-05) | Villaraigosa, Antonio R. | 2001 | General Election | Los Angeles Mayor"
+        }
+      ]
+    },
+    {
+      "id": "archiveit_claim_9ed7613d0d528e3c15496202",
+      "label": "james hahn (2001)",
+      "display": [
+        {
+          "label": "Candidate and contest",
+          "format": "badges",
+          "content": {
+            "Name": "james hahn",
+            "City": "los angeles",
+            "State": "CA",
+            "Election": "2001-06",
+            "Round": "general",
+            "Collection": "5903",
+            "Candidate-year ID": "70156__2001"
+          }
+        },
+        {
+          "label": "URL and source evidence",
+          "format": "json",
+          "content": {
+            "Claimed exact URL": "http://digital.library.ucla.edu/websites/2001_996_001/",
+            "Raw URL": "http://digital.library.ucla.edu/websites/2001_996_001/",
+            "Site root": "http://digital.library.ucla.edu/",
+            "Original URL(s) mentioned in collection metadata": "http://www.jimhahn.org",
+            "Collection metadata description": "Los Angeles Area Municipal Elections, June 5, 2001. | Captured June 4, 2001 from http://www.jimhahn.org with WebCopier 2.01 plus manual download of some individual files.",
+            "Archive capture replay": "https://wayback.archive-it.org/5903/20160422174414id_/http://digital.library.ucla.edu/websites/2001_996_001/",
+            "Archive calendar": "https://wayback.archive-it.org/5903/*/http://digital.library.ucla.edu/websites/2001_996_001/",
+            "Collection record": "https://archive-it.org/collections/5903"
+          }
+        },
+        {
+          "label": "Archive validation",
+          "format": "json",
+          "content": {
+            "Machine-proposed grade (not an acceptance decision)": "C",
+            "Machine URL type": "candidate_subdomain_or_shared_host_path",
+            "Temporal validation status": "outside_headline_and_sensitivity_windows",
+            "Archive query status": "checked",
+            "Validation reason": "outside_headline_and_sensitivity_windows",
+            "Nearest capture timestamp": "20160422174414.0",
+            "Nearest capture distance (days)": "5425.0",
+            "Within 365-day headline window": "no",
+            "Within sensitivity window": "no",
+            "Candidate identity in capture": "yes",
+            "Mayoral campaign in capture": "yes",
+            "City in capture": "yes",
+            "Domain reuse status": "no_additional_capture",
+            "Inclusion reason": "deterministic_non_strict_audit"
+          }
+        },
+        {
+          "label": "Collection evidence text",
+          "format": "text",
+          "content": "Hahn, James Kenneth (2001-06-05) | Hahn, James Kenneth | 2001 | General Election | Los Angeles Mayor"
+        }
+      ]
+    },
+    {
+      "id": "archiveit_claim_562222ebe8709de680cd2682",
+      "label": "antinio villaraigosa (2005)",
+      "display": [
+        {
+          "label": "Candidate and contest",
+          "format": "badges",
+          "content": {
+            "Name": "antinio villaraigosa",
+            "City": "los angeles",
+            "State": "CA",
+            "Election": "2005-05",
+            "Round": "general",
+            "Collection": "5903",
+            "Candidate-year ID": "69915__2005"
+          }
+        },
+        {
+          "label": "URL and source evidence",
+          "format": "json",
+          "content": {
+            "Claimed exact URL": "http://digital.library.ucla.edu/websites/2005_998_002/",
+            "Raw URL": "http://digital.library.ucla.edu/websites/2005_998_002/",
+            "Site root": "http://digital.library.ucla.edu/",
+            "Original URL(s) mentioned in collection metadata": "http://www.antonio2005.com",
+            "Collection metadata description": "Edited with HomeSite 4.5. | Captured May 17, 2005 from http://www.antonio2005.com with WebCopier 4.1. | Los Angeles Area Municipal Elections, May 17, 2005.",
+            "Archive capture replay": "https://wayback.archive-it.org/5903/20190107211856id_/http://digital.library.ucla.edu/websites/2005_998_002/",
+            "Archive calendar": "https://wayback.archive-it.org/5903/*/http://digital.library.ucla.edu/websites/2005_998_002/",
+            "Collection record": "https://archive-it.org/collections/5903"
+          }
+        },
+        {
+          "label": "Archive validation",
+          "format": "json",
+          "content": {
+            "Machine-proposed grade (not an acceptance decision)": "C",
+            "Machine URL type": "candidate_subdomain_or_shared_host_path",
+            "Temporal validation status": "outside_headline_and_sensitivity_windows",
+            "Archive query status": "checked",
+            "Validation reason": "outside_headline_and_sensitivity_windows",
+            "Nearest capture timestamp": "20190107211856.0",
+            "Nearest capture distance (days)": "4985.0",
+            "Within 365-day headline window": "no",
+            "Within sensitivity window": "no",
+            "Candidate identity in capture": "no",
+            "Mayoral campaign in capture": "yes",
+            "City in capture": "yes",
+            "Domain reuse status": "no_additional_capture",
+            "Inclusion reason": "candidate_domain_lead_full_review"
+          }
+        },
+        {
+          "label": "Collection evidence text",
+          "format": "text",
+          "content": "Villaraigosa, Antonio R. (2005-05-17) | Villaraigosa, Antonio R. | Los Angeles Mayor | General Election | 2005"
+        }
+      ]
+    },
+    {
+      "id": "archiveit_claim_bcfd0d18c0260b1b96ff3b63",
+      "label": "james kenneth hahn (2005)",
+      "display": [
+        {
+          "label": "Candidate and contest",
+          "format": "badges",
+          "content": {
+            "Name": "james kenneth hahn",
+            "City": "los angeles",
+            "State": "CA",
+            "Election": "2005-05",
+            "Round": "general",
+            "Collection": "5903",
+            "Candidate-year ID": "70156__2005"
+          }
+        },
+        {
+          "label": "URL and source evidence",
+          "format": "json",
+          "content": {
+            "Claimed exact URL": "http://digital.library.ucla.edu/websites/2005_998_001/",
+            "Raw URL": "http://digital.library.ucla.edu/websites/2005_998_001/",
+            "Site root": "http://digital.library.ucla.edu/",
+            "Original URL(s) mentioned in collection metadata": "http://www.jimhahn.org/",
+            "Collection metadata description": "Edited with HomeSite 4.5. | Captured May 17, 2005 from http://www.jimhahn.org/ with WinHTTrack Website Copier 3.33. | Los Angeles Area Municipal Elections, May 17, 2005.",
+            "Archive capture replay": "https://wayback.archive-it.org/5903/20190104184826id_/http://digital.library.ucla.edu/websites/2005_998_001/",
+            "Archive calendar": "https://wayback.archive-it.org/5903/*/http://digital.library.ucla.edu/websites/2005_998_001/",
+            "Collection record": "https://archive-it.org/collections/5903"
+          }
+        },
+        {
+          "label": "Archive validation",
+          "format": "json",
+          "content": {
+            "Machine-proposed grade (not an acceptance decision)": "C",
+            "Machine URL type": "candidate_subdomain_or_shared_host_path",
+            "Temporal validation status": "outside_headline_and_sensitivity_windows",
+            "Archive query status": "checked",
+            "Validation reason": "outside_headline_and_sensitivity_windows",
+            "Nearest capture timestamp": "20190104184826.0",
+            "Nearest capture distance (days)": "4982.0",
+            "Within 365-day headline window": "no",
+            "Within sensitivity window": "no",
+            "Candidate identity in capture": "yes",
+            "Mayoral campaign in capture": "yes",
+            "City in capture": "yes",
+            "Domain reuse status": "no_additional_capture",
+            "Inclusion reason": "candidate_domain_lead_full_review"
+          }
+        },
+        {
+          "label": "Collection evidence text",
+          "format": "text",
+          "content": "Hahn, James Kenneth (2005-05-17) | Hahn, James Kenneth | General Election | 2005 | Los Angeles Mayor"
+        }
+      ]
+    },
+    {
+      "id": "archiveit_claim_ee1d471aff189c8d90f8f22b",
+      "label": "bruce harry darian (2009)",
+      "display": [
+        {
+          "label": "Candidate and contest",
+          "format": "badges",
+          "content": {
+            "Name": "bruce harry darian",
+            "City": "los angeles",
+            "State": "CA",
+            "Election": "2009-03",
+            "Round": "primary",
+            "Collection": "5903",
+            "Candidate-year ID": "70138__2009"
+          }
+        },
+        {
+          "label": "URL and source evidence",
+          "format": "json",
+          "content": {
+            "Claimed exact URL": "http://digital.library.ucla.edu/websites/2009_999_002/",
+            "Raw URL": "http://digital.library.ucla.edu/websites/2009_999_002/",
+            "Site root": "http://digital.library.ucla.edu/",
+            "Original URL(s) mentioned in collection metadata": "http://www.brucedarian.com/brucedarian/",
+            "Collection metadata description": "Captured March 3, 2009 from http://www.brucedarian.com/brucedarian/ with WebCopier 5.0. | Los Angeles Area Municipal Elections, March 3, 2009.",
+            "Archive capture replay": "https://wayback.archive-it.org/5903/20200620163053id_/http://digital.library.ucla.edu/websites/2009_999_002/",
+            "Archive calendar": "https://wayback.archive-it.org/5903/*/http://digital.library.ucla.edu/websites/2009_999_002/",
+            "Collection record": "https://archive-it.org/collections/5903"
+          }
+        },
+        {
+          "label": "Archive validation",
+          "format": "json",
+          "content": {
+            "Machine-proposed grade (not an acceptance decision)": "C",
+            "Machine URL type": "candidate_subdomain_or_shared_host_path",
+            "Temporal validation status": "outside_headline_and_sensitivity_windows",
+            "Archive query status": "checked",
+            "Validation reason": "outside_headline_and_sensitivity_windows",
+            "Nearest capture timestamp": "20200620163053.0",
+            "Nearest capture distance (days)": "4115.0",
+            "Within 365-day headline window": "no",
+            "Within sensitivity window": "no",
+            "Candidate identity in capture": "yes",
+            "Mayoral campaign in capture": "no",
+            "City in capture": "yes",
+            "Domain reuse status": "no_additional_capture",
+            "Inclusion reason": "candidate_domain_lead_full_review"
+          }
+        },
+        {
+          "label": "Collection evidence text",
+          "format": "text",
+          "content": "Darian, Bruce Harry (2009-03-03) | Darian, Bruce Harry | 2009 | Primary Election | Los Angeles Mayor"
+        }
+      ]
+    },
+    {
+      "id": "archiveit_claim_430a4a96f181f0c47df02e2c",
+      "label": "carlos alvarez (2009)",
+      "display": [
+        {
+          "label": "Candidate and contest",
+          "format": "badges",
+          "content": {
+            "Name": "carlos alvarez",
+            "City": "los angeles",
+            "State": "CA",
+            "Election": "2009-03",
+            "Round": "primary",
+            "Collection": "5903",
+            "Candidate-year ID": "70140__2009"
+          }
+        },
+        {
+          "label": "URL and source evidence",
+          "format": "json",
+          "content": {
+            "Claimed exact URL": "http://digital.library.ucla.edu/websites/2009_999_001/",
+            "Raw URL": "http://digital.library.ucla.edu/websites/2009_999_001/",
+            "Site root": "http://digital.library.ucla.edu/",
+            "Original URL(s) mentioned in collection metadata": "http://www.pslweb.org/",
+            "Collection metadata description": "Single page only. | Captured March 3, 2009 from http://www.pslweb.org/ with Internet Explorer 7.0 and Firefox 3.0. | Los Angeles Area Municipal Elections, March 3, 2009.",
+            "Archive capture replay": "https://wayback.archive-it.org/5903/20200610214141id_/http://digital.library.ucla.edu/websites/2009_999_001/",
+            "Archive calendar": "https://wayback.archive-it.org/5903/*/http://digital.library.ucla.edu/websites/2009_999_001/",
+            "Collection record": "https://archive-it.org/collections/5903"
+          }
+        },
+        {
+          "label": "Archive validation",
+          "format": "json",
+          "content": {
+            "Machine-proposed grade (not an acceptance decision)": "C",
+            "Machine URL type": "candidate_subdomain_or_shared_host_path",
+            "Temporal validation status": "outside_headline_and_sensitivity_windows",
+            "Archive query status": "checked",
+            "Validation reason": "outside_headline_and_sensitivity_windows",
+            "Nearest capture timestamp": "20200610214141.0",
+            "Nearest capture distance (days)": "4105.0",
+            "Within 365-day headline window": "no",
+            "Within sensitivity window": "no",
+            "Candidate identity in capture": "yes",
+            "Mayoral campaign in capture": "yes",
+            "City in capture": "yes",
+            "Domain reuse status": "no_additional_capture",
+            "Inclusion reason": "candidate_domain_lead_full_review"
+          }
+        },
+        {
+          "label": "Collection evidence text",
+          "format": "text",
+          "content": "Alvarez, Carlos (2009-03-03) | Alvarez, Carlos | 2009 | Primary Election | Los Angeles Mayor"
+        }
+      ]
+    },
+    {
+      "id": "archiveit_claim_8a781a249063cd5a0289124e",
+      "label": "craig rubin (2009)",
+      "display": [
+        {
+          "label": "Candidate and contest",
+          "format": "badges",
+          "content": {
+            "Name": "craig rubin",
+            "City": "los angeles",
+            "State": "CA",
+            "Election": "2009-03",
+            "Round": "primary",
+            "Collection": "5903",
+            "Candidate-year ID": "70143__2009"
+          }
+        },
+        {
+          "label": "URL and source evidence",
+          "format": "json",
+          "content": {
+            "Claimed exact URL": "http://digital.library.ucla.edu/websites/2009_999_007/",
+            "Raw URL": "http://digital.library.ucla.edu/websites/2009_999_007/",
+            "Site root": "http://digital.library.ucla.edu/",
+            "Original URL(s) mentioned in collection metadata": "http://craigx4mayor.org/",
+            "Collection metadata description": "Captured March 3, 2009 from http://craigx4mayor.org/ with WebCopier 5.0. | Los Angeles Area Municipal Elections, March 3, 2009.",
+            "Archive capture replay": "https://wayback.archive-it.org/5903/20200619202818id_/http://digital.library.ucla.edu/websites/2009_999_007/",
+            "Archive calendar": "https://wayback.archive-it.org/5903/*/http://digital.library.ucla.edu/websites/2009_999_007/",
+            "Collection record": "https://archive-it.org/collections/5903"
+          }
+        },
+        {
+          "label": "Archive validation",
+          "format": "json",
+          "content": {
+            "Machine-proposed grade (not an acceptance decision)": "C",
+            "Machine URL type": "candidate_subdomain_or_shared_host_path",
+            "Temporal validation status": "outside_headline_and_sensitivity_windows",
+            "Archive query status": "checked",
+            "Validation reason": "outside_headline_and_sensitivity_windows",
+            "Nearest capture timestamp": "20200619202818.0",
+            "Nearest capture distance (days)": "4114.0",
+            "Within 365-day headline window": "no",
+            "Within sensitivity window": "no",
+            "Candidate identity in capture": "yes",
+            "Mayoral campaign in capture": "yes",
+            "City in capture": "yes",
+            "Domain reuse status": "no_additional_capture",
+            "Inclusion reason": "candidate_domain_lead_full_review"
+          }
+        },
+        {
+          "label": "Collection evidence text",
+          "format": "text",
+          "content": "Rubin, Craig X (2009-03-03) | Rubin, Craig X | 2009 | Primary Election | Los Angeles Mayor"
+        }
+      ]
+    },
+    {
+      "id": "archiveit_claim_f47750944c32885415f91128",
+      "label": "david 'zuma dogg' saltsburg (2009)",
+      "display": [
+        {
+          "label": "Candidate and contest",
+          "format": "badges",
+          "content": {
+            "Name": "david 'zuma dogg' saltsburg",
+            "City": "los angeles",
+            "State": "CA",
+            "Election": "2009-03",
+            "Round": "primary",
+            "Collection": "5903",
+            "Candidate-year ID": "70148__2009"
+          }
+        },
+        {
+          "label": "URL and source evidence",
+          "format": "json",
+          "content": {
+            "Claimed exact URL": "http://digital.library.ucla.edu/websites/2009_999_008/",
+            "Raw URL": "http://digital.library.ucla.edu/websites/2009_999_008/",
+            "Site root": "http://digital.library.ucla.edu/",
+            "Original URL(s) mentioned in collection metadata": "http://zumadogg.googlepages.com/home",
+            "Collection metadata description": "Single page only. | Captured March 3, 2009 from http://zumadogg.googlepages.com/home with Firefox 3.0. | Los Angeles Area Municipal Elections, March 3, 2009.",
+            "Archive capture replay": "https://wayback.archive-it.org/5903/20200610214243id_/http://digital.library.ucla.edu/websites/2009_999_008/",
+            "Archive calendar": "https://wayback.archive-it.org/5903/*/http://digital.library.ucla.edu/websites/2009_999_008/",
+            "Collection record": "https://archive-it.org/collections/5903"
+          }
+        },
+        {
+          "label": "Archive validation",
+          "format": "json",
+          "content": {
+            "Machine-proposed grade (not an acceptance decision)": "C",
+            "Machine URL type": "candidate_subdomain_or_shared_host_path",
+            "Temporal validation status": "outside_headline_and_sensitivity_windows",
+            "Archive query status": "checked",
+            "Validation reason": "outside_headline_and_sensitivity_windows",
+            "Nearest capture timestamp": "20200610214243.0",
+            "Nearest capture distance (days)": "4105.0",
+            "Within 365-day headline window": "no",
+            "Within sensitivity window": "no",
+            "Candidate identity in capture": "yes",
+            "Mayoral campaign in capture": "yes",
+            "City in capture": "yes",
+            "Domain reuse status": "no_additional_capture",
+            "Inclusion reason": "candidate_domain_lead_full_review"
+          }
+        },
+        {
+          "label": "Collection evidence text",
+          "format": "text",
+          "content": "Saltsburg, David (Zuma Dogg) (2009-03-03) | Saltsburg, David (Zuma Dogg) | 2009 | Primary Election | Los Angeles Mayor"
+        }
+      ]
+    },
+    {
+      "id": "archiveit_claim_9d7f3b2d20119e102cd0a1d8",
+      "label": "david r. hernanadez (2009)",
+      "display": [
+        {
+          "label": "Candidate and contest",
+          "format": "badges",
+          "content": {
+            "Name": "david r. hernanadez",
+            "City": "los angeles",
+            "State": "CA",
+            "Election": "2009-03",
+            "Round": "primary",
+            "Collection": "5903",
+            "Candidate-year ID": "70145__2009"
+          }
+        },
+        {
+          "label": "URL and source evidence",
+          "format": "json",
+          "content": {
+            "Claimed exact URL": "http://digital.library.ucla.edu/websites/2009_999_011/",
+            "Raw URL": "http://digital.library.ucla.edu/websites/2009_999_011/",
+            "Site root": "http://digital.library.ucla.edu/",
+            "Original URL(s) mentioned in collection metadata": "http://lasmayor.wordpress.com/",
+            "Collection metadata description": "Los Angeles Area Municipal Elections, March 3, 2009. | Edited with HomeSite 4.5. | Captured March 3, 2009 from http://lasmayor.wordpress.com/ with WebCopier 5.0.",
+            "Archive capture replay": "https://wayback.archive-it.org/5903/20200619010333id_/http://digital.library.ucla.edu/websites/2009_999_011/",
+            "Archive calendar": "https://wayback.archive-it.org/5903/*/http://digital.library.ucla.edu/websites/2009_999_011/",
+            "Collection record": "https://archive-it.org/collections/5903"
+          }
+        },
+        {
+          "label": "Archive validation",
+          "format": "json",
+          "content": {
+            "Machine-proposed grade (not an acceptance decision)": "C",
+            "Machine URL type": "candidate_subdomain_or_shared_host_path",
+            "Temporal validation status": "outside_headline_and_sensitivity_windows",
+            "Archive query status": "checked",
+            "Validation reason": "outside_headline_and_sensitivity_windows",
+            "Nearest capture timestamp": "20200619010333.0",
+            "Nearest capture distance (days)": "4114.0",
+            "Within 365-day headline window": "no",
+            "Within sensitivity window": "no",
+            "Candidate identity in capture": "no",
+            "Mayoral campaign in capture": "yes",
+            "City in capture": "yes",
+            "Domain reuse status": "no_additional_capture",
+            "Inclusion reason": "candidate_domain_lead_full_review"
+          }
+        },
+        {
+          "label": "Collection evidence text",
+          "format": "text",
+          "content": "Hernandez, David R. (2009-03-03) [Blog] | Hernandez, David R. | Los Angeles Mayor | Primary Election | 2009 | Blogs"
+        }
+      ]
+    },
+    {
+      "id": "archiveit_claim_d41595a698241248a8e800b8",
+      "label": "david r. hernanadez (2009)",
+      "display": [
+        {
+          "label": "Candidate and contest",
+          "format": "badges",
+          "content": {
+            "Name": "david r. hernanadez",
+            "City": "los angeles",
+            "State": "CA",
+            "Election": "2009-03",
+            "Round": "primary",
+            "Collection": "5903",
+            "Candidate-year ID": "70145__2009"
+          }
+        },
+        {
+          "label": "URL and source evidence",
+          "format": "json",
+          "content": {
+            "Claimed exact URL": "http://digital.library.ucla.edu/websites/2009_999_004/",
+            "Raw URL": "http://digital.library.ucla.edu/websites/2009_999_004/",
+            "Site root": "http://digital.library.ucla.edu/",
+            "Original URL(s) mentioned in collection metadata": "http://www.dave4la.com/",
+            "Collection metadata description": "Captured March 3, 2009 from http://www.dave4la.com/ with WebCopier 5.0. | Los Angeles Area Municipal Elections, March 3, 2009.",
+            "Archive capture replay": "https://wayback.archive-it.org/5903/20200619010359id_/http://digital.library.ucla.edu/websites/2009_999_004/",
+            "Archive calendar": "https://wayback.archive-it.org/5903/*/http://digital.library.ucla.edu/websites/2009_999_004/",
+            "Collection record": "https://archive-it.org/collections/5903"
+          }
+        },
+        {
+          "label": "Archive validation",
+          "format": "json",
+          "content": {
+            "Machine-proposed grade (not an acceptance decision)": "C",
+            "Machine URL type": "candidate_subdomain_or_shared_host_path",
+            "Temporal validation status": "outside_headline_and_sensitivity_windows",
+            "Archive query status": "checked",
+            "Validation reason": "outside_headline_and_sensitivity_windows",
+            "Nearest capture timestamp": "20200619010359.0",
+            "Nearest capture distance (days)": "4114.0",
+            "Within 365-day headline window": "no",
+            "Within sensitivity window": "no",
+            "Candidate identity in capture": "no",
+            "Mayoral campaign in capture": "yes",
+            "City in capture": "yes",
+            "Domain reuse status": "no_additional_capture",
+            "Inclusion reason": "candidate_domain_lead_full_review"
+          }
+        },
+        {
+          "label": "Collection evidence text",
+          "format": "text",
+          "content": "Hernandez, David R. (2009-03-03) | Hernandez, David R. | Los Angeles Mayor | Primary Election | 2009"
+        }
+      ]
+    },
+    {
+      "id": "archiveit_claim_b0c95f90d7484c54a2fc2488",
+      "label": "gordon turner (2009)",
+      "display": [
+        {
+          "label": "Candidate and contest",
+          "format": "badges",
+          "content": {
+            "Name": "gordon turner",
+            "City": "los angeles",
+            "State": "CA",
+            "Election": "2009-03",
+            "Round": "primary",
+            "Collection": "5903",
+            "Candidate-year ID": "70154__2009"
+          }
+        },
+        {
+          "label": "URL and source evidence",
+          "format": "json",
+          "content": {
+            "Claimed exact URL": "http://digital.library.ucla.edu/websites/2009_999_010/",
+            "Raw URL": "http://digital.library.ucla.edu/websites/2009_999_010/",
+            "Site root": "http://digital.library.ucla.edu/",
+            "Original URL(s) mentioned in collection metadata": "http://gordon4mayor2009.com/",
+            "Collection metadata description": "Captured March 3, 2009 from http://gordon4mayor2009.com/ with WebCopier 5.0 and Firefox 3.0. | Los Angeles Area Municipal Elections, March 3, 2009.",
+            "Archive capture replay": "https://wayback.archive-it.org/5903/20200619010306id_/http://digital.library.ucla.edu/websites/2009_999_010/",
+            "Archive calendar": "https://wayback.archive-it.org/5903/*/http://digital.library.ucla.edu/websites/2009_999_010/",
+            "Collection record": "https://archive-it.org/collections/5903"
+          }
+        },
+        {
+          "label": "Archive validation",
+          "format": "json",
+          "content": {
+            "Machine-proposed grade (not an acceptance decision)": "C",
+            "Machine URL type": "candidate_subdomain_or_shared_host_path",
+            "Temporal validation status": "outside_headline_and_sensitivity_windows",
+            "Archive query status": "checked",
+            "Validation reason": "outside_headline_and_sensitivity_windows",
+            "Nearest capture timestamp": "20200619010306.0",
+            "Nearest capture distance (days)": "4114.0",
+            "Within 365-day headline window": "no",
+            "Within sensitivity window": "no",
+            "Candidate identity in capture": "yes",
+            "Mayoral campaign in capture": "yes",
+            "City in capture": "yes",
+            "Domain reuse status": "no_additional_capture",
+            "Inclusion reason": "candidate_domain_lead_full_review"
+          }
+        },
+        {
+          "label": "Collection evidence text",
+          "format": "text",
+          "content": "Turner, Gordon (2009-03-03) | Turner, Gordon | 2009 | Primary Election | Los Angeles Mayor"
+        }
+      ]
+    },
+    {
+      "id": "archiveit_claim_b56d398d7ebb7ddce8339a2f",
+      "label": "gordon turner (2009)",
+      "display": [
+        {
+          "label": "Candidate and contest",
+          "format": "badges",
+          "content": {
+            "Name": "gordon turner",
+            "City": "los angeles",
+            "State": "CA",
+            "Election": "2009-03",
+            "Round": "primary",
+            "Collection": "5903",
+            "Candidate-year ID": "70154__2009"
+          }
+        },
+        {
+          "label": "URL and source evidence",
+          "format": "json",
+          "content": {
+            "Claimed exact URL": "http://digital.library.ucla.edu/websites/2009_999_009/",
+            "Raw URL": "http://digital.library.ucla.edu/websites/2009_999_009/",
+            "Site root": "http://digital.library.ucla.edu/",
+            "Original URL(s) mentioned in collection metadata": "http://losangeles.vpweb.com/",
+            "Collection metadata description": "Captured March 3, 2009 from http://losangeles.vpweb.com/ with WebCopier 5.0. | Los Angeles Area Municipal Elections, March 3, 2009.",
+            "Archive capture replay": "https://wayback.archive-it.org/5903/20200619010215id_/http://digital.library.ucla.edu/websites/2009_999_009/",
+            "Archive calendar": "https://wayback.archive-it.org/5903/*/http://digital.library.ucla.edu/websites/2009_999_009/",
+            "Collection record": "https://archive-it.org/collections/5903"
+          }
+        },
+        {
+          "label": "Archive validation",
+          "format": "json",
+          "content": {
+            "Machine-proposed grade (not an acceptance decision)": "C",
+            "Machine URL type": "candidate_subdomain_or_shared_host_path",
+            "Temporal validation status": "outside_headline_and_sensitivity_windows",
+            "Archive query status": "checked",
+            "Validation reason": "outside_headline_and_sensitivity_windows",
+            "Nearest capture timestamp": "20200619010215.0",
+            "Nearest capture distance (days)": "4114.0",
+            "Within 365-day headline window": "no",
+            "Within sensitivity window": "no",
+            "Candidate identity in capture": "yes",
+            "Mayoral campaign in capture": "no",
+            "City in capture": "yes",
+            "Domain reuse status": "no_additional_capture",
+            "Inclusion reason": "candidate_domain_lead_full_review"
+          }
+        },
+        {
+          "label": "Collection evidence text",
+          "format": "text",
+          "content": "Turner, Gordon (2009-03-03) | Turner, Gordon | 2009 | Primary Election | Los Angeles Mayor"
+        }
+      ]
+    },
+    {
+      "id": "archiveit_claim_e057f676655ce064a4e027a6",
+      "label": "gordon turner (2009)",
+      "display": [
+        {
+          "label": "Candidate and contest",
+          "format": "badges",
+          "content": {
+            "Name": "gordon turner",
+            "City": "los angeles",
+            "State": "CA",
+            "Election": "2009-03",
+            "Round": "primary",
+            "Collection": "5903",
+            "Candidate-year ID": "70154__2009"
+          }
+        },
+        {
+          "label": "URL and source evidence",
+          "format": "json",
+          "content": {
+            "Claimed exact URL": "http://digital.library.ucla.edu/websites/2009_999_003/",
+            "Raw URL": "http://digital.library.ucla.edu/websites/2009_999_003/",
+            "Site root": "http://digital.library.ucla.edu/",
+            "Original URL(s) mentioned in collection metadata": "http://gordonturner.blogspot.com/",
+            "Collection metadata description": "Captured March 3, 2009 from http://gordonturner.blogspot.com/ with WebCopier 5.0. | Los Angeles Area Municipal Elections, March 3, 2009.",
+            "Archive capture replay": "https://wayback.archive-it.org/5903/20200619202503id_/http://digital.library.ucla.edu/websites/2009_999_003/",
+            "Archive calendar": "https://wayback.archive-it.org/5903/*/http://digital.library.ucla.edu/websites/2009_999_003/",
+            "Collection record": "https://archive-it.org/collections/5903"
+          }
+        },
+        {
+          "label": "Archive validation",
+          "format": "json",
+          "content": {
+            "Machine-proposed grade (not an acceptance decision)": "C",
+            "Machine URL type": "candidate_subdomain_or_shared_host_path",
+            "Temporal validation status": "outside_headline_and_sensitivity_windows",
+            "Archive query status": "checked",
+            "Validation reason": "outside_headline_and_sensitivity_windows",
+            "Nearest capture timestamp": "20200619202503.0",
+            "Nearest capture distance (days)": "4114.0",
+            "Within 365-day headline window": "no",
+            "Within sensitivity window": "no",
+            "Candidate identity in capture": "yes",
+            "Mayoral campaign in capture": "yes",
+            "City in capture": "yes",
+            "Domain reuse status": "no_additional_capture",
+            "Inclusion reason": "candidate_domain_lead_full_review"
+          }
+        },
+        {
+          "label": "Collection evidence text",
+          "format": "text",
+          "content": "Turner, Gordon (2009-03-03) [Blog] | Turner, Gordon | Los Angeles Mayor | Primary Election | 2009 | Blogs"
+        }
+      ]
+    },
+    {
+      "id": "archiveit_claim_24f8d6f86bea5cfda42eb382",
+      "label": "phil jennerjahn (2009)",
+      "display": [
+        {
+          "label": "Candidate and contest",
+          "format": "badges",
+          "content": {
+            "Name": "phil jennerjahn",
+            "City": "los angeles",
+            "State": "CA",
+            "Election": "2009-03",
+            "Round": "primary",
+            "Collection": "5903",
+            "Candidate-year ID": "70166__2009"
+          }
+        },
+        {
+          "label": "URL and source evidence",
+          "format": "json",
+          "content": {
+            "Claimed exact URL": "http://digital.library.ucla.edu/websites/2009_999_005/",
+            "Raw URL": "http://digital.library.ucla.edu/websites/2009_999_005/",
+            "Site root": "http://digital.library.ucla.edu/",
+            "Original URL(s) mentioned in collection metadata": "http://www.philjennerjahn.com/",
+            "Collection metadata description": "Los Angeles Area Municipal Elections, March 3, 2009. | Captured March 3, 2009 from http://www.philjennerjahn.com/ with WebCopier 5.0.",
+            "Archive capture replay": "https://wayback.archive-it.org/5903/20200619202532id_/http://digital.library.ucla.edu/websites/2009_999_005/",
+            "Archive calendar": "https://wayback.archive-it.org/5903/*/http://digital.library.ucla.edu/websites/2009_999_005/",
+            "Collection record": "https://archive-it.org/collections/5903"
+          }
+        },
+        {
+          "label": "Archive validation",
+          "format": "json",
+          "content": {
+            "Machine-proposed grade (not an acceptance decision)": "C",
+            "Machine URL type": "candidate_subdomain_or_shared_host_path",
+            "Temporal validation status": "outside_headline_and_sensitivity_windows",
+            "Archive query status": "checked",
+            "Validation reason": "outside_headline_and_sensitivity_windows",
+            "Nearest capture timestamp": "20200619202532.0",
+            "Nearest capture distance (days)": "4114.0",
+            "Within 365-day headline window": "no",
+            "Within sensitivity window": "no",
+            "Candidate identity in capture": "yes",
+            "Mayoral campaign in capture": "yes",
+            "City in capture": "yes",
+            "Domain reuse status": "no_additional_capture",
+            "Inclusion reason": "candidate_domain_lead_full_review"
+          }
+        },
+        {
+          "label": "Collection evidence text",
+          "format": "text",
+          "content": "Jennerjahn, Phil (2009-03-03) | Jennerjahn, Phil | 2009 | Primary Election | Los Angeles Mayor"
+        }
+      ]
+    },
+    {
+      "id": "archiveit_claim_3e6be0170ed3e39af4a3bee0",
+      "label": "walter moore (2009)",
+      "display": [
+        {
+          "label": "Candidate and contest",
+          "format": "badges",
+          "content": {
+            "Name": "walter moore",
+            "City": "los angeles",
+            "State": "CA",
+            "Election": "2009-03",
+            "Round": "primary",
+            "Collection": "5903",
+            "Candidate-year ID": "70173__2009"
+          }
+        },
+        {
+          "label": "URL and source evidence",
+          "format": "json",
+          "content": {
+            "Claimed exact URL": "http://web.mac.com/waltermoore/WalterMooreForMayor/Home.html",
+            "Raw URL": "http://digital.library.ucla.edu/websites/2009_999_006/web.mac.com/waltermoore/WalterMooreForMayor/Home.html",
+            "Site root": "http://web.mac.com/",
+            "Original URL(s) mentioned in collection metadata": "http://web.mac.com/waltermoore/WalterMooreForMayor/Home.html",
+            "Collection metadata description": "Los Angeles Area Municipal Elections, March 3, 2009. | Captured March 3, 2009 from http://web.mac.com/waltermoore/WalterMooreForMayor/Home.html with Offline Explorer Pro 4.9.",
+            "Archive capture replay": "",
+            "Archive calendar": "https://wayback.archive-it.org/5903/*/http://digital.library.ucla.edu/websites/2009_999_006/web.mac.com/waltermoore/WalterMooreForMayor/Home.html",
+            "Collection record": "https://archive-it.org/collections/5903"
+          }
+        },
+        {
+          "label": "Archive validation",
+          "format": "json",
+          "content": {
+            "Machine-proposed grade (not an acceptance decision)": "C",
+            "Machine URL type": "candidate_subdomain_or_shared_host_path",
+            "Temporal validation status": "no_collection_capture",
+            "Archive query status": "checked",
+            "Validation reason": "no_collection_capture",
+            "Nearest capture timestamp": "",
+            "Nearest capture distance (days)": "",
+            "Within 365-day headline window": "no",
+            "Within sensitivity window": "no",
+            "Candidate identity in capture": "no",
+            "Mayoral campaign in capture": "no",
+            "City in capture": "no",
+            "Domain reuse status": "not_inspected_no_capture",
+            "Inclusion reason": "candidate_domain_lead_full_review"
+          }
+        },
+        {
+          "label": "Collection evidence text",
+          "format": "text",
+          "content": "Moore, Walter (2009-03-03) | Moore, Walter | Los Angeles Mayor | Primary Election | 2009"
+        }
+      ]
+    },
+    {
+      "id": "archiveit_claim_ac3a3757b2902f38666c8d57",
+      "label": "david 'zuma dogg' saltsburg (2017)",
+      "display": [
+        {
+          "label": "Candidate and contest",
+          "format": "badges",
+          "content": {
+            "Name": "david 'zuma dogg' saltsburg",
+            "City": "los angeles",
+            "State": "CA",
+            "Election": "2017-03",
+            "Round": "primary",
+            "Collection": "5903",
+            "Candidate-year ID": "70148__2017"
+          }
+        },
+        {
+          "label": "URL and source evidence",
+          "format": "json",
+          "content": {
+            "Claimed exact URL": "https://www.facebook.com/ZumaDoggForMayor/",
+            "Raw URL": "https://www.facebook.com/ZumaDoggForMayor/",
+            "Site root": "https://www.facebook.com/",
+            "Original URL(s) mentioned in collection metadata": "",
+            "Collection metadata description": "Los Angeles Area Municipal Elections, March 7, 2017",
+            "Archive capture replay": "https://wayback.archive-it.org/5903/20170302020000id_/https://www.facebook.com/ZumaDoggForMayor/",
+            "Archive calendar": "https://wayback.archive-it.org/5903/*/https://www.facebook.com/ZumaDoggForMayor/",
+            "Collection record": "https://archive-it.org/collections/5903"
+          }
+        },
+        {
+          "label": "Archive validation",
+          "format": "json",
+          "content": {
+            "Machine-proposed grade (not an acceptance decision)": "C",
+            "Machine URL type": "excluded_social_lead",
+            "Temporal validation status": "content_validation_unresolved",
+            "Archive query status": "checked",
+            "Validation reason": "excluded_url_type",
+            "Nearest capture timestamp": "20170302020000.0",
+            "Nearest capture distance (days)": "13.0",
+            "Within 365-day headline window": "yes",
+            "Within sensitivity window": "yes",
+            "Candidate identity in capture": "yes",
+            "Mayoral campaign in capture": "yes",
+            "City in capture": "yes",
+            "Domain reuse status": "conflicting_content_detected",
+            "Inclusion reason": "candidate_domain_lead_full_review"
+          }
+        },
+        {
+          "label": "Collection evidence text",
+          "format": "text",
+          "content": "Saltsburg, David (Zuma Dogg) (2017-03-07) [Facebook] | Saltsburg, David (Zuma Dogg) | 2017 | Primary Election | Los Angeles Mayor | Facebook (Electronic resource)"
+        }
+      ]
+    },
+    {
+      "id": "archiveit_claim_63537624a85d2552cbd2b0e9",
+      "label": "yehuda 'y j' draiman (2017)",
+      "display": [
+        {
+          "label": "Candidate and contest",
+          "format": "badges",
+          "content": {
+            "Name": "yehuda 'y j' draiman",
+            "City": "los angeles",
+            "State": "CA",
+            "Election": "2017-03",
+            "Round": "primary",
+            "Collection": "5903",
+            "Candidate-year ID": "70174__2017"
+          }
+        },
+        {
+          "label": "URL and source evidence",
+          "format": "json",
+          "content": {
+            "Claimed exact URL": "http://www.draimanformayor2017.com/",
+            "Raw URL": "http://www.draimanformayor2017.com/",
+            "Site root": "http://www.draimanformayor2017.com/",
+            "Original URL(s) mentioned in collection metadata": "",
+            "Collection metadata description": "Los Angeles Area Municipal Elections, March 7, 2017",
+            "Archive capture replay": "https://wayback.archive-it.org/5903/20170224234641id_/http://www.draimanformayor2017.com/",
+            "Archive calendar": "https://wayback.archive-it.org/5903/*/http://www.draimanformayor2017.com/",
+            "Collection record": "https://archive-it.org/collections/5903"
+          }
+        },
+        {
+          "label": "Archive validation",
+          "format": "json",
+          "content": {
+            "Machine-proposed grade (not an acceptance decision)": "C",
+            "Machine URL type": "candidate_owned_custom_domain",
+            "Temporal validation status": "content_validation_unresolved",
+            "Archive query status": "checked",
+            "Validation reason": "candidate_identity_not_confirmed",
+            "Nearest capture timestamp": "20170224234641.0",
+            "Nearest capture distance (days)": "19.0",
+            "Within 365-day headline window": "yes",
+            "Within sensitivity window": "yes",
+            "Candidate identity in capture": "no",
+            "Mayoral campaign in capture": "yes",
+            "City in capture": "yes",
+            "Domain reuse status": "no_additional_capture",
+            "Inclusion reason": "candidate_domain_lead_full_review"
+          }
+        },
+        {
+          "label": "Collection evidence text",
+          "format": "text",
+          "content": "Draiman, Yehuda (Yj) (2017-03-07) | Draiman, Yehuda (Yj) | Primary Election | Los Angeles Mayor | 2017"
+        }
+      ]
+    },
+    {
+      "id": "archiveit_claim_875f2658a1b71db4f91fd221",
+      "label": "yuval kremer (2017)",
+      "display": [
+        {
+          "label": "Candidate and contest",
+          "format": "badges",
+          "content": {
+            "Name": "yuval kremer",
+            "City": "los angeles",
+            "State": "CA",
+            "Election": "2017-03",
+            "Round": "primary",
+            "Collection": "5903",
+            "Candidate-year ID": "70175__2017"
+          }
+        },
+        {
+          "label": "URL and source evidence",
+          "format": "json",
+          "content": {
+            "Claimed exact URL": "https://www.facebook.com/pg/TwoCitiesTeam/",
+            "Raw URL": "https://www.facebook.com/pg/TwoCitiesTeam/",
+            "Site root": "https://www.facebook.com/",
+            "Original URL(s) mentioned in collection metadata": "",
+            "Collection metadata description": "Los Angeles Area Municipal Elections, March 7, 2017",
+            "Archive capture replay": "",
+            "Archive calendar": "https://wayback.archive-it.org/5903/*/https://www.facebook.com/pg/TwoCitiesTeam/",
+            "Collection record": "https://archive-it.org/collections/5903"
+          }
+        },
+        {
+          "label": "Archive validation",
+          "format": "json",
+          "content": {
+            "Machine-proposed grade (not an acceptance decision)": "C",
+            "Machine URL type": "excluded_social_lead",
+            "Temporal validation status": "no_collection_capture",
+            "Archive query status": "checked",
+            "Validation reason": "no_collection_capture",
+            "Nearest capture timestamp": "",
+            "Nearest capture distance (days)": "",
+            "Within 365-day headline window": "no",
+            "Within sensitivity window": "no",
+            "Candidate identity in capture": "no",
+            "Mayoral campaign in capture": "no",
+            "City in capture": "no",
+            "Domain reuse status": "not_inspected_no_capture",
+            "Inclusion reason": "candidate_domain_lead_full_review"
+          }
+        },
+        {
+          "label": "Collection evidence text",
+          "format": "text",
+          "content": "Kremer, Yuval (2017-03-07) [Facebook] | Kremer, Yuval | 2017 | Primary Election | Los Angeles Mayor | Facebook (Electronic resource)"
+        }
+      ]
+    },
+    {
+      "id": "archiveit_claim_ae86633701cf88915d1aa8c3",
+      "label": "philemon hill (2021)",
+      "display": [
+        {
+          "label": "Candidate and contest",
+          "format": "badges",
+          "content": {
+            "Name": "philemon hill",
+            "City": "birmingham",
+            "State": "AL",
+            "Election": "2021-08",
+            "Round": "",
+            "Collection": "16766",
+            "Candidate-year ID": "386__2021"
+          }
+        },
+        {
+          "label": "URL and source evidence",
+          "format": "json",
+          "content": {
+            "Claimed exact URL": "https://www.philemonhillformayor.com/",
+            "Raw URL": "https://www.philemonhillformayor.com/",
+            "Site root": "https://www.philemonhillformayor.com/",
+            "Original URL(s) mentioned in collection metadata": "",
+            "Collection metadata description": "E. Philemon Hill for Mayor: Action. Results. Good Trouble",
+            "Archive capture replay": "https://wayback.archive-it.org/16766/20210712153403id_/https://www.philemonhillformayor.com/",
+            "Archive calendar": "https://wayback.archive-it.org/16766/*/https://www.philemonhillformayor.com/",
+            "Collection record": "https://archive-it.org/collections/16766"
+          }
+        },
+        {
+          "label": "Archive validation",
+          "format": "json",
+          "content": {
+            "Machine-proposed grade (not an acceptance decision)": "C",
+            "Machine URL type": "candidate_owned_custom_domain",
+            "Temporal validation status": "content_validation_unresolved",
+            "Archive query status": "checked",
+            "Validation reason": "city_not_confirmed",
+            "Nearest capture timestamp": "20210712153403.0",
+            "Nearest capture distance (days)": "34.0",
+            "Within 365-day headline window": "yes",
+            "Within sensitivity window": "yes",
+            "Candidate identity in capture": "yes",
+            "Mayoral campaign in capture": "yes",
+            "City in capture": "no",
+            "Domain reuse status": "no_distinct_content_to_probe",
+            "Inclusion reason": "candidate_domain_lead_full_review"
+          }
+        },
+        {
+          "label": "Collection evidence text",
+          "format": "text",
+          "content": "Philemon Hill for Mayor | Philemon Hill | Hill, E. Philemon | Mayors -- Election -- Alabama -- Birmingham -- 21st century | Birmingham (Ala.) -- Politics and government -- 21st century | Mayors -- Alabama -- Birmingham | Birmingham (Ala.) Mayor"
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "id": "identity_match",
+      "label": "Does the evidence match the named candidate, mayoral office, and city?",
+      "type": "yesno",
+      "help": "Answer yes only when all three identity elements match."
+    },
+    {
+      "id": "temporal_match",
+      "label": "Does the evidence belong to this election cycle?",
+      "type": "yesno",
+      "help": "Apply the displayed election date and capture window; later candidacies do not qualify."
+    },
+    {
+      "id": "accept_url",
+      "label": "Accept this as a candidate campaign URL claim?",
+      "type": "yesno",
+      "help": "Grades A through C may be accepted as claims; only A and B are strict coverage."
+    },
+    {
+      "id": "url_type",
+      "label": "URL type for the accepted or reviewed URL",
+      "type": "select",
+      "options": [
+        "custom_domain",
+        "candidate_subdomain",
+        "shared_host_path",
+        "fundraising_profile",
+        "social_profile",
+        "officeholder_site",
+        "archive_container_or_wrapper",
+        "not_campaign_url"
+      ]
+    },
+    {
+      "id": "evidence_grade",
+      "label": "Final evidence grade",
+      "type": "select",
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "reject"
+      ]
+    },
+    {
+      "id": "corrected_url",
+      "label": "Corrected or recovered original campaign URL",
+      "type": "text",
+      "show_if": {
+        "question": "accept_url",
+        "equals": "yes"
+      }
+    }
+  ]
+}

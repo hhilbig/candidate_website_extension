@@ -1,0 +1,248 @@
+[
+ {
+  "city_id": "0427400",
+  "year": 2010,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.gilbertaz.gov/home/showpublisheddocument/54694/639215390208800000",
+  "additional_source_urls": [
+   "https://www.gilbertaz.gov/departments/clerk-s-office/elections",
+   "https://www.gilbertaz.gov/departments/clerk-s-office/primary-elections",
+   "https://www.gilbertaz.gov/departments/clerk-s-office/general-elections",
+   "https://elections.maricopa.gov/results-and-data/historic-results.html?year=2010"
+  ],
+  "note": "The town clerk's register 'Town of Gilbert Voter History- 1981 to present' (https://www.gilbertaz.gov/home/showpublisheddocument/54694/639215390208800000, sha256 5b139026fe48403e3fab1bc5068a8695db6cffc4392fb7b9adfd0e2aaadfc4d4) lists every Gilbert election with its date, type, ballot issues and result. The register lists one Gilbert election this year, the May 18 special election on Proposition 406, a sales-tax question. It carried no candidate contest, so there was no mayoral election."
+ },
+ {
+  "city_id": "0427400",
+  "year": 2011,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.gilbertaz.gov/home/showpublisheddocument/54694/639215390208800000",
+  "additional_source_urls": [
+   "https://www.gilbertaz.gov/departments/clerk-s-office/elections",
+   "https://www.gilbertaz.gov/departments/clerk-s-office/primary-elections",
+   "https://www.gilbertaz.gov/departments/clerk-s-office/general-elections",
+   "https://elections.maricopa.gov/results-and-data/historic-results.html?year=2011"
+  ],
+  "note": "The town clerk's register 'Town of Gilbert Voter History- 1981 to present' (https://www.gilbertaz.gov/home/showpublisheddocument/54694/639215390208800000, sha256 5b139026fe48403e3fab1bc5068a8695db6cffc4392fb7b9adfd0e2aaadfc4d4) lists every Gilbert election with its date, type, ballot issues and result. The register lists a March 8 primary and a May 17 general, both for council seats and Proposition 428. Neither carried a mayoral contest."
+ },
+ {
+  "city_id": "0427400",
+  "year": 2012,
+  "status": "complete",
+  "expected_election_dates": [
+   "2012-08-28"
+  ],
+  "source_url": "https://www.gilbertaz.gov/home/showpublisheddocument/54694/639215390208800000",
+  "additional_source_urls": [
+   "https://www.gilbertaz.gov/departments/clerk-s-office/elections",
+   "https://www.gilbertaz.gov/departments/clerk-s-office/primary-elections",
+   "https://www.gilbertaz.gov/departments/clerk-s-office/general-elections",
+   "https://elections.maricopa.gov/results-and-data/historic-results.html?year=2012"
+  ],
+  "note": "The town clerk's register 'Town of Gilbert Voter History- 1981 to present' (https://www.gilbertaz.gov/home/showpublisheddocument/54694/639215390208800000, sha256 5b139026fe48403e3fab1bc5068a8695db6cffc4392fb7b9adfd0e2aaadfc4d4) lists every Gilbert election with its date, type, ballot issues and result. The register records an August 28 primary with 'Mayor - 2 candidates; Berman, Lewis' and the result 'John Lewis elected Mayor'. The November 6 general carried council only."
+ },
+ {
+  "city_id": "0427400",
+  "year": 2013,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.gilbertaz.gov/home/showpublisheddocument/54694/639215390208800000",
+  "additional_source_urls": [
+   "https://www.gilbertaz.gov/departments/clerk-s-office/elections",
+   "https://www.gilbertaz.gov/departments/clerk-s-office/primary-elections",
+   "https://www.gilbertaz.gov/departments/clerk-s-office/general-elections",
+   "https://elections.maricopa.gov/results-and-data/historic-results.html?year=2013"
+  ],
+  "note": "The town clerk's register 'Town of Gilbert Voter History- 1981 to present' (https://www.gilbertaz.gov/home/showpublisheddocument/54694/639215390208800000, sha256 5b139026fe48403e3fab1bc5068a8695db6cffc4392fb7b9adfd0e2aaadfc4d4) lists every Gilbert election with its date, type, ballot issues and result. The register lists no Gilbert election this year."
+ },
+ {
+  "city_id": "0427400",
+  "year": 2014,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.gilbertaz.gov/home/showpublisheddocument/54694/639215390208800000",
+  "additional_source_urls": [
+   "https://www.gilbertaz.gov/departments/clerk-s-office/elections",
+   "https://www.gilbertaz.gov/departments/clerk-s-office/primary-elections",
+   "https://www.gilbertaz.gov/departments/clerk-s-office/general-elections",
+   "https://elections.maricopa.gov/results-and-data/historic-results.html?year=2014"
+  ],
+  "note": "The town clerk's register 'Town of Gilbert Voter History- 1981 to present' (https://www.gilbertaz.gov/home/showpublisheddocument/54694/639215390208800000, sha256 5b139026fe48403e3fab1bc5068a8695db6cffc4392fb7b9adfd0e2aaadfc4d4) lists every Gilbert election with its date, type, ballot issues and result. The register lists an August 26 primary for four council positions and records the November 4 general as 'No Election - all positions filled at Primary'. Neither carried a mayoral contest."
+ },
+ {
+  "city_id": "0427400",
+  "year": 2015,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.gilbertaz.gov/home/showpublisheddocument/54694/639215390208800000",
+  "additional_source_urls": [
+   "https://www.gilbertaz.gov/departments/clerk-s-office/elections",
+   "https://www.gilbertaz.gov/departments/clerk-s-office/primary-elections",
+   "https://www.gilbertaz.gov/departments/clerk-s-office/general-elections",
+   "https://elections.maricopa.gov/results-and-data/historic-results.html?year=2015"
+  ],
+  "note": "The town clerk's register 'Town of Gilbert Voter History- 1981 to present' (https://www.gilbertaz.gov/home/showpublisheddocument/54694/639215390208800000, sha256 5b139026fe48403e3fab1bc5068a8695db6cffc4392fb7b9adfd0e2aaadfc4d4) lists every Gilbert election with its date, type, ballot issues and result. The register lists no Gilbert election this year."
+ },
+ {
+  "city_id": "0427400",
+  "year": 2016,
+  "status": "complete",
+  "expected_election_dates": [
+   "2016-08-30"
+  ],
+  "source_url": "https://www.gilbertaz.gov/home/showpublisheddocument/54694/639215390208800000",
+  "additional_source_urls": [
+   "https://www.gilbertaz.gov/departments/clerk-s-office/elections",
+   "https://www.gilbertaz.gov/departments/clerk-s-office/primary-elections",
+   "https://www.gilbertaz.gov/departments/clerk-s-office/general-elections",
+   "https://elections.maricopa.gov/results-and-data/historic-results.html?year=2016"
+  ],
+  "note": "The town clerk's register 'Town of Gilbert Voter History- 1981 to present' (https://www.gilbertaz.gov/home/showpublisheddocument/54694/639215390208800000, sha256 5b139026fe48403e3fab1bc5068a8695db6cffc4392fb7b9adfd0e2aaadfc4d4) lists every Gilbert election with its date, type, ballot issues and result. The register records an August 30 primary with 'Mayor - 1 candidate: Daniels' and the result 'J. Daniels elected Mayor'. The November 8 general carried council only."
+ },
+ {
+  "city_id": "0427400",
+  "year": 2017,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.gilbertaz.gov/home/showpublisheddocument/54694/639215390208800000",
+  "additional_source_urls": [
+   "https://www.gilbertaz.gov/departments/clerk-s-office/elections",
+   "https://www.gilbertaz.gov/departments/clerk-s-office/primary-elections",
+   "https://www.gilbertaz.gov/departments/clerk-s-office/general-elections",
+   "https://elections.maricopa.gov/results-and-data/historic-results.html?year=2017"
+  ],
+  "note": "The town clerk's register 'Town of Gilbert Voter History- 1981 to present' (https://www.gilbertaz.gov/home/showpublisheddocument/54694/639215390208800000, sha256 5b139026fe48403e3fab1bc5068a8695db6cffc4392fb7b9adfd0e2aaadfc4d4) lists every Gilbert election with its date, type, ballot issues and result. The register lists no Gilbert election this year."
+ },
+ {
+  "city_id": "0427400",
+  "year": 2018,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.gilbertaz.gov/home/showpublisheddocument/54694/639215390208800000",
+  "additional_source_urls": [
+   "https://www.gilbertaz.gov/departments/clerk-s-office/elections",
+   "https://www.gilbertaz.gov/departments/clerk-s-office/primary-elections",
+   "https://www.gilbertaz.gov/departments/clerk-s-office/general-elections",
+   "https://elections.maricopa.gov/results-and-data/historic-results.html?year=2018"
+  ],
+  "note": "The town clerk's register 'Town of Gilbert Voter History- 1981 to present' (https://www.gilbertaz.gov/home/showpublisheddocument/54694/639215390208800000, sha256 5b139026fe48403e3fab1bc5068a8695db6cffc4392fb7b9adfd0e2aaadfc4d4) lists every Gilbert election with its date, type, ballot issues and result. The register lists an August 28 primary for four council positions with a property-sale question, and a November 6 general on a public-safety bond. Neither carried a mayoral contest."
+ },
+ {
+  "city_id": "0427400",
+  "year": 2019,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.gilbertaz.gov/home/showpublisheddocument/54694/639215390208800000",
+  "additional_source_urls": [
+   "https://www.gilbertaz.gov/departments/clerk-s-office/elections",
+   "https://www.gilbertaz.gov/departments/clerk-s-office/primary-elections",
+   "https://www.gilbertaz.gov/departments/clerk-s-office/general-elections",
+   "https://elections.maricopa.gov/results-and-data/historic-results.html?year=2019"
+  ],
+  "note": "The town clerk's register 'Town of Gilbert Voter History- 1981 to present' (https://www.gilbertaz.gov/home/showpublisheddocument/54694/639215390208800000, sha256 5b139026fe48403e3fab1bc5068a8695db6cffc4392fb7b9adfd0e2aaadfc4d4) lists every Gilbert election with its date, type, ballot issues and result. The register lists no Gilbert election this year."
+ },
+ {
+  "city_id": "0427400",
+  "year": 2020,
+  "status": "complete",
+  "expected_election_dates": [
+   "2020-11-03"
+  ],
+  "source_url": "https://www.gilbertaz.gov/home/showpublisheddocument/54694/639215390208800000",
+  "additional_source_urls": [
+   "https://www.gilbertaz.gov/departments/clerk-s-office/elections",
+   "https://www.gilbertaz.gov/departments/clerk-s-office/primary-elections",
+   "https://www.gilbertaz.gov/departments/clerk-s-office/general-elections",
+   "https://elections.maricopa.gov/results-and-data/historic-results.html?year=2020"
+  ],
+  "note": "The town clerk's register 'Town of Gilbert Voter History- 1981 to present' (https://www.gilbertaz.gov/home/showpublisheddocument/54694/639215390208800000, sha256 5b139026fe48403e3fab1bc5068a8695db6cffc4392fb7b9adfd0e2aaadfc4d4) lists every Gilbert election with its date, type, ballot issues and result. The register records an August 4 primary with 'Mayor- 4 candidates, plus council' and a November 3 general with 'Mayor- Nielsen and Peterson' and the result 'B. Peterson elected'. No candidate won a majority at the primary, so the general is the decisive stage."
+ },
+ {
+  "city_id": "0427400",
+  "year": 2021,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.gilbertaz.gov/home/showpublisheddocument/54694/639215390208800000",
+  "additional_source_urls": [
+   "https://www.gilbertaz.gov/departments/clerk-s-office/elections",
+   "https://www.gilbertaz.gov/departments/clerk-s-office/primary-elections",
+   "https://www.gilbertaz.gov/departments/clerk-s-office/general-elections",
+   "https://elections.maricopa.gov/results-and-data/historic-results.html?year=2021"
+  ],
+  "note": "The town clerk's register 'Town of Gilbert Voter History- 1981 to present' (https://www.gilbertaz.gov/home/showpublisheddocument/54694/639215390208800000, sha256 5b139026fe48403e3fab1bc5068a8695db6cffc4392fb7b9adfd0e2aaadfc4d4) lists every Gilbert election with its date, type, ballot issues and result. The register lists one election, the November 2 general or special on a bond question and Proposition 426. It carried no candidate contest."
+ },
+ {
+  "city_id": "0427400",
+  "year": 2022,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.gilbertaz.gov/home/showpublisheddocument/54694/639215390208800000",
+  "additional_source_urls": [
+   "https://www.gilbertaz.gov/departments/clerk-s-office/elections",
+   "https://www.gilbertaz.gov/departments/clerk-s-office/primary-elections",
+   "https://www.gilbertaz.gov/departments/clerk-s-office/general-elections",
+   "https://elections.maricopa.gov/results-and-data/historic-results.html?year=2022"
+  ],
+  "note": "The town clerk's register 'Town of Gilbert Voter History- 1981 to present' (https://www.gilbertaz.gov/home/showpublisheddocument/54694/639215390208800000, sha256 5b139026fe48403e3fab1bc5068a8695db6cffc4392fb7b9adfd0e2aaadfc4d4) lists every Gilbert election with its date, type, ballot issues and result. The register lists an August 2 primary for four council positions and a November 8 general for one council position. Neither carried a mayoral contest."
+ },
+ {
+  "city_id": "0427400",
+  "year": 2023,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.gilbertaz.gov/home/showpublisheddocument/54694/639215390208800000",
+  "additional_source_urls": [
+   "https://www.gilbertaz.gov/departments/clerk-s-office/elections",
+   "https://www.gilbertaz.gov/departments/clerk-s-office/primary-elections",
+   "https://www.gilbertaz.gov/departments/clerk-s-office/general-elections",
+   "https://elections.maricopa.gov/results-and-data/historic-results.html?year=2023"
+  ],
+  "note": "The town clerk's register 'Town of Gilbert Voter History- 1981 to present' (https://www.gilbertaz.gov/home/showpublisheddocument/54694/639215390208800000, sha256 5b139026fe48403e3fab1bc5068a8695db6cffc4392fb7b9adfd0e2aaadfc4d4) lists every Gilbert election with its date, type, ballot issues and result. The register lists no Gilbert election this year."
+ },
+ {
+  "city_id": "0427400",
+  "year": 2024,
+  "status": "complete",
+  "expected_election_dates": [
+   "2024-07-30"
+  ],
+  "source_url": "https://www.gilbertaz.gov/home/showpublisheddocument/54694/639215390208800000",
+  "additional_source_urls": [
+   "https://www.gilbertaz.gov/departments/clerk-s-office/elections",
+   "https://www.gilbertaz.gov/departments/clerk-s-office/primary-elections",
+   "https://www.gilbertaz.gov/departments/clerk-s-office/general-elections",
+   "https://elections.maricopa.gov/results-and-data/historic-results.html?year=2024"
+  ],
+  "note": "The town clerk's register 'Town of Gilbert Voter History- 1981 to present' (https://www.gilbertaz.gov/home/showpublisheddocument/54694/639215390208800000, sha256 5b139026fe48403e3fab1bc5068a8695db6cffc4392fb7b9adfd0e2aaadfc4d4) lists every Gilbert election with its date, type, ballot issues and result. The register records a July 30 primary with 'Mayor- 2 candidates: S. Anderson, N. DiBernardo' and the result 'S. Anderson elected Mayor'. The November 5 general carried one council seat and two propositions."
+ },
+ {
+  "city_id": "0427400",
+  "year": 2025,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.gilbertaz.gov/home/showpublisheddocument/54694/639215390208800000",
+  "additional_source_urls": [
+   "https://www.gilbertaz.gov/departments/clerk-s-office/elections",
+   "https://www.gilbertaz.gov/departments/clerk-s-office/primary-elections",
+   "https://www.gilbertaz.gov/departments/clerk-s-office/general-elections",
+   "https://elections.maricopa.gov/results-and-data/historic-results.html?year=2025"
+  ],
+  "note": "The town clerk's register 'Town of Gilbert Voter History- 1981 to present' (https://www.gilbertaz.gov/home/showpublisheddocument/54694/639215390208800000, sha256 5b139026fe48403e3fab1bc5068a8695db6cffc4392fb7b9adfd0e2aaadfc4d4) lists every Gilbert election with its date, type, ballot issues and result. The register lists no Gilbert election this year."
+ },
+ {
+  "city_id": "0427400",
+  "year": 2026,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.gilbertaz.gov/home/showpublisheddocument/54694/639215390208800000",
+  "additional_source_urls": [
+   "https://www.gilbertaz.gov/departments/clerk-s-office/elections",
+   "https://www.gilbertaz.gov/departments/clerk-s-office/primary-elections",
+   "https://www.gilbertaz.gov/departments/clerk-s-office/general-elections",
+   "https://elections.maricopa.gov/results-and-data/historic-results.html?year=2026"
+  ],
+  "note": "The town clerk's register 'Town of Gilbert Voter History- 1981 to present' (https://www.gilbertaz.gov/home/showpublisheddocument/54694/639215390208800000, sha256 5b139026fe48403e3fab1bc5068a8695db6cffc4392fb7b9adfd0e2aaadfc4d4) lists every Gilbert election with its date, type, ballot issues and result. The register lists the July 21 primary for four council positions and states that four councilmembers were elected. The town's General Elections page states that there is no runoff for council candidates on the November 2026 ballot. No mayoral contest appears in either source."
+ }
+]

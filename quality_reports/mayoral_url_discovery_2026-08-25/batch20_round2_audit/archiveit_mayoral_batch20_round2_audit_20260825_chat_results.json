@@ -1,0 +1,24 @@
+{
+  "task_id": "archiveit_mayoral_batch20_round2_audit_20260825",
+  "title": "Archive-It round-2 batch audit",
+  "format": "handcode-results-v1",
+  "exported_at": "2026-08-25T14:30:00Z",
+  "review_mode": "in_chat_explicit_approval",
+  "approval_text": "approved",
+  "n_items": 1,
+  "n_complete": 1,
+  "responses": [
+    {
+      "item_id": "archiveit_claim_a82c32765aa96fdf80720bea",
+      "status": "complete",
+      "answers": {
+        "identity_match": "yes",
+        "temporal_match": "yes",
+        "accept_url": "yes",
+        "url_type": "custom_domain",
+        "evidence_grade": "A",
+        "notes": "Hanno explicitly approved the in-chat recommendation. The 2016-10-07 capture names Sharon Weston Broome, identifies the site as Mayor President 2016 and Sharon for Mayor-President, and names Baton Rouge."
+      }
+    }
+  ]
+}

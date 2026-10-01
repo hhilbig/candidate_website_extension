@@ -1,0 +1,28 @@
+{
+  "input": "quality_reports/mayoral_ai_review_2026-09-14/validation.csv",
+  "input_sha256": "3147c7d85e4c3dfc46bc0486a00f256863de31435d52193f2f4c66813d431abc",
+  "script_sha256": "501fa2a50e20728e88e3e892683151e3877a9459163fde3f9a24c09dca617641",
+  "input_rows": 120,
+  "unresolved_rows": 47,
+  "status_counts": {
+    "outside_headline_and_sensitivity_windows": 7,
+    "no_archive_capture": 28,
+    "content_validation_unresolved": 11,
+    "outside_headline_365_within_sensitivity": 1
+  },
+  "action_counts": {
+    "seek_period_specific_evidence_preserve_out_of_period_capture": 7,
+    "inventory_needed_availability_negative_is_not_archive_absence": 28,
+    "inspect_saved_primary_and_supplemental_content": 11,
+    "retain_sensitivity_only_evidence_seek_headline_period": 1
+  },
+  "saved_main_response_records": 19,
+  "supplemental_response_records": 4,
+  "limitations": [
+    "This table routes existing findings and does not establish new website ownership.",
+    "Availability-negative results do not prove archive absence.",
+    "Recorded file paths and hashes require actual byte verification before reuse."
+  ],
+  "original_rows_changed": 0,
+  "new_archive_requests": 0
+}

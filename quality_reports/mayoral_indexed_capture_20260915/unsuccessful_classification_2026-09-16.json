@@ -1,0 +1,132 @@
+{
+ "version": "mayoral_indexed_capture_20260915_unsuccessful_classification_v1",
+ "classified_on": "2026-09-16",
+ "batch": "indexed_capture_20260915",
+ "queue_sha256": "4eeaafc8681c0664673b1eab239053aacff8c67eb8b39d788289665991d12418",
+ "network_requests_made": 0,
+ "source": "run/audit.json on the droplet, read only",
+ "batch_outcome": {
+  "queue_rows": 214,
+  "fetched": 205,
+  "unsuccessful": 9,
+  "verification_valid": true,
+  "terminal_verification": true,
+  "errors": 0
+ },
+ "acquisition_complete_explanation": "The verifier sets acquisition_complete only when every queue row reports fetched. Nine rows did not, so the flag is false. It is a strict all-fetched indicator and not an error: the batch is valid, terminal, and drained, with stop_reason queue_exhausted.",
+ "counts_by_classification": {
+  "inaccessible": 5,
+  "unresolved": 4
+ },
+ "retry_recommendation": "Do not retry either class in a new queue. The five inaccessible rows return a deterministic HTTP 403 from the archive. The four unresolved rows were answered with a neighbouring capture, so the requested key is not retrievable; re-requesting the served capture would be a different target and needs its own approved queue entry.",
+ "records": [
+  {
+   "key": "2a84010ea1d2340cd7c43434b549fc3c32c2657a87f18d8bd2a3f6471e506b49",
+   "runner_status": "capture_mismatch",
+   "http_status": 200,
+   "classification": "unresolved",
+   "requested_original_url": "http://www.janekim.org/",
+   "effective_original_url": "https://www.janekim.org/",
+   "requested_timestamp": "20180324043240",
+   "effective_timestamp": "20180329065843",
+   "attempts": 1,
+   "reason": "The archive served a different capture than the requested key: timestamp 20180324043240 was requested and 20180329065843 was served; URL http://www.janekim.org/ was requested and https://www.janekim.org/ was served. The requested capture is not retrievable at its exact key."
+  },
+  {
+   "key": "309f27b7eda36a2dc53ec7b89a40f3c015163d7ecac6036747092f9c487b7ffe",
+   "runner_status": "terminal_http",
+   "http_status": 403,
+   "classification": "inaccessible",
+   "requested_original_url": "http://www.sylvesterturner.com/",
+   "effective_original_url": "http://www.sylvesterturner.com/",
+   "requested_timestamp": "20160428221414",
+   "effective_timestamp": "20160428221414",
+   "attempts": 1,
+   "reason": "The archive returned HTTP 403 for this replay. The capture exists in the index but the archive refuses to serve it. The response is deterministic, so a retry cannot change it."
+  },
+  {
+   "key": "3fbd737fcaacf8e2715999953e36492d18e91d36b0d492fa4a34b02d0bb964a4",
+   "runner_status": "terminal_http",
+   "http_status": 403,
+   "classification": "inaccessible",
+   "requested_original_url": "http://sylvesterturner.com/",
+   "effective_original_url": "http://www.sylvesterturner.com/",
+   "requested_timestamp": "20151222082617",
+   "effective_timestamp": "20151222082621",
+   "attempts": 1,
+   "reason": "The archive returned HTTP 403 for this replay. The capture exists in the index but the archive refuses to serve it. The response is deterministic, so a retry cannot change it."
+  },
+  {
+   "key": "7fd07c1a2a00da4c11fab58bfcd8b2ed6d822b8857dcdb8363078e1327c017d7",
+   "runner_status": "capture_mismatch",
+   "http_status": 200,
+   "classification": "unresolved",
+   "requested_original_url": "https://janekim.org",
+   "effective_original_url": "https://janekim.org/",
+   "requested_timestamp": "20171221074100",
+   "effective_timestamp": "20171221074100",
+   "attempts": 1,
+   "reason": "The archive served a different capture than the requested key: URL https://janekim.org was requested and https://janekim.org/ was served. The requested capture is not retrievable at its exact key."
+  },
+  {
+   "key": "8b2086371f6258f8a5b0086f7468d5209c95244755d60549a44405dc49a60fe0",
+   "runner_status": "capture_mismatch",
+   "http_status": 200,
+   "classification": "unresolved",
+   "requested_original_url": "http://www.janekim.org/",
+   "effective_original_url": "https://www.janekim.org/",
+   "requested_timestamp": "20180830211403",
+   "effective_timestamp": "20180729031628",
+   "attempts": 1,
+   "reason": "The archive served a different capture than the requested key: timestamp 20180830211403 was requested and 20180729031628 was served; URL http://www.janekim.org/ was requested and https://www.janekim.org/ was served. The requested capture is not retrievable at its exact key."
+  },
+  {
+   "key": "a20eaacea858dd668dc8af2407fbf3408fbd593b6900467fd666ef95c2c19301",
+   "runner_status": "capture_mismatch",
+   "http_status": 200,
+   "classification": "unresolved",
+   "requested_original_url": "http://carolinesimmons.org/",
+   "effective_original_url": "https://www.carolinesimmons.org/",
+   "requested_timestamp": "20211128225137",
+   "effective_timestamp": "20211129181502",
+   "attempts": 1,
+   "reason": "The archive served a different capture than the requested key: timestamp 20211128225137 was requested and 20211129181502 was served; URL http://carolinesimmons.org/ was requested and https://www.carolinesimmons.org/ was served. The requested capture is not retrievable at its exact key."
+  },
+  {
+   "key": "a56aa1450071e9956e1b6e43a673ad187146e8153621e3d19974639dbe84079f",
+   "runner_status": "terminal_http",
+   "http_status": 403,
+   "classification": "inaccessible",
+   "requested_original_url": "http://sylvesterturner.com/",
+   "effective_original_url": "http://www.sylvesterturner.com/",
+   "requested_timestamp": "20160206091605",
+   "effective_timestamp": "20160206091609",
+   "attempts": 1,
+   "reason": "The archive returned HTTP 403 for this replay. The capture exists in the index but the archive refuses to serve it. The response is deterministic, so a retry cannot change it."
+  },
+  {
+   "key": "dce4c44c78f551948d6ae7e5246286ccbffd665fd2273f7146f418bd7ec7acd6",
+   "runner_status": "terminal_http",
+   "http_status": 403,
+   "classification": "inaccessible",
+   "requested_original_url": "http://www.sylvesterturner.com/",
+   "effective_original_url": "http://www.sylvesterturner.com/",
+   "requested_timestamp": "20160312003712",
+   "effective_timestamp": "20160312003712",
+   "attempts": 1,
+   "reason": "The archive returned HTTP 403 for this replay. The capture exists in the index but the archive refuses to serve it. The response is deterministic, so a retry cannot change it."
+  },
+  {
+   "key": "e9246c98bfa849a3e12d3a6b459de35995c9ab63af683708d59233af7406830f",
+   "runner_status": "terminal_http",
+   "http_status": 403,
+   "classification": "inaccessible",
+   "requested_original_url": "http://sylvesterturner.com/",
+   "effective_original_url": "http://www.sylvesterturner.com/",
+   "requested_timestamp": "20160327074912",
+   "effective_timestamp": "20160327074916",
+   "attempts": 1,
+   "reason": "The archive returned HTTP 403 for this replay. The capture exists in the index but the archive refuses to serve it. The response is deterministic, so a retry cannot change it."
+  }
+ ]
+}

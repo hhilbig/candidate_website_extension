@@ -1,0 +1,20 @@
+{
+  "date": "2026-09-14",
+  "authorization": "User approved the 259-capture batch with a 128 MiB decoded-response ceiling and raw files retained on the droplet.",
+  "queue_sha256": "8956c6a5f36b32e5e5a2fb9089b8893ab6a12fb425844887ce5bcc76085213c8",
+  "queue_rows": 259,
+  "unique_candidate_timestamp_original_url_keys": 259,
+  "remote_fetch_ledgers_checked": 15,
+  "existing_attempt_matches": 0,
+  "scan_roots": [
+    "/root/candidate_website_extension/data/municipal_archive_acquisition",
+    "/mnt/mayoral_wayback_full_snapshots"
+  ],
+  "scan_files": ["fetch_attempts.csv", "fetch_attempts.journal.csv"],
+  "scan_key": ["candidate_year_id", "timestamp", "original_url"],
+  "limitation": "This checks recorded attempts in the named ledger formats, not arbitrary orphan files without provenance.",
+  "volume_free_display": "20 GiB",
+  "root_free_display": "3.2 GiB",
+  "mayoral_scraper_processes_observed": 0,
+  "launch_state": "Awaiting bounded-runner tests and live smoke; no archive requests yet."
+}

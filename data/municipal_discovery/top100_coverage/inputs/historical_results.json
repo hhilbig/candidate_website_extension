@@ -1,0 +1,121 @@
+[
+  {
+    "city_name": "Los Angeles", "state_abb": "CA", "roster_place_fips": "644000",
+    "election_date": "2013-05-21", "election_type": "regular", "stage": "runoff",
+    "verification_status": "verified_decisive", "source_url": "https://cityclerk.lacity.org/onlinedocs/2013/13-1100_rpt_clk_06-10-13.pdf",
+    "source_locator": "Certified results, pages 4 and 7", "verification_note": "Certified mayoral returns and declaration of election; the mayoral contest is regular despite other special contests on the same ballot.",
+    "candidates": [{"name": "Eric Garcetti", "role": "winner", "votes": 222300, "candidate_year_id": "69968__2013"}, {"name": "Wendy J. Greuel", "role": "runner_up", "votes": 187609, "candidate_year_id": "70132__2013"}]
+  },
+  {
+    "city_name": "Chicago", "state_abb": "IL", "roster_place_fips": "1714000",
+    "election_date": "2019-04-02", "election_type": "regular", "stage": "runoff",
+    "verification_status": "verified_decisive", "source_url": "https://cboeprod.blob.core.usgovcloudapi.net/prod/2023-12/Proc-2019-04-02.pdf",
+    "source_locator": "Official summary page 4; certification page 6", "verification_note": "Election board proclamation certifies the municipal runoff results.",
+    "candidates": [{"name": "Lori Lightfoot", "role": "winner", "votes": 386039, "candidate_year_id": "9984__2019"}, {"name": "Toni Preckwinkle", "role": "runner_up", "votes": 137765, "candidate_year_id": "9923__2019"}]
+  },
+  {
+    "city_name": "Boston", "state_abb": "MA", "roster_place_fips": "2507000",
+    "election_date": "2013-11-05", "election_type": "regular", "stage": "general",
+    "verification_status": "verified_decisive", "source_url": "https://documents.boston.gov/images_documents/2013%20-%2011-05-13%20-%20Mayor%20Ward%20%26%20Precinct%20Results%20%281%29_tcm3-41970.pdf",
+    "source_locator": "Citywide mayor totals, page 1", "verification_note": "Official municipal election results. The source uses Marty J Walsh; the existing roster uses Martin Walsh. Both vote totals agree.",
+    "candidates": [{"name": "Marty J Walsh", "role": "winner", "votes": 72583, "candidate_year_id": "18852__2013"}, {"name": "John R Connolly", "role": "runner_up", "votes": 67694, "candidate_year_id": "18737__2013"}]
+  },
+  {
+    "city_name": "Boston", "state_abb": "MA", "roster_place_fips": "2507000",
+    "election_date": "2017-11-07", "election_type": "regular", "stage": "general",
+    "verification_status": "verified_decisive", "source_url": "https://www.boston.gov/sites/default/files/embed/2/2017_-_11-07-17_-_mayor_ward_precinct_results.pdf",
+    "source_locator": "Citywide mayor totals, page 1", "verification_note": "Official municipal election results; both candidate vote totals agree with the existing roster.",
+    "candidates": [{"name": "Martin J Walsh", "role": "winner", "votes": 70197, "candidate_year_id": "18852__2017"}, {"name": "Tito Jackson", "role": "runner_up", "votes": 36472, "candidate_year_id": "18828__2017"}]
+  },
+  {
+    "city_name": "Boston", "state_abb": "MA", "roster_place_fips": "2507000",
+    "election_date": "2021-11-02", "election_type": "regular", "stage": "general",
+    "verification_status": "verified_decisive", "source_url": "https://www.boston.gov/sites/default/files/file/2021/11/2021-11-02-21-Mayor.pdf",
+    "source_locator": "Citywide mayor totals, page 1", "verification_note": "Official municipal election results; both candidate vote totals agree with the existing roster.",
+    "candidates": [{"name": "Michelle Wu", "role": "winner", "votes": 91794, "candidate_year_id": "18792__2021"}, {"name": "Annissa Essaibi George", "role": "runner_up", "votes": 51125, "candidate_year_id": "18671__2021"}]
+  },
+  {
+    "city_name": "Baltimore", "state_abb": "MD", "roster_place_fips": "2404000",
+    "election_date": "2016-11-08", "election_type": "regular", "stage": "general",
+    "verification_status": "verified_decisive", "source_url": "https://msa.maryland.gov/msa/mdmanual/36loc/bcity/elect/general/bcit2016.html",
+    "source_locator": "Mayor, general election returns", "verification_note": "Maryland State Archives reproduces official returns. Runner-up Sheila Dixon is a named write-in candidate, not the Republican nominee. Both vote totals agree with the roster.",
+    "candidates": [{"name": "Catherine E. Pugh", "role": "winner", "votes": 134848, "candidate_year_id": "18164__2016"}, {"name": "Sheila Dixon", "role": "runner_up", "votes": 51716, "candidate_year_id": "18145__2016", "write_in": true}]
+  },
+  {
+    "city_name": "Baltimore", "state_abb": "MD", "roster_place_fips": "2404000",
+    "election_date": "2020-11-03", "election_type": "regular", "stage": "general",
+    "verification_status": "verified_decisive", "source_url": "https://boe.baltimorecity.gov/sites/default/files/2020-11-30%20%201027%20-%2003PG20%20EL45%20Election%20Summary%20Official%20Report_0.pdf",
+    "source_locator": "Official results, mayor, page 1", "verification_note": "Official election board summary dated November 25, 2020. Both candidate vote totals agree with the roster.",
+    "candidates": [{"name": "Brandon M. Scott", "role": "winner", "votes": 164661, "candidate_year_id": "18055__2020"}, {"name": "Bob Wallace", "role": "runner_up", "votes": 47275, "candidate_year_id": "18162__2020"}]
+  },
+  {
+    "city_name": "San Francisco", "state_abb": "CA", "roster_place_fips": "667000",
+    "election_date": "2018-06-05", "election_type": "special", "stage": "ranked_choice_final",
+    "verification_status": "verified_decisive", "source_url": "https://www.sfelections.org/results/20180605/data/20180627/CertificationLetterJun2018.pdf",
+    "source_locator": "Section C, local offices, mayor, final round 8", "verification_note": "Certified final-round totals identify the two remaining candidates. These are not first-choice totals. Exact totals agree with the roster. Special-election status is documented by the Ethics Commission.",
+    "additional_source_urls": ["https://sfethics.org/ethics/2017/12/ethics-commission-information-about-the-june-5-2018-mayoral-election.html"],
+    "candidates": [{"name": "London Breed", "role": "winner", "votes": 115977, "candidate_year_id": "74023__2018"}, {"name": "Mark Leno", "role": "runner_up", "votes": 113431, "candidate_year_id": "74053__2018"}]
+  }
+  ,{
+    "city_name": "San Francisco", "state_abb": "CA", "roster_place_fips": "667000",
+    "election_date": "2011-11-08", "election_type": "regular", "stage": "ranked_choice_final",
+    "verification_status": "verified_decisive", "source_url": "https://www.sfelections.org/results/20111108/data/RCV-Mayor.pdf",
+    "source_locator": "Page 48, final state, pass 12", "verification_note": "Official final state explicitly marks Ed Lee as WINNER and John Avalos as the sole other continuing candidate. Other candidates are marked eliminated.",
+    "candidates": [{"name": "Ed Lee", "role": "winner", "votes": 84457, "candidate_year_id": "74164__2011"}, {"name": "John Avalos", "role": "runner_up", "votes": 57160, "candidate_year_id": "73984__2011"}]
+  },
+  {
+    "city_name": "Seattle", "state_abb": "WA", "roster_place_fips": "5363000",
+    "election_date": "2013-11-05", "election_type": "regular", "stage": "general",
+    "verification_status": "verified_decisive", "source_url": "https://your.kingcounty.gov/elections/2013nov-general/results/final/results.pdf",
+    "source_locator": "Page 46, City of Seattle, Mayor", "verification_note": "Official final general-election returns for the two named mayoral finalists. City Archives separately identifies Ed Murray as elected.",
+    "additional_source_urls": ["https://seattle.gov/city-archives/seattle-facts/historical-election-results"],
+    "candidates": [{"name": "Ed Murray", "role": "winner", "votes": 106384, "candidate_year_id": "56254__2013"}, {"name": "Mike McGinn", "role": "runner_up", "votes": 97935, "candidate_year_id": "56259__2013"}]
+  },
+  {
+    "city_name": "Seattle", "state_abb": "WA", "roster_place_fips": "5363000",
+    "election_date": "2017-11-07", "election_type": "regular", "stage": "general",
+    "verification_status": "verified_decisive", "source_url": "https://aqua.kingcounty.gov/elections/2017/nov-general/results/results.pdf",
+    "source_locator": "Page 27, City of Seattle, Mayor", "verification_note": "Official final general-election returns for the two named mayoral finalists. The ballot covers both short and full terms in one contest. Durkan identity matches the city, year, name, and opponent despite a 20-vote roster discrepancy.",
+    "additional_source_urls": ["https://kingcounty.gov/-/media/depts/elections/elections/2017/11/sample-ballot.ashx"],
+    "roster_vote_conflict": true,
+    "candidates": [{"name": "Jenny Durkan", "role": "winner", "votes": 122442, "candidate_year_id": "56256__2017", "roster_votes": 122422, "roster_vote_conflict": true}, {"name": "Cary Moon", "role": "runner_up", "votes": 95251, "candidate_year_id": "56250__2017"}]
+  },
+  {
+    "city_name": "Seattle", "state_abb": "WA", "roster_place_fips": "5363000",
+    "election_date": "2021-11-02", "election_type": "regular", "stage": "general",
+    "verification_status": "verified_decisive", "source_url": "https://aqua.kingcounty.gov/elections/2021/nov-general/results.pdf",
+    "source_locator": "Page 30, City of Seattle, Mayor", "verification_note": "Official final general-election returns for the two named mayoral finalists; both vote totals agree with the roster.",
+    "candidates": [{"name": "Bruce Harrell", "role": "winner", "votes": 155294, "candidate_year_id": "56148__2021"}, {"name": "M. Lorena González", "role": "runner_up", "votes": 109132, "candidate_year_id": "56196__2021"}]
+  },
+  {
+    "city_name": "San Francisco", "state_abb": "CA", "roster_place_fips": "667000",
+    "election_date": "2015-11-03", "election_type": "regular", "stage": "ranked_choice_round_1_majority",
+    "verification_status": "unresolved_final_pair", "source_url": "https://sfelections.org/results/20151103/data/CertificationLetterNov2015.pdf",
+    "source_locator": "Mayor, Candidate's Final Round table", "verification_note": "The certification ends in Round 1 with more than two continuing candidates. It supplies no final pair. Do not derive a candidate ranking. Certified Round 1 counts differ from the raw first-choice summary and roster.",
+    "additional_source_urls": ["https://www.sfelections.org/results/20151103/"],
+    "candidates": [],
+    "reported_facts": {"certified_ed_lee_round_1_votes": 105771, "raw_ed_lee_first_choice_votes": 105298, "certified_francisco_herrera_round_1_votes": 28805, "raw_francisco_herrera_first_choice_votes": 28638}
+  },
+  {
+    "city_name": "Chicago", "state_abb": "IL", "roster_place_fips": "1714000",
+    "election_date": "2011-02-22", "election_type": "regular", "stage": "general",
+    "verification_status": "official_results_roles_unresolved", "source_url": "https://app.chicagoelections.gov/documents/proclamations/Proc-2011-02-22.pdf",
+    "source_locator": "PDF page 6, printed page 5, Mayor", "verification_note": "Official general-election proclamation inspected. Vote counts are available. This extraction does not assign a new candidate ranking or derive runner-up roles from counts.",
+    "candidates": [], "reported_facts": {"rahm_emanuel_votes": 326331, "gery_chico_votes": 141228}
+  },
+  {
+    "city_name": "Chicago", "state_abb": "IL", "roster_place_fips": "1714000",
+    "election_date": "2015-04-07", "election_type": "regular", "stage": "runoff",
+    "verification_status": "source_parse_unresolved", "source_url": "https://cboeprod.blob.core.usgovcloudapi.net/prod/2023-12/Proc-2015-04-07.pdf",
+    "source_locator": "Five-page official proclamation PDF", "verification_note": "PDF retrieved successfully. The text extraction was empty. Result transcription remains incomplete; no candidate role is assigned.",
+    "candidates": []
+  },
+  {
+    "city_name": "Los Angeles", "state_abb": "CA", "roster_place_fips": "644000",
+    "election_date": "2017-03-07", "election_type": "regular", "stage": "primary_nominating",
+    "verification_status": "official_results_roles_unresolved", "source_url": "https://cityclerk.lacity.org/onlinedocs/2017/17-1100_rpt_CLK_03-24-2017.pdf",
+    "source_locator": "Certified results, page 6, Mayor", "verification_note": "Certified municipal returns inspected. The source labels this a primary nominating election. Do not drop the contest solely because of this label. This extraction does not derive candidate roles from numeric ordering.",
+    "additional_source_urls": ["https://results.lavote.gov/text-results/3577"],
+    "candidates": [], "reported_facts": {"eric_garcetti_votes": 331310, "mitchell_jack_schwartz_votes": 33228}
+  }
+]

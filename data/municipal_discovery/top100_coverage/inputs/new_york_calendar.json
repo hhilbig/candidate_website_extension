@@ -1,0 +1,163 @@
+[
+  {
+    "city_id": "3651000",
+    "year": 2010,
+    "status": "no_election",
+    "expected_election_dates": [],
+    "source_url": "https://vote.nyc/page/election-results-summary-2010",
+    "note": "Official annual results index inspected across all listed election sections, including specials. No mayoral contest listed.",
+    "checked_date": "2026-09-14"
+  },
+  {
+    "city_id": "3651000",
+    "year": 2011,
+    "status": "no_election",
+    "expected_election_dates": [],
+    "source_url": "https://vote.nyc/page/election-results-summary-2011",
+    "note": "Official annual results index inspected across all listed election sections, including specials. No mayoral contest listed.",
+    "checked_date": "2026-09-14"
+  },
+  {
+    "city_id": "3651000",
+    "year": 2012,
+    "status": "no_election",
+    "expected_election_dates": [],
+    "source_url": "https://vote.nyc/page/election-results-summary-2012",
+    "note": "Official annual results index inspected across all listed election sections, including specials. No mayoral contest listed.",
+    "checked_date": "2026-09-14"
+  },
+  {
+    "city_id": "3651000",
+    "year": 2013,
+    "status": "complete",
+    "expected_election_dates": [
+      "2013-11-05"
+    ],
+    "source_url": "https://vote.nyc/page/election-results-summary-2013",
+    "note": "Official annual results index inspected across general, primary, and special-election sections. One decisive mayoral general election; primary contests excluded. No mayoral special election listed.",
+    "checked_date": "2026-09-14"
+  },
+  {
+    "city_id": "3651000",
+    "year": 2014,
+    "status": "no_election",
+    "expected_election_dates": [],
+    "source_url": "https://vote.nyc/page/election-results-summary-2014",
+    "note": "Official annual results index inspected across all listed election sections, including specials. No mayoral contest listed.",
+    "checked_date": "2026-09-14"
+  },
+  {
+    "city_id": "3651000",
+    "year": 2015,
+    "status": "no_election",
+    "expected_election_dates": [],
+    "source_url": "https://vote.nyc/page/election-results-summary-2015",
+    "note": "Official annual results index inspected across all listed election sections, including specials. No mayoral contest listed.",
+    "checked_date": "2026-09-14"
+  },
+  {
+    "city_id": "3651000",
+    "year": 2016,
+    "status": "no_election",
+    "expected_election_dates": [],
+    "source_url": "https://vote.nyc/page/election-results-summary-2016",
+    "note": "Official annual results index inspected across all listed election sections, including specials. No mayoral contest listed.",
+    "checked_date": "2026-09-14"
+  },
+  {
+    "city_id": "3651000",
+    "year": 2017,
+    "status": "complete",
+    "expected_election_dates": [
+      "2017-11-07"
+    ],
+    "source_url": "https://vote.nyc/page/election-results-summary-2017",
+    "note": "Official annual results index inspected across general, primary, and special-election sections. One decisive mayoral general election; primary contests excluded. No mayoral special election listed.",
+    "checked_date": "2026-09-14"
+  },
+  {
+    "city_id": "3651000",
+    "year": 2018,
+    "status": "no_election",
+    "expected_election_dates": [],
+    "source_url": "https://vote.nyc/page/election-results-summary-2018",
+    "note": "Official annual results index inspected across all listed election sections, including specials. No mayoral contest listed.",
+    "checked_date": "2026-09-14"
+  },
+  {
+    "city_id": "3651000",
+    "year": 2019,
+    "status": "no_election",
+    "expected_election_dates": [],
+    "source_url": "https://vote.nyc/page/election-results-summary-2019",
+    "note": "Official annual results index inspected across all listed election sections, including specials. No mayoral contest listed.",
+    "checked_date": "2026-09-14"
+  },
+  {
+    "city_id": "3651000",
+    "year": 2020,
+    "status": "no_election",
+    "expected_election_dates": [],
+    "source_url": "https://vote.nyc/page/election-results-summary-2020",
+    "note": "Official annual results index inspected across all listed election sections, including specials. No mayoral contest listed.",
+    "checked_date": "2026-09-14"
+  },
+  {
+    "city_id": "3651000",
+    "year": 2021,
+    "status": "complete",
+    "expected_election_dates": [
+      "2021-11-02"
+    ],
+    "source_url": "https://vote.nyc/page/election-results-summary-2021",
+    "note": "Official annual results index inspected across general, primary, and special-election sections. One decisive mayoral general election; primary contests excluded. No mayoral special election listed.",
+    "checked_date": "2026-09-14"
+  },
+  {
+    "city_id": "3651000",
+    "year": 2022,
+    "status": "no_election",
+    "expected_election_dates": [],
+    "source_url": "https://vote.nyc/page/election-results-summary-2022",
+    "note": "Official annual results index inspected across all listed election sections, including specials. No mayoral contest listed.",
+    "checked_date": "2026-09-14"
+  },
+  {
+    "city_id": "3651000",
+    "year": 2023,
+    "status": "no_election",
+    "expected_election_dates": [],
+    "source_url": "https://vote.nyc/page/election-results-summary-2023",
+    "note": "Official annual results index inspected across all listed election sections, including specials. No mayoral contest listed.",
+    "checked_date": "2026-09-14"
+  },
+  {
+    "city_id": "3651000",
+    "year": 2024,
+    "status": "no_election",
+    "expected_election_dates": [],
+    "source_url": "https://vote.nyc/page/election-results-summary-2024",
+    "note": "Official annual results index inspected across all listed election sections, including specials. No mayoral contest listed.",
+    "checked_date": "2026-09-14"
+  },
+  {
+    "city_id": "3651000",
+    "year": 2025,
+    "status": "complete",
+    "expected_election_dates": [
+      "2025-11-04"
+    ],
+    "source_url": "https://vote.nyc/page/election-results-summary-2025",
+    "note": "Official annual results index inspected across general, primary, and special-election sections. One decisive mayoral general election; primary contests excluded. No mayoral special election listed.",
+    "checked_date": "2026-09-14"
+  },
+  {
+    "city_id": "3651000",
+    "year": 2026,
+    "status": "no_election",
+    "expected_election_dates": [],
+    "source_url": "https://vote.nyc/page/election-results-summary",
+    "note": "Official annual results index inspected across all listed election sections, including specials. No mayoral contest listed. Scope ends September 14, 2026; November election is outside cutoff.",
+    "checked_date": "2026-09-14"
+  }
+]

@@ -1,0 +1,21 @@
+{
+  "inventory_rows": 359,
+  "reviewed_rows": 37,
+  "decisions_by_inventory_row": {
+    "caveat": 3,
+    "not_reviewed": 322,
+    "support": 32,
+    "reject_capture": 2
+  },
+  "ai_supported_mayoral_text_rows": 32,
+  "unique_ai_supported_capture_keys": 32,
+  "rows_deleted": 0,
+  "website_acceptance_changes": 0,
+  "inputs": {
+    "quality_reports/mayoral_inventory_22_2026-09-14/saved_reconciliation_v2/inventory_saved_matches.json": "31d48ab28cf3f83f854c0a57371924ab7209c3274b26ad47d31d50fc39def61c",
+    "quality_reports/mayoral_inventory_22_2026-09-14/saved_capture_reviews_v3.json": "ac3c8067f77f5f96de9c8e074f0ccfb0dfc1857c6dbbab0c5fec2b71b1f58983"
+  },
+  "output_sha256": "6a9f7a790628d5e20499846dc684cfe3039c856092d9368a3bd66d03679176eb",
+  "script_sha256": "93552265c9593e586a8c285538026fdf563309e1149af19d13bc0898413a9993",
+  "definition": "AI-supported text requires content and per-capture date support plus nonempty static text. Caveats require further review; wrong-office captures cannot contribute. This is not human approval or archive completeness."
+}

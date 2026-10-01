@@ -1,0 +1,207 @@
+[
+ {
+  "city_id": "0412000",
+  "year": 2010,
+  "status": "complete",
+  "expected_election_dates": [
+   "2010-08-24"
+  ],
+  "source_url": "https://elections.maricopa.gov/results-and-data/historic-results.html?year=2010",
+  "additional_source_urls": [
+   "https://elections.maricopa.gov/asset/jcr:f1c42017-69b4-409a-8840-1cd8c11ae5c5/08-24-2010%20Final%20Precinct%20Text%20File.txt",
+   "https://www.chandleraz.gov/government/elections-and-voting"
+  ],
+  "note": "Maricopa County official results record the contest 'MAYOR - CITY OF CHANDLER' for this election. Winner and runner-up are in chandler_results.json."
+ },
+ {
+  "city_id": "0412000",
+  "year": 2011,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.chandleraz.gov/government/elections-and-voting",
+  "additional_source_urls": [
+   "https://elections.maricopa.gov/results-and-data/historic-results.html?year=2011"
+  ],
+  "note": "The city's official elections page states that Chandler holds candidate elections in even-numbered years, so no mayoral election occurred in this odd-numbered year. The Maricopa County results archive for this year contains no City of Chandler candidate contest, which agrees."
+ },
+ {
+  "city_id": "0412000",
+  "year": 2012,
+  "status": "complete",
+  "expected_election_dates": [
+   "2012-08-28"
+  ],
+  "source_url": "https://elections.maricopa.gov/results-and-data/historic-results.html?year=2012",
+  "additional_source_urls": [
+   "https://elections.maricopa.gov/asset/jcr:6cb1c607-574e-49f5-8d8f-0a56fc328d07/08-28-2012%20Final%20Precinct%20Text%20File.txt",
+   "https://www.chandleraz.gov/government/elections-and-voting"
+  ],
+  "note": "Maricopa County official results record the contest 'MAYOR - CITY OF CHANDLER' for this election. Winner and runner-up are in chandler_results.json."
+ },
+ {
+  "city_id": "0412000",
+  "year": 2013,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.chandleraz.gov/government/elections-and-voting",
+  "additional_source_urls": [
+   "https://elections.maricopa.gov/results-and-data/historic-results.html?year=2013"
+  ],
+  "note": "The city's official elections page states that Chandler holds candidate elections in even-numbered years, so no mayoral election occurred in this odd-numbered year. The Maricopa County results archive for this year contains no City of Chandler candidate contest, which agrees."
+ },
+ {
+  "city_id": "0412000",
+  "year": 2014,
+  "status": "complete",
+  "expected_election_dates": [
+   "2014-08-26"
+  ],
+  "source_url": "https://elections.maricopa.gov/results-and-data/historic-results.html?year=2014",
+  "additional_source_urls": [
+   "https://elections.maricopa.gov/asset/jcr:7a0f037c-69db-47dc-9e9b-b7d99cb5cf29/08-26-2014%20Final%20Summary.txt",
+   "https://www.chandleraz.gov/government/elections-and-voting"
+  ],
+  "note": "Maricopa County official results record the contest 'MAYOR - CITY OF CHANDLER' for this election. Winner and runner-up are in chandler_results.json."
+ },
+ {
+  "city_id": "0412000",
+  "year": 2015,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.chandleraz.gov/government/elections-and-voting",
+  "additional_source_urls": [
+   "https://elections.maricopa.gov/results-and-data/historic-results.html?year=2015"
+  ],
+  "note": "The city's official elections page states that Chandler holds candidate elections in even-numbered years, so no mayoral election occurred in this odd-numbered year. The Maricopa County results archive for this year contains no City of Chandler candidate contest, which agrees."
+ },
+ {
+  "city_id": "0412000",
+  "year": 2016,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://elections.maricopa.gov/results-and-data/historic-results.html?year=2016",
+  "additional_source_urls": [
+   "https://www.chandleraz.gov/government/elections-and-voting"
+  ],
+  "note": "The Maricopa County results archive for this year holds the City of Chandler contests COUNCILMEMBER CITY OF CHANDLER (vote for 3), CITY OF CHANDLER - COUNCILMEMBER and CITY OF CHANDLER PROP 493, and no mayoral contest. The county therefore ran Chandler's city election this year and no mayoral election was on the ballot."
+ },
+ {
+  "city_id": "0412000",
+  "year": 2017,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.chandleraz.gov/government/elections-and-voting",
+  "additional_source_urls": [
+   "https://elections.maricopa.gov/results-and-data/historic-results.html?year=2017"
+  ],
+  "note": "The city's official elections page states that Chandler holds candidate elections in even-numbered years, so no mayoral election occurred in this odd-numbered year. The Maricopa County results archive for this year contains no City of Chandler candidate contest, which agrees."
+ },
+ {
+  "city_id": "0412000",
+  "year": 2018,
+  "status": "complete",
+  "expected_election_dates": [
+   "2018-08-28"
+  ],
+  "source_url": "https://elections.maricopa.gov/results-and-data/historic-results.html?year=2018",
+  "additional_source_urls": [
+   "https://elections.maricopa.gov/asset/jcr:a577754d-3c2d-43d4-b07d-a2fbf0c3363c/08-28-2018%20Final%20Summary%20Report.txt",
+   "https://www.chandleraz.gov/government/elections-and-voting"
+  ],
+  "note": "Maricopa County official results record the contest 'Chandler-Mayor' for this election. Winner and runner-up are in chandler_results.json."
+ },
+ {
+  "city_id": "0412000",
+  "year": 2019,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.chandleraz.gov/government/elections-and-voting",
+  "additional_source_urls": [
+   "https://elections.maricopa.gov/results-and-data/historic-results.html?year=2019"
+  ],
+  "note": "The city's official elections page states that Chandler holds candidate elections in even-numbered years, so no mayoral election occurred in this odd-numbered year. The Maricopa County results archive for this year contains no City of Chandler candidate contest, which agrees."
+ },
+ {
+  "city_id": "0412000",
+  "year": 2020,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://elections.maricopa.gov/results-and-data/historic-results.html?year=2020",
+  "additional_source_urls": [
+   "https://www.chandleraz.gov/government/elections-and-voting"
+  ],
+  "note": "The Maricopa County results archive for this year holds the City of Chandler contests Chandler-Councilmember and Chandler-QUESTION 1, and no mayoral contest. The county therefore ran Chandler's city election this year and no mayoral election was on the ballot."
+ },
+ {
+  "city_id": "0412000",
+  "year": 2021,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.chandleraz.gov/government/elections-and-voting",
+  "additional_source_urls": [
+   "https://elections.maricopa.gov/results-and-data/historic-results.html?year=2021"
+  ],
+  "note": "The city's official elections page states that Chandler holds candidate elections in even-numbered years, so no mayoral election occurred in this odd-numbered year. The Maricopa County results archive for this year contains no City of Chandler candidate contest, which agrees."
+ },
+ {
+  "city_id": "0412000",
+  "year": 2022,
+  "status": "complete",
+  "expected_election_dates": [
+   "2022-08-02"
+  ],
+  "source_url": "https://elections.maricopa.gov/results-and-data/historic-results.html?year=2022",
+  "additional_source_urls": [
+   "https://elections.maricopa.gov/asset/jcr:4d7ede9a-d1b2-4907-b659-41542ca95b26/08-02-2022-2b%20Final%20SOV%20and%20Official%20Canvass%20Report%20AUG2022.txt",
+   "https://www.chandleraz.gov/government/elections-and-voting"
+  ],
+  "note": "Maricopa County official results record the contest 'Chandler-Mayor' for this election. Winner and runner-up are in chandler_results.json."
+ },
+ {
+  "city_id": "0412000",
+  "year": 2023,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.chandleraz.gov/government/elections-and-voting",
+  "additional_source_urls": [
+   "https://elections.maricopa.gov/results-and-data/historic-results.html?year=2023"
+  ],
+  "note": "The city's official elections page states that Chandler holds candidate elections in even-numbered years, so no mayoral election occurred in this odd-numbered year. The Maricopa County results archive for this year contains no City of Chandler candidate contest, which agrees."
+ },
+ {
+  "city_id": "0412000",
+  "year": 2024,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://elections.maricopa.gov/results-and-data/historic-results.html?year=2024",
+  "additional_source_urls": [
+   "https://www.chandleraz.gov/government/elections-and-voting"
+  ],
+  "note": "The Maricopa County results archive for this year holds the City of Chandler contests Chandler-Councilmember, and no mayoral contest. The county therefore ran Chandler's city election this year and no mayoral election was on the ballot."
+ },
+ {
+  "city_id": "0412000",
+  "year": 2025,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.chandleraz.gov/government/elections-and-voting",
+  "additional_source_urls": [
+   "https://elections.maricopa.gov/results-and-data/historic-results.html?year=2025"
+  ],
+  "note": "The city's official elections page states that Chandler holds candidate elections in even-numbered years, so no mayoral election occurred in this odd-numbered year. The Maricopa County results archive for this year contains no City of Chandler candidate contest, which agrees."
+ },
+ {
+  "city_id": "0412000",
+  "year": 2026,
+  "status": "complete",
+  "expected_election_dates": [
+   "2026-07-21"
+  ],
+  "source_url": "https://elections.maricopa.gov/results-and-data/historic-results.html?year=2026",
+  "additional_source_urls": [
+   "https://elections.maricopa.gov/asset/jcr:b96f254d-123b-47ca-89c0-863800790326/07-21-2026-2b%20Final%20SOV%20and%20Official%20Canvass%20Report.txt",
+   "https://www.chandleraz.gov/government/elections-and-voting"
+  ],
+  "note": "Maricopa County official results record the contest 'Chandler-Mayor' for this election. Winner and runner-up are in chandler_results.json."
+ }
+]

@@ -1,0 +1,64 @@
+{
+  "review_date": "2026-09-14",
+  "reviewer": "current Codex session",
+  "model": "not recorded",
+  "review_type": "AI saved-capture review",
+  "input": "quality_reports/mayoral_variant_content_review_2026-09-14/review_queue.json",
+  "input_sha256": "31b4ae81615266556abf786281b94ede16976fac45270c49b82b3a8c5250c410",
+  "selection": "Candidate URL IDs 16 through 20 in ascending order",
+  "method": "Read saved gzip HTML on the droplet, verify decoded SHA256, and inspect all static text after removing script, style, and noscript elements. No archive requests or browser execution.",
+  "records": [
+    {
+      "candidate_url_id": "candidate_url_0bce0b87646415cf29d717c6",
+      "candidate_year_id": "71574__2010",
+      "capture_sha256": "9dc23d5cb5bf6f79ea50ebb82e1cce19a32f4523de4c806c26686ed15f9c9c0e",
+      "capture_timestamp": "20110202025811",
+      "hash_verified": true,
+      "decision": "reject_capture",
+      "reason": "The saved page is a GoDaddy domain parking and sales page. Its candidate-shaped domain does not establish campaign content. This rejection applies to this capture, not to all historical uses of the domain.",
+      "remaining_flags": ["domain_parking", "other_historical_captures_not_adjudicated", "exact_requested_URL_equivalence_not_established"]
+    },
+    {
+      "candidate_url_id": "candidate_url_0c43279cf01605fdbe9328ed",
+      "candidate_year_id": "4478__2018",
+      "capture_sha256": "2184296f286db2a8692ea990e3dd5af3fb540a2718941d3591c10e90079cc2ab",
+      "capture_timestamp": "20181106124509",
+      "hash_verified": true,
+      "decision": "uncertain",
+      "reason": "Static text contains only Dustin Daniels's name. It does not establish mayoral office, city, or substantive campaign content. Images and scripts were not rendered.",
+      "remaining_flags": ["sparse_static_text", "office_and_city_not_established", "exact_requested_URL_equivalence_not_established"]
+    },
+    {
+      "candidate_url_id": "candidate_url_0c4eab3e4b4b85898fac6bcf",
+      "candidate_year_id": "5899__2010",
+      "capture_sha256": "834b1cba691b0d5f8506173a4eb45b29da7260c9932ba58bc7533973f3166c01",
+      "capture_timestamp": "20100907032353",
+      "hash_verified": true,
+      "decision": "support_campaign_with_target_caveat",
+      "reason": "The page explicitly asks readers to elect Teresa Tomlinson mayor of Columbus and links campaign email updates and videos. The September 2010 capture supports timing, but only 162 characters of static text are available; linked or embedded campaign material was not inspected.",
+      "remaining_flags": ["sparse_static_text", "substantive_campaign_text_not_available", "exact_requested_URL_equivalence_not_established"]
+    },
+    {
+      "candidate_url_id": "candidate_url_0e6864748bb40d0199803576",
+      "candidate_year_id": "50978__2011",
+      "capture_sha256": "19df0b1227e85bf095d132ae81311f975eb07ad566b0e2e4c540e8ba434e36dc",
+      "capture_timestamp": "20110513080506",
+      "hash_verified": true,
+      "decision": "support_capture",
+      "reason": "The page explicitly promotes Herbert Gears's reelection as mayor of Irving and includes campaign positions, Texas contact addresses, and a political-advertisement disclaimer. It advertises May 14, 2011, while the queue's contest month is June; it supports the 2011 campaign, but the election-stage distinction remains unverified.",
+      "remaining_flags": ["election_stage_not_verified", "page_election_month_differs_from_contest_month", "exact_requested_URL_equivalence_not_established"]
+    },
+    {
+      "candidate_url_id": "candidate_url_0eb1df9e4738ddac2bfedb29",
+      "candidate_year_id": "15603__2010",
+      "capture_sha256": "7bdf94edb316b91c4b4eaad9ed28bfdd694fa3ce55b99272f152cdcc1eec3506",
+      "capture_timestamp": "20110204102515",
+      "hash_verified": true,
+      "decision": "uncertain",
+      "reason": "The only static text is a thank-you title. It does not identify Hal Heiner, Louisville, or a mayoral campaign. Images and scripts were not rendered.",
+      "remaining_flags": ["sparse_static_text", "candidate_office_city_not_established", "exact_requested_URL_equivalence_not_established"]
+    }
+  ],
+  "acceptance_changes": 0,
+  "full_historical_completeness": false
+}

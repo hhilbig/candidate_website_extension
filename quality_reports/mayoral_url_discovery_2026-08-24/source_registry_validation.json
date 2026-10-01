@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "registry_path": "config/mayoral_url_source_registry.json",
+  "sources": 22,
+  "enabled_sources": 11,
+  "disabled_sources": 11,
+  "enabled_input_files": 12,
+  "enabled_output_files": 20,
+  "status": "valid"
+}

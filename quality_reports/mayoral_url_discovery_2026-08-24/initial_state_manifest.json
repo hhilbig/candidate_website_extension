@@ -1,0 +1,133 @@
+{
+  "manifest_version": "mayoral-discovery-state-v1",
+  "generated_at_utc": "2026-08-24T12:14:49.698984+00:00",
+  "repository_root_name": "candidate_website_extension",
+  "files": [
+    {
+      "path": "data/external/municipal/ledb_candidatelevel.csv",
+      "bytes": 26699549,
+      "sha256": "86cc4f80b2c9048967b18c74c46b9f932d52fbc561e0c89a86441f0186f35357",
+      "records": 126599,
+      "columns": 32
+    },
+    {
+      "path": "data/external/municipal/cities_constituency_data.csv",
+      "bytes": 209473,
+      "sha256": "1fa62cce2bfad05d1d438a89d02f6889a0c879833f8c8e977f996fc20b107078",
+      "records": 872,
+      "columns": 16
+    },
+    {
+      "path": "data/municipal_discovery/mayoral_discovery_metadata.json",
+      "bytes": 1177,
+      "sha256": "8eab7690da46d84ad02ef90bb2be45ee6b733c3de5ab89551b558a9ac0ad029e",
+      "records": null,
+      "columns": null
+    },
+    {
+      "path": "data/municipal_discovery/final/mayoral_candidate_universe.csv",
+      "bytes": 6567622,
+      "sha256": "d722d64a5b6961f2d1440cb28af1de50031f3fe2944669275edaf668383f42e9",
+      "records": 11020,
+      "columns": 47
+    },
+    {
+      "path": "data/municipal_discovery/final/mayoral_candidate_url_summary.csv",
+      "bytes": 2766447,
+      "sha256": "f383c8d769f9405083fd2a62d75537dea6c2131c18fc78a4f7894494cab82ee7",
+      "records": 4817,
+      "columns": 49
+    },
+    {
+      "path": "data/municipal_discovery/final/mayoral_url_evidence.csv",
+      "bytes": 73280,
+      "sha256": "eb85d988de8212fc5ce537d04fa2c89ba06dc03c26a280b5017c5ee454777120",
+      "records": 140,
+      "columns": 20
+    },
+    {
+      "path": "data/municipal_discovery/final/mayoral_source_status.csv",
+      "bytes": 99262,
+      "sha256": "1997e3e3c6d4deb947a590c2a710acb246d1924b49afee0cc2f29d9d26ec6e06",
+      "records": 772,
+      "columns": 13
+    },
+    {
+      "path": "data/municipal_discovery/final/mayoral_url_archive_validation.csv",
+      "bytes": 35072,
+      "sha256": "360b3922e30780b2c7f7d8acb126cdfe8a2553a1a90604f59fb2e31a5cc3835d",
+      "records": 124,
+      "columns": 16
+    },
+    {
+      "path": "data/municipal_discovery/final/mayoral_coverage_summary.json",
+      "bytes": 2009,
+      "sha256": "b7b21f25fa837f902d9172ff17556d3aaa2a85c03f9a2f2035c0418d55a77156",
+      "records": null,
+      "columns": null
+    },
+    {
+      "path": "data/municipal_discovery/search_pilot/query_manifest.csv",
+      "bytes": 33673,
+      "sha256": "e4e6117a3b33afba11459c7199f9695db06c2ce7e670079122acb779b17305a7",
+      "records": 240,
+      "columns": 9
+    },
+    {
+      "path": "data/municipal_discovery/search_pilot/search_results.jsonl",
+      "bytes": 892507,
+      "sha256": "c5f3cceabd83ea3a57566bb348a7b28fae2f44f6e5f873593a644a74122f73e2",
+      "records": 235,
+      "columns": null
+    },
+    {
+      "path": "data/municipal_discovery/search_pilot/search_lead_review.csv",
+      "bytes": 22302,
+      "sha256": "72c023b1f6c0d9d3acbd6378021662a2359f3302ceff6b978525e832c93641d2",
+      "records": 55,
+      "columns": 18
+    },
+    {
+      "path": "data/municipal_discovery/search_pilot/source_page_expansion.csv",
+      "bytes": 10399,
+      "sha256": "8afebf54823173a6fe7471d1f43207bfeb18eb37b6567d4d90e72a5903d61560",
+      "records": 33,
+      "columns": 13
+    },
+    {
+      "path": "data/municipal_discovery/search_pilot/pilot_domain_archive_checks.csv",
+      "bytes": 974,
+      "sha256": "cbdf6ec17f1d046a266bbae28ddde83d6ce5777c178cfc071a65d1142fe8e725",
+      "records": 6,
+      "columns": 11
+    },
+    {
+      "path": "data/municipal_discovery/search_pilot/search_results_failed_no_credits_20260824.jsonl",
+      "bytes": 106526,
+      "sha256": "9bf6d6144be2d3728b7f3f83108c1cd390154a769666d2ff00e3a366e11f5393",
+      "records": 240,
+      "columns": null
+    },
+    {
+      "path": "config/curated_mayoral_contest_stages.json",
+      "bytes": 5233,
+      "sha256": "3ffbd027f97a07961d688af51de4735c3cdfcc38f81ecac6df2f4d3eadeb3f34",
+      "records": 14,
+      "columns": null
+    },
+    {
+      "path": "config/curated_mayoral_url_evidence.json",
+      "bytes": 17528,
+      "sha256": "ba2a99974df9a364871bb95c2961c58f1ac361584918a376b209738794c39a43",
+      "records": 33,
+      "columns": null
+    },
+    {
+      "path": "config/mayoral_url_source_registry.json",
+      "bytes": 8430,
+      "sha256": "e2dd8d9352a3fb2aaa1810edb900ebe0023dacc82a43c579c715b264a61f1f93",
+      "records": 15,
+      "columns": null
+    }
+  ]
+}

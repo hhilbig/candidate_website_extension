@@ -1,0 +1,422 @@
+{
+  "review_date": "2026-09-14",
+  "reviewer": "Codex saved-capture review agent",
+  "model": "gpt-5.6-sol",
+  "review_type": "AI saved-capture review",
+  "input": "quality_reports/mayoral_variant_content_review_2026-09-14/review_queue.json",
+  "input_sha256": "31b4ae81615266556abf786281b94ede16976fac45270c49b82b3a8c5250c410",
+  "selection": "Positions 121 through 150 in ascending candidate_url_id order",
+  "method": "Read saved gzip HTML on the droplet, verify decoded SHA256, and inspect all static text after removing script, style, and noscript elements. No archive requests, new downloads, raw-file transfers, paid calls, or browser execution.",
+  "records": [
+    {
+      "candidate_url_id": "candidate_url_4c5c9901caabf939e2689c3b",
+      "candidate_year_id": "35665__2017",
+      "capture_sha256": "a255af67a0abf408fc8a39be410fda316d0171a769d8b1d04253241713660996",
+      "capture_timestamp": "20171129032350",
+      "hash_verified": true,
+      "decision": "support_campaign_with_target_caveat",
+      "reason": "The page identifies Friends of Lovely Warren and Mayor Lovely Warren. It includes policy slogans and volunteer and donation controls. Static text is sparse and gives no Rochester location or explicit 2017 campaign year.",
+      "remaining_flags": [
+        "sparse_static_text",
+        "city_not_explicit",
+        "campaign_year_not_explicit",
+        "exact_requested_URL_equivalence_not_established"
+      ]
+    },
+    {
+      "candidate_url_id": "candidate_url_4ccddcc352127fa775fec455",
+      "candidate_year_id": "59039__2018",
+      "capture_sha256": "336cf780834482119294c080ee3a8240acd4d517c30922444ab0b6698ce35e0c",
+      "capture_timestamp": "20181128075306",
+      "hash_verified": true,
+      "decision": "support_capture",
+      "reason": "The page identifies Harry Sidhu for Anaheim mayor. It contains policy priorities, campaign controls, November 2018 election results, and a 2018 campaign disclaimer.",
+      "remaining_flags": [
+        "post_election_content",
+        "exact_requested_URL_equivalence_not_established"
+      ]
+    },
+    {
+      "candidate_url_id": "candidate_url_4dd68496fc4de54ee5d3fdd8",
+      "candidate_year_id": "45594__2011",
+      "capture_sha256": "b0198cc9148db8a3f10164af6e7ee3561023f89d4adca21263a19c8eda198379",
+      "capture_timestamp": "20101216005743",
+      "hash_verified": true,
+      "decision": "support_capture",
+      "reason": "The page identifies Greg Stanton for mayor of Phoenix. It contains a campaign statement, policy priorities, biography, campaign controls, and a committee disclaimer. The 2010 capture precedes the 2011 election; the text gives no 2011 year.",
+      "remaining_flags": [
+        "campaign_year_not_explicit",
+        "exact_requested_URL_equivalence_not_established"
+      ]
+    },
+    {
+      "candidate_url_id": "candidate_url_4deefed213ac04ef86f72fc2",
+      "candidate_year_id": "6855__2015",
+      "capture_sha256": "8863842e5f2a16075abc9845807eda2a913b50fe7d20be6b0af3c6f7ef90fb68",
+      "capture_timestamp": "20150828070929",
+      "hash_verified": true,
+      "decision": "support_capture",
+      "reason": "The page identifies Artur Davis and his Montgomery mayoral campaign. It contains detailed policy proposals, requests a vote, and includes a 2015 campaign footer.",
+      "remaining_flags": [
+        "exact_requested_URL_equivalence_not_established"
+      ]
+    },
+    {
+      "candidate_url_id": "candidate_url_4edfeb3c89723c4414d22058",
+      "candidate_year_id": "47781__2018",
+      "capture_sha256": "0ccea20a4a0f4a8aa128480177d0b00d9b04561105ecf7069630aa5fdccf4611",
+      "capture_timestamp": "20180519054449",
+      "hash_verified": true,
+      "decision": "uncertain_capture",
+      "reason": "The saved manifesto discusses Nashville politics and nomination petitions filed with the Davidson County Election Commission. It contains substantive political text but gives no explicit Jon Sewell identity, mayoral office, or 2018 campaign year.",
+      "remaining_flags": [
+        "candidate_identity_not_established",
+        "office_not_established",
+        "campaign_year_not_explicit",
+        "different_path_query_or_host",
+        "exact_requested_page_not_acquired"
+      ]
+    },
+    {
+      "candidate_url_id": "candidate_url_4f1387626a4b6952fbc3bfd9",
+      "candidate_year_id": "14837__2017",
+      "capture_sha256": "c5e4e77a3c6f04ae90d26c0bbfab9f7c78ddce63d20f88b522d20d4dddc36df4",
+      "capture_timestamp": "20171111203139",
+      "hash_verified": true,
+      "decision": "support_campaign_with_target_caveat",
+      "reason": "The page identifies Spencer Duncan for Topeka mayor. It contains detailed 2017 policy initiatives, campaign controls, and a concession message. The saved homepage does not establish acquisition of the requested query variant.",
+      "remaining_flags": [
+        "post_election_content",
+        "different_path_query_or_host",
+        "exact_requested_page_not_acquired"
+      ]
+    },
+    {
+      "candidate_url_id": "candidate_url_4f1f2131dd97d18c55d31aab",
+      "candidate_year_id": "45652__2020",
+      "capture_sha256": "3222bbb9a9ed458ceadc20843180abcacc9688d0b64826b208f7761e10cc705a",
+      "capture_timestamp": "20201116033042",
+      "hash_verified": true,
+      "decision": "support_capture",
+      "reason": "The page identifies Merissa Hamilton for Phoenix mayor and requests votes and campaign contributions. It gives policy priorities. The text gives no explicit 2020 campaign year.",
+      "remaining_flags": [
+        "campaign_year_not_explicit",
+        "exact_requested_URL_equivalence_not_established"
+      ]
+    },
+    {
+      "candidate_url_id": "candidate_url_4f5261be9a5fae7feda602ff",
+      "candidate_year_id": "45771__2016",
+      "capture_sha256": "68bb17c2bccc540f5b2ba0ea77e4f385c5b91e66489e84d3018189e5005fc0d2",
+      "capture_timestamp": "20161109124756",
+      "hash_verified": true,
+      "decision": "support_campaign_with_target_caveat",
+      "reason": "The page identifies Bob Littlefield as a Scottsdale mayoral candidate. It includes campaign participation requests, contact details, and a committee disclaimer. Static text is limited and gives no explicit 2016 campaign year.",
+      "remaining_flags": [
+        "limited_substantive_text",
+        "campaign_year_not_explicit",
+        "exact_requested_URL_equivalence_not_established"
+      ]
+    },
+    {
+      "candidate_url_id": "candidate_url_507e9bdcbe3ffdbafeb5c405",
+      "candidate_year_id": "3059__2012",
+      "capture_sha256": "cacd9a384517ff2689161aecd0cfa8667e10ffa5a652b94795933c2a91f52a7a",
+      "capture_timestamp": "20110403044820",
+      "hash_verified": true,
+      "decision": "support_campaign_with_target_caveat",
+      "reason": "The page identifies Mike Crowley for mayor of Davie. It contains biography, policy priorities, and a campaign disclaimer. The April 2011 capture does not explicitly establish the 2012 campaign period.",
+      "remaining_flags": [
+        "campaign_period_uncertain",
+        "campaign_year_not_explicit",
+        "exact_requested_URL_equivalence_not_established"
+      ]
+    },
+    {
+      "candidate_url_id": "candidate_url_509ecfb195d6c79ca6cd8c5a",
+      "candidate_year_id": "71867__2020",
+      "capture_sha256": "96a7a46ab0f092e2a4c4c481e48c710056e8e8c0d88df46f8cdb707267186ba1",
+      "capture_timestamp": "20201107220903",
+      "hash_verified": true,
+      "decision": "support_campaign_with_target_caveat",
+      "reason": "The page explicitly asks voters to elect Eric Ohlsen Palmdale mayor. It contains biography, policy proposals, and a 2020 campaign disclaimer. Old Eric For 36 contact details remain. The requested contact page is not acquired.",
+      "remaining_flags": [
+        "stale_other_campaign_contact_details",
+        "different_path_query_or_host",
+        "exact_requested_page_not_acquired"
+      ]
+    },
+    {
+      "candidate_url_id": "candidate_url_50ad0b254c514ba7f09b51a1",
+      "candidate_year_id": "48248__2012",
+      "capture_sha256": "732759172b200a35408c0e4323c71131d45eb3def046623bcfab741af08db242",
+      "capture_timestamp": "20120524054410",
+      "hash_verified": true,
+      "decision": "support_capture",
+      "reason": "The page identifies Brigid Shea for Austin mayor. It contains a concession letter, policy positions, campaign controls, and explicit May 2012 election material.",
+      "remaining_flags": [
+        "post_election_content",
+        "exact_requested_URL_equivalence_not_established"
+      ]
+    },
+    {
+      "candidate_url_id": "candidate_url_51bb69ff1daa8ad30a8131b2",
+      "candidate_year_id": "53365__2015",
+      "capture_sha256": "2369f71717f02078880d5113924ab87ca5d3c12c4f58f1e673ff8d2224637d54",
+      "capture_timestamp": "20151116173051",
+      "hash_verified": true,
+      "decision": "support_campaign_with_target_caveat",
+      "reason": "The saved biography identifies Allison Silberberg as Alexandria mayor-elect after the November 3, 2015 election. It contains substantial biography, a contribution link, and a campaign disclaimer. It does not establish acquisition of the requested homepage.",
+      "remaining_flags": [
+        "post_election_content",
+        "biography_page",
+        "different_path_query_or_host",
+        "exact_requested_page_not_acquired"
+      ]
+    },
+    {
+      "candidate_url_id": "candidate_url_52f6b175ef85c9dad5d18f4f",
+      "candidate_year_id": "56405__2017",
+      "capture_sha256": "80b9cd597772cb129d73f17b5874e9ce2a53c00a5764a3f6861e8c9aa4440bb3",
+      "capture_timestamp": "20171022005012",
+      "hash_verified": true,
+      "decision": "support_capture",
+      "reason": "The page identifies Jim Merritt as a candidate for Tacoma mayor. It contains detailed biography, policy proposals, campaign controls, and a 2017 campaign footer.",
+      "remaining_flags": [
+        "exact_requested_URL_equivalence_not_established"
+      ]
+    },
+    {
+      "candidate_url_id": "candidate_url_53759b90ff77614171f28f24",
+      "candidate_year_id": "71315__2010",
+      "capture_sha256": "40c348e136032f5e2cc47a64f74557d688753fc7a850f469adffba235ba1975e",
+      "capture_timestamp": "20101124064627",
+      "hash_verified": true,
+      "decision": "support_capture",
+      "reason": "The page identifies Jean Quan for Oakland mayor in 2010. It contains November 2010 election results, campaign controls, and policy headings.",
+      "remaining_flags": [
+        "post_election_content",
+        "exact_requested_URL_equivalence_not_established"
+      ]
+    },
+    {
+      "candidate_url_id": "candidate_url_550a50e3791b93fd312cf2e3",
+      "candidate_year_id": "72983__2010",
+      "capture_sha256": "755084865ce9b9fde87ddf71a6465f400af8e454dd9119b389aa2d49a32a7adf",
+      "capture_timestamp": "20101101083611",
+      "hash_verified": true,
+      "decision": "support_capture",
+      "reason": "The page explicitly identifies Gayle McLaughlin’s 2010 reelection campaign for Richmond mayor. It contains detailed policy discussion and requests support and votes.",
+      "remaining_flags": [
+        "exact_requested_URL_equivalence_not_established"
+      ]
+    },
+    {
+      "candidate_url_id": "candidate_url_558ada4f2b0e83ef6c3c3b53",
+      "candidate_year_id": "51890__2013",
+      "capture_sha256": "a86c767e5d8ba14d6b3e6766a37d02b86797ed078d5a1360810b2b54faf4ccfb",
+      "capture_timestamp": "20130524083204",
+      "hash_verified": true,
+      "decision": "support_capture",
+      "reason": "The page identifies Fred Moses for Plano mayor. It contains campaign endorsements, controls, and a concession message. An endorsement explicitly references his 2013 mayoral campaign.",
+      "remaining_flags": [
+        "post_election_content",
+        "exact_requested_URL_equivalence_not_established"
+      ]
+    },
+    {
+      "candidate_url_id": "candidate_url_568fb0fb2b92a8f6c43b7784",
+      "candidate_year_id": "56022__2013",
+      "capture_sha256": "8ac0b7fdcf8c2cae2584b2a1316b0fd6248b379c5b23a0307dc5d05e187e19d8",
+      "capture_timestamp": "20131231075050",
+      "hash_verified": true,
+      "decision": "support_capture",
+      "reason": "The page identifies Jim Ferrell for Federal Way mayor. It contains a campaign statement, endorsements, and an explicit October 2013 mayoral endorsement.",
+      "remaining_flags": [
+        "exact_requested_URL_equivalence_not_established"
+      ]
+    },
+    {
+      "candidate_url_id": "candidate_url_569c19d254d9e7446b2247e1",
+      "candidate_year_id": "26298__2017",
+      "capture_sha256": "67a049cf648f192906efaaecdfe3063bfe7ab48954a8d14b77174e705472c22a",
+      "capture_timestamp": "20170509080517",
+      "hash_verified": true,
+      "decision": "support_capture",
+      "reason": "The page identifies Jean Stothert’s Omaha mayoral campaign. It contains policy accomplishments, campaign controls, and May 2017 reelection news with a campaign disclaimer.",
+      "remaining_flags": [
+        "exact_requested_URL_equivalence_not_established"
+      ]
+    },
+    {
+      "candidate_url_id": "candidate_url_56cb52d18218a267a202813e",
+      "candidate_year_id": "6894__2016",
+      "capture_sha256": "fa9a1dd03bdc1ed60bbb0c57354551e89bc52cd9295bd52ed5ac1f86e74215fc",
+      "capture_timestamp": "20161106002315",
+      "hash_verified": true,
+      "decision": "support_capture",
+      "reason": "The page identifies Charles Djou for Honolulu mayor. It contains policy proposals, campaign controls, November voting instructions, and an explicit 2016 campaign footer.",
+      "remaining_flags": [
+        "exact_requested_URL_equivalence_not_established"
+      ]
+    },
+    {
+      "candidate_url_id": "candidate_url_580496ec748b2000720b15b7",
+      "candidate_year_id": "45515__2013",
+      "capture_sha256": "7075fbf890a704058e3319c0e07d5e22660dc4a3bf6c4d859fd98519b0f4c57c",
+      "capture_timestamp": "20131207071755",
+      "hash_verified": true,
+      "decision": "uncertain_noncampaign_capture",
+      "reason": "The saved article identifies Mayor Steve Benjamin and discusses a Columbia pool dedication in 2013. A contribution link and Benjamin for Mayor disclaimer support campaign association. The article itself is incumbent content and does not establish a 2013 candidate election campaign. The requested biography page is not acquired.",
+      "remaining_flags": [
+        "incumbent_activity_article",
+        "campaign_period_uncertain",
+        "different_path_query_or_host",
+        "exact_requested_page_not_acquired"
+      ]
+    },
+    {
+      "candidate_url_id": "candidate_url_582f8258e87c2347a94dd225",
+      "candidate_year_id": "49607__2011",
+      "capture_sha256": "4f9b8b962cd9b73920a958a1a23b89b587bc46fb8ebc5f41ab8eecc9e3690040",
+      "capture_timestamp": "20110529104826",
+      "hash_verified": true,
+      "decision": "support_capture",
+      "reason": "The page identifies David Kunkle for Dallas mayor. It contains policy proposals, endorsements, campaign controls, and explicit June 18, 2011 runoff instructions.",
+      "remaining_flags": [
+        "exact_requested_URL_equivalence_not_established"
+      ]
+    },
+    {
+      "candidate_url_id": "candidate_url_58d6397c7c20d8353d7291a0",
+      "candidate_year_id": "54843__2016",
+      "capture_sha256": "ae803550ddac35fb4cf49fd7fabc2064beedb176b579a972365921878948c34a",
+      "capture_timestamp": "20161025155216",
+      "hash_verified": true,
+      "decision": "uncertain_capture",
+      "reason": "The static text contains only Lawrence Williams. It provides no Richmond location, mayoral office, campaign period, or substantive text. The saved homepage does not establish acquisition of the requested mayoral page.",
+      "remaining_flags": [
+        "sparse_static_text",
+        "office_not_established",
+        "city_not_established",
+        "campaign_status_not_established",
+        "campaign_period_not_established",
+        "different_path_query_or_host",
+        "exact_requested_page_not_acquired"
+      ]
+    },
+    {
+      "candidate_url_id": "candidate_url_58de2dca7340a62856d0a7d6",
+      "candidate_year_id": "75581__2020",
+      "capture_sha256": "3aceedd3d68ceffadde12422cc273152c7d029a50275b010c98c0963a83816e2",
+      "capture_timestamp": "20201101020459",
+      "hash_verified": true,
+      "decision": "support_capture",
+      "reason": "The page identifies Kevin Lincoln for Stockton mayor. It contains detailed biography, policy proposals, campaign controls, and a 2020 campaign disclaimer.",
+      "remaining_flags": [
+        "exact_requested_URL_equivalence_not_established"
+      ]
+    },
+    {
+      "candidate_url_id": "candidate_url_58e22ffb856cbfa0582be284",
+      "candidate_year_id": "41466__2013",
+      "capture_sha256": "11e812ba8e750c0b948f14fe19b0212bb8f561db4c59d779309dc69ddc9a0e55",
+      "capture_timestamp": "20131023142522",
+      "hash_verified": true,
+      "decision": "support_capture",
+      "reason": "The page identifies Dewey Bartlett’s Tulsa mayoral reelection campaign. It contains policy accomplishments, campaign controls, and extensive dated 2013 campaign news.",
+      "remaining_flags": [
+        "exact_requested_URL_equivalence_not_established"
+      ]
+    },
+    {
+      "candidate_url_id": "candidate_url_5a15fbeeed92726e38795423",
+      "candidate_year_id": "78310__2015",
+      "capture_sha256": "949429995f2708bba02ec8c2c8820dcc4f9ac9847a94817eb30bc26071cfd819",
+      "capture_timestamp": "20131103101636",
+      "hash_verified": true,
+      "decision": "reject_capture",
+      "reason": "The capture contains a CorpseGhost Team website defacement message. It provides no Paul Fiorino, Denver, or mayoral campaign evidence. The 2013 capture also falls outside the specified 365-day window for 2015. This rejection applies only to this capture.",
+      "remaining_flags": [
+        "defaced_page",
+        "outside_365_day_window",
+        "exact_requested_URL_equivalence_not_established"
+      ]
+    },
+    {
+      "candidate_url_id": "candidate_url_5a2105da790742add1b04e68",
+      "candidate_year_id": "78307__2015",
+      "capture_sha256": "546e4368a1d2e8aecc0bc5ed63dce6d0bf4d730976952c1b3dd72809758343e8",
+      "capture_timestamp": "20150509053319",
+      "hash_verified": true,
+      "decision": "support_campaign_with_target_caveat",
+      "reason": "The page identifies Marcus Giavanni for Denver mayor in 2015. It contains a campaign message, policy discussion, voting instructions, and a payment disclaimer. The saved incumbentmayormichaelhancock.html page differs from the requested 2027 election path.",
+      "remaining_flags": [
+        "requested_path_mentions_2027",
+        "requested_path_period_mismatch",
+        "different_path_query_or_host",
+        "exact_requested_page_not_acquired"
+      ]
+    },
+    {
+      "candidate_url_id": "candidate_url_5afaba478781f7c03be149f1",
+      "candidate_year_id": "59799__2016",
+      "capture_sha256": "3cf300484b13c66fc2832016146d27641ab31f7f4320c707de9004dc35d21fa5",
+      "capture_timestamp": "20161118084251",
+      "hash_verified": true,
+      "decision": "support_capture",
+      "reason": "The page identifies Karen Goh for Bakersfield mayor. It contains policy priorities, campaign controls, and an explicit 2016 campaign disclaimer.",
+      "remaining_flags": [
+        "exact_requested_URL_equivalence_not_established"
+      ]
+    },
+    {
+      "candidate_url_id": "candidate_url_5b02d0448a724edf703b01d4",
+      "candidate_year_id": "3196__2016",
+      "capture_sha256": "af78ac7ceee4374770dbadcd32db1b5a634a94139910ff87f9d505a7ac7fc61c",
+      "capture_timestamp": "20160308015604",
+      "hash_verified": true,
+      "decision": "uncertain_capture",
+      "reason": "The static text contains only Ed Braddy Exposed. It does not establish that the page belongs to his campaign. It provides no Gainesville location, mayoral office, campaign year, or substantive text.",
+      "remaining_flags": [
+        "sparse_static_text",
+        "possible_opposition_site",
+        "campaign_attribution_not_established",
+        "office_not_established",
+        "city_not_established",
+        "campaign_year_not_explicit",
+        "exact_requested_URL_equivalence_not_established"
+      ]
+    },
+    {
+      "candidate_url_id": "candidate_url_5ba15507a91cbf274e120a7f",
+      "candidate_year_id": "6870__2011",
+      "capture_sha256": "6274b32a1d1723624e862e40294ca33b04dca886eb4e6a96c5080a37043a6405",
+      "capture_timestamp": "20110207094750",
+      "hash_verified": true,
+      "decision": "reject_capture",
+      "reason": "The capture contains a Bluehost hosting placeholder. It provides no Todd Strange, Montgomery, or mayoral campaign evidence. This rejection applies only to this capture.",
+      "remaining_flags": [
+        "hosting_placeholder",
+        "exact_requested_URL_equivalence_not_established"
+      ]
+    },
+    {
+      "candidate_url_id": "candidate_url_5bb3740727e59e9af853f0eb",
+      "candidate_year_id": "14458__2012",
+      "capture_sha256": "3474e0704067d052145e2fa3f10a85fd316744b28ae73ca1289cd83d3b5414c3",
+      "capture_timestamp": "20120511012707",
+      "hash_verified": true,
+      "decision": "support_campaign_with_target_caveat",
+      "reason": "The page identifies Phil Isley for Anchorage mayor. It contains a campaign statement, fiscal priorities, and payment disclaimers. Its 2010 footer does not establish the 2012 campaign period. The saved root page differs from the requested index.html path.",
+      "remaining_flags": [
+        "campaign_period_uncertain",
+        "stale_footer",
+        "different_path_query_or_host",
+        "exact_requested_page_not_acquired"
+      ]
+    }
+  ],
+  "acceptance_changes": 0,
+  "full_historical_completeness": false
+}

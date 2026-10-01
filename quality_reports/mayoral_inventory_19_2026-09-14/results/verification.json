@@ -1,0 +1,450 @@
+{
+  "verified_at_utc": "2026-09-15T03:44:36Z",
+  "queue_sha256": "45c1fb5e727d96104d4b1ee44d1a256176846c6978c1d406cff7cae26d2aa353",
+  "runner_sha256": "46ef858a1ec7c269310a66387b529a2dbcd341c58e0c5e6d838a8f5df174aa59",
+  "ledger_sha256": "c2f95defa91548b25a8dd82945e860e13436986fd69e593045d34ef2af8dac8f",
+  "expected_queries": 19,
+  "statuses": {
+    "COMPLETE": 19
+  },
+  "all_queries_terminal": true,
+  "attempts": 20,
+  "raw_response_hashes_verified": 20,
+  "accepted_cdx_rows": 1421,
+  "charged_decoded_bytes": 160323,
+  "decoded_bytes": 160323,
+  "run_file_bytes": 467642,
+  "replay_requests": 0,
+  "query_results": [
+    {
+      "candidate_url_id": "candidate_url_6bf6979a51d16a6f07e23b64",
+      "candidate_year_id": "73900__2011",
+      "full_name": "bevan dufty",
+      "requested_url": "http://bevandufty.com/",
+      "from_timestamp": "20100501000000",
+      "to_timestamp": "20120329235959",
+      "status": "COMPLETE",
+      "rows": 26,
+      "distinct_timestamps": 26,
+      "distinct_original_urls": 5,
+      "status_codes": {
+        "200": 18,
+        "301": 6,
+        "404": 1,
+        "503": 1
+      },
+      "mime_types": {
+        "text/html": 26
+      },
+      "html_200_rows": 18,
+      "attempts": 1,
+      "accepted_pages": 1
+    },
+    {
+      "candidate_url_id": "candidate_url_aa0cd6e297ca27a3fc55d215",
+      "candidate_year_id": "55954__2021",
+      "full_name": "cassie franklin",
+      "requested_url": "https://www.mayorcassiefranklin.com/",
+      "from_timestamp": "20200501000000",
+      "to_timestamp": "20220330235959",
+      "status": "COMPLETE",
+      "rows": 18,
+      "distinct_timestamps": 16,
+      "distinct_original_urls": 4,
+      "status_codes": {
+        "200": 8,
+        "301": 6,
+        "-": 4
+      },
+      "mime_types": {
+        "text/html": 8,
+        "unk": 6,
+        "warc/revisit": 4
+      },
+      "html_200_rows": 8,
+      "attempts": 1,
+      "accepted_pages": 1
+    },
+    {
+      "candidate_url_id": "candidate_url_c8d66de5b3ad37a2b4b9b629",
+      "candidate_year_id": "52940__2017",
+      "full_name": "michelle kaufusi",
+      "requested_url": "https://michelle4mayor.com/",
+      "from_timestamp": "20160501000000",
+      "to_timestamp": "20180330235959",
+      "status": "COMPLETE",
+      "rows": 12,
+      "distinct_timestamps": 12,
+      "distinct_original_urls": 4,
+      "status_codes": {
+        "200": 8,
+        "301": 4
+      },
+      "mime_types": {
+        "text/html": 12
+      },
+      "html_200_rows": 8,
+      "attempts": 1,
+      "accepted_pages": 1
+    },
+    {
+      "candidate_url_id": "candidate_url_415c7edbc24fb889aba66194",
+      "candidate_year_id": "42163__2016",
+      "full_name": "ted wheeler",
+      "requested_url": "http://www.tedwheeler.com/",
+      "from_timestamp": "20141101000000",
+      "to_timestamp": "20160928235959",
+      "status": "COMPLETE",
+      "rows": 62,
+      "distinct_timestamps": 62,
+      "distinct_original_urls": 5,
+      "status_codes": {
+        "200": 42,
+        "403": 10,
+        "400": 4,
+        "301": 2,
+        "-": 4
+      },
+      "mime_types": {
+        "text/html": 58,
+        "warc/revisit": 4
+      },
+      "html_200_rows": 42,
+      "attempts": 1,
+      "accepted_pages": 1
+    },
+    {
+      "candidate_url_id": "candidate_url_2fe54c09e099b2bdd4e89a00",
+      "candidate_year_id": "23981__2017",
+      "full_name": "betsy hodges",
+      "requested_url": "http://betsyhodges.org/",
+      "from_timestamp": "20160501000000",
+      "to_timestamp": "20180330235959",
+      "status": "COMPLETE",
+      "rows": 67,
+      "distinct_timestamps": 60,
+      "distinct_original_urls": 5,
+      "status_codes": {
+        "200": 46,
+        "301": 18,
+        "-": 3
+      },
+      "mime_types": {
+        "text/html": 64,
+        "warc/revisit": 3
+      },
+      "html_200_rows": 46,
+      "attempts": 1,
+      "accepted_pages": 1
+    },
+    {
+      "candidate_url_id": "candidate_url_b3dda47641c738e9f0a8df77",
+      "candidate_year_id": "51945__2021",
+      "full_name": "lydia ortega",
+      "requested_url": "https://lydiaortega4plano.com/",
+      "from_timestamp": "20191101000000",
+      "to_timestamp": "20210928235959",
+      "status": "COMPLETE",
+      "rows": 9,
+      "distinct_timestamps": 8,
+      "distinct_original_urls": 2,
+      "status_codes": {
+        "301": 1,
+        "200": 8
+      },
+      "mime_types": {
+        "text/html": 9
+      },
+      "html_200_rows": 8,
+      "attempts": 1,
+      "accepted_pages": 1
+    },
+    {
+      "candidate_url_id": "candidate_url_4c6d3d74755647d6737e7238",
+      "candidate_year_id": "24489__2017",
+      "full_name": "pat harris",
+      "requested_url": "http://www.patharrisformayor.com",
+      "from_timestamp": "20160501000000",
+      "to_timestamp": "20180330235959",
+      "status": "COMPLETE",
+      "rows": 19,
+      "distinct_timestamps": 18,
+      "distinct_original_urls": 5,
+      "status_codes": {
+        "200": 11,
+        "301": 8
+      },
+      "mime_types": {
+        "text/html": 19
+      },
+      "html_200_rows": 11,
+      "attempts": 1,
+      "accepted_pages": 1
+    },
+    {
+      "candidate_url_id": "candidate_url_cdceca4db3c06412d918ff8d",
+      "candidate_year_id": "71383__2014",
+      "full_name": "courtney ruby",
+      "requested_url": "http://www.courtneyruby.com/",
+      "from_timestamp": "20130501000000",
+      "to_timestamp": "20150330235959",
+      "status": "COMPLETE",
+      "rows": 14,
+      "distinct_timestamps": 14,
+      "distinct_original_urls": 4,
+      "status_codes": {
+        "301": 5,
+        "200": 9
+      },
+      "mime_types": {
+        "text/html": 14
+      },
+      "html_200_rows": 9,
+      "attempts": 1,
+      "accepted_pages": 1
+    },
+    {
+      "candidate_url_id": "candidate_url_d2fd16d80367edc77f46c996",
+      "candidate_year_id": "50593__2013",
+      "full_name": "annise parker",
+      "requested_url": "http://www.anniseparker.com/chron-our-pick-for-mayor-of-houston/",
+      "from_timestamp": "20120501000000",
+      "to_timestamp": "20140330235959",
+      "status": "COMPLETE",
+      "rows": 12,
+      "distinct_timestamps": 7,
+      "distinct_original_urls": 2,
+      "status_codes": {
+        "301": 5,
+        "200": 3,
+        "302": 4
+      },
+      "mime_types": {
+        "text/html": 12
+      },
+      "html_200_rows": 3,
+      "attempts": 1,
+      "accepted_pages": 1
+    },
+    {
+      "candidate_url_id": "candidate_url_d7dff0dfcf521745e249fbbe",
+      "candidate_year_id": "74035__2011",
+      "full_name": "leland yee",
+      "requested_url": "http://www.lelandyee.com/",
+      "from_timestamp": "20100501000000",
+      "to_timestamp": "20120329235959",
+      "status": "COMPLETE",
+      "rows": 38,
+      "distinct_timestamps": 38,
+      "distinct_original_urls": 3,
+      "status_codes": {
+        "200": 38
+      },
+      "mime_types": {
+        "text/html": 38
+      },
+      "html_200_rows": 38,
+      "attempts": 1,
+      "accepted_pages": 1
+    },
+    {
+      "candidate_url_id": "candidate_url_be1af68d2fb258135b3317bc",
+      "candidate_year_id": "71315__2014",
+      "full_name": "jean quan",
+      "requested_url": "http://www.jeanquanforoakland.org",
+      "from_timestamp": "20130501000000",
+      "to_timestamp": "20150330235959",
+      "status": "COMPLETE",
+      "rows": 37,
+      "distinct_timestamps": 37,
+      "distinct_original_urls": 4,
+      "status_codes": {
+        "-": 1,
+        "200": 36
+      },
+      "mime_types": {
+        "warc/revisit": 1,
+        "text/html": 36
+      },
+      "html_200_rows": 36,
+      "attempts": 1,
+      "accepted_pages": 1
+    },
+    {
+      "candidate_url_id": "candidate_url_2cf5a7524b66e00b6eecaec5",
+      "candidate_year_id": "74133__2011",
+      "full_name": "tony hall",
+      "requested_url": "http://www.tonyhallsf.com/",
+      "from_timestamp": "20100501000000",
+      "to_timestamp": "20120329235959",
+      "status": "COMPLETE",
+      "rows": 8,
+      "distinct_timestamps": 8,
+      "distinct_original_urls": 3,
+      "status_codes": {
+        "200": 8
+      },
+      "mime_types": {
+        "text/html": 8
+      },
+      "html_200_rows": 8,
+      "attempts": 1,
+      "accepted_pages": 1
+    },
+    {
+      "candidate_url_id": "candidate_url_318065755e7263760d0cb3b9",
+      "candidate_year_id": "78307__2015",
+      "full_name": "marcus giavanni",
+      "requested_url": "http://marcusgiavannifordenvermayor.com",
+      "from_timestamp": "20131101000000",
+      "to_timestamp": "20150928235959",
+      "status": "COMPLETE",
+      "rows": 5,
+      "distinct_timestamps": 4,
+      "distinct_original_urls": 3,
+      "status_codes": {
+        "200": 5
+      },
+      "mime_types": {
+        "text/html": 5
+      },
+      "html_200_rows": 5,
+      "attempts": 1,
+      "accepted_pages": 1
+    },
+    {
+      "candidate_url_id": "candidate_url_22916055be9aec44a51d4ca0",
+      "candidate_year_id": "14458__2012",
+      "full_name": "phil isley",
+      "requested_url": "http://www.philisley.us/",
+      "from_timestamp": "20101001000000",
+      "to_timestamp": "20120828235959",
+      "status": "COMPLETE",
+      "rows": 9,
+      "distinct_timestamps": 9,
+      "distinct_original_urls": 2,
+      "status_codes": {
+        "200": 9
+      },
+      "mime_types": {
+        "text/html": 9
+      },
+      "html_200_rows": 9,
+      "attempts": 1,
+      "accepted_pages": 1
+    },
+    {
+      "candidate_url_id": "candidate_url_877b7429196cc465b4cbdc8d",
+      "candidate_year_id": "45515__2013",
+      "full_name": "steve benjamin",
+      "requested_url": "https://stevebenjamin.com/",
+      "from_timestamp": "20120501000000",
+      "to_timestamp": "20140330235959",
+      "status": "COMPLETE",
+      "rows": 3,
+      "distinct_timestamps": 3,
+      "distinct_original_urls": 2,
+      "status_codes": {
+        "200": 3
+      },
+      "mime_types": {
+        "text/html": 3
+      },
+      "html_200_rows": 3,
+      "attempts": 1,
+      "accepted_pages": 1
+    },
+    {
+      "candidate_url_id": "candidate_url_f3bcf3a604e78ecd7e45f053",
+      "candidate_year_id": "35633__2017",
+      "full_name": "alex white",
+      "requested_url": "http://alexwhiteforrochester.org",
+      "from_timestamp": "20160501000000",
+      "to_timestamp": "20180330235959",
+      "status": "COMPLETE",
+      "rows": 17,
+      "distinct_timestamps": 17,
+      "distinct_original_urls": 3,
+      "status_codes": {
+        "301": 7,
+        "200": 10
+      },
+      "mime_types": {
+        "text/html": 17
+      },
+      "html_200_rows": 10,
+      "attempts": 1,
+      "accepted_pages": 1
+    },
+    {
+      "candidate_url_id": "candidate_url_9b74c47d76fd9dd2f117bef5",
+      "candidate_year_id": "42163__2016",
+      "full_name": "ted wheeler",
+      "requested_url": "https://tedwheeler.com/endorsements/",
+      "from_timestamp": "20141101000000",
+      "to_timestamp": "20160928235959",
+      "status": "COMPLETE",
+      "rows": 37,
+      "distinct_timestamps": 25,
+      "distinct_original_urls": 4,
+      "status_codes": {
+        "200": 25,
+        "301": 12
+      },
+      "mime_types": {
+        "text/html": 37
+      },
+      "html_200_rows": 25,
+      "attempts": 1,
+      "accepted_pages": 1
+    },
+    {
+      "candidate_url_id": "candidate_url_73a437d920b0dfb7444de673",
+      "candidate_year_id": "66507__2012",
+      "full_name": "steve cho",
+      "requested_url": "http://stevecho4mayor.com/",
+      "from_timestamp": "20110501000000",
+      "to_timestamp": "20130330235959",
+      "status": "COMPLETE",
+      "rows": 6,
+      "distinct_timestamps": 6,
+      "distinct_original_urls": 1,
+      "status_codes": {
+        "200": 6
+      },
+      "mime_types": {
+        "text/html": 6
+      },
+      "html_200_rows": 6,
+      "attempts": 1,
+      "accepted_pages": 1
+    },
+    {
+      "candidate_url_id": "candidate_url_c523178d8417eadb0ec6e08e",
+      "candidate_year_id": "34073__2021",
+      "full_name": "india walton",
+      "requested_url": "https://www.indiawalton.com/",
+      "from_timestamp": "20200501000000",
+      "to_timestamp": "20220330235959",
+      "status": "COMPLETE",
+      "rows": 1022,
+      "distinct_timestamps": 832,
+      "distinct_original_urls": 4,
+      "status_codes": {
+        "200": 458,
+        "301": 419,
+        "-": 144,
+        "429": 1
+      },
+      "mime_types": {
+        "text/html": 469,
+        "warc/revisit": 144,
+        "unk": 409
+      },
+      "html_200_rows": 458,
+      "attempts": 2,
+      "accepted_pages": 2
+    }
+  ],
+  "scope": "All returned CDX rows for the exact-match URLs and recorded windows. No digest collapse or status/MIME filter. Metadata does not establish page acquisition, ownership, or full-host history."
+}

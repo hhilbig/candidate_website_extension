@@ -1,0 +1,51 @@
+{
+  "acquisition_complete": false,
+  "attempts": 214,
+  "candidate_year_count": 18,
+  "candidate_years": [
+    "13007__2011",
+    "14457__2012",
+    "15721__2010",
+    "16776__2018",
+    "23181__2021",
+    "26713__2013",
+    "47861__2019",
+    "47877__2019",
+    "50876__2015",
+    "50904__2015",
+    "51942__2021",
+    "52486__2020",
+    "52939__2021",
+    "65464__2018",
+    "65839__2014",
+    "7063__2012",
+    "73997__2018",
+    "79345__2021"
+  ],
+  "charged_decoded_bytes": 18954228,
+  "decoded_bytes": 18954228,
+  "errors": [],
+  "fetched_keys": 205,
+  "http_hops": 221,
+  "ledger_sha256": "547481e55e2e90c3572a5744b47264461120ab56acb34436f463187e8a744446",
+  "manifest_sha256": "e817a8526b931797c8537b7d215e1b60692fbceee04171f77220b71cd2b2f2ad",
+  "queue_rows": 214,
+  "queue_sha256": "4eeaafc8681c0664673b1eab239053aacff8c67eb8b39d788289665991d12418",
+  "raw_files": 221,
+  "raw_stored_bytes": 4129295,
+  "started_attempts": 0,
+  "statuses": {
+    "capture_mismatch": 4,
+    "fetched": 205,
+    "terminal_http": 5
+  },
+  "terminal_verification": true,
+  "text_files": 209,
+  "text_stored_bytes": 369220,
+  "total_stored_bytes": 4498515,
+  "url_relations": {
+    "exact": 107,
+    "index_returned_url_variant": 107
+  },
+  "valid": true
+}

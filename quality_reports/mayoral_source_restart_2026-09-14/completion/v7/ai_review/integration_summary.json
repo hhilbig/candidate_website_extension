@@ -1,0 +1,19 @@
+{
+  "input_hashes": {
+    "quality_reports/mayoral_source_restart_2026-09-14/completion/v7/candidate_urls.csv": "5a3622bcad74ce1d654c3b637032fdaf914300a29148f5237a73bf29278ca2bd",
+    "quality_reports/mayoral_ai_review_2026-09-14/validation.csv": "3147c7d85e4c3dfc46bc0486a00f256863de31435d52193f2f4c66813d431abc",
+    "quality_reports/mayoral_ai_review_2026-09-14/review_a.json": "e0459769e3bb7890b1375fa97dedf1aefd9f4de1d3d0b127bb491f88f66b3c26",
+    "quality_reports/mayoral_ai_review_2026-09-14/review_b.json": "fe424054f4301fd40e679d5a66bfa4d939aea60161dd96a0e134ab2842ac3e4e"
+  },
+  "main_rows_before": 1390,
+  "main_rows_after": 1390,
+  "new_url_rows": 0,
+  "original_fields_preserved": true,
+  "ai_decisions": {
+    "accept": 41,
+    "unsure": 2
+  },
+  "ai_accepted_candidate_years": 40,
+  "human_approvals_added": 0,
+  "output_sha256": "d9f12e1f235d2db114654abe437b2eb10a7e6fbe0543163ee8702cf8425281c7"
+}

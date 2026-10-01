@@ -1,0 +1,735 @@
+{
+  "manifest_version": "mayoral-discovery-state-v1",
+  "generated_at_utc": "2026-08-25T15:26:04.212093+00:00",
+  "repository_root_name": "candidate_website_extension",
+  "files": [
+    {
+      "path": "data/municipal_discovery/screening/city_priority_2000_2007.csv",
+      "bytes": 1287,
+      "sha256": "df806256bd1da3b5e84dfe49a3b43c8281bd43028a5503273ed3be30045564a7",
+      "records": 20,
+      "columns": 12
+    },
+    {
+      "path": "data/municipal_discovery/final/mayoral_candidate_universe.csv",
+      "bytes": 6567622,
+      "sha256": "d722d64a5b6961f2d1440cb28af1de50031f3fe2944669275edaf668383f42e9",
+      "records": 11020,
+      "columns": 47
+    },
+    {
+      "path": "quality_reports/mayoral_url_discovery_2026-08-24/official_municipal_source_inventory.csv",
+      "bytes": 8597,
+      "sha256": "519d4d78644d136846e3a0eb33d911015c00215d8ece108dbf6760d83126c37e",
+      "records": 34,
+      "columns": 10
+    },
+    {
+      "path": "quality_reports/mayoral_url_discovery_2026-08-24/municipal_public_record_request_packet.md",
+      "bytes": 27623,
+      "sha256": "a3b0932f97f9d1004fbcc96edf4fe2d2e6a6db99a28f20f3494b6649027cb007",
+      "records": null,
+      "columns": null
+    },
+    {
+      "path": "quality_reports/mayoral_url_discovery_2026-08-24/source_channel_status.md",
+      "bytes": 6731,
+      "sha256": "1a986320630dcd0f4c9204d36a95914f15aa3facc9c4ccb7516301280da3095b",
+      "records": null,
+      "columns": null
+    },
+    {
+      "path": "quality_reports/plans/2026-08-24_mayoral-url-discovery-next-phase.md",
+      "bytes": 5850,
+      "sha256": "456a4237b8298cfbb7bb8d6e969bcff8880416e01ed08c5540f6ed88cb2bf996",
+      "records": null,
+      "columns": null
+    },
+    {
+      "path": "quality_reports/plans/2026-08-25_mayoral-url-discovery-2010-2021.md",
+      "bytes": 15029,
+      "sha256": "c11b2ec748036b75ff5184cf0d3dc9e566ee123af92cd942b35b1bb0ba19f9da",
+      "records": null,
+      "columns": null
+    },
+    {
+      "path": "quality_reports/mayoral_url_discovery_2026-08-25/municipal_request_batch_1.md",
+      "bytes": 4828,
+      "sha256": "e2b008a9628cc1a16398d3370474b2724b687e107d1b560274e8291bd5b9ea90",
+      "records": null,
+      "columns": null
+    },
+    {
+      "path": "scripts/fetch_municipal_record_sources.py",
+      "bytes": 14097,
+      "sha256": "0cfff83a011f3d359cd108d14a5c02bc2290317dd7bc8555832261ac592b4acc",
+      "records": null,
+      "columns": null
+    },
+    {
+      "path": "scripts/build_municipal_extraction_manifest.py",
+      "bytes": 5338,
+      "sha256": "ef6ebe3213b48dd5627c3accd8e15c54811793b0005a45d62759d5034c13c1f0",
+      "records": null,
+      "columns": null
+    },
+    {
+      "path": "scripts/extract_municipal_mayoral_urls.py",
+      "bytes": 40260,
+      "sha256": "271f78ab64f9d13a6b5821efcab70b19a473e07b91e6aed6a2ef0f6fcd0aa34b",
+      "records": null,
+      "columns": null
+    },
+    {
+      "path": "config/official_municipal_extraction_manifest.json",
+      "bytes": 112037,
+      "sha256": "2d04dead26af42c36a25f409c3f94f1c62a6f92079ff2209ac0b85e40cd8ac71",
+      "records": null,
+      "columns": null
+    },
+    {
+      "path": "data/municipal_discovery/municipal_records/download_manifest.csv",
+      "bytes": 50781,
+      "sha256": "950e25c74a2430572832a4b04267b8b9502a2af2151ea9c90fe2abbf1c19ae90",
+      "records": 91,
+      "columns": 18
+    },
+    {
+      "path": "data/municipal_discovery/municipal_records/source_fetch_attempts.csv",
+      "bytes": 5523,
+      "sha256": "49b9b75989f6f9bbeaf8011125224d099bcfc0231df7bcc56040f18c905a5e1b",
+      "records": 34,
+      "columns": 12
+    },
+    {
+      "path": "data/municipal_discovery/municipal_records/fetch_summary.json",
+      "bytes": 199,
+      "sha256": "ecb7b96bd2e9cb3a651a23227171b835084c306441927d6d02a584b5fb9a56ca",
+      "records": null,
+      "columns": null
+    },
+    {
+      "path": "data/municipal_discovery/municipal_records/mayoral_source_attempts_municipal.csv",
+      "bytes": 58999,
+      "sha256": "caf393fd2624123c16f0d075c6707579aa8991f714f3fa1d76ef2cf35b70cf00",
+      "records": 103,
+      "columns": 21
+    },
+    {
+      "path": "data/municipal_discovery/municipal_records/mayoral_url_evidence_municipal.csv",
+      "bytes": 570,
+      "sha256": "ae8cb8ca6ad9afdaf4ef365a75c97da70acfa08428fedde065ae9d423d88c1cb",
+      "records": 0,
+      "columns": 39
+    },
+    {
+      "path": "quality_reports/mayoral_url_discovery_2026-08-25/municipal_records_phase_report.md",
+      "bytes": 5311,
+      "sha256": "48da65dd9f0418b9d8968ec5d5af0baee84927d8bc7d6064b9b2f9571c0e796e",
+      "records": null,
+      "columns": null
+    },
+    {
+      "path": "docs/mayoral_url_discovery.md",
+      "bytes": 21872,
+      "sha256": "bf650d7c77ab41f7cb0f4550d12053e911d0b728391afeaa4230c8d62af97cfd",
+      "records": null,
+      "columns": null
+    },
+    {
+      "path": "data/municipal_discovery/municipal_records/source_files/albuquerque_campaign_finance__albuquerque__nm/9ead0c42bfb091a82ba7.html",
+      "bytes": 104688,
+      "sha256": "9ead0c42bfb091a82ba7b7fab106580d358ac9f511c1a1925f94b957eb4b3381",
+      "records": null,
+      "columns": null
+    },
+    {
+      "path": "data/municipal_discovery/municipal_records/source_files/albuquerque_historical_elections__albuquerque__nm/134095d991424be75625.html",
+      "bytes": 102705,
+      "sha256": "134095d991424be756251392d9f2c9e073d59b126a2420383e62ed2b779973e4",
+      "records": null,
+      "columns": null
+    },
+    {
+      "path": "data/municipal_discovery/municipal_records/source_files/allegheny_campaign_finance__pittsburgh__pa/9ba535174cf4e26e6159.html",
+      "bytes": 292276,
+      "sha256": "9ba535174cf4e26e61591e6d7f93db66fafcffff3566db63e265784eca25a487",
+      "records": null,
+      "columns": null
+    },
+    {
+      "path": "data/municipal_discovery/municipal_records/source_files/allegheny_election_results__pittsburgh__pa/0d4718503947d86deeb5.pdf",
+      "bytes": 107334,
+      "sha256": "0d4718503947d86deeb53baf7fc79e8f78231ad551a2f8613aadde9e1a5ae4f9",
+      "records": null,
+      "columns": null
+    },
+    {
+      "path": "data/municipal_discovery/municipal_records/source_files/allegheny_election_results__pittsburgh__pa/1a975541f646b4e4138c.html",
+      "bytes": 323156,
+      "sha256": "1a975541f646b4e4138cdbe717d3c997cf9d669ff203ea4bd9569e6490f71f72",
+      "records": null,
+      "columns": null
+    },
+    {
+      "path": "data/municipal_discovery/municipal_records/source_files/allegheny_election_results__pittsburgh__pa/80918a127c9eb960f396.pdf",
+      "bytes": 748626,
+      "sha256": "80918a127c9eb960f3961354aebc70f164c08c4d75fd325f2c35f2ce7570bb0d",
+      "records": null,
+      "columns": null
+    },
+    {
+      "path": "data/municipal_discovery/municipal_records/source_files/allegheny_election_results__pittsburgh__pa/8c1e012d338648be98a4.pdf",
+      "bytes": 5642327,
+      "sha256": "8c1e012d338648be98a443b681155fbcdefbfa8ad196761ebf3d9d4ad1470ec7",
+      "records": null,
+      "columns": null
+    },
+    {
+      "path": "data/municipal_discovery/municipal_records/source_files/allegheny_election_results__pittsburgh__pa/9088ce3080598b9d9d80.pdf",
+      "bytes": 994754,
+      "sha256": "9088ce3080598b9d9d80fc19880f8472dbf78ea855f47216358c30edec854087",
+      "records": null,
+      "columns": null
+    },
+    {
+      "path": "data/municipal_discovery/municipal_records/source_files/allegheny_election_results__pittsburgh__pa/9a5dd042e9edaab18055.pdf",
+      "bytes": 4185905,
+      "sha256": "9a5dd042e9edaab180556fed172b14ec3709b5e57ec858798484739dc0bf3f1f",
+      "records": null,
+      "columns": null
+    },
+    {
+      "path": "data/municipal_discovery/municipal_records/source_files/allegheny_election_results__pittsburgh__pa/b63a2154299ab2592716.pdf",
+      "bytes": 56812,
+      "sha256": "b63a2154299ab25927163c99078ce5db275f30725b5a947a22df4422efc0e13c",
+      "records": null,
+      "columns": null
+    },
+    {
+      "path": "data/municipal_discovery/municipal_records/source_files/anchorage_results_history__anchorage__ak/f8e9a491c790bbe45575.html",
+      "bytes": 82238,
+      "sha256": "f8e9a491c790bbe455759ee01c35ddfc47fa241375472a3a2ee53303d39fc4de",
+      "records": null,
+      "columns": null
+    },
+    {
+      "path": "data/municipal_discovery/municipal_records/source_files/arlington_elections__arlington__tx/75942e2056b08573b8f8.pdf",
+      "bytes": 106906,
+      "sha256": "75942e2056b08573b8f8414859e2c24c7d5aa7077715f3121a5b96d053daa295",
+      "records": null,
+      "columns": null
+    },
+    {
+      "path": "data/municipal_discovery/municipal_records/source_files/arlington_elections__arlington__tx/9d924b6dd1da587293ba.pdf",
+      "bytes": 103828,
+      "sha256": "9d924b6dd1da587293bac2999fa128976ae30e0cf693c24990f550592dfdf8fa",
+      "records": null,
+      "columns": null
+    },
+    {
+      "path": "data/municipal_discovery/municipal_records/source_files/arlington_elections__arlington__tx/ace6a218acd04a3b01a9.pdf",
+      "bytes": 103201,
+      "sha256": "ace6a218acd04a3b01a92aa0a6a71c6d25dc0c8e6f905132a9d46b7e12419eb9",
+      "records": null,
+      "columns": null
+    },
+    {
+      "path": "data/municipal_discovery/municipal_records/source_files/arlington_elections__arlington__tx/c1935504071abead4e5e.pdf",
+      "bytes": 97635,
+      "sha256": "c1935504071abead4e5e38863b989147c5e082dbbba8c020079f200831a88938",
+      "records": null,
+      "columns": null
+    },
+    {
+      "path": "data/municipal_discovery/municipal_records/source_files/arlington_elections__arlington__tx/c72cc6693f209bfc1eb1.pdf",
+      "bytes": 97850,
+      "sha256": "c72cc6693f209bfc1eb107da5b9c707b831e297a6d9db6198acac9210c537ec7",
+      "records": null,
+      "columns": null
+    },
+    {
+      "path": "data/municipal_discovery/municipal_records/source_files/arlington_elections__arlington__tx/d52f1533c666b73c77ab.pdf",
+      "bytes": 101465,
+      "sha256": "d52f1533c666b73c77abac76fc09f000fdce464cfa9a62836fee9e1218dd167c",
+      "records": null,
+      "columns": null
+    },
+    {
+      "path": "data/municipal_discovery/municipal_records/source_files/arlington_elections__arlington__tx/e2446bb065b11fd8ff92.pdf",
+      "bytes": 94519,
+      "sha256": "e2446bb065b11fd8ff92b76570e3f6476699ca32250f5a1a60e8a6bbd0881192",
+      "records": null,
+      "columns": null
+    },
+    {
+      "path": "data/municipal_discovery/municipal_records/source_files/arlington_elections__arlington__tx/f78695d68b6fd770f2a9.pdf",
+      "bytes": 100302,
+      "sha256": "f78695d68b6fd770f2a9685db94de94ee1f61926771879613d898f901eb509d9",
+      "records": null,
+      "columns": null
+    },
+    {
+      "path": "data/municipal_discovery/municipal_records/source_files/arlington_elections__arlington__tx/fe395a31e317f6070ca4.html",
+      "bytes": 102555,
+      "sha256": "fe395a31e317f6070ca4515dd1af9ed7ea0200647f290e211a7b9ce03f367f8e",
+      "records": null,
+      "columns": null
+    },
+    {
+      "path": "data/municipal_discovery/municipal_records/source_files/austin_campaign_finance__austin__tx/535fb09b56e95bf4b1b8.html",
+      "bytes": 82215,
+      "sha256": "535fb09b56e95bf4b1b8e7345e67fa8a59c0036b50567f92953c1fd64a19f0ed",
+      "records": null,
+      "columns": null
+    },
+    {
+      "path": "data/municipal_discovery/municipal_records/source_files/austin_election_history__austin__tx/0c60042e9e0cd123aa7b.html",
+      "bytes": 16951,
+      "sha256": "0c60042e9e0cd123aa7bcf87fb4d8d414c4b175f51336c60aefa0efb6f071d59",
+      "records": null,
+      "columns": null
+    },
+    {
+      "path": "data/municipal_discovery/municipal_records/source_files/columbus_campaign_finance__columbus__oh/65a99d64758d23efd828.html",
+      "bytes": 12846,
+      "sha256": "65a99d64758d23efd828b4622e5f6395db47166063af8ffff221a3b1a1a6cbc7",
+      "records": null,
+      "columns": null
+    },
+    {
+      "path": "data/municipal_discovery/municipal_records/source_files/connecticut_election_history__new_haven__ct/0d9e5cd10c6443d41842.html",
+      "bytes": 71890,
+      "sha256": "0d9e5cd10c6443d41842ef89351393bfaa04199fcc0df784aa4cb03dd18ba556",
+      "records": null,
+      "columns": null
+    },
+    {
+      "path": "data/municipal_discovery/municipal_records/source_files/connecticut_election_history__waterbury__ct/0d9e5cd10c6443d41842.html",
+      "bytes": 71890,
+      "sha256": "0d9e5cd10c6443d41842ef89351393bfaa04199fcc0df784aa4cb03dd18ba556",
+      "records": null,
+      "columns": null
+    },
+    {
+      "path": "data/municipal_discovery/municipal_records/source_files/dearborn_election_results__dearborn__mi/daef9db2e05a59962f15.html",
+      "bytes": 269410,
+      "sha256": "daef9db2e05a59962f15df88eee3901cdaa31e51a058874efac3a126fe7ff97a",
+      "records": null,
+      "columns": null
+    },
+    {
+      "path": "data/municipal_discovery/municipal_records/source_files/hamilton_campaign_finance_filing__chattanooga__tn/0b30010bc01426f93c56.html",
+      "bytes": 45334,
+      "sha256": "0b30010bc01426f93c56d079ff3b8cb9b77b8bdbdb77dbe4fdbebe9bfaf60a11",
+      "records": null,
+      "columns": null
+    },
+    {
+      "path": "data/municipal_discovery/municipal_records/source_files/hamilton_campaign_finance_filing__chattanooga__tn/1bdc68835a8ab7bd1fb4.pdf",
+      "bytes": 407573,
+      "sha256": "1bdc68835a8ab7bd1fb4a21e680bae6724e03e01fcb041f8e31fd90e296e2231",
+      "records": null,
+      "columns": null
+    },
+    {
+      "path": "data/municipal_discovery/municipal_records/source_files/hamilton_campaign_finance_filing__chattanooga__tn/3c0ed76d971dda7c7d4e.pdf",
+      "bytes": 672177,
+      "sha256": "3c0ed76d971dda7c7d4e20c10d9df106bd042bfe29116e4c54e2df9d32019f29",
+      "records": null,
+      "columns": null
+    },
+    {
+      "path": "data/municipal_discovery/municipal_records/source_files/hamilton_campaign_finance_filing__chattanooga__tn/452aa07312e2c3bc2d79.html",
+      "bytes": 56017,
+      "sha256": "452aa07312e2c3bc2d7968ec1fefdf0381dd58c936093b3aab3012463104b6a5",
+      "records": null,
+      "columns": null
+    },
+    {
+      "path": "data/municipal_discovery/municipal_records/source_files/hamilton_campaign_finance_filing__chattanooga__tn/4bb73839bf20054a78fb.pdf",
+      "bytes": 438170,
+      "sha256": "4bb73839bf20054a78fbb6725aa85f722350b55d944ecd7ab66946ba70063048",
+      "records": null,
+      "columns": null
+    },
+    {
+      "path": "data/municipal_discovery/municipal_records/source_files/hamilton_campaign_finance_filing__chattanooga__tn/504443897746899515ad.pdf",
+      "bytes": 306720,
+      "sha256": "504443897746899515ad11b5c4ba2f8c071b7ae85172411bf769df97ac25774d",
+      "records": null,
+      "columns": null
+    },
+    {
+      "path": "data/municipal_discovery/municipal_records/source_files/hamilton_campaign_finance_filing__chattanooga__tn/77f56c9db8860c245b37.html",
+      "bytes": 45664,
+      "sha256": "77f56c9db8860c245b37ded1bc3d57fa6d57798a790a88d9dfef158b11018300",
+      "records": null,
+      "columns": null
+    },
+    {
+      "path": "data/municipal_discovery/municipal_records/source_files/hamilton_campaign_finance_filing__chattanooga__tn/78e173957e48b15ee6fb.pdf",
+      "bytes": 4423906,
+      "sha256": "78e173957e48b15ee6fb1708743e4fa3f4c6d8d9bcb19e4273299350115a5c9c",
+      "records": null,
+      "columns": null
+    },
+    {
+      "path": "data/municipal_discovery/municipal_records/source_files/hamilton_campaign_finance_filing__chattanooga__tn/820a9f39f5360eaffe20.pdf",
+      "bytes": 823257,
+      "sha256": "820a9f39f5360eaffe20393c6f7e343f449f52606c2eb89582837bdb71ff597a",
+      "records": null,
+      "columns": null
+    },
+    {
+      "path": "data/municipal_discovery/municipal_records/source_files/hamilton_campaign_finance_filing__chattanooga__tn/904edf57201273580531.pdf",
+      "bytes": 2380962,
+      "sha256": "904edf57201273580531bb2afc0c3a11eb74dfb0f81f66f74e81fc3a1143126e",
+      "records": null,
+      "columns": null
+    },
+    {
+      "path": "data/municipal_discovery/municipal_records/source_files/hamilton_campaign_finance_filing__chattanooga__tn/dfacdd30c5965d3116e2.pdf",
+      "bytes": 222630,
+      "sha256": "dfacdd30c5965d3116e2db338ec98b63ddc4ed1e84623589313f699345cec796",
+      "records": null,
+      "columns": null
+    },
+    {
+      "path": "data/municipal_discovery/municipal_records/source_files/hamilton_campaign_finance_filing__chattanooga__tn/e0b4feb3e82e998d5ef9.html",
+      "bytes": 46604,
+      "sha256": "e0b4feb3e82e998d5ef9d8c7b0999429426c987b985d0063965f7de90b1190d2",
+      "records": null,
+      "columns": null
+    },
+    {
+      "path": "data/municipal_discovery/municipal_records/source_files/hamilton_county_election_archives__chattanooga__tn/166d1c2ad5570db4642b.html",
+      "bytes": 45334,
+      "sha256": "166d1c2ad5570db4642b0027e6e6c5efc577377ab2863352e2d50f3b67c8faa3",
+      "records": null,
+      "columns": null
+    },
+    {
+      "path": "data/municipal_discovery/municipal_records/source_files/hamilton_county_election_archives__chattanooga__tn/1bdc68835a8ab7bd1fb4.pdf",
+      "bytes": 407573,
+      "sha256": "1bdc68835a8ab7bd1fb4a21e680bae6724e03e01fcb041f8e31fd90e296e2231",
+      "records": null,
+      "columns": null
+    },
+    {
+      "path": "data/municipal_discovery/municipal_records/source_files/hamilton_county_election_archives__chattanooga__tn/3c0ed76d971dda7c7d4e.pdf",
+      "bytes": 672177,
+      "sha256": "3c0ed76d971dda7c7d4e20c10d9df106bd042bfe29116e4c54e2df9d32019f29",
+      "records": null,
+      "columns": null
+    },
+    {
+      "path": "data/municipal_discovery/municipal_records/source_files/hamilton_county_election_archives__chattanooga__tn/4bb73839bf20054a78fb.pdf",
+      "bytes": 438170,
+      "sha256": "4bb73839bf20054a78fbb6725aa85f722350b55d944ecd7ab66946ba70063048",
+      "records": null,
+      "columns": null
+    },
+    {
+      "path": "data/municipal_discovery/municipal_records/source_files/hamilton_county_election_archives__chattanooga__tn/504443897746899515ad.pdf",
+      "bytes": 306720,
+      "sha256": "504443897746899515ad11b5c4ba2f8c071b7ae85172411bf769df97ac25774d",
+      "records": null,
+      "columns": null
+    },
+    {
+      "path": "data/municipal_discovery/municipal_records/source_files/hamilton_county_election_archives__chattanooga__tn/626a0d9558fcf631b2f9.html",
+      "bytes": 46604,
+      "sha256": "626a0d9558fcf631b2f9fc22bd9a6526d637b65685603d9423bfe9f5b2927518",
+      "records": null,
+      "columns": null
+    },
+    {
+      "path": "data/municipal_discovery/municipal_records/source_files/hamilton_county_election_archives__chattanooga__tn/78e173957e48b15ee6fb.pdf",
+      "bytes": 4423906,
+      "sha256": "78e173957e48b15ee6fb1708743e4fa3f4c6d8d9bcb19e4273299350115a5c9c",
+      "records": null,
+      "columns": null
+    },
+    {
+      "path": "data/municipal_discovery/municipal_records/source_files/hamilton_county_election_archives__chattanooga__tn/7c97ae62d80e081d7d2e.html",
+      "bytes": 48439,
+      "sha256": "7c97ae62d80e081d7d2ed4cd19e5e5eabce953a0cfcd01fbd0e643b787b24d08",
+      "records": null,
+      "columns": null
+    },
+    {
+      "path": "data/municipal_discovery/municipal_records/source_files/hamilton_county_election_archives__chattanooga__tn/820a9f39f5360eaffe20.pdf",
+      "bytes": 823257,
+      "sha256": "820a9f39f5360eaffe20393c6f7e343f449f52606c2eb89582837bdb71ff597a",
+      "records": null,
+      "columns": null
+    },
+    {
+      "path": "data/municipal_discovery/municipal_records/source_files/hamilton_county_election_archives__chattanooga__tn/904edf57201273580531.pdf",
+      "bytes": 2380962,
+      "sha256": "904edf57201273580531bb2afc0c3a11eb74dfb0f81f66f74e81fc3a1143126e",
+      "records": null,
+      "columns": null
+    },
+    {
+      "path": "data/municipal_discovery/municipal_records/source_files/hamilton_county_election_archives__chattanooga__tn/a125c92ec685da606099.html",
+      "bytes": 45664,
+      "sha256": "a125c92ec685da60609997992308100d0c60ddbb16c13bf658dc58dacad74cc0",
+      "records": null,
+      "columns": null
+    },
+    {
+      "path": "data/municipal_discovery/municipal_records/source_files/hamilton_county_election_archives__chattanooga__tn/dfacdd30c5965d3116e2.pdf",
+      "bytes": 222630,
+      "sha256": "dfacdd30c5965d3116e2db338ec98b63ddc4ed1e84623589313f699345cec796",
+      "records": null,
+      "columns": null
+    },
+    {
+      "path": "data/municipal_discovery/municipal_records/source_files/harris_county_election_reports__houston__tx/889d8197508ca6d58804.html",
+      "bytes": 123808,
+      "sha256": "889d8197508ca6d588043c20a35b09baf75c178d0821d7550d7cca2d8a846558",
+      "records": null,
+      "columns": null
+    },
+    {
+      "path": "data/municipal_discovery/municipal_records/source_files/hartford_campaign_finance__hartford__ct/0f36f6e7ed691beb55c0.pdf",
+      "bytes": 57380,
+      "sha256": "0f36f6e7ed691beb55c05f4abf524bb5dd676d84334110579e08a40a2e05dea6",
+      "records": null,
+      "columns": null
+    },
+    {
+      "path": "data/municipal_discovery/municipal_records/source_files/hartford_campaign_finance__hartford__ct/19de8d9c6d34b73ac58a.html",
+      "bytes": 280015,
+      "sha256": "19de8d9c6d34b73ac58a78f9e6c19659a4a7a15f86021ee704301e2bd66cbd74",
+      "records": null,
+      "columns": null
+    },
+    {
+      "path": "data/municipal_discovery/municipal_records/source_files/hartford_campaign_finance__hartford__ct/24a0b9f503193b951a9b.pdf",
+      "bytes": 173092,
+      "sha256": "24a0b9f503193b951a9b038ab60667ea7158b02a413668f1d50974e7bcaa92d2",
+      "records": null,
+      "columns": null
+    },
+    {
+      "path": "data/municipal_discovery/municipal_records/source_files/hartford_campaign_finance__hartford__ct/25163421ad73446348a2.pdf",
+      "bytes": 7039458,
+      "sha256": "25163421ad73446348a24aac083261a707f7996d4d1effbeda2085c4dc4f8f72",
+      "records": null,
+      "columns": null
+    },
+    {
+      "path": "data/municipal_discovery/municipal_records/source_files/hartford_campaign_finance__hartford__ct/40d64707a04b644ac7b2.pdf",
+      "bytes": 6157296,
+      "sha256": "40d64707a04b644ac7b21ce9ab5924b219138548a819b8667e6eba8ee54fb184",
+      "records": null,
+      "columns": null
+    },
+    {
+      "path": "data/municipal_discovery/municipal_records/source_files/hartford_campaign_finance__hartford__ct/b73d72c83f67b2076c5b.pdf",
+      "bytes": 242676,
+      "sha256": "b73d72c83f67b2076c5b08cba13ff942ab9236ea9c536e3b54b779d6fe8e2cb6",
+      "records": null,
+      "columns": null
+    },
+    {
+      "path": "data/municipal_discovery/municipal_records/source_files/hartford_campaign_finance__hartford__ct/bdd8742f1dfbf30bd9d3.pdf",
+      "bytes": 351218,
+      "sha256": "bdd8742f1dfbf30bd9d3fb12fe7285250a8bb2511ca6f9b1957b115addc872ef",
+      "records": null,
+      "columns": null
+    },
+    {
+      "path": "data/municipal_discovery/municipal_records/source_files/hartford_campaign_finance__hartford__ct/d4968b3112aa0d0fc0ee.pdf",
+      "bytes": 7017342,
+      "sha256": "d4968b3112aa0d0fc0ee1bbdcbab21978ea49cbf17f13b0857f726a9ae48b0f6",
+      "records": null,
+      "columns": null
+    },
+    {
+      "path": "data/municipal_discovery/municipal_records/source_files/hartford_campaign_finance__hartford__ct/e0ce3173c40b3943c7f6.pdf",
+      "bytes": 780797,
+      "sha256": "e0ce3173c40b3943c7f6e8c3b18296dfcb67ba824b1a861012e4498ac1cf932e",
+      "records": null,
+      "columns": null
+    },
+    {
+      "path": "data/municipal_discovery/municipal_records/source_files/hartford_campaign_finance__hartford__ct/f0fe41353a76593d5e35.pdf",
+      "bytes": 138435,
+      "sha256": "f0fe41353a76593d5e35344a2aa55cecc62a98f89f9a52c9c1a46dd525786e58",
+      "records": null,
+      "columns": null
+    },
+    {
+      "path": "data/municipal_discovery/municipal_records/source_files/hartford_campaign_finance__hartford__ct/f695b9d5685779ee2280.pdf",
+      "bytes": 1683058,
+      "sha256": "f695b9d5685779ee2280d3db2851ee9b8daeaedf8a0067248f769518a2ae8f44",
+      "records": null,
+      "columns": null
+    },
+    {
+      "path": "data/municipal_discovery/municipal_records/source_files/hartford_election_history__hartford__ct/4aba2d764e7098e7f5f5.html",
+      "bytes": 129974,
+      "sha256": "4aba2d764e7098e7f5f5cc0cef5b666cea1d24a7d47f2ab91009971dc0e712a5",
+      "records": null,
+      "columns": null
+    },
+    {
+      "path": "data/municipal_discovery/municipal_records/source_files/houston_campaign_finance__houston__tx/2b68ebba7e07f8ad7a09.html",
+      "bytes": 33232,
+      "sha256": "2b68ebba7e07f8ad7a09b0477078726bd82e345713618febf9996e3d54cce5d7",
+      "records": null,
+      "columns": null
+    },
+    {
+      "path": "data/municipal_discovery/municipal_records/source_files/houston_historic_campaign_finance__houston__tx/127b3c330ce2c6aa7c75.pdf",
+      "bytes": 1704932,
+      "sha256": "127b3c330ce2c6aa7c75c25bc5bd2dce04019b8fbef77b4f7100a72f1e3943bc",
+      "records": null,
+      "columns": null
+    },
+    {
+      "path": "data/municipal_discovery/municipal_records/source_files/houston_historic_campaign_finance__houston__tx/255faebe83a3613f4eb5.pdf",
+      "bytes": 535239,
+      "sha256": "255faebe83a3613f4eb5e2ceea2780727af36ab4aeaa729cad19088498ac44aa",
+      "records": null,
+      "columns": null
+    },
+    {
+      "path": "data/municipal_discovery/municipal_records/source_files/houston_historic_campaign_finance__houston__tx/3501d110f52c9aabad75.pdf",
+      "bytes": 132547,
+      "sha256": "3501d110f52c9aabad75ccec39209f5992bb33a63e0300e0159d8b28f5db98b4",
+      "records": null,
+      "columns": null
+    },
+    {
+      "path": "data/municipal_discovery/municipal_records/source_files/houston_historic_campaign_finance__houston__tx/368819372c3acdfe3785.pdf",
+      "bytes": 258474,
+      "sha256": "368819372c3acdfe378599a566aeb23e1d1b86d4b5c49b84cb755d236dd8f05f",
+      "records": null,
+      "columns": null
+    },
+    {
+      "path": "data/municipal_discovery/municipal_records/source_files/houston_historic_campaign_finance__houston__tx/38cacb2cef7c1db79844.html",
+      "bytes": 24603,
+      "sha256": "38cacb2cef7c1db7984430030a211ad3214e09453f3d01144c8c71cf5e818f7b",
+      "records": null,
+      "columns": null
+    },
+    {
+      "path": "data/municipal_discovery/municipal_records/source_files/houston_historic_campaign_finance__houston__tx/3e066c86890a7b1df270.pdf",
+      "bytes": 129035,
+      "sha256": "3e066c86890a7b1df27010b3948b749a314874bfebeffe597aed69ff8210d134",
+      "records": null,
+      "columns": null
+    },
+    {
+      "path": "data/municipal_discovery/municipal_records/source_files/houston_historic_campaign_finance__houston__tx/6366b6b591458685ca06.pdf",
+      "bytes": 983709,
+      "sha256": "6366b6b591458685ca0661c29b9d37b5b29992d3c0c386aa8a460b91feca8a7f",
+      "records": null,
+      "columns": null
+    },
+    {
+      "path": "data/municipal_discovery/municipal_records/source_files/houston_historic_campaign_finance__houston__tx/69ad662f1fffb65f20bb.pdf",
+      "bytes": 325626,
+      "sha256": "69ad662f1fffb65f20bb3f0ef2ee5ffc6e1d2a2722f5fc1327d03cb476efd2ef",
+      "records": null,
+      "columns": null
+    },
+    {
+      "path": "data/municipal_discovery/municipal_records/source_files/houston_historic_campaign_finance__houston__tx/7b9da2f08dc76d0e9d59.html",
+      "bytes": 31561,
+      "sha256": "7b9da2f08dc76d0e9d597797a62059d035c828a48892e59040ef8025c6d01407",
+      "records": null,
+      "columns": null
+    },
+    {
+      "path": "data/municipal_discovery/municipal_records/source_files/houston_historic_campaign_finance__houston__tx/c106f07944ed3ad5c95b.html",
+      "bytes": 40528,
+      "sha256": "c106f07944ed3ad5c95bb67320f2ff045e4c6cf706fe8c4f4a9afc198905a670",
+      "records": null,
+      "columns": null
+    },
+    {
+      "path": "data/municipal_discovery/municipal_records/source_files/houston_historic_campaign_finance__houston__tx/c197e937b25d10f09302.pdf",
+      "bytes": 754659,
+      "sha256": "c197e937b25d10f093023438b5ab61c804f4a4eb22708b5c2587123d007cea07",
+      "records": null,
+      "columns": null
+    },
+    {
+      "path": "data/municipal_discovery/municipal_records/source_files/houston_historic_campaign_finance__houston__tx/ed252ee4e20c139c32ed.pdf",
+      "bytes": 214903,
+      "sha256": "ed252ee4e20c139c32ed2b94d70d7abe7d6b7dbc14fcf35483fba402ab4bdd11",
+      "records": null,
+      "columns": null
+    },
+    {
+      "path": "data/municipal_discovery/municipal_records/source_files/idaho_campaign_finance_downloads__boise_city__id/0e3c8a70fe43bab847d3.html",
+      "bytes": 10960,
+      "sha256": "0e3c8a70fe43bab847d337a74c65d34fdbe070653c508e4b0527654598efe3df",
+      "records": null,
+      "columns": null
+    },
+    {
+      "path": "data/municipal_discovery/municipal_records/source_files/idaho_mayor_council_finance__boise_city__id/8fc180f223aed668e901.html",
+      "bytes": 118951,
+      "sha256": "8fc180f223aed668e901d429e91f160cb20f688fcd38aade8b3d9ee762179181",
+      "records": null,
+      "columns": null
+    },
+    {
+      "path": "data/municipal_discovery/municipal_records/source_files/jersey_city_clerk__jersey_city__nj/37709f93506ea49f3dc5.html",
+      "bytes": 129028,
+      "sha256": "37709f93506ea49f3dc5dfaf5004f8e25a7169b7165d62bd99c08385eb6be68d",
+      "records": null,
+      "columns": null
+    },
+    {
+      "path": "data/municipal_discovery/municipal_records/source_files/massachusetts_ocpf__worcester__ma/6d20a470618dc3543303.html",
+      "bytes": 692,
+      "sha256": "6d20a470618dc35433034c3a9747b09db43345661da0452f03a6f5aeb53ee243",
+      "records": null,
+      "columns": null
+    },
+    {
+      "path": "data/municipal_discovery/municipal_records/source_files/san_antonio_campaign_finance__san_antonio__tx/e0f8c74147414ab5da05.html",
+      "bytes": 153723,
+      "sha256": "e0f8c74147414ab5da053c5a12b6a5a3385febff8375d236c50d7126f047d0b8",
+      "records": null,
+      "columns": null
+    },
+    {
+      "path": "data/municipal_discovery/municipal_records/source_files/shelby_county_elections__memphis__tn/3394e2b24e7960579b15.html",
+      "bytes": 355863,
+      "sha256": "3394e2b24e7960579b15260dc5b85e8a1a074356658154d2460311d39e858893",
+      "records": null,
+      "columns": null
+    },
+    {
+      "path": "data/municipal_discovery/municipal_records/source_files/waterbury_elections__waterbury__ct/98fa429d2832ed453d9a.html",
+      "bytes": 38601,
+      "sha256": "98fa429d2832ed453d9abea1bc8300c8fb71df7a287acb2aed6819b4517d7f5d",
+      "records": null,
+      "columns": null
+    },
+    {
+      "path": "data/municipal_discovery/municipal_records/source_files/wayne_county_campaign_finance__dearborn__mi/bffa3a6734f9b8792e57.html",
+      "bytes": 52574,
+      "sha256": "bffa3a6734f9b8792e57d7e54ef8b41c8072e2f25452e92c56ebffc5a29d4618",
+      "records": null,
+      "columns": null
+    },
+    {
+      "path": "data/municipal_discovery/municipal_records/source_files/worcester_candidates__worcester__ma/c76f1abd395de2701a5b.html",
+      "bytes": 98282,
+      "sha256": "c76f1abd395de2701a5b45e2612b352904eab958d6fdad5a76c97ef86817eeaa",
+      "records": null,
+      "columns": null
+    }
+  ]
+}

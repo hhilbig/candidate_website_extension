@@ -1,0 +1,97 @@
+{
+  "review_metadata": {
+    "review_label": "AI-not-human",
+    "requested_model": "gpt-5.6-sol",
+    "review_scope": "Six URL cases and 18 saved HTTP 200 HTML responses classified from verified stored bytes with a non-executing HTML parser.",
+    "network_requests_made": false,
+    "javascript_executed": false,
+    "raw_html_copied_to_mac": false,
+    "recoverable_static_text_responses": 0,
+    "authoritative_input_path": "quality_reports/mayoral_terminal_audit_2026-09-14/audit.csv",
+    "raw_response_root": "/mnt/mayoral_wayback_full_snapshots/runs/production_all_inventory",
+    "raw_ledger_path": "/mnt/mayoral_wayback_full_snapshots/runs/production_all_inventory/fetch_attempts.csv",
+    "raw_ledger_sha256": "540f4d8eac1e8abb72ecab56e658eb66cd364ceb0978abe60877679fac8fce0c",
+    "interpretation_limit": "These classifications describe the saved responses only. They do not establish that no historical campaign website existed."
+  },
+  "url_reviews": {
+    "candidate_url_7a439db439cf7f31db4f1104": {
+      "candidate_year_id": "11812__2015",
+      "candidate_name": "james 'jim' langfelder",
+      "year": 2015,
+      "url": "https://www.jimlangfelder.com/",
+      "reason": "Two root responses contain only a GoDaddy parking iframe; the favicon response is an empty HTML document.",
+      "next_action": "Retain as saved-response evidence. Do not extract campaign text from these captures; use separately saved, period-matched evidence if available.",
+      "captures": {
+        "mayoral_capture_2ebcd5ed972e0438abcb729f": {"timestamp":"20140521014801","original_url":"http://jimlangfelder.com/favicon.ico","source_path":"/mnt/mayoral_wayback_full_snapshots/runs/production_all_inventory/raw_html/mayoral_capture_2ebcd5ed972e0438abcb729f.html.gz","raw_sha256":"f70b370debd085dd9e9fb6495c796cdccf41c44574cc185dbe124f3ea8237623","raw_bytes":26,"hash_verified":true,"classification":"other_empty_html","evidence":"The complete response is <html><body></body></html>."},
+        "mayoral_capture_7c210e7e070819447aee3a95": {"timestamp":"20140517172610","original_url":"http://jimlangfelder.com/","source_path":"/mnt/mayoral_wayback_full_snapshots/runs/production_all_inventory/raw_html/mayoral_capture_7c210e7e070819447aee3a95.html.gz","raw_sha256":"e434892f34ec3e23e2a29a296e08dcf85a264a33d1415809c38cab92b8cf3616","raw_bytes":286,"hash_verified":true,"classification":"parking","evidence":"The body contains only an iframe to mcc.godaddy.com/park/."},
+        "mayoral_capture_ff7c8705ea0b77611ad78195": {"timestamp":"20141217140929","original_url":"http://jimlangfelder.com/","source_path":"/mnt/mayoral_wayback_full_snapshots/runs/production_all_inventory/raw_html/mayoral_capture_ff7c8705ea0b77611ad78195.html.gz","raw_sha256":"8d23f690ef85082c332da1b42eef229ce1415ea378b937daa7264341e12ad3d2","raw_bytes":299,"hash_verified":true,"classification":"parking","evidence":"The body contains only an iframe to mcc.godaddy.com/park/."}
+      }
+    },
+    "candidate_url_483f7dfa8043abd8db40ac3e": {
+      "candidate_year_id": "18178__2016",
+      "candidate_name": "sarah klauda",
+      "year": 2016,
+      "url": "http://www.sarahklaudaformayor.com/",
+      "reason": "Both responses are the same cookie-setting and reload shell apart from the recorded IP address. The only visible noscript sentence is generic browser guidance.",
+      "next_action": "Retain as cookie-shell evidence. Do not execute JavaScript; use separately saved static captures if they exist.",
+      "captures": {
+        "mayoral_capture_a790f6fac028ff4e10dba1a9": {"timestamp":"20161214102810","original_url":"http://www.sarahklaudaformayor.com/","source_path":"/mnt/mayoral_wayback_full_snapshots/runs/production_all_inventory/raw_html/mayoral_capture_a790f6fac028ff4e10dba1a9.html.gz","raw_sha256":"9eda47b1b3f88864a2b77d936fd4dc34e7f4b4ab24d29bcd18816dcb24accfbe","raw_bytes":1559,"hash_verified":true,"classification":"cookie_shell","evidence":"Script writes a cookie and calls location.reload; noscript says JavaScript and cookies are required."},
+        "mayoral_capture_e6b90c4fa2781678d9bb392a": {"timestamp":"20161220143256","original_url":"http://www.sarahklaudaformayor.com/goals/","source_path":"/mnt/mayoral_wayback_full_snapshots/runs/production_all_inventory/raw_html/mayoral_capture_e6b90c4fa2781678d9bb392a.html.gz","raw_sha256":"db9e56a3e46a75b6cb6a46fcab1ebf60272dd64556cfa57bdd1458868116c736","raw_bytes":1559,"hash_verified":true,"classification":"cookie_shell","evidence":"Script writes a cookie and calls location.reload; noscript says JavaScript and cookies are required."}
+      }
+    },
+    "candidate_url_f66813f88f630b7b77b7eed0": {
+      "candidate_year_id": "3682__2021",
+      "candidate_name": "francis suarez",
+      "year": 2021,
+      "url": "https://francisformiami.com",
+      "reason": "All four responses are GoDaddy/AdSense parking landers or lander fragments. The only visible text is generic JavaScript guidance.",
+      "next_action": "Retain as parking evidence for these 2020-2022 responses. Existing verified 2017 campaign text is a different election-cycle capture and must not be substituted for 2021 without an explicit temporal rule.",
+      "existing_alternative_evidence": {"source_path":"/mnt/mayoral_wayback_full_snapshots/runs/production_all_inventory/fetch_attempts.csv","candidate_year_id":"3682__2017","verified_text_capture_count":37,"example_capture_id":"mayoral_capture_00d5daf4ce86e9b6609e6f75","example_timestamp":"20170814122416","example_text_path":"/mnt/mayoral_wayback_full_snapshots/runs/production_all_inventory/text/mayoral_capture_00d5daf4ce86e9b6609e6f75.txt","example_text_sha256":"e9229fed27b4f2d981f2419463e7576cc7de044bcac5edac315a296682282525"},
+      "captures": {
+        "mayoral_capture_3c2a4ff2336851a2f58f331e": {"timestamp":"20220204163105","original_url":"http://francisformiami.com/favicon.ico","source_path":"/mnt/mayoral_wayback_full_snapshots/runs/production_all_inventory/raw_html/mayoral_capture_3c2a4ff2336851a2f58f331e.html.gz","raw_sha256":"5b6493eacebc204c35578b400ea70397250de7624ca71fb25f6d38cd4a6c1819","raw_bytes":2548,"hash_verified":true,"classification":"parking","evidence":"AdSense domains script, parking-lander assets, and LANDER_SYSTEM=PW marker."},
+        "mayoral_capture_6fb873da287f0d7d5230e7e9": {"timestamp":"20211204184302","original_url":"http://francisformiami.com/","source_path":"/mnt/mayoral_wayback_full_snapshots/runs/production_all_inventory/raw_html/mayoral_capture_6fb873da287f0d7d5230e7e9.html.gz","raw_sha256":"4abfff1b6d43fa2223c1fe95e454321680c6456a9071255037bd61d7213a997f","raw_bytes":2548,"hash_verified":true,"classification":"parking","evidence":"AdSense domains script, parking-lander assets, and LANDER_SYSTEM=PW marker."},
+        "mayoral_capture_8d8ac151ce389344f1700302": {"timestamp":"20211102181703","original_url":"http://francisformiami.com/","source_path":"/mnt/mayoral_wayback_full_snapshots/runs/production_all_inventory/raw_html/mayoral_capture_8d8ac151ce389344f1700302.html.gz","raw_sha256":"a5041d5c5784a709a4998230b903dbfb571230810c72c7c234f53e61924e18f8","raw_bytes":2548,"hash_verified":true,"classification":"parking","evidence":"AdSense domains script, parking-lander assets, and LANDER_SYSTEM=PW marker."},
+        "mayoral_capture_a6ea2cd3b421d9bafce15a99": {"timestamp":"20200710015350","original_url":"http://francisformiami.com/img.aspx?q=L3MkWGAkYGtmBGH4BQV0AwD2Zmt5Zwp2ZGVyZwMaWGAkAQNjWGV2MFHmpFHlAz4yZ3RjWGV2LlHmpGNyZwMyMvHmpGNyZwMzWGAkWGV2MJpyZ3RlZQVjZQpjBGR4AGZ0BFHlAzA5WGAkZFHlAaEaWGAkZvHlAatyZ3RyZwMhrvHmpGNyZwMzpPHmpGVmBPHlAzuhMlHmpGRyZwMjpPHmpJuzWGV2MzqjWGAkZN==-1","source_path":"/mnt/mayoral_wayback_full_snapshots/runs/production_all_inventory/raw_html/mayoral_capture_a6ea2cd3b421d9bafce15a99.html.gz","raw_sha256":"6644226cf0c2bc995d8b42952aea41d279764706b5c982ce7f9afaa9d4198433","raw_bytes":800,"hash_verified":true,"classification":"parking","evidence":"AdSense domains script and generic JavaScript guidance; no campaign text."}
+      }
+    },
+    "candidate_url_bf10fa93f8b9ced2a0fb5087": {
+      "candidate_year_id": "40645__2015",
+      "candidate_name": "sandy drabik collins",
+      "year": 2015,
+      "url": "http://sandycares4toledo.com/",
+      "reason": "Four root responses are immediate meta-refresh redirects to /default10/_. The saved destination is an image-and-iframe shell whose campaign content would have come from an external IP iframe and contains no static visible text.",
+      "next_action": "Retain the redirect and shell evidence. A future bounded review may inspect an already-saved capture of the iframe URL if one exists; do not infer campaign absence from this shell.",
+      "captures": {
+        "mayoral_capture_076c4d9759afaaf81dee47b6": {"timestamp":"20160306174814","original_url":"http://www.sandycares4toledo.com/","source_path":"/mnt/mayoral_wayback_full_snapshots/runs/production_all_inventory/raw_html/mayoral_capture_076c4d9759afaaf81dee47b6.html.gz","raw_sha256":"742c985f705458cff4e0653582eb433c1991f08a610267f75cd19690dcf53369","raw_bytes":221,"hash_verified":true,"classification":"redirect","evidence":"Meta refresh points to http://www.sandycares4toledo.com/default10/_."},
+        "mayoral_capture_21d21ac4f2d6fef3a7cb262a": {"timestamp":"20160304210603","original_url":"http://sandycares4toledo.com/","source_path":"/mnt/mayoral_wayback_full_snapshots/runs/production_all_inventory/raw_html/mayoral_capture_21d21ac4f2d6fef3a7cb262a.html.gz","raw_sha256":"f4304522cb2e773695f274eefc8cad19527a7114aa9646c893ed36cd76cf483d","raw_bytes":217,"hash_verified":true,"classification":"redirect","evidence":"Meta refresh points to http://sandycares4toledo.com/default10/_."},
+        "mayoral_capture_48ce97ee408d6302762ea30b": {"timestamp":"20160221192823","original_url":"http://www.sandycares4toledo.com/","source_path":"/mnt/mayoral_wayback_full_snapshots/runs/production_all_inventory/raw_html/mayoral_capture_48ce97ee408d6302762ea30b.html.gz","raw_sha256":"742c985f705458cff4e0653582eb433c1991f08a610267f75cd19690dcf53369","raw_bytes":221,"hash_verified":true,"classification":"redirect","evidence":"Meta refresh points to http://www.sandycares4toledo.com/default10/_."},
+        "mayoral_capture_b26c86cb56ad1f306c66607e": {"timestamp":"20160116133320","original_url":"http://sandycares4toledo.com/default10/_","source_path":"/mnt/mayoral_wayback_full_snapshots/runs/production_all_inventory/raw_html/mayoral_capture_b26c86cb56ad1f306c66607e.html.gz","raw_sha256":"4e9b89f0fb8fef7d986aff1f0a8f75a627ea8f5cebd3780a39c108d191d67b5d","raw_bytes":4928,"hash_verified":true,"classification":"shell","evidence":"Static page is an image-based template with an iframe to http://74.53.160.218/content.html and no visible text."},
+        "mayoral_capture_c687ee98ae3a50e2ee29ba20": {"timestamp":"20160109175154","original_url":"http://sandycares4toledo.com/","source_path":"/mnt/mayoral_wayback_full_snapshots/runs/production_all_inventory/raw_html/mayoral_capture_c687ee98ae3a50e2ee29ba20.html.gz","raw_sha256":"f4304522cb2e773695f274eefc8cad19527a7114aa9646c893ed36cd76cf483d","raw_bytes":217,"hash_verified":true,"classification":"redirect","evidence":"Meta refresh points to http://sandycares4toledo.com/default10/_."}
+      }
+    },
+    "candidate_url_893c1b0ad0689cbf392cc963": {
+      "candidate_year_id": "66452__2016",
+      "candidate_name": "bill harrison",
+      "year": 2016,
+      "url": "http://www.harrisonforfremont.com",
+      "reason": "The root response contains only a GoDaddy parking iframe; the favicon response is an empty HTML document.",
+      "next_action": "Retain as saved-response evidence. Do not extract campaign text from these captures.",
+      "captures": {
+        "mayoral_capture_7473be2c8991991e73d9261c": {"timestamp":"20150801160058","original_url":"http://harrisonforfremont.com/","source_path":"/mnt/mayoral_wayback_full_snapshots/runs/production_all_inventory/raw_html/mayoral_capture_7473be2c8991991e73d9261c.html.gz","raw_sha256":"18fb451e23600b74c257b66139667b400536d963e6ea47fc2db14186fb237881","raw_bytes":307,"hash_verified":true,"classification":"parking","evidence":"The body contains only an iframe to mcc.godaddy.com/park/."},
+        "mayoral_capture_d85da4f13eb0a7a708eca74d": {"timestamp":"20150803172902","original_url":"http://harrisonforfremont.com/favicon.ico","source_path":"/mnt/mayoral_wayback_full_snapshots/runs/production_all_inventory/raw_html/mayoral_capture_d85da4f13eb0a7a708eca74d.html.gz","raw_sha256":"f70b370debd085dd9e9fb6495c796cdccf41c44574cc185dbe124f3ea8237623","raw_bytes":26,"hash_verified":true,"classification":"other_empty_html","evidence":"The complete response is <html><body></body></html>."}
+      }
+    },
+    "candidate_url_d083a68b4ef3dd9c645f74cc": {
+      "candidate_year_id": "74300__2018",
+      "candidate_name": "steve brown",
+      "year": 2018,
+      "url": "http://www.stevebrown4mayor.com/",
+      "reason": "The root response contains only a GoDaddy parking iframe; the favicon response is an empty HTML document.",
+      "next_action": "Retain as saved-response evidence. Do not extract campaign text from these captures.",
+      "captures": {
+        "mayoral_capture_3e70d5f63a1e9311264e1355": {"timestamp":"20180820024801","original_url":"http://stevebrown4mayor.com/favicon.ico","source_path":"/mnt/mayoral_wayback_full_snapshots/runs/production_all_inventory/raw_html/mayoral_capture_3e70d5f63a1e9311264e1355.html.gz","raw_sha256":"f70b370debd085dd9e9fb6495c796cdccf41c44574cc185dbe124f3ea8237623","raw_bytes":26,"hash_verified":true,"classification":"other_empty_html","evidence":"The complete response is <html><body></body></html>."},
+        "mayoral_capture_a56d6d7b67bd5b9febc9328d": {"timestamp":"20180805171654","original_url":"http://stevebrown4mayor.com/","source_path":"/mnt/mayoral_wayback_full_snapshots/runs/production_all_inventory/raw_html/mayoral_capture_a56d6d7b67bd5b9febc9328d.html.gz","raw_sha256":"f4e819b5b869e217794f113dad675476234a80789ffc62d11f305fcc9796bfca","raw_bytes":373,"hash_verified":true,"classification":"parking","evidence":"The body contains only an iframe to mcc.godaddy.com/park/."}
+      }
+    }
+  }
+}

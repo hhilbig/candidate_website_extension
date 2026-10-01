@@ -1,0 +1,38 @@
+{
+  "version": "mayoral-ai-attribution-exclusions-v1",
+  "input_hashes": {
+    "quality_reports/mayoral_source_restart_2026-09-14/completion/v7/ai_review/candidate_urls.csv": "d9f12e1f235d2db114654abe437b2eb10a7e6fbe0543163ee8702cf8425281c7",
+    "quality_reports/mayoral_variant_content_review_2026-09-14/review_queue.json": "31b4ae81615266556abf786281b94ede16976fac45270c49b82b3a8c5250c410",
+    "quality_reports/mayoral_variant_content_review_2026-09-14/review_fifth_five.json": "b4fa3d6905087f1ebf3e6fdf90a279bbaaaedd34d7962758d1000cc211fa0e74",
+    "quality_reports/mayoral_variant_content_review_2026-09-14/review_first_five.json": "bee16f4dfef9dc0d0ef5eb21755856b21a1df7528e213d6a24c4dd497f998adc",
+    "quality_reports/mayoral_variant_content_review_2026-09-14/review_fourth_five.json": "0337c2f85e9e03a3ecd003ec4eb2f8906e52585e0cf373b6067e5ec1ea05bfc4",
+    "quality_reports/mayoral_variant_content_review_2026-09-14/review_second_five.json": "037dcb6c920d884b474d8ce24d349c348e3b5ed8a8b35f8420d5f087c05938c0",
+    "quality_reports/mayoral_variant_content_review_2026-09-14/review_sixth_five.json": "2b32c52c3148e9fda02304809afaf5be98eb0f88d6799a992eeeed65db148beb",
+    "quality_reports/mayoral_variant_content_review_2026-09-14/review_third_five.json": "12d178fe4d6df668154bad7802079331787de26a6c587627646892900f9c6d04",
+    "quality_reports/mayoral_variant_content_review_2026-09-14/review_031_060.json": "bd58a7ff83eb0dd61bf13da7c30a1a34cc5cf67eb5ac536a3bc77d060c3d64ee",
+    "quality_reports/mayoral_variant_content_review_2026-09-14/review_061_090.json": "41e3aebc635d659c7405c7f0ed6056bc23b2356fab86c0c262ce48ada2b3cab5",
+    "quality_reports/mayoral_variant_content_review_2026-09-14/review_091_120.json": "917d2f3a7941c514f2dd0426299b33de0d57b0282cedab3df8ef6b3b6efa535f",
+    "quality_reports/mayoral_variant_content_review_2026-09-14/review_121_150.json": "20c3c35dd61335234e13031da6386a14f0108d270337d2d9658547b85ab2dabb",
+    "quality_reports/mayoral_variant_content_review_2026-09-14/review_151_250.json": "9df45a8ae45481e849f3939625b3f97b02eea4384979b68070caa2be97771b01",
+    "quality_reports/mayoral_variant_content_review_2026-09-14/review_251_350.json": "75fc2273bca09790608d450344f3d2c417747821e88e7bd2693316051d5498ea",
+    "quality_reports/mayoral_variant_content_review_2026-09-14/review_351_460.json": "002e0894b827c79093042a8929171ab0d74ca65e1a17b374cc61878cb5c04e97",
+    "quality_reports/mayoral_variant_content_review_2026-09-14/review_walls_followup.json": "487112295703837befc0308726304f45b8bf5c1b051ab6f6c245f435a961b80e"
+  },
+  "url_rows_before": 1390,
+  "url_rows_after": 1385,
+  "excluded_url_rows": 5,
+  "candidate_years_before": 1136,
+  "candidate_years_after": 1134,
+  "excluded_keys": [
+    "candidate_url_0a9e031bf6543d194951784c",
+    "candidate_url_360dd75be0eda1c9d1e2d117",
+    "candidate_url_4993d1d822533c0d9ead03e3",
+    "candidate_url_fbb06057b46114454aac971d",
+    "candidate_url_ffc12750027b28a19b87d84a"
+  ],
+  "interpretation": "Explicit wrong-candidate rejections only. Remaining rows are discovery leads, not approved websites. Candidate-year totals include inactive rows.",
+  "output_hashes": {
+    "candidate_urls.csv": "6dd049b7986342cb5eec4eda9377a22decc49d7d1f073fbcacab39d1cf7ca5c6",
+    "rejected_reference_urls.csv": "61441cbdc336e1a589c58bf8184c1c17100e6bb92feb20f5353ce1295052c0e6"
+  }
+}

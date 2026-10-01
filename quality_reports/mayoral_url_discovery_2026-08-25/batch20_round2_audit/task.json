@@ -1,0 +1,121 @@
+{
+  "task_id": "archiveit_mayoral_batch20_round2_audit_20260825",
+  "title": "Archive-It round-2 batch audit",
+  "instructions": "### What to decide\n- Review the named candidate, mayoral contest, claimed URL, collection metadata, and archive evidence.\n- The machine-proposed grade is context only. No claim is accepted until you code it here.\n- If collection metadata identifies the original campaign domain but the claimed URL is an archive-container path, enter the original domain as the corrected URL.\n- Code URL type for the URL you accept (the corrected URL when one is entered).\n\n### Evidence grades\n- A: an election-period capture of the exact URL identifies the candidate, mayoral campaign, and city.\n- B: a contemporaneous official source links the URL and archived content confirms the campaign.\n- C: a source supports the URL, but no qualifying campaign capture exists.\n- D: domain shape, registration data, or current content provides only a lead.\n- Only grades A and B count as strict coverage.\n\n### Scope\n- The task contains every Archive-It candidate-domain claim.\n- The inclusion-reason field identifies proposed strict positives and the deterministic 10% non-strict audit subset.",
+  "items": [
+    {
+      "id": "archiveit_claim_a82c32765aa96fdf80720bea",
+      "label": "sharon weston broome (2016)",
+      "display": [
+        {
+          "label": "Candidate and contest",
+          "format": "badges",
+          "content": {
+            "Name": "sharon weston broome",
+            "City": "baton rouge",
+            "State": "LA",
+            "Election": "2016-12",
+            "Round": "",
+            "Collection": "7977.0",
+            "Candidate-year ID": "16121__2016"
+          }
+        },
+        {
+          "label": "URL and source evidence",
+          "format": "json",
+          "content": {
+            "Claimed exact URL": "http://www.sharonformayor.com/",
+            "Raw URL": "http://www.sharonformayor.com/",
+            "Site root": "http://www.sharonformayor.com/",
+            "Original URL(s) mentioned in collection metadata": "",
+            "Collection metadata description": "",
+            "Archive capture replay": "https://wayback.archive-it.org/7977/20161007164520id_/http://www.sharonformayor.com/",
+            "Archive calendar": "https://wayback.archive-it.org/7977/*/http://www.sharonformayor.com/",
+            "Collection record": "https://archive-it.org/collections/7977"
+          }
+        },
+        {
+          "label": "Archive validation",
+          "format": "json",
+          "content": {
+            "Machine-proposed grade (not an acceptance decision)": "A",
+            "Machine URL type": "candidate_owned_custom_domain",
+            "Temporal validation status": "grade_a_content_confirmed_pending_review",
+            "Archive query status": "checked",
+            "Validation reason": "grade_a_exact_url_election_period_content_confirmed",
+            "Nearest capture timestamp": "20161007164520",
+            "Nearest capture distance (days)": "69",
+            "Within 365-day headline window": "yes",
+            "Within sensitivity window": "yes",
+            "Candidate identity in capture": "yes",
+            "Mayoral campaign in capture": "yes",
+            "City in capture": "yes",
+            "Domain reuse status": "same_candidate_only",
+            "Inclusion reason": "sampled_marginal_grade_a"
+          }
+        },
+        {
+          "label": "Collection evidence text",
+          "format": "text",
+          "content": ""
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "id": "identity_match",
+      "label": "Does the evidence match the named candidate, mayoral office, and city?",
+      "type": "yesno",
+      "help": "Answer yes only when all three identity elements match."
+    },
+    {
+      "id": "temporal_match",
+      "label": "Does the evidence belong to this election cycle?",
+      "type": "yesno",
+      "help": "Apply the displayed election date and capture window; later candidacies do not qualify."
+    },
+    {
+      "id": "accept_url",
+      "label": "Accept this as a candidate campaign URL claim?",
+      "type": "yesno",
+      "help": "Grades A through C may be accepted as claims; only A and B are strict coverage."
+    },
+    {
+      "id": "url_type",
+      "label": "URL type for the accepted or reviewed URL",
+      "type": "select",
+      "options": [
+        "custom_domain",
+        "candidate_subdomain",
+        "shared_host_path",
+        "fundraising_profile",
+        "social_profile",
+        "officeholder_site",
+        "archive_container_or_wrapper",
+        "not_campaign_url"
+      ]
+    },
+    {
+      "id": "evidence_grade",
+      "label": "Final evidence grade",
+      "type": "select",
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "reject"
+      ]
+    },
+    {
+      "id": "corrected_url",
+      "label": "Corrected or recovered original campaign URL",
+      "type": "text",
+      "show_if": {
+        "question": "accept_url",
+        "equals": "yes"
+      }
+    }
+  ]
+}

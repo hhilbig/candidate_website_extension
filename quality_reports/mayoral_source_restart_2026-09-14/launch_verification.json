@@ -1,0 +1,56 @@
+{
+  "checked_at": "2026-09-14T18:06:43.611418+00:00",
+  "job": {
+    "checked_at": "2026-09-14T18:06:15.728028+00:00",
+    "child_pid": 1307204,
+    "command": [
+      "/root/candidate_website_extension/.venv/bin/python",
+      "/mnt/mayoral_wayback_full_snapshots/source_discovery_20260914/code/scripts/expand_mayoral_saved_sources.py",
+      "fetch",
+      "--repo-root",
+      "/mnt/mayoral_wayback_full_snapshots/source_discovery_20260914/code",
+      "--run-dir",
+      "/mnt/mayoral_wayback_full_snapshots/source_discovery_20260914/work/production",
+      "--workers",
+      "2",
+      "--tranche-id",
+      "source-discovery-20260914",
+      "--additional-bytes",
+      "4000000000",
+      "--max-sources",
+      "5000",
+      "--min-free-bytes",
+      "8000000000"
+    ],
+    "host": "r-server",
+    "job": "mayoral_saved_source_expansion_20260908",
+    "progress_stale_seconds": 25,
+    "project": "candidate_website_extension",
+    "start_notification": "helper_invoked",
+    "started_at": "2026-09-14T18:05:45.342706+00:00",
+    "status": "running",
+    "supervisor_pid": 1307203
+  },
+  "tranche": {
+    "tranche_id": "source-discovery-20260914",
+    "additional_bytes": 4000000000,
+    "max_sources": 5000,
+    "attempts_started": 2,
+    "charged_bytes": 25281619,
+    "reservations": {
+      "00858f0c-f8cc-44a1-87ee-8dcd698a5170": 25065536
+    },
+    "created_at": "2026-09-14T18:05:45.662882+00:00",
+    "baseline_attempts": 14042,
+    "baseline_downloaded_raw_bytes": 8063489603
+  },
+  "completed_new_attempts": 1,
+  "saved_new_source_results": 1,
+  "first_saved_attempt_id": "a10fad88-f4d7-4fa7-a3c0-c46fc668aaa7",
+  "first_saved_source_id": "source_17248dc6d63c75a222da828e",
+  "first_raw_sha256": "f9c37b1b68dd82a7f5a4c53dd876d6d5a8699ecb0de6052c031dafe02ba78208",
+  "first_raw_hash_verified": true,
+  "first_parsed_and_text_files_present": true,
+  "data_volume_free_bytes": 24563990528,
+  "root_free_bytes": 3487989760
+}

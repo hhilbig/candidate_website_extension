@@ -1,0 +1,62 @@
+{
+  "rows": 521,
+  "candidate_years": 470,
+  "classifications": {
+    "different_path_query_or_host_only": 73,
+    "saved_syntactic_variant_only": 422,
+    "saved_effective_exact_url": 26
+  },
+  "same_path_saved_within_365_days": 434,
+  "by_previous_action": {
+    "inspect_earlier_saved_domain_pages_and_exact_path_gap": {
+      "different_path_query_or_host_only": 73,
+      "saved_syntactic_variant_only": 387
+    },
+    "inspect_saved_domain_pages_and_exact_path_gap": {
+      "saved_syntactic_variant_only": 1
+    },
+    "inspect_saved_validation_capture_and_exact_url_equivalence": {
+      "saved_effective_exact_url": 26,
+      "saved_syntactic_variant_only": 34
+    }
+  },
+  "raw_checks": {
+    "verified": 802
+  },
+  "ledger_audit": [
+    {
+      "batch": "full_corpus",
+      "rows": 291044
+    },
+    {
+      "batch": "covered_151_20260826",
+      "rows": 9807
+    },
+    {
+      "batch": "openai_residual_100_20260826",
+      "rows": 524
+    },
+    {
+      "batch": "openai_residual_expansion_357_20260826",
+      "rows": 2113
+    },
+    {
+      "batch": "full_discovery_740_20260826",
+      "rows": 17010
+    }
+  ],
+  "new_archive_requests": 0,
+  "new_human_approvals": 0,
+  "limitations": [
+    "Syntactic variants do not prove host equivalence.",
+    "Matching saved URLs does not establish campaign ownership.",
+    "Only each relationship's nearest saved response received a byte-hash check.",
+    "Election dates use the recorded election month and day 15.",
+    "Counts combine prior ledgers and can repeat the same capture."
+  ],
+  "input_hashes": {
+    "quality_reports/mayoral_review_reconciliation_2026-09-13/reconciliation/remaining_acquisition_review_queue.csv": "9893f4e3cc304f57f02016a178a20360a8f2d89954be4533e24205762535703a",
+    "quality_reports/mayoral_archive_validation_2026-09-10/reuse_resolution/validation.csv": "ff4574d436694bada058d79437ca10b4f31ae32a9115fa4b3b3ae97699fc17ee",
+    "/Users/hanno/Documents/GitHub/candidate_website_extension/scripts/audit_mayoral_saved_url_variants.py": "37e290e1ef3eead94661c84e4efa10ead2904e3f8b571b65ff4e0b33049bda2b"
+  }
+}

@@ -1,0 +1,182 @@
+[
+ {
+  "city_name": "Chandler",
+  "state_abb": "AZ",
+  "roster_place_fips": "0412000",
+  "election_date": "2010-08-24",
+  "election_type": "regular",
+  "stage": "primary_nominating",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "source_url": "https://elections.maricopa.gov/asset/jcr:f1c42017-69b4-409a-8840-1cd8c11ae5c5/08-24-2010%20Final%20Precinct%20Text%20File.txt",
+  "source_locator": "Document '08-24-2010 Final Precinct Text File.txt', contest 'MAYOR - CITY OF CHANDLER'. Votes are the citywide total; precinct-level files are summed over all precincts.",
+  "certification_source_url": "https://elections.maricopa.gov/results-and-data/historic-results.html?year=2010",
+  "additional_source_urls": [
+   "https://elections.maricopa.gov/results-and-data/historic-results.html?year=2010",
+   "https://www.chandleraz.gov/government/elections-and-voting",
+   "https://www.chandleraz.gov/sites/default/files/CF_CandidateInformationPamphlet.pdf"
+  ],
+  "verification_note": "Maricopa County official results list Jay Tibshraeny 26823 under 'MAYOR - CITY OF CHANDLER'. Only one named candidate appeared, so this election has a winner and no runner-up. The write-in line took 197 votes. Total mayoral votes 27020; the winner took 99.3 percent. Chandler's candidate information pamphlet quotes the city charter, Article VII, Section 7.01(b): \"At the primary election any candidate who receives a majority of all the votes cast shall be declared elected to the office for which he or she is a candidate, and no further election shall be held\". Chandler City Code, Chapter 4, Section 4-5 sets the denominator as the total of all votes tabulated for the office of Mayor. The winner below holds a majority on that basis, so the primary is the decisive stage.",
+  "candidates": [
+   {
+    "name": "Jay Tibshraeny",
+    "role": "winner",
+    "votes": 26823,
+    "candidate_year_id": ""
+   }
+  ],
+  "decisive_stage_source_url": "https://www.chandleraz.gov/sites/default/files/CF_CandidateInformationPamphlet.pdf"
+ },
+ {
+  "city_name": "Chandler",
+  "state_abb": "AZ",
+  "roster_place_fips": "0412000",
+  "election_date": "2012-08-28",
+  "election_type": "regular",
+  "stage": "primary_nominating",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "source_url": "https://elections.maricopa.gov/asset/jcr:6cb1c607-574e-49f5-8d8f-0a56fc328d07/08-28-2012%20Final%20Precinct%20Text%20File.txt",
+  "source_locator": "Document '08-28-2012 Final Precinct Text File.txt', contest 'MAYOR - CITY OF CHANDLER'. Votes are the citywide total; precinct-level files are summed over all precincts.",
+  "certification_source_url": "https://elections.maricopa.gov/results-and-data/historic-results.html?year=2012",
+  "additional_source_urls": [
+   "https://elections.maricopa.gov/results-and-data/historic-results.html?year=2012",
+   "https://www.chandleraz.gov/government/elections-and-voting",
+   "https://www.chandleraz.gov/sites/default/files/CF_CandidateInformationPamphlet.pdf"
+  ],
+  "verification_note": "Maricopa County official results list Jay Tibshraeny 24637 under 'MAYOR - CITY OF CHANDLER'. Only one named candidate appeared, so this election has a winner and no runner-up. The write-in line took 132 votes. Total mayoral votes 24769; the winner took 99.5 percent. Chandler's candidate information pamphlet quotes the city charter, Article VII, Section 7.01(b): \"At the primary election any candidate who receives a majority of all the votes cast shall be declared elected to the office for which he or she is a candidate, and no further election shall be held\". Chandler City Code, Chapter 4, Section 4-5 sets the denominator as the total of all votes tabulated for the office of Mayor. The winner below holds a majority on that basis, so the primary is the decisive stage.",
+  "candidates": [
+   {
+    "name": "Jay Tibshraeny",
+    "role": "winner",
+    "votes": 24637,
+    "candidate_year_id": ""
+   }
+  ],
+  "decisive_stage_source_url": "https://www.chandleraz.gov/sites/default/files/CF_CandidateInformationPamphlet.pdf"
+ },
+ {
+  "city_name": "Chandler",
+  "state_abb": "AZ",
+  "roster_place_fips": "0412000",
+  "election_date": "2014-08-26",
+  "election_type": "regular",
+  "stage": "primary_nominating",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "source_url": "https://elections.maricopa.gov/asset/jcr:7a0f037c-69db-47dc-9e9b-b7d99cb5cf29/08-26-2014%20Final%20Summary.txt",
+  "source_locator": "Document '08-26-2014 Final Summary.txt', contest 'MAYOR - CITY OF CHANDLER'. Votes are the citywide total; precinct-level files are summed over all precincts.",
+  "certification_source_url": "https://elections.maricopa.gov/results-and-data/historic-results.html?year=2014",
+  "additional_source_urls": [
+   "https://elections.maricopa.gov/results-and-data/historic-results.html?year=2014",
+   "https://www.chandleraz.gov/government/elections-and-voting",
+   "https://www.chandleraz.gov/sites/default/files/CF_CandidateInformationPamphlet.pdf"
+  ],
+  "verification_note": "Maricopa County official results list Jay Tibshraeny 25512 under 'MAYOR - CITY OF CHANDLER'. Only one named candidate appeared, so this election has a winner and no runner-up. The write-in line took 182 votes. Total mayoral votes 25694; the winner took 99.3 percent. Chandler's candidate information pamphlet quotes the city charter, Article VII, Section 7.01(b): \"At the primary election any candidate who receives a majority of all the votes cast shall be declared elected to the office for which he or she is a candidate, and no further election shall be held\". Chandler City Code, Chapter 4, Section 4-5 sets the denominator as the total of all votes tabulated for the office of Mayor. The winner below holds a majority on that basis, so the primary is the decisive stage.",
+  "candidates": [
+   {
+    "name": "Jay Tibshraeny",
+    "role": "winner",
+    "votes": 25512,
+    "candidate_year_id": ""
+   }
+  ],
+  "decisive_stage_source_url": "https://www.chandleraz.gov/sites/default/files/CF_CandidateInformationPamphlet.pdf"
+ },
+ {
+  "city_name": "Chandler",
+  "state_abb": "AZ",
+  "roster_place_fips": "0412000",
+  "election_date": "2018-08-28",
+  "election_type": "regular",
+  "stage": "primary_nominating",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "source_url": "https://elections.maricopa.gov/asset/jcr:a577754d-3c2d-43d4-b07d-a2fbf0c3363c/08-28-2018%20Final%20Summary%20Report.txt",
+  "source_locator": "Document '08-28-2018 Final Summary Report.txt', contest 'Chandler-Mayor'. Votes are the citywide total; precinct-level files are summed over all precincts.",
+  "certification_source_url": "https://elections.maricopa.gov/results-and-data/historic-results.html?year=2018",
+  "additional_source_urls": [
+   "https://elections.maricopa.gov/results-and-data/historic-results.html?year=2018",
+   "https://www.chandleraz.gov/government/elections-and-voting",
+   "https://www.chandleraz.gov/sites/default/files/CF_CandidateInformationPamphlet.pdf"
+  ],
+  "verification_note": "Maricopa County official results list Kevin Hartke 36564 under 'Chandler-Mayor'. Only one named candidate appeared, so this election has a winner and no runner-up. The write-in line took 305 votes. Total mayoral votes 36869; the winner took 99.2 percent. Chandler's candidate information pamphlet quotes the city charter, Article VII, Section 7.01(b): \"At the primary election any candidate who receives a majority of all the votes cast shall be declared elected to the office for which he or she is a candidate, and no further election shall be held\". Chandler City Code, Chapter 4, Section 4-5 sets the denominator as the total of all votes tabulated for the office of Mayor. The winner below holds a majority on that basis, so the primary is the decisive stage.",
+  "candidates": [
+   {
+    "name": "Kevin Hartke",
+    "role": "winner",
+    "votes": 36564,
+    "candidate_year_id": ""
+   }
+  ],
+  "decisive_stage_source_url": "https://www.chandleraz.gov/sites/default/files/CF_CandidateInformationPamphlet.pdf"
+ },
+ {
+  "city_name": "Chandler",
+  "state_abb": "AZ",
+  "roster_place_fips": "0412000",
+  "election_date": "2022-08-02",
+  "election_type": "regular",
+  "stage": "primary_nominating",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "source_url": "https://elections.maricopa.gov/asset/jcr:4d7ede9a-d1b2-4907-b659-41542ca95b26/08-02-2022-2b%20Final%20SOV%20and%20Official%20Canvass%20Report%20AUG2022.txt",
+  "source_locator": "Document '08-02-2022-2b Final SOV and Official Canvass Report AUG2022.txt', contest 'Chandler-Mayor'. Votes are the citywide total; precinct-level files are summed over all precincts.",
+  "certification_source_url": "https://elections.maricopa.gov/results-and-data/historic-results.html?year=2022",
+  "additional_source_urls": [
+   "https://elections.maricopa.gov/results-and-data/historic-results.html?year=2022",
+   "https://www.chandleraz.gov/government/elections-and-voting",
+   "https://www.chandleraz.gov/sites/default/files/CF_CandidateInformationPamphlet.pdf"
+  ],
+  "verification_note": "Maricopa County official results list Kevin Hartke 39349, Ruth Jones 11755 under 'Chandler-Mayor'. The write-in line took 129 votes. Total mayoral votes 51233; the winner took 76.8 percent. Chandler's candidate information pamphlet quotes the city charter, Article VII, Section 7.01(b): \"At the primary election any candidate who receives a majority of all the votes cast shall be declared elected to the office for which he or she is a candidate, and no further election shall be held\". Chandler City Code, Chapter 4, Section 4-5 sets the denominator as the total of all votes tabulated for the office of Mayor. The winner below holds a majority on that basis, so the primary is the decisive stage.",
+  "candidates": [
+   {
+    "name": "Kevin Hartke",
+    "role": "winner",
+    "votes": 39349,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Ruth Jones",
+    "role": "runner_up",
+    "votes": 11755,
+    "candidate_year_id": ""
+   }
+  ],
+  "decisive_stage_source_url": "https://www.chandleraz.gov/sites/default/files/CF_CandidateInformationPamphlet.pdf"
+ },
+ {
+  "city_name": "Chandler",
+  "state_abb": "AZ",
+  "roster_place_fips": "0412000",
+  "election_date": "2026-07-21",
+  "election_type": "regular",
+  "stage": "primary_nominating",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "source_url": "https://elections.maricopa.gov/asset/jcr:b96f254d-123b-47ca-89c0-863800790326/07-21-2026-2b%20Final%20SOV%20and%20Official%20Canvass%20Report.txt",
+  "source_locator": "Document '07-21-2026-2b Final SOV and Official Canvass Report.txt', contest 'Chandler-Mayor'. Votes are the citywide total; precinct-level files are summed over all precincts.",
+  "certification_source_url": "https://elections.maricopa.gov/results-and-data/historic-results.html?year=2026",
+  "additional_source_urls": [
+   "https://elections.maricopa.gov/results-and-data/historic-results.html?year=2026",
+   "https://www.chandleraz.gov/government/elections-and-voting",
+   "https://www.chandleraz.gov/sites/default/files/CF_CandidateInformationPamphlet.pdf"
+  ],
+  "verification_note": "Maricopa County official results list Matt Orlando 25319, Jeff Weninger 17991 under 'Chandler-Mayor'. The write-in line took 61 votes. Total mayoral votes 43371; the winner took 58.4 percent. Chandler's candidate information pamphlet quotes the city charter, Article VII, Section 7.01(b): \"At the primary election any candidate who receives a majority of all the votes cast shall be declared elected to the office for which he or she is a candidate, and no further election shall be held\". Chandler City Code, Chapter 4, Section 4-5 sets the denominator as the total of all votes tabulated for the office of Mayor. The winner below holds a majority on that basis, so the primary is the decisive stage.",
+  "candidates": [
+   {
+    "name": "Matt Orlando",
+    "role": "winner",
+    "votes": 25319,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Jeff Weninger",
+    "role": "runner_up",
+    "votes": 17991,
+    "candidate_year_id": ""
+   }
+  ],
+  "decisive_stage_source_url": "https://www.chandleraz.gov/sites/default/files/CF_CandidateInformationPamphlet.pdf"
+ }
+]

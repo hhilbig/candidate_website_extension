@@ -1,0 +1,2110 @@
+{
+  "document_count": 517,
+  "note": "Paths are relative to https://elections.maricopa.gov. A plain fetch of an /asset/ path returns 403 because of a bot challenge. Read the documents through a browser session.",
+  "source_page": "https://elections.maricopa.gov/results-and-data/historic-results.html",
+  "version": "maricopa_official_results_index_v1",
+  "years": {
+    "2010": [
+      {
+        "name": "03-09-2010 Final Precinct Report.pdf",
+        "path": "/asset/jcr:5984cfd6-fd25-4989-b1e9-7c99ac7759cc/03-09-2010%20Final%20Precinct%20Report.pdf"
+      },
+      {
+        "name": "03-09-2010 Final Precinct Report.txt",
+        "path": "/asset/jcr:b69d1ecb-a748-43dc-80d9-d1986faa869f/03-09-2010%20Final%20Precinct%20Report.txt"
+      },
+      {
+        "name": "03-09-2010 Final Summary Report.pdf",
+        "path": "/asset/jcr:567aae7e-baf3-431a-b63c-458d1df65746/03-09-2010%20Final%20Summary%20Report.pdf"
+      },
+      {
+        "name": "05-18-2010 Final Precinct Report.pdf",
+        "path": "/asset/jcr:547bf87f-8568-4f31-b5cc-0cff687c571b/05-18-2010%20Final%20Precinct%20Report.pdf"
+      },
+      {
+        "name": "05-18-2010 Final Precinct Report.txt",
+        "path": "/asset/jcr:9f5ae795-b1f3-4c8f-826a-d321c53e35c5/05-18-2010%20Final%20Precinct%20Report.txt"
+      },
+      {
+        "name": "05-18-2010 Final Summary Report.pdf",
+        "path": "/asset/jcr:0d0bc9f5-c674-4658-a528-95d77bbb93a8/05-18-2010%20Final%20Summary%20Report.pdf"
+      },
+      {
+        "name": "08-24-2010 COMPLETE AUG 2010 Canvass.pdf",
+        "path": "/asset/jcr:b28650af-3029-49dc-a9c6-354b19f07137/08-24-2010%20COMPLETE%20AUG%202010%20Canvass.pdf"
+      },
+      {
+        "name": "08-24-2010 Final Precinct Report.pdf",
+        "path": "/asset/jcr:ced70588-90bc-4793-96ba-afc148aa1e98/08-24-2010%20Final%20Precinct%20Report.pdf"
+      },
+      {
+        "name": "08-24-2010 Final Precinct Text File.txt",
+        "path": "/asset/jcr:f1c42017-69b4-409a-8840-1cd8c11ae5c5/08-24-2010%20Final%20Precinct%20Text%20File.txt"
+      },
+      {
+        "name": "08-24-2010 Final Summary Report.pdf",
+        "path": "/asset/jcr:4c1287ed-7b6f-40cb-b79c-19aaef2d60cb/08-24-2010%20Final%20Summary%20Report.pdf"
+      },
+      {
+        "name": "08-24-2010 Precinct Committeemen Results by Precinct.pdf",
+        "path": "/asset/jcr:ca4204cb-4ca7-49d0-ac3f-fc57ac3049e5/08-24-2010%20Precinct%20Committeemen%20Results%20by%20Precinct.pdf"
+      },
+      {
+        "name": "08-31-2010 Precinct Committeemen WRITE IN Results.pdf",
+        "path": "/asset/jcr:4753b5ae-4df4-4e5e-8573-a5df8930da4c/08-31-2010%20Precinct%20Committeemen%20WRITE%20IN%20Results.pdf"
+      },
+      {
+        "name": "09-03-2010 WRITE IN Results Summary (State Offices).pdf",
+        "path": "/asset/jcr:a56b0739-f076-4fd6-8077-d33a488c6df6/09-03-2010%20WRITE%20IN%20Results%20Summary%20(State%20Offices).pdf"
+      },
+      {
+        "name": "09-13-2010 WRITE IN Results By Precinct (State Offices).pdf",
+        "path": "/asset/jcr:177d5fe8-c217-427b-b0da-000bc0ebc341/09-13-2010%20WRITE%20IN%20Results%20By%20Precinct%20(State%20Offices).pdf"
+      },
+      {
+        "name": "11-02-2010 COMPLETE NOV 2010 Canvass.pdf",
+        "path": "/asset/jcr:e0a701d1-9454-4176-ad24-5acc9345f369/11-02-2010%20COMPLETE%20NOV%202010%20Canvass.pdf"
+      },
+      {
+        "name": "11-02-2010 Final Precinct Report.pdf",
+        "path": "/asset/jcr:0d57bdbd-23bf-4838-8a4e-5a254bf891b8/11-02-2010%20Final%20Precinct%20Report.pdf"
+      },
+      {
+        "name": "11-02-2010 Final Precinct Text File.txt",
+        "path": "/asset/jcr:0beaa6ee-4e4b-4f73-98d4-bec5c9a015c1/11-02-2010%20Final%20Precinct%20Text%20File.txt"
+      },
+      {
+        "name": "11-02-2010 Final Summary Report.pdf",
+        "path": "/asset/jcr:d8ce7787-3569-4127-a89e-902708ccbc2f/11-02-2010%20Final%20Summary%20Report.pdf"
+      },
+      {
+        "name": "11-16-2010 General Election Write in Results Summary Report.pdf",
+        "path": "/asset/jcr:ae669f93-0066-463e-9380-e0f969793ecd/11-16-2010%20General%20Election%20Write%20in%20Results%20Summary%20Report.pdf"
+      },
+      {
+        "name": "11-16-2010 General Election Write in Results by Precinct.pdf",
+        "path": "/asset/jcr:6e7b1f51-0ed7-4944-b367-fce9db0ebbe0/11-16-2010%20General%20Election%20Write%20in%20Results%20by%20Precinct.pdf"
+      },
+      {
+        "name": "ELECTION 1163 MARICOPA COUNTY RISC PROV BALLOTS HAVA REQUIREMENTS .pdf",
+        "path": "/asset/jcr:2c77878a-d8fc-4544-9625-cb0aa61744b9/ELECTION%201163%20MARICOPA%20COUNTY%20RISC%20PROV%20BALLOTS%20HAVA%20REQUIREMENTS%20.pdf"
+      },
+      {
+        "name": "GE 11-2-2010 SUM REPORT FINAL RESULTS.pdf",
+        "path": "/asset/jcr:2341c163-e0f6-4090-b721-599ed5d590e7/GE%2011-2-2010%20SUM%20REPORT%20FINAL%20RESULTS.pdf"
+      },
+      {
+        "name": "PE 8-24-2010 SUM REPORT FINAL RESULTS.pdf",
+        "path": "/asset/jcr:086b6ce0-2323-4793-9e70-7224ba016eab/PE%208-24-2010%20SUM%20REPORT%20FINAL%20RESULTS.pdf"
+      },
+      {
+        "name": "Results File Desc.pdf",
+        "path": "/asset/jcr:14fc69cc-f6df-4db1-bdbf-762ba52f6e77/Results%20File%20Desc.pdf"
+      }
+    ],
+    "2011": [
+      {
+        "name": "03-08-2011 Final Precinct Report.pdf",
+        "path": "/asset/jcr:1be41bd0-b1a5-4cc5-8e7d-a0ff31031c98/03-08-2011%20Final%20Precinct%20Report.pdf"
+      },
+      {
+        "name": "03-08-2011 Final Precinct Report.txt",
+        "path": "/asset/jcr:cad12892-28c3-4cc0-8072-34409bb75e83/03-08-2011%20Final%20Precinct%20Report.txt"
+      },
+      {
+        "name": "03-08-2011 Final Summay Report.pdf",
+        "path": "/asset/jcr:1a4762bd-d59a-40a4-b11a-6dce92c71bb1/03-08-2011%20Final%20Summay%20Report.pdf"
+      },
+      {
+        "name": "05-17-2011 Final Precinct Report.pdf",
+        "path": "/asset/jcr:3e0645d7-c33a-4b76-949c-3dd1c8c89a3d/05-17-2011%20Final%20Precinct%20Report.pdf"
+      },
+      {
+        "name": "05-17-2011 Final Precinct Report.txt",
+        "path": "/asset/jcr:b688a2d1-d2e5-4d84-9eb8-cdfec66788f0/05-17-2011%20Final%20Precinct%20Report.txt"
+      },
+      {
+        "name": "05-17-2011 Final Summary Report.pdf",
+        "path": "/asset/jcr:75aab6e6-84c5-4877-93f5-8ef239d99799/05-17-2011%20Final%20Summary%20Report.pdf"
+      },
+      {
+        "name": "08-30-2011 Final Precinct Report.pdf",
+        "path": "/asset/jcr:0a97b3ca-80be-4a5b-9bca-537d5e763d5f/08-30-2011%20Final%20Precinct%20Report.pdf"
+      },
+      {
+        "name": "Results File Desc.pdf",
+        "path": "/asset/jcr:b5fc1d84-4e26-43e3-8ff3-fcf3ad972b4e/Results%20File%20Desc.pdf"
+      },
+      {
+        "name": "11-08-2011 Final Summary Report.pdf",
+        "path": "/asset/jcr:7d93e1d8-05a0-461a-be43-8334a19425a3/11-08-2011%20Final%20Summary%20Report.pdf"
+      },
+      {
+        "name": "11-08-2011 Final Statement of Vote.pdf",
+        "path": "/asset/jcr:e693c923-784b-4474-9c59-e85bc0a801a4/11-08-2011%20Final%20Statement%20of%20Vote.pdf"
+      },
+      {
+        "name": "11-08-2011 Final Precinct Report.txt",
+        "path": "/asset/jcr:a34e0fd5-8c81-4506-b6b2-293fd8805a94/11-08-2011%20Final%20Precinct%20Report.txt"
+      },
+      {
+        "name": "11-08-2011 Final Precinct Report.pdf",
+        "path": "/asset/jcr:a450db91-dee6-40c8-87d4-9f896be7ad14/11-08-2011%20Final%20Precinct%20Report.pdf"
+      },
+      {
+        "name": "08-30-2011 Final Summary Report.pdf",
+        "path": "/asset/jcr:b21c1faa-9583-43f8-a850-05325e7987bc/08-30-2011%20Final%20Summary%20Report.pdf"
+      },
+      {
+        "name": "08-30-2011 Final Precinct Report.txt",
+        "path": "/asset/jcr:54d73cb5-0237-4935-82b5-72a070456769/08-30-2011%20Final%20Precinct%20Report.txt"
+      }
+    ],
+    "2012": [
+      {
+        "name": "02-28-2012 Final Precinct Report.pdf",
+        "path": "/asset/jcr:e2d71a4f-6d98-421f-91da-096175838dc3/02-28-2012%20Final%20Precinct%20Report.pdf"
+      },
+      {
+        "name": "02-28-2012 Final Precinct Report.txt",
+        "path": "/asset/jcr:5187b21e-2e9e-4e9a-9718-31d869a2a535/02-28-2012%20Final%20Precinct%20Report.txt"
+      },
+      {
+        "name": "02-28-2012 Final Summary Report.pdf",
+        "path": "/asset/jcr:932bfe3f-e1b8-4c25-8b66-21c0134e9495/02-28-2012%20Final%20Summary%20Report.pdf"
+      },
+      {
+        "name": "03-13-2012 Final Precinct Report.pdf",
+        "path": "/asset/jcr:47023b53-a894-4c12-b0e8-98b0c46b9e69/03-13-2012%20Final%20Precinct%20Report.pdf"
+      },
+      {
+        "name": "03-13-2012 Final Precinct Report.txt",
+        "path": "/asset/jcr:2e13bf74-4b16-411f-b1ce-b41bcce117de/03-13-2012%20Final%20Precinct%20Report.txt"
+      },
+      {
+        "name": "03-13-2012 Final Summary Report.pdf",
+        "path": "/asset/jcr:9b2e9a3c-d0c2-4e55-9a1a-6fb3f0dfb394/03-13-2012%20Final%20Summary%20Report.pdf"
+      },
+      {
+        "name": "05-15-2012 Final Precinct Report.pdf",
+        "path": "/asset/jcr:dfc81783-288c-4c5e-84d3-dce37f9d98d4/05-15-2012%20Final%20Precinct%20Report.pdf"
+      },
+      {
+        "name": "05-15-2012 Final Precinct Report.txt",
+        "path": "/asset/jcr:27fa0651-37f2-4c8b-ad02-a24b2684d80f/05-15-2012%20Final%20Precinct%20Report.txt"
+      },
+      {
+        "name": "05-15-2012 Final Summary Report.pdf",
+        "path": "/asset/jcr:1c0d47af-1932-4e54-bca6-ce7e0d6db3ca/05-15-2012%20Final%20Summary%20Report.pdf"
+      },
+      {
+        "name": "08-28-2012 COMPLETE AUG 2012 Canvass.pdf",
+        "path": "/asset/jcr:f3106dac-c98d-454e-90ed-c07b1ee25e5b/08-28-2012%20COMPLETE%20AUG%202012%20Canvass.pdf"
+      },
+      {
+        "name": "08-28-2012 Final Precinct Report.pdf",
+        "path": "/asset/jcr:3d10ad72-335c-411e-8591-4055924f8cf7/08-28-2012%20Final%20Precinct%20Report.pdf"
+      },
+      {
+        "name": "08-28-2012 Final Precinct Text File.txt",
+        "path": "/asset/jcr:6cb1c607-574e-49f5-8d8f-0a56fc328d07/08-28-2012%20Final%20Precinct%20Text%20File.txt"
+      },
+      {
+        "name": "08-28-2012 Final Summary Report.pdf",
+        "path": "/asset/jcr:d90e2bdc-7531-4e19-9701-08bf043b657c/08-28-2012%20Final%20Summary%20Report.pdf"
+      },
+      {
+        "name": "09-06-2012 Primary Election Write in Results Summary Report.pdf",
+        "path": "/asset/jcr:1656fceb-5d78-446a-b2da-fd725b00c41f/09-06-2012%20Primary%20Election%20Write%20in%20Results%20Summary%20Report.pdf"
+      },
+      {
+        "name": "09-06-2012 Primary Election Write in Results by Precinct.pdf",
+        "path": "/asset/jcr:c4e931c8-5483-4610-aaec-bb16b6df4a7d/09-06-2012%20Primary%20Election%20Write%20in%20Results%20by%20Precinct.pdf"
+      },
+      {
+        "name": "11-06-2012 COMPLETE NOV 2012 Canvass.pdf",
+        "path": "/asset/jcr:b50644b7-458b-4aec-bbfd-f391d97cda60/11-06-2012%20COMPLETE%20NOV%202012%20Canvass.pdf"
+      },
+      {
+        "name": "11-06-2012 Final Precinct Report.pdf",
+        "path": "/asset/jcr:91fdf82f-18a7-44a0-9548-74717070e2f3/11-06-2012%20Final%20Precinct%20Report.pdf"
+      },
+      {
+        "name": "11-06-2012 Final Precinct Text File.txt",
+        "path": "/asset/jcr:bcc22878-eb30-4fe4-925e-f4c74db89184/11-06-2012%20Final%20Precinct%20Text%20File.txt"
+      },
+      {
+        "name": "11-06-2012 Final Summary Report.pdf",
+        "path": "/asset/jcr:96330beb-6c3d-43b9-b91c-ba21f75b6ee0/11-06-2012%20Final%20Summary%20Report.pdf"
+      },
+      {
+        "name": "11-21-2012 General Election Write in Results Summary Report.pdf",
+        "path": "/asset/jcr:dad8a74b-d144-4699-acad-38e0abd49807/11-21-2012%20General%20Election%20Write%20in%20Results%20Summary%20Report.pdf"
+      },
+      {
+        "name": "11-21-2012 General Election Write in Results by Precinct.pdf",
+        "path": "/asset/jcr:d7c8a6b1-2d17-4981-a070-5413807fff84/11-21-2012%20General%20Election%20Write%20in%20Results%20by%20Precinct.pdf"
+      },
+      {
+        "name": "ELECTION 1221 MARICOPA COUNTY RISC PROV BALLOTS HAVA REQUIREMENTS.pdf",
+        "path": "/asset/jcr:2e7f7fb4-b3cc-4de8-bbd2-d3614d763c7d/ELECTION%201221%20MARICOPA%20COUNTY%20RISC%20PROV%20BALLOTS%20HAVA%20REQUIREMENTS.pdf"
+      },
+      {
+        "name": "GE 11-6-2012 SUM REPORT FINAL RESULTS.pdf",
+        "path": "/asset/jcr:0f29fa82-3b61-4dbd-95f1-a603a668ef50/GE%2011-6-2012%20SUM%20REPORT%20FINAL%20RESULTS.pdf"
+      },
+      {
+        "name": "Results File Desc.pdf",
+        "path": "/asset/jcr:1ce31333-1fe2-43c2-ab66-05ed155830e2/Results%20File%20Desc.pdf"
+      }
+    ],
+    "2013": [
+      {
+        "name": "03-12-2013 Final Precinct Report.pdf",
+        "path": "/asset/jcr:7f989f30-a2d7-41ed-bffa-8a9e62d4d4de/03-12-2013%20Final%20Precinct%20Report.pdf"
+      },
+      {
+        "name": "03-12-2013 Final Precinct Report.txt",
+        "path": "/asset/jcr:668e78d1-7109-4c1e-8d27-97001c5a7a71/03-12-2013%20Final%20Precinct%20Report.txt"
+      },
+      {
+        "name": "03-12-2013 Final Summary Report.pdf",
+        "path": "/asset/jcr:35f8ac10-a13b-45c3-ac6a-abc486c1d33b/03-12-2013%20Final%20Summary%20Report.pdf"
+      },
+      {
+        "name": "05-21-2013 Final Precinct Report.pdf",
+        "path": "/asset/jcr:01ef9e45-541a-435b-9d3d-2cf8cc719e56/05-21-2013%20Final%20Precinct%20Report.pdf"
+      },
+      {
+        "name": "05-21-2013 Final Precinct Report.txt",
+        "path": "/asset/jcr:1ed6b241-beed-494c-ae25-a92d7fc5811e/05-21-2013%20Final%20Precinct%20Report.txt"
+      },
+      {
+        "name": "05-21-2013 Final Summary Report.pdf",
+        "path": "/asset/jcr:051a0135-da31-476c-a6c2-a12f1d46e86b/05-21-2013%20Final%20Summary%20Report.pdf"
+      },
+      {
+        "name": "08-27-2013 Final Precinct Report.pdf",
+        "path": "/asset/jcr:ef13d344-6383-49ed-8374-814aab1fa850/08-27-2013%20Final%20Precinct%20Report.pdf"
+      },
+      {
+        "name": "08-27-2013 Final Precinct Report.txt",
+        "path": "/asset/jcr:fe0fc356-6768-4640-a802-bfeb6a54602d/08-27-2013%20Final%20Precinct%20Report.txt"
+      },
+      {
+        "name": "08-27-2013 Final Summary Report.pdf",
+        "path": "/asset/jcr:f439ecaa-9033-4e2b-8773-4a64e07e371e/08-27-2013%20Final%20Summary%20Report.pdf"
+      },
+      {
+        "name": "11-05-2013 Final Precinct Report.pdf",
+        "path": "/asset/jcr:c7ad4196-ae47-45f8-ba4b-d4a17db06a21/11-05-2013%20Final%20Precinct%20Report.pdf"
+      },
+      {
+        "name": "11-05-2013 Final Precinct Report.txt",
+        "path": "/asset/jcr:22bd3456-dc88-47e1-a161-12affd771a49/11-05-2013%20Final%20Precinct%20Report.txt"
+      },
+      {
+        "name": "11-05-2013 Final Summary Report.pdf",
+        "path": "/asset/jcr:8a005be5-9a08-40ba-9682-44723afd2629/11-05-2013%20Final%20Summary%20Report.pdf"
+      },
+      {
+        "name": "Results File Desc.pdf",
+        "path": "/asset/jcr:d7b2a93f-2711-4c60-aa4a-3ed903109b83/Results%20File%20Desc.pdf"
+      }
+    ],
+    "2014": [
+      {
+        "name": "05-20-2014 Final Precinct Report.pdf",
+        "path": "/asset/jcr:9e4fe5b4-c991-4703-808e-9351b2f9db8f/05-20-2014%20Final%20Precinct%20Report.pdf"
+      },
+      {
+        "name": "05-20-2014 Final Summary Report.pdf",
+        "path": "/asset/jcr:9a7a892b-851a-482d-bda3-70596f79ffe0/05-20-2014%20Final%20Summary%20Report.pdf"
+      },
+      {
+        "name": "05-20-2014 Final Summary Report.txt",
+        "path": "/asset/jcr:387b4fda-0b56-487a-aabd-2930f8365003/05-20-2014%20Final%20Summary%20Report.txt"
+      },
+      {
+        "name": "08-26-2014 Final Precinct Report with PCCM.txt",
+        "path": "/asset/jcr:33a8085e-63ec-4b20-b5bd-74a729c604fa/08-26-2014%20Final%20Precinct%20Report%20with%20PCCM.txt"
+      },
+      {
+        "name": "08-26-2014 Final Precinct Report.pdf",
+        "path": "/asset/jcr:cb8368bf-9606-49b3-a26f-225e93e29852/08-26-2014%20Final%20Precinct%20Report.pdf"
+      },
+      {
+        "name": "08-26-2014 Final Statement of Vote.pdf",
+        "path": "/asset/jcr:4a707319-6969-4e64-bd2e-0b7c8dde57f1/08-26-2014%20Final%20Statement%20of%20Vote.pdf"
+      },
+      {
+        "name": "08-26-2014 Final Summary Report PCCM.pdf",
+        "path": "/asset/jcr:8680c34b-6b4d-46f3-b3be-99f9d9b3a5c4/08-26-2014%20Final%20Summary%20Report%20PCCM.pdf"
+      },
+      {
+        "name": "08-26-2014 Final Summary Report.pdf",
+        "path": "/asset/jcr:509704ef-7e2f-4609-b8f2-b4fb8b7bdc5a/08-26-2014%20Final%20Summary%20Report.pdf"
+      },
+      {
+        "name": "08-26-2014 Final Summary.txt",
+        "path": "/asset/jcr:7a0f037c-69db-47dc-9e9b-b7d99cb5cf29/08-26-2014%20Final%20Summary.txt"
+      },
+      {
+        "name": "11-04-2014 Final Precinct Report.pdf",
+        "path": "/asset/jcr:820e2c8b-8a59-4300-bc42-03f9daf3dd45/11-04-2014%20Final%20Precinct%20Report.pdf"
+      },
+      {
+        "name": "11-04-2014 Final Precinct Report.txt",
+        "path": "/asset/jcr:bbace2f0-ef20-4fd1-90c6-0621b17eecc5/11-04-2014%20Final%20Precinct%20Report.txt"
+      },
+      {
+        "name": "11-04-2014 Final Statement of Vote.pdf",
+        "path": "/asset/jcr:720c74a2-b7e6-4056-bacf-94cf64fb9067/11-04-2014%20Final%20Statement%20of%20Vote.pdf"
+      },
+      {
+        "name": "11-04-2014 Final Summary Report.pdf",
+        "path": "/asset/jcr:1739a239-3ca1-4c51-86d4-bb04bcaf225a/11-04-2014%20Final%20Summary%20Report.pdf"
+      },
+      {
+        "name": "11-04-2014 Final Summary Report.txt",
+        "path": "/asset/jcr:9e48a439-9022-4606-876f-9f42ad35614b/11-04-2014%20Final%20Summary%20Report.txt"
+      },
+      {
+        "name": "FINAL Write in report summary AUG 2014.pdf",
+        "path": "/asset/jcr:6bfc41e4-2f9b-4277-8100-f14580c2d0e8/FINAL%20Write%20in%20report%20summary%20AUG%202014.pdf"
+      },
+      {
+        "name": "FINAL Write-In Canvass by Precinct AUG 2014.pdf",
+        "path": "/asset/jcr:7c21046c-061e-4a21-b820-98dac3e56f05/FINAL%20Write-In%20Canvass%20by%20Precinct%20AUG%202014.pdf"
+      },
+      {
+        "name": "Final WriteIn Summary NOV 2014.pdf",
+        "path": "/asset/jcr:fabf8f75-5688-4fa1-983d-390c0dd90799/Final%20WriteIn%20Summary%20NOV%202014.pdf"
+      },
+      {
+        "name": "Final WriteIn by Precinct NOV 2014.pdf",
+        "path": "/asset/jcr:70482fb6-3c01-451d-83cb-26948d675807/Final%20WriteIn%20by%20Precinct%20NOV%202014.pdf"
+      },
+      {
+        "name": "Results File Desc.pdf",
+        "path": "/asset/jcr:17758c93-da5d-4ded-8e7c-b97018fd6b2f/Results%20File%20Desc.pdf"
+      }
+    ],
+    "2015": [
+      {
+        "name": "03-11-2015 Final Precinct Report.pdf",
+        "path": "/asset/jcr:4660645d-68ea-422c-97b4-d0a460224a2b/03-11-2015%20Final%20Precinct%20Report.pdf"
+      },
+      {
+        "name": "03-11-2015 Final Precinct Report.txt",
+        "path": "/asset/jcr:bc2c6d43-8882-4d5e-979d-54667d0c102e/03-11-2015%20Final%20Precinct%20Report.txt"
+      },
+      {
+        "name": "03-11-2015 Final Summary Report.pdf",
+        "path": "/asset/jcr:473dfa3b-8763-42fc-bd7c-da15e9fc564d/03-11-2015%20Final%20Summary%20Report.pdf"
+      },
+      {
+        "name": "03-11-2015 Final Summary Report.txt",
+        "path": "/asset/jcr:c7ab4894-83d8-47c4-a39c-5bac4b6faeb6/03-11-2015%20Final%20Summary%20Report.txt"
+      },
+      {
+        "name": "08-25-2015 Final Precinct Report.pdf",
+        "path": "/asset/jcr:f9a9cf9f-ac49-4e85-876a-ddf676a0650c/08-25-2015%20Final%20Precinct%20Report.pdf"
+      },
+      {
+        "name": "08-25-2015 Final Precinct Report.txt",
+        "path": "/asset/jcr:d733b6f1-0235-47f8-95b1-b9762dfb3064/08-25-2015%20Final%20Precinct%20Report.txt"
+      },
+      {
+        "name": "08-25-2015 Final Summary Report.pdf",
+        "path": "/asset/jcr:0b0e1f9e-239c-4747-90e8-287ac3c8bcef/08-25-2015%20Final%20Summary%20Report.pdf"
+      },
+      {
+        "name": "08-25-2015 Final Summary Report.txt",
+        "path": "/asset/jcr:a1c0702d-def9-4e48-b973-379db3ab03da/08-25-2015%20Final%20Summary%20Report.txt"
+      },
+      {
+        "name": "11-03-2015 Final Precinct Report.pdf",
+        "path": "/asset/jcr:b3a79312-1ebc-4fff-8415-8cd3eba78518/11-03-2015%20Final%20Precinct%20Report.pdf"
+      },
+      {
+        "name": "11-03-2015 Final Precinct Report.txt",
+        "path": "/asset/jcr:04d8d775-3978-4b03-aa73-5eadada306b9/11-03-2015%20Final%20Precinct%20Report.txt"
+      },
+      {
+        "name": "11-03-2015 Final Summary Report.pdf",
+        "path": "/asset/jcr:39cb3836-eb11-40d9-bef6-18ee85803884/11-03-2015%20Final%20Summary%20Report.pdf"
+      },
+      {
+        "name": "11-03-2015 Final Summary Report.txt",
+        "path": "/asset/jcr:e1be99ce-5cd5-4f8d-b980-99c7270df8b1/11-03-2015%20Final%20Summary%20Report.txt"
+      },
+      {
+        "name": "Results File Desc.pdf",
+        "path": "/asset/jcr:d3d88b12-ea53-441c-9cc9-e32becfe9531/Results%20File%20Desc.pdf"
+      }
+    ],
+    "2016": [
+      {
+        "name": "03-08-2016 Final Precinct Report.pdf",
+        "path": "/asset/jcr:8877f69f-928c-4086-983f-4e3cfd0416f1/03-08-2016%20Final%20Precinct%20Report.pdf"
+      },
+      {
+        "name": "03-08-2016 Final Precinct Report.txt",
+        "path": "/asset/jcr:6bff3df3-caf2-4ac9-8120-70ec85074ff7/03-08-2016%20Final%20Precinct%20Report.txt"
+      },
+      {
+        "name": "03-08-2016 Final Summary Report.pdf",
+        "path": "/asset/jcr:45afd7c8-c9b2-480d-9b0f-786aa8e0838e/03-08-2016%20Final%20Summary%20Report.pdf"
+      },
+      {
+        "name": "03-08-2016 Final Summary Report.txt",
+        "path": "/asset/jcr:d72d5faa-c04d-432e-bee8-98b0dfbcac1b/03-08-2016%20Final%20Summary%20Report.txt"
+      },
+      {
+        "name": "03-22-2016 1 Canvass BOS SUMMARY VERSION PPE 2016.pdf",
+        "path": "/asset/jcr:9d323c2b-f124-4ec2-bfb8-59da7b9e93fd/03-22-2016%201%20Canvass%20BOS%20SUMMARY%20VERSION%20PPE%202016.pdf"
+      },
+      {
+        "name": "03-22-2016 1 Canvass COMPLETE PPE 2016.pdf",
+        "path": "/asset/jcr:89016794-a6e7-4332-a61e-c6dd42995e8b/03-22-2016%201%20Canvass%20COMPLETE%20PPE%202016.pdf"
+      },
+      {
+        "name": "03-22-2016 EV Rejects Summary Report PPE 2016.pdf",
+        "path": "/asset/jcr:e5e9166e-4212-4eb8-92df-9dde91b2d491/03-22-2016%20EV%20Rejects%20Summary%20Report%20PPE%202016.pdf"
+      },
+      {
+        "name": "03-22-2016 Final Precinct Report PPE 2016.pdf",
+        "path": "/asset/jcr:77a15a2f-a207-4445-9a2e-085d8ce83cf4/03-22-2016%20Final%20Precinct%20Report%20PPE%202016.pdf"
+      },
+      {
+        "name": "03-22-2016 Final Precinct Report PPE 2016.txt",
+        "path": "/asset/jcr:6e76a9d5-41f2-43a7-a8cd-699eb095cc1a/03-22-2016%20Final%20Precinct%20Report%20PPE%202016.txt"
+      },
+      {
+        "name": "03-22-2016 Final Summary Report PPE 2016.pdf",
+        "path": "/asset/jcr:c72ad080-1c2c-426c-89f6-c4d813d8848b/03-22-2016%20Final%20Summary%20Report%20PPE%202016.pdf"
+      },
+      {
+        "name": "03-22-2016 Final Summary Report PPE 2016.txt",
+        "path": "/asset/jcr:3e21bea8-b64c-44d2-9482-a1991d7ee17b/03-22-2016%20Final%20Summary%20Report%20PPE%202016.txt"
+      },
+      {
+        "name": "03-22-2016 Provisional Summary Report PPE 2016.pdf",
+        "path": "/asset/jcr:2561aa88-859d-42a2-8386-5da6543416ef/03-22-2016%20Provisional%20Summary%20Report%20PPE%202016.pdf"
+      },
+      {
+        "name": "05-17-2016 EV Rejects Detailed Report.pdf",
+        "path": "/asset/jcr:67c8ca97-b369-4248-a4c6-34252bc3d811/05-17-2016%20EV%20Rejects%20Detailed%20Report.pdf"
+      },
+      {
+        "name": "05-17-2016 Final Summary Report.pdf",
+        "path": "/asset/jcr:ea47e296-da3b-48f8-916d-a2b85af4a20e/05-17-2016%20Final%20Summary%20Report.pdf"
+      },
+      {
+        "name": "05-17-2016 Final Summary Report.txt",
+        "path": "/asset/jcr:37b809fb-c14d-4db5-b7f9-a1ecc9df1fc6/05-17-2016%20Final%20Summary%20Report.txt"
+      },
+      {
+        "name": "05-17-2016 Provisional Summary Report.pdf",
+        "path": "/asset/jcr:24cd498f-5578-45be-ae29-0b57171681cb/05-17-2016%20Provisional%20Summary%20Report.pdf"
+      },
+      {
+        "name": "08-30-2016 1 Canvass BOS SUMMARY AUG 2016.pdf",
+        "path": "/asset/jcr:4ad1b5fa-18db-40b8-9521-ef63b3cd144e/08-30-2016%201%20Canvass%20BOS%20SUMMARY%20AUG%202016.pdf"
+      },
+      {
+        "name": "08-30-2016 1 Canvass COMPLETE AUG 2016.pdf",
+        "path": "/asset/jcr:4d9fd0c2-b004-44ed-8594-d438b86a11a3/08-30-2016%201%20Canvass%20COMPLETE%20AUG%202016.pdf"
+      },
+      {
+        "name": "08-30-2016 EV Rejects Summary Report AUG 2016.pdf",
+        "path": "/asset/jcr:b793a75e-2217-4eb8-91fb-588a2fb8b360/08-30-2016%20EV%20Rejects%20Summary%20Report%20AUG%202016.pdf"
+      },
+      {
+        "name": "08-30-2016 Final Precinct Report AUG 2016.pdf",
+        "path": "/asset/jcr:d5faf136-bc10-4aa3-9167-a25290e0ab30/08-30-2016%20Final%20Precinct%20Report%20AUG%202016.pdf"
+      },
+      {
+        "name": "08-30-2016 Final Precinct Report AUG 2016.txt",
+        "path": "/asset/jcr:f1e76a31-1ff3-4055-96a6-dc8941401850/08-30-2016%20Final%20Precinct%20Report%20AUG%202016.txt"
+      },
+      {
+        "name": "08-30-2016 Final Statement of Vote Book AUG 2016.pdf",
+        "path": "/asset/jcr:a398bdd7-4064-4fe8-baa5-8a90b0159004/08-30-2016%20Final%20Statement%20of%20Vote%20Book%20AUG%202016.pdf"
+      },
+      {
+        "name": "08-30-2016 Final Summary Report AUG 2016.pdf",
+        "path": "/asset/jcr:b2b9523a-766a-4527-a867-e61ef73862ee/08-30-2016%20Final%20Summary%20Report%20AUG%202016.pdf"
+      },
+      {
+        "name": "08-30-2016 Final Summary Report AUG 2016.txt",
+        "path": "/asset/jcr:c7bb1333-7d81-40fd-a52c-b11fe3794d46/08-30-2016%20Final%20Summary%20Report%20AUG%202016.txt"
+      },
+      {
+        "name": "08-30-2016 Final Write-In Report Summary AUG 2016.pdf",
+        "path": "/asset/jcr:10809ecd-d4cc-41b4-a57e-23ac76386d5d/08-30-2016%20Final%20Write-In%20Report%20Summary%20AUG%202016.pdf"
+      },
+      {
+        "name": "08-30-2016 Final Write-in Report by Precinct AUG 2016.pdf",
+        "path": "/asset/jcr:1e362650-3c93-4b56-b934-e6b8d83b5603/08-30-2016%20Final%20Write-in%20Report%20by%20Precinct%20AUG%202016.pdf"
+      },
+      {
+        "name": "08-30-2016 Provisional Summary Report AUG 2016.pdf",
+        "path": "/asset/jcr:e3578daa-7ce8-449e-92e3-c2acbe198e33/08-30-2016%20Provisional%20Summary%20Report%20AUG%202016.pdf"
+      },
+      {
+        "name": "11-08-2016 1 Canvass BOS SUMMARY NOV 2016.pdf",
+        "path": "/asset/jcr:5bad2193-a320-46d5-b7f6-11229bc41873/11-08-2016%201%20Canvass%20BOS%20SUMMARY%20NOV%202016.pdf"
+      },
+      {
+        "name": "11-08-2016 1 Canvass COMPLETE NOV 2016.pdf",
+        "path": "/asset/jcr:5a546649-c3a1-419e-a75f-f8a5147c3ec3/11-08-2016%201%20Canvass%20COMPLETE%20NOV%202016.pdf"
+      },
+      {
+        "name": "11-08-2016 EV Rejects Summary Report NOV 2016.pdf",
+        "path": "/asset/jcr:fac80d02-e3f9-466e-bbd4-69d4de33f4c6/11-08-2016%20EV%20Rejects%20Summary%20Report%20NOV%202016.pdf"
+      },
+      {
+        "name": "11-08-2016 Final Precinct Report NOV 2016.pdf",
+        "path": "/asset/jcr:e3c00eb0-54cf-4878-882d-387247ff41e1/11-08-2016%20Final%20Precinct%20Report%20NOV%202016.pdf"
+      },
+      {
+        "name": "11-08-2016 Final Precinct Report NOV 2016.txt",
+        "path": "/asset/jcr:77dca461-ceb1-42f9-9503-8c8b77f17b8c/11-08-2016%20Final%20Precinct%20Report%20NOV%202016.txt"
+      },
+      {
+        "name": "11-08-2016 Final Statement of Vote Book NOV 2016.pdf",
+        "path": "/asset/jcr:381ff711-7453-4402-82a7-01d6b7699003/11-08-2016%20Final%20Statement%20of%20Vote%20Book%20NOV%202016.pdf"
+      },
+      {
+        "name": "11-08-2016 Final Summary Report NOV 2016.pdf",
+        "path": "/asset/jcr:1126eed2-298b-4c1f-9683-f704b6f5ea20/11-08-2016%20Final%20Summary%20Report%20NOV%202016.pdf"
+      },
+      {
+        "name": "11-08-2016 Final Summary Report NOV 2016.txt",
+        "path": "/asset/jcr:2735191f-5a1b-4365-b833-ee746615262c/11-08-2016%20Final%20Summary%20Report%20NOV%202016.txt"
+      },
+      {
+        "name": "11-08-2016 Final Write-In Report Summary NOV 2016.pdf",
+        "path": "/asset/jcr:ce73126a-6da3-4ff5-811b-550c5e6ebecf/11-08-2016%20Final%20Write-In%20Report%20Summary%20NOV%202016.pdf"
+      },
+      {
+        "name": "11-08-2016 Final Write-In Report by Precinct NOV 2016.pdf",
+        "path": "/asset/jcr:c9df7f2b-337f-4700-b833-f0452c2a3fba/11-08-2016%20Final%20Write-In%20Report%20by%20Precinct%20NOV%202016.pdf"
+      },
+      {
+        "name": "11-08-2016 Provisional Summary Report NOV 2016 .pdf",
+        "path": "/asset/jcr:bce80db6-ed31-4f99-87ed-6b40bba824b8/11-08-2016%20Provisional%20Summary%20Report%20NOV%202016%20.pdf"
+      },
+      {
+        "name": "Results File Desc.pdf",
+        "path": "/asset/jcr:aca3601a-367e-428b-885f-952e970b55db/Results%20File%20Desc.pdf"
+      }
+    ],
+    "2017": [
+      {
+        "name": "03-14-2017 Final Summary Report.pdf",
+        "path": "/asset/jcr:8a75e684-eeef-43e0-b644-6d74e89ecfbd/03-14-2017%20Final%20Summary%20Report.pdf"
+      },
+      {
+        "name": "03-14-2017 Final Summary Report.txt",
+        "path": "/asset/jcr:8f588fee-ddc2-4cd1-9c9b-d7d4ebd1d97a/03-14-2017%20Final%20Summary%20Report.txt"
+      },
+      {
+        "name": "05-16-2017 Final Summary Report.pdf",
+        "path": "/asset/jcr:2e29627e-4289-4448-999c-4bfa6719c146/05-16-2017%20Final%20Summary%20Report.pdf"
+      },
+      {
+        "name": "05-16-2017 Final Summary Report.txt",
+        "path": "/asset/jcr:53144302-2ee3-4ed6-a5be-7894cacd283d/05-16-2017%20Final%20Summary%20Report.txt"
+      },
+      {
+        "name": "11-7-2017 Final Precinct Canvass.pdf",
+        "path": "/asset/jcr:9c1b902d-a276-4ce3-8012-93b61d1497a1/11-7-2017%20Final%20Precinct%20Canvass.pdf"
+      },
+      {
+        "name": "11-7-2017 Final Precinct Report.txt",
+        "path": "/asset/jcr:df040954-5b31-47b0-afee-5320ef69b20f/11-7-2017%20Final%20Precinct%20Report.txt"
+      },
+      {
+        "name": "11-7-2017 Final Summary Report.pdf",
+        "path": "/asset/jcr:b281272f-4526-46b5-9767-3840419971d7/11-7-2017%20Final%20Summary%20Report.pdf"
+      },
+      {
+        "name": "11-7-2017 Final Summary Report.txt",
+        "path": "/asset/jcr:e7e18ad4-f670-4609-a3fc-5fa11a5d47a5/11-7-2017%20Final%20Summary%20Report.txt"
+      }
+    ],
+    "2018": [
+      {
+        "name": "02-27-2018 1 Canvass BOS SUMMARY FEB 2018 CD8.pdf",
+        "path": "/asset/jcr:95213308-6841-4390-b8c6-b9cc3faa7b13/02-27-2018%201%20Canvass%20BOS%20SUMMARY%20FEB%202018%20CD8.pdf"
+      },
+      {
+        "name": "02-27-2018 1 Canvass COMPLETE FEB 2018 CD8.pdf",
+        "path": "/asset/jcr:c52945c8-9ad6-4ae7-84ea-dd5a05499476/02-27-2018%201%20Canvass%20COMPLETE%20FEB%202018%20CD8.pdf"
+      },
+      {
+        "name": "02-27-2018 EV Rejects Detailed Report CD8.pdf",
+        "path": "/asset/jcr:7ba0de39-223b-4e5e-b9a3-af0e0b018c51/02-27-2018%20EV%20Rejects%20Detailed%20Report%20CD8.pdf"
+      },
+      {
+        "name": "02-27-2018 EV Rejects Summary Report CD8.pdf",
+        "path": "/asset/jcr:8be526a2-734d-4c85-97b3-be85b180d3ef/02-27-2018%20EV%20Rejects%20Summary%20Report%20CD8.pdf"
+      },
+      {
+        "name": "02-27-2018 Final Precinct Report CD8.pdf",
+        "path": "/asset/jcr:e6e31120-fa80-43c9-8847-513219a79869/02-27-2018%20Final%20Precinct%20Report%20CD8.pdf"
+      },
+      {
+        "name": "02-27-2018 Final Precinct Report CD8.txt",
+        "path": "/asset/jcr:1706c5a3-d099-4e3b-bf96-ce379e585e08/02-27-2018%20Final%20Precinct%20Report%20CD8.txt"
+      },
+      {
+        "name": "02-27-2018 Final Statement of Vote CD8.pdf",
+        "path": "/asset/jcr:5b79c34c-0f7e-4acf-b10a-1d59cf7a396b/02-27-2018%20Final%20Statement%20of%20Vote%20CD8.pdf"
+      },
+      {
+        "name": "02-27-2018 Final Summary Report CD8.pdf",
+        "path": "/asset/jcr:85b2ddb2-c79e-44a1-95c8-d5f98db84e37/02-27-2018%20Final%20Summary%20Report%20CD8.pdf"
+      },
+      {
+        "name": "02-27-2018 Final Summary Report CD8.txt",
+        "path": "/asset/jcr:d9e807a4-b6c4-4dbb-8765-1da76c6cfb71/02-27-2018%20Final%20Summary%20Report%20CD8.txt"
+      },
+      {
+        "name": "02-27-2018 Provisional Detailed Report CD8.pdf",
+        "path": "/asset/jcr:d118ccd0-dc8c-4571-9036-96a038061de2/02-27-2018%20Provisional%20Detailed%20Report%20CD8.pdf"
+      },
+      {
+        "name": "02-27-2018 Provisional Summary Report CD8.pdf",
+        "path": "/asset/jcr:6993f969-6d80-4b54-b18f-2b040d6bdf01/02-27-2018%20Provisional%20Summary%20Report%20CD8.pdf"
+      },
+      {
+        "name": "02-27-2018 Write in Canvass Summary FINAL CD8.pdf",
+        "path": "/asset/jcr:1ef62d06-750a-40b1-bf53-d5f4a78f34c2/02-27-2018%20Write%20in%20Canvass%20Summary%20FINAL%20CD8.pdf"
+      },
+      {
+        "name": "02-27-2018 Write in Canvass by Precinct FINAL CD8.pdf",
+        "path": "/asset/jcr:445f1d15-75e7-4d53-a999-fd5b612dc813/02-27-2018%20Write%20in%20Canvass%20by%20Precinct%20FINAL%20CD8.pdf"
+      },
+      {
+        "name": "03-13-2018 Final Statement of Vote.pdf",
+        "path": "/asset/jcr:caeebfdd-2204-4d28-aa68-a4fa0bd4ed23/03-13-2018%20Final%20Statement%20of%20Vote.pdf"
+      },
+      {
+        "name": "03-13-2018 Final Summary.pdf",
+        "path": "/asset/jcr:ebd09e69-3066-462d-b767-d02353e056eb/03-13-2018%20Final%20Summary.pdf"
+      },
+      {
+        "name": "03-13-2018 Final Summary.txt",
+        "path": "/asset/jcr:8f003279-dcb4-442a-988e-a028f3426d2e/03-13-2018%20Final%20Summary.txt"
+      },
+      {
+        "name": "04-24-2018 1 Canvass BOS SUMMARY APRIL 2018 CD8.pdf",
+        "path": "/asset/jcr:ebdabf29-179a-41c0-8788-ecafe86077ac/04-24-2018%201%20Canvass%20BOS%20SUMMARY%20APRIL%202018%20CD8.pdf"
+      },
+      {
+        "name": "04-24-2018 1 Canvass COMPLETE APRIL 2018 CD8.pdf",
+        "path": "/asset/jcr:8590d61c-3b2b-4b3d-8f86-98adb9bd9212/04-24-2018%201%20Canvass%20COMPLETE%20APRIL%202018%20CD8.pdf"
+      },
+      {
+        "name": "04-24-2018 EV Rejects Detailed Report CD8.pdf",
+        "path": "/asset/jcr:4f6c9966-07c7-47d9-90bf-ccab8cc7fff1/04-24-2018%20EV%20Rejects%20Detailed%20Report%20CD8.pdf"
+      },
+      {
+        "name": "04-24-2018 EV Rejects Summary Report CD8.pdf",
+        "path": "/asset/jcr:ae623607-82af-4e02-abcd-0be774711c52/04-24-2018%20EV%20Rejects%20Summary%20Report%20CD8.pdf"
+      },
+      {
+        "name": "04-24-2018 Final Precinct Report.pdf",
+        "path": "/asset/jcr:ac4e2370-6c55-4663-ac90-fca17b392f61/04-24-2018%20Final%20Precinct%20Report.pdf"
+      },
+      {
+        "name": "04-24-2018 Final Precinct Report.txt",
+        "path": "/asset/jcr:2895cb04-beb7-431f-9166-56dd5e226df1/04-24-2018%20Final%20Precinct%20Report.txt"
+      },
+      {
+        "name": "04-24-2018 Final Statement of Vote.pdf",
+        "path": "/asset/jcr:23eb72a3-c22e-4325-95a0-4a232c17cc25/04-24-2018%20Final%20Statement%20of%20Vote.pdf"
+      },
+      {
+        "name": "04-24-2018 Final Summary Report.pdf",
+        "path": "/asset/jcr:59fd2c38-5f09-4b78-9c66-9d0ed46e159c/04-24-2018%20Final%20Summary%20Report.pdf"
+      },
+      {
+        "name": "04-24-2018 Final Summary Report.txt",
+        "path": "/asset/jcr:d8dd9c7f-b6d2-44a7-b5ba-82e347050608/04-24-2018%20Final%20Summary%20Report.txt"
+      },
+      {
+        "name": "04-24-2018 Provisional Detailed Report CD8.pdf",
+        "path": "/asset/jcr:4ef1f5bf-20d0-4682-9c41-b5e03dabb4b8/04-24-2018%20Provisional%20Detailed%20Report%20CD8.pdf"
+      },
+      {
+        "name": "04-24-2018 Provisional Summary Report CD8.pdf",
+        "path": "/asset/jcr:fef7feea-9ec3-4a19-8e09-05fdacb15a22/04-24-2018%20Provisional%20Summary%20Report%20CD8.pdf"
+      },
+      {
+        "name": "05-15-2018 Final Precinct Report.pdf",
+        "path": "/asset/jcr:41c9ba1e-366a-4b9d-a188-41945034b270/05-15-2018%20Final%20Precinct%20Report.pdf"
+      },
+      {
+        "name": "05-15-2018 Final Precinct Report.txt",
+        "path": "/asset/jcr:9135e2ef-6d05-4441-a730-58c082cffc77/05-15-2018%20Final%20Precinct%20Report.txt"
+      },
+      {
+        "name": "05-15-2018 Final Summary Report.pdf",
+        "path": "/asset/jcr:29c3ba97-9973-4269-8fe5-09aab4ccd567/05-15-2018%20Final%20Summary%20Report.pdf"
+      },
+      {
+        "name": "05-15-2018 Final Summary Report.txt",
+        "path": "/asset/jcr:f5211d17-9693-4e1f-b983-19fc1ce61e8c/05-15-2018%20Final%20Summary%20Report.txt"
+      },
+      {
+        "name": "08-28-2018 1 Canvass BOS SUMMARY AUG 2018.pdf",
+        "path": "/asset/jcr:c97a1f1d-604d-44db-909c-332cb5b6e673/08-28-2018%201%20Canvass%20BOS%20SUMMARY%20AUG%202018.pdf"
+      },
+      {
+        "name": "08-28-2018 1 Canvass COMPLETE AUG 2018.pdf",
+        "path": "/asset/jcr:e7846ef4-aaea-4ab4-ae80-79d4c76b673c/08-28-2018%201%20Canvass%20COMPLETE%20AUG%202018.pdf"
+      },
+      {
+        "name": "08-28-2018 EV Rejects Detailed Report AUG 2018.pdf",
+        "path": "/asset/jcr:4197ee21-52e6-4ca2-9704-ff4fd3a17b77/08-28-2018%20EV%20Rejects%20Detailed%20Report%20AUG%202018.pdf"
+      },
+      {
+        "name": "08-28-2018 EV Rejects Summary Report AUG 2018.pdf",
+        "path": "/asset/jcr:10165da8-9ecc-4371-b130-82b653dfe0a5/08-28-2018%20EV%20Rejects%20Summary%20Report%20AUG%202018.pdf"
+      },
+      {
+        "name": "08-28-2018 Final Nonpartisan Statement of Vote.pdf",
+        "path": "/asset/jcr:4f3cd907-3f5c-4dfa-b4bf-732531af58b5/08-28-2018%20Final%20Nonpartisan%20Statement%20of%20Vote.pdf"
+      },
+      {
+        "name": "08-28-2018 Final PC Results 0904PM.pdf",
+        "path": "/asset/jcr:39c76f41-27ec-4c76-a2b2-b2ed9489a6a4/08-28-2018%20Final%20PC%20Results%200904PM.pdf"
+      },
+      {
+        "name": "08-28-2018 Final Partisan Statement of Vote.pdf",
+        "path": "/asset/jcr:b6b46139-bde0-44da-bde1-416b73003b18/08-28-2018%20Final%20Partisan%20Statement%20of%20Vote.pdf"
+      },
+      {
+        "name": "08-28-2018 Final Precinct Report.pdf",
+        "path": "/asset/jcr:a2feeb59-651d-428f-bb8e-164709fbc24e/08-28-2018%20Final%20Precinct%20Report.pdf"
+      },
+      {
+        "name": "08-28-2018 Final Precinct Report.txt",
+        "path": "/asset/jcr:f590f5fb-e673-4b9d-836b-623855359a65/08-28-2018%20Final%20Precinct%20Report.txt"
+      },
+      {
+        "name": "08-28-2018 Final Summary Report.pdf",
+        "path": "/asset/jcr:d0cf70c9-ee46-4d2f-a4f4-a789870d0ee8/08-28-2018%20Final%20Summary%20Report.pdf"
+      },
+      {
+        "name": "08-28-2018 Final Summary Report.txt",
+        "path": "/asset/jcr:a577754d-3c2d-43d4-b07d-a2fbf0c3363c/08-28-2018%20Final%20Summary%20Report.txt"
+      },
+      {
+        "name": "08-28-2018 Final Write in Precinct Report PE 2018 09042018 1030pm.pdf",
+        "path": "/asset/jcr:1a234a5d-228f-46bb-a706-c8ae4dba5355/08-28-2018%20Final%20Write%20in%20Precinct%20Report%20PE%202018%2009042018%201030pm.pdf"
+      },
+      {
+        "name": "08-28-2018 Provisional Detailed Report AUG 2018.pdf",
+        "path": "/asset/jcr:15d3ca88-1865-4a05-8126-a71492d39e10/08-28-2018%20Provisional%20Detailed%20Report%20AUG%202018.pdf"
+      },
+      {
+        "name": "08-28-2018 Provisional Summary Report AUG 2018.pdf",
+        "path": "/asset/jcr:9e1fbaef-e0b4-4b7b-977c-94760a6ed416/08-28-2018%20Provisional%20Summary%20Report%20AUG%202018.pdf"
+      },
+      {
+        "name": "11-06-2018 Canvass BOS SUMMARY NOV 2018.pdf",
+        "path": "/asset/jcr:097c22c0-1af9-4570-8257-1af35576f9e5/11-06-2018%20Canvass%20BOS%20SUMMARY%20NOV%202018.pdf"
+      },
+      {
+        "name": "11-06-2018 Canvass COMPLETE NOV 2018.pdf",
+        "path": "/asset/jcr:6bbf34a0-7df4-450b-8d97-4ee44ab82c1c/11-06-2018%20Canvass%20COMPLETE%20NOV%202018.pdf"
+      },
+      {
+        "name": "11-06-2018 EV Rejects Detailed Report NOV 2018.pdf",
+        "path": "/asset/jcr:c7b4f089-ccb9-49e9-b610-1537bdd547bb/11-06-2018%20EV%20Rejects%20Detailed%20Report%20NOV%202018.pdf"
+      },
+      {
+        "name": "11-06-2018 EV Rejects Summary Report NOV 2018.pdf",
+        "path": "/asset/jcr:6c2b34a6-8bda-4957-9b38-68db95cb6c4f/11-06-2018%20EV%20Rejects%20Summary%20Report%20NOV%202018.pdf"
+      },
+      {
+        "name": "11-06-2018 Final Official Precinct Report NOV 2018.pdf",
+        "path": "/asset/jcr:3ab55376-a8e9-490a-80e7-4a63f752b718/11-06-2018%20Final%20Official%20Precinct%20Report%20NOV%202018.pdf"
+      },
+      {
+        "name": "11-06-2018 Final Official Precinct Report NOV 2018.txt",
+        "path": "/asset/jcr:e1d6a79f-b4c0-47bb-9f18-0ff5b5499c01/11-06-2018%20Final%20Official%20Precinct%20Report%20NOV%202018.txt"
+      },
+      {
+        "name": "11-06-2018 Final Official Summary Report NOV 2018.pdf",
+        "path": "/asset/jcr:f9c43854-dc05-46c4-ac47-4467f599476b/11-06-2018%20Final%20Official%20Summary%20Report%20NOV%202018.pdf"
+      },
+      {
+        "name": "11-06-2018 Final Official Summary Report NOV 2018.txt",
+        "path": "/asset/jcr:1d518a66-59ec-4020-8212-ddf3eb15360a/11-06-2018%20Final%20Official%20Summary%20Report%20NOV%202018.txt"
+      },
+      {
+        "name": "11-06-2018 Final Official Write-In Summary NOV 2018.pdf",
+        "path": "/asset/jcr:b66aa397-c11e-49f8-aa36-d1bc68628a82/11-06-2018%20Final%20Official%20Write-In%20Summary%20NOV%202018.pdf"
+      },
+      {
+        "name": "11-06-2018 Final Official Write-In by Precinct NOV 2018.pdf",
+        "path": "/asset/jcr:94eb801c-78c2-4119-a8cf-9a77c95ffe84/11-06-2018%20Final%20Official%20Write-In%20by%20Precinct%20NOV%202018.pdf"
+      },
+      {
+        "name": "11-06-2018 Final Statement of Vote Book NOV 2018.pdf",
+        "path": "/asset/jcr:6335ad6c-97f5-46b7-9ac2-3015d6f7902f/11-06-2018%20Final%20Statement%20of%20Vote%20Book%20NOV%202018.pdf"
+      },
+      {
+        "name": "11-06-2018 Provisional Detailed Report NOV 2018.pdf",
+        "path": "/asset/jcr:7a9184f7-18d1-425d-b825-416eb6426d90/11-06-2018%20Provisional%20Detailed%20Report%20NOV%202018.pdf"
+      },
+      {
+        "name": "11-06-2018 Provisional Summary Report NOV 2018.pdf",
+        "path": "/asset/jcr:de05711d-9d62-4e34-b443-a93a532d9ab2/11-06-2018%20Provisional%20Summary%20Report%20NOV%202018.pdf"
+      },
+      {
+        "name": "Results File Descriptions.pdf",
+        "path": "/asset/jcr:d1a5544b-c02d-4238-9dc2-cd6c659422e1/Results%20File%20Descriptions.pdf"
+      }
+    ],
+    "2019": [
+      {
+        "name": "03-12-2019-1 GOODYEAR Final Official Summary Report.pdf",
+        "path": "/asset/jcr:df694783-dae1-4597-a9ba-86c48c218a1c/03-12-2019-1%20GOODYEAR%20Final%20Official%20Summary%20Report.pdf"
+      },
+      {
+        "name": "03-12-2019-2 GOODYEAR Final SOV and Official Canvass Report.pdf",
+        "path": "/asset/jcr:8c440af7-0b81-4310-beea-83db6bba500c/03-12-2019-2%20GOODYEAR%20Final%20SOV%20and%20Official%20Canvass%20Report.pdf"
+      },
+      {
+        "name": "05-21-2019-1 WICKENBURG Final Official Summary Report.pdf",
+        "path": "/asset/jcr:e2c65a35-effc-4c39-9674-1baa2bc0f360/05-21-2019-1%20WICKENBURG%20Final%20Official%20Summary%20Report.pdf"
+      },
+      {
+        "name": "05-21-2019-2 WICKENBURG Final SOV and Official Canvass Report.pdf",
+        "path": "/asset/jcr:a5ecf4ec-58d4-4234-8bf6-bb8498856a7d/05-21-2019-2%20WICKENBURG%20Final%20SOV%20and%20Official%20Canvass%20Report.pdf"
+      },
+      {
+        "name": "08-27-2019-1 PEORIA Final Official Summary Report.pdf",
+        "path": "/asset/jcr:c3341725-04db-429c-9238-1d4b92902d35/08-27-2019-1%20PEORIA%20Final%20Official%20Summary%20Report.pdf"
+      },
+      {
+        "name": "08-27-2019-2 PEORIA Final SOV and Official Canvass Report.pdf",
+        "path": "/asset/jcr:13b17b3a-82f4-453a-9384-f7f34413084a/08-27-2019-2%20PEORIA%20Final%20SOV%20and%20Official%20Canvass%20Report.pdf"
+      },
+      {
+        "name": "08-27-2019-3 PEORIA Final Writein Results Summary.pdf",
+        "path": "/asset/jcr:12907c8a-f2dc-4889-a496-a514e8dff869/08-27-2019-3%20PEORIA%20Final%20Writein%20Results%20Summary.pdf"
+      },
+      {
+        "name": "11-05-2019-1 ALL OTHER SCHOOLS Final Official Summary Report.pdf",
+        "path": "/asset/jcr:11fe97f4-55eb-4607-8d08-f40f4972a829/11-05-2019-1%20ALL%20OTHER%20SCHOOLS%20Final%20Official%20Summary%20Report.pdf"
+      },
+      {
+        "name": "11-05-2019-1 FTN HILLS SANITARY Final Official Summary Report.pdf",
+        "path": "/asset/jcr:cdad561a-d5fa-498a-8170-4b6fc23ca29b/11-05-2019-1%20FTN%20HILLS%20SANITARY%20Final%20Official%20Summary%20Report.pdf"
+      },
+      {
+        "name": "11-05-2019-1 GLENDALE Final Official Summary Report.pdf",
+        "path": "/asset/jcr:bc300945-06b1-41da-82c1-b298ff4564f9/11-05-2019-1%20GLENDALE%20Final%20Official%20Summary%20Report.pdf"
+      },
+      {
+        "name": "11-05-2019-1 MADISON ELEM Final Official Summary Report.pdf",
+        "path": "/asset/jcr:4bbf67e3-1164-48f9-b574-b541e730a7f8/11-05-2019-1%20MADISON%20ELEM%20Final%20Official%20Summary%20Report.pdf"
+      },
+      {
+        "name": "11-05-2019-1 SCOTTSDALE Final Official Summary Report.pdf",
+        "path": "/asset/jcr:d8f5fed7-8627-4306-a7bd-407d00a4d18a/11-05-2019-1%20SCOTTSDALE%20Final%20Official%20Summary%20Report.pdf"
+      },
+      {
+        "name": "11-05-2019-2 ALL OTHER SCHOOLS Final SOV and Official Canvass Report.pdf",
+        "path": "/asset/jcr:fc2948f4-2c5b-4d24-bb28-e6b9d7637120/11-05-2019-2%20ALL%20OTHER%20SCHOOLS%20Final%20SOV%20and%20Official%20Canvass%20Report.pdf"
+      },
+      {
+        "name": "11-05-2019-2 FTN HILLS SANITARY Final SOV and Official Canvass Report.pdf",
+        "path": "/asset/jcr:1839b70d-9ea7-4245-acbf-6fa8e4d70d09/11-05-2019-2%20FTN%20HILLS%20SANITARY%20Final%20SOV%20and%20Official%20Canvass%20Report.pdf"
+      },
+      {
+        "name": "11-05-2019-2 GLENDALE Final SOV and Official Canvass Report.pdf",
+        "path": "/asset/jcr:030e0774-82cb-44b9-86e6-3eefa45deb3c/11-05-2019-2%20GLENDALE%20Final%20SOV%20and%20Official%20Canvass%20Report.pdf"
+      },
+      {
+        "name": "11-05-2019-2 MADISON ELEM Final SOV and Official Canvass Report.pdf",
+        "path": "/asset/jcr:f5c194ac-39e0-46da-8786-b1722a4f956a/11-05-2019-2%20MADISON%20ELEM%20Final%20SOV%20and%20Official%20Canvass%20Report.pdf"
+      },
+      {
+        "name": "11-05-2019-2 SCOTTSDALE Final SOV and Official Canvass Report.pdf",
+        "path": "/asset/jcr:c34346a3-e3d1-42da-8a17-8852b8d32d48/11-05-2019-2%20SCOTTSDALE%20Final%20SOV%20and%20Official%20Canvass%20Report.pdf"
+      }
+    ],
+    "2020": [
+      {
+        "name": "11-03-2020-0 Canvass COMPLETE NOV2020.pdf",
+        "path": "/asset/jcr:f0e64083-5801-4077-8675-07a8ba475c43/11-03-2020-0%20Canvass%20COMPLETE%20NOV2020.pdf"
+      },
+      {
+        "name": "03-10-2020 -1 CHANDLER Final Official Summary Report MAR2020.pdf",
+        "path": "/asset/jcr:fbb83a58-9cf0-4056-8ce4-086d99c2a294/03-10-2020%20-1%20CHANDLER%20Final%20Official%20Summary%20Report%20MAR2020.pdf"
+      },
+      {
+        "name": "03-10-2020 -1 TEMPE Final Official Summary Report MAR2020.pdf",
+        "path": "/asset/jcr:b70706ce-9c2b-4b3b-913d-27ee65490833/03-10-2020%20-1%20TEMPE%20Final%20Official%20Summary%20Report%20MAR2020.pdf"
+      },
+      {
+        "name": "03-10-2020 -2 CHANDLER Final SOV and Official Canvass Report MAR2020.pdf",
+        "path": "/asset/jcr:d6ef188e-3bd9-44e9-a9e2-32a2467e182b/03-10-2020%20-2%20CHANDLER%20Final%20SOV%20and%20Official%20Canvass%20Report%20MAR2020.pdf"
+      },
+      {
+        "name": "03-10-2020 -2 TEMPE Final SOV and Official Canvass Report MAR2020.pdf",
+        "path": "/asset/jcr:cd590794-da70-4789-9ad5-8ef69ac54654/03-10-2020%20-2%20TEMPE%20Final%20SOV%20and%20Official%20Canvass%20Report%20MAR2020.pdf"
+      },
+      {
+        "name": "03-10-2020 -3 CHANDLER EV Rejects Summary Report MAR2020.pdf",
+        "path": "/asset/jcr:de99c069-8a8e-4f59-82ed-8a409e459a45/03-10-2020%20-3%20CHANDLER%20EV%20Rejects%20Summary%20Report%20MAR2020.pdf"
+      },
+      {
+        "name": "03-10-2020 -3 TEMPE EV Rejects Summary Report MAR2020.pdf",
+        "path": "/asset/jcr:299cf1a0-ad42-495b-b3b3-f22662186de1/03-10-2020%20-3%20TEMPE%20EV%20Rejects%20Summary%20Report%20MAR2020.pdf"
+      },
+      {
+        "name": "03-10-2020 -4 CHANDLER Provisional Summary Report MAR2020.pdf",
+        "path": "/asset/jcr:68f66cb0-bc88-46a3-8353-d5b7395e108a/03-10-2020%20-4%20CHANDLER%20Provisional%20Summary%20Report%20MAR2020.pdf"
+      },
+      {
+        "name": "03-10-2020 -4 TEMPE Provisional Summary Report MAR2020.pdf",
+        "path": "/asset/jcr:80930be9-6f15-438c-9fb7-9e62fa325903/03-10-2020%20-4%20TEMPE%20Provisional%20Summary%20Report%20MAR2020.pdf"
+      },
+      {
+        "name": "03-10-2020 -5 CHANDLER All-Mail Undeliverable Packet Totals MAR2020.pdf",
+        "path": "/asset/jcr:65576722-656a-47ac-b7b5-6cf145172c17/03-10-2020%20-5%20CHANDLER%20All-Mail%20Undeliverable%20Packet%20Totals%20MAR2020.pdf"
+      },
+      {
+        "name": "03-10-2020 -5 TEMPE All-Mail Undeliverable Packet Totals MAR2020.pdf",
+        "path": "/asset/jcr:bd1208a5-efb4-4f58-86db-6a21ec1ab756/03-10-2020%20-5%20TEMPE%20All-Mail%20Undeliverable%20Packet%20Totals%20MAR2020.pdf"
+      },
+      {
+        "name": "03-17-2020 -0 Canvass COMPLETE PPE 2020.pdf",
+        "path": "/asset/jcr:1d83baeb-f743-4814-9ae5-82d5214a59a1/03-17-2020%20-0%20Canvass%20COMPLETE%20PPE%202020.pdf"
+      },
+      {
+        "name": "03-17-2020 -1 Final Official Summary Report PPE 2020.pdf",
+        "path": "/asset/jcr:266393d4-6cde-4edf-8d2f-96504b09c914/03-17-2020%20-1%20Final%20Official%20Summary%20Report%20PPE%202020.pdf"
+      },
+      {
+        "name": "03-17-2020 -2a Final SOV and Official Final Report PPE 2020.pdf",
+        "path": "/asset/jcr:3cac63d5-485e-4e25-a805-bc15fba43424/03-17-2020%20-2a%20Final%20SOV%20and%20Official%20Final%20Report%20PPE%202020.pdf"
+      },
+      {
+        "name": "03-17-2020 -2b Final SOV and Official Final Report PPE 2020.txt",
+        "path": "/asset/jcr:896bcb0e-2afc-4e08-813a-ddd93815902f/03-17-2020%20-2b%20Final%20SOV%20and%20Official%20Final%20Report%20PPE%202020.txt"
+      },
+      {
+        "name": "03-17-2020 -2c FILE DESCRIPTION-Final SOV and Official Final Report PPE 2020..pdf",
+        "path": "/asset/jcr:c9b923d8-ee76-4882-bb38-44c99c100f81/03-17-2020%20-2c%20FILE%20DESCRIPTION-Final%20SOV%20and%20Official%20Final%20Report%20PPE%202020..pdf"
+      },
+      {
+        "name": "03-17-2020 -3a EV Rejects Summary Report 1373 PPE 2020.pdf",
+        "path": "/asset/jcr:fafd5e25-867b-4d22-8a4d-d05998a12630/03-17-2020%20-3a%20EV%20Rejects%20Summary%20Report%201373%20PPE%202020.pdf"
+      },
+      {
+        "name": "03-17-2020 -3b EV Rejects Detailed Report 1373 PPE 2020.pdf",
+        "path": "/asset/jcr:93f2da78-9525-4b0a-83cf-9784cb00860c/03-17-2020%20-3b%20EV%20Rejects%20Detailed%20Report%201373%20PPE%202020.pdf"
+      },
+      {
+        "name": "03-17-2020 -4 Provisional Summary Report 1373 PPE 2020.pdf",
+        "path": "/asset/jcr:20f18310-2078-4ea4-8fe9-24d944dfd0b1/03-17-2020%20-4%20Provisional%20Summary%20Report%201373%20PPE%202020.pdf"
+      },
+      {
+        "name": "03-17-2020 -4b Provisional Detailed Report 1373 PPE 2020.pdf",
+        "path": "/asset/jcr:17da0d30-9ced-4baa-b56f-87f3b05d5a08/03-17-2020%20-4b%20Provisional%20Detailed%20Report%201373%20PPE%202020.pdf"
+      },
+      {
+        "name": "05-19-2020 -1 FOUNTAIN HILLS Final Official Summary Report MAY2020.pdf",
+        "path": "/asset/jcr:6e8307b0-0784-42b1-8b4b-f8db8a500875/05-19-2020%20-1%20FOUNTAIN%20HILLS%20Final%20Official%20Summary%20Report%20MAY2020.pdf"
+      },
+      {
+        "name": "05-19-2020 -2 FOUNTAIN HILLS Final SOV and Official Canvass Report MAY2020.pdf",
+        "path": "/asset/jcr:3c693d7e-199d-48c9-8765-914e511089b5/05-19-2020%20-2%20FOUNTAIN%20HILLS%20Final%20SOV%20and%20Official%20Canvass%20Report%20MAY2020.pdf"
+      },
+      {
+        "name": "05-19-2020 -3 FOUNTAIN HILLS EV Rejects Summary Report MAY2020.pdf",
+        "path": "/asset/jcr:f50d9b25-c7ea-42d9-b5b7-77b1df63a4b6/05-19-2020%20-3%20FOUNTAIN%20HILLS%20EV%20Rejects%20Summary%20Report%20MAY2020.pdf"
+      },
+      {
+        "name": "05-19-2020 -4 FOUNTAIN HILLS Provisional Summary Report MAY2020.pdf",
+        "path": "/asset/jcr:405e5d7c-57ec-4778-a461-bc6d6f507bae/05-19-2020%20-4%20FOUNTAIN%20HILLS%20Provisional%20Summary%20Report%20MAY2020.pdf"
+      },
+      {
+        "name": "05-19-2020 -5 FOUNTAIN HILLS All-Mail_Undeliverable_Packet_Totals MAY2020.pdf",
+        "path": "/asset/jcr:bfbe9f19-ac7d-4759-b416-4153b10caaa7/05-19-2020%20-5%20FOUNTAIN%20HILLS%20All-Mail_Undeliverable_Packet_Totals%20MAY2020.pdf"
+      },
+      {
+        "name": "08-04-2020 -0 Canvass BOS SUMMARY AUG2020.pdf",
+        "path": "/asset/jcr:5198b338-0dac-44f9-a46a-7b671c886a7f/08-04-2020%20-0%20Canvass%20BOS%20SUMMARY%20AUG2020.pdf"
+      },
+      {
+        "name": "08-04-2020 -0 Canvass COMPLETE AUG2020.pdf",
+        "path": "/asset/jcr:ac1cdd23-ccdf-4750-8d88-3220e45e37ec/08-04-2020%20-0%20Canvass%20COMPLETE%20AUG2020.pdf"
+      },
+      {
+        "name": "08-04-2020 -1 Final Official Summary Report AUG2020.pdf",
+        "path": "/asset/jcr:f4038e12-bb83-4d64-beb0-3e3142eb2041/08-04-2020%20-1%20Final%20Official%20Summary%20Report%20AUG2020.pdf"
+      },
+      {
+        "name": "08-04-2020 -2a Final SOV and Official Canvass Report AUG2020.pdf",
+        "path": "/asset/jcr:e73dc70c-649f-49ba-9a40-8af5bf264a8e/08-04-2020%20-2a%20Final%20SOV%20and%20Official%20Canvass%20Report%20AUG2020.pdf"
+      },
+      {
+        "name": "08-04-2020 -2b Final SOV and Official Canvass Report AUG2020.txt",
+        "path": "/asset/jcr:6de37525-9075-489d-b4c1-7aec17a2dd0c/08-04-2020%20-2b%20Final%20SOV%20and%20Official%20Canvass%20Report%20AUG2020.txt"
+      },
+      {
+        "name": "08-04-2020 -2c FILE DESCRIPTION-Final SOV and Official Canvass Report AUG2020.pdf",
+        "path": "/asset/jcr:e2eecdee-0511-42dc-8d18-cc81c1d2d679/08-04-2020%20-2c%20FILE%20DESCRIPTION-Final%20SOV%20and%20Official%20Canvass%20Report%20AUG2020.pdf"
+      },
+      {
+        "name": "08-04-2020 -3a EV Rejects Summary Report AUG2020.pdf",
+        "path": "/asset/jcr:62c65ddc-4da8-49f1-9473-4733b53c8f8c/08-04-2020%20-3a%20EV%20Rejects%20Summary%20Report%20AUG2020.pdf"
+      },
+      {
+        "name": "08-04-2020 -3b EV Rejects Detailed Report AUG2020.pdf",
+        "path": "/asset/jcr:546b2071-6808-4345-8314-92d6157e0b75/08-04-2020%20-3b%20EV%20Rejects%20Detailed%20Report%20AUG2020.pdf"
+      },
+      {
+        "name": "08-04-2020 -4a Provisional Summary Report AUG2020.pdf",
+        "path": "/asset/jcr:50d0fee0-c69e-4674-a69d-5ffbf9bc5d28/08-04-2020%20-4a%20Provisional%20Summary%20Report%20AUG2020.pdf"
+      },
+      {
+        "name": "08-04-2020 -4b Provisional Detailed Report AUG2020.pdf",
+        "path": "/asset/jcr:05257850-dfb9-4a51-9201-0fd1a47dfd6e/08-04-2020%20-4b%20Provisional%20Detailed%20Report%20AUG2020.pdf"
+      },
+      {
+        "name": "08-04-2020 -5 Party Ballot Report_1376_AUG2020.pdf",
+        "path": "/asset/jcr:553a3707-9e68-45f8-985a-7f33a281bb6e/08-04-2020%20-5%20Party%20Ballot%20Report_1376_AUG2020.pdf"
+      },
+      {
+        "name": "11-03-2020-0 Canvass BOS SUMMARY NOV2020-two-sided print.pdf",
+        "path": "/asset/jcr:fc23d5be-e21a-4ccc-8c63-37f8dfee638a/11-03-2020-0%20Canvass%20BOS%20SUMMARY%20NOV2020-two-sided%20print.pdf"
+      },
+      {
+        "name": "11-03-2020-1 Final Official Summary Report NOV2020.pdf",
+        "path": "/asset/jcr:e2f15812-99c3-4bf5-8c40-49a8401b2bc3/11-03-2020-1%20Final%20Official%20Summary%20Report%20NOV2020.pdf"
+      },
+      {
+        "name": "11-03-2020-2b Final SOV and Official Canvass Report NOV2020.txt",
+        "path": "/asset/jcr:cebd0be2-4c55-4410-95f7-14f2b8dd2397/11-03-2020-2b%20Final%20SOV%20and%20Official%20Canvass%20Report%20NOV2020.txt"
+      },
+      {
+        "name": "11-03-2020-2c FILE DESCRIPTION-Final SOV and Official Canvass Report NOV2020.pdf",
+        "path": "/asset/jcr:92083587-9f18-41e6-ac51-6bb436f41557/11-03-2020-2c%20FILE%20DESCRIPTION-Final%20SOV%20and%20Official%20Canvass%20Report%20NOV2020.pdf"
+      },
+      {
+        "name": "11-03-2020-3a Early Voting Rejections Summary NOV2020.pdf",
+        "path": "/asset/jcr:12c5203f-fa7d-4fb9-9902-988bc2e0051c/11-03-2020-3a%20Early%20Voting%20Rejections%20Summary%20NOV2020.pdf"
+      },
+      {
+        "name": "11-03-2020-3b Early Voting Rejections Detailed NOV2020.pdf",
+        "path": "/asset/jcr:d5f6003a-5bb0-4d9d-9003-1b269848f5dd/11-03-2020-3b%20Early%20Voting%20Rejections%20Detailed%20NOV2020.pdf"
+      },
+      {
+        "name": "11-03-2020-0 Canvass COMPLETE NOV2020.pdf",
+        "path": "/asset/jcr:662a98c5-b017-4840-abbd-72c8672d2815/11-03-2020-0%20Canvass%20COMPLETE%20NOV2020.pdf"
+      },
+      {
+        "name": "11-03-2020-4a Provisional Totals by Summary NOV2020.pdf",
+        "path": "/asset/jcr:5b81763e-dc08-43ce-a3da-b0a1866d1d9f/11-03-2020-4a%20Provisional%20Totals%20by%20Summary%20NOV2020.pdf"
+      },
+      {
+        "name": "11-03-2020-4b Provisional Totals by Precinct NOV2020.pdf",
+        "path": "/asset/jcr:0fd6579a-13fb-4bde-ad9d-e0ecdec5cf0c/11-03-2020-4b%20Provisional%20Totals%20by%20Precinct%20NOV2020.pdf"
+      },
+      {
+        "name": "11-03-2020-5a Accessibility Report NOV2020.pdf",
+        "path": "/asset/jcr:d7942512-a9d5-4084-a7c9-684de3863db4/11-03-2020-5a%20Accessibility%20Report%20NOV2020.pdf"
+      },
+      {
+        "name": "11-03-2020-5b Voter Education Report NOV2020.pdf",
+        "path": "/asset/jcr:d9d3af03-9749-4ec4-8f40-5d94270089bd/11-03-2020-5b%20Voter%20Education%20Report%20NOV2020.pdf"
+      },
+      {
+        "name": "11-03-2020-5c.1 Pollworker Training Report NOV2020.pdf",
+        "path": "/asset/jcr:441e2e02-1347-4161-a3c2-e417a9e7bf94/11-03-2020-5c.1%20Pollworker%20Training%20Report%20NOV2020.pdf"
+      },
+      {
+        "name": "11-03-2020-5c.2 Provisional Totals by Facility NOV2020.pdf",
+        "path": "/asset/jcr:b02a150b-ebbd-4f96-87eb-284e257f8bcc/11-03-2020-5c.2%20Provisional%20Totals%20by%20Facility%20NOV2020.pdf"
+      },
+      {
+        "name": "11-03-2020-5d Fed Only Voter Ballots Cast Total NOV2020.pdf",
+        "path": "/asset/jcr:932bd55f-313b-43de-a055-93ccd8595b6b/11-03-2020-5d%20Fed%20Only%20Voter%20Ballots%20Cast%20Total%20NOV2020.pdf"
+      },
+      {
+        "name": "11-03-2020-2a Final SOV and Official Canvass Report NOV2020.pdf",
+        "path": "/asset/jcr:5eeffba4-15a3-4741-a0d5-bd930e516260/11-03-2020-2a%20Final%20SOV%20and%20Official%20Canvass%20Report%20NOV2020.pdf"
+      }
+    ],
+    "2021": [
+      {
+        "name": "03-09-2021 -1 GOODYEAR Final Official Summary Report MAR2021.pdf",
+        "path": "/asset/jcr:e1d1c364-8a71-4dd6-881c-6ec0761ccdee/03-09-2021%20-1%20GOODYEAR%20Final%20Official%20Summary%20Report%20MAR2021.pdf"
+      },
+      {
+        "name": "03-09-2021 -2 GOODYEAR Final SOV and Official Canvass Report MAR2021.pdf",
+        "path": "/asset/jcr:f953be8f-e868-4622-8d59-e781ccb3b41b/03-09-2021%20-2%20GOODYEAR%20Final%20SOV%20and%20Official%20Canvass%20Report%20MAR2021.pdf"
+      },
+      {
+        "name": "03-09-2021 -3 GOODYEAR EV Rejects Detailed Report MAR2021.pdf",
+        "path": "/asset/jcr:ff64833d-4851-4fcb-a4de-683f283f0476/03-09-2021%20-3%20GOODYEAR%20EV%20Rejects%20Detailed%20Report%20MAR2021.pdf"
+      },
+      {
+        "name": "03-09-2021 -3 GOODYEAR EV Rejects Summary Report MAR2021.pdf",
+        "path": "/asset/jcr:8115f578-0280-4949-96ac-1cbf5910b7de/03-09-2021%20-3%20GOODYEAR%20EV%20Rejects%20Summary%20Report%20MAR2021.pdf"
+      },
+      {
+        "name": "03-09-2021 -4 GOODYEAR Provisional Summary Report MAR2021.pdf",
+        "path": "/asset/jcr:e99db076-f3c7-4018-990e-a7ce03a7615b/03-09-2021%20-4%20GOODYEAR%20Provisional%20Summary%20Report%20MAR2021.pdf"
+      },
+      {
+        "name": "03-09-2021 -5 GOODYEAR All-Mail Undeliverable Packet Totals MAR2021.pdf",
+        "path": "/asset/jcr:f5f580b0-0a73-47cf-93a9-eb2426f8fbe3/03-09-2021%20-5%20GOODYEAR%20All-Mail%20Undeliverable%20Packet%20Totals%20MAR2021.pdf"
+      },
+      {
+        "name": "03-09-2021-2b GOODYEAR Final SOV and Official Canvass Report.txt",
+        "path": "/asset/jcr:9019697c-84ce-490c-a4a3-124532873dd5/03-09-2021-2b%20GOODYEAR%20Final%20SOV%20and%20Official%20Canvass%20Report.txt"
+      },
+      {
+        "name": "05-18-2021-1 CAVE CREEK Final Official Summary Report.pdf",
+        "path": "/asset/jcr:ae4438be-7699-4300-8fdb-3b3dec0a187f/05-18-2021-1%20CAVE%20CREEK%20Final%20Official%20Summary%20Report.pdf"
+      },
+      {
+        "name": "05-18-2021-2 CAVE CREEK Final SOV and Official Canvass Report.pdf",
+        "path": "/asset/jcr:9819412a-7faf-4a5a-ae50-4e8d7b8b0f33/05-18-2021-2%20CAVE%20CREEK%20Final%20SOV%20and%20Official%20Canvass%20Report.pdf"
+      },
+      {
+        "name": "05-18-2021-2b CAVE CREEK Final SOV and Official Canvass Report.txt",
+        "path": "/asset/jcr:ce595a38-290f-4f39-9b99-100634375d2e/05-18-2021-2b%20CAVE%20CREEK%20Final%20SOV%20and%20Official%20Canvass%20Report.txt"
+      },
+      {
+        "name": "05-18-2021-2c FILE DESCRIPTION-Final SOV and Official Canvass Report.pdf",
+        "path": "/asset/jcr:82da381a-c23a-4f5b-bff5-ce9ad2453a93/05-18-2021-2c%20FILE%20DESCRIPTION-Final%20SOV%20and%20Official%20Canvass%20Report.pdf"
+      },
+      {
+        "name": "05-18-2021-3 CAVE CREEK EV Rejects Detailed Report.pdf",
+        "path": "/asset/jcr:f76bbf16-3e8a-4352-8e10-75346c9a7812/05-18-2021-3%20CAVE%20CREEK%20EV%20Rejects%20Detailed%20Report.pdf"
+      },
+      {
+        "name": "05-18-2021-4 CAVE CREEK Provisional Totals by Summary-Canvass.pdf",
+        "path": "/asset/jcr:48bb739f-cd8f-488e-8a14-e5ef17d62227/05-18-2021-4%20CAVE%20CREEK%20Provisional%20Totals%20by%20Summary-Canvass.pdf"
+      },
+      {
+        "name": "05-18-2021-5 CAVE CREEK All-Mail Undeliverable Packet Totals.pdf",
+        "path": "/asset/jcr:84119c61-bcbc-42bf-8b8a-55054d10616a/05-18-2021-5%20CAVE%20CREEK%20All-Mail%20Undeliverable%20Packet%20Totals.pdf"
+      },
+      {
+        "name": "11-02-2021-5 ALL JURISDICTIONS All-Mail Undeliverable Packet Totals.pdf",
+        "path": "/asset/jcr:9ed03acf-846d-4256-845c-9e233604ff51/11-02-2021-5%20ALL%20JURISDICTIONS%20All-Mail%20Undeliverable%20Packet%20Totals.pdf"
+      },
+      {
+        "name": "11-02-2021-4 ALL Provisional Totals by Summary - Canvass.pdf",
+        "path": "/asset/jcr:cf202750-a1ba-4857-a842-582d7d4cb1ac/11-02-2021-4%20ALL%20Provisional%20Totals%20by%20Summary%20-%20Canvass.pdf"
+      },
+      {
+        "name": "11-02-2021-3 ALL EV Rejects Summary Report.pdf",
+        "path": "/asset/jcr:34a0b2cf-ea5a-4ccc-aab7-855623d34899/11-02-2021-3%20ALL%20EV%20Rejects%20Summary%20Report.pdf"
+      },
+      {
+        "name": "11-02-2021-3 ALL EV Rejects Detailed Report.pdf",
+        "path": "/asset/jcr:f15a173e-0c97-4448-94c9-c93a0cbc3c63/11-02-2021-3%20ALL%20EV%20Rejects%20Detailed%20Report.pdf"
+      },
+      {
+        "name": "11-02-2021-2c FILE DESCRIPTION-Final SOV and Official Canvass Report.pdf",
+        "path": "/asset/jcr:49bfe9b6-d58f-4f5c-84c4-d8dfbb5eeccd/11-02-2021-2c%20FILE%20DESCRIPTION-Final%20SOV%20and%20Official%20Canvass%20Report.pdf"
+      },
+      {
+        "name": "11-02-2021-2b ALL Jurisdictional Final SOV and Official Canvass Report ALL.txt",
+        "path": "/asset/jcr:c43b7604-5504-45af-a02a-49d00f551e6e/11-02-2021-2b%20ALL%20Jurisdictional%20Final%20SOV%20and%20Official%20Canvass%20Report%20ALL.txt"
+      },
+      {
+        "name": "11-02-2021-2 ALL Final SOV and Official Canvass Report.pdf",
+        "path": "/asset/jcr:d91cbb2e-8286-43f9-bc3a-adf9adec4b64/11-02-2021-2%20ALL%20Final%20SOV%20and%20Official%20Canvass%20Report.pdf"
+      },
+      {
+        "name": "11-02-2021-1 Jurisdictional Final Official Summary Report ALL.pdf",
+        "path": "/asset/jcr:4eca8345-38d4-40b8-91f7-42146d8f9b3e/11-02-2021-1%20Jurisdictional%20Final%20Official%20Summary%20Report%20ALL.pdf"
+      }
+    ],
+    "2022": [
+      {
+        "name": "03-08-2022-1 TEMPE Final Official Summary Report.pdf",
+        "path": "/asset/jcr:ab027ed1-79a2-46ec-955a-53c857600305/03-08-2022-1%20TEMPE%20Final%20Official%20Summary%20Report.pdf"
+      },
+      {
+        "name": "03-08-2022-2 TEMPE Final SOV and Official Canvass Report.pdf",
+        "path": "/asset/jcr:7ee2cc34-998f-4a24-a4ee-0fef55e35716/03-08-2022-2%20TEMPE%20Final%20SOV%20and%20Official%20Canvass%20Report.pdf"
+      },
+      {
+        "name": "03-08-2022-2b TEMPE Final SOV and Official Canvass Report.txt",
+        "path": "/asset/jcr:3681add7-5790-44db-b0cd-62f083db4ed5/03-08-2022-2b%20TEMPE%20Final%20SOV%20and%20Official%20Canvass%20Report.txt"
+      },
+      {
+        "name": "03-08-2022-2c FILE DESCRIPTION-Final SOV and Official Canvass Report.pdf",
+        "path": "/asset/jcr:3979368a-577c-4463-94e7-2a5c4566b6bf/03-08-2022-2c%20FILE%20DESCRIPTION-Final%20SOV%20and%20Official%20Canvass%20Report.pdf"
+      },
+      {
+        "name": "03-08-2022-3 TEMPE EV Rejects Detailed Report.pdf",
+        "path": "/asset/jcr:a2524bb1-0e7e-45fb-81a5-bede0feed1cd/03-08-2022-3%20TEMPE%20EV%20Rejects%20Detailed%20Report.pdf"
+      },
+      {
+        "name": "03-08-2022-3 TEMPE EV Rejects Summary Report.pdf",
+        "path": "/asset/jcr:5fa54bac-2f97-4d6f-9f27-70f01f875f86/03-08-2022-3%20TEMPE%20EV%20Rejects%20Summary%20Report.pdf"
+      },
+      {
+        "name": "03-08-2022-4 TEMPE Provisional Totals by Precinct.pdf",
+        "path": "/asset/jcr:9ce5a70e-901e-4036-bbe4-b2a9af860352/03-08-2022-4%20TEMPE%20Provisional%20Totals%20by%20Precinct.pdf"
+      },
+      {
+        "name": "03-08-2022-4 TEMPE Provisional Totals by Summary.pdf",
+        "path": "/asset/jcr:51f0c0cd-eadd-4404-b4fd-b0e23fa1186e/03-08-2022-4%20TEMPE%20Provisional%20Totals%20by%20Summary.pdf"
+      },
+      {
+        "name": "03-08-2022-5 TEMPE All-Mail Undeliverable Packet Totals.pdf",
+        "path": "/asset/jcr:4f3c2225-1b16-46fd-a561-54eab8effe86/03-08-2022-5%20TEMPE%20All-Mail%20Undeliverable%20Packet%20Totals.pdf"
+      },
+      {
+        "name": "05-17-2022-1 LITCHFIELD PARK Final Official Summary Report.pdf",
+        "path": "/asset/jcr:2c8cfeb6-0c33-4d56-a7aa-3a740580c53a/05-17-2022-1%20LITCHFIELD%20PARK%20Final%20Official%20Summary%20Report.pdf"
+      },
+      {
+        "name": "05-17-2022-2a LITCHFIELD PARK Final SOV and Official Canvass Report.pdf",
+        "path": "/asset/jcr:6db21c93-9d62-40a0-8edc-b99873d5831e/05-17-2022-2a%20LITCHFIELD%20PARK%20Final%20SOV%20and%20Official%20Canvass%20Report.pdf"
+      },
+      {
+        "name": "05-17-2022-2b LITCHFIELD PARK Final SOV and Official Canvass Report.txt",
+        "path": "/asset/jcr:f89437ef-0bb0-4010-bf10-74616d130b6c/05-17-2022-2b%20LITCHFIELD%20PARK%20Final%20SOV%20and%20Official%20Canvass%20Report.txt"
+      },
+      {
+        "name": "05-17-2022-2c FILE DESCRIPTION-Final SOV and Official Canvass Report.pdf",
+        "path": "/asset/jcr:7cba278b-073f-4fc9-9bdd-86fa0746666d/05-17-2022-2c%20FILE%20DESCRIPTION-Final%20SOV%20and%20Official%20Canvass%20Report.pdf"
+      },
+      {
+        "name": "05-17-2022-3 LITCHFIELD PARK EV Rejects Summary Report.pdf",
+        "path": "/asset/jcr:134748fb-c320-4e5e-bd0d-ef8056ccff95/05-17-2022-3%20LITCHFIELD%20PARK%20EV%20Rejects%20Summary%20Report.pdf"
+      },
+      {
+        "name": "05-17-2022-4 LITCHFIELD PARK Provisional Summary Report.pdf",
+        "path": "/asset/jcr:ed4f91d6-5f3c-47c3-9ea5-3517cfdf4ca3/05-17-2022-4%20LITCHFIELD%20PARK%20Provisional%20Summary%20Report.pdf"
+      },
+      {
+        "name": "05-17-2022-5 LITCHFILED PARK All-Mail Undeliverable Packet Totals.pdf",
+        "path": "/asset/jcr:92b3d6ad-e572-4227-800c-49d1c8f6d087/05-17-2022-5%20LITCHFILED%20PARK%20All-Mail%20Undeliverable%20Packet%20Totals.pdf"
+      },
+      {
+        "name": "08-02-2022-0 Canvass BOS SUMMARY CANVASS AUG2022.pdf",
+        "path": "/asset/jcr:4623d846-b029-4f0c-8723-efbf331a5104/08-02-2022-0%20Canvass%20BOS%20SUMMARY%20CANVASS%20AUG2022.pdf"
+      },
+      {
+        "name": "08-02-2022-0 Canvass COMPLETE AUG2022.pdf",
+        "path": "/asset/jcr:caacffa6-a06d-41f2-9671-8886842b13b9/08-02-2022-0%20Canvass%20COMPLETE%20AUG2022.pdf"
+      },
+      {
+        "name": "08-02-2022-1 Final Official Summary Report AUG2022.pdf",
+        "path": "/asset/jcr:03a2698d-ff49-49eb-a2b2-5b4f5fe608c8/08-02-2022-1%20Final%20Official%20Summary%20Report%20AUG2022.pdf"
+      },
+      {
+        "name": "08-02-2022-2a Final SOV and Official Canvass Report AUG2022.pdf",
+        "path": "/asset/jcr:1c058e97-e8df-47c8-bcc7-37c1ced510dc/08-02-2022-2a%20Final%20SOV%20and%20Official%20Canvass%20Report%20AUG2022.pdf"
+      },
+      {
+        "name": "08-02-2022-2b Final SOV and Official Canvass Report AUG2022.txt",
+        "path": "/asset/jcr:4d7ede9a-d1b2-4907-b659-41542ca95b26/08-02-2022-2b%20Final%20SOV%20and%20Official%20Canvass%20Report%20AUG2022.txt"
+      },
+      {
+        "name": "08-02-2022-2c FILE DESCRIPTION-Final SOV and Official Canvass Report AUG2022.pdf",
+        "path": "/asset/jcr:358a57dc-81c7-4183-8f3a-72cf396a03d9/08-02-2022-2c%20FILE%20DESCRIPTION-Final%20SOV%20and%20Official%20Canvass%20Report%20AUG2022.pdf"
+      },
+      {
+        "name": "08-02-2022-2d Final SOV and Official Canvass Report DETAILED.pdf",
+        "path": "/asset/jcr:d526756a-d5b6-422b-b21a-7b5f92494bd6/08-02-2022-2d%20Final%20SOV%20and%20Official%20Canvass%20Report%20DETAILED.pdf"
+      },
+      {
+        "name": "08-02-2022-3a Early Voting Rejections Summary AUG2022.pdf",
+        "path": "/asset/jcr:9575f765-78fa-413a-af5f-c1fed9dcff78/08-02-2022-3a%20Early%20Voting%20Rejections%20Summary%20AUG2022.pdf"
+      },
+      {
+        "name": "08-02-2022-3b Early Voting Rejections Detailed AUG2022.pdf",
+        "path": "/asset/jcr:71c2afad-48d9-45ee-bee6-0f02a83c2d4b/08-02-2022-3b%20Early%20Voting%20Rejections%20Detailed%20AUG2022.pdf"
+      },
+      {
+        "name": "08-02-2022-4a Provisional Totals by Summary AUG2022.pdf",
+        "path": "/asset/jcr:91c52fe9-e6d3-4ff2-9bc8-2ca30a9848b1/08-02-2022-4a%20Provisional%20Totals%20by%20Summary%20AUG2022.pdf"
+      },
+      {
+        "name": "08-02-2022-4b Provisional Totals by Precinct AUG2022.pdf",
+        "path": "/asset/jcr:d18df83c-10fd-441a-8642-1f85325a21fd/08-02-2022-4b%20Provisional%20Totals%20by%20Precinct%20AUG2022.pdf"
+      },
+      {
+        "name": "08-02-2022-5 Manual Write In Tally Results AUG2022.pdf",
+        "path": "/asset/jcr:9ad1e257-fc8d-4de8-9e6e-081003ff1c2f/08-02-2022-5%20Manual%20Write%20In%20Tally%20Results%20AUG2022.pdf"
+      },
+      {
+        "name": "11-08-2022-0 Canvass COMPLETE.pdf",
+        "path": "/asset/jcr:b4cf8c23-01e6-4a18-8a77-96e5cb34cb0a/11-08-2022-0%20Canvass%20COMPLETE.pdf"
+      },
+      {
+        "name": "11-08-2022-0 Canvass BOS SUMMARY CANVASS.pdf",
+        "path": "/asset/jcr:7bd36c75-477c-43d0-83db-80b2761ca698/11-08-2022-0%20Canvass%20BOS%20SUMMARY%20CANVASS.pdf"
+      },
+      {
+        "name": "11-08-2022-1 Final Official Summary Report.pdf",
+        "path": "/asset/jcr:b2fea8aa-6f09-4fb1-906c-78773eaa9999/11-08-2022-1%20Final%20Official%20Summary%20Report.pdf"
+      },
+      {
+        "name": "11-08-2022-2a Final SOV and Official Canvass Report.pdf",
+        "path": "/asset/jcr:1290a902-e071-4d7d-aeec-1a43b691c95f/11-08-2022-2a%20Final%20SOV%20and%20Official%20Canvass%20Report.pdf"
+      },
+      {
+        "name": "11-08-2022-2b Final SOV and Official Canvass Report.txt",
+        "path": "/asset/jcr:9a9d935a-8199-4504-88aa-49ee03e2a890/11-08-2022-2b%20Final%20SOV%20and%20Official%20Canvass%20Report.txt"
+      },
+      {
+        "name": "11-08-2022-2c FILE DESCRIPTION-Final SOV and Official Canvass Report.pdf",
+        "path": "/asset/jcr:b7d2ecd2-8896-4bff-bad2-e67a3ec2251d/11-08-2022-2c%20FILE%20DESCRIPTION-Final%20SOV%20and%20Official%20Canvass%20Report.pdf"
+      },
+      {
+        "name": "11-08-2022-3a Early Voting Rejections Summary Report.pdf",
+        "path": "/asset/jcr:edecd126-0ec5-4f76-a041-dcc21e2db229/11-08-2022-3a%20Early%20Voting%20Rejections%20Summary%20Report.pdf"
+      },
+      {
+        "name": "11-08-2022-3b Early Voting Rejections by Precinct.pdf",
+        "path": "/asset/jcr:681236d2-033a-4c13-b645-a888acf018cc/11-08-2022-3b%20Early%20Voting%20Rejections%20by%20Precinct.pdf"
+      },
+      {
+        "name": "11-08-2022-4a Provisional Totals by Summary.pdf",
+        "path": "/asset/jcr:1746d0d4-af0b-485d-92b9-16f5511e0ef4/11-08-2022-4a%20Provisional%20Totals%20by%20Summary.pdf"
+      },
+      {
+        "name": "11-08-2022-4b Provisional Totals by Precinct.pdf",
+        "path": "/asset/jcr:6313212e-32fc-43b4-b2ea-e2172f9a19c9/11-08-2022-4b%20Provisional%20Totals%20by%20Precinct.pdf"
+      },
+      {
+        "name": "11-08-2022-5a1b Accessibility Report.pdf",
+        "path": "/asset/jcr:20ee06aa-e7ba-4791-86c8-5d3b6cca1d75/11-08-2022-5a1b%20Accessibility%20Report.pdf"
+      },
+      {
+        "name": "11-08-2022-5b1b Voter Education Report.pdf",
+        "path": "/asset/jcr:72be1fb8-9339-49e7-9d41-499011924f18/11-08-2022-5b1b%20Voter%20Education%20Report.pdf"
+      },
+      {
+        "name": "11-08-2022-5c1b Pollworker Training Report.pdf",
+        "path": "/asset/jcr:815ee174-6d7a-4448-9044-562475d23913/11-08-2022-5c1b%20Pollworker%20Training%20Report.pdf"
+      },
+      {
+        "name": "11-08-2022-5d1b Provisional Totals by Facility.pdf",
+        "path": "/asset/jcr:c5bd9f45-6062-48a9-9906-97e9f48fed22/11-08-2022-5d1b%20Provisional%20Totals%20by%20Facility.pdf"
+      },
+      {
+        "name": "11-08-2022-6 BOS Clerk Certificate General Election.pdf",
+        "path": "/asset/jcr:19b14f82-183b-4034-beb2-e14bfef287e1/11-08-2022-6%20BOS%20Clerk%20Certificate%20General%20Election.pdf"
+      },
+      {
+        "name": "11-08-2022-7 Fed Only Voter Ballots Cast Total NOV2022.pdf",
+        "path": "/asset/jcr:db6d889e-5e2b-452b-9a9a-b609ffb0ae91/11-08-2022-7%20Fed%20Only%20Voter%20Ballots%20Cast%20Total%20NOV2022.pdf"
+      }
+    ],
+    "2023": [
+      {
+        "name": "05-16-2023-1 CAREFREE Summary Report.pdf",
+        "path": "/asset/jcr:7e203ba3-7b45-4751-8c22-0fcdbe26eeb2/05-16-2023-1%20CAREFREE%20Summary%20Report.pdf"
+      },
+      {
+        "name": "05-16-2023-1 TEMPE Summary Report.pdf",
+        "path": "/asset/jcr:ec51bf99-d729-41b7-9896-dad09288b3e4/05-16-2023-1%20TEMPE%20Summary%20Report.pdf"
+      },
+      {
+        "name": "05-16-2023-2 CAREFREE Final SOV and Official Canvass Report.pdf",
+        "path": "/asset/jcr:cdd2a557-1091-4cf1-b793-d39201887d26/05-16-2023-2%20CAREFREE%20Final%20SOV%20and%20Official%20Canvass%20Report.pdf"
+      },
+      {
+        "name": "05-16-2023-2 TEMPE Final SOV and Official Canvass Report.pdf",
+        "path": "/asset/jcr:969569e6-80d3-4cc1-b68e-2c815d2104a5/05-16-2023-2%20TEMPE%20Final%20SOV%20and%20Official%20Canvass%20Report.pdf"
+      },
+      {
+        "name": "05-16-2023-2b FILE DESCRIPTION-Final SOV and Official Canvass Report.pdf",
+        "path": "/asset/jcr:1f7b5792-d33e-42aa-8056-cac13b0e517c/05-16-2023-2b%20FILE%20DESCRIPTION-Final%20SOV%20and%20Official%20Canvass%20Report.pdf"
+      },
+      {
+        "name": "05-16-2023-3a CAREFREE Early Voting Rejections.pdf",
+        "path": "/asset/jcr:0447c562-1fb6-433e-bcca-1699f5686e5a/05-16-2023-3a%20CAREFREE%20Early%20Voting%20Rejections.pdf"
+      },
+      {
+        "name": "05-16-2023-3a TEMPE Early Voting Rejections.pdf",
+        "path": "/asset/jcr:0184d3e6-596c-4a38-a301-f1a08e962854/05-16-2023-3a%20TEMPE%20Early%20Voting%20Rejections.pdf"
+      },
+      {
+        "name": "05-16-2023-4b CAREFREE Provisional Totals by Precinct.pdf",
+        "path": "/asset/jcr:59ef3a3d-7750-4f1c-afc9-24cbfee382a6/05-16-2023-4b%20CAREFREE%20Provisional%20Totals%20by%20Precinct.pdf"
+      },
+      {
+        "name": "05-16-2023-4b TEMPE Provisional Totals by Precinct.pdf",
+        "path": "/asset/jcr:1fdfd3e5-1eaa-451b-b7b0-539bfa3948fc/05-16-2023-4b%20TEMPE%20Provisional%20Totals%20by%20Precinct.pdf"
+      },
+      {
+        "name": "05-16-2023-5 Carefree All-Mail Undeliverable Packet Totals.pdf",
+        "path": "/asset/jcr:740927ca-4868-4eb4-ba69-6473faaa77dd/05-16-2023-5%20Carefree%20All-Mail%20Undeliverable%20Packet%20Totals.pdf"
+      },
+      {
+        "name": "05-16-2023-5 Tempe All-Mail Undeliverable Packet Totals.pdf",
+        "path": "/asset/jcr:f7888947-992e-4d6f-93d2-ef66bef85f8e/05-16-2023-5%20Tempe%20All-Mail%20Undeliverable%20Packet%20Totals.pdf"
+      },
+      {
+        "name": "11-07-2023-1 EL MIRAGE Final Summary Report.pdf",
+        "path": "/asset/jcr:db224669-d8d2-4d29-9220-eb7446c682cf/11-07-2023-1%20EL%20MIRAGE%20Final%20Summary%20Report.pdf"
+      },
+      {
+        "name": "11-07-2023-2 EL MIRAGE Final SOV and Official Canvass Report.pdf",
+        "path": "/asset/jcr:2e53ce2e-304b-4026-a55d-73ca1278620a/11-07-2023-2%20EL%20MIRAGE%20Final%20SOV%20and%20Official%20Canvass%20Report.pdf"
+      },
+      {
+        "name": "11-07-2023-1 GLENDALE Final Summary Report.pdf",
+        "path": "/asset/jcr:d775ca14-b528-4840-bae9-4b1275d3caa5/11-07-2023-1%20GLENDALE%20Final%20Summary%20Report.pdf"
+      },
+      {
+        "name": "11-07-2023-2 GLENDALE Final SOV and Official Canvass Report.pdf",
+        "path": "/asset/jcr:84223f31-902a-4330-a46b-cea5b2313290/11-07-2023-2%20GLENDALE%20Final%20SOV%20and%20Official%20Canvass%20Report.pdf"
+      },
+      {
+        "name": "11-07-2023-1 GOODYEAR Final Summary Report.pdf",
+        "path": "/asset/jcr:3e908361-fa5b-45f7-b691-fb39d5f7bad3/11-07-2023-1%20GOODYEAR%20Final%20Summary%20Report.pdf"
+      },
+      {
+        "name": "11-07-2023-2 GOODYEAR Final SOV and Official Canvass Report.pdf",
+        "path": "/asset/jcr:6ebb0d32-125d-4bdb-a6b4-1e03dda6238c/11-07-2023-2%20GOODYEAR%20Final%20SOV%20and%20Official%20Canvass%20Report.pdf"
+      },
+      {
+        "name": "11-07-2023-1 LITCHFIELD PARK Final Summary Report.pdf",
+        "path": "/asset/jcr:41d5d3c4-c76c-4aaa-bfbf-a5f86fa9ea74/11-07-2023-1%20LITCHFIELD%20PARK%20Final%20Summary%20Report.pdf"
+      },
+      {
+        "name": "11-07-2023-2 LITCHFIELD PARK Final SOV and Official Canvass Report.pdf",
+        "path": "/asset/jcr:cbc9490b-dedd-45eb-8f15-88ca28bf5ee4/11-07-2023-2%20LITCHFIELD%20PARK%20Final%20SOV%20and%20Official%20Canvass%20Report.pdf"
+      },
+      {
+        "name": "11-07-2023-1 PHOENIX Final Summary Report.pdf",
+        "path": "/asset/jcr:79e89c1a-1515-46dc-85ed-a2663fef682c/11-07-2023-1%20PHOENIX%20Final%20Summary%20Report.pdf"
+      },
+      {
+        "name": "11-07-2023-2 PHOENIX Final SOV and Official Canvass Report.pdf",
+        "path": "/asset/jcr:92b2d611-84e3-49e0-a386-62beda84f76d/11-07-2023-2%20PHOENIX%20Final%20SOV%20and%20Official%20Canvass%20Report.pdf"
+      },
+      {
+        "name": "11-07-2023-1 SURPRISE Final Summary Report.pdf",
+        "path": "/asset/jcr:b419d973-f489-46c2-947f-9620030538ea/11-07-2023-1%20SURPRISE%20Final%20Summary%20Report.pdf"
+      },
+      {
+        "name": "11-07-2023-2 SURPRISE Final SOV and Official Canvass Report.pdf",
+        "path": "/asset/jcr:c6a8d8a0-90d4-43a4-b93b-2d2219b0f3ce/11-07-2023-2%20SURPRISE%20Final%20SOV%20and%20Official%20Canvass%20Report.pdf"
+      },
+      {
+        "name": "11-07-2023-1 ALL Jurisdictional Final Summary Report.pdf",
+        "path": "/asset/jcr:520ec839-7b5b-49e5-a6bc-ef88f2526116/11-07-2023-%20ALL%20Jurisdictional%20Final%20Summary%20Report.pdf"
+      },
+      {
+        "name": "11-07-2023-2 ALL Final SOV and Official Canvass Report.pdf",
+        "path": "/asset/jcr:cab14946-274b-4081-a241-a185ef05415d/11-07-2023-1%20Jurisdictional%20Final%20Official%20Summary%20Report%20ALL.pdf"
+      },
+      {
+        "name": "11-07-2023-2b ALL Jurisdictional Final SOV and Official Canvass Report ALL.txt",
+        "path": "/asset/jcr:c50a7b8f-4736-474a-a57c-8d18c47fd311/11-07-2023-2b%20ALL%20Jurisdictional%20Final%20SOV%20and%20Official%20Canvass%20Report%20ALL.txt"
+      },
+      {
+        "name": "11-07-2023-2c FILE DESCRIPTION-Final SOV and Official Canvass Report.pdf",
+        "path": "/asset/jcr:a19e1add-a4f9-49a4-850f-8297bf02b3b7/11-07-2023-2c%20FILE%20DESCRIPTION-Final%20SOV%20and%20Official%20Canvass%20Report.pdf"
+      },
+      {
+        "name": "11-07-2023-3 ALL EV Rejects Detailed Report.pdf",
+        "path": "/asset/jcr:6af98175-2cd2-4964-ad0f-9c9d9b9c86a9/11-07-2023-3%20ALL%20EV%20Rejects%20Detailed%20Report.pdf"
+      },
+      {
+        "name": "11-07-2023-3 ALL EV Rejects Summary Report.pdf",
+        "path": "/asset/jcr:26ba75eb-0f4c-44fc-a0a8-5fa67dab2569/11-07-2023-3%20ALL%20EV%20Rejects%20Summary%20Report.pdf"
+      },
+      {
+        "name": "11-07-2023-4 ALL Provisional Totals by Summary.pdf",
+        "path": "/asset/jcr:c09f11da-9f0c-48c1-b6e1-def35abf0e78/11-07-2023-4%20ALL%20Provisional%20Totals%20by%20Summary.pdf"
+      },
+      {
+        "name": "11-07-2023-5 ALL JURISDICTIONS All-Mail Undeliverable Packet Totals.pdf",
+        "path": "/asset/jcr:8750959b-1387-425b-8728-1507e82c28bf/11-07-2023-5%20ALL%20JURISDICTIONS%20All-Mail%20Undeliverable%20Packet%20Totals.pdf"
+      }
+    ],
+    "2024": [
+      {
+        "name": "03-12-2024-1 ALL Jurisdicational Final Summary.pdf",
+        "path": "/asset/jcr:2d1d3927-f6a3-4178-aa3b-053ccf6f0b57/03-12-2024-1%20ALL%20Jurisdicational%20FinalSummary.pdf"
+      },
+      {
+        "name": "03-12-2024-1 LITCHFIELD PARK Final Summary.pdf",
+        "path": "/asset/jcr:77c907a4-3855-4999-a295-a73ab2ee1d9b/03-12-2024-1%20LITCHFIELD%20PARK%20Final%20Summary.pdf"
+      },
+      {
+        "name": "03-12-2024-1 TEMPE Final Summary.pdf",
+        "path": "/asset/jcr:fa90a84c-9308-46d5-a855-31702a9cd922/03-12-2024-1%20TEMPE%20Final%20Summary.pdf"
+      },
+      {
+        "name": "03-12-2024-2 LITCHFIELD PARK Final SOV and Official Canvass Report.pdf",
+        "path": "/asset/jcr:49731dbe-ccfd-4219-a4b0-9d99b91d6f31/03-12-2024-2%20LITCHFIELD%20PARK%20Final%20SOV%20and%20Official%20Canvass%20Report.pdf"
+      },
+      {
+        "name": "03-12-2024-2 TEMPE Final SOV and Official Canvass Report.pdf",
+        "path": "/asset/jcr:7cdff14f-30eb-4b2a-a359-5b00596fb41e/03-12-2024-2%20TEMPE%20Final%20SOV%20and%20Official%20Canvass%20Report.pdf"
+      },
+      {
+        "name": "03-12-2024-2b ALL Jurisdictional Final SOV and Official Canvass Report ALL.txt",
+        "path": "/asset/jcr:ffb8ab47-bc09-4e0b-9de9-c8e36cfa9e12/03-12-2024-2b%20ALL%20Jurisdictional%20Final%20SOV%20and%20Official%20Canvass%20Report%20ALL.txt"
+      },
+      {
+        "name": "03-12-2024-2c FILE DESCRIPTION-Final SOV and Official Canvass Report.pdf",
+        "path": "/asset/jcr:0a1aba13-d3f7-4c34-8202-2cb55c6fa6c8/03-12-2024-2c%20FILE%20DESCRIPTION-Final%20SOV%20and%20Official%20Canvass%20Report.pdf"
+      },
+      {
+        "name": "03-12-2024-3 LITCHFIELD PARK EV Rejects Summary Report.pdf",
+        "path": "/asset/jcr:2e12d673-91d7-40bf-b8fa-c7428cce10f9/03-12-2024-3%20LITCHFIELD%20PARK%20EV%20Rejects%20Summary%20Report.pdf"
+      },
+      {
+        "name": "03-12-2024-3 TEMPE EV Rejects Summary Report.pdf",
+        "path": "/asset/jcr:66635e80-d60b-49a1-8260-45f99c8eeee3/03-12-2024-3%20TEMPE%20EV%20Rejects%20Summary%20Report.pdf"
+      },
+      {
+        "name": "03-12-2024-4 LITCHFIELD PARK Provisional Totals by Summary.pdf",
+        "path": "/asset/jcr:5dbfb054-4fd6-4fcf-9360-0babd4ce879c/03-12-2024-4%20LITCHFIELD%20PARK%20Provisional%20Totals%20by%20Summary.pdf"
+      },
+      {
+        "name": "03-12-2024-4 TEMPE Provisional Totals by Summary.pdf",
+        "path": "/asset/jcr:07677b1c-2656-452c-8b75-47a71d2af6ee/03-12-2024-4%20TEMPE%20Provisional%20Totals%20by%20Summary.pdf"
+      },
+      {
+        "name": "03-19-2024 -0 Canvass COMPLETE PPE 2024.pdf",
+        "path": "/asset/jcr:43d5a006-eaa1-4407-878b-d99827ab7f9d/03-19-2024%20-0%20Canvass%20COMPLETE%20PPE%202024.pdf"
+      },
+      {
+        "name": "03-19-2024 -1 Final Official Summary Report March 2024.pdf",
+        "path": "/asset/jcr:02254e1a-aa95-484e-b486-2c154397208c/03-19-2024%20-1%20Final%20Official%20Summary%20Report%20March%202024.pdf"
+      },
+      {
+        "name": "03-19-2024 -2a Final SOV and Official Final Report PPE 2024.pdf",
+        "path": "/asset/jcr:e4256966-01ff-4b8a-a2e6-435d8b2ab29e/03-19-2024%20-2a%20Final%20SOV%20and%20Official%20Final%20Report%20PPE%202024.pdf"
+      },
+      {
+        "name": "03-19-2024 -2b Final SOV and Official Final Report PPE 2024.txt",
+        "path": "/asset/jcr:fde95745-7e25-4da9-bd00-972ba3a4f5a9/03-19-2024%20-2b%20Final%20SOV%20and%20Official%20Final%20Report%20PPE%202024.txt"
+      },
+      {
+        "name": "03-19-2024-2c FILE DESCRIPTION-Final SOV and Official Canvass Report.pdf",
+        "path": "/asset/jcr:7d13e1ce-fa79-4f20-8daa-83a9881988cc/03-19-2024-2c%20FILE%20DESCRIPTION-Final%20SOV%20and%20Official%20Canvass%20Report.pdf"
+      },
+      {
+        "name": "03-19-2024 -3a EV Rejects Summary Report PPE 2024.pdf",
+        "path": "/asset/jcr:2047425a-b23e-455c-81d4-41315ccefe85/03-19-2024%20-3a%20EV%20Rejects%20Summary%20Report%20PPE%202024.pdf"
+      },
+      {
+        "name": "03-19-2024 -3b EV Rejects Detailed Report PPE 2024.pdf",
+        "path": "/asset/jcr:ae38644e-674d-4454-ab9d-cec3de5d69ba/03-19-2024%20-3b%20EV%20Rejects%20Detailed%20Report%20PPE%202024.pdf"
+      },
+      {
+        "name": "03-19-2024 -4 Provisional Summary Report PPE 2024.pdf",
+        "path": "/asset/jcr:7f871abb-56a6-4abe-8cef-23d465a5fcf1/03-19-2024%20-4%20Provisional%20Summary%20Report%20PPE%202024.pdf"
+      },
+      {
+        "name": "03-19-2024 -4b Provisional Detailed Report PPE 2024.pdf",
+        "path": "/asset/jcr:e32709b4-dbae-413b-807d-72ddf112c76d/03-19-2024%20-4b%20Provisional%20Detailed%20Report%20PPE%202024.pdf"
+      },
+      {
+        "name": "2024 March Presidential Preference Vote Center Provisional Ballot &amp; Early Ballot Drop Off Estimates.pdf",
+        "path": "/asset/jcr:798ceefb-caae-4618-ad61-e12fcbe26974/2024%20March%20Presidential%20Preference%20Vote%20Center%20Provisional%20Ballot%20&amp;%20Early%20Ballot%20Drop%20Off%20Estimates.pdf"
+      },
+      {
+        "name": "EMS Audit Event Log March 2024 PPE.pdf",
+        "path": "/asset/jcr:dc0247ce-cc70-4c00-b320-c36df53bf9f8/EMSAuditLog_2024_03_27T12_59_05.pdf"
+      },
+      {
+        "name": "05-21-2024-1 GOODYEAR Final Summary.pdf",
+        "path": "/asset/jcr:6339dc18-6cf5-4a46-a646-02285666da8f/05-21-2024-1%20GOODYEAR%20Final%20Summary.pdf"
+      },
+      {
+        "name": "05-21-2024-2 GOODYEAR Final SOV and Official Canvass Report.pdf",
+        "path": "/asset/jcr:5a178088-7b1e-4f78-a91a-dad4f97101a1/05-21-2024-2%20GOODYEAR%20Final%20SOV%20and%20Official%20Canvass%20Report.pdf"
+      },
+      {
+        "name": "05-21-2024-2b ALL Jurisdictional Final SOV and Official Canvass Report ALL.txt",
+        "path": "/asset/jcr:dec0663b-ae64-45d0-91e2-da802d9dafc7/05-21-2024-2b%20ALL%20Jurisdictional%20Final%20SOV%20and%20Official%20Canvass%20Report%20ALL.txt"
+      },
+      {
+        "name": "05-21-2024-2c FILE DESCRIPTION-Final SOV and Official Canvass Report.pdf",
+        "path": "/asset/jcr:4ff4606a-486b-42ac-ad5a-2020d87a246b/05-21-2024-2c%20FILE%20DESCRIPTION-Final%20SOV%20and%20Official%20Canvass%20Report.pdf"
+      },
+      {
+        "name": "05-21-2024-3 GOODYEAR EV Rejects Summary Report.pdf",
+        "path": "/asset/jcr:a37ab4c8-5cb2-481b-9436-5ac12455574a/05-21-2024-3%20GOODYEAR%20EV%20Rejects%20Summary%20Report.pdf"
+      },
+      {
+        "name": "05-21-2024-3a GOODYEAR EV Rejects Detailed Report.pdf",
+        "path": "/asset/jcr:2a24b0da-29f4-49b9-954c-261be6614466/05-21-2024-3a%20GOODYEAR%20EV%20Rejects%20Detailed%20Report.pdf"
+      },
+      {
+        "name": "05-21-2024-4 GOODYEAR Provisional Totals by Summary.pdf",
+        "path": "/asset/jcr:9c08c895-19c6-46a4-9897-1efacd90380f/05-21-2024-4%20GOODYEAR%20Provisional%20Totals%20by%20Summary.pdf"
+      },
+      {
+        "name": "05-21-2024-4a GOODYEAR Provisional Totals by Precinct.pdf",
+        "path": "/asset/jcr:241bafbc-7048-40f2-892b-866a47d2e631/05-21-2024-4a%20GOODYEAR%20Provisional%20Totals%20by%20Precinct.pdf"
+      },
+      {
+        "name": "05-21-2024-5 GOODYEAR All-Mail Undeliverable Packet Totals.pdf",
+        "path": "/asset/jcr:c0cc20d6-df10-43e9-96d4-457cb0eb5393/05-21-2024-5%20GOODYEAR%20All-Mail%20Undeliverable%20Packet%20Totals.pdf"
+      },
+      {
+        "name": "EMS Audit Event Log May 2024.pdf",
+        "path": "/asset/jcr:d24af490-450f-4e41-8ed2-38abe60cd972/May2024JurisAuditLog.pdf"
+      },
+      {
+        "name": "07-30-2024-0 BOS CANVASS SUMMARY.pdf",
+        "path": "/asset/jcr:d880884a-62af-4530-b3d5-0146fe0caf69/07-30-2024-0%20BOS%20CANVASS%20SUMMARY.pdf"
+      },
+      {
+        "name": "07-30-2024-1 Final Official Summary Report.pdf",
+        "path": "/asset/jcr:2f298d9c-a1d5-4cef-9a7b-2874e682fdd6/07-30-2024-1%20Final%20Official%20Summary%20Report.pdf"
+      },
+      {
+        "name": "07-30-2024-0 CANVASS COMPLETE.pdf",
+        "path": "/asset/jcr:51f1ee92-cfa1-4802-a50b-605b3724b3df/07-30-2024-0%20CANVASS%20COMPLETE.pdf"
+      },
+      {
+        "name": "07-30-2024-2b Final SOV and Official Canvass Report.txt",
+        "path": "/asset/jcr:718162a7-a25e-42eb-8c1d-2e560baec0a3/07-30-2024-2b%20Final%20SOV%20and%20Official%20Canvass%20Report.txt"
+      },
+      {
+        "name": "07-30-2024-2a Final SOV and Official Canvass Report.pdf",
+        "path": "/asset/jcr:800b2c0a-8286-4d60-b8c2-a3b646ee976c/07-30-2024-2a%20Final%20SOV%20and%20Official%20Canvass%20Report.pdf"
+      },
+      {
+        "name": "07-30-2024-2c FILE DESCRIPTION-Final SOV and Official Canvass Report.pdf",
+        "path": "/asset/jcr:5f8b56dd-4331-4f10-af18-23ffd679f310/07-30-2024-2c%20FILE%20DESCRIPTION-Final%20SOV%20and%20Official%20Canvass%20Report.pdf"
+      },
+      {
+        "name": "07-30-2024-3a EV Rejects Summary Report JULY2024.pdf",
+        "path": "/asset/jcr:1d27cdd8-45a2-4514-87ca-0ca9008aaa2c/07-30-2024-3a%20EV%20Rejects%20Summary%20Report%20JULY2024.pdf"
+      },
+      {
+        "name": "07-30-2024-3b EV Rejects Detailed Report JULY2024.pdf",
+        "path": "/asset/jcr:d458c1bd-beb9-4817-98be-d40510f690fd/07-30-2024-3b%20EV%20Rejects%20Detailed%20Report%20JULY2024.pdf"
+      },
+      {
+        "name": "07-30-2024-4 Provisional Summary Report JULY2024.pdf",
+        "path": "/asset/jcr:3bc0cfa3-2e65-4cfa-8956-09ae78a0ea9a/07-30-2024-4%20Provisional%20Summary%20Report%20JULY2024.pdf"
+      },
+      {
+        "name": "07-30-2024-4b Provisional Detailed Report JULY2024.pdf",
+        "path": "/asset/jcr:e227059e-f571-4680-ae79-999597af3827/07-30-2024-4b%20Provisional%20Detailed%20Report%20JULY2024.pdf"
+      },
+      {
+        "name": "07-30-2024-5 - Vote Center Early Ballot Affidavit Estimates.pdf",
+        "path": "/asset/jcr:2bbc4976-ab1a-4b85-a2f8-02641d2c3092/07-30-2024-5%20-%20Vote%20Center%20Early%20Ballot%20Affidavit%20Estimates.pdf"
+      },
+      {
+        "name": "07-30-2024-6 EMS Audit Event Log July 2024 Primary.pdf",
+        "path": "/asset/jcr:d931b12f-2f3a-4a0d-95eb-317b3774a654/07-30-2024-6%20EMS%20Audit%20Event%20Log%20July%202024%20Primary.pdf"
+      },
+      {
+        "name": "11-05-2024-0 BOS CANVASS SUMMARY.pdf",
+        "path": "/asset/jcr:f1f09b3a-76e5-401f-ac2f-aaf2a0b193ee/11-05-2024-0%20BOS%20CANVASS%20SUMMARY.pdf"
+      },
+      {
+        "name": "11-05-2024-0 CANVASS COMPLETE.pdf",
+        "path": "/asset/jcr:3618433a-5ef5-42b7-84f2-4871cf80a60b/11-05-2024-0%20CANVASS%20COMPLETE.pdf"
+      },
+      {
+        "name": "11-05-2024-1 Final Official Summary Report.pdf",
+        "path": "/asset/jcr:26aa3adb-bac8-424b-ae32-ea50e9e5577a/11-05-2024-1%20Final%20Official%20Summary%20Report.pdf"
+      },
+      {
+        "name": "11-05-2024-2a Final SOV and Official Canvass Report.pdf",
+        "path": "/asset/jcr:9bbf7623-5cdb-41b6-a542-2fd80df4bc26/11-05-2024-2a%20Final%20SOV%20and%20Official%20Canvass%20Report.pdf"
+      },
+      {
+        "name": "11-05-2024-2b Final SOV and Official Canvass Report.txt",
+        "path": "/asset/jcr:5c8a38fd-0d5a-4fa1-83cb-8b13e5ff089c/11-05-2024-2b%20Final%20SOV%20and%20Official%20Canvass%20Report.txt"
+      },
+      {
+        "name": "11-05-2024-2c FILE DESCRIPTION-Final SOV and Official Canvass Report.pdf",
+        "path": "/asset/jcr:7bd7f5df-392a-40c2-a236-2ecd5291ba60/11-05-2024-2c%20FILE%20DESCRIPTION-Final%20SOV%20and%20Official%20Canvass%20Report.pdf"
+      },
+      {
+        "name": "11-05-2024-3a Early Voting Rejections Summary NOV2024.pdf",
+        "path": "/asset/jcr:0024da0f-0b73-476a-a5c2-471382dbce54/11-05-2024-3a%20Early%20Voting%20Rejections%20Summary%20NOV2024.pdf"
+      },
+      {
+        "name": "11-05-2024-3b Early Voting Rejections Detailed NOV2024.pdf",
+        "path": "/asset/jcr:3cb9ab9e-5575-4fde-bd09-5268e93cd1dd/11-05-2024-3b%20Early%20Voting%20Rejections%20Detailed%20NOV2024.pdf"
+      },
+      {
+        "name": "11-05-2024-4 Provisional Summary Report NOV2024.pdf",
+        "path": "/asset/jcr:e1674c70-bbb3-44b1-8111-caa79d823601/11-05-2024-4%20Provisional%20Summary%20Report%20NOV2024.pdf"
+      },
+      {
+        "name": "11-05-2024-5a1b Accessibility Report.pdf",
+        "path": "/asset/jcr:f9b53408-3229-4dea-bc13-38891df076e1/11-05-2024-5a1b%20Accessibility%20Report.pdf"
+      },
+      {
+        "name": "11-05-2024-5b1b Voter Education Report.pdf",
+        "path": "/asset/jcr:63a0bf6c-483e-43c4-9866-0ce7ffc37c8f/11-05-2024-5b1b%20Voter%20Education%20Report.pdf"
+      },
+      {
+        "name": "11-05-2024-5c1b Pollworker Training Report.pdf",
+        "path": "/asset/jcr:94a16e50-c664-49c4-9461-7e660a83aab5/11-05-2024-5c1b%20Pollworker%20Training%20Report.pdf"
+      },
+      {
+        "name": "11-05-2024-5d1b Provisional Totals by Facility.pdf",
+        "path": "/asset/jcr:a6eb070c-b56e-4226-ae30-569585224d3c/11-05-2024-5d1b%20Provisional%20Totals%20by%20Facility.pdf"
+      },
+      {
+        "name": "11-05-2024-6 - Vote Center Early Ballot Affidavit Estimates.pdf",
+        "path": "/asset/jcr:aaada8d5-b270-4c3d-97c3-96dd0b7ab289/2024%20General%20Election%20-%20Vote%20Center%20Affidavit%20Estimates.pdf"
+      },
+      {
+        "name": "11-05-2024-7 EMS Audit Event Log November 2024 General.pdf",
+        "path": "/asset/jcr:152ccbb9-24d2-401d-b544-6d7197cf94e5/EMS%20Audit%20Event%20Log%20November%202024%20General.pdf"
+      },
+      {
+        "name": "11-05-2024 Fountain Hills- Final Official Recount Results .pdf",
+        "path": "/asset/jcr:fba67262-9736-4ba4-ba1c-dd8928a1c75a/11-05-2024%20Final%20Official%20Recount%20Results%20Fountain%20Hills.pdf"
+      },
+      {
+        "name": "11-05-2024 AZ STATE REP LD2- Final Official Recount Results.pdf",
+        "path": "/asset/jcr:93a0b734-dcca-48b8-a44f-3854e95f9280/11-05-2024%20AZ%20STATE%20REP%20LD2%20-Final%20Official%20Results.pdf"
+      },
+      {
+        "name": "11-05-2024 BOS DISTRICT 3- Final Official Recount Results.pdf",
+        "path": "/asset/jcr:55264fb7-3da0-4ed7-8920-1e88a0afebbf/11-05-2024%20BOS%20DISTRICT%203%20Final%20Official%20Results.pdf"
+      },
+      {
+        "name": "2024 Order Certifying Recount Results.PDF",
+        "path": "/asset/jcr:7996bf32-9265-4147-9e02-a68bac4f18dd/2024%20Order%20Certifying%20Recount%20Results.PDF"
+      }
+    ],
+    "2025": [
+      {
+        "name": "Results File Descriptions.pdf",
+        "path": "/asset/jcr:6ba9d6fa-8641-4335-bd30-3b0cd64193af/Results%20File%20Descriptions.pdf"
+      },
+      {
+        "name": "2025 May Jurisdictional Election Results.txt",
+        "path": "/asset/jcr:612ad67d-918e-482b-aa75-a7b26420f359/Final%20Unofficial%20Results%205-23-25.txt"
+      },
+      {
+        "name": "2025 May Jurisdictional Election Results.pdf",
+        "path": "/asset/jcr:981c5838-0ec4-49a2-bc0c-150558913170/Final%20Unofficial%20Results%205-23-25.pdf"
+      },
+      {
+        "name": "2025 May Vote Center Early Ballot Affidavit Estimates.pdf",
+        "path": "/asset/jcr:cb819d04-cb42-485f-91b9-50a66bb8ce9d/2025%20May%20Vote%20Center%20Early%20Ballot%20Affidavit%20Estimates_Updated.pdf"
+      },
+      {
+        "name": "2025 May EMS Audit Event Log.pdf",
+        "path": "/asset/jcr:eaffeb09-5b6f-4370-9b33-2c45ee9b0e2f/2025%20May%20EMS%20Audit%20Event%20Log.pdf"
+      },
+      {
+        "name": "07-15-2025-0 CANVASS COMPLETE JULY_CD7 2025.pdf",
+        "path": "/asset/jcr:85a8d5c6-d0ef-4d61-aba4-11aa004581c1/07-15-2025-0%20CANVASS%20COMPLETE%20JULY_CD7%202025.pdf"
+      },
+      {
+        "name": "07-15-2025-0 BOS CANVASS SUMMARY JULY_CD7 2025.pdf",
+        "path": "/asset/jcr:b0661c4f-3c5d-4178-9dc6-e754288ea3ed/07-15-2025-0%20BOS%20CANVASS%20SUMMARY%20JULY_CD7%202025.pdf"
+      },
+      {
+        "name": "07-15-2025-1 Final Official Summary Report JULY_CD7 2025.pdf",
+        "path": "/asset/jcr:e313aa80-abe1-48f9-b3ab-36c13986fa97/07-15-2025-1%20Final%20Official%20Summary%20Report%20JULY_CD7%202025.pdf"
+      },
+      {
+        "name": "07-15-2025-2a Final SOV and Official Canvass Report JULY_CD7 2025.pdf",
+        "path": "/asset/jcr:6945c5bd-964e-4aa4-ad15-84ba99d1b6e2/07-15-2025-2a%20Final%20SOV%20and%20Official%20Canvass%20Report%20JULY_CD7%202025.pdf"
+      },
+      {
+        "name": "07-15-2025-2b Final SOV and Official Canvass Report JULY_CD7 2025.txt",
+        "path": "/asset/jcr:50880473-c969-4873-bd3b-98eb71915ff2/07-15-2025-2b%20Final%20SOV%20and%20Official%20Canvass%20Report%20JULY_CD7%202025.txt"
+      },
+      {
+        "name": "07-15-2025-2c FILE DESCRIPTION-Final SOV and Official Canvass Report.pdf",
+        "path": "/asset/jcr:d08b5aa6-eb88-4894-b399-6121aed9b7bd/07-15-2025-2c%20FILE%20DESCRIPTION-Final%20SOV%20and%20Official%20Canvass%20Report.pdf"
+      },
+      {
+        "name": "07-15-2025-3a EV Rejects Summary Report JULY_CD7 2025.pdf",
+        "path": "/asset/jcr:e8f6dcc7-53f1-46ca-af36-7b4d8afb31a7/07-15-2025-3a%20EV%20Rejects%20Summary%20Report%20JULY_CD7%202025.pdf"
+      },
+      {
+        "name": "07-15-2025-3b EV Rejects Detailed Report JULY_CD7 2025.pdf",
+        "path": "/asset/jcr:4c2a3c33-a58b-48bc-a723-a4b5c2d19de9/07-15-2025-3b%20EV%20Rejects%20Detailed%20Report%20JULY_CD7%202025.pdf"
+      },
+      {
+        "name": "07-15-2025-4 Provisional Summary Report JULY_CD7 2025.pdf",
+        "path": "/asset/jcr:5ba13120-1e63-4448-b965-af7444e26b5e/07-15-2025-4%20Provisional%20Summary%20Report%20JULY_CD7%202025.pdf"
+      },
+      {
+        "name": "07-15-2025-4b Provisional Detailed Report JULY_CD7 2025.pdf",
+        "path": "/asset/jcr:c9f48c66-93a9-4d12-956d-ed5c294cf5a7/07-15-2025-4b%20Provisional%20Detailed%20Report%20JULY_CD7%202025.pdf"
+      },
+      {
+        "name": "07-15-2025-5 Primary Party Ballot Choices JULY_CD7 2025.pdf",
+        "path": "/asset/jcr:db08fa4e-068a-47f5-ba05-4515c6b0788c/07-15-2025-5%20Primary%20Party%20Ballot%20Choices%20JULY_CD7%202025.pdf"
+      },
+      {
+        "name": "07-15-2025 -6 Vote Center Estimate July_CD7 2025.pdf",
+        "path": "/asset/jcr:e8cdcbe6-038a-4e59-9333-88eed11f3069/07-15-2025%20-6%20Vote%20Center%20Estimate%20July_CD7%202025.pdf"
+      },
+      {
+        "name": "07-15-2025 -7 EMS Audit Event Log July_CD7 2025.pdf",
+        "path": "/asset/jcr:9c520235-5a3b-4d44-b511-6fce03287a90/07-15-2025%20-7%20EMS%20Audit%20Event%20Log%20July_CD7%202025.pdf"
+      },
+      {
+        "name": "09-23-2025-0 CANVASS COMPLETE_CD7 GE 2025.pdf",
+        "path": "/asset/jcr:85023c75-103e-40be-97e8-2b6663a2f4c2/09-23-2025-0%20CANVASS%20COMPLETE.pdf"
+      },
+      {
+        "name": "09-23-2025-1 Final Official Summary Report_CD7_GE_2025.pdf",
+        "path": "/asset/jcr:db7b9b71-71f4-403a-a30f-f7886af6ea93/09-23-2025-1%20Final%20Official%20Summary%20Report_CD7_GE_2025.pdf"
+      },
+      {
+        "name": "09-23-2025-2a Final SOV and Official Canvass Report SEP_CD7 GE 2025.pdf",
+        "path": "/asset/jcr:7b2a0b0c-3c83-44c8-9b37-960bea27fbf2/09-23-2025-2a%20Final%20SOV%20and%20Official%20Canvass%20Report%20SEP_CD7%20GE%202025.pdf"
+      },
+      {
+        "name": "09-23-2025-2b Final SOV and Official Canvass Report SEP_CD7 GE 2025.txt",
+        "path": "/asset/jcr:b40e68a4-d3ff-4a34-886a-fed1df82fe79/09-23-2025-2b%20Final%20SOV%20and%20Official%20Canvass%20Report%20SEP_CD7%20GE%202025.txt"
+      },
+      {
+        "name": "09-23-2025-2c FILE DESCRIPTION-Final SOV and Official Canvass Report_CD7 GE 2025.pdf",
+        "path": "/asset/jcr:43891413-4d23-4ed8-9380-2c9f47ea2ad4/09-23-2025-2c%20FILE%20DESCRIPTION-Final%20SOV%20and%20Official%20Canvass%20Report_CD7%20GE%202025.pdf"
+      },
+      {
+        "name": "09-23-2025-3b EV Rejects Detailed Report SEP_CD7 GE 2025.pdf",
+        "path": "/asset/jcr:f59aa464-58b6-4bd6-bea4-b6c99044f076/09-23-2025-3b%20EV%20Rejects%20Detailed%20Report%20SEP_CD7%20GE%202025.pdf"
+      },
+      {
+        "name": "09-23-2025-3b EV Rejects Summary Report SEP_CD7 GE 2025.pdf",
+        "path": "/asset/jcr:07053888-6652-485a-9ccb-dc54b179c6e6/09-23-2025-3b%20EV%20Rejects%20Summary%20Report%20SEP_CD7%20GE%202025.pdf"
+      },
+      {
+        "name": "09-23-2025-4b Provisional Detailed Report SEP_CD7 GE 2025.pdf",
+        "path": "/asset/jcr:cb3020c4-536b-443b-85da-a01d307a6b65/09-23-2025-4b%20Provisional%20Detailed%20Report%20SEP_CD7%20GE%202025.pdf"
+      },
+      {
+        "name": "09-23-2025-4b Provisional Summary Report SEP_CD7 GE 2025.pdf",
+        "path": "/asset/jcr:6df216c2-9402-40c3-b7ef-6a21e2861a1a/09-23-2025-4b%20Provisional%20Summary%20Report%20SEP_CD7%20GE%202025.pdf"
+      },
+      {
+        "name": "09-23-2025-5 Affidavit Envelope Vote Center Estimate _CD7 GE 2025.pdf",
+        "path": "/asset/jcr:58120502-7e44-46fd-bbe8-731c81a67261/09-23-2025-5%20Affidavit%20Envelope%20Vote%20Center%20Estimate%20_CD7%20GE%202025.pdf"
+      },
+      {
+        "name": "09-23-2025-6 EMS Event Audit Log_CD7 GE 2025.pdf",
+        "path": "/asset/jcr:29be8415-c560-47bd-bb0e-1de791a02334/09-23-2025-6%20EMS%20Event%20Audit%20Log_CD7%20GE%202025.pdf"
+      },
+      {
+        "name": "11-04-2025 -1 ALL Jurisdictional Final Summary Report.pdf",
+        "path": "/asset/jcr:49184578-c366-41ee-8849-870e2df71e41/11-04-2025%20-1%20ALL%20Jurisdictional%20Final%20Summary%20Report.pdf"
+      },
+      {
+        "name": "11-04-2025-1 APACHE JUNCTION Final Summary Report.pdf",
+        "path": "/asset/jcr:01e0e7fa-2952-4025-a828-52b156b8199f/11-04-2025-1%20APACHE%20JUNCTION%20Final%20Summary%20Report.pdf"
+      },
+      {
+        "name": "11-04-2025-1 AVONDALE Final Summary Report.pdf",
+        "path": "/asset/jcr:cea7fc88-7066-4f9d-b054-61ebf3177f91/11-04-2025-1%20AVONDALE%20Final%20Summary%20Report.pdf"
+      },
+      {
+        "name": "11-04-2025-1 CHANDLER Final Summary Report.pdf",
+        "path": "/asset/jcr:c4939a67-d9b3-4034-9953-e9274f138e7a/11-04-2025-1%20CHANDLER%20Final%20Summary%20Report.pdf"
+      },
+      {
+        "name": "11-04-2025-1 GLENDALE Final Summary Report.pdf",
+        "path": "/asset/jcr:73ba2260-9607-42f0-8f07-65cedec11f5c/11-04-2025-1%20GLENDALE%20Final%20Summary%20Report.pdf"
+      },
+      {
+        "name": "11-04-2025-1 MCSHCD Final Summary Report.pdf",
+        "path": "/asset/jcr:83642625-b937-4419-a606-b517636f1662/11-04-2025-1%20MCSHCD%20Final%20Summary%20Report.pdf"
+      },
+      {
+        "name": "11-04-2025-1 MESA-DIST2 Final Summary Report.pdf",
+        "path": "/asset/jcr:0711617d-e09a-41fc-bad6-3fdfee74279f/11-04-2025-1%20MESA-DIST2%20Final%20Summary%20Report.pdf"
+      },
+      {
+        "name": "11-04-2025-1 NORTH COUNTY FIRE &amp; MED Final Summary Report.pdf",
+        "path": "/asset/jcr:d3b630ca-b460-45f4-9617-02fcf493f65b/11-04-2025-1%20NORTH%20COUNTY%20FIRE%20&amp;%20MED%20Final%20Summary%20Report.pdf"
+      },
+      {
+        "name": "11-04-2025-1 SOUTH COUNTY FIRE Final Summary Report.pdf",
+        "path": "/asset/jcr:2ae9b83d-581e-44a8-8a3e-ed43f525b744/11-04-2025-1%20SOUTH%20COUNTY%20FIRE%20Final%20Summary%20Report.pdf"
+      },
+      {
+        "name": "11-04-2025-1 SUPERSTITION FIRE &amp; MED Final Summary Report.pdf",
+        "path": "/asset/jcr:c8ee4785-2dd1-4cea-8fbf-4b9b93f32b24/11-04-2025-1%20SUPERSTITION%20FIRE%20&amp;%20MED%20Final%20Summary%20Report.pdf"
+      },
+      {
+        "name": "11-04-2025-2 ALL Jurisdiction Final SOV.pdf",
+        "path": "/asset/jcr:a4d6ff95-ccd1-4e40-9524-fee22b190181/11-04-2025-2%20ALL%20Jurisdiction%20Final%20SOV.pdf"
+      },
+      {
+        "name": "11-04-2025-2b ALL Jurisdictional Final SOV and Official Canvass Report ALL.txt",
+        "path": "/asset/jcr:4365115b-f658-42d8-8bd0-b3b31d0d4f92/11-04-2025-2b%20ALL%20Jurisdictional%20Final%20SOV%20and%20Official%20Canvass%20Report%20ALL.txt"
+      },
+      {
+        "name": "11-04-2025-2c FILE DESCRIPTION-Final SOV and Official Canvass Report.pdf",
+        "path": "/asset/jcr:d16d90d9-9ae7-4125-8511-79ccad649186/11-04-2025-2c%20FILE%20DESCRIPTION-Final%20SOV%20and%20Official%20Canvass%20Report.pdf"
+      },
+      {
+        "name": "11-04-2025-3a ALL EV Rejects Detailed Report.pdf",
+        "path": "/asset/jcr:4b2f3efc-2264-4cf4-9c0c-3626df9ab258/11-04-2025-3a%20ALL%20EV%20Rejects%20Detailed%20Report.pdf"
+      },
+      {
+        "name": "11-04-2025-3a ALL EV Rejects Summary Report.pdf",
+        "path": "/asset/jcr:6b7537ab-07bf-4c28-abe4-9a8eabb7a5dc/11-04-2025-3a%20ALL%20EV%20Rejects%20Summary%20Report.pdf"
+      },
+      {
+        "name": "11-04-2025-4a ALL Provisional Totals Detailed.pdf",
+        "path": "/asset/jcr:1863e9fb-f60f-41a2-81c6-983f202737f8/11-04-2025-4a%20ALL%20Provisional%20Totals%20Detailed.pdf"
+      },
+      {
+        "name": "11-04-2025-4a ALL Provisional Totals Summary.pdf",
+        "path": "/asset/jcr:341827fb-1540-4b5e-afd3-a854c5dae532/11-04-2025-4a%20ALL%20Provisional%20Totals%20Summary.pdf"
+      },
+      {
+        "name": "11-04-2025-5 COUNTYWIDE Undeliverable Totals.pdf",
+        "path": "/asset/jcr:f9d89294-0981-4335-97ae-7c059dbef9ea/11-04-2025-5%20COUNTYWIDE%20Undeliverable%20Totals.pdf"
+      },
+      {
+        "name": "11-04-2025-5 Vote Center Early Ballot Affidavit Estimates.pdf",
+        "path": "/asset/jcr:221ac370-a345-4bc6-9dd9-33be8c549c59/PEND-11-04-2025-5%20Vote%20Center%20Early%20Ballot%20Affidavit%20Estimates.pdf"
+      },
+      {
+        "name": "11-04-2025-6 EMS Audit Event Log.pdf",
+        "path": "/asset/jcr:8f52be05-fca9-45f9-8c66-2eda8aface3c/PEND-11-04-2025-6%20EMS%20Audit%20Event%20Log.pdf"
+      }
+    ],
+    "2026": [
+      {
+        "name": "Results File Descriptions.pdf",
+        "path": "/asset/jcr:baac064a-024e-45dc-a851-76f4a8e449e0/Results%20File%20Descriptions.pdf"
+      },
+      {
+        "name": "2026 March Election Results.txt",
+        "path": "/asset/jcr:ba5341b4-5efb-4ef8-b824-7702a36de982/03-10-2026-2b%20TEMPE%20Jurisdictional%20Final%20SOV%20and%20Official%20Canvass%20Report.txt"
+      },
+      {
+        "name": "2026 March Election Results.pdf",
+        "path": "/asset/jcr:1d4292dc-48ab-4c1c-9b4c-9309f87c5e20/03-10-2026-1%20TEMPE%20Jurisdictional%20Final%20Summary%20Report.pdf"
+      },
+      {
+        "name": "2026 March Affidavit Envelope Estimates.pdf",
+        "path": "/asset/jcr:01bb8d39-9fde-4ba0-900d-6d9964cf4d1b/2026.03%20-%20Vote%20Center%20Estimates.pdf"
+      },
+      {
+        "name": "2026 March EMS Event Audit Log.pdf",
+        "path": "/asset/jcr:894d556f-a1ad-4ce7-924a-54de1e9fb46d/2026%20March%20EMS%20Event%20Audit%20Log.pdf"
+      },
+      {
+        "name": "05-19-2026-1 GOLDFIELD RANCH Final Summary Report.pdf",
+        "path": "/asset/jcr:a12f48ab-bf6c-48b7-b3da-9bb3a30dcf57/05-19-2026-1%20GOLDFIELD%20RANCH%20Final%20Summary%20Report.pdf"
+      },
+      {
+        "name": "05-19-2026-1 GUADALUPE Final Summary Report.pdf",
+        "path": "/asset/jcr:6924f592-0d47-4a83-96de-5cc933923b10/05-19-2026-1%20GUADALUPE%20Final%20Summary%20Report.pdf"
+      },
+      {
+        "name": "05-19-2026-1 TEMPE Final Summary Report.pdf",
+        "path": "/asset/jcr:16383460-0f7b-4795-9393-ebd8e9a74eed/05-19-2026-1%20TEMPE%20Final%20Summary%20Report.pdf"
+      },
+      {
+        "name": "05-19-2026-2 GOLDFIELD RANCH_Final SOV.pdf",
+        "path": "/asset/jcr:67f1471b-2f1c-4e2a-afb0-6a7d81436844/05-19-2026-2%20GOLDFIELD%20RANCH_Final%20SOV.pdf"
+      },
+      {
+        "name": "05-19-2026-2 GUADALUPE_Final SOV.pdf",
+        "path": "/asset/jcr:6e0f17ec-6344-4534-acf9-fc782202e4d5/05-19-2026-2%20GUADALUPE_Final%20SOV.pdf"
+      },
+      {
+        "name": "05-19-2026-2 TEMPE_Final SOV.pdf",
+        "path": "/asset/jcr:befff5bd-7454-47a5-831e-13e6e74925a7/05-19-2026-2%20TEMPE_Final%20SOV.pdf"
+      },
+      {
+        "name": "05-19-2026-2b Jurisdictional Final SOV and Canvass Report.txt",
+        "path": "/asset/jcr:ea068c37-2e60-4222-8eb5-c58b834bd575/05-19-2026-2b%20Jurisdictional%20Final%20SOV%20and%20Canvass%20Report.txt"
+      },
+      {
+        "name": "05-19-2026-2b TEMPE GENERAL ELECTION Final SOV and Canvass Report.txt",
+        "path": "/asset/jcr:efbce64c-c629-4265-bc65-700ba4e2f02d/05-19-2026-2b%20TEMPE%20GENERAL%20ELECTION%20Final%20SOV%20and%20Canvass%20Report.txt"
+      },
+      {
+        "name": "07-21-2026-0 BOS CANVASS SUMMARY.pdf",
+        "path": "/asset/jcr:275816cd-2a5c-4b8d-8701-8985e7c1a4d8/07-21-2026-0%20BOS%20CANVASS%20SUMMARY.pdf"
+      },
+      {
+        "name": "07-21-2026-0 CANVASS COMPLETE.pdf",
+        "path": "/asset/jcr:d07e5a24-2129-40c3-bc18-c18889a4282a/07-21-2026-0%20CANVASS%20COMPLETE.pdf"
+      },
+      {
+        "name": "07-21-2026-1 Final Official Summary Report.pdf",
+        "path": "/asset/jcr:ce399d12-d664-4ad8-b73b-2e1188a71d51/07-21-2026-1%20Final%20Official%20Summary%20Report.pdf"
+      },
+      {
+        "name": "07-21-2026-2a Final SOV and Official Canvass Report.pdf",
+        "path": "/asset/jcr:ae0b977d-336f-4aa0-8820-216bd49c22b6/07-21-2026-2a%20Final%20SOV%20and%20Official%20Canvass%20Report.pdf"
+      },
+      {
+        "name": "07-21-2026-2b Final SOV and Official Canvass Report.txt",
+        "path": "/asset/jcr:b96f254d-123b-47ca-89c0-863800790326/07-21-2026-2b%20Final%20SOV%20and%20Official%20Canvass%20Report.txt"
+      },
+      {
+        "name": "07-21-2026-2c FILE DESCRIPTION-Final SOV and Official Canvass Report.pdf",
+        "path": "/asset/jcr:0b576205-529f-4277-9557-1af83b5d919d/07-21-2026-2c%20FILE%20DESCRIPTION-Final%20SOV%20and%20Official%20Canvass%20Report.pdf"
+      },
+      {
+        "name": "07-21-2026-3a EV Rejects Detailed Report.pdf",
+        "path": "/asset/jcr:4e2dbdd2-96a4-46c0-8c96-498ac02830b9/07-21-2026-3a%20EV%20Rejects%20Detailed%20Report.pdf"
+      },
+      {
+        "name": "07-21-2026-3a EV Rejects Summary Report.pdf",
+        "path": "/asset/jcr:c2d01c8c-f56f-4de7-9285-72ad1c0eabd2/07-21-2026-3a%20EV%20Rejects%20Summary%20Report.pdf"
+      },
+      {
+        "name": "07-21-2026-4a Provisional Totals Summary.pdf",
+        "path": "/asset/jcr:3d82edce-cd8d-4e44-a45f-62fa1ef416bd/07-21-2026-4a%20Provisional%20Totals%20Summary.pdf"
+      },
+      {
+        "name": "07-21-2026-4b Provisional Totals Detailed.pdf",
+        "path": "/asset/jcr:35868c57-be3e-4cd9-821d-9d865c55522c/07-21-2026-4b%20Provisional%20Totals%20Detailed.pdf"
+      },
+      {
+        "name": "07-21-2026-5 Primary Election Ballot Selections.pdf",
+        "path": "/asset/jcr:9ce81f92-f15e-451b-8ff6-c7c47d3b4f4b/07-21-2026-5%20Primary%20Election%20Ballot%20Selections.pdf"
+      },
+      {
+        "name": "Revised Addendum A - Recovered Early Ballot Affidavits 08.03.2026_Redacted.pdf",
+        "path": "/asset/jcr:a9e9f2a6-9840-42b1-a48f-8b0a4b3a6676/Revised%20Addendum%20A%20-%20Recovered%20Early%20Ballot%20Affidavits%2008.03.2026_Redacted.pdf"
+      },
+      {
+        "name": "07-21-2026-7 EMS Event Audit Log.pdf",
+        "path": "/asset/jcr:7716423a-bf72-4ca8-9443-432677e4da59/07-21-2026-7%20EMS%20Event%20Audit%20Log.pdf"
+      },
+      {
+        "name": "07-21-2026-6 Affidavit Envelopes Estimates.pdf",
+        "path": "/asset/jcr:4a63b3dc-9eca-47d0-ac2a-361420a3f08b/07-21-2026-6%20Affidavit%20Envelopes%20Estimates.pdf"
+      }
+    ]
+  }
+}

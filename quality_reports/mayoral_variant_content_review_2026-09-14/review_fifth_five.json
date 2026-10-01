@@ -1,0 +1,64 @@
+{
+  "review_date": "2026-09-14",
+  "reviewer": "current Codex session",
+  "model": "not recorded",
+  "review_type": "AI saved-capture review",
+  "input": "quality_reports/mayoral_variant_content_review_2026-09-14/review_queue.json",
+  "input_sha256": "31b4ae81615266556abf786281b94ede16976fac45270c49b82b3a8c5250c410",
+  "selection": "Candidate URL IDs 21 through 25 in ascending order",
+  "method": "Read saved gzip HTML on the droplet, verify decoded SHA256, and inspect all static text after removing script, style, and noscript elements. No archive requests or browser execution.",
+  "records": [
+    {
+      "candidate_url_id": "candidate_url_0f28e26538dff03512eaa8f8",
+      "candidate_year_id": "39703__2013",
+      "capture_sha256": "6f27bae2b6c88a6031e70d404e54e8c5090f05c72988b2a529bcf42fc9521fe7",
+      "capture_timestamp": "20131101072233",
+      "hash_verified": true,
+      "decision": "support_campaign_with_target_caveat",
+      "reason": "The page identifies John Cranley's Cincinnati campaign, has campaign controls and a payment disclaimer, and dates posts to 2013. The inspected text does not explicitly identify mayor as the office.",
+      "remaining_flags": ["office_not_explicit_in_visible_text", "exact_requested_URL_equivalence_not_established"]
+    },
+    {
+      "candidate_url_id": "candidate_url_105a533e821af0e14376a105",
+      "candidate_year_id": "78332__2021",
+      "capture_sha256": "bb0f5d38f60cd59bdda07838089cedd8b6a07475d457082bb00604d20020b162",
+      "capture_timestamp": "20210405035412",
+      "hash_verified": true,
+      "decision": "support_campaign_with_target_caveat",
+      "reason": "The page explicitly identifies Molly Skold's campaign for mayor of Fort Collins and provides her platform. Its footer says 2022 despite the recorded April 2021 capture. Campaign identity is supported, but this temporal inconsistency requires investigation before treating the content as contemporaneous 2021 evidence.",
+      "remaining_flags": ["footer_year_after_capture_timestamp", "temporal_content_consistency_unresolved", "exact_requested_URL_equivalence_not_established"]
+    },
+    {
+      "candidate_url_id": "candidate_url_10db871d85e8a334737f8f75",
+      "candidate_year_id": "49573__2019",
+      "capture_sha256": "d9381fa9c27fb2a7e0b84decfea316fd7a2494b37f8875bbf82cb9c2b82b1153",
+      "capture_timestamp": "20181229011926",
+      "hash_verified": true,
+      "decision": "reject_capture",
+      "reason": "The saved homepage explicitly presents Scott Griggs's Dallas City Council campaign and District 1 service, not a mayoral campaign. It also differs from the requested media page. This rejects this capture as mayoral evidence, not all later uses of the domain.",
+      "remaining_flags": ["wrong_office_for_capture", "different_path", "other_historical_captures_not_adjudicated"]
+    },
+    {
+      "candidate_url_id": "candidate_url_11203af10b456a71e2ecf35f",
+      "candidate_year_id": "3571__2015",
+      "capture_sha256": "9bc04085876003daf505c60a06c08994e9723fdf7de83e3651266f5a3adda8ca",
+      "capture_timestamp": "20150503115055",
+      "hash_verified": true,
+      "decision": "support_capture",
+      "reason": "The page identifies Alvin Brown for mayor, names Jacksonville, includes volunteer and donation controls, and has a campaign payment disclaimer. The May 2015 capture supplies timing. Static text is brief and does not contain a substantive platform.",
+      "remaining_flags": ["limited_substantive_text", "exact_requested_URL_equivalence_not_established"]
+    },
+    {
+      "candidate_url_id": "candidate_url_133cb814bd581fff888afca8",
+      "candidate_year_id": "38758__2015",
+      "capture_sha256": "6abbdb4fc7c7863f1ce7ae3783b7e48ac5fa87d818406a480d79999cf2c1ebd2",
+      "capture_timestamp": "20151211210435",
+      "hash_verified": true,
+      "decision": "support_capture",
+      "reason": "The footer explicitly identifies Bill Melver for Akron mayor in 2015 with a committee payment disclaimer. The page offers donations and a campaign song. The song and linked biography were not inspected; the saved static text is brief.",
+      "remaining_flags": ["limited_substantive_text", "exact_requested_URL_equivalence_not_established"]
+    }
+  ],
+  "acceptance_changes": 0,
+  "full_historical_completeness": false
+}

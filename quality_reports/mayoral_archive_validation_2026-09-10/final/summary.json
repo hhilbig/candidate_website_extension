@@ -1,0 +1,49 @@
+{
+  "evidence_compressed_bytes": 3382189,
+  "evidence_files": 629,
+  "evidence_hash_checks_passed": true,
+  "evidence_uncompressed_bytes": 16134905,
+  "historical_campaign_content_not_supported": 1,
+  "historical_campaign_content_supported": 73,
+  "historical_campaign_content_unresolved": 46,
+  "input_rows": 120,
+  "input_sha256": "3408dbcdd182661f2a38b522f23126eca7c01e9dfd45e06c0fd8a368497d0634",
+  "key_and_provenance_checks_passed": true,
+  "missing_keys": [],
+  "observed_keys": 120,
+  "raw_results_sha256": "a154a937be6bb215001991d59b84113db7f38d71ff6ca0ff439901567880a9df",
+  "raw_statuses": {
+    "content_validation_unresolved": 34,
+    "grade_a_content_confirmed_pending_review": 38,
+    "no_archive_capture": 40,
+    "outside_headline_365_within_sensitivity": 1,
+    "outside_headline_and_sensitivity_windows": 7
+  },
+  "request_errors": 0,
+  "request_records": 735,
+  "requests_sha256": "10960eb8464cf6d3359e4839234ace701dbe631d8e35da978212e2b0555d0c63",
+  "result_attempts": 120,
+  "review_not_supported": 1,
+  "review_supported": 25,
+  "reviewed": 26,
+  "reviews_sha256": "8033fdbb9cf28847ef6ff350136aaaf65294d259f7c73a7d6c73a40e9a9884e4",
+  "saved_supplement_sha256": "e7565469d7c774fd494269adba4b1688ed291b01917a0dddd256ee0b6e327fd8",
+  "statuses": {
+    "content_validation_unresolved": 35,
+    "grade_a_content_confirmed_pending_review": 37,
+    "no_archive_capture": 28,
+    "outside_headline_365_within_sensitivity": 1,
+    "outside_headline_and_sensitivity_windows": 7,
+    "saved_capture_content_confirmed_reuse_pending": 12
+  },
+  "strict_eligible": 37,
+  "superseded_results": 0,
+  "target_equivalence": {
+    "literal": 36,
+    "not_fetched": 40,
+    "scheme_www_defaultport_equivalent": 44
+  },
+  "unexpected_keys": [],
+  "validation_csv_sha256": "45066bf7b91e1ade77fb12fbc853d977033a92fbf6b890dc0b7df402ea81bd16",
+  "version": "repaired_mayoral_validation_final_v1"
+}

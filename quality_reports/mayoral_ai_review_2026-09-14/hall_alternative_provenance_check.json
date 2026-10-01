@@ -1,0 +1,17 @@
+{
+  "candidate_url_id": "candidate_url_370b76ea331f34ce30ad4710",
+  "candidate_year_id": "63427__2018",
+  "review_type": "Coordinator verification of saved acquisition provenance",
+  "source_ref": "/mnt/mayoral_wayback_full_snapshots/ownership_validation_20260910/results/evidence/requests.jsonl:522",
+  "journal_sha256": "10960eb8464cf6d3359e4839234ace701dbe631d8e35da978212e2b0555d0c63",
+  "raw_sha256": "2f7109456532445eb3fcd8edb74fcf36e8e4afe1009a2942f77f3112e83d59f9",
+  "decoded_bytes": 537684,
+  "hash_verified": true,
+  "requested_url": "https://web.archive.org/web/20191115213038id_/https://www.matthall.org/",
+  "effective_url": "https://web.archive.org/web/20191115213038id_/https://www.matthall.org/",
+  "http_status": 200,
+  "finding": "The original response journal independently links the saved bytes to the requested and effective November 15, 2019 Wayback capture. This resolves the missing acquisition-log check in hall_alternative_review.json.",
+  "remaining_timing_limitation": "The earlier review's 365-day calculation uses November 15, 2018 as an election-month reference, not a verified election date. The 2019 body supports the named 2018 campaign but does not establish pre-election text availability. No date window or website approval changes here.",
+  "archive_requests": 0,
+  "human_approvals": 0
+}

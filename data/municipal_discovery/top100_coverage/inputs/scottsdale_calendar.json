@@ -1,0 +1,215 @@
+[
+ {
+  "city_id": "0465000",
+  "year": 2010,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://elections.maricopa.gov/results-and-data/historic-results.html?year=2010",
+  "additional_source_urls": [
+   "https://elections.maricopa.gov/asset/jcr:0beaa6ee-4e4b-4f73-98d4-bec5c9a015c1/11-02-2010%20Final%20Precinct%20Text%20File.txt",
+   "https://www.scottsdaleaz.gov/elections/historical-election-results"
+  ],
+  "note": "The Maricopa County results archive for this year holds COUNCILMEMBER CITY OF SCOTTSDALE (vote for 3), and no mayoral contest. The county therefore ran Scottsdale's city election this year and no mayoral election was on the ballot."
+ },
+ {
+  "city_id": "0465000",
+  "year": 2011,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.scottsdaleaz.gov/elections",
+  "additional_source_urls": [
+   "https://elections.maricopa.gov/results-and-data/historic-results.html?year=2011",
+   "https://www.scottsdaleaz.gov/elections/historical-election-results"
+  ],
+  "note": "The Maricopa County results archive for this year contains no City of Scottsdale candidate contest. Scottsdale holds its candidate elections in even-numbered years. Any Scottsdale item in the county file for this year is a ballot measure, not a candidate election."
+ },
+ {
+  "city_id": "0465000",
+  "year": 2012,
+  "status": "complete",
+  "expected_election_dates": [
+   "2012-08-28"
+  ],
+  "source_url": "https://elections.maricopa.gov/results-and-data/historic-results.html?year=2012",
+  "additional_source_urls": [
+   "https://elections.maricopa.gov/asset/jcr:6cb1c607-574e-49f5-8d8f-0a56fc328d07/08-28-2012%20Final%20Precinct%20Text%20File.txt",
+   "https://www.scottsdaleaz.gov/elections/historical-election-results"
+  ],
+  "note": "Maricopa County official results record the contest 'MAYOR - CITY OF SCOTTSDALE' for this election. Winner and runner-up are in scottsdale_results.json."
+ },
+ {
+  "city_id": "0465000",
+  "year": 2013,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.scottsdaleaz.gov/elections",
+  "additional_source_urls": [
+   "https://elections.maricopa.gov/results-and-data/historic-results.html?year=2013",
+   "https://www.scottsdaleaz.gov/elections/historical-election-results"
+  ],
+  "note": "The Maricopa County results archive for this year contains no City of Scottsdale candidate contest. Scottsdale holds its candidate elections in even-numbered years. Any Scottsdale item in the county file for this year is a ballot measure, not a candidate election."
+ },
+ {
+  "city_id": "0465000",
+  "year": 2014,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://elections.maricopa.gov/results-and-data/historic-results.html?year=2014",
+  "additional_source_urls": [
+   "https://elections.maricopa.gov/asset/jcr:9e48a439-9022-4606-876f-9f42ad35614b/11-04-2014%20Final%20Summary%20Report.txt",
+   "https://www.scottsdaleaz.gov/elections/historical-election-results"
+  ],
+  "note": "The Maricopa County results archive for this year holds a City of Scottsdale councilmember contest at both the August and November elections, and no mayoral contest. The county therefore ran Scottsdale's city election this year and no mayoral election was on the ballot."
+ },
+ {
+  "city_id": "0465000",
+  "year": 2015,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.scottsdaleaz.gov/elections",
+  "additional_source_urls": [
+   "https://elections.maricopa.gov/results-and-data/historic-results.html?year=2015",
+   "https://www.scottsdaleaz.gov/elections/historical-election-results"
+  ],
+  "note": "The Maricopa County results archive for this year contains no City of Scottsdale candidate contest. Scottsdale holds its candidate elections in even-numbered years. Any Scottsdale item in the county file for this year is a ballot measure, not a candidate election."
+ },
+ {
+  "city_id": "0465000",
+  "year": 2016,
+  "status": "complete",
+  "expected_election_dates": [
+   "2016-11-08"
+  ],
+  "source_url": "https://elections.maricopa.gov/results-and-data/historic-results.html?year=2016",
+  "additional_source_urls": [
+   "https://elections.maricopa.gov/asset/jcr:2735191f-5a1b-4365-b833-ee746615262c/11-08-2016%20Final%20Summary%20Report%20NOV%202016.txt",
+   "https://www.scottsdaleaz.gov/elections/historical-election-results"
+  ],
+  "note": "Maricopa County official results record the contest 'CITY OF SCOTTSDALE - MAYOR' for this election. Winner and runner-up are in scottsdale_results.json."
+ },
+ {
+  "city_id": "0465000",
+  "year": 2017,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.scottsdaleaz.gov/elections",
+  "additional_source_urls": [
+   "https://elections.maricopa.gov/results-and-data/historic-results.html?year=2017",
+   "https://www.scottsdaleaz.gov/elections/historical-election-results"
+  ],
+  "note": "The Maricopa County results archive for this year contains no City of Scottsdale candidate contest. Scottsdale holds its candidate elections in even-numbered years. Any Scottsdale item in the county file for this year is a ballot measure, not a candidate election."
+ },
+ {
+  "city_id": "0465000",
+  "year": 2018,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://elections.maricopa.gov/results-and-data/historic-results.html?year=2018",
+  "additional_source_urls": [
+   "https://elections.maricopa.gov/asset/jcr:1d518a66-59ec-4020-8212-ddf3eb15360a/11-06-2018%20Final%20Official%20Summary%20Report%20NOV%202018.txt",
+   "https://www.scottsdaleaz.gov/elections/historical-election-results"
+  ],
+  "note": "The Maricopa County results archive for this year holds a City of Scottsdale councilmember contest at the November election, and no mayoral contest. The county therefore ran Scottsdale's city election this year and no mayoral election was on the ballot."
+ },
+ {
+  "city_id": "0465000",
+  "year": 2019,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.scottsdaleaz.gov/elections",
+  "additional_source_urls": [
+   "https://elections.maricopa.gov/results-and-data/historic-results.html?year=2019",
+   "https://www.scottsdaleaz.gov/elections/historical-election-results"
+  ],
+  "note": "The Maricopa County results archive for this year contains no City of Scottsdale candidate contest. Scottsdale holds its candidate elections in even-numbered years. Any Scottsdale item in the county file for this year is a ballot measure, not a candidate election."
+ },
+ {
+  "city_id": "0465000",
+  "year": 2020,
+  "status": "complete",
+  "expected_election_dates": [
+   "2020-11-03"
+  ],
+  "source_url": "https://elections.maricopa.gov/results-and-data/historic-results.html?year=2020",
+  "additional_source_urls": [
+   "https://elections.maricopa.gov/asset/jcr:cebd0be2-4c55-4410-95f7-14f2b8dd2397/11-03-2020-2b%20Final%20SOV%20and%20Official%20Canvass%20Report%20NOV2020.txt",
+   "https://www.scottsdaleaz.gov/elections/historical-election-results"
+  ],
+  "note": "Maricopa County official results record the contest 'Scottsdale-Mayor' for this election. Winner and runner-up are in scottsdale_results.json."
+ },
+ {
+  "city_id": "0465000",
+  "year": 2021,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.scottsdaleaz.gov/elections",
+  "additional_source_urls": [
+   "https://elections.maricopa.gov/results-and-data/historic-results.html?year=2021",
+   "https://www.scottsdaleaz.gov/elections/historical-election-results"
+  ],
+  "note": "The Maricopa County results archive for this year contains no City of Scottsdale candidate contest. Scottsdale holds its candidate elections in even-numbered years. Any Scottsdale item in the county file for this year is a ballot measure, not a candidate election."
+ },
+ {
+  "city_id": "0465000",
+  "year": 2022,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://elections.maricopa.gov/results-and-data/historic-results.html?year=2022",
+  "additional_source_urls": [
+   "https://elections.maricopa.gov/asset/jcr:9a9d935a-8199-4504-88aa-49ee03e2a890/11-08-2022-2b%20Final%20SOV%20and%20Official%20Canvass%20Report.txt",
+   "https://www.scottsdaleaz.gov/elections/historical-election-results"
+  ],
+  "note": "The Maricopa County results archive for this year holds a City of Scottsdale councilmember contest at both the August and November elections, and no mayoral contest. The county therefore ran Scottsdale's city election this year and no mayoral election was on the ballot."
+ },
+ {
+  "city_id": "0465000",
+  "year": 2023,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.scottsdaleaz.gov/elections",
+  "additional_source_urls": [
+   "https://elections.maricopa.gov/results-and-data/historic-results.html?year=2023",
+   "https://www.scottsdaleaz.gov/elections/historical-election-results"
+  ],
+  "note": "The Maricopa County results archive for this year contains no City of Scottsdale candidate contest. Scottsdale holds its candidate elections in even-numbered years. Any Scottsdale item in the county file for this year is a ballot measure, not a candidate election."
+ },
+ {
+  "city_id": "0465000",
+  "year": 2024,
+  "status": "complete",
+  "expected_election_dates": [
+   "2024-11-05"
+  ],
+  "source_url": "https://elections.maricopa.gov/results-and-data/historic-results.html?year=2024",
+  "additional_source_urls": [
+   "https://elections.maricopa.gov/asset/jcr:5c8a38fd-0d5a-4fa1-83cb-8b13e5ff089c/11-05-2024-2b%20Final%20SOV%20and%20Official%20Canvass%20Report.txt",
+   "https://www.scottsdaleaz.gov/elections/historical-election-results"
+  ],
+  "note": "Maricopa County official results record the contest 'Scottsdale-Mayor' for this election. Winner and runner-up are in scottsdale_results.json."
+ },
+ {
+  "city_id": "0465000",
+  "year": 2025,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.scottsdaleaz.gov/elections",
+  "additional_source_urls": [
+   "https://elections.maricopa.gov/results-and-data/historic-results.html?year=2025",
+   "https://www.scottsdaleaz.gov/elections/historical-election-results"
+  ],
+  "note": "The Maricopa County results archive for this year contains no City of Scottsdale candidate contest. Scottsdale holds its candidate elections in even-numbered years. Any Scottsdale item in the county file for this year is a ballot measure, not a candidate election."
+ },
+ {
+  "city_id": "0465000",
+  "year": 2026,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://elections.maricopa.gov/results-and-data/historic-results.html?year=2026",
+  "additional_source_urls": [
+   "https://elections.maricopa.gov/asset/jcr:b96f254d-123b-47ca-89c0-863800790326/07-21-2026-2b%20Final%20SOV%20and%20Official%20Canvass%20Report.txt",
+   "https://www.scottsdaleaz.gov/elections/historical-election-results",
+   "https://www.scottsdaleaz.gov/elections/candidate-listing"
+  ],
+  "note": "The Maricopa County results archive for this year holds a City of Scottsdale councilmember contest at the July primary, and no mayoral contest. The county therefore ran Scottsdale's city election this year and no mayoral election was on the ballot. The city's own 2026 candidate listing names only City Council candidates, which confirms that the office of Mayor is not on the 2026 ballot."
+ }
+]

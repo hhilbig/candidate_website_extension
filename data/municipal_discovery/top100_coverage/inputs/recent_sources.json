@@ -1,0 +1,28 @@
+{
+  "retrieved_on":"2026-09-14",
+  "cutoff":"2026-09-14",
+  "coverage_status":"partial_official_source_recovery",
+  "method":"Manual inspection of official result pages, final canvasses, and certification documents. No paid API, remote job, or campaign URL collection.",
+  "missingness_rule":"Absence from recent_results.json means not yet recovered, not no election. Confirmed results do not establish city-year completeness or exclude special elections.",
+  "verified_records":7,
+  "unresolved_records":3,
+  "sources":[
+    {"source_url":"https://results.lavote.gov/text-results/4300","source_type":"official_results","records":["Los Angeles 2022-11-08","Long Beach 2022-11-08"],"locator":"City general municipal mayor sections; results as of December 5, 2022"},
+    {"source_url":"https://www.lavote.gov/docs/rrcc/news-releases/11082022_certified-results.pdf","source_type":"certification_release","records":["Los Angeles 2022-11-08","Long Beach 2022-11-08"],"locator":"Page 1; final election certification"},
+    {"source_url":"https://services.austintexas.gov/edims/document.cfm?id=399837","source_type":"executed_canvass_resolution","records":["Austin 2022-12-13"],"locator":"Pages 1-3; resolution 20221221-001"},
+    {"source_url":"https://app.chicagoelections.gov/documents/proclamations/Proc-2023-04-04.pdf","source_type":"certified_canvass","records":["Chicago 2023-04-04"],"locator":"Pages 6-7; mayor totals and certification"},
+    {"source_url":"https://vote.phila.gov/media/112423_MeetingTranscript.pdf","source_type":"return_board_transcript","records":["Philadelphia 2023-11-07"],"locator":"Page 5; mayor totals. Certification still unresolved."},
+    {"source_url":"https://www.houstontx.gov/citysec/elections/120923.pdf","source_type":"county_canvass","records":["Houston 2023-12-09"],"locator":"Page 44 mayor totals cover Harris County only. Citywide totals unresolved."},
+    {"source_url":"https://www.sandiego.gov/sites/default/files/2024-12/november-5-2024-election-results.pdf","source_type":"official_canvass","records":["San Diego 2024-11-05"],"locator":"Page 1; city mayor aggregate"},
+    {"source_url":"https://www.sandiego.gov/mayor/mayor-gloria-sworn-historic-second-term-lead-city-san-diego","source_type":"official_certification_confirmation","records":["San Diego 2024-11-05"],"locator":"December 10, 2024 release opening paragraph"},
+    {"source_url":"https://www.sfelections.org/results/20241105/final/round-pages/mayor_short-rounds-en.html","source_type":"final_ranked_choice_results","records":["San Francisco 2024-11-05"],"locator":"Round 14"},
+    {"source_url":"https://www.sfelections.org/results/20241105/data/20241203/CertificationLetterNov52024.pdf","source_type":"certification_statement","records":["San Francisco 2024-11-05"],"locator":"Pages 1, 5, 10; certification and final mayoral round"},
+    {"source_url":"https://elections.maricopa.gov/asset/jcr:f1f09b3a-76e5-401f-ac2f-aaf2a0b193ee/11-05-2024-0%20BOS%20CANVASS%20SUMMARY.pdf","source_type":"final_official_canvass","records":["Phoenix 2024-11-05"],"locator":"PDF pages 3 and 67; canvass declaration and mayor results"},
+    {"source_url":"https://vote.nyc/sites/default/files/pdf/election_results/2025/20251104General%20Election/00000100000Citywide%20Mayor%20Citywide%20Recap.pdf","source_type":"official_return_for_certification","records":["New York 2025-11-04"],"locator":"Page 45; citywide totals. Certification act unresolved."}
+  ],
+  "additional_official_source_leads":[
+    {"city_name":"San Jose","state_abb":"CA","source_url":"https://www.sanjoseca.gov/your-government/appointees/city-clerk/elections/election-data","status":"results_not_extracted","note":"Historical election dates and turnout, not sufficient mayoral results."},
+    {"city_name":"Denver","state_abb":"CO","source_url":"https://www.denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Clerk-and-Recorder/Elections-Division/Data-and-Maps","status":"results_not_extracted","note":"Official historical results entry point."},
+    {"city_name":"Jacksonville","state_abb":"FL","source_url":"https://www.jacksonville.gov/mayor/transition","status":"results_not_extracted","note":"Official transition page identifies May 16, 2023 election. Full certified results not recovered."}
+  ]
+}

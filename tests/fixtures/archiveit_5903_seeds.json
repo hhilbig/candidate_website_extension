@@ -1,0 +1,95 @@
+[
+  {
+    "id": 1001,
+    "collection": 5903,
+    "created_date": "2015-06-12T21:59:39Z",
+    "last_updated_date": "2016-04-27T00:04:02Z",
+    "publicly_visible": true,
+    "active": false,
+    "deleted": false,
+    "seed_type": "normal",
+    "url": "http://digital.library.ucla.edu/websites/2001_fixture_001/WWW.VillaraigosaExample.COM/Issues/Plan.HTML?Ref=Mail",
+    "canonical_url": "http://digital.library.ucla.edu/websites/2001_fixture_001/WWW.VillaraigosaExample.COM/Issues/Plan.HTML?Ref=Mail",
+    "metadata": {
+      "Creator": [{"id": 1, "value": "Villaraigosa, Antonio R."}],
+      "Subject": [
+        {"id": 2, "value": "2001"},
+        {"id": 3, "value": "General Election"},
+        {"id": 4, "value": "Los Angeles Mayor"}
+      ],
+      "Coverage": [{"id": 5, "value": "City of Los Angeles"}],
+      "Date of Election": [{"id": 6, "value": "2001-06-05"}],
+      "Title": [{"id": 7, "value": "Villaraigosa, Antonio R. (2001-06-05)"}]
+    }
+  },
+  {
+    "id": 1002,
+    "collection": 5903,
+    "created_date": "2017-02-01T12:00:00Z",
+    "last_updated_date": "2017-03-08T12:00:00Z",
+    "publicly_visible": true,
+    "active": false,
+    "deleted": false,
+    "seed_type": "normal",
+    "url": "https://www.EricGarcetti.com/Issues/Plan?Ref=A",
+    "canonical_url": "https://www.EricGarcetti.com/Issues/Plan?Ref=A",
+    "metadata": {
+      "Creator": [{"id": 8, "value": "Garcetti, Eric"}],
+      "Subject": [
+        {"id": 9, "value": "2017"},
+        {"id": 10, "value": "Primary Election"},
+        {"id": 11, "value": "Los Angeles Mayor"}
+      ],
+      "Coverage": [{"id": 12, "value": "City of Los Angeles"}],
+      "Date of Election": [{"id": 13, "value": "2017-03-07"}],
+      "Title": [{"id": 14, "value": "Garcetti, Eric (2017-03-07)"}]
+    }
+  },
+  {
+    "id": 1003,
+    "collection": 5903,
+    "created_date": "2017-02-01T12:00:00Z",
+    "last_updated_date": "2017-03-08T12:00:00Z",
+    "publicly_visible": true,
+    "active": false,
+    "deleted": false,
+    "seed_type": "normal",
+    "url": "https://www.facebook.com/pg/TwoCitiesTeam/",
+    "canonical_url": "https://www.facebook.com/pg/TwoCitiesTeam/",
+    "metadata": {
+      "Creator": [{"id": 15, "value": "Kremer, Yuval"}],
+      "Subject": [
+        {"id": 16, "value": "2017"},
+        {"id": 17, "value": "Primary Election"},
+        {"id": 18, "value": "Los Angeles Mayor"},
+        {"id": 19, "value": "Facebook (Electronic resource)"}
+      ],
+      "Coverage": [{"id": 20, "value": "City of Los Angeles"}],
+      "Date of Election": [{"id": 21, "value": "2017-03-07"}],
+      "Title": [{"id": 22, "value": "Kremer, Yuval (2017-03-07) [Facebook]"}]
+    }
+  },
+  {
+    "id": 1004,
+    "collection": 5903,
+    "created_date": "2016-05-01T12:00:00Z",
+    "last_updated_date": "2016-06-08T12:00:00Z",
+    "publicly_visible": true,
+    "active": false,
+    "deleted": false,
+    "seed_type": "normal",
+    "url": "http://www.sotomayorforcongress.com/",
+    "canonical_url": "http://www.sotomayorforcongress.com/",
+    "metadata": {
+      "Creator": [{"id": 23, "value": "Sotomayor, Armando"}],
+      "Subject": [
+        {"id": 24, "value": "2016"},
+        {"id": 25, "value": "Primary Election"},
+        {"id": 26, "value": "U.S. House of Representatives"}
+      ],
+      "Coverage": [{"id": 27, "value": "44th Congressional District of California"}],
+      "Date of Election": [{"id": 28, "value": "2016-06-07"}],
+      "Title": [{"id": 29, "value": "Sotomayor, Armando (2016-06-07)"}]
+    }
+  }
+]

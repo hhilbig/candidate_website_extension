@@ -1,0 +1,9 @@
+{
+  "metric_version": "archiveit-handcode-v1",
+  "claims_reviewed": 5,
+  "accepted_claims": 5,
+  "strict_exact_url_claims": 5,
+  "strict_custom_domain_claims": 5,
+  "strict_exact_candidate_years": 5,
+  "strict_custom_domain_candidate_years": 5
+}

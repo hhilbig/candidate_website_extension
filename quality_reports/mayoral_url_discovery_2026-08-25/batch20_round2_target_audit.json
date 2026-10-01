@@ -1,0 +1,8 @@
+{
+  "batch_id": "archiveit_mayoral_batch20_round2_20260825",
+  "collections": 20,
+  "contest_targets": 20,
+  "target_candidate_rows_with_collection_overlap": 66,
+  "covered_candidate_years_before": 144,
+  "prior_collection_overlap": []
+}

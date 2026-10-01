@@ -1,0 +1,77 @@
+{
+  "input": "data/municipal_discovery/exhaustive_source_expansion_20260908/ai_review_20260914/candidate_urls.csv",
+  "input_sha256": "9b1d4c17e5b0b428dc6be92dda8ed398072301c12d49994d04ba3eb0f589141b",
+  "script_sha256": "821553934779b9c1edda65cc8388862256e13f48ed3c9af5f8839c34bc0427d4",
+  "accepted_urls": 41,
+  "candidate_years": 40,
+  "inventory_states": {
+    "not_in_saved_target_inventories": 22,
+    "saved_filtered_queries_terminal": 19
+  },
+  "retry_rows_by_relation": {
+    "scheme_www_variant": 69,
+    "domain_other_path_or_host": 1905,
+    "exact": 259
+  },
+  "unique_unsaved_capture_keys": 2233,
+  "inventory_queue_urls": 22,
+  "observed_verified_capture_keys": 2199,
+  "mean_raw_response_bytes": 48222.32878581173,
+  "mean_compressed_response_bytes": 10229.37062301046,
+  "estimated_raw_bytes_for_known_unsaved": 107680460.1787176,
+  "estimated_compressed_bytes_for_known_unsaved": 22842184.601182356,
+  "raw_files_checked": 2773,
+  "raw_files_verified": 2773,
+  "limitations": [
+    "Original queries use prefix, statuscode:200, mimetype:text/html, collapse:digest, and limit:50000 without pagination. Terminal status describes this filtered inventory only.",
+    "All historical timestamps require a separate inventory without digest collapse.",
+    "New inventory capture counts and bytes remain unknown. Known retry estimates use the mean saved response size and exclude text and metadata.",
+    "Scheme/www variants and other paths do not prove exact URL equivalence or campaign ownership.",
+    "Fetch ledgers preserve current state, not unique execution attempt IDs. Request counts are not attempt-journal counts.",
+    "Timestamp mismatch responses remain saved evidence but require separate date review.",
+    "No archive requests or remote writes occurred."
+  ],
+  "capture_actions": {
+    "fetch_never_queued_capture": 2233
+  },
+  "saved_no_content_capture_keys": 10,
+  "capture_key_definition": "candidate_year_id + requested timestamp + exact original URL; deduplicated across batches",
+  "byte_estimates_by_relation": {
+    "scheme_www_variant": {
+      "capture_rows": 69,
+      "raw_bytes": 3327340.6862210096,
+      "compressed_bytes": 705826.5729877218
+    },
+    "domain_other_path_or_host": {
+      "capture_rows": 1905,
+      "raw_bytes": 91863536.33697136,
+      "compressed_bytes": 19486951.036834925
+    },
+    "exact": {
+      "capture_rows": 259,
+      "raw_bytes": 12489583.15552524,
+      "compressed_bytes": 2649406.9913597093
+    }
+  },
+  "illustrative_size_scenarios": {
+    "p25": {
+      "observed_raw_bytes_per_capture": 16976,
+      "observed_compressed_bytes_per_capture": 5296,
+      "all_known_pending_raw_bytes": 37907408,
+      "all_known_pending_compressed_bytes": 11825968
+    },
+    "p50": {
+      "observed_raw_bytes_per_capture": 34902,
+      "observed_compressed_bytes_per_capture": 8565,
+      "all_known_pending_raw_bytes": 77936166,
+      "all_known_pending_compressed_bytes": 19125645
+    },
+    "p75": {
+      "observed_raw_bytes_per_capture": 65409,
+      "observed_compressed_bytes_per_capture": 14243,
+      "all_known_pending_raw_bytes": 146058297,
+      "all_known_pending_compressed_bytes": 31804619
+    }
+  },
+  "size_estimate_caveat": "Quartile scenarios describe observed saved response sizes, not confidence intervals or upper bounds. New captures can differ. Bytes for 22 new inventories remain unknown."
+}

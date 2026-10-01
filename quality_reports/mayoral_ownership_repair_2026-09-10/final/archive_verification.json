@@ -1,0 +1,15 @@
+{
+  "archive_path": "/mnt/mayoral_wayback_full_snapshots/attribution_repair_20260910/repaired_20260910.tar.zst",
+  "archive_bytes": 167647002,
+  "archive_sha256": "01715f51ebd42d7a0368fb73d016c261c0e7d94b386b9c1989ccc1ad7a262571",
+  "verified_members": 41,
+  "all_member_hashes_match": true,
+  "original_archive_retained": true,
+  "final_acquisition_hashes_match_original": true,
+  "claim_rows": 65683,
+  "remaining_unmatched_claims": 32,
+  "local_compact_bundle_bytes": 7523070,
+  "temporary_restore_removed": true,
+  "deleted_file_bytes": 2271373491,
+  "volume_free_bytes_after_cleanup": 33002680320
+}

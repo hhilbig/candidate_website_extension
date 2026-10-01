@@ -1,0 +1,31 @@
+{
+  "input_sha256": {
+    "quality_reports/mayoral_saved_evidence_followup_2026-09-13/variants/saved_url_variant_audit.csv": "9655c4d44a559899ab1e3b4ccaaf96fbd6bb8d7ce4f46a41adb2e367deb98e1c",
+    "quality_reports/mayoral_ai_review_2026-09-14/validation_with_capture_reviews.csv": "26b7af04380329c61b4598c36737712b98ddb3bf1b8fca7a9d5bdaa462b04158",
+    "data/municipal_discovery/exhaustive_source_expansion_20260908/ai_review_20260914/candidate_urls.csv": "9b1d4c17e5b0b428dc6be92dda8ed398072301c12d49994d04ba3eb0f589141b"
+  },
+  "script_sha256": "2deeba13dab3771485843f128b54e9c0032d11f03ab9bdd878ad6a7a4bdd15d6",
+  "output_sha256": {
+    "quality_reports/mayoral_variant_content_review_2026-09-14/saved_url_variant_audit.csv": "9655c4d44a559899ab1e3b4ccaaf96fbd6bb8d7ce4f46a41adb2e367deb98e1c",
+    "quality_reports/mayoral_variant_content_review_2026-09-14/review_queue.json": "31b4ae81615266556abf786281b94ede16976fac45270c49b82b3a8c5250c410",
+    "quality_reports/mayoral_variant_content_review_2026-09-14/validation_overlap.json": "f0e6ffc8852bd23437ff7cdb00ce7790e69b6f61b00dfdb3eed02b5e3ffe4827"
+  },
+  "audit_rows": 521,
+  "validation_rows": 120,
+  "candidate_rows": 1360,
+  "queue_rows": 460,
+  "overlap_rows": 61,
+  "queue_classification_counts": {
+    "saved_syntactic_variant_only": 387,
+    "different_path_query_or_host_only": 73
+  },
+  "overlap_classification_counts": {
+    "saved_effective_exact_url": 26,
+    "saved_syntactic_variant_only": 35
+  },
+  "queue_within_365_days": 454,
+  "queue_outside_365_days": 6,
+  "raw_html_copies": 0,
+  "acceptance_changes": 0,
+  "evidence_verification": "Audit hash metadata only; remote HTML files were not opened."
+}

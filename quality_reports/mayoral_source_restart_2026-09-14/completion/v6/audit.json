@@ -1,0 +1,203 @@
+{
+  "attempt_rows": 16460,
+  "attribution_status_counts": {
+    "domain_shape_only": 1416,
+    "identity_supported": 351,
+    "match_unresolved": 50381,
+    "prior_rejection_review": 4,
+    "reference_lead": 35729,
+    "snippet_reference": 531
+  },
+  "cached_sources_used": 1091,
+  "candidate_years_with_extracted_claim": 2242,
+  "checked_at": "2026-09-14T22:22:28.852381+00:00",
+  "claim_rows": 88412,
+  "combined_roster": {
+    "active_candidate_years": 2788,
+    "active_candidate_years_with_url_leads": 1100,
+    "active_unresolved_candidate_years": 1688,
+    "baseline_active_candidate_years_with_url_leads": 1038,
+    "baseline_historical_url_candidate_years_active": 147,
+    "baseline_source_claim_rows": 5364,
+    "combined_source_claim_rows": 93776,
+    "duplicate_source_claim_keys": 0,
+    "duplicate_url_keys": 0,
+    "exact_roster_key_agreement": true,
+    "expanded_attribution_statuses": {
+      "domain_shape_only": 1416,
+      "identity_supported": 351,
+      "match_unresolved": 50381,
+      "prior_rejection_review": 4,
+      "reference_lead": 35729,
+      "snippet_reference": 531
+    },
+    "expanded_claim_dispositions": {
+      "date_conflict_review": 17318,
+      "excluded_url_type": 51802,
+      "identity_or_ownership_unresolved": 17624,
+      "prior_human_rejection": 4,
+      "source_attributed_candidate_lead": 296,
+      "wrong_office_review": 1368
+    },
+    "expanded_eligible_change_counts": {
+      "additional_site_for_known_candidate": 21,
+      "additional_source_for_known_exact_url": 95,
+      "alternative_exact_url_for_known_site": 90,
+      "new_candidate_url_lead": 90
+    },
+    "expanded_eligible_claim_rows": 296,
+    "expanded_source_claim_rows": 88412,
+    "filter_audit": {
+      "before_expanded_claims": 88412,
+      "eligible_after": 296,
+      "excluded_fraction": 0.9966520381848618,
+      "reason": "Only identity-supported claims with explicit target ownership support and no office conflict, date conflict, or prior human rejection enter the URL list. All claims remain in source_claims.csv."
+    },
+    "inherited_candidate_claim_flags_reset": 0,
+    "inputs": {
+      "candidate_roster.csv": {
+        "bytes": 6159652,
+        "sha256": "d290429f07f7590d08e1fc73dea4d158d256c84b03df4bf2700d3398de9b8b49"
+      },
+      "candidate_urls.csv": {
+        "bytes": 777235,
+        "sha256": "f97dbf621b924cd3bdcc1b63929a137a0b9fe84e5efcfb20543484c450ef21cc"
+      },
+      "claim_dispositions.csv": {
+        "bytes": 1926733,
+        "sha256": "2274708cd19e4e81d56b40e5982dc774d91fb78c249528b777b06e2e0b148561"
+      },
+      "combined_claims.csv": {
+        "bytes": 28068050,
+        "sha256": "92e4b297b367c5205553ee9a9ccdcc9495020ab518b76341fbcb60e4bf9e3cc9"
+      },
+      "expanded_url_claims.csv": {
+        "bytes": 472721980,
+        "sha256": "f50b5392a6fac9f1b90d891eb7190ff32ca3b760a1071f8d9d36146677058a91"
+      }
+    },
+    "interpretation": "New URLs are source-attributed candidate leads pending review. Historical URL coverage and archive acquisition flags remain those of the frozen baseline.",
+    "new_active_candidate_years_with_source_attributed_leads": 62,
+    "new_active_exact_url_change_counts": {
+      "additional_site_for_known_candidate": 18,
+      "alternative_exact_url_for_known_site": 68,
+      "new_candidate_url_lead": 68
+    },
+    "new_active_exact_url_rows": 154,
+    "new_active_sites_for_known_candidates": 18,
+    "new_strict_or_human_approved_claims": 0,
+    "outputs": {
+      "candidate_roster.csv": {
+        "bytes": 6354150,
+        "sha256": "f7b4d02185c7afee24e8ade6c308bd3d7c65027752835915a57297e8c6a52f9f"
+      },
+      "candidate_urls.csv": {
+        "bytes": 1080396,
+        "sha256": "4dc4d6ace195378ee1efb056e29335ad6a79c49292cfeae05dc6c95a50921d04"
+      },
+      "new_candidate_urls.csv": {
+        "bytes": 138222,
+        "sha256": "14db741f121b2a83eb47495fdfe67e73a2e7094483f5a7cfdbde578f878562e7"
+      },
+      "review_claims.csv": {
+        "bytes": 296510008,
+        "sha256": "e588512142f65fcb679cdfd2d9d1154f2456269208230d86178424805814155b"
+      },
+      "source_claims.csv": {
+        "bytes": 532698606,
+        "sha256": "5077517cb5011908617a12d6644b0cacc3272079668a0c4ae80d6351fa2a673e"
+      }
+    },
+    "review_claim_rows": 36564,
+    "roster_rows": 4817,
+    "source_run_state": {
+      "checked_at": "2026-09-14T22:22:28.852381+00:00",
+      "deferred_followup_links": 0,
+      "never_attempted_sources": 44883,
+      "processed_sources": 14318,
+      "retryable_sources": 637,
+      "source_dispositions": {
+        "host_deferred_access": 2842,
+        "invalid_url": 4,
+        "non_document_asset": 48,
+        "pending": 58571,
+        "permission_required": 271,
+        "saved_search_snippet": 630,
+        "search_endpoint_outside_source_expansion": 4,
+        "stale_followup": 31,
+        "unsupported_port": 2
+      },
+      "source_rows": 62403,
+      "source_status_counts": {
+        "fetched": 11913,
+        "http_error": 1608,
+        "parse_error": 4,
+        "parse_partial": 182,
+        "request_error": 481,
+        "size_limit": 106,
+        "source_error": 5,
+        "source_unavailable": 17,
+        "unsupported_document": 2
+      },
+      "stage": "source_pass_incomplete",
+      "unprocessed_ocr_pages": 7380
+    },
+    "unknown_expanded_candidate_keys": [],
+    "version": "mayoral-source-expansion-summary-v2"
+  },
+  "deferred_followup_links": 0,
+  "downloaded_raw_bytes": 8767081863,
+  "exact_relation_disposition_key_agreement": true,
+  "exact_source_disposition_key_agreement": true,
+  "never_attempted_sources": 44883,
+  "paid_requests": 0,
+  "processed_saved_snippets": 630,
+  "processed_source_documents": 13688,
+  "processed_sources": 14318,
+  "raw_bytes_saved": 8861726424,
+  "retired_followup_contexts": 920,
+  "retryable_sources": 637,
+  "site_claim_candidate_years": 183,
+  "source_dispositions": {
+    "host_deferred_access": 2842,
+    "invalid_url": 4,
+    "non_document_asset": 48,
+    "pending": 58571,
+    "permission_required": 271,
+    "saved_search_snippet": 630,
+    "search_endpoint_outside_source_expansion": 4,
+    "stale_followup": 31,
+    "unsupported_port": 2
+  },
+  "source_document_rows": 61773,
+  "source_relations": 91589,
+  "source_rows": 62403,
+  "source_status_counts": {
+    "fetched": 11913,
+    "http_error": 1608,
+    "parse_error": 4,
+    "parse_partial": 182,
+    "request_error": 481,
+    "size_limit": 106,
+    "source_error": 5,
+    "source_unavailable": 17,
+    "unsupported_document": 2
+  },
+  "stage": "source_pass_incomplete",
+  "tranches": [
+    {
+      "additional_bytes": 4000000000,
+      "attempts_started": 2418,
+      "baseline_attempts": 14042,
+      "baseline_downloaded_raw_bytes": 8063489603,
+      "charged_bytes": 3987177476,
+      "created_at": "2026-09-14T18:05:45.662882+00:00",
+      "max_sources": 5000,
+      "reservations": {},
+      "tranche_id": "source-discovery-20260914"
+    }
+  ],
+  "unprocessed_ocr_pages": 7380,
+  "usable_site_claims": 296,
+  "version": "mayoral-saved-sources-v2"
+}

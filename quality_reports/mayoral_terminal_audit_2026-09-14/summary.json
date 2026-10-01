@@ -1,0 +1,32 @@
+{
+  "remote_file_sha256": {
+    "/root/candidate_website_extension/data/municipal_archive_acquisition/full_discovery_740_20260826/runs/production/inventory_target_status.csv": "02e27fc963e5d4b9ec61d39ffc0cd550834346dd060a184931a33c006ca5dd29",
+    "/root/candidate_website_extension/data/municipal_archive_acquisition/full_discovery_740_20260826/runs/production/inventory_variant_attempts.csv": "b76722e462ba1eb9bff9fd8488b084357234d7e120e5981207c635c0f2a0cc1b",
+    "/root/candidate_website_extension/data/municipal_archive_acquisition/full_discovery_740_20260826/frozen/targets.csv": "7c82582c7ddf33afa80fa53ac861254503f8d320e456308dad03468fef103132",
+    "/mnt/mayoral_wayback_full_snapshots/runs/production_all_inventory/capture_inventory.csv": "740d8d2cf29f511e2e490d3c6955e90b08144990cccda69e7610b5e50536e154",
+    "/mnt/mayoral_wayback_full_snapshots/runs/production_all_inventory/fetch_attempts.csv": "540f4d8eac1e8abb72ecab56e658eb66cd364ceb0978abe60877679fac8fce0c"
+  },
+  "created_at_utc": "2026-09-14T18:29:15.726965+00:00",
+  "input_path": "quality_reports/mayoral_review_reconciliation_2026-09-13/reconciliation/remaining_acquisition_review_queue.csv",
+  "input_sha256": "9893f4e3cc304f57f02016a178a20360a8f2d89954be4533e24205762535703a",
+  "script_sha256": "dc23e37250087653ae6d07c7dcb90f34399df9dc567440043c007531ff1779b0",
+  "selected_rows": 215,
+  "audit_rows": 215,
+  "missing_keys": 0,
+  "unexpected_keys": 0,
+  "category_counts": {
+    "completed_empty_inventory": 209,
+    "saved_html_without_extracted_text": 6
+  },
+  "unique_query_attempts": 746,
+  "query_variant_keys_and_windows_match_frozen_targets": true,
+  "saved_no_content_responses": 18,
+  "saved_no_content_raw_hashes_verified": true,
+  "limitations": [
+    "Empty means no HTTP 200 HTML captures in the recorded prefix queries and dates, not no archive history.",
+    "Queries used a 50000-row cap without pagination. Empty payloads do not reach this cap.",
+    "Saved URL variants ignore scheme, www, and a trailing slash. They need ownership and content review.",
+    "Terminal fetch states describe attempted captures, not absence of a historical campaign website.",
+    "No archive requests or model labels were generated."
+  ]
+}

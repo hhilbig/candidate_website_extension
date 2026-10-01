@@ -1,0 +1,53 @@
+{
+  "decision_counts": {
+    "accept": 31,
+    "corrected_url_needed": 1,
+    "reject": 27,
+    "unresolved": 1
+  },
+  "decision_file_sha256": "5bba0b9436d9c3c1c2bcfd604a357798ba8a07a3b308b8e9f377fc542edf3fc3",
+  "evidence_grade_counts": {
+    "C": 32,
+    "D": 1,
+    "reject": 27
+  },
+  "interpretation": "Audit decisions estimate whether the exact proposed URL is a candidate campaign website. corrected_url_needed is excluded from exact-URL precision. Decisions are agent audit judgments, not human approvals or release changes.",
+  "sample_rows": 60,
+  "sample_sha256_before_decisions": "bec434c94a263cb06585a731932e5570ddf341d997f3a9b9f65e133bbc9d455a",
+  "strata": {
+    "additional_site_for_known_candidate": {
+      "accepted_exact_url_fraction": 0.25,
+      "accepted_exact_urls": 5,
+      "population_rows": 50,
+      "recoverable_with_corrected_url": 1,
+      "rejected": 14,
+      "sample_rows": 20,
+      "unresolved": 0
+    },
+    "alternative_exact_url_for_known_site": {
+      "accepted_exact_url_fraction": 1.0,
+      "accepted_exact_urls": 20,
+      "population_rows": 51,
+      "recoverable_with_corrected_url": 0,
+      "rejected": 0,
+      "sample_rows": 20,
+      "unresolved": 0
+    },
+    "new_candidate_url_lead": {
+      "accepted_exact_url_fraction": 0.3,
+      "accepted_exact_urls": 6,
+      "population_rows": 124,
+      "recoverable_with_corrected_url": 0,
+      "rejected": 13,
+      "sample_rows": 20,
+      "unresolved": 1
+    }
+  },
+  "stratified_approximate_95_percent_interval": [
+    0.3382884360819889,
+    0.5568226750291222
+  ],
+  "stratified_exact_url_precision": 0.44755555555555554,
+  "stratified_standard_error": 0.05574853034365644,
+  "version": "mayoral-new-url-lead-audit-v1"
+}

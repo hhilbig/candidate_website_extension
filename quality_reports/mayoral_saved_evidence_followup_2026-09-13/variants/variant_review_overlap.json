@@ -1,0 +1,18 @@
+{
+  "audit_date": "2026-09-14",
+  "source": "quality_reports/mayoral_saved_evidence_followup_2026-09-13/variants/saved_url_variant_audit.csv",
+  "comparison": "quality_reports/mayoral_ai_review_2026-09-14/validation_with_capture_reviews.csv",
+  "unit": "Candidate URL row and its selected response for the assigned URL relation",
+  "match_rule": "Same candidate_url_id and a jointly matching decoded hash and effective timestamp in primary or supplemental validation evidence",
+  "same_path_variant_rows": 422,
+  "same_path_variant_matching_existing_capture": 35,
+  "same_path_variant_existing_key_different_capture": 1,
+  "same_path_variant_outside_validation_keys": 386,
+  "changed_path_query_or_host_rows": 73,
+  "changed_path_existing_key_different_capture": 1,
+  "changed_path_outside_validation_keys": 72,
+  "rows_requiring_distinct_capture_assessment": 460,
+  "limitation": "Evidence overlap does not establish acceptance or URL equivalence. Preserve existing capture-specific decisions and all URL relationships.",
+  "new_requests": 0,
+  "new_acceptances": 0
+}

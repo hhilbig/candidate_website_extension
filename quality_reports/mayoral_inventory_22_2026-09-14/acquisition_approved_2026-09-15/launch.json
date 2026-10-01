@@ -1,0 +1,39 @@
+{
+  "started_at_utc": "2026-09-15T03:46:20.540282+00:00",
+  "worker_pid": 1334358,
+  "watcher_pid": 1334359,
+  "command": [
+    "/root/candidate_website_extension/.venv/bin/python",
+    "/mnt/mayoral_wayback_full_snapshots/indexed_capture_20260915/code/fetch_mayoral_exact_capture_batch.py",
+    "--queue",
+    "/mnt/mayoral_wayback_full_snapshots/indexed_capture_20260915/inputs/exact_capture_queue.csv",
+    "--manifest",
+    "/mnt/mayoral_wayback_full_snapshots/indexed_capture_20260915/inputs/manifest.json",
+    "--output-dir",
+    "/mnt/mayoral_wayback_full_snapshots/indexed_capture_20260915/run"
+  ],
+  "watcher_command": [
+    "/root/candidate_website_extension/.venv/bin/python",
+    "/mnt/mayoral_wayback_full_snapshots/indexed_capture_20260915/code/watch_mayoral_exact_capture_batch.py",
+    "--pid",
+    "1334358",
+    "--run-dir",
+    "/mnt/mayoral_wayback_full_snapshots/indexed_capture_20260915/run"
+  ],
+  "volume_free_bytes": 20889710592,
+  "root_free_bytes": 3340300288,
+  "raw_on_attached_volume": true,
+  "external_notifications": false,
+  "smoke_resumed": true,
+  "smoke_verified": true,
+  "smoke_decoded_bytes": 25527,
+  "hashes": {
+    "inputs/inventory_saved_matches.json": "31d48ab28cf3f83f854c0a57371924ab7209c3274b26ad47d31d50fc39def61c",
+    "inputs/manifest.json": "e817a8526b931797c8537b7d215e1b60692fbceee04171f77220b71cd2b2f2ad",
+    "inputs/proposal_manifest.json": "db9faf097048af9582fc7b322d744ab5dc5b6f19e1f333b44d17832f1bf60620",
+    "inputs/summary.json": "50c454ba6306bf7b712834bc86e4df9341e1f1b8c1c6c55a9e421e0280f7999a",
+    "inputs/exact_capture_queue.csv": "4eeaafc8681c0664673b1eab239053aacff8c67eb8b39d788289665991d12418",
+    "code/watch_mayoral_exact_capture_batch.py": "79952a88a2326cdf66259920d289476aca69c948eb2277be535207ae9796d402",
+    "code/fetch_mayoral_exact_capture_batch.py": "7a8f5b0a37fe957d1c461144b053d061873e1af1f086941bc3d570a9edc7bea6"
+  }
+}

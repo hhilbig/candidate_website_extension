@@ -1,0 +1,22 @@
+{
+  "backup": "/mnt/mayoral_wayback_full_snapshots/source_discovery_20260914/work/pre_attribution_v6.sqlite",
+  "method": "Compare row counts and SHA256 of all rows ordered by primary key, serialized as compact JSON lines, against the pre-repair backup.",
+  "unchanged_tables": {
+    "attempts": {"rows": 16460, "sha256": "670205bb6cae6e0786761740411be79c2191b5a1b72b47ba69e1e41f2cbe1e48"},
+    "current": {"rows": 14318, "sha256": "345768641ddcd73305e0d53c47627cf72a65b1ede3d16ea796f219b567122ca2"},
+    "sources": {"rows": 62403, "sha256": "f6ce28b4f7e1b42b52f0ad91f1bffd20c46426144814ae149d9e1e7b0b717635"},
+    "contexts": {"rows": 91589, "sha256": "d6254227e507e45783c8d3d21963417f4962b4258014fe2b6d38515314898ff4"},
+    "candidates": {"rows": 4817, "sha256": "f5541ab349e2385b711dcecab0ed521b7db0f4a0bd19d4355c75d1ae21750385"}
+  },
+  "claim_keys": {"rows": 88412, "sha256": "166d0f1e7836aa1bb0f24513b99b48c47f7b05cb0d76e40bcd7d24cc47e9e22e", "unchanged": true},
+  "quick_check": "ok",
+  "reattribution_exit_code": 0,
+  "candidate_urls_sha256": "5a3622bcad74ce1d654c3b637032fdaf914300a29148f5237a73bf29278ca2bd",
+  "candidate_urls_copy_hash_verified": true,
+  "candidate_url_rows": 1390,
+  "frozen_baseline_url_rows": 1360,
+  "frozen_baseline_keys_missing": 0,
+  "new_url_rows": 30,
+  "eligible_claim_rows": 288,
+  "promotion_status": "pending final new-lead review"
+}

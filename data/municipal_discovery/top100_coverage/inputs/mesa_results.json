@@ -1,0 +1,154 @@
+[
+ {
+  "city_name": "Mesa",
+  "state_abb": "AZ",
+  "roster_place_fips": "446000",
+  "election_date": "2012-08-28",
+  "election_type": "regular",
+  "stage": "primary_nominating",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "source_url": "https://www.mesaaz.gov/files/assets/public/v/1/government/cityclerk/pastelection/08-28-12-primary-election.pdf",
+  "source_locator": "Grand total row, MAYOR column, final results table",
+  "certification_source_url": "https://www.mesaaz.gov/Government/City-Clerk/Elections/Past-Election-Results",
+  "additional_source_urls": [
+   "https://www.mesaaz.gov/Government/City-Clerk/Elections/Past-Election-Results",
+   "https://www.mesaaz.gov/Government/City-Clerk/Elections"
+  ],
+  "verification_note": "City clerk final results for the August 28, 2012 primary list Scott Smith as the only candidate under MAYOR with 52302 votes. No second named candidate appeared, so this election has a winner and no runner-up. Mesa's official elections page states that the November general election is 'for a candidate runoff, if necessary', so a primary that produces an outright winner is the decisive stage.",
+  "candidates": [
+   {
+    "name": "Scott Smith",
+    "role": "winner",
+    "votes": 52302,
+    "candidate_year_id": ""
+   }
+  ],
+  "decisive_stage_source_url": "https://www.mesaaz.gov/Government/City-Clerk/Elections"
+ },
+ {
+  "city_name": "Mesa",
+  "state_abb": "AZ",
+  "roster_place_fips": "446000",
+  "election_date": "2014-08-26",
+  "election_type": "regular",
+  "stage": "primary_nominating",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "source_url": "https://www.mesaaz.gov/files/assets/public/v/1/government/cityclerk/pastelection/08-26-14-primary-election.pdf",
+  "source_locator": "Grand total row, MAYOR column, final results table",
+  "certification_source_url": "https://www.mesaaz.gov/Government/City-Clerk/Elections/Past-Election-Results",
+  "additional_source_urls": [
+   "https://www.mesaaz.gov/Government/City-Clerk/Elections/Past-Election-Results",
+   "https://www.mesaaz.gov/Government/City-Clerk/Elections"
+  ],
+  "verification_note": "City clerk final results for the August 26, 2014 primary list MAYOR candidates John Giles 39320 and Danny Ray 15037 in the grand total row. Giles took a majority of the mayoral vote at this stage. Mesa's official elections page states that the November general election is 'for a candidate runoff, if necessary', so a primary that produces an outright winner is the decisive stage. The document does not label this contest a special election, so the election type is recorded as regular; the term structure was not separately confirmed.",
+  "candidates": [
+   {
+    "name": "John Giles",
+    "role": "winner",
+    "votes": 39320,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Danny Ray",
+    "role": "runner_up",
+    "votes": 15037,
+    "candidate_year_id": ""
+   }
+  ],
+  "decisive_stage_source_url": "https://www.mesaaz.gov/Government/City-Clerk/Elections"
+ },
+ {
+  "city_name": "Mesa",
+  "state_abb": "AZ",
+  "roster_place_fips": "446000",
+  "election_date": "2016-08-30",
+  "election_type": "regular",
+  "stage": "primary_nominating",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "source_url": "https://www.mesaaz.gov/files/assets/public/v/1/government/cityclerk/pastelection/08-30-16-primary-election.pdf",
+  "source_locator": "Grand total row, MAYOR column, final results table",
+  "certification_source_url": "https://www.mesaaz.gov/Government/City-Clerk/Elections/Past-Election-Results",
+  "additional_source_urls": [
+   "https://www.mesaaz.gov/Government/City-Clerk/Elections/Past-Election-Results",
+   "https://www.mesaaz.gov/Government/City-Clerk/Elections"
+  ],
+  "verification_note": "City clerk final results for the August 30, 2016 primary list John Giles as the only candidate under MAYOR with 53273 votes in the grand total row. No second named candidate appeared. Mesa's official elections page states that the November general election is 'for a candidate runoff, if necessary', so a primary that produces an outright winner is the decisive stage.",
+  "candidates": [
+   {
+    "name": "John Giles",
+    "role": "winner",
+    "votes": 53273,
+    "candidate_year_id": ""
+   }
+  ],
+  "decisive_stage_source_url": "https://www.mesaaz.gov/Government/City-Clerk/Elections"
+ },
+ {
+  "city_name": "Mesa",
+  "state_abb": "AZ",
+  "roster_place_fips": "446000",
+  "election_date": "2020-08-04",
+  "election_type": "regular",
+  "stage": "primary_nominating",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "source_url": "https://www.mesaaz.gov/files/assets/public/v/1/government/cityclerk/pastelection/08-04-20-primary-election.pdf",
+  "source_locator": "Grand total row, MAYOR column, final results table",
+  "certification_source_url": "https://www.mesaaz.gov/Government/City-Clerk/Elections/Past-Election-Results",
+  "additional_source_urls": [
+   "https://www.mesaaz.gov/Government/City-Clerk/Elections/Past-Election-Results",
+   "https://www.mesaaz.gov/Government/City-Clerk/Elections"
+  ],
+  "verification_note": "City clerk final results for the August 4, 2020 primary list MAYOR candidates John Giles 60473 and Verl Farnsworth 30452 in the grand total row. Giles took a majority of the mayoral vote at this stage. Mesa's official elections page states that the November general election is 'for a candidate runoff, if necessary', so a primary that produces an outright winner is the decisive stage.",
+  "candidates": [
+   {
+    "name": "John Giles",
+    "role": "winner",
+    "votes": 60473,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Verl Farnsworth",
+    "role": "runner_up",
+    "votes": 30452,
+    "candidate_year_id": ""
+   }
+  ],
+  "decisive_stage_source_url": "https://www.mesaaz.gov/Government/City-Clerk/Elections"
+ },
+ {
+  "city_name": "Mesa",
+  "state_abb": "AZ",
+  "roster_place_fips": "446000",
+  "election_date": "2024-11-05",
+  "election_type": "regular",
+  "stage": "general",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "source_url": "https://www.mesaaz.gov/files/assets/public/v/1/government/cityclerk/pastelection/11-05-24-general-election.pdf",
+  "source_locator": "Grand total row, MAYOR column, final results table",
+  "certification_source_url": "https://www.mesaaz.gov/Government/City-Clerk/Elections/Past-Election-Results",
+  "additional_source_urls": [
+   "https://www.mesaaz.gov/Government/City-Clerk/Elections/Past-Election-Results",
+   "https://www.mesaaz.gov/Government/City-Clerk/Elections"
+  ],
+  "verification_note": "City clerk final results for the November 5, 2024 general election report Mesa-Mayor: Freeman 101808 at 52.54 percent and Smith 90704 at 46.81 percent, with 1243 write-in votes.",
+  "candidates": [
+   {
+    "name": "Mark A. Freeman",
+    "role": "winner",
+    "votes": 101808,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Scott Smith",
+    "role": "runner_up",
+    "votes": 90704,
+    "candidate_year_id": ""
+   }
+  ]
+ }
+]

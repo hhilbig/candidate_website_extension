@@ -1,0 +1,64 @@
+{
+  "review_date": "2026-09-14",
+  "reviewer": "current Codex session",
+  "model": "not recorded",
+  "review_type": "AI saved-capture review",
+  "input": "quality_reports/mayoral_variant_content_review_2026-09-14/review_queue.json",
+  "input_sha256": "31b4ae81615266556abf786281b94ede16976fac45270c49b82b3a8c5250c410",
+  "selection": "First five candidate_url_id values in ascending order",
+  "method": "Read saved gzip HTML on the droplet, verify decoded SHA256, and inspect static text after removing script, style, and noscript elements. No archive requests or browser execution.",
+  "records": [
+    {
+      "candidate_url_id": "candidate_url_014d21f6ff6f0e058dbe5e3e",
+      "candidate_year_id": "79436__2011",
+      "capture_sha256": "8850a425d4f471ce2d22a2ac7a144e3727e7b12583ab802a1ba919d076d13f21",
+      "capture_timestamp": "20110409010609",
+      "hash_verified": true,
+      "decision": "support_capture",
+      "reason": "The page names Neil O'Leary for mayor of Waterbury in 2011. It contains campaign events, volunteer and donation controls, and a campaign payment disclaimer.",
+      "remaining_flags": ["exact_requested_URL_equivalence_not_established"]
+    },
+    {
+      "candidate_url_id": "candidate_url_01f6184e7ca238519f013410",
+      "candidate_year_id": "24211__2013",
+      "capture_sha256": "b7727e30f920394b74c107a81729c4209cd1cc3605463d08b3c696eca9e024c6",
+      "capture_timestamp": "20131127110305",
+      "hash_verified": true,
+      "decision": "support_capture",
+      "reason": "The title names Stephanie Woodruff for mayor of Minneapolis. The page contains her platform, a contribution link, and a campaign payment disclaimer. The capture date supplies the 2013 timing.",
+      "remaining_flags": ["exact_requested_URL_equivalence_not_established"]
+    },
+    {
+      "candidate_url_id": "candidate_url_020cc44c7356e83c64bfe6a4",
+      "candidate_year_id": "69859__2014",
+      "capture_sha256": "5eba5fe560159278626335090fa33ce500f7d268531d51411c2ba212bcf009c0",
+      "capture_timestamp": "20140615015704",
+      "hash_verified": true,
+      "decision": "support_campaign_with_target_caveat",
+      "reason": "The title and payment disclaimer identify Robert Garcia for mayor in 2014. The page contains campaign navigation and a polling-place tool. Visible text does not explicitly name Long Beach; the social handle supplies only indirect city context. The saved /polling_place page does not establish acquisition of the requested /about/ page.",
+      "remaining_flags": ["different_path", "city_not_explicit_in_visible_text", "exact_requested_page_not_acquired"]
+    },
+    {
+      "candidate_url_id": "candidate_url_0241bb3d45c654e7b60aab1c",
+      "candidate_year_id": "25856__2017",
+      "capture_sha256": "bd3c2f4a6d6cec70fd33f4a3db75ed89ac77ec96cea5b683b429eff0c18b76c5",
+      "capture_timestamp": "20170407102220",
+      "hash_verified": true,
+      "decision": "support_capture",
+      "reason": "The title names Kristi Fulnecky for mayor of Springfield, Missouri. The page contains a platform, campaign controls, payment disclaimer, and April 2017 election material.",
+      "remaining_flags": ["exact_requested_URL_equivalence_not_established"]
+    },
+    {
+      "candidate_url_id": "candidate_url_024a99f75244ed48021e228c",
+      "candidate_year_id": "40638__2013",
+      "capture_sha256": "04bf6a5a23e2000b0319325ea391906b75faf5b5d54b6c089817a128218e93e8",
+      "capture_timestamp": "20131231204655",
+      "hash_verified": true,
+      "decision": "uncertain",
+      "reason": "Extracted static text contains only the title Mike Bell for Toledo. It does not provide substantive campaign text or an explicit mayoral office. Images and linked pages were not inspected.",
+      "remaining_flags": ["sparse_static_text", "office_not_explicit", "exact_requested_URL_equivalence_not_established"]
+    }
+  ],
+  "acceptance_changes": 0,
+  "full_historical_completeness": false
+}

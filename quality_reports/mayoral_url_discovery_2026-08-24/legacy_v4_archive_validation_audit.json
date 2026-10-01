@@ -1,0 +1,22 @@
+{
+  "archive_query_status_counts": {
+    "checked": 43,
+    "checked_with_partial_error": 61,
+    "error": 20
+  },
+  "duplicate_key_rows": 0,
+  "evidence_key_count": 124,
+  "exact_evidence_key_agreement": true,
+  "key_count": 124,
+  "missing_evidence_keys": 0,
+  "output_path": "data/municipal_discovery/final/mayoral_url_archive_validation.csv",
+  "retryable_rows": 81,
+  "row_count": 124,
+  "temporal_validation_status_counts": {
+    "archive_capture_within_365_days": 101,
+    "no_archive_capture_in_year_window": 3,
+    "unresolved": 20
+  },
+  "unexpected_validation_keys": 0,
+  "validation_method_version": "exact_root_and_html_site_wildcard_v4"
+}

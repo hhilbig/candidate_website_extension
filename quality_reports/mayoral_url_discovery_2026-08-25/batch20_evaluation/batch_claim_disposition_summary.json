@@ -1,0 +1,18 @@
+{
+  "rule_version": "archiveit-sampled-audit-rule-v1",
+  "audit_items": 6,
+  "sampled_positive_precision": 1.0,
+  "sampled_strict_confirmation_rate": 1.0,
+  "extrapolation_gate_passed": true,
+  "directly_human_accepted_strict_candidate_years": 3,
+  "inferred_strict_candidate_years": 3,
+  "marginal_strict_candidate_years": 6,
+  "marginal_strict_candidate_year_ids": [
+    "1001__2018",
+    "16121__2020",
+    "23091__2021",
+    "25399__2019",
+    "4850__2018",
+    "869__2018"
+  ]
+}

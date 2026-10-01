@@ -1,0 +1,112 @@
+{
+  "contract_version": "serper_one_query_wave_contract_v1",
+  "filter_audits": [
+    {
+      "after_rows": 480,
+      "before_rows": 480,
+      "explicit_audit_present": true,
+      "parent_rows_retained": false,
+      "reason_counts": {},
+      "removed_fraction": 0.0,
+      "removed_rows": 0,
+      "stage": "planned_queries_to_terminal_request_rows"
+    },
+    {
+      "after_rows": 4436,
+      "before_rows": 4436,
+      "explicit_audit_present": true,
+      "parent_rows_retained": false,
+      "reason_counts": {},
+      "removed_fraction": 0.0,
+      "removed_rows": 0,
+      "stage": "saved_organic_results_to_classified_result_rows"
+    },
+    {
+      "after_rows": 552,
+      "before_rows": 4436,
+      "explicit_audit_present": true,
+      "parent_rows_retained": true,
+      "reason_counts": {
+        "credible_source_page_temporal_conflict:full_name_alias_uniquely_matches_target:": 202,
+        "direct_candidate_site:full_name_alias_uniquely_matches_target:": 14,
+        "excluded_url:full_name_alias_matches_other_contest_candidate:excluded_social_or_video_host": 13,
+        "excluded_url:full_name_alias_uniquely_matches_target:excluded_social_or_video_host": 705,
+        "excluded_url:multiple_full_name_aliases_in_context:excluded_social_or_video_host": 62,
+        "excluded_url:no_full_name_alias_in_context:excluded_social_or_video_host": 188,
+        "identity_unresolved:full_name_alias_matches_other_contest_candidate:": 61,
+        "identity_unresolved:multiple_full_name_aliases_in_context:": 660,
+        "identity_unresolved:no_full_name_alias_in_context:": 203,
+        "noise:full_name_alias_uniquely_matches_target:": 1776
+      },
+      "removed_fraction": 0.8755635707844905,
+      "removed_rows": 3884,
+      "stage": "organic_results_to_fetch_eligible"
+    }
+  ],
+  "one_query_per_candidate": true,
+  "pass": true,
+  "query_attempt_rows": 480,
+  "ranked_result_page_queue": {
+    "credible_beyond_cap_retained": 23,
+    "eligible_source_pages": 552,
+    "filter_audit": {
+      "after_rows": 552,
+      "before_rows": 4436,
+      "explicit_audit_present": true,
+      "parent_rows_retained": true,
+      "reason_counts": {
+        "credible_source_page_temporal_conflict:full_name_alias_uniquely_matches_target:": 202,
+        "direct_candidate_site:full_name_alias_uniquely_matches_target:": 14,
+        "excluded_url:full_name_alias_matches_other_contest_candidate:excluded_social_or_video_host": 13,
+        "excluded_url:full_name_alias_uniquely_matches_target:excluded_social_or_video_host": 705,
+        "excluded_url:multiple_full_name_aliases_in_context:excluded_social_or_video_host": 62,
+        "excluded_url:no_full_name_alias_in_context:excluded_social_or_video_host": 188,
+        "identity_unresolved:full_name_alias_matches_other_contest_candidate:": 61,
+        "identity_unresolved:multiple_full_name_aliases_in_context:": 660,
+        "identity_unresolved:no_full_name_alias_in_context:": 203,
+        "noise:full_name_alias_uniquely_matches_target:": 1776
+      },
+      "removed_fraction": 0.8755635707844905,
+      "removed_rows": 3884,
+      "stage": "organic_results_to_fetch_eligible"
+    },
+    "result_count_agreement": true,
+    "role_counts": {
+      "context_unresolved": 1776,
+      "credible_source_page": 552,
+      "direct_candidate_site": 14,
+      "excluded_url": 968,
+      "identity_unresolved": 924,
+      "temporal_conflict_review": 202
+    },
+    "rows": 4436,
+    "selected_source_pages": 529
+  },
+  "raw_responses": {
+    "exact_ledger_key_agreement": true,
+    "full_response_body_hashes_verified": true,
+    "organic_results": 4436,
+    "rows": 480
+  },
+  "ready_for_downstream_fetch": false,
+  "request_ledger": {
+    "complete_rows": 475,
+    "key_agreement": true,
+    "retryable_rows": 5,
+    "rows": 480,
+    "status_counts": {
+      "found": 474,
+      "no_result": 1,
+      "request_error": 5
+    }
+  },
+  "sample_rows": 480,
+  "sample_sha256": "646e2688005ca7c4f0f20ed027aeb7709351adbdfa9864af26e143f1caf3eb19",
+  "url_leads": {
+    "duplicate_entity_claims": 36,
+    "entity_rows": 370,
+    "independent_claims_preserved": true,
+    "rows": 419,
+    "temporal_validation_eligible": 79
+  }
+}

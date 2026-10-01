@@ -1,0 +1,18 @@
+{
+  "host": "droplet",
+  "backup_path": "/mnt/mayoral_wayback_full_snapshots/source_discovery_20260914/work/pre_attribution_v6.sqlite",
+  "backup_bytes": 881623040,
+  "backup_sha256": "2ce81912e56536d29447eb02c71509ff73af9ada0998e5d9eea13b542530d4bd",
+  "quick_check": "ok",
+  "claim_rows": 88412,
+  "attempt_rows": 16460,
+  "method": "SQLite backup API under the exclusive writer lock after the source job stopped",
+  "purpose": "Restore point before saved-evidence ownership reattribution v6",
+  "raw_content_copied_to_mac": false,
+  "retain_until_repaired_outputs_verified": true,
+  "deployed_attribution_version": "mayoral-source-attribution-v6",
+  "deployed_module_sha256": "65c46abb2bdfe2fa40fbc394818f684ea122cd93bff3785724c1196158cce763",
+  "reattribution_pid_at_launch_check": 1319067,
+  "reattribution_mode": "reattribute --ownership-only",
+  "launch_state": "running; completion not yet verified"
+}

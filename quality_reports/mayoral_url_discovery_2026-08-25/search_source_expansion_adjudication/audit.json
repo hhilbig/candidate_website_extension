@@ -1,0 +1,17 @@
+{
+  "approved_rows": 6,
+  "contract_version": "search_lead_adjudication_v1",
+  "decision_file": "quality_reports/mayoral_url_discovery_2026-08-25/search_source_expansion_adjudication/decisions.csv",
+  "decision_rows": 6,
+  "decision_sha256": "b70fb298265f5e26540083b2fee41be2d9820adc97b4ac9540439fc9bfac98a1",
+  "exact_proposed_decision_id_agreement": true,
+  "output_file": "quality_reports/mayoral_url_discovery_2026-08-25/search_source_expansion_adjudication/adjudicated_claims.csv",
+  "output_rows": 6,
+  "proposed_grade_a_rows": 6,
+  "rejected_rows": 0,
+  "source_id": "serper_search_source_expansion_2010_2021",
+  "strict_adapter_rows": 6,
+  "validation_file": "data/municipal_discovery/screening_2010_2021/search_source_expansion/temporal_validation/merged/search_lead_temporal_validation.csv",
+  "validation_rows": 41,
+  "validation_sha256": "7453610216130f4849107ba529458777ce4c289b07ac2ad9f649132a7b8cbb3a"
+}

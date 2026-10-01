@@ -1,0 +1,26 @@
+{
+  "review_sha256": "9323e9f41f00b78f746a7d1d9b573ce306b5551dfb7e536506da54b0c3b56e1a",
+  "authoritative_audit_sha256": "44252e4a5de63f01166c796ce61729f5d25229395a6c1f432696322ad9ce6aa0",
+  "coordinator_checks": {
+    "expected_url_keys": 6,
+    "observed_url_keys": 6,
+    "expected_capture_keys": 18,
+    "observed_capture_keys": 18,
+    "candidate_year_bindings_match": true,
+    "requested_and_effective_timestamps_match": true,
+    "original_urls_match": true,
+    "raw_hashes_and_byte_counts_match": true,
+    "all_review_records_report_verified_raw_hashes": true
+  },
+  "classification_counts": {
+    "parking": 8,
+    "cookie_shell": 2,
+    "redirect": 4,
+    "shell": 1,
+    "other_empty_html": 3
+  },
+  "recoverable_static_campaign_text_responses": 0,
+  "scope": "All six saved-response cases and their 18 recorded captures. This verifies the review bindings and classifications, not archive absence or completeness outside the recorded queries.",
+  "website_acceptance_changes": 0,
+  "new_archive_requests": 0
+}

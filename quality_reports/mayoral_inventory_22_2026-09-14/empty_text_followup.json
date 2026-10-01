@@ -1,0 +1,37 @@
+{
+  "review_type": "AI inspection of saved HTML structure and metadata",
+  "input_audit_sha256": "ca651d456b04daf907ad8d24a3296a08bebde1629bd7e0b913aa6f9fb88b3ca4",
+  "archive_requests": 0,
+  "method": "Read the same saved raw responses. Compare html.parser and lxml without executing scripts. Inspect titles, description metadata, and text before inline-style exclusion. Both available parsers agree. html5lib is not installed and was not used.",
+  "records": [
+    {
+      "row_id": 72,
+      "candidate_year_id": "47861__2019",
+      "timestamp": "20190709125204",
+      "original_url": "https://www.votereginaromero.com/",
+      "raw_sha256": "92dffe9b88e24dd3254d88e858c72e862f3145b8dc34a08c7b1fc647dac85d41",
+      "observed_title": "Regina Romero for Tucson Mayor",
+      "observed_generator": "Wix.com Website Builder",
+      "static_characters_before_inline_style_exclusion": 0,
+      "decision": "campaign_metadata_supported_static_body_unavailable",
+      "reason": "Title and description identify Romero's Tucson mayoral campaign. Both parsers find no body text after noncontent elements are removed. Metadata does not replace campaign body text.",
+      "next_action": "Use other saved period captures or an approved acquisition batch. Do not execute archived scripts in an authenticated browser."
+    },
+    {
+      "row_id": 324,
+      "candidate_year_id": "79345__2021",
+      "timestamp": "20201020231407",
+      "original_url": "https://www.carolinesimmons.org/",
+      "raw_sha256": "7366277b806e57e355f01df26422cc9f138528986223b2ccb6148b27056a76c2",
+      "observed_title": "Caroline Simmons | Caroline Simmons for State Representative",
+      "observed_generator": "Wix.com Website Builder",
+      "static_characters_before_inline_style_exclusion": 351,
+      "decision": "wrong_office_for_mayoral_capture_support",
+      "reason": "The title, description, and 2020 footer identify a state-representative re-election campaign. Inline-style exclusion removes the remaining static text. Preserve the response as evidence, but do not count it as a mayoral campaign capture.",
+      "scope": "Capture-specific decision. It does not reject the candidate's domain or a different dated capture.",
+      "next_action": "Apply this capture-specific exclusion during integration and inspect other dated captures for the mayoral campaign."
+    }
+  ],
+  "new_website_acceptances": 0,
+  "human_reviews": 0
+}

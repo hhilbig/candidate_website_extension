@@ -1,0 +1,199 @@
+[
+  {
+    "city_id": "5363000",
+    "year": 2010,
+    "status": "no_election",
+    "expected_election_dates": [],
+    "source_url": "https://www.seattle.gov/city-archives/seattle-facts/historical-election-results",
+    "additional_source_urls": [
+      "https://www.seattle.gov/city-archives/seattle-facts/city-officials/mayors/mayors-1948-present"
+    ],
+    "note": "City Archives general-and-special election history and complete mayor succession chronology show no mayoral election in this year. This is not inferred from the project's candidate roster."
+  },
+  {
+    "city_id": "5363000",
+    "year": 2011,
+    "status": "no_election",
+    "expected_election_dates": [],
+    "source_url": "https://www.seattle.gov/city-archives/seattle-facts/historical-election-results",
+    "additional_source_urls": [
+      "https://www.seattle.gov/city-archives/seattle-facts/city-officials/mayors/mayors-1948-present"
+    ],
+    "note": "City Archives general-and-special election history and complete mayor succession chronology show no mayoral election in this year. This is not inferred from the project's candidate roster."
+  },
+  {
+    "city_id": "5363000",
+    "year": 2012,
+    "status": "no_election",
+    "expected_election_dates": [],
+    "source_url": "https://www.seattle.gov/city-archives/seattle-facts/historical-election-results",
+    "additional_source_urls": [
+      "https://www.seattle.gov/city-archives/seattle-facts/city-officials/mayors/mayors-1948-present"
+    ],
+    "note": "City Archives general-and-special election history and complete mayor succession chronology show no mayoral election in this year. This is not inferred from the project's candidate roster."
+  },
+  {
+    "city_id": "5363000",
+    "year": 2013,
+    "status": "complete",
+    "expected_election_dates": [
+      "2013-11-05"
+    ],
+    "source_url": "https://www.seattle.gov/city-archives/seattle-facts/historical-election-results",
+    "additional_source_urls": [
+      "https://www.seattle.gov/city-archives/seattle-facts/city-officials/mayors/mayors-1948-present"
+    ],
+    "note": "City Archives general-and-special election history lists this mayoral election; mayor chronology corroborates the subsequent term. No separate mayoral special election appears in the citywide history."
+  },
+  {
+    "city_id": "5363000",
+    "year": 2014,
+    "status": "no_election",
+    "expected_election_dates": [],
+    "source_url": "https://www.seattle.gov/city-archives/seattle-facts/historical-election-results",
+    "additional_source_urls": [
+      "https://www.seattle.gov/city-archives/seattle-facts/city-officials/mayors/mayors-1948-present"
+    ],
+    "note": "City Archives general-and-special election history and complete mayor succession chronology show no mayoral election in this year. This is not inferred from the project's candidate roster."
+  },
+  {
+    "city_id": "5363000",
+    "year": 2015,
+    "status": "no_election",
+    "expected_election_dates": [],
+    "source_url": "https://www.seattle.gov/city-archives/seattle-facts/historical-election-results",
+    "additional_source_urls": [
+      "https://www.seattle.gov/city-archives/seattle-facts/city-officials/mayors/mayors-1948-present"
+    ],
+    "note": "City Archives general-and-special election history and complete mayor succession chronology show no mayoral election in this year. This is not inferred from the project's candidate roster."
+  },
+  {
+    "city_id": "5363000",
+    "year": 2016,
+    "status": "no_election",
+    "expected_election_dates": [],
+    "source_url": "https://www.seattle.gov/city-archives/seattle-facts/historical-election-results",
+    "additional_source_urls": [
+      "https://www.seattle.gov/city-archives/seattle-facts/city-officials/mayors/mayors-1948-present"
+    ],
+    "note": "City Archives general-and-special election history and complete mayor succession chronology show no mayoral election in this year. This is not inferred from the project's candidate roster."
+  },
+  {
+    "city_id": "5363000",
+    "year": 2017,
+    "status": "complete",
+    "expected_election_dates": [
+      "2017-11-07"
+    ],
+    "source_url": "https://www.seattle.gov/city-archives/seattle-facts/historical-election-results",
+    "additional_source_urls": [
+      "https://www.seattle.gov/city-archives/seattle-facts/city-officials/mayors/mayors-1948-present"
+    ],
+    "note": "City Archives lists November 7 mayoral general election. Mayor chronology confirms Bruce Harrell and Tim Burgess were appointed after Murray resigned; neither appointment was a public election. Durkan took office early November 28. Existing historical_results.json records one combined short/full-term contest."
+  },
+  {
+    "city_id": "5363000",
+    "year": 2018,
+    "status": "no_election",
+    "expected_election_dates": [],
+    "source_url": "https://www.seattle.gov/city-archives/seattle-facts/historical-election-results",
+    "additional_source_urls": [
+      "https://www.seattle.gov/city-archives/seattle-facts/city-officials/mayors/mayors-1948-present"
+    ],
+    "note": "City Archives general-and-special election history and complete mayor succession chronology show no mayoral election in this year. This is not inferred from the project's candidate roster."
+  },
+  {
+    "city_id": "5363000",
+    "year": 2019,
+    "status": "no_election",
+    "expected_election_dates": [],
+    "source_url": "https://www.seattle.gov/city-archives/seattle-facts/historical-election-results",
+    "additional_source_urls": [
+      "https://www.seattle.gov/city-archives/seattle-facts/city-officials/mayors/mayors-1948-present"
+    ],
+    "note": "City Archives general-and-special election history and complete mayor succession chronology show no mayoral election in this year. This is not inferred from the project's candidate roster."
+  },
+  {
+    "city_id": "5363000",
+    "year": 2020,
+    "status": "no_election",
+    "expected_election_dates": [],
+    "source_url": "https://www.seattle.gov/city-archives/seattle-facts/historical-election-results",
+    "additional_source_urls": [
+      "https://www.seattle.gov/city-archives/seattle-facts/city-officials/mayors/mayors-1948-present"
+    ],
+    "note": "City Archives general-and-special election history and complete mayor succession chronology show no mayoral election in this year. This is not inferred from the project's candidate roster."
+  },
+  {
+    "city_id": "5363000",
+    "year": 2021,
+    "status": "complete",
+    "expected_election_dates": [
+      "2021-11-02"
+    ],
+    "source_url": "https://www.seattle.gov/city-archives/seattle-facts/historical-election-results",
+    "additional_source_urls": [
+      "https://www.seattle.gov/city-archives/seattle-facts/city-officials/mayors/mayors-1948-present"
+    ],
+    "note": "City Archives general-and-special election history lists this mayoral election; mayor chronology corroborates the subsequent term. No separate mayoral special election appears in the citywide history."
+  },
+  {
+    "city_id": "5363000",
+    "year": 2022,
+    "status": "no_election",
+    "expected_election_dates": [],
+    "source_url": "https://www.seattle.gov/city-archives/seattle-facts/historical-election-results",
+    "additional_source_urls": [
+      "https://www.seattle.gov/city-archives/seattle-facts/city-officials/mayors/mayors-1948-present"
+    ],
+    "note": "City Archives general-and-special election history and complete mayor succession chronology show no mayoral election in this year. This is not inferred from the project's candidate roster."
+  },
+  {
+    "city_id": "5363000",
+    "year": 2023,
+    "status": "no_election",
+    "expected_election_dates": [],
+    "source_url": "https://www.seattle.gov/city-archives/seattle-facts/historical-election-results",
+    "additional_source_urls": [
+      "https://www.seattle.gov/city-archives/seattle-facts/city-officials/mayors/mayors-1948-present"
+    ],
+    "note": "City Archives general-and-special election history and complete mayor succession chronology show no mayoral election in this year. This is not inferred from the project's candidate roster."
+  },
+  {
+    "city_id": "5363000",
+    "year": 2024,
+    "status": "no_election",
+    "expected_election_dates": [],
+    "source_url": "https://www.seattle.gov/city-archives/seattle-facts/historical-election-results",
+    "additional_source_urls": [
+      "https://www.seattle.gov/city-archives/seattle-facts/city-officials/mayors/mayors-1948-present"
+    ],
+    "note": "City Archives general-and-special election history and complete mayor succession chronology show no mayoral election in this year. This is not inferred from the project's candidate roster."
+  },
+  {
+    "city_id": "5363000",
+    "year": 2025,
+    "status": "complete",
+    "expected_election_dates": [
+      "2025-11-04"
+    ],
+    "source_url": "https://www.seattle.gov/city-archives/seattle-facts/historical-election-results",
+    "additional_source_urls": [
+      "https://www.seattle.gov/city-archives/seattle-facts/city-officials/mayors/mayors-1948-present"
+    ],
+    "note": "City Archives general-and-special election history lists this mayoral election; mayor chronology corroborates the subsequent term. No separate mayoral special election appears in the citywide history."
+  },
+  {
+    "city_id": "5363000",
+    "year": 2026,
+    "status": "unresolved",
+    "expected_election_dates": [],
+    "source_url": "https://www.seattle.gov/city-archives/seattle-facts/historical-election-results",
+    "additional_source_urls": [
+      "https://www.seattle.gov/city-archives/seattle-facts/city-officials/mayors/mayors-1948-present",
+      "https://kingcounty.gov/en/dept/elections/results/2026/february-special",
+      "https://info.kingcounty.gov/kcelections/Vote/contests/candidates.aspx"
+    ],
+    "note": "Coverage cutoff is September 14, 2026. Mayor history records Katie Wilson taking office January 1, 2026. February special-election page contains school measures; August primary candidate list contains Seattle council and court offices but no mayor. April special-election completeness not independently verified; retain unresolved calendar rather than infer no election."
+  }
+]

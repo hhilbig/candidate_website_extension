@@ -1,0 +1,12 @@
+{
+  "remote_archive": "/mnt/mayoral_wayback_full_snapshots/source_discovery_20260914/reviewed_outputs_20260914_a955b1a33e04.tar.gz",
+  "bytes": 389120,
+  "sha256": "a955b1a33e04c7f4ae4210aed2bfb5ad631612a2e9af94e1f0914f5c5a8cdc3b",
+  "remote_write_fsynced": true,
+  "remote_readback_hash_verified": true,
+  "archived_review_file_hashes_verified": true,
+  "archived_corrected_output_hashes_verified": true,
+  "raw_html_transferred": false,
+  "temporary_extraction_created": false,
+  "interpretation": "Compact second copy of completed capture reviews, corrected five-exclusion outputs, audit records, generating scripts, selected tests, and status snapshot. Original acquisition archives and raw evidence remain separate and retained. This is not a self-contained replacement for the source ledger or all original inputs."
+}

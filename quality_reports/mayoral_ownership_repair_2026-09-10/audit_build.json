@@ -1,0 +1,45 @@
+{
+  "change_type_counts": {
+    "additional_site_for_known_candidate": 15,
+    "alternative_exact_url_for_known_site": 50,
+    "new_candidate_url_lead": 65
+  },
+  "expected_claim_ids": 169,
+  "flag_counts": {
+    "campaign_absent_from_target_and_evidence": 5,
+    "candidate_absent_from_target_and_evidence": 3,
+    "other_office_language": 5,
+    "source_date_outside_one_year": 6,
+    "source_equals_target": 1
+  },
+  "input": {
+    "path": "../work/production/combined/new_candidate_urls.csv",
+    "rows": 130,
+    "sha256": "8498c9ef6843f89b6194be2b433f06245689598138973714c5bff8871f9767f1"
+  },
+  "matched_claim_ids": 169,
+  "matched_claim_rows": 169,
+  "outputs": {
+    "audit_sample.csv": {
+      "rows": 0,
+      "sha256": "69307eea3b07aeef5736fe22262cd2c32580f81aaed53658d2e057328fd608ba"
+    },
+    "lead_evidence.csv": {
+      "rows": 130,
+      "sha256": "450a3e9bc4d10251ac311e2eea1f0316e7fd2a25e8ab2ced0f5bb200c2411a0c"
+    }
+  },
+  "risk_counts": {
+    "high": 5,
+    "low": 110,
+    "medium": 15
+  },
+  "sample": {
+    "method": "SHA-256 rank within change type",
+    "per_change_type": 0,
+    "rows": 0,
+    "sha256": "69307eea3b07aeef5736fe22262cd2c32580f81aaed53658d2e057328fd608ba"
+  },
+  "unique_lead_keys": 130,
+  "version": "mayoral-new-url-lead-audit-v1"
+}

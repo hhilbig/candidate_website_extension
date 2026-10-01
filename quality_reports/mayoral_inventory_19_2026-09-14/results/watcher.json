@@ -1,0 +1,15 @@
+{
+  "pid": 1333056,
+  "process_start_ticks": "71706790",
+  "checked_at": 1789443832.189479,
+  "running": false,
+  "stalled": false,
+  "attempts": 20,
+  "statuses": {
+    "COMPLETE": 19
+  },
+  "stop_reason": "queue_exhausted",
+  "acquisition_complete": false,
+  "inventory_complete": true,
+  "external_notifications": false
+}

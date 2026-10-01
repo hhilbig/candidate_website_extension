@@ -1,0 +1,48 @@
+{
+  "status": "proposal_only_requires_batch_approval",
+  "source_rows": 1421,
+  "selected_capture_keys": 439,
+  "row_dispositions": {
+    "verified_saved_response": 467,
+    "propose_html_capture": 285,
+    "retain_redirect_or_error_metadata_for_separate_review": 514,
+    "propose_revisit_capture": 155
+  },
+  "selected_by_basis": {
+    "propose_revisit_capture": 155,
+    "propose_html_capture": 284
+  },
+  "selected_url_relations": {
+    "exact": 325,
+    "index_returned_url_variant": 114
+  },
+  "candidate_years": 11,
+  "proposed_limits": {
+    "workers": 1,
+    "max_attempts_per_capture": 3,
+    "max_response_decoded_bytes": 2097152,
+    "max_batch_decoded_bytes": 134217728,
+    "min_volume_free_bytes": 8000000000
+  },
+  "selection": "All unmatched HTML-success and revisit keys in the completed 19-URL inventory; no timestamp or digest sampling.",
+  "exclusions": "Saved responses do not need another download. Redirect/error records remain upstream for separate review; they are not archive-absence findings.",
+  "scope": "Preserve each indexed original URL, including scheme/www/default-port variants. Require exact effective URL and timestamp for success.",
+  "byte_estimate": "Unknown before acquisition. The 128 MiB decoded cap is a stop limit, not an estimate or guarantee that all keys fit.",
+  "preconditions": [
+    "Explicit batch approval.",
+    "Fresh saved-key and available-space checks before launch.",
+    "Use a separately frozen runner contract that permits indexed URL variants; do not relabel variants as exact accepted URLs.",
+    "Preserve substitutions, failures, and limit-stopped keys; do not count them as completed requested captures.",
+    "Save raw responses and text on the attached volume; copy only compact audits to the Mac."
+  ],
+  "inputs": {
+    "quality_reports/mayoral_inventory_19_2026-09-14/reconciliation_all1421/summary.json": "735cdc1687d7dd41c21b61e66ca26779300ea7b05fe9d7e6259d7ffd7b6d5ddd",
+    "quality_reports/mayoral_inventory_19_2026-09-14/reconciliation_all1421/inventory_saved_matches.json": "e04e31b46221db779fa46b63e5c2fc77e12991170c9aab317ed9efd72d43b6ef"
+  },
+  "outputs": {
+    "quality_reports/mayoral_inventory_19_2026-09-14/capture_proposal_all1421/proposed_captures.csv": "9a8cfa723d8aeaa665382b8ee4ac44eb7e4e2c54e0aef7fd56c6610761f60aaa",
+    "quality_reports/mayoral_inventory_19_2026-09-14/capture_proposal_all1421/inventory_dispositions.json": "8c462126707441cec236ec8689163aac0493eba42837b33422b9047334ad700b"
+  },
+  "script_sha256": "52b8d0f45fc22160aede81e917e266f5f1e04858813cf053a1b3020650a22655",
+  "archive_requests": 0
+}

@@ -1,0 +1,1347 @@
+{
+  "review_date": "2026-09-14",
+  "reviewer": "Codex delegated agent variant_reviews_31_60",
+  "model": "gpt-5.6-sol",
+  "review_type": "AI saved-capture review",
+  "input": "quality_reports/mayoral_variant_content_review_2026-09-14/review_queue.json",
+  "input_sha256": "31b4ae81615266556abf786281b94ede16976fac45270c49b82b3a8c5250c410",
+  "selection": "Positions 151 through 250 in ascending candidate_url_id order",
+  "method": "Read saved gzip HTML on the droplet, verify decoded SHA256, and inspect all static text after removing script, style, and noscript elements. No archive requests, raw-file transfers, or browser execution.",
+  "records": [
+    {
+      "candidate_url_id": "candidate_url_5c9e1685c5a3778ec4d21323",
+      "candidate_year_id": "71640__2012",
+      "capture_sha256": "6c079753f18b85c27a3d35f40dd0980b4fe5755a0a2e367b93df7b48f3d08582",
+      "capture_timestamp": "20121006044728",
+      "hash_verified": true,
+      "decision": "support_capture",
+      "reason": "Jon Dumitru explicitly seeks election as Orange mayor in 2012. The page contains his record, priorities, contact details, and campaign payment attribution.",
+      "remaining_flags": [
+        "exact_requested_URL_equivalence_not_established"
+      ]
+    },
+    {
+      "candidate_url_id": "candidate_url_5d17a22a5994a126890be7f1",
+      "candidate_year_id": "71418__2018",
+      "capture_sha256": "2d6f719e56c2c87e2298462505c884a91f59bb1d8406db24d94f56bf5bfecf45",
+      "capture_timestamp": "20181115223236",
+      "hash_verified": true,
+      "decision": "reject_capture",
+      "reason": "The saved page contains Alameda County's general forms directory. It contains no Saied Karamooz campaign statement. Reject this capture only. The saved URL does not establish acquisition of the exact requested URL.",
+      "remaining_flags": [
+        "unrelated_county_forms_page",
+        "capture_specific_rejection",
+        "different_path_query_or_host",
+        "exact_requested_page_not_acquired"
+      ]
+    },
+    {
+      "candidate_url_id": "candidate_url_5e7da2d06d549221cea17a5b",
+      "candidate_year_id": "78332__2021",
+      "capture_sha256": "d696ead37ce9faa23a8ed88d228543cad64796696e9be9f8b7941a593a890eb9",
+      "capture_timestamp": "20210206142428",
+      "hash_verified": true,
+      "decision": "support_campaign_with_target_caveat",
+      "reason": "Molly Skold's biography explicitly identifies her Fort Collins mayoral campaign. It supplies extensive professional and community qualifications. The February 2021 capture displays a 2022 footer, so the visible year needs caution.",
+      "remaining_flags": [
+        "campaign_year_not_explicit",
+        "footer_later_than_capture",
+        "exact_requested_URL_equivalence_not_established"
+      ]
+    },
+    {
+      "candidate_url_id": "candidate_url_5f061be1b61ac5149c913654",
+      "candidate_year_id": "71363__2010",
+      "capture_sha256": "0805aa0dc2c314884d1bd6856ca71d939dcabdc4328eb6b31fc8693a990facae",
+      "capture_timestamp": "20110111033722",
+      "hash_verified": true,
+      "decision": "uncertain",
+      "reason": "Rebecca Kaplan's page identifies her as Oakland City Councilmember At-Large and links her 2008 council advertisement. It does not establish a 2010 mayoral campaign.",
+      "remaining_flags": [
+        "officeholder_site",
+        "different_office_content",
+        "target_campaign_period_not_established",
+        "exact_requested_URL_equivalence_not_established"
+      ]
+    },
+    {
+      "candidate_url_id": "candidate_url_5f133b626563c125acd29df6",
+      "candidate_year_id": "24522__2021",
+      "capture_sha256": "0938f165ee89afe7c9a1de782bc3c27f9ea91b065ef0d4ec1ff069151ff6af0d",
+      "capture_timestamp": "20211116091329",
+      "hash_verified": true,
+      "decision": "support_campaign_with_target_caveat",
+      "reason": "Miki Frost explicitly seeks election as Saint Paul mayor. The page gives his qualifications, campaign controls, and payment attribution. Static text does not state the election year.",
+      "remaining_flags": [
+        "campaign_year_not_explicit",
+        "exact_requested_URL_equivalence_not_established"
+      ]
+    },
+    {
+      "candidate_url_id": "candidate_url_5f25c6c04660bfdc445a228e",
+      "candidate_year_id": "29505__2014",
+      "capture_sha256": "734bf651c7bdb7e089d59052408ff02131e66e0588cd1bf0e8c56369d057a1c7",
+      "capture_timestamp": "20140517175947",
+      "hash_verified": true,
+      "decision": "support_capture",
+      "reason": "Maria Teresa Feliciano explicitly seeks election as Paterson mayor on May 13, 2014. The page contains dated campaign news, endorsements, and payment attribution.",
+      "remaining_flags": [
+        "exact_requested_URL_equivalence_not_established"
+      ]
+    },
+    {
+      "candidate_url_id": "candidate_url_5f70356d24658340186c90df",
+      "candidate_year_id": "40370__2015",
+      "capture_sha256": "88fe22665f9b415e5f7bc06aad196d2412d4af5931b58889c5e86eccef100aea",
+      "capture_timestamp": "20151209150015",
+      "hash_verified": true,
+      "decision": "reject_capture",
+      "reason": "Zach Scott's page explicitly seeks continued service as Franklin County Sheriff. It contains no Columbus mayoral campaign claim. Reject this capture only.",
+      "remaining_flags": [
+        "different_office_content",
+        "capture_specific_rejection",
+        "exact_requested_URL_equivalence_not_established"
+      ]
+    },
+    {
+      "candidate_url_id": "candidate_url_61087a529bba376546d492a5",
+      "candidate_year_id": "35423__2017",
+      "capture_sha256": "1b7f3901b0ddbcdaba49b80d27d467bf60471d41fe1b0267c307db1a6717d7a8",
+      "capture_timestamp": "20171116193031",
+      "hash_verified": true,
+      "decision": "support_capture",
+      "reason": "Sal Albanese explicitly seeks election as New York City mayor in 2017. The page contains detailed policy proposals, campaign controls, and a post-election statement.",
+      "remaining_flags": [
+        "post_election_content",
+        "exact_requested_URL_equivalence_not_established"
+      ]
+    },
+    {
+      "candidate_url_id": "candidate_url_61529877f3aed29e51a72a1e",
+      "candidate_year_id": "37228__2019",
+      "capture_sha256": "1c0163f0621ba2282736a3e42813cfea78fe8f21b1a566583a4dd86db92f8c07",
+      "capture_timestamp": "20190729010035",
+      "hash_verified": true,
+      "decision": "reject_capture",
+      "reason": "The saved page promotes David Rice's books and writing. It contains no Charlotte mayoral campaign evidence. The shared name alone does not establish candidate identity. Reject this capture only.",
+      "remaining_flags": [
+        "personal_noncampaign_site",
+        "candidate_identity_not_disambiguated",
+        "capture_specific_rejection",
+        "exact_requested_URL_equivalence_not_established"
+      ]
+    },
+    {
+      "candidate_url_id": "candidate_url_6153c3045923dffa7d7cc35e",
+      "candidate_year_id": "35590__2013",
+      "capture_sha256": "087a7312a4ec5d30065647912c1bb5bf591c5617a6fcf8b0e99eafc5f9c2724d",
+      "capture_timestamp": "20131115035659",
+      "hash_verified": true,
+      "decision": "uncertain",
+      "reason": "Mike Bloomberg's page contains New York mayoral activities, philanthropy, and November 2013 news. It identifies his public service but does not establish a 2013 mayoral campaign.",
+      "remaining_flags": [
+        "officeholder_and_philanthropy_site",
+        "campaign_status_not_established",
+        "exact_requested_URL_equivalence_not_established"
+      ]
+    },
+    {
+      "candidate_url_id": "candidate_url_6278169e30bcadb69a69661f",
+      "candidate_year_id": "25803__2017",
+      "capture_sha256": "f5adfc7c3d517312241437d78c87582d144be4cee5f442010f728adfcfb7b866",
+      "capture_timestamp": "20170417182443",
+      "hash_verified": true,
+      "decision": "support_campaign_with_target_caveat",
+      "reason": "Tyrone Austin explicitly seeks election as St. Louis mayor. The page gives extensive economic, safety, education, and housing proposals. Static text does not state the 2017 election year.",
+      "remaining_flags": [
+        "campaign_year_not_explicit",
+        "exact_requested_URL_equivalence_not_established"
+      ]
+    },
+    {
+      "candidate_url_id": "candidate_url_645f3660cb058a0931252a53",
+      "candidate_year_id": "11684__2017",
+      "capture_sha256": "3352bd7c55141441ec53f17e3c7d36b75ae23e9726ad0f3accf12aee1e7ca9d4",
+      "capture_timestamp": "20170421212707",
+      "hash_verified": true,
+      "decision": "support_capture",
+      "reason": "Tom McNamara's contact page explicitly identifies his Rockford mayoral campaign. It contains contact controls, campaign payment attribution, and a 2017 footer.",
+      "remaining_flags": [
+        "exact_requested_URL_equivalence_not_established"
+      ]
+    },
+    {
+      "candidate_url_id": "candidate_url_64c089dff3df8d70207a1fe2",
+      "candidate_year_id": "49145__2012",
+      "capture_sha256": "593cb2c30ba2e9956588d80012b625f233cae554317f738a07b8d6be47556d5b",
+      "capture_timestamp": "20121222010039",
+      "hash_verified": true,
+      "decision": "uncertain",
+      "reason": "The saved robots.txt path contains only a title supporting Nelda Martinez for Corpus Christi mayor. It supplies no substantive campaign text or election year. The saved URL does not establish acquisition of the exact requested URL.",
+      "remaining_flags": [
+        "sparse_static_text",
+        "campaign_year_not_explicit",
+        "substantive_content_not_available",
+        "different_path_query_or_host",
+        "exact_requested_page_not_acquired"
+      ]
+    },
+    {
+      "candidate_url_id": "candidate_url_64e1c0fe63376d936caf2e39",
+      "candidate_year_id": "20191__2012",
+      "capture_sha256": "beccfb8b475c9ccdb831ffbe32eae9b949298071a83628c7f2f9a699d763cd04",
+      "capture_timestamp": "20121026070306",
+      "hash_verified": true,
+      "decision": "uncertain",
+      "reason": "Albert Howard's page names a mayoral campaign and includes payment attribution. Its substantive text concerns a presidential primary recount. It does not explicitly identify Ann Arbor or the 2012 election.",
+      "remaining_flags": [
+        "city_not_explicit",
+        "target_campaign_period_not_established",
+        "sparse_relevant_static_text",
+        "exact_requested_URL_equivalence_not_established"
+      ]
+    },
+    {
+      "candidate_url_id": "candidate_url_64fea20dda88a913e2ef7a67",
+      "candidate_year_id": "14837__2017",
+      "capture_sha256": "c5e4e77a3c6f04ae90d26c0bbfab9f7c78ddce63d20f88b522d20d4dddc36df4",
+      "capture_timestamp": "20171111203139",
+      "hash_verified": true,
+      "decision": "support_capture",
+      "reason": "Spencer Duncan explicitly identifies his Topeka mayoral campaign. Detailed housing, safety, and mental-health proposals carry 2017 dates. A concession statement preserves post-election campaign material.",
+      "remaining_flags": [
+        "post_election_content",
+        "exact_requested_URL_equivalence_not_established"
+      ]
+    },
+    {
+      "candidate_url_id": "candidate_url_65806a89fe496a10f6bc84b5",
+      "candidate_year_id": "49573__2019",
+      "capture_sha256": "d9381fa9c27fb2a7e0b84decfea316fd7a2494b37f8875bbf82cb9c2b82b1153",
+      "capture_timestamp": "20181229011926",
+      "hash_verified": true,
+      "decision": "reject_capture",
+      "reason": "Scott Griggs's page explicitly supports Dallas City Council representation and describes his council record. It contains no mayoral campaign claim. Reject this capture only.",
+      "remaining_flags": [
+        "different_office_content",
+        "capture_specific_rejection",
+        "exact_requested_URL_equivalence_not_established"
+      ]
+    },
+    {
+      "candidate_url_id": "candidate_url_65aabdd6a112ad2a3330abdb",
+      "candidate_year_id": "27194__2013",
+      "capture_sha256": "9bf802a3754ce07182f27a17f9894b09750fd7b3f2a0552fbb3edcf9da4f34e0",
+      "capture_timestamp": "20131024062608",
+      "hash_verified": true,
+      "decision": "support_capture",
+      "reason": "Ted Gatsas's page explicitly supports reelection as Manchester mayor. It contains July 2013 filing news, November 5 voting instructions, and campaign payment attribution.",
+      "remaining_flags": [
+        "exact_requested_URL_equivalence_not_established"
+      ]
+    },
+    {
+      "candidate_url_id": "candidate_url_66199d4fff5c6ef10ad90545",
+      "candidate_year_id": "77384__2015",
+      "capture_sha256": "e17c5dcd5dce7b63b9fd5bf090736abaa1673e04eef24c3f8bf52c5a714871e2",
+      "capture_timestamp": "20151110021737",
+      "hash_verified": true,
+      "decision": "support_capture",
+      "reason": "Marc Williams explicitly seeks a second term as Arvada mayor in November. The page contains dated October 2015 statements and participation controls.",
+      "remaining_flags": [
+        "exact_requested_URL_equivalence_not_established"
+      ]
+    },
+    {
+      "candidate_url_id": "candidate_url_664aa0232d27ec7bfe55813b",
+      "candidate_year_id": "12706__2019",
+      "capture_sha256": "21d1c1763e0d11c0e6505f729c04232356f1e7a08469264637a5f9cf1055155f",
+      "capture_timestamp": "20191019154120",
+      "hash_verified": true,
+      "decision": "support_campaign_with_target_caveat",
+      "reason": "Lloyd Winnecke's page identifies his Evansville mayoral campaign, achievements, voting controls, and campaign payment attribution. Static text does not state the 2019 election year.",
+      "remaining_flags": [
+        "campaign_year_not_explicit",
+        "exact_requested_URL_equivalence_not_established"
+      ]
+    },
+    {
+      "candidate_url_id": "candidate_url_669781c60d09e71eee825f2d",
+      "candidate_year_id": "24046__2017",
+      "capture_sha256": "84d4fc99b6d3b2953bd625d0a461c78954469512faf37cb6b26715bafac55631",
+      "capture_timestamp": "20171112172503",
+      "hash_verified": true,
+      "decision": "support_campaign_with_target_caveat",
+      "reason": "Jacob Frey's saved crime plan contains detailed Minneapolis public-safety proposals, September 2017 statistics, and campaign payment attribution. The crime-plan path does not establish acquisition of the requested vision page. The saved URL does not establish acquisition of the exact requested URL.",
+      "remaining_flags": [
+        "different_path_query_or_host",
+        "exact_requested_page_not_acquired"
+      ]
+    },
+    {
+      "candidate_url_id": "candidate_url_6775552e3e072a5770a00c58",
+      "candidate_year_id": "43861__2015",
+      "capture_sha256": "0a03ade5d9e6335fb276435a54e569066eb329a97e3d13fadde51bcf78ce1877",
+      "capture_timestamp": "20151127190447",
+      "hash_verified": true,
+      "decision": "support_campaign_with_target_caveat",
+      "reason": "Melissa Murray Bailey explicitly seeks election as Philadelphia mayor. The page supplies qualifications, policy summaries, campaign controls, and payment attribution. Static text does not state the election year.",
+      "remaining_flags": [
+        "campaign_year_not_explicit",
+        "exact_requested_URL_equivalence_not_established"
+      ]
+    },
+    {
+      "candidate_url_id": "candidate_url_67eb13edfa1b25ba1f0e5812",
+      "candidate_year_id": "59057__2018",
+      "capture_sha256": "3d86c01515abd3242a9bd28374281b24dd29bfe5abcb4c7bc1579eb368b12371",
+      "capture_timestamp": "20181125180519",
+      "hash_verified": true,
+      "decision": "uncertain",
+      "reason": "The static page contains only the title Lorri Galloway for Mayor | Anaheim | CA. It supplies no substantive campaign text or explicit election year.",
+      "remaining_flags": [
+        "sparse_static_text",
+        "campaign_year_not_explicit",
+        "substantive_content_not_available",
+        "exact_requested_URL_equivalence_not_established"
+      ]
+    },
+    {
+      "candidate_url_id": "candidate_url_69863062479e8bc0693f4200",
+      "candidate_year_id": "46551__2014",
+      "capture_sha256": "44884695879a07ebcf673de23adb845912cac4364c9917d2184c5c48d5b544bf",
+      "capture_timestamp": "20141021114513",
+      "hash_verified": true,
+      "decision": "support_capture",
+      "reason": "Bill Summers explicitly seeks election as Clarksville mayor. The page contains fiscal and leadership proposals, October 2014 campaign news, and November 4 voting instructions.",
+      "remaining_flags": [
+        "exact_requested_URL_equivalence_not_established"
+      ]
+    },
+    {
+      "candidate_url_id": "candidate_url_6989e56d5f72d9b8ec2fef58",
+      "candidate_year_id": "22709__2021",
+      "capture_sha256": "fe6df9be71db8951bbd61391e1a1c427d20644f8ca77dce0db4adefd1618e621",
+      "capture_timestamp": "20211115135757",
+      "hash_verified": true,
+      "decision": "support_campaign_with_target_caveat",
+      "reason": "Abdullah Hammoud's saved homepage explicitly identifies his Dearborn mayoral campaign. It gives qualifications, priorities, participation controls, and payment attribution. Static text omits the election year. The homepage does not establish acquisition of the requested pledge page. The saved URL does not establish acquisition of the exact requested URL.",
+      "remaining_flags": [
+        "campaign_year_not_explicit",
+        "different_path_query_or_host",
+        "exact_requested_page_not_acquired"
+      ]
+    },
+    {
+      "candidate_url_id": "candidate_url_69e9de8b518f789b04e3f5dd",
+      "candidate_year_id": "6130__2012",
+      "capture_sha256": "7acb484436719a34d163876ab72e7aaad8d1e52c3d32371ae6b928d6d8eee441",
+      "capture_timestamp": "20120701052020",
+      "hash_verified": true,
+      "decision": "reject_capture",
+      "reason": "The saved page contains New Media Production's commercial contact information and service catalog. It contains no Loretta Spencer campaign evidence. Reject this capture only. The saved URL does not establish acquisition of the exact requested URL.",
+      "remaining_flags": [
+        "unrelated_commercial_page",
+        "capture_specific_rejection",
+        "different_path_query_or_host",
+        "exact_requested_page_not_acquired"
+      ]
+    },
+    {
+      "candidate_url_id": "candidate_url_6a59d4578dcc2478fab25f62",
+      "candidate_year_id": "24516__2017",
+      "capture_sha256": "3a943b57e6e2be3e8887e76b1bbef8ed7659793fd6cca4a3446b5ff5b4f0285b",
+      "capture_timestamp": "20171110040243",
+      "hash_verified": true,
+      "decision": "support_capture",
+      "reason": "Elizabeth Dickinson explicitly seeks election as Saint Paul mayor. The page contains substantive participation and policing priorities and dated October 2017 campaign posts.",
+      "remaining_flags": [
+        "exact_requested_URL_equivalence_not_established"
+      ]
+    },
+    {
+      "candidate_url_id": "candidate_url_6b517c2cc832a4b756fafe62",
+      "candidate_year_id": "4577__2019",
+      "capture_sha256": "eb6adfb0b95ef9d131e3f7c29fa4aa1426463505eca3bf20b076c736d80e8428",
+      "capture_timestamp": "20190627172737",
+      "hash_verified": true,
+      "decision": "uncertain",
+      "reason": "The saved page concerns Police Chief Jane Castor and identifies Tampa's Bright Future as its electioneering sponsor. It does not name David Straz or establish his campaign's ownership.",
+      "remaining_flags": [
+        "candidate_attribution_not_established",
+        "third_party_electioneering_content",
+        "sparse_static_text",
+        "exact_requested_URL_equivalence_not_established"
+      ]
+    },
+    {
+      "candidate_url_id": "candidate_url_6bf0dae2c5505b638a1abeeb",
+      "candidate_year_id": "73922__2011",
+      "capture_sha256": "ab8704f63466e821b1806f5081830584becb0d6f66a348ab411b085d8115e4c9",
+      "capture_timestamp": "20111111080518",
+      "hash_verified": true,
+      "decision": "support_capture",
+      "reason": "David Chiu explicitly seeks election as San Francisco mayor in 2011. The page contains policy summaries, campaign controls, payment attribution, and a November 9 concession.",
+      "remaining_flags": [
+        "post_election_content",
+        "exact_requested_URL_equivalence_not_established"
+      ]
+    },
+    {
+      "candidate_url_id": "candidate_url_6c98f818bf70ea5674d0cbe6",
+      "candidate_year_id": "47237__2011",
+      "capture_sha256": "08959871542c188f3f06be767aa126c1844a7f382cbe080828b89bee84f83ec2",
+      "capture_timestamp": "20111116154726",
+      "hash_verified": true,
+      "decision": "support_capture",
+      "reason": "Madeline Rogero's page contains her November 8, 2011 Knoxville mayoral victory speech. It includes substantive priorities, campaign controls, and payment attribution.",
+      "remaining_flags": [
+        "post_election_content",
+        "exact_requested_URL_equivalence_not_established"
+      ]
+    },
+    {
+      "candidate_url_id": "candidate_url_6cca53d24f5f9380c90bac04",
+      "candidate_year_id": "59181__2016",
+      "capture_sha256": "d0517a1f42fb61c352eb2e398c296c5a1b8e13ec7b839b98682b4060d9dcd8ac",
+      "capture_timestamp": "20161201183452",
+      "hash_verified": true,
+      "decision": "support_capture",
+      "reason": "Sean Wright explicitly seeks election as Antioch mayor in 2016. The page gives extensive qualifications, proposals, campaign controls, and payment attribution.",
+      "remaining_flags": [
+        "exact_requested_URL_equivalence_not_established"
+      ]
+    },
+    {
+      "candidate_url_id": "candidate_url_6d4a9e0dd25df30fb82127f5",
+      "candidate_year_id": "72655__2018",
+      "capture_sha256": "f8fc8a451156ffa40c5a120b78ad953a90d02d529977245fc7747d2e1ff0f183",
+      "capture_timestamp": "20190127121634",
+      "hash_verified": true,
+      "decision": "support_capture",
+      "reason": "Mark Gibboney explicitly seeks election as Rancho Cucamonga mayor in 2018. The page gives substantive qualifications, city priorities, campaign controls, and payment attribution.",
+      "remaining_flags": [
+        "exact_requested_URL_equivalence_not_established"
+      ]
+    },
+    {
+      "candidate_url_id": "candidate_url_6d510974437513a690e160f1",
+      "candidate_year_id": "52938__2013",
+      "capture_sha256": "a99a921479f0c9026a25691a357a7b5e8673c93cbbe64ec76bfddddbedd16994",
+      "capture_timestamp": "20131110035152",
+      "hash_verified": true,
+      "decision": "support_capture",
+      "reason": "John Curtis's page identifies his Provo mayoral campaign. It includes yard-sign controls, substantive work and future priorities, dated September–October 2013 posts, and a 2013 campaign footer.",
+      "remaining_flags": [
+        "exact_requested_URL_equivalence_not_established"
+      ]
+    },
+    {
+      "candidate_url_id": "candidate_url_6d8fcdfbd96ea9fb7867bc1b",
+      "candidate_year_id": "42003__2016",
+      "capture_sha256": "63f4e3058b4807722fb43919a2f0e90c685301fc36bc03e46be1e07b67e8695e",
+      "capture_timestamp": "20161111153107",
+      "hash_verified": true,
+      "decision": "support_campaign_with_target_caveat",
+      "reason": "Aron Carleson's page explicitly identifies a Hillsboro mayoral campaign. Donation and lawn-sign controls and payment attribution support identity. Substantive static text is sparse and omits the election year.",
+      "remaining_flags": [
+        "sparse_static_text",
+        "campaign_year_not_explicit",
+        "exact_requested_URL_equivalence_not_established"
+      ]
+    },
+    {
+      "candidate_url_id": "candidate_url_6ed563d9a557fb3f6b213f33",
+      "candidate_year_id": "56148__2021",
+      "capture_sha256": "59cabda28b49e16d4b4d15356218f56ffc49ab9ea2c30215d769424bb8046972",
+      "capture_timestamp": "20211116225624",
+      "hash_verified": true,
+      "decision": "support_capture",
+      "reason": "Bruce Harrell explicitly seeks election as Seattle mayor. The page contains substantive plans, participation controls, payment attribution, and extensive 2021 campaign news. Social posts include post-election thanks.",
+      "remaining_flags": [
+        "post_election_content",
+        "exact_requested_URL_equivalence_not_established"
+      ]
+    },
+    {
+      "candidate_url_id": "candidate_url_6ee8c0fca27d749959c2f51b",
+      "candidate_year_id": "78749__2019",
+      "capture_sha256": "9b9a97553cdb62769891d93fed34308c6754d17563ad0a0988dc8435913513b4",
+      "capture_timestamp": "20191111230931",
+      "hash_verified": true,
+      "decision": "support_capture",
+      "reason": "Joe Ganim explicitly seeks election as Bridgeport mayor in 2019. The page contains economic, fiscal, safety, and school priorities, campaign controls, and payment attribution.",
+      "remaining_flags": [
+        "exact_requested_URL_equivalence_not_established"
+      ]
+    },
+    {
+      "candidate_url_id": "candidate_url_6f1da603819ffadeabd6bd84",
+      "candidate_year_id": "78533__2018",
+      "capture_sha256": "ba4611e16a35a93d94778f17ba1749ab48af9f1ce9e0be36fe325530c803f82f",
+      "capture_timestamp": "20181106124121",
+      "hash_verified": true,
+      "decision": "support_campaign_with_target_caveat",
+      "reason": "Randy Thurston explicitly seeks election as Pueblo mayor. The page supplies extensive economic, civic, and municipal proposals and donation controls. Static text does not state the 2018 election year.",
+      "remaining_flags": [
+        "campaign_year_not_explicit",
+        "exact_requested_URL_equivalence_not_established"
+      ]
+    },
+    {
+      "candidate_url_id": "candidate_url_6f6076191716f7cab009fdad",
+      "candidate_year_id": "38343__2019",
+      "capture_sha256": "176f34469ad89e6a24831403c68ceea146e83dd91fe87bb1a473ea0c3e68f589",
+      "capture_timestamp": "20191020041655",
+      "hash_verified": true,
+      "decision": "support_campaign_with_target_caveat",
+      "reason": "George Knott explicitly identifies his Raleigh mayoral candidacy and October 8 voting date. Extensive proposals, questionnaire responses, and a 2019 footer support the campaign. A December 2020 reference appears in the October 2019 capture, requiring temporal caution.",
+      "remaining_flags": [
+        "content_date_later_than_capture",
+        "exact_requested_URL_equivalence_not_established"
+      ]
+    },
+    {
+      "candidate_url_id": "candidate_url_6fa4c4012f801fe9f3c810d8",
+      "candidate_year_id": "7074__2020",
+      "capture_sha256": "a7b6566115cf9054cd40397154e16c129a6b818fdb4f97eeb7ffd8d2f2c76a8b",
+      "capture_timestamp": "20201103103419",
+      "hash_verified": true,
+      "decision": "support_capture",
+      "reason": "Rick Blangiardi explicitly seeks election as Honolulu mayor. The page contains extensive economic, housing, rail, public-safety, and environmental proposals, dated October 2020 campaign news, and payment attribution.",
+      "remaining_flags": [
+        "exact_requested_URL_equivalence_not_established"
+      ]
+    },
+    {
+      "candidate_url_id": "candidate_url_6ff3ffc38d06452345ce65c4",
+      "candidate_year_id": "67847__2018",
+      "capture_sha256": "9dfbcab96dd04cf41cf509cf1e0bc0dd0045655bdcbca9e5411d6c980cba322a",
+      "capture_timestamp": "20180424141025",
+      "hash_verified": true,
+      "decision": "support_campaign_with_target_caveat",
+      "reason": "Mark Salinas's signup page explicitly identifies his Hayward mayoral candidacy. It contains participation controls but little substantive text. Static text does not state the election year.",
+      "remaining_flags": [
+        "sparse_substantive_static_text",
+        "campaign_year_not_explicit",
+        "exact_requested_URL_equivalence_not_established"
+      ]
+    },
+    {
+      "candidate_url_id": "candidate_url_7023ed63b90a6656bedfd359",
+      "candidate_year_id": "35554__2017",
+      "capture_sha256": "96725fd6bba5d4dd71bca98bb72c89542e91d3746b89cce1834b6a5858220014",
+      "capture_timestamp": "20171119090701",
+      "hash_verified": true,
+      "decision": "support_campaign_with_target_caveat",
+      "reason": "Akeem Browder's platform explicitly identifies his New York mayoral campaign. It supplies detailed policing, housing, education, and transport proposals. Static text does not state the 2017 election year.",
+      "remaining_flags": [
+        "campaign_year_not_explicit",
+        "exact_requested_URL_equivalence_not_established"
+      ]
+    },
+    {
+      "candidate_url_id": "candidate_url_7073b645ea20a8edae2be0ba",
+      "candidate_year_id": "40402__2021",
+      "capture_sha256": "6277208a09eebb5afe407c136a2a8fffdb4ac70f9852cbea3bcf69220aac1f6c",
+      "capture_timestamp": "20211116184830",
+      "hash_verified": true,
+      "decision": "support_campaign_with_target_caveat",
+      "reason": "Rennes Bowers explicitly seeks election as Dayton mayor. The page gives qualifications, detailed municipal priorities, campaign controls, and payment attribution. Static text does not state the election year.",
+      "remaining_flags": [
+        "campaign_year_not_explicit",
+        "exact_requested_URL_equivalence_not_established"
+      ]
+    },
+    {
+      "candidate_url_id": "candidate_url_70ac0ee02dc30a24d0293295",
+      "candidate_year_id": "60743__2012",
+      "capture_sha256": "d9581a62e8651fa26d3340b4f81be8b0929086673645d14e0252dbdce36d25d7",
+      "capture_timestamp": "20121025173020",
+      "hash_verified": true,
+      "decision": "support_capture",
+      "reason": "Jacquelyn McCormick explicitly seeks election as Berkeley mayor. The page supplies detailed fiscal, service, and participation proposals and a May 29, 2012 publication date.",
+      "remaining_flags": [
+        "exact_requested_URL_equivalence_not_established"
+      ]
+    },
+    {
+      "candidate_url_id": "candidate_url_715d4e299953f6fe7017e8e5",
+      "candidate_year_id": "37742__2017",
+      "capture_sha256": "e8ec441c237c6056f4f6136d94e39dd092ce3d4ecc49f69a8e5cb5b1b9b764f7",
+      "capture_timestamp": "20171025110942",
+      "hash_verified": true,
+      "decision": "uncertain",
+      "reason": "Farad Ali's saved events page identifies a Durham mayoral campaign through its title and payment attribution. The October 2017 calendar repeats unrelated events. Those entries do not establish substantive campaign content. The saved URL does not establish acquisition of the exact requested URL.",
+      "remaining_flags": [
+        "unrelated_repeated_calendar_entries",
+        "substantive_campaign_content_not_established",
+        "different_path_query_or_host",
+        "exact_requested_page_not_acquired"
+      ]
+    },
+    {
+      "candidate_url_id": "candidate_url_71f053cdad330c88000e164e",
+      "candidate_year_id": "72998__2010",
+      "capture_sha256": "36db9c0dd4325f2fe159351f6a4b3c13faca44bc6663e10921a9cedfc982ee5c",
+      "capture_timestamp": "20101005034757",
+      "hash_verified": true,
+      "decision": "support_campaign_with_target_caveat",
+      "reason": "John Ziesenhenne explicitly seeks election as Richmond, California mayor in 2010. The page gives qualifications, municipal priorities, and payment attribution. The saved index path does not establish acquisition of the exact requested page. The saved URL does not establish acquisition of the exact requested URL.",
+      "remaining_flags": [
+        "different_path_query_or_host",
+        "exact_requested_page_not_acquired"
+      ]
+    },
+    {
+      "candidate_url_id": "candidate_url_7240bfd864b9359d263bd1d3",
+      "candidate_year_id": "35570__2021",
+      "capture_sha256": "6caf0e1b8596d956e56a7ea9ab581f81c60af35a4c495439e41667009ab97604",
+      "capture_timestamp": "20211115120801",
+      "hash_verified": true,
+      "decision": "support_capture",
+      "reason": "Eric Adams explicitly seeks election as New York City mayor in 2021. The page contains qualifications, substantive proposals, campaign controls, dated news, and payment attribution.",
+      "remaining_flags": [
+        "exact_requested_URL_equivalence_not_established"
+      ]
+    },
+    {
+      "candidate_url_id": "candidate_url_73649a3d5f4f0a2005db1203",
+      "candidate_year_id": "48425__2018",
+      "capture_sha256": "0d1624d643eb36b2f4dfe392c42ac3473d55b06e90d0aceb9f27865aebe1ae20",
+      "capture_timestamp": "20181120205238",
+      "hash_verified": true,
+      "decision": "support_campaign_with_target_caveat",
+      "reason": "Steve Adler explicitly asks voters to support his Austin mayoral reelection on November 6. Campaign controls and payment attribution support ownership. Static text is sparse and does not state the election year.",
+      "remaining_flags": [
+        "sparse_substantive_static_text",
+        "campaign_year_not_explicit",
+        "exact_requested_URL_equivalence_not_established"
+      ]
+    },
+    {
+      "candidate_url_id": "candidate_url_73f9a646148ffd136f458f3c",
+      "candidate_year_id": "73768__2016",
+      "capture_sha256": "757b28c6084de28711348648b3d9b6f18c2c7f46c9d9c4303bf5652d53147e35",
+      "capture_timestamp": "20160611223254",
+      "hash_verified": true,
+      "decision": "support_capture",
+      "reason": "Kevin Faulconer's page identifies his San Diego mayoral campaign. It gives municipal priorities, endorsements, participation controls, and payment attribution for 2016.",
+      "remaining_flags": [
+        "exact_requested_URL_equivalence_not_established"
+      ]
+    },
+    {
+      "candidate_url_id": "candidate_url_7459063bee048d062b606e71",
+      "candidate_year_id": "35557__2013",
+      "capture_sha256": "bd5e3d3d935fa0e162018f8ffe1123f199a02ef0852d9d2d001e3b21bd72ceaa",
+      "capture_timestamp": "20131112082314",
+      "hash_verified": true,
+      "decision": "uncertain",
+      "reason": "The static page contains only www.votegronowicz.info. It does not establish Anthony Gronowicz's identity, office, city, election year, or substantive campaign content.",
+      "remaining_flags": [
+        "sparse_static_text",
+        "candidate_identity_not_established",
+        "mayoral_office_not_explicit",
+        "city_not_explicit",
+        "campaign_year_not_explicit",
+        "exact_requested_URL_equivalence_not_established"
+      ]
+    },
+    {
+      "candidate_url_id": "candidate_url_746cf3ab13b7b8b962da153a",
+      "candidate_year_id": "71670__2012",
+      "capture_sha256": "f9189d3b09944bf3d4d96ea76ef20afc32bcade287157701a20b58b217fc93c1",
+      "capture_timestamp": "20121113210805",
+      "hash_verified": true,
+      "decision": "uncertain",
+      "reason": "The static page contains only the title Teresa Tita Smith for Mayor of Orange 2012 | Official Website. It establishes campaign identification but supplies no substantive campaign text.",
+      "remaining_flags": [
+        "sparse_static_text",
+        "substantive_content_not_available",
+        "exact_requested_URL_equivalence_not_established"
+      ]
+    },
+    {
+      "candidate_url_id": "candidate_url_7478ff4d4b6277fc55b9e827",
+      "candidate_year_id": "74180__2019",
+      "capture_sha256": "ffe9eca218bd7a1d161a116f8b1ef809997310b2cfa350ba69e6fa17c6a4b07d",
+      "capture_timestamp": "20191106095309",
+      "hash_verified": true,
+      "decision": "support_capture",
+      "reason": "Joel Ventresca explicitly seeks election as San Francisco mayor on November 5, 2019. The page contains his campaign statement, participation links, and payment attribution.",
+      "remaining_flags": [
+        "exact_requested_URL_equivalence_not_established"
+      ]
+    },
+    {
+      "candidate_url_id": "candidate_url_747e5365ca6e1e1b2aaea1f9",
+      "candidate_year_id": "45734__2019",
+      "capture_sha256": "5a66c2db276070ab272e8610a92ba13d1228a76796856377b53775f9bc2955f2",
+      "capture_timestamp": "20190926230832",
+      "hash_verified": true,
+      "decision": "support_capture",
+      "reason": "Thomas Dixon explicitly seeks election as North Charleston mayor on November 5, 2019. The page contains extensive policy proposals, biography, campaign controls, and payment attribution.",
+      "remaining_flags": [
+        "exact_requested_URL_equivalence_not_established"
+      ]
+    },
+    {
+      "candidate_url_id": "candidate_url_755b6d78a1cde2dad536484c",
+      "candidate_year_id": "46685__2014",
+      "capture_sha256": "52c0e66b8a14ee46a992a6e8032ed975bea381477865f926765f02156d95eb1f",
+      "capture_timestamp": "20141207140420",
+      "hash_verified": true,
+      "decision": "uncertain",
+      "reason": "The saved maintenance.css path contains only www.kimmcmillan.com. It does not establish candidate identity, mayoral office, city, election period, or substantive campaign content. The saved URL does not establish acquisition of the exact requested URL.",
+      "remaining_flags": [
+        "sparse_static_text",
+        "candidate_identity_not_established",
+        "mayoral_office_not_explicit",
+        "city_not_explicit",
+        "campaign_year_not_explicit",
+        "different_path_query_or_host",
+        "exact_requested_page_not_acquired"
+      ]
+    },
+    {
+      "candidate_url_id": "candidate_url_76128b2aceac9fcaf1b10613",
+      "candidate_year_id": "23277__2019",
+      "capture_sha256": "0f0bfb4659b62f9d052540594c2ae81eaefab3736c08a02f29a17fd14144dfa9",
+      "capture_timestamp": "20191122084513",
+      "hash_verified": true,
+      "decision": "uncertain",
+      "reason": "Jim Fouts's saved page reports a Warren civic-center project in an October 2017 officeholder article. It does not establish his 2019 mayoral campaign. The article path differs from the requested author archive. The saved URL does not establish acquisition of the exact requested URL.",
+      "remaining_flags": [
+        "officeholder_content",
+        "campaign_status_not_established",
+        "older_substantive_content",
+        "different_path_query_or_host",
+        "exact_requested_page_not_acquired"
+      ]
+    },
+    {
+      "candidate_url_id": "candidate_url_765e225a02af790422151629",
+      "candidate_year_id": "74160__2011",
+      "capture_sha256": "b419ce25fcce6c46560b055c9c90dc3d40a48b69147a515bf6895e433634e28e",
+      "capture_timestamp": "20111111062011",
+      "hash_verified": true,
+      "decision": "support_capture",
+      "reason": "Dennis Herrera explicitly seeks election as San Francisco mayor. The page gives November 8 voting instructions and campaign payment attribution for 2011.",
+      "remaining_flags": [
+        "exact_requested_URL_equivalence_not_established"
+      ]
+    },
+    {
+      "candidate_url_id": "candidate_url_767d040d5b6b48c634e29e77",
+      "candidate_year_id": "50176__2011",
+      "capture_sha256": "ddee548e2b33a1487594ebf4134680089f3273479b989a50c4547a5b2c8ad40c",
+      "capture_timestamp": "20110402152900",
+      "hash_verified": true,
+      "decision": "support_capture",
+      "reason": "Betsy Price explicitly seeks election as Fort Worth mayor. The page gives detailed fiscal and municipal proposals, dated April 2011 posts, May 14 voting instructions, and payment attribution.",
+      "remaining_flags": [
+        "exact_requested_URL_equivalence_not_established"
+      ]
+    },
+    {
+      "candidate_url_id": "candidate_url_769f288632c752e498ce02b8",
+      "candidate_year_id": "18671__2021",
+      "capture_sha256": "2dd24f6dc2f973f53f022c9c18ef64b80ed0f57abcf05ace8772d358ef370a79",
+      "capture_timestamp": "20211115084024",
+      "hash_verified": true,
+      "decision": "support_campaign_with_target_caveat",
+      "reason": "Annissa Essaibi George's page contains a Boston mayoral concession statement and supporter signup controls. It establishes campaign participation but lacks substantive policy proposals and an explicit 2021 date.",
+      "remaining_flags": [
+        "post_election_content",
+        "sparse_policy_content",
+        "campaign_year_not_explicit",
+        "older_footer",
+        "exact_requested_URL_equivalence_not_established"
+      ]
+    },
+    {
+      "candidate_url_id": "candidate_url_779de6418a02f5d1fa34ae08",
+      "candidate_year_id": "19309__2021",
+      "capture_sha256": "3e2b06465ef8202dd9fa57bd791c9c51e8989a15f3f17e840af7be41c3fb0e89",
+      "capture_timestamp": "20211112142559",
+      "hash_verified": true,
+      "decision": "support_capture",
+      "reason": "Darren Cyr explicitly seeks election as Lynn mayor. The page gives qualifications, policy priorities, campaign controls, payment attribution, and a 2021 footer.",
+      "remaining_flags": [
+        "exact_requested_URL_equivalence_not_established"
+      ]
+    },
+    {
+      "candidate_url_id": "candidate_url_77f5479ae667ba84cbd4dc7c",
+      "candidate_year_id": "74198__2011",
+      "capture_sha256": "e4267eb3c1b8aa9b4e652772e5a335116e8b091491297ca847d98d7b9237b982",
+      "capture_timestamp": "20111114220606",
+      "hash_verified": true,
+      "decision": "support_capture",
+      "reason": "Phil Ting's page explicitly identifies his San Francisco mayoral campaign. It contains substantive transport and government proposals, November 2011 material, and campaign payment attribution for 2011.",
+      "remaining_flags": [
+        "exact_requested_URL_equivalence_not_established"
+      ]
+    },
+    {
+      "candidate_url_id": "candidate_url_78153214fd10792dc0f7430e",
+      "candidate_year_id": "30274__2011",
+      "capture_sha256": "7f728730d5f3a7b638da7c3ba9194f49505af3f40c3b23f0ba4f6983a0bc974e",
+      "capture_timestamp": "20111123112951",
+      "hash_verified": true,
+      "decision": "support_campaign_with_target_caveat",
+      "reason": "Michael Ray Huerta explicitly seeks election as Las Cruces mayor. The page contains policy summaries, campaign announcement headlines, and participation controls. Static text does not state the election year.",
+      "remaining_flags": [
+        "campaign_year_not_explicit",
+        "exact_requested_URL_equivalence_not_established"
+      ]
+    },
+    {
+      "candidate_url_id": "candidate_url_78318b0d92ab8b720b153524",
+      "candidate_year_id": "38349__2019",
+      "capture_sha256": "c77be82208c11358362979894f675706cccb73def8ed87e8ace2e170f0d79b35",
+      "capture_timestamp": "20190923093537",
+      "hash_verified": true,
+      "decision": "support_capture",
+      "reason": "Justin Sutton explicitly seeks election in Raleigh's 2019 mayoral contest. The page supplies a substantive statement, qualifications, campaign controls, and a 2019 footer.",
+      "remaining_flags": [
+        "exact_requested_URL_equivalence_not_established"
+      ]
+    },
+    {
+      "candidate_url_id": "candidate_url_7845304f2e0bce9455a7fc11",
+      "candidate_year_id": "74035__2011",
+      "capture_sha256": "f5f46e518985d3f2a81d090080eba210c3760412e3851e78f3e25c8244484c7b",
+      "capture_timestamp": "20111113042420",
+      "hash_verified": true,
+      "decision": "support_capture",
+      "reason": "Leland Yee explicitly seeks election as San Francisco mayor. The page supplies extensive policy summaries, endorsements, campaign controls, and payment attribution for 2011.",
+      "remaining_flags": [
+        "exact_requested_URL_equivalence_not_established"
+      ]
+    },
+    {
+      "candidate_url_id": "candidate_url_78dc1ba6a8e9866db3d291cb",
+      "candidate_year_id": "34761__2017",
+      "capture_sha256": "f73b8929c7626268090a933b2618fa6dabef4e1f60086697885bd33a1cd98844",
+      "capture_timestamp": "20171116123135",
+      "hash_verified": true,
+      "decision": "support_capture",
+      "reason": "Bill de Blasio's page explicitly supports his New York City mayoral campaign. It contains substantial housing, education, policing, and health proposals and payment attribution for 2017.",
+      "remaining_flags": [
+        "exact_requested_URL_equivalence_not_established"
+      ]
+    },
+    {
+      "candidate_url_id": "candidate_url_7a3a59392a1e0bf913193cc6",
+      "candidate_year_id": "69968__2017",
+      "capture_sha256": "cbd0b8237c8cb8df1b3ea3289caa9bcfd8f6e4462aa44f842a4904ef242da71a",
+      "capture_timestamp": "20170224234612",
+      "hash_verified": true,
+      "decision": "support_capture",
+      "reason": "Eric Garcetti explicitly seeks reelection as Los Angeles mayor in 2017. The page contains substantive achievements, endorsements, campaign controls, and payment attribution.",
+      "remaining_flags": [
+        "exact_requested_URL_equivalence_not_established"
+      ]
+    },
+    {
+      "candidate_url_id": "candidate_url_7a85475d28a92ba6bfea7309",
+      "candidate_year_id": "11684__2017",
+      "capture_sha256": "15097776d654f24594c5e4dc7c13ae420a228c740d1dea40f8ea4004d3c45e97",
+      "capture_timestamp": "20170327093225",
+      "hash_verified": true,
+      "decision": "support_campaign_with_target_caveat",
+      "reason": "Tom McNamara's sitemap explicitly identifies his Rockford mayoral campaign through the footer and payment attribution. It supplies navigation but no substantive proposals. The 2016 footer does not explicitly establish the 2017 election.",
+      "remaining_flags": [
+        "sparse_substantive_static_text",
+        "prior_year_footer",
+        "campaign_year_not_explicit",
+        "exact_requested_URL_equivalence_not_established"
+      ]
+    },
+    {
+      "candidate_url_id": "candidate_url_7ba918febe93643c72c9e954",
+      "candidate_year_id": "50905__2019",
+      "capture_sha256": "42e7c75f60fcae0519f6aae548bd5843e947d4d7cb6b6504deb7ff67d938a159",
+      "capture_timestamp": "20191211190234",
+      "hash_verified": true,
+      "decision": "support_campaign_with_target_caveat",
+      "reason": "Tony Buzbee explicitly seeks election as Houston mayor. The page supplies qualifications, priorities, participation controls, and December 14 runoff voting instructions. Static text does not explicitly state the election year.",
+      "remaining_flags": [
+        "campaign_year_not_explicit",
+        "runoff_campaign_content",
+        "exact_requested_URL_equivalence_not_established"
+      ]
+    },
+    {
+      "candidate_url_id": "candidate_url_7bb8156549a29204f0ff8bbb",
+      "candidate_year_id": "74165__2019",
+      "capture_sha256": "aadf7651716bd11e5203f7e702f7082ba365e3ae6a28e92e5b7a58187ff7a997",
+      "capture_timestamp": "20191207221904",
+      "hash_verified": true,
+      "decision": "support_campaign_with_target_caveat",
+      "reason": "Ellen Lee Zhou explicitly seeks election as San Francisco mayor on November 5, 2019. The page supplies extensive policy proposals. The saved index path and query do not establish acquisition of the exact requested page. The saved URL does not establish acquisition of the exact requested URL.",
+      "remaining_flags": [
+        "different_path_query_or_host",
+        "exact_requested_page_not_acquired"
+      ]
+    },
+    {
+      "candidate_url_id": "candidate_url_7c1545d0124fc60bc2feefd4",
+      "candidate_year_id": "38186__2017",
+      "capture_sha256": "b088afc03463e524d139a71f40cfd9c517f2b98456590fa78519b65cc006212b",
+      "capture_timestamp": "20171023093228",
+      "hash_verified": true,
+      "decision": "support_campaign_with_target_caveat",
+      "reason": "Bruce Davis explicitly seeks election as High Point mayor. The page gives extensive qualifications, priorities, voting dates, campaign controls, and payment attribution. Static text does not explicitly state the 2017 election year.",
+      "remaining_flags": [
+        "campaign_year_not_explicit",
+        "exact_requested_URL_equivalence_not_established"
+      ]
+    },
+    {
+      "candidate_url_id": "candidate_url_7cd0c6258c660b6a2216ce52",
+      "candidate_year_id": "56053__2010",
+      "capture_sha256": "adad8a25039282ea90e6a2226955b770d0e61b883d1703c3f01bf0157ddd35b5",
+      "capture_timestamp": "20110202162637",
+      "hash_verified": true,
+      "decision": "support_capture",
+      "reason": "Skip Priest explicitly seeks election as Federal Way mayor. The page contains substantive campaign statements, dated 2010 posts, November 2 voting instructions, and payment attribution.",
+      "remaining_flags": [
+        "exact_requested_URL_equivalence_not_established"
+      ]
+    },
+    {
+      "candidate_url_id": "candidate_url_7e30c3c6808a3881c45a1396",
+      "candidate_year_id": "3289__2021",
+      "capture_sha256": "4a292cafcac80c38be0f42241095e6be689fb9eb66c797760c008501a3f93492",
+      "capture_timestamp": "20211115170033",
+      "hash_verified": true,
+      "decision": "support_campaign_with_target_caveat",
+      "reason": "Juan Santana explicitly seeks election as Hialeah mayor. The page supplies extensive municipal proposals and participation controls. Static text omits the election year. The saved homepage omits the requested tracking query. The saved URL does not establish acquisition of the exact requested URL.",
+      "remaining_flags": [
+        "campaign_year_not_explicit",
+        "requested_query_not_acquired",
+        "different_path_query_or_host",
+        "exact_requested_page_not_acquired"
+      ]
+    },
+    {
+      "candidate_url_id": "candidate_url_7fd88ad44b8aa36bd0634a7e",
+      "candidate_year_id": "51860__2020",
+      "capture_sha256": "b461b8dca691200c2531ef703635f6f9961eb252c9346c9de4e566a12780fc84",
+      "capture_timestamp": "20201116022419",
+      "hash_verified": true,
+      "decision": "support_campaign_with_target_caveat",
+      "reason": "Quentin Wiltz's saved page identifies his Pearland mayoral campaign. It supplies detailed workforce, fiscal, and water-billing proposals, payment attribution, and a 2020 footer. The economic-page path differs from the requested biography path. The saved URL does not establish acquisition of the exact requested URL.",
+      "remaining_flags": [
+        "different_path_query_or_host",
+        "exact_requested_page_not_acquired"
+      ]
+    },
+    {
+      "candidate_url_id": "candidate_url_80c09e2cf0e4476e3be65e37",
+      "candidate_year_id": "36019__2019",
+      "capture_sha256": "1543b4962392732da431a58958481f74e5dfebee652a493c46e0366e93d2e586",
+      "capture_timestamp": "20191101210932",
+      "hash_verified": true,
+      "decision": "support_capture",
+      "reason": "Mike Spano's page explicitly supports his Yonkers mayoral campaign. It contains participation controls, campaign events dated October 2019, and a 2019 footer.",
+      "remaining_flags": [
+        "exact_requested_URL_equivalence_not_established"
+      ]
+    },
+    {
+      "candidate_url_id": "candidate_url_80dac842fd7aee6e2df5cfae",
+      "candidate_year_id": "56073__2017",
+      "capture_sha256": "5ce8d34eccc1944c66ba183aaacf7356a7b9aab12db71549f9e76639acd3d590",
+      "capture_timestamp": "20171106090112",
+      "hash_verified": true,
+      "decision": "support_capture",
+      "reason": "Jim Berrios's page explicitly identifies his Kent mayoral campaign. It contains participation controls, endorsement headlines dated 2017, and a 2017 footer.",
+      "remaining_flags": [
+        "exact_requested_URL_equivalence_not_established"
+      ]
+    },
+    {
+      "candidate_url_id": "candidate_url_80e987c8352f1368ddc22882",
+      "candidate_year_id": "74203__2015",
+      "capture_sha256": "6caf9b313f87a6e8bbfa423fd4e1e27f3802b87a22e030196154f519b3307f65",
+      "capture_timestamp": "20151120063254",
+      "hash_verified": true,
+      "decision": "support_campaign_with_target_caveat",
+      "reason": "Reed Martin explicitly seeks election as San Francisco mayor. The page gives extensive housing, health, transport, environmental, and civic proposals. Static text does not state the 2015 election year.",
+      "remaining_flags": [
+        "campaign_year_not_explicit",
+        "exact_requested_URL_equivalence_not_established"
+      ]
+    },
+    {
+      "candidate_url_id": "candidate_url_815547a04ee5db89f425ac29",
+      "candidate_year_id": "11340__2011",
+      "capture_sha256": "8256a3b6f7b40ba1182f372f6cc2cdad570c40a14639bed9716fc0d5b820744a",
+      "capture_timestamp": "20110413031009",
+      "hash_verified": true,
+      "decision": "support_campaign_with_target_caveat",
+      "reason": "Dave Kaptain's saved tag page explicitly identifies his Elgin mayoral campaign. It includes substantive priorities, payment information, and dated April 2011 material. The tag path differs from the requested Dave path. The saved URL does not establish acquisition of the exact requested URL.",
+      "remaining_flags": [
+        "post_election_content",
+        "different_path_query_or_host",
+        "exact_requested_page_not_acquired"
+      ]
+    },
+    {
+      "candidate_url_id": "candidate_url_8159e6848a6d67269df13c65",
+      "candidate_year_id": "40239__2015",
+      "capture_sha256": "9295a897166d998fa3ff7ef5ab6ebf6ceadc1ba79614cfb7c7ebd2c27a34c191",
+      "capture_timestamp": "20151109001448",
+      "hash_verified": true,
+      "decision": "support_capture",
+      "reason": "Andrew Ginther's saved fact-check page identifies his Columbus mayoral campaign. It gives substantial material on the school-data controversy and campaign payment attribution in a 2015 footer.",
+      "remaining_flags": [
+        "exact_requested_URL_equivalence_not_established"
+      ]
+    },
+    {
+      "candidate_url_id": "candidate_url_817f37e78e6ab606574b350f",
+      "candidate_year_id": "79136__2017",
+      "capture_sha256": "85686704ac8e3811d504af556716f3e9735e24f9deb2974a26fc6b9d843190e2",
+      "capture_timestamp": "20170925073836",
+      "hash_verified": true,
+      "decision": "uncertain",
+      "reason": "The static page contains only Marcus Paca for Mayor. It supplies no city, explicit election year, or substantive campaign text.",
+      "remaining_flags": [
+        "sparse_static_text",
+        "city_not_explicit",
+        "campaign_year_not_explicit",
+        "substantive_content_not_available",
+        "exact_requested_URL_equivalence_not_established"
+      ]
+    },
+    {
+      "candidate_url_id": "candidate_url_81d83e7b7b916bf78dc3cacb",
+      "candidate_year_id": "78749__2015",
+      "capture_sha256": "406ec1662d2a140bcdc4d104fb9ee1fdae3f2851a7ba6f8af9c4108ce5f441bd",
+      "capture_timestamp": "20151104075907",
+      "hash_verified": true,
+      "decision": "support_capture",
+      "reason": "Joe Ganim's page explicitly supports his Bridgeport campaign and September 16, 2015 Democratic primary. It contains substantive municipal priorities, campaign controls, and payment attribution.",
+      "remaining_flags": [
+        "exact_requested_URL_equivalence_not_established"
+      ]
+    },
+    {
+      "candidate_url_id": "candidate_url_81fd2d41331d02978aa220fc",
+      "candidate_year_id": "57880__2019",
+      "capture_sha256": "c99f26061658e9461804e2deeed87823149ff0c7f847859b43c55a15255dca76",
+      "capture_timestamp": "20190718033132",
+      "hash_verified": true,
+      "decision": "reject_capture",
+      "reason": "The saved page contains a service-provider error and no Paul Soglin campaign evidence. Reject this capture only. The domain name does not establish the office represented by this error page. The saved URL does not establish acquisition of the exact requested URL.",
+      "remaining_flags": [
+        "service_provider_error",
+        "capture_specific_rejection",
+        "different_path_query_or_host",
+        "exact_requested_page_not_acquired"
+      ]
+    },
+    {
+      "candidate_url_id": "candidate_url_8250c174c8e189636348b014",
+      "candidate_year_id": "3059__2012",
+      "capture_sha256": "cacd9a384517ff2689161aecd0cfa8667e10ffa5a652b94795933c2a91f52a7a",
+      "capture_timestamp": "20110403044820",
+      "hash_verified": true,
+      "decision": "support_campaign_with_target_caveat",
+      "reason": "Mike Crowley explicitly seeks election as Davie mayor. The page supplies qualifications, municipal priorities, volunteer controls, and payment attribution. The April 2011 capture does not explicitly establish the 2012 target campaign.",
+      "remaining_flags": [
+        "target_campaign_period_not_established",
+        "campaign_year_not_explicit",
+        "exact_requested_URL_equivalence_not_established"
+      ]
+    },
+    {
+      "candidate_url_id": "candidate_url_82b29babe112980f7af25db1",
+      "candidate_year_id": "5004__2017",
+      "capture_sha256": "c50396a76a636919653485d74a6104716a75113d11b75dc0edc00634b4a0718a",
+      "capture_timestamp": "20171130151043",
+      "hash_verified": true,
+      "decision": "support_campaign_with_target_caveat",
+      "reason": "Keisha Lance Bottoms explicitly seeks election as Atlanta mayor. The page gives substantial qualifications, city priorities, and campaign controls. The 2016 footer does not explicitly establish the 2017 election.",
+      "remaining_flags": [
+        "prior_year_footer",
+        "campaign_year_not_explicit",
+        "exact_requested_URL_equivalence_not_established"
+      ]
+    },
+    {
+      "candidate_url_id": "candidate_url_8351bc1b4c14b555a59e6d3f",
+      "candidate_year_id": "35884__2011",
+      "capture_sha256": "506a97454d9cd3f65099bc3a924a798b49888e1284138d7261a1774ec9c8ef29",
+      "capture_timestamp": "20110726063741",
+      "hash_verified": true,
+      "decision": "uncertain",
+      "reason": "Carlo Calvi's page contains his name, volunteer and contact links, and a 2011 footer. It does not explicitly establish the mayoral office, Yonkers jurisdiction, or substantive campaign content.",
+      "remaining_flags": [
+        "sparse_static_text",
+        "mayoral_office_not_explicit",
+        "city_not_explicit",
+        "campaign_status_not_established",
+        "exact_requested_URL_equivalence_not_established"
+      ]
+    },
+    {
+      "candidate_url_id": "candidate_url_83962afd665cd669306b77c8",
+      "candidate_year_id": "34688__2013",
+      "capture_sha256": "1475f22232624cf7fc75687924de93a4ca81e9a599f49963d77b9731da9857b2",
+      "capture_timestamp": "20131104064344",
+      "hash_verified": true,
+      "decision": "support_capture",
+      "reason": "Adolfo Carrión explicitly seeks election as New York City mayor in 2013. The page gives substantial qualifications, policy summaries, campaign controls, dated posts, and payment attribution.",
+      "remaining_flags": [
+        "exact_requested_URL_equivalence_not_established"
+      ]
+    },
+    {
+      "candidate_url_id": "candidate_url_8398b399389dab10450d5001",
+      "candidate_year_id": "73768__2013",
+      "capture_sha256": "19b3c6484b25feb721e7e5b079fab29c1ae9c74353df619f5b23e73dac359562",
+      "capture_timestamp": "20131025224816",
+      "hash_verified": true,
+      "decision": "support_capture",
+      "reason": "Kevin Faulconer explicitly seeks election as San Diego mayor. The page supplies substantive infrastructure and municipal proposals and campaign payment attribution for 2013.",
+      "remaining_flags": [
+        "exact_requested_URL_equivalence_not_established"
+      ]
+    },
+    {
+      "candidate_url_id": "candidate_url_839da1693e6d66618b2c9dc8",
+      "candidate_year_id": "78421__2019",
+      "capture_sha256": "3bc61c054085ffd7ab50b5641698e74fd36debfaa0c8483fd281e9913deeeb0f",
+      "capture_timestamp": "20191112171156",
+      "hash_verified": true,
+      "decision": "support_campaign_with_target_caveat",
+      "reason": "Ramey Johnson explicitly seeks election as Lakewood mayor. The page gives substantive civic and growth priorities, donation controls, and payment attribution. Static text does not state the election year.",
+      "remaining_flags": [
+        "campaign_year_not_explicit",
+        "exact_requested_URL_equivalence_not_established"
+      ]
+    },
+    {
+      "candidate_url_id": "candidate_url_8411a2eaf8131eb832c8a60d",
+      "candidate_year_id": "35566__2021",
+      "capture_sha256": "5f5136d2e1874704e65f1a8e35baea61b8f68d3346680e76eb2de75b4cc8b9c9",
+      "capture_timestamp": "20210413161950",
+      "hash_verified": true,
+      "decision": "support_campaign_with_target_caveat",
+      "reason": "Curtis Sliwa's saved homepage explicitly identifies his New York City mayoral candidacy in 2021. It gives an extensive biography, campaign controls, and payment attribution. The homepage does not establish acquisition of the requested vote-reasons page. The saved URL does not establish acquisition of the exact requested URL.",
+      "remaining_flags": [
+        "different_path_query_or_host",
+        "exact_requested_page_not_acquired"
+      ]
+    },
+    {
+      "candidate_url_id": "candidate_url_84f1502415687adf68688542",
+      "candidate_year_id": "68981__2016",
+      "capture_sha256": "c125e902c5859d6e55f1638a14e0055519a3e509281bbb31e7d9ed1edd286fb5",
+      "capture_timestamp": "20160414230053",
+      "hash_verified": true,
+      "decision": "support_capture",
+      "reason": "Mary Ann Gaido explicitly seeks election as Irvine mayor in 2016. The page contains a substantive minimum-wage statement and campaign committee identification for 2016.",
+      "remaining_flags": [
+        "exact_requested_URL_equivalence_not_established"
+      ]
+    },
+    {
+      "candidate_url_id": "candidate_url_8577430153a2bcac53ad5ae0",
+      "candidate_year_id": "35556__2017",
+      "capture_sha256": "6816869c72f7efd85fa81f9b2a1b9bfe2c21ba4b9e1ae52cd3f47d4671e82d8b",
+      "capture_timestamp": "20170913135213",
+      "hash_verified": true,
+      "decision": "uncertain",
+      "reason": "The static page contains only votecommey. It does not establish Aaron Commey's identity, mayoral office, city, election year, or substantive campaign text.",
+      "remaining_flags": [
+        "sparse_static_text",
+        "candidate_identity_not_established",
+        "mayoral_office_not_explicit",
+        "city_not_explicit",
+        "campaign_year_not_explicit",
+        "exact_requested_URL_equivalence_not_established"
+      ]
+    },
+    {
+      "candidate_url_id": "candidate_url_8577661ebd724eef360ee75c",
+      "candidate_year_id": "48428__2018",
+      "capture_sha256": "4897d6d117e68413e917104c9d1a26e25a9fe5f67ec6e683cebb5dbed07715e9",
+      "capture_timestamp": "20181119151728",
+      "hash_verified": true,
+      "decision": "support_capture",
+      "reason": "Todd Phelps explicitly seeks election as Austin mayor in 2018. The page contains substantial qualifications, policy proposals, dated campaign news, and participation controls.",
+      "remaining_flags": [
+        "exact_requested_URL_equivalence_not_established"
+      ]
+    },
+    {
+      "candidate_url_id": "candidate_url_859ded28f6174f29d4b845a3",
+      "candidate_year_id": "71401__2014",
+      "capture_sha256": "c0db6fbe51ec5a9c1bdb7bf4d1d86bafaaf02a831b0f4a49021d623deb49c592",
+      "capture_timestamp": "20141106080015",
+      "hash_verified": true,
+      "decision": "support_capture",
+      "reason": "Joe Tuman explicitly seeks election as Oakland mayor. The page contains substantial qualifications, policy summaries, dated October 2014 campaign news, and payment attribution for 2014.",
+      "remaining_flags": [
+        "exact_requested_URL_equivalence_not_established"
+      ]
+    },
+    {
+      "candidate_url_id": "candidate_url_85c935e348a523175f7e7962",
+      "candidate_year_id": "7071__2010",
+      "capture_sha256": "9677002ff5ab77b7847e8611b9bfa3c56143b54cbeec9b582fbf9524222e965d",
+      "capture_timestamp": "20100420174735",
+      "hash_verified": true,
+      "decision": "support_capture",
+      "reason": "Peter Carlisle explicitly seeks election as Honolulu mayor in 2010. The page contains a substantial campaign statement, endorsements, a dated fundraiser, and campaign contact details.",
+      "remaining_flags": [
+        "exact_requested_URL_equivalence_not_established"
+      ]
+    },
+    {
+      "candidate_url_id": "candidate_url_8611cb087e3a703ac3152ab3",
+      "candidate_year_id": "68981__2014",
+      "capture_sha256": "539e9430b11035421bdf099ef8821878288b5d10b2941fbb8be1acac1b488733",
+      "capture_timestamp": "20141128093842",
+      "hash_verified": true,
+      "decision": "support_capture",
+      "reason": "Mary Ann Gaido's page identifies her Irvine mayoral campaign committee for 2014. It contains a post-election supporter statement and development priorities.",
+      "remaining_flags": [
+        "post_election_content",
+        "exact_requested_URL_equivalence_not_established"
+      ]
+    },
+    {
+      "candidate_url_id": "candidate_url_86320ef805fc0e595eccb5b2",
+      "candidate_year_id": "74023__2019",
+      "capture_sha256": "b66e2f88fb89fdd892e2ef0d9c3a6ec9de84726114bc03a1411664b00b7dc5ca",
+      "capture_timestamp": "20190115011817",
+      "hash_verified": true,
+      "decision": "support_campaign_with_target_caveat",
+      "reason": "London Breed's page explicitly seeks reelection as San Francisco mayor in 2019 and gives campaign payment attribution. Participation controls support ownership, but substantive static text is sparse.",
+      "remaining_flags": [
+        "sparse_substantive_static_text",
+        "exact_requested_URL_equivalence_not_established"
+      ]
+    },
+    {
+      "candidate_url_id": "candidate_url_86b6c80a6eb5ab9a31efb8f7",
+      "candidate_year_id": "22809__2013",
+      "capture_sha256": "6f65dcadbdf8d67189f5194744115007a83e31bdbb4913056e2101e83a22a8ef",
+      "capture_timestamp": "20131031172652",
+      "hash_verified": true,
+      "decision": "support_capture",
+      "reason": "Benny Napoleon's page identifies his Detroit mayoral campaign through its title and payment attribution. It supplies substantial endorsements, participation controls, campaign contacts, and a 2013 footer.",
+      "remaining_flags": [
+        "exact_requested_URL_equivalence_not_established"
+      ]
+    },
+    {
+      "candidate_url_id": "candidate_url_875dad0aa05c1a66e40410a5",
+      "candidate_year_id": "48340__2014",
+      "capture_sha256": "49b4d30ab8b521a2243566b04dd93c6197c0a75bf539c8d2f9bf82ff1c208c40",
+      "capture_timestamp": "20140630144007",
+      "hash_verified": true,
+      "decision": "reject_capture",
+      "reason": "The saved page contains a Japanese storefront for shoes, watches, bags, and accessories. It contains no Mike Martinez campaign evidence. Reject this capture only.",
+      "remaining_flags": [
+        "unrelated_commercial_storefront",
+        "capture_specific_rejection",
+        "exact_requested_URL_equivalence_not_established"
+      ]
+    },
+    {
+      "candidate_url_id": "candidate_url_885704dd31fc7ac0c0ec7ab2",
+      "candidate_year_id": "78760__2019",
+      "capture_sha256": "8cb3dfe2770f0eac9ecee9d357029c6449fb45e1d10e540718a92a8d54e44081",
+      "capture_timestamp": "20191218070528",
+      "hash_verified": true,
+      "decision": "support_campaign_with_target_caveat",
+      "reason": "Marilyn Moore's page explicitly supports her Bridgeport mayoral write-in campaign for November 5. It includes campaign headlines, participation controls, and payment attribution. Static text does not state the election year.",
+      "remaining_flags": [
+        "campaign_year_not_explicit",
+        "exact_requested_URL_equivalence_not_established"
+      ]
+    },
+    {
+      "candidate_url_id": "candidate_url_88cdcd93894be09981f4cb4c",
+      "candidate_year_id": "78333__2011",
+      "capture_sha256": "8e402272e610c3cefeeb17f086ddff3e516e13db7476b9ec5a80976f9bb8f7f9",
+      "capture_timestamp": "20110425205206",
+      "hash_verified": true,
+      "decision": "uncertain",
+      "reason": "Ross Cunniff's page contains a mayoral concession statement and contact controls. Static text does not explicitly identify Fort Collins or establish the 2011 election period. The footer states 2010.",
+      "remaining_flags": [
+        "city_not_explicit",
+        "target_campaign_period_not_established",
+        "older_footer",
+        "post_election_content",
+        "exact_requested_URL_equivalence_not_established"
+      ]
+    },
+    {
+      "candidate_url_id": "candidate_url_8914ab4bacb7147dce946a15",
+      "candidate_year_id": "27194__2011",
+      "capture_sha256": "d3312c51786b5f8fd17dc89c709aff6d480ade40e08fb9d31840f9842da1582e",
+      "capture_timestamp": "20111120151558",
+      "hash_verified": true,
+      "decision": "support_campaign_with_target_caveat",
+      "reason": "Ted Gatsas's page identifies his Manchester mayoral campaign through payment attribution. It includes October 2011 municipal-election news. Static campaign proposals are sparse.",
+      "remaining_flags": [
+        "sparse_substantive_static_text",
+        "exact_requested_URL_equivalence_not_established"
+      ]
+    },
+    {
+      "candidate_url_id": "candidate_url_893c41b0ba9cca27e71e802f",
+      "candidate_year_id": "45515__2013",
+      "capture_sha256": "7075fbf890a704058e3319c0e07d5e22660dc4a3bf6c4d859fd98519b0f4c57c",
+      "capture_timestamp": "20131207071755",
+      "hash_verified": true,
+      "decision": "uncertain",
+      "reason": "Steve Benjamin's saved page contains his May 2013 Columbia pool-dedication speech and a December governance-referendum appeal. Campaign payment attribution identifies ownership, but the page does not establish a mayoral election campaign. The news path differs from the requested issues path. The saved URL does not establish acquisition of the exact requested URL.",
+      "remaining_flags": [
+        "officeholder_content",
+        "campaign_status_not_established",
+        "governance_referendum_content",
+        "different_path_query_or_host",
+        "exact_requested_page_not_acquired"
+      ]
+    },
+    {
+      "candidate_url_id": "candidate_url_895d65621a4d8f38d3901044",
+      "candidate_year_id": "48189__2017",
+      "capture_sha256": "aff4c3fbbcf0f02501723998d6ef4c630dddfe4cd2dcbcc126d5419c69f1983f",
+      "capture_timestamp": "20170716105321",
+      "hash_verified": true,
+      "decision": "support_campaign_with_target_caveat",
+      "reason": "Jeff Williams's page identifies his Arlington mayoral campaign through its title and payment attribution. It supplies achievements and a May 2017 second-term inauguration event. The capture preserves post-election material rather than an explicit election appeal.",
+      "remaining_flags": [
+        "post_election_content",
+        "inauguration_content",
+        "exact_requested_URL_equivalence_not_established"
+      ]
+    },
+    {
+      "candidate_url_id": "candidate_url_8a3b271e454b0a9c8a46ff7f",
+      "candidate_year_id": "41483__2013",
+      "capture_sha256": "8a6df689fe90b461c3834ceb6d27982a903d167bb64828073871cae5df128f5c",
+      "capture_timestamp": "20131113225538",
+      "hash_verified": true,
+      "decision": "support_capture",
+      "reason": "Kathy Taylor explicitly seeks election as Tulsa mayor. The page contains substantial policy summaries, participation controls, dated November 2013 campaign news, and payment attribution.",
+      "remaining_flags": [
+        "exact_requested_URL_equivalence_not_established"
+      ]
+    }
+  ],
+  "acceptance_changes": 0,
+  "full_historical_completeness": false
+}

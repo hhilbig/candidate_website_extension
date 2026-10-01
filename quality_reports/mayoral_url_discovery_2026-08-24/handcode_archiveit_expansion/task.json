@@ -1,0 +1,353 @@
+{
+  "task_id": "mayoral_url_archiveit_adjudication_20260824",
+  "title": "Archive-It mayoral URL adjudication",
+  "instructions": "### What to decide\n- Review the named candidate, mayoral contest, claimed URL, collection metadata, and archive evidence.\n- The machine-proposed grade is context only. No claim is accepted until you code it here.\n- If collection metadata identifies the original campaign domain but the claimed URL is an archive-container path, enter the original domain as the corrected URL.\n- Code URL type for the URL you accept (the corrected URL when one is entered).\n\n### Evidence grades\n- A: an election-period capture of the exact URL identifies the candidate, mayoral campaign, and city.\n- B: a contemporaneous official source links the URL and archived content confirms the campaign.\n- C: a source supports the URL, but no qualifying campaign capture exists.\n- D: domain shape, registration data, or current content provides only a lead.\n- Only grades A and B count as strict coverage.\n\n### Scope\n- The task contains every Archive-It candidate-domain claim.\n- The inclusion-reason field identifies proposed strict positives and the deterministic 10% non-strict audit subset.",
+  "items": [
+    {
+      "id": "archiveit_claim_fda1cb308f3e94e19aac1925",
+      "label": "randall woodfin (2017)",
+      "display": [
+        {
+          "label": "Candidate and contest",
+          "format": "badges",
+          "content": {
+            "Name": "randall woodfin",
+            "City": "birmingham",
+            "State": "AL",
+            "Election": "2017-10",
+            "Round": "",
+            "Collection": "9517",
+            "Candidate-year ID": "391__2017"
+          }
+        },
+        {
+          "label": "URL and source evidence",
+          "format": "json",
+          "content": {
+            "Claimed exact URL": "http://www.randallwoodfin.com/",
+            "Raw URL": "http://www.randallwoodfin.com/",
+            "Site root": "http://www.randallwoodfin.com/",
+            "Original URL(s) mentioned in collection metadata": "",
+            "Collection metadata description": "\"Randall Woodfin for Mayor.\" | The  Woodfin Plan: Supporting Birmingham's Minority and Women-Owned Businesses; Investing in Birmingham's Children; Investing in Birmingham's Transportation Infrastructure; Making Neighborhoods Safe and Secure; An Opportunity Agenda for Birmingham Residents and Businesses; Revitalizing Our Neighborhoods; Restoring Pride and Trust in City Hall; and An Inclusive Birmingham for All Residents.\" | This website is from the mayoral election runoff with incumbent William Bell held October 3, 2017.",
+            "Archive capture replay": "https://wayback.archive-it.org/9517/20171023213036id_/http://www.randallwoodfin.com/",
+            "Archive calendar": "https://wayback.archive-it.org/9517/*/http://www.randallwoodfin.com/",
+            "Collection record": "https://archive-it.org/collections/9517"
+          }
+        },
+        {
+          "label": "Archive validation",
+          "format": "json",
+          "content": {
+            "Machine-proposed grade (not an acceptance decision)": "A",
+            "Machine URL type": "candidate_owned_custom_domain",
+            "Temporal validation status": "grade_a_content_confirmed_pending_review",
+            "Archive query status": "checked",
+            "Validation reason": "grade_a_exact_url_election_period_content_confirmed",
+            "Nearest capture timestamp": "20171023213036.0",
+            "Nearest capture distance (days)": "8.0",
+            "Within 365-day headline window": "yes",
+            "Within sensitivity window": "yes",
+            "Candidate identity in capture": "yes",
+            "Mayoral campaign in capture": "yes",
+            "City in capture": "yes",
+            "Domain reuse status": "same_candidate_only",
+            "Inclusion reason": "proposed_strict_positive"
+          }
+        },
+        {
+          "label": "Collection evidence text",
+          "format": "text",
+          "content": "Woodfin for Mayor | Committee to Elect Randall Woodfin | Woodfin, Randall L., 1981- | Mayors -- Election -- Alabama -- Birmingham -- 21st century | Birmingham (Ala.) -- Politics and government -- 21st century | Mayors -- Alabama -- Birmingham | Birmingham (Ala.) Mayor"
+        }
+      ]
+    },
+    {
+      "id": "archiveit_claim_a13002d497ef0ba876ca5981",
+      "label": "william bell (2017)",
+      "display": [
+        {
+          "label": "Candidate and contest",
+          "format": "badges",
+          "content": {
+            "Name": "william bell",
+            "City": "birmingham",
+            "State": "AL",
+            "Election": "2017-10",
+            "Round": "",
+            "Collection": "9517",
+            "Candidate-year ID": "359__2017"
+          }
+        },
+        {
+          "label": "URL and source evidence",
+          "format": "json",
+          "content": {
+            "Claimed exact URL": "http://www.williambell2017.com/",
+            "Raw URL": "http://www.williambell2017.com/",
+            "Site root": "http://www.williambell2017.com/",
+            "Original URL(s) mentioned in collection metadata": "",
+            "Collection metadata description": "\"Mayor Bell\u2019s vision and passion for Birmingham drive his efforts everyday to make Birmingham a model city for anyone to live, work, and play.\" | \"What I tell people is that we are all in this together. We are developing Birmingham so all of our neighborhoods are safe, clean and are places where people want to raise their children.\u201d | This website is from the mayoral election runoff with Randall Woodfin held October 3, 2017.",
+            "Archive capture replay": "https://wayback.archive-it.org/9517/20171003150657id_/http://www.williambell2017.com/",
+            "Archive calendar": "https://wayback.archive-it.org/9517/*/http://www.williambell2017.com/",
+            "Collection record": "https://archive-it.org/collections/9517"
+          }
+        },
+        {
+          "label": "Archive validation",
+          "format": "json",
+          "content": {
+            "Machine-proposed grade (not an acceptance decision)": "A",
+            "Machine URL type": "candidate_owned_custom_domain",
+            "Temporal validation status": "grade_a_content_confirmed_pending_review",
+            "Archive query status": "checked",
+            "Validation reason": "grade_a_exact_url_election_period_content_confirmed",
+            "Nearest capture timestamp": "20171003150657.0",
+            "Nearest capture distance (days)": "12.0",
+            "Within 365-day headline window": "yes",
+            "Within sensitivity window": "yes",
+            "Candidate identity in capture": "yes",
+            "Mayoral campaign in capture": "yes",
+            "City in capture": "yes",
+            "Domain reuse status": "no_additional_capture",
+            "Inclusion reason": "proposed_strict_positive"
+          }
+        },
+        {
+          "label": "Collection evidence text",
+          "format": "text",
+          "content": "Re-elect William A. Bell | William A. Bell Mayor | Bell, Willliam A., 1949- | Bell, William A., 1949- | Mayors -- Alabama -- Birmingham | Birmingham (Ala.) Mayor | Mayors -- Election -- Alabama -- Birmingham -- 21st century | Birmingham (Ala.) -- Politics and government -- 21st century"
+        }
+      ]
+    },
+    {
+      "id": "archiveit_claim_fab4b37572e0d2bb3cfa0328",
+      "label": "rosalynn bliss (2019)",
+      "display": [
+        {
+          "label": "Candidate and contest",
+          "format": "badges",
+          "content": {
+            "Name": "rosalynn bliss",
+            "City": "grand rapids",
+            "State": "MI",
+            "Election": "2019-11",
+            "Round": "",
+            "Collection": "13056",
+            "Candidate-year ID": "22950__2019"
+          }
+        },
+        {
+          "label": "URL and source evidence",
+          "format": "json",
+          "content": {
+            "Claimed exact URL": "https://www.mayorbliss.org/",
+            "Raw URL": "https://www.mayorbliss.org/",
+            "Site root": "https://www.mayorbliss.org/",
+            "Original URL(s) mentioned in collection metadata": "",
+            "Collection metadata description": "",
+            "Archive capture replay": "https://wayback.archive-it.org/13056/20191106183310id_/https://www.mayorbliss.org/",
+            "Archive calendar": "https://wayback.archive-it.org/13056/*/https://www.mayorbliss.org/",
+            "Collection record": "https://archive-it.org/collections/13056"
+          }
+        },
+        {
+          "label": "Archive validation",
+          "format": "json",
+          "content": {
+            "Machine-proposed grade (not an acceptance decision)": "A",
+            "Machine URL type": "candidate_owned_custom_domain",
+            "Temporal validation status": "grade_a_content_confirmed_pending_review",
+            "Archive query status": "checked",
+            "Validation reason": "grade_a_exact_url_election_period_content_confirmed",
+            "Nearest capture timestamp": "20191106183310.0",
+            "Nearest capture distance (days)": "9.0",
+            "Within 365-day headline window": "yes",
+            "Within sensitivity window": "yes",
+            "Candidate identity in capture": "yes",
+            "Mayoral campaign in capture": "yes",
+            "City in capture": "yes",
+            "Domain reuse status": "same_candidate_only",
+            "Inclusion reason": "proposed_strict_positive"
+          }
+        },
+        {
+          "label": "Collection evidence text",
+          "format": "text",
+          "content": "Re-election campaign web site for Mayor Bliss"
+        }
+      ]
+    },
+    {
+      "id": "archiveit_claim_820677722f19dc4c050dd53f",
+      "label": "justin bibb (2021)",
+      "display": [
+        {
+          "label": "Candidate and contest",
+          "format": "badges",
+          "content": {
+            "Name": "justin bibb",
+            "City": "cleveland",
+            "State": "OH",
+            "Election": "2021-11",
+            "Round": "",
+            "Collection": "17435",
+            "Candidate-year ID": "40154__2021"
+          }
+        },
+        {
+          "label": "URL and source evidence",
+          "format": "json",
+          "content": {
+            "Claimed exact URL": "https://www.bibbforcle.com/",
+            "Raw URL": "https://www.bibbforcle.com/",
+            "Site root": "https://www.bibbforcle.com/",
+            "Original URL(s) mentioned in collection metadata": "",
+            "Collection metadata description": "",
+            "Archive capture replay": "https://wayback.archive-it.org/17435/20210830155712id_/https://www.bibbforcle.com/",
+            "Archive calendar": "https://wayback.archive-it.org/17435/*/https://www.bibbforcle.com/",
+            "Collection record": "https://archive-it.org/collections/17435"
+          }
+        },
+        {
+          "label": "Archive validation",
+          "format": "json",
+          "content": {
+            "Machine-proposed grade (not an acceptance decision)": "A",
+            "Machine URL type": "candidate_owned_custom_domain",
+            "Temporal validation status": "grade_a_content_confirmed_pending_review",
+            "Archive query status": "checked",
+            "Validation reason": "grade_a_exact_url_election_period_content_confirmed",
+            "Nearest capture timestamp": "20210830155712.0",
+            "Nearest capture distance (days)": "77.0",
+            "Within 365-day headline window": "yes",
+            "Within sensitivity window": "yes",
+            "Candidate identity in capture": "yes",
+            "Mayoral campaign in capture": "yes",
+            "City in capture": "yes",
+            "Domain reuse status": "no_distinct_content_to_probe",
+            "Inclusion reason": "proposed_strict_positive"
+          }
+        },
+        {
+          "label": "Collection evidence text",
+          "format": "text",
+          "content": ""
+        }
+      ]
+    },
+    {
+      "id": "archiveit_claim_5d650c2eda0af4e24acbaa61",
+      "label": "kevin kelley (2021)",
+      "display": [
+        {
+          "label": "Candidate and contest",
+          "format": "badges",
+          "content": {
+            "Name": "kevin kelley",
+            "City": "cleveland",
+            "State": "OH",
+            "Election": "2021-11",
+            "Round": "",
+            "Collection": "17435",
+            "Candidate-year ID": "40097__2021"
+          }
+        },
+        {
+          "label": "URL and source evidence",
+          "format": "json",
+          "content": {
+            "Claimed exact URL": "https://www.kevinforcle.com/",
+            "Raw URL": "https://www.kevinforcle.com/",
+            "Site root": "https://www.kevinforcle.com/",
+            "Original URL(s) mentioned in collection metadata": "",
+            "Collection metadata description": "",
+            "Archive capture replay": "https://wayback.archive-it.org/17435/20210830155718id_/https://www.kevinforcle.com/",
+            "Archive calendar": "https://wayback.archive-it.org/17435/*/https://www.kevinforcle.com/",
+            "Collection record": "https://archive-it.org/collections/17435"
+          }
+        },
+        {
+          "label": "Archive validation",
+          "format": "json",
+          "content": {
+            "Machine-proposed grade (not an acceptance decision)": "A",
+            "Machine URL type": "candidate_owned_custom_domain",
+            "Temporal validation status": "grade_a_content_confirmed_pending_review",
+            "Archive query status": "checked",
+            "Validation reason": "grade_a_exact_url_election_period_content_confirmed",
+            "Nearest capture timestamp": "20210830155718.0",
+            "Nearest capture distance (days)": "77.0",
+            "Within 365-day headline window": "yes",
+            "Within sensitivity window": "yes",
+            "Candidate identity in capture": "yes",
+            "Mayoral campaign in capture": "yes",
+            "City in capture": "yes",
+            "Domain reuse status": "no_distinct_content_to_probe",
+            "Inclusion reason": "proposed_strict_positive"
+          }
+        },
+        {
+          "label": "Collection evidence text",
+          "format": "text",
+          "content": ""
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "id": "identity_match",
+      "label": "Does the evidence match the named candidate, mayoral office, and city?",
+      "type": "yesno",
+      "help": "Answer yes only when all three identity elements match."
+    },
+    {
+      "id": "temporal_match",
+      "label": "Does the evidence belong to this election cycle?",
+      "type": "yesno",
+      "help": "Apply the displayed election date and capture window; later candidacies do not qualify."
+    },
+    {
+      "id": "accept_url",
+      "label": "Accept this as a candidate campaign URL claim?",
+      "type": "yesno",
+      "help": "Grades A through C may be accepted as claims; only A and B are strict coverage."
+    },
+    {
+      "id": "url_type",
+      "label": "URL type for the accepted or reviewed URL",
+      "type": "select",
+      "options": [
+        "custom_domain",
+        "candidate_subdomain",
+        "shared_host_path",
+        "fundraising_profile",
+        "social_profile",
+        "officeholder_site",
+        "archive_container_or_wrapper",
+        "not_campaign_url"
+      ]
+    },
+    {
+      "id": "evidence_grade",
+      "label": "Final evidence grade",
+      "type": "select",
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "reject"
+      ]
+    },
+    {
+      "id": "corrected_url",
+      "label": "Corrected or recovered original campaign URL",
+      "type": "text",
+      "show_if": {
+        "question": "accept_url",
+        "equals": "yes"
+      }
+    }
+  ]
+}

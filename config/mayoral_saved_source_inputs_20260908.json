@@ -1,0 +1,63 @@
+{
+  "version": "mayoral-saved-source-inputs-v1",
+  "roster": "data/municipal_discovery/exhaustive_source_expansion_20260908/roster/candidate_roster.csv",
+  "sources": [
+    {
+      "kind": "full_serper_result",
+      "path": "data/municipal_discovery/screening_2010_2021/full_discovery_2010_2021/serper/ranked_result_page_queue.csv",
+      "url_columns": ["result_url"]
+    },
+    {
+      "kind": "screen_serper_result",
+      "path": "data/municipal_discovery/screening_2010_2021/search_source_expansion/ranked_result_page_queue.csv",
+      "url_columns": ["result_url"]
+    },
+    {
+      "kind": "full_openai_source",
+      "path": "data/municipal_discovery/screening_2010_2021/full_discovery_2010_2021/openai/source_urls.csv",
+      "url_columns": ["raw_url"]
+    },
+    {
+      "kind": "full_openai_retry_source",
+      "path": "data/municipal_discovery/screening_2010_2021/full_discovery_2010_2021/openai/retry_parse_errors/source_urls.csv",
+      "url_columns": ["raw_url"]
+    },
+    {
+      "kind": "pilot_openai_source",
+      "path": "data/municipal_discovery/screening_2010_2021/openai_search_residual_pilot/production/source_urls.csv",
+      "url_columns": ["raw_url"]
+    },
+    {
+      "kind": "residual_openai_source",
+      "path": "data/municipal_discovery/screening_2010_2021/openai_search_residual_expansion/production/source_urls.csv",
+      "url_columns": ["raw_url"]
+    },
+    {
+      "kind": "legacy_pilot_source",
+      "path": "data/municipal_discovery/search_pilot/search_lead_review.csv",
+      "url_columns": ["evidence_source_url"]
+    },
+    {
+      "kind": "reconciled_source",
+      "path": "data/municipal_discovery/exhaustive_source_expansion_20260908/roster/combined_claims.csv",
+      "url_columns": ["source_profile_url", "source_urls_json"]
+    }
+  ],
+  "caches": [
+    {
+      "path": "data/municipal_discovery/screening_2010_2021/search_source_expansion/downloaded_pages.csv"
+    },
+    {
+      "path": "data/municipal_discovery/screening_2010_2021/municipal_curated_acquisition/shard_0/downloaded_files.csv",
+      "file_column": "local_path",
+      "hash_column": "sha256",
+      "url_columns": ["request_url", "final_url"]
+    },
+    {
+      "path": "data/municipal_discovery/screening_2010_2021/municipal_curated_acquisition/shard_1/downloaded_files.csv",
+      "file_column": "local_path",
+      "hash_column": "sha256",
+      "url_columns": ["request_url", "final_url"]
+    }
+  ]
+}

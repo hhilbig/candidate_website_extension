@@ -1,0 +1,20 @@
+{
+  "audit_date": "2026-09-14",
+  "source": "quality_reports/mayoral_saved_evidence_followup_2026-09-13/variants/saved_url_variant_audit.csv",
+  "comparison": "quality_reports/mayoral_ai_review_2026-09-14/validation_with_capture_reviews.csv",
+  "selection": "classification == saved_effective_exact_url",
+  "selected_rows": 26,
+  "matched_candidate_url_keys": 26,
+  "matched_primary_hash_and_timestamp_pairs": 26,
+  "within_365_days": 21,
+  "outside_365_days": 5,
+  "existing_final_validation_status_counts": {
+    "grade_a_content_confirmed_pending_review": 16,
+    "content_validation_unresolved": 5,
+    "outside_headline_and_sensitivity_windows": 4,
+    "outside_headline_365_within_sensitivity": 1
+  },
+  "finding": "These exact saved responses are not additional evidence beyond the existing 120-proposal validation table. Use its capture-specific reviews and timing decisions. Do not count or review the same capture twice.",
+  "new_campaign_acceptances": 0,
+  "new_archive_requests": 0
+}

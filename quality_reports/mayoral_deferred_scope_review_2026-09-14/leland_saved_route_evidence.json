@@ -1,0 +1,35 @@
+{
+  "review_type": "Coordinator AI inspection of hash-verified saved campaign HTML",
+  "candidate_year_id": "74035__2011",
+  "decision_scope": "Acquisition eligibility for the three pending route-as-query captures; not successful acquisition of those exact timestamps",
+  "decision": "eligible_download_lead",
+  "reason": "Two saved responses at the unusual query routes contain substantive petition text under explicit Leland Yee for Mayor branding and 2011 campaign payment disclosures. The query shape does not imply a broken or noncampaign endpoint. Preserve the requested original URLs and timestamps; do not remove the query or substitute another capture.",
+  "evidence": [
+    {
+      "timestamp": "20110407054508",
+      "original_url": "http://www.lelandyee.com:80/take-action/support-our-bills?/take-action/rush-boycott",
+      "raw_path": "/root/candidate_website_extension/data/municipal_archive_acquisition/covered_151_20260826/runs/production/raw_html/mayoral_capture_537849f0732b88ec1d9c17ab.html.gz",
+      "raw_sha256": "e230888d8dd3d5aa0993d9fb7116b9a8307849f4c82ada98fa7c41f8a3e3ba3d",
+      "hash_verified": true,
+      "content_summary": "A bilingual petition discusses three state bills within a San Francisco mayoral campaign page. The footer identifies the Leland Yee for Mayor 2011 Exploratory Committee."
+    },
+    {
+      "timestamp": "20111008031428",
+      "original_url": "http://www.lelandyee.com/take-action/support-our-bills/?/take-action/rush-boycott/",
+      "raw_path": "/root/candidate_website_extension/data/municipal_archive_acquisition/covered_151_20260826/runs/production/raw_html/mayoral_capture_114060c24c17227d1d11d646.html.gz",
+      "raw_sha256": "7b0c1a701afd688d3cb3fd3d5d535a7d1843d1d6c2d359e6f0dca51bea45d3ca",
+      "hash_verified": true,
+      "content_summary": "The same petition appears with mayoral campaign navigation and a 2011 mayoral campaign payment disclosure. This response uses the trailing-slash query form without an explicit port."
+    }
+  ],
+  "pending_capture_keys": [
+    {"timestamp": "20110305094748", "original_url": "http://www.lelandyee.com:80/take-action/support-our-bills?/take-action/rush-boycott"},
+    {"timestamp": "20110405054234", "original_url": "http://www.lelandyee.com:80/take-action/support-our-bills/?/take-action/rush-boycott/"},
+    {"timestamp": "20110405230408", "original_url": "http://www.lelandyee.com:80/take-action/support-our-bills?/take-action/rush-boycott"}
+  ],
+  "method": "Read saved compressed responses over SSH, verify decompressed SHA256, and inspect static text with BeautifulSoup. Do not execute scripts.",
+  "archive_requests": 0,
+  "new_website_approvals": 0,
+  "human_approvals": 0,
+  "remaining_uncertainty": "The three pending timestamps themselves remain unacquired. The India Walton template path is not resolved by this evidence."
+}

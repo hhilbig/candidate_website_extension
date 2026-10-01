@@ -1,0 +1,1438 @@
+[
+  {
+    "row_id": 1,
+    "disposition": "verified_saved_response"
+  },
+  {
+    "row_id": 2,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 3,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 4,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 5,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 6,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 7,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 8,
+    "disposition": "verified_saved_response"
+  },
+  {
+    "row_id": 9,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 10,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 11,
+    "disposition": "verified_saved_response"
+  },
+  {
+    "row_id": 12,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 13,
+    "disposition": "verified_saved_response"
+  },
+  {
+    "row_id": 14,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 15,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 16,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 17,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 18,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 19,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 20,
+    "disposition": "retain_redirect_or_error_metadata_for_separate_review"
+  },
+  {
+    "row_id": 21,
+    "disposition": "retain_redirect_or_error_metadata_for_separate_review"
+  },
+  {
+    "row_id": 22,
+    "disposition": "retain_redirect_or_error_metadata_for_separate_review"
+  },
+  {
+    "row_id": 23,
+    "disposition": "verified_saved_response"
+  },
+  {
+    "row_id": 24,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 25,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 26,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 27,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 28,
+    "disposition": "retain_redirect_or_error_metadata_for_separate_review"
+  },
+  {
+    "row_id": 29,
+    "disposition": "retain_redirect_or_error_metadata_for_separate_review"
+  },
+  {
+    "row_id": 30,
+    "disposition": "verified_saved_response"
+  },
+  {
+    "row_id": 31,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 32,
+    "disposition": "retain_redirect_or_error_metadata_for_separate_review"
+  },
+  {
+    "row_id": 33,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 34,
+    "disposition": "retain_redirect_or_error_metadata_for_separate_review"
+  },
+  {
+    "row_id": 35,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 36,
+    "disposition": "verified_saved_response"
+  },
+  {
+    "row_id": 37,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 38,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 39,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 40,
+    "disposition": "verified_saved_response"
+  },
+  {
+    "row_id": 41,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 42,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 43,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 44,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 45,
+    "disposition": "propose_revisit_capture"
+  },
+  {
+    "row_id": 46,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 47,
+    "disposition": "propose_revisit_capture"
+  },
+  {
+    "row_id": 48,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 49,
+    "disposition": "propose_revisit_capture"
+  },
+  {
+    "row_id": 50,
+    "disposition": "propose_revisit_capture"
+  },
+  {
+    "row_id": 51,
+    "disposition": "propose_revisit_capture"
+  },
+  {
+    "row_id": 52,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 53,
+    "disposition": "verified_saved_response"
+  },
+  {
+    "row_id": 54,
+    "disposition": "retain_redirect_or_error_metadata_for_separate_review"
+  },
+  {
+    "row_id": 55,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 56,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 57,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 58,
+    "disposition": "retain_redirect_or_error_metadata_for_separate_review"
+  },
+  {
+    "row_id": 59,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 60,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 61,
+    "disposition": "verified_saved_response"
+  },
+  {
+    "row_id": 62,
+    "disposition": "verified_saved_response"
+  },
+  {
+    "row_id": 63,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 64,
+    "disposition": "retain_redirect_or_error_metadata_for_separate_review"
+  },
+  {
+    "row_id": 65,
+    "disposition": "retain_redirect_or_error_metadata_for_separate_review"
+  },
+  {
+    "row_id": 66,
+    "disposition": "retain_redirect_or_error_metadata_for_separate_review"
+  },
+  {
+    "row_id": 67,
+    "disposition": "retain_redirect_or_error_metadata_for_separate_review"
+  },
+  {
+    "row_id": 68,
+    "disposition": "retain_redirect_or_error_metadata_for_separate_review"
+  },
+  {
+    "row_id": 69,
+    "disposition": "verified_saved_response"
+  },
+  {
+    "row_id": 70,
+    "disposition": "retain_redirect_or_error_metadata_for_separate_review"
+  },
+  {
+    "row_id": 71,
+    "disposition": "retain_redirect_or_error_metadata_for_separate_review"
+  },
+  {
+    "row_id": 72,
+    "disposition": "verified_saved_response"
+  },
+  {
+    "row_id": 73,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 74,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 75,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 76,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 77,
+    "disposition": "verified_saved_response"
+  },
+  {
+    "row_id": 78,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 79,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 80,
+    "disposition": "verified_saved_response"
+  },
+  {
+    "row_id": 81,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 82,
+    "disposition": "verified_saved_response"
+  },
+  {
+    "row_id": 83,
+    "disposition": "verified_saved_response"
+  },
+  {
+    "row_id": 84,
+    "disposition": "verified_saved_response"
+  },
+  {
+    "row_id": 85,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 86,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 87,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 88,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 89,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 90,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 91,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 92,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 93,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 94,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 95,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 96,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 97,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 98,
+    "disposition": "verified_saved_response"
+  },
+  {
+    "row_id": 99,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 100,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 101,
+    "disposition": "propose_revisit_capture"
+  },
+  {
+    "row_id": 102,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 103,
+    "disposition": "propose_revisit_capture"
+  },
+  {
+    "row_id": 104,
+    "disposition": "propose_revisit_capture"
+  },
+  {
+    "row_id": 105,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 106,
+    "disposition": "propose_revisit_capture"
+  },
+  {
+    "row_id": 107,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 108,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 109,
+    "disposition": "propose_revisit_capture"
+  },
+  {
+    "row_id": 110,
+    "disposition": "propose_revisit_capture"
+  },
+  {
+    "row_id": 111,
+    "disposition": "retain_redirect_or_error_metadata_for_separate_review"
+  },
+  {
+    "row_id": 112,
+    "disposition": "verified_saved_response"
+  },
+  {
+    "row_id": 113,
+    "disposition": "retain_redirect_or_error_metadata_for_separate_review"
+  },
+  {
+    "row_id": 114,
+    "disposition": "retain_redirect_or_error_metadata_for_separate_review"
+  },
+  {
+    "row_id": 115,
+    "disposition": "retain_redirect_or_error_metadata_for_separate_review"
+  },
+  {
+    "row_id": 116,
+    "disposition": "retain_redirect_or_error_metadata_for_separate_review"
+  },
+  {
+    "row_id": 117,
+    "disposition": "retain_redirect_or_error_metadata_for_separate_review"
+  },
+  {
+    "row_id": 118,
+    "disposition": "propose_revisit_capture"
+  },
+  {
+    "row_id": 119,
+    "disposition": "retain_redirect_or_error_metadata_for_separate_review"
+  },
+  {
+    "row_id": 120,
+    "disposition": "retain_redirect_or_error_metadata_for_separate_review"
+  },
+  {
+    "row_id": 121,
+    "disposition": "retain_redirect_or_error_metadata_for_separate_review"
+  },
+  {
+    "row_id": 122,
+    "disposition": "verified_saved_response"
+  },
+  {
+    "row_id": 123,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 124,
+    "disposition": "retain_redirect_or_error_metadata_for_separate_review"
+  },
+  {
+    "row_id": 125,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 126,
+    "disposition": "propose_revisit_capture"
+  },
+  {
+    "row_id": 127,
+    "disposition": "retain_redirect_or_error_metadata_for_separate_review"
+  },
+  {
+    "row_id": 128,
+    "disposition": "retain_redirect_or_error_metadata_for_separate_review"
+  },
+  {
+    "row_id": 129,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 130,
+    "disposition": "retain_redirect_or_error_metadata_for_separate_review"
+  },
+  {
+    "row_id": 131,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 132,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 133,
+    "disposition": "retain_redirect_or_error_metadata_for_separate_review"
+  },
+  {
+    "row_id": 134,
+    "disposition": "propose_revisit_capture"
+  },
+  {
+    "row_id": 135,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 136,
+    "disposition": "propose_revisit_capture"
+  },
+  {
+    "row_id": 137,
+    "disposition": "retain_redirect_or_error_metadata_for_separate_review"
+  },
+  {
+    "row_id": 138,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 139,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 140,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 141,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 142,
+    "disposition": "propose_revisit_capture"
+  },
+  {
+    "row_id": 143,
+    "disposition": "retain_redirect_or_error_metadata_for_separate_review"
+  },
+  {
+    "row_id": 144,
+    "disposition": "verified_saved_response"
+  },
+  {
+    "row_id": 145,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 146,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 147,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 148,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 149,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 150,
+    "disposition": "verified_saved_response"
+  },
+  {
+    "row_id": 151,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 152,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 153,
+    "disposition": "retain_redirect_or_error_metadata_for_separate_review"
+  },
+  {
+    "row_id": 154,
+    "disposition": "verified_saved_response"
+  },
+  {
+    "row_id": 155,
+    "disposition": "retain_redirect_or_error_metadata_for_separate_review"
+  },
+  {
+    "row_id": 156,
+    "disposition": "verified_saved_response"
+  },
+  {
+    "row_id": 157,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 158,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 159,
+    "disposition": "verified_saved_response"
+  },
+  {
+    "row_id": 160,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 161,
+    "disposition": "verified_saved_response"
+  },
+  {
+    "row_id": 162,
+    "disposition": "retain_redirect_or_error_metadata_for_separate_review"
+  },
+  {
+    "row_id": 163,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 164,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 165,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 166,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 167,
+    "disposition": "retain_redirect_or_error_metadata_for_separate_review"
+  },
+  {
+    "row_id": 168,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 169,
+    "disposition": "retain_redirect_or_error_metadata_for_separate_review"
+  },
+  {
+    "row_id": 170,
+    "disposition": "verified_saved_response"
+  },
+  {
+    "row_id": 171,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 172,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 173,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 174,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 175,
+    "disposition": "verified_saved_response"
+  },
+  {
+    "row_id": 176,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 177,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 178,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 179,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 180,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 181,
+    "disposition": "verified_saved_response"
+  },
+  {
+    "row_id": 182,
+    "disposition": "propose_revisit_capture"
+  },
+  {
+    "row_id": 183,
+    "disposition": "retain_redirect_or_error_metadata_for_separate_review"
+  },
+  {
+    "row_id": 184,
+    "disposition": "retain_redirect_or_error_metadata_for_separate_review"
+  },
+  {
+    "row_id": 185,
+    "disposition": "verified_saved_response"
+  },
+  {
+    "row_id": 186,
+    "disposition": "retain_redirect_or_error_metadata_for_separate_review"
+  },
+  {
+    "row_id": 187,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 188,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 189,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 190,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 191,
+    "disposition": "retain_redirect_or_error_metadata_for_separate_review"
+  },
+  {
+    "row_id": 192,
+    "disposition": "retain_redirect_or_error_metadata_for_separate_review"
+  },
+  {
+    "row_id": 193,
+    "disposition": "retain_redirect_or_error_metadata_for_separate_review"
+  },
+  {
+    "row_id": 194,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 195,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 196,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 197,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 198,
+    "disposition": "verified_saved_response"
+  },
+  {
+    "row_id": 199,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 200,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 201,
+    "disposition": "verified_saved_response"
+  },
+  {
+    "row_id": 202,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 203,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 204,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 205,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 206,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 207,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 208,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 209,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 210,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 211,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 212,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 213,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 214,
+    "disposition": "retain_redirect_or_error_metadata_for_separate_review"
+  },
+  {
+    "row_id": 215,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 216,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 217,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 218,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 219,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 220,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 221,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 222,
+    "disposition": "retain_redirect_or_error_metadata_for_separate_review"
+  },
+  {
+    "row_id": 223,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 224,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 225,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 226,
+    "disposition": "retain_redirect_or_error_metadata_for_separate_review"
+  },
+  {
+    "row_id": 227,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 228,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 229,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 230,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 231,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 232,
+    "disposition": "retain_redirect_or_error_metadata_for_separate_review"
+  },
+  {
+    "row_id": 233,
+    "disposition": "retain_redirect_or_error_metadata_for_separate_review"
+  },
+  {
+    "row_id": 234,
+    "disposition": "retain_redirect_or_error_metadata_for_separate_review"
+  },
+  {
+    "row_id": 235,
+    "disposition": "retain_redirect_or_error_metadata_for_separate_review"
+  },
+  {
+    "row_id": 236,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 237,
+    "disposition": "retain_redirect_or_error_metadata_for_separate_review"
+  },
+  {
+    "row_id": 238,
+    "disposition": "retain_redirect_or_error_metadata_for_separate_review"
+  },
+  {
+    "row_id": 239,
+    "disposition": "retain_redirect_or_error_metadata_for_separate_review"
+  },
+  {
+    "row_id": 240,
+    "disposition": "retain_redirect_or_error_metadata_for_separate_review"
+  },
+  {
+    "row_id": 241,
+    "disposition": "retain_redirect_or_error_metadata_for_separate_review"
+  },
+  {
+    "row_id": 242,
+    "disposition": "retain_redirect_or_error_metadata_for_separate_review"
+  },
+  {
+    "row_id": 243,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 244,
+    "disposition": "retain_redirect_or_error_metadata_for_separate_review"
+  },
+  {
+    "row_id": 245,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 246,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 247,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 248,
+    "disposition": "retain_redirect_or_error_metadata_for_separate_review"
+  },
+  {
+    "row_id": 249,
+    "disposition": "retain_redirect_or_error_metadata_for_separate_review"
+  },
+  {
+    "row_id": 250,
+    "disposition": "retain_redirect_or_error_metadata_for_separate_review"
+  },
+  {
+    "row_id": 251,
+    "disposition": "retain_redirect_or_error_metadata_for_separate_review"
+  },
+  {
+    "row_id": 252,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 253,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 254,
+    "disposition": "retain_redirect_or_error_metadata_for_separate_review"
+  },
+  {
+    "row_id": 255,
+    "disposition": "retain_redirect_or_error_metadata_for_separate_review"
+  },
+  {
+    "row_id": 256,
+    "disposition": "retain_redirect_or_error_metadata_for_separate_review"
+  },
+  {
+    "row_id": 257,
+    "disposition": "retain_redirect_or_error_metadata_for_separate_review"
+  },
+  {
+    "row_id": 258,
+    "disposition": "propose_revisit_capture"
+  },
+  {
+    "row_id": 259,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 260,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 261,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 262,
+    "disposition": "retain_redirect_or_error_metadata_for_separate_review"
+  },
+  {
+    "row_id": 263,
+    "disposition": "retain_redirect_or_error_metadata_for_separate_review"
+  },
+  {
+    "row_id": 264,
+    "disposition": "retain_redirect_or_error_metadata_for_separate_review"
+  },
+  {
+    "row_id": 265,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 266,
+    "disposition": "retain_redirect_or_error_metadata_for_separate_review"
+  },
+  {
+    "row_id": 267,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 268,
+    "disposition": "retain_redirect_or_error_metadata_for_separate_review"
+  },
+  {
+    "row_id": 269,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 270,
+    "disposition": "retain_redirect_or_error_metadata_for_separate_review"
+  },
+  {
+    "row_id": 271,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 272,
+    "disposition": "retain_redirect_or_error_metadata_for_separate_review"
+  },
+  {
+    "row_id": 273,
+    "disposition": "retain_redirect_or_error_metadata_for_separate_review"
+  },
+  {
+    "row_id": 274,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 275,
+    "disposition": "retain_redirect_or_error_metadata_for_separate_review"
+  },
+  {
+    "row_id": 276,
+    "disposition": "retain_redirect_or_error_metadata_for_separate_review"
+  },
+  {
+    "row_id": 277,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 278,
+    "disposition": "retain_redirect_or_error_metadata_for_separate_review"
+  },
+  {
+    "row_id": 279,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 280,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 281,
+    "disposition": "retain_redirect_or_error_metadata_for_separate_review"
+  },
+  {
+    "row_id": 282,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 283,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 284,
+    "disposition": "retain_redirect_or_error_metadata_for_separate_review"
+  },
+  {
+    "row_id": 285,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 286,
+    "disposition": "retain_redirect_or_error_metadata_for_separate_review"
+  },
+  {
+    "row_id": 287,
+    "disposition": "retain_redirect_or_error_metadata_for_separate_review"
+  },
+  {
+    "row_id": 288,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 289,
+    "disposition": "retain_redirect_or_error_metadata_for_separate_review"
+  },
+  {
+    "row_id": 290,
+    "disposition": "retain_redirect_or_error_metadata_for_separate_review"
+  },
+  {
+    "row_id": 291,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 292,
+    "disposition": "retain_redirect_or_error_metadata_for_separate_review"
+  },
+  {
+    "row_id": 293,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 294,
+    "disposition": "retain_redirect_or_error_metadata_for_separate_review"
+  },
+  {
+    "row_id": 295,
+    "disposition": "retain_redirect_or_error_metadata_for_separate_review"
+  },
+  {
+    "row_id": 296,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 297,
+    "disposition": "retain_redirect_or_error_metadata_for_separate_review"
+  },
+  {
+    "row_id": 298,
+    "disposition": "retain_redirect_or_error_metadata_for_separate_review"
+  },
+  {
+    "row_id": 299,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 300,
+    "disposition": "retain_redirect_or_error_metadata_for_separate_review"
+  },
+  {
+    "row_id": 301,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 302,
+    "disposition": "retain_redirect_or_error_metadata_for_separate_review"
+  },
+  {
+    "row_id": 303,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 304,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 305,
+    "disposition": "retain_redirect_or_error_metadata_for_separate_review"
+  },
+  {
+    "row_id": 306,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 307,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 308,
+    "disposition": "retain_redirect_or_error_metadata_for_separate_review"
+  },
+  {
+    "row_id": 309,
+    "disposition": "verified_saved_response"
+  },
+  {
+    "row_id": 310,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 311,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 312,
+    "disposition": "retain_redirect_or_error_metadata_for_separate_review"
+  },
+  {
+    "row_id": 313,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 314,
+    "disposition": "retain_redirect_or_error_metadata_for_separate_review"
+  },
+  {
+    "row_id": 315,
+    "disposition": "retain_redirect_or_error_metadata_for_separate_review"
+  },
+  {
+    "row_id": 316,
+    "disposition": "retain_redirect_or_error_metadata_for_separate_review"
+  },
+  {
+    "row_id": 317,
+    "disposition": "propose_revisit_capture"
+  },
+  {
+    "row_id": 318,
+    "disposition": "retain_redirect_or_error_metadata_for_separate_review"
+  },
+  {
+    "row_id": 319,
+    "disposition": "retain_redirect_or_error_metadata_for_separate_review"
+  },
+  {
+    "row_id": 320,
+    "disposition": "retain_redirect_or_error_metadata_for_separate_review"
+  },
+  {
+    "row_id": 321,
+    "disposition": "retain_redirect_or_error_metadata_for_separate_review"
+  },
+  {
+    "row_id": 322,
+    "disposition": "verified_saved_response"
+  },
+  {
+    "row_id": 323,
+    "disposition": "retain_redirect_or_error_metadata_for_separate_review"
+  },
+  {
+    "row_id": 324,
+    "disposition": "verified_saved_response"
+  },
+  {
+    "row_id": 325,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 326,
+    "disposition": "retain_redirect_or_error_metadata_for_separate_review"
+  },
+  {
+    "row_id": 327,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 328,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 329,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 330,
+    "disposition": "retain_redirect_or_error_metadata_for_separate_review"
+  },
+  {
+    "row_id": 331,
+    "disposition": "retain_redirect_or_error_metadata_for_separate_review"
+  },
+  {
+    "row_id": 332,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 333,
+    "disposition": "retain_redirect_or_error_metadata_for_separate_review"
+  },
+  {
+    "row_id": 334,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 335,
+    "disposition": "retain_redirect_or_error_metadata_for_separate_review"
+  },
+  {
+    "row_id": 336,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 337,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 338,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 339,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 340,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 341,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 342,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 343,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 344,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 345,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 346,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 347,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 348,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 349,
+    "disposition": "retain_redirect_or_error_metadata_for_separate_review"
+  },
+  {
+    "row_id": 350,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 351,
+    "disposition": "verified_saved_response"
+  },
+  {
+    "row_id": 352,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 353,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 354,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 355,
+    "disposition": "retain_redirect_or_error_metadata_for_separate_review"
+  },
+  {
+    "row_id": 356,
+    "disposition": "propose_revisit_capture"
+  },
+  {
+    "row_id": 357,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 358,
+    "disposition": "propose_html_capture"
+  },
+  {
+    "row_id": 359,
+    "disposition": "propose_html_capture"
+  }
+]

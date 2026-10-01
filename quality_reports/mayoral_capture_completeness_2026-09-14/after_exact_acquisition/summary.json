@@ -1,0 +1,34 @@
+{
+  "input_hashes": {
+    "quality_reports/mayoral_capture_completeness_2026-09-14/remote_evidence.json": "5453865cae221fad8046f84bf0814e3dbd213e4c76b5b238ba18aa4b5d58d8b1",
+    "quality_reports/mayoral_capture_completeness_2026-09-14/proposal/exact_capture_queue.csv": "8956c6a5f36b32e5e5a2fb9089b8893ab6a12fb425844887ce5bcc76085213c8",
+    "quality_reports/mayoral_capture_completeness_2026-09-14/summary.json": "d0a77226de0147ec67f4c4081f2cea3d32f0937180926525aeb42af2607f9783",
+    "quality_reports/mayoral_capture_completeness_2026-09-14/targeted_capture_retry.csv": "ecec35a09ea0737c57f630b07138c21664ff0f03d2da49991eae044f1f39e1c5",
+    "data/municipal_discovery/exhaustive_source_expansion_20260908/ai_review_20260914/candidate_urls.csv": "9b1d4c17e5b0b428dc6be92dda8ed398072301c12d49994d04ba3eb0f589141b",
+    "/Users/hanno/Documents/GitHub/candidate_website_extension/scripts/audit_mayoral_capture_completeness.py": "06096dd8d8614214a0c4e155db8ceb46d0d8f5ead6e4cbf039333bec95b7d84c",
+    "/Users/hanno/Documents/GitHub/candidate_website_extension/scripts/refresh_mayoral_capture_gaps.py": "9b51114b11d3bbbb8b779b1fcd58481ae0b8bece3bab40973f98de8e765d74b3"
+  },
+  "remote_verified_input_hashes": {
+    "/mnt/mayoral_wayback_full_snapshots/exact_capture_20260914/inputs/exact_capture_queue.csv": "8956c6a5f36b32e5e5a2fb9089b8893ab6a12fb425844887ce5bcc76085213c8",
+    "/mnt/mayoral_wayback_full_snapshots/exact_capture_20260914/run/ledger.sqlite3": "89fcd1227d8d5cb23c445cd5041316708917d203d35f72b3856800c198ad4ff7"
+  },
+  "previous_unsaved_keys": 2233,
+  "remaining_unsaved_keys": 1974,
+  "completed_exact_keys_removed": 259,
+  "unexpected_key_changes": 0,
+  "remaining_by_relation": {
+    "scheme_www_variant": 69,
+    "domain_other_path_or_host": 1905
+  },
+  "inventory_queue_urls": 22,
+  "accepted_urls": 41,
+  "new_raw_files_verified": 259,
+  "archive_requests": 0,
+  "raw_files_copied_to_mac": 0,
+  "output_hashes": {
+    "targeted_capture_retry.csv": "603bd7635e6d037dac40bb0f054814065ec703be1a5bc3f406421a359ec9049a",
+    "targeted_inventory_queue.csv": "6ed003ea847c0d990d59457ddab7234a1491f5589bfbec052fde6ceab4201c47",
+    "url_capture_audit.csv": "7a09d568de4198313418b099e8b191368ca65ab8a1d8819bd5fcf90ec9a1bfa3"
+  },
+  "limitation": "Updates only the approved exact batch against the frozen audit. Remaining inventories and other-path acquisitions are not authorized by this refresh."
+}

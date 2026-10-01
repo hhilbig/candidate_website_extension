@@ -1,0 +1,24 @@
+{
+  "channel_order": [
+    "serper_search_source_expansion"
+  ],
+  "channels": {
+    "serper_search_source_expansion": {
+      "source_ids": [
+        "serper_search_source_expansion_2010_2021"
+      ],
+      "analyst_minutes": 0,
+      "license_cost": 0.48,
+      "cost_note": "Nominal repository cost model for exactly 480 Serper credits at $1 per 1,000 requests. The account used existing credits, so an actual cash charge was not observed. Human review time was not instrumented and is not included."
+    }
+  },
+  "drop_reports": {
+    "restrict_claims_to_candidate_screen": "Three of six accepted URLs belong to sampled candidate-years. The other three are valid contest-level spillovers: searches for sampled candidates exposed Betsy Hodges, Jackie Cherryhomes, and Dave Palm, whose candidate-year IDs are outside the fixed screen. They remain coverage additions but are excluded from the candidate-screen yield and weighted projection."
+  },
+  "acquisition_gate": {
+    "universe_candidate_years": 4817,
+    "existing_primary_strict_candidate_years": 145,
+    "projected_production_cost": null,
+    "approved_production_cost_ceiling": null
+  }
+}

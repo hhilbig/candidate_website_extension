@@ -1,0 +1,406 @@
+{
+  "version": "mayoral-discovery-reconciliation-manifest-v1",
+  "active_years": {
+    "start": 2010,
+    "end": 2021
+  },
+  "roster": "data/municipal_discovery/screening_2010_2021/current_coverage_roster.csv",
+  "policy": {
+    "human_reviews": "Preserve exact decisions. Exact candidate and URL rejections suppress unreviewed duplicate claims. Conflicting human reviews remain unresolved.",
+    "source_flags": "Retain identity-unresolved and date-conflict leads for review. Exclude fundraising, social, officeholder, and source pages from candidate-site lead coverage.",
+    "coverage": "URL leads, source-attributed historical URLs, archive metadata, and downloaded content are separate outcomes.",
+    "archive_scope": "Local recorded validation only. No remote scrape completeness is inferred.",
+    "input_selection": "Explicit current originals and canonical merged outputs replace historical duplicate shards or superseded precision-fix versions.",
+    "attempt_scope": "Prior raw attempts and contest ledger are retained as references/counts, not unique execution totals."
+  },
+  "inputs": [
+    {
+      "path": "data/municipal_discovery/screening_2010_2021/full_discovery_2010_2021/openai/extracted/assistant_outputs.csv",
+      "role": "claim_contexts",
+      "source_id": "openai_full_wave_context"
+    },
+    {
+      "path": "data/municipal_discovery/screening_2010_2021/full_discovery_2010_2021/openai/retry_parse_errors/extracted/assistant_outputs.csv",
+      "role": "claim_contexts",
+      "source_id": "openai_full_retry_context"
+    },
+    {
+      "path": "data/municipal_discovery/screening_2010_2021/openai_search_residual_pilot/production/extracted/assistant_outputs.csv",
+      "role": "claim_contexts",
+      "source_id": "openai_residual_pilot_context"
+    },
+    {
+      "path": "data/municipal_discovery/screening_2010_2021/openai_search_residual_expansion/production/extracted/assistant_outputs.csv",
+      "role": "claim_contexts",
+      "source_id": "openai_residual_expansion_context"
+    },
+    {
+      "path": "data/municipal_discovery/final/mayoral_url_claims.csv",
+      "role": "claims",
+      "source_id": "unified_final_claims",
+      "priority": 40
+    },
+    {
+      "path": "data/municipal_discovery/screening_2010_2021/full_discovery_2010_2021/combined_candidate_list/candidate_url_claims.csv",
+      "role": "baseline",
+      "source_id": "previous_combined_list",
+      "priority": 0,
+      "reason": "Count comparison only; original source claims below preserve independent evidence."
+    },
+    {
+      "path": "data/municipal_discovery/screening_2010_2021/full_discovery_2010_2021/openai/extracted/url_claims.csv",
+      "role": "claims",
+      "source_id": "openai_full_wave",
+      "priority": 10
+    },
+    {
+      "path": "data/municipal_discovery/screening_2010_2021/full_discovery_2010_2021/openai/retry_parse_errors/extracted/url_claims.csv",
+      "role": "claims",
+      "source_id": "openai_full_retry",
+      "priority": 10
+    },
+    {
+      "path": "data/municipal_discovery/screening_2010_2021/openai_search_residual_pilot/production/extracted/url_claims.csv",
+      "role": "claims",
+      "source_id": "openai_residual_pilot",
+      "priority": 10
+    },
+    {
+      "path": "data/municipal_discovery/screening_2010_2021/openai_search_residual_expansion/production/extracted/url_claims.csv",
+      "role": "claims",
+      "source_id": "openai_residual_expansion",
+      "priority": 10
+    },
+    {
+      "path": "data/municipal_discovery/screening_2010_2021/full_discovery_2010_2021/serper/direct_url_leads.csv",
+      "role": "claims",
+      "source_id": "serper_full_direct",
+      "priority": 10
+    },
+    {
+      "path": "data/municipal_discovery/screening_2010_2021/search_source_expansion/url_leads.csv",
+      "role": "claims",
+      "source_id": "serper_source_expansion",
+      "priority": 10
+    },
+    {
+      "path": "data/municipal_discovery/search_pilot/search_evidence_review.csv",
+      "role": "claims",
+      "source_id": "serper_original_pilot",
+      "priority": 10
+    },
+    {
+      "path": "data/municipal_discovery/screening_2010_2021/municipal_curated_wayback_validation/frozen/all_claims.csv",
+      "role": "claims",
+      "source_id": "municipal_curated_sources",
+      "priority": 10
+    },
+    {
+      "path": "data/municipal_discovery/archiveit/mayoral_url_evidence_archiveit_review.csv",
+      "role": "claims",
+      "source_id": "archiveit_initial",
+      "priority": 10
+    },
+    {
+      "path": "data/municipal_discovery/archiveit/batch20/mayoral_url_evidence_archiveit_review.csv",
+      "role": "claims",
+      "source_id": "archiveit_batch20",
+      "priority": 10
+    },
+    {
+      "path": "data/municipal_discovery/archiveit/batch20_round2/mayoral_url_evidence_archiveit_review.csv",
+      "role": "claims",
+      "source_id": "archiveit_round2",
+      "priority": 10
+    },
+    {
+      "path": "data/municipal_discovery/archiveit/cross_collection_2010_2021/url_leads.csv",
+      "role": "claims",
+      "source_id": "archiveit_cross_collection",
+      "priority": 10
+    },
+    {
+      "path": "quality_reports/mayoral_url_discovery_2026-08-24/handcode/adjudicated_claims.csv",
+      "role": "review",
+      "source_id": "human_adjudication",
+      "priority": 100
+    },
+    {
+      "path": "quality_reports/mayoral_url_discovery_2026-08-24/handcode_archiveit/adjudicated_claims.csv",
+      "role": "review",
+      "source_id": "human_adjudication",
+      "priority": 100
+    },
+    {
+      "path": "quality_reports/mayoral_url_discovery_2026-08-24/handcode_archiveit_expansion/adjudicated_claims.csv",
+      "role": "review",
+      "source_id": "human_adjudication",
+      "priority": 100
+    },
+    {
+      "path": "quality_reports/mayoral_url_discovery_2026-08-25/search_source_expansion_adjudication/adjudicated_claims.csv",
+      "role": "review",
+      "source_id": "human_adjudication",
+      "priority": 100
+    },
+    {
+      "path": "quality_reports/mayoral_url_discovery_2026-08-25/batch20_audit/adjudicated_claims.csv",
+      "role": "review",
+      "source_id": "human_adjudication",
+      "priority": 100
+    },
+    {
+      "path": "quality_reports/mayoral_url_discovery_2026-08-25/batch20_round2_audit/adjudicated_claims.csv",
+      "role": "review",
+      "source_id": "human_adjudication",
+      "priority": 100
+    },
+    {
+      "path": "quality_reports/mayoral_url_discovery_2026-08-25/batch20_evaluation/batch_claim_dispositions.csv",
+      "role": "dispositions",
+      "source_id": "approved_sampled_audit_rule",
+      "priority": 80
+    },
+    {
+      "path": "quality_reports/mayoral_url_discovery_2026-08-25/batch20_round2_evaluation/batch_claim_dispositions.csv",
+      "role": "dispositions",
+      "source_id": "approved_sampled_audit_rule",
+      "priority": 80
+    },
+    {
+      "path": "data/municipal_discovery/final/mayoral_url_archive_validation.csv",
+      "role": "validation",
+      "source_id": "recorded_archive_metadata_and_content",
+      "priority": 0
+    },
+    {
+      "path": "data/municipal_discovery/archiveit/mayoral_url_archiveit_validation.csv",
+      "role": "validation",
+      "source_id": "recorded_archive_metadata_and_content",
+      "priority": 0
+    },
+    {
+      "path": "data/municipal_discovery/archiveit/batch20/mayoral_url_archiveit_validation.csv",
+      "role": "validation",
+      "source_id": "recorded_archive_metadata_and_content",
+      "priority": 0
+    },
+    {
+      "path": "data/municipal_discovery/archiveit/batch20_round2/mayoral_url_archiveit_validation.csv",
+      "role": "validation",
+      "source_id": "recorded_archive_metadata_and_content",
+      "priority": 0
+    },
+    {
+      "path": "data/municipal_discovery/screening_2010_2021/search_source_expansion/temporal_validation/merged/search_lead_temporal_validation.csv",
+      "role": "validation",
+      "source_id": "recorded_archive_metadata_and_content",
+      "priority": 0
+    },
+    {
+      "path": "data/municipal_discovery/screening_2010_2021/openai_search_residual_pilot/production/temporal_validation/merged/temporal_validation.csv",
+      "role": "validation",
+      "source_id": "recorded_archive_metadata_and_content",
+      "priority": 0
+    },
+    {
+      "path": "data/municipal_discovery/search_pilot/pilot_domain_archive_checks.csv",
+      "role": "validation",
+      "source_id": "recorded_archive_metadata_and_content",
+      "priority": 0
+    },
+    {
+      "path": "data/municipal_discovery/final/mayoral_source_attempt_ledger.csv",
+      "role": "attempts",
+      "source_id": "prior_source_attempts",
+      "priority": 0
+    },
+    {
+      "path": "data/municipal_discovery/final/mayoral_source_status.csv",
+      "role": "attempts",
+      "source_id": "prior_source_attempts",
+      "priority": 0
+    },
+    {
+      "path": "data/municipal_discovery/municipal_records/mayoral_source_attempts_municipal.csv",
+      "role": "attempts",
+      "source_id": "prior_source_attempts",
+      "priority": 0
+    },
+    {
+      "path": "data/municipal_discovery/municipal_records/source_fetch_attempts.csv",
+      "role": "attempts",
+      "source_id": "prior_source_attempts",
+      "priority": 0
+    },
+    {
+      "path": "data/municipal_discovery/archiveit/batch20/mayoral_source_attempts_archiveit.csv",
+      "role": "attempts",
+      "source_id": "prior_source_attempts",
+      "priority": 0
+    },
+    {
+      "path": "data/municipal_discovery/archiveit/batch20_round2/mayoral_source_attempts_archiveit.csv",
+      "role": "attempts",
+      "source_id": "prior_source_attempts",
+      "priority": 0
+    },
+    {
+      "path": "data/municipal_discovery/archiveit/cross_collection_2010_2021/attempts.csv",
+      "role": "attempts",
+      "source_id": "prior_source_attempts",
+      "priority": 0
+    },
+    {
+      "path": "data/municipal_discovery/screening_2010_2021/municipal_curated_acquisition/merged/attempts.csv",
+      "role": "attempts",
+      "source_id": "prior_source_attempts",
+      "priority": 0
+    },
+    {
+      "path": "data/municipal_discovery/screening_2010_2021/full_discovery_2010_2021/openai/request_ledger.csv",
+      "role": "attempts",
+      "source_id": "prior_source_attempts",
+      "priority": 0
+    },
+    {
+      "path": "data/municipal_discovery/screening_2010_2021/full_discovery_2010_2021/openai/retry_parse_errors/request_ledger.csv",
+      "role": "attempts",
+      "source_id": "prior_source_attempts",
+      "priority": 0
+    },
+    {
+      "path": "data/municipal_discovery/screening_2010_2021/full_discovery_2010_2021/serper/request_ledger.csv",
+      "role": "attempts",
+      "source_id": "prior_source_attempts",
+      "priority": 0
+    },
+    {
+      "path": "data/municipal_discovery/screening_2010_2021/openai_search_residual_pilot/production/request_ledger.csv",
+      "role": "attempts",
+      "source_id": "prior_source_attempts",
+      "priority": 0
+    },
+    {
+      "path": "data/municipal_discovery/screening_2010_2021/openai_search_residual_pilot/request_ledger.csv",
+      "role": "attempts",
+      "source_id": "prior_source_attempts",
+      "priority": 0
+    },
+    {
+      "path": "data/municipal_discovery/screening_2010_2021/openai_search_residual_pilot/smoke_1/request_ledger.csv",
+      "role": "attempts",
+      "source_id": "prior_source_attempts",
+      "priority": 0
+    },
+    {
+      "path": "data/municipal_discovery/screening_2010_2021/openai_search_residual_expansion/production/request_ledger.csv",
+      "role": "attempts",
+      "source_id": "prior_source_attempts",
+      "priority": 0
+    },
+    {
+      "path": "data/municipal_discovery/screening_2010_2021/search_source_expansion/request_ledger.csv",
+      "role": "attempts",
+      "source_id": "prior_source_attempts",
+      "priority": 0
+    },
+    {
+      "path": "data/municipal_discovery/search_pilot/source_page_expansion.csv",
+      "role": "attempts",
+      "source_id": "prior_source_attempts",
+      "priority": 0
+    },
+    {
+      "path": "config/mayoral_discovery_build_manifest.json",
+      "role": "reference",
+      "source_id": "upstream_input_or_decision_reference",
+      "priority": 0,
+      "reason": "Frozen for lineage. Final evidence and reviewed/frozen claim inputs above control row-level reconciliation."
+    },
+    {
+      "path": "config/mayoral_url_source_registry.json",
+      "role": "reference",
+      "source_id": "upstream_input_or_decision_reference",
+      "priority": 0,
+      "reason": "Frozen for lineage. Final evidence and reviewed/frozen claim inputs above control row-level reconciliation."
+    },
+    {
+      "path": "config/official_municipal_extraction_manifest.json",
+      "role": "reference",
+      "source_id": "upstream_input_or_decision_reference",
+      "priority": 0,
+      "reason": "Frozen for lineage. Final evidence and reviewed/frozen claim inputs above control row-level reconciliation."
+    },
+    {
+      "path": "data/municipal_discovery/final/mayoral_url_evidence.csv",
+      "role": "reference",
+      "source_id": "upstream_input_or_decision_reference",
+      "priority": 0,
+      "reason": "Frozen for lineage. Final evidence and reviewed/frozen claim inputs above control row-level reconciliation."
+    },
+    {
+      "path": "data/municipal_discovery/shard_0/mayoral_url_evidence.csv",
+      "role": "reference",
+      "source_id": "upstream_input_or_decision_reference",
+      "priority": 0,
+      "reason": "Frozen for lineage. Final evidence and reviewed/frozen claim inputs above control row-level reconciliation."
+    },
+    {
+      "path": "data/municipal_discovery/shard_0/mayoral_url_evidence_election_pages.csv",
+      "role": "reference",
+      "source_id": "upstream_input_or_decision_reference",
+      "priority": 0,
+      "reason": "Frozen for lineage. Final evidence and reviewed/frozen claim inputs above control row-level reconciliation."
+    },
+    {
+      "path": "data/municipal_discovery/shard_0/mayoral_url_evidence_nyc_cfb.csv",
+      "role": "reference",
+      "source_id": "upstream_input_or_decision_reference",
+      "priority": 0,
+      "reason": "Frozen for lineage. Final evidence and reviewed/frozen claim inputs above control row-level reconciliation."
+    },
+    {
+      "path": "data/municipal_discovery/shard_0/mayoral_url_evidence_seattle.csv",
+      "role": "reference",
+      "source_id": "upstream_input_or_decision_reference",
+      "priority": 0,
+      "reason": "Frozen for lineage. Final evidence and reviewed/frozen claim inputs above control row-level reconciliation."
+    },
+    {
+      "path": "data/municipal_discovery/shard_0/mayoral_url_evidence_curated.csv",
+      "role": "reference",
+      "source_id": "upstream_input_or_decision_reference",
+      "priority": 0,
+      "reason": "Frozen for lineage. Final evidence and reviewed/frozen claim inputs above control row-level reconciliation."
+    },
+    {
+      "path": "data/municipal_discovery/search_pilot/search_results.jsonl",
+      "role": "reference",
+      "source_id": "upstream_input_or_decision_reference",
+      "priority": 0,
+      "reason": "Frozen for lineage. Final evidence and reviewed/frozen claim inputs above control row-level reconciliation."
+    },
+    {
+      "path": "data/municipal_discovery/screening_2010_2021/municipal_curated_acquisition/merged/manifest.json",
+      "role": "reference",
+      "source_id": "upstream_input_or_decision_reference",
+      "priority": 0,
+      "reason": "Frozen for lineage. Final evidence and reviewed/frozen claim inputs above control row-level reconciliation."
+    },
+    {
+      "path": "data/municipal_discovery/screening_2010_2021/municipal_curated_acquisition/merged/identity_decisions.csv",
+      "role": "reference",
+      "source_id": "upstream_input_or_decision_reference",
+      "priority": 0,
+      "reason": "Frozen for lineage. Final evidence and reviewed/frozen claim inputs above control row-level reconciliation."
+    },
+    {
+      "path": "data/municipal_discovery/screening_2010_2021/search_source_expansion/temporal_validation/frozen/lead_filter_decisions.csv",
+      "role": "claim_filters",
+      "source_id": "upstream_input_or_decision_reference",
+      "priority": 0,
+      "reason": "Frozen for lineage. Final evidence and reviewed/frozen claim inputs above control row-level reconciliation."
+    }
+  ]
+}

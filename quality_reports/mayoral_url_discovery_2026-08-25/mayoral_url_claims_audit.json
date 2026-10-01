@@ -1,0 +1,43 @@
+{
+  "adapter_claim_rows": 229,
+  "claim_schema_version": "mayoral_url_claims_v1",
+  "claims_by_grade": {
+    "A": 32,
+    "C": 24,
+    "D": 173,
+    "legacy_ungraded": 140
+  },
+  "claims_by_origin": {
+    "adapter": 229,
+    "legacy_baseline": 140
+  },
+  "claims_by_review_status": {
+    "accepted": 50,
+    "approved": 6,
+    "legacy_not_adjudicated_current_rules": 140,
+    "pending": 168,
+    "rejected": 5
+  },
+  "exact_claim_id_agreement": true,
+  "input_claim_rows": 369,
+  "input_files": {
+    "data/municipal_discovery/final/mayoral_url_evidence.csv": 140,
+    "data/municipal_discovery/screening_2010_2021/openai_search_residual_expansion/production/extracted/unified_claim_adapter.csv": 132,
+    "data/municipal_discovery/screening_2010_2021/openai_search_residual_pilot/production/extracted/unified_claim_adapter.csv": 36,
+    "quality_reports/mayoral_url_discovery_2026-08-24/handcode/adjudicated_claims.csv": 10,
+    "quality_reports/mayoral_url_discovery_2026-08-24/handcode_archiveit/adjudicated_claims.csv": 33,
+    "quality_reports/mayoral_url_discovery_2026-08-24/handcode_archiveit_expansion/adjudicated_claims.csv": 5,
+    "quality_reports/mayoral_url_discovery_2026-08-25/batch20_audit/adjudicated_claims.csv": 6,
+    "quality_reports/mayoral_url_discovery_2026-08-25/batch20_round2_audit/adjudicated_claims.csv": 1,
+    "quality_reports/mayoral_url_discovery_2026-08-25/search_source_expansion_adjudication/adjudicated_claims.csv": 6
+  },
+  "legacy_claim_rows": 140,
+  "new_claims_added": 168,
+  "output_claim_rows": 369,
+  "output_file": "data/municipal_discovery/final/mayoral_url_claims.csv",
+  "previous_claim_rows": 201,
+  "stale_claims_removed": 0,
+  "strict_custom_domain_claims": 32,
+  "strict_exact_url_claims": 32,
+  "unique_claim_ids": 369
+}

@@ -1,0 +1,289 @@
+{
+  "manifest_version": "archiveit-batch-state-v1",
+  "batch_id": "archiveit_mayoral_batch20_20260825",
+  "collection_count": 20,
+  "collection_ids": [
+    3241,
+    5895,
+    6078,
+    6228,
+    7093,
+    7703,
+    9628,
+    9642,
+    9827,
+    9879,
+    9912,
+    9936,
+    9965,
+    10375,
+    10428,
+    10568,
+    11790,
+    12662,
+    14905,
+    18157
+  ],
+  "serper_requests": 0,
+  "paid_cost_usd": 0.0,
+  "files": [
+    {
+      "path": "config/archiveit_mayoral_batch20.json",
+      "bytes": 11196,
+      "sha256": "06ef3070239f98679b6ea6c21bbc0d55bd7ae1221670280b823b4ad6d088c6c0",
+      "csv_rows": null
+    },
+    {
+      "path": "data/municipal_discovery/archiveit/batch20/source_payloads/10375.json",
+      "bytes": 15276,
+      "sha256": "f0ae0f43047cefa8822d7a2bc5085a9a0cdc31611045e032273fbd690f617397",
+      "csv_rows": null
+    },
+    {
+      "path": "data/municipal_discovery/archiveit/batch20/source_payloads/10428.json",
+      "bytes": 5965,
+      "sha256": "037d2ff1694e25251f3ffafa62cef73dbf1c2b79c850b3d6b88311b739b506e4",
+      "csv_rows": null
+    },
+    {
+      "path": "data/municipal_discovery/archiveit/batch20/source_payloads/10568.json",
+      "bytes": 60527,
+      "sha256": "9a2b0e11fffa9ff3197e2492344986858037b3c4bdb9cf12489574a16b3cdb86",
+      "csv_rows": null
+    },
+    {
+      "path": "data/municipal_discovery/archiveit/batch20/source_payloads/11790.json",
+      "bytes": 64123,
+      "sha256": "8460b75c0ba82c46aad40b17d3a2ae7bdd99ebd095761635fbeec25b47ea4e46",
+      "csv_rows": null
+    },
+    {
+      "path": "data/municipal_discovery/archiveit/batch20/source_payloads/12662.json",
+      "bytes": 737608,
+      "sha256": "cf23494ded421604b5d06ccde8f07ee1febb58d5c39eae69061d73b0fbacb32c",
+      "csv_rows": null
+    },
+    {
+      "path": "data/municipal_discovery/archiveit/batch20/source_payloads/14905.json",
+      "bytes": 15428,
+      "sha256": "68a4ef406baa346d227846094680eff16ec90b42c63a945967d97152c526527c",
+      "csv_rows": null
+    },
+    {
+      "path": "data/municipal_discovery/archiveit/batch20/source_payloads/18157.json",
+      "bytes": 2284,
+      "sha256": "dc939f230a3ed5ddea06568f3cdf612f0777796468d2bba9094dc7583f53d0eb",
+      "csv_rows": null
+    },
+    {
+      "path": "data/municipal_discovery/archiveit/batch20/source_payloads/3241.json",
+      "bytes": 292895,
+      "sha256": "d51095bf1a29db9965bdbde8186f0984f0da9d2bbbea434aab1783343c2b0e6d",
+      "csv_rows": null
+    },
+    {
+      "path": "data/municipal_discovery/archiveit/batch20/source_payloads/5895.json",
+      "bytes": 227555,
+      "sha256": "cbec27997b834ff9451425aaa87d48526b3fb4aba0a4c835fb6fbf7b2264ed53",
+      "csv_rows": null
+    },
+    {
+      "path": "data/municipal_discovery/archiveit/batch20/source_payloads/6078.json",
+      "bytes": 1469,
+      "sha256": "951a8994707075fc733481c2fc61b42a733e8a4c763cd53615e32bab3168f2e6",
+      "csv_rows": null
+    },
+    {
+      "path": "data/municipal_discovery/archiveit/batch20/source_payloads/6228.json",
+      "bytes": 83497,
+      "sha256": "1a6fa80d61713fc5f185f85439c94ae08f5e313b07aab83e56f5ad769dffa53a",
+      "csv_rows": null
+    },
+    {
+      "path": "data/municipal_discovery/archiveit/batch20/source_payloads/7093.json",
+      "bytes": 11001,
+      "sha256": "9d24dd68401344a53b33cd05d834da9b37e99073af437f508702d9ffd7bbe052",
+      "csv_rows": null
+    },
+    {
+      "path": "data/municipal_discovery/archiveit/batch20/source_payloads/7703.json",
+      "bytes": 17543,
+      "sha256": "833daafe013abb1ded0b466d2f28d1af7273af076abfcb927048ecaaf9bba443",
+      "csv_rows": null
+    },
+    {
+      "path": "data/municipal_discovery/archiveit/batch20/source_payloads/9628.json",
+      "bytes": 482,
+      "sha256": "71f6493b3d4576eb8a66a2961a4a53873844e3f8210faff924594933e1c24079",
+      "csv_rows": null
+    },
+    {
+      "path": "data/municipal_discovery/archiveit/batch20/source_payloads/9642.json",
+      "bytes": 261742,
+      "sha256": "44ad7344a36a250ed698d8eccd9e4b27461301820f6b51f8724a5479ab08fb1d",
+      "csv_rows": null
+    },
+    {
+      "path": "data/municipal_discovery/archiveit/batch20/source_payloads/9827.json",
+      "bytes": 57861,
+      "sha256": "56192cb11411ebe316634b9224af541ce85a5ea1644d449e615e261694902e17",
+      "csv_rows": null
+    },
+    {
+      "path": "data/municipal_discovery/archiveit/batch20/source_payloads/9879.json",
+      "bytes": 42855,
+      "sha256": "6f0e38b81973e7b9efa5656022494542ec5575ace1d3a60c8a6728acc9fd45c7",
+      "csv_rows": null
+    },
+    {
+      "path": "data/municipal_discovery/archiveit/batch20/source_payloads/9912.json",
+      "bytes": 56510,
+      "sha256": "8117374a60874a5633cabaf54a4a8bf995045091d81c43d96eb6aef4d20a6d77",
+      "csv_rows": null
+    },
+    {
+      "path": "data/municipal_discovery/archiveit/batch20/source_payloads/9936.json",
+      "bytes": 11614,
+      "sha256": "d147dcd869d5e74d783fa585e3a09e5e992736d80ebfd869f002856eee678d7e",
+      "csv_rows": null
+    },
+    {
+      "path": "data/municipal_discovery/archiveit/batch20/source_payloads/9965.json",
+      "bytes": 18923,
+      "sha256": "56a74734f14ed7c4bcbd4f48800cb1f224ce9912b1609d92f6afaadca361e94c",
+      "csv_rows": null
+    },
+    {
+      "path": "data/municipal_discovery/archiveit/batch20/prebatch_mayoral_url_claims.csv",
+      "bytes": 167879,
+      "sha256": "0c6bf33239d7002669ddd479fb73227001cb5f4c9f95b89b25069da98a371ec8",
+      "csv_rows": 188
+    },
+    {
+      "path": "data/municipal_discovery/archiveit/batch20/mayoral_archiveit_seed_records.csv",
+      "bytes": 3262694,
+      "sha256": "f90247f07f0646eafcf67ff10294fa2224f327ee7fabc60e82907eb5bbe4d01f",
+      "csv_rows": 1294
+    },
+    {
+      "path": "data/municipal_discovery/archiveit/batch20/mayoral_source_attempts_archiveit.csv",
+      "bytes": 4810,
+      "sha256": "aad719b9063ada7a5e1e2181fab4caa66b9b908caa491ede19b110cafd24dafc",
+      "csv_rows": 20
+    },
+    {
+      "path": "data/municipal_discovery/archiveit/batch20/mayoral_url_evidence_archiveit.csv",
+      "bytes": 31230,
+      "sha256": "5204a1aa49e3f48d4f128dbf6e3b0944526ff5f3e150d7c5fc6cdd63300c9eea",
+      "csv_rows": 13
+    },
+    {
+      "path": "data/municipal_discovery/archiveit/batch20/mayoral_url_archiveit_validation.csv",
+      "bytes": 13737,
+      "sha256": "6309309063064c34d8ec26fd52ac169c38623cf56c2bcf588cb2934ff54ed281",
+      "csv_rows": 13
+    },
+    {
+      "path": "data/municipal_discovery/archiveit/batch20/mayoral_url_evidence_archiveit_review.csv",
+      "bytes": 34935,
+      "sha256": "6eea51aa9fb9bd9a6e465a5c36a0f30a90ee3991723bb40748c307fb6ac0684e",
+      "csv_rows": 13
+    },
+    {
+      "path": "quality_reports/mayoral_url_discovery_2026-08-25/batch20_audit/audit_input.csv",
+      "bytes": 19325,
+      "sha256": "48ef5528bd3d0612afe3fc2cf6d41db5264fec812220dc7c6c52b3d58c8e2b2f",
+      "csv_rows": 6
+    },
+    {
+      "path": "quality_reports/mayoral_url_discovery_2026-08-25/batch20_audit/audit_manifest.json",
+      "bytes": 673,
+      "sha256": "93fd5e65a78dec2cb18300b1d1bf7665af522aad37d93ebb98463405d60c8e3a",
+      "csv_rows": null
+    },
+    {
+      "path": "quality_reports/mayoral_url_discovery_2026-08-25/batch20_audit/task.json",
+      "bytes": 17125,
+      "sha256": "b2fe62a19a0b4e58d42d41a43f01b7a3b05811ced9b1b2388218627adb8dfeb7",
+      "csv_rows": null
+    },
+    {
+      "path": "quality_reports/mayoral_url_discovery_2026-08-25/batch20_audit/review_items.csv",
+      "bytes": 20505,
+      "sha256": "a756a0d2df2930ae27408371672f093d9d457cf93a188383b04d6aa0e8022729",
+      "csv_rows": 6
+    },
+    {
+      "path": "quality_reports/mayoral_url_discovery_2026-08-25/batch20_audit/archiveit_mayoral_batch20_audit.html",
+      "bytes": 43919,
+      "sha256": "7f354a876cf951898ead42c7f03ac5b8193ff998692d694f6bb68fe1a2a9769b",
+      "csv_rows": null
+    },
+    {
+      "path": "quality_reports/mayoral_url_discovery_2026-08-25/batch20_audit/archiveit_mayoral_batch20_audit_20260825_chat_results.json",
+      "bytes": 3098,
+      "sha256": "5df03d045da10a4d1af8abd4b2fb7d825fbaeb370332a3515fde3da4d835f52d",
+      "csv_rows": null
+    },
+    {
+      "path": "quality_reports/mayoral_url_discovery_2026-08-25/batch20_audit/adjudication.csv",
+      "bytes": 22185,
+      "sha256": "9d1f2c5eff3d9496ecaa1059d82fd7d92132440bb8574e0e21d03bcdad567854",
+      "csv_rows": 6
+    },
+    {
+      "path": "quality_reports/mayoral_url_discovery_2026-08-25/batch20_audit/adjudicated_claims.csv",
+      "bytes": 22076,
+      "sha256": "e0605e7d01ec6e6013cd7d37683c07d7bc6d3fb89cb3686a8430a6cf5a882bf3",
+      "csv_rows": 6
+    },
+    {
+      "path": "quality_reports/mayoral_url_discovery_2026-08-25/batch20_audit/adjudication_summary.json",
+      "bytes": 246,
+      "sha256": "d03cc90f66fdfeb392360a2b5a42863c1638673e31f3a5e2700d9f626290cb13",
+      "csv_rows": null
+    },
+    {
+      "path": "quality_reports/mayoral_url_discovery_2026-08-25/batch20_evaluation/batch_evaluation.json",
+      "bytes": 1181,
+      "sha256": "c8f224ec08a59e537a4882f3a6db95834fd7faaccfbc45d7666ca51720deffb4",
+      "csv_rows": null
+    },
+    {
+      "path": "quality_reports/mayoral_url_discovery_2026-08-25/batch20_evaluation/collection_evaluation.csv",
+      "bytes": 3765,
+      "sha256": "d23d4235ede8923dee57674de3b7fae15f51cb4a442c328e8495e74eeafe39af",
+      "csv_rows": 20
+    },
+    {
+      "path": "quality_reports/mayoral_url_discovery_2026-08-25/batch20_evaluation/batch_claim_dispositions.csv",
+      "bytes": 33411,
+      "sha256": "34bd0b864721f90d9589b8651e5a4eba86b77e91911d3a9ef3d93aa99ca5c327",
+      "csv_rows": 13
+    },
+    {
+      "path": "quality_reports/mayoral_url_discovery_2026-08-25/batch20_evaluation/batch_claim_disposition_summary.json",
+      "bytes": 484,
+      "sha256": "208b9f22cf01994ee35f910356275db923414975d4e9d6e3863369e2a48d014a",
+      "csv_rows": null
+    },
+    {
+      "path": "quality_reports/mayoral_url_discovery_2026-08-25/batch20_report.md",
+      "bytes": 5793,
+      "sha256": "c7f1fad8f7fe224cf408fb41b57639d8636df1f034fd223f63b1684fb26b5e03",
+      "csv_rows": null
+    },
+    {
+      "path": "data/municipal_discovery/final/mayoral_url_claims.csv",
+      "bytes": 172504,
+      "sha256": "2024e2108300d6a7426bdd77ae1180e2dc5d7fd7829a503eb19af90dbc16ce26",
+      "csv_rows": 194
+    },
+    {
+      "path": "quality_reports/mayoral_url_discovery_2026-08-25/mayoral_url_claims_audit.json",
+      "bytes": 1239,
+      "sha256": "bd637a306b34d8eb1ca72b23debe32cdf7b56e6dc06f567138faba16d4b36527",
+      "csv_rows": null
+    }
+  ]
+}

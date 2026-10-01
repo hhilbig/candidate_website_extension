@@ -1,0 +1,31 @@
+{
+ "cutoff": "2026-09-14",
+ "results": [
+  "data/municipal_discovery/top100_coverage/inputs/historical_results.json",
+  "data/municipal_discovery/top100_coverage/inputs/recent_results.json",
+  "data/municipal_discovery/top100_coverage/inputs/boston_results.json",
+  "data/municipal_discovery/top100_coverage/inputs/seattle_results.json",
+  "data/municipal_discovery/top100_coverage/inputs/new_york_results.json",
+  "data/municipal_discovery/top100_coverage/inputs/los_angeles_results.json",
+  "data/municipal_discovery/top100_coverage/inputs/pittsburgh_results.json",
+  "data/municipal_discovery/top100_coverage/inputs/mesa_results.json",
+  "data/municipal_discovery/top100_coverage/inputs/chandler_results.json",
+  "data/municipal_discovery/top100_coverage/inputs/scottsdale_results.json",
+  "data/municipal_discovery/top100_coverage/inputs/gilbert_results.json"
+ ],
+ "city_year_audits": [
+  "data/municipal_discovery/top100_coverage/inputs/city_year_dispositions.json",
+  "data/municipal_discovery/top100_coverage/inputs/boston_calendar.json",
+  "data/municipal_discovery/top100_coverage/inputs/seattle_calendar.json",
+  "data/municipal_discovery/top100_coverage/inputs/new_york_calendar.json",
+  "data/municipal_discovery/top100_coverage/inputs/los_angeles_calendar.json",
+  "data/municipal_discovery/top100_coverage/inputs/san_diego_calendar.json",
+  "data/municipal_discovery/top100_coverage/inputs/baltimore_calendar.json",
+  "data/municipal_discovery/top100_coverage/inputs/santa_clarita_historical_calendar.json",
+  "data/municipal_discovery/top100_coverage/inputs/pittsburgh_calendar.json",
+  "data/municipal_discovery/top100_coverage/inputs/mesa_calendar.json",
+  "data/municipal_discovery/top100_coverage/inputs/chandler_calendar.json",
+  "data/municipal_discovery/top100_coverage/inputs/scottsdale_calendar.json",
+  "data/municipal_discovery/top100_coverage/inputs/gilbert_calendar.json"
+ ]
+}
