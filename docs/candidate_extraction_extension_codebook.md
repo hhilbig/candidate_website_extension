@@ -1135,7 +1135,7 @@ endorser category (withheld since September 20, 2026). Their definitions stay
 in this codebook so that users know what was extracted and why it is absent.
 
 **Excluded pages.** Official government hosts (`.gov`) are not campaign
-websites and are excluded: 631 parent documents. Three candidate-years are
+websites and are excluded: 654 parent documents. Three candidate-years are
 excluded because the archived site is not the candidate's: `H0AL02160-2020`
 (`anthonybrown.com`, a different candidate in Maryland, 36 parent documents),
 `S2GA00167-2022` (`gagop.org`, the Georgia Republican Party, 3), and

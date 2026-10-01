@@ -102,7 +102,9 @@ Not published. Waiting for Hanno's final confirmation of the file list and the d
 (`EXPECTED_EXCLUDED_PARENT_DOCUMENTS` 631 to 654, test added; 112 tests pass; not yet committed).
 The rebuild was stopped at Hanno's request because it used too much memory (peak about 9 GB).
 Hanno approved adding the description sentence (text below). **September 30:** the build and
-validator were restarted in the background into
+validator run detached (`nohup caffeinate -i build/run_release_20260930.sh`, log
+`build/run_release_20260930.log`; the first harness-tracked attempt was stopped at its 30-minute
+background limit before writing output) into
 `build/hive_candidate_extraction/release_20260930_v22_model` (log files beside it: `.summary.json`,
 `.stderr`, `.validate.json`). Check first: if `.validate.json` shows `release_ready` true, continue
 from the count update. If the run was interrupted, delete that directory and its side files and rerun
@@ -1841,3 +1843,16 @@ Once capacity is available and the storage check passes, enable full collection 
 
 Approved Dataverse description sentence, to append to the dataset description before publishing:
 "Version 4.0 adds issue statements, biography facts, and endorsements extracted from the archived pages, each quoted from its source page."
+
+**Disk cleanup (Hanno approved September 30, part 1 only).** After the September 30 build passes
+validation, delete: `build/dataverse_v4_0_draft_download` (1.1 GB, recreated by re-staging),
+`build/hive_candidate_extraction/release_20260928_v22_model` and `release_20260928c_v22_model`
+(plus their `.summary.json`, `.stderr`, `.validate.*` side files). Deferred, not approved: move the
+older builds (`bundle_20260920`, `release_20260920`, `release_20260925_v22`, August pilot folders) to
+mac2; check whether `data/deliverable` and `data/municipal_discovery` are still used.
+
+**September 30, 17:35.** Build and validator for `release_20260930_v22_model` passed (`release_ready`
+true). Rows: issues 287,255, biography 104,124, endorsements 153,108, documents 23,177, segments
+34,322. `.gov` exclusion now removes 654 documents. All counts in the public codebook and README
+updated from these files. Part 1 cleanup done. `build/release_v4_0_candidate` re-assembled (19 files,
+local manifest checks pass). Draft re-staging with `--resume-draft` started.

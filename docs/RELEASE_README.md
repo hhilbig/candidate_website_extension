@@ -41,10 +41,10 @@ Version 4.0 adds six files of extracted variables, described in
 | File | Rows | Columns | One row represents |
 |---|---:|---:|---|
 | `candidate_extraction_status.csv` | 45,123 | 9 | One candidate-year and route (issues, biography, endorsements) |
-| `candidate_extraction_documents.parquet` | 23,200 | 47 | One distinct page text for a candidate-year and route |
-| `candidate_extraction_segments.parquet` | 34,346 | 76 | One model input window within a page |
-| `candidate_issue_statements.parquet` | 287,427 | 26 | One issue statement on one page |
-| `candidate_biography_facts.parquet` | 104,331 | 20 | One biography fact on one page |
+| `candidate_extraction_documents.parquet` | 23,177 | 47 | One distinct page text for a candidate-year and route |
+| `candidate_extraction_segments.parquet` | 34,322 | 76 | One model input window within a page |
+| `candidate_issue_statements.parquet` | 287,255 | 26 | One issue statement on one page |
+| `candidate_biography_facts.parquet` | 104,124 | 20 | One biography fact on one page |
 | `candidate_endorsements.parquet` | 153,108 | 45 | One endorser named on one page |
 
 Every extracted record quotes the page it comes from. The records were checked

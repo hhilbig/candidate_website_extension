@@ -11,10 +11,10 @@ Most variables reproduce what the page says: a paraphrased claim and the sentenc
 | File | One row is | Rows |
 |---|---|---:|
 | `candidate_extraction_status.csv` | A candidate-year and route (issues, biography, endorsements) | 45,123 |
-| `candidate_extraction_documents.parquet` | A distinct page text for one candidate-year and route | 23,200 |
-| `candidate_extraction_segments.parquet` | One model input window within a page | 34,346 |
-| `candidate_issue_statements.parquet` | An issue statement on one page | 287,427 |
-| `candidate_biography_facts.parquet` | A biography fact on one page | 104,331 |
+| `candidate_extraction_documents.parquet` | A distinct page text for one candidate-year and route | 23,177 |
+| `candidate_extraction_segments.parquet` | One model input window within a page | 34,322 |
+| `candidate_issue_statements.parquet` | An issue statement on one page | 287,255 |
+| `candidate_biography_facts.parquet` | A biography fact on one page | 104,124 |
 | `candidate_endorsements.parquet` | An endorser named on one page | 153,108 |
 
 `candidate_extraction_manifest.json` lists each file's rows, columns, bytes, and SHA-256 hash.
@@ -23,7 +23,7 @@ Most variables reproduce what the page says: a paraphrased claim and the sentenc
 
 Each distinct version of a page is its own document, and a page that changed only a date or a banner produces the same records again. About half of all rows repeat a record already present for the same candidate-year: 52 percent of issue rows, 50 percent of biography rows, and 60 percent of endorsement rows. Candidates whose sites were archived often carry the most repeats.
 
-`candidate_record_key` identifies a record within a candidate-year across page versions. It hashes `candidate_cycle_id`, the route, and the record's text after case folding and whitespace collapse: `evidence` for issues, `field` and `value` for biography, and `endorser_name` for endorsements. Keep one row per key before counting anything per candidate. After this step the files hold 137,253 issue statements for 2,305 candidate-years, 52,466 biography facts for 2,455 candidate-years, and 60,899 endorsers for 902 candidate-years. Paraphrases of one fact ("Born in Joplin" and "Born in Joplin, Missouri") remain separate records.
+`candidate_record_key` identifies a record within a candidate-year across page versions. It hashes `candidate_cycle_id`, the route, and the record's text after case folding and whitespace collapse: `evidence` for issues, `field` and `value` for biography, and `endorser_name` for endorsements. Keep one row per key before counting anything per candidate. After this step the files hold 137,114 issue statements for 2,304 candidate-years, 52,365 biography facts for 2,454 candidate-years, and 60,899 endorsers for 902 candidate-years. Paraphrases of one fact ("Born in Joplin" and "Born in Joplin, Missouri") remain separate records.
 
 ## Joins
 
@@ -37,18 +37,18 @@ The status table separates a candidate who said nothing from a page we never saw
 
 | `extraction_status` | Meaning | Rows |
 |---|---|---:|
-| `observed_positive` | At least one record was released | 5,662 |
+| `observed_positive` | At least one record was released | 5,660 |
 | `observed_zero` | Pages were read and no record was found | 372 |
 | `not_extracted_no_source` | The corpus has no page of this type for the candidate-year | 39,033 |
 | `withheld_validation` | Pages were read, but no record could be matched exactly to the page text | 23 |
-| `excluded_not_campaign_site` | All pages were excluded (see below) | 33 |
+| `excluded_not_campaign_site` | All pages were excluded (see below) | 35 |
 
 `not_extracted_no_source` is not a zero. Most candidate-years have no page of a given type, because the site had none, the Wayback Machine did not archive it, or the crawler did not reach it. Among the 7,348 captured candidate-years, the share with at least one record is as follows.
 
 | Office and years | Captured | Issues | Biography | Endorsements |
 |---|---:|---:|---:|---:|
 | House 2018–2024 | 5,787 | 0.32 | 0.35 | 0.13 |
-| Senate 2002–2010 | 403 | 0.15 | 0.14 | 0.04 |
+| Senate 2002–2010 | 403 | 0.14 | 0.14 | 0.04 |
 | Senate 2012–2016 | 449 | 0.31 | 0.30 | 0.06 |
 | Senate 2018–2024 | 709 | 0.36 | 0.37 | 0.11 |
 
@@ -56,7 +56,7 @@ Coverage is similar by party for issues and biography. Endorsement records are m
 
 ## Excluded pages
 
-We excluded pages that are not the candidate's campaign site. Official government pages (`.gov` hosts) account for 631 documents. Three candidate-years were archived from another site: `H0AL02160-2020` points to `anthonybrown.com`, a different candidate's site in Maryland; `S2GA00167-2022` points to the Georgia Republican Party; and `H8IN07291-2018` points to a web studio's placeholder page. These three account for 40 documents. The status table keeps their rows; `n_documents`, `n_segments`, and `n_records` count only released documents, and `n_raw_pages` still counts all pages in the core corpus.
+We excluded pages that are not the candidate's campaign site. Official government pages (`.gov` hosts) account for 654 documents. Three candidate-years were archived from another site: `H0AL02160-2020` points to `anthonybrown.com`, a different candidate's site in Maryland; `S2GA00167-2022` points to the Georgia Republican Party; and `H8IN07291-2018` points to a web studio's placeholder page. These three account for 40 documents. The status table keeps their rows; `n_documents`, `n_segments`, and `n_records` count only released documents, and `n_raw_pages` still counts all pages in the core corpus.
 
 ## Variables
 
@@ -83,7 +83,7 @@ Every quoted field (`evidence`, `source_heading`, `record_evidence`, `endorsemen
 |---|---|
 | `claim` | A short paraphrase of the position, written by the model from `evidence` |
 | `evidence` | The quoted page text the claim rests on |
-| `source_heading` | The nearest page heading above the statement, if one exists (null for 33 percent) |
+| `source_heading` | The nearest page heading above the statement, if one exists (null for 37 percent of rows) |
 | `statement_kind` | `support`, `oppose`, `proposal`, or `past_action`; null where the model returned `current_action` or `unclear` |
 
 We withheld two statement kinds. The model gave `current_action` mostly to future promises, and `unclear` rows stated no position. Those rows keep their claim and evidence.
@@ -145,6 +145,6 @@ Biography facts sometimes describe a family member. We found about 30 military-s
 
 Endorsement lists vary in kind. Some sites list hundreds of private supporters, a few list visitor comments, and pages laid out as tables can yield broken names ("Tawil Melanie"). In the validation sample, 9 of 60 rows were not supported as endorsements, and the model also captured interest-group ratings and awards. Counts of endorsers therefore measure a site's list format as much as elite support.
 
-About 800 rows contain encoding errors carried over from the archived pages, such as "JuliÃ¡n". They are concentrated in about 50 candidate-years, and one 2010 Senate site accounts for 561 of them. We did not repair them, because each quote must match the page text exactly.
+About 800 rows contain encoding errors carried over from the archived pages, such as "JuliÃ¡n". They are concentrated in about 40 candidate-years, and one 2010 Senate site accounts for 561 of them. We did not repair them, because each quote must match the page text exactly.
 
 The source pages are the Wayback Machine captures in the core corpus. Pages that load their text with JavaScript were often archived without it, and those candidates often have no records.
