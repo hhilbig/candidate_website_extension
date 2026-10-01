@@ -1898,3 +1898,12 @@ September 14, 2026), parallelize the population step with smaller agents, run th
   only after my check and a clean build. 88 cities remain without any calendar.
 - Known failure, unrelated: `tests/test_merge_municipal_temporal_validation.py` fails 5 of 18 under the
   current pandas string dtype.
+
+**Mayoral pilot result and full run, September 30.** Pilot: 6 cities in 8.5 minutes, about 210,000
+subagent tokens per city. The checker caught one misread digit; four elections already verified were
+reproduced exactly. Integrated in `f9d8a4a`: 283 of 1,700 city-years assessed, 65 verified elections.
+Full run started for the other 82 cities: workflow run `wf_4b25945a-15c`, script
+`scripts/workflows_mayoral_city_population.js`, outputs in `data/municipal_discovery/top100_coverage/staging/`.
+Integration per city: compare duplicates of already-verified records (keep the existing record),
+mark superseded unresolved records explicitly, register in `config/mayoral_top_two_build.json`, build,
+run `tests/test_build_mayoral_top_two_coverage.py`.
