@@ -1855,4 +1855,6 @@ mac2; check whether `data/deliverable` and `data/municipal_discovery` are still 
 true). Rows: issues 287,255, biography 104,124, endorsements 153,108, documents 23,177, segments
 34,322. `.gov` exclusion now removes 654 documents. All counts in the public codebook and README
 updated from these files. Part 1 cleanup done. `build/release_v4_0_candidate` re-assembled (19 files,
-local manifest checks pass). Draft re-staging with `--resume-draft` started.
+local manifest checks pass). Draft re-staged and verified (19 files byte-identical after download; report
+`build/dataverse_v4_0_draft_download/dataverse_draft_verification.json`). Description sentence added
+to the draft metadata. Waiting only for Hanno's publish confirmation.
