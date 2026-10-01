@@ -1873,3 +1873,10 @@ archive phase and `logs/daily.log` should show its real exit code.
 **Version 4.0 publication.** Hanno approved publishing on September 30. The API token cannot publish
 (HTTP 401, "not permitted"), so Hanno publishes from the Dataverse page (Publish Dataset, major
 release). The draft is complete and verified.
+
+**Share of the release complete, September 30 (approximate).** About 57 percent: Track 1 20 of 20;
+Track 2 about 24 of 25 (only Hanno's web publish remains); Track 3 about 6 of 40 (unchanged, 164 of
+1,700 city-years); Track 4 about 7 of 15 (collection now ends November 17). Remaining: agent work
+dominated by Track 3 (roughly 35 to 55 hours); Hanno about 5 minutes to publish plus mayoral decisions.
+Wall-clock floor: November 17 for Track 4, then 1 to 2 days of exports. Largest uncertainty: the
+1,536 unassessed mayoral city-years.
