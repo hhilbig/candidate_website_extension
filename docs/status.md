@@ -1858,3 +1858,18 @@ updated from these files. Part 1 cleanup done. `build/release_v4_0_candidate` re
 local manifest checks pass). Draft re-staged and verified (19 files byte-identical after download; report
 `build/dataverse_v4_0_draft_download/dataverse_draft_verification.json`). Description sentence added
 to the draft metadata. Waiting only for Hanno's publish confirmation.
+
+**2026 collection, September 30.** Hanno set the endpoint to November 17, 2026 (14 days after the
+general election), replacing December 26. Implemented as `collection_end_date` in
+`config/collection_2026.json`; `due_live` caps each candidate's endpoint and `run` exits after the date.
+Defect found and fixed: from September 24 every daily run stopped on a `ValueError: Invalid IPv6 URL`
+from a malformed link on candidate S6GA00358's site. Live copies were nearly complete (the candidate
+sorts last), but the URL lookup and Wayback archive steps did not run September 24 to 30. The daily
+log read `rc=0` because `$?` was expanded after `$(date)`. Fixes: `page_links` skips unparseable links;
+the runner saves the exit code first. Deployed by rename with `.bak-20260930` copies; droplet hashes
+match the repository; 155 collection tests pass. Next check: the 2026-10-01 run should reach the
+archive phase and `logs/daily.log` should show its real exit code.
+
+**Version 4.0 publication.** Hanno approved publishing on September 30. The API token cannot publish
+(HTTP 401, "not permitted"), so Hanno publishes from the Dataverse page (Publish Dataset, major
+release). The draft is complete and verified.

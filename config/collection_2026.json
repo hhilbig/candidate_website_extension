@@ -1,0 +1,21 @@
+{
+  "version": "collection-2026-v1",
+  "year": 2026,
+  "window_days": 30,
+  "targeted_event_offsets_days": [-1, 1],
+  "live_interval_days": 30,
+  "collection_end_date": "2026-11-17",
+  "max_depth": 2,
+  "max_pages_per_snapshot": 60,
+  "max_response_bytes": 10000000,
+  "wayback_delay_seconds": 1.0,
+  "live_delay_seconds": 1.0,
+  "request_attempts": 3,
+  "connect_timeout_seconds": 10,
+  "read_timeout_seconds": 30,
+  "minimum_free_bytes": 5368709120,
+  "max_run_seconds": 72000,
+  "render_timeout_ms": 20000,
+  "render_fallback": true,
+  "user_agent": "CandidateWebsiteExtension/2026 (academic research; contact: hhilbig@ucdavis.edu)"
+}
