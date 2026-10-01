@@ -1880,3 +1880,7 @@ Track 2 about 24 of 25 (only Hanno's web publish remains); Track 3 about 6 of 40
 dominated by Track 3 (roughly 35 to 55 hours); Hanno about 5 minutes to publish plus mayoral decisions.
 Wall-clock floor: November 17 for Track 4, then 1 to 2 days of exports. Largest uncertainty: the
 1,536 unassessed mayoral city-years.
+
+**Version 4.0 submitted for review, September 30.** Hanno's account has the Root Dataset Editor role,
+which cannot publish. The draft (19 files) was submitted with the API `submitForReview` call; Harvard
+Dataverse curators publish it. Check `versions/:latest-published` for version 4.0 before posting.
