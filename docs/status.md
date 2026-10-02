@@ -2002,3 +2002,16 @@ needs Hanno's approval of a byte budget; run it on the droplet volume or mac2, n
 stage 3 download, content checks, coverage report and release remain); Track 4 about 7 of 15 (collection to
 November 17). Remaining agent time about 25 to 40 hours, mostly Track 3. Hanno: the stage 3 byte budget decision.
 Largest uncertainty: how much of the stage 3 download fits a budget, given slow Wayback replay from the droplet.
+
+**Mayoral website step, stage 3 launched (October 2, Hanno approved; no byte budget on mac2).** 165 targets
+(155 accepted plus 10 outside_window stage 2 URLs; 150 domains, 24 also in earlier scrape targets for other
+candidate-years), built by `scripts/build_mayoral_stage3_targets.py` and frozen with the unchanged method
+`mayoral-wayback-site-scrape-v1` (window 18 months before the election month to 120 days after, at most 150
+pages per target): `data/municipal_archive_acquisition/mayoral_stage3_20261002/frozen/` (targets sha256
+`f408d0ae…`). Runs on mac2 in `~/candidate_website_extension_stage3/` (SSH cannot read `~/Documents` or the
+external drive "My Book" because of macOS privacy settings; the internal disk has 97 GB free). mac2 reaches
+web.archive.org directly (0.7 s per CDX query). Pilot (2 targets, 20 pages): 330 captures to 123 unique pages,
+20 fetched, 0 errors, text is campaign content. Full run: PID 53559, 2 workers, 1 request per second, 20 GB safety
+stop, log `runs/production.log`, outputs `runs/production/`. Older legacy leads are not queued: first compare them
+with the existing 291,044-capture corpus. Next: verify the run, copy the compact audit back, link saved pages to
+the coverage build as downloaded content.
