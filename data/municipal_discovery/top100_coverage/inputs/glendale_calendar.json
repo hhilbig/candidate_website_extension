@@ -2,205 +2,200 @@
  {
   "city_id": "0427820",
   "year": 2010,
-  "status": "unresolved",
+  "status": "no_election",
   "expected_election_dates": [],
-  "source_url": "https://www.glendaleaz.gov/Government/City-Clerk/Elections",
+  "source_url": "https://elections.maricopa.gov/results-and-data/historic-results.html?year=2010",
   "additional_source_urls": [
-   "https://elections.maricopa.gov/results-and-data/historic-results.html?year=2010",
-   "https://www.glendaleaz.gov/Government/City-Council/Mayor-Jerry-P-Weiers"
+   "https://library.municode.com/az/glendale/codes/code_of_ordinances?nodeId=PTITHCH_ARTIXEL"
   ],
-  "note": "No official source for this year could be read. The Glendale city clerk elections page (https://www.glendaleaz.gov/Government/City-Clerk/Elections) opened but shows only the unofficial results of the July 21, 2026 council election (Barrel, Cholla, Ocotillo districts) and no mayoral contest or election history. The Glendale mayor page (https://www.glendaleaz.gov/Government/City-Council/Mayor-Jerry-P-Weiers) says only that Jerry Weiers became mayor in 2013. The Maricopa County Elections Department results pages (https://elections.maricopa.gov/results-and-data/historic-results.html?year=YYYY) opened and list result files, but every result file returned a Cloudflare challenge page when fetched by curl, and WebFetch returned HTTP 403, so no file could be read. The Glendale document repository (https://docs.glendaleaz.com/WebLink/) returned HTTP 403. The Wayback Machine had no snapshot of the tested Maricopa file. Web search was unavailable (session search limit reached). The election cycle and the vote totals were therefore not confirmed from an official source. Re-check on 2026-10-01: the checker found no format error, and the file format is correct. WebFetch of the Maricopa historic results page for 2020 returned no municipal files. The Glendale clerk elections page again showed only the July 21, 2026 results and no election history. A curl request to the Glendale clerk pages returned HTTP 403, and web search was again unavailable. The unresolved status stays because no official source could be read. Second pass (2026-10-01): WebSearch was refused because the session search budget (200) was used. WebFetch of https://www.glendaleaz.gov/government/city_clerk/elections returned HTTP 404. A request to https://www.glendaleaz.gov/Government/City-Clerk/Elections/Past-Elections returned HTTP 403 Access Denied. WebFetch of web.archive.org was refused by the tool, and curl to web.archive.org returned no response (code 000). WebFetch of https://azsos.gov/elections/results-data returned HTTP 403. The Maricopa historic results page for 2024 opened but listed no Glendale file (only Litchfield Park, Tempe, Goodyear, Fountain Hills). The Municode page for Glendale returned only a title with no charter text. No official source was established, so the year stays unresolved."
+  "note": "Every Maricopa County Elections final summary report listed for 2010 on the county results archive was read in a browser on 2026-10-02; none contains a Glendale mayoral contest. Glendale Charter Art. IX Sec. 5 holds city primaries in even-numbered years, and the mayoral contests in the window fall in 2012, 2016, 2020 and 2024 (four-year cycle)."
  },
  {
   "city_id": "0427820",
   "year": 2011,
-  "status": "unresolved",
+  "status": "no_election",
   "expected_election_dates": [],
-  "source_url": "https://www.glendaleaz.gov/Government/City-Clerk/Elections",
+  "source_url": "https://elections.maricopa.gov/results-and-data/historic-results.html?year=2011",
   "additional_source_urls": [
-   "https://elections.maricopa.gov/results-and-data/historic-results.html?year=2011",
-   "https://www.glendaleaz.gov/Government/City-Council/Mayor-Jerry-P-Weiers"
+   "https://library.municode.com/az/glendale/codes/code_of_ordinances?nodeId=PTITHCH_ARTIXEL"
   ],
-  "note": "No official source for this year could be read. The Glendale city clerk elections page (https://www.glendaleaz.gov/Government/City-Clerk/Elections) opened but shows only the unofficial results of the July 21, 2026 council election (Barrel, Cholla, Ocotillo districts) and no mayoral contest or election history. The Glendale mayor page (https://www.glendaleaz.gov/Government/City-Council/Mayor-Jerry-P-Weiers) says only that Jerry Weiers became mayor in 2013. The Maricopa County Elections Department results pages (https://elections.maricopa.gov/results-and-data/historic-results.html?year=YYYY) opened and list result files, but every result file returned a Cloudflare challenge page when fetched by curl, and WebFetch returned HTTP 403, so no file could be read. The Glendale document repository (https://docs.glendaleaz.com/WebLink/) returned HTTP 403. The Wayback Machine had no snapshot of the tested Maricopa file. Web search was unavailable (session search limit reached). The election cycle and the vote totals were therefore not confirmed from an official source. Re-check on 2026-10-01: the checker found no format error, and the file format is correct. WebFetch of the Maricopa historic results page for 2020 returned no municipal files. The Glendale clerk elections page again showed only the July 21, 2026 results and no election history. A curl request to the Glendale clerk pages returned HTTP 403, and web search was again unavailable. The unresolved status stays because no official source could be read. Second pass (2026-10-01): WebSearch was refused because the session search budget (200) was used. WebFetch of https://www.glendaleaz.gov/government/city_clerk/elections returned HTTP 404. A request to https://www.glendaleaz.gov/Government/City-Clerk/Elections/Past-Elections returned HTTP 403 Access Denied. WebFetch of web.archive.org was refused by the tool, and curl to web.archive.org returned no response (code 000). WebFetch of https://azsos.gov/elections/results-data returned HTTP 403. The Maricopa historic results page for 2024 opened but listed no Glendale file (only Litchfield Park, Tempe, Goodyear, Fountain Hills). The Municode page for Glendale returned only a title with no charter text. No official source was established, so the year stays unresolved."
+  "note": "Every Maricopa County Elections final summary report listed for 2011 on the county results archive was read in a browser on 2026-10-02; none contains a Glendale mayoral contest. Glendale Charter Art. IX Sec. 5 holds city primaries in even-numbered years, and the mayoral contests in the window fall in 2012, 2016, 2020 and 2024 (four-year cycle)."
  },
  {
   "city_id": "0427820",
   "year": 2012,
-  "status": "unresolved",
-  "expected_election_dates": [],
-  "source_url": "https://www.glendaleaz.gov/Government/City-Clerk/Elections",
+  "status": "complete",
+  "expected_election_dates": [
+   "2012-11-06"
+  ],
+  "source_url": "https://elections.maricopa.gov/asset/jcr:96330beb-6c3d-43b9-b91c-ba21f75b6ee0/11-06-2012%20Final%20Summary%20Report.pdf",
   "additional_source_urls": [
    "https://elections.maricopa.gov/results-and-data/historic-results.html?year=2012",
-   "https://www.glendaleaz.gov/Government/City-Council/Mayor-Jerry-P-Weiers"
+   "https://library.municode.com/az/glendale/codes/code_of_ordinances?nodeId=PTITHCH_ARTIXEL"
   ],
-  "note": "No official source for this year could be read. The Glendale city clerk elections page (https://www.glendaleaz.gov/Government/City-Clerk/Elections) opened but shows only the unofficial results of the July 21, 2026 council election (Barrel, Cholla, Ocotillo districts) and no mayoral contest or election history. The Glendale mayor page (https://www.glendaleaz.gov/Government/City-Council/Mayor-Jerry-P-Weiers) says only that Jerry Weiers became mayor in 2013. The Maricopa County Elections Department results pages (https://elections.maricopa.gov/results-and-data/historic-results.html?year=YYYY) opened and list result files, but every result file returned a Cloudflare challenge page when fetched by curl, and WebFetch returned HTTP 403, so no file could be read. The Glendale document repository (https://docs.glendaleaz.com/WebLink/) returned HTTP 403. The Wayback Machine had no snapshot of the tested Maricopa file. Web search was unavailable (session search limit reached). The election cycle and the vote totals were therefore not confirmed from an official source. Re-check on 2026-10-01: the checker found no format error, and the file format is correct. WebFetch of the Maricopa historic results page for 2020 returned no municipal files. The Glendale clerk elections page again showed only the July 21, 2026 results and no election history. A curl request to the Glendale clerk pages returned HTTP 403, and web search was again unavailable. The unresolved status stays because no official source could be read. Second pass (2026-10-01): WebSearch was refused because the session search budget (200) was used. WebFetch of https://www.glendaleaz.gov/government/city_clerk/elections returned HTTP 404. A request to https://www.glendaleaz.gov/Government/City-Clerk/Elections/Past-Elections returned HTTP 403 Access Denied. WebFetch of web.archive.org was refused by the tool, and curl to web.archive.org returned no response (code 000). WebFetch of https://azsos.gov/elections/results-data returned HTTP 403. The Maricopa historic results page for 2024 opened but listed no Glendale file (only Litchfield Park, Tempe, Goodyear, Fountain Hills). The Municode page for Glendale returned only a title with no charter text. No official source was established, so the year stays unresolved."
+  "note": "Maricopa County Elections final summary reports for 2012 contain a Glendale mayoral contest; winner and runner-up are in glendale_results.json. Checked in a browser on 2026-10-02."
  },
  {
   "city_id": "0427820",
   "year": 2013,
-  "status": "unresolved",
+  "status": "no_election",
   "expected_election_dates": [],
-  "source_url": "https://www.glendaleaz.gov/Government/City-Clerk/Elections",
+  "source_url": "https://elections.maricopa.gov/results-and-data/historic-results.html?year=2013",
   "additional_source_urls": [
-   "https://elections.maricopa.gov/results-and-data/historic-results.html?year=2013",
-   "https://www.glendaleaz.gov/Government/City-Council/Mayor-Jerry-P-Weiers"
+   "https://library.municode.com/az/glendale/codes/code_of_ordinances?nodeId=PTITHCH_ARTIXEL"
   ],
-  "note": "No official source for this year could be read. The Glendale city clerk elections page (https://www.glendaleaz.gov/Government/City-Clerk/Elections) opened but shows only the unofficial results of the July 21, 2026 council election (Barrel, Cholla, Ocotillo districts) and no mayoral contest or election history. The Glendale mayor page (https://www.glendaleaz.gov/Government/City-Council/Mayor-Jerry-P-Weiers) says only that Jerry Weiers became mayor in 2013. The Maricopa County Elections Department results pages (https://elections.maricopa.gov/results-and-data/historic-results.html?year=YYYY) opened and list result files, but every result file returned a Cloudflare challenge page when fetched by curl, and WebFetch returned HTTP 403, so no file could be read. The Glendale document repository (https://docs.glendaleaz.com/WebLink/) returned HTTP 403. The Wayback Machine had no snapshot of the tested Maricopa file. Web search was unavailable (session search limit reached). The election cycle and the vote totals were therefore not confirmed from an official source. Re-check on 2026-10-01: the checker found no format error, and the file format is correct. WebFetch of the Maricopa historic results page for 2020 returned no municipal files. The Glendale clerk elections page again showed only the July 21, 2026 results and no election history. A curl request to the Glendale clerk pages returned HTTP 403, and web search was again unavailable. The unresolved status stays because no official source could be read. Second pass (2026-10-01): WebSearch was refused because the session search budget (200) was used. WebFetch of https://www.glendaleaz.gov/government/city_clerk/elections returned HTTP 404. A request to https://www.glendaleaz.gov/Government/City-Clerk/Elections/Past-Elections returned HTTP 403 Access Denied. WebFetch of web.archive.org was refused by the tool, and curl to web.archive.org returned no response (code 000). WebFetch of https://azsos.gov/elections/results-data returned HTTP 403. The Maricopa historic results page for 2024 opened but listed no Glendale file (only Litchfield Park, Tempe, Goodyear, Fountain Hills). The Municode page for Glendale returned only a title with no charter text. No official source was established, so the year stays unresolved."
+  "note": "Every Maricopa County Elections final summary report listed for 2013 on the county results archive was read in a browser on 2026-10-02; none contains a Glendale mayoral contest. Glendale Charter Art. IX Sec. 5 holds city primaries in even-numbered years, and the mayoral contests in the window fall in 2012, 2016, 2020 and 2024 (four-year cycle)."
  },
  {
   "city_id": "0427820",
   "year": 2014,
-  "status": "unresolved",
+  "status": "no_election",
   "expected_election_dates": [],
-  "source_url": "https://www.glendaleaz.gov/Government/City-Clerk/Elections",
+  "source_url": "https://elections.maricopa.gov/results-and-data/historic-results.html?year=2014",
   "additional_source_urls": [
-   "https://elections.maricopa.gov/results-and-data/historic-results.html?year=2014",
-   "https://www.glendaleaz.gov/Government/City-Council/Mayor-Jerry-P-Weiers"
+   "https://library.municode.com/az/glendale/codes/code_of_ordinances?nodeId=PTITHCH_ARTIXEL"
   ],
-  "note": "No official source for this year could be read. The Glendale city clerk elections page (https://www.glendaleaz.gov/Government/City-Clerk/Elections) opened but shows only the unofficial results of the July 21, 2026 council election (Barrel, Cholla, Ocotillo districts) and no mayoral contest or election history. The Glendale mayor page (https://www.glendaleaz.gov/Government/City-Council/Mayor-Jerry-P-Weiers) says only that Jerry Weiers became mayor in 2013. The Maricopa County Elections Department results pages (https://elections.maricopa.gov/results-and-data/historic-results.html?year=YYYY) opened and list result files, but every result file returned a Cloudflare challenge page when fetched by curl, and WebFetch returned HTTP 403, so no file could be read. The Glendale document repository (https://docs.glendaleaz.com/WebLink/) returned HTTP 403. The Wayback Machine had no snapshot of the tested Maricopa file. Web search was unavailable (session search limit reached). The election cycle and the vote totals were therefore not confirmed from an official source. Re-check on 2026-10-01: the checker found no format error, and the file format is correct. WebFetch of the Maricopa historic results page for 2020 returned no municipal files. The Glendale clerk elections page again showed only the July 21, 2026 results and no election history. A curl request to the Glendale clerk pages returned HTTP 403, and web search was again unavailable. The unresolved status stays because no official source could be read. Second pass (2026-10-01): WebSearch was refused because the session search budget (200) was used. WebFetch of https://www.glendaleaz.gov/government/city_clerk/elections returned HTTP 404. A request to https://www.glendaleaz.gov/Government/City-Clerk/Elections/Past-Elections returned HTTP 403 Access Denied. WebFetch of web.archive.org was refused by the tool, and curl to web.archive.org returned no response (code 000). WebFetch of https://azsos.gov/elections/results-data returned HTTP 403. The Maricopa historic results page for 2024 opened but listed no Glendale file (only Litchfield Park, Tempe, Goodyear, Fountain Hills). The Municode page for Glendale returned only a title with no charter text. No official source was established, so the year stays unresolved."
+  "note": "Every Maricopa County Elections final summary report listed for 2014 on the county results archive was read in a browser on 2026-10-02; none contains a Glendale mayoral contest. Glendale Charter Art. IX Sec. 5 holds city primaries in even-numbered years, and the mayoral contests in the window fall in 2012, 2016, 2020 and 2024 (four-year cycle)."
  },
  {
   "city_id": "0427820",
   "year": 2015,
-  "status": "unresolved",
+  "status": "no_election",
   "expected_election_dates": [],
-  "source_url": "https://www.glendaleaz.gov/Government/City-Clerk/Elections",
+  "source_url": "https://elections.maricopa.gov/results-and-data/historic-results.html?year=2015",
   "additional_source_urls": [
-   "https://elections.maricopa.gov/results-and-data/historic-results.html?year=2015",
-   "https://www.glendaleaz.gov/Government/City-Council/Mayor-Jerry-P-Weiers"
+   "https://library.municode.com/az/glendale/codes/code_of_ordinances?nodeId=PTITHCH_ARTIXEL"
   ],
-  "note": "No official source for this year could be read. The Glendale city clerk elections page (https://www.glendaleaz.gov/Government/City-Clerk/Elections) opened but shows only the unofficial results of the July 21, 2026 council election (Barrel, Cholla, Ocotillo districts) and no mayoral contest or election history. The Glendale mayor page (https://www.glendaleaz.gov/Government/City-Council/Mayor-Jerry-P-Weiers) says only that Jerry Weiers became mayor in 2013. The Maricopa County Elections Department results pages (https://elections.maricopa.gov/results-and-data/historic-results.html?year=YYYY) opened and list result files, but every result file returned a Cloudflare challenge page when fetched by curl, and WebFetch returned HTTP 403, so no file could be read. The Glendale document repository (https://docs.glendaleaz.com/WebLink/) returned HTTP 403. The Wayback Machine had no snapshot of the tested Maricopa file. Web search was unavailable (session search limit reached). The election cycle and the vote totals were therefore not confirmed from an official source. Re-check on 2026-10-01: the checker found no format error, and the file format is correct. WebFetch of the Maricopa historic results page for 2020 returned no municipal files. The Glendale clerk elections page again showed only the July 21, 2026 results and no election history. A curl request to the Glendale clerk pages returned HTTP 403, and web search was again unavailable. The unresolved status stays because no official source could be read. Second pass (2026-10-01): WebSearch was refused because the session search budget (200) was used. WebFetch of https://www.glendaleaz.gov/government/city_clerk/elections returned HTTP 404. A request to https://www.glendaleaz.gov/Government/City-Clerk/Elections/Past-Elections returned HTTP 403 Access Denied. WebFetch of web.archive.org was refused by the tool, and curl to web.archive.org returned no response (code 000). WebFetch of https://azsos.gov/elections/results-data returned HTTP 403. The Maricopa historic results page for 2024 opened but listed no Glendale file (only Litchfield Park, Tempe, Goodyear, Fountain Hills). The Municode page for Glendale returned only a title with no charter text. No official source was established, so the year stays unresolved."
+  "note": "Every Maricopa County Elections final summary report listed for 2015 on the county results archive was read in a browser on 2026-10-02; none contains a Glendale mayoral contest. Glendale Charter Art. IX Sec. 5 holds city primaries in even-numbered years, and the mayoral contests in the window fall in 2012, 2016, 2020 and 2024 (four-year cycle)."
  },
  {
   "city_id": "0427820",
   "year": 2016,
-  "status": "unresolved",
-  "expected_election_dates": [],
-  "source_url": "https://www.glendaleaz.gov/Government/City-Clerk/Elections",
+  "status": "complete",
+  "expected_election_dates": [
+   "2016-08-30"
+  ],
+  "source_url": "https://elections.maricopa.gov/asset/jcr:b2b9523a-766a-4527-a867-e61ef73862ee/08-30-2016%20Final%20Summary%20Report%20AUG%202016.pdf",
   "additional_source_urls": [
    "https://elections.maricopa.gov/results-and-data/historic-results.html?year=2016",
-   "https://www.glendaleaz.gov/Government/City-Council/Mayor-Jerry-P-Weiers"
+   "https://library.municode.com/az/glendale/codes/code_of_ordinances?nodeId=PTITHCH_ARTIXEL"
   ],
-  "note": "No official source for this year could be read. The Glendale city clerk elections page (https://www.glendaleaz.gov/Government/City-Clerk/Elections) opened but shows only the unofficial results of the July 21, 2026 council election (Barrel, Cholla, Ocotillo districts) and no mayoral contest or election history. The Glendale mayor page (https://www.glendaleaz.gov/Government/City-Council/Mayor-Jerry-P-Weiers) says only that Jerry Weiers became mayor in 2013. The Maricopa County Elections Department results pages (https://elections.maricopa.gov/results-and-data/historic-results.html?year=YYYY) opened and list result files, but every result file returned a Cloudflare challenge page when fetched by curl, and WebFetch returned HTTP 403, so no file could be read. The Glendale document repository (https://docs.glendaleaz.com/WebLink/) returned HTTP 403. The Wayback Machine had no snapshot of the tested Maricopa file. Web search was unavailable (session search limit reached). The election cycle and the vote totals were therefore not confirmed from an official source. Re-check on 2026-10-01: the checker found no format error, and the file format is correct. WebFetch of the Maricopa historic results page for 2020 returned no municipal files. The Glendale clerk elections page again showed only the July 21, 2026 results and no election history. A curl request to the Glendale clerk pages returned HTTP 403, and web search was again unavailable. The unresolved status stays because no official source could be read. Second pass (2026-10-01): WebSearch was refused because the session search budget (200) was used. WebFetch of https://www.glendaleaz.gov/government/city_clerk/elections returned HTTP 404. A request to https://www.glendaleaz.gov/Government/City-Clerk/Elections/Past-Elections returned HTTP 403 Access Denied. WebFetch of web.archive.org was refused by the tool, and curl to web.archive.org returned no response (code 000). WebFetch of https://azsos.gov/elections/results-data returned HTTP 403. The Maricopa historic results page for 2024 opened but listed no Glendale file (only Litchfield Park, Tempe, Goodyear, Fountain Hills). The Municode page for Glendale returned only a title with no charter text. No official source was established, so the year stays unresolved."
+  "note": "Maricopa County Elections final summary reports for 2016 contain a Glendale mayoral contest; winner and runner-up are in glendale_results.json. Checked in a browser on 2026-10-02."
  },
  {
   "city_id": "0427820",
   "year": 2017,
-  "status": "unresolved",
+  "status": "no_election",
   "expected_election_dates": [],
-  "source_url": "https://www.glendaleaz.gov/Government/City-Clerk/Elections",
+  "source_url": "https://elections.maricopa.gov/results-and-data/historic-results.html?year=2017",
   "additional_source_urls": [
-   "https://elections.maricopa.gov/results-and-data/historic-results.html?year=2017",
-   "https://www.glendaleaz.gov/Government/City-Council/Mayor-Jerry-P-Weiers"
+   "https://library.municode.com/az/glendale/codes/code_of_ordinances?nodeId=PTITHCH_ARTIXEL"
   ],
-  "note": "No official source for this year could be read. The Glendale city clerk elections page (https://www.glendaleaz.gov/Government/City-Clerk/Elections) opened but shows only the unofficial results of the July 21, 2026 council election (Barrel, Cholla, Ocotillo districts) and no mayoral contest or election history. The Glendale mayor page (https://www.glendaleaz.gov/Government/City-Council/Mayor-Jerry-P-Weiers) says only that Jerry Weiers became mayor in 2013. The Maricopa County Elections Department results pages (https://elections.maricopa.gov/results-and-data/historic-results.html?year=YYYY) opened and list result files, but every result file returned a Cloudflare challenge page when fetched by curl, and WebFetch returned HTTP 403, so no file could be read. The Glendale document repository (https://docs.glendaleaz.com/WebLink/) returned HTTP 403. The Wayback Machine had no snapshot of the tested Maricopa file. Web search was unavailable (session search limit reached). The election cycle and the vote totals were therefore not confirmed from an official source. Re-check on 2026-10-01: the checker found no format error, and the file format is correct. WebFetch of the Maricopa historic results page for 2020 returned no municipal files. The Glendale clerk elections page again showed only the July 21, 2026 results and no election history. A curl request to the Glendale clerk pages returned HTTP 403, and web search was again unavailable. The unresolved status stays because no official source could be read. Second pass (2026-10-01): WebSearch was refused because the session search budget (200) was used. WebFetch of https://www.glendaleaz.gov/government/city_clerk/elections returned HTTP 404. A request to https://www.glendaleaz.gov/Government/City-Clerk/Elections/Past-Elections returned HTTP 403 Access Denied. WebFetch of web.archive.org was refused by the tool, and curl to web.archive.org returned no response (code 000). WebFetch of https://azsos.gov/elections/results-data returned HTTP 403. The Maricopa historic results page for 2024 opened but listed no Glendale file (only Litchfield Park, Tempe, Goodyear, Fountain Hills). The Municode page for Glendale returned only a title with no charter text. No official source was established, so the year stays unresolved."
+  "note": "Every Maricopa County Elections final summary report listed for 2017 on the county results archive was read in a browser on 2026-10-02; none contains a Glendale mayoral contest. Glendale Charter Art. IX Sec. 5 holds city primaries in even-numbered years, and the mayoral contests in the window fall in 2012, 2016, 2020 and 2024 (four-year cycle)."
  },
  {
   "city_id": "0427820",
   "year": 2018,
-  "status": "unresolved",
+  "status": "no_election",
   "expected_election_dates": [],
-  "source_url": "https://www.glendaleaz.gov/Government/City-Clerk/Elections",
+  "source_url": "https://elections.maricopa.gov/results-and-data/historic-results.html?year=2018",
   "additional_source_urls": [
-   "https://elections.maricopa.gov/results-and-data/historic-results.html?year=2018",
-   "https://www.glendaleaz.gov/Government/City-Council/Mayor-Jerry-P-Weiers"
+   "https://library.municode.com/az/glendale/codes/code_of_ordinances?nodeId=PTITHCH_ARTIXEL"
   ],
-  "note": "No official source for this year could be read. The Glendale city clerk elections page (https://www.glendaleaz.gov/Government/City-Clerk/Elections) opened but shows only the unofficial results of the July 21, 2026 council election (Barrel, Cholla, Ocotillo districts) and no mayoral contest or election history. The Glendale mayor page (https://www.glendaleaz.gov/Government/City-Council/Mayor-Jerry-P-Weiers) says only that Jerry Weiers became mayor in 2013. The Maricopa County Elections Department results pages (https://elections.maricopa.gov/results-and-data/historic-results.html?year=YYYY) opened and list result files, but every result file returned a Cloudflare challenge page when fetched by curl, and WebFetch returned HTTP 403, so no file could be read. The Glendale document repository (https://docs.glendaleaz.com/WebLink/) returned HTTP 403. The Wayback Machine had no snapshot of the tested Maricopa file. Web search was unavailable (session search limit reached). The election cycle and the vote totals were therefore not confirmed from an official source. Re-check on 2026-10-01: the checker found no format error, and the file format is correct. WebFetch of the Maricopa historic results page for 2020 returned no municipal files. The Glendale clerk elections page again showed only the July 21, 2026 results and no election history. A curl request to the Glendale clerk pages returned HTTP 403, and web search was again unavailable. The unresolved status stays because no official source could be read. Second pass (2026-10-01): WebSearch was refused because the session search budget (200) was used. WebFetch of https://www.glendaleaz.gov/government/city_clerk/elections returned HTTP 404. A request to https://www.glendaleaz.gov/Government/City-Clerk/Elections/Past-Elections returned HTTP 403 Access Denied. WebFetch of web.archive.org was refused by the tool, and curl to web.archive.org returned no response (code 000). WebFetch of https://azsos.gov/elections/results-data returned HTTP 403. The Maricopa historic results page for 2024 opened but listed no Glendale file (only Litchfield Park, Tempe, Goodyear, Fountain Hills). The Municode page for Glendale returned only a title with no charter text. No official source was established, so the year stays unresolved."
+  "note": "Every Maricopa County Elections final summary report listed for 2018 on the county results archive was read in a browser on 2026-10-02; none contains a Glendale mayoral contest. Glendale Charter Art. IX Sec. 5 holds city primaries in even-numbered years, and the mayoral contests in the window fall in 2012, 2016, 2020 and 2024 (four-year cycle)."
  },
  {
   "city_id": "0427820",
   "year": 2019,
-  "status": "unresolved",
+  "status": "no_election",
   "expected_election_dates": [],
-  "source_url": "https://www.glendaleaz.gov/Government/City-Clerk/Elections",
+  "source_url": "https://elections.maricopa.gov/results-and-data/historic-results.html?year=2019",
   "additional_source_urls": [
-   "https://elections.maricopa.gov/results-and-data/historic-results.html?year=2019",
-   "https://www.glendaleaz.gov/Government/City-Council/Mayor-Jerry-P-Weiers"
+   "https://library.municode.com/az/glendale/codes/code_of_ordinances?nodeId=PTITHCH_ARTIXEL"
   ],
-  "note": "No official source for this year could be read. The Glendale city clerk elections page (https://www.glendaleaz.gov/Government/City-Clerk/Elections) opened but shows only the unofficial results of the July 21, 2026 council election (Barrel, Cholla, Ocotillo districts) and no mayoral contest or election history. The Glendale mayor page (https://www.glendaleaz.gov/Government/City-Council/Mayor-Jerry-P-Weiers) says only that Jerry Weiers became mayor in 2013. The Maricopa County Elections Department results pages (https://elections.maricopa.gov/results-and-data/historic-results.html?year=YYYY) opened and list result files, but every result file returned a Cloudflare challenge page when fetched by curl, and WebFetch returned HTTP 403, so no file could be read. The Glendale document repository (https://docs.glendaleaz.com/WebLink/) returned HTTP 403. The Wayback Machine had no snapshot of the tested Maricopa file. Web search was unavailable (session search limit reached). The election cycle and the vote totals were therefore not confirmed from an official source. Re-check on 2026-10-01: the checker found no format error, and the file format is correct. WebFetch of the Maricopa historic results page for 2020 returned no municipal files. The Glendale clerk elections page again showed only the July 21, 2026 results and no election history. A curl request to the Glendale clerk pages returned HTTP 403, and web search was again unavailable. The unresolved status stays because no official source could be read. Second pass (2026-10-01): WebSearch was refused because the session search budget (200) was used. WebFetch of https://www.glendaleaz.gov/government/city_clerk/elections returned HTTP 404. A request to https://www.glendaleaz.gov/Government/City-Clerk/Elections/Past-Elections returned HTTP 403 Access Denied. WebFetch of web.archive.org was refused by the tool, and curl to web.archive.org returned no response (code 000). WebFetch of https://azsos.gov/elections/results-data returned HTTP 403. The Maricopa historic results page for 2024 opened but listed no Glendale file (only Litchfield Park, Tempe, Goodyear, Fountain Hills). The Municode page for Glendale returned only a title with no charter text. No official source was established, so the year stays unresolved."
+  "note": "Every Maricopa County Elections final summary report listed for 2019 on the county results archive was read in a browser on 2026-10-02; none contains a Glendale mayoral contest. Glendale Charter Art. IX Sec. 5 holds city primaries in even-numbered years, and the mayoral contests in the window fall in 2012, 2016, 2020 and 2024 (four-year cycle)."
  },
  {
   "city_id": "0427820",
   "year": 2020,
-  "status": "unresolved",
-  "expected_election_dates": [],
-  "source_url": "https://www.glendaleaz.gov/Government/City-Clerk/Elections",
+  "status": "complete",
+  "expected_election_dates": [
+   "2020-08-04"
+  ],
+  "source_url": "https://elections.maricopa.gov/asset/jcr:f4038e12-bb83-4d64-beb0-3e3142eb2041/08-04-2020%20-1%20Final%20Official%20Summary%20Report%20AUG2020.pdf",
   "additional_source_urls": [
    "https://elections.maricopa.gov/results-and-data/historic-results.html?year=2020",
-   "https://www.glendaleaz.gov/Government/City-Council/Mayor-Jerry-P-Weiers"
+   "https://library.municode.com/az/glendale/codes/code_of_ordinances?nodeId=PTITHCH_ARTIXEL"
   ],
-  "note": "No official source for this year could be read. The Glendale city clerk elections page (https://www.glendaleaz.gov/Government/City-Clerk/Elections) opened but shows only the unofficial results of the July 21, 2026 council election (Barrel, Cholla, Ocotillo districts) and no mayoral contest or election history. The Glendale mayor page (https://www.glendaleaz.gov/Government/City-Council/Mayor-Jerry-P-Weiers) says only that Jerry Weiers became mayor in 2013. The Maricopa County Elections Department results pages (https://elections.maricopa.gov/results-and-data/historic-results.html?year=YYYY) opened and list result files, but every result file returned a Cloudflare challenge page when fetched by curl, and WebFetch returned HTTP 403, so no file could be read. The Glendale document repository (https://docs.glendaleaz.com/WebLink/) returned HTTP 403. The Wayback Machine had no snapshot of the tested Maricopa file. Web search was unavailable (session search limit reached). The election cycle and the vote totals were therefore not confirmed from an official source. Re-check on 2026-10-01: the checker found no format error, and the file format is correct. WebFetch of the Maricopa historic results page for 2020 returned no municipal files. The Glendale clerk elections page again showed only the July 21, 2026 results and no election history. A curl request to the Glendale clerk pages returned HTTP 403, and web search was again unavailable. The unresolved status stays because no official source could be read. Second pass (2026-10-01): WebSearch was refused because the session search budget (200) was used. WebFetch of https://www.glendaleaz.gov/government/city_clerk/elections returned HTTP 404. A request to https://www.glendaleaz.gov/Government/City-Clerk/Elections/Past-Elections returned HTTP 403 Access Denied. WebFetch of web.archive.org was refused by the tool, and curl to web.archive.org returned no response (code 000). WebFetch of https://azsos.gov/elections/results-data returned HTTP 403. The Maricopa historic results page for 2024 opened but listed no Glendale file (only Litchfield Park, Tempe, Goodyear, Fountain Hills). The Municode page for Glendale returned only a title with no charter text. No official source was established, so the year stays unresolved."
+  "note": "Maricopa County Elections final summary reports for 2020 contain a Glendale mayoral contest; winner and runner-up are in glendale_results.json. Checked in a browser on 2026-10-02."
  },
  {
   "city_id": "0427820",
   "year": 2021,
-  "status": "unresolved",
+  "status": "no_election",
   "expected_election_dates": [],
-  "source_url": "https://www.glendaleaz.gov/Government/City-Clerk/Elections",
+  "source_url": "https://elections.maricopa.gov/results-and-data/historic-results.html?year=2021",
   "additional_source_urls": [
-   "https://elections.maricopa.gov/results-and-data/historic-results.html?year=2021",
-   "https://www.glendaleaz.gov/Government/City-Council/Mayor-Jerry-P-Weiers"
+   "https://library.municode.com/az/glendale/codes/code_of_ordinances?nodeId=PTITHCH_ARTIXEL"
   ],
-  "note": "No official source for this year could be read. The Glendale city clerk elections page (https://www.glendaleaz.gov/Government/City-Clerk/Elections) opened but shows only the unofficial results of the July 21, 2026 council election (Barrel, Cholla, Ocotillo districts) and no mayoral contest or election history. The Glendale mayor page (https://www.glendaleaz.gov/Government/City-Council/Mayor-Jerry-P-Weiers) says only that Jerry Weiers became mayor in 2013. The Maricopa County Elections Department results pages (https://elections.maricopa.gov/results-and-data/historic-results.html?year=YYYY) opened and list result files, but every result file returned a Cloudflare challenge page when fetched by curl, and WebFetch returned HTTP 403, so no file could be read. The Glendale document repository (https://docs.glendaleaz.com/WebLink/) returned HTTP 403. The Wayback Machine had no snapshot of the tested Maricopa file. Web search was unavailable (session search limit reached). The election cycle and the vote totals were therefore not confirmed from an official source. Re-check on 2026-10-01: the checker found no format error, and the file format is correct. WebFetch of the Maricopa historic results page for 2020 returned no municipal files. The Glendale clerk elections page again showed only the July 21, 2026 results and no election history. A curl request to the Glendale clerk pages returned HTTP 403, and web search was again unavailable. The unresolved status stays because no official source could be read. Second pass (2026-10-01): WebSearch was refused because the session search budget (200) was used. WebFetch of https://www.glendaleaz.gov/government/city_clerk/elections returned HTTP 404. A request to https://www.glendaleaz.gov/Government/City-Clerk/Elections/Past-Elections returned HTTP 403 Access Denied. WebFetch of web.archive.org was refused by the tool, and curl to web.archive.org returned no response (code 000). WebFetch of https://azsos.gov/elections/results-data returned HTTP 403. The Maricopa historic results page for 2024 opened but listed no Glendale file (only Litchfield Park, Tempe, Goodyear, Fountain Hills). The Municode page for Glendale returned only a title with no charter text. No official source was established, so the year stays unresolved."
+  "note": "Every Maricopa County Elections final summary report listed for 2021 on the county results archive was read in a browser on 2026-10-02; none contains a Glendale mayoral contest. Glendale Charter Art. IX Sec. 5 holds city primaries in even-numbered years, and the mayoral contests in the window fall in 2012, 2016, 2020 and 2024 (four-year cycle)."
  },
  {
   "city_id": "0427820",
   "year": 2022,
-  "status": "unresolved",
+  "status": "no_election",
   "expected_election_dates": [],
-  "source_url": "https://www.glendaleaz.gov/Government/City-Clerk/Elections",
+  "source_url": "https://elections.maricopa.gov/results-and-data/historic-results.html?year=2022",
   "additional_source_urls": [
-   "https://elections.maricopa.gov/results-and-data/historic-results.html?year=2022",
-   "https://www.glendaleaz.gov/Government/City-Council/Mayor-Jerry-P-Weiers"
+   "https://library.municode.com/az/glendale/codes/code_of_ordinances?nodeId=PTITHCH_ARTIXEL"
   ],
-  "note": "No official source for this year could be read. The Glendale city clerk elections page (https://www.glendaleaz.gov/Government/City-Clerk/Elections) opened but shows only the unofficial results of the July 21, 2026 council election (Barrel, Cholla, Ocotillo districts) and no mayoral contest or election history. The Glendale mayor page (https://www.glendaleaz.gov/Government/City-Council/Mayor-Jerry-P-Weiers) says only that Jerry Weiers became mayor in 2013. The Maricopa County Elections Department results pages (https://elections.maricopa.gov/results-and-data/historic-results.html?year=YYYY) opened and list result files, but every result file returned a Cloudflare challenge page when fetched by curl, and WebFetch returned HTTP 403, so no file could be read. The Glendale document repository (https://docs.glendaleaz.com/WebLink/) returned HTTP 403. The Wayback Machine had no snapshot of the tested Maricopa file. Web search was unavailable (session search limit reached). The election cycle and the vote totals were therefore not confirmed from an official source. Re-check on 2026-10-01: the checker found no format error, and the file format is correct. WebFetch of the Maricopa historic results page for 2020 returned no municipal files. The Glendale clerk elections page again showed only the July 21, 2026 results and no election history. A curl request to the Glendale clerk pages returned HTTP 403, and web search was again unavailable. The unresolved status stays because no official source could be read. Second pass (2026-10-01): WebSearch was refused because the session search budget (200) was used. WebFetch of https://www.glendaleaz.gov/government/city_clerk/elections returned HTTP 404. A request to https://www.glendaleaz.gov/Government/City-Clerk/Elections/Past-Elections returned HTTP 403 Access Denied. WebFetch of web.archive.org was refused by the tool, and curl to web.archive.org returned no response (code 000). WebFetch of https://azsos.gov/elections/results-data returned HTTP 403. The Maricopa historic results page for 2024 opened but listed no Glendale file (only Litchfield Park, Tempe, Goodyear, Fountain Hills). The Municode page for Glendale returned only a title with no charter text. No official source was established, so the year stays unresolved."
+  "note": "Every Maricopa County Elections final summary report listed for 2022 on the county results archive was read in a browser on 2026-10-02; none contains a Glendale mayoral contest. Glendale Charter Art. IX Sec. 5 holds city primaries in even-numbered years, and the mayoral contests in the window fall in 2012, 2016, 2020 and 2024 (four-year cycle)."
  },
  {
   "city_id": "0427820",
   "year": 2023,
-  "status": "unresolved",
+  "status": "no_election",
   "expected_election_dates": [],
-  "source_url": "https://www.glendaleaz.gov/Government/City-Clerk/Elections",
+  "source_url": "https://elections.maricopa.gov/results-and-data/historic-results.html?year=2023",
   "additional_source_urls": [
-   "https://elections.maricopa.gov/results-and-data/historic-results.html?year=2023",
-   "https://www.glendaleaz.gov/Government/City-Council/Mayor-Jerry-P-Weiers"
+   "https://library.municode.com/az/glendale/codes/code_of_ordinances?nodeId=PTITHCH_ARTIXEL"
   ],
-  "note": "No official source for this year could be read. The Glendale city clerk elections page (https://www.glendaleaz.gov/Government/City-Clerk/Elections) opened but shows only the unofficial results of the July 21, 2026 council election (Barrel, Cholla, Ocotillo districts) and no mayoral contest or election history. The Glendale mayor page (https://www.glendaleaz.gov/Government/City-Council/Mayor-Jerry-P-Weiers) says only that Jerry Weiers became mayor in 2013. The Maricopa County Elections Department results pages (https://elections.maricopa.gov/results-and-data/historic-results.html?year=YYYY) opened and list result files, but every result file returned a Cloudflare challenge page when fetched by curl, and WebFetch returned HTTP 403, so no file could be read. The Glendale document repository (https://docs.glendaleaz.com/WebLink/) returned HTTP 403. The Wayback Machine had no snapshot of the tested Maricopa file. Web search was unavailable (session search limit reached). The election cycle and the vote totals were therefore not confirmed from an official source. Re-check on 2026-10-01: the checker found no format error, and the file format is correct. WebFetch of the Maricopa historic results page for 2020 returned no municipal files. The Glendale clerk elections page again showed only the July 21, 2026 results and no election history. A curl request to the Glendale clerk pages returned HTTP 403, and web search was again unavailable. The unresolved status stays because no official source could be read. Second pass (2026-10-01): WebSearch was refused because the session search budget (200) was used. WebFetch of https://www.glendaleaz.gov/government/city_clerk/elections returned HTTP 404. A request to https://www.glendaleaz.gov/Government/City-Clerk/Elections/Past-Elections returned HTTP 403 Access Denied. WebFetch of web.archive.org was refused by the tool, and curl to web.archive.org returned no response (code 000). WebFetch of https://azsos.gov/elections/results-data returned HTTP 403. The Maricopa historic results page for 2024 opened but listed no Glendale file (only Litchfield Park, Tempe, Goodyear, Fountain Hills). The Municode page for Glendale returned only a title with no charter text. No official source was established, so the year stays unresolved."
+  "note": "Every Maricopa County Elections final summary report listed for 2023 on the county results archive was read in a browser on 2026-10-02; none contains a Glendale mayoral contest. Glendale Charter Art. IX Sec. 5 holds city primaries in even-numbered years, and the mayoral contests in the window fall in 2012, 2016, 2020 and 2024 (four-year cycle)."
  },
  {
   "city_id": "0427820",
   "year": 2024,
-  "status": "unresolved",
-  "expected_election_dates": [],
-  "source_url": "https://www.glendaleaz.gov/Government/City-Clerk/Elections",
+  "status": "complete",
+  "expected_election_dates": [
+   "2024-07-30"
+  ],
+  "source_url": "https://elections.maricopa.gov/asset/jcr:2f298d9c-a1d5-4cef-9a7b-2874e682fdd6/07-30-2024-1%20Final%20Official%20Summary%20Report.pdf",
   "additional_source_urls": [
    "https://elections.maricopa.gov/results-and-data/historic-results.html?year=2024",
-   "https://www.glendaleaz.gov/Government/City-Council/Mayor-Jerry-P-Weiers"
+   "https://library.municode.com/az/glendale/codes/code_of_ordinances?nodeId=PTITHCH_ARTIXEL"
   ],
-  "note": "No official source for this year could be read. The Glendale city clerk elections page (https://www.glendaleaz.gov/Government/City-Clerk/Elections) opened but shows only the unofficial results of the July 21, 2026 council election (Barrel, Cholla, Ocotillo districts) and no mayoral contest or election history. The Glendale mayor page (https://www.glendaleaz.gov/Government/City-Council/Mayor-Jerry-P-Weiers) says only that Jerry Weiers became mayor in 2013. The Maricopa County Elections Department results pages (https://elections.maricopa.gov/results-and-data/historic-results.html?year=YYYY) opened and list result files, but every result file returned a Cloudflare challenge page when fetched by curl, and WebFetch returned HTTP 403, so no file could be read. The Glendale document repository (https://docs.glendaleaz.com/WebLink/) returned HTTP 403. The Wayback Machine had no snapshot of the tested Maricopa file. Web search was unavailable (session search limit reached). The election cycle and the vote totals were therefore not confirmed from an official source. Re-check on 2026-10-01: the checker found no format error, and the file format is correct. WebFetch of the Maricopa historic results page for 2020 returned no municipal files. The Glendale clerk elections page again showed only the July 21, 2026 results and no election history. A curl request to the Glendale clerk pages returned HTTP 403, and web search was again unavailable. The unresolved status stays because no official source could be read. Second pass (2026-10-01): WebSearch was refused because the session search budget (200) was used. WebFetch of https://www.glendaleaz.gov/government/city_clerk/elections returned HTTP 404. A request to https://www.glendaleaz.gov/Government/City-Clerk/Elections/Past-Elections returned HTTP 403 Access Denied. WebFetch of web.archive.org was refused by the tool, and curl to web.archive.org returned no response (code 000). WebFetch of https://azsos.gov/elections/results-data returned HTTP 403. The Maricopa historic results page for 2024 opened but listed no Glendale file (only Litchfield Park, Tempe, Goodyear, Fountain Hills). The Municode page for Glendale returned only a title with no charter text. No official source was established, so the year stays unresolved."
+  "note": "Maricopa County Elections final summary reports for 2024 contain a Glendale mayoral contest; winner and runner-up are in glendale_results.json. Checked in a browser on 2026-10-02."
  },
  {
   "city_id": "0427820",
   "year": 2025,
-  "status": "unresolved",
+  "status": "no_election",
   "expected_election_dates": [],
-  "source_url": "https://www.glendaleaz.gov/Government/City-Clerk/Elections",
+  "source_url": "https://elections.maricopa.gov/results-and-data/historic-results.html?year=2025",
   "additional_source_urls": [
-   "https://elections.maricopa.gov/results-and-data/historic-results.html?year=2025",
-   "https://www.glendaleaz.gov/Government/City-Council/Mayor-Jerry-P-Weiers"
+   "https://library.municode.com/az/glendale/codes/code_of_ordinances?nodeId=PTITHCH_ARTIXEL"
   ],
-  "note": "No official source for this year could be read. The Glendale city clerk elections page (https://www.glendaleaz.gov/Government/City-Clerk/Elections) opened but shows only the unofficial results of the July 21, 2026 council election (Barrel, Cholla, Ocotillo districts) and no mayoral contest or election history. The Glendale mayor page (https://www.glendaleaz.gov/Government/City-Council/Mayor-Jerry-P-Weiers) says only that Jerry Weiers became mayor in 2013. The Maricopa County Elections Department results pages (https://elections.maricopa.gov/results-and-data/historic-results.html?year=YYYY) opened and list result files, but every result file returned a Cloudflare challenge page when fetched by curl, and WebFetch returned HTTP 403, so no file could be read. The Glendale document repository (https://docs.glendaleaz.com/WebLink/) returned HTTP 403. The Wayback Machine had no snapshot of the tested Maricopa file. Web search was unavailable (session search limit reached). The election cycle and the vote totals were therefore not confirmed from an official source. Re-check on 2026-10-01: the checker found no format error, and the file format is correct. WebFetch of the Maricopa historic results page for 2020 returned no municipal files. The Glendale clerk elections page again showed only the July 21, 2026 results and no election history. A curl request to the Glendale clerk pages returned HTTP 403, and web search was again unavailable. The unresolved status stays because no official source could be read. Second pass (2026-10-01): WebSearch was refused because the session search budget (200) was used. WebFetch of https://www.glendaleaz.gov/government/city_clerk/elections returned HTTP 404. A request to https://www.glendaleaz.gov/Government/City-Clerk/Elections/Past-Elections returned HTTP 403 Access Denied. WebFetch of web.archive.org was refused by the tool, and curl to web.archive.org returned no response (code 000). WebFetch of https://azsos.gov/elections/results-data returned HTTP 403. The Maricopa historic results page for 2024 opened but listed no Glendale file (only Litchfield Park, Tempe, Goodyear, Fountain Hills). The Municode page for Glendale returned only a title with no charter text. No official source was established, so the year stays unresolved."
+  "note": "Every Maricopa County Elections final summary report listed for 2025 on the county results archive was read in a browser on 2026-10-02; none contains a Glendale mayoral contest. Glendale Charter Art. IX Sec. 5 holds city primaries in even-numbered years, and the mayoral contests in the window fall in 2012, 2016, 2020 and 2024 (four-year cycle)."
  },
  {
   "city_id": "0427820",
   "year": 2026,
-  "status": "unresolved",
+  "status": "no_election",
   "expected_election_dates": [],
-  "source_url": "https://www.glendaleaz.gov/Government/City-Clerk/Elections",
+  "source_url": "https://elections.maricopa.gov/results-and-data/historic-results.html?year=2026",
   "additional_source_urls": [
-   "https://elections.maricopa.gov/results-and-data/historic-results.html?year=2026",
-   "https://www.glendaleaz.gov/Government/City-Council/Mayor-Jerry-P-Weiers"
+   "https://library.municode.com/az/glendale/codes/code_of_ordinances?nodeId=PTITHCH_ARTIXEL"
   ],
-  "note": "No official source for this year could be read. The Glendale city clerk elections page (https://www.glendaleaz.gov/Government/City-Clerk/Elections) opened but shows only the unofficial results of the July 21, 2026 council election (Barrel, Cholla, Ocotillo districts) and no mayoral contest or election history. The Glendale mayor page (https://www.glendaleaz.gov/Government/City-Council/Mayor-Jerry-P-Weiers) says only that Jerry Weiers became mayor in 2013. The Maricopa County Elections Department results pages (https://elections.maricopa.gov/results-and-data/historic-results.html?year=YYYY) opened and list result files, but every result file returned a Cloudflare challenge page when fetched by curl, and WebFetch returned HTTP 403, so no file could be read. The Glendale document repository (https://docs.glendaleaz.com/WebLink/) returned HTTP 403. The Wayback Machine had no snapshot of the tested Maricopa file. Web search was unavailable (session search limit reached). The election cycle and the vote totals were therefore not confirmed from an official source. Re-check on 2026-10-01: the checker found no format error, and the file format is correct. WebFetch of the Maricopa historic results page for 2020 returned no municipal files. The Glendale clerk elections page again showed only the July 21, 2026 results and no election history. A curl request to the Glendale clerk pages returned HTTP 403, and web search was again unavailable. The unresolved status stays because no official source could be read. Second pass (2026-10-01): WebSearch was refused because the session search budget (200) was used. WebFetch of https://www.glendaleaz.gov/government/city_clerk/elections returned HTTP 404. A request to https://www.glendaleaz.gov/Government/City-Clerk/Elections/Past-Elections returned HTTP 403 Access Denied. WebFetch of web.archive.org was refused by the tool, and curl to web.archive.org returned no response (code 000). WebFetch of https://azsos.gov/elections/results-data returned HTTP 403. The Maricopa historic results page for 2024 opened but listed no Glendale file (only Litchfield Park, Tempe, Goodyear, Fountain Hills). The Municode page for Glendale returned only a title with no charter text. No official source was established, so the year stays unresolved."
+  "note": "Every Maricopa County Elections final summary report listed for 2026 on the county results archive was read in a browser on 2026-10-02; none contains a Glendale mayoral contest. Glendale Charter Art. IX Sec. 5 holds city primaries in even-numbered years, and the mayoral contests in the window fall in 2012, 2016, 2020 and 2024 (four-year cycle)."
  }
 ]
