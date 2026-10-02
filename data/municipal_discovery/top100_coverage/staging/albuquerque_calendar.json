@@ -1,0 +1,182 @@
+[
+ {
+  "city_id": "3502000",
+  "year": 2010,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.cabq.gov/vote/election-information/past-election-information",
+  "additional_source_urls": [],
+  "note": "The city clerk index of past municipal elections lists Albuquerque elections only in odd-numbered years (2009, 2011, 2013 and so on). Albuquerque elects its mayor every four years in odd-numbered years. The city clerk certificates of canvass state mayoral terms expiring November 30, 2017 (elected 2013) and November 30, 2021 (elected 2017), and the 2017, 2021 and 2025 mayoral elections follow the same four-year cycle. No mayoral election occurred in this year."
+ },
+ {
+  "city_id": "3502000",
+  "year": 2011,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.cabq.gov/clerk/documents/copy_of_certificateofcanvass.signed.pdf",
+  "additional_source_urls": [
+   "https://www.cabq.gov/vote/election-information/past-election-information"
+  ],
+  "note": "The 2011 certificate of canvass (October 4, 2011 regular municipal election) lists four city council seats, bonds and a proposition, with no mayoral contest. Albuquerque elects its mayor every four years in odd-numbered years. The city clerk certificates of canvass state mayoral terms expiring November 30, 2017 (elected 2013) and November 30, 2021 (elected 2017), and the 2017, 2021 and 2025 mayoral elections follow the same four-year cycle. No mayoral election occurred in this year."
+ },
+ {
+  "city_id": "3502000",
+  "year": 2012,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.cabq.gov/vote/election-information/past-election-information",
+  "additional_source_urls": [],
+  "note": "The city clerk index of past municipal elections lists Albuquerque elections only in odd-numbered years, and no election is listed for this year. Albuquerque elects its mayor every four years in odd-numbered years. The city clerk certificates of canvass state mayoral terms expiring November 30, 2017 (elected 2013) and November 30, 2021 (elected 2017), and the 2017, 2021 and 2025 mayoral elections follow the same four-year cycle. No mayoral election occurred in this year."
+ },
+ {
+  "city_id": "3502000",
+  "year": 2013,
+  "status": "complete",
+  "expected_election_dates": [
+   "2013-10-08"
+  ],
+  "source_url": "https://www.cabq.gov/vote/documents/certificate-of-canvass-oct-8-2013-election.pdf",
+  "additional_source_urls": [
+   "https://www.cabq.gov/vote/election-information/past-election-information"
+  ],
+  "note": "City clerk certificate of canvass for the October 8, 2013 regular municipal election records a mayoral contest won outright by Richard Berry with 68.10 percent. A November 19, 2013 runoff covered only council District 7. Winner and runner-up are in albuquerque_results.json."
+ },
+ {
+  "city_id": "3502000",
+  "year": 2014,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.cabq.gov/vote/election-information/past-election-information",
+  "additional_source_urls": [],
+  "note": "The city clerk index of past municipal elections lists Albuquerque elections only in odd-numbered years, and no election is listed for this year. Albuquerque elects its mayor every four years in odd-numbered years. The city clerk certificates of canvass state mayoral terms expiring November 30, 2017 (elected 2013) and November 30, 2021 (elected 2017), and the 2017, 2021 and 2025 mayoral elections follow the same four-year cycle. No mayoral election occurred in this year."
+ },
+ {
+  "city_id": "3502000",
+  "year": 2015,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.cabq.gov/vote/documents/2015-election-results.pdf",
+  "additional_source_urls": [
+   "https://www.cabq.gov/vote/election-information/past-election-information"
+  ],
+  "note": "The 2015 certificate of canvass (October 6, 2015 regular municipal election) lists council seats, bonds, charter amendments and a tax ordinance, with no mayoral contest. Albuquerque elects its mayor every four years in odd-numbered years. The city clerk certificates of canvass state mayoral terms expiring November 30, 2017 (elected 2013) and November 30, 2021 (elected 2017), and the 2017, 2021 and 2025 mayoral elections follow the same four-year cycle. No mayoral election occurred in this year."
+ },
+ {
+  "city_id": "3502000",
+  "year": 2016,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.cabq.gov/vote/election-information/past-election-information",
+  "additional_source_urls": [],
+  "note": "The city clerk index of past municipal elections lists Albuquerque elections only in odd-numbered years, and no election is listed for this year. Albuquerque elects its mayor every four years in odd-numbered years. The city clerk certificates of canvass state mayoral terms expiring November 30, 2017 (elected 2013) and November 30, 2021 (elected 2017), and the 2017, 2021 and 2025 mayoral elections follow the same four-year cycle. No mayoral election occurred in this year."
+ },
+ {
+  "city_id": "3502000",
+  "year": 2017,
+  "status": "complete",
+  "expected_election_dates": [
+   "2017-11-14"
+  ],
+  "source_url": "https://web.archive.org/web/20240711232638/https://www.cabq.gov/vote/documents/certificate-of-canvas-nov-14-2017.pdf",
+  "additional_source_urls": [
+   "https://www.cabq.gov/vote/documents/amendment-to-certificate-of-canvass-oct-3-2017-election.pdf",
+   "https://www.cabq.gov/vote/election-information/past-election-information"
+  ],
+  "note": "Mayoral first round on October 3, 2017 had no majority winner (Keller 39.35 percent). The decisive runoff on November 14, 2017 is recorded in albuquerque_results.json. The October 3 round is an earlier round in the same year and is not recorded separately."
+ },
+ {
+  "city_id": "3502000",
+  "year": 2018,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.cabq.gov/vote/election-information/past-election-information",
+  "additional_source_urls": [],
+  "note": "The city clerk index of past municipal elections lists Albuquerque elections only in odd-numbered years, and no election is listed for this year. Albuquerque elects its mayor every four years in odd-numbered years. The city clerk certificates of canvass state mayoral terms expiring November 30, 2017 (elected 2013) and November 30, 2021 (elected 2017), and the 2017, 2021 and 2025 mayoral elections follow the same four-year cycle. No mayoral election occurred in this year."
+ },
+ {
+  "city_id": "3502000",
+  "year": 2019,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "http://electionresults.sos.nm.gov/resultsSW.aspx?type=CTYALL&map=CTY&cty=02&name=Bernalillo&eid=2747",
+  "additional_source_urls": [
+   "https://www.cabq.gov/vote/election-information/past-election-information"
+  ],
+  "note": "SOS official results for the 2019 regular local election and the 2019 Albuquerque runoff list city council districts only and no City of Albuquerque mayor contest. Albuquerque elects its mayor every four years in odd-numbered years. The city clerk certificates of canvass state mayoral terms expiring November 30, 2017 (elected 2013) and November 30, 2021 (elected 2017), and the 2017, 2021 and 2025 mayoral elections follow the same four-year cycle. No mayoral election occurred in this year."
+ },
+ {
+  "city_id": "3502000",
+  "year": 2020,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.cabq.gov/vote/election-information/past-election-information",
+  "additional_source_urls": [],
+  "note": "The city clerk index of past municipal elections lists Albuquerque elections only in odd-numbered years, and no election is listed for this year. Albuquerque elects its mayor every four years in odd-numbered years. The city clerk certificates of canvass state mayoral terms expiring November 30, 2017 (elected 2013) and November 30, 2021 (elected 2017), and the 2017, 2021 and 2025 mayoral elections follow the same four-year cycle. No mayoral election occurred in this year."
+ },
+ {
+  "city_id": "3502000",
+  "year": 2021,
+  "status": "complete",
+  "expected_election_dates": [
+   "2021-11-02"
+  ],
+  "source_url": "https://electionresults.sos.nm.gov/resultsSW.aspx?type=CTYALL&map=CTY&cty=02&name=Bernalillo&eid=2796",
+  "additional_source_urls": [
+   "https://www.cabq.gov/vote/election-information/past-election-information"
+  ],
+  "note": "SOS official results for the November 2, 2021 regular local election record a mayoral contest won outright by Tim Keller with more than 50 percent of the vote. Winner and runner-up are in albuquerque_results.json."
+ },
+ {
+  "city_id": "3502000",
+  "year": 2022,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.cabq.gov/vote/election-information/past-election-information",
+  "additional_source_urls": [],
+  "note": "The city clerk index of past municipal elections lists Albuquerque elections only in odd-numbered years, and no election is listed for this year. Albuquerque elects its mayor every four years in odd-numbered years. The city clerk certificates of canvass state mayoral terms expiring November 30, 2017 (elected 2013) and November 30, 2021 (elected 2017), and the 2017, 2021 and 2025 mayoral elections follow the same four-year cycle. No mayoral election occurred in this year."
+ },
+ {
+  "city_id": "3502000",
+  "year": 2023,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://electionresults.sos.nm.gov/resultsSW.aspx?type=CTYALL&map=CTY&cty=02&name=Bernalillo&eid=2858",
+  "additional_source_urls": [
+   "https://www.cabq.gov/vote/election-information/past-election-information"
+  ],
+  "note": "SOS official results for the 2023 regular local election list city council districts 2, 4, 6 and 8 and no City of Albuquerque mayor contest (the only mayor contest listed is for the Village of Los Ranchos de Albuquerque). Albuquerque elects its mayor every four years in odd-numbered years. The city clerk certificates of canvass state mayoral terms expiring November 30, 2017 (elected 2013) and November 30, 2021 (elected 2017), and the 2017, 2021 and 2025 mayoral elections follow the same four-year cycle. No mayoral election occurred in this year."
+ },
+ {
+  "city_id": "3502000",
+  "year": 2024,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.cabq.gov/vote/election-information/past-election-information",
+  "additional_source_urls": [],
+  "note": "The city clerk index of past municipal elections lists Albuquerque elections only in odd-numbered years, and no election is listed for this year. Albuquerque elects its mayor every four years in odd-numbered years. The city clerk certificates of canvass state mayoral terms expiring November 30, 2017 (elected 2013) and November 30, 2021 (elected 2017), and the 2017, 2021 and 2025 mayoral elections follow the same four-year cycle. No mayoral election occurred in this year."
+ },
+ {
+  "city_id": "3502000",
+  "year": 2025,
+  "status": "complete",
+  "expected_election_dates": [
+   "2025-12-09"
+  ],
+  "source_url": "https://electionresults.sos.nm.gov/resultsSW.aspx?type=CTYALL&map=CTY&cty=02&name=Bernalillo&eid=2898",
+  "additional_source_urls": [
+   "https://electionresults.sos.nm.gov/resultsSW.aspx?type=CTYALL&map=CTY&cty=02&name=Bernalillo&eid=2897"
+  ],
+  "note": "First round on November 4, 2025 had no majority winner (Keller 47,911 of 134,227 votes). The decisive runoff on December 9, 2025 is recorded in albuquerque_results.json. The November 4 round is an earlier round in the same year and is not recorded separately."
+ },
+ {
+  "city_id": "3502000",
+  "year": 2026,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.cabq.gov/vote/election-information/past-election-information",
+  "additional_source_urls": [
+   "https://www.cabq.gov/voting-elections"
+  ],
+  "note": "No Albuquerque municipal election is scheduled in 2026. The mayor elected in the December 9, 2025 runoff serves a four-year term, and the city voting page (cabq.gov/vote) lists the next election as council districts 2, 4, 6 and 8 on November 2, 2027. Albuquerque elects its mayor every four years in odd-numbered years. The city clerk certificates of canvass state mayoral terms expiring November 30, 2017 (elected 2013) and November 30, 2021 (elected 2017), and the 2017, 2021 and 2025 mayoral elections follow the same four-year cycle. No mayoral election occurred in this year."
+ }
+]

@@ -1,0 +1,128 @@
+[
+ {
+  "city_name": "Laredo",
+  "state_abb": "TX",
+  "roster_place_fips": "4841464",
+  "election_type": "regular",
+  "stage": "runoff",
+  "verification_status": "verified_decisive",
+  "certification_status": "certified",
+  "election_date": "2010-12-11",
+  "source_url": "https://www.cityoflaredo.com/home/showpublisheddocument/13987/638421188471900000",
+  "source_locator": "Return sheet dated December 17, 2010, Mayor rows; Resolution 2010-R-108 page 1 summary report",
+  "certification_source_url": "https://www.cityoflaredo.com/home/showpublisheddocument/13987/638421188471900000",
+  "additional_source_urls": [
+   "https://www.cityoflaredo.com/departments/city-secretary-s-office/election-results-archive"
+  ],
+  "verification_note": "The Webb County Elections Administrator certified the return sheet for the City of Laredo runoff on December 17, 2010, and the council canvassed it by Resolution 2010-R-108. Salinas 12,783 (66.03 percent) and Belmares 6,575 (33.97 percent), total 19,358. The November 2, 2010 general election was the earlier round.",
+  "candidates": [
+   {
+    "name": "Raul G. Salinas",
+    "role": "winner",
+    "votes": 12783,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Gene Belmares",
+    "role": "runner_up",
+    "votes": 6575,
+    "candidate_year_id": ""
+   }
+  ]
+ },
+ {
+  "city_name": "Laredo",
+  "state_abb": "TX",
+  "roster_place_fips": "4841464",
+  "election_type": "regular",
+  "stage": "general",
+  "verification_status": "verified_decisive",
+  "certification_status": "certified",
+  "election_date": "2014-11-04",
+  "source_url": "https://www.cityoflaredo.com/home/showpublisheddocument/4914",
+  "source_locator": "Item IV.1, Resolution 2014-R-111, Mayor results table, total column",
+  "certification_source_url": "https://www.cityoflaredo.com/home/showpublisheddocument/4914",
+  "additional_source_urls": [
+   "https://www.cityoflaredo.com/departments/city-secretary-s-office/election-results-archive"
+  ],
+  "verification_note": "The city secretary read the results at the November 12, 2014 canvass and council approved Resolution 2014-R-111. Saenz received 12,831 votes (53.34 percent), a majority under Charter section 10.4, so no mayoral runoff followed. The runner-up Jerry Garza had 4,924, ahead of Cindy Liendo with 4,587. Totals are early voting plus election day.",
+  "candidates": [
+   {
+    "name": "Pete Saenz",
+    "role": "winner",
+    "votes": 12831,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Jerry Garza",
+    "role": "runner_up",
+    "votes": 4924,
+    "candidate_year_id": ""
+   }
+  ]
+ },
+ {
+  "city_name": "Laredo",
+  "state_abb": "TX",
+  "roster_place_fips": "4841464",
+  "election_type": "regular",
+  "stage": "runoff",
+  "verification_status": "verified_decisive",
+  "certification_status": "certified",
+  "election_date": "2018-12-13",
+  "source_url": "https://www.cityoflaredo.com/home/showpublisheddocument/4582",
+  "source_locator": "Item VI.2, Resolution 2018-R-169, runoff canvass table, Mayor rows",
+  "certification_source_url": "https://www.cityoflaredo.com/home/showpublisheddocument/4582",
+  "additional_source_urls": [
+   "https://www.cityoflaredo.com/departments/city-secretary-s-office/election-results-archive",
+   "https://www.cityoflaredo.com/home/showpublisheddocument/4580"
+  ],
+  "verification_note": "Council canvassed the December 13, 2018 runoff by Resolution 2018-R-169. Saenz 13,978 (64.49 percent) and Roque Vela Jr. 7,698 (35.51 percent). In the November 6, 2018 general election Saenz had 21,864 (47.68 percent), short of a majority, which caused the runoff.",
+  "candidates": [
+   {
+    "name": "Pete Saenz",
+    "role": "winner",
+    "votes": 13978,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Roque Vela, Jr.",
+    "role": "runner_up",
+    "votes": 7698,
+    "candidate_year_id": ""
+   }
+  ]
+ },
+ {
+  "city_name": "Laredo",
+  "state_abb": "TX",
+  "roster_place_fips": "4841464",
+  "election_type": "regular",
+  "stage": "runoff",
+  "verification_status": "verified_decisive",
+  "certification_status": "certified",
+  "election_date": "2022-12-17",
+  "source_url": "https://www.cityoflaredo.com/home/showpublisheddocument/6851/638174467378700000",
+  "source_locator": "Attachment to Resolution 2022-R-212, Returns Sheet, Mayor rows",
+  "certification_source_url": "https://www.cityoflaredo.com/home/showpublisheddocument/4222/638158710468930000",
+  "additional_source_urls": [
+   "https://www.cityoflaredo.com/departments/city-secretary-s-office/election-results-archive",
+   "https://www.webbcountytx.gov/DocumentCenter/View/2308/12-17-22-City-Run-Off-Election-PDF"
+  ],
+  "verification_note": "Council canvassed the returns on December 28, 2022 (Resolution 2022-R-212; minutes M2022-SC-09). The returns sheet gives Treviño 8,435 and Martinez 7,171, read by optical character recognition of a scanned page; the second figure printed as 7, 17 1. The Webb County summary report of election night, labeled unofficial, gives 8,419 and 7,154, and is lower by a few votes. The official canvass figures are used. The first round on November 8, 2022 was an earlier round.",
+  "candidates": [
+   {
+    "name": "Victor D. Treviño",
+    "role": "winner",
+    "votes": 8435,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Mercurio Martinez III",
+    "role": "runner_up",
+    "votes": 7171,
+    "candidate_year_id": ""
+   }
+  ]
+ }
+]

@@ -1,0 +1,151 @@
+[
+ {
+  "city_name": "Austin",
+  "state_abb": "TX",
+  "roster_place_fips": "4805000",
+  "election_date": "2012-05-12",
+  "election_type": "regular",
+  "stage": "general",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "source_url": "https://services.austintexas.gov/election/search.cfm",
+  "source_locator": "Browse by Election Date, May 12, 2012 (eid=195), Mayor section",
+  "certification_source_url": "https://services.austintexas.gov/election/search.cfm",
+  "additional_source_urls": [],
+  "verification_note": "Austin City Clerk election history shows Lee Leffingwell 25446 votes (52.06 percent) and Brigid Shea 18126 votes (37.08 percent). Clay Dafoe had 5310. Leffingwell had a majority and won outright. The page lists 49336 ballots cast citywide.",
+  "candidates": [
+   {
+    "name": "Lee Leffingwell",
+    "role": "winner",
+    "votes": 25446,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Brigid Shea",
+    "role": "runner_up",
+    "votes": 18126,
+    "candidate_year_id": ""
+   }
+  ]
+ },
+ {
+  "city_name": "Austin",
+  "state_abb": "TX",
+  "roster_place_fips": "4805000",
+  "election_date": "2014-12-16",
+  "election_type": "regular",
+  "stage": "runoff",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "source_url": "https://services.austintexas.gov/election/search.cfm",
+  "source_locator": "Browse by Election Date, December 16, 2014 (eid=199), Mayor section",
+  "certification_source_url": "https://services.austintexas.gov/election/search.cfm",
+  "additional_source_urls": [
+   "https://elections.traviscountytx.gov/wp-content/uploads/travis-tx/election-results/2014/Tuesday,%20December%2016,%202014%20Joint%20Special%20Runoff%20Elections/The%20City%20of%20Austin/20141216coapct.pdf"
+  ],
+  "verification_note": "Austin City Clerk election history shows the runoff between Steve Adler 52159 votes (67.04 percent) and Mike Martinez 25639 votes (32.96 percent). The November 4, 2014 first round (Adler 64416, Martinez 51892) is an earlier round. The Travis County precinct-level results for the runoff are at https://elections.traviscountytx.gov/wp-content/uploads/travis-tx/election-results/2014/Tuesday,%20December%2016,%202014%20Joint%20Special%20Runoff%20Elections/The%20City%20of%20Austin/20141216coapct.pdf and cover the Travis County part only.",
+  "candidates": [
+   {
+    "name": "Steve Adler",
+    "role": "winner",
+    "votes": 52159,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Mike Martinez",
+    "role": "runner_up",
+    "votes": 25639,
+    "candidate_year_id": ""
+   }
+  ]
+ },
+ {
+  "city_name": "Austin",
+  "state_abb": "TX",
+  "roster_place_fips": "4805000",
+  "election_date": "2018-11-06",
+  "election_type": "regular",
+  "stage": "general",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "source_url": "https://services.austintexas.gov/election/search.cfm",
+  "source_locator": "Browse by Election Date, November 6, 2018 (eid=205), Mayor section",
+  "certification_source_url": "https://services.austintexas.gov/election/search.cfm",
+  "additional_source_urls": [
+   "https://countyclerk.traviscountytx.gov/wp-content/uploads/elections/pdfs/election_results/2018.11.06/20181106coacume.pdf"
+  ],
+  "verification_note": "Austin City Clerk election history shows Steve Adler 178980 votes (59.05 percent) and Laura Morrison 58321 votes (19.24 percent) as the top two. Adler had a majority and no mayoral runoff followed. These citywide totals include all counties. The Travis County cumulative report (Adler 171198, Morrison 56110) covers the Travis County part only and is not used.",
+  "candidates": [
+   {
+    "name": "Steve Adler",
+    "role": "winner",
+    "votes": 178980,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Laura Morrison",
+    "role": "runner_up",
+    "votes": 58321,
+    "candidate_year_id": ""
+   }
+  ]
+ },
+ {
+  "city_name": "Austin",
+  "state_abb": "TX",
+  "roster_place_fips": "4805000",
+  "election_date": "2022-12-13",
+  "election_type": "regular",
+  "stage": "runoff",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "source_url": "https://services.austintexas.gov/election/search.cfm",
+  "source_locator": "Browse by Election Date, December 13, 2022 (eid=215), Mayor section",
+  "certification_source_url": "https://services.austintexas.gov/election/search.cfm",
+  "additional_source_urls": [],
+  "verification_note": "Austin City Clerk election history shows the runoff: Kirk Watson 57565 votes (50.40 percent) and Celia Israel 56623 votes (49.60 percent). The November 8, 2022 first round (Israel 122377, Watson 106883) is an earlier round.",
+  "candidates": [
+   {
+    "name": "Kirk Watson",
+    "role": "winner",
+    "votes": 57565,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Celia Israel",
+    "role": "runner_up",
+    "votes": 56623,
+    "candidate_year_id": ""
+   }
+  ]
+ },
+ {
+  "city_name": "Austin",
+  "state_abb": "TX",
+  "roster_place_fips": "4805000",
+  "election_date": "2024-11-05",
+  "election_type": "regular",
+  "stage": "general",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "source_url": "https://services.austintexas.gov/election/search.cfm",
+  "source_locator": "Browse by Election Date, November 5, 2024 (eid=218), Mayor section",
+  "certification_source_url": "https://services.austintexas.gov/election/search.cfm",
+  "additional_source_urls": [],
+  "verification_note": "Austin City Clerk election history shows Kirk Watson 175096 votes (50.00 percent) and Carmen D. Llanes Pulido 70540 votes (20.14 percent) as the top two. Watson received a majority and the December 14, 2024 runoff had no mayoral contest.",
+  "candidates": [
+   {
+    "name": "Kirk Watson",
+    "role": "winner",
+    "votes": 175096,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Carmen D. Llanes Pulido",
+    "role": "runner_up",
+    "votes": 70540,
+    "candidate_year_id": ""
+   }
+  ]
+ }
+]

@@ -1,0 +1,171 @@
+[
+ {
+  "city_id": "5116000",
+  "year": 2010,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://law.lis.virginia.gov/charters/chesapeake/",
+  "additional_source_urls": [
+   "https://historical.elections.virginia.gov/elections/view/27724"
+  ],
+  "note": "The Chesapeake city charter (Section 3.02(b)), opened at the Virginia Legislative Information System, says the mayor is elected at the regular councilmanic election beginning in 1988 for a four-year term, with successors elected every four years. This gives regular mayoral elections in 1988, 1992, and every fourth year after, including 2012, 2016, 2020, 2024 and 2028. This year is not on that cycle. The Virginia Department of Elections database also shows no mayoral contest in this year; absence in the database alone is not the basis. The 2018 mayoral election was a special election recorded under 2018. The additional source is a council contest in this year and is cited only to show the database lists council but not mayoral races for that date."
+ },
+ {
+  "city_id": "5116000",
+  "year": 2011,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://law.lis.virginia.gov/charters/chesapeake/",
+  "additional_source_urls": [],
+  "note": "The Chesapeake city charter (Section 3.02(b)), opened at the Virginia Legislative Information System, says the mayor is elected at the regular councilmanic election beginning in 1988 for a four-year term, with successors elected every four years. This gives regular mayoral elections in 1988, 1992, and every fourth year after, including 2012, 2016, 2020, 2024 and 2028. This year is not on that cycle. The Virginia Department of Elections database also shows no mayoral contest in this year; absence in the database alone is not the basis. The 2018 mayoral election was a special election recorded under 2018."
+ },
+ {
+  "city_id": "5116000",
+  "year": 2012,
+  "status": "complete",
+  "expected_election_dates": [
+   "2012-05-01"
+  ],
+  "source_url": "https://historical.elections.virginia.gov/elections/view/45157",
+  "additional_source_urls": [],
+  "note": "The Virginia Department of Elections historical elections database records a Chesapeake City mayoral contest on 2012-05-01. Winner and runner-up are in chesapeake_results.json."
+ },
+ {
+  "city_id": "5116000",
+  "year": 2013,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://law.lis.virginia.gov/charters/chesapeake/",
+  "additional_source_urls": [],
+  "note": "The Chesapeake city charter (Section 3.02(b)), opened at the Virginia Legislative Information System, says the mayor is elected at the regular councilmanic election beginning in 1988 for a four-year term, with successors elected every four years. This gives regular mayoral elections in 1988, 1992, and every fourth year after, including 2012, 2016, 2020, 2024 and 2028. This year is not on that cycle. The Virginia Department of Elections database also shows no mayoral contest in this year; absence in the database alone is not the basis. The 2018 mayoral election was a special election recorded under 2018."
+ },
+ {
+  "city_id": "5116000",
+  "year": 2014,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://law.lis.virginia.gov/charters/chesapeake/",
+  "additional_source_urls": [
+   "https://historical.elections.virginia.gov/elections/view/44654"
+  ],
+  "note": "The Chesapeake city charter (Section 3.02(b)), opened at the Virginia Legislative Information System, says the mayor is elected at the regular councilmanic election beginning in 1988 for a four-year term, with successors elected every four years. This gives regular mayoral elections in 1988, 1992, and every fourth year after, including 2012, 2016, 2020, 2024 and 2028. This year is not on that cycle. The Virginia Department of Elections database also shows no mayoral contest in this year; absence in the database alone is not the basis. The 2018 mayoral election was a special election recorded under 2018. The additional source is a council contest in this year and is cited only to show the database lists council but not mayoral races for that date."
+ },
+ {
+  "city_id": "5116000",
+  "year": 2015,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://law.lis.virginia.gov/charters/chesapeake/",
+  "additional_source_urls": [],
+  "note": "The Chesapeake city charter (Section 3.02(b)), opened at the Virginia Legislative Information System, says the mayor is elected at the regular councilmanic election beginning in 1988 for a four-year term, with successors elected every four years. This gives regular mayoral elections in 1988, 1992, and every fourth year after, including 2012, 2016, 2020, 2024 and 2028. This year is not on that cycle. The Virginia Department of Elections database also shows no mayoral contest in this year; absence in the database alone is not the basis. The 2018 mayoral election was a special election recorded under 2018."
+ },
+ {
+  "city_id": "5116000",
+  "year": 2016,
+  "status": "complete",
+  "expected_election_dates": [
+   "2016-05-03"
+  ],
+  "source_url": "https://historical.elections.virginia.gov/elections/view/80815",
+  "additional_source_urls": [],
+  "note": "The Virginia Department of Elections historical elections database records a Chesapeake City mayoral contest on 2016-05-03. Winner and runner-up are in chesapeake_results.json."
+ },
+ {
+  "city_id": "5116000",
+  "year": 2017,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://law.lis.virginia.gov/charters/chesapeake/",
+  "additional_source_urls": [],
+  "note": "The Chesapeake city charter (Section 3.02(b)), opened at the Virginia Legislative Information System, says the mayor is elected at the regular councilmanic election beginning in 1988 for a four-year term, with successors elected every four years. This gives regular mayoral elections in 1988, 1992, and every fourth year after, including 2012, 2016, 2020, 2024 and 2028. This year is not on that cycle. The Virginia Department of Elections database also shows no mayoral contest in this year; absence in the database alone is not the basis. The 2018 mayoral election was a special election recorded under 2018."
+ },
+ {
+  "city_id": "5116000",
+  "year": 2018,
+  "status": "complete",
+  "expected_election_dates": [
+   "2018-05-01"
+  ],
+  "source_url": "https://historical.elections.virginia.gov/elections/view/88542",
+  "additional_source_urls": [],
+  "note": "The Virginia Department of Elections historical elections database records a Chesapeake City mayoral contest on 2018-05-01. Winner and runner-up are in chesapeake_results.json."
+ },
+ {
+  "city_id": "5116000",
+  "year": 2019,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://law.lis.virginia.gov/charters/chesapeake/",
+  "additional_source_urls": [],
+  "note": "The Chesapeake city charter (Section 3.02(b)), opened at the Virginia Legislative Information System, says the mayor is elected at the regular councilmanic election beginning in 1988 for a four-year term, with successors elected every four years. This gives regular mayoral elections in 1988, 1992, and every fourth year after, including 2012, 2016, 2020, 2024 and 2028. This year is not on that cycle. The Virginia Department of Elections database also shows no mayoral contest in this year; absence in the database alone is not the basis. The 2018 mayoral election was a special election recorded under 2018."
+ },
+ {
+  "city_id": "5116000",
+  "year": 2020,
+  "status": "complete",
+  "expected_election_dates": [
+   "2020-05-19"
+  ],
+  "source_url": "https://historical.elections.virginia.gov/elections/view/139713",
+  "additional_source_urls": [],
+  "note": "The Virginia Department of Elections historical elections database records a Chesapeake City mayoral contest on 2020-05-19. Winner and runner-up are in chesapeake_results.json."
+ },
+ {
+  "city_id": "5116000",
+  "year": 2021,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://law.lis.virginia.gov/charters/chesapeake/",
+  "additional_source_urls": [],
+  "note": "The Chesapeake city charter (Section 3.02(b)), opened at the Virginia Legislative Information System, says the mayor is elected at the regular councilmanic election beginning in 1988 for a four-year term, with successors elected every four years. This gives regular mayoral elections in 1988, 1992, and every fourth year after, including 2012, 2016, 2020, 2024 and 2028. This year is not on that cycle. The Virginia Department of Elections database also shows no mayoral contest in this year; absence in the database alone is not the basis. The 2018 mayoral election was a special election recorded under 2018."
+ },
+ {
+  "city_id": "5116000",
+  "year": 2022,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://law.lis.virginia.gov/charters/chesapeake/",
+  "additional_source_urls": [
+   "https://historical.elections.virginia.gov/elections/view/156723"
+  ],
+  "note": "The Chesapeake city charter (Section 3.02(b)), opened at the Virginia Legislative Information System, says the mayor is elected at the regular councilmanic election beginning in 1988 for a four-year term, with successors elected every four years. This gives regular mayoral elections in 1988, 1992, and every fourth year after, including 2012, 2016, 2020, 2024 and 2028. This year is not on that cycle. The Virginia Department of Elections database also shows no mayoral contest in this year; absence in the database alone is not the basis. The 2018 mayoral election was a special election recorded under 2018. The additional source is a council contest in this year and is cited only to show the database lists council but not mayoral races for that date."
+ },
+ {
+  "city_id": "5116000",
+  "year": 2023,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://law.lis.virginia.gov/charters/chesapeake/",
+  "additional_source_urls": [],
+  "note": "The Chesapeake city charter (Section 3.02(b)), opened at the Virginia Legislative Information System, says the mayor is elected at the regular councilmanic election beginning in 1988 for a four-year term, with successors elected every four years. This gives regular mayoral elections in 1988, 1992, and every fourth year after, including 2012, 2016, 2020, 2024 and 2028. This year is not on that cycle. The Virginia Department of Elections database also shows no mayoral contest in this year; absence in the database alone is not the basis. The 2018 mayoral election was a special election recorded under 2018."
+ },
+ {
+  "city_id": "5116000",
+  "year": 2024,
+  "status": "complete",
+  "expected_election_dates": [
+   "2024-11-05"
+  ],
+  "source_url": "https://historical.elections.virginia.gov/elections/view/161344",
+  "additional_source_urls": [],
+  "note": "The Virginia Department of Elections historical elections database records a Chesapeake City mayoral contest on 2024-11-05. Winner and runner-up are in chesapeake_results.json."
+ },
+ {
+  "city_id": "5116000",
+  "year": 2025,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://law.lis.virginia.gov/charters/chesapeake/",
+  "additional_source_urls": [],
+  "note": "The Chesapeake city charter (Section 3.02(b)), opened at the Virginia Legislative Information System, says the mayor is elected at the regular councilmanic election beginning in 1988 for a four-year term, with successors elected every four years. This gives regular mayoral elections in 1988, 1992, and every fourth year after, including 2012, 2016, 2020, 2024 and 2028. This year is not on that cycle. The Virginia Department of Elections database also shows no mayoral contest in this year; absence in the database alone is not the basis. The 2018 mayoral election was a special election recorded under 2018."
+ },
+ {
+  "city_id": "5116000",
+  "year": 2026,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://law.lis.virginia.gov/charters/chesapeake/",
+  "additional_source_urls": [],
+  "note": "The Chesapeake city charter (Section 3.02(b)), opened at the Virginia Legislative Information System, says the mayor is elected at the regular councilmanic election beginning in 1988 for a four-year term, with successors elected every four years. This gives regular mayoral elections in 1988, 1992, and every fourth year after, including 2012, 2016, 2020, 2024 and 2028. This year is not on that cycle. The Virginia Department of Elections database also shows no mayoral contest in this year; absence in the database alone is not the basis. The 2018 mayoral election was a special election recorded under 2018."
+ }
+]

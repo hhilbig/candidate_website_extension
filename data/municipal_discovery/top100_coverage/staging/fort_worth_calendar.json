@@ -1,0 +1,184 @@
+[
+ {
+  "city_id": "4827000",
+  "year": 2010,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.fortworthtexas.gov/departments/citysecretary/elections/election-history",
+  "additional_source_urls": [],
+  "note": "The City Secretary election history page lists every Fort Worth city election for this year. It lists no election with a mayoral contest. The index marks mayoral elections only in odd years (2019, 2021, 2023, 2025 are labeled; 2011, 2013, 2015 and 2017 appear as odd-year general elections), and no even year from 2010 to 2026 has one. The index does not state a term length, so the cycle rests on this listing. The page lists no election at all for 2010."
+ },
+ {
+  "city_id": "4827000",
+  "year": 2011,
+  "status": "complete",
+  "expected_election_dates": [
+   "2011-06-18"
+  ],
+  "source_url": "https://publicdocuments.fortworthtexas.gov/CSODOCS/DocView.aspx?id=21765&dbid=0&repo=City-Secretary",
+  "additional_source_urls": [
+   "https://publicdocuments.fortworthtexas.gov/CSODOCS/DocView.aspx?id=16771&dbid=0&repo=City-Secretary",
+   "https://www.fortworthtexas.gov/departments/citysecretary/elections/election-history"
+  ],
+  "note": "A general election on May 14, 2011 was the first round. No mayoral candidate won a majority, so the June 18, 2011 runoff decided the office. City Council Resolution 4000-06-2011 canvassed the runoff. Winner and runner-up are in fort_worth_results.json."
+ },
+ {
+  "city_id": "4827000",
+  "year": 2012,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.fortworthtexas.gov/departments/citysecretary/elections/election-history",
+  "additional_source_urls": [],
+  "note": "The City Secretary election history page lists every Fort Worth city election for this year. It lists no election with a mayoral contest. The index marks mayoral elections only in odd years (2019, 2021, 2023, 2025 are labeled; 2011, 2013, 2015 and 2017 appear as odd-year general elections), and no even year from 2010 to 2026 has one. The index does not state a term length, so the cycle rests on this listing. The 2012 entries are a District 8 special election on May 12 and its runoff on June 23."
+ },
+ {
+  "city_id": "4827000",
+  "year": 2013,
+  "status": "unresolved",
+  "expected_election_dates": [],
+  "source_url": "https://publicdocuments.fortworthtexas.gov/CSODOCS/DocView.aspx?id=26491&dbid=0&repo=City-Secretary",
+  "additional_source_urls": [
+   "https://www.fortworthtexas.gov/departments/citysecretary/elections/election-history"
+  ],
+  "note": "Council Resolution 4205-05-2013 states that only one person filed for mayor. The City Secretary certified the candidate as unopposed on March 19, 2013. The Council declared that candidate elected under Texas Election Code section 2.053 and cancelled the mayoral election, so no mayoral vote was held on May 11, 2013. The document shows no vote totals and, in the text read, does not name the candidate. The year is left unresolved because no election votes exist to record."
+ },
+ {
+  "city_id": "4827000",
+  "year": 2014,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.fortworthtexas.gov/departments/citysecretary/elections/election-history",
+  "additional_source_urls": [],
+  "note": "The City Secretary election history page lists every Fort Worth city election for this year. It lists no election with a mayoral contest. The index marks mayoral elections only in odd years (2019, 2021, 2023, 2025 are labeled; 2011, 2013, 2015 and 2017 appear as odd-year general elections), and no even year from 2010 to 2026 has one. The index does not state a term length, so the cycle rests on this listing. The 2014 entries are a bond election, a Crime Control and Prevention District election, a District 9 special election and runoff, and a November special election."
+ },
+ {
+  "city_id": "4827000",
+  "year": 2015,
+  "status": "unresolved",
+  "expected_election_dates": [],
+  "source_url": "https://publicdocuments.fortworthtexas.gov/CSODOCS/DocView.aspx?id=47571&dbid=0&repo=City-Secretary",
+  "additional_source_urls": [
+   "https://www.fortworthtexas.gov/departments/citysecretary/elections/election-history"
+  ],
+  "note": "Council Resolution 4453-05-2015 states that only one person filed for mayor. The City Secretary certified the candidate as unopposed, and the mayoral race was not on the May 9, 2015 ballot. No vote totals exist for it. The candidate is not named in the text read. The year is left unresolved because no election votes exist to record."
+ },
+ {
+  "city_id": "4827000",
+  "year": 2016,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.fortworthtexas.gov/departments/citysecretary/elections/election-history",
+  "additional_source_urls": [],
+  "note": "The City Secretary election history page lists every Fort Worth city election for this year. It lists no election with a mayoral contest. The index marks mayoral elections only in odd years (2019, 2021, 2023, 2025 are labeled; 2011, 2013, 2015 and 2017 appear as odd-year general elections), and no even year from 2010 to 2026 has one. The index does not state a term length, so the cycle rests on this listing. The only 2016 entry is a charter election on May 7."
+ },
+ {
+  "city_id": "4827000",
+  "year": 2017,
+  "status": "complete",
+  "expected_election_dates": [
+   "2017-05-06"
+  ],
+  "source_url": "https://publicdocuments.fortworthtexas.gov/CSODOCS/DocView.aspx?id=145690&dbid=0&repo=City-Secretary",
+  "additional_source_urls": [
+   "https://www.fortworthtexas.gov/departments/citysecretary/elections/election-history"
+  ],
+  "note": "Council Resolution 4780-05-2017 canvassed the May 6, 2017 general election. It records a contested mayoral race. Winner and runner-up are in fort_worth_results.json."
+ },
+ {
+  "city_id": "4827000",
+  "year": 2018,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.fortworthtexas.gov/departments/citysecretary/elections/election-history",
+  "additional_source_urls": [],
+  "note": "The City Secretary election history page lists every Fort Worth city election for this year. It lists no election with a mayoral contest. The index marks mayoral elections only in odd years (2019, 2021, 2023, 2025 are labeled; 2011, 2013, 2015 and 2017 appear as odd-year general elections), and no even year from 2010 to 2026 has one. The index does not state a term length, so the cycle rests on this listing. The only 2018 entry is a bond election on May 5."
+ },
+ {
+  "city_id": "4827000",
+  "year": 2019,
+  "status": "complete",
+  "expected_election_dates": [
+   "2019-05-04"
+  ],
+  "source_url": "https://publicdocuments.fortworthtexas.gov/CSODOCS/DocView.aspx?id=173755&dbid=0&repo=City-Secretary",
+  "additional_source_urls": [
+   "https://www.fortworthtexas.gov/departments/citysecretary/elections/election-history"
+  ],
+  "note": "Council Resolution 5085-05-2019 canvassed the May 4, 2019 general election. It records a contested mayoral race. Winner and runner-up are in fort_worth_results.json."
+ },
+ {
+  "city_id": "4827000",
+  "year": 2020,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.fortworthtexas.gov/departments/citysecretary/elections/election-history",
+  "additional_source_urls": [],
+  "note": "The City Secretary election history page lists every Fort Worth city election for this year. It lists no election with a mayoral contest. The index marks mayoral elections only in odd years (2019, 2021, 2023, 2025 are labeled; 2011, 2013, 2015 and 2017 appear as odd-year general elections), and no even year from 2010 to 2026 has one. The index does not state a term length, so the cycle rests on this listing. The only 2020 entry is a Crime Control and Prevention District election on July 14."
+ },
+ {
+  "city_id": "4827000",
+  "year": 2021,
+  "status": "complete",
+  "expected_election_dates": [
+   "2021-06-05"
+  ],
+  "source_url": "https://www.fortworthtexas.gov/departments/citysecretary/elections/election-history/election-2021",
+  "additional_source_urls": [
+   "https://www.fortworthtexas.gov/departments/citysecretary/elections/election-history"
+  ],
+  "note": "The City Secretary results page shows ten mayoral candidates in the May 1, 2021 general election and a runoff on June 5, 2021 between Mattie Parker and Deborah Peoples. The runoff decided the office. Winner and runner-up are in fort_worth_results.json."
+ },
+ {
+  "city_id": "4827000",
+  "year": 2022,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.fortworthtexas.gov/departments/citysecretary/elections/election-history",
+  "additional_source_urls": [],
+  "note": "The City Secretary election history page lists every Fort Worth city election for this year. It lists no election with a mayoral contest. The index marks mayoral elections only in odd years (2019, 2021, 2023, 2025 are labeled; 2011, 2013, 2015 and 2017 appear as odd-year general elections), and no even year from 2010 to 2026 has one. The index does not state a term length, so the cycle rests on this listing. The 2022 entries are a bond and charter election and a District 4 special election, both on May 7."
+ },
+ {
+  "city_id": "4827000",
+  "year": 2023,
+  "status": "complete",
+  "expected_election_dates": [
+   "2023-05-06"
+  ],
+  "source_url": "https://www.fortworthtexas.gov/departments/citysecretary/elections/election-history/election-2023",
+  "additional_source_urls": [
+   "https://www.fortworthtexas.gov/departments/citysecretary/elections/election-history"
+  ],
+  "note": "The City Secretary results page shows a May 6, 2023 general election with five mayoral candidates. One candidate won outright, and no mayoral runoff is listed. Winner and runner-up are in fort_worth_results.json."
+ },
+ {
+  "city_id": "4827000",
+  "year": 2024,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.fortworthtexas.gov/departments/citysecretary/elections/election-history",
+  "additional_source_urls": [],
+  "note": "The City Secretary election history page lists every Fort Worth city election for this year. It lists no election with a mayoral contest. The index marks mayoral elections only in odd years (2019, 2021, 2023, 2025 are labeled; 2011, 2013, 2015 and 2017 appear as odd-year general elections), and no even year from 2010 to 2026 has one. The index does not state a term length, so the cycle rests on this listing. The only 2024 entry is a venue tax special election on May 4."
+ },
+ {
+  "city_id": "4827000",
+  "year": 2025,
+  "status": "complete",
+  "expected_election_dates": [
+   "2025-05-03"
+  ],
+  "source_url": "https://www.fortworthtexas.gov/departments/citysecretary/elections/election-history/election-2025",
+  "additional_source_urls": [
+   "https://www.fortworthtexas.gov/departments/citysecretary/elections/election-history"
+  ],
+  "note": "The City Secretary results page shows a May 3, 2025 general election with eight mayoral candidates. One candidate won outright. The only 2025 runoff listed is for District 6. Winner and runner-up are in fort_worth_results.json."
+ },
+ {
+  "city_id": "4827000",
+  "year": 2026,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.fortworthtexas.gov/departments/citysecretary/elections/election-history",
+  "additional_source_urls": [],
+  "note": "The City Secretary election history page lists every Fort Worth city election for this year. It lists no election with a mayoral contest. The index marks mayoral elections only in odd years (2019, 2021, 2023, 2025 are labeled; 2011, 2013, 2015 and 2017 appear as odd-year general elections), and no even year from 2010 to 2026 has one. The index does not state a term length, so the cycle rests on this listing. The 2026 entries are a bond and charter election and a District 10 special election, both on May 2."
+ }
+]

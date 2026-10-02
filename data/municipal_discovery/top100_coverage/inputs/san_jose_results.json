@@ -1,0 +1,165 @@
+[
+ {
+  "city_name": "San Jose",
+  "state_abb": "CA",
+  "roster_place_fips": "0668000",
+  "election_date": "2010-06-08",
+  "election_type": "regular",
+  "stage": "primary_nominating",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "source_url": "https://web.archive.org/web/20221108062001id_/https://sccvote.sccgov.org/sites/g/files/exjcpb1106/files/Gubernatorial%20Primary%20Election%20E81_SOV%20June%208%202010.pdf",
+  "source_locator": "PDF page 2653 of 2905, NONPARTISAN CITY OF SAN JOSE MAYOR sheet, Grand Totals row (equal to the City of San Jose row)",
+  "certification_source_url": "https://web.archive.org/web/20210802064748/https://sccvote.sccgov.org/elections/past-election-results",
+  "additional_source_urls": [
+   "https://web.archive.org/web/20210802064748/https://sccvote.sccgov.org/elections/past-election-results"
+  ],
+  "verification_note": "County statement of vote, June 8, 2010 gubernatorial primary, Mayor of San Jose, citywide grand totals: Chuck Reed 103230, Thomas Nguyen 13349, Susan Barragan 10671, Bill Chew 7070. Reed holds 76.9 percent of the 134320 candidate votes, a majority, so he was elected at the primary under the city rule that a majority elects. Columns were checked on the rendered page. Write-in totals are not in this contest sheet. The PDF was opened through an Internet Archive copy of the county file.",
+  "candidates": [
+   {
+    "name": "Chuck Reed",
+    "role": "winner",
+    "votes": 103230,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Thomas Nguyen",
+    "role": "runner_up",
+    "votes": 13349,
+    "candidate_year_id": ""
+   }
+  ],
+  "decisive_stage_source_url": "https://www.sanjoseca.gov/home/showpublisheddocument/78323/"
+ },
+ {
+  "city_name": "San Jose",
+  "state_abb": "CA",
+  "roster_place_fips": "0668000",
+  "election_date": "2014-11-04",
+  "election_type": "regular",
+  "stage": "runoff",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "source_url": "https://web.archive.org/web/20210802064748/https://sccvote.sccgov.org/sites/g/files/exjcpb1106/files/E101_SOV_Final.xls",
+  "source_locator": "Sheet GRD. Totals - Page 69, Mayor, City of San Jose, City of San Jose row",
+  "certification_source_url": "https://web.archive.org/web/20210802064748/https://sccvote.sccgov.org/elections/past-election-results",
+  "additional_source_urls": [
+   "https://web.archive.org/web/20210802064748/https://sccvote.sccgov.org/sites/g/files/exjcpb1106/files/E99_SOV.xls",
+   "https://web.archive.org/web/20210802064748/https://sccvote.sccgov.org/elections/past-election-results"
+  ],
+  "verification_note": "County statement of vote, November 4, 2014 runoff, Mayor of San Jose, City of San Jose row: Sam Liccardo 91840 and Dave Cortese 89090. No candidate had a majority in the June 3, 2014 first round, so the runoff decided the office. The spreadsheet was opened through an Internet Archive copy of the county file.",
+  "candidates": [
+   {
+    "name": "Sam Liccardo",
+    "role": "winner",
+    "votes": 91840,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Dave Cortese",
+    "role": "runner_up",
+    "votes": 89090,
+    "candidate_year_id": ""
+   }
+  ]
+ },
+ {
+  "city_name": "San Jose",
+  "state_abb": "CA",
+  "roster_place_fips": "0668000",
+  "election_date": "2018-06-05",
+  "election_type": "regular",
+  "stage": "primary_nominating",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "source_url": "https://web.archive.org/web/20210802064748/https://sccvote.sccgov.org/sites/g/files/exjcpb1106/files/E119_SOV.xls",
+  "source_locator": "Sheet GRD. Totals - Page 29, Mayor, CITY OF SAN JOSE, City of San Jose row",
+  "certification_source_url": "https://web.archive.org/web/20210802064748/https://sccvote.sccgov.org/elections/past-election-results",
+  "additional_source_urls": [
+   "https://web.archive.org/web/20210802064748/https://sccvote.sccgov.org/elections/past-election-results",
+   "https://www.sanjoseca.gov/home/showpublisheddocument/78323/"
+  ],
+  "verification_note": "County statement of vote, June 5, 2018 primary, Mayor of San Jose, City of San Jose row: Sam Liccardo 120846, Steve Brown 22764, Quangminh Pham 11330, Tyrone Wade 4406. Liccardo holds 75.8 percent of the 159346 candidate votes, a majority, so he was elected at the primary under the city rule that a majority elects. The spreadsheet was opened through an Internet Archive copy of the county file.",
+  "candidates": [
+   {
+    "name": "Sam Liccardo",
+    "role": "winner",
+    "votes": 120846,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Steve Brown",
+    "role": "runner_up",
+    "votes": 22764,
+    "candidate_year_id": ""
+   }
+  ],
+  "decisive_stage_source_url": "https://www.sanjoseca.gov/home/showpublisheddocument/78323/"
+ },
+ {
+  "city_name": "San Jose",
+  "state_abb": "CA",
+  "roster_place_fips": "0668000",
+  "election_type": "regular",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "election_date": "2022-11-08",
+  "stage": "runoff",
+  "source_url": "https://results.enr.clarityelections.com/CA/Santa_Clara/115971/319093/json/en/summary.json",
+  "source_locator": "Clarity summary.json (version 319093 of election 115971), contest 'City of San Jose Mayor', choices CINDY CHAVEZ and MATT MAHAN, vote totals",
+  "certification_source_url": "https://web.archive.org/web/20240127033027/https://vote.santaclaracounty.gov/elections/past-election-information-and-results",
+  "additional_source_urls": [
+   "https://results.enr.clarityelections.com/CA/Santa_Clara/113941/300273/json/en/summary.json",
+   "https://web.archive.org/web/20240127033027/https://vote.santaclaracounty.gov/elections/past-election-information-and-results",
+   "https://web.archive.org/web/2023/https://www.sanjoseca.gov/home/showpublisheddocument/85260/637871836557800000"
+  ],
+  "verification_note": "County results site, November 8, 2022 runoff, City of San Jose Mayor: Matt Mahan 128376 (51.2 percent) and Cindy Chavez 122329 (48.8 percent). No candidate had a majority in the June 7, 2022 primary (Chavez 65501, Mahan 54076 of 167403 votes), so the runoff decided the office. The county past-election index lists this results page and its statement of vote spreadsheets; the spreadsheets could not be opened (not archived), so the figures come from the results site data file current at retrieval on 2026-10-01. Certification is not independently confirmed.",
+  "candidates": [
+   {
+    "name": "Matt Mahan",
+    "role": "winner",
+    "votes": 128376,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Cindy Chavez",
+    "role": "runner_up",
+    "votes": 122329,
+    "candidate_year_id": ""
+   }
+  ]
+ },
+ {
+  "city_name": "San Jose",
+  "state_abb": "CA",
+  "roster_place_fips": "0668000",
+  "election_type": "regular",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "election_date": "2024-03-05",
+  "stage": "primary_nominating",
+  "source_url": "https://results.enr.clarityelections.com/CA/Santa_Clara/120250/334586/json/en/summary.json",
+  "source_locator": "Clarity summary.json (version 334586 of election 120250), contest 'City of San Jose, Mayor', choices Matt Mahan and Tyrone Wade, vote totals",
+  "certification_source_url": "https://web.archive.org/web/20241210172903/https://vote.santaclaracounty.gov/elections/past-election-information-and-results",
+  "additional_source_urls": [
+   "https://web.archive.org/web/20241210172903/https://vote.santaclaracounty.gov/elections/past-election-information-and-results",
+   "https://web.archive.org/web/2023/https://www.sanjoseca.gov/home/showpublisheddocument/85260/637871836557800000"
+  ],
+  "verification_note": "County results site, March 5, 2024 presidential primary, City of San Jose Mayor: Matt Mahan 144701 (86.6 percent) and Tyrone Wade 22363 (13.4 percent) of 167064 candidate votes. Mahan holds a majority, so he was elected at the primary; Measure B text (Charter sections 500 and 1600) requires a majority of votes cast and holds a runoff only for the top two when none is reached. The county statement of vote spreadsheet could not be opened, so the figures come from the results site data file current at retrieval on 2026-10-01. Certification is not independently confirmed.",
+  "candidates": [
+   {
+    "name": "Matt Mahan",
+    "role": "winner",
+    "votes": 144701,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Tyrone Wade",
+    "role": "runner_up",
+    "votes": 22363,
+    "candidate_year_id": ""
+   }
+  ],
+  "decisive_stage_source_url": "https://web.archive.org/web/2023/https://www.sanjoseca.gov/home/showpublisheddocument/85260/637871836557800000"
+ }
+]

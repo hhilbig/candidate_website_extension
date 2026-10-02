@@ -1,0 +1,180 @@
+[
+ {
+  "city_id": "2938000",
+  "year": 2010,
+  "status": "unresolved",
+  "expected_election_dates": [],
+  "source_url": "https://kceb.org/elections/election-results/",
+  "additional_source_urls": [],
+  "note": "Unresolved. The earlier no_election value rested on the Election Board results index and on a four-year cycle (2011, 2015, 2019, 2023) that no official document opened in this project states. Re-check attempts failed. https://kceb.org/elections/election-results/ returned only a bot-verification page (One moment, please) to curl and WebFetch. The city charter on Municode (library.municode.com) returned no text without JavaScript. https://www.kcmo.gov/city-hall/city-clerk, /city-clerk/city-charter and /city-officials/mayor returned HTTP 403 Access Denied. The browser extension was not connected and the web search budget was used up. The four verified mayoral elections in the results file (2011, 2015, 2019, 2023) are consistent with a four-year cycle, but absence of a mayoral election in this year is not shown by an official source."
+ },
+ {
+  "city_id": "2938000",
+  "year": 2011,
+  "status": "complete",
+  "expected_election_dates": [
+   "2011-03-22"
+  ],
+  "source_url": "https://www.kceb.org/useruploads/Past_Election_Results/3_22_11_GEMS_ELECTION_RESULTS.pdf",
+  "additional_source_urls": [
+   "https://web.archive.org/web/20110409060221/http://www.claycoelections.com/pdfs/2011-MARCH-22-SUMMARY-REPORT.pdf",
+   "https://www.plattecountymovotes.gov/s/2011kcg.pdf",
+   "https://kceb.org/elections/election-results/"
+  ],
+  "note": "Kansas City holds a nonpartisan mayoral primary and then a general election; the general election decided the office. The county election authority results for the decisive round are recorded in kansas_city_results.json."
+ },
+ {
+  "city_id": "2938000",
+  "year": 2012,
+  "status": "unresolved",
+  "expected_election_dates": [],
+  "source_url": "https://kceb.org/elections/election-results/",
+  "additional_source_urls": [],
+  "note": "Unresolved. The earlier no_election value rested on the Election Board results index and on a four-year cycle (2011, 2015, 2019, 2023) that no official document opened in this project states. Re-check attempts failed. https://kceb.org/elections/election-results/ returned only a bot-verification page (One moment, please) to curl and WebFetch. The city charter on Municode (library.municode.com) returned no text without JavaScript. https://www.kcmo.gov/city-hall/city-clerk, /city-clerk/city-charter and /city-officials/mayor returned HTTP 403 Access Denied. The browser extension was not connected and the web search budget was used up. The four verified mayoral elections in the results file (2011, 2015, 2019, 2023) are consistent with a four-year cycle, but absence of a mayoral election in this year is not shown by an official source."
+ },
+ {
+  "city_id": "2938000",
+  "year": 2013,
+  "status": "unresolved",
+  "expected_election_dates": [],
+  "source_url": "https://kceb.org/elections/election-results/",
+  "additional_source_urls": [],
+  "note": "Unresolved. The earlier no_election value rested on the Election Board results index and on a four-year cycle (2011, 2015, 2019, 2023) that no official document opened in this project states. Re-check attempts failed. https://kceb.org/elections/election-results/ returned only a bot-verification page (One moment, please) to curl and WebFetch. The city charter on Municode (library.municode.com) returned no text without JavaScript. https://www.kcmo.gov/city-hall/city-clerk, /city-clerk/city-charter and /city-officials/mayor returned HTTP 403 Access Denied. The browser extension was not connected and the web search budget was used up. The four verified mayoral elections in the results file (2011, 2015, 2019, 2023) are consistent with a four-year cycle, but absence of a mayoral election in this year is not shown by an official source."
+ },
+ {
+  "city_id": "2938000",
+  "year": 2014,
+  "status": "unresolved",
+  "expected_election_dates": [],
+  "source_url": "https://kceb.org/elections/election-results/",
+  "additional_source_urls": [],
+  "note": "Unresolved. The earlier no_election value rested on the Election Board results index and on a four-year cycle (2011, 2015, 2019, 2023) that no official document opened in this project states. Re-check attempts failed. https://kceb.org/elections/election-results/ returned only a bot-verification page (One moment, please) to curl and WebFetch. The city charter on Municode (library.municode.com) returned no text without JavaScript. https://www.kcmo.gov/city-hall/city-clerk, /city-clerk/city-charter and /city-officials/mayor returned HTTP 403 Access Denied. The browser extension was not connected and the web search budget was used up. The four verified mayoral elections in the results file (2011, 2015, 2019, 2023) are consistent with a four-year cycle, but absence of a mayoral election in this year is not shown by an official source."
+ },
+ {
+  "city_id": "2938000",
+  "year": 2015,
+  "status": "complete",
+  "expected_election_dates": [
+   "2015-06-23"
+  ],
+  "source_url": "https://www.kceb.org/useruploads/Election_Summary_Official_6-15.pdf",
+  "additional_source_urls": [
+   "https://web.archive.org/web/20230429153842/https://www.claycoelections.com/vertical/sites/%7B75B54153-78CB-4524-80B8-16CB405691C9%7D/uploads/2015-06-23_KC-General-Election_Summary-Report_OFFICIAL.pdf",
+   "https://www.plattecountymovotes.gov/s/06232015.pdf",
+   "https://kceb.org/elections/election-results/"
+  ],
+  "note": "Kansas City holds a nonpartisan mayoral primary and then a general election; the general election decided the office. The county election authority results for the decisive round are recorded in kansas_city_results.json."
+ },
+ {
+  "city_id": "2938000",
+  "year": 2016,
+  "status": "unresolved",
+  "expected_election_dates": [],
+  "source_url": "https://kceb.org/elections/election-results/",
+  "additional_source_urls": [],
+  "note": "Unresolved. The earlier no_election value rested on the Election Board results index and on a four-year cycle (2011, 2015, 2019, 2023) that no official document opened in this project states. Re-check attempts failed. https://kceb.org/elections/election-results/ returned only a bot-verification page (One moment, please) to curl and WebFetch. The city charter on Municode (library.municode.com) returned no text without JavaScript. https://www.kcmo.gov/city-hall/city-clerk, /city-clerk/city-charter and /city-officials/mayor returned HTTP 403 Access Denied. The browser extension was not connected and the web search budget was used up. The four verified mayoral elections in the results file (2011, 2015, 2019, 2023) are consistent with a four-year cycle, but absence of a mayoral election in this year is not shown by an official source."
+ },
+ {
+  "city_id": "2938000",
+  "year": 2017,
+  "status": "unresolved",
+  "expected_election_dates": [],
+  "source_url": "https://kceb.org/elections/election-results/",
+  "additional_source_urls": [],
+  "note": "Unresolved. The earlier no_election value rested on the Election Board results index and on a four-year cycle (2011, 2015, 2019, 2023) that no official document opened in this project states. Re-check attempts failed. https://kceb.org/elections/election-results/ returned only a bot-verification page (One moment, please) to curl and WebFetch. The city charter on Municode (library.municode.com) returned no text without JavaScript. https://www.kcmo.gov/city-hall/city-clerk, /city-clerk/city-charter and /city-officials/mayor returned HTTP 403 Access Denied. The browser extension was not connected and the web search budget was used up. The four verified mayoral elections in the results file (2011, 2015, 2019, 2023) are consistent with a four-year cycle, but absence of a mayoral election in this year is not shown by an official source."
+ },
+ {
+  "city_id": "2938000",
+  "year": 2018,
+  "status": "unresolved",
+  "expected_election_dates": [],
+  "source_url": "https://kceb.org/elections/election-results/",
+  "additional_source_urls": [],
+  "note": "Unresolved. The earlier no_election value rested on the Election Board results index and on a four-year cycle (2011, 2015, 2019, 2023) that no official document opened in this project states. Re-check attempts failed. https://kceb.org/elections/election-results/ returned only a bot-verification page (One moment, please) to curl and WebFetch. The city charter on Municode (library.municode.com) returned no text without JavaScript. https://www.kcmo.gov/city-hall/city-clerk, /city-clerk/city-charter and /city-officials/mayor returned HTTP 403 Access Denied. The browser extension was not connected and the web search budget was used up. The four verified mayoral elections in the results file (2011, 2015, 2019, 2023) are consistent with a four-year cycle, but absence of a mayoral election in this year is not shown by an official source."
+ },
+ {
+  "city_id": "2938000",
+  "year": 2019,
+  "status": "complete",
+  "expected_election_dates": [
+   "2019-06-18"
+  ],
+  "source_url": "https://www.kceb.org/useruploads/2019_mayorCC/Election_Summary_Official_6-19.pdf",
+  "additional_source_urls": [
+   "https://www.kceb.org/useruploads/2019_mayorCC/Precinct_Detail_Official_6-19.pdf",
+   "https://web.archive.org/web/20230429153842/https://www.claycoelections.com/vertical/sites/%7B75B54153-78CB-4524-80B8-16CB405691C9%7D/uploads/2019-06-18_KC-Municipal-General-Election_Summary_Report_OFFICIAL.pdf",
+   "https://www.plattecountymovotes.gov/s/kcmo-06212019141239.pdf",
+   "https://kceb.org/elections/election-results/"
+  ],
+  "note": "Kansas City holds a nonpartisan mayoral primary and then a general election; the general election decided the office. The county election authority results for the decisive round are recorded in kansas_city_results.json."
+ },
+ {
+  "city_id": "2938000",
+  "year": 2020,
+  "status": "unresolved",
+  "expected_election_dates": [],
+  "source_url": "https://kceb.org/elections/election-results/",
+  "additional_source_urls": [],
+  "note": "Unresolved. The earlier no_election value rested on the Election Board results index and on a four-year cycle (2011, 2015, 2019, 2023) that no official document opened in this project states. Re-check attempts failed. https://kceb.org/elections/election-results/ returned only a bot-verification page (One moment, please) to curl and WebFetch. The city charter on Municode (library.municode.com) returned no text without JavaScript. https://www.kcmo.gov/city-hall/city-clerk, /city-clerk/city-charter and /city-officials/mayor returned HTTP 403 Access Denied. The browser extension was not connected and the web search budget was used up. The four verified mayoral elections in the results file (2011, 2015, 2019, 2023) are consistent with a four-year cycle, but absence of a mayoral election in this year is not shown by an official source."
+ },
+ {
+  "city_id": "2938000",
+  "year": 2021,
+  "status": "unresolved",
+  "expected_election_dates": [],
+  "source_url": "https://kceb.org/elections/election-results/",
+  "additional_source_urls": [],
+  "note": "Unresolved. The earlier no_election value rested on the Election Board results index and on a four-year cycle (2011, 2015, 2019, 2023) that no official document opened in this project states. Re-check attempts failed. https://kceb.org/elections/election-results/ returned only a bot-verification page (One moment, please) to curl and WebFetch. The city charter on Municode (library.municode.com) returned no text without JavaScript. https://www.kcmo.gov/city-hall/city-clerk, /city-clerk/city-charter and /city-officials/mayor returned HTTP 403 Access Denied. The browser extension was not connected and the web search budget was used up. The four verified mayoral elections in the results file (2011, 2015, 2019, 2023) are consistent with a four-year cycle, but absence of a mayoral election in this year is not shown by an official source."
+ },
+ {
+  "city_id": "2938000",
+  "year": 2022,
+  "status": "unresolved",
+  "expected_election_dates": [],
+  "source_url": "https://kceb.org/elections/election-results/",
+  "additional_source_urls": [],
+  "note": "Unresolved. The earlier no_election value rested on the Election Board results index and on a four-year cycle (2011, 2015, 2019, 2023) that no official document opened in this project states. Re-check attempts failed. https://kceb.org/elections/election-results/ returned only a bot-verification page (One moment, please) to curl and WebFetch. The city charter on Municode (library.municode.com) returned no text without JavaScript. https://www.kcmo.gov/city-hall/city-clerk, /city-clerk/city-charter and /city-officials/mayor returned HTTP 403 Access Denied. The browser extension was not connected and the web search budget was used up. The four verified mayoral elections in the results file (2011, 2015, 2019, 2023) are consistent with a four-year cycle, but absence of a mayoral election in this year is not shown by an official source."
+ },
+ {
+  "city_id": "2938000",
+  "year": 2023,
+  "status": "complete",
+  "expected_election_dates": [
+   "2023-06-20"
+  ],
+  "source_url": "https://www.kceb.org/useruploads/Election_Summary_Official_6-23.pdf",
+  "additional_source_urls": [
+   "https://web.archive.org/web/20240403011358/https://www.voteclaycountymo.gov/vertical/sites/%7B75B54153-78CB-4524-80B8-16CB405691C9%7D/uploads/2023-06-20_KC-Municipal-General-Election_Summary_Report_OFFICIAL.pdf",
+   "https://www.plattecountymovotes.gov/s/KCGenMunOfficial.pdf",
+   "https://kceb.org/elections/election-results/"
+  ],
+  "note": "Kansas City holds a nonpartisan mayoral primary and then a general election; the general election decided the office. The county election authority results for the decisive round are recorded in kansas_city_results.json."
+ },
+ {
+  "city_id": "2938000",
+  "year": 2024,
+  "status": "unresolved",
+  "expected_election_dates": [],
+  "source_url": "https://kceb.org/elections/election-results/",
+  "additional_source_urls": [],
+  "note": "Unresolved. The earlier no_election value rested on the Election Board results index and on a four-year cycle (2011, 2015, 2019, 2023) that no official document opened in this project states. Re-check attempts failed. https://kceb.org/elections/election-results/ returned only a bot-verification page (One moment, please) to curl and WebFetch. The city charter on Municode (library.municode.com) returned no text without JavaScript. https://www.kcmo.gov/city-hall/city-clerk, /city-clerk/city-charter and /city-officials/mayor returned HTTP 403 Access Denied. The browser extension was not connected and the web search budget was used up. The four verified mayoral elections in the results file (2011, 2015, 2019, 2023) are consistent with a four-year cycle, but absence of a mayoral election in this year is not shown by an official source."
+ },
+ {
+  "city_id": "2938000",
+  "year": 2025,
+  "status": "unresolved",
+  "expected_election_dates": [],
+  "source_url": "https://kceb.org/elections/election-results/",
+  "additional_source_urls": [],
+  "note": "Unresolved. The earlier no_election value rested on the Election Board results index and on a four-year cycle (2011, 2015, 2019, 2023) that no official document opened in this project states. Re-check attempts failed. https://kceb.org/elections/election-results/ returned only a bot-verification page (One moment, please) to curl and WebFetch. The city charter on Municode (library.municode.com) returned no text without JavaScript. https://www.kcmo.gov/city-hall/city-clerk, /city-clerk/city-charter and /city-officials/mayor returned HTTP 403 Access Denied. The browser extension was not connected and the web search budget was used up. The four verified mayoral elections in the results file (2011, 2015, 2019, 2023) are consistent with a four-year cycle, but absence of a mayoral election in this year is not shown by an official source."
+ },
+ {
+  "city_id": "2938000",
+  "year": 2026,
+  "status": "unresolved",
+  "expected_election_dates": [],
+  "source_url": "https://kceb.org/elections/election-results/",
+  "additional_source_urls": [],
+  "note": "Unresolved. The earlier no_election value rested on the Election Board results index and on a four-year cycle (2011, 2015, 2019, 2023) that no official document opened in this project states. Re-check attempts failed. https://kceb.org/elections/election-results/ returned only a bot-verification page (One moment, please) to curl and WebFetch. The city charter on Municode (library.municode.com) returned no text without JavaScript. https://www.kcmo.gov/city-hall/city-clerk, /city-clerk/city-charter and /city-officials/mayor returned HTTP 403 Access Denied. The browser extension was not connected and the web search budget was used up. The four verified mayoral elections in the results file (2011, 2015, 2019, 2023) are consistent with a four-year cycle, but absence of a mayoral election in this year is not shown by an official source."
+ }
+]

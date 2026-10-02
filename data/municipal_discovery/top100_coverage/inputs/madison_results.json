@@ -1,0 +1,129 @@
+[
+ {
+  "city_name": "Madison",
+  "state_abb": "WI",
+  "roster_place_fips": "5548000",
+  "election_date": "2011-04-05",
+  "election_type": "regular",
+  "stage": "general",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "source_url": "https://elections.countyofdane.com/elections/elect2011b.html",
+  "source_locator": "Madison Mayor, CANDIDATE TOTALS row (countywide total for the city contest)",
+  "certification_source_url": "https://elections.countyofdane.com/elections/elect2011b.html",
+  "additional_source_urls": [
+   "https://elections.countyofdane.com/elections/elect2011a.html",
+   "https://elections.countyofdane.com/past-elections"
+  ],
+  "verification_note": "Dane County Clerk 2011 Spring Election results page (headed 'Results from Official Canvass') shows Madison Mayor candidate totals: Paul R. Soglin 44542, Dave Cieslewicz 43829, write-ins 1133. The page states municipal contests are posted as a courtesy and are unofficial; certification_status is therefore source_verified. The 2011-02-15 spring primary was an earlier round and the 2011-04-05 election decided the office. Candidate column order was read from the vertical column headers of the preformatted table.",
+  "candidates": [
+   {
+    "name": "Paul R. Soglin",
+    "role": "winner",
+    "votes": 44542,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Dave Cieslewicz",
+    "role": "runner_up",
+    "votes": 43829,
+    "candidate_year_id": ""
+   }
+  ]
+ },
+ {
+  "city_name": "Madison",
+  "state_abb": "WI",
+  "roster_place_fips": "5548000",
+  "election_date": "2015-04-07",
+  "election_type": "regular",
+  "stage": "general",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "source_url": "https://elections.countyofdane.com/Election-Result/74",
+  "source_locator": "Madison Mayor race table, 100% of precincts reporting (126 of 126)",
+  "certification_source_url": "https://elections.countyofdane.com/Election-Result/74",
+  "additional_source_urls": [
+   "https://elections.countyofdane.com/Election-Result/73",
+   "https://elections.countyofdane.com/election-dates"
+  ],
+  "verification_note": "Dane County Clerk 2015 Spring Election page shows Madison Mayor: Paul R. Soglin 37734, Scott Resnick 14195, write-in 506. The page states municipal results are unofficial, so certification_status is source_verified. The 2015-02-17 spring primary (page Election-Result/73) was an earlier round with several candidates; the April general decided the office.",
+  "candidates": [
+   {
+    "name": "Paul R. Soglin",
+    "role": "winner",
+    "votes": 37734,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Scott Resnick",
+    "role": "runner_up",
+    "votes": 14195,
+    "candidate_year_id": ""
+   }
+  ]
+ },
+ {
+  "city_name": "Madison",
+  "state_abb": "WI",
+  "roster_place_fips": "5548000",
+  "election_date": "2019-04-02",
+  "election_type": "regular",
+  "stage": "general",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "source_url": "https://elections.countyofdane.com/Election-Result/109",
+  "source_locator": "Madison Mayor race table, 100% of precincts reporting (144 of 144)",
+  "certification_source_url": "https://elections.countyofdane.com/Election-Result/109",
+  "additional_source_urls": [
+   "https://elections.countyofdane.com/Election-Result/108",
+   "https://elections.countyofdane.com/election-dates"
+  ],
+  "verification_note": "Dane County Clerk 2019 Spring Election page shows Madison Mayor: Satya Rhodes-Conway 47915, Paul R. Soglin 29150, write-in 311. The page states municipal results are unofficial, so certification_status is source_verified. The 2019-02-19 spring primary (page Election-Result/108) was an earlier round; the April general decided the office.",
+  "candidates": [
+   {
+    "name": "Satya Rhodes-Conway",
+    "role": "winner",
+    "votes": 47915,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Paul R. Soglin",
+    "role": "runner_up",
+    "votes": 29150,
+    "candidate_year_id": ""
+   }
+  ]
+ },
+ {
+  "city_name": "Madison",
+  "state_abb": "WI",
+  "roster_place_fips": "5548000",
+  "election_date": "2023-04-04",
+  "election_type": "regular",
+  "stage": "general",
+  "verification_status": "verified_decisive",
+  "certification_status": "certified",
+  "source_url": "https://elections.countyofdane.com/Election-Result/153",
+  "source_locator": "Madison Mayor - Official Canvass table, 100% of precincts reporting (156 of 156)",
+  "certification_source_url": "https://elections.countyofdane.com/Election-Result/153",
+  "additional_source_urls": [
+   "https://elections.countyofdane.com/election-dates"
+  ],
+  "verification_note": "Dane County Clerk 2023 Spring Election page, race labeled 'Madison Mayor - Official Canvass': Satya Rhodes-Conway 63078, Gloria Reyes 50405, write-in 755. No Madison mayoral primary was held in February 2023.",
+  "candidates": [
+   {
+    "name": "Satya Rhodes-Conway",
+    "role": "winner",
+    "votes": 63078,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Gloria Reyes",
+    "role": "runner_up",
+    "votes": 50405,
+    "candidate_year_id": ""
+   }
+  ]
+ }
+]

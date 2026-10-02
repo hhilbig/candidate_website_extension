@@ -1,0 +1,163 @@
+[
+ {
+  "city_id": "3611000",
+  "year": 2010,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.elections.erie.gov/Files/Election%20Results/2010/11022010/2010-General.pdf",
+  "additional_source_urls": [],
+  "note": "Erie County Board of Elections 2010 general election canvass results were searched for a Buffalo mayor contest. None appears. The 2013 canvass book labels the Buffalo mayor office as a 4 Year Term. Buffalo mayoral results appear in the official Erie County Board of Elections canvass books only for 2013, 2017, 2021 and 2025."
+ },
+ {
+  "city_id": "3611000",
+  "year": 2011,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.elections.erie.gov/Files/Election%20Results/2011/11082011/2011-General.pdf",
+  "additional_source_urls": [],
+  "note": "Erie County Board of Elections 2011 general election canvass results were searched for a Buffalo mayor contest. None appears. The 2013 canvass book labels the Buffalo mayor office as a 4 Year Term. Buffalo mayoral results appear in the official Erie County Board of Elections canvass books only for 2013, 2017, 2021 and 2025."
+ },
+ {
+  "city_id": "3611000",
+  "year": 2012,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.elections.erie.gov/Files/Election%20Results/2012/11062012/2012-General.pdf",
+  "additional_source_urls": [],
+  "note": "Erie County Board of Elections 2012 general election canvass results were searched for a Buffalo mayor contest. None appears. The 2013 canvass book labels the Buffalo mayor office as a 4 Year Term. Buffalo mayoral results appear in the official Erie County Board of Elections canvass books only for 2013, 2017, 2021 and 2025."
+ },
+ {
+  "city_id": "3611000",
+  "year": 2013,
+  "status": "complete",
+  "expected_election_dates": [
+   "2013-11-05"
+  ],
+  "source_url": "https://www.elections.erie.gov/Files/Election%20Results/2013/11052013/2013-General.pdf",
+  "additional_source_urls": [],
+  "note": "Erie County Board of Elections general election canvass book shows a citywide Buffalo mayor recapitulation (4 year term). One decisive general election; partisan primary excluded."
+ },
+ {
+  "city_id": "3611000",
+  "year": 2014,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.elections.erie.gov/Files/Election%20Results/2014/11042014/2014-General.pdf",
+  "additional_source_urls": [],
+  "note": "Erie County Board of Elections 2014 general election canvass results were searched for a Buffalo mayor contest. None appears. The 2013 canvass book labels the Buffalo mayor office as a 4 Year Term. Buffalo mayoral results appear in the official Erie County Board of Elections canvass books only for 2013, 2017, 2021 and 2025."
+ },
+ {
+  "city_id": "3611000",
+  "year": 2015,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.elections.erie.gov/Files/Election%20Results/2015/110315/2015-General.pdf",
+  "additional_source_urls": [],
+  "note": "Erie County Board of Elections 2015 general election canvass results were searched for a Buffalo mayor contest. None appears. The 2013 canvass book labels the Buffalo mayor office as a 4 Year Term. Buffalo mayoral results appear in the official Erie County Board of Elections canvass books only for 2013, 2017, 2021 and 2025."
+ },
+ {
+  "city_id": "3611000",
+  "year": 2016,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.elections.erie.gov/Files/Election%20Results/2016/11082016/2016-General-Election-Canvass-Book-WEB.pdf",
+  "additional_source_urls": [],
+  "note": "Erie County Board of Elections 2016 general election canvass results were searched for a Buffalo mayor contest. None appears. The 2013 canvass book labels the Buffalo mayor office as a 4 Year Term. Buffalo mayoral results appear in the official Erie County Board of Elections canvass books only for 2013, 2017, 2021 and 2025."
+ },
+ {
+  "city_id": "3611000",
+  "year": 2017,
+  "status": "complete",
+  "expected_election_dates": [
+   "2017-11-07"
+  ],
+  "source_url": "https://www.elections.erie.gov/Files/Election%20Results/2017/2017-General.pdf",
+  "additional_source_urls": [],
+  "note": "Erie County Board of Elections general election canvass book shows a Buffalo Mayor Recapitulation (4 year term). One decisive general election; partisan primary excluded."
+ },
+ {
+  "city_id": "3611000",
+  "year": 2018,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.elections.erie.gov/Files/Election%20Results/2018/2018-General-Election-Canvass-Book-Web.pdf",
+  "additional_source_urls": [],
+  "note": "Erie County Board of Elections 2018 general election canvass results were searched for a Buffalo mayor contest. None appears. The 2013 canvass book labels the Buffalo mayor office as a 4 Year Term. Buffalo mayoral results appear in the official Erie County Board of Elections canvass books only for 2013, 2017, 2021 and 2025."
+ },
+ {
+  "city_id": "3611000",
+  "year": 2019,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.elections.erie.gov/Files/Election%20Results/2019/2019-General-Election-Canvass-Book.pdf",
+  "additional_source_urls": [],
+  "note": "Erie County Board of Elections 2019 general election canvass results were searched for a Buffalo mayor contest. None appears. The 2013 canvass book labels the Buffalo mayor office as a 4 Year Term. Buffalo mayoral results appear in the official Erie County Board of Elections canvass books only for 2013, 2017, 2021 and 2025."
+ },
+ {
+  "city_id": "3611000",
+  "year": 2020,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://elections.erie.gov/pdfs/2020%20General%20Canvass%20Booknew.xlsx",
+  "additional_source_urls": [],
+  "note": "Erie County Board of Elections 2020 general election canvass results were searched for a Buffalo mayor contest. None appears. The 2013 canvass book labels the Buffalo mayor office as a 4 Year Term. Buffalo mayoral results appear in the official Erie County Board of Elections canvass books only for 2013, 2017, 2021 and 2025."
+ },
+ {
+  "city_id": "3611000",
+  "year": 2021,
+  "status": "complete",
+  "expected_election_dates": [
+   "2021-11-02"
+  ],
+  "source_url": "https://elections.erie.gov/Files/Election%20Results/2021/2021%20General%20Canvass%20Bookupupdated.pdf",
+  "additional_source_urls": [],
+  "note": "Erie County Board of Elections general canvass book shows a citywide Buffalo mayor recapitulation (4 year term). General election decided the office; the June 2021 Democratic primary is an earlier nominating round and is not recorded."
+ },
+ {
+  "city_id": "3611000",
+  "year": 2022,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://erie.resultscaster.com/api/resultscasts/Gen22/shell",
+  "additional_source_urls": [],
+  "note": "Erie County Board of Elections ResultsCaster contest list for the Nov 8, 2022 general election was read. No City of Buffalo mayor contest appears. The 2013 canvass book labels the Buffalo mayor office as a 4 Year Term. Buffalo mayoral results appear in the official Erie County Board of Elections canvass books only for 2013, 2017, 2021 and 2025."
+ },
+ {
+  "city_id": "3611000",
+  "year": 2023,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://erie.resultscaster.com/api/resultscasts/GE23/shell",
+  "additional_source_urls": [],
+  "note": "Erie County Board of Elections ResultsCaster contest list for the Nov 7, 2023 general election was read. No City of Buffalo mayor contest appears. The 2013 canvass book labels the Buffalo mayor office as a 4 Year Term. Buffalo mayoral results appear in the official Erie County Board of Elections canvass books only for 2013, 2017, 2021 and 2025."
+ },
+ {
+  "city_id": "3611000",
+  "year": 2024,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://erie.resultscaster.com/api/resultscasts/24Gen/shell",
+  "additional_source_urls": [],
+  "note": "Erie County Board of Elections ResultsCaster contest list for the Nov 5, 2024 general election was read. No City of Buffalo mayor contest appears. The 2013 canvass book labels the Buffalo mayor office as a 4 Year Term. Buffalo mayoral results appear in the official Erie County Board of Elections canvass books only for 2013, 2017, 2021 and 2025."
+ },
+ {
+  "city_id": "3611000",
+  "year": 2025,
+  "status": "complete",
+  "expected_election_dates": [
+   "2025-11-04"
+  ],
+  "source_url": "https://erie.resultscaster.com/r/GEN25",
+  "additional_source_urls": [],
+  "note": "Erie County Board of Elections ResultsCaster results for the 2025 general election include the City of Buffalo mayor contest (4 year term). General election decided the office; the June 2025 Democratic primary is not recorded."
+ },
+ {
+  "city_id": "3611000",
+  "year": 2026,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://elections.erie.gov/pdfs/08.31.26%20Offices%20to%20be%20Elected.pdf",
+  "additional_source_urls": [],
+  "note": "Erie County Board of Elections list of offices to be elected in 2026 (dated 8/31/2026) shows only a City Court Judge under City of Buffalo. No mayoral election. The June 2026 primary contest list also has no mayor contest. The 2013 canvass book labels the Buffalo mayor office as a 4 Year Term. Buffalo mayoral results appear in the official Erie County Board of Elections canvass books only for 2013, 2017, 2021 and 2025."
+ }
+]

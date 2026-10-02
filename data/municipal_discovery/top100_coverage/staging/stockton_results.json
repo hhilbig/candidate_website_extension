@@ -1,0 +1,130 @@
+[
+ {
+  "city_name": "Stockton",
+  "state_abb": "CA",
+  "roster_place_fips": "0675000",
+  "election_date": "2012-11-06",
+  "election_type": "regular",
+  "stage": "general",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "source_url": "https://www.sjgov.org/docs/default-source/registrar-of-voters-documents/statements-of-votes-cast/2012-november---presidential-general-election/full-statement-of-votes-cast.pdf?sfvrsn=1ad2e05b_3",
+  "source_locator": "Statement of Votes Cast by District, STOCKTON MAYOR, county Total row (PDF page 146 of 340 in the by-district section)",
+  "certification_source_url": "https://www.sjgov.org/docs/default-source/registrar-of-voters-documents/statements-of-votes-cast/2012-november---presidential-general-election/full-statement-of-votes-cast.pdf?sfvrsn=1ad2e05b_3",
+  "additional_source_urls": [
+   "https://www.sjgov.org/department/rov/results/statement-of-votes-cast",
+   "https://www.stocktonca.gov/government/city_clerk/elections.php"
+  ],
+  "verification_note": "County statement of votes cast for the November 6, 2012 presidential general election shows the Stockton mayor runoff: Silva 44,159 (59.26 percent), Johnston 30,360 (40.74 percent), total votes 74,519. The June 5, 2012 primary had five candidates and no majority (Silva 7,263 of 33,908), so the November contest decided the office. The document is prepared by the Registrar of Voters and the contest is labeled official; no separate signed certification page was found in the extracted text.",
+  "candidates": [
+   {
+    "name": "Anthony Silva",
+    "role": "winner",
+    "votes": 44159,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Ann Johnston",
+    "role": "runner_up",
+    "votes": 30360,
+    "candidate_year_id": ""
+   }
+  ]
+ },
+ {
+  "city_name": "Stockton",
+  "state_abb": "CA",
+  "roster_place_fips": "0675000",
+  "election_date": "2016-11-08",
+  "election_type": "regular",
+  "stage": "general",
+  "verification_status": "verified_decisive",
+  "certification_status": "certified",
+  "source_url": "https://www.sjgov.org/docs/default-source/registrar-of-voters-documents/statements-of-votes-cast/2016-november---presidential-general-election/full-statement-of-votes-cast.pdf?sfvrsn=f9ae1e33_3",
+  "source_locator": "STOCKTON MAYOR, county Total row (PDF page 176 of 7391); table of contents Stockton Mayor",
+  "certification_source_url": "https://www.sjgov.org/docs/default-source/registrar-of-voters-documents/statements-of-votes-cast/2016-november---presidential-general-election/full-statement-of-votes-cast.pdf?sfvrsn=f9ae1e33_3",
+  "additional_source_urls": [
+   "https://www.sjgov.org/department/rov/results/statement-of-votes-cast",
+   "https://www.stocktonca.gov/government/city_clerk/elections.php"
+  ],
+  "verification_note": "County statement of votes cast for the November 8, 2016 presidential general election, certified by the Registrar of Voters on December 2, 2016, shows the Stockton mayor runoff: Tubbs 56,165 (70.57 percent), Silva 23,426 (29.43 percent), total votes 79,591. The June 7, 2016 primary had no majority winner (Tubbs 15,847 of 47,412).",
+  "candidates": [
+   {
+    "name": "Michael Tubbs",
+    "role": "winner",
+    "votes": 56165,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Anthony Silva",
+    "role": "runner_up",
+    "votes": 23426,
+    "candidate_year_id": ""
+   }
+  ]
+ },
+ {
+  "city_name": "Stockton",
+  "state_abb": "CA",
+  "roster_place_fips": "0675000",
+  "election_date": "2020-11-03",
+  "election_type": "regular",
+  "stage": "general",
+  "verification_status": "verified_decisive",
+  "certification_status": "certified",
+  "source_url": "https://www.sjgov.org/docs/default-source/registrar-of-voters-documents/statements-of-votes-cast/2020-november---presidential-election/full-statement-of-votes-cast.pdf?sfvrsn=e36ad138_3",
+  "source_locator": "CITY OF STOCKTON MAYOR - Vote for One (1) contest results, Total column; table of contents page 213",
+  "certification_source_url": "https://www.sjgov.org/docs/default-source/registrar-of-voters-documents/statements-of-votes-cast/2020-november---presidential-election/full-statement-of-votes-cast.pdf?sfvrsn=e36ad138_3",
+  "additional_source_urls": [
+   "https://www.sjgov.org/department/rov/results/statement-of-votes-cast",
+   "https://www.stocktonca.gov/government/city_clerk/elections.php"
+  ],
+  "verification_note": "County statement of votes cast for the November 3, 2020 election, prepared and certified by the Registrar of Voters, shows the Stockton mayor runoff: Lincoln 57,276 (56.44 percent), Tubbs 44,206 (43.56 percent), cast votes 101,482. The March 3, 2020 primary had six or more candidates and no majority winner (Lincoln 10,927 of the total, 21.59 percent).",
+  "candidates": [
+   {
+    "name": "Kevin J Lincoln II",
+    "role": "winner",
+    "votes": 57276,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Michael Tubbs",
+    "role": "runner_up",
+    "votes": 44206,
+    "candidate_year_id": ""
+   }
+  ]
+ },
+ {
+  "city_name": "Stockton",
+  "state_abb": "CA",
+  "roster_place_fips": "0675000",
+  "election_date": "2024-11-05",
+  "election_type": "regular",
+  "stage": "general",
+  "verification_status": "verified_decisive",
+  "certification_status": "certified",
+  "source_url": "https://www.sjgov.org/docs/default-source/registrar-of-voters-documents/current-election-general-2024/statement-of-votes-cast/2024-november---presidential-general-election/2024-general-election-statement-of-votes-cast.pdf?sfvrsn=f2d794b4_10",
+  "source_locator": "City of Stockton Mayor - Vote for One, Total column (report page 13; table of contents entry page 13 and 175)",
+  "certification_source_url": "https://www.sjgov.org/docs/default-source/registrar-of-voters-documents/current-election-general-2024/statement-of-votes-cast/2024-november---presidential-general-election/2024-general-election-statement-of-votes-cast.pdf?sfvrsn=f2d794b4_10",
+  "additional_source_urls": [
+   "https://www.sjgov.org/department/rov/results/statement-of-votes-cast",
+   "https://www.stocktonca.gov/government/city_clerk/elections.php"
+  ],
+  "verification_note": "County statement of votes cast for the November 5, 2024 general election, certified by the Registrar of Voters on December 3, 2024, shows the Stockton mayor runoff: Fugazi 45,674 (54.00 percent), Patti 38,902 (46.00 percent), cast votes 84,576. The March 5, 2024 primary had six candidates and no majority winner (Patti 13,834, 34.30 percent; Fugazi 9,123, 22.62 percent).",
+  "candidates": [
+   {
+    "name": "Christina Fugazi",
+    "role": "winner",
+    "votes": 45674,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Tom Patti",
+    "role": "runner_up",
+    "votes": 38902,
+    "candidate_year_id": ""
+   }
+  ]
+ }
+]

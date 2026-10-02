@@ -1,0 +1,167 @@
+[
+ {
+  "city_name": "Anchorage municipality",
+  "state_abb": "AK",
+  "roster_place_fips": "0203000",
+  "election_date": "2012-04-03",
+  "election_type": "regular",
+  "stage": "general",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "source_url": "https://www.muni.org/Departments/Assembly/Clerk/Elections/Election%20Results/2012%20Regular%20Election%20Results.pdf",
+  "source_locator": "Page 1, MAYOR contest, Total Votes 69655",
+  "certification_source_url": "https://www.muni.org/Departments/Assembly/Clerk/Elections/Pages/ResultsAndHistory.aspx",
+  "additional_source_urls": [
+   "https://www.muni.org/Departments/Assembly/Clerk/Elections/Election%20Results/2012%20Regular%20Election%20SOVC.pdf",
+   "https://www.muni.org/Departments/Assembly/Clerk/Elections/Pages/ResultsAndHistory.aspx",
+   "https://www.muni.org/Departments/Assembly/Clerk/Elections/Documents/Honor%20Roll/2024-0719%20Honor%20Roll-Mayors%20of%20COA,%20GAAB,%20and%20MOA%201920-2024.pdf"
+  ],
+  "verification_note": "Clerk summary report for the 2012 Regular Election lists MAYOR with Total Votes 69655: Dan Sullivan 40871 (58.68%) and Paul Honeman 26896 (38.61%), with minor candidates and write-ins making up the rest. Sullivan won outright with a majority, so no runoff was held. The election date April 3, 2012 is not printed on the summary page; it is the regular April election date, and the Honor Roll lists April 2012 with 71099 total votes cast, matching the summary report's 71099 cards cast. Votes read from a scanned image by OCR; the candidate lines sum to the stated total.",
+  "candidates": [
+   {
+    "name": "Dan Sullivan",
+    "role": "winner",
+    "votes": 40871,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Paul Honeman",
+    "role": "runner_up",
+    "votes": 26896,
+    "candidate_year_id": ""
+   }
+  ]
+ },
+ {
+  "city_name": "Anchorage municipality",
+  "state_abb": "AK",
+  "roster_place_fips": "0203000",
+  "election_date": "2015-05-05",
+  "election_type": "regular",
+  "stage": "runoff",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "source_url": "https://www.muni.org/Departments/Assembly/Clerk/Elections/Election%20Results/2015%20Runoff%20Election%20Results.pdf",
+  "source_locator": "Page 1, MAYOR contest, Total Votes 70574",
+  "certification_source_url": "https://www.muni.org/Departments/Assembly/Clerk/Elections/Pages/ResultsAndHistory.aspx",
+  "additional_source_urls": [
+   "https://www.muni.org/Departments/Assembly/Clerk/Elections/Election%20Results/2015%20Runoff%20Election%20SOVC.pdf",
+   "https://www.muni.org/Departments/Assembly/Clerk/Elections/Pages/ResultsAndHistory.aspx",
+   "https://www.muni.org/Departments/Assembly/Clerk/Elections/Documents/Honor%20Roll/2024-0719%20Honor%20Roll-Mayors%20of%20COA,%20GAAB,%20and%20MOA%201920-2024.pdf"
+  ],
+  "verification_note": "The first round of April 2015 had no majority winner: Ethan Berkowitz 21164 (37.03%), Amy Demboski 13779 (24.11%), Andrew Halcro 12327, Dan Coffey 8250 (2015 Regular Election Results, page 1). The clerk's 2015 Runoff Election summary lists MAYOR with Total Votes 70574: Ethan Berkowitz 42869 (60.74%) and Amy Demboski 27705 (39.26%). The runoff date May 5, 2015 is not printed on the summary page; the Honor Roll lists May 2015 (runoff) with 70650 votes cast, matching the summary's 70650 cards cast. Votes read by OCR; the two totals sum to 70574.",
+  "candidates": [
+   {
+    "name": "Ethan Berkowitz",
+    "role": "winner",
+    "votes": 42869,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Amy Demboski",
+    "role": "runner_up",
+    "votes": 27705,
+    "candidate_year_id": ""
+   }
+  ]
+ },
+ {
+  "city_name": "Anchorage municipality",
+  "state_abb": "AK",
+  "roster_place_fips": "0203000",
+  "election_date": "2018-04-03",
+  "election_type": "regular",
+  "stage": "general",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "source_url": "https://www.muni.org/Departments/Assembly/Clerk/Elections/Election%20Results/2018%20Regular%20Election%20Results.pdf",
+  "source_locator": "Page 1, MAYOR contest, Total Votes 76906",
+  "certification_source_url": "https://www.muni.org/Departments/Assembly/Clerk/Elections/Pages/ResultsAndHistory.aspx",
+  "additional_source_urls": [
+   "https://www.muni.org/Departments/Assembly/Clerk/Elections/Election%20Results/2018%20Regular%20Election%20SOVC.pdf",
+   "https://www.muni.org/Departments/Assembly/Clerk/Elections/Pages/ResultsAndHistory.aspx",
+   "https://www.muni.org/Departments/Assembly/Clerk/Elections/Documents/Honor%20Roll/2024-0719%20Honor%20Roll-Mayors%20of%20COA,%20GAAB,%20and%20MOA%201920-2024.pdf"
+  ],
+  "verification_note": "Clerk summary report for the General Election of April 03, 2018 (Official Results) lists MAYOR with Total Votes 76906: Ethan Berkowitz 42639 (55.44%) and Rebecca Logan 28560 (37.14%), with seven minor candidates. Berkowitz won outright with a majority, so no runoff was held. Votes read by OCR; candidate lines plus 543 unresolved write-ins sum to the stated total.",
+  "candidates": [
+   {
+    "name": "Ethan Berkowitz",
+    "role": "winner",
+    "votes": 42639,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Rebecca Logan",
+    "role": "runner_up",
+    "votes": 28560,
+    "candidate_year_id": ""
+   }
+  ]
+ },
+ {
+  "city_name": "Anchorage municipality",
+  "state_abb": "AK",
+  "roster_place_fips": "0203000",
+  "election_date": "2021-05-11",
+  "election_type": "regular",
+  "stage": "runoff",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "source_url": "https://www.muni.org/Departments/Assembly/Clerk/Elections/Election%20Results/2021%20Runoff%20Election%20Results.pdf",
+  "source_locator": "Page 1, MAYOR contest, Total Votes 90681",
+  "certification_source_url": "https://www.muni.org/Departments/Assembly/Clerk/Elections/Pages/ResultsAndHistory.aspx",
+  "additional_source_urls": [
+   "https://www.muni.org/Departments/Assembly/Clerk/Elections/Election%20Results/2021%20Runoff%20Election%20SOVC.pdf",
+   "https://www.muni.org/Departments/Assembly/Clerk/Elections/Pages/ResultsAndHistory.aspx",
+   "https://www.muni.org/Departments/Assembly/Clerk/Elections/Documents/Honor%20Roll/2024-0719%20Honor%20Roll-Mayors%20of%20COA,%20GAAB,%20and%20MOA%201920-2024.pdf"
+  ],
+  "verification_note": "The April 06, 2021 first round had no majority winner: Dave Bronson 24567 (33.06%) and Forrest Dunbar 23054 (31.02%) advanced (2021 Regular Election Results, page 1). The clerk's official results for the May 11, 2021 mayoral runoff list MAYOR with Total Votes 90681: Dave Bronson 45937 (50.66%) and Forrest Dunbar 44744 (49.34%).",
+  "candidates": [
+   {
+    "name": "Dave Bronson",
+    "role": "winner",
+    "votes": 45937,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Forrest Dunbar",
+    "role": "runner_up",
+    "votes": 44744,
+    "candidate_year_id": ""
+   }
+  ]
+ },
+ {
+  "city_name": "Anchorage municipality",
+  "state_abb": "AK",
+  "roster_place_fips": "0203000",
+  "election_date": "2024-05-14",
+  "election_type": "regular",
+  "stage": "runoff",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "source_url": "https://www.muni.org/Departments/Assembly/Clerk/Elections/Election%20Results/2024%20Runoff%20Election%20Results.pdf",
+  "source_locator": "Page 1, MAYOR contest, Total Votes 79558",
+  "certification_source_url": "https://www.muni.org/Departments/Assembly/Clerk/Elections/Pages/ResultsAndHistory.aspx",
+  "additional_source_urls": [
+   "https://www.muni.org/Departments/Assembly/Clerk/Elections/Election%20Results/2024%20Runoff%20Election%20SOVC.pdf",
+   "https://www.muni.org/Departments/Assembly/Clerk/Elections/Pages/ResultsAndHistory.aspx",
+   "https://www.muni.org/Departments/Assembly/Clerk/Elections/Documents/Honor%20Roll/2024-0719%20Honor%20Roll-Mayors%20of%20COA,%20GAAB,%20and%20MOA%201920-2024.pdf"
+  ],
+  "verification_note": "The April 02, 2024 first round had no majority winner: Suzanne LaFrance 25904 (36.23%) and Dave Bronson 25431 (35.57%) advanced (2024 Regular Election Results, page 1). The clerk's official results dated May 31, 2024 for the May 14, 2024 runoff list MAYOR with Total Votes 79558: Suzanne LaFrance 42597 (53.54%) and Dave Bronson 36961 (46.46%). The page image was inspected directly.",
+  "candidates": [
+   {
+    "name": "Suzanne LaFrance",
+    "role": "winner",
+    "votes": 42597,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Dave Bronson",
+    "role": "runner_up",
+    "votes": 36961,
+    "candidate_year_id": ""
+   }
+  ]
+ }
+]

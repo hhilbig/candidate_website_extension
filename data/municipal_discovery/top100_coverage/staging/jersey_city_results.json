@@ -1,0 +1,122 @@
+[
+ {
+  "city_name": "Jersey City",
+  "state_abb": "NJ",
+  "roster_place_fips": "3436000",
+  "election_date": "2013-05-14",
+  "election_type": "regular",
+  "stage": "general",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "source_url": "http://assets01.aws.connect.clarityelections.com/Assets/Connect/RootPublish/hudson-nj.connect.clarityelections.com/Election_Archive/2013/Municipal/2013JC_MuniElectionResults.pdf",
+  "source_locator": "Page 1, Jersey City Mayor, citywide total 39,639 votes (181 of 181 districts)",
+  "certification_source_url": "https://www.hudsoncountyclerk.org/elections-archives/",
+  "additional_source_urls": [],
+  "verification_note": "Nonpartisan municipal election. Fulop 20,983 (52.94 percent) won an outright majority over Healy 14,931. Other candidates: Walker 3,290, Malik 407, Personal Choice 28. No runoff for mayor.",
+  "candidates": [
+   {
+    "name": "Steven Fulop",
+    "role": "winner",
+    "votes": 20983,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Jerramiah Healy",
+    "role": "runner_up",
+    "votes": 14931,
+    "candidate_year_id": ""
+   }
+  ]
+ },
+ {
+  "city_name": "Jersey City",
+  "state_abb": "NJ",
+  "roster_place_fips": "3436000",
+  "election_date": "2017-11-07",
+  "election_type": "regular",
+  "stage": "general",
+  "verification_status": "verified_decisive",
+  "certification_status": "certified",
+  "source_url": "http://assets01.aws.connect.clarityelections.com/Assets/Connect/RootPublish/hudson-nj.connect.clarityelections.com/Election_Archive/2017/General/OFFICIAL-District-Canvass-General-Election-Results-2017.pdf",
+  "source_locator": "Statement of vote, Jersey City Mayor, Contest Total row: Fulop 30,279; Matsikoudis 8,763; Personal Choice 57 and 2",
+  "certification_source_url": "https://www.hudsoncountyclerk.org/elections-archives/",
+  "additional_source_urls": [],
+  "verification_note": "Document is the official district canvass and statement of vote for the November 7, 2017 general election, printed November 17, 2017. Column order follows the candidate header order Fulop, Matsikoudis, Personal Choice. Fulop won an outright majority, so no mayoral runoff.",
+  "candidates": [
+   {
+    "name": "Steven Fulop",
+    "role": "winner",
+    "votes": 30279,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Bill Matsikoudis",
+    "role": "runner_up",
+    "votes": 8763,
+    "candidate_year_id": ""
+   }
+  ]
+ },
+ {
+  "city_name": "Jersey City",
+  "state_abb": "NJ",
+  "roster_place_fips": "3436000",
+  "election_date": "2021-11-02",
+  "election_type": "regular",
+  "stage": "general",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "source_url": "https://www.hudsoncountyclerk.org/wp-content/uploads/2021/12/2021-General-Election-District-Canvass-Report.pdf",
+  "source_locator": "District canvass, Jersey City Mayor, Contest Total row (page 93 of 172): Fulop 28,562; Spears 13,741; Personal Choice 145",
+  "certification_source_url": "https://www.hudsoncountyclerk.org/elections-archives/",
+  "additional_source_urls": [
+   "https://results.enr.clarityelections.com/NJ/Hudson/111524/"
+  ],
+  "verification_note": "District canvass report printed November 22, 2021. Fulop won an outright majority, so no mayoral runoff. The same totals appear on the county clerk results page https://results.enr.clarityelections.com/NJ/Hudson/111524/.",
+  "candidates": [
+   {
+    "name": "Steven M. Fulop",
+    "role": "winner",
+    "votes": 28562,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Lewis Spears",
+    "role": "runner_up",
+    "votes": 13741,
+    "candidate_year_id": ""
+   }
+  ]
+ },
+ {
+  "city_name": "Jersey City",
+  "state_abb": "NJ",
+  "roster_place_fips": "3436000",
+  "election_date": "2025-12-02",
+  "election_type": "regular",
+  "stage": "runoff",
+  "verification_status": "verified_decisive",
+  "certification_status": "certified",
+  "source_url": "https://www.hudsoncountyclerk.org/wp-content/uploads/2026/01/2025-General-Election-Runoff-Official-Summary-Results-by-Contest.pdf",
+  "source_locator": "Official Summary Results by Contest, page 1, For Mayor City of Jersey City, 190 of 190 precincts, total votes 36,237",
+  "certification_source_url": "https://www.hudsoncountyclerk.org/elections-archives/",
+  "additional_source_urls": [
+   "https://results.enr.clarityelections.com/NJ/Hudson/125652/"
+  ],
+  "verification_note": "Official runoff results for December 2, 2025, last updated December 10, 2025. Solomon 24,707 (68.18 percent); McGreevey 11,530 (31.82 percent). The November 4, 2025 first round had eight candidates and no majority winner (election-night totals: Solomon 18,838; McGreevey 16,219), so it is an earlier round and is not recorded.",
+  "candidates": [
+   {
+    "name": "James Solomon",
+    "role": "winner",
+    "votes": 24707,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Jim McGreevey",
+    "role": "runner_up",
+    "votes": 11530,
+    "candidate_year_id": ""
+   }
+  ]
+ }
+]

@@ -1,0 +1,201 @@
+[
+ {
+  "city_id": "5167000",
+  "year": 2010,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://law.lis.virginia.gov/charters/richmond/",
+  "additional_source_urls": [
+   "https://historical.elections.virginia.gov/"
+  ],
+  "note": "The Richmond City Charter, section 3.01.1 (Virginia Code Commission charter page, opened), states: 'On the first Tuesday after the first Monday in November 2004, and every four years thereafter, a general election shall be held to elect the mayor.' The term is four years. Mayoral elections therefore fall in 2008, 2012, 2016, 2020, 2024 and 2028, and 2010 is not one of these years. The Virginia Department of Elections historical database (search landing page) listed no other Richmond mayor contest, including no special or primary, in the 2010 to 2026 window; that search supports the charter but is not the basis for this status."
+ },
+ {
+  "city_id": "5167000",
+  "year": 2011,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://law.lis.virginia.gov/charters/richmond/",
+  "additional_source_urls": [
+   "https://historical.elections.virginia.gov/"
+  ],
+  "note": "The Richmond City Charter, section 3.01.1 (Virginia Code Commission charter page, opened), states: 'On the first Tuesday after the first Monday in November 2004, and every four years thereafter, a general election shall be held to elect the mayor.' The term is four years. Mayoral elections therefore fall in 2008, 2012, 2016, 2020, 2024 and 2028, and 2011 is not one of these years. The Virginia Department of Elections historical database (search landing page) listed no other Richmond mayor contest, including no special or primary, in the 2010 to 2026 window; that search supports the charter but is not the basis for this status."
+ },
+ {
+  "city_id": "5167000",
+  "year": 2012,
+  "status": "complete",
+  "expected_election_dates": [
+   "2012-11-06"
+  ],
+  "source_url": "https://historical.elections.virginia.gov/contest/45120",
+  "additional_source_urls": [
+   "https://historical.elections.virginia.gov/",
+   "https://law.lis.virginia.gov/charters/richmond/"
+  ],
+  "note": "The Virginia Department of Elections database lists a Richmond City mayor general election on this date. Winner and runner-up are in richmond_results.json."
+ },
+ {
+  "city_id": "5167000",
+  "year": 2013,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://law.lis.virginia.gov/charters/richmond/",
+  "additional_source_urls": [
+   "https://historical.elections.virginia.gov/"
+  ],
+  "note": "The Richmond City Charter, section 3.01.1 (Virginia Code Commission charter page, opened), states: 'On the first Tuesday after the first Monday in November 2004, and every four years thereafter, a general election shall be held to elect the mayor.' The term is four years. Mayoral elections therefore fall in 2008, 2012, 2016, 2020, 2024 and 2028, and 2013 is not one of these years. The Virginia Department of Elections historical database (search landing page) listed no other Richmond mayor contest, including no special or primary, in the 2010 to 2026 window; that search supports the charter but is not the basis for this status."
+ },
+ {
+  "city_id": "5167000",
+  "year": 2014,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://law.lis.virginia.gov/charters/richmond/",
+  "additional_source_urls": [
+   "https://historical.elections.virginia.gov/"
+  ],
+  "note": "The Richmond City Charter, section 3.01.1 (Virginia Code Commission charter page, opened), states: 'On the first Tuesday after the first Monday in November 2004, and every four years thereafter, a general election shall be held to elect the mayor.' The term is four years. Mayoral elections therefore fall in 2008, 2012, 2016, 2020, 2024 and 2028, and 2014 is not one of these years. The Virginia Department of Elections historical database (search landing page) listed no other Richmond mayor contest, including no special or primary, in the 2010 to 2026 window; that search supports the charter but is not the basis for this status."
+ },
+ {
+  "city_id": "5167000",
+  "year": 2015,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://law.lis.virginia.gov/charters/richmond/",
+  "additional_source_urls": [
+   "https://historical.elections.virginia.gov/"
+  ],
+  "note": "The Richmond City Charter, section 3.01.1 (Virginia Code Commission charter page, opened), states: 'On the first Tuesday after the first Monday in November 2004, and every four years thereafter, a general election shall be held to elect the mayor.' The term is four years. Mayoral elections therefore fall in 2008, 2012, 2016, 2020, 2024 and 2028, and 2015 is not one of these years. The Virginia Department of Elections historical database (search landing page) listed no other Richmond mayor contest, including no special or primary, in the 2010 to 2026 window; that search supports the charter but is not the basis for this status."
+ },
+ {
+  "city_id": "5167000",
+  "year": 2016,
+  "status": "complete",
+  "expected_election_dates": [
+   "2016-11-08"
+  ],
+  "source_url": "https://historical.elections.virginia.gov/contest/81086",
+  "additional_source_urls": [
+   "https://historical.elections.virginia.gov/",
+   "https://law.lis.virginia.gov/charters/richmond/"
+  ],
+  "note": "The Virginia Department of Elections database lists a Richmond City mayor general election on this date. Winner and runner-up are in richmond_results.json."
+ },
+ {
+  "city_id": "5167000",
+  "year": 2017,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://law.lis.virginia.gov/charters/richmond/",
+  "additional_source_urls": [
+   "https://historical.elections.virginia.gov/"
+  ],
+  "note": "The Richmond City Charter, section 3.01.1 (Virginia Code Commission charter page, opened), states: 'On the first Tuesday after the first Monday in November 2004, and every four years thereafter, a general election shall be held to elect the mayor.' The term is four years. Mayoral elections therefore fall in 2008, 2012, 2016, 2020, 2024 and 2028, and 2017 is not one of these years. The Virginia Department of Elections historical database (search landing page) listed no other Richmond mayor contest, including no special or primary, in the 2010 to 2026 window; that search supports the charter but is not the basis for this status."
+ },
+ {
+  "city_id": "5167000",
+  "year": 2018,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://law.lis.virginia.gov/charters/richmond/",
+  "additional_source_urls": [
+   "https://historical.elections.virginia.gov/"
+  ],
+  "note": "The Richmond City Charter, section 3.01.1 (Virginia Code Commission charter page, opened), states: 'On the first Tuesday after the first Monday in November 2004, and every four years thereafter, a general election shall be held to elect the mayor.' The term is four years. Mayoral elections therefore fall in 2008, 2012, 2016, 2020, 2024 and 2028, and 2018 is not one of these years. The Virginia Department of Elections historical database (search landing page) listed no other Richmond mayor contest, including no special or primary, in the 2010 to 2026 window; that search supports the charter but is not the basis for this status."
+ },
+ {
+  "city_id": "5167000",
+  "year": 2019,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://law.lis.virginia.gov/charters/richmond/",
+  "additional_source_urls": [
+   "https://historical.elections.virginia.gov/"
+  ],
+  "note": "The Richmond City Charter, section 3.01.1 (Virginia Code Commission charter page, opened), states: 'On the first Tuesday after the first Monday in November 2004, and every four years thereafter, a general election shall be held to elect the mayor.' The term is four years. Mayoral elections therefore fall in 2008, 2012, 2016, 2020, 2024 and 2028, and 2019 is not one of these years. The Virginia Department of Elections historical database (search landing page) listed no other Richmond mayor contest, including no special or primary, in the 2010 to 2026 window; that search supports the charter but is not the basis for this status."
+ },
+ {
+  "city_id": "5167000",
+  "year": 2020,
+  "status": "complete",
+  "expected_election_dates": [
+   "2020-11-03"
+  ],
+  "source_url": "https://historical.elections.virginia.gov/contest/144774",
+  "additional_source_urls": [
+   "https://historical.elections.virginia.gov/",
+   "https://law.lis.virginia.gov/charters/richmond/"
+  ],
+  "note": "The Virginia Department of Elections database lists a Richmond City mayor general election on this date. Winner and runner-up are in richmond_results.json."
+ },
+ {
+  "city_id": "5167000",
+  "year": 2021,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://law.lis.virginia.gov/charters/richmond/",
+  "additional_source_urls": [
+   "https://historical.elections.virginia.gov/"
+  ],
+  "note": "The Richmond City Charter, section 3.01.1 (Virginia Code Commission charter page, opened), states: 'On the first Tuesday after the first Monday in November 2004, and every four years thereafter, a general election shall be held to elect the mayor.' The term is four years. Mayoral elections therefore fall in 2008, 2012, 2016, 2020, 2024 and 2028, and 2021 is not one of these years. The Virginia Department of Elections historical database (search landing page) listed no other Richmond mayor contest, including no special or primary, in the 2010 to 2026 window; that search supports the charter but is not the basis for this status."
+ },
+ {
+  "city_id": "5167000",
+  "year": 2022,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://law.lis.virginia.gov/charters/richmond/",
+  "additional_source_urls": [
+   "https://historical.elections.virginia.gov/"
+  ],
+  "note": "The Richmond City Charter, section 3.01.1 (Virginia Code Commission charter page, opened), states: 'On the first Tuesday after the first Monday in November 2004, and every four years thereafter, a general election shall be held to elect the mayor.' The term is four years. Mayoral elections therefore fall in 2008, 2012, 2016, 2020, 2024 and 2028, and 2022 is not one of these years. The Virginia Department of Elections historical database (search landing page) listed no other Richmond mayor contest, including no special or primary, in the 2010 to 2026 window; that search supports the charter but is not the basis for this status."
+ },
+ {
+  "city_id": "5167000",
+  "year": 2023,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://law.lis.virginia.gov/charters/richmond/",
+  "additional_source_urls": [
+   "https://historical.elections.virginia.gov/"
+  ],
+  "note": "The Richmond City Charter, section 3.01.1 (Virginia Code Commission charter page, opened), states: 'On the first Tuesday after the first Monday in November 2004, and every four years thereafter, a general election shall be held to elect the mayor.' The term is four years. Mayoral elections therefore fall in 2008, 2012, 2016, 2020, 2024 and 2028, and 2023 is not one of these years. The Virginia Department of Elections historical database (search landing page) listed no other Richmond mayor contest, including no special or primary, in the 2010 to 2026 window; that search supports the charter but is not the basis for this status."
+ },
+ {
+  "city_id": "5167000",
+  "year": 2024,
+  "status": "complete",
+  "expected_election_dates": [
+   "2024-11-05"
+  ],
+  "source_url": "https://historical.elections.virginia.gov/contest/161563",
+  "additional_source_urls": [
+   "https://historical.elections.virginia.gov/",
+   "https://law.lis.virginia.gov/charters/richmond/"
+  ],
+  "note": "The Virginia Department of Elections database lists a Richmond City mayor general election on this date. Winner and runner-up are in richmond_results.json."
+ },
+ {
+  "city_id": "5167000",
+  "year": 2025,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://law.lis.virginia.gov/charters/richmond/",
+  "additional_source_urls": [
+   "https://historical.elections.virginia.gov/"
+  ],
+  "note": "The Richmond City Charter, section 3.01.1 (Virginia Code Commission charter page, opened), states: 'On the first Tuesday after the first Monday in November 2004, and every four years thereafter, a general election shall be held to elect the mayor.' The term is four years. Mayoral elections therefore fall in 2008, 2012, 2016, 2020, 2024 and 2028, and 2025 is not one of these years. The Virginia Department of Elections historical database (search landing page) listed no other Richmond mayor contest, including no special or primary, in the 2010 to 2026 window; that search supports the charter but is not the basis for this status."
+ },
+ {
+  "city_id": "5167000",
+  "year": 2026,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://law.lis.virginia.gov/charters/richmond/",
+  "additional_source_urls": [
+   "https://historical.elections.virginia.gov/"
+  ],
+  "note": "The Richmond City Charter, section 3.01.1 (Virginia Code Commission charter page, opened), states: 'On the first Tuesday after the first Monday in November 2004, and every four years thereafter, a general election shall be held to elect the mayor.' The term is four years. Mayoral elections therefore fall in 2008, 2012, 2016, 2020, 2024 and 2028, and 2026 is not one of these years. The Virginia Department of Elections historical database (search landing page) listed no other Richmond mayor contest, including no special or primary, in the 2010 to 2026 window; that search supports the charter but is not the basis for this status."
+ }
+]

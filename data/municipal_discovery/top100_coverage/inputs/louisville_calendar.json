@@ -1,0 +1,218 @@
+[
+ {
+  "city_id": "2148006",
+  "year": 2010,
+  "status": "complete",
+  "expected_election_dates": [
+   "2010-11-02"
+  ],
+  "source_url": "https://www.jeffersoncountyclerk.org/files/assets/clerk/v/1/elections/documents/election-results/sovc-general-2010.pdf",
+  "additional_source_urls": [
+   "https://apps.legislature.ky.gov/law/statutes/statute.aspx?id=55789",
+   "https://web.archive.org/web/2020id_/https://www.jeffersoncountyclerk.org/files/assets/clerk/v/1/elections/documents/election-results/sovc-general-2010.pdf"
+  ],
+  "note": "The Jefferson County Clerk statement of votes cast for the general election of 2010-11-02 records the Louisville Metro mayor contest (Fischer and Heiner). The clerk URL returns HTTP 404 live, so the document was read from an Internet Archive copy of the same clerk file (web.archive.org/web/2020id_/ URL listed in additional_source_urls). Winner and runner-up are in louisville_results.json."
+ },
+ {
+  "city_id": "2148006",
+  "year": 2011,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.jeffersoncountyclerk.org/files/assets/clerk/v/1/elections/documents/election-results/2011sovc-report_gen.pdf",
+  "additional_source_urls": [
+   "https://apps.legislature.ky.gov/law/statutes/statute.aspx?id=55789",
+   "https://www.jeffersoncountyclerk.org/Voter-Info/Election-Results/Past-Election-Results"
+  ],
+  "note": "The Jefferson County Clerk statement of votes cast for the November 8, 2011 general election was inspected (text search). It lists only small-city mayor contests, no Louisville Metro mayor contest. The inspected copy was an Internet Archive copy of this clerk document. KRS 67C.105 sets a four-year mayoral term with elections in the same years as other local officials. Elections fell in 2010, 2014, 2018 and 2022, so the next fell in 2026."
+ },
+ {
+  "city_id": "2148006",
+  "year": 2012,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.jeffersoncountyclerk.org/files/assets/clerk/v/1/elections/documents/election-results/sovc_2012-generalofficial.pdf",
+  "additional_source_urls": [
+   "https://apps.legislature.ky.gov/law/statutes/statute.aspx?id=55789",
+   "https://www.jeffersoncountyclerk.org/Voter-Info/Election-Results/Past-Election-Results"
+  ],
+  "note": "The Jefferson County Clerk statement of votes cast for the November 6, 2012 general election was inspected (text search). It lists only small-city mayor contests, no Louisville Metro mayor contest. The inspected copy was an Internet Archive copy of this clerk document. KRS 67C.105 sets a four-year mayoral term with elections in the same years as other local officials. Elections fell in 2010, 2014, 2018 and 2022, so the next fell in 2026."
+ },
+ {
+  "city_id": "2148006",
+  "year": 2013,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://apps.legislature.ky.gov/law/statutes/statute.aspx?id=55789",
+  "additional_source_urls": [
+   "https://www.jeffersoncountyclerk.org/files/assets/clerk/v/1/elections/documents/election-results/sovc-general-2010.pdf",
+   "https://www.jeffersoncountyclerk.org/files/assets/clerk/v/1/elections/documents/election-results/gems-election-summary14.pdf",
+   "https://www.jeffersoncountyclerk.org/Voter-Info/Election-Results/Past-Election-Results"
+  ],
+  "note": "No Louisville Metro mayor election fell in 2013. Cycle derivation: KRS 67C.105(2)(a) sets a four-year mayoral term, and 67C.105(2)(b) starts the term on the first Monday in January after the election. KRS 67C.105(6) fills a mayoral vacancy by council selection or gubernatorial appointment, not by a special election. Jefferson County Clerk statements of votes cast show a Louisville Metro mayor contest in 2010, 2014, 2018 and 2022, which is a four-year spacing with no contest in the years between. The 2010 term runs to January 2015 and the next contest is 2014, so 2013 is inside a term. The clerk past-results index has no entry for this year, but this note does not rest on that absence. Nothing in the opened documents names the years in the statute itself; the cycle comes from the term length plus the observed election years."
+ },
+ {
+  "city_id": "2148006",
+  "year": 2014,
+  "status": "complete",
+  "expected_election_dates": [
+   "2014-11-04"
+  ],
+  "source_url": "https://www.jeffersoncountyclerk.org/files/assets/clerk/v/1/elections/documents/election-results/gems-election-summary14.pdf",
+  "additional_source_urls": [
+   "https://apps.legislature.ky.gov/law/statutes/statute.aspx?id=55789"
+  ],
+  "note": "The Jefferson County Clerk statement of votes cast for the general election of 2014-11-04 records the Louisville Metro mayor contest. Mayor serves a four-year term under KRS 67C.105 (4-year term, elected in the same years as other local officials). Winner and runner-up are in louisville_results.json."
+ },
+ {
+  "city_id": "2148006",
+  "year": 2015,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.jeffersoncountyclerk.org/files/assets/clerk/v/1/elections/documents/election-results/general2015officialresults.pdf",
+  "additional_source_urls": [
+   "https://apps.legislature.ky.gov/law/statutes/statute.aspx?id=55789",
+   "https://www.jeffersoncountyclerk.org/Voter-Info/Election-Results/Past-Election-Results"
+  ],
+  "note": "The Jefferson County Clerk statement of votes cast for the November 3, 2015 general election was inspected (text search). It lists only small-city mayor contests, no Louisville Metro mayor contest. The inspected copy was an Internet Archive copy of this clerk document. KRS 67C.105 sets a four-year mayoral term with elections in the same years as other local officials. Elections fell in 2010, 2014, 2018 and 2022, so the next fell in 2026."
+ },
+ {
+  "city_id": "2148006",
+  "year": 2016,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.jeffersoncountyclerk.org/files/assets/clerk/v/1/elections/documents/election-results/gen16officialsovc.pdf",
+  "additional_source_urls": [
+   "https://apps.legislature.ky.gov/law/statutes/statute.aspx?id=55789",
+   "https://www.jeffersoncountyclerk.org/Voter-Info/Election-Results/Past-Election-Results"
+  ],
+  "note": "The Jefferson County Clerk statement of votes cast for the November 8, 2016 general election was inspected (text search). It lists only small-city mayor contests, no Louisville Metro mayor contest. The inspected copy was an Internet Archive copy of this clerk document. KRS 67C.105 sets a four-year mayoral term with elections in the same years as other local officials. Elections fell in 2010, 2014, 2018 and 2022, so the next fell in 2026."
+ },
+ {
+  "city_id": "2148006",
+  "year": 2017,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://apps.legislature.ky.gov/law/statutes/statute.aspx?id=55789",
+  "additional_source_urls": [
+   "https://www.jeffersoncountyclerk.org/files/assets/clerk/v/1/elections/documents/election-results/gems-election-summary14.pdf",
+   "https://www.jeffersoncountyclerk.org/files/assets/clerk/v/1/elections/documents/election-results/2018genofficialsovc.pdf",
+   "https://www.jeffersoncountyclerk.org/Voter-Info/Election-Results/Past-Election-Results"
+  ],
+  "note": "No Louisville Metro mayor election fell in 2017. Cycle derivation: KRS 67C.105(2)(a) sets a four-year mayoral term, and 67C.105(2)(b) starts the term on the first Monday in January after the election. KRS 67C.105(6) fills a mayoral vacancy by council selection or gubernatorial appointment, not by a special election. Jefferson County Clerk statements of votes cast show a Louisville Metro mayor contest in 2010, 2014, 2018 and 2022, which is a four-year spacing with no contest in the years between. The 2014 term runs to January 2019 and the next contest is 2018, so 2017 is inside a term. The clerk past-results index has no entry for this year, but this note does not rest on that absence. Nothing in the opened documents names the years in the statute itself; the cycle comes from the term length plus the observed election years."
+ },
+ {
+  "city_id": "2148006",
+  "year": 2018,
+  "status": "complete",
+  "expected_election_dates": [
+   "2018-11-06"
+  ],
+  "source_url": "https://www.jeffersoncountyclerk.org/files/assets/clerk/v/1/elections/documents/election-results/2018genofficialsovc.pdf",
+  "additional_source_urls": [
+   "https://apps.legislature.ky.gov/law/statutes/statute.aspx?id=55789"
+  ],
+  "note": "The Jefferson County Clerk statement of votes cast for the general election of 2018-11-06 records the Louisville Metro mayor contest. Mayor serves a four-year term under KRS 67C.105 (4-year term, elected in the same years as other local officials). Winner and runner-up are in louisville_results.json."
+ },
+ {
+  "city_id": "2148006",
+  "year": 2019,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://apps.legislature.ky.gov/law/statutes/statute.aspx?id=55789",
+  "additional_source_urls": [
+   "https://www.jeffersoncountyclerk.org/files/assets/clerk/v/1/elections/documents/election-results/2018genofficialsovc.pdf",
+   "https://www.jeffersoncountyclerk.org/files/assets/clerk/v/1/elections/documents/election-results/gen22_sovc_official.pdf",
+   "https://www.jeffersoncountyclerk.org/Voter-Info/Election-Results/Past-Election-Results"
+  ],
+  "note": "No Louisville Metro mayor election fell in 2019. Cycle derivation: KRS 67C.105(2)(a) sets a four-year mayoral term, and 67C.105(2)(b) starts the term on the first Monday in January after the election. KRS 67C.105(6) fills a mayoral vacancy by council selection or gubernatorial appointment, not by a special election. Jefferson County Clerk statements of votes cast show a Louisville Metro mayor contest in 2010, 2014, 2018 and 2022, which is a four-year spacing with no contest in the years between. The 2018 term runs to January 2023 and the next contest is 2022, so 2019 is inside a term. The clerk past-results index has no entry for this year, but this note does not rest on that absence. Nothing in the opened documents names the years in the statute itself; the cycle comes from the term length plus the observed election years."
+ },
+ {
+  "city_id": "2148006",
+  "year": 2020,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.jeffersoncountyclerk.org/files/assets/clerk/v/1/elections/documents/election-results/gen20sovc.pdf",
+  "additional_source_urls": [
+   "https://apps.legislature.ky.gov/law/statutes/statute.aspx?id=55789",
+   "https://www.jeffersoncountyclerk.org/Voter-Info/Election-Results/Past-Election-Results"
+  ],
+  "note": "The Jefferson County Clerk statement of votes cast for the November 3, 2020 general election was inspected (text search). It lists only small-city mayor contests, no Louisville Metro mayor contest. KRS 67C.105 sets a four-year mayoral term with elections in the same years as other local officials. Elections fell in 2010, 2014, 2018 and 2022, so the next fell in 2026."
+ },
+ {
+  "city_id": "2148006",
+  "year": 2021,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://apps.legislature.ky.gov/law/statutes/statute.aspx?id=55789",
+  "additional_source_urls": [
+   "https://www.jeffersoncountyclerk.org/files/assets/clerk/v/1/elections/documents/election-results/2018genofficialsovc.pdf",
+   "https://www.jeffersoncountyclerk.org/files/assets/clerk/v/1/elections/documents/election-results/gen22_sovc_official.pdf",
+   "https://www.jeffersoncountyclerk.org/Voter-Info/Election-Results/Past-Election-Results"
+  ],
+  "note": "No Louisville Metro mayor election fell in 2021. Cycle derivation: KRS 67C.105(2)(a) sets a four-year mayoral term, and 67C.105(2)(b) starts the term on the first Monday in January after the election. KRS 67C.105(6) fills a mayoral vacancy by council selection or gubernatorial appointment, not by a special election. Jefferson County Clerk statements of votes cast show a Louisville Metro mayor contest in 2010, 2014, 2018 and 2022, which is a four-year spacing with no contest in the years between. The 2018 term runs to January 2023 and the next contest is 2022, so 2021 is inside a term. The clerk past-results index has no entry for this year, but this note does not rest on that absence. Nothing in the opened documents names the years in the statute itself; the cycle comes from the term length plus the observed election years."
+ },
+ {
+  "city_id": "2148006",
+  "year": 2022,
+  "status": "complete",
+  "expected_election_dates": [
+   "2022-11-08"
+  ],
+  "source_url": "https://www.jeffersoncountyclerk.org/files/assets/clerk/v/1/elections/documents/election-results/gen22_sovc_official.pdf",
+  "additional_source_urls": [
+   "https://apps.legislature.ky.gov/law/statutes/statute.aspx?id=55789"
+  ],
+  "note": "The Jefferson County Clerk statement of votes cast for the general election of 2022-11-08 records the Louisville Metro mayor contest. Mayor serves a four-year term under KRS 67C.105 (4-year term, elected in the same years as other local officials). Winner and runner-up are in louisville_results.json."
+ },
+ {
+  "city_id": "2148006",
+  "year": 2023,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.jeffersoncountyclerk.org/files/assets/clerk/v/1/elections/documents/election-results/gen23_sovc_official.pdf",
+  "additional_source_urls": [
+   "https://apps.legislature.ky.gov/law/statutes/statute.aspx?id=55789",
+   "https://www.jeffersoncountyclerk.org/Voter-Info/Election-Results/Past-Election-Results"
+  ],
+  "note": "The Jefferson County Clerk statement of votes cast for the November 7, 2023 general election was inspected (text search). It lists only small-city mayor contests, no Louisville Metro mayor contest. KRS 67C.105 sets a four-year mayoral term with elections in the same years as other local officials. Elections fell in 2010, 2014, 2018 and 2022, so the next fell in 2026."
+ },
+ {
+  "city_id": "2148006",
+  "year": 2024,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.jeffersoncountyclerk.org/files/assets/clerk/v/1/elections/documents/election-results/gen24_sovc.pdf",
+  "additional_source_urls": [
+   "https://apps.legislature.ky.gov/law/statutes/statute.aspx?id=55789",
+   "https://www.jeffersoncountyclerk.org/Voter-Info/Election-Results/Past-Election-Results"
+  ],
+  "note": "The Jefferson County Clerk statement of votes cast for the November 5, 2024 general election was inspected (text search). It lists only small-city mayor contests, no Louisville Metro mayor contest. KRS 67C.105 sets a four-year mayoral term with elections in the same years as other local officials. Elections fell in 2010, 2014, 2018 and 2022, so the next fell in 2026."
+ },
+ {
+  "city_id": "2148006",
+  "year": 2025,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://apps.legislature.ky.gov/law/statutes/statute.aspx?id=55789",
+  "additional_source_urls": [
+   "https://www.jeffersoncountyclerk.org/files/assets/clerk/v/1/elections/documents/election-results/gen22_sovc_official.pdf",
+   "https://www.jeffersoncountyclerk.org/files/assets/clerk/v/1/elections/documents/election-results/2026pri_sovc.pdf",
+   "https://www.jeffersoncountyclerk.org/Voter-Info/Election-Results/Past-Election-Results"
+  ],
+  "note": "No Louisville Metro mayor election fell in 2025. Cycle derivation: KRS 67C.105(2)(a) sets a four-year mayoral term, and 67C.105(2)(b) starts the term on the first Monday in January after the election. KRS 67C.105(6) fills a mayoral vacancy by council selection or gubernatorial appointment, not by a special election. Jefferson County Clerk statements of votes cast show a Louisville Metro mayor contest in 2010, 2014, 2018 and 2022, which is a four-year spacing with no contest in the years between. The 2022 term runs to January 2027 and the 2026 primary lists the next mayor contest, so 2025 is inside a term. The clerk past-results index has no entry for this year, but this note does not rest on that absence. Nothing in the opened documents names the years in the statute itself; the cycle comes from the term length plus the observed election years."
+ },
+ {
+  "city_id": "2148006",
+  "year": 2026,
+  "status": "earlier_round_only",
+  "expected_election_dates": [],
+  "source_url": "https://www.jeffersoncountyclerk.org/files/assets/clerk/v/1/elections/documents/election-results/2026pri_sovc.pdf",
+  "additional_source_urls": [
+   "https://apps.legislature.ky.gov/law/statutes/statute.aspx?id=55789",
+   "https://apps.legislature.ky.gov/law/statutes/statute.aspx?id=51687",
+   "https://apps.legislature.ky.gov/law/statutes/statute.aspx?id=57011",
+   "https://www.jeffersoncountyclerk.org/Voter-Info/Election-Results/Past-Election-Results"
+  ],
+  "note": "The Jefferson County Clerk official statement of votes cast for the May 19, 2026 primary lists a LOUISVILLE MAYOR contest, VOTE FOR 1, with ten candidates in one list (page 126 of 155 onward; Greenberg and DeVore among them). KRS 67C.105(2)(a) says the mayor is nominated and elected in nonpartisan elections. KRS 83A.170(13) to (15) say the two top nonpartisan primary vote-getters are nominated and the nominee with more votes at the regular election is elected. KRS 118.025(4) sets the regular election on the first Tuesday after the first Monday in November, which is November 3, 2026. The statute PDF shows no effective date, and no opened clerk document names the November 2026 mayor contest. The November 3 date is therefore derived from the statutes, not read from a clerk ballot document. The May primary is an earlier round and the decisive round falls after the September 14, 2026 cutoff."
+ }
+]

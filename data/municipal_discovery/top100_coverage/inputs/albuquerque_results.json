@@ -1,0 +1,127 @@
+[
+ {
+  "city_name": "Albuquerque",
+  "state_abb": "NM",
+  "roster_place_fips": "3502000",
+  "election_date": "2013-10-08",
+  "election_type": "regular",
+  "stage": "general",
+  "verification_status": "verified_decisive",
+  "certification_status": "certified",
+  "source_url": "https://www.cabq.gov/vote/documents/certificate-of-canvass-oct-8-2013-election.pdf",
+  "source_locator": "Page 1, Mayor table (Terms Expiring November 30, 2017)",
+  "certification_source_url": "https://www.cabq.gov/vote/documents/certificate-of-canvass-oct-8-2013-election.pdf",
+  "additional_source_urls": [
+   "https://www.cabq.gov/vote/election-information/past-election-information"
+  ],
+  "verification_note": "Certificate of canvass signed by the City Clerk and the district judge on October 18, 2013. Mayor: Berry 48,009 (68.10 percent), Dinelli 20,248 (28.72 percent), Heh 2,217, write-in 26. Berry won a majority, so no mayoral runoff occurred. The certificate text says the election was held on the 4th day of October 2013, but its title and the clerk index give October 8, 2013, which is the used date.",
+  "candidates": [
+   {
+    "name": "Richard J. Berry",
+    "role": "winner",
+    "votes": 48009,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Pete Dinelli",
+    "role": "runner_up",
+    "votes": 20248,
+    "candidate_year_id": ""
+   }
+  ]
+ },
+ {
+  "city_name": "Albuquerque",
+  "state_abb": "NM",
+  "roster_place_fips": "3502000",
+  "election_date": "2017-11-14",
+  "election_type": "regular",
+  "stage": "runoff",
+  "verification_status": "verified_decisive",
+  "certification_status": "certified",
+  "source_url": "https://web.archive.org/web/20240711232638/https://www.cabq.gov/vote/documents/certificate-of-canvas-nov-14-2017.pdf",
+  "source_locator": "Page 1, Mayor table (Terms Expiring November 30, 2021)",
+  "certification_source_url": "https://web.archive.org/web/20240711232638/https://www.cabq.gov/vote/documents/certificate-of-canvas-nov-14-2017.pdf",
+  "additional_source_urls": [
+   "https://www.cabq.gov/vote/documents/amendment-to-certificate-of-canvass-oct-3-2017-election.pdf",
+   "https://www.cabq.gov/vote/election-information/past-election-information"
+  ],
+  "verification_note": "Certificate of canvass for the municipal run-off election, signed November 21, 2017. Mayor: Keller 60,249 (62.20 percent), Lewis 36,615 (37.80 percent). The October 3, 2017 first round (Keller 38,163; Lewis 22,241; no majority) is in the amended certificate of canvass at the second additional URL. The runoff PDF was read from an Internet Archive copy (captured 2024-07-11) of the city clerk file because the live city URL returns 404.",
+  "candidates": [
+   {
+    "name": "Timothy M. Keller",
+    "role": "winner",
+    "votes": 60249,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Dan Lewis",
+    "role": "runner_up",
+    "votes": 36615,
+    "candidate_year_id": ""
+   }
+  ]
+ },
+ {
+  "city_name": "Albuquerque",
+  "state_abb": "NM",
+  "roster_place_fips": "3502000",
+  "election_date": "2021-11-02",
+  "election_type": "regular",
+  "stage": "general",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "source_url": "https://electionresults.sos.nm.gov/resultsSW.aspx?type=CTYALL&map=CTY&cty=02&name=Bernalillo&eid=2796",
+  "source_locator": "Contest MAYOR CITY OF ALBUQUERQUE, Bernalillo County, 2021 Regular Local Election, total votes 119,762",
+  "certification_source_url": "https://electionresults.sos.nm.gov/resultsSW.aspx?type=CTYALL&map=CTY&cty=02&name=Bernalillo&eid=2796",
+  "additional_source_urls": [
+   "https://www.cabq.gov/vote/election-information/past-election-information"
+  ],
+  "verification_note": "New Mexico Secretary of State official results page (last updated 11/29/2021). Keller 67,163 (56.1 percent), Gonzales 30,576, Aragon 21,989, Sais write-in 34. Keller exceeded 50 percent, so no runoff occurred. Roles by votes in the decisive general.",
+  "candidates": [
+   {
+    "name": "Timothy M. Keller",
+    "role": "winner",
+    "votes": 67163,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Manuel Gonzales III",
+    "role": "runner_up",
+    "votes": 30576,
+    "candidate_year_id": ""
+   }
+  ]
+ },
+ {
+  "city_name": "Albuquerque",
+  "state_abb": "NM",
+  "roster_place_fips": "3502000",
+  "election_date": "2025-12-09",
+  "election_type": "regular",
+  "stage": "runoff",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "source_url": "https://electionresults.sos.nm.gov/resultsSW.aspx?type=CTYALL&map=CTY&cty=02&name=Bernalillo&eid=2898",
+  "source_locator": "Contest MAYOR CITY OF ALBUQUERQUE, 2025 City of Albuquerque Runoff Election, total votes 129,036, 610 of 610 precincts",
+  "certification_source_url": "https://electionresults.sos.nm.gov/resultsSW.aspx?type=CTYALL&map=CTY&cty=02&name=Bernalillo&eid=2898",
+  "additional_source_urls": [
+   "https://electionresults.sos.nm.gov/resultsSW.aspx?type=CTYALL&map=CTY&cty=02&name=Bernalillo&eid=2897"
+  ],
+  "verification_note": "New Mexico Secretary of State results page, last updated 12/15/2025. Runoff: Keller 74,472 (57.7 percent), White 54,564 (42.3 percent). The November 4, 2025 first round (Keller 47,911; White 41,137; total 134,227) at the additional URL had no majority. Bernalillo County clerk certification page (berncoclerk.gov) returned HTTP 403, so certification was not read directly.",
+  "candidates": [
+   {
+    "name": "Timothy M. Keller",
+    "role": "winner",
+    "votes": 74472,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Darren White",
+    "role": "runner_up",
+    "votes": 54564,
+    "candidate_year_id": ""
+   }
+  ]
+ }
+]

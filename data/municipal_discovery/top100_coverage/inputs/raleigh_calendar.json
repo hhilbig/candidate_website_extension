@@ -1,0 +1,209 @@
+[
+ {
+  "city_id": "3755000",
+  "year": 2010,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.wake.gov/departments-government/board-elections/data-reports/past-election-results",
+  "additional_source_urls": [
+   "https://www.ncleg.gov/EnactedLegislation/SessionLaws/HTML/2021-2022/SL2021-56.html"
+  ],
+  "note": "Raleigh mayoral elections fell in odd years through 2019 (two-year terms). The Wake County Board of Elections index of past municipal elections lists no Raleigh election in this year. Mayoral elections moved to even years only from 2022."
+ },
+ {
+  "city_id": "3755000",
+  "year": 2011,
+  "status": "complete",
+  "expected_election_dates": [
+   "2011-10-11"
+  ],
+  "source_url": "https://s3.amazonaws.com/dl.ncsbe.gov/ENRS/2011_10_11/results_pct_20111011.zip",
+  "additional_source_urls": [
+   "https://www.wake.gov/departments-government/board-elections/data-reports/past-election-results"
+  ],
+  "note": "Raleigh mayoral election recorded in the state results file; winner and runner-up are in raleigh_results.json."
+ },
+ {
+  "city_id": "3755000",
+  "year": 2012,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.wake.gov/departments-government/board-elections/data-reports/past-election-results",
+  "additional_source_urls": [
+   "https://www.ncleg.gov/EnactedLegislation/SessionLaws/HTML/2021-2022/SL2021-56.html"
+  ],
+  "note": "Raleigh mayoral elections fell in odd years through 2019 (two-year terms). The Wake County Board of Elections index of past municipal elections lists no Raleigh election in this year. Mayoral elections moved to even years only from 2022."
+ },
+ {
+  "city_id": "3755000",
+  "year": 2013,
+  "status": "complete",
+  "expected_election_dates": [
+   "2013-10-08"
+  ],
+  "source_url": "https://s3.amazonaws.com/dl.ncsbe.gov/ENRS/2013_10_08/results_pct_20131008.zip",
+  "additional_source_urls": [
+   "https://www.wake.gov/departments-government/board-elections/data-reports/past-election-results"
+  ],
+  "note": "Raleigh mayoral election recorded in the state results file; winner and runner-up are in raleigh_results.json."
+ },
+ {
+  "city_id": "3755000",
+  "year": 2014,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.wake.gov/departments-government/board-elections/data-reports/past-election-results",
+  "additional_source_urls": [
+   "https://www.ncleg.gov/EnactedLegislation/SessionLaws/HTML/2021-2022/SL2021-56.html"
+  ],
+  "note": "Raleigh mayoral elections fell in odd years through 2019 (two-year terms). The Wake County Board of Elections index of past municipal elections lists no Raleigh election in this year. Mayoral elections moved to even years only from 2022."
+ },
+ {
+  "city_id": "3755000",
+  "year": 2015,
+  "status": "complete",
+  "expected_election_dates": [
+   "2015-10-06"
+  ],
+  "source_url": "https://s3.amazonaws.com/dl.ncsbe.gov/ENRS/2015_10_06/results_pct_20151006.zip",
+  "additional_source_urls": [
+   "https://www.wake.gov/departments-government/board-elections/data-reports/past-election-results"
+  ],
+  "note": "Raleigh mayoral election recorded in the state results file; winner and runner-up are in raleigh_results.json."
+ },
+ {
+  "city_id": "3755000",
+  "year": 2016,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.wake.gov/departments-government/board-elections/data-reports/past-election-results",
+  "additional_source_urls": [
+   "https://www.ncleg.gov/EnactedLegislation/SessionLaws/HTML/2021-2022/SL2021-56.html"
+  ],
+  "note": "Raleigh mayoral elections fell in odd years through 2019 (two-year terms). The Wake County Board of Elections index of past municipal elections lists no Raleigh election in this year. Mayoral elections moved to even years only from 2022."
+ },
+ {
+  "city_id": "3755000",
+  "year": 2017,
+  "status": "complete",
+  "expected_election_dates": [
+   "2017-11-07"
+  ],
+  "source_url": "https://s3.amazonaws.com/dl.ncsbe.gov/ENRS/2017_11_07/results_pct_20171107.zip",
+  "additional_source_urls": [
+   "https://www.wake.gov/departments-government/board-elections/data-reports/past-election-results"
+  ],
+  "note": "The 2017-10-10 first round gave no majority; the decisive runoff was held 2017-11-07 and is recorded in raleigh_results.json."
+ },
+ {
+  "city_id": "3755000",
+  "year": 2018,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.wake.gov/departments-government/board-elections/data-reports/past-election-results",
+  "additional_source_urls": [
+   "https://www.ncleg.gov/EnactedLegislation/SessionLaws/HTML/2021-2022/SL2021-56.html"
+  ],
+  "note": "Raleigh mayoral elections fell in odd years through 2019 (two-year terms). The Wake County Board of Elections index of past municipal elections lists no Raleigh election in this year. Mayoral elections moved to even years only from 2022."
+ },
+ {
+  "city_id": "3755000",
+  "year": 2019,
+  "status": "complete",
+  "expected_election_dates": [
+   "2019-10-08"
+  ],
+  "source_url": "https://s3.amazonaws.com/dl.ncsbe.gov/ENRS/2019_10_08/results_pct_20191008.zip",
+  "additional_source_urls": [
+   "https://www.wake.gov/departments-government/board-elections/data-reports/past-election-results"
+  ],
+  "note": "One October round decided the office: no runoff was requested, and the 2019-11-05 results contain no Raleigh mayor contest. Recorded in raleigh_results.json."
+ },
+ {
+  "city_id": "3755000",
+  "year": 2020,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.wake.gov/departments-government/board-elections/data-reports/past-election-results",
+  "additional_source_urls": [
+   "https://www.ncleg.gov/EnactedLegislation/SessionLaws/HTML/2021-2022/SL2021-56.html"
+  ],
+  "note": "Raleigh mayoral elections fell in odd years through 2019 (two-year terms). The Wake County Board of Elections index of past municipal elections lists no Raleigh election in this year. Mayoral elections moved to even years only from 2022."
+ },
+ {
+  "city_id": "3755000",
+  "year": 2021,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.ncleg.gov/EnactedLegislation/SessionLaws/HTML/2021-2022/SL2021-56.html",
+  "additional_source_urls": [
+   "https://s3.amazonaws.com/dl.ncsbe.gov/ENRS/2021_10_05/results_pct_20211005.zip",
+   "https://s3.amazonaws.com/dl.ncsbe.gov/ENRS/2021_11_02/results_pct_20211102.zip",
+   "https://www.wake.gov/departments-government/board-elections/data-reports/past-election-results"
+  ],
+  "note": "S.L. 2021-56 section 1.8 states that no municipal election is conducted in Raleigh in 2021 and the next regular election is 2022-11-08. The state results files for 2021-10-05 and 2021-11-02 contain no Raleigh mayor contest."
+ },
+ {
+  "city_id": "3755000",
+  "year": 2022,
+  "status": "complete",
+  "expected_election_dates": [
+   "2022-11-08"
+  ],
+  "source_url": "https://s3.amazonaws.com/dl.ncsbe.gov/ENRS/2022_11_08/results_pct_20221108.zip",
+  "additional_source_urls": [
+   "https://www.ncleg.gov/EnactedLegislation/SessionLaws/HTML/2021-2022/SL2021-56.html"
+  ],
+  "note": "Raleigh mayoral election recorded in the state results file; winner and runner-up are in raleigh_results.json."
+ },
+ {
+  "city_id": "3755000",
+  "year": 2023,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.ncleg.gov/EnactedLegislation/SessionLaws/HTML/2021-2022/SL2021-56.html",
+  "additional_source_urls": [
+   "https://www.wake.gov/departments-government/board-elections/data-reports/past-election-results",
+   "https://s3.amazonaws.com/dl.ncsbe.gov/ENRS/2023_10_10/results_pct_20231010.zip",
+   "https://s3.amazonaws.com/dl.ncsbe.gov/ENRS/2023_11_07/results_pct_20231107.zip"
+  ],
+  "note": "Raleigh holds regular elections in even years since S.L. 2021-56 section 1.8, with mayoral terms of two years. The state results files for the October and November election dates of this year contain no Raleigh mayor contest."
+ },
+ {
+  "city_id": "3755000",
+  "year": 2024,
+  "status": "complete",
+  "expected_election_dates": [
+   "2024-11-05"
+  ],
+  "source_url": "https://s3.amazonaws.com/dl.ncsbe.gov/ENRS/2024_11_05/results_pct_20241105.zip",
+  "additional_source_urls": [
+   "https://www.ncleg.gov/EnactedLegislation/SessionLaws/HTML/2021-2022/SL2021-56.html"
+  ],
+  "note": "Raleigh mayoral election recorded in the state results file; winner and runner-up are in raleigh_results.json."
+ },
+ {
+  "city_id": "3755000",
+  "year": 2025,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.ncleg.gov/EnactedLegislation/SessionLaws/HTML/2021-2022/SL2021-56.html",
+  "additional_source_urls": [
+   "https://www.wake.gov/departments-government/board-elections/data-reports/past-election-results",
+   "https://s3.amazonaws.com/dl.ncsbe.gov/ENRS/2025_10_07/results_pct_20251007.zip",
+   "https://s3.amazonaws.com/dl.ncsbe.gov/ENRS/2025_11_04/results_pct_20251104.zip"
+  ],
+  "note": "Raleigh holds regular elections in even years since S.L. 2021-56 section 1.8, with mayoral terms of two years. The state results files for the October and November election dates of this year contain no Raleigh mayor contest."
+ },
+ {
+  "city_id": "3755000",
+  "year": 2026,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.ncleg.gov/EnactedLegislation/SessionLaws/HTML/2021-2022/SL2021-56.html",
+  "additional_source_urls": [
+   "https://www.wake.gov/departments-government/board-elections"
+  ],
+  "note": "S.L. 2021-56 section 1.8 sets two-year terms and regular elections in even years from 2022. The 2026 regular election falls on the November 3, 2026 general election date listed by Wake County, after the September 14, 2026 cutoff. No earlier mayoral round is scheduled in this plurality system (2022 and 2024 had none). No mayoral election in the window."
+ }
+]

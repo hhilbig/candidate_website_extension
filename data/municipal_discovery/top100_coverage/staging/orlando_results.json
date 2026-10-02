@@ -1,0 +1,126 @@
+[
+ {
+  "city_name": "Orlando",
+  "state_abb": "FL",
+  "roster_place_fips": "1253000",
+  "election_date": "2012-04-03",
+  "election_type": "regular",
+  "stage": "general",
+  "verification_status": "verified_decisive",
+  "certification_status": "certified",
+  "source_url": "https://voteorangefl.gov/wp-content/uploads/2026/05/10118-election-results-official-summary.pdf",
+  "source_locator": "Mayor Orlando contest page (table of contents page 2), Totals row",
+  "certification_source_url": "https://voteorangefl.gov/wp-content/uploads/2026/05/10118-election-results-official-summary.pdf",
+  "additional_source_urls": [
+   "https://voteorangefl.gov/election-record/2012-orlando-general-election-2012-04-03/"
+  ],
+  "verification_note": "Official results show the nonpartisan mayoral general election on April 3, 2012. Totals row: Cantone 659, Diamond 5707, Dyer 12121, Mulvaney 2316, total 20803. Dyer won a majority, so no runoff.",
+  "candidates": [
+   {
+    "name": "Buddy Dyer",
+    "role": "winner",
+    "votes": 12121,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Phil Diamond",
+    "role": "runner_up",
+    "votes": 5707,
+    "candidate_year_id": ""
+   }
+  ]
+ },
+ {
+  "city_name": "Orlando",
+  "state_abb": "FL",
+  "roster_place_fips": "1253000",
+  "election_date": "2015-11-03",
+  "election_type": "regular",
+  "stage": "general",
+  "verification_status": "verified_decisive",
+  "certification_status": "certified",
+  "source_url": "https://voteorangefl.gov/wp-content/uploads/2026/05/10589-election-results-official-summary.pdf",
+  "source_locator": "Page 1, Orlando Mayor contest, Total Votes column",
+  "certification_source_url": "https://voteorangefl.gov/wp-content/uploads/2026/05/10589-election-results-official-summary.pdf",
+  "additional_source_urls": [
+   "https://voteorangefl.gov/election-record/2015-orlando-general-election-2015-11-03/"
+  ],
+  "verification_note": "Official results (run date 2015-11-05) show Dyer 13953 (62.53 percent), Paulson 7383 (33.09 percent), Grund 979. The source is a scanned page read visually. Dyer won a majority, so no runoff.",
+  "candidates": [
+   {
+    "name": "Buddy Dyer",
+    "role": "winner",
+    "votes": 13953,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Paul Paulson",
+    "role": "runner_up",
+    "votes": 7383,
+    "candidate_year_id": ""
+   }
+  ]
+ },
+ {
+  "city_name": "Orlando",
+  "state_abb": "FL",
+  "roster_place_fips": "1253000",
+  "election_date": "2019-11-05",
+  "election_type": "regular",
+  "stage": "general",
+  "verification_status": "verified_decisive",
+  "certification_status": "certified",
+  "source_url": "https://voteorangefl.gov/wp-content/uploads/2026/05/20877-election-results-official-summary.pdf",
+  "source_locator": "Page 1, Mayor contest, Total Votes column",
+  "certification_source_url": "https://voteorangefl.gov/wp-content/uploads/2026/05/20877-election-results-official-summary.pdf",
+  "additional_source_urls": [
+   "https://voteorangefl.gov/election-record/2019-orlando-general-election-2019-11-05/"
+  ],
+  "verification_note": "Official results (run date 2019-11-08) show Dyer 15957 (71.79 percent), Ings 3883 (17.47 percent), Simons 2387. The source is a scanned page read visually. Dyer won a majority, so no runoff.",
+  "candidates": [
+   {
+    "name": "Buddy Dyer",
+    "role": "winner",
+    "votes": 15957,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Samuel B. Ings",
+    "role": "runner_up",
+    "votes": 3883,
+    "candidate_year_id": ""
+   }
+  ]
+ },
+ {
+  "city_name": "Orlando",
+  "state_abb": "FL",
+  "roster_place_fips": "1253000",
+  "election_date": "2023-11-07",
+  "election_type": "regular",
+  "stage": "general",
+  "verification_status": "verified_decisive",
+  "certification_status": "certified",
+  "source_url": "https://voteorangefl.gov/wp-content/uploads/2026/05/284-official-election-results-summary.pdf",
+  "source_locator": "Mayor rows in the Official Election Results Summary table, Total Votes column",
+  "certification_source_url": "https://voteorangefl.gov/wp-content/uploads/2026/05/284-official-election-results-summary.pdf",
+  "additional_source_urls": [
+   "https://voteorangefl.gov/election-record/2023-special-house-35-primary-and-city-orlando-general-2023-11-07/"
+  ],
+  "verification_note": "Official summary shows Dyer 18670 (72.79 percent), Dixon 3812 (14.86 percent), Ings 2193, Vargas 974. Dyer won a majority, so no runoff.",
+  "candidates": [
+   {
+    "name": "Buddy Dyer",
+    "role": "winner",
+    "votes": 18670,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Steve Dixon",
+    "role": "runner_up",
+    "votes": 3812,
+    "candidate_year_id": ""
+   }
+  ]
+ }
+]

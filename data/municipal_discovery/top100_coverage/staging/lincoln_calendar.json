@@ -1,0 +1,179 @@
+[
+ {
+  "city_id": "3128000",
+  "year": 2010,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.lancaster.ne.gov/329/Election-Results",
+  "additional_source_urls": [],
+  "note": "The Lancaster County Election Commission results index lists the elections held in this year. It lists only statewide primary and general elections and no Lincoln City election. Lincoln elects its mayor in 2011, 2015, 2019 and 2023, a four-year cycle, so the next mayoral election falls in 2027."
+ },
+ {
+  "city_id": "3128000",
+  "year": 2011,
+  "status": "complete",
+  "expected_election_dates": [
+   "2011-05-03"
+  ],
+  "source_url": "http://app.lincoln.ne.gov/cnty/election/results/resul11m.htm",
+  "additional_source_urls": [
+   "https://www.lancaster.ne.gov/329/Election-Results"
+  ],
+  "note": "The Lancaster County Election Commission official final results for the Lincoln City General Election record a mayoral contest. Winner and runner-up are in lincoln_results.json."
+ },
+ {
+  "city_id": "3128000",
+  "year": 2012,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.lancaster.ne.gov/329/Election-Results",
+  "additional_source_urls": [],
+  "note": "The Lancaster County Election Commission results index lists the elections held in this year. It lists only statewide primary and general elections and no Lincoln City election. Lincoln elects its mayor in 2011, 2015, 2019 and 2023, a four-year cycle, so the next mayoral election falls in 2027."
+ },
+ {
+  "city_id": "3128000",
+  "year": 2013,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "http://app.lincoln.ne.gov/cnty/election/results/resul13m.htm",
+  "additional_source_urls": [
+   "https://www.lancaster.ne.gov/329/Election-Results"
+  ],
+  "note": "The Lancaster County Election Commission results index lists a Lincoln City primary and general election in this year. The official final general election results list council and other contests and no mayoral contest. Lincoln elects its mayor in 2011, 2015, 2019 and 2023, a four-year cycle."
+ },
+ {
+  "city_id": "3128000",
+  "year": 2014,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.lancaster.ne.gov/329/Election-Results",
+  "additional_source_urls": [],
+  "note": "The Lancaster County Election Commission results index lists the elections held in this year. It lists only statewide primary and general elections and no Lincoln City election. Lincoln elects its mayor in 2011, 2015, 2019 and 2023, a four-year cycle, so the next mayoral election falls in 2027."
+ },
+ {
+  "city_id": "3128000",
+  "year": 2015,
+  "status": "complete",
+  "expected_election_dates": [
+   "2015-05-05"
+  ],
+  "source_url": "http://app.lincoln.ne.gov/cnty/election/results/resul15M.htm",
+  "additional_source_urls": [
+   "https://www.lancaster.ne.gov/329/Election-Results"
+  ],
+  "note": "The Lancaster County Election Commission official final results for the Lincoln City General Election record a mayoral contest. Winner and runner-up are in lincoln_results.json."
+ },
+ {
+  "city_id": "3128000",
+  "year": 2016,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.lancaster.ne.gov/329/Election-Results",
+  "additional_source_urls": [],
+  "note": "The Lancaster County Election Commission results index lists the elections held in this year. It lists only statewide primary and general elections and no Lincoln City election. Lincoln elects its mayor in 2011, 2015, 2019 and 2023, a four-year cycle, so the next mayoral election falls in 2027."
+ },
+ {
+  "city_id": "3128000",
+  "year": 2017,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "http://app.lincoln.ne.gov/cnty/election/results/resul17m.htm",
+  "additional_source_urls": [
+   "https://www.lancaster.ne.gov/329/Election-Results"
+  ],
+  "note": "The Lancaster County Election Commission results index lists a Lincoln City primary and general election in this year. The official final general election results list council and other contests and no mayoral contest. Lincoln elects its mayor in 2011, 2015, 2019 and 2023, a four-year cycle."
+ },
+ {
+  "city_id": "3128000",
+  "year": 2018,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.lancaster.ne.gov/329/Election-Results",
+  "additional_source_urls": [],
+  "note": "The Lancaster County Election Commission results index lists the elections held in this year. It lists only statewide primary and general elections and no Lincoln City election. Lincoln elects its mayor in 2011, 2015, 2019 and 2023, a four-year cycle, so the next mayoral election falls in 2027."
+ },
+ {
+  "city_id": "3128000",
+  "year": 2019,
+  "status": "complete",
+  "expected_election_dates": [
+   "2019-05-07"
+  ],
+  "source_url": "http://app.lincoln.ne.gov/cnty/election/results/resul19m.htm",
+  "additional_source_urls": [
+   "https://www.lancaster.ne.gov/329/Election-Results"
+  ],
+  "note": "The Lancaster County Election Commission official final results for the Lincoln City General Election record a mayoral contest. Winner and runner-up are in lincoln_results.json."
+ },
+ {
+  "city_id": "3128000",
+  "year": 2020,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.lancaster.ne.gov/329/Election-Results",
+  "additional_source_urls": [],
+  "note": "The Lancaster County Election Commission results index lists the elections held in this year. It lists only statewide primary and general elections and no Lincoln City election. Lincoln elects its mayor in 2011, 2015, 2019 and 2023, a four-year cycle, so the next mayoral election falls in 2027."
+ },
+ {
+  "city_id": "3128000",
+  "year": 2021,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.lancaster.ne.gov/DocumentCenter/View/9007",
+  "additional_source_urls": [
+   "https://www.lancaster.ne.gov/329/Election-Results"
+  ],
+  "note": "The Lancaster County Election Commission results index lists a Lincoln City primary and general election in this year. The official final general election results list council and other contests and no mayoral contest. Lincoln elects its mayor in 2011, 2015, 2019 and 2023, a four-year cycle."
+ },
+ {
+  "city_id": "3128000",
+  "year": 2022,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.lancaster.ne.gov/329/Election-Results",
+  "additional_source_urls": [],
+  "note": "The Lancaster County Election Commission results index lists the elections held in this year. It lists only statewide primary and general elections and no Lincoln City election. Lincoln elects its mayor in 2011, 2015, 2019 and 2023, a four-year cycle, so the next mayoral election falls in 2027."
+ },
+ {
+  "city_id": "3128000",
+  "year": 2023,
+  "status": "complete",
+  "expected_election_dates": [
+   "2023-05-02"
+  ],
+  "source_url": "https://www.lancaster.ne.gov/DocumentCenter/View/18543",
+  "additional_source_urls": [
+   "https://www.lancaster.ne.gov/329/Election-Results"
+  ],
+  "note": "The Lancaster County Election Commission official final results for the Lincoln City General Election record a mayoral contest. Winner and runner-up are in lincoln_results.json."
+ },
+ {
+  "city_id": "3128000",
+  "year": 2024,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.lancaster.ne.gov/329/Election-Results",
+  "additional_source_urls": [],
+  "note": "The Lancaster County Election Commission results index lists the elections held in this year. It lists only statewide primary and general elections and no Lincoln City election. Lincoln elects its mayor in 2011, 2015, 2019 and 2023, a four-year cycle, so the next mayoral election falls in 2027."
+ },
+ {
+  "city_id": "3128000",
+  "year": 2025,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.lancaster.ne.gov/DocumentCenter/View/28087",
+  "additional_source_urls": [
+   "https://www.lancaster.ne.gov/329/Election-Results"
+  ],
+  "note": "The Lancaster County Election Commission results index lists a Lincoln City primary and general election in this year. The official final general election results list council and other contests and no mayoral contest. Lincoln elects its mayor in 2011, 2015, 2019 and 2023, a four-year cycle."
+ },
+ {
+  "city_id": "3128000",
+  "year": 2026,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.lancaster.ne.gov/329/Election-Results",
+  "additional_source_urls": [],
+  "note": "The Lancaster County Election Commission results index lists the elections held in this year. It lists only statewide primary and general elections and no Lincoln City election. Lincoln elects its mayor in 2011, 2015, 2019 and 2023, a four-year cycle, so the next mayoral election falls in 2027."
+ }
+]

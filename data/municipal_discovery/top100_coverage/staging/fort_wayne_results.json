@@ -1,0 +1,126 @@
+[
+ {
+  "city_name": "Fort Wayne",
+  "state_abb": "IN",
+  "roster_place_fips": "1825000",
+  "election_date": "2011-11-08",
+  "election_type": "regular",
+  "stage": "general",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "source_url": "https://indianavoters.in.gov/ENRHistorical/ElectionResults?year=2011",
+  "source_locator": "Historical Election Results, year 2011, General election, office Mayor, district Fort Wayne (data served by POST https://indianavoters.in.gov/ENRHistorical/GetElectionData, electionType=GENERAL, office=Mayor)",
+  "certification_source_url": "https://indianavoters.in.gov/ENRHistorical/ElectionResults?year=2011",
+  "additional_source_urls": [
+   "https://indianavoters.in.gov/ENRHistorical/GetElectionData"
+  ],
+  "verification_note": "State election authority (Indiana Election Division, indianavoters.in.gov) historical results. Henry (Democratic) 23149; Hughes (Republican) 21515; D. Haley Ahrendt (Independent) 1781. The state page does not state a certification date, so status is source_verified. Winner and runner-up chosen by votes in the decisive general election.",
+  "candidates": [
+   {
+    "name": "Thomas C. Henry",
+    "role": "winner",
+    "votes": 23149,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Paula Hughes",
+    "role": "runner_up",
+    "votes": 21515,
+    "candidate_year_id": ""
+   }
+  ]
+ },
+ {
+  "city_name": "Fort Wayne",
+  "state_abb": "IN",
+  "roster_place_fips": "1825000",
+  "election_date": "2015-11-03",
+  "election_type": "regular",
+  "stage": "general",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "source_url": "https://indianavoters.in.gov/ENRHistorical/ElectionResults?year=2015",
+  "source_locator": "Historical Election Results, year 2015, General election, office Mayor, district Fort Wayne (data served by POST https://indianavoters.in.gov/ENRHistorical/GetElectionData, electionType=GENERAL, office=Mayor)",
+  "certification_source_url": "https://indianavoters.in.gov/ENRHistorical/ElectionResults?year=2015",
+  "additional_source_urls": [
+   "https://indianavoters.in.gov/ENRHistorical/GetElectionData"
+  ],
+  "verification_note": "State election authority (Indiana Election Division, indianavoters.in.gov) historical results. Henry (Democratic) 23769; Harper (Republican) 18068. Two candidates. The state page does not state a certification date, so status is source_verified. Winner and runner-up chosen by votes in the decisive general election.",
+  "candidates": [
+   {
+    "name": "Thomas C. Henry",
+    "role": "winner",
+    "votes": 23769,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Mitch V. Harper",
+    "role": "runner_up",
+    "votes": 18068,
+    "candidate_year_id": ""
+   }
+  ]
+ },
+ {
+  "city_name": "Fort Wayne",
+  "state_abb": "IN",
+  "roster_place_fips": "1825000",
+  "election_date": "2019-11-05",
+  "election_type": "regular",
+  "stage": "general",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "source_url": "https://indianavoters.in.gov/ENRHistorical/ElectionResults?year=2019",
+  "source_locator": "Historical Election Results, year 2019, General election, office Mayor, district Fort Wayne (data served by POST https://indianavoters.in.gov/ENRHistorical/GetElectionData, electionType=GENERAL, office=Mayor)",
+  "certification_source_url": "https://indianavoters.in.gov/ENRHistorical/ElectionResults?year=2019",
+  "additional_source_urls": [
+   "https://indianavoters.in.gov/ENRHistorical/GetElectionData"
+  ],
+  "verification_note": "State election authority (Indiana Election Division, indianavoters.in.gov) historical results. Henry (Democratic) 32563; Smith (Republican) 20638. Two candidates. The state page does not state a certification date, so status is source_verified. Winner and runner-up chosen by votes in the decisive general election.",
+  "candidates": [
+   {
+    "name": "Thomas C Henry",
+    "role": "winner",
+    "votes": 32563,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Tim Smith",
+    "role": "runner_up",
+    "votes": 20638,
+    "candidate_year_id": ""
+   }
+  ]
+ },
+ {
+  "city_name": "Fort Wayne",
+  "state_abb": "IN",
+  "roster_place_fips": "1825000",
+  "election_date": "2023-11-07",
+  "election_type": "regular",
+  "stage": "general",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "source_url": "https://indianavoters.in.gov/ENRHistorical/ElectionResults?year=2023",
+  "source_locator": "Historical Election Results, year 2023, General election, office Mayor, district Fort Wayne (data served by POST https://indianavoters.in.gov/ENRHistorical/GetElectionData, electionType=GENERAL, office=Mayor)",
+  "certification_source_url": "https://indianavoters.in.gov/ENRHistorical/ElectionResults?year=2023",
+  "additional_source_urls": [
+   "https://indianavoters.in.gov/ENRHistorical/GetElectionData"
+  ],
+  "verification_note": "State election authority (Indiana Election Division, indianavoters.in.gov) historical results. Henry (Democratic) 23947; Didier (Republican) 22213. Two candidates. The state page does not state a certification date, so status is source_verified. Winner and runner-up chosen by votes in the decisive general election.",
+  "candidates": [
+   {
+    "name": "Thomas C Henry",
+    "role": "winner",
+    "votes": 23947,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Thomas (Tom) Didier",
+    "role": "runner_up",
+    "votes": 22213,
+    "candidate_year_id": ""
+   }
+  ]
+ }
+]

@@ -1,0 +1,258 @@
+[
+ {
+  "city_name": "Irvine",
+  "state_abb": "CA",
+  "roster_place_fips": "0636770",
+  "election_date": "2010-11-02",
+  "election_type": "regular",
+  "stage": "general",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "source_url": "https://ocvote.gov/data/election-results-archives",
+  "source_locator": "Archive year 2010, election 1003 (11/02/2010 General Election), contest CITY OF IRVINE Mayor, vote count column; 129 of 129 precincts",
+  "certification_source_url": "https://ocvote.gov/data/election-results-archives",
+  "additional_source_urls": [
+   "https://cityofirvine.gov/election",
+   "https://online.flippingbook.com/view/719429533/"
+  ],
+  "verification_note": "Orange County Registrar of Voters results (county election authority) for the November general election. The mayor is elected at large by plurality in one round with no runoff. Kang is the incumbent; two candidates; 64.1 percent to 35.9 percent. The page does not state a certification date, so status is source_verified.",
+  "candidates": [
+   {
+    "name": "Sukhee Kang",
+    "role": "winner",
+    "votes": 34634,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Christopher Gonzales",
+    "role": "runner_up",
+    "votes": 19383,
+    "candidate_year_id": ""
+   }
+  ]
+ },
+ {
+  "city_name": "Irvine",
+  "state_abb": "CA",
+  "roster_place_fips": "0636770",
+  "election_date": "2012-11-06",
+  "election_type": "regular",
+  "stage": "general",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "source_url": "https://ocvote.gov/data/election-results-archives",
+  "source_locator": "Archive year 2012, election 1043 (11/06/2012 General Election), contest CITY OF IRVINE Mayor, vote count column; 127 of 127 precincts",
+  "certification_source_url": "https://ocvote.gov/data/election-results-archives",
+  "additional_source_urls": [
+   "https://cityofirvine.gov/election",
+   "https://online.flippingbook.com/view/719429533/"
+  ],
+  "verification_note": "Orange County Registrar of Voters results (county election authority) for the November general election. The mayor is elected at large by plurality in one round with no runoff. Three candidates; third is Katherine Daigle with 9951 votes. Choi 45.7 percent, Agran 40.4 percent. The page does not state a certification date, so status is source_verified.",
+  "candidates": [
+   {
+    "name": "Steven S. Choi",
+    "role": "winner",
+    "votes": 32505,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Larry Agran",
+    "role": "runner_up",
+    "votes": 28741,
+    "candidate_year_id": ""
+   }
+  ]
+ },
+ {
+  "city_name": "Irvine",
+  "state_abb": "CA",
+  "roster_place_fips": "0636770",
+  "election_date": "2014-11-04",
+  "election_type": "regular",
+  "stage": "general",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "source_url": "https://ocvote.gov/data/election-results-archives",
+  "source_locator": "Archive year 2014, election 1047 (11/04/2014 General Election), contest CITY OF IRVINE Mayor, vote count column; 109 of 109 precincts",
+  "certification_source_url": "https://ocvote.gov/data/election-results-archives",
+  "additional_source_urls": [
+   "https://cityofirvine.gov/election",
+   "https://online.flippingbook.com/view/719429533/"
+  ],
+  "verification_note": "Orange County Registrar of Voters results (county election authority) for the November general election. The mayor is elected at large by plurality in one round with no runoff. Choi is the incumbent. Third candidate is Katherine Daigle with 4698 votes. Choi 45.4 percent, Gaido 43.0 percent. The registrar archive spells the runner-up surname Gaido. The page does not state a certification date, so status is source_verified.",
+  "candidates": [
+   {
+    "name": "Steven S. Choi",
+    "role": "winner",
+    "votes": 18333,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Mary Ann Gaido",
+    "role": "runner_up",
+    "votes": 17380,
+    "candidate_year_id": ""
+   }
+  ]
+ },
+ {
+  "city_name": "Irvine",
+  "state_abb": "CA",
+  "roster_place_fips": "0636770",
+  "election_date": "2016-11-08",
+  "election_type": "regular",
+  "stage": "general",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "source_url": "https://ocvote.gov/data/election-results-archives",
+  "source_locator": "Archive year 2016, election 1055 (11/08/2016 Presidential General Election), contest CITY OF IRVINE Mayor, vote count column; 101 of 101 precincts",
+  "certification_source_url": "https://ocvote.gov/data/election-results-archives",
+  "additional_source_urls": [
+   "https://cityofirvine.gov/election",
+   "https://online.flippingbook.com/view/719429533/"
+  ],
+  "verification_note": "Orange County Registrar of Voters results (county election authority) for the November general election. The mayor is elected at large by plurality in one round with no runoff. Five candidates. Others are Gang Chen 11816, Katherine Daigle 8299, David Chey 3206. Wagner 37.7 percent, Gaido 33.0 percent. The page does not state a certification date, so status is source_verified.",
+  "candidates": [
+   {
+    "name": "Donald P. Wagner",
+    "role": "winner",
+    "votes": 30002,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Mary Ann Gaido",
+    "role": "runner_up",
+    "votes": 26278,
+    "candidate_year_id": ""
+   }
+  ]
+ },
+ {
+  "city_name": "Irvine",
+  "state_abb": "CA",
+  "roster_place_fips": "0636770",
+  "election_date": "2018-11-06",
+  "election_type": "regular",
+  "stage": "general",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "source_url": "https://ocvote.gov/data/election-results-archives",
+  "source_locator": "Archive year 2018, election 1057 (11/06/2018 Statewide General Election), contest CITY OF IRVINE Mayor, vote count column; 91 of 91 precincts",
+  "certification_source_url": "https://ocvote.gov/data/election-results-archives",
+  "additional_source_urls": [
+   "https://cityofirvine.gov/election",
+   "https://online.flippingbook.com/view/719429533/"
+  ],
+  "verification_note": "Orange County Registrar of Voters results (county election authority) for the November general election. The mayor is elected at large by plurality in one round with no runoff. Wagner is the incumbent. Others are Katherine Daigle 13018 and Ing Tiong 5341. Wagner 45.3 percent, Pope 31.4 percent. The page does not state a certification date, so status is source_verified.",
+  "candidates": [
+   {
+    "name": "Donald P. Wagner",
+    "role": "winner",
+    "votes": 35592,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Ed Pope",
+    "role": "runner_up",
+    "votes": 24682,
+    "candidate_year_id": ""
+   }
+  ]
+ },
+ {
+  "city_name": "Irvine",
+  "state_abb": "CA",
+  "roster_place_fips": "0636770",
+  "election_date": "2020-11-03",
+  "election_type": "regular",
+  "stage": "general",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "source_url": "https://www.livevoterturnout.com/Orange/LiveResults/en/Index_6.html",
+  "source_locator": "Page titled November 3, 2020 General Election, contest CITY OF IRVINE Mayor, Total column (vote center plus vote by mail); page last updated 12/3/2020",
+  "certification_source_url": "https://ocvote.gov/data/election-results-archives",
+  "additional_source_urls": [
+   "https://cityofirvine.gov/election",
+   "https://online.flippingbook.com/view/719429533/"
+  ],
+  "verification_note": "Orange County Registrar of Voters results (county election authority) for the November general election. The mayor is elected at large by plurality in one round with no runoff. Shea is the incumbent council member listed with an asterisk. Others are Luis Huang 9684 and Katherine Daigle 9654. The page does not state a certification date, so status is source_verified.",
+  "candidates": [
+   {
+    "name": "Farrah N. Khan",
+    "role": "winner",
+    "votes": 56304,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Christina L. Shea",
+    "role": "runner_up",
+    "votes": 42738,
+    "candidate_year_id": ""
+   }
+  ]
+ },
+ {
+  "city_name": "Irvine",
+  "state_abb": "CA",
+  "roster_place_fips": "0636770",
+  "election_date": "2022-11-08",
+  "election_type": "regular",
+  "stage": "general",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "source_url": "https://www.livevoterturnout.com/ENR/orangecaenr/11/en/ekxwum4_Index_11.html",
+  "source_locator": "Page titled 2022 General Election, contest CITY OF IRVINE Mayor, Total column; page last updated 12/2/2022",
+  "certification_source_url": "https://ocvote.gov/data/election-results-archives",
+  "additional_source_urls": [
+   "https://cityofirvine.gov/election",
+   "https://online.flippingbook.com/view/719429533/"
+  ],
+  "verification_note": "Orange County Registrar of Voters results (county election authority) for the November general election. The mayor is elected at large by plurality in one round with no runoff. Khan is the incumbent mayor. Others are Simon Moon 14834, Katherine Daigle 7184, Tom Chomyn 5129. Khan 37.82 percent, Lin 27.52 percent. The page does not state a certification date, so status is source_verified.",
+  "candidates": [
+   {
+    "name": "Farrah N. Khan",
+    "role": "winner",
+    "votes": 29628,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Branda Lin",
+    "role": "runner_up",
+    "votes": 21560,
+    "candidate_year_id": ""
+   }
+  ]
+ },
+ {
+  "city_name": "Irvine",
+  "state_abb": "CA",
+  "roster_place_fips": "0636770",
+  "election_date": "2024-11-05",
+  "election_type": "regular",
+  "stage": "general",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "source_url": "https://www.livevoterturnout.com/ENR/orangecaenr/18/en/EzifcRF_Index_18.html",
+  "source_locator": "Page for 11/05/2024 Presidential General Election (archive election 1070), contest CITY OF IRVINE Mayor, Total column; page last updated 12/4/2024",
+  "certification_source_url": "https://ocvote.gov/data/election-results-archives",
+  "additional_source_urls": [
+   "https://cityofirvine.gov/election",
+   "https://online.flippingbook.com/view/719429533/"
+  ],
+  "verification_note": "Orange County Registrar of Voters results (county election authority) for the November general election. The mayor is elected at large by plurality in one round with no runoff. Seven candidates. Others are Ron Scolesdang 12891, Lee Sun 6001, Felipe Delgado 5325, Akshat Bhatia 2761, Wing Chow 2496. The page does not state a certification date, so status is source_verified.",
+  "candidates": [
+   {
+    "name": "Larry Agran",
+    "role": "winner",
+    "votes": 42652,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Tammy Kim",
+    "role": "runner_up",
+    "votes": 37924,
+    "candidate_year_id": ""
+   }
+  ]
+ }
+]

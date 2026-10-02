@@ -1,0 +1,160 @@
+[
+ {
+  "city_name": "Nashville-Davidson metropolitan government (balance)",
+  "state_abb": "TN",
+  "roster_place_fips": "4752006",
+  "election_date": "2011-08-04",
+  "election_type": "regular",
+  "stage": "general",
+  "verification_status": "verified_decisive",
+  "certification_status": "certified",
+  "source_url": "https://www.nashville.gov/departments/elections/election-results-and-statistics/election-results/110804",
+  "source_locator": "MAYOR table, Total Votes column, citywide",
+  "certification_source_url": "https://www.nashville.gov/departments/elections/election-results-and-statistics/election-results/110804",
+  "additional_source_urls": [
+   "https://www.nashville.gov/departments/elections/election-results-and-statistics/election-results"
+  ],
+  "verification_note": "Certified Davidson County Election Commission results for August 4, 2011. Mayor table: K. Dean 50,391; J. Keeton 6,661 (next highest); M. Barnes 4,220; B. Casper 1,810; write-in 597; total 63,679. Dean received more than 50 percent, so no runoff followed.",
+  "candidates": [
+   {
+    "name": "Karl Dean",
+    "role": "winner",
+    "votes": 50391,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Jacky Keeton",
+    "role": "runner_up",
+    "votes": 6661,
+    "candidate_year_id": ""
+   }
+  ]
+ },
+ {
+  "city_name": "Nashville-Davidson metropolitan government (balance)",
+  "state_abb": "TN",
+  "roster_place_fips": "4752006",
+  "election_date": "2015-09-10",
+  "election_type": "regular",
+  "stage": "runoff",
+  "verification_status": "verified_decisive",
+  "certification_status": "certified",
+  "source_url": "https://www.nashville.gov/departments/elections/election-results-and-statistics/election-results/150910",
+  "source_locator": "MAYOR table, Total Votes column, citywide",
+  "certification_source_url": "https://www.nashville.gov/departments/elections/election-results-and-statistics/election-results/150910",
+  "additional_source_urls": [
+   "https://www.nashville.gov/departments/elections/election-results-and-statistics/election-results",
+   "https://www.nashville.gov/departments/elections/election-results-and-statistics/election-results/150806"
+  ],
+  "verification_note": "Certified results for the September 10, 2015 runoff (page 150910). Megan Barry 60,594; David A. Fox 49,747; write-in 241. The August 6, 2015 first round (page 150806) had no majority (Barry 24,553; Fox 23,754; Freeman 22,308 among others), so the runoff decided the office. The first round is an earlier round and is not recorded separately.",
+  "candidates": [
+   {
+    "name": "Megan Barry",
+    "role": "winner",
+    "votes": 60594,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "David A. Fox",
+    "role": "runner_up",
+    "votes": 49747,
+    "candidate_year_id": ""
+   }
+  ]
+ },
+ {
+  "city_name": "Nashville-Davidson metropolitan government (balance)",
+  "state_abb": "TN",
+  "roster_place_fips": "4752006",
+  "election_date": "2018-05-24",
+  "election_type": "special",
+  "stage": "special",
+  "verification_status": "verified_decisive",
+  "certification_status": "certified",
+  "source_url": "https://www.nashville.gov/departments/elections/election-results-and-statistics/election-results/180524",
+  "source_locator": "MAYOR table, Total Votes column, citywide",
+  "certification_source_url": "https://www.nashville.gov/departments/elections/election-results-and-statistics/election-results/180524",
+  "additional_source_urls": [
+   "https://www.nashville.gov/departments/elections/election-results-and-statistics/election-results"
+  ],
+  "verification_note": "Certified results for the May 24, 2018 special mayoral election after the mayor resigned. David Briley 44,845 (54.44 percent); Carol M. Swain 18,850; 11 other candidates and write-ins. Briley won a majority, so no runoff was needed. The Davidson County results index lists a June 28, 2018 election; its page (180628) has no mayoral contest. The August 2, 2018 and September 6, 2018 pages list no mayor contest.",
+  "candidates": [
+   {
+    "name": "David Briley",
+    "role": "winner",
+    "votes": 44845,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Carol M. Swain",
+    "role": "runner_up",
+    "votes": 18850,
+    "candidate_year_id": ""
+   }
+  ]
+ },
+ {
+  "city_name": "Nashville-Davidson metropolitan government (balance)",
+  "state_abb": "TN",
+  "roster_place_fips": "4752006",
+  "election_date": "2019-09-12",
+  "election_type": "regular",
+  "stage": "runoff",
+  "verification_status": "verified_decisive",
+  "certification_status": "certified",
+  "source_url": "https://www.nashville.gov/departments/elections/election-results-and-statistics/election-results/190912",
+  "source_locator": "MAYOR table, Total Votes column, citywide",
+  "certification_source_url": "https://www.nashville.gov/departments/elections/election-results-and-statistics/election-results/190912",
+  "additional_source_urls": [
+   "https://www.nashville.gov/departments/elections/election-results-and-statistics/election-results",
+   "https://www.nashville.gov/departments/elections/election-results-and-statistics/election-results/190801"
+  ],
+  "verification_note": "Certified results for the September 12, 2019 runoff (page 190912). John Cooper 62,440 (69.12 percent); David Briley 27,281; write-in 621. The August 1, 2019 first round (page 190801) had no majority (Cooper 35,676; Briley 25,786), so the runoff decided the office. The first round is an earlier round and is not recorded separately.",
+  "candidates": [
+   {
+    "name": "John Cooper",
+    "role": "winner",
+    "votes": 62440,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "David Briley",
+    "role": "runner_up",
+    "votes": 27281,
+    "candidate_year_id": ""
+   }
+  ]
+ },
+ {
+  "city_name": "Nashville-Davidson metropolitan government (balance)",
+  "state_abb": "TN",
+  "roster_place_fips": "4752006",
+  "election_date": "2023-09-14",
+  "election_type": "regular",
+  "stage": "runoff",
+  "verification_status": "verified_decisive",
+  "certification_status": "certified",
+  "source_url": "https://www.nashville.gov/departments/elections/election-results-and-statistics/election-results/230914",
+  "source_locator": "Mayor contest table, Total Votes column, 179 of 179 precincts",
+  "certification_source_url": "https://www.nashville.gov/departments/elections/election-results-and-statistics/election-results/230914",
+  "additional_source_urls": [
+   "https://www.nashville.gov/departments/elections/election-results-and-statistics/election-results",
+   "https://www.nashville.gov/departments/elections/election-results-and-statistics/election-results/230803"
+  ],
+  "verification_note": "Certified results for the September 14, 2023 runoff (page 230914). Freddie O'Connell 72,989; Alice Rolli 41,205; write-in 123. The August 3, 2023 first round (page 230803) had no majority (O'Connell 27,503; Rolli 20,472), so the runoff decided the office. The first round is an earlier round and is not recorded separately.",
+  "candidates": [
+   {
+    "name": "Freddie O'Connell",
+    "role": "winner",
+    "votes": 72989,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Alice Rolli",
+    "role": "runner_up",
+    "votes": 41205,
+    "candidate_year_id": ""
+   }
+  ]
+ }
+]

@@ -1,0 +1,201 @@
+[
+ {
+  "city_id": "0626000",
+  "year": 2010,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://acvote.alamedacountyca.gov/acvote-assets/pdf/elections/2010/11022010/results/november-2-2010-summary-results-report.pdf",
+  "additional_source_urls": [
+   "https://alamedacountyca.gov/rov_app/electedofficials"
+  ],
+  "note": "The county certified summary results for the November 2, 2010 general election list no Fremont mayoral contest. The June 8, 2010 and February 2, 2010 reports also list none. The Alameda County Registrar of Voters results show Fremont mayoral contests in 2012, 2016, 2020 and 2024 only. The county elected officials list shows the Fremont mayor serving 2024-2028, so Fremont elects its mayor every four years."
+ },
+ {
+  "city_id": "0626000",
+  "year": 2011,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://acvote.alamedacountyca.gov/election-information/archived-elections",
+  "additional_source_urls": [
+   "https://alamedacountyca.gov/rov_app/electedofficials"
+  ],
+  "note": "The county archive and election list show only special or district elections in this odd-numbered year and no Fremont mayoral contest. The Alameda County Registrar of Voters results show Fremont mayoral contests in 2012, 2016, 2020 and 2024 only. The county elected officials list shows the Fremont mayor serving 2024-2028, so Fremont elects its mayor every four years."
+ },
+ {
+  "city_id": "0626000",
+  "year": 2012,
+  "status": "complete",
+  "expected_election_dates": [
+   "2012-11-06"
+  ],
+  "source_url": "https://acvote.alamedacountyca.gov/acvote-assets/pdf/elections/2012/11062012/results/nov-6-2012-summary-results-report.pdf",
+  "additional_source_urls": [
+   "https://acvote.alamedacountyca.gov/election-information/archived-elections",
+   "https://alamedacountyca.gov/rov_app/electedofficials"
+  ],
+  "note": "Alameda County Registrar of Voters results record a Fremont mayoral contest in the general election on 2012-11-06, decided by plurality with no runoff. Winner and runner-up are in fremont_results.json."
+ },
+ {
+  "city_id": "0626000",
+  "year": 2013,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://acvote.alamedacountyca.gov/election-information/archived-elections",
+  "additional_source_urls": [
+   "https://alamedacountyca.gov/rov_app/electedofficials"
+  ],
+  "note": "The county archive and election list show only special or district elections in this odd-numbered year and no Fremont mayoral contest. The Alameda County Registrar of Voters results show Fremont mayoral contests in 2012, 2016, 2020 and 2024 only. The county elected officials list shows the Fremont mayor serving 2024-2028, so Fremont elects its mayor every four years."
+ },
+ {
+  "city_id": "0626000",
+  "year": 2014,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://acvote.alamedacountyca.gov/acvote-assets/pdf/elections/2014/11042014/results/nov-4-2014-summary-results-report.pdf",
+  "additional_source_urls": [
+   "https://alamedacountyca.gov/rov_app/electedofficials"
+  ],
+  "note": "The county summary results for the November 4, 2014 general election list no Fremont mayoral contest. The 2014 February, May and June reports also list none. The Alameda County Registrar of Voters results show Fremont mayoral contests in 2012, 2016, 2020 and 2024 only. The county elected officials list shows the Fremont mayor serving 2024-2028, so Fremont elects its mayor every four years."
+ },
+ {
+  "city_id": "0626000",
+  "year": 2015,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://acvote.alamedacountyca.gov/election-information/archived-elections",
+  "additional_source_urls": [
+   "https://alamedacountyca.gov/rov_app/electedofficials"
+  ],
+  "note": "The county archive and election list show only special or district elections in this odd-numbered year and no Fremont mayoral contest. The Alameda County Registrar of Voters results show Fremont mayoral contests in 2012, 2016, 2020 and 2024 only. The county elected officials list shows the Fremont mayor serving 2024-2028, so Fremont elects its mayor every four years."
+ },
+ {
+  "city_id": "0626000",
+  "year": 2016,
+  "status": "complete",
+  "expected_election_dates": [
+   "2016-11-08"
+  ],
+  "source_url": "https://acvote.alamedacountyca.gov/acvote-assets/pdf/elections/2016/11082016/results/november-8-2016-summary-results-report.pdf",
+  "additional_source_urls": [
+   "https://acvote.alamedacountyca.gov/election-information/archived-elections",
+   "https://alamedacountyca.gov/rov_app/electedofficials"
+  ],
+  "note": "Alameda County Registrar of Voters results record a Fremont mayoral contest in the general election on 2016-11-08, decided by plurality with no runoff. Winner and runner-up are in fremont_results.json."
+ },
+ {
+  "city_id": "0626000",
+  "year": 2017,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://acvote.alamedacountyca.gov/election-information/archived-elections",
+  "additional_source_urls": [
+   "https://alamedacountyca.gov/rov_app/electedofficials"
+  ],
+  "note": "The county archive and election list show only special or district elections in this odd-numbered year and no Fremont mayoral contest. The Alameda County Registrar of Voters results show Fremont mayoral contests in 2012, 2016, 2020 and 2024 only. The county elected officials list shows the Fremont mayor serving 2024-2028, so Fremont elects its mayor every four years."
+ },
+ {
+  "city_id": "0626000",
+  "year": 2018,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://alamedacountyca.gov/rovresults/236/indexA.htm",
+  "additional_source_urls": [
+   "https://alamedacountyca.gov/rov_app/electedofficials"
+  ],
+  "note": "The county results for the November 6, 2018 general election list mayoral contests for other cities but none for Fremont. The Alameda County Registrar of Voters results show Fremont mayoral contests in 2012, 2016, 2020 and 2024 only. The county elected officials list shows the Fremont mayor serving 2024-2028, so Fremont elects its mayor every four years."
+ },
+ {
+  "city_id": "0626000",
+  "year": 2019,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://acvote.alamedacountyca.gov/election-information/elections",
+  "additional_source_urls": [
+   "https://alamedacountyca.gov/rov_app/electedofficials"
+  ],
+  "note": "The county archive and election list show only special or district elections in this odd-numbered year and no Fremont mayoral contest. The Alameda County Registrar of Voters results show Fremont mayoral contests in 2012, 2016, 2020 and 2024 only. The county elected officials list shows the Fremont mayor serving 2024-2028, so Fremont elects its mayor every four years."
+ },
+ {
+  "city_id": "0626000",
+  "year": 2020,
+  "status": "complete",
+  "expected_election_dates": [
+   "2020-11-03"
+  ],
+  "source_url": "https://alamedacountyca.gov/rovresults/241/indexA.htm",
+  "additional_source_urls": [
+   "https://acvote.alamedacountyca.gov/election-information/elections",
+   "https://alamedacountyca.gov/rov_app/electedofficials"
+  ],
+  "note": "Alameda County Registrar of Voters results record a Fremont mayoral contest in the general election on 2020-11-03, decided by plurality with no runoff. Winner and runner-up are in fremont_results.json."
+ },
+ {
+  "city_id": "0626000",
+  "year": 2021,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://acvote.alamedacountyca.gov/election-information/elections",
+  "additional_source_urls": [
+   "https://alamedacountyca.gov/rov_app/electedofficials"
+  ],
+  "note": "The county archive and election list show only special or district elections in this odd-numbered year and no Fremont mayoral contest. The Alameda County Registrar of Voters results show Fremont mayoral contests in 2012, 2016, 2020 and 2024 only. The county elected officials list shows the Fremont mayor serving 2024-2028, so Fremont elects its mayor every four years."
+ },
+ {
+  "city_id": "0626000",
+  "year": 2022,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://alamedacountyca.gov/rovresults/248/",
+  "additional_source_urls": [
+   "https://alamedacountyca.gov/rov_app/electedofficials"
+  ],
+  "note": "The county results for the November 8, 2022 general election list mayoral contests for other cities but none for Fremont. The Alameda County Registrar of Voters results show Fremont mayoral contests in 2012, 2016, 2020 and 2024 only. The county elected officials list shows the Fremont mayor serving 2024-2028, so Fremont elects its mayor every four years."
+ },
+ {
+  "city_id": "0626000",
+  "year": 2023,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://acvote.alamedacountyca.gov/election-information/elections",
+  "additional_source_urls": [
+   "https://alamedacountyca.gov/rov_app/electedofficials"
+  ],
+  "note": "The county archive and election list show only special or district elections in this odd-numbered year and no Fremont mayoral contest. The Alameda County Registrar of Voters results show Fremont mayoral contests in 2012, 2016, 2020 and 2024 only. The county elected officials list shows the Fremont mayor serving 2024-2028, so Fremont elects its mayor every four years."
+ },
+ {
+  "city_id": "0626000",
+  "year": 2024,
+  "status": "complete",
+  "expected_election_dates": [
+   "2024-11-05"
+  ],
+  "source_url": "https://alamedacountyca.gov/rovresults/252/",
+  "additional_source_urls": [
+   "https://acvote.alamedacountyca.gov/election-information/elections",
+   "https://alamedacountyca.gov/rov_app/electedofficials"
+  ],
+  "note": "Alameda County Registrar of Voters results record a Fremont mayoral contest in the general election on 2024-11-05, decided by plurality with no runoff. Winner and runner-up are in fremont_results.json."
+ },
+ {
+  "city_id": "0626000",
+  "year": 2025,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://acvote.alamedacountyca.gov/election-information/elections",
+  "additional_source_urls": [
+   "https://alamedacountyca.gov/rov_app/electedofficials"
+  ],
+  "note": "The county archive and election list show only special or district elections in this odd-numbered year and no Fremont mayoral contest. The Alameda County Registrar of Voters results show Fremont mayoral contests in 2012, 2016, 2020 and 2024 only. The county elected officials list shows the Fremont mayor serving 2024-2028, so Fremont elects its mayor every four years."
+ },
+ {
+  "city_id": "0626000",
+  "year": 2026,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://alamedacountyca.gov/rov_app/electedofficials",
+  "additional_source_urls": [
+   "https://acvote.alamedacountyca.gov/election-information/elections"
+  ],
+  "note": "The county elected officials list shows the Fremont mayor serving 2024-2028. The county results for the June 2, 2026 primary list no Fremont mayoral contest, and the next regular mayoral election falls after the cutoff. The Alameda County Registrar of Voters results show Fremont mayoral contests in 2012, 2016, 2020 and 2024 only. The county elected officials list shows the Fremont mayor serving 2024-2028, so Fremont elects its mayor every four years."
+ }
+]

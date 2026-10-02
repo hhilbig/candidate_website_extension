@@ -1,0 +1,214 @@
+[
+ {
+  "city_id": "3260600",
+  "year": 2010,
+  "status": "complete",
+  "expected_election_dates": [
+   "2010-11-02"
+  ],
+  "source_url": "https://www.washoecounty.gov/voters/results/resultsfiles/2010generalresults.pdf",
+  "additional_source_urls": [
+   "https://www.washoecounty.gov/voters/results/archivedresults.php",
+   "https://www.leg.state.nv.us/CityCharters/CtyRCC.html"
+  ],
+  "note": "Washoe County Registrar of Voters general election results list a Reno mayor contest on 2010-11-02. Reno charter Sec. 2.010 sets 4-year mayoral terms and Sec. 5.020 sends the top two primary candidates to the general election, so the general is decisive. Winner and runner-up are in reno_results.json."
+ },
+ {
+  "city_id": "3260600",
+  "year": 2011,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.leg.state.nv.us/CityCharters/CtyRCC.html",
+  "additional_source_urls": [
+   "https://www.washoecounty.gov/voters/results/archivedresults.php",
+   "https://www.reno.gov/government/departments/city-clerk/elections/index.php"
+  ],
+  "note": "Reno charter Sec. 5.010 holds general city elections on the statewide general election date in November, every 4 years from 2002 for the mayor (Sec. 2.010, 4-year terms). The City Clerk page states municipal elections are held in conjunction with statewide general elections. The Washoe County archive lists only even-year primary and general elections. No mayoral election falls in this odd year."
+ },
+ {
+  "city_id": "3260600",
+  "year": 2012,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.washoecounty.gov/voters/results/resultsfiles/2012generalresults.pdf",
+  "additional_source_urls": [
+   "https://www.washoecounty.gov/voters/results/archivedresults.php",
+   "https://www.leg.state.nv.us/CityCharters/CtyRCC.html"
+  ],
+  "note": "The Washoe County official general election results for this year were inspected. Reno contests listed are council, municipal court and other offices, with no Reno mayor contest. Reno charter Sec. 2.010 and Sec. 5.010 set 4-year mayoral terms with elections in 2002 and every 4 years after, which gives mayoral elections in 2010, 2014, 2018, 2022 and 2026 only."
+ },
+ {
+  "city_id": "3260600",
+  "year": 2013,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.leg.state.nv.us/CityCharters/CtyRCC.html",
+  "additional_source_urls": [
+   "https://www.washoecounty.gov/voters/results/archivedresults.php",
+   "https://www.reno.gov/government/departments/city-clerk/elections/index.php"
+  ],
+  "note": "Reno charter Sec. 5.010 holds general city elections on the statewide general election date in November, every 4 years from 2002 for the mayor (Sec. 2.010, 4-year terms). The City Clerk page states municipal elections are held in conjunction with statewide general elections. The Washoe County archive lists only even-year primary and general elections. No mayoral election falls in this odd year."
+ },
+ {
+  "city_id": "3260600",
+  "year": 2014,
+  "status": "complete",
+  "expected_election_dates": [
+   "2014-11-04"
+  ],
+  "source_url": "https://www.washoecounty.gov/voters/results/resultsfiles/2014generalresults.pdf",
+  "additional_source_urls": [
+   "https://www.washoecounty.gov/voters/results/archivedresults.php",
+   "https://www.leg.state.nv.us/CityCharters/CtyRCC.html"
+  ],
+  "note": "Washoe County Registrar of Voters general election results list a Reno mayor contest on 2014-11-04. Reno charter Sec. 2.010 sets 4-year mayoral terms and Sec. 5.020 sends the top two primary candidates to the general election, so the general is decisive. Winner and runner-up are in reno_results.json."
+ },
+ {
+  "city_id": "3260600",
+  "year": 2015,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.leg.state.nv.us/CityCharters/CtyRCC.html",
+  "additional_source_urls": [
+   "https://www.washoecounty.gov/voters/results/archivedresults.php",
+   "https://www.reno.gov/government/departments/city-clerk/elections/index.php"
+  ],
+  "note": "Reno charter Sec. 5.010 holds general city elections on the statewide general election date in November, every 4 years from 2002 for the mayor (Sec. 2.010, 4-year terms). The City Clerk page states municipal elections are held in conjunction with statewide general elections. The Washoe County archive lists only even-year primary and general elections. No mayoral election falls in this odd year."
+ },
+ {
+  "city_id": "3260600",
+  "year": 2016,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.washoecounty.gov/voters/results/resultsfiles/2016generalresults.pdf",
+  "additional_source_urls": [
+   "https://www.washoecounty.gov/voters/results/archivedresults.php",
+   "https://www.leg.state.nv.us/CityCharters/CtyRCC.html"
+  ],
+  "note": "The Washoe County official general election results for this year were inspected. Reno contests listed are council, municipal court and other offices, with no Reno mayor contest. Reno charter Sec. 2.010 and Sec. 5.010 set 4-year mayoral terms with elections in 2002 and every 4 years after, which gives mayoral elections in 2010, 2014, 2018, 2022 and 2026 only."
+ },
+ {
+  "city_id": "3260600",
+  "year": 2017,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.leg.state.nv.us/CityCharters/CtyRCC.html",
+  "additional_source_urls": [
+   "https://www.washoecounty.gov/voters/results/archivedresults.php",
+   "https://www.reno.gov/government/departments/city-clerk/elections/index.php"
+  ],
+  "note": "Reno charter Sec. 5.010 holds general city elections on the statewide general election date in November, every 4 years from 2002 for the mayor (Sec. 2.010, 4-year terms). The City Clerk page states municipal elections are held in conjunction with statewide general elections. The Washoe County archive lists only even-year primary and general elections. No mayoral election falls in this odd year."
+ },
+ {
+  "city_id": "3260600",
+  "year": 2018,
+  "status": "complete",
+  "expected_election_dates": [
+   "2018-11-06"
+  ],
+  "source_url": "https://www.washoecounty.gov/voters/results/resultsfiles/2018generalresults.pdf",
+  "additional_source_urls": [
+   "https://www.washoecounty.gov/voters/results/archivedresults.php",
+   "https://www.leg.state.nv.us/CityCharters/CtyRCC.html"
+  ],
+  "note": "Washoe County Registrar of Voters general election results list a Reno mayor contest on 2018-11-06. Reno charter Sec. 2.010 sets 4-year mayoral terms and Sec. 5.020 sends the top two primary candidates to the general election, so the general is decisive. Winner and runner-up are in reno_results.json."
+ },
+ {
+  "city_id": "3260600",
+  "year": 2019,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.leg.state.nv.us/CityCharters/CtyRCC.html",
+  "additional_source_urls": [
+   "https://www.washoecounty.gov/voters/results/archivedresults.php",
+   "https://www.reno.gov/government/departments/city-clerk/elections/index.php"
+  ],
+  "note": "Reno charter Sec. 5.010 holds general city elections on the statewide general election date in November, every 4 years from 2002 for the mayor (Sec. 2.010, 4-year terms). The City Clerk page states municipal elections are held in conjunction with statewide general elections. The Washoe County archive lists only even-year primary and general elections. No mayoral election falls in this odd year."
+ },
+ {
+  "city_id": "3260600",
+  "year": 2020,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.washoecounty.gov/voters/results/resultsfiles/2020generalresults.pdf",
+  "additional_source_urls": [
+   "https://www.washoecounty.gov/voters/results/archivedresults.php",
+   "https://www.leg.state.nv.us/CityCharters/CtyRCC.html"
+  ],
+  "note": "The Washoe County official general election results for this year were inspected. Reno contests listed are council, municipal court and other offices, with no Reno mayor contest. Reno charter Sec. 2.010 and Sec. 5.010 set 4-year mayoral terms with elections in 2002 and every 4 years after, which gives mayoral elections in 2010, 2014, 2018, 2022 and 2026 only."
+ },
+ {
+  "city_id": "3260600",
+  "year": 2021,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.leg.state.nv.us/CityCharters/CtyRCC.html",
+  "additional_source_urls": [
+   "https://www.washoecounty.gov/voters/results/archivedresults.php",
+   "https://www.reno.gov/government/departments/city-clerk/elections/index.php"
+  ],
+  "note": "Reno charter Sec. 5.010 holds general city elections on the statewide general election date in November, every 4 years from 2002 for the mayor (Sec. 2.010, 4-year terms). The City Clerk page states municipal elections are held in conjunction with statewide general elections. The Washoe County archive lists only even-year primary and general elections. No mayoral election falls in this odd year."
+ },
+ {
+  "city_id": "3260600",
+  "year": 2022,
+  "status": "complete",
+  "expected_election_dates": [
+   "2022-11-08"
+  ],
+  "source_url": "https://www.washoecounty.gov/voters/results/resultsfiles/2022generalresults.pdf",
+  "additional_source_urls": [
+   "https://www.washoecounty.gov/voters/results/archivedresults.php",
+   "https://www.leg.state.nv.us/CityCharters/CtyRCC.html"
+  ],
+  "note": "Washoe County Registrar of Voters general election results list a Reno mayor contest on 2022-11-08. Reno charter Sec. 2.010 sets 4-year mayoral terms and Sec. 5.020 sends the top two primary candidates to the general election, so the general is decisive. Winner and runner-up are in reno_results.json."
+ },
+ {
+  "city_id": "3260600",
+  "year": 2023,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.leg.state.nv.us/CityCharters/CtyRCC.html",
+  "additional_source_urls": [
+   "https://www.washoecounty.gov/voters/results/archivedresults.php",
+   "https://www.reno.gov/government/departments/city-clerk/elections/index.php"
+  ],
+  "note": "Reno charter Sec. 5.010 holds general city elections on the statewide general election date in November, every 4 years from 2002 for the mayor (Sec. 2.010, 4-year terms). The City Clerk page states municipal elections are held in conjunction with statewide general elections. The Washoe County archive lists only even-year primary and general elections. No mayoral election falls in this odd year."
+ },
+ {
+  "city_id": "3260600",
+  "year": 2024,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.washoecounty.gov/voters/results/resultsfiles/2024generalresults.pdf",
+  "additional_source_urls": [
+   "https://www.washoecounty.gov/voters/results/archivedresults.php",
+   "https://www.leg.state.nv.us/CityCharters/CtyRCC.html"
+  ],
+  "note": "The Washoe County official general election results for this year were inspected. Reno contests listed are council, municipal court and other offices, with no Reno mayor contest. Reno charter Sec. 2.010 and Sec. 5.010 set 4-year mayoral terms with elections in 2002 and every 4 years after, which gives mayoral elections in 2010, 2014, 2018, 2022 and 2026 only."
+ },
+ {
+  "city_id": "3260600",
+  "year": 2025,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.leg.state.nv.us/CityCharters/CtyRCC.html",
+  "additional_source_urls": [
+   "https://www.washoecounty.gov/voters/results/archivedresults.php",
+   "https://www.reno.gov/government/departments/city-clerk/elections/index.php"
+  ],
+  "note": "Reno charter Sec. 5.010 holds general city elections on the statewide general election date in November, every 4 years from 2002 for the mayor (Sec. 2.010, 4-year terms). The City Clerk page states municipal elections are held in conjunction with statewide general elections. The Washoe County archive lists only even-year primary and general elections. No mayoral election falls in this odd year."
+ },
+ {
+  "city_id": "3260600",
+  "year": 2026,
+  "status": "earlier_round_only",
+  "expected_election_dates": [],
+  "source_url": "https://www.washoecounty.gov/voters/results/datafiles/WASHOE2026PRIMARYSummaryFINAL.pdf",
+  "additional_source_urls": [
+   "https://www.reno.gov/government/departments/city-clerk/elections/index.php",
+   "https://www.leg.state.nv.us/CityCharters/CtyRCC.html"
+  ],
+  "note": "The Washoe County 2026 primary summary report (June 9, 2026) lists a Reno city mayor contest with nine candidates. Kate Marshall led with 22,562 of 50,311 votes (44.85 percent), so no candidate had a majority. Under charter Sec. 5.020 the top two advance. The City Clerk elections page sets the general election for November 3, 2026, after the September 14, 2026 cutoff, so the decisive round is outside the window."
+ }
+]

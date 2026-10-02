@@ -1,0 +1,182 @@
+[
+ {
+  "city_id": "1150000",
+  "year": 2010,
+  "status": "complete",
+  "expected_election_dates": [
+   "2010-11-02"
+  ],
+  "source_url": "https://electionresults.dcboe.org/cityWide/getCityWide/2010-General-Election",
+  "additional_source_urls": [
+   "https://electionresults.dcboe.org/"
+  ],
+  "note": "DC Board of Elections certified results record the citywide mayoral general election on 2010-11-02. The partisan primary in the same year was an earlier round and the general decided the office. Winner and runner-up are in washington_results.json."
+ },
+ {
+  "city_id": "1150000",
+  "year": 2011,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://electionresults.dcboe.org/",
+  "additional_source_urls": [],
+  "note": "The DC Board of Elections results site lists no mayoral contest in this odd-numbered year. DC mayors serve four-year terms, and mayoral general elections in the window fall in 2010, 2014, 2018, 2022 and 2026. Specials inspected for 2011, 2013 and 2015 contained no mayoral contest."
+ },
+ {
+  "city_id": "1150000",
+  "year": 2012,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://electionresults.dcboe.org/Downloads/Reports/November_6_2012_General_and_Special_Election_Certified_Results.pdf",
+  "additional_source_urls": [
+   "https://electionresults.dcboe.org/"
+  ],
+  "note": "The DC Board of Elections certified results for the 2012 general election were inspected. The text contains no mayoral contest. DC mayors serve four-year terms, and the mayoral general elections in the window fall in 2010, 2014, 2018, 2022 and 2026."
+ },
+ {
+  "city_id": "1150000",
+  "year": 2013,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://electionresults.dcboe.org/",
+  "additional_source_urls": [],
+  "note": "The DC Board of Elections results site lists no mayoral contest in this odd-numbered year. DC mayors serve four-year terms, and mayoral general elections in the window fall in 2010, 2014, 2018, 2022 and 2026. Specials inspected for 2011, 2013 and 2015 contained no mayoral contest."
+ },
+ {
+  "city_id": "1150000",
+  "year": 2014,
+  "status": "complete",
+  "expected_election_dates": [
+   "2014-11-04"
+  ],
+  "source_url": "https://electionresults.dcboe.org/Downloads/Reports/November_4_2014_General_Election_Certified_Results.pdf",
+  "additional_source_urls": [
+   "https://electionresults.dcboe.org/"
+  ],
+  "note": "DC Board of Elections certified results record the citywide mayoral general election on 2014-11-04. The partisan primary in the same year was an earlier round and the general decided the office. Winner and runner-up are in washington_results.json."
+ },
+ {
+  "city_id": "1150000",
+  "year": 2015,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://electionresults.dcboe.org/",
+  "additional_source_urls": [],
+  "note": "The DC Board of Elections results site lists no mayoral contest in this odd-numbered year. DC mayors serve four-year terms, and mayoral general elections in the window fall in 2010, 2014, 2018, 2022 and 2026. Specials inspected for 2011, 2013 and 2015 contained no mayoral contest."
+ },
+ {
+  "city_id": "1150000",
+  "year": 2016,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://electionresults.dcboe.org/Downloads/Reports/November_8_2016_General_Election_Certified_Results.pdf",
+  "additional_source_urls": [
+   "https://electionresults.dcboe.org/"
+  ],
+  "note": "The DC Board of Elections certified results for the 2016 general election were inspected. The text contains no mayoral contest. DC mayors serve four-year terms, and the mayoral general elections in the window fall in 2010, 2014, 2018, 2022 and 2026."
+ },
+ {
+  "city_id": "1150000",
+  "year": 2017,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://electionresults.dcboe.org/",
+  "additional_source_urls": [],
+  "note": "The DC Board of Elections results site lists no mayoral contest in this odd-numbered year. DC mayors serve four-year terms, and mayoral general elections in the window fall in 2010, 2014, 2018, 2022 and 2026. Specials inspected for 2011, 2013 and 2015 contained no mayoral contest."
+ },
+ {
+  "city_id": "1150000",
+  "year": 2018,
+  "status": "complete",
+  "expected_election_dates": [
+   "2018-11-06"
+  ],
+  "source_url": "https://electionresults.dcboe.org/Downloads/Reports/November_6_2018_General_Election_Certified_Results.pdf",
+  "additional_source_urls": [
+   "https://electionresults.dcboe.org/"
+  ],
+  "note": "DC Board of Elections certified results record the citywide mayoral general election on 2018-11-06. The partisan primary in the same year was an earlier round and the general decided the office. Winner and runner-up are in washington_results.json."
+ },
+ {
+  "city_id": "1150000",
+  "year": 2019,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://electionresults.dcboe.org/",
+  "additional_source_urls": [],
+  "note": "The DC Board of Elections results site lists no mayoral contest in this odd-numbered year. DC mayors serve four-year terms, and mayoral general elections in the window fall in 2010, 2014, 2018, 2022 and 2026. Specials inspected for 2011, 2013 and 2015 contained no mayoral contest."
+ },
+ {
+  "city_id": "1150000",
+  "year": 2020,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://electionresults.dcboe.org/Downloads/Reports/November_3_2020_General_Election_Certified_Results.pdf",
+  "additional_source_urls": [
+   "https://electionresults.dcboe.org/"
+  ],
+  "note": "The DC Board of Elections certified results for the 2020 general election were inspected. The text contains no mayoral contest. DC mayors serve four-year terms, and the mayoral general elections in the window fall in 2010, 2014, 2018, 2022 and 2026."
+ },
+ {
+  "city_id": "1150000",
+  "year": 2021,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://electionresults.dcboe.org/",
+  "additional_source_urls": [],
+  "note": "The DC Board of Elections results site lists no mayoral contest in this odd-numbered year. DC mayors serve four-year terms, and mayoral general elections in the window fall in 2010, 2014, 2018, 2022 and 2026. Specials inspected for 2011, 2013 and 2015 contained no mayoral contest."
+ },
+ {
+  "city_id": "1150000",
+  "year": 2022,
+  "status": "complete",
+  "expected_election_dates": [
+   "2022-11-08"
+  ],
+  "source_url": "https://electionresults.dcboe.org/Downloads/Reports/November_8_2022_General_Election_Certified_Results.pdf",
+  "additional_source_urls": [
+   "https://electionresults.dcboe.org/"
+  ],
+  "note": "DC Board of Elections certified results record the citywide mayoral general election on 2022-11-08. The partisan primary in the same year was an earlier round and the general decided the office. Winner and runner-up are in washington_results.json."
+ },
+ {
+  "city_id": "1150000",
+  "year": 2023,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://electionresults.dcboe.org/",
+  "additional_source_urls": [],
+  "note": "The DC Board of Elections results site lists no mayoral contest in this odd-numbered year. DC mayors serve four-year terms, and mayoral general elections in the window fall in 2010, 2014, 2018, 2022 and 2026. Specials inspected for 2011, 2013 and 2015 contained no mayoral contest."
+ },
+ {
+  "city_id": "1150000",
+  "year": 2024,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://electionresults.dcboe.org/Downloads/Reports/November_5_2024_General_Election_Certified_Results.pdf",
+  "additional_source_urls": [
+   "https://electionresults.dcboe.org/"
+  ],
+  "note": "The DC Board of Elections certified results for the 2024 general election were inspected. The text contains no mayoral contest. DC mayors serve four-year terms, and the mayoral general elections in the window fall in 2010, 2014, 2018, 2022 and 2026."
+ },
+ {
+  "city_id": "1150000",
+  "year": 2025,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://electionresults.dcboe.org/",
+  "additional_source_urls": [],
+  "note": "The DC Board of Elections results site lists no mayoral contest in this odd-numbered year. DC mayors serve four-year terms, and mayoral general elections in the window fall in 2010, 2014, 2018, 2022 and 2026. Specials inspected for 2011, 2013 and 2015 contained no mayoral contest."
+ },
+ {
+  "city_id": "1150000",
+  "year": 2026,
+  "status": "earlier_round_only",
+  "expected_election_dates": [],
+  "source_url": "https://electionresults.dcboe.org/electionResults/getElectionInfo/2026-Primary-Election",
+  "additional_source_urls": [
+   "https://electionresults.dcboe.org/cityWide/getCityWide/2026-Primary-Election",
+   "https://www.dcboe.org/"
+  ],
+  "note": "The DC Board of Elections site lists certified results for the June 16, 2026 primary, which included contests for Mayor in the Democratic, Republican and Statehood Green primaries. The general election is scheduled for November 3, 2026, after the September 14, 2026 cutoff, and decides the office. No decisive election falls inside the window."
+ }
+]

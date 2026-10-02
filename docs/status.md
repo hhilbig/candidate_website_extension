@@ -1921,3 +1921,18 @@ deleted (session folders kept), and 16 superseded extraction builds (about 1 GB,
 checksum comparison. Free space: 14 GB. The workflow resumed from run `wf_4b25945a-15c` (finished
 agents return cached results). `build/agent_tmp_cleanup.sh` (detached, log `build/agent_tmp_cleanup.log`)
 deletes agent downloads older than 30 minutes; stop it after the workflow ends.
+
+**Mayoral population step: full run integrated, October 1.** All 82 remaining cities added. City-years
+assessed: 1,528 of 1,700 (was 283). Verified decisive elections: 391 (782 candidate records). Five elections
+already verified earlier were reproduced exactly (existing records kept); two unresolved records superseded.
+Checker findings across 82 cities: 2 wrong_fact (Bakersfield, resolved by repair), 74 unsupported, 2 format,
+115 minor. Repairs stalled for Oklahoma City and Fresno. Integration decisions: Fresno 2012, 2020 and 2024 and
+Sacramento 2012, 2016 and 2020 (primary-decided) are unresolved because no official source for the
+primary-majority rule could be opened (charter sites return 403); vote figures kept. Louisville no-election
+years rest on the four-year term in KRS 67C.105 plus official records of the 2010-2022 contests.
+Remaining unresolved city-years concentrate in Oklahoma City, Tulsa, Glendale and St. Paul (all 17), Kansas
+City 13, Irving 12, Indianapolis 9, Newark 7, Colorado Springs 5, Plano 4, Sacramento and Fresno 3 each.
+Cause: official sites block automated access (HTTP 403) or publish no machine-readable results.
+Usage: about 25 million new subagent tokens in total (10.7 million exact for the resumed part).
+Next: a targeted second pass for the unresolved cities, using another route (Hanno's browser for 403 sites,
+county election boards, archived copies).

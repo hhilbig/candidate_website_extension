@@ -1,0 +1,194 @@
+[
+ {
+  "city_id": "3719000",
+  "year": 2010,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://s3.amazonaws.com/dl.ncsbe.gov?delimiter=/&prefix=ENRS/2010",
+  "additional_source_urls": [],
+  "note": "The NC State Board of Elections results directory lists the election dates for this year. Every available precinct results file for these dates was opened and contains no City of Durham Mayor contest. Durham elects its mayor in odd years."
+ },
+ {
+  "city_id": "3719000",
+  "year": 2011,
+  "status": "complete",
+  "expected_election_dates": [
+   "2011-11-08"
+  ],
+  "source_url": "https://s3.amazonaws.com/dl.ncsbe.gov/ENRS/2011_11_08/results_pct_20111108.zip",
+  "additional_source_urls": [
+   "https://s3.amazonaws.com/dl.ncsbe.gov?delimiter=/&prefix=ENRS/2011",
+   "https://s3.amazonaws.com/dl.ncsbe.gov/ENRS/2011_10_11/results_pct_20111011.zip"
+  ],
+  "note": "NC State Board of Elections precinct results file for 2011-11-08 contains the City of Durham Mayor contest. Durham elects its mayor in odd years in this window. A nonpartisan primary was held on 2011-10-11 and is an earlier round; it did not elect a mayor. Winner and runner-up are in durham_results.json."
+ },
+ {
+  "city_id": "3719000",
+  "year": 2012,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://s3.amazonaws.com/dl.ncsbe.gov?delimiter=/&prefix=ENRS/2012",
+  "additional_source_urls": [],
+  "note": "The NC State Board of Elections results directory lists the election dates for this year. Every available precinct results file for these dates was opened and contains no City of Durham Mayor contest. Durham elects its mayor in odd years."
+ },
+ {
+  "city_id": "3719000",
+  "year": 2013,
+  "status": "complete",
+  "expected_election_dates": [
+   "2013-11-05"
+  ],
+  "source_url": "https://s3.amazonaws.com/dl.ncsbe.gov/ENRS/2013_11_05/results_sort_20131105.zip",
+  "additional_source_urls": [
+   "https://s3.amazonaws.com/dl.ncsbe.gov?delimiter=/&prefix=ENRS/2013",
+   "https://s3.amazonaws.com/dl.ncsbe.gov/ENRS/2013_10_08/results_pct_20131008.zip"
+  ],
+  "note": "NC State Board of Elections precinct results file for 2013-11-05 contains the City of Durham Mayor contest. Durham elects its mayor in odd years in this window. A nonpartisan primary was held on 2013-10-08 and is an earlier round; it did not elect a mayor. Winner and runner-up are in durham_results.json."
+ },
+ {
+  "city_id": "3719000",
+  "year": 2014,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://s3.amazonaws.com/dl.ncsbe.gov?delimiter=/&prefix=ENRS/2014",
+  "additional_source_urls": [],
+  "note": "The NC State Board of Elections results directory lists the election dates for this year. Every available precinct results file for these dates was opened and contains no City of Durham Mayor contest. Durham elects its mayor in odd years."
+ },
+ {
+  "city_id": "3719000",
+  "year": 2015,
+  "status": "complete",
+  "expected_election_dates": [
+   "2015-11-03"
+  ],
+  "source_url": "https://s3.amazonaws.com/dl.ncsbe.gov/ENRS/2015_11_03/results_pct_20151103.zip",
+  "additional_source_urls": [
+   "https://s3.amazonaws.com/dl.ncsbe.gov?delimiter=/&prefix=ENRS/2015",
+   "https://s3.amazonaws.com/dl.ncsbe.gov/ENRS/2015_10_06/results_pct_20151006.zip"
+  ],
+  "note": "NC State Board of Elections precinct results file for 2015-11-03 contains the City of Durham Mayor contest. Durham elects its mayor in odd years in this window. A nonpartisan primary was held on 2015-10-06 and is an earlier round; it did not elect a mayor. Winner and runner-up are in durham_results.json."
+ },
+ {
+  "city_id": "3719000",
+  "year": 2016,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://s3.amazonaws.com/dl.ncsbe.gov?delimiter=/&prefix=ENRS/2016",
+  "additional_source_urls": [],
+  "note": "The NC State Board of Elections results directory lists the election dates for this year. Every available precinct results file for these dates was opened and contains no City of Durham Mayor contest. Durham elects its mayor in odd years."
+ },
+ {
+  "city_id": "3719000",
+  "year": 2017,
+  "status": "complete",
+  "expected_election_dates": [
+   "2017-11-07"
+  ],
+  "source_url": "https://s3.amazonaws.com/dl.ncsbe.gov/ENRS/2017_11_07/results_pct_20171107.zip",
+  "additional_source_urls": [
+   "https://s3.amazonaws.com/dl.ncsbe.gov?delimiter=/&prefix=ENRS/2017",
+   "https://s3.amazonaws.com/dl.ncsbe.gov/ENRS/2017_10_10/results_pct_20171010.zip"
+  ],
+  "note": "NC State Board of Elections precinct results file for 2017-11-07 contains the City of Durham Mayor contest. Durham elects its mayor in odd years in this window. A nonpartisan primary was held on 2017-10-10 and is an earlier round; it did not elect a mayor. Winner and runner-up are in durham_results.json."
+ },
+ {
+  "city_id": "3719000",
+  "year": 2018,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://s3.amazonaws.com/dl.ncsbe.gov?delimiter=/&prefix=ENRS/2018",
+  "additional_source_urls": [],
+  "note": "The NC State Board of Elections results directory lists the election dates for this year. Every available precinct results file for these dates was opened and contains no City of Durham Mayor contest. Durham elects its mayor in odd years."
+ },
+ {
+  "city_id": "3719000",
+  "year": 2019,
+  "status": "complete",
+  "expected_election_dates": [
+   "2019-11-05"
+  ],
+  "source_url": "https://s3.amazonaws.com/dl.ncsbe.gov/ENRS/2019_11_05/results_pct_20191105.zip",
+  "additional_source_urls": [
+   "https://s3.amazonaws.com/dl.ncsbe.gov?delimiter=/&prefix=ENRS/2019"
+  ],
+  "note": "NC State Board of Elections precinct results file for 2019-11-05 contains the City of Durham Mayor contest. Durham elects its mayor in odd years in this window. No mayoral primary appears in the state results for this year. Winner and runner-up are in durham_results.json."
+ },
+ {
+  "city_id": "3719000",
+  "year": 2020,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://s3.amazonaws.com/dl.ncsbe.gov?delimiter=/&prefix=ENRS/2020",
+  "additional_source_urls": [],
+  "note": "The NC State Board of Elections results directory lists the election dates for this year. Every available precinct results file for these dates was opened and contains no City of Durham Mayor contest. Durham elects its mayor in odd years."
+ },
+ {
+  "city_id": "3719000",
+  "year": 2021,
+  "status": "complete",
+  "expected_election_dates": [
+   "2021-11-02"
+  ],
+  "source_url": "https://s3.amazonaws.com/dl.ncsbe.gov/ENRS/2021_11_02/results_pct_20211102.zip",
+  "additional_source_urls": [
+   "https://s3.amazonaws.com/dl.ncsbe.gov?delimiter=/&prefix=ENRS/2021",
+   "https://s3.amazonaws.com/dl.ncsbe.gov/ENRS/2021_10_05/results_pct_20211005.zip"
+  ],
+  "note": "NC State Board of Elections precinct results file for 2021-11-02 contains the City of Durham Mayor contest. Durham elects its mayor in odd years in this window. A nonpartisan primary was held on 2021-10-05 and is an earlier round; it did not elect a mayor. Winner and runner-up are in durham_results.json."
+ },
+ {
+  "city_id": "3719000",
+  "year": 2022,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://s3.amazonaws.com/dl.ncsbe.gov?delimiter=/&prefix=ENRS/2022",
+  "additional_source_urls": [],
+  "note": "The NC State Board of Elections results directory lists the election dates for this year. Every available precinct results file for these dates was opened and contains no City of Durham Mayor contest. Durham elects its mayor in odd years."
+ },
+ {
+  "city_id": "3719000",
+  "year": 2023,
+  "status": "complete",
+  "expected_election_dates": [
+   "2023-11-07"
+  ],
+  "source_url": "https://s3.amazonaws.com/dl.ncsbe.gov/ENRS/2023_11_07/results_pct_20231107.zip",
+  "additional_source_urls": [
+   "https://s3.amazonaws.com/dl.ncsbe.gov?delimiter=/&prefix=ENRS/2023",
+   "https://s3.amazonaws.com/dl.ncsbe.gov/ENRS/2023_10_10/results_pct_20231010.zip"
+  ],
+  "note": "NC State Board of Elections precinct results file for 2023-11-07 contains the City of Durham Mayor contest. Durham elects its mayor in odd years in this window. A nonpartisan primary was held on 2023-10-10 and is an earlier round; it did not elect a mayor. Winner and runner-up are in durham_results.json."
+ },
+ {
+  "city_id": "3719000",
+  "year": 2024,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://s3.amazonaws.com/dl.ncsbe.gov?delimiter=/&prefix=ENRS/2024",
+  "additional_source_urls": [],
+  "note": "The NC State Board of Elections results directory lists the election dates for this year. Every available precinct results file for these dates was opened and contains no City of Durham Mayor contest. Durham elects its mayor in odd years. The results file for 2024-05-14 could not be opened as a zip file."
+ },
+ {
+  "city_id": "3719000",
+  "year": 2025,
+  "status": "complete",
+  "expected_election_dates": [
+   "2025-11-04"
+  ],
+  "source_url": "https://s3.amazonaws.com/dl.ncsbe.gov/ENRS/2025_11_04/results_pct_20251104.zip",
+  "additional_source_urls": [
+   "https://s3.amazonaws.com/dl.ncsbe.gov?delimiter=/&prefix=ENRS/2025",
+   "https://s3.amazonaws.com/dl.ncsbe.gov/ENRS/2025_10_07/results_pct_20251007.zip"
+  ],
+  "note": "NC State Board of Elections precinct results file for 2025-11-04 contains the City of Durham Mayor contest. Durham elects its mayor in odd years in this window. A nonpartisan primary was held on 2025-10-07 and is an earlier round; it did not elect a mayor. Winner and runner-up are in durham_results.json."
+ },
+ {
+  "city_id": "3719000",
+  "year": 2026,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://s3.amazonaws.com/dl.ncsbe.gov?delimiter=/&prefix=ENRS/2026",
+  "additional_source_urls": [],
+  "note": "The NC State Board of Elections results directory lists the election dates for this year. Every available precinct results file for these dates was opened and contains no City of Durham Mayor contest. Durham elects its mayor in odd years. The November 2026 general election falls after the September 14, 2026 cutoff and its results file was not available."
+ }
+]

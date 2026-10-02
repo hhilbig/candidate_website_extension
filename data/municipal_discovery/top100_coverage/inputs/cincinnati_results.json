@@ -1,0 +1,126 @@
+[
+ {
+  "city_name": "Cincinnati",
+  "state_abb": "OH",
+  "roster_place_fips": "3915000",
+  "election_date": "2013-11-05",
+  "election_type": "regular",
+  "stage": "general",
+  "verification_status": "verified_decisive",
+  "certification_status": "certified",
+  "source_url": "https://votehamiltoncountyohio.gov/wp-content/uploads/2020/02/G13OFFCANVASS.xls",
+  "source_locator": "Sheet 'Cinti Mayor & Council', Mayor columns (first two candidate columns), row TOTAL (citywide total across precincts; sum of precinct rows matches)",
+  "certification_source_url": "https://votehamiltoncountyohio.gov/results/",
+  "additional_source_urls": [
+   "https://votehamiltoncountyohio.gov/wp-content/uploads/2020/02/130910OFFCAN.xls"
+  ],
+  "verification_note": "The county official canvass lists the Cincinnati mayor (vote for 1, 4 year term) with citywide total John Cranley 33428 votes and Roxanne Qualls 24288 votes. The TOTAL row equals the sum of the precinct rows. The nonpartisan primary advances two candidates to this general election, so the general is the decisive stage. The county index page lists this file as the official general election result.",
+  "candidates": [
+   {
+    "name": "John Cranley",
+    "role": "winner",
+    "votes": 33428,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Roxanne Qualls",
+    "role": "runner_up",
+    "votes": 24288,
+    "candidate_year_id": ""
+   }
+  ]
+ },
+ {
+  "city_name": "Cincinnati",
+  "state_abb": "OH",
+  "roster_place_fips": "3915000",
+  "election_date": "2017-11-07",
+  "election_type": "regular",
+  "stage": "general",
+  "verification_status": "verified_decisive",
+  "certification_status": "certified",
+  "source_url": "https://votehamiltoncountyohio.gov/wp-content/uploads/2020/02/G17OFFCAN.xls",
+  "source_locator": "Sheet 'Cinti Mayor & Council', Mayor columns (first two candidate columns), row TOTAL (citywide total across precincts; sum of precinct rows matches)",
+  "certification_source_url": "https://votehamiltoncountyohio.gov/results/",
+  "additional_source_urls": [
+   "https://votehamiltoncountyohio.gov/wp-content/uploads/2020/02/Pri17Canvass.xlsx"
+  ],
+  "verification_note": "The county official canvass lists the Cincinnati mayor (vote for 1, 4 year term) with citywide total John Cranley 33446 votes and Yvette Simpson 29045 votes. The TOTAL row equals the sum of the precinct rows. The nonpartisan primary advances two candidates to this general election, so the general is the decisive stage. The posted file is labelled official/recount results. The county index page lists this file as the official general election result.",
+  "candidates": [
+   {
+    "name": "John Cranley",
+    "role": "winner",
+    "votes": 33446,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Yvette Simpson",
+    "role": "runner_up",
+    "votes": 29045,
+    "candidate_year_id": ""
+   }
+  ]
+ },
+ {
+  "city_name": "Cincinnati",
+  "state_abb": "OH",
+  "roster_place_fips": "3915000",
+  "election_date": "2021-11-02",
+  "election_type": "regular",
+  "stage": "general",
+  "verification_status": "verified_decisive",
+  "certification_status": "certified",
+  "source_url": "https://votehamiltoncountyohio.gov/wp-content/uploads/2022/04/G21_Official_Canvass.xlsx",
+  "source_locator": "Sheet 'Cincinnati', Mayor columns (first two candidate columns), row TOTAL (citywide total across precincts; sum of precinct rows matches)",
+  "certification_source_url": "https://votehamiltoncountyohio.gov/results/",
+  "additional_source_urls": [
+   "https://votehamiltoncountyohio.gov/wp-content/uploads/2021/10/P21OfficialCanvass.xlsx"
+  ],
+  "verification_note": "The county official canvass lists the Cincinnati mayor (vote for 1, 4 year term) with citywide total Aftab Pureval 34541 votes and David Mann 17919 votes. The TOTAL row equals the sum of the precinct rows. The nonpartisan primary advances two candidates to this general election, so the general is the decisive stage. The county index page lists this file as the official general election result.",
+  "candidates": [
+   {
+    "name": "Aftab Pureval",
+    "role": "winner",
+    "votes": 34541,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "David Mann",
+    "role": "runner_up",
+    "votes": 17919,
+    "candidate_year_id": ""
+   }
+  ]
+ },
+ {
+  "city_name": "Cincinnati",
+  "state_abb": "OH",
+  "roster_place_fips": "3915000",
+  "election_date": "2025-11-04",
+  "election_type": "regular",
+  "stage": "general",
+  "verification_status": "verified_decisive",
+  "certification_status": "certified",
+  "source_url": "https://votehamiltoncountyohio.gov/wp-content/uploads/2026/04/G25-Official-Canvass.xlsx",
+  "source_locator": "Sheet 'Cincinnati', Mayor columns (first two candidate columns), row TOTAL (citywide total across precincts; sum of precinct rows matches)",
+  "certification_source_url": "https://votehamiltoncountyohio.gov/results/",
+  "additional_source_urls": [
+   "https://votehamiltoncountyohio.gov/wp-content/uploads/2025/10/P25OfficialCanvass.xlsx"
+  ],
+  "verification_note": "The county official canvass lists the Cincinnati mayor (vote for 1, 4 year term) with citywide total Aftab Pureval 52697 votes and Cory Bowman 14579 votes. The TOTAL row equals the sum of the precinct rows. The nonpartisan primary advances two candidates to this general election, so the general is the decisive stage. The mayoral column set also includes a write-in column (Julien Spivey, 20 votes), which is below the runner-up. The county index page lists this file as the official general election result.",
+  "candidates": [
+   {
+    "name": "Aftab Pureval",
+    "role": "winner",
+    "votes": 52697,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Cory Bowman",
+    "role": "runner_up",
+    "votes": 14579,
+    "candidate_year_id": ""
+   }
+  ]
+ }
+]

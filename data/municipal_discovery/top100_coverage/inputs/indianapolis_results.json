@@ -1,0 +1,122 @@
+[
+ {
+  "city_name": "Indianapolis city (balance)",
+  "state_abb": "IN",
+  "roster_place_fips": "1836000",
+  "election_date": "2011-11-08",
+  "election_type": "regular",
+  "stage": "general",
+  "verification_status": "verified_decisive",
+  "certification_status": "certified",
+  "source_url": "https://gis.indy.gov/portal/sharing/rest/content/items/be5e452e5d1041fe902a42b0e3d3b299/data",
+  "source_locator": "Summary report (PDF), MAYOR contest, 590 of 590 precincts",
+  "certification_source_url": "https://gis.indy.gov/portal/sharing/rest/content/items/be5e452e5d1041fe902a42b0e3d3b299/data",
+  "additional_source_urls": [],
+  "verification_note": "Marion County Election Board summary report marked CERTIFIED RESULTS, run 11/21/11. Ballard 92,525 (51.31 percent), Kennedy 84,993 (47.14 percent), Bowen (Libertarian) 2,677, write-in 122. Partisan general election with no runoff. Earlier unofficial run (11/10/11) showed Ballard 92,499 and Kennedy 84,971; certified figures used.",
+  "candidates": [
+   {
+    "name": "Greg Ballard",
+    "role": "winner",
+    "votes": 92525,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Melina Kennedy",
+    "role": "runner_up",
+    "votes": 84993,
+    "candidate_year_id": ""
+   }
+  ]
+ },
+ {
+  "city_name": "Indianapolis city (balance)",
+  "state_abb": "IN",
+  "roster_place_fips": "1836000",
+  "election_date": "2015-11-03",
+  "election_type": "regular",
+  "stage": "general",
+  "verification_status": "verified_decisive",
+  "certification_status": "certified",
+  "source_url": "https://gis.indy.gov/portal/sharing/rest/content/items/be1fd99101c4498c9c3236733d16fb0b/data",
+  "source_locator": "Certified results PDF, MAYOR INDIANAPOLIS contest, 600 of 600 precincts",
+  "certification_source_url": "https://gis.indy.gov/portal/sharing/rest/content/items/be1fd99101c4498c9c3236733d16fb0b/data",
+  "additional_source_urls": [],
+  "verification_note": "Marion County certified results, run 11/16/15. Hogsett 92,830 (62.01 percent), Brewer 56,661 (37.85 percent), write-in 221. General election, no runoff.",
+  "candidates": [
+   {
+    "name": "Joe Hogsett",
+    "role": "winner",
+    "votes": 92830,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Chuck Brewer",
+    "role": "runner_up",
+    "votes": 56661,
+    "candidate_year_id": ""
+   }
+  ]
+ },
+ {
+  "city_name": "Indianapolis city (balance)",
+  "state_abb": "IN",
+  "roster_place_fips": "1836000",
+  "election_date": "2019-11-05",
+  "election_type": "regular",
+  "stage": "general",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "source_url": "https://gis.indy.gov/portal/sharing/rest/content/items/4cb48c7103aa4e23ba698b538005fe60/data",
+  "source_locator": "Workbook sheet '2019 Municipal Results - Precin', race CITY OF INDIANAPOLIS MAYOR, summed over 600 precincts",
+  "certification_source_url": "https://gis.indy.gov/portal/sharing/rest/content/items/4cb48c7103aa4e23ba698b538005fe60/data",
+  "additional_source_urls": [
+   "https://www.arcgis.com/sharing/rest/content/items/b2e836c9430d402b83407e84c53fc91e?f=json"
+  ],
+  "verification_note": "Official Marion County results workbook, no total row; Hogsett 109,084 and Merritt 40,903 are sums over 600 unique precinct rows. Libertarian McNaughton 2,353. The workbook carries no certification label, so status is source_verified. General election, no runoff.",
+  "candidates": [
+   {
+    "name": "Joe Hogsett",
+    "role": "winner",
+    "votes": 109084,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "James W. (Jim) Merritt Jr.",
+    "role": "runner_up",
+    "votes": 40903,
+    "candidate_year_id": ""
+   }
+  ]
+ },
+ {
+  "city_name": "Indianapolis city (balance)",
+  "state_abb": "IN",
+  "roster_place_fips": "1836000",
+  "election_date": "2023-11-07",
+  "election_type": "regular",
+  "stage": "general",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "source_url": "https://gis.indy.gov/portal/sharing/rest/content/items/b18b251e16c34d98a41148c3bdf4e1a7/data",
+  "source_locator": "Workbook sheet 'City of Indianapolis Mayor', row 'Total' (also confirmed by summing 621 precinct rows)",
+  "certification_source_url": "https://gis.indy.gov/portal/sharing/rest/content/items/b18b251e16c34d98a41148c3bdf4e1a7/data",
+  "additional_source_urls": [
+   "https://www.arcgis.com/sharing/rest/content/items/3d8937b4d1e74b829d73672bf0a0d6c5?f=json"
+  ],
+  "verification_note": "Official Marion County 2023 General Election Results workbook, Total row: Hogsett 97,807 and Shreve 66,781, equal to the sum of 621 precinct rows. The workbook carries no certification label, so status is source_verified. General election, no runoff. Figures differ slightly from unofficial election-night totals reported elsewhere; the official workbook is used.",
+  "candidates": [
+   {
+    "name": "Joe Hogsett",
+    "role": "winner",
+    "votes": 97807,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Jefferson Scott Shreve",
+    "role": "runner_up",
+    "votes": 66781,
+    "candidate_year_id": ""
+   }
+  ]
+ }
+]

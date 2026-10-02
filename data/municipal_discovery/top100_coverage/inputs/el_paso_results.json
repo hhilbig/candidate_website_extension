@@ -1,0 +1,130 @@
+[
+ {
+  "city_name": "El Paso",
+  "state_abb": "TX",
+  "roster_place_fips": "4824000",
+  "election_date": "2013-06-15",
+  "election_type": "regular",
+  "stage": "runoff",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "source_url": "https://ep-county-elections-production.s3.amazonaws.com/documents/files/000/000/475/original/Election_Results_Combined_Official.pdf?1450312116",
+  "source_locator": "Page 1, MAYOR, EL PASO contest, Total column",
+  "certification_source_url": "https://epcountyvotes.com/election-archives",
+  "additional_source_urls": [
+   "https://ep-county-elections-production.s3.amazonaws.com/documents/files/000/000/468/original/ELECTION-RESULTS-COMBINED-OFFICIAL.pdf?1450312114",
+   "https://www.elpasotexas.gov/assets/Documents/CoEP/CityClerk/Others/City-Charter-amended.pdf"
+  ],
+  "verification_note": "El Paso County Elections Department official final combined results (report dated 06/24/13) for the June 15, 2013 runoff show Oscar Leeser 33269 and Steve Ortega 11493 in the MAYOR, EL PASO contest. The May 11, 2013 first round official results gave Leeser 21725 and Ortega 9946 with no majority, so the runoff was decisive.",
+  "candidates": [
+   {
+    "name": "Oscar Leeser",
+    "role": "winner",
+    "votes": 33269,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Steve Ortega",
+    "role": "runner_up",
+    "votes": 11493,
+    "candidate_year_id": ""
+   }
+  ]
+ },
+ {
+  "city_name": "El Paso",
+  "state_abb": "TX",
+  "roster_place_fips": "4824000",
+  "election_date": "2017-06-10",
+  "election_type": "regular",
+  "stage": "runoff",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "source_url": "https://ep-county-elections-production.s3.amazonaws.com/documents/files/000/001/406/original/Official_Final_Election_Results.pdf?1499095961",
+  "source_locator": "Page 1, MAYOR, EL PASO contest, Total column",
+  "certification_source_url": "https://epcountyvotes.com/election-archives",
+  "additional_source_urls": [
+   "https://ep-county-elections-production.s3.amazonaws.com/documents/files/000/001/310/original/Official_Final_Election_Results.pdf?1495555000",
+   "https://www.elpasotexas.gov/assets/Documents/CoEP/CityClerk/Others/City-Charter-amended.pdf"
+  ],
+  "verification_note": "El Paso County Elections Department official final results for the June 10, 2017 uniform runoff show Dee Margo 17154 and David Saucedo 12941 in the MAYOR, EL PASO contest. The May 6, 2017 first round official results gave Margo 14918 and Saucedo 7885 with no majority, so the runoff was decisive.",
+  "candidates": [
+   {
+    "name": "Dee Margo",
+    "role": "winner",
+    "votes": 17154,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "David Saucedo",
+    "role": "runner_up",
+    "votes": 12941,
+    "candidate_year_id": ""
+   }
+  ]
+ },
+ {
+  "city_name": "El Paso",
+  "state_abb": "TX",
+  "roster_place_fips": "4824000",
+  "election_date": "2020-12-12",
+  "election_type": "regular",
+  "stage": "runoff",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "source_url": "https://ep-county-elections-production.s3.amazonaws.com/documents/files/000/003/261/original/Official_Final_Election_Results.pdf?1610737139",
+  "source_locator": "Page 2, City of EP, Mayor, TOTAL column",
+  "certification_source_url": "https://epcountyvotes.com/election-archives",
+  "additional_source_urls": [
+   "https://ep-county-elections-production.s3.amazonaws.com/documents/files/000/003/187/original/Official_Final_Election_Results.pdf?1605641831",
+   "https://www.elpasotexas.gov/assets/Documents/CoEP/CityClerk/Others/City-Charter-amended.pdf"
+  ],
+  "verification_note": "El Paso County official final results (Electionware report dated 01/12/2021) for the December 12, 2020 runoff show Oscar Leeser 43182 and Dee Margo 11108 in the City of EP, Mayor contest. The November 3, 2020 first round official results gave Leeser 92700 (42.62 percent), Margo 53606 and Veronica Carbajal 47299, with no majority, so the runoff was decisive.",
+  "candidates": [
+   {
+    "name": "Oscar Leeser",
+    "role": "winner",
+    "votes": 43182,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Dee Margo",
+    "role": "runner_up",
+    "votes": 11108,
+    "candidate_year_id": ""
+   }
+  ]
+ },
+ {
+  "city_name": "El Paso",
+  "state_abb": "TX",
+  "roster_place_fips": "4824000",
+  "election_date": "2024-12-14",
+  "election_type": "regular",
+  "stage": "runoff",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "source_url": "https://ep-county-elections-production.s3.amazonaws.com/documents/files/000/005/896/original/OFF_FIN_ELE_RES.pdf?1740610459",
+  "source_locator": "Page 2, Mayor, City of El Paso, TOTAL column",
+  "certification_source_url": "https://epcountyvotes.com/election-archives",
+  "additional_source_urls": [
+   "https://ep-county-elections-production.s3.amazonaws.com/documents/files/000/005/792/original/OFF_FIN_ELEC_RES.pdf?1732132444",
+   "https://www2.elpasotexas.gov/municipal-clerk/CCElectionDocs/elections/election-2024-12-14.php"
+  ],
+  "verification_note": "El Paso County official final results (report dated 01/06/2025) for the December 14, 2024 City of El Paso runoff show Renard U. Johnson 19630 and Brian Kennedy 15343 in the Mayor, City of El Paso contest. The November 5, 2024 first round official results gave Johnson 59698 (32.47 percent) and Kennedy 44516 with no majority, so the runoff was decisive.",
+  "candidates": [
+   {
+    "name": "Renard U. Johnson",
+    "role": "winner",
+    "votes": 19630,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Brian Kennedy",
+    "role": "runner_up",
+    "votes": 15343,
+    "candidate_year_id": ""
+   }
+  ]
+ }
+]

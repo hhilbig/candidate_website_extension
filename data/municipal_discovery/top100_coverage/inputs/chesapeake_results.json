@@ -1,0 +1,151 @@
+[
+ {
+  "city_name": "Chesapeake",
+  "state_abb": "VA",
+  "roster_place_fips": "5116000",
+  "election_date": "2012-05-01",
+  "election_type": "regular",
+  "stage": "general",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "source_url": "https://historical.elections.virginia.gov/elections/view/45157",
+  "source_locator": "Contest page: Mayor, Chesapeake City, candidate vote table",
+  "certification_source_url": "https://historical.elections.virginia.gov/elections/view/45157",
+  "additional_source_urls": [
+   "https://historical.elections.virginia.gov/search"
+  ],
+  "verification_note": "Virginia Department of Elections historical elections database (contest page 45157). Candidate vote totals are citywide. Three candidates plus write-ins (97). Total votes cast 16,937. Single decisive round; no runoff exists. Certification date not shown on the page, so status is source_verified.",
+  "candidates": [
+   {
+    "name": "Alan Paul Krasnoff",
+    "role": "winner",
+    "votes": 12578,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Burnie Fletcher Mansfield, Jr.",
+    "role": "runner_up",
+    "votes": 3327,
+    "candidate_year_id": ""
+   }
+  ]
+ },
+ {
+  "city_name": "Chesapeake",
+  "state_abb": "VA",
+  "roster_place_fips": "5116000",
+  "election_date": "2016-05-03",
+  "election_type": "regular",
+  "stage": "general",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "source_url": "https://historical.elections.virginia.gov/elections/view/80815",
+  "source_locator": "Contest page: Mayor, Chesapeake City, candidate vote table",
+  "certification_source_url": "https://historical.elections.virginia.gov/elections/view/80815",
+  "additional_source_urls": [
+   "https://historical.elections.virginia.gov/search"
+  ],
+  "verification_note": "Virginia Department of Elections historical elections database (contest page 80815). Candidate vote totals are citywide. Only one named candidate appeared. Write-ins received 574 votes; total votes cast 15,580. Recorded as uncontested. Single decisive round; no runoff exists. Certification date not shown on the page, so status is source_verified.",
+  "candidates": [
+   {
+    "name": "Alan P. Krasnoff",
+    "role": "winner",
+    "votes": 15006,
+    "candidate_year_id": ""
+   }
+  ]
+ },
+ {
+  "city_name": "Chesapeake",
+  "state_abb": "VA",
+  "roster_place_fips": "5116000",
+  "election_date": "2018-05-01",
+  "election_type": "special",
+  "stage": "special",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "source_url": "https://historical.elections.virginia.gov/elections/view/88542",
+  "source_locator": "Contest page: Mayor, Chesapeake City, candidate vote table",
+  "certification_source_url": "https://historical.elections.virginia.gov/elections/view/88542",
+  "additional_source_urls": [
+   "https://historical.elections.virginia.gov/search"
+  ],
+  "verification_note": "Virginia Department of Elections historical elections database (contest page 88542). Candidate vote totals are citywide. The database flags this mayoral contest as a special election. Write-ins 109; total votes cast 23,081. Single decisive round; no runoff exists. Certification date not shown on the page, so status is source_verified.",
+  "candidates": [
+   {
+    "name": "Richard Wayne West",
+    "role": "winner",
+    "votes": 13342,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Jo Anne Marie Gallant",
+    "role": "runner_up",
+    "votes": 9630,
+    "candidate_year_id": ""
+   }
+  ]
+ },
+ {
+  "city_name": "Chesapeake",
+  "state_abb": "VA",
+  "roster_place_fips": "5116000",
+  "election_date": "2020-05-19",
+  "election_type": "regular",
+  "stage": "general",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "source_url": "https://historical.elections.virginia.gov/elections/view/139713",
+  "source_locator": "Contest page: Mayor, Chesapeake City, candidate vote table",
+  "certification_source_url": "https://historical.elections.virginia.gov/elections/view/139713",
+  "additional_source_urls": [
+   "https://historical.elections.virginia.gov/search"
+  ],
+  "verification_note": "Virginia Department of Elections historical elections database (contest page 139713). Candidate vote totals are citywide. Four named candidates plus write-ins (191). Total votes cast 33,193. Single decisive round; no runoff exists. Certification date not shown on the page, so status is source_verified.",
+  "candidates": [
+   {
+    "name": "Richard Wayne West",
+    "role": "winner",
+    "votes": 21888,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Lenard Tyrone Myers, II",
+    "role": "runner_up",
+    "votes": 9087,
+    "candidate_year_id": ""
+   }
+  ]
+ },
+ {
+  "city_name": "Chesapeake",
+  "state_abb": "VA",
+  "roster_place_fips": "5116000",
+  "election_date": "2024-11-05",
+  "election_type": "regular",
+  "stage": "general",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "source_url": "https://historical.elections.virginia.gov/elections/view/161344",
+  "source_locator": "Contest page: Mayor, Chesapeake City, candidate vote table",
+  "certification_source_url": "https://historical.elections.virginia.gov/elections/view/161344",
+  "additional_source_urls": [
+   "https://historical.elections.virginia.gov/search"
+  ],
+  "verification_note": "Virginia Department of Elections historical elections database (contest page 161344). Candidate vote totals are citywide. Write-ins 594; total votes cast 122,954. Single decisive round; no runoff exists. Certification date not shown on the page, so status is source_verified.",
+  "candidates": [
+   {
+    "name": "Richard W. \"Rick\" West",
+    "role": "winner",
+    "votes": 68421,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Don J. Carey III",
+    "role": "runner_up",
+    "votes": 53939,
+    "candidate_year_id": ""
+   }
+  ]
+ }
+]

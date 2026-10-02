@@ -1,0 +1,168 @@
+[
+ {
+  "city_name": "Houston",
+  "state_abb": "TX",
+  "roster_place_fips": "4835000",
+  "election_date": "2011-11-08",
+  "election_type": "regular",
+  "stage": "general",
+  "verification_status": "verified_decisive",
+  "certification_status": "certified",
+  "source_url": "https://houstontx.gov/citysec/elections/110811.pdf",
+  "source_locator": "Page 1, MAYOR block under Ballots Cast - Houston - 123,620; city secretary canvass report pages follow",
+  "certification_source_url": "https://houstontx.gov/citysec/elections/110811.pdf",
+  "additional_source_urls": [
+   "https://houstontx.gov/citysec/elections/electionsindex.html"
+  ],
+  "verification_note": "City secretary combined Harris, Fort Bend and Montgomery results. Parker received 60,135 votes (50.78 percent), a majority, so no mayoral runoff was held. O'Connor was second with 17,348. The December 10, 2011 runoff file (121011.pdf) contains no mayoral contest.",
+  "candidates": [
+   {
+    "name": "Annise D. Parker",
+    "role": "winner",
+    "votes": 60135,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Jack O'Connor",
+    "role": "runner_up",
+    "votes": 17348,
+    "candidate_year_id": ""
+   }
+  ]
+ },
+ {
+  "city_name": "Houston",
+  "state_abb": "TX",
+  "roster_place_fips": "4835000",
+  "election_date": "2013-11-05",
+  "election_type": "regular",
+  "stage": "general",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "source_url": "https://houstontx.gov/citysec/elections/110513.pdf",
+  "source_locator": "Page 1, City of Houston MAYOR, Total column (Harris County Cumulative Report, Official)",
+  "certification_source_url": "https://houstontx.gov/citysec/elections/110513.pdf",
+  "additional_source_urls": [
+   "https://www.fortbendcountytx.gov/sites/default/files/2021-11/CumulativeResultsNovember5.pdf",
+   "https://elections.mctx.org/results/2013_November_Cumulative_Report.pdf?ts=1023345692",
+   "https://www.fortbendcountytx.gov/sites/default/files/2021-11/CumulativeResults_1.pdf",
+   "https://houstontx.gov/citysec/elections/electionsindex.html"
+  ],
+  "verification_note": "Parker won a majority, so no mayoral runoff followed. Houston totals are the sum of three official county reports. Harris County cumulative report in the city file: Parker 97,165, Hall 46,828. Fort Bend County cumulative report (Nov 5, 2013): Parker 924, Hall 1,769. Montgomery County cumulative report: Parker 35, Hall 7. Sums: Parker 98,124, Hall 48,604. No city-issued combined 2013 document was found; the 2013 city secretary file lists only Harris County. The December 14, 2013 runoff had no mayoral contest (Fort Bend runoff report lists council contests only).",
+  "candidates": [
+   {
+    "name": "Annise D. Parker",
+    "role": "winner",
+    "votes": 98124,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Ben Hall",
+    "role": "runner_up",
+    "votes": 48604,
+    "candidate_year_id": ""
+   }
+  ]
+ },
+ {
+  "city_name": "Houston",
+  "state_abb": "TX",
+  "roster_place_fips": "4835000",
+  "election_date": "2015-12-12",
+  "election_type": "regular",
+  "stage": "runoff",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "source_url": "https://houstontx.gov/citysec/elections/121215.pdf",
+  "source_locator": "Page 1 (scanned image), MAYOR under Ballots Cast - Houston - 221,143, Harris, Fort Bend and Montgomery combined",
+  "certification_source_url": "https://houstontx.gov/citysec/elections/121215.pdf",
+  "additional_source_urls": [
+   "https://houstontx.gov/citysec/elections/110315.pdf",
+   "https://houstontx.gov/citysec/elections/electionsindex.html"
+  ],
+  "verification_note": "Runoff decided the office after the November 3, 2015 first round. City secretary combined results: Turner 108,461 (50.94 percent), King 104,471 (49.06 percent). Figures read from the scanned page and checked by viewing the image. Harris County cumulative report on page 3 of the same file shows Turner 104,711 and King 104,125 for the Harris portion only.",
+  "candidates": [
+   {
+    "name": "Sylvester Turner",
+    "role": "winner",
+    "votes": 108461,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Bill King",
+    "role": "runner_up",
+    "votes": 104471,
+    "candidate_year_id": ""
+   }
+  ]
+ },
+ {
+  "city_name": "Houston",
+  "state_abb": "TX",
+  "roster_place_fips": "4835000",
+  "election_date": "2019-12-14",
+  "election_type": "regular",
+  "stage": "runoff",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "source_url": "https://files.harrisvotes.com/harrisvotes/prd/HISTORY/20191214/cumulative.pdf",
+  "source_locator": "Page 1, City of Houston, Mayor, Total column (Harris County Cumulative Report, Official)",
+  "certification_source_url": "https://elections.mctx.org/ElectionResults.asp",
+  "additional_source_urls": [
+   "https://elections.mctx.org/results/City%20of%20Houston%20Canvass%20Report.pdf",
+   "https://results.enr.clarityelections.com/TX/Fort_Bend/99826/",
+   "https://www.fortbendcountytx.gov/government/departments/elections-voter-registration/election-results/2019-election-results",
+   "https://houstontx.gov/citysec/elections/110519.pdf",
+   "https://houstontx.gov/citysec/elections/electionsindex.html",
+   "https://results.enr.clarityelections.com/TX/Fort_Bend/99826/236476/json/en/summary.json"
+  ],
+  "verification_note": "Runoff decided the office after the November 5, 2019 first round (Turner 114,926, Buzbee 69,634 of 245,362 mayoral votes in the city secretary combined general election file). No combined citywide runoff document was available: the city secretary index link for the December 14, 2019 file (121419pdf) and the URLs 121419.pdf under houstontx.gov/citysec/election/ and /elections/ all returned HTTP 404. Houston runoff totals are the sum of three county reports. Harris: Turner 113,262, Buzbee 88,844 (official cumulative). Montgomery: Turner 30, Buzbee 65 (official canvass report, Totals row). Fort Bend: Turner 3,029, Buzbee 252. The Fort Bend figure comes from the Fort Bend County elections office results site (Clarity ENR, election 99826, version 236476, contest 'City of Houston Mayor', json/en/summary.json, opened and read directly; 11 of 11 precincts reporting). The county labels this site unofficial, and no Fort Bend canvass PDF for the December 14 runoff exists on the county 2019 results page (its canvass, cumulative and precinct PDFs are for November 5, 2019). The Fort Bend vote is therefore county-published but not certified in a document we could open. Sums: Turner 116,321, Buzbee 89,161. Fort Bend is 1.4 percent of the Turner total and 0.3 percent of the Buzbee total; the winner and runner-up do not depend on it.",
+  "candidates": [
+   {
+    "name": "Sylvester Turner",
+    "role": "winner",
+    "votes": 116321,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Tony Buzbee",
+    "role": "runner_up",
+    "votes": 89161,
+    "candidate_year_id": ""
+   }
+  ]
+ },
+ {
+  "city_name": "Houston",
+  "state_abb": "TX",
+  "roster_place_fips": "4835000",
+  "election_date": "2023-12-09",
+  "election_type": "regular",
+  "stage": "runoff",
+  "verification_status": "verified_decisive",
+  "certification_status": "certified",
+  "source_url": "https://houstontx.gov/citysec/elections/120923.pdf",
+  "source_locator": "Harris section page 44 Totals row (Mayor); Montgomery section page 292 Totals row; Fort Bend section page 285 Totals row (Mayor City of Houston)",
+  "certification_source_url": "https://houstontx.gov/citysec/elections/120923.pdf",
+  "additional_source_urls": [
+   "https://files.harrisvotes.com/harrisvotes/prd/docs/Uploads/Official%20Cumulative%20Results-12-15-2023%2005-54-05%20PM.pdf",
+   "https://houstontx.gov/citysec/elections/110723.pdf",
+   "https://houstontx.gov/citysec/elections/electionsindex.html"
+  ],
+  "verification_note": "Runoff decided the office after the November 7, 2023 first round (Whitmire and Jackson Lee advanced). City of Houston Canvass file contains county sections. Harris: Whitmire 129,217, Jackson Lee 68,819. Montgomery: Whitmire 83, Jackson Lee 28. Fort Bend: Whitmire 509, Jackson Lee 2,872. Sums: Whitmire 129,809, Jackson Lee 71,719. The first column of each Totals row is Whitmire, confirmed against the Harris County cumulative report (129,217 and 68,819).",
+  "candidates": [
+   {
+    "name": "John Whitmire",
+    "role": "winner",
+    "votes": 129809,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Sheila Jackson Lee",
+    "role": "runner_up",
+    "votes": 71719,
+    "candidate_year_id": ""
+   }
+  ]
+ }
+]

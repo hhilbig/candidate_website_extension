@@ -1,0 +1,118 @@
+[
+ {
+  "city_name": "Washington",
+  "state_abb": "DC",
+  "roster_place_fips": "1150000",
+  "election_date": "2010-11-02",
+  "election_type": "regular",
+  "stage": "general",
+  "verification_status": "verified_decisive",
+  "certification_status": "certified",
+  "source_url": "https://electionresults.dcboe.org/cityWide/getCityWide/2010-General-Election",
+  "source_locator": "Contest MAYOR, citywide totals",
+  "certification_source_url": "https://electionresults.dcboe.org/cityWide/getCityWide/2010-General-Election",
+  "additional_source_urls": [],
+  "verification_note": "The official results site labels this election Certified Results (last updated 2010-11-20). Gray (DEM) 97,978; Carlos Allen (IND) 2,279; Faith (STG) 1,476; Omari Musa (SOC) 717. The aggregate Write-In line of 29,599 votes is not a single candidate and is not used as runner-up. The linked PDF summary (PreCertified_General_Election_Results_2010_Summary.pdf) shows the same totals but is headed Unofficial Results, so the site JSON is the cited source.",
+  "candidates": [
+   {
+    "name": "Vincent C. Gray",
+    "role": "winner",
+    "votes": 97978,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Carlos Allen",
+    "role": "runner_up",
+    "votes": 2279,
+    "candidate_year_id": ""
+   }
+  ]
+ },
+ {
+  "city_name": "Washington",
+  "state_abb": "DC",
+  "roster_place_fips": "1150000",
+  "election_date": "2014-11-04",
+  "election_type": "regular",
+  "stage": "general",
+  "verification_status": "verified_decisive",
+  "certification_status": "certified",
+  "source_url": "https://electionresults.dcboe.org/Downloads/Reports/November_4_2014_General_Election_Certified_Results.pdf",
+  "source_locator": "MAYOR OF THE DISTRICT OF COLUMBIA, Total column",
+  "certification_source_url": "https://electionresults.dcboe.org/Downloads/Reports/November_4_2014_General_Election_Certified_Results.pdf",
+  "additional_source_urls": [],
+  "verification_note": "Certified results. Bowser 96,666; Catania 61,388; Schwartz 12,327. Write-in 1,612 aggregate.",
+  "candidates": [
+   {
+    "name": "Muriel E. Bowser",
+    "role": "winner",
+    "votes": 96666,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "David A. Catania",
+    "role": "runner_up",
+    "votes": 61388,
+    "candidate_year_id": ""
+   }
+  ]
+ },
+ {
+  "city_name": "Washington",
+  "state_abb": "DC",
+  "roster_place_fips": "1150000",
+  "election_date": "2018-11-06",
+  "election_type": "regular",
+  "stage": "general",
+  "verification_status": "verified_decisive",
+  "certification_status": "certified",
+  "source_url": "https://electionresults.dcboe.org/Downloads/Reports/November_6_2018_General_Election_Certified_Results.pdf",
+  "source_locator": "MAYOR OF THE DISTRICT OF COLUMBIA, Total column",
+  "certification_source_url": "https://electionresults.dcboe.org/Downloads/Reports/November_6_2018_General_Election_Certified_Results.pdf",
+  "additional_source_urls": [],
+  "verification_note": "Certified results. Bowser 171,608; Wilcox 20,950; Canter 15,478; Moulton 7,569. Write-in 9,053 aggregate is not a single candidate.",
+  "candidates": [
+   {
+    "name": "Muriel Bowser",
+    "role": "winner",
+    "votes": 171608,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Ann C. Wilcox",
+    "role": "runner_up",
+    "votes": 20950,
+    "candidate_year_id": ""
+   }
+  ]
+ },
+ {
+  "city_name": "Washington",
+  "state_abb": "DC",
+  "roster_place_fips": "1150000",
+  "election_date": "2022-11-08",
+  "election_type": "regular",
+  "stage": "general",
+  "verification_status": "verified_decisive",
+  "certification_status": "certified",
+  "source_url": "https://electionresults.dcboe.org/Downloads/Reports/November_8_2022_General_Election_Certified_Results.pdf",
+  "source_locator": "MAYOR OF THE DISTRICT OF COLUMBIA, Total column",
+  "certification_source_url": "https://electionresults.dcboe.org/Downloads/Reports/November_8_2022_General_Election_Certified_Results.pdf",
+  "additional_source_urls": [],
+  "verification_note": "Certified results. Bowser (DEM) 147,433; Grant (IND) 29,531; Hall (REP) 11,510; Sobin (LIB) 2,521. Write-in 6,580 aggregate is not a single candidate.",
+  "candidates": [
+   {
+    "name": "Muriel E. Bowser",
+    "role": "winner",
+    "votes": 147433,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Rodney Red Grant",
+    "role": "runner_up",
+    "votes": 29531,
+    "candidate_year_id": ""
+   }
+  ]
+ }
+]

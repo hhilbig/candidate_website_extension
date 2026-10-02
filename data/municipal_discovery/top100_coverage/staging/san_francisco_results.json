@@ -1,0 +1,151 @@
+[
+ {
+  "city_name": "San Francisco",
+  "state_abb": "CA",
+  "roster_place_fips": "0667000",
+  "election_date": "2011-11-08",
+  "election_type": "regular",
+  "stage": "ranked_choice_final",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "source_url": "https://sfelections.org/results/20111108/data/mayor.html",
+  "source_locator": "Official Ranked-Choice Results Report, Mayor, Round 12 column (final)",
+  "certification_source_url": "https://sfelections.org/results/20111108/data/mayor.html",
+  "verification_note": "Final round of ranked-choice tabulation (round 12): Ed Lee 84,457 (59.64 percent of continuing ballots), John Avalos 57,160 (40.36 percent). Official Department of Elections report, read from an Internet Archive copy because sfelections.org blocks automated access. Certification letter not opened.",
+  "candidates": [
+   {
+    "name": "Ed Lee",
+    "role": "winner",
+    "votes": 84457,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "John Avalos",
+    "role": "runner_up",
+    "votes": 57160,
+    "candidate_year_id": ""
+   }
+  ],
+  "additional_source_urls": []
+ },
+ {
+  "city_name": "San Francisco",
+  "state_abb": "CA",
+  "roster_place_fips": "0667000",
+  "election_date": "2015-11-03",
+  "election_type": "regular",
+  "stage": "general",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "source_url": "https://sfelections.org/results/20151103/index.php",
+  "source_locator": "Official Election Results page, Mayor table (first-choice votes)",
+  "certification_source_url": "https://sfelections.org/results/20151103/data/CertificationLetterNov2015.pdf",
+  "verification_note": "Ed Lee received 105,298 of 190,397 votes (55.30 percent), a first-choice majority, so he won in the first round of ranked-choice voting. Francisco Herrera was second with 28,638. Read from an Internet Archive copy of the official page. The certification letter link is listed on that page but was not opened.",
+  "candidates": [
+   {
+    "name": "Edwin M. Lee",
+    "role": "winner",
+    "votes": 105298,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Francisco Herrera",
+    "role": "runner_up",
+    "votes": 28638,
+    "candidate_year_id": ""
+   }
+  ],
+  "additional_source_urls": []
+ },
+ {
+  "city_name": "San Francisco",
+  "state_abb": "CA",
+  "roster_place_fips": "0667000",
+  "election_date": "2018-06-05",
+  "election_type": "special",
+  "stage": "ranked_choice_final",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "source_url": "https://www.sfelections.org/results/20180605/data/20180627/mayor/20180627_mayor.pdf",
+  "source_locator": "RCV Results Report, Mayor, Final State (last round, run 6/27/2018)",
+  "certification_source_url": "https://www.sfelections.org/results/20180605/data/20180627/CertificationLetterJun2018.pdf",
+  "verification_note": "Mayor special election held with the June 5, 2018 primary after the death of Mayor Edwin Lee. Final ranked-choice round: London Breed 115,977 (50.55 percent, marked WINNER), Mark Leno 113,431 (49.45 percent). Read from an Internet Archive copy of the official report. The certification letter is a scanned image and was not read.",
+  "candidates": [
+   {
+    "name": "London Breed",
+    "role": "winner",
+    "votes": 115977,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Mark Leno",
+    "role": "runner_up",
+    "votes": 113431,
+    "candidate_year_id": ""
+   }
+  ],
+  "additional_source_urls": []
+ },
+ {
+  "city_name": "San Francisco",
+  "state_abb": "CA",
+  "roster_place_fips": "0667000",
+  "election_date": "2019-11-05",
+  "election_type": "regular",
+  "stage": "general",
+  "verification_status": "verified_decisive",
+  "certification_status": "certified",
+  "source_url": "https://www.sfelections.org/results/20191105/data/20191125/summary.pdf",
+  "source_locator": "Final Summary Report, Mayor contest, RCV first choice totals",
+  "certification_source_url": "https://www.sfelections.org/results/20191105/data/20191125/CertificationLetterNov2019.pdf",
+  "additional_source_urls": [
+   "https://www.sfbos.org/sites/default/files/r0523-19.pdf"
+  ],
+  "verification_note": "London Breed received 125,200 first-choice votes (70.66 percent), a majority, so she won in the first round. Ellen Lee Zhou was second with 24,667. Final summary report run November 25, 2019. The certification letter lists the Mayor ranked-choice contest. Board of Supervisors Resolution 523-19 declares Breed elected. Read from Internet Archive copies of the official files.",
+  "candidates": [
+   {
+    "name": "London N. Breed",
+    "role": "winner",
+    "votes": 125200,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Ellen Lee Zhou",
+    "role": "runner_up",
+    "votes": 24667,
+    "candidate_year_id": ""
+   }
+  ]
+ },
+ {
+  "city_name": "San Francisco",
+  "state_abb": "CA",
+  "roster_place_fips": "0667000",
+  "election_date": "2024-11-05",
+  "election_type": "regular",
+  "stage": "ranked_choice_final",
+  "verification_status": "verified_decisive",
+  "certification_status": "certified",
+  "source_url": "https://www.sfelections.org/results/20241105/data/20241203/mayor/mayor_short.pdf",
+  "source_locator": "Final RCV Short Report, Mayor, Round 14 (final) on page 8",
+  "certification_source_url": "https://www.sfelections.org/results/20241105/data/20241203/CertificationLetterNov52024.pdf",
+  "additional_source_urls": [
+   "https://sfbos.org/sites/default/files/r0612-24.pdf"
+  ],
+  "verification_note": "Final round (round 14): Daniel Lurie 182,364 (55.02 percent), London Breed 149,113 (44.98 percent). Official report run December 2, 2024, read from an Internet Archive copy. Director of Elections certification letter covers the election. Board of Supervisors Resolution 612-24 declares Lurie elected Mayor.",
+  "candidates": [
+   {
+    "name": "Daniel Lurie",
+    "role": "winner",
+    "votes": 182364,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "London Breed",
+    "role": "runner_up",
+    "votes": 149113,
+    "candidate_year_id": ""
+   }
+  ]
+ }
+]

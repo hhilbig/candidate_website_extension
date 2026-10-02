@@ -1,0 +1,215 @@
+[
+ {
+  "city_id": "4752006",
+  "year": 2010,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.nashville.gov/departments/elections/election-results-and-statistics/election-results",
+  "additional_source_urls": [
+   "https://www.nashville.gov/departments/elections/election-results-and-statistics/election-results",
+   "https://www.nashville.gov/departments/mayor/what-can-your-mayor-do"
+  ],
+  "note": "The Davidson County Election Commission results index lists every Metro election. The certified result pages for this year's elections list no mayoral contest. The Mayor's Office page states the mayor is elected to a four-year term, and the regular mayoral elections fell in 2011, 2015, 2019 and 2023, with a special election in 2018."
+ },
+ {
+  "city_id": "4752006",
+  "year": 2011,
+  "status": "complete",
+  "expected_election_dates": [
+   "2011-08-04"
+  ],
+  "source_url": "https://www.nashville.gov/departments/elections/election-results-and-statistics/election-results/110804",
+  "additional_source_urls": [
+   "https://www.nashville.gov/departments/elections/election-results-and-statistics/election-results"
+  ],
+  "note": "Davidson County Election Commission certified results record the decisive mayoral election on this date. Winner and runner-up are in nashville_davidson_results.json."
+ },
+ {
+  "city_id": "4752006",
+  "year": 2012,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.nashville.gov/departments/elections/election-results-and-statistics/election-results",
+  "additional_source_urls": [
+   "https://www.nashville.gov/departments/elections/election-results-and-statistics/election-results",
+   "https://www.nashville.gov/departments/mayor/what-can-your-mayor-do"
+  ],
+  "note": "The Davidson County Election Commission results index lists every Metro election. The certified result pages for this year's elections list no mayoral contest. The Mayor's Office page states the mayor is elected to a four-year term, and the regular mayoral elections fell in 2011, 2015, 2019 and 2023, with a special election in 2018."
+ },
+ {
+  "city_id": "4752006",
+  "year": 2013,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.nashville.gov/departments/elections/election-results-and-statistics/election-results",
+  "additional_source_urls": [
+   "https://www.nashville.gov/departments/elections/election-results-and-statistics/election-results",
+   "https://www.nashville.gov/departments/mayor/what-can-your-mayor-do"
+  ],
+  "note": "The Davidson County Election Commission results index lists every Metro election. The certified result pages for this year's elections list no mayoral contest. The Mayor's Office page states the mayor is elected to a four-year term, and the regular mayoral elections fell in 2011, 2015, 2019 and 2023, with a special election in 2018."
+ },
+ {
+  "city_id": "4752006",
+  "year": 2014,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.nashville.gov/departments/elections/election-results-and-statistics/election-results",
+  "additional_source_urls": [
+   "https://www.nashville.gov/departments/elections/election-results-and-statistics/election-results",
+   "https://www.nashville.gov/departments/mayor/what-can-your-mayor-do"
+  ],
+  "note": "The Davidson County Election Commission results index lists every Metro election. The certified result pages for this year's elections list no mayoral contest. The Mayor's Office page states the mayor is elected to a four-year term, and the regular mayoral elections fell in 2011, 2015, 2019 and 2023, with a special election in 2018."
+ },
+ {
+  "city_id": "4752006",
+  "year": 2015,
+  "status": "complete",
+  "expected_election_dates": [
+   "2015-09-10"
+  ],
+  "source_url": "https://www.nashville.gov/departments/elections/election-results-and-statistics/election-results/150910",
+  "additional_source_urls": [
+   "https://www.nashville.gov/departments/elections/election-results-and-statistics/election-results",
+   "https://www.nashville.gov/departments/elections/election-results-and-statistics/election-results/150806"
+  ],
+  "note": "Davidson County Election Commission certified results record the decisive mayoral election on this date. Winner and runner-up are in nashville_davidson_results.json."
+ },
+ {
+  "city_id": "4752006",
+  "year": 2016,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.nashville.gov/departments/elections/election-results-and-statistics/election-results",
+  "additional_source_urls": [
+   "https://www.nashville.gov/departments/elections/election-results-and-statistics/election-results",
+   "https://www.nashville.gov/departments/mayor/what-can-your-mayor-do"
+  ],
+  "note": "The Davidson County Election Commission results index lists every Metro election. The certified result pages for this year's elections list no mayoral contest. The Mayor's Office page states the mayor is elected to a four-year term, and the regular mayoral elections fell in 2011, 2015, 2019 and 2023, with a special election in 2018."
+ },
+ {
+  "city_id": "4752006",
+  "year": 2017,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.nashville.gov/departments/elections/election-results-and-statistics/election-results",
+  "additional_source_urls": [
+   "https://www.nashville.gov/departments/elections/election-results-and-statistics/election-results",
+   "https://www.nashville.gov/departments/mayor/what-can-your-mayor-do"
+  ],
+  "note": "The Davidson County Election Commission results index lists every Metro election. The certified result pages for this year's elections list no mayoral contest. The Mayor's Office page states the mayor is elected to a four-year term, and the regular mayoral elections fell in 2011, 2015, 2019 and 2023, with a special election in 2018."
+ },
+ {
+  "city_id": "4752006",
+  "year": 2018,
+  "status": "complete",
+  "expected_election_dates": [
+   "2018-05-24"
+  ],
+  "source_url": "https://www.nashville.gov/departments/elections/election-results-and-statistics/election-results/180524",
+  "additional_source_urls": [
+   "https://www.nashville.gov/departments/elections/election-results-and-statistics/election-results"
+  ],
+  "note": "Davidson County Election Commission certified results record the decisive mayoral election on this date. Winner and runner-up are in nashville_davidson_results.json."
+ },
+ {
+  "city_id": "4752006",
+  "year": 2019,
+  "status": "complete",
+  "expected_election_dates": [
+   "2019-09-12"
+  ],
+  "source_url": "https://www.nashville.gov/departments/elections/election-results-and-statistics/election-results/190912",
+  "additional_source_urls": [
+   "https://www.nashville.gov/departments/elections/election-results-and-statistics/election-results",
+   "https://www.nashville.gov/departments/elections/election-results-and-statistics/election-results/190801"
+  ],
+  "note": "Davidson County Election Commission certified results record the decisive mayoral election on this date. Winner and runner-up are in nashville_davidson_results.json."
+ },
+ {
+  "city_id": "4752006",
+  "year": 2020,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.nashville.gov/departments/elections/election-results-and-statistics/election-results",
+  "additional_source_urls": [
+   "https://www.nashville.gov/departments/elections/election-results-and-statistics/election-results",
+   "https://www.nashville.gov/departments/mayor/what-can-your-mayor-do"
+  ],
+  "note": "The Davidson County Election Commission results index lists every Metro election. The certified result pages for this year's elections list no mayoral contest. The Mayor's Office page states the mayor is elected to a four-year term, and the regular mayoral elections fell in 2011, 2015, 2019 and 2023, with a special election in 2018."
+ },
+ {
+  "city_id": "4752006",
+  "year": 2021,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.nashville.gov/departments/elections/election-results-and-statistics/election-results",
+  "additional_source_urls": [
+   "https://www.nashville.gov/departments/elections/election-results-and-statistics/election-results",
+   "https://www.nashville.gov/departments/mayor/what-can-your-mayor-do"
+  ],
+  "note": "The Davidson County Election Commission results index lists every Metro election. The certified result pages for this year's elections list no mayoral contest. The Mayor's Office page states the mayor is elected to a four-year term, and the regular mayoral elections fell in 2011, 2015, 2019 and 2023, with a special election in 2018."
+ },
+ {
+  "city_id": "4752006",
+  "year": 2022,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.nashville.gov/departments/elections/election-results-and-statistics/election-results",
+  "additional_source_urls": [
+   "https://www.nashville.gov/departments/elections/election-results-and-statistics/election-results",
+   "https://www.nashville.gov/departments/mayor/what-can-your-mayor-do"
+  ],
+  "note": "The Davidson County Election Commission results index lists every Metro election. The certified result pages for this year's elections list no mayoral contest. The Mayor's Office page states the mayor is elected to a four-year term, and the regular mayoral elections fell in 2011, 2015, 2019 and 2023, with a special election in 2018."
+ },
+ {
+  "city_id": "4752006",
+  "year": 2023,
+  "status": "complete",
+  "expected_election_dates": [
+   "2023-09-14"
+  ],
+  "source_url": "https://www.nashville.gov/departments/elections/election-results-and-statistics/election-results/230914",
+  "additional_source_urls": [
+   "https://www.nashville.gov/departments/elections/election-results-and-statistics/election-results",
+   "https://www.nashville.gov/departments/elections/election-results-and-statistics/election-results/230803"
+  ],
+  "note": "Davidson County Election Commission certified results record the decisive mayoral election on this date. Winner and runner-up are in nashville_davidson_results.json."
+ },
+ {
+  "city_id": "4752006",
+  "year": 2024,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.nashville.gov/departments/elections/election-results-and-statistics/election-results",
+  "additional_source_urls": [
+   "https://www.nashville.gov/departments/elections/election-results-and-statistics/election-results",
+   "https://www.nashville.gov/departments/mayor/what-can-your-mayor-do"
+  ],
+  "note": "The Davidson County Election Commission results index lists every Metro election. The certified result pages for this year's elections list no mayoral contest. The Mayor's Office page states the mayor is elected to a four-year term, and the regular mayoral elections fell in 2011, 2015, 2019 and 2023, with a special election in 2018."
+ },
+ {
+  "city_id": "4752006",
+  "year": 2025,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.nashville.gov/departments/elections/election-results-and-statistics/election-results",
+  "additional_source_urls": [
+   "https://www.nashville.gov/departments/elections/election-results-and-statistics/election-results",
+   "https://www.nashville.gov/departments/mayor/what-can-your-mayor-do"
+  ],
+  "note": "The Davidson County Election Commission index lists only 2025 U.S. House District 7 special primary and special general elections for this year. No mayoral contest appears, and the mayor elected in 2023 serves a four-year term."
+ },
+ {
+  "city_id": "4752006",
+  "year": 2026,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.nashville.gov/departments/elections/election-results-and-statistics/election-results",
+  "additional_source_urls": [
+   "https://www.nashville.gov/departments/elections/election-results-and-statistics/election-results",
+   "https://www.nashville.gov/departments/mayor/what-can-your-mayor-do",
+   "https://www.nashville.gov/sites/default/files/2026-08/2026-08-06---State-Primary-County-General---Precinct-Level-Results-CERTIFIED.pdf"
+  ],
+  "note": "The Davidson County Election Commission index lists the March 17, May 5 and August 6, 2026 elections. The certified August 6, 2026 precinct report contains no mayor contest (text searched for 'mayor', no matches). The mayor elected in 2023 serves a four-year term, so the next regular mayoral election is August 2027."
+ }
+]

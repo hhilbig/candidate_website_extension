@@ -1,0 +1,207 @@
+[
+ {
+  "city_id": "2743000",
+  "year": 2010,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://vote.minneapolismn.gov/results-data/election-results/2010/",
+  "additional_source_urls": [
+   "https://vote.minneapolismn.gov/results-data/election-results/",
+   "https://vote.minneapolismn.gov/ranked-choice-voting/history/"
+  ],
+  "note": "The city election results page for 2010 lists only non-mayoral contests or ballot questions and no mayoral contest. The city lists mayoral ranked-choice elections in 2009, 2013, 2017, 2021 and 2023 municipal cycles, with mayoral results pages for 2013, 2017, 2021 and 2025, which shows a four-year cycle. No mayoral election occurred in 2010."
+ },
+ {
+  "city_id": "2743000",
+  "year": 2011,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://vote.minneapolismn.gov/results-data/election-results/",
+  "additional_source_urls": [
+   "https://vote.minneapolismn.gov/ranked-choice-voting/history/"
+  ],
+  "note": "The city election results index lists years with elections and has no page for 2011. The city shows mayoral elections only in 2013, 2017, 2021 and 2025 in this period. No mayoral election occurred in 2011."
+ },
+ {
+  "city_id": "2743000",
+  "year": 2012,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://vote.minneapolismn.gov/results-data/election-results/2012/",
+  "additional_source_urls": [
+   "https://vote.minneapolismn.gov/results-data/election-results/",
+   "https://vote.minneapolismn.gov/ranked-choice-voting/history/"
+  ],
+  "note": "The city election results page for 2012 lists only non-mayoral contests or ballot questions and no mayoral contest. The city lists mayoral ranked-choice elections in 2009, 2013, 2017, 2021 and 2023 municipal cycles, with mayoral results pages for 2013, 2017, 2021 and 2025, which shows a four-year cycle. No mayoral election occurred in 2012."
+ },
+ {
+  "city_id": "2743000",
+  "year": 2013,
+  "status": "complete",
+  "expected_election_dates": [
+   "2013-11-05"
+  ],
+  "source_url": "https://vote.minneapolismn.gov/results-data/election-results/2013/mayor/",
+  "additional_source_urls": [
+   "https://vote.minneapolismn.gov/ranked-choice-voting/history/"
+  ],
+  "note": "The Minneapolis Elections and Voter Services page for the 2013 mayoral race records a ranked-choice municipal election on 2013-11-05. Winner and runner-up are in minneapolis_results.json."
+ },
+ {
+  "city_id": "2743000",
+  "year": 2014,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://vote.minneapolismn.gov/results-data/election-results/2014/",
+  "additional_source_urls": [
+   "https://vote.minneapolismn.gov/results-data/election-results/",
+   "https://vote.minneapolismn.gov/ranked-choice-voting/history/"
+  ],
+  "note": "The city election results page for 2014 lists only non-mayoral contests or ballot questions and no mayoral contest. The city lists mayoral ranked-choice elections in 2009, 2013, 2017, 2021 and 2023 municipal cycles, with mayoral results pages for 2013, 2017, 2021 and 2025, which shows a four-year cycle. No mayoral election occurred in 2014."
+ },
+ {
+  "city_id": "2743000",
+  "year": 2015,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://vote.minneapolismn.gov/results-data/election-results/",
+  "additional_source_urls": [
+   "https://vote.minneapolismn.gov/ranked-choice-voting/history/"
+  ],
+  "note": "The city election results index lists years with elections and has no page for 2015. The city shows mayoral elections only in 2013, 2017, 2021 and 2025 in this period. No mayoral election occurred in 2015."
+ },
+ {
+  "city_id": "2743000",
+  "year": 2016,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://vote.minneapolismn.gov/results-data/election-results/2016/",
+  "additional_source_urls": [
+   "https://vote.minneapolismn.gov/results-data/election-results/",
+   "https://vote.minneapolismn.gov/ranked-choice-voting/history/"
+  ],
+  "note": "The city election results page for 2016 lists only non-mayoral contests or ballot questions and no mayoral contest. The city lists mayoral ranked-choice elections in 2009, 2013, 2017, 2021 and 2023 municipal cycles, with mayoral results pages for 2013, 2017, 2021 and 2025, which shows a four-year cycle. No mayoral election occurred in 2016."
+ },
+ {
+  "city_id": "2743000",
+  "year": 2017,
+  "status": "complete",
+  "expected_election_dates": [
+   "2017-11-07"
+  ],
+  "source_url": "https://vote.minneapolismn.gov/results-data/election-results/2017/mayor/",
+  "additional_source_urls": [
+   "https://vote.minneapolismn.gov/ranked-choice-voting/history/"
+  ],
+  "note": "The Minneapolis Elections and Voter Services page for the 2017 mayoral race records a ranked-choice municipal election on 2017-11-07. Winner and runner-up are in minneapolis_results.json."
+ },
+ {
+  "city_id": "2743000",
+  "year": 2018,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://vote.minneapolismn.gov/results-data/election-results/2018/",
+  "additional_source_urls": [
+   "https://vote.minneapolismn.gov/results-data/election-results/",
+   "https://vote.minneapolismn.gov/ranked-choice-voting/history/"
+  ],
+  "note": "The city election results page for 2018 lists only non-mayoral contests or ballot questions and no mayoral contest. The city lists mayoral ranked-choice elections in 2009, 2013, 2017, 2021 and 2023 municipal cycles, with mayoral results pages for 2013, 2017, 2021 and 2025, which shows a four-year cycle. No mayoral election occurred in 2018."
+ },
+ {
+  "city_id": "2743000",
+  "year": 2019,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://vote.minneapolismn.gov/results-data/election-results/",
+  "additional_source_urls": [
+   "https://vote.minneapolismn.gov/ranked-choice-voting/history/"
+  ],
+  "note": "The city election results index lists years with elections and has no page for 2019. The city shows mayoral elections only in 2013, 2017, 2021 and 2025 in this period. No mayoral election occurred in 2019."
+ },
+ {
+  "city_id": "2743000",
+  "year": 2020,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://vote.minneapolismn.gov/results-data/election-results/2020/",
+  "additional_source_urls": [
+   "https://vote.minneapolismn.gov/results-data/election-results/",
+   "https://vote.minneapolismn.gov/ranked-choice-voting/history/"
+  ],
+  "note": "The city election results page for 2020 lists only non-mayoral contests or ballot questions and no mayoral contest. The city lists mayoral ranked-choice elections in 2009, 2013, 2017, 2021 and 2023 municipal cycles, with mayoral results pages for 2013, 2017, 2021 and 2025, which shows a four-year cycle. No mayoral election occurred in 2020."
+ },
+ {
+  "city_id": "2743000",
+  "year": 2021,
+  "status": "complete",
+  "expected_election_dates": [
+   "2021-11-02"
+  ],
+  "source_url": "https://vote.minneapolismn.gov/results-data/election-results/2021/mayor/",
+  "additional_source_urls": [
+   "https://vote.minneapolismn.gov/ranked-choice-voting/history/"
+  ],
+  "note": "The Minneapolis Elections and Voter Services page for the 2021 mayoral race records a ranked-choice municipal election on 2021-11-02. Winner and runner-up are in minneapolis_results.json."
+ },
+ {
+  "city_id": "2743000",
+  "year": 2022,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://vote.minneapolismn.gov/results-data/election-results/2022/",
+  "additional_source_urls": [
+   "https://vote.minneapolismn.gov/results-data/election-results/",
+   "https://vote.minneapolismn.gov/ranked-choice-voting/history/"
+  ],
+  "note": "The city election results page for 2022 lists only non-mayoral contests or ballot questions and no mayoral contest. The city lists mayoral ranked-choice elections in 2009, 2013, 2017, 2021 and 2023 municipal cycles, with mayoral results pages for 2013, 2017, 2021 and 2025, which shows a four-year cycle. No mayoral election occurred in 2022."
+ },
+ {
+  "city_id": "2743000",
+  "year": 2023,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://vote.minneapolismn.gov/results-data/election-results/2023/",
+  "additional_source_urls": [
+   "https://vote.minneapolismn.gov/results-data/election-results/",
+   "https://vote.minneapolismn.gov/ranked-choice-voting/history/"
+  ],
+  "note": "The city results page for the November 7, 2023 municipal election lists City Council ward races and other offices, with no mayoral race. The mayor was elected in 2021 and 2025 on a four-year cycle. No mayoral election occurred in 2023."
+ },
+ {
+  "city_id": "2743000",
+  "year": 2024,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://vote.minneapolismn.gov/results-data/election-results/2024/",
+  "additional_source_urls": [
+   "https://vote.minneapolismn.gov/results-data/election-results/",
+   "https://vote.minneapolismn.gov/ranked-choice-voting/history/"
+  ],
+  "note": "The city election results page for 2024 lists only non-mayoral contests or ballot questions and no mayoral contest. The city lists mayoral ranked-choice elections in 2009, 2013, 2017, 2021 and 2023 municipal cycles, with mayoral results pages for 2013, 2017, 2021 and 2025, which shows a four-year cycle. No mayoral election occurred in 2024."
+ },
+ {
+  "city_id": "2743000",
+  "year": 2025,
+  "status": "complete",
+  "expected_election_dates": [
+   "2025-11-04"
+  ],
+  "source_url": "https://vote.minneapolismn.gov/results-data/election-results/2025/mayor/",
+  "additional_source_urls": [
+   "https://vote.minneapolismn.gov/ranked-choice-voting/history/"
+  ],
+  "note": "The Minneapolis Elections and Voter Services page for the 2025 mayoral race records a ranked-choice municipal election on 2025-11-04. Winner and runner-up are in minneapolis_results.json."
+ },
+ {
+  "city_id": "2743000",
+  "year": 2026,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://vote.minneapolismn.gov/results-data/election-results/2026/",
+  "additional_source_urls": [
+   "https://vote.minneapolismn.gov/results-data/election-results/",
+   "https://vote.minneapolismn.gov/results-data/election-results/2025/mayor/"
+  ],
+  "note": "The city 2026 results page shows only the August 11, 2026 primary with school board races and no mayoral contest. The mayor was elected November 4, 2025 and the city results index shows a four-year mayoral cycle (2013, 2017, 2021, 2025). No mayoral election is due in 2026."
+ }
+]

@@ -1,0 +1,213 @@
+[
+ {
+  "city_id": "0669000",
+  "year": 2010,
+  "status": "complete",
+  "expected_election_dates": [
+   "2010-11-02"
+  ],
+  "source_url": "https://storage.googleapis.com/proudcity/santaanaca/2024/03/Election-History-Updated-2025-2.pdf",
+  "additional_source_urls": [
+   "https://santa-ana.gov/elections",
+   "https://santa-ana.gov/documents/election-results-mayor-and-city-council/"
+  ],
+  "note": "The City Clerk Election History lists the 2010-11-02 General Municipal Election (RES. 2010-061) with a Mayor contest. Winner and runner-up are in santa_ana_results.json."
+ },
+ {
+  "city_id": "0669000",
+  "year": 2011,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://storage.googleapis.com/proudcity/santaanaca/2024/03/Election-History-Updated-2025-2.pdf",
+  "additional_source_urls": [
+   "https://santa-ana.gov/elections"
+  ],
+  "note": "The City Clerk Election History lists every Santa Ana election by year and records no mayoral contest in this year. Santa Ana holds general municipal elections in even-numbered years, and the Mayor serves a two-year term (City elections page)."
+ },
+ {
+  "city_id": "0669000",
+  "year": 2012,
+  "status": "complete",
+  "expected_election_dates": [
+   "2012-11-06"
+  ],
+  "source_url": "https://storage.googleapis.com/proudcity/santaanaca/2024/03/Election-History-Updated-2025-2.pdf",
+  "additional_source_urls": [
+   "https://santa-ana.gov/elections",
+   "https://santa-ana.gov/documents/election-results-mayor-and-city-council/"
+  ],
+  "note": "The City Clerk Election History lists the 2012-11-06 General Municipal Election (RES. 2012-051) with a Mayor contest. Winner and runner-up are in santa_ana_results.json."
+ },
+ {
+  "city_id": "0669000",
+  "year": 2013,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://storage.googleapis.com/proudcity/santaanaca/2024/03/Election-History-Updated-2025-2.pdf",
+  "additional_source_urls": [
+   "https://santa-ana.gov/elections"
+  ],
+  "note": "The City Clerk Election History lists every Santa Ana election by year and records no mayoral contest in this year. Santa Ana holds general municipal elections in even-numbered years, and the Mayor serves a two-year term (City elections page)."
+ },
+ {
+  "city_id": "0669000",
+  "year": 2014,
+  "status": "complete",
+  "expected_election_dates": [
+   "2014-11-04"
+  ],
+  "source_url": "https://storage.googleapis.com/proudcity/santaanaca/2024/03/Election-History-Updated-2025-2.pdf",
+  "additional_source_urls": [
+   "https://santa-ana.gov/elections",
+   "https://santa-ana.gov/documents/election-results-mayor-and-city-council/"
+  ],
+  "note": "The City Clerk Election History lists the 2014-11-04 General Municipal Election (RES. 2014-084) with a Mayor contest. Winner and runner-up are in santa_ana_results.json."
+ },
+ {
+  "city_id": "0669000",
+  "year": 2015,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://storage.googleapis.com/proudcity/santaanaca/2024/03/Election-History-Updated-2025-2.pdf",
+  "additional_source_urls": [
+   "https://santa-ana.gov/elections"
+  ],
+  "note": "The City Clerk Election History lists every Santa Ana election by year and records no mayoral contest in this year. Santa Ana holds general municipal elections in even-numbered years, and the Mayor serves a two-year term (City elections page)."
+ },
+ {
+  "city_id": "0669000",
+  "year": 2016,
+  "status": "complete",
+  "expected_election_dates": [
+   "2016-11-08"
+  ],
+  "source_url": "https://storage.googleapis.com/proudcity/santaanaca/2024/03/Election-History-Updated-2025-2.pdf",
+  "additional_source_urls": [
+   "https://santa-ana.gov/elections",
+   "https://santa-ana.gov/documents/election-results-mayor-and-city-council/"
+  ],
+  "note": "The City Clerk Election History lists the 2016-11-08 General Municipal Election (RES. 2016-094) with a Mayor contest. Winner and runner-up are in santa_ana_results.json."
+ },
+ {
+  "city_id": "0669000",
+  "year": 2017,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://storage.googleapis.com/proudcity/santaanaca/2024/03/Election-History-Updated-2025-2.pdf",
+  "additional_source_urls": [
+   "https://santa-ana.gov/elections"
+  ],
+  "note": "The City Clerk Election History lists every Santa Ana election by year and records no mayoral contest in this year. Santa Ana holds general municipal elections in even-numbered years, and the Mayor serves a two-year term (City elections page)."
+ },
+ {
+  "city_id": "0669000",
+  "year": 2018,
+  "status": "complete",
+  "expected_election_dates": [
+   "2018-11-06"
+  ],
+  "source_url": "https://storage.googleapis.com/proudcity/santaanaca/2024/03/Election-History-Updated-2025-2.pdf",
+  "additional_source_urls": [
+   "https://santa-ana.gov/elections",
+   "https://santa-ana.gov/documents/election-results-mayor-and-city-council/"
+  ],
+  "note": "The City Clerk Election History lists the 2018-11-06 General Municipal Election (RES. 2018-091) with a Mayor contest. Winner and runner-up are in santa_ana_results.json."
+ },
+ {
+  "city_id": "0669000",
+  "year": 2019,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://storage.googleapis.com/proudcity/santaanaca/2024/03/Election-History-Updated-2025-2.pdf",
+  "additional_source_urls": [
+   "https://santa-ana.gov/elections"
+  ],
+  "note": "The City Clerk Election History lists every Santa Ana election by year and records no mayoral contest in this year. The only election listed in this year is the November 5, 2019 Special Municipal election for Ward 4 council; it has no mayoral contest. Santa Ana holds general municipal elections in even-numbered years, and the Mayor serves a two-year term (City elections page)."
+ },
+ {
+  "city_id": "0669000",
+  "year": 2020,
+  "status": "complete",
+  "expected_election_dates": [
+   "2020-11-03"
+  ],
+  "source_url": "https://storage.googleapis.com/proudcity/santaanaca/2024/03/Election-History-Updated-2025-2.pdf",
+  "additional_source_urls": [
+   "https://santa-ana.gov/elections",
+   "https://santa-ana.gov/documents/election-results-mayor-and-city-council/"
+  ],
+  "note": "The City Clerk Election History lists the 2020-11-03 General Municipal Election (RES. 2020-108) with a Mayor contest. Winner and runner-up are in santa_ana_results.json."
+ },
+ {
+  "city_id": "0669000",
+  "year": 2021,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://storage.googleapis.com/proudcity/santaanaca/2024/03/Election-History-Updated-2025-2.pdf",
+  "additional_source_urls": [
+   "https://santa-ana.gov/elections"
+  ],
+  "note": "The City Clerk Election History lists every Santa Ana election by year and records no mayoral contest in this year. Santa Ana holds general municipal elections in even-numbered years, and the Mayor serves a two-year term (City elections page)."
+ },
+ {
+  "city_id": "0669000",
+  "year": 2022,
+  "status": "complete",
+  "expected_election_dates": [
+   "2022-11-08"
+  ],
+  "source_url": "https://storage.googleapis.com/proudcity/santaanaca/2024/03/Election-History-Updated-2025-2.pdf",
+  "additional_source_urls": [
+   "https://santa-ana.gov/elections",
+   "https://santa-ana.gov/documents/election-results-mayor-and-city-council/"
+  ],
+  "note": "The City Clerk Election History lists the 2022-11-08 General Municipal Election (RES. 2022-096) with a Mayor contest. Winner and runner-up are in santa_ana_results.json."
+ },
+ {
+  "city_id": "0669000",
+  "year": 2023,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://storage.googleapis.com/proudcity/santaanaca/2024/03/Election-History-Updated-2025-2.pdf",
+  "additional_source_urls": [
+   "https://santa-ana.gov/elections"
+  ],
+  "note": "The City Clerk Election History lists every Santa Ana election by year and records no mayoral contest in this year. The only election listed in this year is the November 14, 2023 Special Recall election for Ward 3 council; it has no mayoral contest. Santa Ana holds general municipal elections in even-numbered years, and the Mayor serves a two-year term (City elections page)."
+ },
+ {
+  "city_id": "0669000",
+  "year": 2024,
+  "status": "complete",
+  "expected_election_dates": [
+   "2024-11-05"
+  ],
+  "source_url": "https://storage.googleapis.com/proudcity/santaanaca/2024/03/Election-History-Updated-2025-2.pdf",
+  "additional_source_urls": [
+   "https://santa-ana.gov/elections",
+   "https://santa-ana.gov/documents/election-results-mayor-and-city-council/"
+  ],
+  "note": "The City Clerk Election History lists the 2024-11-05 General Municipal Election (RES. 2024-074) with a Mayor contest. Winner and runner-up are in santa_ana_results.json."
+ },
+ {
+  "city_id": "0669000",
+  "year": 2025,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://storage.googleapis.com/proudcity/santaanaca/2024/03/Election-History-Updated-2025-2.pdf",
+  "additional_source_urls": [
+   "https://santa-ana.gov/elections"
+  ],
+  "note": "The City Clerk Election History lists every Santa Ana election by year and records no mayoral contest in this year. The document, updated in 2025, lists no election in this year. Santa Ana holds general municipal elections in even-numbered years, and the Mayor serves a two-year term (City elections page)."
+ },
+ {
+  "city_id": "0669000",
+  "year": 2026,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://santa-ana.gov/elections",
+  "additional_source_urls": [
+   "https://storage.googleapis.com/proudcity/santaanaca/2024/03/Election-History-Updated-2025-2.pdf"
+  ],
+  "note": "The City elections page schedules the next General Municipal Election, with the Mayoral seat on the ballot, for November 3, 2026. That date is after the September 14, 2026 cutoff. No mayoral round was held in this year within the window. Santa Ana holds general municipal elections in even-numbered years, and the Mayor serves a two-year term (City elections page)."
+ }
+]

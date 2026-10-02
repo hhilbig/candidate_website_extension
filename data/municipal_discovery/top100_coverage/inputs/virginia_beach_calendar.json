@@ -1,0 +1,197 @@
+[
+ {
+  "city_id": "5182000",
+  "year": 2010,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://law.lis.virginia.gov/charters/virginia-beach/",
+  "additional_source_urls": [
+   "https://historical.elections.virginia.gov/"
+  ],
+  "note": "Charter section 3.02:2 provides that the mayor is elected in November 2008 and every fourth year thereafter, so regular mayoral elections fall in 2012, 2016, 2020 and 2024. The Virginia Department of Elections historical database was queried for all Mayor contests in this year and returned no Virginia Beach City contest."
+ },
+ {
+  "city_id": "5182000",
+  "year": 2011,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://law.lis.virginia.gov/charters/virginia-beach/",
+  "additional_source_urls": [
+   "https://historical.elections.virginia.gov/"
+  ],
+  "note": "Charter section 3.02:2 provides that the mayor is elected in November 2008 and every fourth year thereafter, so regular mayoral elections fall in 2012, 2016, 2020 and 2024. The Virginia Department of Elections historical database was queried for all Mayor contests in this year and returned no Virginia Beach City contest."
+ },
+ {
+  "city_id": "5182000",
+  "year": 2012,
+  "status": "complete",
+  "expected_election_dates": [
+   "2012-11-06"
+  ],
+  "source_url": "https://historical.elections.virginia.gov/elections/view/45135",
+  "additional_source_urls": [
+   "https://law.lis.virginia.gov/charters/virginia-beach/"
+  ],
+  "note": "The Virginia Department of Elections historical results database lists a Virginia Beach City mayoral contest on 2012-11-06 (contest id 45135). Winner and runner-up are in virginia_beach_results.json. The city charter sets mayoral elections for 2008 and every fourth year."
+ },
+ {
+  "city_id": "5182000",
+  "year": 2013,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://law.lis.virginia.gov/charters/virginia-beach/",
+  "additional_source_urls": [
+   "https://historical.elections.virginia.gov/"
+  ],
+  "note": "Charter section 3.02:2 provides that the mayor is elected in November 2008 and every fourth year thereafter, so regular mayoral elections fall in 2012, 2016, 2020 and 2024. The Virginia Department of Elections historical database was queried for all Mayor contests in this year and returned no Virginia Beach City contest."
+ },
+ {
+  "city_id": "5182000",
+  "year": 2014,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://law.lis.virginia.gov/charters/virginia-beach/",
+  "additional_source_urls": [
+   "https://historical.elections.virginia.gov/"
+  ],
+  "note": "Charter section 3.02:2 provides that the mayor is elected in November 2008 and every fourth year thereafter, so regular mayoral elections fall in 2012, 2016, 2020 and 2024. The Virginia Department of Elections historical database was queried for all Mayor contests in this year and returned no Virginia Beach City contest."
+ },
+ {
+  "city_id": "5182000",
+  "year": 2015,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://law.lis.virginia.gov/charters/virginia-beach/",
+  "additional_source_urls": [
+   "https://historical.elections.virginia.gov/"
+  ],
+  "note": "Charter section 3.02:2 provides that the mayor is elected in November 2008 and every fourth year thereafter, so regular mayoral elections fall in 2012, 2016, 2020 and 2024. The Virginia Department of Elections historical database was queried for all Mayor contests in this year and returned no Virginia Beach City contest."
+ },
+ {
+  "city_id": "5182000",
+  "year": 2016,
+  "status": "complete",
+  "expected_election_dates": [
+   "2016-11-08"
+  ],
+  "source_url": "https://historical.elections.virginia.gov/elections/view/81098",
+  "additional_source_urls": [
+   "https://law.lis.virginia.gov/charters/virginia-beach/"
+  ],
+  "note": "The Virginia Department of Elections historical results database lists a Virginia Beach City mayoral contest on 2016-11-08 (contest id 81098). Winner and runner-up are in virginia_beach_results.json. The city charter sets mayoral elections for 2008 and every fourth year."
+ },
+ {
+  "city_id": "5182000",
+  "year": 2017,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://law.lis.virginia.gov/charters/virginia-beach/",
+  "additional_source_urls": [
+   "https://historical.elections.virginia.gov/"
+  ],
+  "note": "Charter section 3.02:2 provides that the mayor is elected in November 2008 and every fourth year thereafter, so regular mayoral elections fall in 2012, 2016, 2020 and 2024. The Virginia Department of Elections historical database was queried for all Mayor contests in this year and returned no Virginia Beach City contest. The 2018 mayoral contest is recorded separately."
+ },
+ {
+  "city_id": "5182000",
+  "year": 2018,
+  "status": "unresolved",
+  "expected_election_dates": [],
+  "source_url": "https://historical.elections.virginia.gov/elections/view/134283",
+  "additional_source_urls": [
+   "https://law.lis.virginia.gov/charters/virginia-beach/"
+  ],
+  "note": "The Virginia Department of Elections lists a Mayor contest (Dyer and Davenport) in the 2018 Nov 6 General Election in Virginia Beach City. The state page does not label it special and gives no vacancy reason. Charter 3.02:2 sets regular mayoral elections in 2008 and every fourth year, so 2018 is off cycle. Charter 3.03 has the council choose an interim mayor and refers to general law for the successor election. No official source found explains why a mayoral election was held in 2018 or whether it was special. The earlier special label was an inference and is removed. The year is unresolved because the election type and decisive status could not be established. Web search was unavailable (budget exhausted), so no further source was tried."
+ },
+ {
+  "city_id": "5182000",
+  "year": 2019,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://law.lis.virginia.gov/charters/virginia-beach/",
+  "additional_source_urls": [
+   "https://historical.elections.virginia.gov/"
+  ],
+  "note": "Charter section 3.02:2 provides that the mayor is elected in November 2008 and every fourth year thereafter, so regular mayoral elections fall in 2012, 2016, 2020 and 2024. The Virginia Department of Elections historical database was queried for all Mayor contests in this year and returned no Virginia Beach City contest. The 2018 mayoral contest is recorded separately."
+ },
+ {
+  "city_id": "5182000",
+  "year": 2020,
+  "status": "complete",
+  "expected_election_dates": [
+   "2020-11-03"
+  ],
+  "source_url": "https://historical.elections.virginia.gov/elections/view/144787",
+  "additional_source_urls": [
+   "https://law.lis.virginia.gov/charters/virginia-beach/"
+  ],
+  "note": "The Virginia Department of Elections historical results database lists a Virginia Beach City mayoral contest on 2020-11-03 (contest id 144787). Winner and runner-up are in virginia_beach_results.json. The city charter sets mayoral elections for 2008 and every fourth year."
+ },
+ {
+  "city_id": "5182000",
+  "year": 2021,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://law.lis.virginia.gov/charters/virginia-beach/",
+  "additional_source_urls": [
+   "https://historical.elections.virginia.gov/"
+  ],
+  "note": "Charter section 3.02:2 provides that the mayor is elected in November 2008 and every fourth year thereafter, so regular mayoral elections fall in 2012, 2016, 2020 and 2024. The Virginia Department of Elections historical database was queried for all Mayor contests in this year and returned no Virginia Beach City contest."
+ },
+ {
+  "city_id": "5182000",
+  "year": 2022,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://law.lis.virginia.gov/charters/virginia-beach/",
+  "additional_source_urls": [
+   "https://historical.elections.virginia.gov/"
+  ],
+  "note": "Charter section 3.02:2 provides that the mayor is elected in November 2008 and every fourth year thereafter, so regular mayoral elections fall in 2012, 2016, 2020 and 2024. The Virginia Department of Elections historical database was queried for all Mayor contests in this year and returned no Virginia Beach City contest."
+ },
+ {
+  "city_id": "5182000",
+  "year": 2023,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://law.lis.virginia.gov/charters/virginia-beach/",
+  "additional_source_urls": [
+   "https://historical.elections.virginia.gov/"
+  ],
+  "note": "Charter section 3.02:2 provides that the mayor is elected in November 2008 and every fourth year thereafter, so regular mayoral elections fall in 2012, 2016, 2020 and 2024. The Virginia Department of Elections historical database was queried for all Mayor contests in this year and returned no Virginia Beach City contest."
+ },
+ {
+  "city_id": "5182000",
+  "year": 2024,
+  "status": "complete",
+  "expected_election_dates": [
+   "2024-11-05"
+  ],
+  "source_url": "https://historical.elections.virginia.gov/elections/view/161681",
+  "additional_source_urls": [
+   "https://law.lis.virginia.gov/charters/virginia-beach/"
+  ],
+  "note": "The Virginia Department of Elections historical results database lists a Virginia Beach City mayoral contest on 2024-11-05 (contest id 161681). Winner and runner-up are in virginia_beach_results.json. The city charter sets mayoral elections for 2008 and every fourth year."
+ },
+ {
+  "city_id": "5182000",
+  "year": 2025,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://law.lis.virginia.gov/charters/virginia-beach/",
+  "additional_source_urls": [
+   "https://historical.elections.virginia.gov/"
+  ],
+  "note": "The mayor elected in November 2024 serves a four-year term beginning January 1, 2025. Charter section 3.02:2 provides mayoral elections only every fourth year after 2008."
+ },
+ {
+  "city_id": "5182000",
+  "year": 2026,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://law.lis.virginia.gov/charters/virginia-beach/",
+  "additional_source_urls": [
+   "https://historical.elections.virginia.gov/"
+  ],
+  "note": "The mayor elected in November 2024 serves a term from January 1, 2025 to December 31, 2028. Charter section 3.01:1 provides that the November 2026 election fills council district seats only, not the mayor."
+ }
+]

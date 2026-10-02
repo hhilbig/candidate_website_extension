@@ -1,0 +1,127 @@
+[
+ {
+  "city_name": "Louisville/Jefferson County metro government (balance)",
+  "state_abb": "KY",
+  "roster_place_fips": "2148000",
+  "election_date": "2010-11-02",
+  "election_type": "regular",
+  "stage": "general",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "source_url": "https://www.jeffersoncountyclerk.org/files/assets/clerk/v/1/elections/documents/election-results/sovc-general-2010.pdf",
+  "source_locator": "Statement of Votes Cast, Mayor contest, Total row on report page 203 of 611 (Total Votes 258401; Fischer DEM 132050; Heiner REP 125178; Couzin 499; Mills 474; write-in 200). Report dated 11/12/10, Official Results.",
+  "certification_source_url": "https://www.jeffersoncountyclerk.org/Voter-Info/Election-Results/Past-Election-Results",
+  "additional_source_urls": [
+   "https://apps.legislature.ky.gov/law/statutes/statute.aspx?id=55789",
+   "https://web.archive.org/web/2020id_/https://www.jeffersoncountyclerk.org/files/assets/clerk/v/1/elections/documents/election-results/sovc-general-2010.pdf"
+  ],
+  "verification_note": "Nov 2, 2010 general. Partisan ballot. Total votes 258,401. Source is the Jefferson County Clerk official statement of votes cast (611 report pages; report dated 11/12/10, Official Results); the clerk does not post a separate certification page for it. The clerk URL returns HTTP 404 live (rechecked 2026-10-01). The document was read from an Internet Archive copy of the same clerk URL (web.archive.org/web/2020id_/, an unmodified file copy). Check: column order in the Total row is Total Votes, Heiner REP, Fischer DEM, Couzin, Mills, write-in. 125,178 + 132,050 + 499 + 474 + 200 = 258,401, which equals Total Votes. Candidate totals are the citywide Total row, not a precinct row.",
+  "candidates": [
+   {
+    "name": "Greg Fischer",
+    "role": "winner",
+    "votes": 132050,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Hal Heiner",
+    "role": "runner_up",
+    "votes": 125178,
+    "candidate_year_id": ""
+   }
+  ]
+ },
+ {
+  "city_name": "Louisville/Jefferson County metro government (balance)",
+  "state_abb": "KY",
+  "roster_place_fips": "2148000",
+  "election_date": "2014-11-04",
+  "election_type": "regular",
+  "stage": "general",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "source_url": "https://www.jeffersoncountyclerk.org/files/assets/clerk/v/1/elections/documents/election-results/gems-election-summary14.pdf",
+  "source_locator": "Statement of Votes Cast, Mayor contest, Total row on report page 213 (Total Votes 252191; Fischer DEM 172810; DeVore REP 78870; write-in 511). Report dated 11/14/14, Official Results.",
+  "certification_source_url": "https://www.jeffersoncountyclerk.org/Voter-Info/Election-Results/Past-Election-Results",
+  "additional_source_urls": [
+   "https://apps.legislature.ky.gov/law/statutes/statute.aspx?id=55789"
+  ],
+  "verification_note": "Nov 4, 2014 general. Partisan ballot. Total votes 252,191. Source is the Jefferson County Clerk official statement of votes cast; the clerk does not post a separate certification page for it. The live clerk file for 2010, 2014 and 2018 returned 404, so the document was read from an Internet Archive copy of the same clerk URL. Candidate totals are the citywide Total row, not a precinct row.",
+  "candidates": [
+   {
+    "name": "Greg Fischer",
+    "role": "winner",
+    "votes": 172810,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Bob DeVore",
+    "role": "runner_up",
+    "votes": 78870,
+    "candidate_year_id": ""
+   }
+  ]
+ },
+ {
+  "city_name": "Louisville/Jefferson County metro government (balance)",
+  "state_abb": "KY",
+  "roster_place_fips": "2148000",
+  "election_date": "2018-11-06",
+  "election_type": "regular",
+  "stage": "general",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "source_url": "https://www.jeffersoncountyclerk.org/files/assets/clerk/v/1/elections/documents/election-results/2018genofficialsovc.pdf",
+  "source_locator": "Statement of Votes Cast, Louisville Metro Mayor, Totals row on printed page 255 (PDF page 270) (total 291,595; Leet 105,853; Fischer 177,749; then smaller candidates). Printed Nov 19, 2018, Official Results. Scanned document, read by OCR; winner, runner-up and total agree.",
+  "certification_source_url": "https://www.jeffersoncountyclerk.org/Voter-Info/Election-Results/Past-Election-Results",
+  "additional_source_urls": [
+   "https://apps.legislature.ky.gov/law/statutes/statute.aspx?id=55789"
+  ],
+  "verification_note": "Nov 6, 2018 general. Scanned (image) PDF read by OCR; the OCR totals row was checked for internal consistency (Fischer plus Leet below the total). Source is the Jefferson County Clerk official statement of votes cast; the clerk does not post a separate certification page for it. The live clerk file for 2010, 2014 and 2018 returned 404, so the document was read from an Internet Archive copy of the same clerk URL. Candidate totals are the citywide Total row, not a precinct row.",
+  "candidates": [
+   {
+    "name": "Greg Fischer",
+    "role": "winner",
+    "votes": 177749,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Angela Leet",
+    "role": "runner_up",
+    "votes": 105853,
+    "candidate_year_id": ""
+   }
+  ]
+ },
+ {
+  "city_name": "Louisville/Jefferson County metro government (balance)",
+  "state_abb": "KY",
+  "roster_place_fips": "2148000",
+  "election_date": "2022-11-08",
+  "election_type": "regular",
+  "stage": "general",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "source_url": "https://www.jeffersoncountyclerk.org/files/assets/clerk/v/1/elections/documents/election-results/gen22_sovc_official.pdf",
+  "source_locator": "Statement of Votes Cast, MAYOR, VOTE FOR 1, Totals row on report page 258 of 636 (Dieruf REP 128,690; Greenberg DEM 143,779; next candidate 1,215). Report generated 11/14/2022, Official Results.",
+  "certification_source_url": "https://www.jeffersoncountyclerk.org/Voter-Info/Election-Results/Past-Election-Results",
+  "additional_source_urls": [
+   "https://apps.legislature.ky.gov/law/statutes/statute.aspx?id=55789"
+  ],
+  "verification_note": "Nov 8, 2022 general. Column order in the Totals row follows the header order Dieruf then Greenberg; Greenberg is the winner with 143,779. Source is the Jefferson County Clerk official statement of votes cast; the clerk does not post a separate certification page for it. The live clerk file for 2010, 2014 and 2018 returned 404, so the document was read from an Internet Archive copy of the same clerk URL. Candidate totals are the citywide Total row, not a precinct row.",
+  "candidates": [
+   {
+    "name": "Craig Greenberg",
+    "role": "winner",
+    "votes": 143779,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Bill Dieruf",
+    "role": "runner_up",
+    "votes": 128690,
+    "candidate_year_id": ""
+   }
+  ]
+ }
+]

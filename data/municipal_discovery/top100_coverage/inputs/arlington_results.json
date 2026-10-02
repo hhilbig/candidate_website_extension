@@ -1,0 +1,250 @@
+[
+ {
+  "city_name": "Arlington",
+  "state_abb": "TX",
+  "roster_place_fips": "4804000",
+  "election_date": "2011-05-14",
+  "election_type": "regular",
+  "stage": "general",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "source_url": "https://www.arlingtontx.gov/files/assets/city/v/1/city-secretary/documents/elections/past-elections-results/may-14-2011-general-and-special-election-results.pdf",
+  "source_locator": "MAYOR table, citywide totals",
+  "certification_source_url": "https://www.arlingtontx.gov/Government/Elections-Voting/Election-Information",
+  "additional_source_urls": [
+   "https://www.arlingtontx.gov/Government/Elections-Voting/Election-Information"
+  ],
+  "verification_note": "The City Secretary results for the May 14, 2011 general election list MAYOR with Robert Cluck 6,901 (67.41%) and Carl Scrivner 3,337 (32.59%), total 10,238. Cluck won a majority, and the City Secretary index lists a June 18, 2011 runoff whose results contain no mayoral contest.",
+  "candidates": [
+   {
+    "name": "Robert Cluck",
+    "role": "winner",
+    "votes": 6901,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Carl Scrivner",
+    "role": "runner_up",
+    "votes": 3337,
+    "candidate_year_id": ""
+   }
+  ]
+ },
+ {
+  "city_name": "Arlington",
+  "state_abb": "TX",
+  "roster_place_fips": "4804000",
+  "election_date": "2013-05-11",
+  "election_type": "regular",
+  "stage": "general",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "source_url": "https://www.arlingtontx.gov/files/assets/city/v/1/city-secretary/documents/elections/past-elections-results/may-11-2013-general-election-results.pdf",
+  "source_locator": "MAYOR table, citywide totals",
+  "certification_source_url": "https://www.arlingtontx.gov/Government/Elections-Voting/Election-Information",
+  "additional_source_urls": [
+   "https://www.arlingtontx.gov/Government/Elections-Voting/Election-Information"
+  ],
+  "verification_note": "The City Secretary results for the May 11, 2013 general election list MAYOR with Robert Cluck 7,800 (71.52%), Jerry Pikulinski 2,171 and Chris Dobson 935. Cluck won a majority outright. No runoff was listed for 2013.",
+  "candidates": [
+   {
+    "name": "Robert Cluck",
+    "role": "winner",
+    "votes": 7800,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Jerry Pikulinski",
+    "role": "runner_up",
+    "votes": 2171,
+    "candidate_year_id": ""
+   }
+  ]
+ },
+ {
+  "city_name": "Arlington",
+  "state_abb": "TX",
+  "roster_place_fips": "4804000",
+  "election_date": "2015-05-09",
+  "election_type": "regular",
+  "stage": "general",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "source_url": "https://www.arlingtontx.gov/files/assets/city/v/1/city-secretary/documents/elections/past-elections-results/may-9-2015-general-and-special-election-results.pdf",
+  "source_locator": "MAYOR table, citywide totals",
+  "certification_source_url": "https://www.arlingtontx.gov/Government/Elections-Voting/Election-Information",
+  "additional_source_urls": [
+   "https://www.arlingtontx.gov/Government/Elections-Voting/Election-Information"
+  ],
+  "verification_note": "The City Secretary results for the May 9, 2015 general election list MAYOR with Jeff Williams 15,501 (58.07%), Robert Cluck 10,461 and Didmus B. Banda 211. Williams won a majority outright. No runoff was listed for 2015.",
+  "candidates": [
+   {
+    "name": "Jeff Williams",
+    "role": "winner",
+    "votes": 15501,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Robert Cluck",
+    "role": "runner_up",
+    "votes": 10461,
+    "candidate_year_id": ""
+   }
+  ]
+ },
+ {
+  "city_name": "Arlington",
+  "state_abb": "TX",
+  "roster_place_fips": "4804000",
+  "election_date": "2017-05-06",
+  "election_type": "regular",
+  "stage": "general",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "source_url": "https://www.arlingtontx.gov/files/assets/city/v/1/city-secretary/documents/elections/past-elections-results/may-6-2017-general-and-special-elections-results.pdf",
+  "source_locator": "MAYOR table, citywide totals",
+  "certification_source_url": "https://www.arlingtontx.gov/Government/Elections-Voting/Election-Information",
+  "additional_source_urls": [
+   "https://www.arlingtontx.gov/Government/Elections-Voting/Election-Information"
+  ],
+  "verification_note": "The City Secretary results for the May 6, 2017 general election list MAYOR with Jeff Williams 14,134 (70.55%) and Chris Dobson 5,900, total 20,034. The June 10, 2017 runoff results contain no mayoral contest.",
+  "candidates": [
+   {
+    "name": "Jeff Williams",
+    "role": "winner",
+    "votes": 14134,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Chris Dobson",
+    "role": "runner_up",
+    "votes": 5900,
+    "candidate_year_id": ""
+   }
+  ]
+ },
+ {
+  "city_name": "Arlington",
+  "state_abb": "TX",
+  "roster_place_fips": "4804000",
+  "election_date": "2019-05-04",
+  "election_type": "regular",
+  "stage": "general",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "source_url": "https://www.arlingtontx.gov/files/assets/city/v/1/city-secretary/documents/elections/past-elections-results/may-4-2019-election-results.pdf",
+  "source_locator": "MAYOR table, citywide totals",
+  "certification_source_url": "https://www.arlingtontx.gov/Government/Elections-Voting/Election-Information",
+  "additional_source_urls": [
+   "https://www.arlingtontx.gov/Government/Elections-Voting/Election-Information"
+  ],
+  "verification_note": "The City Secretary results for the May 4, 2019 general election list MAYOR with Jeff Williams 10,613 (58.53%), Ruby Faye Woolridge 4,668, Ashton Stauffer 1,809 and Chris Dobson 1,042, total 18,132. Williams won a majority outright. The June 8, 2019 runoff results contain no mayoral contest.",
+  "candidates": [
+   {
+    "name": "Jeff Williams",
+    "role": "winner",
+    "votes": 10613,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Ruby Faye Woolridge",
+    "role": "runner_up",
+    "votes": 4668,
+    "candidate_year_id": ""
+   }
+  ]
+ },
+ {
+  "city_name": "Arlington",
+  "state_abb": "TX",
+  "roster_place_fips": "4804000",
+  "election_date": "2021-06-05",
+  "election_type": "regular",
+  "stage": "runoff",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "source_url": "https://www.arlingtontx.gov/files/assets/city/v/2/city-secretary/documents/elections/past-elections-results/june-5-2021-runoff-election-results.pdf",
+  "source_locator": "MAYOR RUNOFF table",
+  "certification_source_url": "https://www.arlingtontx.gov/Government/Elections-Voting/Election-Information",
+  "additional_source_urls": [
+   "https://www.arlingtontx.gov/Government/Elections-Voting/Election-Information"
+  ],
+  "verification_note": "The City Secretary results for the June 5, 2021 runoff list MAYOR RUNOFF with Jim Ross 11,333 (54.44%) and Michael Glaspie 9,484, total 20,817. In the May 1, 2021 first round Ross received 14,782 of 31,182 votes (47.41%), short of a majority, so the runoff decided the office.",
+  "candidates": [
+   {
+    "name": "Jim Ross",
+    "role": "winner",
+    "votes": 11333,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Michael Glaspie",
+    "role": "runner_up",
+    "votes": 9484,
+    "candidate_year_id": ""
+   }
+  ]
+ },
+ {
+  "city_name": "Arlington",
+  "state_abb": "TX",
+  "roster_place_fips": "4804000",
+  "election_date": "2023-05-06",
+  "election_type": "regular",
+  "stage": "general",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "source_url": "https://www.arlingtontx.gov/files/assets/city/v/1/city-secretary/documents/elections/past-elections-results/may-6-2023-general-and-bond-election-results.pdf",
+  "source_locator": "First table, City of Arlington - Mayor, Total column",
+  "certification_source_url": "https://www.arlingtontx.gov/Government/Elections-Voting/Election-Information",
+  "additional_source_urls": [
+   "https://www.arlingtontx.gov/Government/Elections-Voting/Election-Information"
+  ],
+  "verification_note": "The Tarrant County Official Results report published by the City Secretary lists City of Arlington - Mayor for May 6, 2023 with Jim Ross 9,067 (51.86%) and Amy Cearnal 8,415 (48.14%), cast votes 17,482. Two candidates ran, so no runoff followed.",
+  "candidates": [
+   {
+    "name": "Jim Ross",
+    "role": "winner",
+    "votes": 9067,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Amy Cearnal",
+    "role": "runner_up",
+    "votes": 8415,
+    "candidate_year_id": ""
+   }
+  ]
+ },
+ {
+  "city_name": "Arlington",
+  "state_abb": "TX",
+  "roster_place_fips": "4804000",
+  "election_date": "2026-05-02",
+  "election_type": "regular",
+  "stage": "general",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "source_url": "https://www.arlingtontx.gov/files/assets/city/v/1/city-secretary/documents/elections/past-elections-results/may-2-2026-general-and-special-election-results.pdf",
+  "source_locator": "First table, City of Arlington Mayor, Total column",
+  "certification_source_url": "https://www.arlingtontx.gov/Government/Elections-Voting/Election-Information",
+  "additional_source_urls": [
+   "https://www.arlingtontx.gov/Government/Elections-Voting/Election-Information"
+  ],
+  "verification_note": "The Tarrant County Official Results report published by the City Secretary lists City of Arlington Mayor for May 2, 2026 with Jim Ross 13,316 (50.05%), Steve Cavender 10,494, Hunter Crow 1,462, Shaun Mallory 1,309 and write-in C. Phillip Dobson 27, cast votes 26,608. Ross held a majority of cast votes. The June 13, 2026 runoff results contain no mayoral contest.",
+  "candidates": [
+   {
+    "name": "Jim Ross",
+    "role": "winner",
+    "votes": 13316,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Steve Cavender",
+    "role": "runner_up",
+    "votes": 10494,
+    "candidate_year_id": ""
+   }
+  ]
+ }
+]

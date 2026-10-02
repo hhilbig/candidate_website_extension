@@ -1,0 +1,189 @@
+[
+ {
+  "city_id": "4845000",
+  "year": 2010,
+  "status": "complete",
+  "expected_election_dates": [
+   "2010-05-08"
+  ],
+  "source_url": "https://web.archive.org/web/20200414144948id_/http://assets01.aws.connect.clarityelections.com/Assets/Connect/RootPublish/lubbock-tx.connect.clarityelections.com/HistoricalElectionResults/2010/May8/CumulativeReport.pdf",
+  "additional_source_urls": [
+   "https://web.archive.org/web/20200414144948/https://www.votelubbock.org/election-information/historical-election-results/"
+  ],
+  "note": "The official results document records a mayoral contest decided on this date. Winner and runner-up are in lubbock_results.json."
+ },
+ {
+  "city_id": "4845000",
+  "year": 2011,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://web.archive.org/web/20200414144948/https://www.votelubbock.org/election-information/historical-election-results/",
+  "additional_source_urls": [],
+  "note": "The county historical election results index, archived April 14, 2020, lists the elections held in this year. It shows no City of Lubbock election in this year. Lubbock held its mayoral elections in even-numbered years."
+ },
+ {
+  "city_id": "4845000",
+  "year": 2012,
+  "status": "complete",
+  "expected_election_dates": [
+   "2012-05-12"
+  ],
+  "source_url": "https://web.archive.org/web/20200414144948id_/http://assets01.aws.connect.clarityelections.com/Assets/Connect/RootPublish/lubbock-tx.connect.clarityelections.com/HistoricalElectionResults/2012/May12/CityofLubbockofficial.pdf",
+  "additional_source_urls": [
+   "https://web.archive.org/web/20200414144948/https://www.votelubbock.org/election-information/historical-election-results/"
+  ],
+  "note": "The official results document records a mayoral contest decided on this date. Winner and runner-up are in lubbock_results.json."
+ },
+ {
+  "city_id": "4845000",
+  "year": 2013,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://web.archive.org/web/20200414144948/https://www.votelubbock.org/election-information/historical-election-results/",
+  "additional_source_urls": [],
+  "note": "The county historical election results index, archived April 14, 2020, lists the elections held in this year. It shows no City of Lubbock election in this year. Lubbock held its mayoral elections in even-numbered years."
+ },
+ {
+  "city_id": "4845000",
+  "year": 2014,
+  "status": "unresolved",
+  "expected_election_dates": [],
+  "source_url": "https://web.archive.org/web/20200414144948id_/http://assets01.aws.connect.clarityelections.com/Assets/Connect/RootPublish/lubbock-tx.connect.clarityelections.com/HistoricalElectionResults/2014/May10/CityofLubbockOfficial.pdf",
+  "additional_source_urls": [
+   "https://web.archive.org/web/20200414144948/https://www.votelubbock.org/election-information/historical-election-results/"
+  ],
+  "note": "The county official cumulative report for the May 10, 2014 city and school election lists only Council District 1, 3 and 5 contests for the City of Lubbock and no mayoral contest. The mayor elected in May 2012 and the mayor elected in May 2016 differ, so the office was filled in 2014 or the term ran four years. No official source tried (city site, county site, archived pages, charter) showed the term length or a declaration of an unopposed mayor. The ecode360 charter site returned HTTP 403 and municode returned no content. Year left unresolved."
+ },
+ {
+  "city_id": "4845000",
+  "year": 2015,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://web.archive.org/web/20200414144948/https://www.votelubbock.org/election-information/historical-election-results/",
+  "additional_source_urls": [],
+  "note": "The county historical election results index, archived April 14, 2020, lists the elections held in this year. It shows no City of Lubbock election in this year. Lubbock held its mayoral elections in even-numbered years."
+ },
+ {
+  "city_id": "4845000",
+  "year": 2016,
+  "status": "complete",
+  "expected_election_dates": [
+   "2016-05-07"
+  ],
+  "source_url": "https://web.archive.org/web/20200414144948id_/http://assets01.aws.connect.clarityelections.com/Assets/Connect/RootPublish/lubbock-tx.connect.clarityelections.com/HistoricalElectionResults/2016/May7/CityofLubbockCumulative.pdf",
+  "additional_source_urls": [
+   "https://web.archive.org/web/20200414144948/https://www.votelubbock.org/election-information/historical-election-results/"
+  ],
+  "note": "The official results document records a mayoral contest decided on this date. Winner and runner-up are in lubbock_results.json."
+ },
+ {
+  "city_id": "4845000",
+  "year": 2017,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://web.archive.org/web/20200414144948/https://www.votelubbock.org/election-information/historical-election-results/",
+  "additional_source_urls": [],
+  "note": "The county historical election results index, archived April 14, 2020, lists the elections held in this year. It shows no City of Lubbock election in this year. Lubbock held its mayoral elections in even-numbered years."
+ },
+ {
+  "city_id": "4845000",
+  "year": 2018,
+  "status": "complete",
+  "expected_election_dates": [
+   "2018-05-05"
+  ],
+  "source_url": "https://web.archive.org/web/20200414144948id_/http://assets01.aws.connect.clarityelections.com/Assets/Connect/RootPublish/lubbock-tx.connect.clarityelections.com/HistoricalElectionResults/2018/May5/CityofLubbockCumulative.pdf",
+  "additional_source_urls": [
+   "https://web.archive.org/web/20200414144948/https://www.votelubbock.org/election-information/historical-election-results/"
+  ],
+  "note": "The official results document records a mayoral contest decided on this date. Winner and runner-up are in lubbock_results.json."
+ },
+ {
+  "city_id": "4845000",
+  "year": 2019,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://web.archive.org/web/20200414144948/https://www.votelubbock.org/election-information/historical-election-results/",
+  "additional_source_urls": [],
+  "note": "The county historical election results index, archived April 14, 2020, lists the elections held in this year. It shows no City of Lubbock election in this year. Lubbock held its mayoral elections in even-numbered years."
+ },
+ {
+  "city_id": "4845000",
+  "year": 2020,
+  "status": "complete",
+  "expected_election_dates": [
+   "2020-11-03"
+  ],
+  "source_url": "https://www.mylubbock.us/DocumentCenter/View/5993",
+  "additional_source_urls": [
+   "https://www.mylubbock.us/856/Results-for-Previous-Elections-Resultado"
+  ],
+  "note": "The official results document records a mayoral contest decided on this date. Winner and runner-up are in lubbock_results.json."
+ },
+ {
+  "city_id": "4845000",
+  "year": 2021,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.mylubbock.us/856/Results-for-Previous-Elections-Resultado",
+  "additional_source_urls": [],
+  "note": "The City of Lubbock index of past elections lists every city election from 2020 onward. It shows no mayoral election in this year. Mayoral elections fell in 2020, 2022, 2024 and 2026."
+ },
+ {
+  "city_id": "4845000",
+  "year": 2022,
+  "status": "complete",
+  "expected_election_dates": [
+   "2022-05-07"
+  ],
+  "source_url": "https://www.mylubbock.us/DocumentCenter/View/6005",
+  "additional_source_urls": [
+   "https://www.mylubbock.us/856/Results-for-Previous-Elections-Resultado"
+  ],
+  "note": "The official results document records a mayoral contest decided on this date. Winner and runner-up are in lubbock_results.json."
+ },
+ {
+  "city_id": "4845000",
+  "year": 2023,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.mylubbock.us/856/Results-for-Previous-Elections-Resultado",
+  "additional_source_urls": [],
+  "note": "The City of Lubbock index of past elections lists every city election from 2020 onward. It shows no mayoral election in this year. Mayoral elections fell in 2020, 2022, 2024 and 2026."
+ },
+ {
+  "city_id": "4845000",
+  "year": 2024,
+  "status": "complete",
+  "expected_election_dates": [
+   "2024-06-15"
+  ],
+  "source_url": "https://www.mylubbock.us/DocumentCenter/View/6024",
+  "additional_source_urls": [
+   "https://www.mylubbock.us/856/Results-for-Previous-Elections-Resultado"
+  ],
+  "note": "The official results document records a mayoral contest decided on this date. Winner and runner-up are in lubbock_results.json. A runoff decided the office; the May 4, 2024 first round fell in the same year."
+ },
+ {
+  "city_id": "4845000",
+  "year": 2025,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.mylubbock.us/856/Results-for-Previous-Elections-Resultado",
+  "additional_source_urls": [],
+  "note": "The City of Lubbock index of past elections lists every city election from 2020 onward. It shows no mayoral election in this year. Mayoral elections fell in 2020, 2022, 2024 and 2026."
+ },
+ {
+  "city_id": "4845000",
+  "year": 2026,
+  "status": "complete",
+  "expected_election_dates": [
+   "2026-05-02"
+  ],
+  "source_url": "https://www.mylubbock.us/DocumentCenter/View/8311",
+  "additional_source_urls": [
+   "https://www.mylubbock.us/856/Results-for-Previous-Elections-Resultado"
+  ],
+  "note": "The official results document records a mayoral contest decided on this date. Winner and runner-up are in lubbock_results.json."
+ }
+]

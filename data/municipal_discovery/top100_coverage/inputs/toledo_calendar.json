@@ -1,0 +1,218 @@
+[
+ {
+  "city_id": "3977000",
+  "year": 2010,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "http://co.lucas.oh.us/DocumentCenter/View/6723",
+  "additional_source_urls": [
+   "http://co.lucas.oh.us/DocumentCenter/View/5933",
+   "https://www.lucascountyohiovotes.gov/historic_election_results/index.php"
+  ],
+  "note": "Lucas County Board of Elections official summary reports for the May 4, 2010 primary and the November 2, 2010 general election contain no Toledo mayor contest. Toledo's mayoral contests fall in odd-numbered years (2013, 2017, 2021, 2025) plus a 2015 special, so no mayoral election occurred in 2010."
+ },
+ {
+  "city_id": "3977000",
+  "year": 2011,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "http://co.lucas.oh.us/DocumentCenter/View/8632",
+  "additional_source_urls": [
+   "http://co.lucas.oh.us/DocumentCenter/View/8288",
+   "https://www.lucascountyohiovotes.gov/historic_election_results/index.php"
+  ],
+  "note": "Lucas County Board of Elections official summary reports for the September 13, 2011 municipal primary and the November 8, 2011 general election list Maumee and Waterville city mayors and village mayors but no Toledo mayor contest. No mayoral election occurred in Toledo in 2011."
+ },
+ {
+  "city_id": "3977000",
+  "year": 2012,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "http://co.lucas.oh.us/DocumentCenter/View/10699",
+  "additional_source_urls": [
+   "http://co.lucas.oh.us/DocumentCenter/View/9467",
+   "https://www.lucascountyohiovotes.gov/historic_election_results/index.php"
+  ],
+  "note": "Lucas County Board of Elections official summary reports for the March 6, 2012 primary and the November 6, 2012 general election contain no Toledo mayor contest. No mayoral election occurred in 2012."
+ },
+ {
+  "city_id": "3977000",
+  "year": 2013,
+  "status": "complete",
+  "expected_election_dates": [
+   "2013-11-05"
+  ],
+  "source_url": "http://co.lucas.oh.us/DocumentCenter/View/47381",
+  "additional_source_urls": [
+   "http://co.lucas.oh.us/DocumentCenter/View/47378",
+   "https://www.lucascountyohiovotes.gov/historic_election_results/index.php"
+  ],
+  "note": "The county official canvass for the November 5, 2013 general election records a Toledo mayor contest between D. Michael Collins and Michael P. Bell. The September 10, 2013 primary was an earlier round. Winner and runner-up are in toledo_results.json."
+ },
+ {
+  "city_id": "3977000",
+  "year": 2014,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "http://co.lucas.oh.us/DocumentCenter/View/53175",
+  "additional_source_urls": [
+   "http://co.lucas.oh.us/DocumentCenter/View/48400",
+   "https://www.lucascountyohiovotes.gov/historic_election_results/index.php"
+  ],
+  "note": "Lucas County Board of Elections official summary reports for the May 6, 2014 primary and the November 4, 2014 general election contain no Toledo mayor contest. No mayoral election occurred in 2014."
+ },
+ {
+  "city_id": "3977000",
+  "year": 2015,
+  "status": "complete",
+  "expected_election_dates": [
+   "2015-11-03"
+  ],
+  "source_url": "http://co.lucas.oh.us/DocumentCenter/View/56533",
+  "additional_source_urls": [
+   "http://co.lucas.oh.us/DocumentCenter/View/55990",
+   "https://www.lucascountyohiovotes.gov/historic_election_results/index.php"
+  ],
+  "note": "The county official results for the November 3, 2015 general election record a seven-candidate Toledo City Mayor contest decided in one round. The September 15, 2015 primary summary lists no mayoral contest. This is outside the regular 2013 and 2017 cycle, so the file records it as a special election. The special label is inferred from that cycle. The county reports do not use the word special. Winner and runner-up are in toledo_results.json."
+ },
+ {
+  "city_id": "3977000",
+  "year": 2016,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "http://co.lucas.oh.us/DocumentCenter/View/60526",
+  "additional_source_urls": [
+   "http://co.lucas.oh.us/DocumentCenter/View/58801",
+   "https://www.lucascountyohiovotes.gov/historic_election_results/index.php"
+  ],
+  "note": "Lucas County Board of Elections official summary reports for the March 15, 2016 primary and the November 8, 2016 general election contain no Toledo mayor contest. The November 8, 2016 report is a scanned image read by OCR. No mayoral election occurred in 2016."
+ },
+ {
+  "city_id": "3977000",
+  "year": 2017,
+  "status": "complete",
+  "expected_election_dates": [
+   "2017-11-07"
+  ],
+  "source_url": "http://co.lucas.oh.us/DocumentCenter/View/66685",
+  "additional_source_urls": [
+   "http://co.lucas.oh.us/DocumentCenter/View/65903",
+   "https://www.lucascountyohiovotes.gov/historic_election_results/index.php"
+  ],
+  "note": "The county official results for the November 7, 2017 general election record a Toledo mayor contest between Wade Kapszukiewicz and Paula Hicks-Hudson. The September 12, 2017 primary was an earlier round. Winner and runner-up are in toledo_results.json."
+ },
+ {
+  "city_id": "3977000",
+  "year": 2018,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "http://co.lucas.oh.us/DocumentCenter/View/71449",
+  "additional_source_urls": [
+   "http://co.lucas.oh.us/DocumentCenter/View/69612",
+   "https://www.lucascountyohiovotes.gov/historic_election_results/index.php"
+  ],
+  "note": "Lucas County Board of Elections official summary reports for the May 8, 2018 primary and the November 6, 2018 general election contain no Toledo mayor contest. Both reports are scanned images read by OCR. No mayoral election occurred in 2018."
+ },
+ {
+  "city_id": "3977000",
+  "year": 2019,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "http://co.lucas.oh.us/DocumentCenter/View/75796",
+  "additional_source_urls": [
+   "http://co.lucas.oh.us/DocumentCenter/View/75305",
+   "https://www.lucascountyohiovotes.gov/historic_election_results/index.php"
+  ],
+  "note": "Lucas County Board of Elections official results for the November 5, 2019 general election and the certified September 2019 results list other city and village mayors but no Toledo mayor contest. The February 26, 2019 and May 7, 2019 special election reports (scanned) also show none. No mayoral election occurred in Toledo in 2019."
+ },
+ {
+  "city_id": "3977000",
+  "year": 2020,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://drive.google.com/file/d/1bbcTzwwcrQT9SaXZulC2a9AD4Ei31jz2/view",
+  "additional_source_urls": [
+   "https://drive.google.com/file/d/13esebyJ-4-1BVUQJsokDiquM86Ua6r2h/view",
+   "https://www.lucascountyohiovotes.gov/historic_election_results/index.php"
+  ],
+  "note": "Lucas County Board of Elections official results summary reports for 2020, including the November 3, 2020 general election, contain no Toledo mayor contest. The March 2020 primary report was not opened. No mayoral election occurred in 2020."
+ },
+ {
+  "city_id": "3977000",
+  "year": 2021,
+  "status": "complete",
+  "expected_election_dates": [
+   "2021-11-02"
+  ],
+  "source_url": "https://drive.google.com/file/d/1_KlMcrznKIrGPSnANHfp2QvcalQ5yZMa/view",
+  "additional_source_urls": [
+   "https://drive.google.com/file/d/1meGo7cEakWATGBxTgzUNEhb5yO4N_Vsv/view",
+   "https://www.lucascountyohiovotes.gov/historic_election_results/index.php"
+  ],
+  "note": "The county official vote totals for the November 2, 2021 general election record a Toledo City Mayor contest between Wade Kapszukiewicz and Carty Finkbeiner. The September 14, 2021 primary was an earlier round. Winner and runner-up are in toledo_results.json."
+ },
+ {
+  "city_id": "3977000",
+  "year": 2022,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://drive.google.com/file/d/1htTDo0qId3e8EDNzMiEp8ubE4plVZkpk/view",
+  "additional_source_urls": [
+   "https://drive.google.com/file/d/1m9tHFtpZJcB320pxH6E8Jz4gGnQvIIOi/view",
+   "https://drive.google.com/file/d/1pWWozbFNXxH_1eL_p6hHMHqVcDpjEjjW/view",
+   "https://www.lucascountyohiovotes.gov/historic_election_results/index.php"
+  ],
+  "note": "Lucas County Board of Elections official results for the May and August 2022 primaries and the November 2022 general election contain no Toledo mayor contest. No mayoral election occurred in 2022."
+ },
+ {
+  "city_id": "3977000",
+  "year": 2023,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://drive.google.com/file/d/1kMfMMHrPyxgAqjZnYB6Wnr_WXcJ6FJCw/view",
+  "additional_source_urls": [
+   "https://drive.google.com/file/d/1uQn5WD9bLL-aYGJo5GB5YJM-ce-Nkjv_/view",
+   "https://drive.google.com/file/d/1LLa5uUa6SlkAeWghSWPpzSy43MLQGc49/view",
+   "https://www.lucascountyohiovotes.gov/historic_election_results/index.php"
+  ],
+  "note": "Lucas County Board of Elections official results for the May 2, 2023 special election, the September 12, 2023 primary, the October 3, 2023 primary and the November 2023 general election contain no Toledo mayor contest. No mayoral election occurred in 2023."
+ },
+ {
+  "city_id": "3977000",
+  "year": 2024,
+  "status": "unresolved",
+  "expected_election_dates": [],
+  "source_url": "https://www.lucascountyohiovotes.gov/historic_election_results/index.php",
+  "additional_source_urls": [
+   "https://drive.google.com/file/d/1_KlMcrznKIrGPSnANHfp2QvcalQ5yZMa/view",
+   "https://drive.google.com/file/d/1rAOQM_QF1D4bGMtornsQk3mOaP8mlLMr/view"
+  ],
+  "note": "Status is unresolved. The Lucas County historic results index lists 2024 results, but the site returned HTTP 403 to WebFetch and to curl with a browser user agent, so no 2024 results document was opened. The Toledo charter at codelibrary.amlegal.com also returned HTTP 403, and toledo.oh.gov/city-government/mayor returned HTTP 404. The regular Toledo mayoral elections in 2021 and 2025 are four years apart, which suggests no election in 2024, but this inference is not an official source for 2024. No official 2024 document shows the cycle."
+ },
+ {
+  "city_id": "3977000",
+  "year": 2025,
+  "status": "complete",
+  "expected_election_dates": [
+   "2025-11-04"
+  ],
+  "source_url": "https://drive.google.com/file/d/1rAOQM_QF1D4bGMtornsQk3mOaP8mlLMr/view",
+  "additional_source_urls": [
+   "https://drive.google.com/file/d/1B4kifzLWqwugmyzwmFyZ22VJMncW-wHk/view",
+   "https://www.lucascountyohiovotes.gov/historic_election_results/index.php"
+  ],
+  "note": "The county official canvass for the November 4, 2025 general election records a Toledo City Mayor contest between Wade Kapszukiewicz and Roberto Torres. The May 6, 2025 primary was an earlier round. Winner and runner-up are in toledo_results.json."
+ },
+ {
+  "city_id": "3977000",
+  "year": 2026,
+  "status": "unresolved",
+  "expected_election_dates": [],
+  "source_url": "https://drive.google.com/file/d/1XJNuvpnligK3JrELKHjMVHWE4gcnQ2jv/view",
+  "additional_source_urls": [
+   "https://www.lucascountyohiovotes.gov/historic_election_results/index.php",
+   "https://drive.google.com/file/d/1rAOQM_QF1D4bGMtornsQk3mOaP8mlLMr/view"
+  ],
+  "note": "Status is unresolved. The county Custom Table Report for the May 5, 2026 primary contains no Toledo mayor contest. That report does not cover the period from May 6 to the September 14, 2026 cutoff, and the term length was not confirmed from an official city source. The Toledo charter at codelibrary.amlegal.com returned HTTP 403 and the county results index returned HTTP 403. The 2025 winner likely serves until 2029, but no official source opened in this check establishes that."
+ }
+]

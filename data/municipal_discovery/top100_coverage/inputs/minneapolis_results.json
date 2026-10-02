@@ -1,0 +1,129 @@
+[
+ {
+  "city_name": "Minneapolis",
+  "state_abb": "MN",
+  "roster_place_fips": "2743000",
+  "election_date": "2013-11-05",
+  "election_type": "regular",
+  "stage": "ranked_choice_final",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "source_url": "https://vote.minneapolismn.gov/results-data/election-results/2013/mayor/",
+  "source_locator": "Mayor results table, Final round votes column",
+  "certification_source_url": "https://vote.minneapolismn.gov/results-data/election-results/",
+  "additional_source_urls": [
+   "https://vote.minneapolismn.gov/ranked-choice-voting/history/",
+   "https://vote.minneapolismn.gov/media/-www-content-assets/documents/archive/elections/2013-Mayor-RCV-Tabulation-Summary.xlsx"
+  ],
+  "verification_note": "Official city results page for the 2013 mayor race lists the official winner. After 34 rounds of tabulation. Final round percentages 48.95 and 31.44. Total ballots cast 79,415. Totals are final-round votes in the ranked-choice tabulation.",
+  "candidates": [
+   {
+    "name": "Betsy Hodges",
+    "role": "winner",
+    "votes": 38870,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Mark Andrew",
+    "role": "runner_up",
+    "votes": 24972,
+    "candidate_year_id": ""
+   }
+  ]
+ },
+ {
+  "city_name": "Minneapolis",
+  "state_abb": "MN",
+  "roster_place_fips": "2743000",
+  "election_date": "2017-11-07",
+  "election_type": "regular",
+  "stage": "ranked_choice_final",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "source_url": "https://vote.minneapolismn.gov/results-data/election-results/2017/mayor/",
+  "source_locator": "Mayor results table, Final round votes column",
+  "certification_source_url": "https://vote.minneapolismn.gov/results-data/election-results/",
+  "additional_source_urls": [
+   "https://vote.minneapolismn.gov/ranked-choice-voting/history/"
+  ],
+  "verification_note": "Official city results page for the 2017 mayor race lists the official winner. After six rounds of tabulation. Final round percentages 44.69 and 33.46. Betsy Hodges was eliminated in round 5. Total votes cast 104,522. Totals are final-round votes in the ranked-choice tabulation.",
+  "candidates": [
+   {
+    "name": "Jacob Frey",
+    "role": "winner",
+    "votes": 46716,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Raymond Dehn",
+    "role": "runner_up",
+    "votes": 34971,
+    "candidate_year_id": ""
+   }
+  ]
+ },
+ {
+  "city_name": "Minneapolis",
+  "state_abb": "MN",
+  "roster_place_fips": "2743000",
+  "election_date": "2021-11-02",
+  "election_type": "regular",
+  "stage": "ranked_choice_final",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "source_url": "https://vote.minneapolismn.gov/results-data/election-results/2021/mayor/",
+  "source_locator": "Mayor results table, Final round votes column",
+  "certification_source_url": "https://vote.minneapolismn.gov/results-data/election-results/",
+  "additional_source_urls": [
+   "https://vote.minneapolismn.gov/ranked-choice-voting/history/",
+   "https://vote.minneapolismn.gov/media/-www-content-assets/documents/archive/elections/2021-Mayor-Round-Results-Summary.pdf"
+  ],
+  "verification_note": "Official city results page for the 2021 mayor race lists the official winner. After two rounds of tabulation. Final round percentages 49.1 and 38.2. Sheila Nezhad had more first-choice votes than Knuth (30,368 versus 26,468) but was eliminated in round 2. Total votes cast 143,974. Totals are final-round votes in the ranked-choice tabulation.",
+  "candidates": [
+   {
+    "name": "Jacob Frey",
+    "role": "winner",
+    "votes": 70669,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Kate Knuth",
+    "role": "runner_up",
+    "votes": 55007,
+    "candidate_year_id": ""
+   }
+  ]
+ },
+ {
+  "city_name": "Minneapolis",
+  "state_abb": "MN",
+  "roster_place_fips": "2743000",
+  "election_date": "2025-11-04",
+  "election_type": "regular",
+  "stage": "ranked_choice_final",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "source_url": "https://vote.minneapolismn.gov/results-data/election-results/2025/mayor/",
+  "source_locator": "Mayor results table, Final round votes column",
+  "certification_source_url": "https://vote.minneapolismn.gov/results-data/election-results/",
+  "additional_source_urls": [
+   "https://vote.minneapolismn.gov/ranked-choice-voting/history/",
+   "https://vote.minneapolismn.gov/media/-www-content-assets/documents/archive/elections/2025-Mayor-Round-Results-Summary.pdf"
+  ],
+  "verification_note": "Official city results page for the 2025 mayor race lists the official winner. After two rounds of tabulation. Final round percentages 50.03 and 44.37. Total votes cast 147,356. Totals are final-round votes in the ranked-choice tabulation.",
+  "candidates": [
+   {
+    "name": "Jacob Frey",
+    "role": "winner",
+    "votes": 73723,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Omar Fateh",
+    "role": "runner_up",
+    "votes": 65377,
+    "candidate_year_id": ""
+   }
+  ]
+ }
+]

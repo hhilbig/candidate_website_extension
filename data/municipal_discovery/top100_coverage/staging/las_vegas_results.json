@@ -1,0 +1,132 @@
+[
+ {
+  "city_name": "Las Vegas",
+  "state_abb": "NV",
+  "roster_place_fips": "3240000",
+  "election_date": "2011-06-07",
+  "election_type": "regular",
+  "stage": "general",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "source_url": "https://elections.clarkcountynv.gov/electionresultsTV/results.aspx",
+  "source_locator": "Clark County Elections Department results page, election '2011 MUNICIPAL GENERAL (06/07/2011)', category 'OFFICIAL ELECTION RESULTS', contest MAYOR OF LAS VEGAS, Total row 54,705",
+  "certification_source_url": "https://elections.clarkcountynv.gov/electionresultsTV/results.aspx",
+  "additional_source_urls": [
+   "https://www.clarkcountynv.gov/government/departments/elections/past-elections",
+   "https://www.leg.state.nv.us/CityCharters/CtyLasVegasCC.html"
+  ],
+  "verification_note": "The Clark County Elections Department official results for the June 7, 2011 municipal general election list the contest MAYOR OF LAS VEGAS with 356 of 356 precincts reporting. Carolyn G. Goodman received 33104 votes (60.51 percent) and Chris Giunchigliani received 21601 votes (39.49 percent), total 54705. No candidate won a majority in the April 5, 2011 primary (Goodman 18040 of 48388 votes, 37.28 percent), so the general election was decisive. The page is the county's official results listing; no separate certification document was opened.",
+  "candidates": [
+   {
+    "name": "Carolyn G. Goodman",
+    "role": "winner",
+    "votes": 33104,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Chris Giunchigliani",
+    "role": "runner_up",
+    "votes": 21601,
+    "candidate_year_id": ""
+   }
+  ]
+ },
+ {
+  "city_name": "Las Vegas",
+  "state_abb": "NV",
+  "roster_place_fips": "3240000",
+  "election_date": "2015-04-07",
+  "election_type": "regular",
+  "stage": "primary_nominating",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "source_url": "https://elections.clarkcountynv.gov/electionresultsTV/results.aspx",
+  "source_locator": "Clark County Elections Department results page, election '2015 MUNICIPAL PRIMARY (04/07/2015)', category 'OFFICIAL ELECTION RESULTS', contest MAYOR OF LAS VEGAS, Total row 37,485",
+  "certification_source_url": "https://elections.clarkcountynv.gov/electionresultsTV/results.aspx",
+  "additional_source_urls": [
+   "https://www.clarkcountynv.gov/government/departments/elections/past-elections",
+   "https://www.leg.state.nv.us/CityCharters/CtyLasVegasCC.html"
+  ],
+  "verification_note": "The Clark County Elections Department official results for the April 7, 2015 municipal primary list MAYOR OF LAS VEGAS with 298 of 298 precincts reporting. Carolyn G. Goodman received 20443 votes (54.54 percent) and Stavros S. Anthony received 15761 votes (42.05 percent); the other candidates were Phil Cory 955 and Abdul H. Shabazz 326, total 37485. Goodman won a majority, so under Las Vegas City Charter section 5.010 subsection 4 she was declared elected and no general election was held for the office. The 2015 municipal general election results (06/02/2015) contain no mayoral contest. No separate certification document was opened.",
+  "candidates": [
+   {
+    "name": "Carolyn G. Goodman",
+    "role": "winner",
+    "votes": 20443,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Stavros S. Anthony",
+    "role": "runner_up",
+    "votes": 15761,
+    "candidate_year_id": ""
+   }
+  ],
+  "decisive_stage_source_url": "https://www.leg.state.nv.us/CityCharters/CtyLasVegasCC.html"
+ },
+ {
+  "city_name": "Las Vegas",
+  "state_abb": "NV",
+  "roster_place_fips": "3240000",
+  "election_date": "2019-04-02",
+  "election_type": "regular",
+  "stage": "primary_nominating",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "source_url": "https://elections.clarkcountynv.gov/electionresultsTV/results.aspx",
+  "source_locator": "Clark County Elections Department results page, election '2019 MUNICIPAL PRIMARY (04/02/2019)', category 'OFFICIAL ELECTION RESULTS', contest MAYOR OF LAS VEGAS, Total row 26,723",
+  "certification_source_url": "https://elections.clarkcountynv.gov/electionresultsTV/results.aspx",
+  "additional_source_urls": [
+   "https://www.clarkcountynv.gov/government/departments/elections/past-elections",
+   "https://www.leg.state.nv.us/CityCharters/CtyLasVegasCC.html"
+  ],
+  "verification_note": "The Clark County Elections Department official results for the April 2, 2019 municipal primary list MAYOR OF LAS VEGAS with seven candidates. Carolyn G. Goodman received 22316 votes (83.51 percent) and Phil Collins received 1417 votes (5.30 percent), total 26723. Goodman won a majority, so under Las Vegas City Charter section 5.010 subsection 4 she was declared elected and no general election was held for mayor. The 2019 municipal general election results (06/11/2019) contain no Las Vegas mayoral contest. No separate certification document was opened.",
+  "candidates": [
+   {
+    "name": "Carolyn G. Goodman",
+    "role": "winner",
+    "votes": 22316,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Phil Collins",
+    "role": "runner_up",
+    "votes": 1417,
+    "candidate_year_id": ""
+   }
+  ],
+  "decisive_stage_source_url": "https://www.leg.state.nv.us/CityCharters/CtyLasVegasCC.html"
+ },
+ {
+  "city_name": "Las Vegas",
+  "state_abb": "NV",
+  "roster_place_fips": "3240000",
+  "election_date": "2024-11-05",
+  "election_type": "regular",
+  "stage": "general",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "source_url": "https://elections.clarkcountynv.gov/electionresultsTV/results.aspx",
+  "source_locator": "Clark County Elections Department results page, election '2024 GENERAL ELECTION (11/05/2024)', category 'OFFICIAL ELECTION RESULTS', contest CITY OF LAS VEGAS MAYOR, Total row 250,910",
+  "certification_source_url": "https://elections.clarkcountynv.gov/electionresultsTV/results.aspx",
+  "additional_source_urls": [
+   "https://www.clarkcountynv.gov/government/departments/elections/past-elections",
+   "https://www.leg.state.nv.us/CityCharters/CtyLasVegasCC.html"
+  ],
+  "verification_note": "The Clark County Elections Department official results for the November 5, 2024 general election list CITY OF LAS VEGAS MAYOR. Shelley Berkley received 133520 votes (53.21 percent) and Victoria Seaman received 117390 votes (46.79 percent), total 250910. No candidate won a majority in the June 11, 2024 primary (Berkley 25839 of 72434 votes, 35.67 percent; Seaman 20942, 28.91 percent), so the top two advanced and the general election was decisive under charter section 5.010 subsection 4. The page is the county's official results listing; no separate certification document was opened.",
+  "candidates": [
+   {
+    "name": "Shelley Berkley",
+    "role": "winner",
+    "votes": 133520,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Victoria Seaman",
+    "role": "runner_up",
+    "votes": 117390,
+    "candidate_year_id": ""
+   }
+  ]
+ }
+]

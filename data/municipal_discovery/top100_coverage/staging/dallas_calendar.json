@@ -1,0 +1,163 @@
+[
+ {
+  "city_id": "4819000",
+  "year": 2010,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://citysecretary2.dallascityhall.com/pdf/Elections/ElectMasterList.pdf",
+  "additional_source_urls": [],
+  "note": "The City Secretary master list of all Dallas elections shows no election with a mayoral contest in this year. Dallas elects its mayor every four years in May with a June runoff (2011, 2015, 2019, 2023)."
+ },
+ {
+  "city_id": "4819000",
+  "year": 2011,
+  "status": "complete",
+  "expected_election_dates": [
+   "2011-06-18"
+  ],
+  "source_url": "https://citysecretary2.dallascityhall.com/pdf/Elections/ElectMasterList.pdf",
+  "additional_source_urls": [],
+  "note": "The Dallas City Secretary master list records a mayoral contest decided on this date. Winner and runner-up are in dallas_results.json."
+ },
+ {
+  "city_id": "4819000",
+  "year": 2012,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://citysecretary2.dallascityhall.com/pdf/Elections/ElectMasterList.pdf",
+  "additional_source_urls": [],
+  "note": "The City Secretary master list of all Dallas elections shows no election with a mayoral contest in this year. Dallas elects its mayor every four years in May with a June runoff (2011, 2015, 2019, 2023)."
+ },
+ {
+  "city_id": "4819000",
+  "year": 2013,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://citysecretary2.dallascityhall.com/pdf/Elections/ElectMasterList.pdf",
+  "additional_source_urls": [],
+  "note": "The City Secretary master list of all Dallas elections shows no election with a mayoral contest in this year. Dallas elects its mayor every four years in May with a June runoff (2011, 2015, 2019, 2023)."
+ },
+ {
+  "city_id": "4819000",
+  "year": 2014,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://citysecretary2.dallascityhall.com/pdf/Elections/ElectMasterList.pdf",
+  "additional_source_urls": [],
+  "note": "The City Secretary master list of all Dallas elections shows no election with a mayoral contest in this year. Dallas elects its mayor every four years in May with a June runoff (2011, 2015, 2019, 2023)."
+ },
+ {
+  "city_id": "4819000",
+  "year": 2015,
+  "status": "complete",
+  "expected_election_dates": [
+   "2015-05-09"
+  ],
+  "source_url": "https://citysecretary2.dallascityhall.com/pdf/Elections/ElectMasterList.pdf",
+  "additional_source_urls": [],
+  "note": "The Dallas City Secretary master list records a mayoral contest decided on this date. Winner and runner-up are in dallas_results.json."
+ },
+ {
+  "city_id": "4819000",
+  "year": 2016,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://citysecretary2.dallascityhall.com/pdf/Elections/ElectMasterList.pdf",
+  "additional_source_urls": [],
+  "note": "The City Secretary master list of all Dallas elections shows no election with a mayoral contest in this year. Dallas elects its mayor every four years in May with a June runoff (2011, 2015, 2019, 2023)."
+ },
+ {
+  "city_id": "4819000",
+  "year": 2017,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://citysecretary2.dallascityhall.com/pdf/Elections/ElectMasterList.pdf",
+  "additional_source_urls": [],
+  "note": "The City Secretary master list of all Dallas elections shows no election with a mayoral contest in this year. Dallas elects its mayor every four years in May with a June runoff (2011, 2015, 2019, 2023)."
+ },
+ {
+  "city_id": "4819000",
+  "year": 2018,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://citysecretary2.dallascityhall.com/pdf/Elections/ElectMasterList.pdf",
+  "additional_source_urls": [],
+  "note": "The City Secretary master list of all Dallas elections shows no election with a mayoral contest in this year. Dallas elects its mayor every four years in May with a June runoff (2011, 2015, 2019, 2023). The only 2018 election listed is a November 6 special election with a December 11 runoff for council District 4, with no mayoral contest."
+ },
+ {
+  "city_id": "4819000",
+  "year": 2019,
+  "status": "complete",
+  "expected_election_dates": [
+   "2019-06-08"
+  ],
+  "source_url": "https://citysecretary2.dallascityhall.com/pdf/Elections/ElectMasterList.pdf",
+  "additional_source_urls": [],
+  "note": "The Dallas City Secretary master list records a mayoral contest decided on this date. Winner and runner-up are in dallas_results.json."
+ },
+ {
+  "city_id": "4819000",
+  "year": 2020,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://citysecretary2.dallascityhall.com/pdf/Elections/ElectMasterList.pdf",
+  "additional_source_urls": [],
+  "note": "The City Secretary master list of all Dallas elections shows no election with a mayoral contest in this year. Dallas elects its mayor every four years in May with a June runoff (2011, 2015, 2019, 2023)."
+ },
+ {
+  "city_id": "4819000",
+  "year": 2021,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://citysecretary2.dallascityhall.com/pdf/Elections/ElectMasterList.pdf",
+  "additional_source_urls": [],
+  "note": "The City Secretary master list of all Dallas elections shows no election with a mayoral contest in this year. Dallas elects its mayor every four years in May with a June runoff (2011, 2015, 2019, 2023)."
+ },
+ {
+  "city_id": "4819000",
+  "year": 2022,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://citysecretary2.dallascityhall.com/pdf/Elections/ElectMasterList.pdf",
+  "additional_source_urls": [],
+  "note": "The City Secretary master list of all Dallas elections shows no election with a mayoral contest in this year. Dallas elects its mayor every four years in May with a June runoff (2011, 2015, 2019, 2023)."
+ },
+ {
+  "city_id": "4819000",
+  "year": 2023,
+  "status": "complete",
+  "expected_election_dates": [
+   "2023-05-06"
+  ],
+  "source_url": "https://citysecretary2.dallascityhall.com/pdf/Elections/ElectMasterList.pdf",
+  "additional_source_urls": [],
+  "note": "The Dallas City Secretary master list records a mayoral contest decided on this date. Winner and runner-up are in dallas_results.json."
+ },
+ {
+  "city_id": "4819000",
+  "year": 2024,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://citysecretary2.dallascityhall.com/pdf/Elections/ElectMasterList.pdf",
+  "additional_source_urls": [],
+  "note": "The City Secretary master list of all Dallas elections shows no election with a mayoral contest in this year. Dallas elects its mayor every four years in May with a June runoff (2011, 2015, 2019, 2023)."
+ },
+ {
+  "city_id": "4819000",
+  "year": 2025,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://citysecretary2.dallascityhall.com/pdf/Elections/ElectMasterList.pdf",
+  "additional_source_urls": [],
+  "note": "The City Secretary master list of all Dallas elections shows no election with a mayoral contest in this year. Dallas elects its mayor every four years in May with a June runoff (2011, 2015, 2019, 2023)."
+ },
+ {
+  "city_id": "4819000",
+  "year": 2026,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://citysecretary2.dallascityhall.com/pdf/Elections/ElectMasterList.pdf",
+  "additional_source_urls": [],
+  "note": "The City Secretary master list of all Dallas elections shows no election with a mayoral contest in this year. Dallas elects its mayor every four years in May with a June runoff (2011, 2015, 2019, 2023). The mayor elected in 2023 serves a four-year term through the 2027 cycle, and the list shows the 2025-2027 council term with no mayoral contest in 2026."
+ }
+]

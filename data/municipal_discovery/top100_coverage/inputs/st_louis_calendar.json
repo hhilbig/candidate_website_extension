@@ -1,0 +1,171 @@
+[
+ {
+  "city_id": "2965000",
+  "year": 2010,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.stlouis-mo.gov/government/departments/board-election-commissioners/elections/results/past-years.cfm",
+  "additional_source_urls": [],
+  "note": "The Board of Election Commissioners results index lists every city election for this year. No mayoral contest appears in the final summaries inspected. Mayoral elections fell in 2013, 2017, 2021 and 2025, a four-year cycle."
+ },
+ {
+  "city_id": "2965000",
+  "year": 2011,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.stlouis-mo.gov/government/departments/board-election-commissioners/elections/results/past-years.cfm",
+  "additional_source_urls": [],
+  "note": "The Board of Election Commissioners results index lists every city election for this year. No mayoral contest appears in the final summaries inspected. Mayoral elections fell in 2013, 2017, 2021 and 2025, a four-year cycle."
+ },
+ {
+  "city_id": "2965000",
+  "year": 2012,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.stlouis-mo.gov/government/departments/board-election-commissioners/elections/results/past-years.cfm",
+  "additional_source_urls": [],
+  "note": "The Board of Election Commissioners results index lists every city election for this year. No mayoral contest appears in the final summaries inspected. Mayoral elections fell in 2013, 2017, 2021 and 2025, a four-year cycle."
+ },
+ {
+  "city_id": "2965000",
+  "year": 2013,
+  "status": "complete",
+  "expected_election_dates": [
+   "2013-04-02"
+  ],
+  "source_url": "https://www.stlouis-mo.gov/government/departments/board-election-commissioners/documents/election-results/upload/Apr13-Final-Official-Summary.pdf",
+  "additional_source_urls": [
+   "https://www.stlouis-mo.gov/government/departments/board-election-commissioners/elections/results/past-years.cfm"
+  ],
+  "note": "The Board of Election Commissioners final official results show a mayoral contest in the 2013-04-02 general municipal election. Winner and runner-up are in st_louis_results.json."
+ },
+ {
+  "city_id": "2965000",
+  "year": 2014,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.stlouis-mo.gov/government/departments/board-election-commissioners/elections/results/past-years.cfm",
+  "additional_source_urls": [],
+  "note": "The Board of Election Commissioners results index lists every city election for this year. No mayoral contest appears in the final summaries inspected. Mayoral elections fell in 2013, 2017, 2021 and 2025, a four-year cycle."
+ },
+ {
+  "city_id": "2965000",
+  "year": 2015,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.stlouis-mo.gov/government/departments/board-election-commissioners/elections/results/past-years.cfm",
+  "additional_source_urls": [],
+  "note": "The Board of Election Commissioners results index lists every city election for this year. No mayoral contest appears in the final summaries inspected. Mayoral elections fell in 2013, 2017, 2021 and 2025, a four-year cycle."
+ },
+ {
+  "city_id": "2965000",
+  "year": 2016,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.stlouis-mo.gov/government/departments/board-election-commissioners/elections/results/past-years.cfm",
+  "additional_source_urls": [],
+  "note": "The Board of Election Commissioners results index lists every city election for this year. No mayoral contest appears in the final summaries inspected. Mayoral elections fell in 2013, 2017, 2021 and 2025, a four-year cycle."
+ },
+ {
+  "city_id": "2965000",
+  "year": 2017,
+  "status": "complete",
+  "expected_election_dates": [
+   "2017-04-04"
+  ],
+  "source_url": "https://www.stlouis-mo.gov/government/departments/board-election-commissioners/documents/election-results/upload/Apr2017-Final-Official-Summary-2.pdf",
+  "additional_source_urls": [
+   "https://www.stlouis-mo.gov/government/departments/board-election-commissioners/elections/results/past-years.cfm"
+  ],
+  "note": "The Board of Election Commissioners final official results show a mayoral contest in the 2017-04-04 general municipal election. Winner and runner-up are in st_louis_results.json."
+ },
+ {
+  "city_id": "2965000",
+  "year": 2018,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.stlouis-mo.gov/government/departments/board-election-commissioners/elections/results/past-years.cfm",
+  "additional_source_urls": [],
+  "note": "The Board of Election Commissioners results index lists every city election for this year. No mayoral contest appears in the final summaries inspected. Mayoral elections fell in 2013, 2017, 2021 and 2025, a four-year cycle."
+ },
+ {
+  "city_id": "2965000",
+  "year": 2019,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.stlouis-mo.gov/government/departments/board-election-commissioners/elections/results/past-years.cfm",
+  "additional_source_urls": [],
+  "note": "The Board of Election Commissioners results index lists every city election for this year. No mayoral contest appears in the final summaries inspected. Mayoral elections fell in 2013, 2017, 2021 and 2025, a four-year cycle."
+ },
+ {
+  "city_id": "2965000",
+  "year": 2020,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.stlouis-mo.gov/government/departments/board-election-commissioners/elections/results/past-years.cfm",
+  "additional_source_urls": [],
+  "note": "The Board of Election Commissioners results index lists every city election for this year. No mayoral contest appears in the final summaries inspected. Mayoral elections fell in 2013, 2017, 2021 and 2025, a four-year cycle."
+ },
+ {
+  "city_id": "2965000",
+  "year": 2021,
+  "status": "complete",
+  "expected_election_dates": [
+   "2021-04-06"
+  ],
+  "source_url": "https://www.stlouis-mo.gov/government/departments/board-election-commissioners/documents/election-results/upload/Apr21-Final-Official-Summary.pdf",
+  "additional_source_urls": [
+   "https://www.stlouis-mo.gov/government/departments/board-election-commissioners/elections/results/past-years.cfm"
+  ],
+  "note": "The Board of Election Commissioners final official results show a mayoral contest in the 2021-04-06 general municipal election. Winner and runner-up are in st_louis_results.json."
+ },
+ {
+  "city_id": "2965000",
+  "year": 2022,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.stlouis-mo.gov/government/departments/board-election-commissioners/elections/results/past-years.cfm",
+  "additional_source_urls": [],
+  "note": "The Board of Election Commissioners results index lists every city election for this year. No mayoral contest appears in the final summaries inspected. Mayoral elections fell in 2013, 2017, 2021 and 2025, a four-year cycle."
+ },
+ {
+  "city_id": "2965000",
+  "year": 2023,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.stlouis-mo.gov/government/departments/board-election-commissioners/elections/results/past-years.cfm",
+  "additional_source_urls": [],
+  "note": "The Board of Election Commissioners results index lists every city election for this year. No mayoral contest appears in the final summaries inspected. Mayoral elections fell in 2013, 2017, 2021 and 2025, a four-year cycle."
+ },
+ {
+  "city_id": "2965000",
+  "year": 2024,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.stlouis-mo.gov/government/departments/board-election-commissioners/elections/results/past-years.cfm",
+  "additional_source_urls": [],
+  "note": "The Board of Election Commissioners results index lists every city election for this year. No mayoral contest appears in the final summaries inspected. Mayoral elections fell in 2013, 2017, 2021 and 2025, a four-year cycle."
+ },
+ {
+  "city_id": "2965000",
+  "year": 2025,
+  "status": "complete",
+  "expected_election_dates": [
+   "2025-04-08"
+  ],
+  "source_url": "https://www.stlouis-mo.gov/government/departments/board-election-commissioners/documents/election-results/upload/Apr25-Final-Official-Summary.pdf",
+  "additional_source_urls": [
+   "https://www.stlouis-mo.gov/government/departments/board-election-commissioners/elections/results/past-years.cfm"
+  ],
+  "note": "The Board of Election Commissioners final official results show a mayoral contest in the 2025-04-08 general municipal election. Winner and runner-up are in st_louis_results.json."
+ },
+ {
+  "city_id": "2965000",
+  "year": 2026,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.stlouis-mo.gov/government/departments/board-election-commissioners/elections/results/index.cfm",
+  "additional_source_urls": [],
+  "note": "The Board of Election Commissioners results page lists the April 7, 2026 general municipal election and the August 4, 2026 primary. The April 2026 final official summary contains no mayor contest. The mayor elected in April 2025 serves to 2029."
+ }
+]

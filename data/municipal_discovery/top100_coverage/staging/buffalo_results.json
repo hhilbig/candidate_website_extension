@@ -1,0 +1,125 @@
+[
+ {
+  "city_name": "Buffalo",
+  "state_abb": "NY",
+  "roster_place_fips": "3611000",
+  "election_type": "regular",
+  "stage": "general",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "election_date": "2013-11-05",
+  "source_url": "https://www.elections.erie.gov/Files/Election%20Results/2013/11052013/2013-General.pdf",
+  "source_locator": "PDF page 315 (printed page 8), City of Buffalo Mayor Recapitulation, TOTAL row",
+  "certification_source_url": "https://www.elections.erie.gov/Files/Election%20Results/2013/11052013/2013-General.pdf",
+  "additional_source_urls": [],
+  "verification_note": "Official Erie County Board of Elections canvass book. Totals aggregate ballot lines. Brown 23881 Democratic + 665 Conservative + 978 Working Families + 596 Independence = 26120. Rodriguez 9390 Republican + 1343 Progressive = 10733. Blank, void and scattering 1326; all columns sum to 38179. Document does not state a certification date.",
+  "candidates": [
+   {
+    "name": "Byron W. Brown",
+    "role": "winner",
+    "votes": 26120,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Sergio R. Rodriguez",
+    "role": "runner_up",
+    "votes": 10733,
+    "candidate_year_id": ""
+   }
+  ]
+ },
+ {
+  "city_name": "Buffalo",
+  "state_abb": "NY",
+  "roster_place_fips": "3611000",
+  "election_type": "regular",
+  "stage": "general",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "election_date": "2017-11-07",
+  "source_url": "https://www.elections.erie.gov/Files/Election%20Results/2017/2017-General.pdf",
+  "source_locator": "PDF page 274, Buffalo Mayor Recapitulation, City of Buffalo Total row",
+  "certification_source_url": "https://www.elections.erie.gov/Files/Election%20Results/2017/2017-General.pdf",
+  "additional_source_urls": [],
+  "verification_note": "Official Erie County Board of Elections canvass book. Brown aggregates 27532 Democratic + 1228 Working Families + 609 Independence + 319 Women's Equality = 29688. Schroeder 11446 on the Reform line. Others: Howard 1357, Robinson 1276, Simmons write-in 102, blank/void/scattering 1877; all columns sum to 45746. Document does not state a certification date.",
+  "candidates": [
+   {
+    "name": "Byron W. Brown",
+    "role": "winner",
+    "votes": 29688,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Mark J. F. Schroeder",
+    "role": "runner_up",
+    "votes": 11446,
+    "candidate_year_id": ""
+   }
+  ]
+ },
+ {
+  "city_name": "Buffalo",
+  "state_abb": "NY",
+  "roster_place_fips": "3611000",
+  "election_type": "regular",
+  "stage": "general",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "election_date": "2021-11-02",
+  "source_url": "https://elections.erie.gov/Files/Election%20Results/2021/2021%20General%20Canvass%20Bookupupdated.pdf",
+  "source_locator": "PDF page 284, City of Buffalo Recapitulation, City of Buffalo Total row (ward totals on pages 277-283)",
+  "certification_source_url": "https://elections.erie.gov/Files/Election%20Results/2021/2021%20General%20Canvass%20Bookupupdated.pdf",
+  "additional_source_urls": [
+   "https://erie.resultscaster.com/r/GE21"
+  ],
+  "verification_note": "Official Erie County Board of Elections canvass book (updated version). Brown ran as a write-in and has his own column: 38108. Walton, Democratic nominee: 25806. Other write-ins: Carlisle 219, Miles 23, O'Dell 8; blank/void/scattering 1309; total 65473. Nine ward totals sum to the citywide figures. The ResultsCaster feed for this election shows only a combined write-in line, so the canvass book is the source. Document does not state a certification date.",
+  "candidates": [
+   {
+    "name": "Byron Brown",
+    "role": "winner",
+    "votes": 38108,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "India B. Walton",
+    "role": "runner_up",
+    "votes": 25806,
+    "candidate_year_id": ""
+   }
+  ]
+ },
+ {
+  "city_name": "Buffalo",
+  "state_abb": "NY",
+  "roster_place_fips": "3611000",
+  "election_type": "regular",
+  "stage": "general",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "election_date": "2025-11-04",
+  "source_url": "https://erie.resultscaster.com/r/GEN25",
+  "source_locator": "Contest 14, Mayor Buffalo, City of Buffalo; API results by group summed (Election Day, Early Voting, Absentee), 208 of 208 districts reporting",
+  "certification_source_url": "https://erie.resultscaster.com/r/GEN25",
+  "additional_source_urls": [
+   "https://erie.resultscaster.com/api/resultscasts/GEN25/shell",
+   "https://erie.resultscaster.com/api/resultscasts/GEN25/results/Election%20Day",
+   "https://erie.resultscaster.com/api/resultscasts/GEN25/results/Early%20Voting",
+   "https://erie.resultscaster.com/api/resultscasts/GEN25/results/Absentee"
+  ],
+  "verification_note": "Official Erie County Board of Elections results site. Choice keys come from the shell file (46 Ryan DEM+WOR, 47 Gardner REP+CON, 48 Gainer Restore Buffalo, 49 write-in). Sum over three vote groups: Ryan 22860+6050+1587 = 30497; Gardner 7752+1590+312 = 9654; Gainer 1966; write-in 371. Last data upload 2025-11-24; the feed does not flag the tally as official, so certification status is source_verified, not certified. General election decided the office.",
+  "candidates": [
+   {
+    "name": "Sean M. Ryan",
+    "role": "winner",
+    "votes": 30497,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "James R. Gardner",
+    "role": "runner_up",
+    "votes": 9654,
+    "candidate_year_id": ""
+   }
+  ]
+ }
+]

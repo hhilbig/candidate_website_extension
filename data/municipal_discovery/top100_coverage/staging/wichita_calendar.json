@@ -1,0 +1,202 @@
+[
+ {
+  "city_id": "2079000",
+  "year": 2010,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.sedgwickcounty.org/elections/election-results/",
+  "additional_source_urls": [
+   "https://www.wichita.gov/599/City-Council"
+  ],
+  "note": "The Sedgwick County Election Office index of past election results lists every election held in Sedgwick County. The official results pages for the elections of this year show no Wichita mayoral contest. Wichita elects its mayor at-large to a four-year term, and mayoral elections fell in 2011, 2015, 2019 and 2023. The next mayoral election falls in 2027."
+ },
+ {
+  "city_id": "2079000",
+  "year": 2011,
+  "status": "complete",
+  "expected_election_dates": [
+   "2011-04-05"
+  ],
+  "source_url": "https://www.sedgwickcounty.org/elections/election-results/2011-general/",
+  "additional_source_urls": [
+   "https://www.sedgwickcounty.org/elections/election-results/2011-primary/",
+   "https://www.wichita.gov/599/City-Council"
+  ],
+  "note": "The Sedgwick County Election Office official results record a Wichita mayoral general election on this date, after a nonpartisan primary earlier in the same year that narrowed the field to two. The decisive general election is recorded in wichita_results.json. The City Council page states that the mayor is elected at-large and that terms are four years."
+ },
+ {
+  "city_id": "2079000",
+  "year": 2012,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.sedgwickcounty.org/elections/election-results/",
+  "additional_source_urls": [
+   "https://www.wichita.gov/599/City-Council"
+  ],
+  "note": "The Sedgwick County Election Office index of past election results lists every election held in Sedgwick County. The official results pages for the elections of this year show no Wichita mayoral contest. Wichita elects its mayor at-large to a four-year term, and mayoral elections fell in 2011, 2015, 2019 and 2023. The next mayoral election falls in 2027."
+ },
+ {
+  "city_id": "2079000",
+  "year": 2013,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.sedgwickcounty.org/elections/election-results/",
+  "additional_source_urls": [
+   "https://www.wichita.gov/599/City-Council"
+  ],
+  "note": "The Sedgwick County Election Office index of past election results lists every election held in Sedgwick County. The official results pages for the elections of this year show no Wichita mayoral contest. Wichita elects its mayor at-large to a four-year term, and mayoral elections fell in 2011, 2015, 2019 and 2023. The next mayoral election falls in 2027."
+ },
+ {
+  "city_id": "2079000",
+  "year": 2014,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.sedgwickcounty.org/elections/election-results/",
+  "additional_source_urls": [
+   "https://www.wichita.gov/599/City-Council"
+  ],
+  "note": "The Sedgwick County Election Office index of past election results lists every election held in Sedgwick County. The official results pages for the elections of this year show no Wichita mayoral contest. Wichita elects its mayor at-large to a four-year term, and mayoral elections fell in 2011, 2015, 2019 and 2023. The next mayoral election falls in 2027."
+ },
+ {
+  "city_id": "2079000",
+  "year": 2015,
+  "status": "complete",
+  "expected_election_dates": [
+   "2015-04-07"
+  ],
+  "source_url": "https://www.sedgwickcounty.org/elections/election-results/2015-general/",
+  "additional_source_urls": [
+   "https://www.sedgwickcounty.org/elections/election-results/2015-primary/",
+   "https://www.wichita.gov/599/City-Council"
+  ],
+  "note": "The Sedgwick County Election Office official results record a Wichita mayoral general election on this date, after a nonpartisan primary earlier in the same year that narrowed the field to two. The decisive general election is recorded in wichita_results.json. The City Council page states that the mayor is elected at-large and that terms are four years."
+ },
+ {
+  "city_id": "2079000",
+  "year": 2016,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.sedgwickcounty.org/elections/election-results/",
+  "additional_source_urls": [
+   "https://www.wichita.gov/599/City-Council"
+  ],
+  "note": "The Sedgwick County Election Office index of past election results lists every election held in Sedgwick County. The official results pages for the elections of this year show no Wichita mayoral contest. Wichita elects its mayor at-large to a four-year term, and mayoral elections fell in 2011, 2015, 2019 and 2023. The next mayoral election falls in 2027."
+ },
+ {
+  "city_id": "2079000",
+  "year": 2017,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.sedgwickcounty.org/elections/election-results/",
+  "additional_source_urls": [
+   "https://www.wichita.gov/599/City-Council"
+  ],
+  "note": "The Sedgwick County Election Office index of past election results lists every election held in Sedgwick County. The official results pages for the elections of this year show no Wichita mayoral contest. Wichita elects its mayor at-large to a four-year term, and mayoral elections fell in 2011, 2015, 2019 and 2023. The next mayoral election falls in 2027."
+ },
+ {
+  "city_id": "2079000",
+  "year": 2018,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.sedgwickcounty.org/elections/election-results/",
+  "additional_source_urls": [
+   "https://www.wichita.gov/599/City-Council"
+  ],
+  "note": "The Sedgwick County Election Office index of past election results lists every election held in Sedgwick County. The official results pages for the elections of this year show no Wichita mayoral contest. Wichita elects its mayor at-large to a four-year term, and mayoral elections fell in 2011, 2015, 2019 and 2023. The next mayoral election falls in 2027."
+ },
+ {
+  "city_id": "2079000",
+  "year": 2019,
+  "status": "complete",
+  "expected_election_dates": [
+   "2019-11-05"
+  ],
+  "source_url": "https://www.sedgwickcounty.org/elections/election-results/general/",
+  "additional_source_urls": [
+   "https://www.sedgwickcounty.org/elections/election-results/2019-primary/",
+   "https://www.wichita.gov/599/City-Council"
+  ],
+  "note": "The Sedgwick County Election Office official results record a Wichita mayoral general election on this date, after a nonpartisan primary earlier in the same year that narrowed the field to two. The decisive general election is recorded in wichita_results.json. The City Council page states that the mayor is elected at-large and that terms are four years."
+ },
+ {
+  "city_id": "2079000",
+  "year": 2020,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.sedgwickcounty.org/elections/election-results/",
+  "additional_source_urls": [
+   "https://www.wichita.gov/599/City-Council"
+  ],
+  "note": "The Sedgwick County Election Office index of past election results lists every election held in Sedgwick County. The official results pages for the elections of this year show no Wichita mayoral contest. Wichita elects its mayor at-large to a four-year term, and mayoral elections fell in 2011, 2015, 2019 and 2023. The next mayoral election falls in 2027."
+ },
+ {
+  "city_id": "2079000",
+  "year": 2021,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.sedgwickcounty.org/elections/election-results/",
+  "additional_source_urls": [
+   "https://www.wichita.gov/599/City-Council"
+  ],
+  "note": "The Sedgwick County Election Office index of past election results lists every election held in Sedgwick County. The official results pages for the elections of this year show no Wichita mayoral contest. Wichita elects its mayor at-large to a four-year term, and mayoral elections fell in 2011, 2015, 2019 and 2023. The next mayoral election falls in 2027."
+ },
+ {
+  "city_id": "2079000",
+  "year": 2022,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.sedgwickcounty.org/elections/election-results/",
+  "additional_source_urls": [
+   "https://www.wichita.gov/599/City-Council"
+  ],
+  "note": "The Sedgwick County Election Office index of past election results lists every election held in Sedgwick County. The official results pages for the elections of this year show no Wichita mayoral contest. Wichita elects its mayor at-large to a four-year term, and mayoral elections fell in 2011, 2015, 2019 and 2023. The next mayoral election falls in 2027."
+ },
+ {
+  "city_id": "2079000",
+  "year": 2023,
+  "status": "complete",
+  "expected_election_dates": [
+   "2023-11-07"
+  ],
+  "source_url": "https://www.sedgwickcounty.org/media/65376/official-results-plus-other-counties.pdf",
+  "additional_source_urls": [
+   "https://www.sedgwickcounty.org/media/64666/official-summary-results.pdf",
+   "https://www.sedgwickcounty.org/elections/election-results/2023-primary-election-results/",
+   "https://www.wichita.gov/599/City-Council"
+  ],
+  "note": "The Sedgwick County Election Office official results record a Wichita mayoral general election on this date, after a nonpartisan primary earlier in the same year that narrowed the field to two. The decisive general election is recorded in wichita_results.json. The City Council page states that the mayor is elected at-large and that terms are four years."
+ },
+ {
+  "city_id": "2079000",
+  "year": 2024,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.sedgwickcounty.org/elections/election-results/",
+  "additional_source_urls": [
+   "https://www.wichita.gov/599/City-Council"
+  ],
+  "note": "The Sedgwick County Election Office index of past election results lists every election held in Sedgwick County. The official results pages for the elections of this year show no Wichita mayoral contest. Wichita elects its mayor at-large to a four-year term, and mayoral elections fell in 2011, 2015, 2019 and 2023. The next mayoral election falls in 2027."
+ },
+ {
+  "city_id": "2079000",
+  "year": 2025,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.sedgwickcounty.org/elections/election-results/",
+  "additional_source_urls": [
+   "https://www.wichita.gov/599/City-Council"
+  ],
+  "note": "The Sedgwick County Election Office index of past election results lists every election held in Sedgwick County. The official results pages for the elections of this year show no Wichita mayoral contest. Wichita elects its mayor at-large to a four-year term, and mayoral elections fell in 2011, 2015, 2019 and 2023. The next mayoral election falls in 2027."
+ },
+ {
+  "city_id": "2079000",
+  "year": 2026,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.sedgwickcounty.org/elections/election-results/",
+  "additional_source_urls": [
+   "https://www.wichita.gov/599/City-Council"
+  ],
+  "note": "The Sedgwick County Election Office index of past election results lists every election held in Sedgwick County. The official results pages for the elections of this year show no Wichita mayoral contest. Wichita elects its mayor at-large to a four-year term, and mayoral elections fell in 2011, 2015, 2019 and 2023. The next mayoral election falls in 2027."
+ }
+]

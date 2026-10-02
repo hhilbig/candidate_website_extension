@@ -1,0 +1,211 @@
+[
+ {
+  "city_id": "0662000",
+  "year": 2010,
+  "status": "unresolved",
+  "expected_election_dates": [],
+  "source_url": "https://docs.voteinfo.net/docs/20120605_Candidates.pdf",
+  "additional_source_urls": [
+   "https://riversideca.gov/cityclerk/elections",
+   "https://library.municode.com/ca/riverside/codes/code_of_ordinances?nodeId=PTICICH_ARTIVCICOMA_S400ENNUTEMAELWA",
+   "https://library.municode.com/ca/riverside/codes/code_of_ordinances?nodeId=PTICICH_ARTVEL_S500GEMUEL"
+  ],
+  "note": "Unresolved. No official document for 2010 was opened. The current charter (Sec. 400(a) and 500) sets a four-year mayoral term and mayoral elections in presidential years, but Sec. 500 was amended on November 3, 2020 and the pre-2020 charter text was not obtained. The 2012 county candidate list shows Ronald O. Loveridge as the incumbent whose term ended in 2012, which does not show whether a mayoral election was held in 2010. Guessed docs.voteinfo.net 2010 statement of vote URLs returned HTTP 404, the voteinfo.net archive pages returned HTTP 403, and the Wayback CDX query returned nothing. Text read through api.municode.com (Code of Ordinances, Supplement 33, codified through Ordinance 7776 of June 23, 2026), the same content the Municode pages show."
+ },
+ {
+  "city_id": "0662000",
+  "year": 2011,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://docs.voteinfo.net/docs/2011-06-07SOV.pdf",
+  "additional_source_urls": [
+   "https://riversideca.gov/cityclerk/elections"
+  ],
+  "note": "The county statement of vote for the June 7, 2011 Riverside municipal election was inspected. Its contests are City Council Wards 1, 3, 5 and 7 only. It has no mayoral contest. Riverside elects its mayor every four years, in 2012, 2016, 2020 and 2024. The city clerk elections page states the next mayoral election is on March 7, 2028. The mayor page states that Patricia Lock Dawson was elected in 2020. No vacancy or special mayoral election appears in the official sources inspected."
+ },
+ {
+  "city_id": "0662000",
+  "year": 2012,
+  "status": "complete",
+  "expected_election_dates": [
+   "2012-11-06"
+  ],
+  "source_url": "https://docs.voteinfo.net/docs/SOV_11_06_2012.pdf",
+  "additional_source_urls": [
+   "https://docs.voteinfo.net/docs/20120605_Candidates.pdf"
+  ],
+  "note": "The June 5, 2012 county candidate list shows a seven-candidate Riverside mayor contest with incumbent Loveridge not running. The November 6, 2012 county statement of vote shows a two-candidate mayoral runoff between Rusty Bailey and Ed Adkison. The runoff decided the office and is recorded in riverside_results.json. The June 5 first round is not recorded separately."
+ },
+ {
+  "city_id": "0662000",
+  "year": 2013,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://docs.voteinfo.net/eresults/72/SOV_Book_Final.pdf",
+  "additional_source_urls": [
+   "https://riversideca.gov/cityclerk/elections"
+  ],
+  "note": "The county statement of vote for the June 4, 2013 Riverside municipal election was inspected. Its contests are City Council Wards 2, 4 and 6 only. It has no mayoral contest. Riverside elects its mayor every four years, in 2012, 2016, 2020 and 2024. The city clerk elections page states the next mayoral election is on March 7, 2028. The mayor page states that Patricia Lock Dawson was elected in 2020. No vacancy or special mayoral election appears in the official sources inspected."
+ },
+ {
+  "city_id": "0662000",
+  "year": 2014,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://docs.voteinfo.net/elections/20141104/eresults/Statement_of_votes_FINAL.pdf",
+  "additional_source_urls": [
+   "https://riversideca.gov/cityclerk/elections"
+  ],
+  "note": "The November 4, 2014 county statement of vote was inspected. It has no Riverside mayoral contest and only a city charter measure. Riverside elects its mayor every four years, in 2012, 2016, 2020 and 2024. The city clerk elections page states the next mayoral election is on March 7, 2028. The mayor page states that Patricia Lock Dawson was elected in 2020. No vacancy or special mayoral election appears in the official sources inspected."
+ },
+ {
+  "city_id": "0662000",
+  "year": 2015,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://docs.voteinfo.net/Elections/20150602/docs/Candidate%20List_web.pdf",
+  "additional_source_urls": [
+   "https://riversideca.gov/cityclerk/elections"
+  ],
+  "note": "The county candidate list for the June 2, 2015 Riverside municipal election was inspected. Its contests are City Council Wards 1, 3, 5 and 7 only. It has no mayoral contest. Riverside elects its mayor every four years, in 2012, 2016, 2020 and 2024. The city clerk elections page states the next mayoral election is on March 7, 2028. The mayor page states that Patricia Lock Dawson was elected in 2020. No vacancy or special mayoral election appears in the official sources inspected."
+ },
+ {
+  "city_id": "0662000",
+  "year": 2016,
+  "status": "complete",
+  "expected_election_dates": [
+   "2016-06-07"
+  ],
+  "source_url": "https://docs.voteinfo.net/elections/20160607/eresults/SOVBOOK_07052016.pdf",
+  "additional_source_urls": [
+   "https://docs.voteinfo.net/Elections/20161108/eresults/SOVBOOK_FINAL.pdf",
+   "https://riversideca.gov/cityclerk/elections",
+   "https://library.municode.com/ca/riverside/codes/code_of_ordinances?nodeId=PTICICH_ARTIVCICOMA_S400ENNUTEMAELWA"
+  ],
+  "note": "The June 7, 2016 county statement of vote shows a six-candidate Riverside mayor contest. Rusty Bailey won a majority and the November 8, 2016 county statement of vote has no Riverside mayoral contest, so the June primary decided the office. Winner and runner-up are in riverside_results.json. The majority rule for the Mayor is in Riverside City Charter Sec. 400(c), cited in riverside_results.json."
+ },
+ {
+  "city_id": "0662000",
+  "year": 2017,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://docs.voteinfo.net/Elections/20170606/eresults/sovbook.pdf",
+  "additional_source_urls": [
+   "https://riversideca.gov/cityclerk/elections"
+  ],
+  "note": "The county statement of vote for the June 6, 2017 Riverside general municipal election was inspected. Its contests are City Council Wards 2, 4 and 6 only. It has no mayoral contest. Riverside elects its mayor every four years, in 2012, 2016, 2020 and 2024. The city clerk elections page states the next mayoral election is on March 7, 2028. The mayor page states that Patricia Lock Dawson was elected in 2020. No vacancy or special mayoral election appears in the official sources inspected."
+ },
+ {
+  "city_id": "0662000",
+  "year": 2018,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://docs.voteinfo.net/Elections/20181106/eresults/SOVBOOK.pdf",
+  "additional_source_urls": [
+   "https://riversideca.gov/cityclerk/elections"
+  ],
+  "note": "The November 6, 2018 county statement of vote was inspected. It has no Riverside mayoral contest. Riverside elects its mayor every four years, in 2012, 2016, 2020 and 2024. The city clerk elections page states the next mayoral election is on March 7, 2028. The mayor page states that Patricia Lock Dawson was elected in 2020. No vacancy or special mayoral election appears in the official sources inspected."
+ },
+ {
+  "city_id": "0662000",
+  "year": 2019,
+  "status": "unresolved",
+  "expected_election_dates": [],
+  "source_url": "https://riversideca.gov/cityclerk/elections",
+  "additional_source_urls": [
+   "https://library.municode.com/ca/riverside/codes/code_of_ordinances?nodeId=PTICICH_ARTIVCICOMA_S400ENNUTEMAELWA",
+   "https://library.municode.com/ca/riverside/codes/code_of_ordinances?nodeId=PTICICH_ARTVEL_S500GEMUEL",
+   "https://riversideca.gov/mayor"
+  ],
+  "note": "Unresolved. No official document for 2019 was opened. The current charter text (Sec. 400(a), 500) shows a four-year term and mayoral elections in presidential years, but it was amended on November 3, 2020, so it does not establish the rule that applied in 2019. The pre-2020 charter text and a 2019 county election document were not obtained. The 2016 and 2020 mayoral elections are consistent with a four-year cycle, but the cycle is not inferred as a no-election finding. Text read through api.municode.com (Code of Ordinances, Supplement 33, codified through Ordinance 7776 of June 23, 2026), the same content the Municode pages show."
+ },
+ {
+  "city_id": "0662000",
+  "year": 2020,
+  "status": "complete",
+  "expected_election_dates": [
+   "2020-11-03"
+  ],
+  "source_url": "https://docs.voteinfo.net/Elections/20201103/docs/StatementOfVotesCastRPT.pdf",
+  "additional_source_urls": [
+   "https://docs.voteinfo.net/Elections/20201103/docs/Certification11320.pdf",
+   "https://riversideca.gov/cityclerk/elections"
+  ],
+  "note": "The March 3, 2020 first round held a Riverside mayor contest. The November 3, 2020 county statement of votes cast shows a two-candidate runoff between Patricia Lock Dawson and Andrew S. Melendrez Jr. The runoff decided the office and is recorded in riverside_results.json."
+ },
+ {
+  "city_id": "0662000",
+  "year": 2021,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://library.municode.com/ca/riverside/codes/code_of_ordinances?nodeId=PTICICH_ARTIVCICOMA_S400ENNUTEMAELWA",
+  "additional_source_urls": [
+   "https://library.municode.com/ca/riverside/codes/code_of_ordinances?nodeId=PTICICH_ARTVEL_S500GEMUEL",
+   "https://riversideca.gov/cityclerk/elections",
+   "https://riversideca.gov/mayor"
+  ],
+  "note": "Riverside City Charter Sec. 400(a) sets a four-year term for the Mayor. Sec. 500 says general municipal elections for Mayor are held on the primary election date set by the State in United States Presidential election years. Sec. 500 also names the June 8, 2021 election as a Councilmember election for Wards 2, 4 and 6 only. The 2020 mayoral winner took office after the November 2020 election, and the 2024 mayoral election is recorded in the results file. The city clerk page states the next mayoral election is on March 7, 2028. The charter provisions were amended on November 3, 2020 and apply to this year. No special mayoral election appears in the official sources inspected. Text read through api.municode.com (Code of Ordinances, Supplement 33, codified through Ordinance 7776 of June 23, 2026), the same content the Municode pages show."
+ },
+ {
+  "city_id": "0662000",
+  "year": 2022,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://docs.voteinfo.net/elections/20220607/docs/SOV_PDF.pdf",
+  "additional_source_urls": [
+   "https://riversideca.gov/cityclerk/elections"
+  ],
+  "note": "The June 7, 2022 county statement of vote was inspected. It has no Riverside mayoral contest. The November 2022 results were not opened. Riverside elects its mayor every four years, in 2012, 2016, 2020 and 2024. The city clerk elections page states the next mayoral election is on March 7, 2028. The mayor page states that Patricia Lock Dawson was elected in 2020. No vacancy or special mayoral election appears in the official sources inspected."
+ },
+ {
+  "city_id": "0662000",
+  "year": 2023,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://library.municode.com/ca/riverside/codes/code_of_ordinances?nodeId=PTICICH_ARTIVCICOMA_S400ENNUTEMAELWA",
+  "additional_source_urls": [
+   "https://library.municode.com/ca/riverside/codes/code_of_ordinances?nodeId=PTICICH_ARTVEL_S500GEMUEL",
+   "https://riversideca.gov/cityclerk/elections",
+   "https://riversideca.gov/mayor"
+  ],
+  "note": "Riverside City Charter Sec. 400(a) sets a four-year term for the Mayor. Sec. 500 says general municipal elections for Mayor are held on the primary election date set by the State in United States Presidential election years. Sec. 500 also names the June 8, 2021 election as a Councilmember election for Wards 2, 4 and 6 only. The 2020 mayoral winner took office after the November 2020 election, and the 2024 mayoral election is recorded in the results file. The city clerk page states the next mayoral election is on March 7, 2028. The charter provisions were amended on November 3, 2020 and apply to this year. No special mayoral election appears in the official sources inspected. Text read through api.municode.com (Code of Ordinances, Supplement 33, codified through Ordinance 7776 of June 23, 2026), the same content the Municode pages show."
+ },
+ {
+  "city_id": "0662000",
+  "year": 2024,
+  "status": "complete",
+  "expected_election_dates": [
+   "2024-03-05"
+  ],
+  "source_url": "https://voteinfo.net/sites/g/files/aldnop371/files/ElectionResults/2024/March05/March2024_ElectionSummaryReportRPT_29.pdf",
+  "additional_source_urls": [
+   "https://riversideca.gov/cityclerk/elections",
+   "https://library.municode.com/ca/riverside/codes/code_of_ordinances?nodeId=PTICICH_ARTIVCICOMA_S400ENNUTEMAELWA"
+  ],
+  "note": "The March 5, 2024 county summary report shows the Riverside mayor contest decided in the primary with a majority for Patricia Lock Dawson. The November 5, 2024 county summary report has no Riverside mayoral contest. Winner and runner-up are in riverside_results.json. The majority rule for the Mayor is in Riverside City Charter Sec. 400(c), cited in riverside_results.json."
+ },
+ {
+  "city_id": "0662000",
+  "year": 2025,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://library.municode.com/ca/riverside/codes/code_of_ordinances?nodeId=PTICICH_ARTIVCICOMA_S400ENNUTEMAELWA",
+  "additional_source_urls": [
+   "https://library.municode.com/ca/riverside/codes/code_of_ordinances?nodeId=PTICICH_ARTVEL_S500GEMUEL",
+   "https://riversideca.gov/cityclerk/elections",
+   "https://riversideca.gov/mayor"
+  ],
+  "note": "Riverside City Charter Sec. 400(a) sets a four-year term for the Mayor. Sec. 500 says general municipal elections for Mayor are held on the primary election date set by the State in United States Presidential election years. Sec. 500 also names the June 8, 2021 election as a Councilmember election for Wards 2, 4 and 6 only. The 2020 mayoral winner took office after the November 2020 election, and the 2024 mayoral election is recorded in the results file. The city clerk page states the next mayoral election is on March 7, 2028. The charter provisions were amended on November 3, 2020 and apply to this year. No special mayoral election appears in the official sources inspected. Text read through api.municode.com (Code of Ordinances, Supplement 33, codified through Ordinance 7776 of June 23, 2026), the same content the Municode pages show."
+ },
+ {
+  "city_id": "0662000",
+  "year": 2026,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://voteinfo.net/sites/g/files/aldnop371/files/ElectionResults/2026/Jun26/ElectionSummaryReportRPT_June022026_Final-Certified-Results.pdf",
+  "additional_source_urls": [
+   "https://riversideca.gov/cityclerk/elections"
+  ],
+  "note": "The certified June 2, 2026 county results list Riverside City Council Wards 2, 4 and 6 and Measure Z, with no mayoral contest. The clerk page lists only Ward 2 and Ward 4 council runoffs on November 3, 2026. The next mayoral election is March 7, 2028."
+ }
+]

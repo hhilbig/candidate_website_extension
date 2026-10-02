@@ -1,0 +1,217 @@
+[
+ {
+  "city_id": "4835000",
+  "year": 2010,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://houstontx.gov/citysec/elections/110210.pdf",
+  "additional_source_urls": [
+   "https://houstontx.gov/citysec/elections/electionsindex.html",
+   "https://www.houstontx.gov/mayor/history.html"
+  ],
+  "note": "The city secretary file for the only 2010 Houston election (November 2, 2010) shows charter and drainage propositions and no mayoral contest. Mayor Parker took office after the December 2009 runoff and the 2011 election followed on a two-year cycle."
+ },
+ {
+  "city_id": "4835000",
+  "year": 2011,
+  "status": "complete",
+  "expected_election_dates": [
+   "2011-11-08"
+  ],
+  "source_url": "https://houstontx.gov/citysec/elections/110811.pdf",
+  "additional_source_urls": [
+   "https://houstontx.gov/citysec/elections/electionsindex.html"
+  ],
+  "note": "Parker won a majority on November 8, 2011. No mayoral runoff was held. Results are in houston_results.json."
+ },
+ {
+  "city_id": "4835000",
+  "year": 2012,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://houstontx.gov/citysec/elections/110612.pdf",
+  "additional_source_urls": [
+   "https://houstontx.gov/citysec/elections/electionsindex.html"
+  ],
+  "note": "The city secretary index lists one 2012 election, November 6, with only a council district E contest in the city file. Mayoral elections were held in odd years under two-year terms (2011, 2013)."
+ },
+ {
+  "city_id": "4835000",
+  "year": 2013,
+  "status": "complete",
+  "expected_election_dates": [
+   "2013-11-05"
+  ],
+  "source_url": "https://houstontx.gov/citysec/elections/110513.pdf",
+  "additional_source_urls": [
+   "https://houstontx.gov/citysec/elections/electionsindex.html"
+  ],
+  "note": "Parker won a majority on November 5, 2013. The December 14, 2013 runoff had no mayoral contest. Results are in houston_results.json."
+ },
+ {
+  "city_id": "4835000",
+  "year": 2014,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://houstontx.gov/citysec/elections/electionsindex.html",
+  "additional_source_urls": [
+   "https://www.houstontx.gov/mayor/history.html"
+  ],
+  "note": "The city secretary index lists no Houston election in 2014. The two-year term cycle placed mayoral elections in 2013 and 2015."
+ },
+ {
+  "city_id": "4835000",
+  "year": 2015,
+  "status": "complete",
+  "expected_election_dates": [
+   "2015-12-12"
+  ],
+  "source_url": "https://houstontx.gov/citysec/elections/121215.pdf",
+  "additional_source_urls": [
+   "https://houstontx.gov/citysec/elections/110315.pdf",
+   "https://houstontx.gov/citysec/elections/electionsindex.html",
+   "https://houstontx.gov/abouthouston/citygovernment.html"
+  ],
+  "note": "First round on November 3, 2015 (city file 110315.pdf) was followed by a runoff on December 12, 2015, which decided the office. Only the runoff is recorded."
+ },
+ {
+  "city_id": "4835000",
+  "year": 2016,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://houstontx.gov/citysec/elections/electionsindex.html",
+  "additional_source_urls": [
+   "https://houstontx.gov/abouthouston/citygovernment.html",
+   "https://www.houstontx.gov/mayor/history.html"
+  ],
+  "note": "The city secretary election results index lists the Houston elections held in this period. It lists no Houston election in this year. The city states that the Mayor serves four-year terms; the mayor elected in 2015 took office in January 2016 and the next regular election was in 2019."
+ },
+ {
+  "city_id": "4835000",
+  "year": 2017,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://houstontx.gov/citysec/elections/electionsindex.html",
+  "additional_source_urls": [
+   "https://houstontx.gov/abouthouston/citygovernment.html",
+   "https://www.houstontx.gov/mayor/history.html"
+  ],
+  "note": "The city secretary election results index lists the Houston elections held in this period. It lists no Houston election in this year. The city states that the Mayor serves four-year terms; the mayor elected in 2015 took office in January 2016 and the next regular election was in 2019."
+ },
+ {
+  "city_id": "4835000",
+  "year": 2018,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://houstontx.gov/citysec/elections/electionsindex.html",
+  "additional_source_urls": [
+   "https://houstontx.gov/abouthouston/citygovernment.html",
+   "https://www.houstontx.gov/mayor/history.html"
+  ],
+  "note": "The city secretary election results index lists the Houston elections held in this period. It lists no Houston election in this year. The city states that the Mayor serves four-year terms; the mayor elected in 2015 took office in January 2016 and the next regular election was in 2019."
+ },
+ {
+  "city_id": "4835000",
+  "year": 2019,
+  "status": "complete",
+  "expected_election_dates": [
+   "2019-12-14"
+  ],
+  "source_url": "https://files.harrisvotes.com/harrisvotes/prd/HISTORY/20191214/cumulative.pdf",
+  "additional_source_urls": [
+   "https://houstontx.gov/citysec/elections/110519.pdf",
+   "https://houstontx.gov/citysec/elections/electionsindex.html",
+   "https://houstontx.gov/abouthouston/citygovernment.html",
+   "https://results.enr.clarityelections.com/TX/Fort_Bend/99826/236476/json/en/summary.json"
+  ],
+  "note": "First round on November 5, 2019 (city file 110519.pdf) was followed by a runoff on December 14, 2019, which decided the office. Only the runoff is recorded. The Fort Bend portion of the runoff totals rests on the county's unofficial ENR page; see the results file note."
+ },
+ {
+  "city_id": "4835000",
+  "year": 2020,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://houstontx.gov/citysec/elections/electionsindex.html",
+  "additional_source_urls": [
+   "https://houstontx.gov/abouthouston/citygovernment.html",
+   "https://www.houstontx.gov/mayor/history.html"
+  ],
+  "note": "The city secretary election results index lists the Houston elections held in this period. It lists no Houston election in this year. The city states that the Mayor serves four-year terms; the regular elections fell in 2019 and 2023."
+ },
+ {
+  "city_id": "4835000",
+  "year": 2021,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://houstontx.gov/citysec/elections/electionsindex.html",
+  "additional_source_urls": [
+   "https://houstontx.gov/abouthouston/citygovernment.html",
+   "https://www.houstontx.gov/mayor/history.html"
+  ],
+  "note": "The city secretary election results index lists the Houston elections held in this period. It lists no Houston election in this year. The city states that the Mayor serves four-year terms; the regular elections fell in 2019 and 2023."
+ },
+ {
+  "city_id": "4835000",
+  "year": 2022,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://houstontx.gov/citysec/elections/electionsindex.html",
+  "additional_source_urls": [
+   "https://houstontx.gov/abouthouston/citygovernment.html",
+   "https://www.houstontx.gov/mayor/history.html"
+  ],
+  "note": "The city secretary election results index lists the Houston elections held in this period. It lists no Houston election in this year. The city states that the Mayor serves four-year terms; the regular elections fell in 2019 and 2023."
+ },
+ {
+  "city_id": "4835000",
+  "year": 2023,
+  "status": "complete",
+  "expected_election_dates": [
+   "2023-12-09"
+  ],
+  "source_url": "https://houstontx.gov/citysec/elections/120923.pdf",
+  "additional_source_urls": [
+   "https://houstontx.gov/citysec/elections/110723.pdf",
+   "https://houstontx.gov/citysec/elections/electionsindex.html",
+   "https://houstontx.gov/abouthouston/citygovernment.html"
+  ],
+  "note": "First round on November 7, 2023 (city file 110723.pdf) was followed by a runoff on December 9, 2023, which decided the office. Only the runoff is recorded."
+ },
+ {
+  "city_id": "4835000",
+  "year": 2024,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://houstontx.gov/citysec/elections/electionsindex.html",
+  "additional_source_urls": [
+   "https://www.houstontx.gov/mayor/history.html",
+   "https://houstontx.gov/abouthouston/citygovernment.html"
+  ],
+  "note": "The city secretary election results index lists the Houston elections held in this period. It lists no Houston election in 2024. The mayoral history page shows Whitmire in office from 2024 and the city states mayoral terms are four years."
+ },
+ {
+  "city_id": "4835000",
+  "year": 2025,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://houstontx.gov/citysec/elections/110425.pdf",
+  "additional_source_urls": [
+   "https://houstontx.gov/citysec/elections/121325.pdf",
+   "https://houstontx.gov/citysec/elections/electionsindex.html",
+   "https://houstontx.gov/abouthouston/citygovernment.html"
+  ],
+  "note": "The city secretary files for November 4 and December 13, 2025 (110425.pdf, 121325.pdf) contain only council At-Large Position 4 unexpired term contests and no mayoral contest. Four-year terms put the next regular mayoral election in 2027."
+ },
+ {
+  "city_id": "4835000",
+  "year": 2026,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://houstontx.gov/abouthouston/citygovernment.html",
+  "additional_source_urls": [
+   "https://houstontx.gov/citysec/elections/electionsindex.html",
+   "https://www.houstontx.gov/mayor/history.html"
+  ],
+  "note": "The city states that the Mayor serves a four-year term. The mayor elected in December 2023 serves into 2027, and the city secretary index lists no 2026 mayoral election. The index may not yet list elections scheduled after the date it was inspected."
+ }
+]

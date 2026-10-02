@@ -1,0 +1,126 @@
+[
+ {
+  "city_name": "Newark",
+  "state_abb": "NJ",
+  "roster_place_fips": "3451000",
+  "election_date": "2014-05-13",
+  "election_type": "regular",
+  "stage": "general",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "source_url": "https://www.essexclerk.com/Election/View/51",
+  "source_locator": "Mayor-Newark table, 162/162 precincts: Ras J. Baraka 24,358 (54.06%), Shavar D. Jeffries 20,593 (45.70%), write-in 106",
+  "certification_source_url": "https://www.essexclerk.com/Election/View/51",
+  "additional_source_urls": [
+   "https://www.essexclerk.com/Election/View/52"
+  ],
+  "verification_note": "Essex County Clerk page for the May 13, 2014 nonpartisan municipal election. Baraka has a majority, so this round decided the office. The June 10, 2014 run-off page lists only council seats. Page shows last update April 18, 2016; no certification document was opened.",
+  "candidates": [
+   {
+    "name": "Ras J. Baraka",
+    "role": "winner",
+    "votes": 24358,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Shavar D. Jeffries",
+    "role": "runner_up",
+    "votes": 20593,
+    "candidate_year_id": ""
+   }
+  ]
+ },
+ {
+  "city_name": "Newark",
+  "state_abb": "NJ",
+  "roster_place_fips": "3451000",
+  "election_date": "2018-05-08",
+  "election_type": "regular",
+  "stage": "general",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "source_url": "https://results.enr.clarityelections.com/NJ/Essex/75024/",
+  "source_locator": "Summary table, contest 'Mayor-Newark (Vote For 1)', 162 precincts: Ras BARAKA 22,094 (77.00%), Gayle CHANEYFIELD JENKINS 6,510 (22.69%), Write-In 90",
+  "certification_source_url": "https://www.essexclerk.com/Election/",
+  "additional_source_urls": [
+   "https://www.essexclerk.com/Election/"
+  ],
+  "verification_note": "Essex County Clerk Clarity results for the May 8, 2018 municipal election, listed on the clerk's results index as Unofficial Results. Data read from the summary.json and summary.csv files of the Clarity site, last updated June 6, 2018. Baraka has a majority, so no runoff followed. The Newark run-off of June 12, 2018 (Clarity 75962) lists only East, West and Central Ward council seats, with no mayoral contest. The Clarity page marks results as unofficial; no certification document was opened.",
+  "candidates": [
+   {
+    "name": "Ras J. Baraka",
+    "role": "winner",
+    "votes": 22094,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Gayle Chaneyfield Jenkins",
+    "role": "runner_up",
+    "votes": 6510,
+    "candidate_year_id": ""
+   }
+  ]
+ },
+ {
+  "city_name": "Newark",
+  "state_abb": "NJ",
+  "roster_place_fips": "3451000",
+  "election_date": "2022-05-10",
+  "election_type": "regular",
+  "stage": "general",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "source_url": "https://results.enr.clarityelections.com/NJ/Essex/112990/",
+  "source_locator": "Summary table, contest 'For Mayor (Newark) (Vote For 1)', 168 of 168 precincts: Ras Baraka 14,777 (83.09%), Sheila Montague 3,007 (16.91%)",
+  "certification_source_url": "https://www.essexclerk.com/Election/",
+  "additional_source_urls": [
+   "https://www.essexclerk.com/Election/"
+  ],
+  "verification_note": "Essex County Clerk Clarity results for the May 10, 2022 municipal election, read from the summary.json and summary.csv files, last updated May 18, 2022. Baraka has a majority, so no runoff followed. The page is the county clerk's results page; no certification document was opened.",
+  "candidates": [
+   {
+    "name": "Ras Baraka",
+    "role": "winner",
+    "votes": 14777,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Sheila Montague",
+    "role": "runner_up",
+    "votes": 3007,
+    "candidate_year_id": ""
+   }
+  ]
+ },
+ {
+  "city_name": "Newark",
+  "state_abb": "NJ",
+  "roster_place_fips": "3451000",
+  "election_date": "2026-05-12",
+  "election_type": "regular",
+  "stage": "general",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "source_url": "https://results.enr.clarityelections.com/NJ/Essex/126285/",
+  "source_locator": "Summary table, contest 'Mayor - Newark (Vote For 1)', 173 of 173 precincts: Ras J. BARAKA 13,661 (70.10%), Jhamar D. YOUNGBLOOD 3,274 (16.80%), Debra L. Salters 921, Sheila A. Montague 653, Nasheedah S. Singleton 102 and four others",
+  "certification_source_url": "https://www.essexclerk.com/Election/",
+  "additional_source_urls": [
+   "https://www.essexclerk.com/Election/"
+  ],
+  "verification_note": "Essex County Clerk Clarity results page 'Newark May Municipal Results 2026' for the May 12, 2026 election, read from the summary.json and summary.csv files, last updated May 20, 2026. Baraka has 70.10 percent, a majority, so no runoff followed. The page is the county clerk's results page; no certification document was opened.",
+  "candidates": [
+   {
+    "name": "Ras J. Baraka",
+    "role": "winner",
+    "votes": 13661,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Jhamar D. Youngblood",
+    "role": "runner_up",
+    "votes": 3274,
+    "candidate_year_id": ""
+   }
+  ]
+ }
+]

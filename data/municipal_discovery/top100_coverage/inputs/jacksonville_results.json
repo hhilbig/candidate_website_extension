@@ -1,0 +1,130 @@
+[
+ {
+  "city_name": "Jacksonville",
+  "state_abb": "FL",
+  "roster_place_fips": "1235000",
+  "election_date": "2011-05-17",
+  "election_type": "regular",
+  "stage": "general",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "source_url": "https://www.duvalelections.gov/DocumentCenter/View/1504",
+  "source_locator": "2011 Duval Unitary Gen. Statement of Votes Cast, Mayor section, jurisdiction-wide Total row (PDF text lines at end of Mayor precinct block)",
+  "certification_source_url": "https://www.duvalelections.gov/Archive.aspx?ADID=95",
+  "additional_source_urls": [
+   "https://www.duvalelections.gov/Archive.aspx?ADID=95",
+   "https://www.duvalelections.gov/DocumentCenter/View/1503"
+  ],
+  "verification_note": "The official Statement of Votes Cast for the 2011 Duval Unitary General election lists Alvin Brown (DEM) 97307 and Mike Hogan (REP) 95645 in the jurisdiction-wide total row. The first election document (View/1503) shows Brown with 37747 and Hogan with 52072 among three or more candidates, so no candidate had a majority and the general election decided the office. The election date of May 17, 2011 was not printed in the extracted PDF text; it comes from the Supervisor of Elections general election summary reported in search results and was not opened directly.",
+  "candidates": [
+   {
+    "name": "Alvin Brown",
+    "role": "winner",
+    "votes": 97307,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Mike Hogan",
+    "role": "runner_up",
+    "votes": 95645,
+    "candidate_year_id": ""
+   }
+  ]
+ },
+ {
+  "city_name": "Jacksonville",
+  "state_abb": "FL",
+  "roster_place_fips": "1235000",
+  "election_date": "2015-05-19",
+  "election_type": "regular",
+  "stage": "general",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "source_url": "https://enr.electionsfl.org/DUV/Summary/1276",
+  "source_locator": "Mayor contest summary, 2015 Duval General Election",
+  "certification_source_url": "https://www.duvalelections.gov/Archive.aspx?ADID=57",
+  "additional_source_urls": [
+   "https://www.duvalelections.gov/Archive.aspx?ADID=57"
+  ],
+  "verification_note": "The Supervisor of Elections results page for the 2015 Duval General Election, dated May 19, 2015, shows Lenny Curry (REP) 103626 and Alvin Brown (DEM) 98353, with 201979 total mayoral votes. The first election on March 24, 2015 did not decide the office; its results page was not opened.",
+  "candidates": [
+   {
+    "name": "Lenny Curry",
+    "role": "winner",
+    "votes": 103626,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Alvin Brown",
+    "role": "runner_up",
+    "votes": 98353,
+    "candidate_year_id": ""
+   }
+  ]
+ },
+ {
+  "city_name": "Jacksonville",
+  "state_abb": "FL",
+  "roster_place_fips": "1235000",
+  "election_date": "2019-03-19",
+  "election_type": "regular",
+  "stage": "primary_nominating",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "source_url": "https://enr.electionsfl.org/DUV/Summary/2085/",
+  "source_locator": "Mayor contest summary, 2019 Duval First Election",
+  "certification_source_url": "https://www.duvalelections.gov/Archive.aspx?ADID=53",
+  "additional_source_urls": [
+   "https://www.duvalelections.gov/Archive.aspx?ADID=53",
+   "https://enr.electionsfl.org/DUV/Summary/2125/",
+   "https://library.municode.com/fl/jacksonville/codes/code_of_ordinances?nodeId=TITIXELCO_CH350ELELRECA_PT1GEPR_S350.101GECOGOEL"
+  ],
+  "verification_note": "The Supervisor of Elections results page for the 2019 Duval First Election, March 19, 2019, shows Lenny Curry (REP) 84604 votes, 57.63 percent of 146817, and Anna Lopez Brosche (REP) 35425 votes. The other candidates were Omega Allen 15465, Jimmy Hill 11063 and write-ins 260. Jacksonville Code of Ordinances Sec. 350.102(a), read through the Municode API (nodeId TITIXELCO_CH350ELELRECA_PT1GEPR_S350.102COGOEL), states that each candidate receiving a majority of the votes cast in a first consolidated government election is declared elected, and that a general election is held only where no candidate receives a majority. Sec. 350.101(c) requires election by majority. Curry won a majority, so the first election decided the office. The current text of Sec. 350.102 includes a 2025 amendment (Ord. 2025-765-E); the majority rule dates from Ord. 78-367-148 and Ord. 93-1267-1332, and the 2019 general election page shows no mayoral contest, consistent with the rule.",
+  "candidates": [
+   {
+    "name": "Lenny Curry",
+    "role": "winner",
+    "votes": 84604,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Anna Lopez Brosche",
+    "role": "runner_up",
+    "votes": 35425,
+    "candidate_year_id": ""
+   }
+  ],
+  "decisive_stage_source_url": "https://library.municode.com/fl/jacksonville/codes/code_of_ordinances?nodeId=TITIXELCO_CH350ELELRECA_PT1GEPR_S350.102COGOEL"
+ },
+ {
+  "city_name": "Jacksonville",
+  "state_abb": "FL",
+  "roster_place_fips": "1235000",
+  "election_date": "2023-05-16",
+  "election_type": "regular",
+  "stage": "general",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "source_url": "https://enr.electionsfl.org/DUV/Summary/3385/",
+  "source_locator": "Mayor contest summary, 2023 Duval General Election",
+  "certification_source_url": "https://www.duvalelections.gov/Archive.aspx?ADID=49",
+  "additional_source_urls": [
+   "https://www.duvalelections.gov/Archive.aspx?ADID=49"
+  ],
+  "verification_note": "The Supervisor of Elections results page for the 2023 Duval General Election, May 16, 2023, shows Donna Deegan (DEM) 113226 and Daniel Davis (REP) 104172, with 186 of 186 precincts reporting. The first election on March 21, 2023 did not decide the office.",
+  "candidates": [
+   {
+    "name": "Donna Deegan",
+    "role": "winner",
+    "votes": 113226,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Daniel Davis",
+    "role": "runner_up",
+    "votes": 104172,
+    "candidate_year_id": ""
+   }
+  ]
+ }
+]

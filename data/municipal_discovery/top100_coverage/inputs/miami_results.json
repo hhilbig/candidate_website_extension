@@ -1,0 +1,127 @@
+[
+ {
+  "city_name": "Miami",
+  "state_abb": "FL",
+  "roster_place_fips": "1245000",
+  "election_date": "2013-11-05",
+  "election_type": "regular",
+  "stage": "general",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "source_url": "https://enr.electionsfl.org/DAD/3040/Summary/",
+  "source_locator": "Miami mayor contest table, candidate vote totals",
+  "certification_source_url": "https://enr.electionsfl.org/DAD/3040/Summary/",
+  "additional_source_urls": [
+   "https://www.votemiamidade.gov/elections/data/results-archive.page"
+  ],
+  "verification_note": "Miami-Dade ENR summary, MIAMI: MAYOR, marked Results are Official, 128 precincts. Four candidates total 26169 votes.",
+  "candidates": [
+   {
+    "name": "Tomas P. Regalado",
+    "role": "winner",
+    "votes": 20414,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Jeff Benjamin",
+    "role": "runner_up",
+    "votes": 2543,
+    "candidate_year_id": ""
+   }
+  ]
+ },
+ {
+  "city_name": "Miami",
+  "state_abb": "FL",
+  "roster_place_fips": "1245000",
+  "election_date": "2017-11-07",
+  "election_type": "regular",
+  "stage": "general",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "source_url": "https://enr.electionsfl.org/DAD/3007/Summary/",
+  "source_locator": "Miami mayor contest table, candidate vote totals",
+  "certification_source_url": "https://enr.electionsfl.org/DAD/3007/Summary/",
+  "additional_source_urls": [
+   "https://www.votemiamidade.gov/elections/data/results-archive.page"
+  ],
+  "verification_note": "Miami-Dade ENR summary, MIAMI: MAYOR. Four candidates total 25471 votes. Cynthia Jaquith (1394) finished second, ahead of Armbrister (1392).",
+  "candidates": [
+   {
+    "name": "Francis X. Suarez",
+    "role": "winner",
+    "votes": 21856,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Cynthia Jaquith",
+    "role": "runner_up",
+    "votes": 1394,
+    "candidate_year_id": ""
+   }
+  ]
+ },
+ {
+  "city_name": "Miami",
+  "state_abb": "FL",
+  "roster_place_fips": "1245000",
+  "election_date": "2021-11-02",
+  "election_type": "regular",
+  "stage": "general",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "source_url": "https://enr.electionsfl.org/DAD/3110/Summary/",
+  "source_locator": "Miami mayor contest table, candidate vote totals",
+  "certification_source_url": "https://enr.electionsfl.org/DAD/3110/Summary/",
+  "additional_source_urls": [
+   "https://www.votemiamidade.gov/elections/data/results-archive.page"
+  ],
+  "verification_note": "Miami-Dade ENR summary, Miami Mayor, 145 precincts reporting. Five candidates total 27330 votes. Suarez had a majority.",
+  "candidates": [
+   {
+    "name": "Francis X. Suarez",
+    "role": "winner",
+    "votes": 21485,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Max Martinez",
+    "role": "runner_up",
+    "votes": 3167,
+    "candidate_year_id": ""
+   }
+  ]
+ },
+ {
+  "city_name": "Miami",
+  "state_abb": "FL",
+  "roster_place_fips": "1245000",
+  "election_date": "2025-12-09",
+  "election_type": "regular",
+  "stage": "runoff",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "source_url": "https://enr.electionsfl.org/DAD/3900/Summary/",
+  "source_locator": "Miami mayor contest table, candidate vote totals",
+  "certification_source_url": "https://enr.electionsfl.org/DAD/3900/Summary/",
+  "additional_source_urls": [
+   "https://www.votemiamidade.gov/elections/data/results-archive.page",
+   "https://enr.electionsfl.org/DAD/3882/Summary/"
+  ],
+  "verification_note": "Miami-Dade ENR summary for the Miami Run-Off Election, Miami Mayor, 139 of 139 precincts, Results are official. Total 37244 votes. The 2025-11-04 first round is an earlier round in the same year (ENR 3882).",
+  "candidates": [
+   {
+    "name": "Eileen Higgins",
+    "role": "winner",
+    "votes": 22145,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Emilio T. Gonzalez",
+    "role": "runner_up",
+    "votes": 15099,
+    "candidate_year_id": ""
+   }
+  ]
+ }
+]

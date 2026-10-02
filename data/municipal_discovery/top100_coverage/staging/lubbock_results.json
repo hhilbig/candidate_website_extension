@@ -1,0 +1,257 @@
+[
+ {
+  "city_name": "Lubbock",
+  "state_abb": "TX",
+  "roster_place_fips": "4845000",
+  "election_date": "2010-05-08",
+  "election_type": "regular",
+  "stage": "general",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "source_url": "https://web.archive.org/web/20200414144948id_/http://assets01.aws.connect.clarityelections.com/Assets/Connect/RootPublish/lubbock-tx.connect.clarityelections.com/HistoricalElectionResults/2010/May8/CumulativeReport.pdf",
+  "source_locator": "Page 1, Lubbock Mayor, Vote For 1, Total column",
+  "certification_source_url": "https://web.archive.org/web/20200414144948id_/http://assets01.aws.connect.clarityelections.com/Assets/Connect/RootPublish/lubbock-tx.connect.clarityelections.com/HistoricalElectionResults/2010/May8/CumulativeReport.pdf",
+  "additional_source_urls": [
+   "https://web.archive.org/web/20200414144948/https://www.votelubbock.org/election-information/historical-election-results/"
+  ],
+  "verification_note": "The county elections office posts this report as Official Final Results in its historical results index. The report header reads Unofficial, so certification is recorded as source_verified. Tom Martin 7,696 (67.02 percent), Cody R. Smart 2,447, Roger Settler 794, Richard Quade 546. Martin won a majority, so no runoff was needed.",
+  "candidates": [
+   {
+    "name": "Tom Martin",
+    "role": "winner",
+    "votes": 7696,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Cody R. Smart",
+    "role": "runner_up",
+    "votes": 2447,
+    "candidate_year_id": ""
+   }
+  ]
+ },
+ {
+  "city_name": "Lubbock",
+  "state_abb": "TX",
+  "roster_place_fips": "4845000",
+  "election_date": "2012-05-12",
+  "election_type": "regular",
+  "stage": "general",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "source_url": "https://web.archive.org/web/20200414144948id_/http://assets01.aws.connect.clarityelections.com/Assets/Connect/RootPublish/lubbock-tx.connect.clarityelections.com/HistoricalElectionResults/2012/May12/CityofLubbockofficial.pdf",
+  "source_locator": "Page 1, Lubbock Mayor, Vote For 1, Total column",
+  "certification_source_url": "https://web.archive.org/web/20200414144948id_/http://assets01.aws.connect.clarityelections.com/Assets/Connect/RootPublish/lubbock-tx.connect.clarityelections.com/HistoricalElectionResults/2012/May12/CityofLubbockofficial.pdf",
+  "additional_source_urls": [
+   "https://web.archive.org/web/20200414144948/https://www.votelubbock.org/election-information/historical-election-results/"
+  ],
+  "verification_note": "The county elections office posts this report as Official Final Results in its historical results index. The report is headed Official. Glen Robertson 12,457 (65.36 percent) defeated Tom Martin 6,603. Two candidates only, so no runoff.",
+  "candidates": [
+   {
+    "name": "Glen Robertson",
+    "role": "winner",
+    "votes": 12457,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Tom Martin",
+    "role": "runner_up",
+    "votes": 6603,
+    "candidate_year_id": ""
+   }
+  ]
+ },
+ {
+  "city_name": "Lubbock",
+  "state_abb": "TX",
+  "roster_place_fips": "4845000",
+  "election_date": "2016-05-07",
+  "election_type": "regular",
+  "stage": "general",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "source_url": "https://web.archive.org/web/20200414144948id_/http://assets01.aws.connect.clarityelections.com/Assets/Connect/RootPublish/lubbock-tx.connect.clarityelections.com/HistoricalElectionResults/2016/May7/CityofLubbockCumulative.pdf",
+  "source_locator": "Page 1, Lubbock Mayor, Vote For 1, Total column",
+  "certification_source_url": "https://web.archive.org/web/20200414144948id_/http://assets01.aws.connect.clarityelections.com/Assets/Connect/RootPublish/lubbock-tx.connect.clarityelections.com/HistoricalElectionResults/2016/May7/CityofLubbockCumulative.pdf",
+  "additional_source_urls": [
+   "https://web.archive.org/web/20200414144948/https://www.votelubbock.org/election-information/historical-election-results/",
+   "https://web.archive.org/web/20200414144948id_/http://assets01.aws.connect.clarityelections.com/Assets/Connect/RootPublish/lubbock-tx.connect.clarityelections.com/HistoricalElectionResults/2016/June25/City%20of%20Lubbock%20Cumulative%20Report.pdf"
+  ],
+  "verification_note": "The county elections office posts this report as Official Final Results in its historical results index. The report is headed Official. Dan Pope 11,134 (52.64 percent) won a majority over Todd Klein 6,672, Victor Hernandez 1,825 and Ysidro Sid Gutierrez 1,522. The June 25, 2016 city runoff report lists a municipal court judge and council contests only, with no mayoral contest.",
+  "candidates": [
+   {
+    "name": "Dan Pope",
+    "role": "winner",
+    "votes": 11134,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Todd Klein",
+    "role": "runner_up",
+    "votes": 6672,
+    "candidate_year_id": ""
+   }
+  ]
+ },
+ {
+  "city_name": "Lubbock",
+  "state_abb": "TX",
+  "roster_place_fips": "4845000",
+  "election_date": "2018-05-05",
+  "election_type": "regular",
+  "stage": "general",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "source_url": "https://web.archive.org/web/20200414144948id_/http://assets01.aws.connect.clarityelections.com/Assets/Connect/RootPublish/lubbock-tx.connect.clarityelections.com/HistoricalElectionResults/2018/May5/CityofLubbockCumulative.pdf",
+  "source_locator": "Page 1, General Election Lubbock Mayor, Total column",
+  "certification_source_url": "https://web.archive.org/web/20200414144948id_/http://assets01.aws.connect.clarityelections.com/Assets/Connect/RootPublish/lubbock-tx.connect.clarityelections.com/HistoricalElectionResults/2018/May5/CityofLubbockCumulative.pdf",
+  "additional_source_urls": [
+   "https://web.archive.org/web/20200414144948/https://www.votelubbock.org/election-information/historical-election-results/"
+  ],
+  "verification_note": "The county elections office posts this report as Official Final Results in its historical results index. Official results run dated 05/15/2018. Dan Pope 11,394 (78.02 percent), Johnathan Cothran 2,686, Stephen Sanders (write-in) 524. Majority winner, no runoff.",
+  "candidates": [
+   {
+    "name": "Dan Pope",
+    "role": "winner",
+    "votes": 11394,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Johnathan Cothran",
+    "role": "runner_up",
+    "votes": 2686,
+    "candidate_year_id": ""
+   }
+  ]
+ },
+ {
+  "city_name": "Lubbock",
+  "state_abb": "TX",
+  "roster_place_fips": "4845000",
+  "election_date": "2020-11-03",
+  "election_type": "regular",
+  "stage": "general",
+  "verification_status": "verified_decisive",
+  "certification_status": "certified",
+  "source_url": "https://www.mylubbock.us/DocumentCenter/View/5993",
+  "source_locator": "Page 1, Lubbock Mayor, Total column",
+  "certification_source_url": "https://www.mylubbock.us/856/Results-for-Previous-Elections-Resultado",
+  "additional_source_urls": [
+   "https://www.mylubbock.us/856/Results-for-Previous-Elections-Resultado",
+   "https://www.mylubbock.us/DocumentCenter/View/5995"
+  ],
+  "verification_note": "City of Lubbock official cumulative results run 11/10/2020 for the November 3, 2020 general election. Dan Pope 49,064 (55.73 percent), Stephen Sanders 38,981. The city index lists Resolution 2020-R0394 canvassing the returns. The regular May 2, 2020 election was moved to November 3, 2020; the city index lists no other 2020 city election.",
+  "candidates": [
+   {
+    "name": "Dan Pope",
+    "role": "winner",
+    "votes": 49064,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Stephen Sanders",
+    "role": "runner_up",
+    "votes": 38981,
+    "candidate_year_id": ""
+   }
+  ]
+ },
+ {
+  "city_name": "Lubbock",
+  "state_abb": "TX",
+  "roster_place_fips": "4845000",
+  "election_date": "2022-05-07",
+  "election_type": "regular",
+  "stage": "general",
+  "verification_status": "verified_decisive",
+  "certification_status": "certified",
+  "source_url": "https://www.mylubbock.us/DocumentCenter/View/6005",
+  "source_locator": "Page 1, Lubbock Mayor, Total column",
+  "certification_source_url": "https://www.mylubbock.us/856/Results-for-Previous-Elections-Resultado",
+  "additional_source_urls": [
+   "https://www.mylubbock.us/856/Results-for-Previous-Elections-Resultado",
+   "https://www.mylubbock.us/DocumentCenter/View/6004"
+  ],
+  "verification_note": "City of Lubbock official cumulative results run 05/14/2022 for the May 7, 2022 general election. Tray Payne 12,986 (67.65 percent) won a majority. Adam Hernandez 3,572 placed second, ahead of Stephen Sanders 1,692, Gulrez Khan 604 and Epifanio Garza 343. The city index lists Resolution 2022-R0247 canvassing the returns and no runoff.",
+  "candidates": [
+   {
+    "name": "Tray Payne",
+    "role": "winner",
+    "votes": 12986,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Adam Hernandez",
+    "role": "runner_up",
+    "votes": 3572,
+    "candidate_year_id": ""
+   }
+  ]
+ },
+ {
+  "city_name": "Lubbock",
+  "state_abb": "TX",
+  "roster_place_fips": "4845000",
+  "election_date": "2024-06-15",
+  "election_type": "regular",
+  "stage": "runoff",
+  "verification_status": "verified_decisive",
+  "certification_status": "certified",
+  "source_url": "https://www.mylubbock.us/DocumentCenter/View/6024",
+  "source_locator": "Page 1, Lubbock Mayor, Total column (June 15, 2024 runoff cumulative)",
+  "certification_source_url": "https://www.mylubbock.us/856/Results-for-Previous-Elections-Resultado",
+  "additional_source_urls": [
+   "https://www.mylubbock.us/856/Results-for-Previous-Elections-Resultado",
+   "https://www.mylubbock.us/DocumentCenter/View/6019",
+   "https://www.mylubbock.us/DocumentCenter/View/6021",
+   "https://www.mylubbock.us/DocumentCenter/View/6020"
+  ],
+  "verification_note": "City of Lubbock official runoff cumulative results run 06/21/2024. Mark McBrayer 11,891 (72.16 percent) defeated Steve Massengale 4,587. The May 4, 2024 general election was the earlier round: McBrayer 11,552, Massengale 8,739, Adam Hernandez 6,315 (cumulative report https://www.mylubbock.us/DocumentCenter/View/6019). The city index lists Resolution 2024-R0302 canvassing the runoff.",
+  "candidates": [
+   {
+    "name": "Mark McBrayer",
+    "role": "winner",
+    "votes": 11891,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Steve Massengale",
+    "role": "runner_up",
+    "votes": 4587,
+    "candidate_year_id": ""
+   }
+  ]
+ },
+ {
+  "city_name": "Lubbock",
+  "state_abb": "TX",
+  "roster_place_fips": "4845000",
+  "election_date": "2026-05-02",
+  "election_type": "regular",
+  "stage": "general",
+  "verification_status": "verified_decisive",
+  "certification_status": "certified",
+  "source_url": "https://www.mylubbock.us/DocumentCenter/View/8311",
+  "source_locator": "Page 1, City of Lubbock Mayor, Total column",
+  "certification_source_url": "https://www.mylubbock.us/856/Results-for-Previous-Elections-Resultado",
+  "additional_source_urls": [
+   "https://www.mylubbock.us/856/Results-for-Previous-Elections-Resultado",
+   "https://www.mylubbock.us/DocumentCenter/View/8310"
+  ],
+  "verification_note": "City of Lubbock official cumulative report run 05/08/2026 for the May 2, 2026 general election. Mark McBrayer 6,779 (70.34 percent) won a majority over Stephen J. Sanders 1,853, Peggy Bohmfalk 751 and G. Todd Winans 255. No mayoral runoff appears in the city index, which lists only a Council District 4 runoff on August 1, 2026. The city index lists Resolution 2026-R0194 canvassing the returns.",
+  "candidates": [
+   {
+    "name": "Mark McBrayer",
+    "role": "winner",
+    "votes": 6779,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Stephen J. Sanders",
+    "role": "runner_up",
+    "votes": 1853,
+    "candidate_year_id": ""
+   }
+  ]
+ }
+]

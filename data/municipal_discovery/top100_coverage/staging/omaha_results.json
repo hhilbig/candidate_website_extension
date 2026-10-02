@@ -1,0 +1,126 @@
+[
+ {
+  "city_name": "Omaha",
+  "state_abb": "NE",
+  "roster_place_fips": "3137000",
+  "election_date": "2013-05-14",
+  "election_type": "regular",
+  "stage": "general",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "source_url": "https://www.votedouglascounty-ne.gov/elections/2013/General/G13ResultsSummary2013-05-14.htm",
+  "source_locator": "Omaha Mayor, Summary Report",
+  "certification_source_url": "https://www.votedouglascounty-ne.gov/election_results.aspx",
+  "additional_source_urls": [
+   "https://www.votedouglascounty-ne.gov/city_elections.aspx"
+  ],
+  "verification_note": "Douglas County Election Commission summary results for the nonpartisan city general election. The two top primary finishers advanced to this general election, so it decided the office. Report run 05/24/13, labeled Official Results; 202 of 202 precincts. Mayor totals: Jean Stothert 48290, Jim Suttle 36120, write-ins 361. Winner and runner-up chosen by votes.",
+  "candidates": [
+   {
+    "name": "Jean Stothert",
+    "role": "winner",
+    "votes": 48290,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Jim Suttle",
+    "role": "runner_up",
+    "votes": 36120,
+    "candidate_year_id": ""
+   }
+  ]
+ },
+ {
+  "city_name": "Omaha",
+  "state_abb": "NE",
+  "roster_place_fips": "3137000",
+  "election_date": "2017-05-09",
+  "election_type": "regular",
+  "stage": "general",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "source_url": "https://www.votedouglascounty-ne.gov/elections/2017/General/LG17ResultsSummary2017-05-09.htm",
+  "source_locator": "Omaha Mayor, Summary Report",
+  "certification_source_url": "https://www.votedouglascounty-ne.gov/election_results.aspx",
+  "additional_source_urls": [
+   "https://www.votedouglascounty-ne.gov/city_elections.aspx"
+  ],
+  "verification_note": "Douglas County Election Commission summary results for the nonpartisan city general election. The two top primary finishers advanced to this general election, so it decided the office. Labeled Official Results; 190 of 190 precincts. Mayor totals: Jean Stothert 52509, Heath Mello 46761, write-ins 209. Winner and runner-up chosen by votes.",
+  "candidates": [
+   {
+    "name": "Jean Stothert",
+    "role": "winner",
+    "votes": 52509,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Heath Mello",
+    "role": "runner_up",
+    "votes": 46761,
+    "candidate_year_id": ""
+   }
+  ]
+ },
+ {
+  "city_name": "Omaha",
+  "state_abb": "NE",
+  "roster_place_fips": "3137000",
+  "election_date": "2021-05-11",
+  "election_type": "regular",
+  "stage": "general",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "source_url": "https://www.votedouglascounty-ne.gov/elections/2021/General/LG21ResultsSummary.pdf",
+  "source_locator": "page 2, For Omaha Mayor",
+  "certification_source_url": "https://www.votedouglascounty-ne.gov/election_results.aspx",
+  "additional_source_urls": [
+   "https://www.votedouglascounty-ne.gov/city_elections.aspx"
+  ],
+  "verification_note": "Douglas County Election Commission summary results for the nonpartisan city general election. The two top primary finishers advanced to this general election, so it decided the office. Labeled OFFICIAL RESULTS, report generated 05/27/2021. Mayor totals: Jean Stothert 62646, RJ Neary 33822, write-ins 859. Winner and runner-up chosen by votes.",
+  "candidates": [
+   {
+    "name": "Jean Stothert",
+    "role": "winner",
+    "votes": 62646,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "RJ Neary",
+    "role": "runner_up",
+    "votes": 33822,
+    "candidate_year_id": ""
+   }
+  ]
+ },
+ {
+  "city_name": "Omaha",
+  "state_abb": "NE",
+  "roster_place_fips": "3137000",
+  "election_date": "2025-05-13",
+  "election_type": "regular",
+  "stage": "general",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "source_url": "https://www.votedouglascounty-ne.gov/elections/2025/General/LG25ResultsSummary.pdf",
+  "source_locator": "page 1-2, For Omaha Mayor",
+  "certification_source_url": "https://www.votedouglascounty-ne.gov/election_results.aspx",
+  "additional_source_urls": [
+   "https://www.votedouglascounty-ne.gov/city_elections.aspx"
+  ],
+  "verification_note": "Douglas County Election Commission summary results for the nonpartisan city general election. The two top primary finishers advanced to this general election, so it decided the office. Labeled OFFICIAL RESULTS. Mayor totals: John W. Ewing, Jr. 53671, Jean Stothert 40531, write-ins 267. Winner and runner-up chosen by votes.",
+  "candidates": [
+   {
+    "name": "John W. Ewing, Jr.",
+    "role": "winner",
+    "votes": 53671,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Jean Stothert",
+    "role": "runner_up",
+    "votes": 40531,
+    "candidate_year_id": ""
+   }
+  ]
+ }
+]

@@ -1,0 +1,164 @@
+[
+ {
+  "city_name": "Oakland",
+  "state_abb": "CA",
+  "roster_place_fips": "0653000",
+  "election_date": "2010-11-02",
+  "election_type": "regular",
+  "stage": "ranked_choice_final",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "source_url": "https://acvote.alamedacountyca.gov/acvote-assets/pdf/elections/2010/11022010/results/rcv/oakland/mayor/november-2-2010-pass-report-oakland-mayor.pdf",
+  "source_locator": "Pass 9 Final State table (last page of the pass report), Mayor - Oakland (RCV)",
+  "certification_source_url": "https://acvote.alamedacountyca.gov/acvote-assets/pdf/elections/2010/11022010/results/rcv/oakland/mayor/november-2-2010-pass-report-oakland-mayor.pdf",
+  "additional_source_urls": [
+   "https://acvote.alamedacountyca.gov/acvote-assets/pdf/elections/2010/11022010/results/rcv/oakland/mayor/november-2-2010-comprehensive-results-report-oakland-mayor.pdf",
+   "https://acvote.alamedacountyca.gov/acvote-assets/pdf/elections/2010/11022010/results/november-2-2010-summary-results-report.pdf"
+  ],
+  "verification_note": "Alameda County Registrar of Voters RCV pass report for the November 2, 2010 General Election (run date 11/19/2010), contest Mayor - Oakland (RCV). Round 1 first choices: Perata 40,342; Quan 29,266; Kaplan 25,813. After nine passes Jean Quan is marked WINNER with 53,897 votes (50.96%) and Don Perata has 51,872 (49.04%) in the final round. Final-round totals are used. The county summary report for the date lists the Oakland mayor contest.",
+  "candidates": [
+   {
+    "name": "Jean Quan",
+    "role": "winner",
+    "votes": 53897,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Don Perata",
+    "role": "runner_up",
+    "votes": 51872,
+    "candidate_year_id": ""
+   }
+  ]
+ },
+ {
+  "city_name": "Oakland",
+  "state_abb": "CA",
+  "roster_place_fips": "0653000",
+  "election_date": "2014-11-04",
+  "election_type": "regular",
+  "stage": "ranked_choice_final",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "source_url": "https://acvote.alamedacountyca.gov/acvote-assets/pdf/elections/2014/11042014/results/rcv/oakland/mayor/nov-4-2014-pass-report-mayor-oakland.pdf",
+  "source_locator": "Pass 15 Final State table (last page of the pass report), Mayor - Oakland (RCV)",
+  "certification_source_url": "https://acvote.alamedacountyca.gov/acvote-assets/pdf/elections/2014/11042014/results/rcv/oakland/mayor/nov-4-2014-pass-report-mayor-oakland.pdf",
+  "additional_source_urls": [
+   "https://acvote.alamedacountyca.gov/acvote-assets/pdf/elections/2014/11042014/results/rcv/oakland/mayor/nov-4-2014-comprehensive-results-mayor-oakland.pdf",
+   "https://acvote.alamedacountyca.gov/acvote-assets/pdf/elections/2014/11042014/results/nov-4-2014-summary-results-report.pdf"
+  ],
+  "verification_note": "Alameda County Registrar of Voters RCV pass report for the November 4, 2014 General Election (run date 11/12/2014), contest Mayor - Oakland (RCV). Round 1 first choices: Schaaf 30,041; Quan 15,808; Kaplan 14,693. After fifteen passes Libby Schaaf is marked WINNER with 48,806 votes (63.20% of continuing ballots) and Rebecca Kaplan has 28,421 (36.80%) in the final round. Final-round totals are used.",
+  "candidates": [
+   {
+    "name": "Libby Schaaf",
+    "role": "winner",
+    "votes": 48806,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Rebecca Kaplan",
+    "role": "runner_up",
+    "votes": 28421,
+    "candidate_year_id": ""
+   }
+  ]
+ },
+ {
+  "city_name": "Oakland",
+  "state_abb": "CA",
+  "roster_place_fips": "0653000",
+  "election_date": "2018-11-06",
+  "election_type": "regular",
+  "stage": "ranked_choice",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "source_url": "https://alamedacountyca.gov/rovresults/rcv/236/OaklandMayor/Pass%20Report.pdf",
+  "source_locator": "Pass 0 Final State table, Mayor - Oakland (RCV), Load Type Complete",
+  "certification_source_url": "https://alamedacountyca.gov/rovresults/rcv/236/OaklandMayor/Pass%20Report.pdf",
+  "additional_source_urls": [
+   "https://alamedacountyca.gov/rovresults/rcv/236/OaklandMayor/comprehensive_report.pdf",
+   "https://alamedacountyca.gov/rovresults/rcv/236/rcvresults_100100.htm",
+   "https://alamedacountyca.gov/rovresults/236/indexA.htm"
+  ],
+  "verification_note": "Alameda County Registrar of Voters RCV results report for the November 6, 2018 General Election (run date 12/4/2018), contest Mayor - Oakland (RCV). Libby Schaaf is marked WINNER in the first count with 84,502 votes (53.27% of 158,618 continuing ballots), so no elimination rounds were needed. Cat Brooks is second with 40,760. The report does not carry an explicit certification stamp, so certification_status is source_verified.",
+  "candidates": [
+   {
+    "name": "Libby Schaaf",
+    "role": "winner",
+    "votes": 84502,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Cat Brooks",
+    "role": "runner_up",
+    "votes": 40760,
+    "candidate_year_id": ""
+   }
+  ]
+ },
+ {
+  "city_name": "Oakland",
+  "state_abb": "CA",
+  "roster_place_fips": "0653000",
+  "election_date": "2022-11-08",
+  "election_type": "regular",
+  "stage": "ranked_choice_final",
+  "verification_status": "verified_decisive",
+  "certification_status": "certified",
+  "source_url": "https://alamedacountyca.gov/rovresults/rcv/248/Oakland/001-Mayor/RcvDetailedReport.xml",
+  "source_locator": "RCV Detailed Report XML, contest Mayor - Oakland (RCV), Round 9 choiceGroup votes",
+  "certification_source_url": "https://alamedacountyca.gov/rovresults/rcv/248/Oakland/001-Mayor/RcvDetailedReport.xml",
+  "additional_source_urls": [
+   "https://acvote.alamedacountyca.gov/acvote-assets/02_election_information/SOV/11082022/Statement%20of%20Vote%20General%20Election.pdf",
+   "https://alamedacountyca.gov/rovresults/248/indexA.htm"
+  ],
+  "verification_note": "Alameda County Registrar of Voters RCV Detailed Report, marked CERTIFIED FINAL RESULTS, for the November 8, 2022 General Election, contest Mayor - Oakland (RCV). Round 1 first choices: Taylor 41,510; Thao 39,909; de la Fuente 12,893. After nine rounds Sheng Thao has 57,206 and Loren Manuel Taylor has 56,529 in the final round. Final-round totals are used.",
+  "candidates": [
+   {
+    "name": "Sheng Thao",
+    "role": "winner",
+    "votes": 57206,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Loren Taylor",
+    "role": "runner_up",
+    "votes": 56529,
+    "candidate_year_id": ""
+   }
+  ]
+ },
+ {
+  "city_name": "Oakland",
+  "state_abb": "CA",
+  "roster_place_fips": "0653000",
+  "election_date": "2025-04-15",
+  "election_type": "special",
+  "stage": "ranked_choice_final",
+  "verification_status": "verified_decisive",
+  "certification_status": "certified",
+  "source_url": "https://alamedacountyca.gov/rovresults/rcv/257/Oakland/001-Mayor/RcvDetailedReport.xml",
+  "source_locator": "RCV Detailed Report XML, contest Mayor, Short Term - Oakland (RCV), Round 9 choiceGroup votes",
+  "certification_source_url": "https://alamedacountyca.gov/rovresults/rcv/257/Oakland/001-Mayor/RcvDetailedReport.xml",
+  "additional_source_urls": [
+   "https://alamedacountyca.gov/rovresults/rcv/257/rcvresults.htm?race=Oakland%2F001-Mayor",
+   "https://acvote.alamedacountyca.gov/acvote-assets/02_election_information/SOV/20250415/District%20Canvass%20-%20Oakland%20Special%20Election.pdf",
+   "https://acvote.alamedacountyca.gov/acvote-assets/02_election_information/SOV/20250415/Statement%20of%20Vote%20-%20Oakland%20Special%20Election.pdf"
+  ],
+  "verification_note": "Alameda County Registrar of Voters RCV Detailed Report, marked CERTIFIED FINAL RESULTS (timestamp 2025-05-01), for the City of Oakland Special Municipal Election of April 15, 2025, contest Mayor, Short Term - Oakland (RCV). The certified District Canvass first-choice totals are Lee 47,122 and Taylor 42,342 of 95,046 ballots. After nine RCV rounds Barbara Lee has 48,935 and Loren Manuel Taylor has 43,929 in the final round. Final-round totals are used. The election filled the vacancy after the November 2024 recall of Mayor Sheng Thao.",
+  "candidates": [
+   {
+    "name": "Barbara Lee",
+    "role": "winner",
+    "votes": 48935,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Loren Taylor",
+    "role": "runner_up",
+    "votes": 43929,
+    "candidate_year_id": ""
+   }
+  ]
+ }
+]

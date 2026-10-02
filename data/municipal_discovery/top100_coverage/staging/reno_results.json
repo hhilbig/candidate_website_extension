@@ -1,0 +1,130 @@
+[
+ {
+  "city_name": "Reno",
+  "state_abb": "NV",
+  "roster_place_fips": "3260600",
+  "election_date": "2010-11-02",
+  "election_type": "regular",
+  "stage": "general",
+  "verification_status": "verified_decisive",
+  "certification_status": "certified",
+  "source_url": "https://www.washoecounty.gov/voters/results/resultsfiles/2010generalresults.pdf",
+  "source_locator": "Cumulative Totals page, RENO Mayor, 160 of 160 precincts",
+  "certification_source_url": "https://www.washoecounty.gov/voters/results/archivedresults.php",
+  "additional_source_urls": [
+   "https://www.washoecounty.gov/voters/results/archivedresults.php",
+   "https://www.leg.state.nv.us/CityCharters/CtyRCC.html"
+  ],
+  "verification_note": "Washoe County 10 GEN FINAL OFFICIAL SUMMARY for November 2, 2010 lists RENO Mayor: Bob Cashell 41117 (66.00 percent) and Chad Dehne 21180 (34.00 percent). The June 8, 2010 primary had four candidates and the top two advanced, so the general decided the office.",
+  "candidates": [
+   {
+    "name": "Bob Cashell",
+    "role": "winner",
+    "votes": 41117,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Chad Dehne",
+    "role": "runner_up",
+    "votes": 21180,
+    "candidate_year_id": ""
+   }
+  ]
+ },
+ {
+  "city_name": "Reno",
+  "state_abb": "NV",
+  "roster_place_fips": "3260600",
+  "election_date": "2014-11-04",
+  "election_type": "regular",
+  "stage": "general",
+  "verification_status": "verified_decisive",
+  "certification_status": "certified",
+  "source_url": "https://www.washoecounty.gov/voters/results/resultsfiles/2014generalresults.pdf",
+  "source_locator": "RENO Mayor, 207/207 precincts, Total 53248",
+  "certification_source_url": "https://www.washoecounty.gov/voters/results/archivedresults.php",
+  "additional_source_urls": [
+   "https://www.washoecounty.gov/voters/results/archivedresults.php",
+   "https://www.leg.state.nv.us/CityCharters/CtyRCC.html"
+  ],
+  "verification_note": "Washoe County 2014 GENERAL OFFICIAL FINAL summary report for November 4, 2014 lists RENO Mayor: Hillary Schieve 32445 (60.93 percent) and Raymond Pezonella 20803 (39.07 percent). The June 10, 2014 primary had 18 candidates and the top two advanced.",
+  "candidates": [
+   {
+    "name": "Hillary Schieve",
+    "role": "winner",
+    "votes": 32445,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Raymond Pezonella",
+    "role": "runner_up",
+    "votes": 20803,
+    "candidate_year_id": ""
+   }
+  ]
+ },
+ {
+  "city_name": "Reno",
+  "state_abb": "NV",
+  "roster_place_fips": "3260600",
+  "election_date": "2018-11-06",
+  "election_type": "regular",
+  "stage": "general",
+  "verification_status": "verified_decisive",
+  "certification_status": "certified",
+  "source_url": "https://www.washoecounty.gov/voters/results/resultsfiles/2018generalresults.pdf",
+  "source_locator": "Page 14, CITY OF RENO MAYOR, 217 of 217 precincts reported",
+  "certification_source_url": "https://www.washoecounty.gov/voters/results/archivedresults.php",
+  "additional_source_urls": [
+   "https://www.washoecounty.gov/voters/results/archivedresults.php",
+   "https://www.leg.state.nv.us/CityCharters/CtyRCC.html"
+  ],
+  "verification_note": "Washoe County General Election Official Final Results for November 6, 2018 list CITY OF RENO MAYOR: Hillary Schieve 57580 (64.51 percent) and Eddie Lorton 31684 (35.49 percent). Total votes 89264.",
+  "candidates": [
+   {
+    "name": "Hillary Schieve",
+    "role": "winner",
+    "votes": 57580,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Eddie Lorton",
+    "role": "runner_up",
+    "votes": 31684,
+    "candidate_year_id": ""
+   }
+  ]
+ },
+ {
+  "city_name": "Reno",
+  "state_abb": "NV",
+  "roster_place_fips": "3260600",
+  "election_date": "2022-11-08",
+  "election_type": "regular",
+  "stage": "general",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "source_url": "https://www.washoecounty.gov/voters/results/resultsfiles/2022generalresults.pdf",
+  "source_locator": "RENO MAYOR (Vote for 1) contest block",
+  "certification_source_url": "https://www.washoecounty.gov/voters/results/archivedresults.php",
+  "additional_source_urls": [
+   "https://www.washoecounty.gov/voters/results/archivedresults.php",
+   "https://www.leg.state.nv.us/CityCharters/CtyRCC.html"
+  ],
+  "verification_note": "Washoe County General Election Official Results for November 8, 2022 list RENO MAYOR: Hillary Schieve 52512 and George Eddie Lorton 36392. Total votes 88904, which equals the sum of the two.",
+  "candidates": [
+   {
+    "name": "Hillary Schieve",
+    "role": "winner",
+    "votes": 52512,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "George \"Eddie\" Lorton",
+    "role": "runner_up",
+    "votes": 36392,
+    "candidate_year_id": ""
+   }
+  ]
+ }
+]

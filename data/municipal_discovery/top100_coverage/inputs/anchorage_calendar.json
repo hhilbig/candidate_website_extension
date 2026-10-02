@@ -1,0 +1,223 @@
+[
+ {
+  "city_id": "0203000",
+  "year": 2010,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.muni.org/Departments/Assembly/Clerk/Elections/Election%20Results/2010%20Regular%20Election%20Results.pdf",
+  "additional_source_urls": [
+   "https://www.muni.org/Departments/Assembly/Clerk/Elections/Pages/ResultsAndHistory.aspx",
+   "https://www.muni.org/Departments/Assembly/Clerk/Elections/Pages/ArchivedElectionResults,Samples,Reports.aspx",
+   "https://www.muni.org/Departments/Assembly/Clerk/Elections/Documents/Honor%20Roll/2024-0719%20Honor%20Roll-Mayors%20of%20COA,%20GAAB,%20and%20MOA%201920-2024.pdf"
+  ],
+  "note": "The clerk's official results summary for this year's election was inspected by OCR of the scanned pages and contains no MAYOR contest (assembly, school board and ballot measures only). The Anchorage Clerk's Honor Roll of Mayors lists mayoral elections in April 2009 (runoff May 2009), April 2012, April 2015 (runoff May 2015), April 2018, April 2021 (runoff May 2021) and April 2024 (runoff May 2024), a three-year cycle. Suzanne LaFrance's term runs 07/01/2024 to 06/30/2027, so the next mayoral election falls in 2027."
+ },
+ {
+  "city_id": "0203000",
+  "year": 2011,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.muni.org/Departments/Assembly/Clerk/Elections/Election%20Results/2011%20Regular%20Election%20Results.pdf",
+  "additional_source_urls": [
+   "https://www.muni.org/Departments/Assembly/Clerk/Elections/Pages/ResultsAndHistory.aspx",
+   "https://www.muni.org/Departments/Assembly/Clerk/Elections/Pages/ArchivedElectionResults,Samples,Reports.aspx",
+   "https://www.muni.org/Departments/Assembly/Clerk/Elections/Documents/Honor%20Roll/2024-0719%20Honor%20Roll-Mayors%20of%20COA,%20GAAB,%20and%20MOA%201920-2024.pdf"
+  ],
+  "note": "The clerk's official results summary for this year's election was inspected by OCR of the scanned pages and contains no MAYOR contest (assembly, school board and ballot measures only). The Anchorage Clerk's Honor Roll of Mayors lists mayoral elections in April 2009 (runoff May 2009), April 2012, April 2015 (runoff May 2015), April 2018, April 2021 (runoff May 2021) and April 2024 (runoff May 2024), a three-year cycle. Suzanne LaFrance's term runs 07/01/2024 to 06/30/2027, so the next mayoral election falls in 2027."
+ },
+ {
+  "city_id": "0203000",
+  "year": 2012,
+  "status": "complete",
+  "expected_election_dates": [
+   "2012-04-03"
+  ],
+  "source_url": "https://www.muni.org/Departments/Assembly/Clerk/Elections/Pages/ResultsAndHistory.aspx",
+  "additional_source_urls": [
+   "https://www.muni.org/Departments/Assembly/Clerk/Elections/Documents/Honor%20Roll/2024-0719%20Honor%20Roll-Mayors%20of%20COA,%20GAAB,%20and%20MOA%201920-2024.pdf"
+  ],
+  "note": "Anchorage Municipal Clerk results records a mayoral election in this year. The April election decided the office outright. Winner and runner-up are in anchorage_results.json."
+ },
+ {
+  "city_id": "0203000",
+  "year": 2013,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.muni.org/Departments/Assembly/Clerk/Elections/Election%20Results/2013%20Regular%20Election%20Results_Unofficial.pdf",
+  "additional_source_urls": [
+   "https://www.muni.org/Departments/Assembly/Clerk/Elections/Pages/ResultsAndHistory.aspx",
+   "https://www.muni.org/Departments/Assembly/Clerk/Elections/Pages/ArchivedElectionResults,Samples,Reports.aspx",
+   "https://www.muni.org/Departments/Assembly/Clerk/Elections/Documents/Honor%20Roll/2024-0719%20Honor%20Roll-Mayors%20of%20COA,%20GAAB,%20and%20MOA%201920-2024.pdf"
+  ],
+  "note": "The clerk's official results summary for this year's election was inspected by OCR of the scanned pages and contains no MAYOR contest (assembly, school board and ballot measures only). The Anchorage Clerk's Honor Roll of Mayors lists mayoral elections in April 2009 (runoff May 2009), April 2012, April 2015 (runoff May 2015), April 2018, April 2021 (runoff May 2021) and April 2024 (runoff May 2024), a three-year cycle. Suzanne LaFrance's term runs 07/01/2024 to 06/30/2027, so the next mayoral election falls in 2027."
+ },
+ {
+  "city_id": "0203000",
+  "year": 2014,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.muni.org/Departments/Assembly/Clerk/Elections/Election%20Results/2014%20Regular%20Election%20Results.pdf",
+  "additional_source_urls": [
+   "https://www.muni.org/Departments/Assembly/Clerk/Elections/Pages/ResultsAndHistory.aspx",
+   "https://www.muni.org/Departments/Assembly/Clerk/Elections/Pages/ArchivedElectionResults,Samples,Reports.aspx",
+   "https://www.muni.org/Departments/Assembly/Clerk/Elections/Documents/Honor%20Roll/2024-0719%20Honor%20Roll-Mayors%20of%20COA,%20GAAB,%20and%20MOA%201920-2024.pdf"
+  ],
+  "note": "The clerk's official results summary for this year's election was inspected by OCR of the scanned pages and contains no MAYOR contest (assembly, school board and ballot measures only). The Anchorage Clerk's Honor Roll of Mayors lists mayoral elections in April 2009 (runoff May 2009), April 2012, April 2015 (runoff May 2015), April 2018, April 2021 (runoff May 2021) and April 2024 (runoff May 2024), a three-year cycle. Suzanne LaFrance's term runs 07/01/2024 to 06/30/2027, so the next mayoral election falls in 2027."
+ },
+ {
+  "city_id": "0203000",
+  "year": 2015,
+  "status": "complete",
+  "expected_election_dates": [
+   "2015-05-05"
+  ],
+  "source_url": "https://www.muni.org/Departments/Assembly/Clerk/Elections/Pages/ResultsAndHistory.aspx",
+  "additional_source_urls": [
+   "https://www.muni.org/Departments/Assembly/Clerk/Elections/Documents/Honor%20Roll/2024-0719%20Honor%20Roll-Mayors%20of%20COA,%20GAAB,%20and%20MOA%201920-2024.pdf"
+  ],
+  "note": "Anchorage Municipal Clerk results records a mayoral election in this year. The decisive round was the runoff; the April first round had no majority winner. Winner and runner-up are in anchorage_results.json."
+ },
+ {
+  "city_id": "0203000",
+  "year": 2016,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.muni.org/Departments/Assembly/Clerk/Elections/Election%20Results/2016%20Regular%20Election%20Results.pdf",
+  "additional_source_urls": [
+   "https://www.muni.org/Departments/Assembly/Clerk/Elections/Pages/ResultsAndHistory.aspx",
+   "https://www.muni.org/Departments/Assembly/Clerk/Elections/Pages/ArchivedElectionResults,Samples,Reports.aspx",
+   "https://www.muni.org/Departments/Assembly/Clerk/Elections/Documents/Honor%20Roll/2024-0719%20Honor%20Roll-Mayors%20of%20COA,%20GAAB,%20and%20MOA%201920-2024.pdf"
+  ],
+  "note": "The clerk's official results summary for this year's election was inspected by OCR of the scanned pages and contains no MAYOR contest (assembly, school board and ballot measures only). The Anchorage Clerk's Honor Roll of Mayors lists mayoral elections in April 2009 (runoff May 2009), April 2012, April 2015 (runoff May 2015), April 2018, April 2021 (runoff May 2021) and April 2024 (runoff May 2024), a three-year cycle. Suzanne LaFrance's term runs 07/01/2024 to 06/30/2027, so the next mayoral election falls in 2027."
+ },
+ {
+  "city_id": "0203000",
+  "year": 2017,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.muni.org/Departments/Assembly/Clerk/Elections/Election%20Results/2017%20Regular%20Election%20Results.pdf",
+  "additional_source_urls": [
+   "https://www.muni.org/Departments/Assembly/Clerk/Elections/Pages/ResultsAndHistory.aspx",
+   "https://www.muni.org/Departments/Assembly/Clerk/Elections/Pages/ArchivedElectionResults,Samples,Reports.aspx",
+   "https://www.muni.org/Departments/Assembly/Clerk/Elections/Documents/Honor%20Roll/2024-0719%20Honor%20Roll-Mayors%20of%20COA,%20GAAB,%20and%20MOA%201920-2024.pdf"
+  ],
+  "note": "The clerk's official results summary for this year's election was inspected by OCR of the scanned pages and contains no MAYOR contest (assembly, school board and ballot measures only). The Anchorage Clerk's Honor Roll of Mayors lists mayoral elections in April 2009 (runoff May 2009), April 2012, April 2015 (runoff May 2015), April 2018, April 2021 (runoff May 2021) and April 2024 (runoff May 2024), a three-year cycle. Suzanne LaFrance's term runs 07/01/2024 to 06/30/2027, so the next mayoral election falls in 2027."
+ },
+ {
+  "city_id": "0203000",
+  "year": 2018,
+  "status": "complete",
+  "expected_election_dates": [
+   "2018-04-03"
+  ],
+  "source_url": "https://www.muni.org/Departments/Assembly/Clerk/Elections/Pages/ResultsAndHistory.aspx",
+  "additional_source_urls": [
+   "https://www.muni.org/Departments/Assembly/Clerk/Elections/Documents/Honor%20Roll/2024-0719%20Honor%20Roll-Mayors%20of%20COA,%20GAAB,%20and%20MOA%201920-2024.pdf"
+  ],
+  "note": "Anchorage Municipal Clerk results records a mayoral election in this year. The April election decided the office outright. Winner and runner-up are in anchorage_results.json."
+ },
+ {
+  "city_id": "0203000",
+  "year": 2019,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.muni.org/Departments/Assembly/Clerk/Elections/Election%20Results/2019%20Regular%20Election%20Results.pdf",
+  "additional_source_urls": [
+   "https://www.muni.org/Departments/Assembly/Clerk/Elections/Pages/ResultsAndHistory.aspx",
+   "https://www.muni.org/Departments/Assembly/Clerk/Elections/Pages/ArchivedElectionResults,Samples,Reports.aspx",
+   "https://www.muni.org/Departments/Assembly/Clerk/Elections/Documents/Honor%20Roll/2024-0719%20Honor%20Roll-Mayors%20of%20COA,%20GAAB,%20and%20MOA%201920-2024.pdf"
+  ],
+  "note": "The clerk's official results summary for this year's election was inspected by OCR of the scanned pages and contains no MAYOR contest (assembly, school board and ballot measures only). The Anchorage Clerk's Honor Roll of Mayors lists mayoral elections in April 2009 (runoff May 2009), April 2012, April 2015 (runoff May 2015), April 2018, April 2021 (runoff May 2021) and April 2024 (runoff May 2024), a three-year cycle. Suzanne LaFrance's term runs 07/01/2024 to 06/30/2027, so the next mayoral election falls in 2027."
+ },
+ {
+  "city_id": "0203000",
+  "year": 2020,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.muni.org/Departments/Assembly/Clerk/Elections/Election%20Results/2020%20Regular%20Election%20Results.pdf",
+  "additional_source_urls": [
+   "https://www.muni.org/Departments/Assembly/Clerk/Elections/Pages/ResultsAndHistory.aspx",
+   "https://www.muni.org/Departments/Assembly/Clerk/Elections/Pages/ArchivedElectionResults,Samples,Reports.aspx",
+   "https://www.muni.org/Departments/Assembly/Clerk/Elections/Documents/Honor%20Roll/2024-0719%20Honor%20Roll-Mayors%20of%20COA,%20GAAB,%20and%20MOA%201920-2024.pdf"
+  ],
+  "note": "The clerk's official results summary for this year's election was inspected by OCR of the scanned pages and contains no MAYOR contest (assembly, school board and ballot measures only). The Anchorage Clerk's Honor Roll of Mayors lists mayoral elections in April 2009 (runoff May 2009), April 2012, April 2015 (runoff May 2015), April 2018, April 2021 (runoff May 2021) and April 2024 (runoff May 2024), a three-year cycle. Suzanne LaFrance's term runs 07/01/2024 to 06/30/2027, so the next mayoral election falls in 2027. The Honor Roll notes Mayor Berkowitz resigned on 10/23/2020 and an Acting Mayor served until 06/30/2021, so no special mayoral election was held."
+ },
+ {
+  "city_id": "0203000",
+  "year": 2021,
+  "status": "complete",
+  "expected_election_dates": [
+   "2021-05-11"
+  ],
+  "source_url": "https://www.muni.org/Departments/Assembly/Clerk/Elections/Pages/ResultsAndHistory.aspx",
+  "additional_source_urls": [
+   "https://www.muni.org/Departments/Assembly/Clerk/Elections/Documents/Honor%20Roll/2024-0719%20Honor%20Roll-Mayors%20of%20COA,%20GAAB,%20and%20MOA%201920-2024.pdf"
+  ],
+  "note": "Anchorage Municipal Clerk results records a mayoral election in this year. The decisive round was the runoff; the April first round had no majority winner. Winner and runner-up are in anchorage_results.json."
+ },
+ {
+  "city_id": "0203000",
+  "year": 2022,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.muni.org/Departments/Assembly/Clerk/Elections/Election%20Results/2022%20Regular%20Election%20Results.pdf",
+  "additional_source_urls": [
+   "https://www.muni.org/Departments/Assembly/Clerk/Elections/Pages/ResultsAndHistory.aspx",
+   "https://www.muni.org/Departments/Assembly/Clerk/Elections/Pages/ArchivedElectionResults,Samples,Reports.aspx",
+   "https://www.muni.org/Departments/Assembly/Clerk/Elections/Documents/Honor%20Roll/2024-0719%20Honor%20Roll-Mayors%20of%20COA,%20GAAB,%20and%20MOA%201920-2024.pdf"
+  ],
+  "note": "The clerk's official results summary for this year's election was inspected by OCR of the scanned pages and contains no MAYOR contest (assembly, school board and ballot measures only). The Anchorage Clerk's Honor Roll of Mayors lists mayoral elections in April 2009 (runoff May 2009), April 2012, April 2015 (runoff May 2015), April 2018, April 2021 (runoff May 2021) and April 2024 (runoff May 2024), a three-year cycle. Suzanne LaFrance's term runs 07/01/2024 to 06/30/2027, so the next mayoral election falls in 2027."
+ },
+ {
+  "city_id": "0203000",
+  "year": 2023,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.muni.org/Departments/Assembly/Clerk/Elections/Election%20Results/2023%20Regular%20and%20Special%20Concurrent%20Election%20Results.pdf",
+  "additional_source_urls": [
+   "https://www.muni.org/Departments/Assembly/Clerk/Elections/Pages/ResultsAndHistory.aspx",
+   "https://www.muni.org/Departments/Assembly/Clerk/Elections/Pages/ArchivedElectionResults,Samples,Reports.aspx",
+   "https://www.muni.org/Departments/Assembly/Clerk/Elections/Documents/Honor%20Roll/2024-0719%20Honor%20Roll-Mayors%20of%20COA,%20GAAB,%20and%20MOA%201920-2024.pdf"
+  ],
+  "note": "The clerk's official results summary for this year's election was inspected by OCR of the scanned pages and contains no MAYOR contest (assembly, school board and ballot measures only). The Anchorage Clerk's Honor Roll of Mayors lists mayoral elections in April 2009 (runoff May 2009), April 2012, April 2015 (runoff May 2015), April 2018, April 2021 (runoff May 2021) and April 2024 (runoff May 2024), a three-year cycle. Suzanne LaFrance's term runs 07/01/2024 to 06/30/2027, so the next mayoral election falls in 2027. The only mention of the mayor on the 2023 ballot is Proposition 13, a charter amendment on filling vacancies; it is not a mayoral contest."
+ },
+ {
+  "city_id": "0203000",
+  "year": 2024,
+  "status": "complete",
+  "expected_election_dates": [
+   "2024-05-14"
+  ],
+  "source_url": "https://www.muni.org/Departments/Assembly/Clerk/Elections/Pages/ResultsAndHistory.aspx",
+  "additional_source_urls": [
+   "https://www.muni.org/Departments/Assembly/Clerk/Elections/Documents/Honor%20Roll/2024-0719%20Honor%20Roll-Mayors%20of%20COA,%20GAAB,%20and%20MOA%201920-2024.pdf"
+  ],
+  "note": "Anchorage Municipal Clerk results records a mayoral election in this year. The decisive round was the runoff; the April first round had no majority winner. Winner and runner-up are in anchorage_results.json."
+ },
+ {
+  "city_id": "0203000",
+  "year": 2025,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.muni.org/Departments/Assembly/Clerk/Elections/Election%20Results/2025%20Regular%20Election%20Results.pdf",
+  "additional_source_urls": [
+   "https://www.muni.org/Departments/Assembly/Clerk/Elections/Pages/ResultsAndHistory.aspx",
+   "https://www.muni.org/Departments/Assembly/Clerk/Elections/Pages/ArchivedElectionResults,Samples,Reports.aspx",
+   "https://www.muni.org/Departments/Assembly/Clerk/Elections/Documents/Honor%20Roll/2024-0719%20Honor%20Roll-Mayors%20of%20COA,%20GAAB,%20and%20MOA%201920-2024.pdf"
+  ],
+  "note": "The clerk's official results summary for this year's election was inspected by OCR of the scanned pages and contains no MAYOR contest (assembly, school board and ballot measures only). The Anchorage Clerk's Honor Roll of Mayors lists mayoral elections in April 2009 (runoff May 2009), April 2012, April 2015 (runoff May 2015), April 2018, April 2021 (runoff May 2021) and April 2024 (runoff May 2024), a three-year cycle. Suzanne LaFrance's term runs 07/01/2024 to 06/30/2027, so the next mayoral election falls in 2027."
+ },
+ {
+  "city_id": "0203000",
+  "year": 2026,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.muni.org/Departments/Assembly/Clerk/Elections/Election%20Results/2026%20Regular%20Election%20Results.pdf",
+  "additional_source_urls": [
+   "https://www.muni.org/Departments/Assembly/Clerk/Elections/Pages/ResultsAndHistory.aspx",
+   "https://www.muni.org/Departments/Assembly/Clerk/Elections/Pages/ArchivedElectionResults,Samples,Reports.aspx",
+   "https://www.muni.org/Departments/Assembly/Clerk/Elections/Documents/Honor%20Roll/2024-0719%20Honor%20Roll-Mayors%20of%20COA,%20GAAB,%20and%20MOA%201920-2024.pdf"
+  ],
+  "note": "The clerk's official results summary for this year's election was inspected by OCR of the scanned pages and contains no MAYOR contest (assembly, school board and ballot measures only). The Anchorage Clerk's Honor Roll of Mayors lists mayoral elections in April 2009 (runoff May 2009), April 2012, April 2015 (runoff May 2015), April 2018, April 2021 (runoff May 2021) and April 2024 (runoff May 2024), a three-year cycle. Suzanne LaFrance's term runs 07/01/2024 to 06/30/2027, so the next mayoral election falls in 2027."
+ }
+]

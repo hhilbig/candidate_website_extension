@@ -1,0 +1,141 @@
+[
+ {
+  "city_name": "Norfolk",
+  "state_abb": "VA",
+  "roster_place_fips": "5157000",
+  "election_date": "2010-05-04",
+  "election_type": "regular",
+  "stage": "general",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "source_url": "https://www.norfolk.gov/DocumentCenter/View/55690",
+  "source_locator": "Official results PDF, May 4, 2010 General Election, Mayor column, CITY TOTALS row",
+  "certification_source_url": "https://www.norfolk.gov/4713/Election-Results",
+  "additional_source_urls": [],
+  "verification_note": "City of Norfolk Office of Elections posts this document as official results. The mayoral column shows Fraim 16,688, Hester 7,992, Ryan P. Cooper 721, Daniel E. Montague 804 and 56 write-ins; total 26,507 ballots. Fraim won a majority. The document heading calls it a general election; no runoff exists in the results index.",
+  "candidates": [
+   {
+    "name": "Paul D. Fraim",
+    "role": "winner",
+    "votes": 16688,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Daun S. Hester",
+    "role": "runner_up",
+    "votes": 7992,
+    "candidate_year_id": ""
+   }
+  ]
+ },
+ {
+  "city_name": "Norfolk",
+  "state_abb": "VA",
+  "roster_place_fips": "5157000",
+  "election_date": "2014-05-06",
+  "election_type": "regular",
+  "stage": "general",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "source_url": "https://www.norfolk.gov/DocumentCenter/View/55705",
+  "source_locator": "Official results PDF, May 6, 2014 General Election, Mayor column, CITY TOTALS row",
+  "certification_source_url": "https://www.norfolk.gov/4713/Election-Results",
+  "additional_source_urls": [],
+  "verification_note": "City of Norfolk Office of Elections posts this document as official results. The mayoral column shows Fraim 11,252, Muhammad 2,555, Jane E. Bethel 1,869 and 161 write-ins; total 16,075. Fraim won a majority. The document heading calls it a general election; no runoff exists in the results index.",
+  "candidates": [
+   {
+    "name": "Paul D. Fraim",
+    "role": "winner",
+    "votes": 11252,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Michael J. Muhammad",
+    "role": "runner_up",
+    "votes": 2555,
+    "candidate_year_id": ""
+   }
+  ]
+ },
+ {
+  "city_name": "Norfolk",
+  "state_abb": "VA",
+  "roster_place_fips": "5157000",
+  "election_date": "2016-05-03",
+  "election_type": "regular",
+  "stage": "general",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "source_url": "https://www.norfolk.gov/DocumentCenter/View/55711",
+  "source_locator": "Official results PDF, May 3, 2016 General Election, Mayor column, CITY TOTALS row",
+  "certification_source_url": "https://www.norfolk.gov/4713/Election-Results",
+  "additional_source_urls": [],
+  "verification_note": "City of Norfolk Office of Elections posts this document as official results. The mayoral column shows Alexander 16,397, Protogyrou 8,022, Robert J. McCabe 7,276 and 30 write-ins; total 31,832, which per the city's footnote on other years includes over and under votes. Alexander won a majority of the listed vote. The document heading calls it a general election; no runoff exists in the results index.",
+  "candidates": [
+   {
+    "name": "Kenneth Cooper Alexander",
+    "role": "winner",
+    "votes": 16397,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Andy A. Protogyrou",
+    "role": "runner_up",
+    "votes": 8022,
+    "candidate_year_id": ""
+   }
+  ]
+ },
+ {
+  "city_name": "Norfolk",
+  "state_abb": "VA",
+  "roster_place_fips": "5157000",
+  "election_date": "2020-05-19",
+  "election_type": "regular",
+  "stage": "general",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "source_url": "https://www.norfolk.gov/DocumentCenter/View/60954",
+  "source_locator": "Official results PDF, May 19, 2020 General Election, Mayor column, CITY TOTALS row",
+  "certification_source_url": "https://www.norfolk.gov/4713/Election-Results",
+  "additional_source_urls": [],
+  "verification_note": "City of Norfolk Office of Elections posts this document as official results. Only one candidate, Kenneth Cooper Alexander, appeared on the ballot for mayor. He received 12,252 votes and 560 write-ins; the total column is 13,261 and includes under votes per the city footnote. Recorded as uncontested. The document heading calls it a general election; no runoff exists in the results index.",
+  "candidates": [
+   {
+    "name": "Kenneth Cooper Alexander",
+    "role": "winner",
+    "votes": 12252,
+    "candidate_year_id": ""
+   }
+  ]
+ },
+ {
+  "city_name": "Norfolk",
+  "state_abb": "VA",
+  "roster_place_fips": "5157000",
+  "election_date": "2024-11-05",
+  "election_type": "regular",
+  "stage": "general",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "source_url": "https://www.norfolk.gov/DocumentCenter/View/98792",
+  "source_locator": "Official results PDF, November 5, 2024 General and Special Elections, Mayor page, CITY TOTALS row",
+  "certification_source_url": "https://www.norfolk.gov/4713/Election-Results",
+  "additional_source_urls": [],
+  "verification_note": "City of Norfolk Office of Elections posts this document as official results. The mayoral page shows Alexander 48,568, Leeman 27,404, Giovanni G. Gio Dolmo 5,431 and 551 write-ins; total 86,079 ballots. Alexander won a plurality and majority of ballots counted. Norfolk's November 2024 election of a mayor followed the May 2020 election. The document heading calls it a general election; no runoff exists in the results index.",
+  "candidates": [
+   {
+    "name": "Kenneth Cooper Alexander",
+    "role": "winner",
+    "votes": 48568,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Thomas P. \"Tommy\" Leeman, Jr.",
+    "role": "runner_up",
+    "votes": 27404,
+    "candidate_year_id": ""
+   }
+  ]
+ }
+]

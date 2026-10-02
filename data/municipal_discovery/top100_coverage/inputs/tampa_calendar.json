@@ -1,0 +1,171 @@
+[
+ {
+  "city_id": "1271000",
+  "year": 2010,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.votehillsborough.gov/183/Election-Results",
+  "additional_source_urls": [],
+  "note": "The Hillsborough County Supervisor of Elections index of past election results lists every City of Tampa municipal election. It lists regular Tampa elections in 2003, 2007, 2011, 2015, 2019 and 2023 only, in March of odd years with runoffs after. The index lists no mayoral contest in this year. The only other Tampa elections listed are a 2016 council runoff and a 2025 special election for City Council District 5, with no mayoral race. The next regular Tampa election falls in 2027, after the cutoff."
+ },
+ {
+  "city_id": "1271000",
+  "year": 2011,
+  "status": "complete",
+  "expected_election_dates": [
+   "2011-03-22"
+  ],
+  "source_url": "https://www.votehillsborough.gov/DocumentCenter/View/168/2011-City-of-Tampa-Municipal-Runoff-Election-Official-Results-PDF",
+  "additional_source_urls": [
+   "https://www.votehillsborough.gov/183/Election-Results"
+  ],
+  "note": "The Hillsborough County Supervisor of Elections official results show the Tampa mayoral runoff, decided between Bob Buckhorn and Rose Ferlita after the first round on March 1, 2011. The runoff is the decisive round. Winner and runner-up are in tampa_results.json."
+ },
+ {
+  "city_id": "1271000",
+  "year": 2012,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.votehillsborough.gov/183/Election-Results",
+  "additional_source_urls": [],
+  "note": "The Hillsborough County Supervisor of Elections index of past election results lists every City of Tampa municipal election. It lists regular Tampa elections in 2003, 2007, 2011, 2015, 2019 and 2023 only, in March of odd years with runoffs after. The index lists no mayoral contest in this year. The only other Tampa elections listed are a 2016 council runoff and a 2025 special election for City Council District 5, with no mayoral race. The next regular Tampa election falls in 2027, after the cutoff."
+ },
+ {
+  "city_id": "1271000",
+  "year": 2013,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.votehillsborough.gov/183/Election-Results",
+  "additional_source_urls": [],
+  "note": "The Hillsborough County Supervisor of Elections index of past election results lists every City of Tampa municipal election. It lists regular Tampa elections in 2003, 2007, 2011, 2015, 2019 and 2023 only, in March of odd years with runoffs after. The index lists no mayoral contest in this year. The only other Tampa elections listed are a 2016 council runoff and a 2025 special election for City Council District 5, with no mayoral race. The next regular Tampa election falls in 2027, after the cutoff."
+ },
+ {
+  "city_id": "1271000",
+  "year": 2014,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.votehillsborough.gov/183/Election-Results",
+  "additional_source_urls": [],
+  "note": "The Hillsborough County Supervisor of Elections index of past election results lists every City of Tampa municipal election. It lists regular Tampa elections in 2003, 2007, 2011, 2015, 2019 and 2023 only, in March of odd years with runoffs after. The index lists no mayoral contest in this year. The only other Tampa elections listed are a 2016 council runoff and a 2025 special election for City Council District 5, with no mayoral race. The next regular Tampa election falls in 2027, after the cutoff."
+ },
+ {
+  "city_id": "1271000",
+  "year": 2015,
+  "status": "complete",
+  "expected_election_dates": [
+   "2015-03-03"
+  ],
+  "source_url": "http://enr.electionsfl.org/HIL/Summary/1246",
+  "additional_source_urls": [
+   "https://www.votehillsborough.gov/183/Election-Results"
+  ],
+  "note": "The Hillsborough County Supervisor of Elections official results show the Tampa mayoral election on March 3, 2015. Bob Buckhorn was the only named candidate and won outright, so only the winner is recorded."
+ },
+ {
+  "city_id": "1271000",
+  "year": 2016,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.votehillsborough.gov/183/Election-Results",
+  "additional_source_urls": [],
+  "note": "The Hillsborough County Supervisor of Elections index of past election results lists every City of Tampa municipal election. It lists regular Tampa elections in 2003, 2007, 2011, 2015, 2019 and 2023 only, in March of odd years with runoffs after. The index lists no mayoral contest in this year. The only other Tampa elections listed are a 2016 council runoff and a 2025 special election for City Council District 5, with no mayoral race. The next regular Tampa election falls in 2027, after the cutoff."
+ },
+ {
+  "city_id": "1271000",
+  "year": 2017,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.votehillsborough.gov/183/Election-Results",
+  "additional_source_urls": [],
+  "note": "The Hillsborough County Supervisor of Elections index of past election results lists every City of Tampa municipal election. It lists regular Tampa elections in 2003, 2007, 2011, 2015, 2019 and 2023 only, in March of odd years with runoffs after. The index lists no mayoral contest in this year. The only other Tampa elections listed are a 2016 council runoff and a 2025 special election for City Council District 5, with no mayoral race. The next regular Tampa election falls in 2027, after the cutoff."
+ },
+ {
+  "city_id": "1271000",
+  "year": 2018,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.votehillsborough.gov/183/Election-Results",
+  "additional_source_urls": [],
+  "note": "The Hillsborough County Supervisor of Elections index of past election results lists every City of Tampa municipal election. It lists regular Tampa elections in 2003, 2007, 2011, 2015, 2019 and 2023 only, in March of odd years with runoffs after. The index lists no mayoral contest in this year. The only other Tampa elections listed are a 2016 council runoff and a 2025 special election for City Council District 5, with no mayoral race. The next regular Tampa election falls in 2027, after the cutoff."
+ },
+ {
+  "city_id": "1271000",
+  "year": 2019,
+  "status": "complete",
+  "expected_election_dates": [
+   "2019-04-23"
+  ],
+  "source_url": "https://enr.electionsfl.org/HIL/Summary/2119/",
+  "additional_source_urls": [
+   "https://www.votehillsborough.gov/183/Election-Results"
+  ],
+  "note": "The Hillsborough County Supervisor of Elections official results show the Tampa mayoral runoff on April 23, 2019, between Jane Castor and David Straz. The first round on March 5, 2019 had no majority winner. The runoff is the decisive round. Winner and runner-up are in tampa_results.json."
+ },
+ {
+  "city_id": "1271000",
+  "year": 2020,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.votehillsborough.gov/183/Election-Results",
+  "additional_source_urls": [],
+  "note": "The Hillsborough County Supervisor of Elections index of past election results lists every City of Tampa municipal election. It lists regular Tampa elections in 2003, 2007, 2011, 2015, 2019 and 2023 only, in March of odd years with runoffs after. The index lists no mayoral contest in this year. The only other Tampa elections listed are a 2016 council runoff and a 2025 special election for City Council District 5, with no mayoral race. The next regular Tampa election falls in 2027, after the cutoff."
+ },
+ {
+  "city_id": "1271000",
+  "year": 2021,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.votehillsborough.gov/183/Election-Results",
+  "additional_source_urls": [],
+  "note": "The Hillsborough County Supervisor of Elections index of past election results lists every City of Tampa municipal election. It lists regular Tampa elections in 2003, 2007, 2011, 2015, 2019 and 2023 only, in March of odd years with runoffs after. The index lists no mayoral contest in this year. The only other Tampa elections listed are a 2016 council runoff and a 2025 special election for City Council District 5, with no mayoral race. The next regular Tampa election falls in 2027, after the cutoff."
+ },
+ {
+  "city_id": "1271000",
+  "year": 2022,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.votehillsborough.gov/183/Election-Results",
+  "additional_source_urls": [],
+  "note": "The Hillsborough County Supervisor of Elections index of past election results lists every City of Tampa municipal election. It lists regular Tampa elections in 2003, 2007, 2011, 2015, 2019 and 2023 only, in March of odd years with runoffs after. The index lists no mayoral contest in this year. The only other Tampa elections listed are a 2016 council runoff and a 2025 special election for City Council District 5, with no mayoral race. The next regular Tampa election falls in 2027, after the cutoff."
+ },
+ {
+  "city_id": "1271000",
+  "year": 2023,
+  "status": "complete",
+  "expected_election_dates": [
+   "2023-03-07"
+  ],
+  "source_url": "https://www.votehillsborough.gov/DocumentCenter/View/1086/Official-Results-Certificate-COT-Election-10-March-2023",
+  "additional_source_urls": [
+   "https://www.votehillsborough.gov/183/Election-Results"
+  ],
+  "note": "The County Canvassing Board certificate shows the Tampa mayoral election on March 7, 2023. Jane Castor won outright against one qualified write-in candidate. Winner and runner-up are in tampa_results.json."
+ },
+ {
+  "city_id": "1271000",
+  "year": 2024,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.votehillsborough.gov/183/Election-Results",
+  "additional_source_urls": [],
+  "note": "The Hillsborough County Supervisor of Elections index of past election results lists every City of Tampa municipal election. It lists regular Tampa elections in 2003, 2007, 2011, 2015, 2019 and 2023 only, in March of odd years with runoffs after. The index lists no mayoral contest in this year. The only other Tampa elections listed are a 2016 council runoff and a 2025 special election for City Council District 5, with no mayoral race. The next regular Tampa election falls in 2027, after the cutoff."
+ },
+ {
+  "city_id": "1271000",
+  "year": 2025,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.votehillsborough.gov/183/Election-Results",
+  "additional_source_urls": [],
+  "note": "The Hillsborough County Supervisor of Elections index of past election results lists every City of Tampa municipal election. It lists regular Tampa elections in 2003, 2007, 2011, 2015, 2019 and 2023 only, in March of odd years with runoffs after. The index lists no mayoral contest in this year. The only other Tampa elections listed are a 2016 council runoff and a 2025 special election for City Council District 5, with no mayoral race. The next regular Tampa election falls in 2027, after the cutoff."
+ },
+ {
+  "city_id": "1271000",
+  "year": 2026,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.votehillsborough.gov/183/Election-Results",
+  "additional_source_urls": [],
+  "note": "The Hillsborough County Supervisor of Elections index of past election results lists every City of Tampa municipal election. It lists regular Tampa elections in 2003, 2007, 2011, 2015, 2019 and 2023 only, in March of odd years with runoffs after. The index lists no mayoral contest in this year. The only other Tampa elections listed are a 2016 council runoff and a 2025 special election for City Council District 5, with no mayoral race. The next regular Tampa election falls in 2027, after the cutoff."
+ }
+]

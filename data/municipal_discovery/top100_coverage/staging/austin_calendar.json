@@ -1,0 +1,167 @@
+[
+ {
+  "city_id": "4805000",
+  "year": 2010,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://services.austintexas.gov/election/search.cfm",
+  "additional_source_urls": [],
+  "note": "The only city election listed is November 2, 2010, a bond election with no mayoral contest."
+ },
+ {
+  "city_id": "4805000",
+  "year": 2011,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://services.austintexas.gov/election/search.cfm",
+  "additional_source_urls": [],
+  "note": "The listed city elections are May 14, 2011 (council) and June 18, 2011 (council runoff). Neither shows a mayoral contest. The mayor was elected in 2009 and 2012."
+ },
+ {
+  "city_id": "4805000",
+  "year": 2012,
+  "status": "complete",
+  "expected_election_dates": [
+   "2012-05-12"
+  ],
+  "source_url": "https://services.austintexas.gov/election/search.cfm",
+  "additional_source_urls": [],
+  "note": "The database lists a May 12, 2012 mayoral contest. Lee Leffingwell won with a majority, so no runoff followed in 2012. Winner and runner-up are in austin_results.json."
+ },
+ {
+  "city_id": "4805000",
+  "year": 2013,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://services.austintexas.gov/election/search.cfm",
+  "additional_source_urls": [],
+  "note": "The only city election listed is November 5, 2013, a bond election with no mayoral contest."
+ },
+ {
+  "city_id": "4805000",
+  "year": 2014,
+  "status": "complete",
+  "expected_election_dates": [
+   "2014-12-16"
+  ],
+  "source_url": "https://services.austintexas.gov/election/search.cfm",
+  "additional_source_urls": [],
+  "note": "The database lists a November 4, 2014 mayoral first round and a December 16, 2014 runoff. The runoff decided the office and is the recorded election. Winner and runner-up are in austin_results.json."
+ },
+ {
+  "city_id": "4805000",
+  "year": 2015,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://services.austintexas.gov/election/search.cfm",
+  "additional_source_urls": [],
+  "note": "The database lists no city election in 2015."
+ },
+ {
+  "city_id": "4805000",
+  "year": 2016,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://services.austintexas.gov/election/search.cfm",
+  "additional_source_urls": [],
+  "note": "The database lists November 8, 2016 and December 13, 2016. Both show council district contests and bonds only, with no mayoral contest."
+ },
+ {
+  "city_id": "4805000",
+  "year": 2017,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://services.austintexas.gov/election/search.cfm",
+  "additional_source_urls": [],
+  "note": "The database lists no city election in 2017."
+ },
+ {
+  "city_id": "4805000",
+  "year": 2018,
+  "status": "complete",
+  "expected_election_dates": [
+   "2018-11-06"
+  ],
+  "source_url": "https://services.austintexas.gov/election/search.cfm",
+  "additional_source_urls": [],
+  "note": "The database lists a November 6, 2018 mayoral contest won by Steve Adler with a majority. The December 11, 2018 runoff had no mayoral contest. Winner and runner-up are in austin_results.json."
+ },
+ {
+  "city_id": "4805000",
+  "year": 2019,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://services.austintexas.gov/election/search.cfm",
+  "additional_source_urls": [],
+  "note": "The only city election listed is November 5, 2019, an initiative election with no mayoral contest."
+ },
+ {
+  "city_id": "4805000",
+  "year": 2020,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://services.austintexas.gov/election/search.cfm",
+  "additional_source_urls": [],
+  "note": "The database lists November 3, 2020 and December 15, 2020. Both show council, bond and tax rate items only, with no mayoral contest."
+ },
+ {
+  "city_id": "4805000",
+  "year": 2021,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://services.austintexas.gov/election/search.cfm",
+  "additional_source_urls": [],
+  "note": "The database lists May 1, 2021 and November 2, 2021. Both are initiative or special elections with no mayoral contest."
+ },
+ {
+  "city_id": "4805000",
+  "year": 2022,
+  "status": "complete",
+  "expected_election_dates": [
+   "2022-12-13"
+  ],
+  "source_url": "https://services.austintexas.gov/election/search.cfm",
+  "additional_source_urls": [],
+  "note": "The database lists a November 8, 2022 mayoral first round and a December 13, 2022 runoff. The runoff decided the office and is the recorded election. Winner and runner-up are in austin_results.json."
+ },
+ {
+  "city_id": "4805000",
+  "year": 2023,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://services.austintexas.gov/election/search.cfm",
+  "additional_source_urls": [],
+  "note": "The only city election listed is May 6, 2023, a citizen initiative election with no mayoral contest."
+ },
+ {
+  "city_id": "4805000",
+  "year": 2024,
+  "status": "complete",
+  "expected_election_dates": [
+   "2024-11-05"
+  ],
+  "source_url": "https://services.austintexas.gov/election/search.cfm",
+  "additional_source_urls": [],
+  "note": "The database lists a November 5, 2024 mayoral contest won by Kirk Watson with a majority. The December 14, 2024 runoff had no mayoral contest. Winner and runner-up are in austin_results.json."
+ },
+ {
+  "city_id": "4805000",
+  "year": 2025,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://services.austintexas.gov/election/search.cfm",
+  "additional_source_urls": [],
+  "note": "The only city election listed is November 4, 2025, a special election with no mayoral contest. The mayor elected in 2024 serves a term that does not end in 2025."
+ },
+ {
+  "city_id": "4805000",
+  "year": 2026,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.austintexas.gov/clerk/elections/Ballot-Applications-November-2026",
+  "additional_source_urls": [
+   "https://services.austintexas.gov/election/search.cfm"
+  ],
+  "note": "The City Clerk ballot applications page for the November 3, 2026 election lists council Districts 1, 3, 5, 8 and 9 only, with no mayoral candidates. The November 3, 2026 date also falls after the September 14, 2026 cutoff. The mayor elected in 2024 is not on the 2026 ballot."
+ }
+]

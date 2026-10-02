@@ -1,0 +1,131 @@
+[
+ {
+  "city_name": "Boise City",
+  "state_abb": "ID",
+  "roster_place_fips": "1608830",
+  "election_date": "2011-11-08",
+  "election_type": "regular",
+  "stage": "general",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "source_url": "https://adacounty.id.gov/elections/wp-content/uploads/sites/38/Consolidated-Summary-11-8-11.pdf",
+  "source_locator": "Page 1, BOISE MAYOR contest",
+  "certification_source_url": "https://adacounty.id.gov/elections/election-results/",
+  "additional_source_urls": [
+   "https://adacounty.id.gov/elections/election-results/",
+   "https://legislature.idaho.gov/statutesrules/idstat/Title50/T50CH4/SECT50-402/"
+  ],
+  "verification_note": "Ada County official results for the November 8, 2011 consolidated election list David Bieter 12640 votes (74.28 percent) and David B Hall 4377 votes (25.72 percent). The PDF is a scanned image and the first name of the second candidate is covered by a hole punch; the visible text reads 'B Hall'. The first name David is from a secondary source (Wikipedia) used only for the name. Vote totals were read by OCR from the scan and agree with the percentages (12640 of 17017). Nonpartisan election decided by plurality in one round.",
+  "candidates": [
+   {
+    "name": "David Bieter",
+    "role": "winner",
+    "votes": 12640,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "David B Hall",
+    "role": "runner_up",
+    "votes": 4377,
+    "candidate_year_id": ""
+   }
+  ]
+ },
+ {
+  "city_name": "Boise City",
+  "state_abb": "ID",
+  "roster_place_fips": "1608830",
+  "election_date": "2015-11-03",
+  "election_type": "regular",
+  "stage": "general",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "source_url": "https://adacounty.id.gov/elections/wp-content/uploads/sites/38/Nov-2015-Consolidated-Electoin-Results.pdf",
+  "source_locator": "Page 1, BOISE CITY MAYOR contest, TOTAL VOTES column",
+  "certification_source_url": "https://adacounty.id.gov/elections/election-results/",
+  "additional_source_urls": [
+   "https://adacounty.id.gov/elections/election-results/",
+   "https://legislature.idaho.gov/statutesrules/idstat/Title50/T50CH4/SECT50-402/"
+  ],
+  "verification_note": "Ada County official results for the November 3, 2015 consolidated election, 88 of 88 precincts, list David H. Bieter 22722 (68.82 percent), Judy Peavey-Derr 8716 (26.40 percent), Seth M. Holden 1489 and write-in 90. Bieter won a majority so no runoff was needed.",
+  "candidates": [
+   {
+    "name": "David H. Bieter",
+    "role": "winner",
+    "votes": 22722,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Judy Peavey-Derr",
+    "role": "runner_up",
+    "votes": 8716,
+    "candidate_year_id": ""
+   }
+  ]
+ },
+ {
+  "city_name": "Boise City",
+  "state_abb": "ID",
+  "roster_place_fips": "1608830",
+  "election_date": "2019-12-03",
+  "election_type": "regular",
+  "stage": "runoff",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "source_url": "https://adacounty.id.gov/elections/wp-content/uploads/sites/38/01-Ada-County-Results-Election-Night-December-2019.pdf",
+  "source_locator": "Page 1, BOISE CITY MAYOR contest, Total Votes column",
+  "certification_source_url": "https://adacounty.id.gov/elections/election-results/",
+  "additional_source_urls": [
+   "https://adacounty.id.gov/elections/wp-content/uploads/sites/38/01-Ada-County-Results-Election-Night-November-2019-3.pdf",
+   "https://adacounty.id.gov/elections/election-results/",
+   "https://legislature.idaho.gov/statutesrules/idstat/Title50/T50CH6/SECT50-612/"
+  ],
+  "verification_note": "Ada County official results for the December 3, 2019 Boise City Mayoral Runoff, 88 of 88 precincts, list Lauren McLean 30306 (65.5 percent) and David H. Bieter 15998 (34.5 percent). The November 5, 2019 first round (McLean 23669, Bieter 15711, no majority) is an earlier round and is not recorded separately. Idaho Code 50-612 provides for a runoff between the top two when no candidate has a majority.",
+  "candidates": [
+   {
+    "name": "Lauren McLean",
+    "role": "winner",
+    "votes": 30306,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "David H. Bieter",
+    "role": "runner_up",
+    "votes": 15998,
+    "candidate_year_id": ""
+   }
+  ]
+ },
+ {
+  "city_name": "Boise City",
+  "state_abb": "ID",
+  "roster_place_fips": "1608830",
+  "election_date": "2023-11-07",
+  "election_type": "regular",
+  "stage": "general",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "source_url": "https://adacounty.id.gov/elections/wp-content/uploads/sites/38/01-Ada-County-Results-Election-Night-November-2023-Official1.pdf",
+  "source_locator": "Page 1, BOISE MAYOR contest, Total Votes column",
+  "certification_source_url": "https://adacounty.id.gov/elections/election-results/",
+  "additional_source_urls": [
+   "https://adacounty.id.gov/elections/election-results/",
+   "https://legislature.idaho.gov/statutesrules/idstat/Title50/T50CH4/SECT50-402/"
+  ],
+  "verification_note": "Ada County official results (run date 11/20/2023) for the November 7, 2023 consolidated election list Lauren McLean 33926 (55.4 percent), Mike Masterson 26542 (43.4 percent), Joe Evans 563 and Aaron Reis 153. McLean won a majority, so no runoff was held.",
+  "candidates": [
+   {
+    "name": "Lauren McLean",
+    "role": "winner",
+    "votes": 33926,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Mike Masterson",
+    "role": "runner_up",
+    "votes": 26542,
+    "candidate_year_id": ""
+   }
+  ]
+ }
+]

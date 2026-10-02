@@ -1,0 +1,214 @@
+[
+ {
+  "city_id": "1263000",
+  "year": 2010,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://enr.votepinellas.com/FL/Pinellas/22578/40218/en/summary.html",
+  "additional_source_urls": [
+   "https://enr.votepinellas.com/FL/Pinellas/19832/40338/en/summary.html",
+   "https://enr.votepinellas.com/FL/Pinellas/11057/19069/en/summary.html",
+   "https://www.stpete.org/Government/Government/Elections/Candidate%20Rules%20%26%20Information/City%20Charter%20-%20v04%20-%20as%20amended%20through%2011-08-2022.pdf?t=202310250845590"
+  ],
+  "note": "Pinellas County Supervisor of Elections official results for the August 24, 2010 primary and the November 2, 2010 general election list no St. Petersburg contest. The St. Petersburg mayor was elected in 2009 (September 1 and November 3, 2009 official municipal election results), and the next mayoral election was 2013. No mayoral election fell in this year."
+ },
+ {
+  "city_id": "1263000",
+  "year": 2011,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://enr.votepinellas.com/FL/Pinellas/34161/49987/en/summary.html",
+  "additional_source_urls": [
+   "https://enr.votepinellas.com/FL/Pinellas/32812/46104/en/summary.html"
+  ],
+  "note": "Pinellas County official results show St. Petersburg held only council elections in 2011: the August 30, 2011 primary (District 1 council) and the November 8, 2011 municipal election (council districts 1, 3, 5, 7 and a charter amendment). No mayor contest appears. The mayor is elected in 2009, 2013, 2017 and 2021."
+ },
+ {
+  "city_id": "1263000",
+  "year": 2012,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://enr.votepinellas.com/FL/Pinellas/43334/111547/en/summary.html",
+  "additional_source_urls": [
+   "https://enr.votepinellas.com/FL/Pinellas/41042/96334/en/summary.html",
+   "https://enr.votepinellas.com/FL/Pinellas/36882/69920/en/summary.html",
+   "https://www.stpete.org/Government/Government/Elections/Candidate%20Rules%20%26%20Information/City%20Charter%20-%20v04%20-%20as%20amended%20through%2011-08-2022.pdf?t=202310250845590"
+  ],
+  "note": "Pinellas County official results for the January 31, 2012 presidential preference primary and municipal elections, the August 14, 2012 primary and the November 6, 2012 general election list no St. Petersburg contest. The mayor was elected in 2009 and 2013, so no mayoral election fell in this year."
+ },
+ {
+  "city_id": "1263000",
+  "year": 2013,
+  "status": "complete",
+  "expected_election_dates": [
+   "2013-11-05"
+  ],
+  "source_url": "https://enr.votepinellas.com/FL/Pinellas/48873/122777/en/summary.html",
+  "additional_source_urls": [
+   "https://enr.votepinellas.com/FL/Pinellas/47334/118089/en/summary.html",
+   "https://www.stpete.org/Government/Government/Elections/Candidate%20Rules%20%26%20Information/City%20Charter%20-%20v04%20-%20as%20amended%20through%2011-08-2022.pdf?t=202310250845590"
+  ],
+  "note": "Pinellas County Supervisor of Elections official results show a St. Petersburg mayoral primary on August 27, 2013 and a general election on November 5, 2013 between two candidates. The general election decided the office. Winner and runner-up are in st_petersburg_results.json."
+ },
+ {
+  "city_id": "1263000",
+  "year": 2014,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.stpete.org/Government/Government/Elections/Candidate%20Rules%20%26%20Information/City%20Charter%20-%20v04%20-%20as%20amended%20through%2011-08-2022.pdf?t=202310250845590",
+  "additional_source_urls": [
+   "https://enr.votepinellas.com/FL/Pinellas/48873/122777/en/summary.html",
+   "https://enr.votepinellas.com/FL/Pinellas/71891/191120/en/summary.html"
+  ],
+  "note": "The 2013 mayor (elected November 5, 2013) served a four-year term, and the next mayoral election was November 7, 2017 (Pinellas official results). The City Charter sets regular municipal general elections in odd-numbered years before the 2022 amendment (Sec. 5.05(b)). The Pinellas January 14, 2014 special primary results (ID 50611) are not a St. Petersburg election. A full 2014 St. Petersburg-specific results index was not opened, so this rests on the term cycle shown by the 2013 and 2017 official results."
+ },
+ {
+  "city_id": "1263000",
+  "year": 2015,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://enr.votepinellas.com/FL/Pinellas/57802/156943/json/sum.json",
+  "additional_source_urls": [
+   "https://enr.votepinellas.com/FL/Pinellas/56672/153836/json/sum.json",
+   "https://www.votepinellas.gov/243/2015-Election-Results"
+  ],
+  "note": "Pinellas County official results show St. Petersburg held only council elections in 2015: the August 25, 2015 primary (District 7 council) and the November 3, 2015 election (council districts 1, 5, 7 and referendum questions). No mayor contest appears. The Mayor is elected in 2013, 2017 and 2021."
+ },
+ {
+  "city_id": "1263000",
+  "year": 2016,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.votepinellas.gov/242/2016-Election-Results",
+  "additional_source_urls": [
+   "https://www.stpete.org/Government/Government/Elections/Candidate%20Rules%20%26%20Information/City%20Charter%20-%20v04%20-%20as%20amended%20through%2011-08-2022.pdf?t=202310250845590",
+   "https://enr.votepinellas.com/FL/Pinellas/71891/191120/en/summary.html",
+   "https://enr.votepinellas.com/FL/Pinellas/48873/122777/en/summary.html",
+   "https://www.votepinellas.gov/289/March-15-Presidential-Preference-Primary"
+  ],
+  "note": "The St. Petersburg City Charter sets a four-year mayoral term (Sec. 3.02(c)) and a general municipal election in odd-numbered years (Sec. 5.05(b)). Pinellas official results show the mayor elected on November 5, 2013 and again on November 7, 2017, so 2016 fell inside the term. The county 2016 results index (https://www.votepinellas.gov/242/2016-Election-Results) lists only the March 15 presidential preference primary and municipal elections, the August 30 primary and the November 8 general; it does not name the March cities and the ENR detail pages return HTTP 403 to curl, so it neither shows nor rules out a St. Petersburg contest. The no_election status rests on the charter cycle plus the 2013 and 2017 official results, not on the index page alone. The charter copy opened is the version amended through 2022 and does not reproduce the pre-2019 text."
+ },
+ {
+  "city_id": "1263000",
+  "year": 2017,
+  "status": "complete",
+  "expected_election_dates": [
+   "2017-11-07"
+  ],
+  "source_url": "https://enr.votepinellas.com/FL/Pinellas/71891/191120/en/summary.html",
+  "additional_source_urls": [
+   "https://www.votepinellas.gov/283/November-7-County-Referendum-Municipal-G",
+   "https://www.votepinellas.gov/286/August-29-St-Petersburg-Primary"
+  ],
+  "note": "Pinellas official results show a St. Petersburg mayoral primary on August 29, 2017 and a two-candidate general election on November 7, 2017, which decided the office. Winner and runner-up are in st_petersburg_results.json."
+ },
+ {
+  "city_id": "1263000",
+  "year": 2018,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.votepinellas.gov/281/March-13-Municipal-Elections",
+  "additional_source_urls": [
+   "https://www.votepinellas.gov/240/2018-Election-Results",
+   "https://www.stpete.org/Government/Government/Elections/Candidate%20Rules%20%26%20Information/City%20Charter%20-%20v04%20-%20as%20amended%20through%2011-08-2022.pdf?t=202310250845590",
+   "https://enr.votepinellas.com/FL/Pinellas/71891/191120/en/summary.html"
+  ],
+  "note": "The Pinellas County Supervisor of Elections page for the March 13, 2018 municipal elections lists the municipal offices up for election: Belleair, Belleair Beach, Clearwater, Gulfport, Indian Rocks Beach, Kenneth City, Madeira Beach, Pinellas Park, Redington Beach, Safety Harbor, South Pasadena and Treasure Island. St. Petersburg is not listed. St. Petersburg held its mayoral elections in November 2017 (Pinellas official results) on a four-year term (Charter Sec. 3.02(c)), so no mayoral election fell in 2018. The August 28 and November 6, 2018 ENR pages are JavaScript pages that returned HTTP 403 to curl and could not be read; the 2018 results index lists those dates without city detail."
+ },
+ {
+  "city_id": "1263000",
+  "year": 2019,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://enr.votepinellas.com/FL/Pinellas/98865/Web02.232126/#/",
+  "additional_source_urls": [
+   "https://enr.votepinellas.com/FL/Pinellas/96597/Web02.228981/#/",
+   "https://www.votepinellas.gov/239/2019-Election-Results"
+  ],
+  "note": "Pinellas official results show St. Petersburg held council elections in 2019: the August 27 primary (council districts 3, 5, 7) and the November 5 election (council districts 1, 3, 5, 7, charter amendments and a referendum). No mayor contest appears. The mayor is elected in 2017 and 2021."
+ },
+ {
+  "city_id": "1263000",
+  "year": 2020,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.votepinellas.gov/238/2020-Election-Results",
+  "additional_source_urls": [
+   "https://enr.votepinellas.com/FL/Pinellas/104757/Web02.258511/#/",
+   "https://enr.votepinellas.com/FL/Pinellas/106209/web.264614/#/summary"
+  ],
+  "note": "The Pinellas County Supervisor of Elections 2020 results page lists the March 17 presidential preference primary and municipal elections, the August 18 primary and the November 3 general election. The ENR results for the August 18 and November 3 ballots contain no St. Petersburg contest. The mayor was elected in 2017 and 2021."
+ },
+ {
+  "city_id": "1263000",
+  "year": 2021,
+  "status": "complete",
+  "expected_election_dates": [
+   "2021-11-02"
+  ],
+  "source_url": "https://enr.votepinellas.com/FL/Pinellas/110781/web.278093/#/summary",
+  "additional_source_urls": [
+   "https://www.votepinellas.gov/262/November-2-St-Petersburg-General-Electio",
+   "https://www.votepinellas.gov/264/August-24-St-Petersburg-Primary-Election"
+  ],
+  "note": "Pinellas official results show a nine-candidate St. Petersburg mayoral primary on August 24, 2021 (no majority) and a two-candidate general election on November 2, 2021, which decided the office. Winner and runner-up are in st_petersburg_results.json."
+ },
+ {
+  "city_id": "1263000",
+  "year": 2022,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.stpete.org/Government/Government/Elections/Candidate%20Rules%20%26%20Information/City%20Charter%20-%20v04%20-%20as%20amended%20through%2011-08-2022.pdf?t=202310250845590",
+  "additional_source_urls": [
+   "https://enr.votepinellas.gov/FL/Pinellas/115973/web.307039/#/summary"
+  ],
+  "note": "Charter Sec. 3.02(a)(1) states that no regular primary or general election is held in 2022 or 2023, and the sitting Mayor's term was extended by about one year (Sec. 3.02(a)(4)). Pinellas official results for the March 15, August 23 and November 8, 2022 elections show only St. Petersburg charter amendments and referendum questions, no mayoral contest."
+ },
+ {
+  "city_id": "1263000",
+  "year": 2023,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.stpete.org/Government/Government/Elections/Candidate%20Rules%20%26%20Information/City%20Charter%20-%20v04%20-%20as%20amended%20through%2011-08-2022.pdf?t=202310250845590",
+  "additional_source_urls": [
+   "https://enr.votepinellas.gov/FL/Pinellas/118634/web.317647/#/summary",
+   "https://enr.votepinellas.gov/FL/Pinellas/117397/web.307039/"
+  ],
+  "note": "Charter Sec. 3.02(a)(1) states that no regular primary or general election is held in 2023. Pinellas official results for the March 14 and November 7, 2023 elections contain no St. Petersburg contest."
+ },
+ {
+  "city_id": "1263000",
+  "year": 2024,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.stpete.org/Government/Government/Elections/Candidate%20Rules%20%26%20Information/City%20Charter%20-%20v04%20-%20as%20amended%20through%2011-08-2022.pdf?t=202310250845590",
+  "additional_source_urls": [
+   "https://enr.votepinellas.gov/FL/Pinellas/122163/web.345435/#/summary"
+  ],
+  "note": "Charter Sec. 3.02(a)(2) sets 2024 as the base year for council districts 1, 3, 5 and 7 only. The Mayor base year is 2026 (Sec. 3.02(a)(3)). Pinellas official results for the August 20, 2024 primary show only St. Petersburg council districts 3 and 7, no mayoral contest."
+ },
+ {
+  "city_id": "1263000",
+  "year": 2025,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.stpete.org/Government/Government/Elections/Candidate%20Rules%20%26%20Information/City%20Charter%20-%20v04%20-%20as%20amended%20through%2011-08-2022.pdf?t=202310250845590",
+  "additional_source_urls": [
+   "https://enr.votepinellas.gov/FL/Pinellas/124693/web.345435/#/summary",
+   "https://enr.votepinellas.gov/FL/Pinellas/123235/web.345435/#/summary"
+  ],
+  "note": "The Charter Sec. 3.02(a)(3) sets the next Mayor election in 2026 and extended the term of the sitting Mayor, so no mayoral election fell in 2025. Pinellas official results for the March 11, 2025 and November 4, 2025 municipal elections contain no St. Petersburg contest."
+ },
+ {
+  "city_id": "1263000",
+  "year": 2026,
+  "status": "earlier_round_only",
+  "expected_election_dates": [],
+  "source_url": "https://www.stpete.org/government/elections/candidate_rules.php",
+  "additional_source_urls": [
+   "https://www.stpete.org/Government/Government/Elections/Candidate%20Rules%20%26%20Information/City%20Charter%20-%20v04%20-%20as%20amended%20through%2011-08-2022.pdf?t=202310250845590",
+   "https://www.votepinellas.gov/383/August-18-2026-Primary-Election"
+  ],
+  "note": "The St. Petersburg city clerk page (https://www.stpete.org/government/elections/candidate_rules.php) lists the 2026 mayoral primary on August 18, 2026 and the general election on November 3, 2026, and states the full four-year term begins in January 2027. Charter Sec. 3.02(a)(3) sets 2026 as the Mayor base year. The primary falls before the September 14, 2026 cutoff and the general falls after it, so the decisive round is outside the window and the status is earlier_round_only. Primary vote totals are not recorded here: the Pinellas ENR page returns HTTP 403 to curl and a loading shell to WebFetch, and the county August 18, 2026 results page lists only the School Board District 6 contest. An earlier version of this note gave candidate counts and totals that could not be confirmed, and they were removed. Charter Sec. 5.05(a) places the primary ten weeks before the general, which would be August 25; the city page says August 18, and this date difference is unresolved but does not change the status."
+ }
+]

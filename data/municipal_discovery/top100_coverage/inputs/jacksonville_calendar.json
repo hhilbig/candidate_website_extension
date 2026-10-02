@@ -1,0 +1,227 @@
+[
+ {
+  "city_id": "1235000",
+  "year": 2010,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://library.municode.com/fl/jacksonville/codes/code_of_ordinances?nodeId=TITIXELCO_CH350ELELRECA_PT1GEPR_S350.101GECOGOEL",
+  "additional_source_urls": [
+   "https://www.duvalelections.gov/Archive.aspx?ADID=94",
+   "https://www.duvalelections.gov/241/Election-Results-2002-through-2013",
+   "https://www.duvalelections.gov/DocumentCenter/View/647/Mayor-PDF"
+  ],
+  "note": "Jacksonville Code of Ordinances Sec. 350.101(a) (read through the Municode API, nodeId TITIXELCO_CH350ELELRECA_PT1GEPR_S350.101GECOGOEL) sets general consolidated government elections in 1979 and every four years after, which gives 2011, 2015, 2019, 2023 and 2027. The 2027 Mayor Information Sheet confirms a four-year term and 2027 dates. The 2010 archive lists the Baldwin election, the Duval primary and the Duval general election. The text of the 2010 general statement of votes (View/1502) has no mayoral contest of the consolidated city. The 2010 primary (View/1501) also has none. The Supervisor of Elections archive for this year lists no mayoral election of the consolidated city. No special mayoral election was found in the archive listing."
+ },
+ {
+  "city_id": "1235000",
+  "year": 2011,
+  "status": "complete",
+  "expected_election_dates": [
+   "2011-05-17"
+  ],
+  "source_url": "https://www.duvalelections.gov/DocumentCenter/View/1504",
+  "additional_source_urls": [
+   "https://library.municode.com/fl/jacksonville/codes/code_of_ordinances?nodeId=TITIXELCO_CH350ELELRECA_PT1GEPR_S350.101GECOGOEL"
+  ],
+  "note": "The Supervisor of Elections archive lists the 2011 Duval Unitary General election results. The mayoral contest was decided in the general election, because no candidate won a majority in the first election. Winner and runner-up are in jacksonville_results.json."
+ },
+ {
+  "city_id": "1235000",
+  "year": 2012,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://library.municode.com/fl/jacksonville/codes/code_of_ordinances?nodeId=TITIXELCO_CH350ELELRECA_PT1GEPR_S350.101GECOGOEL",
+  "additional_source_urls": [
+   "https://www.duvalelections.gov/Archive.aspx?ADID=96",
+   "https://www.duvalelections.gov/241/Election-Results-2002-through-2013",
+   "https://www.duvalelections.gov/DocumentCenter/View/647/Mayor-PDF"
+  ],
+  "note": "Jacksonville Code of Ordinances Sec. 350.101(a) (read through the Municode API, nodeId TITIXELCO_CH350ELELRECA_PT1GEPR_S350.101GECOGOEL) sets general consolidated government elections in 1979 and every four years after, which gives 2011, 2015, 2019, 2023 and 2027. The 2027 Mayor Information Sheet confirms a four-year term and 2027 dates. The 2012 archive lists a primary and a general election only. The 2012 general statement of votes (View/1509, read by OCR) shows only Baldwin and Jacksonville Beach mayor races, which are other municipalities. It shows no Jacksonville mayoral contest. The Supervisor of Elections archive for this year lists no mayoral election of the consolidated city. No special mayoral election was found in the archive listing."
+ },
+ {
+  "city_id": "1235000",
+  "year": 2013,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://library.municode.com/fl/jacksonville/codes/code_of_ordinances?nodeId=TITIXELCO_CH350ELELRECA_PT1GEPR_S350.101GECOGOEL",
+  "additional_source_urls": [
+   "https://www.duvalelections.gov/Archive.aspx?ADID=97",
+   "https://www.duvalelections.gov/241/Election-Results-2002-through-2013",
+   "https://www.duvalelections.gov/DocumentCenter/View/647/Mayor-PDF"
+  ],
+  "note": "Jacksonville Code of Ordinances Sec. 350.101(a) (read through the Municode API, nodeId TITIXELCO_CH350ELELRECA_PT1GEPR_S350.101GECOGOEL) sets general consolidated government elections in 1979 and every four years after, which gives 2011, 2015, 2019, 2023 and 2027. The 2027 Mayor Information Sheet confirms a four-year term and 2027 dates. The 2013 archive page lists no election documents. The Supervisor of Elections archive for this year lists no mayoral election of the consolidated city. No special mayoral election was found in the archive listing."
+ },
+ {
+  "city_id": "1235000",
+  "year": 2014,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://library.municode.com/fl/jacksonville/codes/code_of_ordinances?nodeId=TITIXELCO_CH350ELELRECA_PT1GEPR_S350.101GECOGOEL",
+  "additional_source_urls": [
+   "https://www.duvalelections.gov/Archive.aspx?ADID=58",
+   "https://www.duvalelections.gov/289/Election-Results-After-2013",
+   "https://www.duvalelections.gov/DocumentCenter/View/647/Mayor-PDF"
+  ],
+  "note": "Jacksonville Code of Ordinances Sec. 350.101(a) (read through the Municode API, nodeId TITIXELCO_CH350ELELRECA_PT1GEPR_S350.101GECOGOEL) sets general consolidated government elections in 1979 and every four years after, which gives 2011, 2015, 2019, 2023 and 2027. The 2027 Mayor Information Sheet confirms a four-year term and 2027 dates. The 2014 archive lists a primary, a general and a state house special primary. The ENR pages for these (Summary/1054, 1160, 1229) show no mayoral contest. The Supervisor of Elections archive for this year lists no mayoral election of the consolidated city. No special mayoral election was found in the archive listing."
+ },
+ {
+  "city_id": "1235000",
+  "year": 2015,
+  "status": "complete",
+  "expected_election_dates": [
+   "2015-05-19"
+  ],
+  "source_url": "https://enr.electionsfl.org/DUV/Summary/1276",
+  "additional_source_urls": [
+   "https://www.duvalelections.gov/Archive.aspx?ADID=57",
+   "https://www.duvalelections.gov/DocumentCenter/View/647/Mayor-PDF"
+  ],
+  "note": "The Supervisor of Elections results page for the 2015 Duval General Election shows the mayoral contest. Winner and runner-up are in jacksonville_results.json."
+ },
+ {
+  "city_id": "1235000",
+  "year": 2016,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://library.municode.com/fl/jacksonville/codes/code_of_ordinances?nodeId=TITIXELCO_CH350ELELRECA_PT1GEPR_S350.101GECOGOEL",
+  "additional_source_urls": [
+   "https://www.duvalelections.gov/Archive.aspx?ADID=56",
+   "https://www.duvalelections.gov/289/Election-Results-After-2013",
+   "https://www.duvalelections.gov/DocumentCenter/View/647/Mayor-PDF"
+  ],
+  "note": "Jacksonville Code of Ordinances Sec. 350.101(a) (read through the Municode API, nodeId TITIXELCO_CH350ELELRECA_PT1GEPR_S350.101GECOGOEL) sets general consolidated government elections in 1979 and every four years after, which gives 2011, 2015, 2019, 2023 and 2027. The 2027 Mayor Information Sheet confirms a four-year term and 2027 dates. The 2016 archive lists the presidential preference primary, the primary and the general. The ENR pages (Summary/1374, 1527, 1608) show only Neptune Beach, Baldwin and Jacksonville Beach mayor contests, which are other municipalities. The Supervisor of Elections archive for this year lists no mayoral election of the consolidated city. No special mayoral election was found in the archive listing."
+ },
+ {
+  "city_id": "1235000",
+  "year": 2017,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://library.municode.com/fl/jacksonville/codes/code_of_ordinances?nodeId=TITIXELCO_CH350ELELRECA_PT1GEPR_S350.101GECOGOEL",
+  "additional_source_urls": [
+   "https://www.duvalelections.gov/Archive.aspx?ADID=55",
+   "https://www.duvalelections.gov/289/Election-Results-After-2013",
+   "https://www.duvalelections.gov/DocumentCenter/View/647/Mayor-PDF"
+  ],
+  "note": "Jacksonville Code of Ordinances Sec. 350.101(a) (read through the Municode API, nodeId TITIXELCO_CH350ELELRECA_PT1GEPR_S350.101GECOGOEL) sets general consolidated government elections in 1979 and every four years after, which gives 2011, 2015, 2019, 2023 and 2027. The 2027 Mayor Information Sheet confirms a four-year term and 2027 dates. The 2017 archive lists only an Atlantic Beach primary (Summary/1711), a different municipality. The Supervisor of Elections archive for this year lists no mayoral election of the consolidated city. No special mayoral election was found in the archive listing."
+ },
+ {
+  "city_id": "1235000",
+  "year": 2018,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://library.municode.com/fl/jacksonville/codes/code_of_ordinances?nodeId=TITIXELCO_CH350ELELRECA_PT1GEPR_S350.101GECOGOEL",
+  "additional_source_urls": [
+   "https://www.duvalelections.gov/Archive.aspx?ADID=54",
+   "https://www.duvalelections.gov/289/Election-Results-After-2013",
+   "https://www.duvalelections.gov/DocumentCenter/View/647/Mayor-PDF"
+  ],
+  "note": "Jacksonville Code of Ordinances Sec. 350.101(a) (read through the Municode API, nodeId TITIXELCO_CH350ELELRECA_PT1GEPR_S350.101GECOGOEL) sets general consolidated government elections in 1979 and every four years after, which gives 2011, 2015, 2019, 2023 and 2027. The 2027 Mayor Information Sheet confirms a four-year term and 2027 dates. The 2018 archive lists a primary and a general. The ENR pages (Summary/1859, 1964) show no mayoral contest. The Supervisor of Elections archive for this year lists no mayoral election of the consolidated city. No special mayoral election was found in the archive listing."
+ },
+ {
+  "city_id": "1235000",
+  "year": 2019,
+  "status": "complete",
+  "expected_election_dates": [
+   "2019-03-19"
+  ],
+  "source_url": "https://enr.electionsfl.org/DUV/Summary/2085/",
+  "additional_source_urls": [
+   "https://www.duvalelections.gov/Archive.aspx?ADID=53",
+   "https://enr.electionsfl.org/DUV/Summary/2125/",
+   "https://library.municode.com/fl/jacksonville/codes/code_of_ordinances?nodeId=TITIXELCO_CH350ELELRECA_PT1GEPR_S350.102COGOEL",
+   "https://library.municode.com/fl/jacksonville/codes/code_of_ordinances?nodeId=TITIXELCO_CH350ELELRECA_PT1GEPR_S350.101GECOGOEL"
+  ],
+  "note": "The Supervisor of Elections results page for the 2019 Duval First Election shows Lenny Curry with a majority of the mayoral vote (84,604 of 146,817). Jacksonville Code Sec. 350.102(a) says a candidate with a majority in the first consolidated government election is declared elected, and a general election is held only if no candidate has a majority. The 2019 Duval General Election page lists only council contests and no mayoral contest. The decisive election was the first election on March 19, 2019."
+ },
+ {
+  "city_id": "1235000",
+  "year": 2020,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://library.municode.com/fl/jacksonville/codes/code_of_ordinances?nodeId=TITIXELCO_CH350ELELRECA_PT1GEPR_S350.101GECOGOEL",
+  "additional_source_urls": [
+   "https://www.duvalelections.gov/Archive.aspx?ADID=52",
+   "https://www.duvalelections.gov/289/Election-Results-After-2013",
+   "https://www.duvalelections.gov/DocumentCenter/View/647/Mayor-PDF"
+  ],
+  "note": "Jacksonville Code of Ordinances Sec. 350.101(a) (read through the Municode API, nodeId TITIXELCO_CH350ELELRECA_PT1GEPR_S350.101GECOGOEL) sets general consolidated government elections in 1979 and every four years after, which gives 2011, 2015, 2019, 2023 and 2027. The 2027 Mayor Information Sheet confirms a four-year term and 2027 dates. The 2020 archive lists the presidential preference primary, the primary and the general. The ENR pages (Summary/2620, 2675, 2745) show only Jacksonville Beach, Baldwin and Atlantic Beach mayor contests, which are other municipalities. The Supervisor of Elections archive for this year lists no mayoral election of the consolidated city. No special mayoral election was found in the archive listing."
+ },
+ {
+  "city_id": "1235000",
+  "year": 2021,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://library.municode.com/fl/jacksonville/codes/code_of_ordinances?nodeId=TITIXELCO_CH350ELELRECA_PT1GEPR_S350.101GECOGOEL",
+  "additional_source_urls": [
+   "https://www.duvalelections.gov/Archive.aspx?ADID=51",
+   "https://www.duvalelections.gov/289/Election-Results-After-2013",
+   "https://www.duvalelections.gov/DocumentCenter/View/647/Mayor-PDF"
+  ],
+  "note": "Jacksonville Code of Ordinances Sec. 350.101(a) (read through the Municode API, nodeId TITIXELCO_CH350ELELRECA_PT1GEPR_S350.101GECOGOEL) sets general consolidated government elections in 1979 and every four years after, which gives 2011, 2015, 2019, 2023 and 2027. The 2027 Mayor Information Sheet confirms a four-year term and 2027 dates. The 2021 archive lists only a special first unitary election (Summary/3089), which shows no mayoral contest. The Supervisor of Elections archive for this year lists no mayoral election of the consolidated city. No special mayoral election was found in the archive listing."
+ },
+ {
+  "city_id": "1235000",
+  "year": 2022,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://library.municode.com/fl/jacksonville/codes/code_of_ordinances?nodeId=TITIXELCO_CH350ELELRECA_PT1GEPR_S350.101GECOGOEL",
+  "additional_source_urls": [
+   "https://www.duvalelections.gov/Archive.aspx?ADID=50",
+   "https://www.duvalelections.gov/289/Election-Results-After-2013",
+   "https://www.duvalelections.gov/DocumentCenter/View/647/Mayor-PDF"
+  ],
+  "note": "Jacksonville Code of Ordinances Sec. 350.101(a) (read through the Municode API, nodeId TITIXELCO_CH350ELELRECA_PT1GEPR_S350.101GECOGOEL) sets general consolidated government elections in 1979 and every four years after, which gives 2011, 2015, 2019, 2023 and 2027. The 2027 Mayor Information Sheet confirms a four-year term and 2027 dates. The 2022 archive lists a special general unitary election, a primary and a general. The ENR pages (Summary/3124, 3206, 3284) show only an Atlantic Beach mayor contest, a different municipality. The Supervisor of Elections archive for this year lists no mayoral election of the consolidated city. No special mayoral election was found in the archive listing."
+ },
+ {
+  "city_id": "1235000",
+  "year": 2023,
+  "status": "complete",
+  "expected_election_dates": [
+   "2023-05-16"
+  ],
+  "source_url": "https://enr.electionsfl.org/DUV/Summary/3385/",
+  "additional_source_urls": [
+   "https://www.duvalelections.gov/Archive.aspx?ADID=49",
+   "https://www.duvalelections.gov/DocumentCenter/View/647/Mayor-PDF"
+  ],
+  "note": "The Supervisor of Elections results page for the 2023 Duval General Election shows the mayoral contest. The first election was on March 21, 2023 and went to a general election. Winner and runner-up are in jacksonville_results.json."
+ },
+ {
+  "city_id": "1235000",
+  "year": 2024,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://library.municode.com/fl/jacksonville/codes/code_of_ordinances?nodeId=TITIXELCO_CH350ELELRECA_PT1GEPR_S350.101GECOGOEL",
+  "additional_source_urls": [
+   "https://www.duvalelections.gov/Archive.aspx?ADID=101",
+   "https://www.duvalelections.gov/289/Election-Results-After-2013",
+   "https://www.duvalelections.gov/DocumentCenter/View/647/Mayor-PDF"
+  ],
+  "note": "Jacksonville Code of Ordinances Sec. 350.101(a) (read through the Municode API, nodeId TITIXELCO_CH350ELELRECA_PT1GEPR_S350.101GECOGOEL) sets general consolidated government elections in 1979 and every four years after, which gives 2011, 2015, 2019, 2023 and 2027. The 2027 Mayor Information Sheet confirms a four-year term and 2027 dates. The 2024 archive lists the presidential preference election, the primary and the general. The ENR pages (Summary/3491, 3614, 3694) show only Jacksonville Beach and Neptune Beach mayor contests, which are other municipalities. The Supervisor of Elections archive for this year lists no mayoral election of the consolidated city. No special mayoral election was found in the archive listing."
+ },
+ {
+  "city_id": "1235000",
+  "year": 2025,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://library.municode.com/fl/jacksonville/codes/code_of_ordinances?nodeId=TITIXELCO_CH350ELELRECA_PT1GEPR_S350.101GECOGOEL",
+  "additional_source_urls": [
+   "https://www.duvalelections.gov/289/Election-Results-After-2013",
+   "https://www.duvalelections.gov/DocumentCenter/View/647/Mayor-PDF"
+  ],
+  "note": "Jacksonville Code of Ordinances Sec. 350.101(a) (read through the Municode API, nodeId TITIXELCO_CH350ELELRECA_PT1GEPR_S350.101GECOGOEL) sets general consolidated government elections in 1979 and every four years after, which gives 2011, 2015, 2019, 2023 and 2027. The 2027 Mayor Information Sheet confirms a four-year term and 2027 dates. The Past Election Results index (After 2013 page) lists no 2025 archive, so no 2025 election document is published there. The Supervisor of Elections archive for this year lists no mayoral election of the consolidated city. No special mayoral election was found in the archive listing."
+ },
+ {
+  "city_id": "1235000",
+  "year": 2026,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://library.municode.com/fl/jacksonville/codes/code_of_ordinances?nodeId=TITIXELCO_CH350ELELRECA_PT1GEPR_S350.101GECOGOEL",
+  "additional_source_urls": [
+   "https://www.duvalelections.gov/Archive.aspx?ADID=48",
+   "https://www.duvalelections.gov/289/Election-Results-After-2013",
+   "https://www.duvalelections.gov/DocumentCenter/View/647/Mayor-PDF"
+  ],
+  "note": "Jacksonville Code of Ordinances Sec. 350.101(a) (read through the Municode API, nodeId TITIXELCO_CH350ELELRECA_PT1GEPR_S350.101GECOGOEL) sets general consolidated government elections in 1979 and every four years after, which gives 2011, 2015, 2019, 2023 and 2027. The 2027 Mayor Information Sheet confirms a four-year term and 2027 dates. The 2026 archive lists only the primary election (Summary/4003), which shows no mayoral contest. The Supervisor of Elections archive for this year lists no mayoral election of the consolidated city. No special mayoral election was found in the archive listing."
+ }
+]

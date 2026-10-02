@@ -1,0 +1,173 @@
+[
+ {
+  "city_id": "3231900",
+  "year": 2010,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://elections.clarkcountynv.gov/electionresultsTV/results.aspx",
+  "additional_source_urls": [],
+  "note": "The Clark County Election Department results index (the official county election authority) lists every election held in the county. The index lists only the 2010 primary (06/08/2010) and general (11/02/2010), which held no Henderson city mayor contest. The 2010 primary shows no contest titled Mayor of Henderson."
+ },
+ {
+  "city_id": "3231900",
+  "year": 2011,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://elections.clarkcountynv.gov/electionresultsTV/results.aspx",
+  "additional_source_urls": [],
+  "note": "The Clark County Election Department results index (the official county election authority) lists every election held in the county. The index lists the 2011 municipal primary (04/05/2011), municipal general (06/07/2011) and a 09/13/2011 special election. The 2011 Henderson contests found are council wards and a municipal court judge. No Mayor of Henderson contest appears in any of them. The mayor was elected in 2013 and 2017."
+ },
+ {
+  "city_id": "3231900",
+  "year": 2012,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://elections.clarkcountynv.gov/electionresultsTV/results.aspx",
+  "additional_source_urls": [],
+  "note": "The Clark County Election Department results index (the official county election authority) lists every election held in the county. The index lists the 2012 primary (06/12/2012) and general (11/06/2012) plus two Las Vegas ward elections. None has a Mayor of Henderson contest. Henderson holds its mayoral election in the odd-year municipal cycle in this period."
+ },
+ {
+  "city_id": "3231900",
+  "year": 2013,
+  "status": "complete",
+  "expected_election_dates": [
+   "2013-04-02"
+  ],
+  "source_url": "https://elections.clarkcountynv.gov/electionresultsTV/results.aspx",
+  "additional_source_urls": [
+   "https://www.leg.state.nv.us/Statutes/78th2015/Stats201514.html"
+  ],
+  "note": "Clark County official results for the 2013 Municipal Primary (04/02/2013) show a Mayor of Henderson contest. Hafen won a majority, so no mayoral contest appears on the 06/04/2013 municipal general. Winner and runner-up are in henderson_results.json. The rule in force in 2013 and 2017 is shown by the Legislative Counsel's Digest of 2015 Statutes of Nevada, chapter 295 (SB 5), pages 1479-1480, at https://www.leg.state.nv.us/Statutes/78th2015/Stats201514.html. The digest says that for most charter cities, including Henderson (Henderson City Charter 5.010), existing law in 2015 provided that a candidate with a majority of votes in the primary city election is declared elected and is not placed on the general city ballot. That act amended only the Carson City charter, so the Henderson rule stayed the same through 2017. The current text of NRS 293C.175 (June even-year primaries) applies only from 2019 and later and is not used as the rule for 2013 or 2017. The Henderson charter text itself was not opened (the city site returned HTTP 403 and no charter page was found on the legislature site); the rule rests on the digest."
+ },
+ {
+  "city_id": "3231900",
+  "year": 2014,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://elections.clarkcountynv.gov/electionresultsTV/results.aspx",
+  "additional_source_urls": [],
+  "note": "The Clark County Election Department results index (the official county election authority) lists every election held in the county. The index lists the 2014 primary (06/10/2014) and general (11/04/2014). Henderson appears only for Henderson Township justice of the peace contests. No Mayor of Henderson contest appears."
+ },
+ {
+  "city_id": "3231900",
+  "year": 2015,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://elections.clarkcountynv.gov/electionresultsTV/results.aspx",
+  "additional_source_urls": [],
+  "note": "The Clark County Election Department results index (the official county election authority) lists every election held in the county. The index lists the 2015 municipal primary (04/07/2015) and general (06/02/2015). Henderson contests are council wards I, II and IV only. No Mayor of Henderson contest appears. The mayor elected in 2013 served until the 2017 election."
+ },
+ {
+  "city_id": "3231900",
+  "year": 2016,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://elections.clarkcountynv.gov/electionresultsTV/results.aspx",
+  "additional_source_urls": [],
+  "note": "The Clark County Election Department results index (the official county election authority) lists every election held in the county. The index lists the 2016 primary (06/14/2016) and general (11/08/2016). No Henderson city contest and no Mayor of Henderson contest appears."
+ },
+ {
+  "city_id": "3231900",
+  "year": 2017,
+  "status": "complete",
+  "expected_election_dates": [
+   "2017-04-04"
+  ],
+  "source_url": "https://elections.clarkcountynv.gov/electionresultsTV/results.aspx",
+  "additional_source_urls": [
+   "https://www.leg.state.nv.us/Statutes/78th2015/Stats201514.html"
+  ],
+  "note": "Clark County official results for the 2017 Municipal Primary (04/04/2017) show a Mayor of Henderson contest. March won a majority, so only Ward III council appears for Henderson on the 06/13/2017 municipal general. Winner and runner-up are in henderson_results.json. The rule in force in 2013 and 2017 is shown by the Legislative Counsel's Digest of 2015 Statutes of Nevada, chapter 295 (SB 5), pages 1479-1480, at https://www.leg.state.nv.us/Statutes/78th2015/Stats201514.html. The digest says that for most charter cities, including Henderson (Henderson City Charter 5.010), existing law in 2015 provided that a candidate with a majority of votes in the primary city election is declared elected and is not placed on the general city ballot. That act amended only the Carson City charter, so the Henderson rule stayed the same through 2017. The current text of NRS 293C.175 (June even-year primaries) applies only from 2019 and later and is not used as the rule for 2013 or 2017. The Henderson charter text itself was not opened (the city site returned HTTP 403 and no charter page was found on the legislature site); the rule rests on the digest."
+ },
+ {
+  "city_id": "3231900",
+  "year": 2018,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://elections.clarkcountynv.gov/electionresultsTV/results.aspx",
+  "additional_source_urls": [],
+  "note": "The Clark County Election Department results index (the official county election authority) lists every election held in the county. The index lists the 2018 primary, a 03/27/2018 Las Vegas ward special, a 07/17/2018 special and the general (11/06/2018). Henderson appears only for Henderson Township justice of the peace contests. No Mayor of Henderson contest appears."
+ },
+ {
+  "city_id": "3231900",
+  "year": 2019,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://elections.clarkcountynv.gov/electionresultsTV/results.aspx",
+  "additional_source_urls": [],
+  "note": "The Clark County Election Department results index (the official county election authority) lists every election held in the county. The index lists the 2019 municipal primary (04/02/2019) and general (06/11/2019). Henderson contests are council wards I, II and IV and a municipal court judge. No Mayor of Henderson contest appears."
+ },
+ {
+  "city_id": "3231900",
+  "year": 2020,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://elections.clarkcountynv.gov/electionresultsTV/results.aspx",
+  "additional_source_urls": [],
+  "note": "The Clark County Election Department results index (the official county election authority) lists every election held in the county. The index lists the 2020 primary (06/09/2020) and general (11/03/2020). Henderson appears only for Henderson Township justice of the peace contests. No Mayor of Henderson contest appears."
+ },
+ {
+  "city_id": "3231900",
+  "year": 2021,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://elections.clarkcountynv.gov/electionresultsTV/results.aspx",
+  "additional_source_urls": [
+   "https://www.leg.state.nv.us/nrs/nrs-293c.html"
+  ],
+  "note": "The Clark County Election Department results index (the official county election authority) lists every election held in the county. The index lists for 2021 only a Boulder City primary (04/06/2021) and Boulder City general (06/15/2021). No Henderson election was held in 2021. NRS 293C.175 as amended in 2019 and 2021 sets primary city elections for large cities in even-numbered years. The next Henderson mayoral election after 2017 appears in the index in 2022. The Henderson city clerk website returned HTTP 403 to every request, so no city document was read."
+ },
+ {
+  "city_id": "3231900",
+  "year": 2022,
+  "status": "complete",
+  "expected_election_dates": [
+   "2022-06-14"
+  ],
+  "source_url": "https://elections.clarkcountynv.gov/electionresultsTV/results.aspx",
+  "additional_source_urls": [
+   "https://www.leg.state.nv.us/nrs/nrs-293c.html"
+  ],
+  "note": "Clark County official results for the 2022 Primary Election (06/14/2022) show Mayor of Henderson (nonpartisan). Romero won a majority of the votes. The 11/08/2022 general results contain no Mayor of Henderson contest. NRS 293C.175(5) declares a majority winner in a city primary elected and omits that name from the general ballot. Winner and runner-up are in henderson_results.json."
+ },
+ {
+  "city_id": "3231900",
+  "year": 2023,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://elections.clarkcountynv.gov/electionresultsTV/results.aspx",
+  "additional_source_urls": [],
+  "note": "The Clark County Election Department results index (the official county election authority) lists every election held in the county. The index lists a 04/03/2023 Henderson Ward I election only (a single council ward). No Mayor of Henderson contest appears."
+ },
+ {
+  "city_id": "3231900",
+  "year": 2024,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://elections.clarkcountynv.gov/electionresultsTV/results.aspx",
+  "additional_source_urls": [],
+  "note": "The Clark County Election Department results index (the official county election authority) lists every election held in the county. The index lists the 2024 presidential primary, primary (06/11/2024) and general (11/05/2024). Henderson contests are council wards I, II and IV and Henderson Township justice of the peace. No Mayor of Henderson contest appears."
+ },
+ {
+  "city_id": "3231900",
+  "year": 2025,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://elections.clarkcountynv.gov/electionresultsTV/results.aspx",
+  "additional_source_urls": [
+   "https://www.leg.state.nv.us/nrs/nrs-293c.html"
+  ],
+  "note": "The Clark County Election Department results index (the official county election authority) lists every election held in the county. The county results index (page current to 2026) lists no election of any kind in 2025. Henderson mayoral elections now follow the even-year cycle of NRS 293C.175, with the 2022 election followed by the 2026 election. The mayor is not selected by the council."
+ },
+ {
+  "city_id": "3231900",
+  "year": 2026,
+  "status": "earlier_round_only",
+  "expected_election_dates": [],
+  "source_url": "https://elections.clarkcountynv.gov/electionresultsTV/results.aspx",
+  "additional_source_urls": [
+   "https://www.leg.state.nv.us/nrs/nrs-293c.html"
+  ],
+  "note": "The Clark County 2026 Primary Election (06/09/2026) shows City of Henderson Mayor (nonpartisan). Romero got 29040 of 58372 votes (49.75 percent), below a majority. Under NRS 293C.175(5) the top two candidates, Romero and Chadwick, go to the general city election. That general falls in November 2026, after the September 14, 2026 cutoff, so the decisive round is outside the window."
+ }
+]
