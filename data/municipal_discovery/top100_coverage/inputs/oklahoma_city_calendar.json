@@ -10,7 +10,7 @@
    "https://www.okc.gov/Government/Elected-Officials/Mayor",
    "https://www.okc.gov/Government/Elected-Officials/Elections/Upcoming-Elections"
   ],
-  "note": "A mayoral election is expected in this year (nonpartisan February election, four-year cycle), but no official results document could be opened. The state election board index page for February 8, 2022 links to https://results.okelections.us/OKER/?elecDate=20220208. That page loaded only as a JavaScript application and its data needs a login call, which the session did not run. WebFetch to results.okelections.us returned HTTP 403. The okc.gov city clerk elections page returned HTTP 404. News and Wikipedia figures were not accepted as results sources. Second pass: the official OKC pages confirm that the mayor is elected in even-numbered years every four years, with the general election on the second Tuesday of February and a runoff on the first Tuesday of April if needed (https://www.okc.gov/departments/city-clerk/elections). The Mayor page states that David Holt was elected in 2018 and re-elected in 2022 (https://www.okc.gov/Government/Elected-Officials/Mayor), and the Upcoming Elections page lists the next mayoral general election for February 2030 (https://www.okc.gov/Government/Elected-Officials/Elections/Upcoming-Elections). Official vote totals could not be read. The state results application (results.okelections.us, redirects to results.okelections.gov, election dates 20100209/20140211/20180213/20220208/20260210 where linked) returns HTTP 403 to plain requests and its data API needs a login with an embedded app password, which was not used. oklahoma.gov/elections archive pages for 2010 list only statewide PDFs. The Oklahoma County Election Board pages (oklahomacounty.org/Departments/Election-Board and /Election-Results) hold no results documents. web.archive.org timed out or was blocked, and the Chrome extension was not connected. The web search budget was exhausted. The year stays unresolved."
+  "note": "A mayoral election is expected in this year (nonpartisan February election, four-year cycle), but no official results document could be opened. The state election board index page for February 8, 2022 links to https://results.okelections.us/OKER/?elecDate=20220208. That page loaded only as a JavaScript application and its data needs a login call, which the session did not run. WebFetch to results.okelections.us returned HTTP 403. The okc.gov city clerk elections page returned HTTP 404. News and Wikipedia figures were not accepted as results sources. Second pass: the official OKC pages confirm that the mayor is elected in even-numbered years every four years, with the general election on the second Tuesday of February and a runoff on the first Tuesday of April if needed (https://www.okc.gov/departments/city-clerk/elections). The Mayor page states that David Holt was elected in 2018 and re-elected in 2022 (https://www.okc.gov/Government/Elected-Officials/Mayor), and the Upcoming Elections page lists the next mayoral general election for February 2030 (https://www.okc.gov/Government/Elected-Officials/Elections/Upcoming-Elections). Official vote totals could not be read. The state results application (results.okelections.us, redirects to results.okelections.gov, election dates 20100209/20140211/20180213/20220208/20260210 where linked) returns HTTP 403 to plain requests and its data API needs a login with an embedded app password, which was not used. oklahoma.gov/elections archive pages for 2010 list only statewide PDFs. The Oklahoma County Election Board pages (oklahomacounty.org/Departments/Election-Board and /Election-Results) hold no results documents. web.archive.org timed out or was blocked, and the Chrome extension was not connected. The web search budget was exhausted. The year stays unresolved. Browser check 2026-10-02: the state results application returns no data for 2010-03-02 (it appears to start later); no official 2010 result was opened."
  },
  {
   "city_id": "4055000",
@@ -54,15 +54,15 @@
  {
   "city_id": "4055000",
   "year": 2014,
-  "status": "unresolved",
-  "expected_election_dates": [],
-  "source_url": "https://www.ok.gov/elections/elections-results/election-results.html",
-  "additional_source_urls": [
-   "https://www.okc.gov/departments/city-clerk/elections",
-   "https://www.okc.gov/Government/Elected-Officials/Mayor",
-   "https://www.okc.gov/Government/Elected-Officials/Elections/Upcoming-Elections"
+  "status": "complete",
+  "expected_election_dates": [
+   "2014-03-04"
   ],
-  "note": "A mayoral election is expected in this year (nonpartisan February election, four-year cycle), but no official results document could be opened. The state election board index page for February 8, 2022 links to https://results.okelections.us/OKER/?elecDate=20220208. That page loaded only as a JavaScript application and its data needs a login call, which the session did not run. WebFetch to results.okelections.us returned HTTP 403. The okc.gov city clerk elections page returned HTTP 404. News and Wikipedia figures were not accepted as results sources. Second pass: the official OKC pages confirm that the mayor is elected in even-numbered years every four years, with the general election on the second Tuesday of February and a runoff on the first Tuesday of April if needed (https://www.okc.gov/departments/city-clerk/elections). The Mayor page states that David Holt was elected in 2018 and re-elected in 2022 (https://www.okc.gov/Government/Elected-Officials/Mayor), and the Upcoming Elections page lists the next mayoral general election for February 2030 (https://www.okc.gov/Government/Elected-Officials/Elections/Upcoming-Elections). Official vote totals could not be read. The state results application (results.okelections.us, redirects to results.okelections.gov, election dates 20100209/20140211/20180213/20220208/20260210 where linked) returns HTTP 403 to plain requests and its data API needs a login with an embedded app password, which was not used. oklahoma.gov/elections archive pages for 2010 list only statewide PDFs. The Oklahoma County Election Board pages (oklahomacounty.org/Departments/Election-Board and /Election-Results) hold no results documents. web.archive.org timed out or was blocked, and the Chrome extension was not connected. The web search budget was exhausted. The year stays unresolved."
+  "source_url": "https://results.okelections.gov/OKER/?elecDate=20140304",
+  "additional_source_urls": [
+   "https://library.municode.com/ok/oklahoma_city/codes/code_of_ordinances?nodeId=OKCH_ARTXGEELRUEL"
+  ],
+  "note": "Oklahoma State Election Board official results for 2014-03-04 contain the Oklahoma City mayoral election (majority winner deemed elected under Charter Art. X). Winner and runner-up are in oklahoma_city_results.json. Checked in a browser on 2026-10-02."
  },
  {
   "city_id": "4055000",
@@ -106,15 +106,15 @@
  {
   "city_id": "4055000",
   "year": 2018,
-  "status": "unresolved",
-  "expected_election_dates": [],
-  "source_url": "https://www.ok.gov/elections/elections-results/election-results.html",
-  "additional_source_urls": [
-   "https://www.okc.gov/departments/city-clerk/elections",
-   "https://www.okc.gov/Government/Elected-Officials/Mayor",
-   "https://www.okc.gov/Government/Elected-Officials/Elections/Upcoming-Elections"
+  "status": "complete",
+  "expected_election_dates": [
+   "2018-02-13"
   ],
-  "note": "A mayoral election is expected in this year (nonpartisan February election, four-year cycle), but no official results document could be opened. The state election board index page for February 8, 2022 links to https://results.okelections.us/OKER/?elecDate=20220208. That page loaded only as a JavaScript application and its data needs a login call, which the session did not run. WebFetch to results.okelections.us returned HTTP 403. The okc.gov city clerk elections page returned HTTP 404. News and Wikipedia figures were not accepted as results sources. Second pass: the official OKC pages confirm that the mayor is elected in even-numbered years every four years, with the general election on the second Tuesday of February and a runoff on the first Tuesday of April if needed (https://www.okc.gov/departments/city-clerk/elections). The Mayor page states that David Holt was elected in 2018 and re-elected in 2022 (https://www.okc.gov/Government/Elected-Officials/Mayor), and the Upcoming Elections page lists the next mayoral general election for February 2030 (https://www.okc.gov/Government/Elected-Officials/Elections/Upcoming-Elections). Official vote totals could not be read. The state results application (results.okelections.us, redirects to results.okelections.gov, election dates 20100209/20140211/20180213/20220208/20260210 where linked) returns HTTP 403 to plain requests and its data API needs a login with an embedded app password, which was not used. oklahoma.gov/elections archive pages for 2010 list only statewide PDFs. The Oklahoma County Election Board pages (oklahomacounty.org/Departments/Election-Board and /Election-Results) hold no results documents. web.archive.org timed out or was blocked, and the Chrome extension was not connected. The web search budget was exhausted. The year stays unresolved."
+  "source_url": "https://results.okelections.gov/OKER/?elecDate=20180213",
+  "additional_source_urls": [
+   "https://library.municode.com/ok/oklahoma_city/codes/code_of_ordinances?nodeId=OKCH_ARTXGEELRUEL"
+  ],
+  "note": "Oklahoma State Election Board official results for 2018-02-13 contain the Oklahoma City mayoral election (majority winner deemed elected under Charter Art. X). Winner and runner-up are in oklahoma_city_results.json. Checked in a browser on 2026-10-02."
  },
  {
   "city_id": "4055000",
@@ -158,15 +158,15 @@
  {
   "city_id": "4055000",
   "year": 2022,
-  "status": "unresolved",
-  "expected_election_dates": [],
-  "source_url": "https://www.ok.gov/elections/elections-results/election-results.html",
-  "additional_source_urls": [
-   "https://www.okc.gov/departments/city-clerk/elections",
-   "https://www.okc.gov/Government/Elected-Officials/Mayor",
-   "https://www.okc.gov/Government/Elected-Officials/Elections/Upcoming-Elections"
+  "status": "complete",
+  "expected_election_dates": [
+   "2022-02-08"
   ],
-  "note": "A mayoral election is expected in this year (nonpartisan February election, four-year cycle), but no official results document could be opened. The state election board index page for February 8, 2022 links to https://results.okelections.us/OKER/?elecDate=20220208. That page loaded only as a JavaScript application and its data needs a login call, which the session did not run. WebFetch to results.okelections.us returned HTTP 403. The okc.gov city clerk elections page returned HTTP 404. News and Wikipedia figures were not accepted as results sources. Second pass: the official OKC pages confirm that the mayor is elected in even-numbered years every four years, with the general election on the second Tuesday of February and a runoff on the first Tuesday of April if needed (https://www.okc.gov/departments/city-clerk/elections). The Mayor page states that David Holt was elected in 2018 and re-elected in 2022 (https://www.okc.gov/Government/Elected-Officials/Mayor), and the Upcoming Elections page lists the next mayoral general election for February 2030 (https://www.okc.gov/Government/Elected-Officials/Elections/Upcoming-Elections). Official vote totals could not be read. The state results application (results.okelections.us, redirects to results.okelections.gov, election dates 20100209/20140211/20180213/20220208/20260210 where linked) returns HTTP 403 to plain requests and its data API needs a login with an embedded app password, which was not used. oklahoma.gov/elections archive pages for 2010 list only statewide PDFs. The Oklahoma County Election Board pages (oklahomacounty.org/Departments/Election-Board and /Election-Results) hold no results documents. web.archive.org timed out or was blocked, and the Chrome extension was not connected. The web search budget was exhausted. The year stays unresolved."
+  "source_url": "https://results.okelections.gov/OKER/?elecDate=20220208",
+  "additional_source_urls": [
+   "https://library.municode.com/ok/oklahoma_city/codes/code_of_ordinances?nodeId=OKCH_ARTXGEELRUEL"
+  ],
+  "note": "Oklahoma State Election Board official results for 2022-02-08 contain the Oklahoma City mayoral election (majority winner deemed elected under Charter Art. X). Winner and runner-up are in oklahoma_city_results.json. Checked in a browser on 2026-10-02."
  },
  {
   "city_id": "4055000",
@@ -218,6 +218,6 @@
    "https://www.okc.gov/Government/Elected-Officials/Mayor",
    "https://www.okc.gov/Government/Elected-Officials/Elections/Upcoming-Elections"
   ],
-  "note": "A mayoral election is expected in this year (nonpartisan February election, four-year cycle), but no official results document could be opened. The state election board index page for February 8, 2022 links to https://results.okelections.us/OKER/?elecDate=20220208. That page loaded only as a JavaScript application and its data needs a login call, which the session did not run. WebFetch to results.okelections.us returned HTTP 403. The okc.gov city clerk elections page returned HTTP 404. News and Wikipedia figures were not accepted as results sources. Second pass: the official OKC pages confirm that the mayor is elected in even-numbered years every four years, with the general election on the second Tuesday of February and a runoff on the first Tuesday of April if needed (https://www.okc.gov/departments/city-clerk/elections). The Mayor page states that David Holt was elected in 2018 and re-elected in 2022 (https://www.okc.gov/Government/Elected-Officials/Mayor), and the Upcoming Elections page lists the next mayoral general election for February 2030 (https://www.okc.gov/Government/Elected-Officials/Elections/Upcoming-Elections). Official vote totals could not be read. The state results application (results.okelections.us, redirects to results.okelections.gov, election dates 20100209/20140211/20180213/20220208/20260210 where linked) returns HTTP 403 to plain requests and its data API needs a login with an embedded app password, which was not used. oklahoma.gov/elections archive pages for 2010 list only statewide PDFs. The Oklahoma County Election Board pages (oklahomacounty.org/Departments/Election-Board and /Election-Results) hold no results documents. web.archive.org timed out or was blocked, and the Chrome extension was not connected. The web search budget was exhausted. The year stays unresolved."
+  "note": "A mayoral election is expected in this year (nonpartisan February election, four-year cycle), but no official results document could be opened. The state election board index page for February 8, 2022 links to https://results.okelections.us/OKER/?elecDate=20220208. That page loaded only as a JavaScript application and its data needs a login call, which the session did not run. WebFetch to results.okelections.us returned HTTP 403. The okc.gov city clerk elections page returned HTTP 404. News and Wikipedia figures were not accepted as results sources. Second pass: the official OKC pages confirm that the mayor is elected in even-numbered years every four years, with the general election on the second Tuesday of February and a runoff on the first Tuesday of April if needed (https://www.okc.gov/departments/city-clerk/elections). The Mayor page states that David Holt was elected in 2018 and re-elected in 2022 (https://www.okc.gov/Government/Elected-Officials/Mayor), and the Upcoming Elections page lists the next mayoral general election for February 2030 (https://www.okc.gov/Government/Elected-Officials/Elections/Upcoming-Elections). Official vote totals could not be read. The state results application (results.okelections.us, redirects to results.okelections.gov, election dates 20100209/20140211/20180213/20220208/20260210 where linked) returns HTTP 403 to plain requests and its data API needs a login with an embedded app password, which was not used. oklahoma.gov/elections archive pages for 2010 list only statewide PDFs. The Oklahoma County Election Board pages (oklahomacounty.org/Departments/Election-Board and /Election-Results) hold no results documents. web.archive.org timed out or was blocked, and the Chrome extension was not connected. The web search budget was exhausted. The year stays unresolved. Browser check 2026-10-02: the state results application for 2026-02-10 lists no Oklahoma City mayoral contest. Charter Art. X deems an unopposed candidate elected without a ballot contest, so the absence may mean an unopposed mayor; no official document naming the person was opened, so the year stays unresolved."
  }
 ]

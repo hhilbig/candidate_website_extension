@@ -1,1 +1,95 @@
-[]
+[
+ {
+  "city_name": "Oklahoma City",
+  "state_abb": "OK",
+  "roster_place_fips": "4055000",
+  "election_date": "2014-03-04",
+  "election_type": "regular",
+  "stage": "general",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "source_url": "https://results.okelections.gov/OKER/?elecDate=20140304",
+  "source_locator": "Oklahoma State Election Board results application, Local Results, FOR MAYOR CITY OF OKLAHOMA CITY",
+  "certification_source_url": "https://results.okelections.gov/OKER/?elecDate=20140304",
+  "additional_source_urls": [
+   "https://library.municode.com/ok/oklahoma_city/codes/code_of_ordinances?nodeId=OKCH_ARTXGEELRUEL"
+  ],
+  "verification_note": "Oklahoma State Election Board official results for 2014-03-04 list FOR MAYOR CITY OF OKLAHOMA CITY: Mick Cornett 31,514 (65.70 percent), Ed Shadid 15,749 (32.84 percent), Joe Sarge Nelson 368, Phil Hughes 332; total 47,963; 234 of 234 precincts. Under Oklahoma City Charter Art. X, a mayoral candidate who receives a majority of all votes in the general election is deemed elected and no April runoff is held. Read in a browser on 2026-10-02 (the application needs a browser session).",
+  "candidates": [
+   {
+    "name": "Mick Cornett",
+    "role": "winner",
+    "votes": 31514,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Ed Shadid",
+    "role": "runner_up",
+    "votes": 15749,
+    "candidate_year_id": ""
+   }
+  ]
+ },
+ {
+  "city_name": "Oklahoma City",
+  "state_abb": "OK",
+  "roster_place_fips": "4055000",
+  "election_date": "2018-02-13",
+  "election_type": "regular",
+  "stage": "general",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "source_url": "https://results.okelections.gov/OKER/?elecDate=20180213",
+  "source_locator": "Oklahoma State Election Board results application, Local Results, FOR MAYOR CITY OF OKLAHOMA CITY",
+  "certification_source_url": "https://results.okelections.gov/OKER/?elecDate=20180213",
+  "additional_source_urls": [
+   "https://library.municode.com/ok/oklahoma_city/codes/code_of_ordinances?nodeId=OKCH_ARTXGEELRUEL"
+  ],
+  "verification_note": "Oklahoma State Election Board official results for 2018-02-13 list FOR MAYOR CITY OF OKLAHOMA CITY: David Holt 20,416 (78.53 percent), Taylor M. Neighbors 3,443 (13.24 percent), Randall Smith 2,138; total 25,997; 234 of 234 precincts. Under Oklahoma City Charter Art. X, a mayoral candidate who receives a majority of all votes in the general election is deemed elected and no April runoff is held. Read in a browser on 2026-10-02 (the application needs a browser session).",
+  "candidates": [
+   {
+    "name": "David Holt",
+    "role": "winner",
+    "votes": 20416,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Taylor M. Neighbors",
+    "role": "runner_up",
+    "votes": 3443,
+    "candidate_year_id": ""
+   }
+  ]
+ },
+ {
+  "city_name": "Oklahoma City",
+  "state_abb": "OK",
+  "roster_place_fips": "4055000",
+  "election_date": "2022-02-08",
+  "election_type": "regular",
+  "stage": "general",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "source_url": "https://results.okelections.gov/OKER/?elecDate=20220208",
+  "source_locator": "Oklahoma State Election Board results application, Local Results, FOR MAYOR CITY OF OKLAHOMA CITY",
+  "certification_source_url": "https://results.okelections.gov/OKER/?elecDate=20220208",
+  "additional_source_urls": [
+   "https://library.municode.com/ok/oklahoma_city/codes/code_of_ordinances?nodeId=OKCH_ARTXGEELRUEL"
+  ],
+  "verification_note": "Oklahoma State Election Board official results for 2022-02-08 list FOR MAYOR CITY OF OKLAHOMA CITY: David Holt 36,355 (59.81 percent), Frank Urbanic 12,117 (19.93 percent), Carol Hefner 8,287, Jimmy Lawson 4,026; total 60,785; 234 of 234 precincts. Under Oklahoma City Charter Art. X, a mayoral candidate who receives a majority of all votes in the general election is deemed elected and no April runoff is held. Read in a browser on 2026-10-02 (the application needs a browser session).",
+  "candidates": [
+   {
+    "name": "David Holt",
+    "role": "winner",
+    "votes": 36355,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Frank Urbanic",
+    "role": "runner_up",
+    "votes": 12117,
+    "candidate_year_id": ""
+   }
+  ]
+ }
+]
