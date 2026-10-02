@@ -1,0 +1,162 @@
+[
+ {
+  "city_name": "Toledo",
+  "state_abb": "OH",
+  "roster_place_fips": "3977000",
+  "election_date": "2013-11-05",
+  "election_type": "regular",
+  "stage": "general",
+  "verification_status": "verified_decisive",
+  "certification_status": "certified",
+  "source_url": "http://co.lucas.oh.us/DocumentCenter/View/47381",
+  "source_locator": "Page 1, Toledo Mayor contest, candidate rows",
+  "certification_source_url": "http://co.lucas.oh.us/DocumentCenter/View/47381",
+  "additional_source_urls": [
+   "https://www.lucascountyohiovotes.gov/historic_election_results/index.php",
+   "http://co.lucas.oh.us/DocumentCenter/View/47378"
+  ],
+  "verification_note": "The Lucas County Board of Elections report is headed Official Canvass (Post-Recount), General Election, November 5, 2013. Toledo Mayor shows D. Michael Collins 28159 and Michael P. Bell 21721 with 49880 total votes, which equals the sum of the two. The September 10, 2013 primary was an earlier round. The post-recount canvass label is the basis for the certified status.",
+  "candidates": [
+   {
+    "name": "D. Michael Collins",
+    "role": "winner",
+    "votes": 28159,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Michael P. Bell",
+    "role": "runner_up",
+    "votes": 21721,
+    "candidate_year_id": ""
+   }
+  ]
+ },
+ {
+  "city_name": "Toledo",
+  "state_abb": "OH",
+  "roster_place_fips": "3977000",
+  "election_date": "2015-11-03",
+  "election_type": "special",
+  "stage": "special",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "source_url": "http://co.lucas.oh.us/DocumentCenter/View/56533",
+  "source_locator": "Page 1, Toledo City Mayor contest, candidate rows",
+  "certification_source_url": "http://co.lucas.oh.us/DocumentCenter/View/56533",
+  "additional_source_urls": [
+   "https://www.lucascountyohiovotes.gov/historic_election_results/index.php",
+   "http://co.lucas.oh.us/DocumentCenter/View/55990"
+  ],
+  "verification_note": "The county Official Results report for the November 3, 2015 general election lists seven Toledo City Mayor candidates: Paula Hicks-Hudson 23087, Michael P. Bell 11228, Carty Finkbeiner 10276, Sandy Drabik Collins 9432, Sandy Spang 7028, Mike Ferner 3208 and Opal Covey 544. The total of 64803 equals their sum. The September 15, 2015 primary report lists no mayoral contest, so this single round decided the office. The special election label is inferred from the regular 2013 and 2017 cycle because the county report does not state it.",
+  "candidates": [
+   {
+    "name": "Paula Hicks-Hudson",
+    "role": "winner",
+    "votes": 23087,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Michael P. Bell",
+    "role": "runner_up",
+    "votes": 11228,
+    "candidate_year_id": ""
+   }
+  ]
+ },
+ {
+  "city_name": "Toledo",
+  "state_abb": "OH",
+  "roster_place_fips": "3977000",
+  "election_date": "2017-11-07",
+  "election_type": "regular",
+  "stage": "general",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "source_url": "http://co.lucas.oh.us/DocumentCenter/View/66685",
+  "source_locator": "Page 1, Toledo Mayor contest, candidate rows",
+  "certification_source_url": "http://co.lucas.oh.us/DocumentCenter/View/66685",
+  "additional_source_urls": [
+   "https://www.lucascountyohiovotes.gov/historic_election_results/index.php",
+   "http://co.lucas.oh.us/DocumentCenter/View/65903"
+  ],
+  "verification_note": "The county Official Results report for the November 7, 2017 general election shows Toledo Mayor with Wade Kapszukiewicz 28546 and Paula Hicks-Hudson 22930, total votes 51476, which equals their sum. The September 12, 2017 primary was an earlier round.",
+  "candidates": [
+   {
+    "name": "Wade Kapszukiewicz",
+    "role": "winner",
+    "votes": 28546,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Paula Hicks-Hudson",
+    "role": "runner_up",
+    "votes": 22930,
+    "candidate_year_id": ""
+   }
+  ]
+ },
+ {
+  "city_name": "Toledo",
+  "state_abb": "OH",
+  "roster_place_fips": "3977000",
+  "election_date": "2021-11-02",
+  "election_type": "regular",
+  "stage": "general",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "source_url": "https://drive.google.com/file/d/1_KlMcrznKIrGPSnANHfp2QvcalQ5yZMa/view",
+  "source_locator": "Page 2, Toledo City Mayor contest, candidate rows",
+  "certification_source_url": "https://drive.google.com/file/d/1_KlMcrznKIrGPSnANHfp2QvcalQ5yZMa/view",
+  "additional_source_urls": [
+   "https://www.lucascountyohiovotes.gov/historic_election_results/index.php",
+   "https://drive.google.com/file/d/1meGo7cEakWATGBxTgzUNEhb5yO4N_Vsv/view"
+  ],
+  "verification_note": "The county Official Vote Totals report generated 11/18/2021 shows Toledo City Mayor with Wade Kapszukiewicz 24061 (68.91 percent) and Carty Finkbeiner 10377 (29.72 percent), ahead of write-in totals. The report page has no election name, but the file is listed on the county results index as the November 2, 2021 General Official report. The September 14, 2021 primary was an earlier round with three candidates.",
+  "candidates": [
+   {
+    "name": "Wade Kapszukiewicz",
+    "role": "winner",
+    "votes": 24061,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Carty Finkbeiner",
+    "role": "runner_up",
+    "votes": 10377,
+    "candidate_year_id": ""
+   }
+  ]
+ },
+ {
+  "city_name": "Toledo",
+  "state_abb": "OH",
+  "roster_place_fips": "3977000",
+  "election_date": "2025-11-04",
+  "election_type": "regular",
+  "stage": "general",
+  "verification_status": "verified_decisive",
+  "certification_status": "certified",
+  "source_url": "https://drive.google.com/file/d/1rAOQM_QF1D4bGMtornsQk3mOaP8mlLMr/view",
+  "source_locator": "Page 5, Summary Results Report, Toledo City Mayor contest",
+  "certification_source_url": "https://drive.google.com/file/d/1rAOQM_QF1D4bGMtornsQk3mOaP8mlLMr/view",
+  "additional_source_urls": [
+   "https://www.lucascountyohiovotes.gov/historic_election_results/index.php",
+   "https://drive.google.com/file/d/1B4kifzLWqwugmyzwmFyZ22VJMncW-wHk/view"
+  ],
+  "verification_note": "The county Official Canvass Report for the November 4, 2025 general election shows Toledo City Mayor with Wade Kapszukiewicz 19072 and Roberto Torres 10179. Write-in candidates were each below Torres, the largest being Harold Harris with 1886. The file begins with a board of elections certification signature form dated Nov 24, 2025. The report is a scanned image, read by OCR and checked against a page image. The May 6, 2025 primary was an earlier round with three candidates.",
+  "candidates": [
+   {
+    "name": "Wade Kapszukiewicz",
+    "role": "winner",
+    "votes": 19072,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Roberto Torres",
+    "role": "runner_up",
+    "votes": 10179,
+    "candidate_year_id": ""
+   }
+  ]
+ }
+]

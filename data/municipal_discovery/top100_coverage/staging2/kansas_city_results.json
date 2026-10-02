@@ -1,0 +1,135 @@
+[
+ {
+  "city_name": "Kansas City",
+  "state_abb": "MO",
+  "roster_place_fips": "2938000",
+  "election_date": "2011-03-22",
+  "election_type": "regular",
+  "stage": "general",
+  "verification_status": "verified_decisive",
+  "certification_status": "certified",
+  "source_url": "https://www.kceb.org/useruploads/Past_Election_Results/3_22_11_GEMS_ELECTION_RESULTS.pdf",
+  "source_locator": "Jackson County: Mayor, Total column (page 1). Clay County: Summary Report page 1, KC MAYOR. Platte County: Statement of Votes Cast, page 2, For Mayor, Total row.",
+  "certification_source_url": "https://www.kceb.org/useruploads/Past_Election_Results/3_22_11_GEMS_ELECTION_RESULTS.pdf",
+  "additional_source_urls": [
+   "https://web.archive.org/web/20110409060221/http://www.claycoelections.com/pdfs/2011-MARCH-22-SUMMARY-REPORT.pdf",
+   "https://www.plattecountymovotes.gov/s/2011kcg.pdf",
+   "https://kceb.org/elections/election-results/"
+  ],
+  "verification_note": "Kansas City spans Jackson, Clay and Platte counties, so the citywide total is the sum of three official county reports for the March 22, 2011 municipal general election, the decisive round after the February 22, 2011 nonpartisan primary. Jackson County Election Board official results: James 31794, Burke 18736. Clay County Election Board official summary: James 5047, Burke 9231. Platte County statement of votes cast (Total row): James 1997, Burke 4628. Sums: James 38838, Burke 32595. The Clay report was opened through an Internet Archive copy of the Clay County Election Board PDF; the Platte report is undated in its text and is the document Platte County lists as the 2011 Kansas City general election.",
+  "candidates": [
+   {
+    "name": "Sylvester James Jr.",
+    "role": "winner",
+    "votes": 38838,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Mike Burke",
+    "role": "runner_up",
+    "votes": 32595,
+    "candidate_year_id": ""
+   }
+  ]
+ },
+ {
+  "city_name": "Kansas City",
+  "state_abb": "MO",
+  "roster_place_fips": "2938000",
+  "election_date": "2015-06-23",
+  "election_type": "regular",
+  "stage": "general",
+  "verification_status": "verified_decisive",
+  "certification_status": "certified",
+  "source_url": "https://www.kceb.org/useruploads/Election_Summary_Official_6-15.pdf",
+  "source_locator": "Jackson County: Mayor, Total column. Clay County: KANSAS CITY MAYOR box. Platte County: For Mayor, Total row (page 1, scanned image read by OCR; polling plus absentee rows checked to the total).",
+  "certification_source_url": "https://www.kceb.org/useruploads/Election_Summary_Official_6-15.pdf",
+  "additional_source_urls": [
+   "https://web.archive.org/web/20230429153842/https://www.claycoelections.com/vertical/sites/%7B75B54153-78CB-4524-80B8-16CB405691C9%7D/uploads/2015-06-23_KC-General-Election_Summary-Report_OFFICIAL.pdf",
+   "https://www.plattecountymovotes.gov/s/06232015.pdf",
+   "https://kceb.org/elections/election-results/"
+  ],
+  "verification_note": "Kansas City spans Jackson, Clay and Platte counties, so the citywide total is the sum of three official county reports for the June 23, 2015 general election, the decisive round after the April 7, 2015 nonpartisan primary. Jackson County official results: James 22864, Lee 2909. Clay County official summary: James 5076, Lee 1138. Platte County statement of votes cast: James 1890, Lee 290. Sums: James 29830, Lee 4337.",
+  "candidates": [
+   {
+    "name": "Sylvester James Jr.",
+    "role": "winner",
+    "votes": 29830,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Vincent Lee",
+    "role": "runner_up",
+    "votes": 4337,
+    "candidate_year_id": ""
+   }
+  ]
+ },
+ {
+  "city_name": "Kansas City",
+  "state_abb": "MO",
+  "roster_place_fips": "2938000",
+  "election_date": "2019-06-18",
+  "election_type": "regular",
+  "stage": "general",
+  "verification_status": "verified_decisive",
+  "certification_status": "certified",
+  "source_url": "https://www.kceb.org/useruploads/2019_mayorCC/Election_Summary_Official_6-19.pdf",
+  "source_locator": "Jackson County: Mayor, Total votes column. Clay County: KANSAS CITY MAYOR box. Platte County: KC Mayor columns, Total row (scanned image read by OCR; candidate totals sum to the Total Votes figure 6407).",
+  "certification_source_url": "https://www.kceb.org/useruploads/2019_mayorCC/Election_Summary_Official_6-19.pdf",
+  "additional_source_urls": [
+   "https://www.kceb.org/useruploads/2019_mayorCC/Precinct_Detail_Official_6-19.pdf",
+   "https://web.archive.org/web/20230429153842/https://www.claycoelections.com/vertical/sites/%7B75B54153-78CB-4524-80B8-16CB405691C9%7D/uploads/2019-06-18_KC-Municipal-General-Election_Summary_Report_OFFICIAL.pdf",
+   "https://www.plattecountymovotes.gov/s/kcmo-06212019141239.pdf",
+   "https://kceb.org/elections/election-results/"
+  ],
+  "verification_note": "Kansas City spans Jackson, Clay and Platte counties, so the citywide total is the sum of three official county reports for the June 18, 2019 municipal general election, the decisive round after the April 2, 2019 nonpartisan primary. Jackson County official results (run 06/25/19): Lucas 30125, Justus 17677; the precinct detail report sums to the same figures. Clay County official summary: Lucas 7053, Justus 7302. Platte County statement of votes cast: Lucas 2971, Justus 3436. Sums: Lucas 40149, Justus 28415.",
+  "candidates": [
+   {
+    "name": "Quinton Lucas",
+    "role": "winner",
+    "votes": 40149,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Jolie Justus",
+    "role": "runner_up",
+    "votes": 28415,
+    "candidate_year_id": ""
+   }
+  ]
+ },
+ {
+  "city_name": "Kansas City",
+  "state_abb": "MO",
+  "roster_place_fips": "2938000",
+  "election_date": "2023-06-20",
+  "election_type": "regular",
+  "stage": "general",
+  "verification_status": "verified_decisive",
+  "certification_status": "certified",
+  "source_url": "https://www.kceb.org/useruploads/Election_Summary_Official_6-23.pdf",
+  "source_locator": "Jackson County: page 2, MAYOR, TOTAL column. Clay County: KANSAS CITY MAYOR box. Platte County: page 1, KC Mayor, Total row (scanned image read by OCR; one precinct digit corrected so rows sum to the printed total 1233).",
+  "certification_source_url": "https://www.kceb.org/useruploads/Election_Summary_Official_6-23.pdf",
+  "additional_source_urls": [
+   "https://web.archive.org/web/20240403011358/https://www.voteclaycountymo.gov/vertical/sites/%7B75B54153-78CB-4524-80B8-16CB405691C9%7D/uploads/2023-06-20_KC-Municipal-General-Election_Summary_Report_OFFICIAL.pdf",
+   "https://www.plattecountymovotes.gov/s/KCGenMunOfficial.pdf",
+   "https://kceb.org/elections/election-results/"
+  ],
+  "verification_note": "Kansas City spans Jackson, Clay and Platte counties, so the citywide total is the sum of three official county reports for the June 20, 2023 municipal general election, the decisive round after the April 4, 2023 nonpartisan primary. Jackson County official results (generated 06/28/2023): Lucas 24572, Chastain 3271. Clay County official summary: Lucas 5927, Chastain 3504. Platte County official abstract: Lucas 2859, Chastain 1233. Sums: Lucas 33358, Chastain 8008. Published news and encyclopedia tallies show slightly lower totals (33266 and 7993); the roles do not change. Cass County has no Kansas City mayoral votes in the 2019 cross-check, and none are assumed here.",
+  "candidates": [
+   {
+    "name": "Quinton Lucas",
+    "role": "winner",
+    "votes": 33358,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Clay Chastain",
+    "role": "runner_up",
+    "votes": 8008,
+    "candidate_year_id": ""
+   }
+  ]
+ }
+]

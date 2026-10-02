@@ -1,0 +1,124 @@
+[
+ {
+  "city_name": "Milwaukee",
+  "state_abb": "WI",
+  "roster_place_fips": "5553000",
+  "election_date": "2016-04-05",
+  "election_type": "regular",
+  "stage": "general",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "source_url": "https://data.milwaukee.gov/dataset/410b03d9-118f-404d-961a-06c76b29333f/resource/081b860b-f3cd-4726-80de-33772b1dafb4/download/mayor-milwaukee.csv",
+  "source_locator": "CSV column totals over all ward rows (Ward, Bob Donovan, Tom Barrett, Write-in)",
+  "certification_source_url": "https://data.milwaukee.gov/dataset/410b03d9-118f-404d-961a-06c76b29333f/resource/081b860b-f3cd-4726-80de-33772b1dafb4/download/mayor-milwaukee.csv",
+  "additional_source_urls": [
+   "https://data.milwaukee.gov/dataset/2016-election-data"
+  ],
+  "verification_note": "City Election Commission open data file of mayoral votes by ward for the 2016 Spring Election. Totals are the sum of 327 ward rows: Barrett 110437, Donovan 46957, write-in 475. The decisive stage is the April general election after the February primary.",
+  "candidates": [
+   {
+    "name": "Tom Barrett",
+    "role": "winner",
+    "votes": 110437,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Bob Donovan",
+    "role": "runner_up",
+    "votes": 46957,
+    "candidate_year_id": ""
+   }
+  ]
+ },
+ {
+  "city_name": "Milwaukee",
+  "state_abb": "WI",
+  "roster_place_fips": "5553000",
+  "election_date": "2020-04-07",
+  "election_type": "regular",
+  "stage": "general",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "source_url": "https://city.milwaukee.gov/ImageLibrary/Groups/electionAuthors/Election-Results/2020-April-7th-Spring-Election.pdf",
+  "source_locator": "PDF page 8, Mayor City of Milwaukee table",
+  "certification_source_url": "https://city.milwaukee.gov/ImageLibrary/Groups/electionAuthors/Election-Results/2020-April-7th-Spring-Election.pdf",
+  "additional_source_urls": [
+   "https://data.milwaukee.gov/dataset/april-7-2020-spring-election"
+  ],
+  "verification_note": "Final official summary report, including provisional ballots, with 327 of 327 precincts counted. Barrett 57492 and Taylor 33572, write-in 852. The data.milwaukee.gov ward file sums to the same totals.",
+  "candidates": [
+   {
+    "name": "Tom Barrett",
+    "role": "winner",
+    "votes": 57492,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Lena Taylor",
+    "role": "runner_up",
+    "votes": 33572,
+    "candidate_year_id": ""
+   }
+  ]
+ },
+ {
+  "city_name": "Milwaukee",
+  "state_abb": "WI",
+  "roster_place_fips": "5553000",
+  "election_date": "2022-04-05",
+  "election_type": "special",
+  "stage": "special",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "source_url": "https://city.milwaukee.gov/ImageLibrary/Groups/electionAuthors/Election-Results/2022-April-5th-Spring-Election.pdf",
+  "source_locator": "PDF pages 4 and 5, City of Milwaukee, Mayor",
+  "certification_source_url": "https://city.milwaukee.gov/ImageLibrary/Groups/electionAuthors/Election-Results/2022-April-5th-Spring-Election.pdf",
+  "additional_source_urls": [
+   "https://city.milwaukee.gov/ImageLibrary/Groups/electionAuthors/Election-Results/2022-February-15th-Spring--Special-Primary.pdf"
+  ],
+  "verification_note": "Official summary report run April 5, 2022 with 317 of 317 precincts counted. Johnson 62143 and Donovan 24543, write-in 215. The election filled the remainder of the term that ended in 2024; the February 15, 2022 primary was labeled a Spring Special Primary by the Election Commission.",
+  "candidates": [
+   {
+    "name": "Cavalier Johnson",
+    "role": "winner",
+    "votes": 62143,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Bob Donovan",
+    "role": "runner_up",
+    "votes": 24543,
+    "candidate_year_id": ""
+   }
+  ]
+ },
+ {
+  "city_name": "Milwaukee",
+  "state_abb": "WI",
+  "roster_place_fips": "5553000",
+  "election_date": "2024-04-02",
+  "election_type": "regular",
+  "stage": "general",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "source_url": "https://city.milwaukee.gov/ImageLibrary/Groups/electionAuthors/Election-Results/2024/2024April2SpringElectionandPresidentialPrimary",
+  "source_locator": "Mayor block on every ward page (354 ward pages in a 1416 page PDF)",
+  "certification_source_url": "https://city.milwaukee.gov/ImageLibrary/Groups/electionAuthors/Election-Results/2024/2024April2SpringElectionandPresidentialPrimary",
+  "additional_source_urls": [],
+  "verification_note": "Official ward-by-ward report with 354 wards. Totals are the sum of the Mayor block in each of the 354 ward pages: Johnson 64539, King 14639, write-in 523. The decisive stage is the April general election after the February 20 primary.",
+  "candidates": [
+   {
+    "name": "Cavalier Johnson",
+    "role": "winner",
+    "votes": 64539,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "David D. King",
+    "role": "runner_up",
+    "votes": 14639,
+    "candidate_year_id": ""
+   }
+  ]
+ }
+]

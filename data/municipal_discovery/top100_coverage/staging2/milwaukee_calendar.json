@@ -1,0 +1,198 @@
+[
+ {
+  "city_id": "5553000",
+  "year": 2010,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://city.milwaukee.gov/ImageLibrary/User/dwalton/kdzapat1/Website-Forms/TermsofOffice1.pdf",
+  "additional_source_urls": [
+   "https://milwaukee.legistar1.com/milwaukee/attachments/41ca66c0-5507-4413-8ee3-4d8e480ec9f8.PDF"
+  ],
+  "note": "The City of Milwaukee Election Commission terms of office table lists the Mayor with a four-year term elected in spring. The mayoral term is four years with elections in spring, and the cycle fell on 2008, 2012, 2016, 2020 and 2024, so no regular mayoral election fell in this year. No special mayoral election was found for this year."
+ },
+ {
+  "city_id": "5553000",
+  "year": 2011,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://city.milwaukee.gov/ImageLibrary/User/dwalton/kdzapat1/Website-Forms/TermsofOffice1.pdf",
+  "additional_source_urls": [
+   "https://milwaukee.legistar1.com/milwaukee/attachments/41ca66c0-5507-4413-8ee3-4d8e480ec9f8.PDF"
+  ],
+  "note": "The City of Milwaukee Election Commission terms of office table lists the Mayor with a four-year term elected in spring. The mayoral term is four years with elections in spring, and the cycle fell on 2008, 2012, 2016, 2020 and 2024, so no regular mayoral election fell in this year. No special mayoral election was found for this year."
+ },
+ {
+  "city_id": "5553000",
+  "year": 2012,
+  "status": "unresolved",
+  "expected_election_dates": [],
+  "source_url": "https://milwaukee.legistar1.com/milwaukee/attachments/41ca66c0-5507-4413-8ee3-4d8e480ec9f8.PDF",
+  "additional_source_urls": [
+   "https://city.milwaukee.gov/ImageLibrary/User/dwalton/kdzapat1/Website-Forms/TermsofOffice1.pdf"
+  ],
+  "note": "A mayoral election was held on April 3, 2012 and Mayor Tom Barrett was re-elected. The Board of Election Commissioners letter to the mayor in Common Council file 120027 confirms this, and the file title lists the Mayor among the offices. The attached letters contain no vote totals. The old city results page city.milwaukee.gov/ElectionResults1717/20121/April-3-2012.htm and the old county page county.milwaukee.gov/ElectionResults23729/2012-Election-Results.htm both returned Page Not Found. The Internet Archive was offline. No official vote totals were opened."
+ },
+ {
+  "city_id": "5553000",
+  "year": 2013,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://city.milwaukee.gov/ImageLibrary/User/dwalton/kdzapat1/Website-Forms/TermsofOffice1.pdf",
+  "additional_source_urls": [
+   "https://milwaukee.legistar1.com/milwaukee/attachments/41ca66c0-5507-4413-8ee3-4d8e480ec9f8.PDF"
+  ],
+  "note": "The City of Milwaukee Election Commission terms of office table lists the Mayor with a four-year term elected in spring. The mayoral term is four years with elections in spring, and the cycle fell on 2008, 2012, 2016, 2020 and 2024, so no regular mayoral election fell in this year. No special mayoral election was found for this year."
+ },
+ {
+  "city_id": "5553000",
+  "year": 2014,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://city.milwaukee.gov/ImageLibrary/User/dwalton/kdzapat1/Website-Forms/TermsofOffice1.pdf",
+  "additional_source_urls": [
+   "https://milwaukee.legistar1.com/milwaukee/attachments/41ca66c0-5507-4413-8ee3-4d8e480ec9f8.PDF"
+  ],
+  "note": "The City of Milwaukee Election Commission terms of office table lists the Mayor with a four-year term elected in spring. The mayoral term is four years with elections in spring, and the cycle fell on 2008, 2012, 2016, 2020 and 2024, so no regular mayoral election fell in this year. No special mayoral election was found for this year."
+ },
+ {
+  "city_id": "5553000",
+  "year": 2015,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://city.milwaukee.gov/ImageLibrary/User/dwalton/kdzapat1/Website-Forms/TermsofOffice1.pdf",
+  "additional_source_urls": [
+   "https://milwaukee.legistar1.com/milwaukee/attachments/41ca66c0-5507-4413-8ee3-4d8e480ec9f8.PDF"
+  ],
+  "note": "The City of Milwaukee Election Commission terms of office table lists the Mayor with a four-year term elected in spring. The mayoral term is four years with elections in spring, and the cycle fell on 2008, 2012, 2016, 2020 and 2024, so no regular mayoral election fell in this year. No special mayoral election was found for this year."
+ },
+ {
+  "city_id": "5553000",
+  "year": 2016,
+  "status": "complete",
+  "expected_election_dates": [
+   "2016-04-05"
+  ],
+  "source_url": "https://data.milwaukee.gov/dataset/410b03d9-118f-404d-961a-06c76b29333f/resource/081b860b-f3cd-4726-80de-33772b1dafb4/download/mayor-milwaukee.csv",
+  "additional_source_urls": [
+   "https://data.milwaukee.gov/dataset/2016-election-data",
+   "https://city.milwaukee.gov/ImageLibrary/User/dwalton/kdzapat1/Website-Forms/TermsofOffice1.pdf"
+  ],
+  "note": "The City of Milwaukee Election Commission open data file for the 2016 Spring Election lists mayoral ward results for Tom Barrett and Bob Donovan. Both candidates appear in the file and the winner and runner-up are in milwaukee_results.json. The mayor serves a four-year term elected in the spring of presidential years."
+ },
+ {
+  "city_id": "5553000",
+  "year": 2017,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://city.milwaukee.gov/ImageLibrary/User/dwalton/kdzapat1/Website-Forms/TermsofOffice1.pdf",
+  "additional_source_urls": [
+   "https://milwaukee.legistar1.com/milwaukee/attachments/41ca66c0-5507-4413-8ee3-4d8e480ec9f8.PDF"
+  ],
+  "note": "The City of Milwaukee Election Commission terms of office table lists the Mayor with a four-year term elected in spring. The mayoral term is four years with elections in spring, and the cycle fell on 2008, 2012, 2016, 2020 and 2024, so no regular mayoral election fell in this year. No special mayoral election was found for this year."
+ },
+ {
+  "city_id": "5553000",
+  "year": 2018,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://city.milwaukee.gov/ImageLibrary/User/dwalton/kdzapat1/Website-Forms/TermsofOffice1.pdf",
+  "additional_source_urls": [
+   "https://city.milwaukee.gov/election/ElectionInformation/MilwaukeeElectionResults/Archive-Election-Results"
+  ],
+  "note": "The City of Milwaukee Election Commission terms of office table lists the Mayor with a four-year term elected in spring. The city Election Commission archive lists the spring elections held in this year and the year falls outside the 2008, 2012, 2016, 2020, 2024 mayoral cycle. No special mayoral election was found for this year."
+ },
+ {
+  "city_id": "5553000",
+  "year": 2019,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://city.milwaukee.gov/ImageLibrary/User/dwalton/kdzapat1/Website-Forms/TermsofOffice1.pdf",
+  "additional_source_urls": [
+   "https://city.milwaukee.gov/election/ElectionInformation/MilwaukeeElectionResults/Archive-Election-Results"
+  ],
+  "note": "The City of Milwaukee Election Commission terms of office table lists the Mayor with a four-year term elected in spring. The city Election Commission archive lists the spring elections held in this year and the year falls outside the 2008, 2012, 2016, 2020, 2024 mayoral cycle. No special mayoral election was found for this year."
+ },
+ {
+  "city_id": "5553000",
+  "year": 2020,
+  "status": "complete",
+  "expected_election_dates": [
+   "2020-04-07"
+  ],
+  "source_url": "https://city.milwaukee.gov/ImageLibrary/Groups/electionAuthors/Election-Results/2020-April-7th-Spring-Election.pdf",
+  "additional_source_urls": [
+   "https://city.milwaukee.gov/ImageLibrary/User/dwalton/kdzapat1/Website-Forms/TermsofOffice1.pdf"
+  ],
+  "note": "The Election Commission final official summary report for the April 7, 2020 Spring Election records a mayoral contest. Winner and runner-up are in milwaukee_results.json."
+ },
+ {
+  "city_id": "5553000",
+  "year": 2021,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://city.milwaukee.gov/ImageLibrary/User/dwalton/kdzapat1/Website-Forms/TermsofOffice1.pdf",
+  "additional_source_urls": [
+   "https://city.milwaukee.gov/election/ElectionInformation/MilwaukeeElectionResults/Archive-Election-Results"
+  ],
+  "note": "The City of Milwaukee Election Commission terms of office table lists the Mayor with a four-year term elected in spring. The city Election Commission archive lists the spring elections held in this year and the year falls outside the 2008, 2012, 2016, 2020, 2024 mayoral cycle. No special mayoral election was found for this year."
+ },
+ {
+  "city_id": "5553000",
+  "year": 2022,
+  "status": "complete",
+  "expected_election_dates": [
+   "2022-04-05"
+  ],
+  "source_url": "https://city.milwaukee.gov/ImageLibrary/Groups/electionAuthors/Election-Results/2022-April-5th-Spring-Election.pdf",
+  "additional_source_urls": [
+   "https://city.milwaukee.gov/ImageLibrary/User/dwalton/kdzapat1/Website-Forms/TermsofOffice1.pdf"
+  ],
+  "note": "The Election Commission official summary report for the April 5, 2022 Spring Election records a mayoral contest. The Election Commission file name for the February 15 primary calls it a Spring Special Primary, so this election filled the term that ended in 2024. Winner and runner-up are in milwaukee_results.json."
+ },
+ {
+  "city_id": "5553000",
+  "year": 2023,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://city.milwaukee.gov/ImageLibrary/User/dwalton/kdzapat1/Website-Forms/TermsofOffice1.pdf",
+  "additional_source_urls": [
+   "https://city.milwaukee.gov/election/ElectionInformation/MilwaukeeElectionResults/Archive-Election-Results"
+  ],
+  "note": "The City of Milwaukee Election Commission terms of office table lists the Mayor with a four-year term elected in spring. The city Election Commission archive lists the spring elections held in this year and the year falls outside the 2008, 2012, 2016, 2020, 2024 mayoral cycle. No special mayoral election was found for this year."
+ },
+ {
+  "city_id": "5553000",
+  "year": 2024,
+  "status": "complete",
+  "expected_election_dates": [
+   "2024-04-02"
+  ],
+  "source_url": "https://city.milwaukee.gov/ImageLibrary/Groups/electionAuthors/Election-Results/2024/2024April2SpringElectionandPresidentialPrimary",
+  "additional_source_urls": [
+   "https://city.milwaukee.gov/ImageLibrary/User/dwalton/kdzapat1/Website-Forms/TermsofOffice1.pdf"
+  ],
+  "note": "The Election Commission official ward-by-ward report for the April 2, 2024 Spring Election records a mayoral contest. A February 20, 2024 primary narrowed the field. Winner and runner-up are in milwaukee_results.json."
+ },
+ {
+  "city_id": "5553000",
+  "year": 2025,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://city.milwaukee.gov/ImageLibrary/User/dwalton/kdzapat1/Website-Forms/TermsofOffice1.pdf",
+  "additional_source_urls": [
+   "https://city.milwaukee.gov/election/ElectionInformation/MilwaukeeElectionResults/Archive-Election-Results"
+  ],
+  "note": "The City of Milwaukee Election Commission terms of office table lists the Mayor with a four-year term elected in spring. The Election Commission terms of office table (revised November 2024) gives the mayor a four-year spring term, and the mayor elected in 2024 serves to 2028. No special mayoral election was found for this year."
+ },
+ {
+  "city_id": "5553000",
+  "year": 2026,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://city.milwaukee.gov/ImageLibrary/User/dwalton/kdzapat1/Website-Forms/TermsofOffice1.pdf",
+  "additional_source_urls": [
+   "https://city.milwaukee.gov/election/ElectionInformation/MilwaukeeElectionResults/Archive-Election-Results"
+  ],
+  "note": "The City of Milwaukee Election Commission terms of office table lists the Mayor with a four-year term elected in spring. The Election Commission terms of office table (revised November 2024) gives the mayor a four-year spring term, and the mayor elected in 2024 serves to 2028. No special mayoral election was found for this year."
+ }
+]

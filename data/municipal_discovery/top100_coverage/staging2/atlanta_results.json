@@ -1,0 +1,64 @@
+[
+ {
+  "city_name": "Atlanta",
+  "state_abb": "GA",
+  "roster_place_fips": "1304000",
+  "election_date": "2017-12-05",
+  "election_type": "regular",
+  "stage": "runoff",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "source_url": "https://results.enr.clarityelections.com/GA/Fulton/72274/",
+  "source_locator": "Fulton Clarity election 72274, contest ATLANTA MAYOR (159 of 159 precincts); DeKalb zip file '2017 MUNI & SE RUNOFF ELECTION SUMMARY.pdf', Mayor - Atlanta, Official and Complete, dated 12/11/17",
+  "certification_source_url": "https://www.dekalbcountyga.gov/sites/default/files/2026-03/2017%20Election%20Results.zip",
+  "additional_source_urls": [
+   "https://library.municode.com/ga/atlanta/codes/code_of_ordinances?nodeId=PTICHRELA_SPACH_ART5ELRECOIN_CH1COEL_S5-102REELTIHOVO"
+  ],
+  "verification_note": "Runoff decided the office after the November 7, 2017 first round. Citywide total sums the Fulton County portion (Bottoms 42887, Norwood 40668) and the DeKalb County portion (Bottoms 3780, Norwood 5167). Result: Bottoms 46667, Norwood 45835. Fulton figures come from the county results site; no separate Fulton certification document was opened.",
+  "candidates": [
+   {
+    "name": "Keisha Lance Bottoms",
+    "role": "winner",
+    "votes": 46667,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Mary Norwood",
+    "role": "runner_up",
+    "votes": 45835,
+    "candidate_year_id": ""
+   }
+  ]
+ },
+ {
+  "city_name": "Atlanta",
+  "state_abb": "GA",
+  "roster_place_fips": "1304000",
+  "election_date": "2021-11-30",
+  "election_type": "regular",
+  "stage": "runoff",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "source_url": "https://results.enr.clarityelections.com/GA/Fulton/111693/",
+  "source_locator": "Fulton Clarity election 111693, contest Atlanta Mayor (169 of 169 precincts); DeKalb zip file 'ElectionSummaryReport-Official and Complete 11.30.2021.pdf', Mayor - Atlanta, Official and Complete, dated 12/6/2021",
+  "certification_source_url": "https://www.dekalbcountyga.gov/sites/default/files/2026-01/2021.zip",
+  "additional_source_urls": [
+   "https://library.municode.com/ga/atlanta/codes/code_of_ordinances?nodeId=PTICHRELA_SPACH_ART5ELRECOIN_CH1COEL_S5-102REELTIHOVO"
+  ],
+  "verification_note": "Runoff decided the office after the November 2, 2021 first round. Citywide total sums the Fulton County portion (Dickens 44655, Moore 26365) and the DeKalb County portion (Dickens 6051, Moore 2858). Result: Dickens 50706, Moore 29223. Fulton figures come from the county results site; no separate Fulton certification document was opened.",
+  "candidates": [
+   {
+    "name": "Andre Dickens",
+    "role": "winner",
+    "votes": 50706,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Felicia Moore",
+    "role": "runner_up",
+    "votes": 29223,
+    "candidate_year_id": ""
+   }
+  ]
+ }
+]

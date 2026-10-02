@@ -1,0 +1,185 @@
+[
+ {
+  "city_id": "3251800",
+  "year": 2010,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://elections.clarkcountynv.gov/electionresultsTV/results.aspx",
+  "additional_source_urls": [
+   "https://www.leg.state.nv.us/NRS/NRS-293C.html"
+  ],
+  "note": "The Clark County Election Department official results index lists the elections held in this year. Its contest listings for the 2010 primary (06/08/2010) and general (11/02/2010) show no North Las Vegas mayoral contest. North Las Vegas elected its mayor in 2013, 2017 and 2022, and the 2022 winner serves a four-year term ending in 2026 (NRS 293C.140 sets a general city election every even year)."
+ },
+ {
+  "city_id": "3251800",
+  "year": 2011,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://elections.clarkcountynv.gov/electionresultsTV/results.aspx",
+  "additional_source_urls": [
+   "https://www.leg.state.nv.us/NRS/NRS-293C.html"
+  ],
+  "note": "The Clark County Election Department official results index lists the elections held in this year. Its contest listings for the 2011 municipal primary (04/05/2011) and general (06/07/2011) show no North Las Vegas mayoral contest. North Las Vegas elected its mayor in 2013, 2017 and 2022, and the 2022 winner serves a four-year term ending in 2026 (NRS 293C.140 sets a general city election every even year)."
+ },
+ {
+  "city_id": "3251800",
+  "year": 2012,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://elections.clarkcountynv.gov/electionresultsTV/results.aspx",
+  "additional_source_urls": [
+   "https://www.leg.state.nv.us/NRS/NRS-293C.html"
+  ],
+  "note": "The Clark County Election Department official results index lists the elections held in this year. Its contest listings for the 2012 primary, general and special elections show no North Las Vegas mayoral contest. North Las Vegas elected its mayor in 2013, 2017 and 2022, and the 2022 winner serves a four-year term ending in 2026 (NRS 293C.140 sets a general city election every even year)."
+ },
+ {
+  "city_id": "3251800",
+  "year": 2013,
+  "status": "unresolved",
+  "expected_election_dates": [],
+  "source_url": "https://elections.clarkcountynv.gov/electionresultsTV/results.aspx",
+  "additional_source_urls": [],
+  "note": "The Clark County official results for the 2013 municipal primary (04/02/2013) list the North Las Vegas mayoral contest. John Lee received a majority of the primary votes. The 2013 municipal general (06/04/2013) lists only a Ward 1 council contest for North Las Vegas and no mayoral contest. The official primary totals for 2013-04-02 are recorded in the results file as unresolved. Re-check on 2026-10-01: NRS 293C.175(5) applies only to cities of population category one or two with a June even-year primary, and North Las Vegas held April odd-year municipal elections in 2013 and 2017 under its own city charter. The North Las Vegas charter text and the 2013 and 2017 charter election rules could not be opened (leg.state.nv.us charter URLs returned 404 or 403, cityofnorthlasvegas.com returned 403, Municode returned no content). The statute in force in those years was not shown to be the governing rule, so the decisive stage is not established from an official rule."
+ },
+ {
+  "city_id": "3251800",
+  "year": 2014,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://elections.clarkcountynv.gov/electionresultsTV/results.aspx",
+  "additional_source_urls": [
+   "https://www.leg.state.nv.us/NRS/NRS-293C.html"
+  ],
+  "note": "The Clark County Election Department official results index lists the elections held in this year. Its contest listings for the 2014 primary and general show no North Las Vegas mayoral contest. North Las Vegas elected its mayor in 2013, 2017 and 2022, and the 2022 winner serves a four-year term ending in 2026 (NRS 293C.140 sets a general city election every even year)."
+ },
+ {
+  "city_id": "3251800",
+  "year": 2015,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://elections.clarkcountynv.gov/electionresultsTV/results.aspx",
+  "additional_source_urls": [
+   "https://www.leg.state.nv.us/NRS/NRS-293C.html"
+  ],
+  "note": "The Clark County Election Department official results index lists the elections held in this year. Its contest listings for the 2015 municipal primary (04/07/2015) and general (06/02/2015) show no North Las Vegas mayoral contest. North Las Vegas elected its mayor in 2013, 2017 and 2022, and the 2022 winner serves a four-year term ending in 2026 (NRS 293C.140 sets a general city election every even year)."
+ },
+ {
+  "city_id": "3251800",
+  "year": 2016,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://elections.clarkcountynv.gov/electionresultsTV/results.aspx",
+  "additional_source_urls": [
+   "https://www.leg.state.nv.us/NRS/NRS-293C.html"
+  ],
+  "note": "The Clark County Election Department official results index lists the elections held in this year. Its contest listings for the 2016 primary and general show no North Las Vegas mayoral contest. North Las Vegas elected its mayor in 2013, 2017 and 2022, and the 2022 winner serves a four-year term ending in 2026 (NRS 293C.140 sets a general city election every even year)."
+ },
+ {
+  "city_id": "3251800",
+  "year": 2017,
+  "status": "unresolved",
+  "expected_election_dates": [],
+  "source_url": "https://elections.clarkcountynv.gov/electionresultsTV/results.aspx",
+  "additional_source_urls": [],
+  "note": "The Clark County official results for the 2017 municipal primary (04/04/2017) list the North Las Vegas mayoral contest. John Lee received a majority of the primary votes. The 2017 municipal general (06/13/2017) lists only a Ward 3 council contest for North Las Vegas and no mayoral contest. The official primary totals for 2017-04-04 are recorded in the results file as unresolved. Re-check on 2026-10-01: NRS 293C.175(5) applies only to cities of population category one or two with a June even-year primary, and North Las Vegas held April odd-year municipal elections in 2013 and 2017 under its own city charter. The North Las Vegas charter text and the 2013 and 2017 charter election rules could not be opened (leg.state.nv.us charter URLs returned 404 or 403, cityofnorthlasvegas.com returned 403, Municode returned no content). The statute in force in those years was not shown to be the governing rule, so the decisive stage is not established from an official rule."
+ },
+ {
+  "city_id": "3251800",
+  "year": 2018,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://elections.clarkcountynv.gov/electionresultsTV/results.aspx",
+  "additional_source_urls": [
+   "https://www.leg.state.nv.us/NRS/NRS-293C.html"
+  ],
+  "note": "The Clark County Election Department official results index lists the elections held in this year. Its contest listings for the 2018 primary, special and general show no North Las Vegas mayoral contest. North Las Vegas elected its mayor in 2013, 2017 and 2022, and the 2022 winner serves a four-year term ending in 2026 (NRS 293C.140 sets a general city election every even year)."
+ },
+ {
+  "city_id": "3251800",
+  "year": 2019,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://elections.clarkcountynv.gov/electionresultsTV/results.aspx",
+  "additional_source_urls": [
+   "https://www.leg.state.nv.us/NRS/NRS-293C.html"
+  ],
+  "note": "The Clark County Election Department official results index lists the elections held in this year. Its contest listings for the 2019 municipal primary (04/02/2019) and general (06/11/2019) show no North Las Vegas mayoral contest. North Las Vegas elected its mayor in 2013, 2017 and 2022, and the 2022 winner serves a four-year term ending in 2026 (NRS 293C.140 sets a general city election every even year)."
+ },
+ {
+  "city_id": "3251800",
+  "year": 2020,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://elections.clarkcountynv.gov/electionresultsTV/results.aspx",
+  "additional_source_urls": [
+   "https://www.leg.state.nv.us/NRS/NRS-293C.html"
+  ],
+  "note": "The Clark County Election Department official results index lists the elections held in this year. Its contest listings for the 2020 primary and general show no North Las Vegas mayoral contest. North Las Vegas elected its mayor in 2013, 2017 and 2022, and the 2022 winner serves a four-year term ending in 2026 (NRS 293C.140 sets a general city election every even year)."
+ },
+ {
+  "city_id": "3251800",
+  "year": 2021,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://elections.clarkcountynv.gov/electionresultsTV/results.aspx",
+  "additional_source_urls": [
+   "https://www.leg.state.nv.us/NRS/NRS-293C.html"
+  ],
+  "note": "The Clark County Election Department official results index lists the elections held in this year. Its contest listings for the 2021 elections (the county index lists only Boulder City elections in 2021) show no North Las Vegas mayoral contest. North Las Vegas elected its mayor in 2013, 2017 and 2022, and the 2022 winner serves a four-year term ending in 2026 (NRS 293C.140 sets a general city election every even year)."
+ },
+ {
+  "city_id": "3251800",
+  "year": 2022,
+  "status": "complete",
+  "expected_election_dates": [
+   "2022-11-08"
+  ],
+  "source_url": "https://elections.clarkcountynv.gov/electionresultsTV/results.aspx",
+  "additional_source_urls": [],
+  "note": "The Clark County official results list a nonpartisan mayoral primary on 06/14/2022 in which no candidate received a majority (Pamela Goynes-Brown 36.91 percent). The two leading candidates met in the 11/08/2022 general election, which decided the office. The primary is an earlier round and is not recorded as a separate election."
+ },
+ {
+  "city_id": "3251800",
+  "year": 2023,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://elections.clarkcountynv.gov/electionresultsTV/results.aspx",
+  "additional_source_urls": [
+   "https://www.leg.state.nv.us/NRS/NRS-293C.html"
+  ],
+  "note": "The Clark County Election Department official results index lists the elections held in this year. Its contest listings for the 2023 elections (the county index lists only the Henderson Ward I election in 2023) show no North Las Vegas mayoral contest. North Las Vegas elected its mayor in 2013, 2017 and 2022, and the 2022 winner serves a four-year term ending in 2026 (NRS 293C.140 sets a general city election every even year)."
+ },
+ {
+  "city_id": "3251800",
+  "year": 2024,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://elections.clarkcountynv.gov/electionresultsTV/results.aspx",
+  "additional_source_urls": [
+   "https://www.leg.state.nv.us/NRS/NRS-293C.html"
+  ],
+  "note": "The Clark County Election Department official results index lists the elections held in this year. Its contest listings for the 2024 presidential primary, primary and general show no North Las Vegas mayoral contest. North Las Vegas elected its mayor in 2013, 2017 and 2022, and the 2022 winner serves a four-year term ending in 2026 (NRS 293C.140 sets a general city election every even year)."
+ },
+ {
+  "city_id": "3251800",
+  "year": 2025,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://elections.clarkcountynv.gov/electionresultsTV/results.aspx",
+  "additional_source_urls": [
+   "https://www.leg.state.nv.us/NRS/NRS-293C.html"
+  ],
+  "note": "The Clark County Election Department official results index lists the elections held in this year. Its contest listings for the 2025 (the county index lists no election in 2025) show no North Las Vegas mayoral contest. North Las Vegas elected its mayor in 2013, 2017 and 2022, and the 2022 winner serves a four-year term ending in 2026 (NRS 293C.140 sets a general city election every even year)."
+ },
+ {
+  "city_id": "3251800",
+  "year": 2026,
+  "status": "earlier_round_only",
+  "expected_election_dates": [],
+  "source_url": "https://elections.clarkcountynv.gov/electionresultsTV/results.aspx",
+  "additional_source_urls": [
+   "https://www.leg.state.nv.us/NRS/NRS-293C.html"
+  ],
+  "note": "The Clark County official results for the 06/09/2026 primary list a North Las Vegas mayoral contest. No candidate received a majority (Daniele Monroe-Moreno 47.06 percent, Scott Black 41.57 percent). Under NRS 293C.175 the top two candidates go to the general city election in November 2026, which falls after the September 14, 2026 cutoff."
+ }
+]

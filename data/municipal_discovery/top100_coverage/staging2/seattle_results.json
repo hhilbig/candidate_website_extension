@@ -1,0 +1,33 @@
+[
+  {
+    "city_name": "Seattle",
+    "state_abb": "WA",
+    "roster_place_fips": "5363000",
+    "election_date": "2025-11-04",
+    "election_type": "regular",
+    "stage": "general",
+    "verification_status": "verified_decisive",
+    "certification_status": "certified",
+    "source_url": "https://cdn.kingcounty.gov/-/media/king-county/depts/elections/results/2025/11/2025nov-results-final.pdf?hash=C26251B388BCE79FDF2F536A3A2933D1&rev=a66e093e25c24c11b61e08c49ad00495",
+    "source_locator": "PDF page 35, City of Seattle, Mayor",
+    "certification_source_url": "https://kingcounty.gov/en/dept/elections/results/2025/november-general",
+    "additional_source_urls": [
+      "https://www.seattle.gov/city-archives/seattle-facts/historical-election-results"
+    ],
+    "verification_note": "King County official final results list Wilson 138931 and Harrell 136920; results landing page states certification November 25, 2025. Seattle Municipal Archives independently lists the same totals and marks Wilson elected. Earlier 2013, 2017 and 2021 results remain in historical_results.json.",
+    "candidates": [
+      {
+        "name": "Katie Wilson",
+        "role": "winner",
+        "votes": 138931,
+        "candidate_year_id": ""
+      },
+      {
+        "name": "Bruce Harrell",
+        "role": "runner_up",
+        "votes": 136920,
+        "candidate_year_id": ""
+      }
+    ]
+  }
+]

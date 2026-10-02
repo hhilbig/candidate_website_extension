@@ -1,0 +1,174 @@
+[
+ {
+  "city_id": "3436000",
+  "year": 2010,
+  "status": "unresolved",
+  "expected_election_dates": [],
+  "source_url": "https://www.hudsoncountyclerk.org/elections-archives/",
+  "additional_source_urls": [
+   "https://www.nj.gov/state/elections/election-information-results.shtml"
+  ],
+  "note": "Unresolved. The earlier note said the Hudson County Clerk archive shows no Jersey City mayoral contest in 2010. The checker found that the archive index lists elections by date only and shows no municipality. It lists a June 15, 2010 Municipal Runoff Election that the earlier note did not address. This session tried to re-open https://www.hudsoncountyclerk.org/elections-archives/ and the sibling path /election-archives/. Both returned an AWS WAF challenge (HTTP 202, empty body) to curl, and WebFetch returned no content. The NJ Division of Elections page https://www.nj.gov/state/elections/election-information-results.shtml lists only statewide 2010 general and primary results, no municipal results. The cycle of 2013, 2017, 2021 and 2025 is consistent with a four-year term, but no official source opened in this session shows a 2010 mayoral contest or its absence, and the identity of the June 15, 2010 runoff town is not established. The year stays unresolved until an official Hudson County or Jersey City source can be read."
+ },
+ {
+  "city_id": "3436000",
+  "year": 2011,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.hudsoncountyclerk.org/elections-archives/",
+  "additional_source_urls": [],
+  "note": "The Hudson County Clerk elections archive lists every county-run election by year. It shows no Jersey City mayoral contest in this year. Jersey City mayoral elections in the archive fall in 2013, 2017, 2021 and 2025 only, a four-year cycle. The next regular mayoral election is in 2029."
+ },
+ {
+  "city_id": "3436000",
+  "year": 2012,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.hudsoncountyclerk.org/elections-archives/",
+  "additional_source_urls": [],
+  "note": "The Hudson County Clerk elections archive lists every county-run election by year. It shows no Jersey City mayoral contest in this year. Jersey City mayoral elections in the archive fall in 2013, 2017, 2021 and 2025 only, a four-year cycle. The next regular mayoral election is in 2029."
+ },
+ {
+  "city_id": "3436000",
+  "year": 2013,
+  "status": "complete",
+  "expected_election_dates": [
+   "2013-05-14"
+  ],
+  "source_url": "http://assets01.aws.connect.clarityelections.com/Assets/Connect/RootPublish/hudson-nj.connect.clarityelections.com/Election_Archive/2013/Municipal/2013JC_MuniElectionResults.pdf",
+  "additional_source_urls": [
+   "https://www.hudsoncountyclerk.org/elections-archives/"
+  ],
+  "note": "The Hudson County Clerk municipal election results for May 14, 2013 record a Jersey City mayoral contest. Steven Fulop won with a majority of votes, so no runoff was held. Winner and runner-up are in jersey_city_results.json."
+ },
+ {
+  "city_id": "3436000",
+  "year": 2014,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.hudsoncountyclerk.org/elections-archives/",
+  "additional_source_urls": [],
+  "note": "The Hudson County Clerk elections archive lists every county-run election by year. It shows no Jersey City mayoral contest in this year. Jersey City mayoral elections in the archive fall in 2013, 2017, 2021 and 2025 only, a four-year cycle. The next regular mayoral election is in 2029."
+ },
+ {
+  "city_id": "3436000",
+  "year": 2015,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.hudsoncountyclerk.org/elections-archives/",
+  "additional_source_urls": [],
+  "note": "The Hudson County Clerk elections archive lists every county-run election by year. It shows no Jersey City mayoral contest in this year. Jersey City mayoral elections in the archive fall in 2013, 2017, 2021 and 2025 only, a four-year cycle. The next regular mayoral election is in 2029."
+ },
+ {
+  "city_id": "3436000",
+  "year": 2016,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.hudsoncountyclerk.org/elections-archives/",
+  "additional_source_urls": [],
+  "note": "The Hudson County Clerk elections archive lists every county-run election by year. It shows no Jersey City mayoral contest in this year. Jersey City mayoral elections in the archive fall in 2013, 2017, 2021 and 2025 only, a four-year cycle. The next regular mayoral election is in 2029."
+ },
+ {
+  "city_id": "3436000",
+  "year": 2017,
+  "status": "complete",
+  "expected_election_dates": [
+   "2017-11-07"
+  ],
+  "source_url": "http://assets01.aws.connect.clarityelections.com/Assets/Connect/RootPublish/hudson-nj.connect.clarityelections.com/Election_Archive/2017/General/OFFICIAL-District-Canvass-General-Election-Results-2017.pdf",
+  "additional_source_urls": [
+   "https://www.hudsoncountyclerk.org/elections-archives/"
+  ],
+  "note": "The Hudson County Clerk statement of vote for November 7, 2017 records a Jersey City mayoral contest. Steven Fulop won. Winner and runner-up are in jersey_city_results.json."
+ },
+ {
+  "city_id": "3436000",
+  "year": 2018,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.hudsoncountyclerk.org/elections-archives/",
+  "additional_source_urls": [],
+  "note": "The Hudson County Clerk elections archive lists every county-run election by year. It shows no Jersey City mayoral contest in this year. Jersey City mayoral elections in the archive fall in 2013, 2017, 2021 and 2025 only, a four-year cycle. The next regular mayoral election is in 2029."
+ },
+ {
+  "city_id": "3436000",
+  "year": 2019,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.hudsoncountyclerk.org/elections-archives/",
+  "additional_source_urls": [],
+  "note": "The Hudson County Clerk elections archive lists every county-run election by year. It shows no Jersey City mayoral contest in this year. Jersey City mayoral elections in the archive fall in 2013, 2017, 2021 and 2025 only, a four-year cycle. The next regular mayoral election is in 2029."
+ },
+ {
+  "city_id": "3436000",
+  "year": 2020,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.hudsoncountyclerk.org/elections-archives/",
+  "additional_source_urls": [],
+  "note": "The Hudson County Clerk elections archive lists every county-run election by year. It shows no Jersey City mayoral contest in this year. Jersey City mayoral elections in the archive fall in 2013, 2017, 2021 and 2025 only, a four-year cycle. The next regular mayoral election is in 2029."
+ },
+ {
+  "city_id": "3436000",
+  "year": 2021,
+  "status": "complete",
+  "expected_election_dates": [
+   "2021-11-02"
+  ],
+  "source_url": "https://www.hudsoncountyclerk.org/wp-content/uploads/2021/12/2021-General-Election-District-Canvass-Report.pdf",
+  "additional_source_urls": [
+   "https://www.hudsoncountyclerk.org/elections-archives/"
+  ],
+  "note": "The Hudson County Clerk district canvass for November 2, 2021 records a Jersey City mayoral contest. Steven Fulop won. Winner and runner-up are in jersey_city_results.json."
+ },
+ {
+  "city_id": "3436000",
+  "year": 2022,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.hudsoncountyclerk.org/elections-archives/",
+  "additional_source_urls": [],
+  "note": "The Hudson County Clerk elections archive lists every county-run election by year. It shows no Jersey City mayoral contest in this year. Jersey City mayoral elections in the archive fall in 2013, 2017, 2021 and 2025 only, a four-year cycle. The next regular mayoral election is in 2029."
+ },
+ {
+  "city_id": "3436000",
+  "year": 2023,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.hudsoncountyclerk.org/elections-archives/",
+  "additional_source_urls": [],
+  "note": "The Hudson County Clerk elections archive lists every county-run election by year. It shows no Jersey City mayoral contest in this year. Jersey City mayoral elections in the archive fall in 2013, 2017, 2021 and 2025 only, a four-year cycle. The next regular mayoral election is in 2029."
+ },
+ {
+  "city_id": "3436000",
+  "year": 2024,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.hudsoncountyclerk.org/elections-archives/",
+  "additional_source_urls": [],
+  "note": "The Hudson County Clerk elections archive lists every county-run election by year. It shows no Jersey City mayoral contest in this year. Jersey City mayoral elections in the archive fall in 2013, 2017, 2021 and 2025 only, a four-year cycle. The next regular mayoral election is in 2029."
+ },
+ {
+  "city_id": "3436000",
+  "year": 2025,
+  "status": "complete",
+  "expected_election_dates": [
+   "2025-12-02"
+  ],
+  "source_url": "https://www.hudsoncountyclerk.org/wp-content/uploads/2026/01/2025-General-Election-Runoff-Official-Summary-Results-by-Contest.pdf",
+  "additional_source_urls": [
+   "https://www.hudsoncountyclerk.org/elections-archives/",
+   "https://results.enr.clarityelections.com/NJ/Hudson/125139/"
+  ],
+  "note": "No candidate won a majority in the November 4, 2025 first round. The decisive round was the December 2, 2025 runoff between James Solomon and Jim McGreevey. The county clerk official runoff summary records the result. Solomon won."
+ },
+ {
+  "city_id": "3436000",
+  "year": 2026,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.hudsoncountyclerk.org/elections-archives/",
+  "additional_source_urls": [],
+  "note": "The Hudson County Clerk elections archive lists every county-run election by year. It shows no Jersey City mayoral contest in this year. Jersey City mayoral elections in the archive fall in 2013, 2017, 2021 and 2025 only, a four-year cycle. The next regular mayoral election is in 2029. The 2026 elections listed by the clerk are the June 2 primary and the November 3 general, and the general falls after the September 14, 2026 cutoff. Mayor Solomon took office after the December 2025 runoff."
+ }
+]

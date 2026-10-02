@@ -1,0 +1,95 @@
+[
+ {
+  "city_name": "Detroit",
+  "state_abb": "MI",
+  "roster_place_fips": "2622000",
+  "election_date": "2017-11-07",
+  "election_type": "regular",
+  "stage": "general",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "source_url": "https://www.waynecountymi.gov/files/assets/mainsite/v/1/clerk/documents/elections/election-results/2017-november-7/off_1117.pdf",
+  "source_locator": "DETROIT MAYOR contest, 590 of 590 precincts, Total column",
+  "certification_source_url": "https://www.waynecountymi.gov/files/assets/mainsite/v/1/clerk/documents/elections/election-results/2017-november-7/off_1117.pdf",
+  "additional_source_urls": [
+   "https://devtraining.detroitmi.gov/sites/training.detroitmi/files/2018-05/2_29_2012_CharterDocument_2_1_WITHOUT_COMMENTARY_1.pdf"
+  ],
+  "verification_note": "Wayne County Clerk Election Summary Report labelled OFFICIAL RESULTS for the November 7, 2017 general election lists Duggan 72439 and Young 28149, with 532 unresolved write-in votes. The detroitmi.gov unofficial report showed 72450 and 28164; the official county figures are used. No separate certification document was opened.",
+  "candidates": [
+   {
+    "name": "Mike Duggan",
+    "role": "winner",
+    "votes": 72439,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Coleman A. Young II",
+    "role": "runner_up",
+    "votes": 28149,
+    "candidate_year_id": ""
+   }
+  ]
+ },
+ {
+  "city_name": "Detroit",
+  "state_abb": "MI",
+  "roster_place_fips": "2622000",
+  "election_date": "2021-11-02",
+  "election_type": "regular",
+  "stage": "general",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "source_url": "https://www.waynecountymi.gov/files/assets/mainsite/v/1/clerk/documents/elections/election-results/2021-november-2/electionsum11221_official.pdf",
+  "source_locator": "Mayor- City of Detroit contest, 623 of 623 precincts, Total column",
+  "certification_source_url": "https://www.waynecountymi.gov/files/assets/mainsite/v/1/clerk/documents/elections/election-results/2021-november-2/electionsum11221_official.pdf",
+  "additional_source_urls": [
+   "https://devtraining.detroitmi.gov/sites/training.detroitmi/files/2018-05/2_29_2012_CharterDocument_2_1_WITHOUT_COMMENTARY_1.pdf"
+  ],
+  "verification_note": "Wayne County Clerk Election Summary Report labelled OFFICIAL RESULTS (run November 12, 2021) for the November 2, 2021 general election lists Duggan 69353 and Adams 22384, plus 408 write-in votes. No separate certification document was opened.",
+  "candidates": [
+   {
+    "name": "Mike Duggan",
+    "role": "winner",
+    "votes": 69353,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Anthony Adams",
+    "role": "runner_up",
+    "votes": 22384,
+    "candidate_year_id": ""
+   }
+  ]
+ },
+ {
+  "city_name": "Detroit",
+  "state_abb": "MI",
+  "roster_place_fips": "2622000",
+  "election_date": "2025-11-04",
+  "election_type": "regular",
+  "stage": "general",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "source_url": "https://detroitmi.gov/sites/detroitmi.localhost/files/2025-12/November%204%20Municipal%20Gen%20Election%20Results%20-%20Official.pdf",
+  "source_locator": "Page 1, Mayor - City of Detroit contest, 430 of 430 precincts, Total column",
+  "certification_source_url": "https://detroitmi.gov/sites/detroitmi.localhost/files/2025-12/November%204%20Municipal%20Gen%20Election%20Results%20-%20Official.pdf",
+  "additional_source_urls": [
+   "https://devtraining.detroitmi.gov/sites/training.detroitmi/files/2018-05/2_29_2012_CharterDocument_2_1_WITHOUT_COMMENTARY_1.pdf"
+  ],
+  "verification_note": "Detroit Department of Elections Election Summary Report labelled OFFICIAL RESULTS (run December 3, 2025) for the November 4, 2025 general election lists Sheffield 88285 and Kinloch 25748, plus 601 write-in votes. No separate certification document was opened.",
+  "candidates": [
+   {
+    "name": "Mary Sheffield",
+    "role": "winner",
+    "votes": 88285,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Solomon Kinloch",
+    "role": "runner_up",
+    "votes": 25748,
+    "candidate_year_id": ""
+   }
+  ]
+ }
+]

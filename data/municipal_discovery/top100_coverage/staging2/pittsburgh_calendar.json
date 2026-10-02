@@ -1,0 +1,197 @@
+[
+ {
+  "city_id": "4261000",
+  "year": 2010,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.pittsburghpa.gov/City-Government/The-Mayor/Mayors-of-Pittsburgh",
+  "additional_source_urls": [
+   "https://www.alleghenycounty.us/Government/Elections/Election-Results"
+  ],
+  "note": "The official city mayor list records four-year terms beginning in January 2014, 2018, 2022 and 2026, and Pennsylvania holds municipal elections in odd-numbered years. No regular mayoral election fell in this year. Inspected September 16, 2026."
+ },
+ {
+  "city_id": "4261000",
+  "year": 2011,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.pittsburghpa.gov/City-Government/The-Mayor/Mayors-of-Pittsburgh",
+  "additional_source_urls": [
+   "https://www.alleghenycounty.us/Government/Elections/Election-Results"
+  ],
+  "note": "The official city mayor list records four-year terms beginning in January 2014, 2018, 2022 and 2026, and Pennsylvania holds municipal elections in odd-numbered years. No regular mayoral election fell in this year. Inspected September 16, 2026."
+ },
+ {
+  "city_id": "4261000",
+  "year": 2012,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.pittsburghpa.gov/City-Government/The-Mayor/Mayors-of-Pittsburgh",
+  "additional_source_urls": [
+   "https://www.alleghenycounty.us/Government/Elections/Election-Results"
+  ],
+  "note": "The official city mayor list records four-year terms beginning in January 2014, 2018, 2022 and 2026, and Pennsylvania holds municipal elections in odd-numbered years. No regular mayoral election fell in this year. Inspected September 16, 2026."
+ },
+ {
+  "city_id": "4261000",
+  "year": 2013,
+  "status": "unresolved",
+  "expected_election_dates": [
+   "2013-11-05"
+  ],
+  "source_url": "https://www.alleghenycounty.us/Government/Elections/Election-Results",
+  "additional_source_urls": [
+   "https://www.pittsburghpa.gov/City-Government/The-Mayor/Mayors-of-Pittsburgh"
+  ],
+  "note": "The official city mayor list shows a mayor taking office in January 2014, which places a regular mayoral election in November 2013. The county results set linked for the 2013 General Election contains eleven Pittsburgh contests, including Controller and council districts, but no mayoral contest, so the finalists are not yet verified from an official results source. Absence from that incomplete set is not treated as evidence that no election occurred."
+ },
+ {
+  "city_id": "4261000",
+  "year": 2014,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.pittsburghpa.gov/City-Government/The-Mayor/Mayors-of-Pittsburgh",
+  "additional_source_urls": [
+   "https://www.alleghenycounty.us/Government/Elections/Election-Results"
+  ],
+  "note": "The official city mayor list records four-year terms beginning in January 2014, 2018, 2022 and 2026, and Pennsylvania holds municipal elections in odd-numbered years. No regular mayoral election fell in this year. Inspected September 16, 2026."
+ },
+ {
+  "city_id": "4261000",
+  "year": 2015,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.pittsburghpa.gov/City-Government/The-Mayor/Mayors-of-Pittsburgh",
+  "additional_source_urls": [
+   "https://www.alleghenycounty.us/Government/Elections/Election-Results"
+  ],
+  "note": "The official city mayor list records four-year terms beginning in January 2014, 2018, 2022 and 2026, and Pennsylvania holds municipal elections in odd-numbered years. No regular mayoral election fell in this year. Inspected September 16, 2026."
+ },
+ {
+  "city_id": "4261000",
+  "year": 2016,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.pittsburghpa.gov/City-Government/The-Mayor/Mayors-of-Pittsburgh",
+  "additional_source_urls": [
+   "https://www.alleghenycounty.us/Government/Elections/Election-Results"
+  ],
+  "note": "The official city mayor list records four-year terms beginning in January 2014, 2018, 2022 and 2026, and Pennsylvania holds municipal elections in odd-numbered years. No regular mayoral election fell in this year. Inspected September 16, 2026."
+ },
+ {
+  "city_id": "4261000",
+  "year": 2017,
+  "status": "complete",
+  "expected_election_dates": [
+   "2017-11-07"
+  ],
+  "source_url": "https://www.alleghenycounty.us/Government/Elections/Election-Results",
+  "additional_source_urls": [
+   "https://www.pittsburghpa.gov/City-Government/The-Mayor/Mayors-of-Pittsburgh"
+  ],
+  "note": "Allegheny County official results publish the Pittsburgh mayoral contest for this election. Winner and runner-up are recorded in pittsburgh_results.json."
+ },
+ {
+  "city_id": "4261000",
+  "year": 2018,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.pittsburghpa.gov/City-Government/The-Mayor/Mayors-of-Pittsburgh",
+  "additional_source_urls": [
+   "https://www.alleghenycounty.us/Government/Elections/Election-Results"
+  ],
+  "note": "The official city mayor list records four-year terms beginning in January 2014, 2018, 2022 and 2026, and Pennsylvania holds municipal elections in odd-numbered years. No regular mayoral election fell in this year. Inspected September 16, 2026."
+ },
+ {
+  "city_id": "4261000",
+  "year": 2019,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.pittsburghpa.gov/City-Government/The-Mayor/Mayors-of-Pittsburgh",
+  "additional_source_urls": [
+   "https://www.alleghenycounty.us/Government/Elections/Election-Results"
+  ],
+  "note": "The official city mayor list records four-year terms beginning in January 2014, 2018, 2022 and 2026, and Pennsylvania holds municipal elections in odd-numbered years. No regular mayoral election fell in this year. Inspected September 16, 2026."
+ },
+ {
+  "city_id": "4261000",
+  "year": 2020,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.pittsburghpa.gov/City-Government/The-Mayor/Mayors-of-Pittsburgh",
+  "additional_source_urls": [
+   "https://www.alleghenycounty.us/Government/Elections/Election-Results"
+  ],
+  "note": "The official city mayor list records four-year terms beginning in January 2014, 2018, 2022 and 2026, and Pennsylvania holds municipal elections in odd-numbered years. No regular mayoral election fell in this year. Inspected September 16, 2026."
+ },
+ {
+  "city_id": "4261000",
+  "year": 2021,
+  "status": "complete",
+  "expected_election_dates": [
+   "2021-11-02"
+  ],
+  "source_url": "https://www.alleghenycounty.us/Government/Elections/Election-Results",
+  "additional_source_urls": [
+   "https://www.pittsburghpa.gov/City-Government/The-Mayor/Mayors-of-Pittsburgh"
+  ],
+  "note": "Allegheny County official results publish the Pittsburgh mayoral contest for this election. Winner and runner-up are recorded in pittsburgh_results.json."
+ },
+ {
+  "city_id": "4261000",
+  "year": 2022,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.pittsburghpa.gov/City-Government/The-Mayor/Mayors-of-Pittsburgh",
+  "additional_source_urls": [
+   "https://www.alleghenycounty.us/Government/Elections/Election-Results"
+  ],
+  "note": "The official city mayor list records four-year terms beginning in January 2014, 2018, 2022 and 2026, and Pennsylvania holds municipal elections in odd-numbered years. No regular mayoral election fell in this year. Inspected September 16, 2026."
+ },
+ {
+  "city_id": "4261000",
+  "year": 2023,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.pittsburghpa.gov/City-Government/The-Mayor/Mayors-of-Pittsburgh",
+  "additional_source_urls": [
+   "https://www.alleghenycounty.us/Government/Elections/Election-Results"
+  ],
+  "note": "The official city mayor list records four-year terms beginning in January 2014, 2018, 2022 and 2026, and Pennsylvania holds municipal elections in odd-numbered years. No regular mayoral election fell in this year. Inspected September 16, 2026."
+ },
+ {
+  "city_id": "4261000",
+  "year": 2024,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.pittsburghpa.gov/City-Government/The-Mayor/Mayors-of-Pittsburgh",
+  "additional_source_urls": [
+   "https://www.alleghenycounty.us/Government/Elections/Election-Results"
+  ],
+  "note": "The official city mayor list records four-year terms beginning in January 2014, 2018, 2022 and 2026, and Pennsylvania holds municipal elections in odd-numbered years. No regular mayoral election fell in this year. Inspected September 16, 2026."
+ },
+ {
+  "city_id": "4261000",
+  "year": 2025,
+  "status": "complete",
+  "expected_election_dates": [
+   "2025-11-04"
+  ],
+  "source_url": "https://www.alleghenycounty.us/Government/Elections/Election-Results",
+  "additional_source_urls": [
+   "https://www.pittsburghpa.gov/City-Government/The-Mayor/Mayors-of-Pittsburgh"
+  ],
+  "note": "Allegheny County official results publish the Pittsburgh mayoral contest for this election. Winner and runner-up are recorded in pittsburgh_results.json."
+ },
+ {
+  "city_id": "4261000",
+  "year": 2026,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://www.pittsburghpa.gov/City-Government/The-Mayor/Mayors-of-Pittsburgh",
+  "additional_source_urls": [
+   "https://www.alleghenycounty.us/Government/Elections/Election-Results"
+  ],
+  "note": "The official city mayor list records four-year terms beginning in January 2014, 2018, 2022 and 2026, and Pennsylvania holds municipal elections in odd-numbered years. No regular mayoral election fell in this year. Inspected September 16, 2026."
+ }
+]
