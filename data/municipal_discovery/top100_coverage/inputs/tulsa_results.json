@@ -1,1 +1,33 @@
-[]
+[
+ {
+  "city_name": "Tulsa",
+  "state_abb": "OK",
+  "roster_place_fips": "4075000",
+  "election_date": "2013-11-12",
+  "election_type": "regular",
+  "stage": "general",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "source_url": "https://results.okelections.gov/OKER/?elecDate=20131112",
+  "source_locator": "Oklahoma State Election Board results application, Local Results, FOR MAYOR CITY OF TULSA",
+  "certification_source_url": "https://results.okelections.gov/OKER/?elecDate=20131112",
+  "additional_source_urls": [
+   "https://results.okelections.gov/OKER/?elecDate=20130611"
+  ],
+  "verification_note": "Oklahoma State Election Board official results for November 12, 2013 list FOR MAYOR CITY OF TULSA: Dewey Follett Bartlett, Jr. 39,739 (54.98 percent), Kathy Taylor 32,534 (45.02 percent); 195 of 195 precincts. The June 11, 2013 primary (Taylor 24,529, 42.07 percent; Bartlett 19,949; William Lee Christiansen 13,488) gave no candidate a majority, so the November general was decisive. Read in a browser on 2026-10-02.",
+  "candidates": [
+   {
+    "name": "Dewey Follett Bartlett, Jr.",
+    "role": "winner",
+    "votes": 39739,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Kathy Taylor",
+    "role": "runner_up",
+    "votes": 32534,
+    "candidate_year_id": ""
+   }
+  ]
+ }
+]
