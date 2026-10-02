@@ -1,0 +1,4081 @@
+[
+ {
+  "city_id": "0203000",
+  "city_name": "Anchorage",
+  "state_abb": "AK",
+  "slug": "anchorage",
+  "finalists": [
+   {
+    "candidate_election_id": "0203000__2012-04-03__regular__b4e1cd0b32321154",
+    "candidate_name": "Dan Sullivan",
+    "role": "winner",
+    "election_date": "2012-04-03",
+    "result_source_url": "https://www.muni.org/Departments/Assembly/Clerk/Elections/Election%20Results/2012%20Regular%20Election%20Results.pdf"
+   },
+   {
+    "candidate_election_id": "0203000__2015-05-05__regular__6b22c131e592abb4",
+    "candidate_name": "Ethan Berkowitz",
+    "role": "winner",
+    "election_date": "2015-05-05",
+    "result_source_url": "https://www.muni.org/Departments/Assembly/Clerk/Elections/Election%20Results/2015%20Runoff%20Election%20Results.pdf"
+   },
+   {
+    "candidate_election_id": "0203000__2015-05-05__regular__338e750ff9516b03",
+    "candidate_name": "Amy Demboski",
+    "role": "runner_up",
+    "election_date": "2015-05-05",
+    "result_source_url": "https://www.muni.org/Departments/Assembly/Clerk/Elections/Election%20Results/2015%20Runoff%20Election%20Results.pdf"
+   },
+   {
+    "candidate_election_id": "0203000__2024-05-14__regular__76a9bb7c18c67016",
+    "candidate_name": "Suzanne LaFrance",
+    "role": "winner",
+    "election_date": "2024-05-14",
+    "result_source_url": "https://www.muni.org/Departments/Assembly/Clerk/Elections/Election%20Results/2024%20Runoff%20Election%20Results.pdf"
+   },
+   {
+    "candidate_election_id": "0203000__2024-05-14__regular__d768d0bcc019d118",
+    "candidate_name": "Dave Bronson",
+    "role": "runner_up",
+    "election_date": "2024-05-14",
+    "result_source_url": "https://www.muni.org/Departments/Assembly/Clerk/Elections/Election%20Results/2024%20Runoff%20Election%20Results.pdf"
+   }
+  ]
+ },
+ {
+  "city_id": "0412000",
+  "city_name": "Chandler",
+  "state_abb": "AZ",
+  "slug": "chandler",
+  "finalists": [
+   {
+    "candidate_election_id": "0412000__2022-08-02__regular__6856ce9ce26b0b06",
+    "candidate_name": "Kevin Hartke",
+    "role": "winner",
+    "election_date": "2022-08-02",
+    "result_source_url": "https://elections.maricopa.gov/asset/jcr:4d7ede9a-d1b2-4907-b659-41542ca95b26/08-02-2022-2b%20Final%20SOV%20and%20Official%20Canvass%20Report%20AUG2022.txt"
+   },
+   {
+    "candidate_election_id": "0412000__2022-08-02__regular__1fa625cda00ea955",
+    "candidate_name": "Ruth Jones",
+    "role": "runner_up",
+    "election_date": "2022-08-02",
+    "result_source_url": "https://elections.maricopa.gov/asset/jcr:4d7ede9a-d1b2-4907-b659-41542ca95b26/08-02-2022-2b%20Final%20SOV%20and%20Official%20Canvass%20Report%20AUG2022.txt"
+   },
+   {
+    "candidate_election_id": "0412000__2026-07-21__regular__9740a7ae6dde0e75",
+    "candidate_name": "Matt Orlando",
+    "role": "winner",
+    "election_date": "2026-07-21",
+    "result_source_url": "https://elections.maricopa.gov/asset/jcr:b96f254d-123b-47ca-89c0-863800790326/07-21-2026-2b%20Final%20SOV%20and%20Official%20Canvass%20Report.txt"
+   },
+   {
+    "candidate_election_id": "0412000__2026-07-21__regular__76d06a12fe681c6c",
+    "candidate_name": "Jeff Weninger",
+    "role": "runner_up",
+    "election_date": "2026-07-21",
+    "result_source_url": "https://elections.maricopa.gov/asset/jcr:b96f254d-123b-47ca-89c0-863800790326/07-21-2026-2b%20Final%20SOV%20and%20Official%20Canvass%20Report.txt"
+   }
+  ]
+ },
+ {
+  "city_id": "0427400",
+  "city_name": "Gilbert",
+  "state_abb": "AZ",
+  "slug": "gilbert",
+  "finalists": [
+   {
+    "candidate_election_id": "0427400__2012-08-28__regular__0baaa441731776a7",
+    "candidate_name": "John Lewis",
+    "role": "winner",
+    "election_date": "2012-08-28",
+    "result_source_url": "https://elections.maricopa.gov/asset/jcr:6cb1c607-574e-49f5-8d8f-0a56fc328d07/08-28-2012%20Final%20Precinct%20Text%20File.txt"
+   },
+   {
+    "candidate_election_id": "0427400__2012-08-28__regular__c00ac5dd981e9560",
+    "candidate_name": "Steve Berman",
+    "role": "runner_up",
+    "election_date": "2012-08-28",
+    "result_source_url": "https://elections.maricopa.gov/asset/jcr:6cb1c607-574e-49f5-8d8f-0a56fc328d07/08-28-2012%20Final%20Precinct%20Text%20File.txt"
+   },
+   {
+    "candidate_election_id": "0427400__2020-11-03__regular__57d91cc6b44a53a3",
+    "candidate_name": "Brigette Peterson",
+    "role": "winner",
+    "election_date": "2020-11-03",
+    "result_source_url": "https://elections.maricopa.gov/asset/jcr:cebd0be2-4c55-4410-95f7-14f2b8dd2397/11-03-2020-2b%20Final%20SOV%20and%20Official%20Canvass%20Report%20NOV2020.txt"
+   },
+   {
+    "candidate_election_id": "0427400__2020-11-03__regular__f3719d23e99c2311",
+    "candidate_name": "Matt Nielsen",
+    "role": "runner_up",
+    "election_date": "2020-11-03",
+    "result_source_url": "https://elections.maricopa.gov/asset/jcr:cebd0be2-4c55-4410-95f7-14f2b8dd2397/11-03-2020-2b%20Final%20SOV%20and%20Official%20Canvass%20Report%20NOV2020.txt"
+   },
+   {
+    "candidate_election_id": "0427400__2024-07-30__regular__4d603fb9b6efacc0",
+    "candidate_name": "Scott Anderson",
+    "role": "winner",
+    "election_date": "2024-07-30",
+    "result_source_url": "https://elections.maricopa.gov/asset/jcr:718162a7-a25e-42eb-8c1d-2e560baec0a3/07-30-2024-2b%20Final%20SOV%20and%20Official%20Canvass%20Report.txt"
+   },
+   {
+    "candidate_election_id": "0427400__2024-07-30__regular__1e3c91aa18371c7d",
+    "candidate_name": "Natalie DiBernardo",
+    "role": "runner_up",
+    "election_date": "2024-07-30",
+    "result_source_url": "https://elections.maricopa.gov/asset/jcr:718162a7-a25e-42eb-8c1d-2e560baec0a3/07-30-2024-2b%20Final%20SOV%20and%20Official%20Canvass%20Report.txt"
+   }
+  ]
+ },
+ {
+  "city_id": "0427820",
+  "city_name": "Glendale",
+  "state_abb": "AZ",
+  "slug": "glendale",
+  "finalists": [
+   {
+    "candidate_election_id": "0427820__2012-11-06__regular__5a47bf95a1f34dba",
+    "candidate_name": "Jerry Weiers",
+    "role": "winner",
+    "election_date": "2012-11-06",
+    "result_source_url": "https://elections.maricopa.gov/asset/jcr:96330beb-6c3d-43b9-b91c-ba21f75b6ee0/11-06-2012%20Final%20Summary%20Report.pdf"
+   },
+   {
+    "candidate_election_id": "0427820__2012-11-06__regular__3dcfeb11bd7b367f",
+    "candidate_name": "Manuel \"Manny\" Cruz",
+    "role": "runner_up",
+    "election_date": "2012-11-06",
+    "result_source_url": "https://elections.maricopa.gov/asset/jcr:96330beb-6c3d-43b9-b91c-ba21f75b6ee0/11-06-2012%20Final%20Summary%20Report.pdf"
+   },
+   {
+    "candidate_election_id": "0427820__2016-08-30__regular__72322bc906087c77",
+    "candidate_name": "Mark Burdick",
+    "role": "runner_up",
+    "election_date": "2016-08-30",
+    "result_source_url": "https://elections.maricopa.gov/asset/jcr:b2b9523a-766a-4527-a867-e61ef73862ee/08-30-2016%20Final%20Summary%20Report%20AUG%202016.pdf"
+   },
+   {
+    "candidate_election_id": "0427820__2020-08-04__regular__1388635525c6e328",
+    "candidate_name": "Michelle Robertson",
+    "role": "runner_up",
+    "election_date": "2020-08-04",
+    "result_source_url": "https://elections.maricopa.gov/asset/jcr:f4038e12-bb83-4d64-beb0-3e3142eb2041/08-04-2020%20-1%20Final%20Official%20Summary%20Report%20AUG2020.pdf"
+   }
+  ]
+ },
+ {
+  "city_id": "0446000",
+  "city_name": "Mesa",
+  "state_abb": "AZ",
+  "slug": "mesa",
+  "finalists": [
+   {
+    "candidate_election_id": "0446000__2024-11-05__regular__82f2cb6b4435a1f0",
+    "candidate_name": "Mark A. Freeman",
+    "role": "winner",
+    "election_date": "2024-11-05",
+    "result_source_url": "https://www.mesaaz.gov/files/assets/public/v/1/government/cityclerk/pastelection/11-05-24-general-election.pdf"
+   },
+   {
+    "candidate_election_id": "0446000__2024-11-05__regular__dc11e66bc175d26d",
+    "candidate_name": "Scott Smith",
+    "role": "runner_up",
+    "election_date": "2024-11-05",
+    "result_source_url": "https://www.mesaaz.gov/files/assets/public/v/1/government/cityclerk/pastelection/11-05-24-general-election.pdf"
+   }
+  ]
+ },
+ {
+  "city_id": "0455000",
+  "city_name": "Phoenix",
+  "state_abb": "AZ",
+  "slug": "phoenix",
+  "finalists": [
+   {
+    "candidate_election_id": "0455000__2015-08-25__regular__6e6d3dc5085bfbff",
+    "candidate_name": "Greg Stanton",
+    "role": "winner",
+    "election_date": "2015-08-25",
+    "result_source_url": "https://www.phoenix.gov/content/dam/phoenix/cityclerksite/documents/elections/citywide%20summary_official.pdf"
+   },
+   {
+    "candidate_election_id": "0455000__2015-08-25__regular__72ad429ec9e2217d",
+    "candidate_name": "Anna Maria Brennan",
+    "role": "runner_up",
+    "election_date": "2015-08-25",
+    "result_source_url": "https://www.phoenix.gov/content/dam/phoenix/cityclerksite/documents/elections/citywide%20summary_official.pdf"
+   },
+   {
+    "candidate_election_id": "0455000__2024-11-05__regular__f2a875c73fa80119",
+    "candidate_name": "Kate Gallego",
+    "role": "winner",
+    "election_date": "2024-11-05",
+    "result_source_url": "https://elections.maricopa.gov/asset/jcr:f1f09b3a-76e5-401f-ac2f-aaf2a0b193ee/11-05-2024-0%20BOS%20CANVASS%20SUMMARY.pdf"
+   },
+   {
+    "candidate_election_id": "0455000__2024-11-05__regular__f78a939a07ceff77",
+    "candidate_name": "Matt Evans",
+    "role": "runner_up",
+    "election_date": "2024-11-05",
+    "result_source_url": "https://elections.maricopa.gov/asset/jcr:f1f09b3a-76e5-401f-ac2f-aaf2a0b193ee/11-05-2024-0%20BOS%20CANVASS%20SUMMARY.pdf"
+   }
+  ]
+ },
+ {
+  "city_id": "0465000",
+  "city_name": "Scottsdale",
+  "state_abb": "AZ",
+  "slug": "scottsdale",
+  "finalists": [
+   {
+    "candidate_election_id": "0465000__2012-08-28__regular__b81680a9d5458dd2",
+    "candidate_name": "Jim Lane",
+    "role": "winner",
+    "election_date": "2012-08-28",
+    "result_source_url": "https://elections.maricopa.gov/asset/jcr:6cb1c607-574e-49f5-8d8f-0a56fc328d07/08-28-2012%20Final%20Precinct%20Text%20File.txt"
+   },
+   {
+    "candidate_election_id": "0465000__2012-08-28__regular__e40d6542c938b405",
+    "candidate_name": "John Washington",
+    "role": "runner_up",
+    "election_date": "2012-08-28",
+    "result_source_url": "https://elections.maricopa.gov/asset/jcr:6cb1c607-574e-49f5-8d8f-0a56fc328d07/08-28-2012%20Final%20Precinct%20Text%20File.txt"
+   },
+   {
+    "candidate_election_id": "0465000__2016-11-08__regular__b81680a9d5458dd2",
+    "candidate_name": "Jim Lane",
+    "role": "winner",
+    "election_date": "2016-11-08",
+    "result_source_url": "https://elections.maricopa.gov/asset/jcr:2735191f-5a1b-4365-b833-ee746615262c/11-08-2016%20Final%20Summary%20Report%20NOV%202016.txt"
+   },
+   {
+    "candidate_election_id": "0465000__2024-11-05__regular__7d83aa4321435cce",
+    "candidate_name": "Lisa Borowsky",
+    "role": "winner",
+    "election_date": "2024-11-05",
+    "result_source_url": "https://elections.maricopa.gov/asset/jcr:5c8a38fd-0d5a-4fa1-83cb-8b13e5ff089c/11-05-2024-2b%20Final%20SOV%20and%20Official%20Canvass%20Report.txt"
+   },
+   {
+    "candidate_election_id": "0465000__2024-11-05__regular__5d1eadb04334a2b2",
+    "candidate_name": "David Ortega",
+    "role": "runner_up",
+    "election_date": "2024-11-05",
+    "result_source_url": "https://elections.maricopa.gov/asset/jcr:5c8a38fd-0d5a-4fa1-83cb-8b13e5ff089c/11-05-2024-2b%20Final%20SOV%20and%20Official%20Canvass%20Report.txt"
+   }
+  ]
+ },
+ {
+  "city_id": "0477000",
+  "city_name": "Tucson",
+  "state_abb": "AZ",
+  "slug": "tucson",
+  "finalists": [
+   {
+    "candidate_election_id": "0477000__2011-11-08__regular__fa7dddf493880202",
+    "candidate_name": "Jonathan Rothschild",
+    "role": "winner",
+    "election_date": "2011-11-08",
+    "result_source_url": "https://www.tucsonaz.gov/files/sharedassets/public/clerks/documents/elections/electionsummary_1991_2023.pdf"
+   },
+   {
+    "candidate_election_id": "0477000__2011-11-08__regular__47f4ffa7efa49632",
+    "candidate_name": "Rick Grinnell",
+    "role": "runner_up",
+    "election_date": "2011-11-08",
+    "result_source_url": "https://www.tucsonaz.gov/files/sharedassets/public/clerks/documents/elections/electionsummary_1991_2023.pdf"
+   },
+   {
+    "candidate_election_id": "0477000__2015-11-03__regular__fa7dddf493880202",
+    "candidate_name": "Jonathan Rothschild",
+    "role": "winner",
+    "election_date": "2015-11-03",
+    "result_source_url": "https://www.tucsonaz.gov/files/sharedassets/public/clerks/documents/elections/electionsummary_1991_2023.pdf"
+   },
+   {
+    "candidate_election_id": "0477000__2015-11-03__regular__de10d04788ecfda9",
+    "candidate_name": "Paula Huff",
+    "role": "runner_up",
+    "election_date": "2015-11-03",
+    "result_source_url": "https://www.tucsonaz.gov/files/sharedassets/public/clerks/documents/elections/electionsummary_1991_2023.pdf"
+   },
+   {
+    "candidate_election_id": "0477000__2023-11-07__regular__26c1f22cc978800d",
+    "candidate_name": "Regina Romero",
+    "role": "winner",
+    "election_date": "2023-11-07",
+    "result_source_url": "https://www.tucsonaz.gov/files/sharedassets/public/clerks/documents/elections/electionsummary_1991_2023.pdf"
+   },
+   {
+    "candidate_election_id": "0477000__2023-11-07__regular__98a4ce0f4f0b51c7",
+    "candidate_name": "Janet Wittenbraker",
+    "role": "runner_up",
+    "election_date": "2023-11-07",
+    "result_source_url": "https://www.tucsonaz.gov/files/sharedassets/public/clerks/documents/elections/electionsummary_1991_2023.pdf"
+   }
+  ]
+ },
+ {
+  "city_id": "0602000",
+  "city_name": "Anaheim",
+  "state_abb": "CA",
+  "slug": "anaheim",
+  "finalists": [
+   {
+    "candidate_election_id": "0602000__2010-11-02__regular__a5d952bce59fab80",
+    "candidate_name": "Shirley McCracken",
+    "role": "runner_up",
+    "election_date": "2010-11-02",
+    "result_source_url": "https://ocvote.gov/data/election-results-archives"
+   },
+   {
+    "candidate_election_id": "0602000__2014-11-04__regular__e5e31638ed9821b5",
+    "candidate_name": "Tom Tait",
+    "role": "winner",
+    "election_date": "2014-11-04",
+    "result_source_url": "https://ocvote.gov/data/election-results-archives"
+   },
+   {
+    "candidate_election_id": "0602000__2022-11-08__regular__0974c7bd073f68ba",
+    "candidate_name": "Ashleigh Aitken",
+    "role": "winner",
+    "election_date": "2022-11-08",
+    "result_source_url": "https://www.livevoterturnout.com/ENR/orangecaenr/11/en/ekxwum4_Index_11.html"
+   },
+   {
+    "candidate_election_id": "0602000__2022-11-08__regular__7e62eb6a91158264",
+    "candidate_name": "Trevor O'Neil",
+    "role": "runner_up",
+    "election_date": "2022-11-08",
+    "result_source_url": "https://www.livevoterturnout.com/ENR/orangecaenr/11/en/ekxwum4_Index_11.html"
+   }
+  ]
+ },
+ {
+  "city_id": "0603526",
+  "city_name": "Bakersfield",
+  "state_abb": "CA",
+  "slug": "bakersfield",
+  "finalists": [
+   {
+    "candidate_election_id": "0603526__2020-03-03__regular__644b926fe54a0e47",
+    "candidate_name": "Karen Goh",
+    "role": "winner",
+    "election_date": "2020-03-03",
+    "result_source_url": "https://www.kernvote.com/home/showpublisheddocument/13532/638446310771870000"
+   },
+   {
+    "candidate_election_id": "0603526__2020-03-03__regular__26fbb602bc854171",
+    "candidate_name": "Gregory Tatum",
+    "role": "runner_up",
+    "election_date": "2020-03-03",
+    "result_source_url": "https://www.kernvote.com/home/showpublisheddocument/13532/638446310771870000"
+   },
+   {
+    "candidate_election_id": "0603526__2024-03-05__regular__644b926fe54a0e47",
+    "candidate_name": "Karen Goh",
+    "role": "winner",
+    "election_date": "2024-03-05",
+    "result_source_url": "https://www.kernvote.com/home/showpublisheddocument/13792/638476783547730000"
+   },
+   {
+    "candidate_election_id": "0603526__2024-03-05__regular__26fbb602bc854171",
+    "candidate_name": "Gregory Tatum",
+    "role": "runner_up",
+    "election_date": "2024-03-05",
+    "result_source_url": "https://www.kernvote.com/home/showpublisheddocument/13792/638476783547730000"
+   }
+  ]
+ },
+ {
+  "city_id": "0613392",
+  "city_name": "Chula Vista",
+  "state_abb": "CA",
+  "slug": "chula_vista",
+  "finalists": [
+   {
+    "candidate_election_id": "0613392__2014-11-04__regular__eb297b46f93f6ca6",
+    "candidate_name": "Mary Salas",
+    "role": "winner",
+    "election_date": "2014-11-04",
+    "result_source_url": "https://www.sdvote.com/content/dam/rov/en/archive/201411cvpdf.zip"
+   },
+   {
+    "candidate_election_id": "0613392__2014-11-04__regular__5b760c83792f447b",
+    "candidate_name": "Jerry R. Rindone",
+    "role": "runner_up",
+    "election_date": "2014-11-04",
+    "result_source_url": "https://www.sdvote.com/content/dam/rov/en/archive/201411cvpdf.zip"
+   },
+   {
+    "candidate_election_id": "0613392__2018-11-06__regular__f04a7f75abdf5ee2",
+    "candidate_name": "Mary Casillas Salas",
+    "role": "winner",
+    "election_date": "2018-11-06",
+    "result_source_url": "https://www.sdvote.com/content/dam/rov/en/archive/201811cvpdf.zip"
+   },
+   {
+    "candidate_election_id": "0613392__2022-11-08__regular__ab51a7229cf3add0",
+    "candidate_name": "John McCann",
+    "role": "winner",
+    "election_date": "2022-11-08",
+    "result_source_url": "https://www.sdvote.com/content/dam/rov/en/archive/OfficialFinalStatementofVotesCast202211.xls"
+   },
+   {
+    "candidate_election_id": "0613392__2022-11-08__regular__e0ec4dcbab9e450a",
+    "candidate_name": "Ammar Campa-Najjar",
+    "role": "runner_up",
+    "election_date": "2022-11-08",
+    "result_source_url": "https://www.sdvote.com/content/dam/rov/en/archive/OfficialFinalStatementofVotesCast202211.xls"
+   }
+  ]
+ },
+ {
+  "city_id": "0626000",
+  "city_name": "Fremont",
+  "state_abb": "CA",
+  "slug": "fremont",
+  "finalists": [
+   {
+    "candidate_election_id": "0626000__2024-11-05__regular__040874494f51dee6",
+    "candidate_name": "Raj Salwan",
+    "role": "winner",
+    "election_date": "2024-11-05",
+    "result_source_url": "https://alamedacountyca.gov/rovresults/252/"
+   },
+   {
+    "candidate_election_id": "0626000__2024-11-05__regular__a6a75254425646f2",
+    "candidate_name": "Vinnie Bacon",
+    "role": "runner_up",
+    "election_date": "2024-11-05",
+    "result_source_url": "https://alamedacountyca.gov/rovresults/252/"
+   }
+  ]
+ },
+ {
+  "city_id": "0627000",
+  "city_name": "Fresno",
+  "state_abb": "CA",
+  "slug": "fresno",
+  "finalists": [
+   {
+    "candidate_election_id": "0627000__2012-06-05__regular__5aeac387f9cb9d28",
+    "candidate_name": "Ashley Swearengin",
+    "role": "winner",
+    "election_date": "2012-06-05",
+    "result_source_url": "https://www.fresnocountyca.gov/Departments/County-ClerkRegistrar-of-Voters/Elections/Election-Results/2012/RESULTS-OF-JUNE-5-2012-PRESIDENTIAL-PRIMARY-ELECTION"
+   },
+   {
+    "candidate_election_id": "0627000__2012-06-05__regular__7031024496632402",
+    "candidate_name": "Barbara Ann Hunt",
+    "role": "runner_up",
+    "election_date": "2012-06-05",
+    "result_source_url": "https://www.fresnocountyca.gov/Departments/County-ClerkRegistrar-of-Voters/Elections/Election-Results/2012/RESULTS-OF-JUNE-5-2012-PRESIDENTIAL-PRIMARY-ELECTION"
+   },
+   {
+    "candidate_election_id": "0627000__2016-11-08__regular__c4e408b93006078d",
+    "candidate_name": "Henry Perea",
+    "role": "runner_up",
+    "election_date": "2016-11-08",
+    "result_source_url": "https://www.fresnocountyca.gov/Departments/County-ClerkRegistrar-of-Voters/Elections/Election-Results/2016/RESULTS-OF-NOVEMBER-8-2016-PRESIDENTIAL-GENERAL-ELECTION"
+   },
+   {
+    "candidate_election_id": "0627000__2020-03-03__regular__07506401be83e755",
+    "candidate_name": "Jerry Dyer",
+    "role": "winner",
+    "election_date": "2020-03-03",
+    "result_source_url": "https://www.fresnocountyca.gov/Departments/County-ClerkRegistrar-of-Voters/Elections/Election-Results/2020/RESULTS-OF-THE-MARCH-3-2020-PRESIDENTIAL-PRIMARY-ELECTION"
+   },
+   {
+    "candidate_election_id": "0627000__2024-03-05__regular__07506401be83e755",
+    "candidate_name": "Jerry Dyer",
+    "role": "winner",
+    "election_date": "2024-03-05",
+    "result_source_url": "https://www.fresnocountyca.gov/files/sharedassets/county/v/12/county-clerk-registrar-of-voters/1_election-pages/2024_03-march-primary/electionsummaryreportrpt_03292024.pdf"
+   },
+   {
+    "candidate_election_id": "0627000__2024-03-05__regular__89d4146eafad9939",
+    "candidate_name": "James Barr",
+    "role": "runner_up",
+    "election_date": "2024-03-05",
+    "result_source_url": "https://www.fresnocountyca.gov/files/sharedassets/county/v/12/county-clerk-registrar-of-voters/1_election-pages/2024_03-march-primary/electionsummaryreportrpt_03292024.pdf"
+   }
+  ]
+ },
+ {
+  "city_id": "0636770",
+  "city_name": "Irvine",
+  "state_abb": "CA",
+  "slug": "irvine",
+  "finalists": [
+   {
+    "candidate_election_id": "0636770__2010-11-02__regular__324146c028c6b313",
+    "candidate_name": "Sukhee Kang",
+    "role": "winner",
+    "election_date": "2010-11-02",
+    "result_source_url": "https://ocvote.gov/data/election-results-archives"
+   },
+   {
+    "candidate_election_id": "0636770__2010-11-02__regular__0e1fa1af37383252",
+    "candidate_name": "Christopher Gonzales",
+    "role": "runner_up",
+    "election_date": "2010-11-02",
+    "result_source_url": "https://ocvote.gov/data/election-results-archives"
+   },
+   {
+    "candidate_election_id": "0636770__2018-11-06__regular__b3abb044aaf7af5e",
+    "candidate_name": "Donald P. Wagner",
+    "role": "winner",
+    "election_date": "2018-11-06",
+    "result_source_url": "https://ocvote.gov/data/election-results-archives"
+   },
+   {
+    "candidate_election_id": "0636770__2020-11-03__regular__242877297a38f317",
+    "candidate_name": "Christina L. Shea",
+    "role": "runner_up",
+    "election_date": "2020-11-03",
+    "result_source_url": "https://www.livevoterturnout.com/Orange/LiveResults/en/Index_6.html"
+   },
+   {
+    "candidate_election_id": "0636770__2022-11-08__regular__1efc765cf2a1d307",
+    "candidate_name": "Farrah N. Khan",
+    "role": "winner",
+    "election_date": "2022-11-08",
+    "result_source_url": "https://www.livevoterturnout.com/ENR/orangecaenr/11/en/ekxwum4_Index_11.html"
+   },
+   {
+    "candidate_election_id": "0636770__2022-11-08__regular__f0c999ab5ebd6c83",
+    "candidate_name": "Branda Lin",
+    "role": "runner_up",
+    "election_date": "2022-11-08",
+    "result_source_url": "https://www.livevoterturnout.com/ENR/orangecaenr/11/en/ekxwum4_Index_11.html"
+   },
+   {
+    "candidate_election_id": "0636770__2024-11-05__regular__c4f027b5dc701288",
+    "candidate_name": "Larry Agran",
+    "role": "winner",
+    "election_date": "2024-11-05",
+    "result_source_url": "https://www.livevoterturnout.com/ENR/orangecaenr/18/en/EzifcRF_Index_18.html"
+   },
+   {
+    "candidate_election_id": "0636770__2024-11-05__regular__f229e04ec34ad4ce",
+    "candidate_name": "Tammy Kim",
+    "role": "runner_up",
+    "election_date": "2024-11-05",
+    "result_source_url": "https://www.livevoterturnout.com/ENR/orangecaenr/18/en/EzifcRF_Index_18.html"
+   }
+  ]
+ },
+ {
+  "city_id": "0643000",
+  "city_name": "Long Beach",
+  "state_abb": "CA",
+  "slug": "long_beach",
+  "finalists": [
+   {
+    "candidate_election_id": "0643000__2010-04-13__regular__af0047104d81e1eb",
+    "candidate_name": "Stevie Danielle Merino",
+    "role": "runner_up",
+    "election_date": "2010-04-13",
+    "result_source_url": "https://www.longbeach.gov/globalassets/city-clerk/media-library/documents/elections/results/2010/final-official-sov---total"
+   },
+   {
+    "candidate_election_id": "0643000__2022-11-08__regular__1e3759202c358045",
+    "candidate_name": "Rex Richardson",
+    "role": "winner",
+    "election_date": "2022-11-08",
+    "result_source_url": "https://results.lavote.gov/text-results/4300"
+   },
+   {
+    "candidate_election_id": "0643000__2022-11-08__regular__fd66a31fd0498592",
+    "candidate_name": "Suzie Price",
+    "role": "runner_up",
+    "election_date": "2022-11-08",
+    "result_source_url": "https://results.lavote.gov/text-results/4300"
+   },
+   {
+    "candidate_election_id": "0643000__2026-06-02__regular__1e3759202c358045",
+    "candidate_name": "Rex Richardson",
+    "role": "winner",
+    "election_date": "2026-06-02",
+    "result_source_url": "https://www.longbeach.gov/globalassets/city-clerk/media-library/documents/elections/results/2026/2026-june-6---primary-nominating-election---cumulative-report"
+   },
+   {
+    "candidate_election_id": "0643000__2026-06-02__regular__99b8c891de70daee",
+    "candidate_name": "Joshua Rodriguez",
+    "role": "runner_up",
+    "election_date": "2026-06-02",
+    "result_source_url": "https://www.longbeach.gov/globalassets/city-clerk/media-library/documents/elections/results/2026/2026-june-6---primary-nominating-election---cumulative-report"
+   }
+  ]
+ },
+ {
+  "city_id": "0644000",
+  "city_name": "Los Angeles",
+  "state_abb": "CA",
+  "slug": "los_angeles",
+  "finalists": [
+   {
+    "candidate_election_id": "0644000__2022-11-08__regular__89b38997361b7f73",
+    "candidate_name": "Karen Ruth Bass",
+    "role": "winner",
+    "election_date": "2022-11-08",
+    "result_source_url": "https://results.lavote.gov/text-results/4300"
+   },
+   {
+    "candidate_election_id": "0644000__2022-11-08__regular__9118af89548a6240",
+    "candidate_name": "Rick J. Caruso",
+    "role": "runner_up",
+    "election_date": "2022-11-08",
+    "result_source_url": "https://results.lavote.gov/text-results/4300"
+   }
+  ]
+ },
+ {
+  "city_id": "0653000",
+  "city_name": "Oakland",
+  "state_abb": "CA",
+  "slug": "oakland",
+  "finalists": [
+   {
+    "candidate_election_id": "0653000__2022-11-08__regular__f5c1b7668ca6d32e",
+    "candidate_name": "Sheng Thao",
+    "role": "winner",
+    "election_date": "2022-11-08",
+    "result_source_url": "https://alamedacountyca.gov/rovresults/rcv/248/Oakland/001-Mayor/RcvDetailedReport.xml"
+   },
+   {
+    "candidate_election_id": "0653000__2022-11-08__regular__87baf6c3beaa504a",
+    "candidate_name": "Loren Taylor",
+    "role": "runner_up",
+    "election_date": "2022-11-08",
+    "result_source_url": "https://alamedacountyca.gov/rovresults/rcv/248/Oakland/001-Mayor/RcvDetailedReport.xml"
+   },
+   {
+    "candidate_election_id": "0653000__2025-04-15__special__1e94ea98f67e8024",
+    "candidate_name": "Barbara Lee",
+    "role": "winner",
+    "election_date": "2025-04-15",
+    "result_source_url": "https://alamedacountyca.gov/rovresults/rcv/257/Oakland/001-Mayor/RcvDetailedReport.xml"
+   },
+   {
+    "candidate_election_id": "0653000__2025-04-15__special__87baf6c3beaa504a",
+    "candidate_name": "Loren Taylor",
+    "role": "runner_up",
+    "election_date": "2025-04-15",
+    "result_source_url": "https://alamedacountyca.gov/rovresults/rcv/257/Oakland/001-Mayor/RcvDetailedReport.xml"
+   }
+  ]
+ },
+ {
+  "city_id": "0662000",
+  "city_name": "Riverside",
+  "state_abb": "CA",
+  "slug": "riverside",
+  "finalists": [
+   {
+    "candidate_election_id": "0662000__2012-11-06__regular__b74eec6c9df8e816",
+    "candidate_name": "Rusty Bailey",
+    "role": "winner",
+    "election_date": "2012-11-06",
+    "result_source_url": "https://docs.voteinfo.net/docs/SOV_11_06_2012.pdf"
+   },
+   {
+    "candidate_election_id": "0662000__2016-06-07__regular__b74eec6c9df8e816",
+    "candidate_name": "Rusty Bailey",
+    "role": "winner",
+    "election_date": "2016-06-07",
+    "result_source_url": "https://docs.voteinfo.net/elections/20160607/eresults/SOVBOOK_07052016.pdf"
+   },
+   {
+    "candidate_election_id": "0662000__2016-06-07__regular__77b8ef9bfa7a3bfd",
+    "candidate_name": "Paul Davis",
+    "role": "runner_up",
+    "election_date": "2016-06-07",
+    "result_source_url": "https://docs.voteinfo.net/elections/20160607/eresults/SOVBOOK_07052016.pdf"
+   },
+   {
+    "candidate_election_id": "0662000__2020-11-03__regular__ac9e34243d83c970",
+    "candidate_name": "Patricia Lock Dawson",
+    "role": "winner",
+    "election_date": "2020-11-03",
+    "result_source_url": "https://docs.voteinfo.net/Elections/20201103/docs/StatementOfVotesCastRPT.pdf"
+   },
+   {
+    "candidate_election_id": "0662000__2024-03-05__regular__ac9e34243d83c970",
+    "candidate_name": "Patricia Lock Dawson",
+    "role": "winner",
+    "election_date": "2024-03-05",
+    "result_source_url": "https://voteinfo.net/sites/g/files/aldnop371/files/ElectionResults/2024/March05/March2024_ElectionSummaryReportRPT_29.pdf"
+   },
+   {
+    "candidate_election_id": "0662000__2024-03-05__regular__ca6edc296235cbd6",
+    "candidate_name": "Jessica Qattawi",
+    "role": "runner_up",
+    "election_date": "2024-03-05",
+    "result_source_url": "https://voteinfo.net/sites/g/files/aldnop371/files/ElectionResults/2024/March05/March2024_ElectionSummaryReportRPT_29.pdf"
+   }
+  ]
+ },
+ {
+  "city_id": "0664000",
+  "city_name": "Sacramento",
+  "state_abb": "CA",
+  "slug": "sacramento",
+  "finalists": [
+   {
+    "candidate_election_id": "0664000__2024-11-05__regular__a0795d6b64dfcf7d",
+    "candidate_name": "Kevin McCarty",
+    "role": "winner",
+    "election_date": "2024-11-05",
+    "result_source_url": "https://elections.saccounty.gov/content/dam/vre/documents/archived/2024/N2024%20-%20STATEMENT%20OF%20THE%20VOTE.pdf"
+   },
+   {
+    "candidate_election_id": "0664000__2024-11-05__regular__8e5bb49a3020c26e",
+    "candidate_name": "Flojaune \"Flo\" Cofer",
+    "role": "runner_up",
+    "election_date": "2024-11-05",
+    "result_source_url": "https://elections.saccounty.gov/content/dam/vre/documents/archived/2024/N2024%20-%20STATEMENT%20OF%20THE%20VOTE.pdf"
+   }
+  ]
+ },
+ {
+  "city_id": "0666000",
+  "city_name": "San Diego",
+  "state_abb": "CA",
+  "slug": "san_diego",
+  "finalists": [
+   {
+    "candidate_election_id": "0666000__2024-11-05__regular__5771154d0573e176",
+    "candidate_name": "Todd Gloria",
+    "role": "winner",
+    "election_date": "2024-11-05",
+    "result_source_url": "https://www.sandiego.gov/sites/default/files/2024-12/november-5-2024-election-results.pdf"
+   },
+   {
+    "candidate_election_id": "0666000__2024-11-05__regular__5c9ecfeef7ad072e",
+    "candidate_name": "Larry Turner",
+    "role": "runner_up",
+    "election_date": "2024-11-05",
+    "result_source_url": "https://www.sandiego.gov/sites/default/files/2024-12/november-5-2024-election-results.pdf"
+   }
+  ]
+ },
+ {
+  "city_id": "0667000",
+  "city_name": "San Francisco",
+  "state_abb": "CA",
+  "slug": "san_francisco",
+  "finalists": [
+   {
+    "candidate_election_id": "0667000__2024-11-05__regular__22dc43ed04defc67",
+    "candidate_name": "Daniel Lurie",
+    "role": "winner",
+    "election_date": "2024-11-05",
+    "result_source_url": "https://www.sfelections.org/results/20241105/final/round-pages/mayor_short-rounds-en.html"
+   },
+   {
+    "candidate_election_id": "0667000__2024-11-05__regular__c7fe109f2bcec8bb",
+    "candidate_name": "London Breed",
+    "role": "runner_up",
+    "election_date": "2024-11-05",
+    "result_source_url": "https://www.sfelections.org/results/20241105/final/round-pages/mayor_short-rounds-en.html"
+   }
+  ]
+ },
+ {
+  "city_id": "0668000",
+  "city_name": "San Jose",
+  "state_abb": "CA",
+  "slug": "san_jose",
+  "finalists": [
+   {
+    "candidate_election_id": "0668000__2010-06-08__regular__9230139da379d161",
+    "candidate_name": "Chuck Reed",
+    "role": "winner",
+    "election_date": "2010-06-08",
+    "result_source_url": "https://web.archive.org/web/20221108062001id_/https://sccvote.sccgov.org/sites/g/files/exjcpb1106/files/Gubernatorial%20Primary%20Election%20E81_SOV%20June%208%202010.pdf"
+   },
+   {
+    "candidate_election_id": "0668000__2010-06-08__regular__1fd43d017c2b4f11",
+    "candidate_name": "Thomas Nguyen",
+    "role": "runner_up",
+    "election_date": "2010-06-08",
+    "result_source_url": "https://web.archive.org/web/20221108062001id_/https://sccvote.sccgov.org/sites/g/files/exjcpb1106/files/Gubernatorial%20Primary%20Election%20E81_SOV%20June%208%202010.pdf"
+   },
+   {
+    "candidate_election_id": "0668000__2022-11-08__regular__ecceb9dda0076bda",
+    "candidate_name": "Matt Mahan",
+    "role": "winner",
+    "election_date": "2022-11-08",
+    "result_source_url": "https://results.enr.clarityelections.com/CA/Santa_Clara/115971/319093/json/en/summary.json"
+   },
+   {
+    "candidate_election_id": "0668000__2022-11-08__regular__8812fd2e28f2f89a",
+    "candidate_name": "Cindy Chavez",
+    "role": "runner_up",
+    "election_date": "2022-11-08",
+    "result_source_url": "https://results.enr.clarityelections.com/CA/Santa_Clara/115971/319093/json/en/summary.json"
+   },
+   {
+    "candidate_election_id": "0668000__2024-03-05__regular__ecceb9dda0076bda",
+    "candidate_name": "Matt Mahan",
+    "role": "winner",
+    "election_date": "2024-03-05",
+    "result_source_url": "https://results.enr.clarityelections.com/CA/Santa_Clara/120250/334586/json/en/summary.json"
+   },
+   {
+    "candidate_election_id": "0668000__2024-03-05__regular__e1c0a54a0b3b9811",
+    "candidate_name": "Tyrone Wade",
+    "role": "runner_up",
+    "election_date": "2024-03-05",
+    "result_source_url": "https://results.enr.clarityelections.com/CA/Santa_Clara/120250/334586/json/en/summary.json"
+   }
+  ]
+ },
+ {
+  "city_id": "0669000",
+  "city_name": "Santa Ana",
+  "state_abb": "CA",
+  "slug": "santa_ana",
+  "finalists": [
+   {
+    "candidate_election_id": "0669000__2010-11-02__regular__c2cefd64eab3e3cf",
+    "candidate_name": "Miguel A. Pulido",
+    "role": "winner",
+    "election_date": "2010-11-02",
+    "result_source_url": "https://storage.googleapis.com/proudcity/santaanaca/2024/03/Election-History-Updated-2025-2.pdf"
+   },
+   {
+    "candidate_election_id": "0669000__2010-11-02__regular__e3b1a8dfa39beffa",
+    "candidate_name": "Alfredo Amezcua",
+    "role": "runner_up",
+    "election_date": "2010-11-02",
+    "result_source_url": "https://storage.googleapis.com/proudcity/santaanaca/2024/03/Election-History-Updated-2025-2.pdf"
+   },
+   {
+    "candidate_election_id": "0669000__2012-11-06__regular__c2cefd64eab3e3cf",
+    "candidate_name": "Miguel A. Pulido",
+    "role": "winner",
+    "election_date": "2012-11-06",
+    "result_source_url": "https://storage.googleapis.com/proudcity/santaanaca/2024/03/Election-History-Updated-2025-2.pdf"
+   },
+   {
+    "candidate_election_id": "0669000__2012-11-06__regular__089785117688d01c",
+    "candidate_name": "P. David Benavides",
+    "role": "runner_up",
+    "election_date": "2012-11-06",
+    "result_source_url": "https://storage.googleapis.com/proudcity/santaanaca/2024/03/Election-History-Updated-2025-2.pdf"
+   },
+   {
+    "candidate_election_id": "0669000__2014-11-04__regular__c2cefd64eab3e3cf",
+    "candidate_name": "Miguel A. Pulido",
+    "role": "winner",
+    "election_date": "2014-11-04",
+    "result_source_url": "https://storage.googleapis.com/proudcity/santaanaca/2024/03/Election-History-Updated-2025-2.pdf"
+   },
+   {
+    "candidate_election_id": "0669000__2014-11-04__regular__0782cd4127a8b3be",
+    "candidate_name": "Roman Reyna",
+    "role": "runner_up",
+    "election_date": "2014-11-04",
+    "result_source_url": "https://storage.googleapis.com/proudcity/santaanaca/2024/03/Election-History-Updated-2025-2.pdf"
+   },
+   {
+    "candidate_election_id": "0669000__2016-11-08__regular__c2cefd64eab3e3cf",
+    "candidate_name": "Miguel A. Pulido",
+    "role": "winner",
+    "election_date": "2016-11-08",
+    "result_source_url": "https://storage.googleapis.com/proudcity/santaanaca/2024/03/Election-History-Updated-2025-2.pdf"
+   },
+   {
+    "candidate_election_id": "0669000__2016-11-08__regular__09ea0f0bc9f70231",
+    "candidate_name": "Benjamin Vazquez",
+    "role": "runner_up",
+    "election_date": "2016-11-08",
+    "result_source_url": "https://storage.googleapis.com/proudcity/santaanaca/2024/03/Election-History-Updated-2025-2.pdf"
+   },
+   {
+    "candidate_election_id": "0669000__2018-11-06__regular__c2cefd64eab3e3cf",
+    "candidate_name": "Miguel A. Pulido",
+    "role": "winner",
+    "election_date": "2018-11-06",
+    "result_source_url": "https://storage.googleapis.com/proudcity/santaanaca/2024/03/Election-History-Updated-2025-2.pdf"
+   },
+   {
+    "candidate_election_id": "0669000__2020-11-03__regular__af5bb186ada3063d",
+    "candidate_name": "Claudia C. Alvarez",
+    "role": "runner_up",
+    "election_date": "2020-11-03",
+    "result_source_url": "https://storage.googleapis.com/proudcity/santaanaca/2024/03/Election-History-Updated-2025-2.pdf"
+   },
+   {
+    "candidate_election_id": "0669000__2022-11-08__regular__a490a2d1fe4d4ab8",
+    "candidate_name": "Valerie Amezcua",
+    "role": "winner",
+    "election_date": "2022-11-08",
+    "result_source_url": "https://storage.googleapis.com/proudcity/santaanaca/2024/03/Election-History-Updated-2025-2.pdf"
+   },
+   {
+    "candidate_election_id": "0669000__2022-11-08__regular__f2c400575bfb663c",
+    "candidate_name": "Jose Solorio",
+    "role": "runner_up",
+    "election_date": "2022-11-08",
+    "result_source_url": "https://storage.googleapis.com/proudcity/santaanaca/2024/03/Election-History-Updated-2025-2.pdf"
+   },
+   {
+    "candidate_election_id": "0669000__2024-11-05__regular__a490a2d1fe4d4ab8",
+    "candidate_name": "Valerie Amezcua",
+    "role": "winner",
+    "election_date": "2024-11-05",
+    "result_source_url": "https://storage.googleapis.com/proudcity/santaanaca/2024/03/Election-History-Updated-2025-2.pdf"
+   },
+   {
+    "candidate_election_id": "0669000__2024-11-05__regular__09ea0f0bc9f70231",
+    "candidate_name": "Benjamin Vazquez",
+    "role": "runner_up",
+    "election_date": "2024-11-05",
+    "result_source_url": "https://storage.googleapis.com/proudcity/santaanaca/2024/03/Election-History-Updated-2025-2.pdf"
+   }
+  ]
+ },
+ {
+  "city_id": "0675000",
+  "city_name": "Stockton",
+  "state_abb": "CA",
+  "slug": "stockton",
+  "finalists": [
+   {
+    "candidate_election_id": "0675000__2012-11-06__regular__536eaa247ae776f9",
+    "candidate_name": "Anthony Silva",
+    "role": "winner",
+    "election_date": "2012-11-06",
+    "result_source_url": "https://www.sjgov.org/docs/default-source/registrar-of-voters-documents/statements-of-votes-cast/2012-november---presidential-general-election/full-statement-of-votes-cast.pdf?sfvrsn=1ad2e05b_3"
+   },
+   {
+    "candidate_election_id": "0675000__2012-11-06__regular__1d8dcffc808f288b",
+    "candidate_name": "Ann Johnston",
+    "role": "runner_up",
+    "election_date": "2012-11-06",
+    "result_source_url": "https://www.sjgov.org/docs/default-source/registrar-of-voters-documents/statements-of-votes-cast/2012-november---presidential-general-election/full-statement-of-votes-cast.pdf?sfvrsn=1ad2e05b_3"
+   },
+   {
+    "candidate_election_id": "0675000__2016-11-08__regular__6a372d674eb13b74",
+    "candidate_name": "Michael Tubbs",
+    "role": "winner",
+    "election_date": "2016-11-08",
+    "result_source_url": "https://www.sjgov.org/docs/default-source/registrar-of-voters-documents/statements-of-votes-cast/2016-november---presidential-general-election/full-statement-of-votes-cast.pdf?sfvrsn=f9ae1e33_3"
+   },
+   {
+    "candidate_election_id": "0675000__2016-11-08__regular__536eaa247ae776f9",
+    "candidate_name": "Anthony Silva",
+    "role": "runner_up",
+    "election_date": "2016-11-08",
+    "result_source_url": "https://www.sjgov.org/docs/default-source/registrar-of-voters-documents/statements-of-votes-cast/2016-november---presidential-general-election/full-statement-of-votes-cast.pdf?sfvrsn=f9ae1e33_3"
+   },
+   {
+    "candidate_election_id": "0675000__2024-11-05__regular__9e78c284edf752d3",
+    "candidate_name": "Christina Fugazi",
+    "role": "winner",
+    "election_date": "2024-11-05",
+    "result_source_url": "https://www.sjgov.org/docs/default-source/registrar-of-voters-documents/current-election-general-2024/statement-of-votes-cast/2024-november---presidential-general-election/2024-general-election-statement-of-votes-cast.pdf?sfvrsn=f2d794b4_10"
+   },
+   {
+    "candidate_election_id": "0675000__2024-11-05__regular__cbfda081589398fe",
+    "candidate_name": "Tom Patti",
+    "role": "runner_up",
+    "election_date": "2024-11-05",
+    "result_source_url": "https://www.sjgov.org/docs/default-source/registrar-of-voters-documents/current-election-general-2024/statement-of-votes-cast/2024-november---presidential-general-election/2024-general-election-statement-of-votes-cast.pdf?sfvrsn=f2d794b4_10"
+   }
+  ]
+ },
+ {
+  "city_id": "0804000",
+  "city_name": "Aurora",
+  "state_abb": "CO",
+  "slug": "aurora",
+  "finalists": [
+   {
+    "candidate_election_id": "0804000__2011-11-01__regular__5ac1afcef55e489d",
+    "candidate_name": "Ryan L. Frazier",
+    "role": "runner_up",
+    "election_date": "2011-11-01",
+    "result_source_url": "https://www.arapahoeco.gov/Your%20County/Arapahoe%20Votes/Documents/Records%20And%20data/Past%20Elections%20File%20Library/2011/2011CoordinatedElection_OfficialResults.pdf"
+   },
+   {
+    "candidate_election_id": "0804000__2023-11-07__regular__e9a916260b06869a",
+    "candidate_name": "Mike Coffman",
+    "role": "winner",
+    "election_date": "2023-11-07",
+    "result_source_url": "https://www.arapahoeco.gov/Your%20County/Arapahoe%20Votes/Documents/Records%20And%20data/Past%20Elections%20File%20Library/2023/Official%20Summary%20Report_170523.pdf"
+   },
+   {
+    "candidate_election_id": "0804000__2023-11-07__regular__ff37e1acccbc7531",
+    "candidate_name": "Juan Marcano",
+    "role": "runner_up",
+    "election_date": "2023-11-07",
+    "result_source_url": "https://www.arapahoeco.gov/Your%20County/Arapahoe%20Votes/Documents/Records%20And%20data/Past%20Elections%20File%20Library/2023/Official%20Summary%20Report_170523.pdf"
+   }
+  ]
+ },
+ {
+  "city_id": "0816000",
+  "city_name": "Colorado Springs",
+  "state_abb": "CO",
+  "slug": "colorado_springs",
+  "finalists": [
+   {
+    "candidate_election_id": "0816000__2019-04-02__regular__1cf908d910f04e7e",
+    "candidate_name": "John Suthers",
+    "role": "winner",
+    "election_date": "2019-04-02",
+    "result_source_url": "https://coloradosprings.gov/system/files/inline-images/2019_official_statement_of_votes_cast_0.pdf"
+   },
+   {
+    "candidate_election_id": "0816000__2019-04-02__regular__7698dd7f45a2feaa",
+    "candidate_name": "Juliette Parker",
+    "role": "runner_up",
+    "election_date": "2019-04-02",
+    "result_source_url": "https://coloradosprings.gov/system/files/inline-images/2019_official_statement_of_votes_cast_0.pdf"
+   },
+   {
+    "candidate_election_id": "0816000__2023-05-16__regular__822087886543be14",
+    "candidate_name": "Yemi Mobolade",
+    "role": "winner",
+    "election_date": "2023-05-16",
+    "result_source_url": "https://coloradosprings.gov/system/files/2023-05/2023-05-16_election_-_official_statement_of_votes_cast_0.pdf"
+   },
+   {
+    "candidate_election_id": "0816000__2023-05-16__regular__2f5f29d739f6b64a",
+    "candidate_name": "Wayne Williams",
+    "role": "runner_up",
+    "election_date": "2023-05-16",
+    "result_source_url": "https://coloradosprings.gov/system/files/2023-05/2023-05-16_election_-_official_statement_of_votes_cast_0.pdf"
+   }
+  ]
+ },
+ {
+  "city_id": "0820000",
+  "city_name": "Denver",
+  "state_abb": "CO",
+  "slug": "denver",
+  "finalists": [
+   {
+    "candidate_election_id": "0820000__2015-05-05__regular__60a68252e1814b1e",
+    "candidate_name": "Michael B. Hancock",
+    "role": "winner",
+    "election_date": "2015-05-05",
+    "result_source_url": "https://www.denvergov.org/media/denverapps/electionresults/pdfs/20150505/Summary_Report_Denver_FinalUnofficial.pdf"
+   },
+   {
+    "candidate_election_id": "0820000__2023-06-06__regular__e3279b6cfd77d054",
+    "candidate_name": "Mike Johnston",
+    "role": "winner",
+    "election_date": "2023-06-06",
+    "result_source_url": "https://www.denvergov.org/media/denverapps/electionresults/pdfs/20230606/Summary_Report_FinalOfficial.pdf"
+   },
+   {
+    "candidate_election_id": "0820000__2023-06-06__regular__a2ffb67f920136d1",
+    "candidate_name": "Kelly Brough",
+    "role": "runner_up",
+    "election_date": "2023-06-06",
+    "result_source_url": "https://www.denvergov.org/media/denverapps/electionresults/pdfs/20230606/Summary_Report_FinalOfficial.pdf"
+   }
+  ]
+ },
+ {
+  "city_id": "1150000",
+  "city_name": "Washington",
+  "state_abb": "DC",
+  "slug": "washington",
+  "finalists": [
+   {
+    "candidate_election_id": "1150000__2010-11-02__regular__fe5119e9577d187f",
+    "candidate_name": "Vincent C. Gray",
+    "role": "winner",
+    "election_date": "2010-11-02",
+    "result_source_url": "https://electionresults.dcboe.org/cityWide/getCityWide/2010-General-Election"
+   },
+   {
+    "candidate_election_id": "1150000__2010-11-02__regular__4fac0139da8405ea",
+    "candidate_name": "Carlos Allen",
+    "role": "runner_up",
+    "election_date": "2010-11-02",
+    "result_source_url": "https://electionresults.dcboe.org/cityWide/getCityWide/2010-General-Election"
+   },
+   {
+    "candidate_election_id": "1150000__2018-11-06__regular__119e9d8bb59bc1b4",
+    "candidate_name": "Ann C. Wilcox",
+    "role": "runner_up",
+    "election_date": "2018-11-06",
+    "result_source_url": "https://electionresults.dcboe.org/Downloads/Reports/November_6_2018_General_Election_Certified_Results.pdf"
+   },
+   {
+    "candidate_election_id": "1150000__2022-11-08__regular__6e10ac0f07d91f43",
+    "candidate_name": "Muriel E. Bowser",
+    "role": "winner",
+    "election_date": "2022-11-08",
+    "result_source_url": "https://electionresults.dcboe.org/Downloads/Reports/November_8_2022_General_Election_Certified_Results.pdf"
+   },
+   {
+    "candidate_election_id": "1150000__2022-11-08__regular__353149db08f4e8e3",
+    "candidate_name": "Rodney Red Grant",
+    "role": "runner_up",
+    "election_date": "2022-11-08",
+    "result_source_url": "https://electionresults.dcboe.org/Downloads/Reports/November_8_2022_General_Election_Certified_Results.pdf"
+   }
+  ]
+ },
+ {
+  "city_id": "1235000",
+  "city_name": "Jacksonville",
+  "state_abb": "FL",
+  "slug": "jacksonville",
+  "finalists": [
+   {
+    "candidate_election_id": "1235000__2011-05-17__regular__521d4c20d5960cec",
+    "candidate_name": "Mike Hogan",
+    "role": "runner_up",
+    "election_date": "2011-05-17",
+    "result_source_url": "https://www.duvalelections.gov/DocumentCenter/View/1504"
+   },
+   {
+    "candidate_election_id": "1235000__2023-05-16__regular__f578c3a7d5d308b4",
+    "candidate_name": "Donna Deegan",
+    "role": "winner",
+    "election_date": "2023-05-16",
+    "result_source_url": "https://enr.electionsfl.org/DUV/Summary/3385/"
+   },
+   {
+    "candidate_election_id": "1235000__2023-05-16__regular__bcc82a1135dae853",
+    "candidate_name": "Daniel Davis",
+    "role": "runner_up",
+    "election_date": "2023-05-16",
+    "result_source_url": "https://enr.electionsfl.org/DUV/Summary/3385/"
+   }
+  ]
+ },
+ {
+  "city_id": "1245000",
+  "city_name": "Miami",
+  "state_abb": "FL",
+  "slug": "miami",
+  "finalists": [
+   {
+    "candidate_election_id": "1245000__2013-11-05__regular__4335943bcc5650ed",
+    "candidate_name": "Tomas P. Regalado",
+    "role": "winner",
+    "election_date": "2013-11-05",
+    "result_source_url": "https://enr.electionsfl.org/DAD/3040/Summary/"
+   },
+   {
+    "candidate_election_id": "1245000__2017-11-07__regular__3d8370ca83186c12",
+    "candidate_name": "Cynthia Jaquith",
+    "role": "runner_up",
+    "election_date": "2017-11-07",
+    "result_source_url": "https://enr.electionsfl.org/DAD/3007/Summary/"
+   },
+   {
+    "candidate_election_id": "1245000__2025-12-09__regular__9887b33867f487fc",
+    "candidate_name": "Eileen Higgins",
+    "role": "winner",
+    "election_date": "2025-12-09",
+    "result_source_url": "https://enr.electionsfl.org/DAD/3900/Summary/"
+   },
+   {
+    "candidate_election_id": "1245000__2025-12-09__regular__fb03fe53a23e07f2",
+    "candidate_name": "Emilio T. Gonzalez",
+    "role": "runner_up",
+    "election_date": "2025-12-09",
+    "result_source_url": "https://enr.electionsfl.org/DAD/3900/Summary/"
+   }
+  ]
+ },
+ {
+  "city_id": "1253000",
+  "city_name": "Orlando",
+  "state_abb": "FL",
+  "slug": "orlando",
+  "finalists": [
+   {
+    "candidate_election_id": "1253000__2012-04-03__regular__16b926a0a383096b",
+    "candidate_name": "Buddy Dyer",
+    "role": "winner",
+    "election_date": "2012-04-03",
+    "result_source_url": "https://voteorangefl.gov/wp-content/uploads/2026/05/10118-election-results-official-summary.pdf"
+   },
+   {
+    "candidate_election_id": "1253000__2012-04-03__regular__99b2d231db4fbf4f",
+    "candidate_name": "Phil Diamond",
+    "role": "runner_up",
+    "election_date": "2012-04-03",
+    "result_source_url": "https://voteorangefl.gov/wp-content/uploads/2026/05/10118-election-results-official-summary.pdf"
+   },
+   {
+    "candidate_election_id": "1253000__2019-11-05__regular__16b926a0a383096b",
+    "candidate_name": "Buddy Dyer",
+    "role": "winner",
+    "election_date": "2019-11-05",
+    "result_source_url": "https://voteorangefl.gov/wp-content/uploads/2026/05/20877-election-results-official-summary.pdf"
+   },
+   {
+    "candidate_election_id": "1253000__2023-11-07__regular__16b926a0a383096b",
+    "candidate_name": "Buddy Dyer",
+    "role": "winner",
+    "election_date": "2023-11-07",
+    "result_source_url": "https://voteorangefl.gov/wp-content/uploads/2026/05/284-official-election-results-summary.pdf"
+   },
+   {
+    "candidate_election_id": "1253000__2023-11-07__regular__aed11e9bea8e8cac",
+    "candidate_name": "Steve Dixon",
+    "role": "runner_up",
+    "election_date": "2023-11-07",
+    "result_source_url": "https://voteorangefl.gov/wp-content/uploads/2026/05/284-official-election-results-summary.pdf"
+   }
+  ]
+ },
+ {
+  "city_id": "1263000",
+  "city_name": "St. Petersburg",
+  "state_abb": "FL",
+  "slug": "st_petersburg",
+  "finalists": [
+   {
+    "candidate_election_id": "1263000__2013-11-05__regular__d79e7c9564ff8c43",
+    "candidate_name": "Rick Kriseman",
+    "role": "winner",
+    "election_date": "2013-11-05",
+    "result_source_url": "https://enr.votepinellas.com/FL/Pinellas/48873/122777/json/sum.json"
+   },
+   {
+    "candidate_election_id": "1263000__2017-11-07__regular__d79e7c9564ff8c43",
+    "candidate_name": "Rick Kriseman",
+    "role": "winner",
+    "election_date": "2017-11-07",
+    "result_source_url": "https://enr.votepinellas.com/FL/Pinellas/71891/191120/json/en/summary.json"
+   }
+  ]
+ },
+ {
+  "city_id": "1271000",
+  "city_name": "Tampa",
+  "state_abb": "FL",
+  "slug": "tampa",
+  "finalists": [
+   {
+    "candidate_election_id": "1271000__2011-03-22__regular__a487aeb2462ce736",
+    "candidate_name": "Rose Ferlita",
+    "role": "runner_up",
+    "election_date": "2011-03-22",
+    "result_source_url": "https://www.votehillsborough.gov/DocumentCenter/View/168/2011-City-of-Tampa-Municipal-Runoff-Election-Official-Results-PDF"
+   },
+   {
+    "candidate_election_id": "1271000__2023-03-07__regular__34adb0d45bab1089",
+    "candidate_name": "Jane Castor",
+    "role": "winner",
+    "election_date": "2023-03-07",
+    "result_source_url": "https://www.votehillsborough.gov/DocumentCenter/View/1086/Official-Results-Certificate-COT-Election-10-March-2023"
+   },
+   {
+    "candidate_election_id": "1271000__2023-03-07__regular__0c37868e2df840e2",
+    "candidate_name": "Belinda Noah",
+    "role": "runner_up",
+    "election_date": "2023-03-07",
+    "result_source_url": "https://www.votehillsborough.gov/DocumentCenter/View/1086/Official-Results-Certificate-COT-Election-10-March-2023"
+   }
+  ]
+ },
+ {
+  "city_id": "1304000",
+  "city_name": "Atlanta",
+  "state_abb": "GA",
+  "slug": "atlanta",
+  "finalists": [
+   {
+    "candidate_election_id": "1304000__2025-11-04__regular__99abb2bd2ed115ad",
+    "candidate_name": "Andre Dickens",
+    "role": "winner",
+    "election_date": "2025-11-04",
+    "result_source_url": "https://results.enr.clarityelections.com/GA/Fulton/124753/365980/json/en/summary.json"
+   },
+   {
+    "candidate_election_id": "1304000__2025-11-04__regular__b7fabc97b52c09c9",
+    "candidate_name": "Eddie Meredith",
+    "role": "runner_up",
+    "election_date": "2025-11-04",
+    "result_source_url": "https://results.enr.clarityelections.com/GA/Fulton/124753/365980/json/en/summary.json"
+   }
+  ]
+ },
+ {
+  "city_id": "1571550",
+  "city_name": "Urban Honolulu",
+  "state_abb": "HI",
+  "slug": "urban_honolulu",
+  "finalists": [
+   {
+    "candidate_election_id": "1571550__2010-09-18__special__a1a0d866ad31898d",
+    "candidate_name": "Kirk Caldwell",
+    "role": "runner_up",
+    "election_date": "2010-09-18",
+    "result_source_url": "https://files.hawaii.gov/elections/files/results/2010/primary/cch.pdf"
+   },
+   {
+    "candidate_election_id": "1571550__2024-08-10__regular__2fd201cfb9dcbc17",
+    "candidate_name": "Rick Blangiardi",
+    "role": "winner",
+    "election_date": "2024-08-10",
+    "result_source_url": "https://files.hawaii.gov/elections/files/results/2024/Primary/cch.pdf"
+   },
+   {
+    "candidate_election_id": "1571550__2024-08-10__regular__1660ea2886cbb294",
+    "candidate_name": "Choon James",
+    "role": "runner_up",
+    "election_date": "2024-08-10",
+    "result_source_url": "https://files.hawaii.gov/elections/files/results/2024/Primary/cch.pdf"
+   }
+  ]
+ },
+ {
+  "city_id": "1608830",
+  "city_name": "Boise City",
+  "state_abb": "ID",
+  "slug": "boise_city",
+  "finalists": [
+   {
+    "candidate_election_id": "1608830__2011-11-08__regular__1254ee6d3cf398a6",
+    "candidate_name": "David B Hall",
+    "role": "runner_up",
+    "election_date": "2011-11-08",
+    "result_source_url": "https://adacounty.id.gov/elections/wp-content/uploads/sites/38/Consolidated-Summary-11-8-11.pdf"
+   },
+   {
+    "candidate_election_id": "1608830__2015-11-03__regular__3f50af484cb21e03",
+    "candidate_name": "Judy Peavey-Derr",
+    "role": "runner_up",
+    "election_date": "2015-11-03",
+    "result_source_url": "https://adacounty.id.gov/elections/wp-content/uploads/sites/38/Nov-2015-Consolidated-Electoin-Results.pdf"
+   },
+   {
+    "candidate_election_id": "1608830__2023-11-07__regular__17b8dc507dc4fd97",
+    "candidate_name": "Lauren McLean",
+    "role": "winner",
+    "election_date": "2023-11-07",
+    "result_source_url": "https://adacounty.id.gov/elections/wp-content/uploads/sites/38/01-Ada-County-Results-Election-Night-November-2023-Official1.pdf"
+   },
+   {
+    "candidate_election_id": "1608830__2023-11-07__regular__fc077cb6738c47bd",
+    "candidate_name": "Mike Masterson",
+    "role": "runner_up",
+    "election_date": "2023-11-07",
+    "result_source_url": "https://adacounty.id.gov/elections/wp-content/uploads/sites/38/01-Ada-County-Results-Election-Night-November-2023-Official1.pdf"
+   }
+  ]
+ },
+ {
+  "city_id": "1714000",
+  "city_name": "Chicago",
+  "state_abb": "IL",
+  "slug": "chicago",
+  "finalists": [
+   {
+    "candidate_election_id": "1714000__2011-02-22__regular__94916fe8f75ac1dc",
+    "candidate_name": "Rahm Emanuel",
+    "role": "winner",
+    "election_date": "2011-02-22",
+    "result_source_url": "https://app.chicagoelections.gov/documents/proclamations/Proc-2011-02-22.pdf"
+   },
+   {
+    "candidate_election_id": "1714000__2015-04-07__regular__6d97cec38e66e55d",
+    "candidate_name": "Jesus \"Chuy\" Garcia",
+    "role": "runner_up",
+    "election_date": "2015-04-07",
+    "result_source_url": "https://app.chicagoelections.gov/documents/proclamations/Proc-2015-04-07.pdf"
+   },
+   {
+    "candidate_election_id": "1714000__2023-04-04__regular__5bb1487050a0c9ac",
+    "candidate_name": "Brandon Johnson",
+    "role": "winner",
+    "election_date": "2023-04-04",
+    "result_source_url": "https://app.chicagoelections.gov/documents/proclamations/Proc-2023-04-04.pdf"
+   },
+   {
+    "candidate_election_id": "1714000__2023-04-04__regular__e7803958b856cbef",
+    "candidate_name": "Paul Vallas",
+    "role": "runner_up",
+    "election_date": "2023-04-04",
+    "result_source_url": "https://app.chicagoelections.gov/documents/proclamations/Proc-2023-04-04.pdf"
+   }
+  ]
+ },
+ {
+  "city_id": "1825000",
+  "city_name": "Fort Wayne",
+  "state_abb": "IN",
+  "slug": "fort_wayne",
+  "finalists": [
+   {
+    "candidate_election_id": "1825000__2011-11-08__regular__a50da3608de33abb",
+    "candidate_name": "Thomas C. Henry",
+    "role": "winner",
+    "election_date": "2011-11-08",
+    "result_source_url": "https://indianavoters.in.gov/ENRHistorical/ElectionResults?year=2011"
+   },
+   {
+    "candidate_election_id": "1825000__2011-11-08__regular__5ece2ef9c0abb398",
+    "candidate_name": "Paula Hughes",
+    "role": "runner_up",
+    "election_date": "2011-11-08",
+    "result_source_url": "https://indianavoters.in.gov/ENRHistorical/ElectionResults?year=2011"
+   },
+   {
+    "candidate_election_id": "1825000__2015-11-03__regular__a50da3608de33abb",
+    "candidate_name": "Thomas C. Henry",
+    "role": "winner",
+    "election_date": "2015-11-03",
+    "result_source_url": "https://indianavoters.in.gov/ENRHistorical/ElectionResults?year=2015"
+   },
+   {
+    "candidate_election_id": "1825000__2019-11-05__regular__bf0304e528498a3f",
+    "candidate_name": "Tim Smith",
+    "role": "runner_up",
+    "election_date": "2019-11-05",
+    "result_source_url": "https://indianavoters.in.gov/ENRHistorical/ElectionResults?year=2019"
+   },
+   {
+    "candidate_election_id": "1825000__2023-11-07__regular__a50da3608de33abb",
+    "candidate_name": "Thomas C Henry",
+    "role": "winner",
+    "election_date": "2023-11-07",
+    "result_source_url": "https://indianavoters.in.gov/ENRHistorical/ElectionResults?year=2023"
+   },
+   {
+    "candidate_election_id": "1825000__2023-11-07__regular__373d99d22f744fee",
+    "candidate_name": "Thomas (Tom) Didier",
+    "role": "runner_up",
+    "election_date": "2023-11-07",
+    "result_source_url": "https://indianavoters.in.gov/ENRHistorical/ElectionResults?year=2023"
+   }
+  ]
+ },
+ {
+  "city_id": "1836003",
+  "city_name": "Indianapolis city (balance)",
+  "state_abb": "IN",
+  "slug": "indianapolis_city_balance",
+  "finalists": [
+   {
+    "candidate_election_id": "1836003__2015-11-03__regular__5d0053483a9fff09",
+    "candidate_name": "Joe Hogsett",
+    "role": "winner",
+    "election_date": "2015-11-03",
+    "result_source_url": "https://gis.indy.gov/portal/sharing/rest/content/items/be1fd99101c4498c9c3236733d16fb0b/data"
+   },
+   {
+    "candidate_election_id": "1836003__2019-11-05__regular__5d0053483a9fff09",
+    "candidate_name": "Joe Hogsett",
+    "role": "winner",
+    "election_date": "2019-11-05",
+    "result_source_url": "https://gis.indy.gov/portal/sharing/rest/content/items/4cb48c7103aa4e23ba698b538005fe60/data"
+   },
+   {
+    "candidate_election_id": "1836003__2019-11-05__regular__265d0897e1a2bd70",
+    "candidate_name": "James W. (Jim) Merritt Jr.",
+    "role": "runner_up",
+    "election_date": "2019-11-05",
+    "result_source_url": "https://gis.indy.gov/portal/sharing/rest/content/items/4cb48c7103aa4e23ba698b538005fe60/data"
+   },
+   {
+    "candidate_election_id": "1836003__2023-11-07__regular__5d0053483a9fff09",
+    "candidate_name": "Joe Hogsett",
+    "role": "winner",
+    "election_date": "2023-11-07",
+    "result_source_url": "https://gis.indy.gov/portal/sharing/rest/content/items/b18b251e16c34d98a41148c3bdf4e1a7/data"
+   },
+   {
+    "candidate_election_id": "1836003__2023-11-07__regular__21565cabd41e1b45",
+    "candidate_name": "Jefferson Scott Shreve",
+    "role": "runner_up",
+    "election_date": "2023-11-07",
+    "result_source_url": "https://gis.indy.gov/portal/sharing/rest/content/items/b18b251e16c34d98a41148c3bdf4e1a7/data"
+   }
+  ]
+ },
+ {
+  "city_id": "2079000",
+  "city_name": "Wichita",
+  "state_abb": "KS",
+  "slug": "wichita",
+  "finalists": [
+   {
+    "candidate_election_id": "2079000__2011-04-05__regular__65b4eefd41a668cf",
+    "candidate_name": "Darrell E. Leffew",
+    "role": "runner_up",
+    "election_date": "2011-04-05",
+    "result_source_url": "https://www.sedgwickcounty.org/elections/election-results/2011-general/"
+   },
+   {
+    "candidate_election_id": "2079000__2015-04-07__regular__d25d80a3b2a49216",
+    "candidate_name": "Jeff Longwell",
+    "role": "winner",
+    "election_date": "2015-04-07",
+    "result_source_url": "https://www.sedgwickcounty.org/elections/election-results/2015-general/"
+   },
+   {
+    "candidate_election_id": "2079000__2015-04-07__regular__026dcb693a5c9642",
+    "candidate_name": "Samuel M. Williams",
+    "role": "runner_up",
+    "election_date": "2015-04-07",
+    "result_source_url": "https://www.sedgwickcounty.org/elections/election-results/2015-general/"
+   },
+   {
+    "candidate_election_id": "2079000__2023-11-07__regular__d7fc7efd80525fda",
+    "candidate_name": "Lily Wu",
+    "role": "winner",
+    "election_date": "2023-11-07",
+    "result_source_url": "https://www.sedgwickcounty.org/media/65376/official-results-plus-other-counties.pdf"
+   },
+   {
+    "candidate_election_id": "2079000__2023-11-07__regular__7080967e2bec33a9",
+    "candidate_name": "Brandon Whipple",
+    "role": "runner_up",
+    "election_date": "2023-11-07",
+    "result_source_url": "https://www.sedgwickcounty.org/media/65376/official-results-plus-other-counties.pdf"
+   }
+  ]
+ },
+ {
+  "city_id": "2146027",
+  "city_name": "Lexington-Fayette",
+  "state_abb": "KY",
+  "slug": "lexington_fayette",
+  "finalists": [
+   {
+    "candidate_election_id": "2146027__2014-11-04__regular__4e1a4725b41f184a",
+    "candidate_name": "Jim Gray",
+    "role": "winner",
+    "election_date": "2014-11-04",
+    "result_source_url": "https://elect.ky.gov/SiteAssets/Pages/2014-Recap-Sheets/Fayette.pdf"
+   },
+   {
+    "candidate_election_id": "2146027__2022-11-08__regular__975d4cf656cc7baf",
+    "candidate_name": "Linda Gorton",
+    "role": "winner",
+    "election_date": "2022-11-08",
+    "result_source_url": "https://elect.ky.gov/results/2020-2029/2022ElectionReports/GeneralRecaps/Fayette%20County.pdf"
+   },
+   {
+    "candidate_election_id": "2146027__2022-11-08__regular__0f70fc4bdf166dde",
+    "candidate_name": "David Kloiber",
+    "role": "runner_up",
+    "election_date": "2022-11-08",
+    "result_source_url": "https://elect.ky.gov/results/2020-2029/2022ElectionReports/GeneralRecaps/Fayette%20County.pdf"
+   }
+  ]
+ },
+ {
+  "city_id": "2148006",
+  "city_name": "Louisville/Jefferson County metro government (balance)",
+  "state_abb": "KY",
+  "slug": "louisville_jefferson_county_metro_government_balance",
+  "finalists": [
+   {
+    "candidate_election_id": "2148006__2014-11-04__regular__11a58c6aae02cc36",
+    "candidate_name": "Greg Fischer",
+    "role": "winner",
+    "election_date": "2014-11-04",
+    "result_source_url": "https://www.jeffersoncountyclerk.org/files/assets/clerk/v/1/elections/documents/election-results/gems-election-summary14.pdf"
+   },
+   {
+    "candidate_election_id": "2148006__2018-11-06__regular__887fdd2c75d197a4",
+    "candidate_name": "Angela Leet",
+    "role": "runner_up",
+    "election_date": "2018-11-06",
+    "result_source_url": "https://www.jeffersoncountyclerk.org/files/assets/clerk/v/1/elections/documents/election-results/2018genofficialsovc.pdf"
+   },
+   {
+    "candidate_election_id": "2148006__2022-11-08__regular__3feda6c83773bc1e",
+    "candidate_name": "Craig Greenberg",
+    "role": "winner",
+    "election_date": "2022-11-08",
+    "result_source_url": "https://www.jeffersoncountyclerk.org/files/assets/clerk/v/1/elections/documents/election-results/gen22_sovc_official.pdf"
+   },
+   {
+    "candidate_election_id": "2148006__2022-11-08__regular__d93c10a2e540537d",
+    "candidate_name": "Bill Dieruf",
+    "role": "runner_up",
+    "election_date": "2022-11-08",
+    "result_source_url": "https://www.jeffersoncountyclerk.org/files/assets/clerk/v/1/elections/documents/election-results/gen22_sovc_official.pdf"
+   }
+  ]
+ },
+ {
+  "city_id": "2205000",
+  "city_name": "Baton Rouge",
+  "state_abb": "LA",
+  "slug": "baton_rouge",
+  "finalists": [
+   {
+    "candidate_election_id": "2205000__2012-11-06__regular__c9a1abc8055fbd5b",
+    "candidate_name": "Melvin \"Kip\" Holden",
+    "role": "winner",
+    "election_date": "2012-11-06",
+    "result_source_url": "https://s3-us-west-2.amazonaws.com/mediaresults.sos.la.gov/HumanReadableElectionResults/20121106/Election+Results+(11-06-2012).xlsx"
+   },
+   {
+    "candidate_election_id": "2205000__2012-11-06__regular__eaa23d638c080226",
+    "candidate_name": "J. Michael \"Mike\" Walker, Sr.",
+    "role": "runner_up",
+    "election_date": "2012-11-06",
+    "result_source_url": "https://s3-us-west-2.amazonaws.com/mediaresults.sos.la.gov/HumanReadableElectionResults/20121106/Election+Results+(11-06-2012).xlsx"
+   },
+   {
+    "candidate_election_id": "2205000__2024-12-07__regular__779385e5642ec510",
+    "candidate_name": "Emile \"Sid\" Edwards",
+    "role": "winner",
+    "election_date": "2024-12-07",
+    "result_source_url": "https://s3-us-west-2.amazonaws.com/mediaresults.sos.la.gov/HumanReadableElectionResults/20241207/Election+Results+(12-07-2024).xlsx"
+   },
+   {
+    "candidate_election_id": "2205000__2024-12-07__regular__f450515411500a39",
+    "candidate_name": "Sharon Weston Broome",
+    "role": "runner_up",
+    "election_date": "2024-12-07",
+    "result_source_url": "https://s3-us-west-2.amazonaws.com/mediaresults.sos.la.gov/HumanReadableElectionResults/20241207/Election+Results+(12-07-2024).xlsx"
+   }
+  ]
+ },
+ {
+  "city_id": "2255000",
+  "city_name": "New Orleans",
+  "state_abb": "LA",
+  "slug": "new_orleans",
+  "finalists": [
+   {
+    "candidate_election_id": "2255000__2010-02-06__regular__aed6064e67b6923a",
+    "candidate_name": "Mitchell \"Mitch\" Landrieu",
+    "role": "winner",
+    "election_date": "2010-02-06",
+    "result_source_url": "https://voterportal.sos.la.gov/ElectionResults/ElectionResults/Data?blob=20100206/VotesParish/Votes_36.htm"
+   },
+   {
+    "candidate_election_id": "2255000__2010-02-06__regular__a6be218b7c39095a",
+    "candidate_name": "Troy Henry",
+    "role": "runner_up",
+    "election_date": "2010-02-06",
+    "result_source_url": "https://voterportal.sos.la.gov/ElectionResults/ElectionResults/Data?blob=20100206/VotesParish/Votes_36.htm"
+   },
+   {
+    "candidate_election_id": "2255000__2014-02-01__regular__e1d120d389a41cda",
+    "candidate_name": "Mitch Landrieu",
+    "role": "winner",
+    "election_date": "2014-02-01",
+    "result_source_url": "https://voterportal.sos.la.gov/ElectionResults/ElectionResults/Data?blob=20140201/VotesParish/Votes_36.htm"
+   },
+   {
+    "candidate_election_id": "2255000__2014-02-01__regular__a61e0f96982cc4c2",
+    "candidate_name": "Michael Bagneris",
+    "role": "runner_up",
+    "election_date": "2014-02-01",
+    "result_source_url": "https://voterportal.sos.la.gov/ElectionResults/ElectionResults/Data?blob=20140201/VotesParish/Votes_36.htm"
+   },
+   {
+    "candidate_election_id": "2255000__2017-11-18__regular__7455827b177e8e3a",
+    "candidate_name": "LaToya Cantrell",
+    "role": "winner",
+    "election_date": "2017-11-18",
+    "result_source_url": "https://voterportal.sos.la.gov/ElectionResults/ElectionResults/Data?blob=20171118/VotesParish/Votes_36.htm"
+   },
+   {
+    "candidate_election_id": "2255000__2017-11-18__regular__c48d8f1de762e139",
+    "candidate_name": "Desiree M. Charbonnet",
+    "role": "runner_up",
+    "election_date": "2017-11-18",
+    "result_source_url": "https://voterportal.sos.la.gov/ElectionResults/ElectionResults/Data?blob=20171118/VotesParish/Votes_36.htm"
+   },
+   {
+    "candidate_election_id": "2255000__2021-11-13__regular__0073e0f4d9ff8ecb",
+    "candidate_name": "Vina Nguyen",
+    "role": "runner_up",
+    "election_date": "2021-11-13",
+    "result_source_url": "https://voterportal.sos.la.gov/ElectionResults/ElectionResults/Data?blob=20211113/VotesParish/Votes_36.htm"
+   },
+   {
+    "candidate_election_id": "2255000__2025-10-11__regular__84552f9b2e3fa06a",
+    "candidate_name": "Helena Moreno",
+    "role": "winner",
+    "election_date": "2025-10-11",
+    "result_source_url": "https://voterportal.sos.la.gov/ElectionResults/ElectionResults/Data?blob=20251011/VotesParish/Votes_36.htm"
+   },
+   {
+    "candidate_election_id": "2255000__2025-10-11__regular__1614c57a38d6c8a9",
+    "candidate_name": "Royce Duplessis",
+    "role": "runner_up",
+    "election_date": "2025-10-11",
+    "result_source_url": "https://voterportal.sos.la.gov/ElectionResults/ElectionResults/Data?blob=20251011/VotesParish/Votes_36.htm"
+   }
+  ]
+ },
+ {
+  "city_id": "2507000",
+  "city_name": "Boston",
+  "state_abb": "MA",
+  "slug": "boston",
+  "finalists": [
+   {
+    "candidate_election_id": "2507000__2013-11-05__regular__5e1bdcc76c3484d7",
+    "candidate_name": "Marty J Walsh",
+    "role": "winner",
+    "election_date": "2013-11-05",
+    "result_source_url": "https://documents.boston.gov/images_documents/2013%20-%2011-05-13%20-%20Mayor%20Ward%20%26%20Precinct%20Results%20%281%29_tcm3-41970.pdf"
+   }
+  ]
+ },
+ {
+  "city_id": "2622000",
+  "city_name": "Detroit",
+  "state_abb": "MI",
+  "slug": "detroit",
+  "finalists": [
+   {
+    "candidate_election_id": "2622000__2025-11-04__regular__cf2187e4d27219df",
+    "candidate_name": "Mary Sheffield",
+    "role": "winner",
+    "election_date": "2025-11-04",
+    "result_source_url": "https://detroitmi.gov/sites/detroitmi.localhost/files/2025-12/November%204%20Municipal%20Gen%20Election%20Results%20-%20Official.pdf"
+   },
+   {
+    "candidate_election_id": "2622000__2025-11-04__regular__421a9c126cabfc2d",
+    "candidate_name": "Solomon Kinloch",
+    "role": "runner_up",
+    "election_date": "2025-11-04",
+    "result_source_url": "https://detroitmi.gov/sites/detroitmi.localhost/files/2025-12/November%204%20Municipal%20Gen%20Election%20Results%20-%20Official.pdf"
+   }
+  ]
+ },
+ {
+  "city_id": "2743000",
+  "city_name": "Minneapolis",
+  "state_abb": "MN",
+  "slug": "minneapolis",
+  "finalists": [
+   {
+    "candidate_election_id": "2743000__2025-11-04__regular__d9ef74b455d48478",
+    "candidate_name": "Jacob Frey",
+    "role": "winner",
+    "election_date": "2025-11-04",
+    "result_source_url": "https://vote.minneapolismn.gov/results-data/election-results/2025/mayor/"
+   },
+   {
+    "candidate_election_id": "2743000__2025-11-04__regular__1ca92c04555a9e4c",
+    "candidate_name": "Omar Fateh",
+    "role": "runner_up",
+    "election_date": "2025-11-04",
+    "result_source_url": "https://vote.minneapolismn.gov/results-data/election-results/2025/mayor/"
+   }
+  ]
+ },
+ {
+  "city_id": "2758000",
+  "city_name": "St. Paul",
+  "state_abb": "MN",
+  "slug": "st_paul",
+  "finalists": [
+   {
+    "candidate_election_id": "2758000__2013-11-05__regular__d1e0e89990fb6e76",
+    "candidate_name": "Chris Coleman",
+    "role": "winner",
+    "election_date": "2013-11-05",
+    "result_source_url": "https://web.archive.org/web/20241016080927/https://www.ramseycounty.us/sites/default/files/Elections%20and%20Voting/Abstracts/2013%20Abstracts/2013%20Saint%20Paul.pdf"
+   },
+   {
+    "candidate_election_id": "2758000__2025-11-04__regular__0c7e8fa41ce4d7db",
+    "candidate_name": "Kaohly Her",
+    "role": "winner",
+    "election_date": "2025-11-04",
+    "result_source_url": "https://stpaul.legistar.com/LegislationDetail.aspx?ID=7726549&GUID=706DF33A-BE30-45EB-A25D-A794306C204B"
+   },
+   {
+    "candidate_election_id": "2758000__2025-11-04__regular__8a97bacd462a8d40",
+    "candidate_name": "Melvin Carter",
+    "role": "runner_up",
+    "election_date": "2025-11-04",
+    "result_source_url": "https://stpaul.legistar.com/LegislationDetail.aspx?ID=7726549&GUID=706DF33A-BE30-45EB-A25D-A794306C204B"
+   }
+  ]
+ },
+ {
+  "city_id": "2938000",
+  "city_name": "Kansas City",
+  "state_abb": "MO",
+  "slug": "kansas_city",
+  "finalists": [
+   {
+    "candidate_election_id": "2938000__2011-03-22__regular__914ceddf670f54cc",
+    "candidate_name": "Sylvester James Jr.",
+    "role": "winner",
+    "election_date": "2011-03-22",
+    "result_source_url": "https://www.kceb.org/useruploads/Past_Election_Results/3_22_11_GEMS_ELECTION_RESULTS.pdf"
+   },
+   {
+    "candidate_election_id": "2938000__2015-06-23__regular__3a7b5b999e561180",
+    "candidate_name": "Vincent Lee",
+    "role": "runner_up",
+    "election_date": "2015-06-23",
+    "result_source_url": "https://www.kceb.org/useruploads/Election_Summary_Official_6-15.pdf"
+   },
+   {
+    "candidate_election_id": "2938000__2023-06-20__regular__1a5f2fa6bd07618f",
+    "candidate_name": "Quinton Lucas",
+    "role": "winner",
+    "election_date": "2023-06-20",
+    "result_source_url": "https://www.kceb.org/useruploads/Election_Summary_Official_6-23.pdf"
+   },
+   {
+    "candidate_election_id": "2938000__2023-06-20__regular__3852e8386b54c2bf",
+    "candidate_name": "Clay Chastain",
+    "role": "runner_up",
+    "election_date": "2023-06-20",
+    "result_source_url": "https://www.kceb.org/useruploads/Election_Summary_Official_6-23.pdf"
+   }
+  ]
+ },
+ {
+  "city_id": "2965000",
+  "city_name": "St. Louis",
+  "state_abb": "MO",
+  "slug": "st_louis",
+  "finalists": [
+   {
+    "candidate_election_id": "2965000__2013-04-02__regular__04cd1cbe8ee97930",
+    "candidate_name": "Francis Slay",
+    "role": "winner",
+    "election_date": "2013-04-02",
+    "result_source_url": "https://www.stlouis-mo.gov/government/departments/board-election-commissioners/documents/election-results/upload/Apr13-Final-Official-Summary.pdf"
+   },
+   {
+    "candidate_election_id": "2965000__2013-04-02__regular__5b5e4e2d8858e7bb",
+    "candidate_name": "James Mcneely",
+    "role": "runner_up",
+    "election_date": "2013-04-02",
+    "result_source_url": "https://www.stlouis-mo.gov/government/departments/board-election-commissioners/documents/election-results/upload/Apr13-Final-Official-Summary.pdf"
+   },
+   {
+    "candidate_election_id": "2965000__2017-04-04__regular__0843b0309e5e03c8",
+    "candidate_name": "Lyda Krewson",
+    "role": "winner",
+    "election_date": "2017-04-04",
+    "result_source_url": "https://www.stlouis-mo.gov/government/departments/board-election-commissioners/documents/election-results/upload/Apr2017-Final-Official-Summary-2.pdf"
+   },
+   {
+    "candidate_election_id": "2965000__2017-04-04__regular__8810aa9c7b8bc83d",
+    "candidate_name": "Andrew Jones",
+    "role": "runner_up",
+    "election_date": "2017-04-04",
+    "result_source_url": "https://www.stlouis-mo.gov/government/departments/board-election-commissioners/documents/election-results/upload/Apr2017-Final-Official-Summary-2.pdf"
+   },
+   {
+    "candidate_election_id": "2965000__2025-04-08__regular__01c03dd754109c85",
+    "candidate_name": "Cara Spencer",
+    "role": "winner",
+    "election_date": "2025-04-08",
+    "result_source_url": "https://www.stlouis-mo.gov/government/departments/board-election-commissioners/documents/election-results/upload/Apr25-Final-Official-Summary.pdf"
+   },
+   {
+    "candidate_election_id": "2965000__2025-04-08__regular__f096476d1cc5ed3d",
+    "candidate_name": "Tishaura Jones",
+    "role": "runner_up",
+    "election_date": "2025-04-08",
+    "result_source_url": "https://www.stlouis-mo.gov/government/departments/board-election-commissioners/documents/election-results/upload/Apr25-Final-Official-Summary.pdf"
+   }
+  ]
+ },
+ {
+  "city_id": "3128000",
+  "city_name": "Lincoln",
+  "state_abb": "NE",
+  "slug": "lincoln",
+  "finalists": [
+   {
+    "candidate_election_id": "3128000__2011-05-03__regular__eea76e01d9806765",
+    "candidate_name": "Chris Beutler",
+    "role": "winner",
+    "election_date": "2011-05-03",
+    "result_source_url": "http://app.lincoln.ne.gov/cnty/election/results/resul11m.htm"
+   },
+   {
+    "candidate_election_id": "3128000__2011-05-03__regular__64758d90848af331",
+    "candidate_name": "Tammy Buffington",
+    "role": "runner_up",
+    "election_date": "2011-05-03",
+    "result_source_url": "http://app.lincoln.ne.gov/cnty/election/results/resul11m.htm"
+   },
+   {
+    "candidate_election_id": "3128000__2019-05-07__regular__c7a6ad6d59136d2d",
+    "candidate_name": "Leirion Gaylor Baird",
+    "role": "winner",
+    "election_date": "2019-05-07",
+    "result_source_url": "http://app.lincoln.ne.gov/cnty/election/results/resul19m.htm"
+   },
+   {
+    "candidate_election_id": "3128000__2023-05-02__regular__c7a6ad6d59136d2d",
+    "candidate_name": "Leirion Gaylor Baird",
+    "role": "winner",
+    "election_date": "2023-05-02",
+    "result_source_url": "https://www.lancaster.ne.gov/DocumentCenter/View/18543"
+   },
+   {
+    "candidate_election_id": "3128000__2023-05-02__regular__fa93e75bff95c005",
+    "candidate_name": "Suzanne Geist",
+    "role": "runner_up",
+    "election_date": "2023-05-02",
+    "result_source_url": "https://www.lancaster.ne.gov/DocumentCenter/View/18543"
+   }
+  ]
+ },
+ {
+  "city_id": "3137000",
+  "city_name": "Omaha",
+  "state_abb": "NE",
+  "slug": "omaha",
+  "finalists": [
+   {
+    "candidate_election_id": "3137000__2025-05-13__regular__5d20b01b0d43a02b",
+    "candidate_name": "John W. Ewing, Jr.",
+    "role": "winner",
+    "election_date": "2025-05-13",
+    "result_source_url": "https://www.votedouglascounty-ne.gov/elections/2025/General/LG25ResultsSummary.pdf"
+   },
+   {
+    "candidate_election_id": "3137000__2025-05-13__regular__8088567775aef50b",
+    "candidate_name": "Jean Stothert",
+    "role": "runner_up",
+    "election_date": "2025-05-13",
+    "result_source_url": "https://www.votedouglascounty-ne.gov/elections/2025/General/LG25ResultsSummary.pdf"
+   }
+  ]
+ },
+ {
+  "city_id": "3231900",
+  "city_name": "Henderson",
+  "state_abb": "NV",
+  "slug": "henderson",
+  "finalists": [
+   {
+    "candidate_election_id": "3231900__2017-04-04__regular__0d93a44a9c8ceaf1",
+    "candidate_name": "Debra March",
+    "role": "winner",
+    "election_date": "2017-04-04",
+    "result_source_url": "https://elections.clarkcountynv.gov/electionresultsTV/results.aspx"
+   },
+   {
+    "candidate_election_id": "3231900__2017-04-04__regular__f5ae6b4ddc4dc44b",
+    "candidate_name": "Rick Workman",
+    "role": "runner_up",
+    "election_date": "2017-04-04",
+    "result_source_url": "https://elections.clarkcountynv.gov/electionresultsTV/results.aspx"
+   },
+   {
+    "candidate_election_id": "3231900__2022-06-14__regular__7f35d412816c026b",
+    "candidate_name": "Michelle Romero",
+    "role": "winner",
+    "election_date": "2022-06-14",
+    "result_source_url": "https://elections.clarkcountynv.gov/electionresultsTV/results.aspx"
+   },
+   {
+    "candidate_election_id": "3231900__2022-06-14__regular__726b2dbdfb16f4f9",
+    "candidate_name": "Frank Ficadenti",
+    "role": "runner_up",
+    "election_date": "2022-06-14",
+    "result_source_url": "https://elections.clarkcountynv.gov/electionresultsTV/results.aspx"
+   }
+  ]
+ },
+ {
+  "city_id": "3240000",
+  "city_name": "Las Vegas",
+  "state_abb": "NV",
+  "slug": "las_vegas",
+  "finalists": [
+   {
+    "candidate_election_id": "3240000__2011-06-07__regular__5124cab58d06c308",
+    "candidate_name": "Carolyn G. Goodman",
+    "role": "winner",
+    "election_date": "2011-06-07",
+    "result_source_url": "https://elections.clarkcountynv.gov/electionresultsTV/results.aspx"
+   },
+   {
+    "candidate_election_id": "3240000__2011-06-07__regular__32ab111efd94be92",
+    "candidate_name": "Chris Giunchigliani",
+    "role": "runner_up",
+    "election_date": "2011-06-07",
+    "result_source_url": "https://elections.clarkcountynv.gov/electionresultsTV/results.aspx"
+   },
+   {
+    "candidate_election_id": "3240000__2015-04-07__regular__5124cab58d06c308",
+    "candidate_name": "Carolyn G. Goodman",
+    "role": "winner",
+    "election_date": "2015-04-07",
+    "result_source_url": "https://elections.clarkcountynv.gov/electionresultsTV/results.aspx"
+   },
+   {
+    "candidate_election_id": "3240000__2015-04-07__regular__1afe16a421f5fbd6",
+    "candidate_name": "Stavros S. Anthony",
+    "role": "runner_up",
+    "election_date": "2015-04-07",
+    "result_source_url": "https://elections.clarkcountynv.gov/electionresultsTV/results.aspx"
+   },
+   {
+    "candidate_election_id": "3240000__2019-04-02__regular__5124cab58d06c308",
+    "candidate_name": "Carolyn G. Goodman",
+    "role": "winner",
+    "election_date": "2019-04-02",
+    "result_source_url": "https://elections.clarkcountynv.gov/electionresultsTV/results.aspx"
+   },
+   {
+    "candidate_election_id": "3240000__2019-04-02__regular__5fd36b47cbf55509",
+    "candidate_name": "Phil Collins",
+    "role": "runner_up",
+    "election_date": "2019-04-02",
+    "result_source_url": "https://elections.clarkcountynv.gov/electionresultsTV/results.aspx"
+   },
+   {
+    "candidate_election_id": "3240000__2024-11-05__regular__a83bc2e26c079f98",
+    "candidate_name": "Shelley Berkley",
+    "role": "winner",
+    "election_date": "2024-11-05",
+    "result_source_url": "https://elections.clarkcountynv.gov/electionresultsTV/results.aspx"
+   },
+   {
+    "candidate_election_id": "3240000__2024-11-05__regular__6dec076b03777cb5",
+    "candidate_name": "Victoria Seaman",
+    "role": "runner_up",
+    "election_date": "2024-11-05",
+    "result_source_url": "https://elections.clarkcountynv.gov/electionresultsTV/results.aspx"
+   }
+  ]
+ },
+ {
+  "city_id": "3251800",
+  "city_name": "North Las Vegas",
+  "state_abb": "NV",
+  "slug": "north_las_vegas",
+  "finalists": [
+   {
+    "candidate_election_id": "3251800__2013-04-02__regular__155b15ab7e3fe907",
+    "candidate_name": "John Lee",
+    "role": "winner",
+    "election_date": "2013-04-02",
+    "result_source_url": "https://elections.clarkcountynv.gov/electionresultsTV/results.aspx"
+   },
+   {
+    "candidate_election_id": "3251800__2013-04-02__regular__e6a6049489e15c62",
+    "candidate_name": "Shari Buck",
+    "role": "runner_up",
+    "election_date": "2013-04-02",
+    "result_source_url": "https://elections.clarkcountynv.gov/electionresultsTV/results.aspx"
+   },
+   {
+    "candidate_election_id": "3251800__2017-04-04__regular__cc94163a47e404fc",
+    "candidate_name": "John J. Lee",
+    "role": "winner",
+    "election_date": "2017-04-04",
+    "result_source_url": "https://elections.clarkcountynv.gov/electionresultsTV/results.aspx"
+   },
+   {
+    "candidate_election_id": "3251800__2017-04-04__regular__29ced36465c703b0",
+    "candidate_name": "Gary Bouchard",
+    "role": "runner_up",
+    "election_date": "2017-04-04",
+    "result_source_url": "https://elections.clarkcountynv.gov/electionresultsTV/results.aspx"
+   },
+   {
+    "candidate_election_id": "3251800__2022-11-08__regular__b3ed5356508006b0",
+    "candidate_name": "Pamela A. Goynes-Brown",
+    "role": "winner",
+    "election_date": "2022-11-08",
+    "result_source_url": "https://elections.clarkcountynv.gov/electionresultsTV/results.aspx"
+   },
+   {
+    "candidate_election_id": "3251800__2022-11-08__regular__b6de7bee9451b3d0",
+    "candidate_name": "Pat Spearman",
+    "role": "runner_up",
+    "election_date": "2022-11-08",
+    "result_source_url": "https://elections.clarkcountynv.gov/electionresultsTV/results.aspx"
+   }
+  ]
+ },
+ {
+  "city_id": "3260600",
+  "city_name": "Reno",
+  "state_abb": "NV",
+  "slug": "reno",
+  "finalists": [
+   {
+    "candidate_election_id": "3260600__2010-11-02__regular__4aa476f96bc965a5",
+    "candidate_name": "Bob Cashell",
+    "role": "winner",
+    "election_date": "2010-11-02",
+    "result_source_url": "https://www.washoecounty.gov/voters/results/resultsfiles/2010generalresults.pdf"
+   },
+   {
+    "candidate_election_id": "3260600__2014-11-04__regular__40d3d1bf0372771e",
+    "candidate_name": "Hillary Schieve",
+    "role": "winner",
+    "election_date": "2014-11-04",
+    "result_source_url": "https://www.washoecounty.gov/voters/results/resultsfiles/2014generalresults.pdf"
+   },
+   {
+    "candidate_election_id": "3260600__2014-11-04__regular__7b65b8543d4d8db2",
+    "candidate_name": "Raymond Pezonella",
+    "role": "runner_up",
+    "election_date": "2014-11-04",
+    "result_source_url": "https://www.washoecounty.gov/voters/results/resultsfiles/2014generalresults.pdf"
+   },
+   {
+    "candidate_election_id": "3260600__2018-11-06__regular__40d3d1bf0372771e",
+    "candidate_name": "Hillary Schieve",
+    "role": "winner",
+    "election_date": "2018-11-06",
+    "result_source_url": "https://www.washoecounty.gov/voters/results/resultsfiles/2018generalresults.pdf"
+   },
+   {
+    "candidate_election_id": "3260600__2018-11-06__regular__b5f12afb875ebde9",
+    "candidate_name": "Eddie Lorton",
+    "role": "runner_up",
+    "election_date": "2018-11-06",
+    "result_source_url": "https://www.washoecounty.gov/voters/results/resultsfiles/2018generalresults.pdf"
+   },
+   {
+    "candidate_election_id": "3260600__2022-11-08__regular__40d3d1bf0372771e",
+    "candidate_name": "Hillary Schieve",
+    "role": "winner",
+    "election_date": "2022-11-08",
+    "result_source_url": "https://www.washoecounty.gov/voters/results/resultsfiles/2022generalresults.pdf"
+   },
+   {
+    "candidate_election_id": "3260600__2022-11-08__regular__6ef08439ddeb11c0",
+    "candidate_name": "George \"Eddie\" Lorton",
+    "role": "runner_up",
+    "election_date": "2022-11-08",
+    "result_source_url": "https://www.washoecounty.gov/voters/results/resultsfiles/2022generalresults.pdf"
+   }
+  ]
+ },
+ {
+  "city_id": "3436000",
+  "city_name": "Jersey City",
+  "state_abb": "NJ",
+  "slug": "jersey_city",
+  "finalists": [
+   {
+    "candidate_election_id": "3436000__2013-05-14__regular__ffe4e91b8d390902",
+    "candidate_name": "Jerramiah Healy",
+    "role": "runner_up",
+    "election_date": "2013-05-14",
+    "result_source_url": "http://assets01.aws.connect.clarityelections.com/Assets/Connect/RootPublish/hudson-nj.connect.clarityelections.com/Election_Archive/2013/Municipal/2013JC_MuniElectionResults.pdf"
+   },
+   {
+    "candidate_election_id": "3436000__2017-11-07__regular__b42d2a3a213ca100",
+    "candidate_name": "Steven Fulop",
+    "role": "winner",
+    "election_date": "2017-11-07",
+    "result_source_url": "http://assets01.aws.connect.clarityelections.com/Assets/Connect/RootPublish/hudson-nj.connect.clarityelections.com/Election_Archive/2017/General/OFFICIAL-District-Canvass-General-Election-Results-2017.pdf"
+   },
+   {
+    "candidate_election_id": "3436000__2017-11-07__regular__9c673dfe3eeb6971",
+    "candidate_name": "Bill Matsikoudis",
+    "role": "runner_up",
+    "election_date": "2017-11-07",
+    "result_source_url": "http://assets01.aws.connect.clarityelections.com/Assets/Connect/RootPublish/hudson-nj.connect.clarityelections.com/Election_Archive/2017/General/OFFICIAL-District-Canvass-General-Election-Results-2017.pdf"
+   },
+   {
+    "candidate_election_id": "3436000__2021-11-02__regular__38c77d2e13d16a0e",
+    "candidate_name": "Lewis Spears",
+    "role": "runner_up",
+    "election_date": "2021-11-02",
+    "result_source_url": "https://www.hudsoncountyclerk.org/wp-content/uploads/2021/12/2021-General-Election-District-Canvass-Report.pdf"
+   },
+   {
+    "candidate_election_id": "3436000__2025-12-02__regular__e17d48f57e2cbfe5",
+    "candidate_name": "James Solomon",
+    "role": "winner",
+    "election_date": "2025-12-02",
+    "result_source_url": "https://www.hudsoncountyclerk.org/wp-content/uploads/2026/01/2025-General-Election-Runoff-Official-Summary-Results-by-Contest.pdf"
+   },
+   {
+    "candidate_election_id": "3436000__2025-12-02__regular__a4e04a891f64d305",
+    "candidate_name": "Jim McGreevey",
+    "role": "runner_up",
+    "election_date": "2025-12-02",
+    "result_source_url": "https://www.hudsoncountyclerk.org/wp-content/uploads/2026/01/2025-General-Election-Runoff-Official-Summary-Results-by-Contest.pdf"
+   }
+  ]
+ },
+ {
+  "city_id": "3451000",
+  "city_name": "Newark",
+  "state_abb": "NJ",
+  "slug": "newark",
+  "finalists": [
+   {
+    "candidate_election_id": "3451000__2014-05-13__regular__7b36f8ae9ed2aa97",
+    "candidate_name": "Shavar D. Jeffries",
+    "role": "runner_up",
+    "election_date": "2014-05-13",
+    "result_source_url": "https://www.essexclerk.com/Election/View/51"
+   },
+   {
+    "candidate_election_id": "3451000__2018-05-08__regular__9eeb596e6a104922",
+    "candidate_name": "Ras J. Baraka",
+    "role": "winner",
+    "election_date": "2018-05-08",
+    "result_source_url": "https://results.enr.clarityelections.com/NJ/Essex/75024/"
+   },
+   {
+    "candidate_election_id": "3451000__2018-05-08__regular__dee9688ee6781929",
+    "candidate_name": "Gayle Chaneyfield Jenkins",
+    "role": "runner_up",
+    "election_date": "2018-05-08",
+    "result_source_url": "https://results.enr.clarityelections.com/NJ/Essex/75024/"
+   },
+   {
+    "candidate_election_id": "3451000__2022-05-10__regular__3f8b3ae6b8cbea06",
+    "candidate_name": "Ras Baraka",
+    "role": "winner",
+    "election_date": "2022-05-10",
+    "result_source_url": "https://results.enr.clarityelections.com/NJ/Essex/112990/"
+   },
+   {
+    "candidate_election_id": "3451000__2022-05-10__regular__bbe3c9f98b3aec2f",
+    "candidate_name": "Sheila Montague",
+    "role": "runner_up",
+    "election_date": "2022-05-10",
+    "result_source_url": "https://results.enr.clarityelections.com/NJ/Essex/112990/"
+   },
+   {
+    "candidate_election_id": "3451000__2026-05-12__regular__9eeb596e6a104922",
+    "candidate_name": "Ras J. Baraka",
+    "role": "winner",
+    "election_date": "2026-05-12",
+    "result_source_url": "https://results.enr.clarityelections.com/NJ/Essex/126285/"
+   },
+   {
+    "candidate_election_id": "3451000__2026-05-12__regular__d92169301e43f8c4",
+    "candidate_name": "Jhamar D. Youngblood",
+    "role": "runner_up",
+    "election_date": "2026-05-12",
+    "result_source_url": "https://results.enr.clarityelections.com/NJ/Essex/126285/"
+   }
+  ]
+ },
+ {
+  "city_id": "3502000",
+  "city_name": "Albuquerque",
+  "state_abb": "NM",
+  "slug": "albuquerque",
+  "finalists": [
+   {
+    "candidate_election_id": "3502000__2013-10-08__regular__328e098fb11d69f9",
+    "candidate_name": "Richard J. Berry",
+    "role": "winner",
+    "election_date": "2013-10-08",
+    "result_source_url": "https://www.cabq.gov/vote/documents/certificate-of-canvass-oct-8-2013-election.pdf"
+   },
+   {
+    "candidate_election_id": "3502000__2013-10-08__regular__2b1455f9876257dd",
+    "candidate_name": "Pete Dinelli",
+    "role": "runner_up",
+    "election_date": "2013-10-08",
+    "result_source_url": "https://www.cabq.gov/vote/documents/certificate-of-canvass-oct-8-2013-election.pdf"
+   },
+   {
+    "candidate_election_id": "3502000__2025-12-09__regular__05682de6559d00d2",
+    "candidate_name": "Timothy M. Keller",
+    "role": "winner",
+    "election_date": "2025-12-09",
+    "result_source_url": "https://electionresults.sos.nm.gov/resultsSW.aspx?type=CTYALL&map=CTY&cty=02&name=Bernalillo&eid=2898"
+   },
+   {
+    "candidate_election_id": "3502000__2025-12-09__regular__464d68f164682931",
+    "candidate_name": "Darren White",
+    "role": "runner_up",
+    "election_date": "2025-12-09",
+    "result_source_url": "https://electionresults.sos.nm.gov/resultsSW.aspx?type=CTYALL&map=CTY&cty=02&name=Bernalillo&eid=2898"
+   }
+  ]
+ },
+ {
+  "city_id": "3611000",
+  "city_name": "Buffalo",
+  "state_abb": "NY",
+  "slug": "buffalo",
+  "finalists": [
+   {
+    "candidate_election_id": "3611000__2017-11-07__regular__759cccf821e4614f",
+    "candidate_name": "Byron W. Brown",
+    "role": "winner",
+    "election_date": "2017-11-07",
+    "result_source_url": "https://www.elections.erie.gov/Files/Election%20Results/2017/2017-General.pdf"
+   },
+   {
+    "candidate_election_id": "3611000__2017-11-07__regular__292f533002507742",
+    "candidate_name": "Mark J. F. Schroeder",
+    "role": "runner_up",
+    "election_date": "2017-11-07",
+    "result_source_url": "https://www.elections.erie.gov/Files/Election%20Results/2017/2017-General.pdf"
+   },
+   {
+    "candidate_election_id": "3611000__2025-11-04__regular__43262b4f3fef2a63",
+    "candidate_name": "Sean M. Ryan",
+    "role": "winner",
+    "election_date": "2025-11-04",
+    "result_source_url": "https://erie.resultscaster.com/r/GEN25"
+   },
+   {
+    "candidate_election_id": "3611000__2025-11-04__regular__92b4c2d38bfc7b09",
+    "candidate_name": "James R. Gardner",
+    "role": "runner_up",
+    "election_date": "2025-11-04",
+    "result_source_url": "https://erie.resultscaster.com/r/GEN25"
+   }
+  ]
+ },
+ {
+  "city_id": "3651000",
+  "city_name": "New York",
+  "state_abb": "NY",
+  "slug": "new_york",
+  "finalists": [
+   {
+    "candidate_election_id": "3651000__2025-11-04__regular__aa22ee7643f6a698",
+    "candidate_name": "Zohran Kwame Mamdani",
+    "role": "winner",
+    "election_date": "2025-11-04",
+    "result_source_url": "https://vote.nyc/sites/default/files/pdf/election_results/2025/20251104General%20Election/00000100000Citywide%20Mayor%20Citywide%20Recap.pdf"
+   },
+   {
+    "candidate_election_id": "3651000__2025-11-04__regular__9ef00481c8a08af0",
+    "candidate_name": "Andrew M. Cuomo",
+    "role": "runner_up",
+    "election_date": "2025-11-04",
+    "result_source_url": "https://vote.nyc/sites/default/files/pdf/election_results/2025/20251104General%20Election/00000100000Citywide%20Mayor%20Citywide%20Recap.pdf"
+   }
+  ]
+ },
+ {
+  "city_id": "3712000",
+  "city_name": "Charlotte",
+  "state_abb": "NC",
+  "slug": "charlotte",
+  "finalists": [
+   {
+    "candidate_election_id": "3712000__2013-11-05__regular__3984a1f03ad371a1",
+    "candidate_name": "Patrick D. Cannon",
+    "role": "winner",
+    "election_date": "2013-11-05",
+    "result_source_url": "https://s3.amazonaws.com/dl.ncsbe.gov/ENRS/2013_11_05/results_sort_20131105.zip"
+   },
+   {
+    "candidate_election_id": "3712000__2013-11-05__regular__9bc8613275a9ace1",
+    "candidate_name": "Edwin B. Peacock III",
+    "role": "runner_up",
+    "election_date": "2013-11-05",
+    "result_source_url": "https://s3.amazonaws.com/dl.ncsbe.gov/ENRS/2013_11_05/results_sort_20131105.zip"
+   },
+   {
+    "candidate_election_id": "3712000__2017-11-07__regular__5aa5f60353cc070e",
+    "candidate_name": "Vi Lyles",
+    "role": "winner",
+    "election_date": "2017-11-07",
+    "result_source_url": "https://s3.amazonaws.com/dl.ncsbe.gov/ENRS/2017_11_07/results_pct_20171107.zip"
+   },
+   {
+    "candidate_election_id": "3712000__2019-11-05__regular__5aa5f60353cc070e",
+    "candidate_name": "Vi Lyles",
+    "role": "winner",
+    "election_date": "2019-11-05",
+    "result_source_url": "https://s3.amazonaws.com/dl.ncsbe.gov/ENRS/2019_11_05/results_pct_20191105.zip"
+   },
+   {
+    "candidate_election_id": "3712000__2022-07-26__regular__4118ccb7afb934dc",
+    "candidate_name": "Vi Alexander Lyles",
+    "role": "winner",
+    "election_date": "2022-07-26",
+    "result_source_url": "https://s3.amazonaws.com/dl.ncsbe.gov/ENRS/2022_07_26/results_pct_20220726.zip"
+   },
+   {
+    "candidate_election_id": "3712000__2022-07-26__regular__4e8e200e2fd4f611",
+    "candidate_name": "Stephanie de Sarachaga-Bilbao",
+    "role": "runner_up",
+    "election_date": "2022-07-26",
+    "result_source_url": "https://s3.amazonaws.com/dl.ncsbe.gov/ENRS/2022_07_26/results_pct_20220726.zip"
+   },
+   {
+    "candidate_election_id": "3712000__2023-11-07__regular__5aa5f60353cc070e",
+    "candidate_name": "Vi Lyles",
+    "role": "winner",
+    "election_date": "2023-11-07",
+    "result_source_url": "https://s3.amazonaws.com/dl.ncsbe.gov/ENRS/2023_11_07/results_pct_20231107.zip"
+   },
+   {
+    "candidate_election_id": "3712000__2023-11-07__regular__249c09f158c0c6a9",
+    "candidate_name": "Misun Kim",
+    "role": "runner_up",
+    "election_date": "2023-11-07",
+    "result_source_url": "https://s3.amazonaws.com/dl.ncsbe.gov/ENRS/2023_11_07/results_pct_20231107.zip"
+   },
+   {
+    "candidate_election_id": "3712000__2025-11-04__regular__5aa5f60353cc070e",
+    "candidate_name": "Vi Lyles",
+    "role": "winner",
+    "election_date": "2025-11-04",
+    "result_source_url": "https://s3.amazonaws.com/dl.ncsbe.gov/ENRS/2025_11_04/results_pct_20251104.zip"
+   },
+   {
+    "candidate_election_id": "3712000__2025-11-04__regular__86a13ad89964fa0f",
+    "candidate_name": "Terrie D. Donovan",
+    "role": "runner_up",
+    "election_date": "2025-11-04",
+    "result_source_url": "https://s3.amazonaws.com/dl.ncsbe.gov/ENRS/2025_11_04/results_pct_20251104.zip"
+   }
+  ]
+ },
+ {
+  "city_id": "3719000",
+  "city_name": "Durham",
+  "state_abb": "NC",
+  "slug": "durham",
+  "finalists": [
+   {
+    "candidate_election_id": "3719000__2013-11-05__regular__3a34008d37ae09f9",
+    "candidate_name": "William V. (Bill) Bell",
+    "role": "winner",
+    "election_date": "2013-11-05",
+    "result_source_url": "https://s3.amazonaws.com/dl.ncsbe.gov/ENRS/2013_11_05/results_sort_20131105.zip"
+   },
+   {
+    "candidate_election_id": "3719000__2019-11-05__regular__8f9b84575fda725c",
+    "candidate_name": "Sylvester Williams",
+    "role": "runner_up",
+    "election_date": "2019-11-05",
+    "result_source_url": "https://s3.amazonaws.com/dl.ncsbe.gov/ENRS/2019_11_05/results_pct_20191105.zip"
+   },
+   {
+    "candidate_election_id": "3719000__2023-11-07__regular__271a70d53d27e1c0",
+    "candidate_name": "Leonardo (Leo) Williams",
+    "role": "winner",
+    "election_date": "2023-11-07",
+    "result_source_url": "https://s3.amazonaws.com/dl.ncsbe.gov/ENRS/2023_11_07/results_pct_20231107.zip"
+   },
+   {
+    "candidate_election_id": "3719000__2023-11-07__regular__97daaf6f19dc0536",
+    "candidate_name": "Mike Woodard",
+    "role": "runner_up",
+    "election_date": "2023-11-07",
+    "result_source_url": "https://s3.amazonaws.com/dl.ncsbe.gov/ENRS/2023_11_07/results_pct_20231107.zip"
+   },
+   {
+    "candidate_election_id": "3719000__2025-11-04__regular__271a70d53d27e1c0",
+    "candidate_name": "Leonardo (Leo) Williams",
+    "role": "winner",
+    "election_date": "2025-11-04",
+    "result_source_url": "https://s3.amazonaws.com/dl.ncsbe.gov/ENRS/2025_11_04/results_pct_20251104.zip"
+   },
+   {
+    "candidate_election_id": "3719000__2025-11-04__regular__eb7c96e51f5efe22",
+    "candidate_name": "Anjanee Bell",
+    "role": "runner_up",
+    "election_date": "2025-11-04",
+    "result_source_url": "https://s3.amazonaws.com/dl.ncsbe.gov/ENRS/2025_11_04/results_pct_20251104.zip"
+   }
+  ]
+ },
+ {
+  "city_id": "3728000",
+  "city_name": "Greensboro",
+  "state_abb": "NC",
+  "slug": "greensboro",
+  "finalists": [
+   {
+    "candidate_election_id": "3728000__2011-11-08__regular__fade6672a43a34c1",
+    "candidate_name": "Robert V. (Robbie) Perkins",
+    "role": "winner",
+    "election_date": "2011-11-08",
+    "result_source_url": "https://s3.amazonaws.com/dl.ncsbe.gov/ENRS/2011_11_08/results_pct_20111108.zip"
+   },
+   {
+    "candidate_election_id": "3728000__2011-11-08__regular__77f86f6e17b2e09f",
+    "candidate_name": "Bill Knight",
+    "role": "runner_up",
+    "election_date": "2011-11-08",
+    "result_source_url": "https://s3.amazonaws.com/dl.ncsbe.gov/ENRS/2011_11_08/results_pct_20111108.zip"
+   },
+   {
+    "candidate_election_id": "3728000__2013-11-05__regular__c18d9fdebf4a3e60",
+    "candidate_name": "Nancy Barakat Vaughan",
+    "role": "winner",
+    "election_date": "2013-11-05",
+    "result_source_url": "https://s3.amazonaws.com/dl.ncsbe.gov/ENRS/2013_11_05/results_sort_20131105.zip"
+   },
+   {
+    "candidate_election_id": "3728000__2015-11-03__regular__523c7358af80356c",
+    "candidate_name": "Devin R. King",
+    "role": "runner_up",
+    "election_date": "2015-11-03",
+    "result_source_url": "https://s3.amazonaws.com/dl.ncsbe.gov/ENRS/2015_11_03/results_pct_20151103.zip"
+   },
+   {
+    "candidate_election_id": "3728000__2017-11-07__regular__c18d9fdebf4a3e60",
+    "candidate_name": "Nancy Barakat Vaughan",
+    "role": "winner",
+    "election_date": "2017-11-07",
+    "result_source_url": "https://s3.amazonaws.com/dl.ncsbe.gov/ENRS/2017_11_07/results_pct_20171107.zip"
+   },
+   {
+    "candidate_election_id": "3728000__2022-07-26__regular__30b4d11d559c01b8",
+    "candidate_name": "Nancy Vaughan",
+    "role": "winner",
+    "election_date": "2022-07-26",
+    "result_source_url": "https://s3.amazonaws.com/dl.ncsbe.gov/ENRS/2022_07_26/results_pct_20220726.zip"
+   },
+   {
+    "candidate_election_id": "3728000__2022-07-26__regular__9249f58c324423a1",
+    "candidate_name": "Justin Outling",
+    "role": "runner_up",
+    "election_date": "2022-07-26",
+    "result_source_url": "https://s3.amazonaws.com/dl.ncsbe.gov/ENRS/2022_07_26/results_pct_20220726.zip"
+   },
+   {
+    "candidate_election_id": "3728000__2025-11-04__regular__14588141889ba6f0",
+    "candidate_name": "Marikay Abuzuaiter",
+    "role": "winner",
+    "election_date": "2025-11-04",
+    "result_source_url": "https://s3.amazonaws.com/dl.ncsbe.gov/ENRS/2025_11_04/results_pct_20251104.zip"
+   },
+   {
+    "candidate_election_id": "3728000__2025-11-04__regular__0cd1ace2f2ca3bd5",
+    "candidate_name": "Robbie Perkins",
+    "role": "runner_up",
+    "election_date": "2025-11-04",
+    "result_source_url": "https://s3.amazonaws.com/dl.ncsbe.gov/ENRS/2025_11_04/results_pct_20251104.zip"
+   }
+  ]
+ },
+ {
+  "city_id": "3755000",
+  "city_name": "Raleigh",
+  "state_abb": "NC",
+  "slug": "raleigh",
+  "finalists": [
+   {
+    "candidate_election_id": "3755000__2015-10-06__regular__ba32bf22c920b347",
+    "candidate_name": "Nancy McFarlane",
+    "role": "winner",
+    "election_date": "2015-10-06",
+    "result_source_url": "https://s3.amazonaws.com/dl.ncsbe.gov/ENRS/2015_10_06/results_pct_20151006.zip"
+   },
+   {
+    "candidate_election_id": "3755000__2022-11-08__regular__78b6be8dcf58e796",
+    "candidate_name": "Mary-Ann Baldwin",
+    "role": "winner",
+    "election_date": "2022-11-08",
+    "result_source_url": "https://s3.amazonaws.com/dl.ncsbe.gov/ENRS/2022_11_08/results_pct_20221108.zip"
+   },
+   {
+    "candidate_election_id": "3755000__2022-11-08__regular__cc0dcfd82f6ad9bc",
+    "candidate_name": "Terrance (Truth) Ruth",
+    "role": "runner_up",
+    "election_date": "2022-11-08",
+    "result_source_url": "https://s3.amazonaws.com/dl.ncsbe.gov/ENRS/2022_11_08/results_pct_20221108.zip"
+   },
+   {
+    "candidate_election_id": "3755000__2024-11-05__regular__637e594e1045af72",
+    "candidate_name": "Janet Cowell",
+    "role": "winner",
+    "election_date": "2024-11-05",
+    "result_source_url": "https://s3.amazonaws.com/dl.ncsbe.gov/ENRS/2024_11_05/results_pct_20241105.zip"
+   },
+   {
+    "candidate_election_id": "3755000__2024-11-05__regular__d919d4ac61045497",
+    "candidate_name": "Paul Fitts",
+    "role": "runner_up",
+    "election_date": "2024-11-05",
+    "result_source_url": "https://s3.amazonaws.com/dl.ncsbe.gov/ENRS/2024_11_05/results_pct_20241105.zip"
+   }
+  ]
+ },
+ {
+  "city_id": "3775000",
+  "city_name": "Winston-Salem",
+  "state_abb": "NC",
+  "slug": "winston_salem",
+  "finalists": [
+   {
+    "candidate_election_id": "3775000__2013-11-05__regular__bf6dd0b5fde826df",
+    "candidate_name": "Allen Joines",
+    "role": "winner",
+    "election_date": "2013-11-05",
+    "result_source_url": "https://s3.amazonaws.com/dl.ncsbe.gov/ENRS/2013_11_05/results_sort_20131105.zip"
+   },
+   {
+    "candidate_election_id": "3775000__2013-11-05__regular__a86279120bc929c1",
+    "candidate_name": "James Lee Knox",
+    "role": "runner_up",
+    "election_date": "2013-11-05",
+    "result_source_url": "https://s3.amazonaws.com/dl.ncsbe.gov/ENRS/2013_11_05/results_sort_20131105.zip"
+   },
+   {
+    "candidate_election_id": "3775000__2020-11-03__regular__bf6dd0b5fde826df",
+    "candidate_name": "Allen Joines",
+    "role": "winner",
+    "election_date": "2020-11-03",
+    "result_source_url": "https://s3.amazonaws.com/dl.ncsbe.gov/ENRS/2020_11_03/results_pct_20201103.zip"
+   },
+   {
+    "candidate_election_id": "3775000__2020-11-03__regular__12e0a01a69fa161b",
+    "candidate_name": "Kris McCann",
+    "role": "runner_up",
+    "election_date": "2020-11-03",
+    "result_source_url": "https://s3.amazonaws.com/dl.ncsbe.gov/ENRS/2020_11_03/results_pct_20201103.zip"
+   }
+  ]
+ },
+ {
+  "city_id": "3915000",
+  "city_name": "Cincinnati",
+  "state_abb": "OH",
+  "slug": "cincinnati",
+  "finalists": [
+   {
+    "candidate_election_id": "3915000__2025-11-04__regular__10f74c01d5e1da1d",
+    "candidate_name": "Aftab Pureval",
+    "role": "winner",
+    "election_date": "2025-11-04",
+    "result_source_url": "https://votehamiltoncountyohio.gov/wp-content/uploads/2026/04/G25-Official-Canvass.xlsx"
+   },
+   {
+    "candidate_election_id": "3915000__2025-11-04__regular__7f404e3bba3b2595",
+    "candidate_name": "Cory Bowman",
+    "role": "runner_up",
+    "election_date": "2025-11-04",
+    "result_source_url": "https://votehamiltoncountyohio.gov/wp-content/uploads/2026/04/G25-Official-Canvass.xlsx"
+   }
+  ]
+ },
+ {
+  "city_id": "3916000",
+  "city_name": "Cleveland",
+  "state_abb": "OH",
+  "slug": "cleveland",
+  "finalists": [
+   {
+    "candidate_election_id": "3916000__2025-11-04__regular__283ee4c4cd80d9b6",
+    "candidate_name": "Justin Bibb",
+    "role": "winner",
+    "election_date": "2025-11-04",
+    "result_source_url": "https://boe.cuyahogacounty.gov/elections/GetDocumentById/53c69ccd-3994-4b2c-a2cd-9b17b50dc9cb/"
+   },
+   {
+    "candidate_election_id": "3916000__2025-11-04__regular__1a1deebdc005b59e",
+    "candidate_name": "Laverne Gore",
+    "role": "runner_up",
+    "election_date": "2025-11-04",
+    "result_source_url": "https://boe.cuyahogacounty.gov/elections/GetDocumentById/53c69ccd-3994-4b2c-a2cd-9b17b50dc9cb/"
+   }
+  ]
+ },
+ {
+  "city_id": "3918000",
+  "city_name": "Columbus",
+  "state_abb": "OH",
+  "slug": "columbus",
+  "finalists": [
+   {
+    "candidate_election_id": "3918000__2011-11-08__regular__8d468cbe4ec0757e",
+    "candidate_name": "Michael B. Coleman",
+    "role": "winner",
+    "election_date": "2011-11-08",
+    "result_source_url": "https://vote.franklincountyohio.gov/getmedia/06a23469-76e3-4f03-8983-be2a17e3b89c/Official_Franklin_County_Summary_Includes_Overlaps"
+   },
+   {
+    "candidate_election_id": "3918000__2011-11-08__regular__322c28be7e8be395",
+    "candidate_name": "Earl Smith",
+    "role": "runner_up",
+    "election_date": "2011-11-08",
+    "result_source_url": "https://vote.franklincountyohio.gov/getmedia/06a23469-76e3-4f03-8983-be2a17e3b89c/Official_Franklin_County_Summary_Includes_Overlaps"
+   },
+   {
+    "candidate_election_id": "3918000__2019-11-05__regular__e690fcbf1d5ba41e",
+    "candidate_name": "Andrew J. Ginther",
+    "role": "winner",
+    "election_date": "2019-11-05",
+    "result_source_url": "https://vote.franklincountyohio.gov/getmedia/d122f432-050a-4a78-95ee-7707d72a973d/Franklin-County-s-Official-Canvass-Most-Populous-County"
+   },
+   {
+    "candidate_election_id": "3918000__2019-11-05__regular__43315c90985dc71d",
+    "candidate_name": "Jeff Leopard",
+    "role": "runner_up",
+    "election_date": "2019-11-05",
+    "result_source_url": "https://vote.franklincountyohio.gov/getmedia/d122f432-050a-4a78-95ee-7707d72a973d/Franklin-County-s-Official-Canvass-Most-Populous-County"
+   },
+   {
+    "candidate_election_id": "3918000__2023-11-07__regular__e690fcbf1d5ba41e",
+    "candidate_name": "Andrew J. Ginther",
+    "role": "winner",
+    "election_date": "2023-11-07",
+    "result_source_url": "https://vote.franklincountyohio.gov/getmedia/88f8e129-564f-4373-927b-4883fbbe1e5a/Franklin-s-Official-Canvass-MP"
+   },
+   {
+    "candidate_election_id": "3918000__2023-11-07__regular__89b92eae1bd03abc",
+    "candidate_name": "Joe Motil",
+    "role": "runner_up",
+    "election_date": "2023-11-07",
+    "result_source_url": "https://vote.franklincountyohio.gov/getmedia/88f8e129-564f-4373-927b-4883fbbe1e5a/Franklin-s-Official-Canvass-MP"
+   }
+  ]
+ },
+ {
+  "city_id": "3977000",
+  "city_name": "Toledo",
+  "state_abb": "OH",
+  "slug": "toledo",
+  "finalists": [
+   {
+    "candidate_election_id": "3977000__2015-11-03__special__3e35f49bcd43ebd4",
+    "candidate_name": "Paula Hicks-Hudson",
+    "role": "winner",
+    "election_date": "2015-11-03",
+    "result_source_url": "http://co.lucas.oh.us/DocumentCenter/View/56533"
+   },
+   {
+    "candidate_election_id": "3977000__2017-11-07__regular__3e35f49bcd43ebd4",
+    "candidate_name": "Paula Hicks-Hudson",
+    "role": "runner_up",
+    "election_date": "2017-11-07",
+    "result_source_url": "http://co.lucas.oh.us/DocumentCenter/View/66685"
+   },
+   {
+    "candidate_election_id": "3977000__2021-11-02__regular__f7d8a0ad40c986ae",
+    "candidate_name": "Carty Finkbeiner",
+    "role": "runner_up",
+    "election_date": "2021-11-02",
+    "result_source_url": "https://drive.google.com/file/d/1_KlMcrznKIrGPSnANHfp2QvcalQ5yZMa/view"
+   },
+   {
+    "candidate_election_id": "3977000__2025-11-04__regular__deaf5453edc5e0fe",
+    "candidate_name": "Wade Kapszukiewicz",
+    "role": "winner",
+    "election_date": "2025-11-04",
+    "result_source_url": "https://drive.google.com/file/d/1rAOQM_QF1D4bGMtornsQk3mOaP8mlLMr/view"
+   },
+   {
+    "candidate_election_id": "3977000__2025-11-04__regular__4f34b71f5a2a85b4",
+    "candidate_name": "Roberto Torres",
+    "role": "runner_up",
+    "election_date": "2025-11-04",
+    "result_source_url": "https://drive.google.com/file/d/1rAOQM_QF1D4bGMtornsQk3mOaP8mlLMr/view"
+   }
+  ]
+ },
+ {
+  "city_id": "4055000",
+  "city_name": "Oklahoma City",
+  "state_abb": "OK",
+  "slug": "oklahoma_city",
+  "finalists": [
+   {
+    "candidate_election_id": "4055000__2014-03-04__regular__6ab4c7dfb81d2c83",
+    "candidate_name": "Ed Shadid",
+    "role": "runner_up",
+    "election_date": "2014-03-04",
+    "result_source_url": "https://results.okelections.gov/OKER/?elecDate=20140304"
+   },
+   {
+    "candidate_election_id": "4055000__2022-02-08__regular__afb06641f95cde08",
+    "candidate_name": "David Holt",
+    "role": "winner",
+    "election_date": "2022-02-08",
+    "result_source_url": "https://results.okelections.gov/OKER/?elecDate=20220208"
+   },
+   {
+    "candidate_election_id": "4055000__2022-02-08__regular__ffc122b0051b680c",
+    "candidate_name": "Frank Urbanic",
+    "role": "runner_up",
+    "election_date": "2022-02-08",
+    "result_source_url": "https://results.okelections.gov/OKER/?elecDate=20220208"
+   }
+  ]
+ },
+ {
+  "city_id": "4159000",
+  "city_name": "Portland",
+  "state_abb": "OR",
+  "slug": "portland",
+  "finalists": [
+   {
+    "candidate_election_id": "4159000__2012-11-06__regular__7a6fab02f713722b",
+    "candidate_name": "Jefferson Smith",
+    "role": "runner_up",
+    "election_date": "2012-11-06",
+    "result_source_url": "https://efiles.portlandoregon.gov/record/5368275/file/document"
+   },
+   {
+    "candidate_election_id": "4159000__2024-11-05__regular__a17c5748800b811d",
+    "candidate_name": "Keith Wilson",
+    "role": "winner",
+    "election_date": "2024-11-05",
+    "result_source_url": "https://rcvresults.multco.us/Reports/a18a5db1-04a2-4123-8ccb-de12b485f135-City_of_Portland_Mayor"
+   },
+   {
+    "candidate_election_id": "4159000__2024-11-05__regular__31d23a0e358524c4",
+    "candidate_name": "Carmen Rubio",
+    "role": "runner_up",
+    "election_date": "2024-11-05",
+    "result_source_url": "https://rcvresults.multco.us/Reports/a18a5db1-04a2-4123-8ccb-de12b485f135-City_of_Portland_Mayor"
+   }
+  ]
+ },
+ {
+  "city_id": "4260000",
+  "city_name": "Philadelphia",
+  "state_abb": "PA",
+  "slug": "philadelphia",
+  "finalists": [
+   {
+    "candidate_election_id": "4260000__2011-11-08__regular__8f33a6401b6e64fa",
+    "candidate_name": "Michael A. Nutter",
+    "role": "winner",
+    "election_date": "2011-11-08",
+    "result_source_url": "https://vote.phila.gov/files/election-results/2011_General_WD.csv"
+   },
+   {
+    "candidate_election_id": "4260000__2011-11-08__regular__872fd1e127789abb",
+    "candidate_name": "Karen Brown",
+    "role": "runner_up",
+    "election_date": "2011-11-08",
+    "result_source_url": "https://vote.phila.gov/files/election-results/2011_General_WD.csv"
+   },
+   {
+    "candidate_election_id": "4260000__2019-11-05__regular__bc0f741c5ceeb563",
+    "candidate_name": "Jim Kenney",
+    "role": "winner",
+    "election_date": "2019-11-05",
+    "result_source_url": "https://vote.phila.gov/files/raw-data/2019_general.csv"
+   },
+   {
+    "candidate_election_id": "4260000__2019-11-05__regular__86fcd8b9b08be9fc",
+    "candidate_name": "Billy Ciancaglini",
+    "role": "runner_up",
+    "election_date": "2019-11-05",
+    "result_source_url": "https://vote.phila.gov/files/raw-data/2019_general.csv"
+   },
+   {
+    "candidate_election_id": "4260000__2023-11-07__regular__6fb0568ec8281225",
+    "candidate_name": "Cherelle L. Parker",
+    "role": "winner",
+    "election_date": "2023-11-07",
+    "result_source_url": "https://vote.phila.gov/media/2023_General_Results.xlsx"
+   },
+   {
+    "candidate_election_id": "4260000__2023-11-07__regular__45f1f3849b828aaf",
+    "candidate_name": "David Oh",
+    "role": "runner_up",
+    "election_date": "2023-11-07",
+    "result_source_url": "https://vote.phila.gov/media/2023_General_Results.xlsx"
+   }
+  ]
+ },
+ {
+  "city_id": "4261000",
+  "city_name": "Pittsburgh",
+  "state_abb": "PA",
+  "slug": "pittsburgh",
+  "finalists": [
+   {
+    "candidate_election_id": "4261000__2013-11-05__regular__9c336d2d170a76ad",
+    "candidate_name": "William Peduto",
+    "role": "winner",
+    "election_date": "2013-11-05",
+    "result_source_url": "https://www.alleghenycounty.us/files/assets/county/v/1/government/elections/documents/elections-archive/2013-general-summary.pdf"
+   },
+   {
+    "candidate_election_id": "4261000__2025-11-04__regular__54b60a99d4fdfcce",
+    "candidate_name": "Corey O'Connor",
+    "role": "winner",
+    "election_date": "2025-11-04",
+    "result_source_url": "https://results.enr.clarityelections.com/PA/Allegheny/124195/367073/json/sum.json"
+   },
+   {
+    "candidate_election_id": "4261000__2025-11-04__regular__45406172fd56e72a",
+    "candidate_name": "Tony Moreno",
+    "role": "runner_up",
+    "election_date": "2025-11-04",
+    "result_source_url": "https://results.enr.clarityelections.com/PA/Allegheny/124195/367073/json/sum.json"
+   }
+  ]
+ },
+ {
+  "city_id": "4748000",
+  "city_name": "Memphis",
+  "state_abb": "TN",
+  "slug": "memphis",
+  "finalists": [
+   {
+    "candidate_election_id": "4748000__2015-10-08__regular__213972b3cd915d0a",
+    "candidate_name": "A C Wharton",
+    "role": "runner_up",
+    "election_date": "2015-10-08",
+    "result_source_url": "https://www.electionsshelbytn.gov/wp-content/uploads/2025/09/2015-Memphis-Municipal-SOVC-with-Provisional_RN746.pdf"
+   },
+   {
+    "candidate_election_id": "4748000__2019-10-03__regular__e6c9f2ac42ea34dc",
+    "candidate_name": "Willie Herenton",
+    "role": "runner_up",
+    "election_date": "2019-10-03",
+    "result_source_url": "https://www.electionsshelbytn.gov/wp-content/uploads/2025/09/10.03.19-Official-Combined-GEMS-SOVC-REPORT.pdf"
+   },
+   {
+    "candidate_election_id": "4748000__2023-10-05__regular__15c085d6a8fbe7c4",
+    "candidate_name": "Paul A. Young",
+    "role": "winner",
+    "election_date": "2023-10-05",
+    "result_source_url": "https://www.electionsshelbytn.gov/wp-content/uploads/2026/06/10.5.23-Results-combined.pdf"
+   },
+   {
+    "candidate_election_id": "4748000__2023-10-05__regular__609e60bc3447b001",
+    "candidate_name": "Floyd Bonner",
+    "role": "runner_up",
+    "election_date": "2023-10-05",
+    "result_source_url": "https://www.electionsshelbytn.gov/wp-content/uploads/2026/06/10.5.23-Results-combined.pdf"
+   }
+  ]
+ },
+ {
+  "city_id": "4752006",
+  "city_name": "Nashville-Davidson",
+  "state_abb": "TN",
+  "slug": "nashville_davidson",
+  "finalists": [
+   {
+    "candidate_election_id": "4752006__2011-08-04__regular__1779d620dde834d9",
+    "candidate_name": "Karl Dean",
+    "role": "winner",
+    "election_date": "2011-08-04",
+    "result_source_url": "https://www.nashville.gov/departments/elections/election-results-and-statistics/election-results/110804"
+   },
+   {
+    "candidate_election_id": "4752006__2011-08-04__regular__08614591119557f1",
+    "candidate_name": "Jacky Keeton",
+    "role": "runner_up",
+    "election_date": "2011-08-04",
+    "result_source_url": "https://www.nashville.gov/departments/elections/election-results-and-statistics/election-results/110804"
+   },
+   {
+    "candidate_election_id": "4752006__2015-09-10__regular__aaa81e8cf4289831",
+    "candidate_name": "Megan Barry",
+    "role": "winner",
+    "election_date": "2015-09-10",
+    "result_source_url": "https://www.nashville.gov/departments/elections/election-results-and-statistics/election-results/150910"
+   },
+   {
+    "candidate_election_id": "4752006__2023-09-14__regular__444f1caafbaf01cd",
+    "candidate_name": "Freddie O'Connell",
+    "role": "winner",
+    "election_date": "2023-09-14",
+    "result_source_url": "https://www.nashville.gov/departments/elections/election-results-and-statistics/election-results/230914"
+   },
+   {
+    "candidate_election_id": "4752006__2023-09-14__regular__69c74f86f9053368",
+    "candidate_name": "Alice Rolli",
+    "role": "runner_up",
+    "election_date": "2023-09-14",
+    "result_source_url": "https://www.nashville.gov/departments/elections/election-results-and-statistics/election-results/230914"
+   }
+  ]
+ },
+ {
+  "city_id": "4804000",
+  "city_name": "Arlington",
+  "state_abb": "TX",
+  "slug": "arlington",
+  "finalists": [
+   {
+    "candidate_election_id": "4804000__2011-05-14__regular__f2eafdf8b73551b2",
+    "candidate_name": "Robert Cluck",
+    "role": "winner",
+    "election_date": "2011-05-14",
+    "result_source_url": "https://www.arlingtontx.gov/files/assets/city/v/1/city-secretary/documents/elections/past-elections-results/may-14-2011-general-and-special-election-results.pdf"
+   },
+   {
+    "candidate_election_id": "4804000__2011-05-14__regular__ead77a98b32f75e4",
+    "candidate_name": "Carl Scrivner",
+    "role": "runner_up",
+    "election_date": "2011-05-14",
+    "result_source_url": "https://www.arlingtontx.gov/files/assets/city/v/1/city-secretary/documents/elections/past-elections-results/may-14-2011-general-and-special-election-results.pdf"
+   },
+   {
+    "candidate_election_id": "4804000__2013-05-11__regular__f2eafdf8b73551b2",
+    "candidate_name": "Robert Cluck",
+    "role": "winner",
+    "election_date": "2013-05-11",
+    "result_source_url": "https://www.arlingtontx.gov/files/assets/city/v/1/city-secretary/documents/elections/past-elections-results/may-11-2013-general-election-results.pdf"
+   },
+   {
+    "candidate_election_id": "4804000__2013-05-11__regular__e1eefbefd98cb8cd",
+    "candidate_name": "Jerry Pikulinski",
+    "role": "runner_up",
+    "election_date": "2013-05-11",
+    "result_source_url": "https://www.arlingtontx.gov/files/assets/city/v/1/city-secretary/documents/elections/past-elections-results/may-11-2013-general-election-results.pdf"
+   },
+   {
+    "candidate_election_id": "4804000__2015-05-09__regular__f2eafdf8b73551b2",
+    "candidate_name": "Robert Cluck",
+    "role": "runner_up",
+    "election_date": "2015-05-09",
+    "result_source_url": "https://www.arlingtontx.gov/files/assets/city/v/1/city-secretary/documents/elections/past-elections-results/may-9-2015-general-and-special-election-results.pdf"
+   },
+   {
+    "candidate_election_id": "4804000__2019-05-04__regular__887147faba1a22d3",
+    "candidate_name": "Jeff Williams",
+    "role": "winner",
+    "election_date": "2019-05-04",
+    "result_source_url": "https://www.arlingtontx.gov/files/assets/city/v/1/city-secretary/documents/elections/past-elections-results/may-4-2019-election-results.pdf"
+   },
+   {
+    "candidate_election_id": "4804000__2023-05-06__regular__a58040f01e9104dc",
+    "candidate_name": "Jim Ross",
+    "role": "winner",
+    "election_date": "2023-05-06",
+    "result_source_url": "https://www.arlingtontx.gov/files/assets/city/v/1/city-secretary/documents/elections/past-elections-results/may-6-2023-general-and-bond-election-results.pdf"
+   },
+   {
+    "candidate_election_id": "4804000__2023-05-06__regular__b80e16428aea11fa",
+    "candidate_name": "Amy Cearnal",
+    "role": "runner_up",
+    "election_date": "2023-05-06",
+    "result_source_url": "https://www.arlingtontx.gov/files/assets/city/v/1/city-secretary/documents/elections/past-elections-results/may-6-2023-general-and-bond-election-results.pdf"
+   },
+   {
+    "candidate_election_id": "4804000__2026-05-02__regular__a58040f01e9104dc",
+    "candidate_name": "Jim Ross",
+    "role": "winner",
+    "election_date": "2026-05-02",
+    "result_source_url": "https://www.arlingtontx.gov/files/assets/city/v/1/city-secretary/documents/elections/past-elections-results/may-2-2026-general-and-special-election-results.pdf"
+   },
+   {
+    "candidate_election_id": "4804000__2026-05-02__regular__93abf9e6f624519c",
+    "candidate_name": "Steve Cavender",
+    "role": "runner_up",
+    "election_date": "2026-05-02",
+    "result_source_url": "https://www.arlingtontx.gov/files/assets/city/v/1/city-secretary/documents/elections/past-elections-results/may-2-2026-general-and-special-election-results.pdf"
+   }
+  ]
+ },
+ {
+  "city_id": "4805000",
+  "city_name": "Austin",
+  "state_abb": "TX",
+  "slug": "austin",
+  "finalists": [
+   {
+    "candidate_election_id": "4805000__2022-12-13__regular__e4c911c0e0228219",
+    "candidate_name": "Kirk Watson",
+    "role": "winner",
+    "election_date": "2022-12-13",
+    "result_source_url": "https://services.austintexas.gov/edims/document.cfm?id=399837"
+   },
+   {
+    "candidate_election_id": "4805000__2022-12-13__regular__b60703073a79759e",
+    "candidate_name": "Celia Israel",
+    "role": "runner_up",
+    "election_date": "2022-12-13",
+    "result_source_url": "https://services.austintexas.gov/edims/document.cfm?id=399837"
+   },
+   {
+    "candidate_election_id": "4805000__2024-11-05__regular__e4c911c0e0228219",
+    "candidate_name": "Kirk Watson",
+    "role": "winner",
+    "election_date": "2024-11-05",
+    "result_source_url": "https://services.austintexas.gov/election/search.cfm"
+   },
+   {
+    "candidate_election_id": "4805000__2024-11-05__regular__2562ba9637800c00",
+    "candidate_name": "Carmen D. Llanes Pulido",
+    "role": "runner_up",
+    "election_date": "2024-11-05",
+    "result_source_url": "https://services.austintexas.gov/election/search.cfm"
+   }
+  ]
+ },
+ {
+  "city_id": "4817000",
+  "city_name": "Corpus Christi",
+  "state_abb": "TX",
+  "slug": "corpus_christi",
+  "finalists": [
+   {
+    "candidate_election_id": "4817000__2014-11-04__regular__da79a5a21ca12500",
+    "candidate_name": "Bob Jones",
+    "role": "runner_up",
+    "election_date": "2014-11-04",
+    "result_source_url": "https://www.corpuschristitx.gov/media/jhwnmdxj/ctysec-2014-general-election-summary.pdf"
+   },
+   {
+    "candidate_election_id": "4817000__2016-11-08__regular__c6a09ebc0cdbabc7",
+    "candidate_name": "Dan McQueen",
+    "role": "winner",
+    "election_date": "2016-11-08",
+    "result_source_url": "https://www.corpuschristitx.gov/media/0yxalpqh/ctysec-2016generalelectionsummary.pdf"
+   },
+   {
+    "candidate_election_id": "4817000__2016-11-08__regular__ba74ddbb78822deb",
+    "candidate_name": "Nelda Martinez",
+    "role": "runner_up",
+    "election_date": "2016-11-08",
+    "result_source_url": "https://www.corpuschristitx.gov/media/0yxalpqh/ctysec-2016generalelectionsummary.pdf"
+   },
+   {
+    "candidate_election_id": "4817000__2017-05-06__special__6a32a6dd3833af01",
+    "candidate_name": "Joe McComb",
+    "role": "winner",
+    "election_date": "2017-05-06",
+    "result_source_url": "https://www.corpuschristitx.gov/media/bxmhqsug/ctysec-2017specialelectionsummary.pdf"
+   },
+   {
+    "candidate_election_id": "4817000__2017-05-06__special__ba74ddbb78822deb",
+    "candidate_name": "Nelda Martinez",
+    "role": "runner_up",
+    "election_date": "2017-05-06",
+    "result_source_url": "https://www.corpuschristitx.gov/media/bxmhqsug/ctysec-2017specialelectionsummary.pdf"
+   },
+   {
+    "candidate_election_id": "4817000__2018-12-18__regular__6a32a6dd3833af01",
+    "candidate_name": "Joe McComb",
+    "role": "winner",
+    "election_date": "2018-12-18",
+    "result_source_url": "https://www.corpuschristitx.gov/media/vnxpaom4/ctysec-2018-runoff-election-summary.pdf"
+   },
+   {
+    "candidate_election_id": "4817000__2018-12-18__regular__6c4232f49e0c3885",
+    "candidate_name": "Michael Hall",
+    "role": "runner_up",
+    "election_date": "2018-12-18",
+    "result_source_url": "https://www.corpuschristitx.gov/media/vnxpaom4/ctysec-2018-runoff-election-summary.pdf"
+   },
+   {
+    "candidate_election_id": "4817000__2020-12-15__regular__6a32a6dd3833af01",
+    "candidate_name": "Joe McComb",
+    "role": "runner_up",
+    "election_date": "2020-12-15",
+    "result_source_url": "https://www.corpuschristitx.gov/media/dkjpd3ud/2020_runoff_election_summary.pdf"
+   },
+   {
+    "candidate_election_id": "4817000__2022-11-08__regular__816396dafe54663e",
+    "candidate_name": "Paulette Guajardo",
+    "role": "winner",
+    "election_date": "2022-11-08",
+    "result_source_url": "https://www.corpuschristitx.gov/media/n2ndsxh1/2022-general-election-summary-1.pdf"
+   },
+   {
+    "candidate_election_id": "4817000__2022-11-08__regular__a7df9a118e6e5240",
+    "candidate_name": "John Wright",
+    "role": "runner_up",
+    "election_date": "2022-11-08",
+    "result_source_url": "https://www.corpuschristitx.gov/media/n2ndsxh1/2022-general-election-summary-1.pdf"
+   },
+   {
+    "candidate_election_id": "4817000__2024-12-14__regular__816396dafe54663e",
+    "candidate_name": "Paulette Guajardo",
+    "role": "winner",
+    "election_date": "2024-12-14",
+    "result_source_url": "https://www.corpuschristitx.gov/media/iukbpaqg/official-cumulative-results-with-certificate-12-20-2024.pdf"
+   },
+   {
+    "candidate_election_id": "4817000__2024-12-14__regular__836df689278beaa4",
+    "candidate_name": "Michael Hunter",
+    "role": "runner_up",
+    "election_date": "2024-12-14",
+    "result_source_url": "https://www.corpuschristitx.gov/media/iukbpaqg/official-cumulative-results-with-certificate-12-20-2024.pdf"
+   }
+  ]
+ },
+ {
+  "city_id": "4819000",
+  "city_name": "Dallas",
+  "state_abb": "TX",
+  "slug": "dallas",
+  "finalists": [
+   {
+    "candidate_election_id": "4819000__2015-05-09__regular__e6f70aac9b6b1b70",
+    "candidate_name": "Mike Rawlings",
+    "role": "winner",
+    "election_date": "2015-05-09",
+    "result_source_url": "https://citysecretary2.dallascityhall.com/pdf/Elections/ElectMasterList.pdf"
+   },
+   {
+    "candidate_election_id": "4819000__2015-05-09__regular__9204d5c86e57ca0c",
+    "candidate_name": "Marcos Ronquillo",
+    "role": "runner_up",
+    "election_date": "2015-05-09",
+    "result_source_url": "https://citysecretary2.dallascityhall.com/pdf/Elections/ElectMasterList.pdf"
+   }
+  ]
+ },
+ {
+  "city_id": "4824000",
+  "city_name": "El Paso",
+  "state_abb": "TX",
+  "slug": "el_paso",
+  "finalists": [
+   {
+    "candidate_election_id": "4824000__2013-06-15__regular__beb8ae7a78a0bee0",
+    "candidate_name": "Oscar Leeser",
+    "role": "winner",
+    "election_date": "2013-06-15",
+    "result_source_url": "https://ep-county-elections-production.s3.amazonaws.com/documents/files/000/000/475/original/Election_Results_Combined_Official.pdf?1450312116"
+   },
+   {
+    "candidate_election_id": "4824000__2017-06-10__regular__0e1681a4b4d5cabe",
+    "candidate_name": "Dee Margo",
+    "role": "winner",
+    "election_date": "2017-06-10",
+    "result_source_url": "https://ep-county-elections-production.s3.amazonaws.com/documents/files/000/001/406/original/Official_Final_Election_Results.pdf?1499095961"
+   },
+   {
+    "candidate_election_id": "4824000__2024-12-14__regular__a1355e8ffdd68cd7",
+    "candidate_name": "Renard U. Johnson",
+    "role": "winner",
+    "election_date": "2024-12-14",
+    "result_source_url": "https://ep-county-elections-production.s3.amazonaws.com/documents/files/000/005/896/original/OFF_FIN_ELE_RES.pdf?1740610459"
+   },
+   {
+    "candidate_election_id": "4824000__2024-12-14__regular__28b2844d1553e893",
+    "candidate_name": "Brian Kennedy",
+    "role": "runner_up",
+    "election_date": "2024-12-14",
+    "result_source_url": "https://ep-county-elections-production.s3.amazonaws.com/documents/files/000/005/896/original/OFF_FIN_ELE_RES.pdf?1740610459"
+   }
+  ]
+ },
+ {
+  "city_id": "4827000",
+  "city_name": "Fort Worth",
+  "state_abb": "TX",
+  "slug": "fort_worth",
+  "finalists": [
+   {
+    "candidate_election_id": "4827000__2023-05-06__regular__a3fba50e7c62a956",
+    "candidate_name": "Mattie Parker",
+    "role": "winner",
+    "election_date": "2023-05-06",
+    "result_source_url": "https://www.fortworthtexas.gov/departments/citysecretary/elections/election-history/election-2023"
+   },
+   {
+    "candidate_election_id": "4827000__2023-05-06__regular__db6efc9529d83c24",
+    "candidate_name": "Jennifer Castillo",
+    "role": "runner_up",
+    "election_date": "2023-05-06",
+    "result_source_url": "https://www.fortworthtexas.gov/departments/citysecretary/elections/election-history/election-2023"
+   },
+   {
+    "candidate_election_id": "4827000__2025-05-03__regular__a3fba50e7c62a956",
+    "candidate_name": "Mattie Parker",
+    "role": "winner",
+    "election_date": "2025-05-03",
+    "result_source_url": "https://www.fortworthtexas.gov/departments/citysecretary/elections/election-history/election-2025"
+   },
+   {
+    "candidate_election_id": "4827000__2025-05-03__regular__cb6b7e66fd5fb117",
+    "candidate_name": "Josh Lucas",
+    "role": "runner_up",
+    "election_date": "2025-05-03",
+    "result_source_url": "https://www.fortworthtexas.gov/departments/citysecretary/elections/election-history/election-2025"
+   }
+  ]
+ },
+ {
+  "city_id": "4829000",
+  "city_name": "Garland",
+  "state_abb": "TX",
+  "slug": "garland",
+  "finalists": [
+   {
+    "candidate_election_id": "4829000__2013-05-11__regular__233213391ca21210",
+    "candidate_name": "Douglas Athas",
+    "role": "winner",
+    "election_date": "2013-05-11",
+    "result_source_url": "https://assets01.aws.connect.clarityelections.com/Assets/Connect/RootPublish/dallas-tx.connect.clarityelections.com/ElectionDocuments/2013/Joint%20Election_May112013/Updated_Final_Results.pdf"
+   },
+   {
+    "candidate_election_id": "4829000__2013-05-11__regular__b6306e07204652a6",
+    "candidate_name": "Larry Jeffus",
+    "role": "runner_up",
+    "election_date": "2013-05-11",
+    "result_source_url": "https://assets01.aws.connect.clarityelections.com/Assets/Connect/RootPublish/dallas-tx.connect.clarityelections.com/ElectionDocuments/2013/Joint%20Election_May112013/Updated_Final_Results.pdf"
+   },
+   {
+    "candidate_election_id": "4829000__2017-05-06__regular__d389e75f2e810a0b",
+    "candidate_name": "Leala H. Green",
+    "role": "runner_up",
+    "election_date": "2017-05-06",
+    "result_source_url": "https://assets01.aws.connect.clarityelections.com/Assets/Connect/RootPublish/dallas-tx.connect.clarityelections.com/ElectionDocuments/2017/Joint%20170506/170506%20Joint%20Election%20Canvass%20General%20Final%20Cum%20Totals.pdf"
+   },
+   {
+    "candidate_election_id": "4829000__2018-05-05__special__a21dff0ad31202f4",
+    "candidate_name": "Lori Barnett Dodson",
+    "role": "winner",
+    "election_date": "2018-05-05",
+    "result_source_url": "https://assets01.aws.connect.clarityelections.com/Assets/Connect/RootPublish/dallas-tx.connect.clarityelections.com/ElectionDocuments/2018/Joint%20Election%20180505/180505J%20Joint%20Election%20Canvass%20Final%20Cum%20Totals%20WOverUnders.pdf"
+   },
+   {
+    "candidate_election_id": "4829000__2018-05-05__special__0673badcf0fc538a",
+    "candidate_name": "Louis Moore",
+    "role": "runner_up",
+    "election_date": "2018-05-05",
+    "result_source_url": "https://assets01.aws.connect.clarityelections.com/Assets/Connect/RootPublish/dallas-tx.connect.clarityelections.com/ElectionDocuments/2018/Joint%20Election%20180505/180505J%20Joint%20Election%20Canvass%20Final%20Cum%20Totals%20WOverUnders.pdf"
+   },
+   {
+    "candidate_election_id": "4829000__2021-05-01__regular__5adfb5a0667e7404",
+    "candidate_name": "Scott LeMay",
+    "role": "winner",
+    "election_date": "2021-05-01",
+    "result_source_url": "https://assets01.aws.connect.clarityelections.com/Assets/Connect/RootPublish/dallas-tx.connect.clarityelections.com/ElectionDocuments/2021/2021%20Joint/2021%20Joint%20Election%20Final%20Canvass%20Reports%20Final%20Cum%20Totals%20WOverUnder.pdf"
+   },
+   {
+    "candidate_election_id": "4829000__2021-05-01__regular__b1ced7d6c380211b",
+    "candidate_name": "Roel G. Garcia, Sr.",
+    "role": "runner_up",
+    "election_date": "2021-05-01",
+    "result_source_url": "https://assets01.aws.connect.clarityelections.com/Assets/Connect/RootPublish/dallas-tx.connect.clarityelections.com/ElectionDocuments/2021/2021%20Joint/2021%20Joint%20Election%20Final%20Canvass%20Reports%20Final%20Cum%20Totals%20WOverUnder.pdf"
+   },
+   {
+    "candidate_election_id": "4829000__2023-05-06__regular__5adfb5a0667e7404",
+    "candidate_name": "Scott LeMay",
+    "role": "winner",
+    "election_date": "2023-05-06",
+    "result_source_url": "https://assets01.aws.connect.clarityelections.com/Assets/Connect/RootPublish/dallas-tx.connect.clarityelections.com/ElectionDocuments/2023/May%206%2C%202023/Unofficial%20Final.pdf"
+   },
+   {
+    "candidate_election_id": "4829000__2023-05-06__regular__6ee626edc343ee0d",
+    "candidate_name": "Roel G. Garcia",
+    "role": "runner_up",
+    "election_date": "2023-05-06",
+    "result_source_url": "https://assets01.aws.connect.clarityelections.com/Assets/Connect/RootPublish/dallas-tx.connect.clarityelections.com/ElectionDocuments/2023/May%206%2C%202023/Unofficial%20Final.pdf"
+   },
+   {
+    "candidate_election_id": "4829000__2025-06-07__regular__314cc297c1f5380a",
+    "candidate_name": "Dylan Hedrick",
+    "role": "winner",
+    "election_date": "2025-06-07",
+    "result_source_url": "https://www.dallascountyvotes.org/wp-content/uploads/2025/06/Unofficial-Final-Summary-060725.pdf"
+   },
+   {
+    "candidate_election_id": "4829000__2025-06-07__regular__75dec96846de2b5b",
+    "candidate_name": "Deborah S. Morris",
+    "role": "runner_up",
+    "election_date": "2025-06-07",
+    "result_source_url": "https://www.dallascountyvotes.org/wp-content/uploads/2025/06/Unofficial-Final-Summary-060725.pdf"
+   }
+  ]
+ },
+ {
+  "city_id": "4835000",
+  "city_name": "Houston",
+  "state_abb": "TX",
+  "slug": "houston",
+  "finalists": [
+   {
+    "candidate_election_id": "4835000__2023-12-09__regular__44b3f221b0c66635",
+    "candidate_name": "John Whitmire",
+    "role": "winner",
+    "election_date": "2023-12-09",
+    "result_source_url": "https://houstontx.gov/citysec/elections/120923.pdf"
+   },
+   {
+    "candidate_election_id": "4835000__2023-12-09__regular__85280bbba80296c9",
+    "candidate_name": "Sheila Jackson Lee",
+    "role": "runner_up",
+    "election_date": "2023-12-09",
+    "result_source_url": "https://houstontx.gov/citysec/elections/120923.pdf"
+   }
+  ]
+ },
+ {
+  "city_id": "4837000",
+  "city_name": "Irving",
+  "state_abb": "TX",
+  "slug": "irving",
+  "finalists": [
+   {
+    "candidate_election_id": "4837000__2014-05-10__regular__324bc72053f5578d",
+    "candidate_name": "Herbert A. Gears",
+    "role": "runner_up",
+    "election_date": "2014-05-10",
+    "result_source_url": "https://assets01.aws.connect.clarityelections.com/Assets/Connect/RootPublish/dallas-tx.connect.clarityelections.com/ElectionDocuments/2014/Joint_140510/Updated_Final_Results.pdf"
+   },
+   {
+    "candidate_election_id": "4837000__2017-05-06__regular__d17c066854fa72f3",
+    "candidate_name": "Rick Stopfer",
+    "role": "winner",
+    "election_date": "2017-05-06",
+    "result_source_url": "https://assets01.aws.connect.clarityelections.com/Assets/Connect/RootPublish/dallas-tx.connect.clarityelections.com/ElectionDocuments/2017/Joint%20170506/170506%20Joint%20Election%20Canvass%20General%20Final%20Cum%20Totals.pdf"
+   },
+   {
+    "candidate_election_id": "4837000__2020-11-03__regular__65152d8d3ebe27d7",
+    "candidate_name": "Olivia Novelo Abreu",
+    "role": "runner_up",
+    "election_date": "2020-11-03",
+    "result_source_url": "https://assets01.aws.connect.clarityelections.com/Assets/Connect/RootPublish/dallas-tx.connect.clarityelections.com/ElectionDocuments/2020/201103%20General%20Joint/Dallas%20County%20Final%20Canvass%20Cum%20WOverUnder%20Totals.pdf"
+   },
+   {
+    "candidate_election_id": "4837000__2026-05-02__regular__c6e6504397f60b6f",
+    "candidate_name": "Al Zapanta",
+    "role": "winner",
+    "election_date": "2026-05-02",
+    "result_source_url": "https://www.dallascountyvotes.org/wp-content/uploads/2026/05/Election_Night_Unofficial_Final.pdf"
+   },
+   {
+    "candidate_election_id": "4837000__2026-05-02__regular__4440868d860fe8a1",
+    "candidate_name": "Zhanae Jackson",
+    "role": "runner_up",
+    "election_date": "2026-05-02",
+    "result_source_url": "https://www.dallascountyvotes.org/wp-content/uploads/2026/05/Election_Night_Unofficial_Final.pdf"
+   }
+  ]
+ },
+ {
+  "city_id": "4841464",
+  "city_name": "Laredo",
+  "state_abb": "TX",
+  "slug": "laredo",
+  "finalists": [
+   {
+    "candidate_election_id": "4841464__2010-12-11__regular__3d373e6673bf42b0",
+    "candidate_name": "Raul G. Salinas",
+    "role": "winner",
+    "election_date": "2010-12-11",
+    "result_source_url": "https://www.cityoflaredo.com/home/showpublisheddocument/13987/638421188471900000"
+   },
+   {
+    "candidate_election_id": "4841464__2010-12-11__regular__9dcb9191de082b08",
+    "candidate_name": "Gene Belmares",
+    "role": "runner_up",
+    "election_date": "2010-12-11",
+    "result_source_url": "https://www.cityoflaredo.com/home/showpublisheddocument/13987/638421188471900000"
+   },
+   {
+    "candidate_election_id": "4841464__2014-11-04__regular__d37d83e6298a37cd",
+    "candidate_name": "Pete Saenz",
+    "role": "winner",
+    "election_date": "2014-11-04",
+    "result_source_url": "https://www.cityoflaredo.com/home/showpublisheddocument/4914"
+   },
+   {
+    "candidate_election_id": "4841464__2014-11-04__regular__b88635b5cc64352d",
+    "candidate_name": "Jerry Garza",
+    "role": "runner_up",
+    "election_date": "2014-11-04",
+    "result_source_url": "https://www.cityoflaredo.com/home/showpublisheddocument/4914"
+   },
+   {
+    "candidate_election_id": "4841464__2018-12-13__regular__d37d83e6298a37cd",
+    "candidate_name": "Pete Saenz",
+    "role": "winner",
+    "election_date": "2018-12-13",
+    "result_source_url": "https://www.cityoflaredo.com/home/showpublisheddocument/4582"
+   },
+   {
+    "candidate_election_id": "4841464__2018-12-13__regular__87ed027f58df5963",
+    "candidate_name": "Roque Vela, Jr.",
+    "role": "runner_up",
+    "election_date": "2018-12-13",
+    "result_source_url": "https://www.cityoflaredo.com/home/showpublisheddocument/4582"
+   },
+   {
+    "candidate_election_id": "4841464__2022-12-17__regular__c40495c66071649e",
+    "candidate_name": "Victor D. Trevi\u00f1o",
+    "role": "winner",
+    "election_date": "2022-12-17",
+    "result_source_url": "https://www.cityoflaredo.com/home/showpublisheddocument/6851/638174467378700000"
+   },
+   {
+    "candidate_election_id": "4841464__2022-12-17__regular__0e1da3175dcbe5d9",
+    "candidate_name": "Mercurio Martinez III",
+    "role": "runner_up",
+    "election_date": "2022-12-17",
+    "result_source_url": "https://www.cityoflaredo.com/home/showpublisheddocument/6851/638174467378700000"
+   }
+  ]
+ },
+ {
+  "city_id": "4845000",
+  "city_name": "Lubbock",
+  "state_abb": "TX",
+  "slug": "lubbock",
+  "finalists": [
+   {
+    "candidate_election_id": "4845000__2010-05-08__regular__260e3b85ffbc6349",
+    "candidate_name": "Tom Martin",
+    "role": "winner",
+    "election_date": "2010-05-08",
+    "result_source_url": "https://web.archive.org/web/20200414144948id_/http://assets01.aws.connect.clarityelections.com/Assets/Connect/RootPublish/lubbock-tx.connect.clarityelections.com/HistoricalElectionResults/2010/May8/CumulativeReport.pdf"
+   },
+   {
+    "candidate_election_id": "4845000__2010-05-08__regular__b93d6631de35c516",
+    "candidate_name": "Cody R. Smart",
+    "role": "runner_up",
+    "election_date": "2010-05-08",
+    "result_source_url": "https://web.archive.org/web/20200414144948id_/http://assets01.aws.connect.clarityelections.com/Assets/Connect/RootPublish/lubbock-tx.connect.clarityelections.com/HistoricalElectionResults/2010/May8/CumulativeReport.pdf"
+   },
+   {
+    "candidate_election_id": "4845000__2012-05-12__regular__520fd6c121e89f02",
+    "candidate_name": "Glen Robertson",
+    "role": "winner",
+    "election_date": "2012-05-12",
+    "result_source_url": "https://web.archive.org/web/20200414144948id_/http://assets01.aws.connect.clarityelections.com/Assets/Connect/RootPublish/lubbock-tx.connect.clarityelections.com/HistoricalElectionResults/2012/May12/CityofLubbockofficial.pdf"
+   },
+   {
+    "candidate_election_id": "4845000__2012-05-12__regular__260e3b85ffbc6349",
+    "candidate_name": "Tom Martin",
+    "role": "runner_up",
+    "election_date": "2012-05-12",
+    "result_source_url": "https://web.archive.org/web/20200414144948id_/http://assets01.aws.connect.clarityelections.com/Assets/Connect/RootPublish/lubbock-tx.connect.clarityelections.com/HistoricalElectionResults/2012/May12/CityofLubbockofficial.pdf"
+   },
+   {
+    "candidate_election_id": "4845000__2016-05-07__regular__868202b3b09657e0",
+    "candidate_name": "Todd Klein",
+    "role": "runner_up",
+    "election_date": "2016-05-07",
+    "result_source_url": "https://web.archive.org/web/20200414144948id_/http://assets01.aws.connect.clarityelections.com/Assets/Connect/RootPublish/lubbock-tx.connect.clarityelections.com/HistoricalElectionResults/2016/May7/CityofLubbockCumulative.pdf"
+   },
+   {
+    "candidate_election_id": "4845000__2018-05-05__regular__6e08870ec6364b35",
+    "candidate_name": "Dan Pope",
+    "role": "winner",
+    "election_date": "2018-05-05",
+    "result_source_url": "https://web.archive.org/web/20200414144948id_/http://assets01.aws.connect.clarityelections.com/Assets/Connect/RootPublish/lubbock-tx.connect.clarityelections.com/HistoricalElectionResults/2018/May5/CityofLubbockCumulative.pdf"
+   },
+   {
+    "candidate_election_id": "4845000__2018-05-05__regular__be38dcfd0d741199",
+    "candidate_name": "Johnathan Cothran",
+    "role": "runner_up",
+    "election_date": "2018-05-05",
+    "result_source_url": "https://web.archive.org/web/20200414144948id_/http://assets01.aws.connect.clarityelections.com/Assets/Connect/RootPublish/lubbock-tx.connect.clarityelections.com/HistoricalElectionResults/2018/May5/CityofLubbockCumulative.pdf"
+   },
+   {
+    "candidate_election_id": "4845000__2020-11-03__regular__61afbbf4cf5ba374",
+    "candidate_name": "Stephen Sanders",
+    "role": "runner_up",
+    "election_date": "2020-11-03",
+    "result_source_url": "https://www.mylubbock.us/DocumentCenter/View/5993"
+   },
+   {
+    "candidate_election_id": "4845000__2022-05-07__regular__5c2426f7603a907e",
+    "candidate_name": "Tray Payne",
+    "role": "winner",
+    "election_date": "2022-05-07",
+    "result_source_url": "https://www.mylubbock.us/DocumentCenter/View/6005"
+   },
+   {
+    "candidate_election_id": "4845000__2022-05-07__regular__bd38ef5f1ada382c",
+    "candidate_name": "Adam Hernandez",
+    "role": "runner_up",
+    "election_date": "2022-05-07",
+    "result_source_url": "https://www.mylubbock.us/DocumentCenter/View/6005"
+   },
+   {
+    "candidate_election_id": "4845000__2024-06-15__regular__9e90a28d5bb2f0ed",
+    "candidate_name": "Mark McBrayer",
+    "role": "winner",
+    "election_date": "2024-06-15",
+    "result_source_url": "https://www.mylubbock.us/DocumentCenter/View/6024"
+   },
+   {
+    "candidate_election_id": "4845000__2024-06-15__regular__588ad7a27f6da389",
+    "candidate_name": "Steve Massengale",
+    "role": "runner_up",
+    "election_date": "2024-06-15",
+    "result_source_url": "https://www.mylubbock.us/DocumentCenter/View/6024"
+   },
+   {
+    "candidate_election_id": "4845000__2026-05-02__regular__9e90a28d5bb2f0ed",
+    "candidate_name": "Mark McBrayer",
+    "role": "winner",
+    "election_date": "2026-05-02",
+    "result_source_url": "https://www.mylubbock.us/DocumentCenter/View/8311"
+   },
+   {
+    "candidate_election_id": "4845000__2026-05-02__regular__6b6dc9345312598b",
+    "candidate_name": "Stephen J. Sanders",
+    "role": "runner_up",
+    "election_date": "2026-05-02",
+    "result_source_url": "https://www.mylubbock.us/DocumentCenter/View/8311"
+   }
+  ]
+ },
+ {
+  "city_id": "4865000",
+  "city_name": "San Antonio",
+  "state_abb": "TX",
+  "slug": "san_antonio",
+  "finalists": [
+   {
+    "candidate_election_id": "4865000__2011-05-14__regular__aa40a2a243377700",
+    "candidate_name": "Juli\u00e1n Castro",
+    "role": "winner",
+    "election_date": "2011-05-14",
+    "result_source_url": "https://elections.bexar.gov/DocumentCenter/View/1447"
+   },
+   {
+    "candidate_election_id": "4865000__2011-05-14__regular__a65e81d09f2935b1",
+    "candidate_name": "Will McLeod",
+    "role": "runner_up",
+    "election_date": "2011-05-14",
+    "result_source_url": "https://elections.bexar.gov/DocumentCenter/View/1447"
+   },
+   {
+    "candidate_election_id": "4865000__2013-05-11__regular__0beaf1ef8b222527",
+    "candidate_name": "Julian Castro",
+    "role": "winner",
+    "election_date": "2013-05-11",
+    "result_source_url": "https://elections.bexar.gov/DocumentCenter/View/1476"
+   },
+   {
+    "candidate_election_id": "4865000__2013-05-11__regular__08d5b9be1b6ecd80",
+    "candidate_name": "Rhett R. Smith",
+    "role": "runner_up",
+    "election_date": "2013-05-11",
+    "result_source_url": "https://elections.bexar.gov/DocumentCenter/View/1476"
+   },
+   {
+    "candidate_election_id": "4865000__2015-06-13__regular__cbd73abebfc92d69",
+    "candidate_name": "Ivy R. Taylor",
+    "role": "winner",
+    "election_date": "2015-06-13",
+    "result_source_url": "https://elections.bexar.gov/DocumentCenter/View/1566"
+   },
+   {
+    "candidate_election_id": "4865000__2017-06-10__regular__b2026ab9e757e6a1",
+    "candidate_name": "Ron Nirenberg",
+    "role": "winner",
+    "election_date": "2017-06-10",
+    "result_source_url": "https://elections.bexar.gov/DocumentCenter/View/1554"
+   },
+   {
+    "candidate_election_id": "4865000__2017-06-10__regular__cbd73abebfc92d69",
+    "candidate_name": "Ivy R. Taylor",
+    "role": "runner_up",
+    "election_date": "2017-06-10",
+    "result_source_url": "https://elections.bexar.gov/DocumentCenter/View/1554"
+   },
+   {
+    "candidate_election_id": "4865000__2023-05-06__regular__b2026ab9e757e6a1",
+    "candidate_name": "Ron Nirenberg",
+    "role": "winner",
+    "election_date": "2023-05-06",
+    "result_source_url": "https://elections.bexar.gov/DocumentCenter/View/1267"
+   },
+   {
+    "candidate_election_id": "4865000__2023-05-06__regular__bc7ae49828b288de",
+    "candidate_name": "Christopher T. Schuchardt",
+    "role": "runner_up",
+    "election_date": "2023-05-06",
+    "result_source_url": "https://elections.bexar.gov/DocumentCenter/View/1267"
+   },
+   {
+    "candidate_election_id": "4865000__2025-06-07__regular__b7b86366e087cb7e",
+    "candidate_name": "Gina Ortiz Jones",
+    "role": "winner",
+    "election_date": "2025-06-07",
+    "result_source_url": "https://elections.bexar.gov/DocumentCenter/View/1222"
+   },
+   {
+    "candidate_election_id": "4865000__2025-06-07__regular__68f739203c108c1c",
+    "candidate_name": "Rolando Pablos",
+    "role": "runner_up",
+    "election_date": "2025-06-07",
+    "result_source_url": "https://elections.bexar.gov/DocumentCenter/View/1222"
+   }
+  ]
+ },
+ {
+  "city_id": "5116000",
+  "city_name": "Chesapeake",
+  "state_abb": "VA",
+  "slug": "chesapeake",
+  "finalists": [
+   {
+    "candidate_election_id": "5116000__2012-05-01__regular__546f9202156e180d",
+    "candidate_name": "Alan Paul Krasnoff",
+    "role": "winner",
+    "election_date": "2012-05-01",
+    "result_source_url": "https://historical.elections.virginia.gov/elections/view/45157"
+   },
+   {
+    "candidate_election_id": "5116000__2012-05-01__regular__7e60646d46b5bfda",
+    "candidate_name": "Burnie Fletcher Mansfield, Jr.",
+    "role": "runner_up",
+    "election_date": "2012-05-01",
+    "result_source_url": "https://historical.elections.virginia.gov/elections/view/45157"
+   },
+   {
+    "candidate_election_id": "5116000__2018-05-01__special__9f146c3a09c7d68a",
+    "candidate_name": "Richard Wayne West",
+    "role": "winner",
+    "election_date": "2018-05-01",
+    "result_source_url": "https://historical.elections.virginia.gov/elections/view/88542"
+   },
+   {
+    "candidate_election_id": "5116000__2018-05-01__special__22f8e367c01cd777",
+    "candidate_name": "Jo Anne Marie Gallant",
+    "role": "runner_up",
+    "election_date": "2018-05-01",
+    "result_source_url": "https://historical.elections.virginia.gov/elections/view/88542"
+   },
+   {
+    "candidate_election_id": "5116000__2020-05-19__regular__9f146c3a09c7d68a",
+    "candidate_name": "Richard Wayne West",
+    "role": "winner",
+    "election_date": "2020-05-19",
+    "result_source_url": "https://historical.elections.virginia.gov/elections/view/139713"
+   },
+   {
+    "candidate_election_id": "5116000__2020-05-19__regular__f27e655416fd77ac",
+    "candidate_name": "Lenard Tyrone Myers, II",
+    "role": "runner_up",
+    "election_date": "2020-05-19",
+    "result_source_url": "https://historical.elections.virginia.gov/elections/view/139713"
+   },
+   {
+    "candidate_election_id": "5116000__2024-11-05__regular__f13433298c106eee",
+    "candidate_name": "Richard W. \"Rick\" West",
+    "role": "winner",
+    "election_date": "2024-11-05",
+    "result_source_url": "https://historical.elections.virginia.gov/elections/view/161344"
+   },
+   {
+    "candidate_election_id": "5116000__2024-11-05__regular__274eca882f4f52d4",
+    "candidate_name": "Don J. Carey III",
+    "role": "runner_up",
+    "election_date": "2024-11-05",
+    "result_source_url": "https://historical.elections.virginia.gov/elections/view/161344"
+   }
+  ]
+ },
+ {
+  "city_id": "5157000",
+  "city_name": "Norfolk",
+  "state_abb": "VA",
+  "slug": "norfolk",
+  "finalists": [
+   {
+    "candidate_election_id": "5157000__2010-05-04__regular__157c38d75327c9a4",
+    "candidate_name": "Paul D. Fraim",
+    "role": "winner",
+    "election_date": "2010-05-04",
+    "result_source_url": "https://www.norfolk.gov/DocumentCenter/View/55690"
+   },
+   {
+    "candidate_election_id": "5157000__2010-05-04__regular__f7e6c5b075a4e257",
+    "candidate_name": "Daun S. Hester",
+    "role": "runner_up",
+    "election_date": "2010-05-04",
+    "result_source_url": "https://www.norfolk.gov/DocumentCenter/View/55690"
+   },
+   {
+    "candidate_election_id": "5157000__2014-05-06__regular__728eaee9b8d19028",
+    "candidate_name": "Michael J. Muhammad",
+    "role": "runner_up",
+    "election_date": "2014-05-06",
+    "result_source_url": "https://www.norfolk.gov/DocumentCenter/View/55705"
+   },
+   {
+    "candidate_election_id": "5157000__2024-11-05__regular__e0c4e1befd246fd3",
+    "candidate_name": "Kenneth Cooper Alexander",
+    "role": "winner",
+    "election_date": "2024-11-05",
+    "result_source_url": "https://www.norfolk.gov/DocumentCenter/View/98792"
+   },
+   {
+    "candidate_election_id": "5157000__2024-11-05__regular__87a6f20199a7a0f1",
+    "candidate_name": "Thomas P. \"Tommy\" Leeman, Jr.",
+    "role": "runner_up",
+    "election_date": "2024-11-05",
+    "result_source_url": "https://www.norfolk.gov/DocumentCenter/View/98792"
+   }
+  ]
+ },
+ {
+  "city_id": "5167000",
+  "city_name": "Richmond",
+  "state_abb": "VA",
+  "slug": "richmond",
+  "finalists": [
+   {
+    "candidate_election_id": "5167000__2012-11-06__regular__b834a5c224c3cef0",
+    "candidate_name": "Dwight Clinton Jones",
+    "role": "winner",
+    "election_date": "2012-11-06",
+    "result_source_url": "https://historical.elections.virginia.gov/contest/45120"
+   },
+   {
+    "candidate_election_id": "5167000__2012-11-06__regular__c2f8b80a06956dd8",
+    "candidate_name": "Michael Kerin Ryan",
+    "role": "runner_up",
+    "election_date": "2012-11-06",
+    "result_source_url": "https://historical.elections.virginia.gov/contest/45120"
+   },
+   {
+    "candidate_election_id": "5167000__2016-11-08__regular__0b1cfa1674b7a7b2",
+    "candidate_name": "Levar Marcus Stoney",
+    "role": "winner",
+    "election_date": "2016-11-08",
+    "result_source_url": "https://historical.elections.virginia.gov/contest/81086"
+   },
+   {
+    "candidate_election_id": "5167000__2020-11-03__regular__0b1cfa1674b7a7b2",
+    "candidate_name": "Levar Marcus Stoney",
+    "role": "winner",
+    "election_date": "2020-11-03",
+    "result_source_url": "https://historical.elections.virginia.gov/contest/144774"
+   },
+   {
+    "candidate_election_id": "5167000__2020-11-03__regular__8222d5eb215ba04d",
+    "candidate_name": "Alexsis Evon Rodgers",
+    "role": "runner_up",
+    "election_date": "2020-11-03",
+    "result_source_url": "https://historical.elections.virginia.gov/contest/144774"
+   },
+   {
+    "candidate_election_id": "5167000__2024-11-05__regular__a768ad0b3aa07291",
+    "candidate_name": "Danny T.K. Avula",
+    "role": "winner",
+    "election_date": "2024-11-05",
+    "result_source_url": "https://historical.elections.virginia.gov/contest/161563"
+   },
+   {
+    "candidate_election_id": "5167000__2024-11-05__regular__ecbe52183bf66698",
+    "candidate_name": "Michelle R. Mosby",
+    "role": "runner_up",
+    "election_date": "2024-11-05",
+    "result_source_url": "https://historical.elections.virginia.gov/contest/161563"
+   }
+  ]
+ },
+ {
+  "city_id": "5182000",
+  "city_name": "Virginia Beach",
+  "state_abb": "VA",
+  "slug": "virginia_beach",
+  "finalists": [
+   {
+    "candidate_election_id": "5182000__2012-11-06__regular__94587cf954f3137b",
+    "candidate_name": "William Douglas Sessoms, Jr.",
+    "role": "winner",
+    "election_date": "2012-11-06",
+    "result_source_url": "https://historical.elections.virginia.gov/elections/view/45135"
+   },
+   {
+    "candidate_election_id": "5182000__2012-11-06__regular__89df5043c7afc53c",
+    "candidate_name": "Richard Wilhelm Kowalewitch",
+    "role": "runner_up",
+    "election_date": "2012-11-06",
+    "result_source_url": "https://historical.elections.virginia.gov/elections/view/45135"
+   },
+   {
+    "candidate_election_id": "5182000__2016-11-08__regular__94587cf954f3137b",
+    "candidate_name": "William Douglas Sessoms, Jr.",
+    "role": "winner",
+    "election_date": "2016-11-08",
+    "result_source_url": "https://historical.elections.virginia.gov/elections/view/81098"
+   },
+   {
+    "candidate_election_id": "5182000__2016-11-08__regular__89df5043c7afc53c",
+    "candidate_name": "Richard Wilhelm Kowalewitch",
+    "role": "runner_up",
+    "election_date": "2016-11-08",
+    "result_source_url": "https://historical.elections.virginia.gov/elections/view/81098"
+   },
+   {
+    "candidate_election_id": "5182000__2024-11-05__regular__f53425a2ede50676",
+    "candidate_name": "Robert M. \"Bobby\" Dyer",
+    "role": "winner",
+    "election_date": "2024-11-05",
+    "result_source_url": "https://historical.elections.virginia.gov/elections/view/161681"
+   },
+   {
+    "candidate_election_id": "5182000__2024-11-05__regular__0130a1c8de500d58",
+    "candidate_name": "Sabrina D. Wooten",
+    "role": "runner_up",
+    "election_date": "2024-11-05",
+    "result_source_url": "https://historical.elections.virginia.gov/elections/view/161681"
+   }
+  ]
+ },
+ {
+  "city_id": "5363000",
+  "city_name": "Seattle",
+  "state_abb": "WA",
+  "slug": "seattle",
+  "finalists": [
+   {
+    "candidate_election_id": "5363000__2025-11-04__regular__1b4828ac1df050f2",
+    "candidate_name": "Katie Wilson",
+    "role": "winner",
+    "election_date": "2025-11-04",
+    "result_source_url": "https://cdn.kingcounty.gov/-/media/king-county/depts/elections/results/2025/11/2025nov-results-final.pdf?hash=C26251B388BCE79FDF2F536A3A2933D1&rev=a66e093e25c24c11b61e08c49ad00495"
+   },
+   {
+    "candidate_election_id": "5363000__2025-11-04__regular__756a280d2165e8b7",
+    "candidate_name": "Bruce Harrell",
+    "role": "runner_up",
+    "election_date": "2025-11-04",
+    "result_source_url": "https://cdn.kingcounty.gov/-/media/king-county/depts/elections/results/2025/11/2025nov-results-final.pdf?hash=C26251B388BCE79FDF2F536A3A2933D1&rev=a66e093e25c24c11b61e08c49ad00495"
+   }
+  ]
+ },
+ {
+  "city_id": "5367000",
+  "city_name": "Spokane",
+  "state_abb": "WA",
+  "slug": "spokane",
+  "finalists": [
+   {
+    "candidate_election_id": "5367000__2011-11-08__regular__9ad45790f39d71ac",
+    "candidate_name": "David Condon",
+    "role": "winner",
+    "election_date": "2011-11-08",
+    "result_source_url": "https://results.vote.wa.gov/results/20111108/spokane/"
+   },
+   {
+    "candidate_election_id": "5367000__2011-11-08__regular__8f296d0fdbb10f50",
+    "candidate_name": "Mary B. Verner",
+    "role": "runner_up",
+    "election_date": "2011-11-08",
+    "result_source_url": "https://results.vote.wa.gov/results/20111108/spokane/"
+   },
+   {
+    "candidate_election_id": "5367000__2015-11-03__regular__9ad45790f39d71ac",
+    "candidate_name": "David Condon",
+    "role": "winner",
+    "election_date": "2015-11-03",
+    "result_source_url": "https://results.vote.wa.gov/results/20151103/spokane/"
+   },
+   {
+    "candidate_election_id": "5367000__2019-11-05__regular__76bdb5f7687d87ab",
+    "candidate_name": "Nadine Woodward",
+    "role": "winner",
+    "election_date": "2019-11-05",
+    "result_source_url": "https://results.vote.wa.gov/results/20191105/spokane/"
+   },
+   {
+    "candidate_election_id": "5367000__2023-11-07__regular__43ea8cb072f5bbba",
+    "candidate_name": "Lisa Brown",
+    "role": "winner",
+    "election_date": "2023-11-07",
+    "result_source_url": "https://results.vote.wa.gov/results/20231107/spokane/"
+   },
+   {
+    "candidate_election_id": "5367000__2023-11-07__regular__76bdb5f7687d87ab",
+    "candidate_name": "Nadine Woodward",
+    "role": "runner_up",
+    "election_date": "2023-11-07",
+    "result_source_url": "https://results.vote.wa.gov/results/20231107/spokane/"
+   }
+  ]
+ },
+ {
+  "city_id": "5548000",
+  "city_name": "Madison",
+  "state_abb": "WI",
+  "slug": "madison",
+  "finalists": [
+   {
+    "candidate_election_id": "5548000__2011-04-05__regular__3c2be4488c1aad50",
+    "candidate_name": "Paul R. Soglin",
+    "role": "winner",
+    "election_date": "2011-04-05",
+    "result_source_url": "https://elections.countyofdane.com/elections/elect2011b.html"
+   },
+   {
+    "candidate_election_id": "5548000__2015-04-07__regular__3c2be4488c1aad50",
+    "candidate_name": "Paul R. Soglin",
+    "role": "winner",
+    "election_date": "2015-04-07",
+    "result_source_url": "https://elections.countyofdane.com/Election-Result/74"
+   },
+   {
+    "candidate_election_id": "5548000__2023-04-04__regular__98551b8b6c28b29b",
+    "candidate_name": "Satya Rhodes-Conway",
+    "role": "winner",
+    "election_date": "2023-04-04",
+    "result_source_url": "https://elections.countyofdane.com/Election-Result/153"
+   },
+   {
+    "candidate_election_id": "5548000__2023-04-04__regular__2ca3efad8e17173c",
+    "candidate_name": "Gloria Reyes",
+    "role": "runner_up",
+    "election_date": "2023-04-04",
+    "result_source_url": "https://elections.countyofdane.com/Election-Result/153"
+   }
+  ]
+ },
+ {
+  "city_id": "5553000",
+  "city_name": "Milwaukee",
+  "state_abb": "WI",
+  "slug": "milwaukee",
+  "finalists": [
+   {
+    "candidate_election_id": "5553000__2012-04-03__regular__e10acfff51d7f782",
+    "candidate_name": "Tom Barrett",
+    "role": "winner",
+    "election_date": "2012-04-03",
+    "result_source_url": "https://web.archive.org/web/20130609180242/http://city.milwaukee.gov/ElectionResults1717/20121/April-3-2012.htm"
+   },
+   {
+    "candidate_election_id": "5553000__2012-04-03__regular__7dc206a987423a29",
+    "candidate_name": "Edward McDonald",
+    "role": "runner_up",
+    "election_date": "2012-04-03",
+    "result_source_url": "https://web.archive.org/web/20130609180242/http://city.milwaukee.gov/ElectionResults1717/20121/April-3-2012.htm"
+   },
+   {
+    "candidate_election_id": "5553000__2016-04-05__regular__e10acfff51d7f782",
+    "candidate_name": "Tom Barrett",
+    "role": "winner",
+    "election_date": "2016-04-05",
+    "result_source_url": "https://data.milwaukee.gov/dataset/410b03d9-118f-404d-961a-06c76b29333f/resource/081b860b-f3cd-4726-80de-33772b1dafb4/download/mayor-milwaukee.csv"
+   },
+   {
+    "candidate_election_id": "5553000__2022-04-05__special__1ad22e9316656baf",
+    "candidate_name": "Cavalier Johnson",
+    "role": "winner",
+    "election_date": "2022-04-05",
+    "result_source_url": "https://city.milwaukee.gov/ImageLibrary/Groups/electionAuthors/Election-Results/2022-April-5th-Spring-Election.pdf"
+   },
+   {
+    "candidate_election_id": "5553000__2022-04-05__special__0213ba318998ee09",
+    "candidate_name": "Bob Donovan",
+    "role": "runner_up",
+    "election_date": "2022-04-05",
+    "result_source_url": "https://city.milwaukee.gov/ImageLibrary/Groups/electionAuthors/Election-Results/2022-April-5th-Spring-Election.pdf"
+   },
+   {
+    "candidate_election_id": "5553000__2024-04-02__regular__1ad22e9316656baf",
+    "candidate_name": "Cavalier Johnson",
+    "role": "winner",
+    "election_date": "2024-04-02",
+    "result_source_url": "https://city.milwaukee.gov/ImageLibrary/Groups/electionAuthors/Election-Results/2024/2024April2SpringElectionandPresidentialPrimary"
+   },
+   {
+    "candidate_election_id": "5553000__2024-04-02__regular__f94b99531a64480e",
+    "candidate_name": "David D. King",
+    "role": "runner_up",
+    "election_date": "2024-04-02",
+    "result_source_url": "https://city.milwaukee.gov/ImageLibrary/Groups/electionAuthors/Election-Results/2024/2024April2SpringElectionandPresidentialPrimary"
+   }
+  ]
+ }
+]

@@ -1959,3 +1959,24 @@ Sacramento; about 16 single years).
 **Website step starting point (build summary).** Of 822 finalists: URL lead 274 (33 percent), archive
 discovery 22, downloaded content 13. 417 finalists have no identity link to the legacy discovery roster,
 so part of the URL gap is a linkage gap, not a discovery gap.
+
+**Mayoral website step, stage 1 done (October 2, commit `f96e47f`).** 164 finalists linked to the legacy
+roster by reviewed name variants (`scripts/build_mayoral_identity_links.py`, output
+`data/municipal_discovery/top100_coverage/linkage/identity_links.csv`, read by the build as basis
+`reviewed_name_variant_same_city_year_month`). URL leads: 274 to 349 of 822 finalists (42 percent).
+
+**Stage 2 approved by Hanno; run it in a FRESH session (this session's web-search budget is used up).**
+- Input: `data/municipal_discovery/top100_coverage/url_discovery/stage2_args.json` (96 cities, 473 finalists
+  without a URL lead; 224 of them 2022-2026).
+- Launch: `Workflow({scriptPath: 'scripts/workflows_mayoral_url_discovery.js', args: <that JSON>})`.
+  One Sonnet discover agent per city plus an independent Sonnet check agent. Wayback requests run on the
+  droplet (`ssh root@droplet curl ...`) because this Mac cannot reach web.archive.org.
+- Expected cost: roughly 20 to 30 million subagent tokens, about 2 hours.
+- Before launch: start `build/agent_tmp_cleanup.sh` (detached; deletes agent downloads older than 10 minutes in
+  `/private/tmp/claude-501`); free disk was about 25 GB on October 2. Stop it afterwards.
+- Output: `url_discovery/<slug>_url_leads.json` (status accepted / outside_window / not_found, with the
+  in-window capture and a page quote).
+- Integration (not yet written): apply checker verdicts (reject drops the URL, downgrade sets outside_window),
+  then add a build input for new URL leads with its own basis label, as was done for identity links; rebuild,
+  run `tests/test_build_mayoral_top_two_coverage.py`, commit.
+- Stage 3 (archive capture download for verified URLs) needs a separate bounded approval.
