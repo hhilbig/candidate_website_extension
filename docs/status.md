@@ -2015,3 +2015,13 @@ web.archive.org directly (0.7 s per CDX query). Pilot (2 targets, 20 pages): 330
 stop, log `runs/production.log`, outputs `runs/production/`. Older legacy leads are not queued: first compare them
 with the existing 291,044-capture corpus. Next: verify the run, copy the compact audit back, link saved pages to
 the coverage build as downloaded content.
+
+**Coverage push, options 1 and 2 (October 2, Hanno approved).** `scripts/sweep_mayoral_domain_patterns.py`
+(6 tests) generates about 22 campaign-domain patterns for each of the 308 finalists without a URL lead
+(6,919 rows, `url_discovery/sweep_20261002/patterns.csv`). Running on mac2 in the stage 3 folder, alongside the
+stage 3 scrape: Wayback CDX by whole domain for the 365 days up to the election (6,907 queries, one per 2 seconds,
+about 8 hours, PID 53784) and Common Crawl for 2022-2026 elections, the 2 latest crawls before each election
+(5,856 queries, about 8.5 seconds each, about 14 hours, PID 53834; all crawls would have been 25,598 queries).
+Outputs `wayback_hits.jsonl`, `commoncrawl_hits.jsonl` (resumable). Next: `screen` (fetch each hit, keep pages with
+the last name and "mayor"), then a small agent check under the stage 2 acceptance rule, then integration as a
+third basis label. Option 3 (wider date window) waits for Hanno after these results.
