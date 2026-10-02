@@ -1996,3 +1996,9 @@ archive discovery 23 to 178 (22 percent). Finalists in 2022 to 2026 have URL lea
 from `stage2_args.json`. Known limit: capture counts include asset files and some hit query limits.
 Next: stage 3 (download in-window captures for the 155 accepted URLs plus legacy leads without archive evidence)
 needs Hanno's approval of a byte budget; run it on the droplet volume or mac2, not this Mac (11 GB free or less).
+
+**Share of the release complete, October 2 (approximate).** About 63 percent: Track 1 20 of 20; Track 2 about
+24 of 25 (Dataverse curators publish 4.0); Track 3 about 12 of 40 (population closed, website stages 1 and 2 done;
+stage 3 download, content checks, coverage report and release remain); Track 4 about 7 of 15 (collection to
+November 17). Remaining agent time about 25 to 40 hours, mostly Track 3. Hanno: the stage 3 byte budget decision.
+Largest uncertainty: how much of the stage 3 download fits a budget, given slow Wayback replay from the droplet.
