@@ -338,3 +338,25 @@ def test_coverage_gaps_merge_does_not_mutate_its_inputs():
     merge_coverage_gaps(missing_urls, missing_captures)
     assert "gap_type" not in missing_urls[0]
     assert "gap_type" not in missing_captures[0]
+
+
+def test_reviewed_identity_link_uses_its_own_basis():
+    cities, roster, urls, result = fixture()
+    result['candidates'][0]['name'] = 'Exampleton A. Variant'
+    roster[0]['full_name'] = 'example variant'
+    link = {'election_id': '0000001__2020-11-03__regular', 'candidate_name': 'Exampleton A. Variant',
+            'candidate_year_id': 'legacy-a', 'link_basis': 'reviewed_name_variant_same_city_year_month'}
+    _, _, _, candidates, _, _ = build(cities, roster, urls, [result], identity_links=[link])
+    assert candidates[0]['candidate_year_id'] == 'legacy-a'
+    assert candidates[0]['identity_link_basis'] == 'reviewed_name_variant_same_city_year_month'
+    assert candidates[0]['url_lead'] is True
+
+
+def test_reviewed_identity_link_rejects_other_month():
+    cities, roster, urls, result = fixture()
+    result['candidates'][0]['name'] = 'Exampleton A. Variant'
+    roster[0]['month'] = '6'
+    link = {'election_id': '0000001__2020-11-03__regular', 'candidate_name': 'Exampleton A. Variant',
+            'candidate_year_id': 'legacy-a', 'link_basis': 'reviewed_name_variant_same_city_year_month'}
+    with pytest.raises(ValueError, match='Reviewed identity link'):
+        build(cities, roster, urls, [result], identity_links=[link])

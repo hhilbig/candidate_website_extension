@@ -181,7 +181,7 @@ def recorded_period_metadata(urls, election_date, saved, reviews, validations):
     return None
 
 
-def build(cities, roster, urls, results, reviews=(), validations=(), city_year_overrides=(), saved_evidence=()):
+def build(cities, roster, urls, results, reviews=(), validations=(), city_year_overrides=(), saved_evidence=(), identity_links=()):
     unique(cities, "city_id", "city")
     unique(roster, "candidate_year_id", "legacy candidate-year")
     unique(urls, "candidate_url_id", "URL")
@@ -201,6 +201,15 @@ def build(cities, roster, urls, results, reviews=(), validations=(), city_year_o
             old_contests[row["contest"]].append(row)
             city_year_old[(city["city_id"], year)].append(row)
             exact_names[(city["city_id"], year, name_key(row["full_name"]))].append(row)
+    # Reviewed name-variant links (scripts/build_mayoral_identity_links.py). They
+    # apply only where no exact or source-verified link exists, and they keep
+    # their own basis label so provenance stays visible.
+    reviewed_links = {}
+    for link in identity_links:
+        key = (link["election_id"], name_key(link["candidate_name"]))
+        if key in reviewed_links:
+            raise ValueError("Duplicate reviewed identity link")
+        reviewed_links[key] = link
     by_candidate = defaultdict(list)
     for row in urls:
         by_candidate[row["candidate_year_id"]].append(row)
@@ -266,6 +275,15 @@ def build(cities, roster, urls, results, reviews=(), validations=(), city_year_o
                 legacy = matches[0] if len(matches) == 1 else None
                 legacy_id = legacy["candidate_year_id"] if legacy else ""
                 link_basis = "exact_name_city_year_month" if legacy else "unresolved_or_new_candidate"
+                reviewed = reviewed_links.get((election_id, name_key(candidate["name"]))) if not legacy else None
+                if reviewed:
+                    legacy = roster_ids.get(reviewed["candidate_year_id"])
+                    if (not legacy or fips_map.get(fips_key(legacy["place_fips"]), {}).get("city_id") != city["city_id"]
+                            or int(float(legacy["year"])) != day.year or not legacy.get("month")
+                            or int(float(legacy["month"])) != day.month):
+                        raise ValueError("Reviewed identity link conflicts with city/year/month")
+                    legacy_id = legacy["candidate_year_id"]
+                    link_basis = reviewed["link_basis"]
             if legacy:
                 if legacy_id in legacy_election_links and legacy_election_links[legacy_id] != election_id:
                     raise ValueError("Legacy candidate-year maps to multiple elections; provide election-specific evidence")
@@ -475,9 +493,14 @@ def main():
         if sha(ROOT / path) != source["sha256"]:
             raise ValueError("Frozen Census response changed")
         inputs.append(path)
+    links_path = config.get("identity_links")
+    identity_links = read_csv(ROOT / links_path) if links_path else []
+    if links_path:
+        inputs.append(Path(links_path))
     hashes = {str(p): sha(ROOT / p) for p in inputs}
     result = build(read_csv(ROOT / args.cities), read_csv(ROOT / ROSTER), read_csv(ROOT / URLS), records,
-                   read_csv(ROOT / REVIEWS), read_csv(ROOT / VALIDATION), overrides, read_csv(ROOT / args.saved_evidence))
+                   read_csv(ROOT / REVIEWS), read_csv(ROOT / VALIDATION), overrides, read_csv(ROOT / args.saved_evidence),
+                   identity_links=identity_links)
     cities, city_years, elections, candidates, summary, outside = result
     if len(cities) != 100:
         raise ValueError("Production build requires exactly 100 cities")

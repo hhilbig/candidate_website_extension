@@ -203,5 +203,6 @@
     "data/municipal_discovery/top100_coverage/inputs/washington_calendar.json",
     "data/municipal_discovery/top100_coverage/inputs/wichita_calendar.json",
     "data/municipal_discovery/top100_coverage/inputs/winston_salem_calendar.json"
-  ]
+  ],
+  "identity_links": "data/municipal_discovery/top100_coverage/linkage/identity_links.csv"
 }
