@@ -24,13 +24,15 @@
  {
   "city_id": "5553000",
   "year": 2012,
-  "status": "unresolved",
-  "expected_election_dates": [],
-  "source_url": "https://milwaukee.legistar1.com/milwaukee/attachments/41ca66c0-5507-4413-8ee3-4d8e480ec9f8.PDF",
+  "status": "complete",
+  "expected_election_dates": [
+   "2012-04-03"
+  ],
+  "source_url": "https://web.archive.org/web/20130609180242/http://city.milwaukee.gov/ElectionResults1717/20121/April-3-2012.htm",
   "additional_source_urls": [
    "https://city.milwaukee.gov/ImageLibrary/User/dwalton/kdzapat1/Website-Forms/TermsofOffice1.pdf"
   ],
-  "note": "A mayoral election was held on April 3, 2012 and Mayor Tom Barrett was re-elected. The Board of Election Commissioners letter to the mayor in Common Council file 120027 confirms this, and the file title lists the Mayor among the offices. The attached letters contain no vote totals. The old city results page city.milwaukee.gov/ElectionResults1717/20121/April-3-2012.htm and the old county page county.milwaukee.gov/ElectionResults23729/2012-Election-Results.htm both returned Page Not Found. The Internet Archive was offline. No official vote totals were opened."
+  "note": "Archived copy of the official City of Milwaukee Election Commission results page for April 3, 2012 shows the mayoral race with Tom Barrett 54,640, Edward McDonald 22,388 and write-in 517. The page states the Board of Commissioners certified the results on April 12, 2012. Only two candidates ran, so no February primary decided the office. The first pass could not open this page because the live URL was removed."
  },
  {
   "city_id": "5553000",

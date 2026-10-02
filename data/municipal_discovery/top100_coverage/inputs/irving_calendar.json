@@ -2,13 +2,14 @@
  {
   "city_id": "4837000",
   "year": 2010,
-  "status": "unresolved",
+  "status": "no_election",
   "expected_election_dates": [],
-  "source_url": "https://www.dallascountyvotes.org/election-results/historical/may-8-2010-joint-election/",
+  "source_url": "http://results.enr.clarityelections.com/TX/Dallas/16612/25073/reports/detailtxt.zip",
   "additional_source_urls": [
-   "https://assets01.aws.connect.clarityelections.com/Assets/Connect/RootPublish/dallas-tx.connect.clarityelections.com/ElectionDocuments/2010/May082010/UnofficialFinalResults.html"
+   "http://web.archive.org/web/20251206173745id_/https://irvingtx.gov/corecode/storage/uber_resource/uploaded_pdfs/corecode/May%202013%20Canvass%20Ord.%202013-9464_201407210807177403_822.pdf",
+   "http://web.archive.org/web/20251206173745id_/https://irvingtx.gov/corecode/storage/uber_resource/uploaded_pdfs/corecode/Irving%2C%20TX%20Charter%20Updated%20May%206_202311271724016876_1370.pdf"
   ],
-  "note": "The Dallas County page for the May 8, 2010 joint election links only a redirect page (to results.enr.clarityelections.com, Dallas 16612) and an Access database, and the results could not be read. The City of Irving website returned HTTP 403 to every request, so the city election list could not be opened. Whether a mayoral race occurred in 2010 is not confirmed."
+  "note": "The Dallas County Clarity results file for the May 8, 2010 joint election (election 16612, detail.txt) lists three Irving city contests: Council Member District 01, Council Place 2 At-Large and Council Member District 7. It lists no Irving mayor contest, although it lists mayor contests for other cities. The City of Irving canvass ordinance ORD-2013-9464 states that a system of three-year alternating terms was already in place in 2013, and the mayor is elected with Places 3 and 5 in 2011, 2014, 2017 and 2020. Places 1, 2 and 7 were on the 2010 ballot. No mayoral election was held in 2010. Cycle source: Irving City Charter Art. IV Secs. 6 and 8 (three-year terms for the mayor and council, regular election in May), as published on the City of Irving website and opened through the Internet Archive."
  },
  {
   "city_id": "4837000",
@@ -29,24 +30,24 @@
   "year": 2012,
   "status": "unresolved",
   "expected_election_dates": [],
-  "source_url": "https://assets01.aws.connect.clarityelections.com/Assets/Connect/RootPublish/dallas-tx.connect.clarityelections.com/ElectionDocuments/2012/JointElection_May122012/update.pdf",
+  "source_url": "http://web.archive.org/web/20251206173745id_/https://irvingtx.gov/corecode/storage/uber_resource/uploaded_pdfs/corecode/Official%20Election%20Results%205-12-12_201407141412180849_820.pdf",
   "additional_source_urls": [
-   "https://www.dallascountyvotes.org/election-results/historical/may-12-2012-joint-election/",
-   "https://assets01.aws.connect.clarityelections.com/Assets/Connect/RootPublish/dallas-tx.connect.clarityelections.com/ElectionDocuments/2012/JointRunoffElection_June232012/UpdatedResults.pdf"
+   "http://web.archive.org/web/20251206173745id_/https://irvingtx.gov/corecode/storage/uber_resource/uploaded_pdfs/corecode/May%202013%20Canvass%20Ord.%202013-9464_201407210807177403_822.pdf",
+   "http://web.archive.org/web/20251206173745id_/https://irvingtx.gov/corecode/storage/uber_resource/uploaded_pdfs/corecode/Irving%2C%20TX%20Charter%20Updated%20May%206_202311271724016876_1370.pdf"
   ],
-  "note": "The Dallas County results document linked here lists Irving council or school contests but no Irving mayoral contest in the joint election it covers. No official city source (charter, city clerk list of mayors or elections) that states the mayoral term length or the election years could be opened: the City of Irving website returned HTTP 403 to every request, and the Dallas County city notice CoI-Notice-of-Election-050226.pdf downloaded as an empty file. Mayoral races were found in 2011, 2014, 2017, 2020 and 2026 in county results, but a cycle inferred from those rows is not an official cycle source, and absence from one results document does not exclude a mayoral election at another date that year. The year is left unresolved after the checker review."
+  "note": "Unresolved. The cited City of Irving canvass ORD-2012-9339 (Official Election Results 5-12-12 PDF) could not be opened. Attempts: curl of the web.archive.org URL failed with HTTP 000 (connection failure) on repeated tries; WebFetch is blocked for web.archive.org; the direct irvingtx.gov URL returned an HTML bot-challenge page, not the PDF; the Dallas County historical results pages returned HTTP 202 challenge pages. The 2013 and 2015 canvass ordinances and the three-year cycle (mayor elected 2011 and 2014) suggest no mayoral election in 2012, but no official 2012 document was read, so the year is not confirmed."
  },
  {
   "city_id": "4837000",
   "year": 2013,
-  "status": "unresolved",
+  "status": "no_election",
   "expected_election_dates": [],
-  "source_url": "https://assets01.aws.connect.clarityelections.com/Assets/Connect/RootPublish/dallas-tx.connect.clarityelections.com/ElectionDocuments/2013/Joint%20Election_May112013/Updated_Final_Results.pdf",
+  "source_url": "http://web.archive.org/web/20251206173745id_/https://irvingtx.gov/corecode/storage/uber_resource/uploaded_pdfs/corecode/May%202013%20Canvass%20Ord.%202013-9464_201407210807177403_822.pdf",
   "additional_source_urls": [
-   "https://www.dallascountyvotes.org/election-results/historical/may-11-2013-joint-election/",
-   "https://assets01.aws.connect.clarityelections.com/Assets/Connect/RootPublish/dallas-tx.connect.clarityelections.com/ElectionDocuments/2013/Joint%20Runoff_June152013/Updated_Final_Results.pdf"
+   "http://web.archive.org/web/20251206173745id_/https://irvingtx.gov/corecode/storage/uber_resource/uploaded_pdfs/5-11-13%20Election%20Canvass_1749219248.pdf",
+   "http://web.archive.org/web/20251206173745id_/https://irvingtx.gov/corecode/storage/uber_resource/uploaded_pdfs/corecode/Irving%2C%20TX%20Charter%20Updated%20May%206_202311271724016876_1370.pdf"
   ],
-  "note": "The Dallas County results document linked here lists Irving council or school contests but no Irving mayoral contest in the joint election it covers. No official city source (charter, city clerk list of mayors or elections) that states the mayoral term length or the election years could be opened: the City of Irving website returned HTTP 403 to every request, and the Dallas County city notice CoI-Notice-of-Election-050226.pdf downloaded as an empty file. Mayoral races were found in 2011, 2014, 2017, 2020 and 2026 in county results, but a cycle inferred from those rows is not an official cycle source, and absence from one results document does not exclude a mayoral election at another date that year. The year is left unresolved after the checker review."
+  "note": "City of Irving Ordinance ORD-2013-9464 canvasses the May 11, 2013 general municipal election held to elect Council Places 1, 2 and 7 for three-year terms. The ordinance lists no mayoral contest. Its summary of charter amendments states that the system of three-year alternating terms is already in place. No mayoral election was held in 2013. Cycle source: Irving City Charter Art. IV Secs. 6 and 8 (three-year terms for the mayor and council, regular election in May), as published on the City of Irving website and opened through the Internet Archive."
  },
  {
   "city_id": "4837000",
@@ -64,26 +65,24 @@
  {
   "city_id": "4837000",
   "year": 2015,
-  "status": "unresolved",
+  "status": "no_election",
   "expected_election_dates": [],
-  "source_url": "https://assets01.aws.connect.clarityelections.com/Assets/Connect/RootPublish/dallas-tx.connect.clarityelections.com/ElectionDocuments/2015/Joint_150509/150509JointFinalCumTotals.pdf",
+  "source_url": "http://web.archive.org/web/20251206173745id_/https://irvingtx.gov/corecode/storage/uber_resource/uploaded_pdfs/5-9-15-Election-Canvass_1749219441.pdf",
   "additional_source_urls": [
-   "https://www.dallascountyvotes.org/election-results/historical/may-9-2015-joint-election/",
-   "https://assets01.aws.connect.clarityelections.com/Assets/Connect/RootPublish/dallas-tx.connect.clarityelections.com/ElectionDocuments/2015/JointRunoff_150613/_150613RO_JointRunoffFinalCumTotals.pdf"
+   "http://web.archive.org/web/20251206173745id_/https://irvingtx.gov/corecode/storage/uber_resource/uploaded_pdfs/corecode/Irving%2C%20TX%20Charter%20Updated%20May%206_202311271724016876_1370.pdf"
   ],
-  "note": "The Dallas County results document linked here lists Irving council or school contests but no Irving mayoral contest in the joint election it covers. No official city source (charter, city clerk list of mayors or elections) that states the mayoral term length or the election years could be opened: the City of Irving website returned HTTP 403 to every request, and the Dallas County city notice CoI-Notice-of-Election-050226.pdf downloaded as an empty file. Mayoral races were found in 2011, 2014, 2017, 2020 and 2026 in county results, but a cycle inferred from those rows is not an official cycle source, and absence from one results document does not exclude a mayoral election at another date that year. The year is left unresolved after the checker review."
+  "note": "City of Irving Ordinance ORD-2015-9689 canvasses the May 9, 2015 general municipal election held to elect Council Places 4, 6 and 8 for three-year terms. The ordinance lists no mayoral contest. The mayor was elected in 2014 and 2017. No mayoral election was held in 2015. Cycle source: Irving City Charter Art. IV Secs. 6 and 8 (three-year terms for the mayor and council, regular election in May), as published on the City of Irving website and opened through the Internet Archive."
  },
  {
   "city_id": "4837000",
   "year": 2016,
-  "status": "unresolved",
+  "status": "no_election",
   "expected_election_dates": [],
-  "source_url": "https://assets01.aws.connect.clarityelections.com/Assets/Connect/RootPublish/dallas-tx.connect.clarityelections.com/ElectionDocuments/2016/Joint%20160507/160507J%20Final%20Cum%20Totals.pdf",
+  "source_url": "http://web.archive.org/web/20251206173745id_/https://irvingtx.gov/corecode/storage/uber_resource/uploaded_pdfs/5-7-16-Election-Canvass_1749219888.pdf",
   "additional_source_urls": [
-   "https://www.dallascountyvotes.org/election-results/historical/may-7-2016-joint-election/",
-   "https://assets01.aws.connect.clarityelections.com/Assets/Connect/RootPublish/dallas-tx.connect.clarityelections.com/ElectionDocuments/2016/Joint%20Runoff%20160618/160618JR%20Joint%20Runoff%20Final%20Cum%20Totals_EL45A.pdf"
+   "http://web.archive.org/web/20251206173745id_/https://irvingtx.gov/corecode/storage/uber_resource/uploaded_pdfs/corecode/Irving%2C%20TX%20Charter%20Updated%20May%206_202311271724016876_1370.pdf"
   ],
-  "note": "The Dallas County results document linked here lists Irving council or school contests but no Irving mayoral contest in the joint election it covers. No official city source (charter, city clerk list of mayors or elections) that states the mayoral term length or the election years could be opened: the City of Irving website returned HTTP 403 to every request, and the Dallas County city notice CoI-Notice-of-Election-050226.pdf downloaded as an empty file. Mayoral races were found in 2011, 2014, 2017, 2020 and 2026 in county results, but a cycle inferred from those rows is not an official cycle source, and absence from one results document does not exclude a mayoral election at another date that year. The year is left unresolved after the checker review."
+  "note": "City of Irving Ordinance ORD-2016-9818 canvasses the May 7, 2016 general municipal election held to elect Council Places 1, 2 and 7 for three-year terms. The ordinance lists no mayoral contest. No mayoral election was held in 2016. Cycle source: Irving City Charter Art. IV Secs. 6 and 8 (three-year terms for the mayor and council, regular election in May), as published on the City of Irving website and opened through the Internet Archive."
  },
  {
   "city_id": "4837000",
@@ -101,25 +100,25 @@
  {
   "city_id": "4837000",
   "year": 2018,
-  "status": "unresolved",
+  "status": "no_election",
   "expected_election_dates": [],
-  "source_url": "https://assets01.aws.connect.clarityelections.com/Assets/Connect/RootPublish/dallas-tx.connect.clarityelections.com/ElectionDocuments/2018/Joint%20Election%20180505/180505J%20Joint%20Election%20Canvass%20Final%20Cum%20Totals%20WOverUnders.pdf",
+  "source_url": "http://web.archive.org/web/20251206173745id_/https://irvingtx.gov/corecode/storage/uber_resource/uploaded_pdfs/corecode/Ord.%202018-10062%20canvassing%205-5-18%20election_4449.pdf",
   "additional_source_urls": [
-   "https://www.dallascountyvotes.org/election-results/historical/may-5-2018-joint-election/"
+   "http://web.archive.org/web/20251206173745id_/https://irvingtx.gov/corecode/storage/uber_resource/uploaded_pdfs/corecode/Certification%20of%20Unopposed%20Candidates_4442.pdf",
+   "http://web.archive.org/web/20251206173745id_/https://irvingtx.gov/corecode/storage/uber_resource/uploaded_pdfs/corecode/Irving%2C%20TX%20Charter%20Updated%20May%206_202311271724016876_1370.pdf"
   ],
-  "note": "The Dallas County results document linked here lists Irving council or school contests but no Irving mayoral contest in the joint election it covers. No official city source (charter, city clerk list of mayors or elections) that states the mayoral term length or the election years could be opened: the City of Irving website returned HTTP 403 to every request, and the Dallas County city notice CoI-Notice-of-Election-050226.pdf downloaded as an empty file. Mayoral races were found in 2011, 2014, 2017, 2020 and 2026 in county results, but a cycle inferred from those rows is not an official cycle source, and absence from one results document does not exclude a mayoral election at another date that year. The year is left unresolved after the checker review."
+  "note": "City of Irving Ordinance ORD-2018-10062 canvasses the May 5, 2018 general municipal election. Place 6 was contested. Places 4 and 8 were unopposed and declared elected, and their elections were cancelled. The unopposed certification for May 5, 2018 lists only Place 4 and Place 8. The ordinance and the certification list no mayoral contest. No mayoral election was held in 2018. Cycle source: Irving City Charter Art. IV Secs. 6 and 8 (three-year terms for the mayor and council, regular election in May), as published on the City of Irving website and opened through the Internet Archive."
  },
  {
   "city_id": "4837000",
   "year": 2019,
-  "status": "unresolved",
+  "status": "no_election",
   "expected_election_dates": [],
-  "source_url": "https://assets01.aws.connect.clarityelections.com/Assets/Connect/RootPublish/dallas-tx.connect.clarityelections.com/ElectionDocuments/2019/190504%20Joint/190504J%20Joint%20Election%20Canvass%20Final%20Cum%20Totals_EL45A.pdf",
+  "source_url": "http://web.archive.org/web/2025id_/https://irvingtx.gov/corecode/storage/uber_resource/uploaded_pdfs/May-4-2019-General%20Election_1747949970.pdf",
   "additional_source_urls": [
-   "https://www.dallascountyvotes.org/election-results/historical/may-4-2019-joint-election/",
-   "https://assets01.aws.connect.clarityelections.com/Assets/Connect/RootPublish/dallas-tx.connect.clarityelections.com/ElectionDocuments/2019/2019%20Joint%20RO/190608RO%20Joint%20Runoff%20Election%20Canvass%20Final%20Cum%20Totals%20WOverUnders_EL45A.pdf"
+   "http://web.archive.org/web/20251206173745id_/https://irvingtx.gov/corecode/storage/uber_resource/uploaded_pdfs/corecode/Irving%2C%20TX%20Charter%20Updated%20May%206_202311271724016876_1370.pdf"
   ],
-  "note": "The Dallas County results document linked here lists Irving council or school contests but no Irving mayoral contest in the joint election it covers. No official city source (charter, city clerk list of mayors or elections) that states the mayoral term length or the election years could be opened: the City of Irving website returned HTTP 403 to every request, and the Dallas County city notice CoI-Notice-of-Election-050226.pdf downloaded as an empty file. Mayoral races were found in 2011, 2014, 2017, 2020 and 2026 in county results, but a cycle inferred from those rows is not an official cycle source, and absence from one results document does not exclude a mayoral election at another date that year. The year is left unresolved after the checker review."
+  "note": "City of Irving Ordinance ORD-2019-10188 canvasses the May 4, 2019 general municipal election held to elect Council Places 1, 2 and 7 for three-year terms, plus an alcohol local option proposition. The ordinance lists no mayoral contest. The November 5, 2019 special election concerned a charter amendment on pension contributions (ORD-2019-10238). No mayoral election was held in 2019. Cycle source: Irving City Charter Art. IV Secs. 6 and 8 (three-year terms for the mayor and council, regular election in May), as published on the City of Irving website and opened through the Internet Archive."
  },
  {
   "city_id": "4837000",
@@ -137,60 +136,63 @@
  {
   "city_id": "4837000",
   "year": 2021,
-  "status": "unresolved",
+  "status": "no_election",
   "expected_election_dates": [],
-  "source_url": "https://assets01.aws.connect.clarityelections.com/Assets/Connect/RootPublish/dallas-tx.connect.clarityelections.com/ElectionDocuments/2021/2021%20Joint/2021%20Joint%20Election%20Final%20Canvass%20Reports%20Final%20Cum%20Totals%20WOverUnder.pdf",
+  "source_url": "http://web.archive.org/web/20251206173745id_/https://irvingtx.gov/corecode/storage/uber_resource/uploaded_pdfs/corecode/Canvass%20Ord.%205-1-21%20General%20Election_859.pdf",
   "additional_source_urls": [
-   "https://www.dallascountyvotes.org/election-results/historical/may-1-2021-joint-election/",
-   "https://assets01.aws.connect.clarityelections.com/Assets/Connect/RootPublish/dallas-tx.connect.clarityelections.com/ElectionDocuments/2021/2021%20Joint%20Runoff/2021%20Joint%20Runoff%20Final%20Canvass%20Reports%20Final%20Cum%20Totals%20WOverUnder.pdf"
+   "http://web.archive.org/web/20251206173745id_/https://irvingtx.gov/corecode/storage/uber_resource/uploaded_pdfs/corecode/Irving%2C%20TX%20Charter%20Updated%20May%206_202311271724016876_1370.pdf"
   ],
-  "note": "The Dallas County results document linked here lists Irving council or school contests but no Irving mayoral contest in the joint election it covers. No official city source (charter, city clerk list of mayors or elections) that states the mayoral term length or the election years could be opened: the City of Irving website returned HTTP 403 to every request, and the Dallas County city notice CoI-Notice-of-Election-050226.pdf downloaded as an empty file. Mayoral races were found in 2011, 2014, 2017, 2020 and 2026 in county results, but a cycle inferred from those rows is not an official cycle source, and absence from one results document does not exclude a mayoral election at another date that year. The year is left unresolved after the checker review."
+  "note": "City of Irving Ordinance ORD-2021-10441 canvasses the May 1, 2021 regular municipal election held to elect Council Places 4, 6 and 8 for three-year terms. The ordinance lists no mayoral contest. The mayor was elected in November 2020 and May 2023. No mayoral election was held in 2021. Cycle source: Irving City Charter Art. IV Secs. 6 and 8 (three-year terms for the mayor and council, regular election in May), as published on the City of Irving website and opened through the Internet Archive."
  },
  {
   "city_id": "4837000",
   "year": 2022,
-  "status": "unresolved",
+  "status": "no_election",
   "expected_election_dates": [],
-  "source_url": "https://assets01.aws.connect.clarityelections.com/Assets/Connect/RootPublish/dallas-tx.connect.clarityelections.com/ElectionDocuments/2022/2022%20Constutional%20and%20Joint%20Election/Unofficial%20Final%20Results.pdf",
+  "source_url": "http://web.archive.org/web/20251206173745id_/https://irvingtx.gov/corecode/storage/uber_resource/uploaded_pdfs/CanvassOrd-May2022_1742770356.pdf",
   "additional_source_urls": [
-   "https://www.dallascountyvotes.org/election-results/historical/may-7-2022-joint-election/",
-   "https://assets01.aws.connect.clarityelections.com/Assets/Connect/RootPublish/dallas-tx.connect.clarityelections.com/ElectionDocuments/2022/2022%20General%20and%20Joint/Final%20Cum.pdf"
+   "http://web.archive.org/web/20251206173745id_/https://irvingtx.gov/corecode/storage/uber_resource/uploaded_pdfs/corecode/Canvass%20Ord.%202022-10602_940.pdf",
+   "http://web.archive.org/web/20251206173745id_/https://irvingtx.gov/corecode/storage/uber_resource/uploaded_pdfs/CertificateofUnopposedCandidates_11064.pdf",
+   "http://web.archive.org/web/20251206173745id_/https://irvingtx.gov/corecode/storage/uber_resource/uploaded_pdfs/corecode/Irving%2C%20TX%20Charter%20Updated%20May%206_202311271724016876_1370.pdf"
   ],
-  "note": "The Dallas County results document linked here lists Irving council or school contests but no Irving mayoral contest in the joint election it covers. No official city source (charter, city clerk list of mayors or elections) that states the mayoral term length or the election years could be opened: the City of Irving website returned HTTP 403 to every request, and the Dallas County city notice CoI-Notice-of-Election-050226.pdf downloaded as an empty file. Mayoral races were found in 2011, 2014, 2017, 2020 and 2026 in county results, but a cycle inferred from those rows is not an official cycle source, and absence from one results document does not exclude a mayoral election at another date that year. The year is left unresolved after the checker review."
+  "note": "City of Irving Ordinance ORD-2022-10583 canvasses the May 7, 2022 regular municipal election held to elect Council Places 1, 2 and 7. Place 2 was unopposed. The June 18, 2022 runoff (ORD-2022-10602) concerned Place 1 only. The ordinances list no mayoral contest. No mayoral election was held in 2022. Cycle source: Irving City Charter Art. IV Secs. 6 and 8 (three-year terms for the mayor and council, regular election in May), as published on the City of Irving website and opened through the Internet Archive."
  },
  {
   "city_id": "4837000",
   "year": 2023,
-  "status": "unresolved",
-  "expected_election_dates": [],
-  "source_url": "https://www.dallascountyvotes.org/election-results/historical/may-6-2023-joint-election/",
-  "additional_source_urls": [
-   "https://assets01.aws.connect.clarityelections.com/Assets/Connect/RootPublish/dallas-tx.connect.clarityelections.com/ElectionDocuments/2023/May%206%2C%202023/Unofficial%20Final.pdf",
-   "https://assets01.aws.connect.clarityelections.com/Assets/Connect/RootPublish/dallas-tx.connect.clarityelections.com/ElectionDocuments/2023/May%206%2C%202023/FInal%20Sample%20Ballot%208.5X%2014.pdf"
+  "status": "complete",
+  "expected_election_dates": [
+   "2023-05-06"
   ],
-  "note": "The Dallas County unofficial final results and sample ballot for May 6, 2023 list no Irving mayoral contest. Mayoral races appear in county results for 2011, 2014, 2017, 2020 and 2026, so a 2023 election or an uncontested cancellation cannot be excluded. The City of Irving website returned HTTP 403, and the Dallas County city notice CoI-Notice-of-Election-050226.pdf downloaded as an empty file, so no official source for the term length, the cycle, a cancellation or a term change could be opened. Status is not confirmed."
+  "source_url": "http://web.archive.org/web/20251206173745id_/https://irvingtx.gov/corecode/storage/uber_resource/uploaded_pdfs/corecode/Ord%202023-10746%20Canvass%20Election_1061.pdf",
+  "additional_source_urls": [
+   "http://web.archive.org/web/20251206173745id_/https://irvingtx.gov/corecode/storage/uber_resource/uploaded_pdfs/corecode/Certification%20of%20unopposed%20candidates_1053.pdf",
+   "http://web.archive.org/web/20251206173745id_/https://irvingtx.gov/corecode/storage/uber_resource/uploaded_pdfs/corecode/Irving%2C%20TX%20Charter%20Updated%20May%206_202311271724016876_1370.pdf"
+  ],
+  "note": "City of Irving Ordinance ORD-2023-10746 canvasses the May 6, 2023 regular municipal election called to elect the Mayor and Council Places 3 and 5. It recites that on March 9, 2023 the council (ORD-2023-10716) accepted the certification that Richard H. Stopfer was unopposed for Mayor and declared him elected. The signed certification of unopposed candidates lists Mayor, Richard H. Stopfer. No mayoral votes were counted. Details are in irving_results.json."
  },
  {
   "city_id": "4837000",
   "year": 2024,
-  "status": "unresolved",
+  "status": "no_election",
   "expected_election_dates": [],
-  "source_url": "https://www.dallascountyvotes.org/wp-content/uploads/2024/05/Final-Unofficial-Final.pdf",
+  "source_url": "http://web.archive.org/web/20251206173745id_/https://irvingtx.gov/corecode/storage/uber_resource/uploaded_pdfs/corecode/Canvassing%20Ord.%2C%20General%20Election%2C%205-4-24_1191.pdf",
   "additional_source_urls": [
-   "https://www.dallascountyvotes.org/election-results/historical/may-4-2024-joint-election/"
+   "http://web.archive.org/web/20251206173745id_/https://irvingtx.gov/corecode/storage/uber_resource/uploaded_pdfs/corecode/Ord%202024-10859%20ordering%20general%20election_1199.pdf",
+   "http://web.archive.org/web/20251206173745id_/https://irvingtx.gov/corecode/storage/uber_resource/uploaded_pdfs/corecode/Irving%2C%20TX%20Charter%20Updated%20May%206_202311271724016876_1370.pdf"
   ],
-  "note": "The Dallas County results document linked here lists Irving council or school contests but no Irving mayoral contest in the joint election it covers. No official city source (charter, city clerk list of mayors or elections) that states the mayoral term length or the election years could be opened: the City of Irving website returned HTTP 403 to every request, and the Dallas County city notice CoI-Notice-of-Election-050226.pdf downloaded as an empty file. Mayoral races were found in 2011, 2014, 2017, 2020 and 2026 in county results, but a cycle inferred from those rows is not an official cycle source, and absence from one results document does not exclude a mayoral election at another date that year. The year is left unresolved after the checker review."
+  "note": "City of Irving Ordinance ORD-2024-10918 canvasses the May 4, 2024 regular municipal election held to elect Council Places 4, 6 and 8. The ordinance lists no mayoral contest. The mayor was elected in May 2023 (unopposed) and May 2026. No mayoral election was held in 2024. Cycle source: Irving City Charter Art. IV Secs. 6 and 8 (three-year terms for the mayor and council, regular election in May), as published on the City of Irving website and opened through the Internet Archive."
  },
  {
   "city_id": "4837000",
   "year": 2025,
-  "status": "unresolved",
+  "status": "no_election",
   "expected_election_dates": [],
-  "source_url": "https://www.dallascountyvotes.org/wp-content/uploads/2025/05/Unofficial-Final-1.pdf",
+  "source_url": "http://web.archive.org/web/20251206173745id_/https://irvingtx.gov/corecode/storage/uber_resource/uploaded_pdfs/Canvass-May-2025-Elections_1747408627.pdf",
   "additional_source_urls": [
-   "https://www.dallascountyvotes.org/election-results/historical/may-3-2025-joint-special-election/"
+   "http://web.archive.org/web/20251206173745id_/https://irvingtx.gov/corecode/storage/uber_resource/uploaded_pdfs/corecode/Irving%2C%20TX%20Charter%20Updated%20May%206_202311271724016876_1370.pdf"
   ],
-  "note": "The Dallas County results document linked here lists Irving council or school contests but no Irving mayoral contest in the joint election it covers. No official city source (charter, city clerk list of mayors or elections) that states the mayoral term length or the election years could be opened: the City of Irving website returned HTTP 403 to every request, and the Dallas County city notice CoI-Notice-of-Election-050226.pdf downloaded as an empty file. Mayoral races were found in 2011, 2014, 2017, 2020 and 2026 in county results, but a cycle inferred from those rows is not an official cycle source, and absence from one results document does not exclude a mayoral election at another date that year. The year is left unresolved after the checker review."
+  "note": "City of Irving Ordinance ORD-2025-11106 canvasses the May 3, 2025 regular municipal election held to elect Council Places 1, 2 and 7. The ordinance lists no mayoral contest. A June 7, 2025 runoff concerned a council place. No mayoral election was held in 2025. Cycle source: Irving City Charter Art. IV Secs. 6 and 8 (three-year terms for the mayor and council, regular election in May), as published on the City of Irving website and opened through the Internet Archive."
  },
  {
   "city_id": "4837000",

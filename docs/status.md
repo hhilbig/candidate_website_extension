@@ -1936,3 +1936,14 @@ Cause: official sites block automated access (HTTP 403) or publish no machine-re
 Usage: about 25 million new subagent tokens in total (10.7 million exact for the resumed part).
 Next: a targeted second pass for the unresolved cities, using another route (Hanno's browser for 403 sites,
 county election boards, archived copies).
+
+**Mayoral second pass integrated, October 1.** Workflow `scripts/workflows_mayoral_second_pass.js`
+(run `wf_8af39b23-9f9`, 78 agents, 6.0 million subagent tokens) on the 36 cities with unresolved years,
+editing copies in `staging2/`. Integration reverted any change outside each city's unresolved years
+(none remained) and reconciled new records against other source files. Unresolved city-years in those
+cities: 172 to 72. City-years assessed: 1,528 to 1,628 of 1,700. Verified decisive elections: 391 to 404
+(new: Pittsburgh 2013, Atlanta 2025, Aurora 2011, Fresno 2012/2020/2024, Milwaukee 2012, North Las Vegas
+2013/2017, St. Paul 2013/2017/2021/2025; Irving 2023 uncontested). Build and 46 tests pass.
+Remaining open years concentrate in Glendale AZ (17), Santa Clarita (16; council-selected mayor but no
+period-specific official statement), Oklahoma City (5 election years), Tulsa (4), Colorado Springs (5),
+Plano (4), Sacramento (3). These need a browser or human source check (sites block automated access).

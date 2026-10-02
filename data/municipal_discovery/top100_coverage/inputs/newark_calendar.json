@@ -8,7 +8,7 @@
   "additional_source_urls": [
    "http://web.archive.org/web/20100925225337/http://newarkelection2010.com/ward/mayor"
   ],
-  "note": "A Newark mayoral contest was held on May 11, 2010. The only source for the vote totals is an Internet Archive copy of newarkelection2010.com. That site labels itself Unofficial and carries QLife branding, and no document from an election authority certifies it. The Essex County Clerk page View/30 has no Newark mayor table and says Newark results go to newarkelection2010.com. The archived site shows Booker 22745 and Minor 13570 as the top two, but no official or certified document was found. A search for another source was not completed because the web search budget and the Wayback CDX rate limit were exhausted. The year is left unresolved and no result is recorded."
+  "note": "A Newark mayoral contest was held on May 11, 2010. The only source for the vote totals is an Internet Archive copy of newarkelection2010.com. That site labels itself Unofficial and carries QLife branding, and no document from an election authority certifies it. The Essex County Clerk page View/30 has no Newark mayor table and says Newark results go to newarkelection2010.com. The archived site shows Booker 22745 and Minor 13570 as the top two, but no official or certified document was found. A search for another source was not completed because the web search budget and the Wayback CDX rate limit were exhausted. The year is left unresolved and no result is recorded. This pass: the Essex clerk page View/30 (last update 04/15/2016) was read again and still has no Newark mayor table, only the line 'FOR NEWARK RESULTS GO TO http://www.newarkelection2010.com'. A request to web.archive.org for newarkelection2010.com and its CDX index failed (no response, then SSL connection error), and the web search budget was exhausted, so no city clerk, council resolution or county canvass for the May 11, 2010 Newark mayoral result was found. The year stays unresolved."
  },
  {
   "city_id": "3451000",
@@ -105,29 +105,41 @@
  {
   "city_id": "3451000",
   "year": 2019,
-  "status": "unresolved",
+  "status": "no_election",
   "expected_election_dates": [],
-  "source_url": "https://www.essexclerk.com/Election/",
-  "additional_source_urls": [],
-  "note": "The Essex County Clerk index lists a municipal election page for this year only as a Clarity link. Essex clerk election results index https://www.essexclerk.com/Election/ links the Clarity pages, but results.enr.clarityelections.com returned HTTP 405 with an AWS WAF human-verification CAPTCHA to curl, WebFetch and the browser. The CAPTCHA was not solved. Whether Newark had a mayoral contest in this year is not confirmed from an official document. No charter or official list of Newark elections was opened."
+  "source_url": "https://results.enr.clarityelections.com/NJ/Essex/95904/",
+  "additional_source_urls": [
+   "https://www.essexclerk.com/Election/",
+   "https://results.enr.clarityelections.com/NJ/Essex/112990/",
+   "https://results.enr.clarityelections.com/NJ/Essex/126285/"
+  ],
+  "note": "The Essex County Clerk results index lists the 2019 Municipal Election page. Its official contest list (summary.json) holds Cedar Grove council at large, South Orange village president, South Orange trustees and Verona council at large. It holds no Newark mayoral contest. Newark mayoral elections are recorded on official Essex County Clerk pages for May 2014, May 2018, May 2022 and May 2026, a four-year cycle, and no mayoral round fell in this year. No charter or statute document was opened to confirm the four-year term; the cycle rests on the official county results. This pass: the Clarity results.enr.clarityelections.com pages were read through current_ver.txt and json/en/summary.json with a browser user agent, which now load."
  },
  {
   "city_id": "3451000",
   "year": 2020,
-  "status": "unresolved",
+  "status": "no_election",
   "expected_election_dates": [],
-  "source_url": "https://www.essexclerk.com/Election/",
-  "additional_source_urls": [],
-  "note": "The Essex County Clerk index lists a municipal election page for this year only as a Clarity link. Essex clerk election results index https://www.essexclerk.com/Election/ links the Clarity pages, but results.enr.clarityelections.com returned HTTP 405 with an AWS WAF human-verification CAPTCHA to curl, WebFetch and the browser. The CAPTCHA was not solved. Whether Newark had a mayoral contest in this year is not confirmed from an official document. No charter or official list of Newark elections was opened."
+  "source_url": "https://results.enr.clarityelections.com/NJ/Essex/103451/",
+  "additional_source_urls": [
+   "https://www.essexclerk.com/Election/",
+   "https://results.enr.clarityelections.com/NJ/Essex/112990/",
+   "https://results.enr.clarityelections.com/NJ/Essex/126285/"
+  ],
+  "note": "The Essex County Clerk results index lists the 2020 Special Municipal Elections page. Its official contest list (summary.json) holds Belleville, Irvington, Montclair, Nutley and Orange contests plus Newark school board and a Newark school proposition, with no Newark mayoral contest. It holds no Newark mayoral contest. Newark mayoral elections are recorded on official Essex County Clerk pages for May 2014, May 2018, May 2022 and May 2026, a four-year cycle, and no mayoral round fell in this year. No charter or statute document was opened to confirm the four-year term; the cycle rests on the official county results. This pass: the Clarity results.enr.clarityelections.com pages were read through current_ver.txt and json/en/summary.json with a browser user agent, which now load."
  },
  {
   "city_id": "3451000",
   "year": 2021,
-  "status": "unresolved",
+  "status": "no_election",
   "expected_election_dates": [],
-  "source_url": "https://www.essexclerk.com/Election/",
-  "additional_source_urls": [],
-  "note": "The Essex County Clerk index lists a municipal election page for this year only as a Clarity link. Essex clerk election results index https://www.essexclerk.com/Election/ links the Clarity pages, but results.enr.clarityelections.com returned HTTP 405 with an AWS WAF human-verification CAPTCHA to curl, WebFetch and the browser. The CAPTCHA was not solved. Whether Newark had a mayoral contest in this year is not confirmed from an official document. No charter or official list of Newark elections was opened."
+  "source_url": "https://results.enr.clarityelections.com/NJ/Essex/109367",
+  "additional_source_urls": [
+   "https://www.essexclerk.com/Election/",
+   "https://results.enr.clarityelections.com/NJ/Essex/112990/",
+   "https://results.enr.clarityelections.com/NJ/Essex/126285/"
+  ],
+  "note": "The Essex County Clerk results index lists the 2021 Municipal Election (Unofficial Results) page. Its official contest list (summary.json) holds Cedar Grove council at large, South Orange trustees and Verona council at large. It holds no Newark mayoral contest. Newark mayoral elections are recorded on official Essex County Clerk pages for May 2014, May 2018, May 2022 and May 2026, a four-year cycle, and no mayoral round fell in this year. No charter or statute document was opened to confirm the four-year term; the cycle rests on the official county results. This pass: the Clarity results.enr.clarityelections.com pages were read through current_ver.txt and json/en/summary.json with a browser user agent, which now load."
  },
  {
   "city_id": "3451000",
@@ -145,29 +157,41 @@
  {
   "city_id": "3451000",
   "year": 2023,
-  "status": "unresolved",
+  "status": "no_election",
   "expected_election_dates": [],
-  "source_url": "https://www.essexclerk.com/Election/",
-  "additional_source_urls": [],
-  "note": "The Essex County Clerk index lists a municipal election page for this year only as a Clarity link. Essex clerk election results index https://www.essexclerk.com/Election/ links the Clarity pages, but results.enr.clarityelections.com returned HTTP 405 with an AWS WAF human-verification CAPTCHA to curl, WebFetch and the browser. The CAPTCHA was not solved. Whether Newark had a mayoral contest in this year is not confirmed from an official document. No charter or official list of Newark elections was opened."
+  "source_url": "https://results.enr.clarityelections.com/NJ/Essex/117798/",
+  "additional_source_urls": [
+   "https://www.essexclerk.com/Election/",
+   "https://results.enr.clarityelections.com/NJ/Essex/112990/",
+   "https://results.enr.clarityelections.com/NJ/Essex/126285/"
+  ],
+  "note": "The Essex County Clerk results index lists the 2023 Municipal Election page. Its official contest list (summary.json) holds Cedar Grove council at large, South Orange village president and trustees and Verona council at large. It holds no Newark mayoral contest. Newark mayoral elections are recorded on official Essex County Clerk pages for May 2014, May 2018, May 2022 and May 2026, a four-year cycle, and no mayoral round fell in this year. No charter or statute document was opened to confirm the four-year term; the cycle rests on the official county results. This pass: the Clarity results.enr.clarityelections.com pages were read through current_ver.txt and json/en/summary.json with a browser user agent, which now load."
  },
  {
   "city_id": "3451000",
   "year": 2024,
-  "status": "unresolved",
+  "status": "no_election",
   "expected_election_dates": [],
-  "source_url": "https://www.essexclerk.com/Election/",
-  "additional_source_urls": [],
-  "note": "The Essex County Clerk index lists a municipal election page for this year only as a Clarity link. Essex clerk election results index https://www.essexclerk.com/Election/ links the Clarity pages, but results.enr.clarityelections.com returned HTTP 405 with an AWS WAF human-verification CAPTCHA to curl, WebFetch and the browser. The CAPTCHA was not solved. Whether Newark had a mayoral contest in this year is not confirmed from an official document. No charter or official list of Newark elections was opened."
+  "source_url": "https://results.enr.clarityelections.com/NJ/Essex/121184/",
+  "additional_source_urls": [
+   "https://www.essexclerk.com/Election/",
+   "https://results.enr.clarityelections.com/NJ/Essex/112990/",
+   "https://results.enr.clarityelections.com/NJ/Essex/126285/"
+  ],
+  "note": "The Essex County Clerk results index lists the 2024 May Municipal Results page. Its official contest list (summary.json) holds Belleville, Irvington, Montclair, Nutley and Orange contests, with no Newark contest. It holds no Newark mayoral contest. Newark mayoral elections are recorded on official Essex County Clerk pages for May 2014, May 2018, May 2022 and May 2026, a four-year cycle, and no mayoral round fell in this year. No charter or statute document was opened to confirm the four-year term; the cycle rests on the official county results. This pass: the Clarity results.enr.clarityelections.com pages were read through current_ver.txt and json/en/summary.json with a browser user agent, which now load."
  },
  {
   "city_id": "3451000",
   "year": 2025,
-  "status": "unresolved",
+  "status": "no_election",
   "expected_election_dates": [],
-  "source_url": "https://www.essexclerk.com/Election/",
-  "additional_source_urls": [],
-  "note": "The Essex County Clerk index lists a municipal election page for this year only as a Clarity link. Essex clerk election results index https://www.essexclerk.com/Election/ links the Clarity pages, but results.enr.clarityelections.com returned HTTP 405 with an AWS WAF human-verification CAPTCHA to curl, WebFetch and the browser. The CAPTCHA was not solved. Whether Newark had a mayoral contest in this year is not confirmed from an official document. No charter or official list of Newark elections was opened."
+  "source_url": "https://results.enr.clarityelections.com/NJ/Essex/123818/",
+  "additional_source_urls": [
+   "https://www.essexclerk.com/Election/",
+   "https://results.enr.clarityelections.com/NJ/Essex/112990/",
+   "https://results.enr.clarityelections.com/NJ/Essex/126285/"
+  ],
+  "note": "The Essex County Clerk results index lists the 2025 May Municipal Results page. Its official contest list (summary.json) holds one contest, Cedar Grove council at large. It holds no Newark mayoral contest. Newark mayoral elections are recorded on official Essex County Clerk pages for May 2014, May 2018, May 2022 and May 2026, a four-year cycle, and no mayoral round fell in this year. No charter or statute document was opened to confirm the four-year term; the cycle rests on the official county results. This pass: the Clarity results.enr.clarityelections.com pages were read through current_ver.txt and json/en/summary.json with a browser user agent, which now load."
  },
  {
   "city_id": "3451000",

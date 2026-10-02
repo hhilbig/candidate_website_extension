@@ -2,13 +2,14 @@
  {
   "city_id": "3436000",
   "year": 2010,
-  "status": "unresolved",
+  "status": "no_election",
   "expected_election_dates": [],
-  "source_url": "https://www.hudsoncountyclerk.org/elections-archives/",
+  "source_url": "https://www.jerseycitynj.gov/cityhall/Clerk/elections/",
   "additional_source_urls": [
+   "https://www.hudsoncountyclerk.org/elections-archives/",
    "https://www.nj.gov/state/elections/election-information-results.shtml"
   ],
-  "note": "Unresolved. The earlier note said the Hudson County Clerk archive shows no Jersey City mayoral contest in 2010. The checker found that the archive index lists elections by date only and shows no municipality. It lists a June 15, 2010 Municipal Runoff Election that the earlier note did not address. This session tried to re-open https://www.hudsoncountyclerk.org/elections-archives/ and the sibling path /election-archives/. Both returned an AWS WAF challenge (HTTP 202, empty body) to curl, and WebFetch returned no content. The NJ Division of Elections page https://www.nj.gov/state/elections/election-information-results.shtml lists only statewide 2010 general and primary results, no municipal results. The cycle of 2013, 2017, 2021 and 2025 is consistent with a four-year term, but no official source opened in this session shows a 2010 mayoral contest or its absence, and the identity of the June 15, 2010 runoff town is not established. The year stays unresolved until an official Hudson County or Jersey City source can be read."
+  "note": "The Jersey City City Clerk elections page lists every Jersey City election by year. Its 2012 - 2009 tab lists, for 2010, only one election: a Special Election on 11/2/2010 for Ward B only. It lists no mayoral election in 2010. The same list shows the regular municipal election on 5/12/2009 with a runoff on 6/9/2009, and the next regular municipal election on 5/14/2013 with a runoff on 6/11/2013. The mayoral cycle is therefore four years, and 2010 is not a mayoral year. The Hudson County Clerk archive lists a June 15, 2010 municipal runoff by date only, with no municipality. The Jersey City clerk list shows no June 2010 Jersey City election, so that runoff belongs to other Hudson County towns. Earlier pass: the Hudson County Clerk pages returned an AWS WAF challenge (HTTP 202) to curl. This pass: web.archive.org was not reachable from this session, and the web search budget was exhausted."
  },
  {
   "city_id": "3436000",

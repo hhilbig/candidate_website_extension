@@ -98,9 +98,10 @@
   "expected_election_dates": [],
   "source_url": "https://historical.elections.virginia.gov/elections/view/134283",
   "additional_source_urls": [
+   "https://va2.elstats.civera.com/api/download_contest/134283_table.csv?split_party=false",
    "https://law.lis.virginia.gov/charters/virginia-beach/"
   ],
-  "note": "The Virginia Department of Elections lists a Mayor contest (Dyer and Davenport) in the 2018 Nov 6 General Election in Virginia Beach City. The state page does not label it special and gives no vacancy reason. Charter 3.02:2 sets regular mayoral elections in 2008 and every fourth year, so 2018 is off cycle. Charter 3.03 has the council choose an interim mayor and refers to general law for the successor election. No official source found explains why a mayoral election was held in 2018 or whether it was special. The earlier special label was an inference and is removed. The year is unresolved because the election type and decisive status could not be established. Web search was unavailable (budget exhausted), so no further source was tried."
+  "note": "The Virginia Department of Elections database (contest 134283) lists a Mayor contest in Virginia Beach City on 2018-11-06 named '2018 Nov 6 General Election', with Dyer 82,201 and Davenport 75,693. The page has no special-election label. Charter 3.02 sets regular mayoral elections in 2008 and every fourth year, so 2018 is off cycle, and charter 3.03 has the council fill a vacancy until a successor is elected. No official source that could be opened states that this contest was a special election or why the seat was vacant. Attempts: vbgov.com, virginiabeach.gov, web.archive.org and the Department of Elections candidate list failed with connection errors or HTTP 404; elections.virginia.gov special-elections page and 2018-Special-Elections.pdf returned HTTP 404. The year is left unresolved because the regular-versus-special type cannot be established from an official source."
  },
  {
   "city_id": "5182000",

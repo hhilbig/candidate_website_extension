@@ -5,35 +5,51 @@
   "status": "unresolved",
   "expected_election_dates": [],
   "source_url": "https://www.ok.gov/elections/elections-results/election-results.html",
-  "additional_source_urls": [],
-  "note": "A mayoral election is expected in this year (nonpartisan February election, four-year cycle), but no official results document could be opened. The state election board index page for February 8, 2022 links to https://results.okelections.us/OKER/?elecDate=20220208. That page loaded only as a JavaScript application and its data needs a login call, which the session did not run. WebFetch to results.okelections.us returned HTTP 403. The okc.gov city clerk elections page returned HTTP 404. News and Wikipedia figures were not accepted as results sources."
+  "additional_source_urls": [
+   "https://www.okc.gov/departments/city-clerk/elections",
+   "https://www.okc.gov/Government/Elected-Officials/Mayor",
+   "https://www.okc.gov/Government/Elected-Officials/Elections/Upcoming-Elections"
+  ],
+  "note": "A mayoral election is expected in this year (nonpartisan February election, four-year cycle), but no official results document could be opened. The state election board index page for February 8, 2022 links to https://results.okelections.us/OKER/?elecDate=20220208. That page loaded only as a JavaScript application and its data needs a login call, which the session did not run. WebFetch to results.okelections.us returned HTTP 403. The okc.gov city clerk elections page returned HTTP 404. News and Wikipedia figures were not accepted as results sources. Second pass: the official OKC pages confirm that the mayor is elected in even-numbered years every four years, with the general election on the second Tuesday of February and a runoff on the first Tuesday of April if needed (https://www.okc.gov/departments/city-clerk/elections). The Mayor page states that David Holt was elected in 2018 and re-elected in 2022 (https://www.okc.gov/Government/Elected-Officials/Mayor), and the Upcoming Elections page lists the next mayoral general election for February 2030 (https://www.okc.gov/Government/Elected-Officials/Elections/Upcoming-Elections). Official vote totals could not be read. The state results application (results.okelections.us, redirects to results.okelections.gov, election dates 20100209/20140211/20180213/20220208/20260210 where linked) returns HTTP 403 to plain requests and its data API needs a login with an embedded app password, which was not used. oklahoma.gov/elections archive pages for 2010 list only statewide PDFs. The Oklahoma County Election Board pages (oklahomacounty.org/Departments/Election-Board and /Election-Results) hold no results documents. web.archive.org timed out or was blocked, and the Chrome extension was not connected. The web search budget was exhausted. The year stays unresolved."
  },
  {
   "city_id": "4055000",
   "year": 2011,
-  "status": "unresolved",
+  "status": "no_election",
   "expected_election_dates": [],
-  "source_url": "https://www.ok.gov/elections/elections-results/election-results.html",
-  "additional_source_urls": [],
-  "note": "No official source for the Oklahoma City mayoral cycle could be opened, so this year cannot be classed as having no election. Mayoral elections are believed to fall every fourth year (2010, 2014, 2018, 2022, 2026), but this was not confirmed from an official source."
+  "source_url": "https://www.okc.gov/departments/city-clerk/elections",
+  "additional_source_urls": [
+   "https://www.okc.gov/Government/Elected-Officials/Mayor",
+   "https://www.okc.gov/Government/Elected-Officials/Elections/Upcoming-Elections",
+   "https://www.okc.gov/Government/Records/Oklahoma-City-History/Former-Oklahoma-City-Mayors"
+  ],
+  "note": "The official City of Oklahoma City elections page states that the mayor is elected in even-numbered years every four years and council members in odd-numbered years. The Mayor page shows elections in 2018 and 2022, and the Upcoming Elections page lists the next mayoral general election for February 2030, which fixes the cycle at 2010, 2014, 2018, 2022 and 2026. The city's former mayors page shows Mick Cornett in office from March 2004 to April 2018 and David Holt from April 2018 to the present, so no vacancy or special mayoral election occurred. No mayoral round falls in 2011."
  },
  {
   "city_id": "4055000",
   "year": 2012,
-  "status": "unresolved",
+  "status": "no_election",
   "expected_election_dates": [],
-  "source_url": "https://www.ok.gov/elections/elections-results/election-results.html",
-  "additional_source_urls": [],
-  "note": "No official source for the Oklahoma City mayoral cycle could be opened, so this year cannot be classed as having no election. Mayoral elections are believed to fall every fourth year (2010, 2014, 2018, 2022, 2026), but this was not confirmed from an official source."
+  "source_url": "https://www.okc.gov/departments/city-clerk/elections",
+  "additional_source_urls": [
+   "https://www.okc.gov/Government/Elected-Officials/Mayor",
+   "https://www.okc.gov/Government/Elected-Officials/Elections/Upcoming-Elections",
+   "https://www.okc.gov/Government/Records/Oklahoma-City-History/Former-Oklahoma-City-Mayors"
+  ],
+  "note": "The official City of Oklahoma City elections page states that the mayor is elected in even-numbered years every four years and council members in odd-numbered years. The Mayor page shows elections in 2018 and 2022, and the Upcoming Elections page lists the next mayoral general election for February 2030, which fixes the cycle at 2010, 2014, 2018, 2022 and 2026. The city's former mayors page shows Mick Cornett in office from March 2004 to April 2018 and David Holt from April 2018 to the present, so no vacancy or special mayoral election occurred. No mayoral round falls in 2012."
  },
  {
   "city_id": "4055000",
   "year": 2013,
-  "status": "unresolved",
+  "status": "no_election",
   "expected_election_dates": [],
-  "source_url": "https://www.ok.gov/elections/elections-results/election-results.html",
-  "additional_source_urls": [],
-  "note": "No official source for the Oklahoma City mayoral cycle could be opened, so this year cannot be classed as having no election. Mayoral elections are believed to fall every fourth year (2010, 2014, 2018, 2022, 2026), but this was not confirmed from an official source."
+  "source_url": "https://www.okc.gov/departments/city-clerk/elections",
+  "additional_source_urls": [
+   "https://www.okc.gov/Government/Elected-Officials/Mayor",
+   "https://www.okc.gov/Government/Elected-Officials/Elections/Upcoming-Elections",
+   "https://www.okc.gov/Government/Records/Oklahoma-City-History/Former-Oklahoma-City-Mayors"
+  ],
+  "note": "The official City of Oklahoma City elections page states that the mayor is elected in even-numbered years every four years and council members in odd-numbered years. The Mayor page shows elections in 2018 and 2022, and the Upcoming Elections page lists the next mayoral general election for February 2030, which fixes the cycle at 2010, 2014, 2018, 2022 and 2026. The city's former mayors page shows Mick Cornett in office from March 2004 to April 2018 and David Holt from April 2018 to the present, so no vacancy or special mayoral election occurred. No mayoral round falls in 2013."
  },
  {
   "city_id": "4055000",
@@ -41,35 +57,51 @@
   "status": "unresolved",
   "expected_election_dates": [],
   "source_url": "https://www.ok.gov/elections/elections-results/election-results.html",
-  "additional_source_urls": [],
-  "note": "A mayoral election is expected in this year (nonpartisan February election, four-year cycle), but no official results document could be opened. The state election board index page for February 8, 2022 links to https://results.okelections.us/OKER/?elecDate=20220208. That page loaded only as a JavaScript application and its data needs a login call, which the session did not run. WebFetch to results.okelections.us returned HTTP 403. The okc.gov city clerk elections page returned HTTP 404. News and Wikipedia figures were not accepted as results sources."
+  "additional_source_urls": [
+   "https://www.okc.gov/departments/city-clerk/elections",
+   "https://www.okc.gov/Government/Elected-Officials/Mayor",
+   "https://www.okc.gov/Government/Elected-Officials/Elections/Upcoming-Elections"
+  ],
+  "note": "A mayoral election is expected in this year (nonpartisan February election, four-year cycle), but no official results document could be opened. The state election board index page for February 8, 2022 links to https://results.okelections.us/OKER/?elecDate=20220208. That page loaded only as a JavaScript application and its data needs a login call, which the session did not run. WebFetch to results.okelections.us returned HTTP 403. The okc.gov city clerk elections page returned HTTP 404. News and Wikipedia figures were not accepted as results sources. Second pass: the official OKC pages confirm that the mayor is elected in even-numbered years every four years, with the general election on the second Tuesday of February and a runoff on the first Tuesday of April if needed (https://www.okc.gov/departments/city-clerk/elections). The Mayor page states that David Holt was elected in 2018 and re-elected in 2022 (https://www.okc.gov/Government/Elected-Officials/Mayor), and the Upcoming Elections page lists the next mayoral general election for February 2030 (https://www.okc.gov/Government/Elected-Officials/Elections/Upcoming-Elections). Official vote totals could not be read. The state results application (results.okelections.us, redirects to results.okelections.gov, election dates 20100209/20140211/20180213/20220208/20260210 where linked) returns HTTP 403 to plain requests and its data API needs a login with an embedded app password, which was not used. oklahoma.gov/elections archive pages for 2010 list only statewide PDFs. The Oklahoma County Election Board pages (oklahomacounty.org/Departments/Election-Board and /Election-Results) hold no results documents. web.archive.org timed out or was blocked, and the Chrome extension was not connected. The web search budget was exhausted. The year stays unresolved."
  },
  {
   "city_id": "4055000",
   "year": 2015,
-  "status": "unresolved",
+  "status": "no_election",
   "expected_election_dates": [],
-  "source_url": "https://www.ok.gov/elections/elections-results/election-results.html",
-  "additional_source_urls": [],
-  "note": "No official source for the Oklahoma City mayoral cycle could be opened, so this year cannot be classed as having no election. Mayoral elections are believed to fall every fourth year (2010, 2014, 2018, 2022, 2026), but this was not confirmed from an official source."
+  "source_url": "https://www.okc.gov/departments/city-clerk/elections",
+  "additional_source_urls": [
+   "https://www.okc.gov/Government/Elected-Officials/Mayor",
+   "https://www.okc.gov/Government/Elected-Officials/Elections/Upcoming-Elections",
+   "https://www.okc.gov/Government/Records/Oklahoma-City-History/Former-Oklahoma-City-Mayors"
+  ],
+  "note": "The official City of Oklahoma City elections page states that the mayor is elected in even-numbered years every four years and council members in odd-numbered years. The Mayor page shows elections in 2018 and 2022, and the Upcoming Elections page lists the next mayoral general election for February 2030, which fixes the cycle at 2010, 2014, 2018, 2022 and 2026. The city's former mayors page shows Mick Cornett in office from March 2004 to April 2018 and David Holt from April 2018 to the present, so no vacancy or special mayoral election occurred. No mayoral round falls in 2015."
  },
  {
   "city_id": "4055000",
   "year": 2016,
-  "status": "unresolved",
+  "status": "no_election",
   "expected_election_dates": [],
-  "source_url": "https://www.ok.gov/elections/elections-results/election-results.html",
-  "additional_source_urls": [],
-  "note": "No official source for the Oklahoma City mayoral cycle could be opened, so this year cannot be classed as having no election. Mayoral elections are believed to fall every fourth year (2010, 2014, 2018, 2022, 2026), but this was not confirmed from an official source."
+  "source_url": "https://www.okc.gov/departments/city-clerk/elections",
+  "additional_source_urls": [
+   "https://www.okc.gov/Government/Elected-Officials/Mayor",
+   "https://www.okc.gov/Government/Elected-Officials/Elections/Upcoming-Elections",
+   "https://www.okc.gov/Government/Records/Oklahoma-City-History/Former-Oklahoma-City-Mayors"
+  ],
+  "note": "The official City of Oklahoma City elections page states that the mayor is elected in even-numbered years every four years and council members in odd-numbered years. The Mayor page shows elections in 2018 and 2022, and the Upcoming Elections page lists the next mayoral general election for February 2030, which fixes the cycle at 2010, 2014, 2018, 2022 and 2026. The city's former mayors page shows Mick Cornett in office from March 2004 to April 2018 and David Holt from April 2018 to the present, so no vacancy or special mayoral election occurred. No mayoral round falls in 2016."
  },
  {
   "city_id": "4055000",
   "year": 2017,
-  "status": "unresolved",
+  "status": "no_election",
   "expected_election_dates": [],
-  "source_url": "https://www.ok.gov/elections/elections-results/election-results.html",
-  "additional_source_urls": [],
-  "note": "No official source for the Oklahoma City mayoral cycle could be opened, so this year cannot be classed as having no election. Mayoral elections are believed to fall every fourth year (2010, 2014, 2018, 2022, 2026), but this was not confirmed from an official source."
+  "source_url": "https://www.okc.gov/departments/city-clerk/elections",
+  "additional_source_urls": [
+   "https://www.okc.gov/Government/Elected-Officials/Mayor",
+   "https://www.okc.gov/Government/Elected-Officials/Elections/Upcoming-Elections",
+   "https://www.okc.gov/Government/Records/Oklahoma-City-History/Former-Oklahoma-City-Mayors"
+  ],
+  "note": "The official City of Oklahoma City elections page states that the mayor is elected in even-numbered years every four years and council members in odd-numbered years. The Mayor page shows elections in 2018 and 2022, and the Upcoming Elections page lists the next mayoral general election for February 2030, which fixes the cycle at 2010, 2014, 2018, 2022 and 2026. The city's former mayors page shows Mick Cornett in office from March 2004 to April 2018 and David Holt from April 2018 to the present, so no vacancy or special mayoral election occurred. No mayoral round falls in 2017."
  },
  {
   "city_id": "4055000",
@@ -77,35 +109,51 @@
   "status": "unresolved",
   "expected_election_dates": [],
   "source_url": "https://www.ok.gov/elections/elections-results/election-results.html",
-  "additional_source_urls": [],
-  "note": "A mayoral election is expected in this year (nonpartisan February election, four-year cycle), but no official results document could be opened. The state election board index page for February 8, 2022 links to https://results.okelections.us/OKER/?elecDate=20220208. That page loaded only as a JavaScript application and its data needs a login call, which the session did not run. WebFetch to results.okelections.us returned HTTP 403. The okc.gov city clerk elections page returned HTTP 404. News and Wikipedia figures were not accepted as results sources."
+  "additional_source_urls": [
+   "https://www.okc.gov/departments/city-clerk/elections",
+   "https://www.okc.gov/Government/Elected-Officials/Mayor",
+   "https://www.okc.gov/Government/Elected-Officials/Elections/Upcoming-Elections"
+  ],
+  "note": "A mayoral election is expected in this year (nonpartisan February election, four-year cycle), but no official results document could be opened. The state election board index page for February 8, 2022 links to https://results.okelections.us/OKER/?elecDate=20220208. That page loaded only as a JavaScript application and its data needs a login call, which the session did not run. WebFetch to results.okelections.us returned HTTP 403. The okc.gov city clerk elections page returned HTTP 404. News and Wikipedia figures were not accepted as results sources. Second pass: the official OKC pages confirm that the mayor is elected in even-numbered years every four years, with the general election on the second Tuesday of February and a runoff on the first Tuesday of April if needed (https://www.okc.gov/departments/city-clerk/elections). The Mayor page states that David Holt was elected in 2018 and re-elected in 2022 (https://www.okc.gov/Government/Elected-Officials/Mayor), and the Upcoming Elections page lists the next mayoral general election for February 2030 (https://www.okc.gov/Government/Elected-Officials/Elections/Upcoming-Elections). Official vote totals could not be read. The state results application (results.okelections.us, redirects to results.okelections.gov, election dates 20100209/20140211/20180213/20220208/20260210 where linked) returns HTTP 403 to plain requests and its data API needs a login with an embedded app password, which was not used. oklahoma.gov/elections archive pages for 2010 list only statewide PDFs. The Oklahoma County Election Board pages (oklahomacounty.org/Departments/Election-Board and /Election-Results) hold no results documents. web.archive.org timed out or was blocked, and the Chrome extension was not connected. The web search budget was exhausted. The year stays unresolved."
  },
  {
   "city_id": "4055000",
   "year": 2019,
-  "status": "unresolved",
+  "status": "no_election",
   "expected_election_dates": [],
-  "source_url": "https://www.ok.gov/elections/elections-results/election-results.html",
-  "additional_source_urls": [],
-  "note": "No official source for the Oklahoma City mayoral cycle could be opened, so this year cannot be classed as having no election. Mayoral elections are believed to fall every fourth year (2010, 2014, 2018, 2022, 2026), but this was not confirmed from an official source."
+  "source_url": "https://www.okc.gov/departments/city-clerk/elections",
+  "additional_source_urls": [
+   "https://www.okc.gov/Government/Elected-Officials/Mayor",
+   "https://www.okc.gov/Government/Elected-Officials/Elections/Upcoming-Elections",
+   "https://www.okc.gov/Government/Records/Oklahoma-City-History/Former-Oklahoma-City-Mayors"
+  ],
+  "note": "The official City of Oklahoma City elections page states that the mayor is elected in even-numbered years every four years and council members in odd-numbered years. The Mayor page shows elections in 2018 and 2022, and the Upcoming Elections page lists the next mayoral general election for February 2030, which fixes the cycle at 2010, 2014, 2018, 2022 and 2026. The city's former mayors page shows Mick Cornett in office from March 2004 to April 2018 and David Holt from April 2018 to the present, so no vacancy or special mayoral election occurred. No mayoral round falls in 2019."
  },
  {
   "city_id": "4055000",
   "year": 2020,
-  "status": "unresolved",
+  "status": "no_election",
   "expected_election_dates": [],
-  "source_url": "https://www.ok.gov/elections/elections-results/election-results.html",
-  "additional_source_urls": [],
-  "note": "No official source for the Oklahoma City mayoral cycle could be opened, so this year cannot be classed as having no election. Mayoral elections are believed to fall every fourth year (2010, 2014, 2018, 2022, 2026), but this was not confirmed from an official source."
+  "source_url": "https://www.okc.gov/departments/city-clerk/elections",
+  "additional_source_urls": [
+   "https://www.okc.gov/Government/Elected-Officials/Mayor",
+   "https://www.okc.gov/Government/Elected-Officials/Elections/Upcoming-Elections",
+   "https://www.okc.gov/Government/Records/Oklahoma-City-History/Former-Oklahoma-City-Mayors"
+  ],
+  "note": "The official City of Oklahoma City elections page states that the mayor is elected in even-numbered years every four years and council members in odd-numbered years. The Mayor page shows elections in 2018 and 2022, and the Upcoming Elections page lists the next mayoral general election for February 2030, which fixes the cycle at 2010, 2014, 2018, 2022 and 2026. The city's former mayors page shows Mick Cornett in office from March 2004 to April 2018 and David Holt from April 2018 to the present, so no vacancy or special mayoral election occurred. No mayoral round falls in 2020."
  },
  {
   "city_id": "4055000",
   "year": 2021,
-  "status": "unresolved",
+  "status": "no_election",
   "expected_election_dates": [],
-  "source_url": "https://www.ok.gov/elections/elections-results/election-results.html",
-  "additional_source_urls": [],
-  "note": "No official source for the Oklahoma City mayoral cycle could be opened, so this year cannot be classed as having no election. Mayoral elections are believed to fall every fourth year (2010, 2014, 2018, 2022, 2026), but this was not confirmed from an official source."
+  "source_url": "https://www.okc.gov/departments/city-clerk/elections",
+  "additional_source_urls": [
+   "https://www.okc.gov/Government/Elected-Officials/Mayor",
+   "https://www.okc.gov/Government/Elected-Officials/Elections/Upcoming-Elections",
+   "https://www.okc.gov/Government/Records/Oklahoma-City-History/Former-Oklahoma-City-Mayors"
+  ],
+  "note": "The official City of Oklahoma City elections page states that the mayor is elected in even-numbered years every four years and council members in odd-numbered years. The Mayor page shows elections in 2018 and 2022, and the Upcoming Elections page lists the next mayoral general election for February 2030, which fixes the cycle at 2010, 2014, 2018, 2022 and 2026. The city's former mayors page shows Mick Cornett in office from March 2004 to April 2018 and David Holt from April 2018 to the present, so no vacancy or special mayoral election occurred. No mayoral round falls in 2021."
  },
  {
   "city_id": "4055000",
@@ -114,36 +162,50 @@
   "expected_election_dates": [],
   "source_url": "https://www.ok.gov/elections/elections-results/election-results.html",
   "additional_source_urls": [
-   "https://oklahoma.gov/elections/elections-results/election-results/2022-election-results/2022-february-board-of-education-and-special-elections.html"
+   "https://www.okc.gov/departments/city-clerk/elections",
+   "https://www.okc.gov/Government/Elected-Officials/Mayor",
+   "https://www.okc.gov/Government/Elected-Officials/Elections/Upcoming-Elections"
   ],
-  "note": "A mayoral election is expected in this year (nonpartisan February election, four-year cycle), but no official results document could be opened. The state election board index page for February 8, 2022 links to https://results.okelections.us/OKER/?elecDate=20220208. That page loaded only as a JavaScript application and its data needs a login call, which the session did not run. WebFetch to results.okelections.us returned HTTP 403. The okc.gov city clerk elections page returned HTTP 404. News and Wikipedia figures were not accepted as results sources."
+  "note": "A mayoral election is expected in this year (nonpartisan February election, four-year cycle), but no official results document could be opened. The state election board index page for February 8, 2022 links to https://results.okelections.us/OKER/?elecDate=20220208. That page loaded only as a JavaScript application and its data needs a login call, which the session did not run. WebFetch to results.okelections.us returned HTTP 403. The okc.gov city clerk elections page returned HTTP 404. News and Wikipedia figures were not accepted as results sources. Second pass: the official OKC pages confirm that the mayor is elected in even-numbered years every four years, with the general election on the second Tuesday of February and a runoff on the first Tuesday of April if needed (https://www.okc.gov/departments/city-clerk/elections). The Mayor page states that David Holt was elected in 2018 and re-elected in 2022 (https://www.okc.gov/Government/Elected-Officials/Mayor), and the Upcoming Elections page lists the next mayoral general election for February 2030 (https://www.okc.gov/Government/Elected-Officials/Elections/Upcoming-Elections). Official vote totals could not be read. The state results application (results.okelections.us, redirects to results.okelections.gov, election dates 20100209/20140211/20180213/20220208/20260210 where linked) returns HTTP 403 to plain requests and its data API needs a login with an embedded app password, which was not used. oklahoma.gov/elections archive pages for 2010 list only statewide PDFs. The Oklahoma County Election Board pages (oklahomacounty.org/Departments/Election-Board and /Election-Results) hold no results documents. web.archive.org timed out or was blocked, and the Chrome extension was not connected. The web search budget was exhausted. The year stays unresolved."
  },
  {
   "city_id": "4055000",
   "year": 2023,
-  "status": "unresolved",
+  "status": "no_election",
   "expected_election_dates": [],
-  "source_url": "https://www.ok.gov/elections/elections-results/election-results.html",
-  "additional_source_urls": [],
-  "note": "No official source for the Oklahoma City mayoral cycle could be opened, so this year cannot be classed as having no election. Mayoral elections are believed to fall every fourth year (2010, 2014, 2018, 2022, 2026), but this was not confirmed from an official source."
+  "source_url": "https://www.okc.gov/departments/city-clerk/elections",
+  "additional_source_urls": [
+   "https://www.okc.gov/Government/Elected-Officials/Mayor",
+   "https://www.okc.gov/Government/Elected-Officials/Elections/Upcoming-Elections",
+   "https://www.okc.gov/Government/Records/Oklahoma-City-History/Former-Oklahoma-City-Mayors"
+  ],
+  "note": "The official City of Oklahoma City elections page states that the mayor is elected in even-numbered years every four years and council members in odd-numbered years. The Mayor page shows elections in 2018 and 2022, and the Upcoming Elections page lists the next mayoral general election for February 2030, which fixes the cycle at 2010, 2014, 2018, 2022 and 2026. The city's former mayors page shows Mick Cornett in office from March 2004 to April 2018 and David Holt from April 2018 to the present, so no vacancy or special mayoral election occurred. No mayoral round falls in 2023."
  },
  {
   "city_id": "4055000",
   "year": 2024,
-  "status": "unresolved",
+  "status": "no_election",
   "expected_election_dates": [],
-  "source_url": "https://www.ok.gov/elections/elections-results/election-results.html",
-  "additional_source_urls": [],
-  "note": "No official source for the Oklahoma City mayoral cycle could be opened, so this year cannot be classed as having no election. Mayoral elections are believed to fall every fourth year (2010, 2014, 2018, 2022, 2026), but this was not confirmed from an official source."
+  "source_url": "https://www.okc.gov/departments/city-clerk/elections",
+  "additional_source_urls": [
+   "https://www.okc.gov/Government/Elected-Officials/Mayor",
+   "https://www.okc.gov/Government/Elected-Officials/Elections/Upcoming-Elections",
+   "https://www.okc.gov/Government/Records/Oklahoma-City-History/Former-Oklahoma-City-Mayors"
+  ],
+  "note": "The official City of Oklahoma City elections page states that the mayor is elected in even-numbered years every four years and council members in odd-numbered years. The Mayor page shows elections in 2018 and 2022, and the Upcoming Elections page lists the next mayoral general election for February 2030, which fixes the cycle at 2010, 2014, 2018, 2022 and 2026. The city's former mayors page shows Mick Cornett in office from March 2004 to April 2018 and David Holt from April 2018 to the present, so no vacancy or special mayoral election occurred. No mayoral round falls in 2024."
  },
  {
   "city_id": "4055000",
   "year": 2025,
-  "status": "unresolved",
+  "status": "no_election",
   "expected_election_dates": [],
-  "source_url": "https://www.ok.gov/elections/elections-results/election-results.html",
-  "additional_source_urls": [],
-  "note": "No official source for the Oklahoma City mayoral cycle could be opened, so this year cannot be classed as having no election. Mayoral elections are believed to fall every fourth year (2010, 2014, 2018, 2022, 2026), but this was not confirmed from an official source."
+  "source_url": "https://www.okc.gov/departments/city-clerk/elections",
+  "additional_source_urls": [
+   "https://www.okc.gov/Government/Elected-Officials/Mayor",
+   "https://www.okc.gov/Government/Elected-Officials/Elections/Upcoming-Elections",
+   "https://www.okc.gov/Government/Records/Oklahoma-City-History/Former-Oklahoma-City-Mayors"
+  ],
+  "note": "The official City of Oklahoma City elections page states that the mayor is elected in even-numbered years every four years and council members in odd-numbered years. The Mayor page shows elections in 2018 and 2022, and the Upcoming Elections page lists the next mayoral general election for February 2030, which fixes the cycle at 2010, 2014, 2018, 2022 and 2026. The city's former mayors page shows Mick Cornett in office from March 2004 to April 2018 and David Holt from April 2018 to the present, so no vacancy or special mayoral election occurred. No mayoral round falls in 2025."
  },
  {
   "city_id": "4055000",
@@ -151,7 +213,11 @@
   "status": "unresolved",
   "expected_election_dates": [],
   "source_url": "https://www.ok.gov/elections/elections-results/election-results.html",
-  "additional_source_urls": [],
-  "note": "A mayoral election is expected in this year (nonpartisan February election, four-year cycle), but no official results document could be opened. The state election board index page for February 8, 2022 links to https://results.okelections.us/OKER/?elecDate=20220208. That page loaded only as a JavaScript application and its data needs a login call, which the session did not run. WebFetch to results.okelections.us returned HTTP 403. The okc.gov city clerk elections page returned HTTP 404. News and Wikipedia figures were not accepted as results sources."
+  "additional_source_urls": [
+   "https://www.okc.gov/departments/city-clerk/elections",
+   "https://www.okc.gov/Government/Elected-Officials/Mayor",
+   "https://www.okc.gov/Government/Elected-Officials/Elections/Upcoming-Elections"
+  ],
+  "note": "A mayoral election is expected in this year (nonpartisan February election, four-year cycle), but no official results document could be opened. The state election board index page for February 8, 2022 links to https://results.okelections.us/OKER/?elecDate=20220208. That page loaded only as a JavaScript application and its data needs a login call, which the session did not run. WebFetch to results.okelections.us returned HTTP 403. The okc.gov city clerk elections page returned HTTP 404. News and Wikipedia figures were not accepted as results sources. Second pass: the official OKC pages confirm that the mayor is elected in even-numbered years every four years, with the general election on the second Tuesday of February and a runoff on the first Tuesday of April if needed (https://www.okc.gov/departments/city-clerk/elections). The Mayor page states that David Holt was elected in 2018 and re-elected in 2022 (https://www.okc.gov/Government/Elected-Officials/Mayor), and the Upcoming Elections page lists the next mayoral general election for February 2030 (https://www.okc.gov/Government/Elected-Officials/Elections/Upcoming-Elections). Official vote totals could not be read. The state results application (results.okelections.us, redirects to results.okelections.gov, election dates 20100209/20140211/20180213/20220208/20260210 where linked) returns HTTP 403 to plain requests and its data API needs a login with an embedded app password, which was not used. oklahoma.gov/elections archive pages for 2010 list only statewide PDFs. The Oklahoma County Election Board pages (oklahomacounty.org/Departments/Election-Board and /Election-Results) hold no results documents. web.archive.org timed out or was blocked, and the Chrome extension was not connected. The web search budget was exhausted. The year stays unresolved."
  }
 ]

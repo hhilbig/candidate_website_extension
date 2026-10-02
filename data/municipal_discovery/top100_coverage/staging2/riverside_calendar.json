@@ -2,15 +2,17 @@
  {
   "city_id": "0662000",
   "year": 2010,
-  "status": "unresolved",
+  "status": "no_election",
   "expected_election_dates": [],
-  "source_url": "https://docs.voteinfo.net/docs/20120605_Candidates.pdf",
+  "source_url": "https://docs.voteinfo.net/docs/2010-11-02_SOV_BOOK2.pdf",
   "additional_source_urls": [
-   "https://riversideca.gov/cityclerk/elections",
-   "https://library.municode.com/ca/riverside/codes/code_of_ordinances?nodeId=PTICICH_ARTIVCICOMA_S400ENNUTEMAELWA",
-   "https://library.municode.com/ca/riverside/codes/code_of_ordinances?nodeId=PTICICH_ARTVEL_S500GEMUEL"
+   "https://docs.voteinfo.net/docs/2010-06-08-SOV4W.pdf",
+   "https://docs.voteinfo.net/docs/2010-04-13-SOV.pdf",
+   "https://docs.voteinfo.net/docs/2010-02-23Cert&SOV.pdf",
+   "https://docs.voteinfo.net/docs/2010-08-24_SOV.pdf",
+   "https://docs.voteinfo.net/docs/2010%20Candidate%20Handbook-Nov.pdf"
   ],
-  "note": "Unresolved. No official document for 2010 was opened. The current charter (Sec. 400(a) and 500) sets a four-year mayoral term and mayoral elections in presidential years, but Sec. 500 was amended on November 3, 2020 and the pre-2020 charter text was not obtained. The 2012 county candidate list shows Ronald O. Loveridge as the incumbent whose term ended in 2012, which does not show whether a mayoral election was held in 2010. Guessed docs.voteinfo.net 2010 statement of vote URLs returned HTTP 404, the voteinfo.net archive pages returned HTTP 403, and the Wayback CDX query returned nothing. Text read through api.municode.com (Code of Ordinances, Supplement 33, codified through Ordinance 7776 of June 23, 2026), the same content the Municode pages show."
+  "note": "Second pass. The Riverside County statements of vote for every county-run election in 2010 were opened and have no Riverside mayoral contest. The November 2, 2010 statement of vote lists mayor contests only for Cathedral City, Coachella and La Quinta, and city council contests for other cities, with no City of Riverside contest. The June 8, 2010 consolidated primary has no City of Riverside contest. The April 13, 2010 special election has one city council contest in Rancho Mirage. The February 23, 2010 election was the Lake Elsinore recall, and the August 24, 2010 election was a special measure for the Southern Coachella Valley Community Services District. The November 2010 candidate handbook lists no city offices. No Riverside vacancy or special mayoral election appears in these documents. Riverside elects its mayor every four years, in 2012, 2016, 2020 and 2024. The 2012 contest is an open seat after incumbent Loveridge, which fits a four-year cycle from 2008."
  },
  {
   "city_id": "0662000",
@@ -109,15 +111,16 @@
  {
   "city_id": "0662000",
   "year": 2019,
-  "status": "unresolved",
+  "status": "no_election",
   "expected_election_dates": [],
-  "source_url": "https://riversideca.gov/cityclerk/elections",
+  "source_url": "https://docs.voteinfo.net/Elections/20190604/docs/20190604_Candidates.pdf",
   "additional_source_urls": [
-   "https://library.municode.com/ca/riverside/codes/code_of_ordinances?nodeId=PTICICH_ARTIVCICOMA_S400ENNUTEMAELWA",
-   "https://library.municode.com/ca/riverside/codes/code_of_ordinances?nodeId=PTICICH_ARTVEL_S500GEMUEL",
-   "https://riversideca.gov/mayor"
+   "https://docs.voteinfo.net/Elections/20190604/eresults/SOV_final.pdf",
+   "https://docs.voteinfo.net/Elections/20190507/docs/20190507_Candidates.pdf",
+   "https://docs.voteinfo.net/Elections/20191105/docs/20191105_Calendar.pdf",
+   "https://riversideca.gov/cityclerk/elections"
   ],
-  "note": "Unresolved. No official document for 2019 was opened. The current charter text (Sec. 400(a), 500) shows a four-year term and mayoral elections in presidential years, but it was amended on November 3, 2020, so it does not establish the rule that applied in 2019. The pre-2020 charter text and a 2019 county election document were not obtained. The 2016 and 2020 mayoral elections are consistent with a four-year cycle, but the cycle is not inferred as a no-election finding. Text read through api.municode.com (Code of Ordinances, Supplement 33, codified through Ordinance 7776 of June 23, 2026), the same content the Municode pages show."
+  "note": "Second pass. The June 4, 2019 Riverside general municipal election, per the county candidate proof list dated April 24, 2019, had City Council Wards 1, 3, 5 and 7 only, with no mayoral contest. The county statement of vote for June 4, 2019 shows four City of Riverside council contests, for Wards 1, 3, 5 and 7, which match the proof list, and no mayoral contest. The May 7, 2019 county candidate list has no City of Riverside contest. The county calendar for November 5, 2019 describes a Uniform District Election Law election, which covers special districts and not city offices. A county statement of vote for November 5, 2019 was not found, so the absence of a Riverside mayoral contest on that date rests on the calendar type and not on a results document. The 2016 and 2020 mayoral elections are recorded in the results file, and the 2020 winner is shown by the city clerk as elected in 2020. No vacancy or special mayoral election appears in these documents."
  },
  {
   "city_id": "0662000",

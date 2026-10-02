@@ -13,15 +13,17 @@
  {
   "city_id": "0804000",
   "year": 2011,
-  "status": "unresolved",
-  "expected_election_dates": [],
+  "status": "complete",
+  "expected_election_dates": [
+   "2011-11-01"
+  ],
   "source_url": "https://www.arapahoeco.gov/Your%20County/Arapahoe%20Votes/Documents/Records%20And%20data/Past%20Elections%20File%20Library/2011/2011CoordinatedElection_OfficialResults.pdf",
   "additional_source_urls": [
    "https://adamscountyco.gov/wp-content/uploads/2026/03/CR-2011Coordinated.pdf",
-   "https://www.douglasco.gov/elections/historical-election-data/",
+   "https://www.douglasco.gov/documents/2011-ce-official-results.pdf/",
    "https://www.arapahoeco.gov/your_county/arapahoevotes/records_data/past_elections_file_library.php"
   ],
-  "note": "A mayoral election was held on 2011-11-01 and Steve Hogan led. Arapahoe County official results show Hogan 14584, Ryan L. Frazier 12277. Adams County official results show Hogan 1082, Frazier 869. Aurora also lies partly in Douglas County. The Douglas County historical results page lists no 2011 document (earliest year is 2012), a guessed 2011 URL returned HTTP 404, and the Internet Archive was offline when tried. The Douglas portion of the citywide total could not be obtained, so the exact citywide vote totals are not confirmed. Hogan's lead over Frazier in the two counties found is 2520 votes. Aurora mayoral elections in the Arapahoe, Adams and Douglas County results fall in 2011, 2015, 2019 and 2023, with a four year term (the 2015 Arapahoe report is headed 'Mayor - (4yr) CITY OF AURORA' and the Douglas 2015 report says 'Vote for One for a Four Year Term'). "
+  "note": "A mayoral election was held on 2011-11-01 and Steve Hogan led. Arapahoe County official results show Hogan 14584, Ryan L. Frazier 12277. Adams County official results show Hogan 1082, Frazier 869. Aurora also lies partly in Douglas County. The Douglas County historical results page lists no 2011 document (earliest year is 2012), a guessed 2011 URL returned HTTP 404, and the Internet Archive was offline when tried. The Douglas portion of the citywide total could not be obtained, so the exact citywide vote totals are not confirmed. Hogan's lead over Frazier in the two counties found is 2520 votes. Aurora mayoral elections in the Arapahoe, Adams and Douglas County results fall in 2011, 2015, 2019 and 2023, with a four year term (the 2015 Arapahoe report is headed 'Mayor - (4yr) CITY OF AURORA' and the Douglas 2015 report says 'Vote for One for a Four Year Term').  Second pass: the Douglas County official results PDF was found at https://www.douglasco.gov/documents/2011-ce-official-results.pdf/ (opened; it is linked from no Douglas index page, found by trying the 2011-ce naming pattern). It shows the Aurora Mayor contest with Frazier 25, Hogan 11, Sandvall 8, Stafford 5, Davis 2, Yamrick 0 in Douglas County. Citywide totals are the sum of the three counties: Hogan 15677 and Frazier 13171. Aurora decides the mayor by plurality in a single election, so the 2011-11-01 election is decisive."
  },
  {
   "city_id": "0804000",

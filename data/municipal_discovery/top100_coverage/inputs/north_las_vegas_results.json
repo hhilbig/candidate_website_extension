@@ -6,15 +6,17 @@
   "election_date": "2013-04-02",
   "election_type": "regular",
   "stage": "primary_nominating",
-  "verification_status": "unresolved",
+  "verification_status": "verified_decisive",
   "certification_status": "source_verified",
   "source_url": "https://elections.clarkcountynv.gov/electionresultsTV/results.aspx",
   "source_locator": "Clark County results page, election 2013 Municipal Primary (04/02/2013), Official Election Results, contest MAYOR OF NORTH LAS VEGAS, Total row 9,153",
   "certification_source_url": "https://elections.clarkcountynv.gov/electionresultsTV/results.aspx",
   "additional_source_urls": [
+   "https://www.leg.state.nv.us/Statutes/76th2011/Stats201108.html",
+   "https://www.leg.state.nv.us/Statutes/78th2015/Stats201518.html",
    "https://www.leg.state.nv.us/NRS/NRS-293C.html"
   ],
-  "verification_note": "The county official results for the 04/02/2013 primary show Lee, John 4,909 (53.63 percent), Buck, Shari 3,248 (35.49 percent), Hunter, Mike 537 and Belger, Sharon 459, total 9,153, all 87 of 87 precincts reporting. Lee received a majority. The 06/04/2013 general lists no mayoral contest for North Las Vegas. NRS 293C.175(5) states the current rule that a majority winner in the primary is declared elected; for 2013 this is inferred from the absence of a mayoral contest on the general ballot. UNRESOLVED: the official rule that a primary majority elected the mayor in this year could not be established. NRS 293C.175(5) is the current statute for category one or two cities with June even-year primaries and is not shown to govern a North Las Vegas April odd-year election; the charter text could not be opened.",
+  "verification_note": "The county official results for the 04/02/2013 primary show Lee, John 4,909 (53.63 percent), Buck, Shari 3,248 (35.49 percent), Hunter, Mike 537 and Belger, Sharon 459, total 9,153, all 87 of 87 precincts reporting. Lee received a majority. The 06/04/2013 general lists no mayoral contest for North Las Vegas. North Las Vegas Charter section 5.020(4), as amended by chapter 218, Statutes of Nevada 2011 (AB 132), page 963, states that if one candidate receives a majority of the total votes cast for an office in the primary municipal election, that candidate must be declared elected and no general municipal election need be held for that office. Section 5.020(2) sets the primary on the Tuesday after the first Monday in April. Section 5.010 sets mayoral elections every 4 years from 1977 (2013 and 2017 in that sequence); chapter 336, Statutes of Nevada 2015 (AB 23, approved June 4, 2015) restated the sequence from 2017. Lee's majority at the primary elected him, consistent with the absence of a mayoral contest on the general ballot.",
   "candidates": [
    {
     "name": "John Lee",
@@ -29,7 +31,7 @@
     "candidate_year_id": ""
    }
   ],
-  "decisive_stage_source_url": "https://www.leg.state.nv.us/NRS/NRS-293C.html"
+  "decisive_stage_source_url": "https://www.leg.state.nv.us/Statutes/76th2011/Stats201108.html"
  },
  {
   "city_name": "North Las Vegas",
@@ -38,15 +40,17 @@
   "election_date": "2017-04-04",
   "election_type": "regular",
   "stage": "primary_nominating",
-  "verification_status": "unresolved",
+  "verification_status": "verified_decisive",
   "certification_status": "source_verified",
   "source_url": "https://elections.clarkcountynv.gov/electionresultsTV/results.aspx",
   "source_locator": "Clark County results page, election 2017 Municipal Primary (04/04/2017), Official Election Results, contest MAYOR OF NORTH LAS VEGAS, Total row 8,325",
   "certification_source_url": "https://elections.clarkcountynv.gov/electionresultsTV/results.aspx",
   "additional_source_urls": [
+   "https://www.leg.state.nv.us/Statutes/76th2011/Stats201108.html",
+   "https://www.leg.state.nv.us/Statutes/78th2015/Stats201518.html",
    "https://www.leg.state.nv.us/NRS/NRS-293C.html"
   ],
-  "verification_note": "The county official results for the 04/04/2017 primary show Lee, John J. 6,724 (80.77 percent), Bouchard, Gary 849 and Taylor, DeQuincy 752, total 8,325, all 92 of 92 precincts reporting. Lee received a majority. The 06/13/2017 general lists no mayoral contest for North Las Vegas, so the primary decided the office. NRS 293C.175(5) states the current majority-elects rule; for 2017 it is inferred from the absence of a mayoral contest on the general ballot. UNRESOLVED: the official rule that a primary majority elected the mayor in this year could not be established. NRS 293C.175(5) is the current statute for category one or two cities with June even-year primaries and is not shown to govern a North Las Vegas April odd-year election; the charter text could not be opened.",
+  "verification_note": "The county official results for the 04/04/2017 primary show Lee, John J. 6,724 (80.77 percent), Bouchard, Gary 849 and Taylor, DeQuincy 752, total 8,325, all 92 of 92 precincts reporting. Lee received a majority. The 06/13/2017 general lists no mayoral contest for North Las Vegas, so the primary decided the office. North Las Vegas Charter section 5.020(4), as amended by chapter 218, Statutes of Nevada 2011 (AB 132), page 963, states that if one candidate receives a majority of the total votes cast for an office in the primary municipal election, that candidate must be declared elected and no general municipal election need be held for that office. Section 5.020(2) sets the primary on the Tuesday after the first Monday in April. Section 5.010 sets mayoral elections every 4 years from 1977 (2013 and 2017 in that sequence); chapter 336, Statutes of Nevada 2015 (AB 23, approved June 4, 2015) restated the sequence from 2017. Lee's majority at the primary elected him, consistent with the absence of a mayoral contest on the general ballot.",
   "candidates": [
    {
     "name": "John J. Lee",
@@ -61,7 +65,7 @@
     "candidate_year_id": ""
    }
   ],
-  "decisive_stage_source_url": "https://www.leg.state.nv.us/NRS/NRS-293C.html"
+  "decisive_stage_source_url": "https://www.leg.state.nv.us/Statutes/76th2011/Stats201108.html"
  },
  {
   "city_name": "North Las Vegas",

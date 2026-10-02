@@ -36,11 +36,11 @@
   "year": 2013,
   "status": "unresolved",
   "expected_election_dates": [],
-  "source_url": "https://publicdocuments.fortworthtexas.gov/CSODOCS/DocView.aspx?id=26491&dbid=0&repo=City-Secretary",
+  "source_url": "https://www.fortworthtexas.gov/departments/citysecretary/elections/election-history",
   "additional_source_urls": [
-   "https://www.fortworthtexas.gov/departments/citysecretary/elections/election-history"
+   "https://publicdocuments.fortworthtexas.gov/CSODOCS/DocView.aspx?id=26491&dbid=0&repo=City-Secretary"
   ],
-  "note": "Council Resolution 4205-05-2013 states that only one person filed for mayor. The City Secretary certified the candidate as unopposed on March 19, 2013. The Council declared that candidate elected under Texas Election Code section 2.053 and cancelled the mayoral election, so no mayoral vote was held on May 11, 2013. The document shows no vote totals and, in the text read, does not name the candidate. The year is left unresolved because no election votes exist to record."
+  "note": "The City Secretary election history page, read in the second-pass repair via WebFetch, lists a General Election on May 11, 2013 with the mayor not on the ballot. The page states that only one person had filed as a candidate for mayor and that unopposed candidates were declared elected. The linked Laserfiche document (id=26491) returned only a cookie-required portal page to curl and WebFetch, so its text was not read. The candidate name, the certification date, the resolution number and the legal basis are not verified from an official document. No mayoral vote was held, so no vote totals exist. The year stays unresolved because the unopposed winner could not be named from an opened official document."
  },
  {
   "city_id": "4827000",
@@ -56,11 +56,11 @@
   "year": 2015,
   "status": "unresolved",
   "expected_election_dates": [],
-  "source_url": "https://publicdocuments.fortworthtexas.gov/CSODOCS/DocView.aspx?id=47571&dbid=0&repo=City-Secretary",
+  "source_url": "https://www.fortworthtexas.gov/departments/citysecretary/elections/election-history",
   "additional_source_urls": [
-   "https://www.fortworthtexas.gov/departments/citysecretary/elections/election-history"
+   "https://publicdocuments.fortworthtexas.gov/CSODOCS/DocView.aspx?id=47571&dbid=0&repo=City-Secretary"
   ],
-  "note": "Council Resolution 4453-05-2015 states that only one person filed for mayor. The City Secretary certified the candidate as unopposed, and the mayoral race was not on the May 9, 2015 ballot. No vote totals exist for it. The candidate is not named in the text read. The year is left unresolved because no election votes exist to record."
+  "note": "The City Secretary election history page, read in the second-pass repair via WebFetch, lists a General Election on May 9, 2015 with the mayor not on the ballot. The page states that only one person had filed as a candidate for mayor and that unopposed candidates were declared elected. The linked Laserfiche document (id=47571) returned only a cookie-required portal page to curl and WebFetch, so its text was not read. The candidate name, the certification date, the resolution number and the legal basis are not verified from an official document. No mayoral vote was held, so no vote totals exist. The year stays unresolved because the unopposed winner could not be named from an opened official document."
  },
  {
   "city_id": "4827000",

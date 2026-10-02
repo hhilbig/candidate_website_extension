@@ -35,15 +35,17 @@
  {
   "city_id": "4261000",
   "year": 2013,
-  "status": "unresolved",
+  "status": "complete",
   "expected_election_dates": [
    "2013-11-05"
   ],
-  "source_url": "https://www.alleghenycounty.us/Government/Elections/Election-Results",
+  "source_url": "https://www.alleghenycounty.us/files/assets/county/v/1/government/elections/documents/elections-archive/2013-general-summary.pdf",
   "additional_source_urls": [
+   "https://www.alleghenycounty.us/files/assets/county/v/1/government/elections/documents/elections-archive/2013-general-detail-canvass.pdf",
+   "https://www.alleghenycounty.us/Government/Elections/Election-Results",
    "https://www.pittsburghpa.gov/City-Government/The-Mayor/Mayors-of-Pittsburgh"
   ],
-  "note": "The official city mayor list shows a mayor taking office in January 2014, which places a regular mayoral election in November 2013. The county results set linked for the 2013 General Election contains eleven Pittsburgh contests, including Controller and council districts, but no mayoral contest, so the finalists are not yet verified from an official results source. Absence from that incomplete set is not treated as evidence that no election occurred."
+  "note": "The Allegheny County Board of Elections 2013 General Election summary report (certified) lists the contest Mayor CITYWIDE for Pittsburgh. Winner and runner-up are recorded in pittsburgh_results.json. The first-pass county page link set was incomplete; the summary PDF linked from the county election results page contains the mayoral contest."
  },
  {
   "city_id": "4261000",

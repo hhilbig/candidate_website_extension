@@ -2,156 +2,215 @@
  {
   "city_id": "2758000",
   "year": 2010,
-  "status": "unresolved",
+  "status": "no_election",
   "expected_election_dates": [],
-  "source_url": "https://www.ramseycountymn.gov/residents/elections-voting/election-results",
-  "additional_source_urls": [],
-  "note": "No official source for this year could be opened. St. Paul mayoral elections appear to follow a four-year cycle (2013, 2017, 2021, 2025) but no official charter or clerk document confirming the cycle or this year's contests was opened, and absence is not treated as proof. Tried and failed or found no mayoral data: Ramsey County election results page lists only the past four years (2022 onward) and no mayoral results for this year; Ramsey County archival documents scanned by id (about 4400 to 5200) contain only 2022 to 2025 canvass abstracts and 2023 council reallocation files, none for a St. Paul mayor race before 2025; the Minnesota Secretary of State sites (electionresults.sos.mn.gov and www.sos.mn.gov) returned a bot-check page and could not be opened; electionresultsfiles.sos.mn.gov local.txt for 2021, 2017 and 2025 opened but contains no St. Paul contests; Wayback Machine page replay timed out or was blocked; the WebSearch budget was exhausted."
+  "source_url": "https://web.archive.org/web/20131017145401/http://www.co.ramsey.mn.us/elections/results.htm",
+  "additional_source_urls": [
+   "https://web.archive.org/web/20131017145401/http://www.co.ramsey.mn.us/NR/rdonlyres/B578D6E2-7800-40D9-9A5A-65A45266318B/17715/cityabstract2009generalelection.pdf",
+   "https://api.municode.com/CodesContent?nodeId=PTICICH_CH7EL_S7.01CIEL&productId=10061&clientId=4472"
+  ],
+  "note": "The city charter (section 2.02, as shown in the municode charter text) sets a four-year mayoral term, and the 2009 county abstract lists a MAYOR contest on November 3, 2009. Official results show mayoral elections on November 5, 2013, November 7, 2017, November 2, 2021 and November 4, 2025. The Ramsey County results index (archived October 17, 2013) lists for 2010 only state and county abstracts and suburban city results, with no St. Paul city general election abstract. Mayor Coleman was elected in 2009 for four years, so no regular mayoral election fell in 2010. No special mayoral election appears in the index."
  },
  {
   "city_id": "2758000",
   "year": 2011,
-  "status": "unresolved",
+  "status": "no_election",
   "expected_election_dates": [],
-  "source_url": "https://www.ramseycountymn.gov/residents/elections-voting/election-results",
-  "additional_source_urls": [],
-  "note": "No official source for this year could be opened. St. Paul mayoral elections appear to follow a four-year cycle (2013, 2017, 2021, 2025) but no official charter or clerk document confirming the cycle or this year's contests was opened, and absence is not treated as proof. Tried and failed or found no mayoral data: Ramsey County election results page lists only the past four years (2022 onward) and no mayoral results for this year; Ramsey County archival documents scanned by id (about 4400 to 5200) contain only 2022 to 2025 canvass abstracts and 2023 council reallocation files, none for a St. Paul mayor race before 2025; the Minnesota Secretary of State sites (electionresults.sos.mn.gov and www.sos.mn.gov) returned a bot-check page and could not be opened; electionresultsfiles.sos.mn.gov local.txt for 2021, 2017 and 2025 opened but contains no St. Paul contests; Wayback Machine page replay timed out or was blocked; the WebSearch budget was exhausted."
+  "source_url": "https://web.archive.org/web/20131017145401/http://www.co.ramsey.mn.us/NR/rdonlyres/B578D6E2-7800-40D9-9A5A-65A45266318B/26148/GeneralElectionAbstractStPaul.pdf",
+  "additional_source_urls": [
+   "https://web.archive.org/web/20131017145401/http://www.co.ramsey.mn.us/elections/results.htm",
+   "https://api.municode.com/CodesContent?nodeId=PTICICH_CH7EL_S7.01CIEL&productId=10061&clientId=4472"
+  ],
+  "note": "The city charter (section 2.02, as shown in the municode charter text) sets a four-year mayoral term, and the 2009 county abstract lists a MAYOR contest on November 3, 2009. Official results show mayoral elections on November 5, 2013, November 7, 2017, November 2, 2021 and November 4, 2025. The official abstract of votes cast for the St. Paul general election of November 8, 2011 was read. It lists city question and Council Member ward contests and no mayoral contest. The St. Paul council canvass resolution for that election is RES 11-2283 in the Legistar list."
  },
  {
   "city_id": "2758000",
   "year": 2012,
-  "status": "unresolved",
+  "status": "no_election",
   "expected_election_dates": [],
-  "source_url": "https://www.ramseycountymn.gov/residents/elections-voting/election-results",
-  "additional_source_urls": [],
-  "note": "No official source for this year could be opened. St. Paul mayoral elections appear to follow a four-year cycle (2013, 2017, 2021, 2025) but no official charter or clerk document confirming the cycle or this year's contests was opened, and absence is not treated as proof. Tried and failed or found no mayoral data: Ramsey County election results page lists only the past four years (2022 onward) and no mayoral results for this year; Ramsey County archival documents scanned by id (about 4400 to 5200) contain only 2022 to 2025 canvass abstracts and 2023 council reallocation files, none for a St. Paul mayor race before 2025; the Minnesota Secretary of State sites (electionresults.sos.mn.gov and www.sos.mn.gov) returned a bot-check page and could not be opened; electionresultsfiles.sos.mn.gov local.txt for 2021, 2017 and 2025 opened but contains no St. Paul contests; Wayback Machine page replay timed out or was blocked; the WebSearch budget was exhausted."
+  "source_url": "https://web.archive.org/web/20131017145401/http://www.co.ramsey.mn.us/elections/results.htm",
+  "additional_source_urls": [
+   "https://api.municode.com/CodesContent?nodeId=PTICICH_CH7EL_S7.01CIEL&productId=10061&clientId=4472",
+   "https://web.archive.org/web/20131017145401/http://www.co.ramsey.mn.us/NR/rdonlyres/B578D6E2-7800-40D9-9A5A-65A45266318B/17715/cityabstract2009generalelection.pdf"
+  ],
+  "note": "The city charter (section 2.02, as shown in the municode charter text) sets a four-year mayoral term, and the 2009 county abstract lists a MAYOR contest on November 3, 2009. Official results show mayoral elections on November 5, 2013, November 7, 2017, November 2, 2021 and November 4, 2025. The Ramsey County results index (archived October 17, 2013) lists for 2012 state and county abstracts, suburban city abstracts and a St. Paul write-in tally for state offices, and no St. Paul city general election abstract. No regular mayoral election fell in 2012 under the four-year term."
  },
  {
   "city_id": "2758000",
   "year": 2013,
-  "status": "unresolved",
-  "expected_election_dates": [],
-  "source_url": "https://www.ramseycountymn.gov/residents/elections-voting/election-results",
-  "additional_source_urls": [],
-  "note": "No official source for this year could be opened. St. Paul mayoral elections appear to follow a four-year cycle (2013, 2017, 2021, 2025) but no official charter or clerk document confirming the cycle or this year's contests was opened, and absence is not treated as proof. Tried and failed or found no mayoral data: Ramsey County election results page lists only the past four years (2022 onward) and no mayoral results for this year; Ramsey County archival documents scanned by id (about 4400 to 5200) contain only 2022 to 2025 canvass abstracts and 2023 council reallocation files, none for a St. Paul mayor race before 2025; the Minnesota Secretary of State sites (electionresults.sos.mn.gov and www.sos.mn.gov) returned a bot-check page and could not be opened; electionresultsfiles.sos.mn.gov local.txt for 2021, 2017 and 2025 opened but contains no St. Paul contests; Wayback Machine page replay timed out or was blocked; the WebSearch budget was exhausted."
+  "status": "complete",
+  "expected_election_dates": [
+   "2013-11-05"
+  ],
+  "source_url": "https://web.archive.org/web/20241016080927/https://www.ramseycounty.us/sites/default/files/Elections%20and%20Voting/Abstracts/2013%20Abstracts/2013%20Saint%20Paul.pdf",
+  "additional_source_urls": [
+   "https://web.archive.org/web/20140727071716/http://www.co.ramsey.mn.us/elections/2013_general_election_results.htm",
+   "https://web.archive.org/web/20131017145401/http://www.co.ramsey.mn.us/elections/results.htm",
+   "https://api.municode.com/CodesContent?nodeId=PTICICH_CH7EL_S7.01CIEL&productId=10061&clientId=4472"
+  ],
+  "note": "Mayoral general election of November 5, 2013, decided in the first count by a majority. Chris Coleman received 23875 of 30518 votes in the first choice count. The result is in the results file. Source is the official abstract with council canvass resolution RES 13-1798."
  },
  {
   "city_id": "2758000",
   "year": 2014,
-  "status": "unresolved",
+  "status": "no_election",
   "expected_election_dates": [],
-  "source_url": "https://www.ramseycountymn.gov/residents/elections-voting/election-results",
-  "additional_source_urls": [],
-  "note": "No official source for this year could be opened. St. Paul mayoral elections appear to follow a four-year cycle (2013, 2017, 2021, 2025) but no official charter or clerk document confirming the cycle or this year's contests was opened, and absence is not treated as proof. Tried and failed or found no mayoral data: Ramsey County election results page lists only the past four years (2022 onward) and no mayoral results for this year; Ramsey County archival documents scanned by id (about 4400 to 5200) contain only 2022 to 2025 canvass abstracts and 2023 council reallocation files, none for a St. Paul mayor race before 2025; the Minnesota Secretary of State sites (electionresults.sos.mn.gov and www.sos.mn.gov) returned a bot-check page and could not be opened; electionresultsfiles.sos.mn.gov local.txt for 2021, 2017 and 2025 opened but contains no St. Paul contests; Wayback Machine page replay timed out or was blocked; the WebSearch budget was exhausted."
+  "source_url": "https://web.archive.org/web/20171025020110/https://www.ramseycounty.us/residents/elections-voting/results-maps-archives/election-results",
+  "additional_source_urls": [
+   "https://api.municode.com/CodesContent?nodeId=PTICICH_CH7EL_S7.01CIEL&productId=10061&clientId=4472",
+   "https://webapi.legistar.com/v1/stpaul/matters?$top=60&$filter=substringof(%27Canvassing%27,MatterTitle)"
+  ],
+  "note": "The city charter (section 2.02, as shown in the municode charter text) sets a four-year mayoral term, and the 2009 county abstract lists a MAYOR contest on November 3, 2009. Official results show mayoral elections on November 5, 2013, November 7, 2017, November 2, 2021 and November 4, 2025. The Ramsey County results index (archived October 25, 2017) lists for 2014 state and county abstracts, suburban city abstracts and a St. Paul write-in tally sheet, and no St. Paul city general election abstract. The Legistar list of St. Paul canvassing resolutions has no entry for a 2014 city election."
  },
  {
   "city_id": "2758000",
   "year": 2015,
-  "status": "unresolved",
+  "status": "no_election",
   "expected_election_dates": [],
-  "source_url": "https://www.ramseycountymn.gov/residents/elections-voting/election-results",
-  "additional_source_urls": [],
-  "note": "No official source for this year could be opened. St. Paul mayoral elections appear to follow a four-year cycle (2013, 2017, 2021, 2025) but no official charter or clerk document confirming the cycle or this year's contests was opened, and absence is not treated as proof. Tried and failed or found no mayoral data: Ramsey County election results page lists only the past four years (2022 onward) and no mayoral results for this year; Ramsey County archival documents scanned by id (about 4400 to 5200) contain only 2022 to 2025 canvass abstracts and 2023 council reallocation files, none for a St. Paul mayor race before 2025; the Minnesota Secretary of State sites (electionresults.sos.mn.gov and www.sos.mn.gov) returned a bot-check page and could not be opened; electionresultsfiles.sos.mn.gov local.txt for 2021, 2017 and 2025 opened but contains no St. Paul contests; Wayback Machine page replay timed out or was blocked; the WebSearch budget was exhausted."
+  "source_url": "https://web.archive.org/web/20241016075616/https://www.ramseycounty.us/sites/default/files/Elections%20and%20Voting/Abstracts/Test%20Abstracts/Saint%20Paul%20Results%202015.pdf",
+  "additional_source_urls": [
+   "https://web.archive.org/web/20171025020110/https://www.ramseycounty.us/residents/elections-voting/results-maps-archives/election-results",
+   "https://api.municode.com/CodesContent?nodeId=PTICICH_CH7EL_S7.01CIEL&productId=10061&clientId=4472",
+   "https://webapi.legistar.com/v1/stpaul/matters?$top=60&$filter=substringof(%27Canvassing%27,MatterTitle)"
+  ],
+  "note": "The city charter (section 2.02, as shown in the municode charter text) sets a four-year mayoral term, and the 2009 county abstract lists a MAYOR contest on November 3, 2009. Official results show mayoral elections on November 5, 2013, November 7, 2017, November 2, 2021 and November 4, 2025. The St. Paul council resolution RES 15-1989 canvassing the November 3, 2015 city general election was read. It lists only councilmember contests (Ward 1 to Ward 7) and no mayoral contest."
  },
  {
   "city_id": "2758000",
   "year": 2016,
-  "status": "unresolved",
+  "status": "no_election",
   "expected_election_dates": [],
-  "source_url": "https://www.ramseycountymn.gov/residents/elections-voting/election-results",
-  "additional_source_urls": [],
-  "note": "No official source for this year could be opened. St. Paul mayoral elections appear to follow a four-year cycle (2013, 2017, 2021, 2025) but no official charter or clerk document confirming the cycle or this year's contests was opened, and absence is not treated as proof. Tried and failed or found no mayoral data: Ramsey County election results page lists only the past four years (2022 onward) and no mayoral results for this year; Ramsey County archival documents scanned by id (about 4400 to 5200) contain only 2022 to 2025 canvass abstracts and 2023 council reallocation files, none for a St. Paul mayor race before 2025; the Minnesota Secretary of State sites (electionresults.sos.mn.gov and www.sos.mn.gov) returned a bot-check page and could not be opened; electionresultsfiles.sos.mn.gov local.txt for 2021, 2017 and 2025 opened but contains no St. Paul contests; Wayback Machine page replay timed out or was blocked; the WebSearch budget was exhausted."
+  "source_url": "https://web.archive.org/web/20201016225530/https://www.ramseycounty.us/residents/elections-voting/information-reference/election-results",
+  "additional_source_urls": [
+   "https://api.municode.com/CodesContent?nodeId=PTICICH_CH7EL_S7.01CIEL&productId=10061&clientId=4472",
+   "https://webapi.legistar.com/v1/stpaul/matters?$top=60&$filter=substringof(%27Canvassing%27,MatterTitle)"
+  ],
+  "note": "The city charter (section 2.02, as shown in the municode charter text) sets a four-year mayoral term, and the 2009 county abstract lists a MAYOR contest on November 3, 2009. Official results show mayoral elections on November 5, 2013, November 7, 2017, November 2, 2021 and November 4, 2025. The Ramsey County results index (archived October 16, 2020) lists for 2016 only county, state, suburban city and ISD 625 abstracts, and no St. Paul city general election abstract. The Legistar list of St. Paul canvassing resolutions has no entry for a 2016 city election."
  },
  {
   "city_id": "2758000",
   "year": 2017,
-  "status": "unresolved",
-  "expected_election_dates": [],
-  "source_url": "https://www.ramseycountymn.gov/residents/elections-voting/election-results",
-  "additional_source_urls": [],
-  "note": "No official source for this year could be opened. St. Paul mayoral elections appear to follow a four-year cycle (2013, 2017, 2021, 2025) but no official charter or clerk document confirming the cycle or this year's contests was opened, and absence is not treated as proof. Tried and failed or found no mayoral data: Ramsey County election results page lists only the past four years (2022 onward) and no mayoral results for this year; Ramsey County archival documents scanned by id (about 4400 to 5200) contain only 2022 to 2025 canvass abstracts and 2023 council reallocation files, none for a St. Paul mayor race before 2025; the Minnesota Secretary of State sites (electionresults.sos.mn.gov and www.sos.mn.gov) returned a bot-check page and could not be opened; electionresultsfiles.sos.mn.gov local.txt for 2021, 2017 and 2025 opened but contains no St. Paul contests; Wayback Machine page replay timed out or was blocked; the WebSearch budget was exhausted."
+  "status": "complete",
+  "expected_election_dates": [
+   "2017-11-07"
+  ],
+  "source_url": "https://web.archive.org/web/20201016225530/https://www.ramseycounty.us/sites/default/files/Elections%20and%20Voting/city%20general%20election%20-%202017.pdf",
+  "additional_source_urls": [
+   "https://stpaul.legistar.com/LegislationDetail.aspx?ID=3208173&GUID=E0033BD0-EA5A-46E4-B534-90A79596CE1F",
+   "https://web.archive.org/web/20201016225530/https://www.ramseycounty.us/residents/elections-voting/information-reference/election-results",
+   "https://api.municode.com/CodesContent?nodeId=PTICICH_CH7EL_S7.01CIEL&productId=10061&clientId=4472"
+  ],
+  "note": "Mayoral general election of November 7, 2017, decided in the first count by a majority. Melvin Carter received 31353 of 61646 first choice votes. The result is in the results file. Source is the Ramsey County abstract and council canvass resolution RES 17-1832."
  },
  {
   "city_id": "2758000",
   "year": 2018,
-  "status": "unresolved",
+  "status": "no_election",
   "expected_election_dates": [],
-  "source_url": "https://www.ramseycountymn.gov/residents/elections-voting/election-results",
-  "additional_source_urls": [],
-  "note": "No official source for this year could be opened. St. Paul mayoral elections appear to follow a four-year cycle (2013, 2017, 2021, 2025) but no official charter or clerk document confirming the cycle or this year's contests was opened, and absence is not treated as proof. Tried and failed or found no mayoral data: Ramsey County election results page lists only the past four years (2022 onward) and no mayoral results for this year; Ramsey County archival documents scanned by id (about 4400 to 5200) contain only 2022 to 2025 canvass abstracts and 2023 council reallocation files, none for a St. Paul mayor race before 2025; the Minnesota Secretary of State sites (electionresults.sos.mn.gov and www.sos.mn.gov) returned a bot-check page and could not be opened; electionresultsfiles.sos.mn.gov local.txt for 2021, 2017 and 2025 opened but contains no St. Paul contests; Wayback Machine page replay timed out or was blocked; the WebSearch budget was exhausted."
+  "source_url": "https://web.archive.org/web/20201016225530/https://www.ramseycounty.us/sites/default/files/Elections%20and%20Voting/Notices%20%26%20Reports/Abstract%20-%20StP%20-%20Primary%202018%20updated.pdf",
+  "additional_source_urls": [
+   "https://webapi.legistar.com/v1/stpaul/matters?$top=60&$filter=substringof(%27Canvassing%27,MatterTitle)",
+   "https://web.archive.org/web/20201016225530/https://www.ramseycounty.us/residents/elections-voting/information-reference/election-results",
+   "https://api.municode.com/CodesContent?nodeId=PTICICH_CH7EL_S7.01CIEL&productId=10061&clientId=4472"
+  ],
+  "note": "The city charter (section 2.02, as shown in the municode charter text) sets a four-year mayoral term, and the 2009 county abstract lists a MAYOR contest on November 3, 2009. Official results show mayoral elections on November 5, 2013, November 7, 2017, November 2, 2021 and November 4, 2025. The only St. Paul city election in 2018 was the special election for Council Member Ward 4 on August 14, 2018 (council resolution RES 18-1399). The official abstract was read and has no mayoral contest."
  },
  {
   "city_id": "2758000",
   "year": 2019,
-  "status": "unresolved",
+  "status": "no_election",
   "expected_election_dates": [],
-  "source_url": "https://www.ramseycountymn.gov/residents/elections-voting/election-results",
-  "additional_source_urls": [],
-  "note": "No official source for this year could be opened. St. Paul mayoral elections appear to follow a four-year cycle (2013, 2017, 2021, 2025) but no official charter or clerk document confirming the cycle or this year's contests was opened, and absence is not treated as proof. Tried and failed or found no mayoral data: Ramsey County election results page lists only the past four years (2022 onward) and no mayoral results for this year; Ramsey County archival documents scanned by id (about 4400 to 5200) contain only 2022 to 2025 canvass abstracts and 2023 council reallocation files, none for a St. Paul mayor race before 2025; the Minnesota Secretary of State sites (electionresults.sos.mn.gov and www.sos.mn.gov) returned a bot-check page and could not be opened; electionresultsfiles.sos.mn.gov local.txt for 2021, 2017 and 2025 opened but contains no St. Paul contests; Wayback Machine page replay timed out or was blocked; the WebSearch budget was exhausted."
+  "source_url": "https://web.archive.org/web/20201016225530/https://www.ramseycounty.us/sites/default/files/Elections%20and%20Voting/Notices%20%26%20Reports/2019%20St%20Paul%20Abstract_acc.pdf",
+  "additional_source_urls": [
+   "https://stpaul.legistar.com/LegislationDetail.aspx?ID=4218651&GUID=E205E9D0-6971-4480-9C81-264F3A5C55C0",
+   "https://api.municode.com/CodesContent?nodeId=PTICICH_CH7EL_S7.01CIEL&productId=10061&clientId=4472"
+  ],
+  "note": "The city charter (section 2.02, as shown in the municode charter text) sets a four-year mayoral term, and the 2009 county abstract lists a MAYOR contest on November 3, 2009. Official results show mayoral elections on November 5, 2013, November 7, 2017, November 2, 2021 and November 4, 2025. The official abstract of votes cast for the St. Paul general election of November 5, 2019 was read. It lists Council Member wards and City Question 1 and no mayoral contest. Council resolution RES 19-1972 lists only councilmember contests and the ballot question."
  },
  {
   "city_id": "2758000",
   "year": 2020,
-  "status": "unresolved",
+  "status": "no_election",
   "expected_election_dates": [],
-  "source_url": "https://www.ramseycountymn.gov/residents/elections-voting/election-results",
-  "additional_source_urls": [],
-  "note": "No official source for this year could be opened. St. Paul mayoral elections appear to follow a four-year cycle (2013, 2017, 2021, 2025) but no official charter or clerk document confirming the cycle or this year's contests was opened, and absence is not treated as proof. Tried and failed or found no mayoral data: Ramsey County election results page lists only the past four years (2022 onward) and no mayoral results for this year; Ramsey County archival documents scanned by id (about 4400 to 5200) contain only 2022 to 2025 canvass abstracts and 2023 council reallocation files, none for a St. Paul mayor race before 2025; the Minnesota Secretary of State sites (electionresults.sos.mn.gov and www.sos.mn.gov) returned a bot-check page and could not be opened; electionresultsfiles.sos.mn.gov local.txt for 2021, 2017 and 2025 opened but contains no St. Paul contests; Wayback Machine page replay timed out or was blocked; the WebSearch budget was exhausted."
+  "source_url": "https://api.municode.com/CodesContent?nodeId=PTICICH_CH7EL_S7.01CIEL&productId=10061&clientId=4472",
+  "additional_source_urls": [
+   "https://webapi.legistar.com/v1/stpaul/matters?$top=60&$filter=substringof(%27Canvassing%27,MatterTitle)",
+   "https://web.archive.org/web/20201016225530/https://www.ramseycounty.us/residents/elections-voting/information-reference/election-results"
+  ],
+  "note": "The city charter (section 2.02, as shown in the municode charter text) sets a four-year mayoral term, and the 2009 county abstract lists a MAYOR contest on November 3, 2009. Official results show mayoral elections on November 5, 2013, November 7, 2017, November 2, 2021 and November 4, 2025. The Legistar list of St. Paul canvassing resolutions has no entry for a 2020 city election. The Ramsey County results index (archived October 16, 2020) lists only presidential primary abstracts for 2020. City elections were in odd years until the charter change shown in section 7.01."
  },
  {
   "city_id": "2758000",
   "year": 2021,
-  "status": "unresolved",
-  "expected_election_dates": [],
-  "source_url": "https://www.ramseycountymn.gov/residents/elections-voting/election-results",
-  "additional_source_urls": [],
-  "note": "No official source for this year could be opened. St. Paul mayoral elections appear to follow a four-year cycle (2013, 2017, 2021, 2025) but no official charter or clerk document confirming the cycle or this year's contests was opened, and absence is not treated as proof. Tried and failed or found no mayoral data: Ramsey County election results page lists only the past four years (2022 onward) and no mayoral results for this year; Ramsey County archival documents scanned by id (about 4400 to 5200) contain only 2022 to 2025 canvass abstracts and 2023 council reallocation files, none for a St. Paul mayor race before 2025; the Minnesota Secretary of State sites (electionresults.sos.mn.gov and www.sos.mn.gov) returned a bot-check page and could not be opened; electionresultsfiles.sos.mn.gov local.txt for 2021, 2017 and 2025 opened but contains no St. Paul contests; Wayback Machine page replay timed out or was blocked; the WebSearch budget was exhausted."
+  "status": "complete",
+  "expected_election_dates": [
+   "2021-11-02"
+  ],
+  "source_url": "https://web.archive.org/web/20211205034110/https://www.ramseycounty.us/sites/default/files/Elections%20and%20Voting/Notices%20%26%20Reports/St%20Paul_11-2-2021.pdf",
+  "additional_source_urls": [
+   "https://stpaul.legistar.com/LegislationDetail.aspx?ID=5203554&GUID=6D874883-8C1B-4330-80A1-79C5C9DE692E",
+   "https://api.municode.com/CodesContent?nodeId=PTICICH_CH7EL_S7.01CIEL&productId=10061&clientId=4472"
+  ],
+  "note": "Mayoral general election of November 2, 2021, decided in the first count by a majority. Melvin Carter received 36426 of 59103 first choice votes. The result is in the results file. Source is the Ramsey County abstract and council canvass resolution RES 21-1625."
  },
  {
   "city_id": "2758000",
   "year": 2022,
-  "status": "unresolved",
+  "status": "no_election",
   "expected_election_dates": [],
-  "source_url": "https://www.ramseycountymn.gov/residents/elections-voting/election-results",
-  "additional_source_urls": [],
-  "note": "No official source for this year could be opened. St. Paul mayoral elections appear to follow a four-year cycle (2013, 2017, 2021, 2025) but no official charter or clerk document confirming the cycle or this year's contests was opened, and absence is not treated as proof. Tried and failed or found no mayoral data: Ramsey County election results page lists only the past four years (2022 onward) and no mayoral results for this year; Ramsey County archival documents scanned by id (about 4400 to 5200) contain only 2022 to 2025 canvass abstracts and 2023 council reallocation files, none for a St. Paul mayor race before 2025; the Minnesota Secretary of State sites (electionresults.sos.mn.gov and www.sos.mn.gov) returned a bot-check page and could not be opened; electionresultsfiles.sos.mn.gov local.txt for 2021, 2017 and 2025 opened but contains no St. Paul contests; Wayback Machine page replay timed out or was blocked; the WebSearch budget was exhausted."
+  "source_url": "https://api.municode.com/CodesContent?nodeId=PTICICH_CH7EL_S7.01CIEL&productId=10061&clientId=4472",
+  "additional_source_urls": [
+   "https://webapi.legistar.com/v1/stpaul/matters?$top=60&$filter=substringof(%27Canvassing%27,MatterTitle)"
+  ],
+  "note": "The city charter (section 2.02, as shown in the municode charter text) sets a four-year mayoral term, and the 2009 county abstract lists a MAYOR contest on November 3, 2009. Official results show mayoral elections on November 5, 2013, November 7, 2017, November 2, 2021 and November 4, 2025. The Legistar list of St. Paul canvassing resolutions has no entry for a 2022 city election. Charter section 7.01 shows city elections moving to presidential years, with a mayoral election on November 4, 2025 for a three-year term. The 2021 mayor held a four-year term through 2025."
  },
  {
   "city_id": "2758000",
   "year": 2023,
-  "status": "unresolved",
+  "status": "no_election",
   "expected_election_dates": [],
-  "source_url": "https://www.ramseycountymn.gov/residents/elections-voting/election-results",
-  "additional_source_urls": [],
-  "note": "No official source for this year could be opened. St. Paul mayoral elections appear to follow a four-year cycle (2013, 2017, 2021, 2025) but no official charter or clerk document confirming the cycle or this year's contests was opened, and absence is not treated as proof. Tried and failed or found no mayoral data: Ramsey County election results page lists only the past four years (2022 onward) and no mayoral results for this year; Ramsey County archival documents scanned by id (about 4400 to 5200) contain only 2022 to 2025 canvass abstracts and 2023 council reallocation files, none for a St. Paul mayor race before 2025; the Minnesota Secretary of State sites (electionresults.sos.mn.gov and www.sos.mn.gov) returned a bot-check page and could not be opened; electionresultsfiles.sos.mn.gov local.txt for 2021, 2017 and 2025 opened but contains no St. Paul contests; Wayback Machine page replay timed out or was blocked; the WebSearch budget was exhausted."
+  "source_url": "https://stpaul.legistar.com/LegislationDetail.aspx?ID=6411590&GUID=EEEC650B-409A-4FD5-9BE9-237467548A30",
+  "additional_source_urls": [
+   "https://api.municode.com/CodesContent?nodeId=PTICICH_CH7EL_S7.01CIEL&productId=10061&clientId=4472",
+   "https://webapi.legistar.com/v1/stpaul/matters?$top=60&$filter=substringof(%27Canvassing%27,MatterTitle)"
+  ],
+  "note": "The city charter (section 2.02, as shown in the municode charter text) sets a four-year mayoral term, and the 2009 county abstract lists a MAYOR contest on November 3, 2009. Official results show mayoral elections on November 5, 2013, November 7, 2017, November 2, 2021 and November 4, 2025. Council resolution RES 23-1611 canvassing the November 7, 2023 city general election was read. It lists Ward 1 to Ward 7 councilmember contests and no mayoral contest. Charter section 7.01 confirms the next mayoral election was on November 4, 2025."
  },
  {
   "city_id": "2758000",
   "year": 2024,
-  "status": "unresolved",
+  "status": "no_election",
   "expected_election_dates": [],
-  "source_url": "https://www.ramseycountymn.gov/residents/elections-voting/election-results",
-  "additional_source_urls": [],
-  "note": "No official source for this year could be opened. St. Paul mayoral elections appear to follow a four-year cycle (2013, 2017, 2021, 2025) but no official charter or clerk document confirming the cycle or this year's contests was opened, and absence is not treated as proof. Tried and failed or found no mayoral data: Ramsey County election results page lists only the past four years (2022 onward) and no mayoral results for this year; Ramsey County archival documents scanned by id (about 4400 to 5200) contain only 2022 to 2025 canvass abstracts and 2023 council reallocation files, none for a St. Paul mayor race before 2025; the Minnesota Secretary of State sites (electionresults.sos.mn.gov and www.sos.mn.gov) returned a bot-check page and could not be opened; electionresultsfiles.sos.mn.gov local.txt for 2021, 2017 and 2025 opened but contains no St. Paul contests; Wayback Machine page replay timed out or was blocked; the WebSearch budget was exhausted."
+  "source_url": "https://api.municode.com/CodesContent?nodeId=PTICICH_CH7EL_S7.01CIEL&productId=10061&clientId=4472",
+  "additional_source_urls": [
+   "https://webapi.legistar.com/v1/stpaul/matters?$top=60&$filter=substringof(%27Canvassing%27,MatterTitle)"
+  ],
+  "note": "The city charter (section 2.02, as shown in the municode charter text) sets a four-year mayoral term, and the 2009 county abstract lists a MAYOR contest on November 3, 2009. Official results show mayoral elections on November 5, 2013, November 7, 2017, November 2, 2021 and November 4, 2025. The Legistar list of St. Paul canvassing resolutions has no entry for a 2024 city election. Charter section 7.01 sets the next mayoral election on November 4, 2025."
  },
  {
   "city_id": "2758000",
   "year": 2025,
-  "status": "unresolved",
-  "expected_election_dates": [],
-  "source_url": "https://www.ramseycountymn.gov/residents/elections-voting/election-results",
-  "additional_source_urls": [
-   "https://www.rcvis.com/v/saint-paul-mayoral-race-11042025"
+  "status": "complete",
+  "expected_election_dates": [
+   "2025-11-04"
   ],
-  "note": "The Ramsey County election results page lists a 2025 Saint Paul mayoral race with complete reallocation results, held 2025-11-04 (ranked choice), but the county document behind that link (https://www.ramseycountymn.gov/media/23749) returned HTTP 404 when opened, so the official totals could not be read. The county links a ranked-choice visualization at https://www.rcvis.com/v/saint-paul-mayoral-race-11042025 that shows a final round 2 of Kaohly Her 32,295 and Melvin Carter 30,418. That site is not an official authority page, so these numbers are a lead only and are not recorded as a verified result. Tried and failed or found no mayoral data: Ramsey County election results page lists only the past four years (2022 onward) and no mayoral results for this year; Ramsey County archival documents scanned by id (about 4400 to 5200) contain only 2022 to 2025 canvass abstracts and 2023 council reallocation files, none for a St. Paul mayor race before 2025; the Minnesota Secretary of State sites (electionresults.sos.mn.gov and www.sos.mn.gov) returned a bot-check page and could not be opened; electionresultsfiles.sos.mn.gov local.txt for 2021, 2017 and 2025 opened but contains no St. Paul contests; Wayback Machine page replay timed out or was blocked; the WebSearch budget was exhausted."
+  "source_url": "https://stpaul.legistar.com/LegislationDetail.aspx?ID=7726549&GUID=706DF33A-BE30-45EB-A25D-A794306C204B",
+  "additional_source_urls": [
+   "https://legistar1.granicus.com/StPaul/attachments/408885cd-c4c2-4499-a058-ed5449858df9.pdf",
+   "https://api.municode.com/CodesContent?nodeId=PTICICH_CH7EL_S7.01CIEL&productId=10061&clientId=4472"
+  ],
+  "note": "Mayoral general election of November 4, 2025 with ranked choice reallocation. Kaohly Her won the final round with 32295 votes against 30418 for Melvin Carter. The result is in the results file. Source is council canvass resolution RES 25-1746."
  },
  {
   "city_id": "2758000",
   "year": 2026,
-  "status": "unresolved",
+  "status": "no_election",
   "expected_election_dates": [],
-  "source_url": "https://www.ramseycountymn.gov/residents/elections-voting/election-results",
-  "additional_source_urls": [],
-  "note": "No official source for this year could be opened. St. Paul mayoral elections appear to follow a four-year cycle (2013, 2017, 2021, 2025) but no official charter or clerk document confirming the cycle or this year's contests was opened, and absence is not treated as proof. Tried and failed or found no mayoral data: Ramsey County election results page lists only the past four years (2022 onward) and no mayoral results for this year; Ramsey County archival documents scanned by id (about 4400 to 5200) contain only 2022 to 2025 canvass abstracts and 2023 council reallocation files, none for a St. Paul mayor race before 2025; the Minnesota Secretary of State sites (electionresults.sos.mn.gov and www.sos.mn.gov) returned a bot-check page and could not be opened; electionresultsfiles.sos.mn.gov local.txt for 2021, 2017 and 2025 opened but contains no St. Paul contests; Wayback Machine page replay timed out or was blocked; the WebSearch budget was exhausted."
+  "source_url": "https://api.municode.com/CodesContent?nodeId=PTICICH_CH7EL_S7.01CIEL&productId=10061&clientId=4472",
+  "additional_source_urls": [
+   "https://stpaul.legistar.com/LegislationDetail.aspx?ID=7726549&GUID=706DF33A-BE30-45EB-A25D-A794306C204B",
+   "https://webapi.legistar.com/v1/stpaul/matters?$top=60&$filter=substringof(%27Canvassing%27,MatterTitle)"
+  ],
+  "note": "Charter section 7.01 sets a mayoral election on November 4, 2025 for a three-year term, and council resolution RES 25-1746 lists the mayor race as MAYOR (3 Year Term). The next regular mayoral election is therefore in 2028, after the cutoff. The Legistar list of St. Paul canvassing resolutions has no 2026 city election."
  }
 ]

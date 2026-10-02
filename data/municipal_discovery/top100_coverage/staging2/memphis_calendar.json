@@ -18,7 +18,7 @@
    "https://www.electionsshelbytn.gov/past-elections/2012-past-elections/",
    "https://www.memphistn.gov/gov-guide/"
   ],
-  "note": "The cycle in the City of Memphis government guide places a mayoral election in 2011, and secondary sources date it October 6, 2011. The Shelby County Election Commission past-elections archive starts in 2012 and has no 2011 page (the 2010 and 2011 year pages return HTTP 404). No official 2011 results document was found. The Internet Archive was offline (Temporarily Offline page) when tried. Secondary sources are not used for results."
+  "note": "The cycle in the City of Memphis government guide places a mayoral election in 2011, and secondary sources date it October 6, 2011. The Shelby County Election Commission past-elections archive starts in 2012 and has no 2011 page (the 2010 and 2011 year pages return HTTP 404). No official 2011 results document was found. The Internet Archive was offline (Temporarily Offline page) when tried. Secondary sources are not used for results. Second pass: the past-elections page https://www.electionsshelbytn.gov/past-elections/ returned HTTP 200 and has no 2011 link. https://www.electionsshelbytn.gov/past-elections/2011-past-elections/ and the 2010 equivalent returned HTTP 404. The Wayback CDX API returned no response with curl, and WebFetch refused web.archive.org. The web search quota was exhausted, so council minutes and state sources were not searched. The year stays unresolved."
  },
  {
   "city_id": "4748000",

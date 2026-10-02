@@ -60,5 +60,37 @@
     "candidate_year_id": ""
    }
   ]
+ },
+ {
+  "city_name": "Atlanta",
+  "state_abb": "GA",
+  "roster_place_fips": "1304000",
+  "election_date": "2025-11-04",
+  "election_type": "regular",
+  "stage": "general",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "source_url": "https://results.enr.clarityelections.com/GA/Fulton/124753/365980/json/en/summary.json",
+  "source_locator": "Fulton Clarity election 124753 (version 365980), summary.json, contest 'Atlanta Mayor' (177 of 180 precincts reporting, the same count shown for every Atlanta contest); DeKalb zip file '2025 Election Results/ElectionSummaryReportRPT-11-17-RECERTIFIED.pdf', Atlanta Mayor (Vote for 1), 16 of 16 precincts, Official and Complete",
+  "certification_source_url": "https://www.dekalbcountyga.gov/sites/default/files/2026-04/2025%20Election%20Results.zip",
+  "additional_source_urls": [
+   "https://library.municode.com/ga/atlanta/codes/code_of_ordinances?nodeId=PTICHRELA_SPACH_ART5ELRECOIN_CH1COEL_S5-102REELTIHOVO",
+   "https://fultoncountyga.gov/-/media/2025-Election/November-4-2025-Election-Documents/Ballot-Canvass-Summary--Fulton-County--November-4-2025--rv-112425.pdf"
+  ],
+  "verification_note": "Single round on November 4, 2025; Dickens won a majority, so no runoff. Citywide total sums the Fulton County portion (Dickens 79107, Meredith 5198, Jackson 4519, Domagalski 3395) and the DeKalb County portion (Dickens 9432, Meredith 1133, Jackson 771, Domagalski 569). Result: Dickens 88539, Meredith 6331, Jackson 5290, Domagalski 3964. Fulton figures come from the county results site; the Fulton canvass summary opened (Wayback copy) has ballot counts only, so no separate Fulton contest certification was opened.",
+  "candidates": [
+   {
+    "name": "Andre Dickens",
+    "role": "winner",
+    "votes": 88539,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Eddie Meredith",
+    "role": "runner_up",
+    "votes": 6331,
+    "candidate_year_id": ""
+   }
+  ]
  }
 ]

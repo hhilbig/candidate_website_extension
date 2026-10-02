@@ -3,6 +3,35 @@
   "city_name": "Milwaukee",
   "state_abb": "WI",
   "roster_place_fips": "5553000",
+  "election_date": "2012-04-03",
+  "election_type": "regular",
+  "stage": "general",
+  "verification_status": "verified_decisive",
+  "certification_status": "certified",
+  "source_url": "https://web.archive.org/web/20130609180242/http://city.milwaukee.gov/ElectionResults1717/20121/April-3-2012.htm",
+  "source_locator": "Page April 3, 2012, MAYOR block, Vote For 1",
+  "certification_source_url": "https://web.archive.org/web/20130609180242/http://city.milwaukee.gov/ElectionResults1717/20121/April-3-2012.htm",
+  "additional_source_urls": [],
+  "verification_note": "Archived official Election Commission results page, certified by the Board of Commissioners on April 12, 2012. Barrett 54640, McDonald 22388, write-in 517. Only two candidates were on the ballot, so no primary was needed.",
+  "candidates": [
+   {
+    "name": "Tom Barrett",
+    "role": "winner",
+    "votes": 54640,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Edward McDonald",
+    "role": "runner_up",
+    "votes": 22388,
+    "candidate_year_id": ""
+   }
+  ]
+ },
+ {
+  "city_name": "Milwaukee",
+  "state_abb": "WI",
+  "roster_place_fips": "5553000",
   "election_date": "2016-04-05",
   "election_type": "regular",
   "stage": "general",

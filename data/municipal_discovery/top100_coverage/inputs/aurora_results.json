@@ -3,6 +3,39 @@
   "city_name": "Aurora",
   "state_abb": "CO",
   "roster_place_fips": "0804000",
+  "election_date": "2011-11-01",
+  "election_type": "regular",
+  "stage": "general",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "source_url": "https://www.arapahoeco.gov/Your%20County/Arapahoe%20Votes/Documents/Records%20And%20data/Past%20Elections%20File%20Library/2011/2011CoordinatedElection_OfficialResults.pdf",
+  "source_locator": "Arapahoe: 'CITY OF AURORA - MAYOR (Vote For Not More Than 1)' contest, page 1, Hogan 14584, Frazier 12277. Adams: 'AURORA MAYOR', Hogan 1082, Frazier 869. Douglas: 'Aurora Mayor, Vote For 1', Hogan 11, Frazier 25.",
+  "certification_source_url": "https://www.arapahoeco.gov/your_county/arapahoevotes/records_data/past_elections_file_library.php",
+  "additional_source_urls": [
+   "https://adamscountyco.gov/wp-content/uploads/2026/03/CR-2011Coordinated.pdf",
+   "https://www.douglasco.gov/documents/2011-ce-official-results.pdf/",
+   "https://www.arapahoeco.gov/your_county/arapahoevotes/records_data/past_elections_file_library.php"
+  ],
+  "verification_note": "Aurora spans Arapahoe, Adams and Douglas Counties, and each county reports its own part of the contest. Official county results give Hogan 14584 in Arapahoe, 1082 in Adams and 11 in Douglas, summed to 15677. Ryan L. Frazier received 12277, 869 and 25, summed to 13171. Frazier was second of six candidates in each county sum and in the citywide sum. Other candidates were Sandvall (Arapahoe 5905), Stafford (4607), Davis (1359) and Yamrick (979), all below Frazier. Official county results, not a city or county canvass certificate, were used, so certification status is source_verified.",
+  "candidates": [
+   {
+    "name": "Steve Hogan",
+    "role": "winner",
+    "votes": 15677,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Ryan L. Frazier",
+    "role": "runner_up",
+    "votes": 13171,
+    "candidate_year_id": ""
+   }
+  ]
+ },
+ {
+  "city_name": "Aurora",
+  "state_abb": "CO",
+  "roster_place_fips": "0804000",
   "election_date": "2015-11-03",
   "election_type": "regular",
   "stage": "general",

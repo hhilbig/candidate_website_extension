@@ -1,67 +1,124 @@
 [
-  {
-    "city_name": "Pittsburgh",
-    "state_abb": "PA",
-    "roster_place_fips": "4261000",
-    "election_date": "2025-11-04",
-    "election_type": "regular",
-    "stage": "general",
-    "verification_status": "verified_decisive",
-    "certification_status": "certified",
-    "source_url": "https://results.enr.clarityelections.com/PA/Allegheny/124195/367073/json/sum.json",
-    "source_locator": "Contest 'Mayor Pittsburgh', published version 367073",
-    "certification_source_url": "https://www.alleghenycounty.us/Government/Elections/Election-Results",
-    "additional_source_urls": [
-      "https://results.enr.clarityelections.com/PA/Allegheny/124195/",
-      "https://www.pittsburghpa.gov/City-Government/The-Mayor/Mayors-of-Pittsburgh"
-    ],
-    "verification_note": "Allegheny County official results system reports Mayor Pittsburgh with all 402 of 402 precincts reporting: O'Connor 80738, Moreno 11463, write-in 2154. The county elections page links this results set as the 2025 General Election. The city mayor list independently records O'Connor taking office in 2026.",
-    "candidates": [
-      {"name": "Corey O'Connor", "role": "winner", "votes": 80738, "candidate_year_id": ""},
-      {"name": "Tony Moreno", "role": "runner_up", "votes": 11463, "candidate_year_id": ""}
-    ]
-  },
-  {
-    "city_name": "Pittsburgh",
-    "state_abb": "PA",
-    "roster_place_fips": "4261000",
-    "election_date": "2021-11-02",
-    "election_type": "regular",
-    "stage": "general",
-    "verification_status": "verified_decisive",
-    "certification_status": "certified",
-    "source_url": "https://results.enr.clarityelections.com/PA/Allegheny/111176/285575/json/sum.json",
-    "source_locator": "Contest 'Mayor Pittsburgh', published version 285575",
-    "certification_source_url": "https://www.alleghenycounty.us/Government/Elections/Election-Results",
-    "additional_source_urls": [
-      "https://results.enr.clarityelections.com/PA/Allegheny/111176/",
-      "https://www.pittsburghpa.gov/City-Government/The-Mayor/Mayors-of-Pittsburgh"
-    ],
-    "verification_note": "Allegheny County official results system reports Mayor Pittsburgh with all 402 of 402 precincts reporting: Gainey 50165, Moreno 20162, write-in 558. The county elections page links this results set as the 2021 General Election. The city mayor list independently records Gainey taking office in 2022.",
-    "candidates": [
-      {"name": "Edward C. Gainey", "role": "winner", "votes": 50165, "candidate_year_id": ""},
-      {"name": "Tony Moreno", "role": "runner_up", "votes": 20162, "candidate_year_id": ""}
-    ]
-  },
-  {
-    "city_name": "Pittsburgh",
-    "state_abb": "PA",
-    "roster_place_fips": "4261000",
-    "election_date": "2017-11-07",
-    "election_type": "regular",
-    "stage": "general",
-    "verification_status": "verified_decisive",
-    "certification_status": "certified",
-    "source_url": "https://results.enr.clarityelections.com/PA/Allegheny/71801/193474/json/sum.json",
-    "source_locator": "Contest 'Mayor CITYWIDE', published version 193474",
-    "certification_source_url": "https://www.alleghenycounty.us/Government/Elections/Election-Results",
-    "additional_source_urls": [
-      "https://results.enr.clarityelections.com/PA/Allegheny/71801/",
-      "https://www.pittsburghpa.gov/City-Government/The-Mayor/Mayors-of-Pittsburgh"
-    ],
-    "verification_note": "Allegheny County official results system reports Mayor CITYWIDE with all 402 of 402 precincts reporting: Peduto 40540 and write-in 1706. The county labels the Pittsburgh citywide contest CITYWIDE in this election. No second named candidate appeared on the ballot, so this election has a winner and no runner-up. The build records it as uncontested rather than inventing an opponent.",
-    "candidates": [
-      {"name": "William Peduto", "role": "winner", "votes": 40540, "candidate_year_id": ""}
-    ]
-  }
+ {
+  "city_name": "Pittsburgh",
+  "state_abb": "PA",
+  "roster_place_fips": "4261000",
+  "election_date": "2025-11-04",
+  "election_type": "regular",
+  "stage": "general",
+  "verification_status": "verified_decisive",
+  "certification_status": "certified",
+  "source_url": "https://results.enr.clarityelections.com/PA/Allegheny/124195/367073/json/sum.json",
+  "source_locator": "Contest 'Mayor Pittsburgh', published version 367073",
+  "certification_source_url": "https://www.alleghenycounty.us/Government/Elections/Election-Results",
+  "additional_source_urls": [
+   "https://results.enr.clarityelections.com/PA/Allegheny/124195/",
+   "https://www.pittsburghpa.gov/City-Government/The-Mayor/Mayors-of-Pittsburgh"
+  ],
+  "verification_note": "Allegheny County official results system reports Mayor Pittsburgh with all 402 of 402 precincts reporting: O'Connor 80738, Moreno 11463, write-in 2154. The county elections page links this results set as the 2025 General Election. The city mayor list independently records O'Connor taking office in 2026.",
+  "candidates": [
+   {
+    "name": "Corey O'Connor",
+    "role": "winner",
+    "votes": 80738,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Tony Moreno",
+    "role": "runner_up",
+    "votes": 11463,
+    "candidate_year_id": ""
+   }
+  ]
+ },
+ {
+  "city_name": "Pittsburgh",
+  "state_abb": "PA",
+  "roster_place_fips": "4261000",
+  "election_date": "2021-11-02",
+  "election_type": "regular",
+  "stage": "general",
+  "verification_status": "verified_decisive",
+  "certification_status": "certified",
+  "source_url": "https://results.enr.clarityelections.com/PA/Allegheny/111176/285575/json/sum.json",
+  "source_locator": "Contest 'Mayor Pittsburgh', published version 285575",
+  "certification_source_url": "https://www.alleghenycounty.us/Government/Elections/Election-Results",
+  "additional_source_urls": [
+   "https://results.enr.clarityelections.com/PA/Allegheny/111176/",
+   "https://www.pittsburghpa.gov/City-Government/The-Mayor/Mayors-of-Pittsburgh"
+  ],
+  "verification_note": "Allegheny County official results system reports Mayor Pittsburgh with all 402 of 402 precincts reporting: Gainey 50165, Moreno 20162, write-in 558. The county elections page links this results set as the 2021 General Election. The city mayor list independently records Gainey taking office in 2022.",
+  "candidates": [
+   {
+    "name": "Edward C. Gainey",
+    "role": "winner",
+    "votes": 50165,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Tony Moreno",
+    "role": "runner_up",
+    "votes": 20162,
+    "candidate_year_id": ""
+   }
+  ]
+ },
+ {
+  "city_name": "Pittsburgh",
+  "state_abb": "PA",
+  "roster_place_fips": "4261000",
+  "election_date": "2017-11-07",
+  "election_type": "regular",
+  "stage": "general",
+  "verification_status": "verified_decisive",
+  "certification_status": "certified",
+  "source_url": "https://results.enr.clarityelections.com/PA/Allegheny/71801/193474/json/sum.json",
+  "source_locator": "Contest 'Mayor CITYWIDE', published version 193474",
+  "certification_source_url": "https://www.alleghenycounty.us/Government/Elections/Election-Results",
+  "additional_source_urls": [
+   "https://results.enr.clarityelections.com/PA/Allegheny/71801/",
+   "https://www.pittsburghpa.gov/City-Government/The-Mayor/Mayors-of-Pittsburgh"
+  ],
+  "verification_note": "Allegheny County official results system reports Mayor CITYWIDE with all 402 of 402 precincts reporting: Peduto 40540 and write-in 1706. The county labels the Pittsburgh citywide contest CITYWIDE in this election. No second named candidate appeared on the ballot, so this election has a winner and no runner-up. The build records it as uncontested rather than inventing an opponent.",
+  "candidates": [
+   {
+    "name": "William Peduto",
+    "role": "winner",
+    "votes": 40540,
+    "candidate_year_id": ""
+   }
+  ]
+ },
+ {
+  "city_name": "Pittsburgh",
+  "state_abb": "PA",
+  "roster_place_fips": "4261000",
+  "election_date": "2013-11-05",
+  "election_type": "regular",
+  "stage": "general",
+  "verification_status": "verified_decisive",
+  "certification_status": "certified",
+  "source_url": "https://www.alleghenycounty.us/files/assets/county/v/1/government/elections/documents/elections-archive/2013-general-summary.pdf",
+  "source_locator": "Summary report, contest 'Mayor CITYWIDE' (Vote for 1)",
+  "certification_source_url": "https://www.alleghenycounty.us/Government/Elections/Election-Results",
+  "additional_source_urls": [
+   "https://www.alleghenycounty.us/files/assets/county/v/1/government/elections/documents/elections-archive/2013-general-detail-canvass.pdf",
+   "https://www.pittsburghpa.gov/City-Government/The-Mayor/Mayors-of-Pittsburgh"
+  ],
+  "verification_note": "Allegheny County official 2013 General Election summary report, certified by the Board of Elections, shows Mayor CITYWIDE: Peduto (DEM) 37006, Wander (REP) 5028, Ludwig (IND) 1522, write-in 341. The detail canvass report shows the same totals. The city mayor list records Peduto taking office in January 2014.",
+  "candidates": [
+   {
+    "name": "William Peduto",
+    "role": "winner",
+    "votes": 37006,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Josh Wander",
+    "role": "runner_up",
+    "votes": 5028,
+    "candidate_year_id": ""
+   }
+  ]
+ }
 ]

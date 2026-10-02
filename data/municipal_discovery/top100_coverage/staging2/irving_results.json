@@ -121,6 +121,31 @@
   "city_name": "Irving",
   "state_abb": "TX",
   "roster_place_fips": "4837000",
+  "election_date": "2023-05-06",
+  "election_type": "regular",
+  "stage": "general",
+  "verification_status": "verified_decisive",
+  "certification_status": "certified",
+  "source_url": "http://web.archive.org/web/20251206173745id_/https://irvingtx.gov/corecode/storage/uber_resource/uploaded_pdfs/corecode/Ord%202023-10746%20Canvass%20Election_1061.pdf",
+  "source_locator": "ORD-2023-10746, second WHEREAS clause and Section 2 (Richard H. Stopfer, Mayor, At-Large); signed certification of unopposed candidates, line 1 Mayor",
+  "certification_source_url": "http://web.archive.org/web/20251206173745id_/https://irvingtx.gov/corecode/storage/uber_resource/uploaded_pdfs/corecode/Ord%202023-10746%20Canvass%20Election_1061.pdf",
+  "additional_source_urls": [
+   "http://web.archive.org/web/20251206173745id_/https://irvingtx.gov/corecode/storage/uber_resource/uploaded_pdfs/corecode/Certification%20of%20unopposed%20candidates_1053.pdf"
+  ],
+  "verification_note": "City of Irving ORD-2023-10746 (canvass of May 17, 2023) states the election of May 6, 2023 was called for Mayor and Council Places 3 and 5, and that on March 9, 2023 the council (ORD-2023-10716) accepted the certification that Richard H. Stopfer, candidate for Mayor, was unopposed and declared him elected. Section 2 lists Stopfer as elected Mayor, At-Large. The signed certification of unopposed candidates for the May 6, 2023 election lists Mayor, Richard H. Stopfer, only. Only one candidate appeared, so only a winner is recorded. The mayoral race was not on the ballot, so no votes were counted. The votes field is 0 because no official vote total exists. Uncontested.",
+  "candidates": [
+   {
+    "name": "Richard H. Stopfer",
+    "role": "winner",
+    "votes": 0,
+    "candidate_year_id": ""
+   }
+  ]
+ },
+ {
+  "city_name": "Irving",
+  "state_abb": "TX",
+  "roster_place_fips": "4837000",
   "election_date": "2026-05-02",
   "election_type": "regular",
   "stage": "general",

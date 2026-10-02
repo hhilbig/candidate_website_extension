@@ -35,11 +35,17 @@
  {
   "city_id": "3251800",
   "year": 2013,
-  "status": "unresolved",
-  "expected_election_dates": [],
+  "status": "complete",
+  "expected_election_dates": [
+   "2013-04-02"
+  ],
   "source_url": "https://elections.clarkcountynv.gov/electionresultsTV/results.aspx",
-  "additional_source_urls": [],
-  "note": "The Clark County official results for the 2013 municipal primary (04/02/2013) list the North Las Vegas mayoral contest. John Lee received a majority of the primary votes. The 2013 municipal general (06/04/2013) lists only a Ward 1 council contest for North Las Vegas and no mayoral contest. The official primary totals for 2013-04-02 are recorded in the results file as unresolved. Re-check on 2026-10-01: NRS 293C.175(5) applies only to cities of population category one or two with a June even-year primary, and North Las Vegas held April odd-year municipal elections in 2013 and 2017 under its own city charter. The North Las Vegas charter text and the 2013 and 2017 charter election rules could not be opened (leg.state.nv.us charter URLs returned 404 or 403, cityofnorthlasvegas.com returned 403, Municode returned no content). The statute in force in those years was not shown to be the governing rule, so the decisive stage is not established from an official rule."
+  "additional_source_urls": [
+   "https://www.leg.state.nv.us/Statutes/76th2011/Stats201108.html",
+   "https://www.leg.state.nv.us/Statutes/78th2015/Stats201518.html",
+   "https://www.leg.state.nv.us/NRS/NRS-293C.html"
+  ],
+  "note": "The Clark County official results for the 2013 municipal primary (04/02/2013) list the North Las Vegas mayoral contest. John Lee received a majority of the primary votes. The 2013 municipal general (06/04/2013) lists only a Ward 1 council contest for North Las Vegas and no mayoral contest. The official primary totals for 2013-04-02 are recorded in the results file as verified. North Las Vegas Charter section 5.020(4), as amended by chapter 218, Statutes of Nevada 2011 (AB 132), page 963, states that if one candidate receives a majority of the total votes cast for an office in the primary municipal election, that candidate must be declared elected and no general municipal election need be held for that office. Section 5.020(2) sets the primary on the Tuesday after the first Monday in April. Section 5.010 sets mayoral elections every 4 years from 1977 (2013 and 2017 in that sequence); chapter 336, Statutes of Nevada 2015 (AB 23, approved June 4, 2015) restated the sequence from 2017. The primary majority winner was declared elected, so the primary on 2013-04-02 is the decisive election. Resolved in the second pass."
  },
  {
   "city_id": "3251800",
@@ -77,11 +83,17 @@
  {
   "city_id": "3251800",
   "year": 2017,
-  "status": "unresolved",
-  "expected_election_dates": [],
+  "status": "complete",
+  "expected_election_dates": [
+   "2017-04-04"
+  ],
   "source_url": "https://elections.clarkcountynv.gov/electionresultsTV/results.aspx",
-  "additional_source_urls": [],
-  "note": "The Clark County official results for the 2017 municipal primary (04/04/2017) list the North Las Vegas mayoral contest. John Lee received a majority of the primary votes. The 2017 municipal general (06/13/2017) lists only a Ward 3 council contest for North Las Vegas and no mayoral contest. The official primary totals for 2017-04-04 are recorded in the results file as unresolved. Re-check on 2026-10-01: NRS 293C.175(5) applies only to cities of population category one or two with a June even-year primary, and North Las Vegas held April odd-year municipal elections in 2013 and 2017 under its own city charter. The North Las Vegas charter text and the 2013 and 2017 charter election rules could not be opened (leg.state.nv.us charter URLs returned 404 or 403, cityofnorthlasvegas.com returned 403, Municode returned no content). The statute in force in those years was not shown to be the governing rule, so the decisive stage is not established from an official rule."
+  "additional_source_urls": [
+   "https://www.leg.state.nv.us/Statutes/76th2011/Stats201108.html",
+   "https://www.leg.state.nv.us/Statutes/78th2015/Stats201518.html",
+   "https://www.leg.state.nv.us/NRS/NRS-293C.html"
+  ],
+  "note": "The Clark County official results for the 2017 municipal primary (04/04/2017) list the North Las Vegas mayoral contest. John Lee received a majority of the primary votes. The 2017 municipal general (06/13/2017) lists only a Ward 3 council contest for North Las Vegas and no mayoral contest. The official primary totals for 2017-04-04 are recorded in the results file as verified. North Las Vegas Charter section 5.020(4), as amended by chapter 218, Statutes of Nevada 2011 (AB 132), page 963, states that if one candidate receives a majority of the total votes cast for an office in the primary municipal election, that candidate must be declared elected and no general municipal election need be held for that office. Section 5.020(2) sets the primary on the Tuesday after the first Monday in April. Section 5.010 sets mayoral elections every 4 years from 1977 (2013 and 2017 in that sequence); chapter 336, Statutes of Nevada 2015 (AB 23, approved June 4, 2015) restated the sequence from 2017. The primary majority winner was declared elected, so the primary on 2017-04-04 is the decisive election. Resolved in the second pass."
  },
  {
   "city_id": "3251800",

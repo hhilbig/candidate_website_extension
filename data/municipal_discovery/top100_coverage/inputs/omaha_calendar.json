@@ -20,7 +20,7 @@
    "https://www.votedouglascounty-ne.gov/election_results.aspx",
    "https://www.votedouglascounty-ne.gov/city_elections.aspx"
   ],
-  "note": "The Douglas County Election Commission held a City of Omaha Mayoral Recall election on 2011-01-25. Voters answered whether to remove Jim Suttle: Yes 39,781, No 42,091. This was a yes/no retention vote with no candidate contest, so no winner and runner-up pair exists. It is not recorded in the results file. Status is unresolved because no allowed status fits a mayoral round without candidates."
+  "note": "The Douglas County Election Commission held a City of Omaha Mayoral Recall election on 2011-01-25. Voters answered whether to remove Jim Suttle: Yes 39,781, No 42,091. This was a yes/no retention vote with no candidate contest, so no winner and runner-up pair exists. It is not recorded in the results file. Status is unresolved because no allowed status fits a mayoral round without candidates. Second pass: the official summary page was reopened and confirms the contest 'Shall Jim Suttle be removed from the office of Omaha Mayor?', Official Results, 284 of 284 precincts, Yes 39781, No 42091, 81872 ballots, election date 2011-01-25. The contest has no candidate choices, so no winner and runner-up pair can be recorded from an official source without assigning the No votes to a candidate, which the source does not do. The year stays unresolved for the integrator to decide how to treat a recall."
  },
  {
   "city_id": "3137000",

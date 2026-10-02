@@ -26,13 +26,16 @@
  {
   "city_id": "0627000",
   "year": 2012,
-  "status": "unresolved",
-  "expected_election_dates": [],
+  "status": "complete",
+  "expected_election_dates": [
+   "2012-06-05"
+  ],
   "source_url": "https://www.fresnocountyca.gov/Departments/County-ClerkRegistrar-of-Voters/Elections/Election-Results/2012/RESULTS-OF-JUNE-5-2012-PRESIDENTIAL-PRIMARY-ELECTION",
   "additional_source_urls": [
-   "https://www.fresnocountyca.gov/Departments/County-ClerkRegistrar-of-Voters/Elections/Election-Results"
+   "https://www.fresnocountyca.gov/Departments/County-ClerkRegistrar-of-Voters/Elections/Election-Results",
+   "https://www.fresno.gov/wp-content/uploads/2025/12/2026-Candidate-Handbook-10w1070-10w1177.pdf"
   ],
-  "note": "Fresno County Registrar of Voters final official results for the June 5, 2012 primary list a Fresno Mayor contest. Ashley Swearengin received 74.80 percent, a majority, so the primary decided the office. Winner and runner-up are in fresno_results.json. Unresolved on integration review: the primary-majority rule lacks an official citation."
+  "note": "Fresno County Registrar of Voters final official results for the June 5, 2012 primary list a Fresno Mayor contest. Ashley Swearengin received 74.80 percent, a majority, so the primary decided the office. Winner and runner-up are in fresno_results.json. Rule source: the City of Fresno 2026 Candidate Handbook (city clerk, PDF page 58) reproduces Fresno City Charter Sec. 1400(a): if any candidate receives a majority of all votes cast for an office at the direct primary, that candidate is declared elected and no general municipal election is held for that office. Sec. 300 (page 48) makes the mayor an elective officer. Second-pass check (2026-10-01): the handbook was downloaded and read with pdftotext."
  },
  {
   "city_id": "0627000",
@@ -125,14 +128,17 @@
  {
   "city_id": "0627000",
   "year": 2020,
-  "status": "unresolved",
-  "expected_election_dates": [],
+  "status": "complete",
+  "expected_election_dates": [
+   "2020-03-03"
+  ],
   "source_url": "https://www.fresnocountyca.gov/Departments/County-ClerkRegistrar-of-Voters/Elections/Election-Results/2020/RESULTS-OF-THE-MARCH-3-2020-PRESIDENTIAL-PRIMARY-ELECTION",
   "additional_source_urls": [
    "https://www.fresnocountyca.gov/Departments/County-ClerkRegistrar-of-Voters/Elections/Election-Results",
-   "https://www.fresnocountyca.gov/files/sharedassets/county/v/1/county-clerk-registrar-of-voters/1_election-results-page-sov-ssov/2020/nov-2020/50985-electionsummaryreportrpt_final_11252020.pdf"
+   "https://www.fresnocountyca.gov/files/sharedassets/county/v/1/county-clerk-registrar-of-voters/1_election-results-page-sov-ssov/2020/nov-2020/50985-electionsummaryreportrpt_final_11252020.pdf",
+   "https://www.fresno.gov/wp-content/uploads/2025/12/2026-Candidate-Handbook-10w1070-10w1177.pdf"
   ],
-  "note": "Fresno County Registrar of Voters official final results for the March 3, 2020 primary list a Fresno Mayor contest. Jerry Dyer received 51.56 percent, a majority, so the primary decided the office. The county summary report for the November 3, 2020 election shows no Fresno Mayor contest. Winner and runner-up are in fresno_results.json. Unresolved on integration review: the primary-majority rule lacks an official citation."
+  "note": "Fresno County Registrar of Voters official final results for the March 3, 2020 primary list a Fresno Mayor contest. Jerry Dyer received 51.56 percent, a majority, so the primary decided the office. The county summary report for the November 3, 2020 election shows no Fresno Mayor contest. Winner and runner-up are in fresno_results.json. Rule source: the City of Fresno 2026 Candidate Handbook (city clerk, PDF page 58) reproduces Fresno City Charter Sec. 1400(a): if any candidate receives a majority of all votes cast for an office at the direct primary, that candidate is declared elected and no general municipal election is held for that office. Sec. 300 (page 48) makes the mayor an elective officer. Second-pass check (2026-10-01): the handbook was downloaded and read with pdftotext."
  },
  {
   "city_id": "0627000",
@@ -174,14 +180,17 @@
  {
   "city_id": "0627000",
   "year": 2024,
-  "status": "unresolved",
-  "expected_election_dates": [],
+  "status": "complete",
+  "expected_election_dates": [
+   "2024-03-05"
+  ],
   "source_url": "https://www.fresnocountyca.gov/Departments/County-ClerkRegistrar-of-Voters/Elections/Election-Results/2024/RESULTS-FOR-MARCH-5-2024-CONSOLIDATED-PRESIDENTIAL-PRIMARY-ELECTION",
   "additional_source_urls": [
    "https://www.fresnocountyca.gov/Departments/County-ClerkRegistrar-of-Voters/Elections/Election-Results",
-   "https://www.fresnocountyca.gov/Departments/County-ClerkRegistrar-of-Voters/Elections/Election-Results/2024/RESULTS-FOR-NOVEMBER-5-2024-PRESIDENTIAL-GENERAL-ELECTION"
+   "https://www.fresnocountyca.gov/Departments/County-ClerkRegistrar-of-Voters/Elections/Election-Results/2024/RESULTS-FOR-NOVEMBER-5-2024-PRESIDENTIAL-GENERAL-ELECTION",
+   "https://www.fresno.gov/wp-content/uploads/2025/12/2026-Candidate-Handbook-10w1070-10w1177.pdf"
   ],
-  "note": "Fresno County Registrar of Voters results for the March 5, 2024 primary list a Fresno Mayor contest. Jerry Dyer received 80.01 percent, a majority, so the primary decided the office. The November 5, 2024 county results list no Fresno Mayor contest. Winner and runner-up are in fresno_results.json. Unresolved on integration review: the primary-majority rule lacks an official citation."
+  "note": "Fresno County Registrar of Voters results for the March 5, 2024 primary list a Fresno Mayor contest. Jerry Dyer received 80.01 percent, a majority, so the primary decided the office. The November 5, 2024 county results list no Fresno Mayor contest. Winner and runner-up are in fresno_results.json. Rule source: the City of Fresno 2026 Candidate Handbook (city clerk, PDF page 58) reproduces Fresno City Charter Sec. 1400(a): if any candidate receives a majority of all votes cast for an office at the direct primary, that candidate is declared elected and no general municipal election is held for that office. Sec. 300 (page 48) makes the mayor an elective officer. Second-pass check (2026-10-01): the handbook was downloaded and read with pdftotext."
  },
  {
   "city_id": "0627000",

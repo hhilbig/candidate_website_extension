@@ -65,37 +65,6 @@
   "city_name": "Virginia Beach",
   "state_abb": "VA",
   "roster_place_fips": "5182000",
-  "election_date": "2018-11-06",
-  "election_type": "regular",
-  "stage": "general",
-  "verification_status": "unresolved",
-  "certification_status": "source_verified",
-  "source_url": "https://historical.elections.virginia.gov/elections/view/134283",
-  "source_locator": "Contest id 134283, office Mayor, locality Virginia Beach City, candidate vote table",
-  "certification_source_url": "https://historical.elections.virginia.gov/elections/view/134283",
-  "additional_source_urls": [
-   "https://law.lis.virginia.gov/charters/virginia-beach/"
-  ],
-  "verification_note": "State database page (contest 134283) lists Mayor in the 2018 Nov 6 General Election in Virginia Beach City with Robert Bob M. Dyer and Murray Benjamin Davenport, both Independent. It does not label the contest special and gives no vacancy reason. Vote totals 82,201 and 75,693 (total 158,727) are as recorded earlier and as reported by an independent checker from the state CSV; the page fetched in this review did not display them. Charter 3.02:2 puts regular mayoral elections in 2008 and every fourth year, so a 2018 mayoral contest is off cycle, and no official source found says why or that it was special. Type and stage follow the official label (General Election) but remain unconfirmed, so the election is marked unresolved.",
-  "candidates": [
-   {
-    "name": "Robert M. Dyer",
-    "role": "winner",
-    "votes": 82201,
-    "candidate_year_id": ""
-   },
-   {
-    "name": "Murray Benjamin Davenport",
-    "role": "runner_up",
-    "votes": 75693,
-    "candidate_year_id": ""
-   }
-  ]
- },
- {
-  "city_name": "Virginia Beach",
-  "state_abb": "VA",
-  "roster_place_fips": "5182000",
   "election_date": "2020-11-03",
   "election_type": "regular",
   "stage": "general",

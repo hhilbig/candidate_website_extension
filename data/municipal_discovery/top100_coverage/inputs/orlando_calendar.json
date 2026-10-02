@@ -10,20 +10,20 @@
    "https://www.orlando.gov/Our-Government/Mayor-City-Council",
    "https://dos.fl.gov/elections/data-statistics/elections-data/election-results-archive/"
   ],
-  "note": "No official source for this year could be opened. The Orange County Supervisor of Elections archive lists Orlando general elections only from 2012-04-03 onward. Site searches for 2010 and 2011 Orlando records returned nothing. The Florida Division of Elections archive states that it does not cover municipal elections. The city clerk page has no past results list, and direct curl requests to the SOE site were blocked. The cycle cannot be confirmed from an official document for this year."
+  "note": "No official source for this year could be opened. The Orange County Supervisor of Elections archive lists Orlando general elections only from 2012-04-03 onward. Site searches for 2010 and 2011 Orlando records returned nothing. The Florida Division of Elections archive states that it does not cover municipal elections. The city clerk page has no past results list, and direct curl requests to the SOE site were blocked. The cycle cannot be confirmed from an official document for this year. Pass 2: the archived Orange County SOE 2011 municipal index was opened, but no 2010 equivalent could be found. The Wayback availability API returned no snapshot for the 2010 municipal results URLs, and the CDX API returned nothing. The archived ocfelections.com home page of 2010-06-08 shows no municipal results link. An archived City Clerk page request (cityoforlando.net/cityclerk, 2010-07-07) timed out. voteorangefl.gov election-record guesses returned HTTP 403, and the web search budget was exhausted."
  },
  {
   "city_id": "1253000",
   "year": 2011,
-  "status": "unresolved",
+  "status": "no_election",
   "expected_election_dates": [],
-  "source_url": "https://voteorangefl.gov/?s=orlando+2010",
+  "source_url": "http://web.archive.org/web/20190721172815/https://www.ocfelections.com/Public%20Records/2011%20Municipal%20Elections/2011%20Municipal%20Results.htm",
   "additional_source_urls": [
-   "https://voteorangefl.gov/?s=municipal+2011",
+   "http://web.archive.org/web/20110405231850/http://www.ocfelections.com:80/",
    "https://www.orlando.gov/Our-Government/Mayor-City-Council",
-   "https://dos.fl.gov/elections/data-statistics/elections-data/election-results-archive/"
+   "https://voteorangefl.gov/wp-content/uploads/2026/05/10118-election-results-official-summary.pdf"
   ],
-  "note": "No official source for this year could be opened. The Orange County Supervisor of Elections archive lists Orlando general elections only from 2012-04-03 onward. Site searches for 2010 and 2011 Orlando records returned nothing. The Florida Division of Elections archive states that it does not cover municipal elections. The city clerk page has no past results list, and direct curl requests to the SOE site were blocked. The cycle cannot be confirmed from an official document for this year."
+  "note": "The Orange County Supervisor of Elections 2011 Municipal Election Information page (archived copy) is the official index of the municipal elections it ran in 2011. It lists results for Eatonville (March 5), Windermere, Winter Garden and Winter Park, including the April 12 runoffs. It lists no City of Orlando election and no mayoral contest. The next official Orlando mayoral contest is the April 3, 2012 general election, and the City of Orlando states the Mayor serves a four-year term. Pass 2: the archived page was opened through web.archive.org. Direct curl requests to voteorangefl.gov return HTTP 403."
  },
  {
   "city_id": "1253000",

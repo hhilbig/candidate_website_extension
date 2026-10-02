@@ -6,15 +6,16 @@
   "election_date": "2012-06-05",
   "election_type": "regular",
   "stage": "primary_nominating",
-  "verification_status": "unresolved",
+  "verification_status": "verified_decisive",
   "certification_status": "source_verified",
   "source_url": "https://www.fresnocountyca.gov/Departments/County-ClerkRegistrar-of-Voters/Elections/Election-Results/2012/RESULTS-OF-JUNE-5-2012-PRESIDENTIAL-PRIMARY-ELECTION",
   "source_locator": "Mayor contest, Fresno city; 7 lines including write-ins; total votes 52,598",
   "certification_source_url": "https://www.fresnocountyca.gov/Departments/County-ClerkRegistrar-of-Voters/Elections/Election-Results/2012/RESULTS-OF-JUNE-5-2012-PRESIDENTIAL-PRIMARY-ELECTION",
   "additional_source_urls": [
-   "https://www.fresnocountyca.gov/Departments/County-ClerkRegistrar-of-Voters/Elections/Election-Results"
+   "https://www.fresnocountyca.gov/Departments/County-ClerkRegistrar-of-Voters/Elections/Election-Results",
+   "https://www.fresno.gov/wp-content/uploads/2025/12/2026-Candidate-Handbook-10w1070-10w1177.pdf"
   ],
-  "verification_note": "County page labeled Final Official Report dated 06/27/12. Swearengin 39,342 (74.80 percent) was a majority of 52,598 votes, so she was elected in the primary. Hunt had 4,545 as runner-up. Other lines: Garcia 3,758, Morse 2,389, Worona 2,305, write-ins 259. The city election page describes a November runoff only if needed. Set to unresolved on integration review (2026-10-01): no official source for the rule that a primary majority elects the mayor was cited; the checker found the cited URL does not state it. Vote figures kept.",
+  "verification_note": "County page labeled Final Official Report dated 06/27/12. Swearengin 39,342 (74.80 percent) was a majority of 52,598 votes, so she was elected in the primary. Hunt had 4,545 as runner-up. Other lines: Garcia 3,758, Morse 2,389, Worona 2,305, write-ins 259. The city election page describes a November runoff only if needed. Rule source: the City of Fresno 2026 Candidate Handbook (city clerk, PDF page 58) reproduces Fresno City Charter Sec. 1400(a): if any candidate receives a majority of all votes cast for an office at the direct primary, that candidate is declared elected and no general municipal election is held for that office. Sec. 300 (page 48) makes the mayor an elective officer. Second-pass check (2026-10-01): the handbook was downloaded and read with pdftotext.",
   "candidates": [
    {
     "name": "Ashley Swearengin",
@@ -28,7 +29,8 @@
     "votes": 4545,
     "candidate_year_id": ""
    }
-  ]
+  ],
+  "decisive_stage_source_url": "https://www.fresno.gov/wp-content/uploads/2025/12/2026-Candidate-Handbook-10w1070-10w1177.pdf"
  },
  {
   "city_name": "Fresno",
@@ -68,16 +70,17 @@
   "election_date": "2020-03-03",
   "election_type": "regular",
   "stage": "primary_nominating",
-  "verification_status": "unresolved",
+  "verification_status": "verified_decisive",
   "certification_status": "source_verified",
   "source_url": "https://www.fresnocountyca.gov/Departments/County-ClerkRegistrar-of-Voters/Elections/Election-Results/2020/RESULTS-OF-THE-MARCH-3-2020-PRESIDENTIAL-PRIMARY-ELECTION",
   "source_locator": "Mayor contest, Fresno city; total votes 98,738",
   "certification_source_url": "https://www.fresnocountyca.gov/Departments/County-ClerkRegistrar-of-Voters/Elections/Election-Results/2020/RESULTS-OF-THE-MARCH-3-2020-PRESIDENTIAL-PRIMARY-ELECTION",
   "additional_source_urls": [
    "https://www.fresnocountyca.gov/Departments/County-ClerkRegistrar-of-Voters/Elections/Election-Results",
-   "https://www.fresnocountyca.gov/files/sharedassets/county/v/1/county-clerk-registrar-of-voters/1_election-results-page-sov-ssov/2020/march-2020/42364-electionsummaryreportrpt-9.pdf"
+   "https://www.fresnocountyca.gov/files/sharedassets/county/v/1/county-clerk-registrar-of-voters/1_election-results-page-sov-ssov/2020/march-2020/42364-electionsummaryreportrpt-9.pdf",
+   "https://www.fresno.gov/wp-content/uploads/2025/12/2026-Candidate-Handbook-10w1070-10w1177.pdf"
   ],
-  "verification_note": "County page labeled Official Final Results dated 4/2/2020. Dyer 50,914 (51.56 percent) was a majority of 98,738 votes, so he was elected in the primary. Janz had 39,430 as runner-up. Other candidates: Harris 2,262, Gates 2,262, Renteria 2,076, Wildstar 1,284, Jefferson 510; the sum matches the total. The November 3, 2020 county summary report (checked with pdftotext) has no Fresno Mayor contest. Set to unresolved on integration review (2026-10-01): no official source for the rule that a primary majority elects the mayor was cited; the checker found the cited URL does not state it. Vote figures kept.",
+  "verification_note": "County page labeled Official Final Results dated 4/2/2020. Dyer 50,914 (51.56 percent) was a majority of 98,738 votes, so he was elected in the primary. Janz had 39,430 as runner-up. Other candidates: Harris 2,262, Gates 2,262, Renteria 2,076, Wildstar 1,284, Jefferson 510; the sum matches the total. The November 3, 2020 county summary report (checked with pdftotext) has no Fresno Mayor contest. Rule source: the City of Fresno 2026 Candidate Handbook (city clerk, PDF page 58) reproduces Fresno City Charter Sec. 1400(a): if any candidate receives a majority of all votes cast for an office at the direct primary, that candidate is declared elected and no general municipal election is held for that office. Sec. 300 (page 48) makes the mayor an elective officer. Second-pass check (2026-10-01): the handbook was downloaded and read with pdftotext.",
   "candidates": [
    {
     "name": "Jerry Dyer",
@@ -91,7 +94,8 @@
     "votes": 39430,
     "candidate_year_id": ""
    }
-  ]
+  ],
+  "decisive_stage_source_url": "https://www.fresno.gov/wp-content/uploads/2025/12/2026-Candidate-Handbook-10w1070-10w1177.pdf"
  },
  {
   "city_name": "Fresno",
@@ -100,7 +104,7 @@
   "election_date": "2024-03-05",
   "election_type": "regular",
   "stage": "primary_nominating",
-  "verification_status": "unresolved",
+  "verification_status": "verified_decisive",
   "certification_status": "source_verified",
   "source_url": "https://www.fresnocountyca.gov/files/sharedassets/county/v/12/county-clerk-registrar-of-voters/1_election-pages/2024_03-march-primary/electionsummaryreportrpt_03292024.pdf",
   "source_locator": "Fresno Mayor (Vote for 1), page 7 of 16 of the Official Results report dated 3/29/2024; total votes 69,828",
@@ -108,9 +112,10 @@
   "additional_source_urls": [
    "https://www.fresnocountyca.gov/Departments/County-ClerkRegistrar-of-Voters/Elections/Election-Results",
    "https://www.fresnocountyca.gov/Departments/County-ClerkRegistrar-of-Voters/Elections/Election-Results/2024/RESULTS-FOR-MARCH-5-2024-CONSOLIDATED-PRESIDENTIAL-PRIMARY-ELECTION",
-   "https://www.fresnocountyca.gov/Departments/County-ClerkRegistrar-of-Voters/Elections/Election-Results/2024/RESULTS-FOR-NOVEMBER-5-2024-PRESIDENTIAL-GENERAL-ELECTION"
+   "https://www.fresnocountyca.gov/Departments/County-ClerkRegistrar-of-Voters/Elections/Election-Results/2024/RESULTS-FOR-NOVEMBER-5-2024-PRESIDENTIAL-GENERAL-ELECTION",
+   "https://www.fresno.gov/wp-content/uploads/2025/12/2026-Candidate-Handbook-10w1070-10w1177.pdf"
   ],
-  "verification_note": "The county report is titled Official Results and dated 3/29/2024 (checked with pdftotext). Dyer 55,872 (80.01 percent) was a majority of 69,828 votes, so he was elected in the primary. Barr had 9,910 as runner-up; Dussell had 4,046. The November 5, 2024 county results list no Fresno Mayor contest. The report does not state a certification date, so the status is source_verified. Set to unresolved on integration review (2026-10-01): no official source for the rule that a primary majority elects the mayor was cited; the checker found the cited URL does not state it. Vote figures kept.",
+  "verification_note": "The county report is titled Official Results and dated 3/29/2024 (checked with pdftotext). Dyer 55,872 (80.01 percent) was a majority of 69,828 votes, so he was elected in the primary. Barr had 9,910 as runner-up; Dussell had 4,046. The November 5, 2024 county results list no Fresno Mayor contest. The report does not state a certification date, so the status is source_verified. Rule source: the City of Fresno 2026 Candidate Handbook (city clerk, PDF page 58) reproduces Fresno City Charter Sec. 1400(a): if any candidate receives a majority of all votes cast for an office at the direct primary, that candidate is declared elected and no general municipal election is held for that office. Sec. 300 (page 48) makes the mayor an elective officer. Second-pass check (2026-10-01): the handbook was downloaded and read with pdftotext.",
   "candidates": [
    {
     "name": "Jerry Dyer",
@@ -124,6 +129,7 @@
     "votes": 9910,
     "candidate_year_id": ""
    }
-  ]
+  ],
+  "decisive_stage_source_url": "https://www.fresno.gov/wp-content/uploads/2025/12/2026-Candidate-Handbook-10w1070-10w1177.pdf"
  }
 ]
