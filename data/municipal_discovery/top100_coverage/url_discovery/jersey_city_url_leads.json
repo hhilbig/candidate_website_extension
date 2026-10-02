@@ -1,0 +1,97 @@
+[
+ {
+  "candidate_election_id": "3436000__2013-05-14__regular__ffe4e91b8d390902",
+  "candidate_name": "Jerramiah Healy",
+  "election_date": "2013-05-14",
+  "status": "outside_window",
+  "campaign_url": "http://electhealy.com/",
+  "registrable_domain": "electhealy.com",
+  "lead_sources": [
+   "https://web.archive.org/cdx/search/cdx?url=electhealy.com (domain guess; no web lead found)"
+  ],
+  "wayback_window_captures": 0,
+  "first_capture_in_window": "",
+  "checked_capture_url": "https://web.archive.org/web/20130531160058/http://electhealy.com/",
+  "page_evidence": "Page title 'HEALY-Home-Page' (capture is after the election; text not confirmed as mayoral campaign)",
+  "other_profiles": [],
+  "note": "Web search budget was exhausted, so domains were guessed. electhealy.com has only robots.txt 404 captures from 2012-04 to 2013-05-09 and its first HTTP 200 capture is 20130531160058, 17 days after the election. No 200 capture in the window. Ownership by Healy is not confirmed. healyformayor.com has 200 captures 2011-02-08 (before window) and 2013-06-07 (after window; that capture is a frame pointing to stevenfulop.com, so the domain was not Healy's in 2013)."
+ },
+ {
+  "candidate_election_id": "3436000__2017-11-07__regular__b42d2a3a213ca100",
+  "candidate_name": "Steven Fulop",
+  "election_date": "2017-11-07",
+  "status": "accepted",
+  "campaign_url": "http://www.stevenfulop.com/",
+  "registrable_domain": "stevenfulop.com",
+  "lead_sources": [
+   "https://web.archive.org/web/20130607172842/http://healyformayor.com/ (frame source http://stevenfulop.com/steven-fulop)",
+   "CDX host search stevenfulop.com"
+  ],
+  "wayback_window_captures": 98,
+  "first_capture_in_window": "20170209225645",
+  "checked_capture_url": "https://web.archive.org/web/20170517090344/http://www.stevenfulop.com/",
+  "page_evidence": "Steven Fulop home page with Donate and Volunteer menu; footer: 'Paid for by Steven Fulop for Mayor 2017'",
+  "other_profiles": [],
+  "note": "98 HTTP 200 captures from 2016-11-07 to 2017-11-07 (CDX limit 5000, count from host query)."
+ },
+ {
+  "candidate_election_id": "3436000__2017-11-07__regular__9c673dfe3eeb6971",
+  "candidate_name": "Bill Matsikoudis",
+  "election_date": "2017-11-07",
+  "status": "not_found",
+  "campaign_url": "",
+  "registrable_domain": "",
+  "lead_sources": [],
+  "wayback_window_captures": 0,
+  "first_capture_in_window": "",
+  "checked_capture_url": "",
+  "page_evidence": "",
+  "other_profiles": [],
+  "note": "Tried matsikoudis.com (captures only from 2022-02), billformayor.com (2013-2014 captures, a different owner and year), and about 15 other guessed domains with no capture. Web search budget was exhausted, so no web lead was found."
+ },
+ {
+  "candidate_election_id": "3436000__2021-11-02__regular__38c77d2e13d16a0e",
+  "candidate_name": "Lewis Spears",
+  "election_date": "2021-11-02",
+  "status": "not_found",
+  "campaign_url": "",
+  "registrable_domain": "",
+  "lead_sources": [],
+  "wayback_window_captures": 0,
+  "first_capture_in_window": "",
+  "checked_capture_url": "",
+  "page_evidence": "",
+  "other_profiles": [],
+  "note": "Tried about 8 guessed domains (lewisspears.com, spearsformayor.com, lewisspears2021.com and similar). No capture for any. Web search budget was exhausted, so no web lead was found."
+ },
+ {
+  "candidate_election_id": "3436000__2025-12-02__regular__e17d48f57e2cbfe5",
+  "candidate_name": "James Solomon",
+  "election_date": "2025-12-02",
+  "status": "not_found",
+  "campaign_url": "",
+  "registrable_domain": "solomon2025.com",
+  "lead_sources": [],
+  "wayback_window_captures": 0,
+  "first_capture_in_window": "",
+  "checked_capture_url": "https://web.archive.org/web/20250312015257/https://solomon2025.com/",
+  "page_evidence": "Coming Soon solomon2025.com We're under construction.",
+  "other_profiles": [],
+  "note": "solomon2025.com has 4 HTTP 200 captures in the window (2025-01-10 and 2025-03-12), but all four show a 'Coming Soon' placeholder with no candidate name and no mention of the mayoral race, so the criterion is not met. Ownership by Solomon is unconfirmed. solomon4jc.com has 2018-2019 captures only (before the window). jamessolomon.com is an unrelated 2004 site. Web search budget was exhausted."
+ },
+ {
+  "candidate_election_id": "3436000__2025-12-02__regular__a4e04a891f64d305",
+  "candidate_name": "Jim McGreevey",
+  "election_date": "2025-12-02",
+  "status": "not_found",
+  "campaign_url": "",
+  "registrable_domain": "",
+  "lead_sources": [],
+  "wayback_window_captures": 0,
+  "first_capture_in_window": "",
+  "checked_capture_url": "",
+  "page_evidence": "",
+  "other_profiles": [],
+  "note": "Tried about 15 guessed domains (jimmcgreevey.com, mcgreevey2025.com, jimformayor.com and similar). jimformayor.com has only 2013-2014 captures. jimmcgreevey.net has one 2025-07-17 capture that redirects to a domain-parking page, not a campaign site. Web search budget was exhausted, so no web lead was found."
+ }
+]

@@ -1,0 +1,37 @@
+[
+ {
+  "candidate_election_id": "0664000__2024-11-05__regular__a0795d6b64dfcf7d",
+  "candidate_name": "Kevin McCarty",
+  "election_date": "2024-11-05",
+  "status": "accepted",
+  "campaign_url": "https://www.mccartyformayor.com/",
+  "registrable_domain": "mccartyformayor.com",
+  "lead_sources": [
+   "https://www.cityofsacramento.gov/content/dam/portal/clerk/Elections/2024-Election-Documents/Candidates/Kevin-McCarty-Candidate-Worksheet---Website.pdf"
+  ],
+  "wayback_window_captures": 803,
+  "first_capture_in_window": "20231217094637",
+  "checked_capture_url": "https://web.archive.org/web/20240617072641/https://www.mccartyformayor.com/",
+  "page_evidence": "Home - Kevin McCarty for Sacramento Mayor",
+  "other_profiles": [],
+  "note": "Web search gave the website; the city clerk worksheet is the lead source. CDX returned 803 HTTP 200 lines for the host in the 365 days to 2024-11-05 (all paths, not only the home page). The archived home page of 2024-06-17 has the title 'Home - Kevin McCarty for Sacramento Mayor'. I did not open the clerk PDF myself."
+ },
+ {
+  "candidate_election_id": "0664000__2024-11-05__regular__8e5bb49a3020c26e",
+  "candidate_name": "Flojaune \"Flo\" Cofer",
+  "election_date": "2024-11-05",
+  "status": "accepted",
+  "campaign_url": "https://www.floformayor.com/",
+  "registrable_domain": "floformayor.com",
+  "lead_sources": [
+   "https://www.cityofsacramento.gov/content/dam/portal/clerk/Elections/2024-Election-Documents/Candidates/Flojaune-Flo-Cofer-Candidate-Worksheet---Website.pdf",
+   "https://www.capradio.org/articles/2024/02/29/sacramento-mayoral-candidate-profile-epidemiologist-dr-flojaune-cofer/"
+  ],
+  "wayback_window_captures": 256,
+  "first_capture_in_window": "20231116060821",
+  "checked_capture_url": "https://web.archive.org/web/20240524041558/https://www.floformayor.com/",
+  "page_evidence": "siteTitle: Dr. Flo Cofer for Sacramento Mayor",
+  "other_profiles": [],
+  "note": "Search results gave the campaign email domain FloForMayor.com. CDX returned 256 HTTP 200 lines for the host in the window (all paths). The archived home page of 2024-05-24 has the site title 'Dr. Flo Cofer for Sacramento Mayor'."
+ }
+]

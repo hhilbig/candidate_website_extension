@@ -1,0 +1,34 @@
+[
+ {
+  "candidate_election_id": "2622000__2025-11-04__regular__cf2187e4d27219df",
+  "candidate_name": "Mary Sheffield",
+  "election_date": "2025-11-04",
+  "status": "accepted",
+  "campaign_url": "https://www.marysheffield.com/",
+  "registrable_domain": "marysheffield.com",
+  "lead_sources": [
+   "Wayback CDX probe of the domain marysheffield.com (domain guessed from the candidate name, then verified)"
+  ],
+  "wayback_window_captures": 200,
+  "first_capture_in_window": "20241108041802",
+  "checked_capture_url": "https://web.archive.org/web/20251025030537/https://www.marysheffield.com/",
+  "page_evidence": "Page title: \"Mary Sheffield for Detroit's Future | Democratic Campaign for Detroit\"; header logo file marysheffieldformayorhorizontal.png; archived news page titled \"mary-sheffield-on-detroit's-mayoral-race,-priorities-for-the-city\" (capture 20251015050700)",
+  "other_profiles": [],
+  "note": "The CDX query returned 200 records with HTTP 200 in the window; this equals the query limit, so the true count is at least 200. Web search budget was exhausted, so the domain came from a direct probe, not a search lead. The page text is a Wix shell; the evidence is the title and the logo name, not body text. The same site also served an earlier congressional or council campaign, but the capture of 2025-10-25 is inside the window."
+ },
+ {
+  "candidate_election_id": "2622000__2025-11-04__regular__421a9c126cabfc2d",
+  "candidate_name": "Solomon Kinloch",
+  "election_date": "2025-11-04",
+  "status": "not_found",
+  "campaign_url": "",
+  "registrable_domain": "",
+  "lead_sources": [],
+  "wayback_window_captures": 0,
+  "first_capture_in_window": "",
+  "checked_capture_url": "",
+  "page_evidence": "",
+  "other_profiles": [],
+  "note": "The web search budget was exhausted, so no search was possible. Wayback CDX probes for kinlochformayor.com, solomonkinloch.com/.org, drsolomonkinloch.com, kinloch4mayor.com, kinlochfordetroit.com/.org, kinloch4detroit.com, solomonfordetroit.com, solomon4detroit.com, solomonformayor.com and kinloch2025.com returned no 200 captures in the window. Some probes failed with SSH errors (solomonkinlochformayor.com, votekinloch.com) and are unchecked. This is not proof that no site exists. Rerun with search available."
+ }
+]

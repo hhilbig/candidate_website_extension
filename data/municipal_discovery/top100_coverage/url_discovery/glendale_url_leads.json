@@ -1,0 +1,64 @@
+[
+ {
+  "candidate_election_id": "0427820__2012-11-06__regular__5a47bf95a1f34dba",
+  "candidate_name": "Jerry Weiers",
+  "election_date": "2012-11-06",
+  "status": "accepted",
+  "campaign_url": "http://www.weiersformayor.com/",
+  "registrable_domain": "weiersformayor.com",
+  "lead_sources": [
+   "Domain found by checking likely names in the Wayback CDX index; no news or official page named it. The archived site itself is the only source."
+  ],
+  "wayback_window_captures": 70,
+  "first_capture_in_window": "20120428230506",
+  "checked_capture_url": "https://web.archive.org/web/20120629070038/http://www.weiersformayor.com:80/about.html",
+  "page_evidence": "About - Weiers for Mayor: \"Jerry Weiers has represented the West Valley in the State Legislature for nearly eight years ... who better to now help with Glendale through its many storm clouds than a pilot?\" Footer: \"Paid by Weiers for Mayor\"",
+  "other_profiles": [],
+  "note": "70 HTTP 200 captures (all file types) from 2011-11-06 to 2012-11-06; the first is 2012-04-28 and the last is 2012-11-02. I read the 2012-06-29 about page and the 2012-04-28 home page (title Weiers for Mayor, nav Home/About/Issues/News/Volunteer/Donate/Contact). The CDX was queried by host with matchType=host, so the count includes css, robots.txt and other files, not only HTML pages. The given election date is 2012-11-06, but Wikipedia lists the mayoral election as 2012-08-28; the window follows the given date and the page is in both windows."
+ },
+ {
+  "candidate_election_id": "0427820__2012-11-06__regular__3dcfeb11bd7b367f",
+  "candidate_name": "Manuel \"Manny\" Cruz",
+  "election_date": "2012-11-06",
+  "status": "not_found",
+  "campaign_url": "",
+  "registrable_domain": "",
+  "lead_sources": [],
+  "wayback_window_captures": 0,
+  "first_capture_in_window": "",
+  "checked_capture_url": "",
+  "page_evidence": "",
+  "other_profiles": [],
+  "note": "Searched the web, Wikipedia, KJZZ, newpolitics.org and Phoenix New Times: no 2012 mayoral website named. cruzforarizona.com is archived in 2010 only (earlier Cruz race, no 2012 mayoral check; not accepted). Guessed domains cruzformayor.com, mannycruzformayor.com, manny4mayor.com, cruz4glendale.com, cruzforglendale.com, mannycruz2012.com, mannyformayor.com: the CDX query for them failed with connection refused, so they are unchecked. Ballotpedia blocked access."
+ },
+ {
+  "candidate_election_id": "0427820__2016-08-30__regular__72322bc906087c77",
+  "candidate_name": "Mark Burdick",
+  "election_date": "2016-08-30",
+  "status": "not_found",
+  "campaign_url": "",
+  "registrable_domain": "",
+  "lead_sources": [],
+  "wayback_window_captures": 0,
+  "first_capture_in_window": "",
+  "checked_capture_url": "",
+  "page_evidence": "",
+  "other_profiles": [],
+  "note": "Searched the web, ABC15, Joyce Clark Unfiltered, KJZZ and Wikipedia: none names a campaign website. Checked mark4mayor.com: 2016 captures show a HugeDomains sale page, not Burdick. burdickformayor.com, markburdick.com, votemarkburdick.com and markburdickformayor.com have no CDX captures. Other guessed domains (burdick4glendale.com, burdickforglendale.com, mark4glendale.com, markburdick.org) were unchecked because Wayback refused connections. Ballotpedia blocked access."
+ },
+ {
+  "candidate_election_id": "0427820__2020-08-04__regular__1388635525c6e328",
+  "candidate_name": "Michelle Robertson",
+  "election_date": "2020-08-04",
+  "status": "not_found",
+  "campaign_url": "",
+  "registrable_domain": "",
+  "lead_sources": [],
+  "wayback_window_captures": 0,
+  "first_capture_in_window": "",
+  "checked_capture_url": "",
+  "page_evidence": "",
+  "other_profiles": [],
+  "note": "Searched the web, KTAR, Rose Law Group, Arizona Daily Independent and BallotReady: articles say she had a campaign website but give no domain. Checked domains: robertson4mayor.com has captures from 2024 only; votemichellerobertson.com has 2018 captures only and none in the 2020 window (likely a different campaign); michellerobertson.com has 2004 captures. michelleforglendale.com, michelle4glendale.com, robertsonformayor.com and electmichellerobertson.com have no CDX captures. Other guesses were unchecked because Wayback refused connections. Ballotpedia blocked access."
+ }
+]

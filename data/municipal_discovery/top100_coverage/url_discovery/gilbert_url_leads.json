@@ -1,0 +1,113 @@
+[
+ {
+  "candidate_election_id": "0427400__2012-08-28__regular__0baaa441731776a7",
+  "candidate_name": "John Lewis",
+  "election_date": "2012-08-28",
+  "status": "accepted",
+  "campaign_url": "http://www.johnlewisformayor.com:80/",
+  "registrable_domain": "johnlewisformayor.com",
+  "lead_sources": [
+   "Domain guess checked in the Wayback CDX index; no web page found that lists it"
+  ],
+  "wayback_window_captures": 37,
+  "first_capture_in_window": "20110919012155",
+  "checked_capture_url": "https://web.archive.org/web/20120606183352/http://www.johnlewisformayor.com:80/",
+  "page_evidence": "JOHN LEWIS - MAYOR FOR GILBERT (page title of the 2012-06-06 capture)",
+  "other_profiles": [],
+  "note": "Found by a domain guess, not from a source page. The site has 37 HTTP 200 captures in the 365 days to the election, including meetjohn, endorsements, donate and volunteer pages. The page title names the candidate and Gilbert mayor. The same site also has captures from 2009, so it served more than one campaign. I read only the title of the 2012 home page, not a re-election phrase."
+ },
+ {
+  "candidate_election_id": "0427400__2012-08-28__regular__c00ac5dd981e9560",
+  "candidate_name": "Steve Berman",
+  "election_date": "2012-08-28",
+  "status": "not_found",
+  "campaign_url": "",
+  "registrable_domain": "",
+  "lead_sources": [
+   "https://skippingstarsproductions.wordpress.com/2012/08/05/steve-berman-for-mayor-of-gilbert-arizona-2012/"
+  ],
+  "wayback_window_captures": 0,
+  "first_capture_in_window": "",
+  "checked_capture_url": "",
+  "page_evidence": "",
+  "other_profiles": [
+   "https://www.facebook.com/MayorBerman/"
+  ],
+  "note": "Searched the web and Ballotpedia-style sources; the 2012 blog post and news pages give no website. Checked the Wayback CDX for stevenberman.com (only robots.txt in window), mayorberman.com (2008 only), bermanformayor.com (2025 only), and about 8 other guessed domains (no captures). berman4mayor.com has captures only on 2013-07-18 and 2025-07-10, both outside the window; I could not replay the 2013 capture, so I cannot say whether it belongs to this candidate. Not accepted."
+ },
+ {
+  "candidate_election_id": "0427400__2020-11-03__regular__57d91cc6b44a53a3",
+  "candidate_name": "Brigette Peterson",
+  "election_date": "2020-11-03",
+  "status": "accepted",
+  "campaign_url": "https://www.votebrigettepeterson.com/",
+  "registrable_domain": "votebrigettepeterson.com",
+  "lead_sources": [
+   "Domain guess checked in the Wayback CDX index; no web page found that lists it"
+  ],
+  "wayback_window_captures": 78,
+  "first_capture_in_window": "20191118010326",
+  "checked_capture_url": "https://web.archive.org/web/20200817190440/https://www.votebrigettepeterson.com/",
+  "page_evidence": "Gilbert Mayor | Vote Brigette Peterson; \"...support me for Mayor of Gilbert.\"",
+  "other_profiles": [
+   "https://twitter.com/BrigetteDP",
+   "https://twitter.com/GilbertAZMayor"
+  ],
+  "note": "Found by a domain guess. 78 HTTP 200 captures in the window (counted with the CDX, includes many photo lightbox URLs). The site also has 2018 captures from her council campaign, so the first in-window capture 2019-11-18 may show older content; the 2020-08-17 capture is clearly the mayoral campaign."
+ },
+ {
+  "candidate_election_id": "0427400__2020-11-03__regular__f3719d23e99c2311",
+  "candidate_name": "Matt Nielsen",
+  "election_date": "2020-11-03",
+  "status": "accepted",
+  "campaign_url": "http://votemattnielsen.com/",
+  "registrable_domain": "votemattnielsen.com",
+  "lead_sources": [
+   "Domain guess checked in the Wayback CDX index; no web page found that lists it"
+  ],
+  "wayback_window_captures": 28,
+  "first_capture_in_window": "20200720014408",
+  "checked_capture_url": "https://web.archive.org/web/20200812120810/http://votemattnielsen.com/",
+  "page_evidence": "Vote Matt Nielsen - Mayor of Gilbert (page title of the 2020-08-12 capture)",
+  "other_profiles": [],
+  "note": "Found by a domain guess. 28 HTTP 200 captures in the window, including on-the-issues, filing-day and on-the-ballot pages. The home page title names the candidate and Gilbert mayor."
+ },
+ {
+  "candidate_election_id": "0427400__2024-07-30__regular__4d603fb9b6efacc0",
+  "candidate_name": "Scott Anderson",
+  "election_date": "2024-07-30",
+  "status": "accepted",
+  "campaign_url": "https://www.gilbertmayoranderson.org/",
+  "registrable_domain": "gilbertmayoranderson.org",
+  "lead_sources": [
+   "Web search result for Scott Anderson Gilbert mayor 2024 (named www.gilbertmayoranderson.org)",
+   "https://gilbertaz.gov/departments/clerk-s-office/elections/primary-elections/candidate-information"
+  ],
+  "wayback_window_captures": 10,
+  "first_capture_in_window": "20240610140934",
+  "checked_capture_url": "https://web.archive.org/web/20240610140934/https://www.gilbertmayoranderson.org/",
+  "page_evidence": "Scott Anderson Town of Gilbert Mayor; meta description \"Anderson for Mayor ... Vote Scott Anderson\"",
+  "other_profiles": [],
+  "note": "10 HTTP 200 captures in the window, all between 2024-06-10 and 2024-06-13. The replay needed retries because of Wayback connection refusals."
+ },
+ {
+  "candidate_election_id": "0427400__2024-07-30__regular__1e3c91aa18371c7d",
+  "candidate_name": "Natalie DiBernardo",
+  "election_date": "2024-07-30",
+  "status": "accepted",
+  "campaign_url": "https://votenatalie.com/",
+  "registrable_domain": "votenatalie.com",
+  "lead_sources": [
+   "https://gilbertaz.gov/departments/clerk-s-office/elections/primary-elections/candidate-information (as reported in a web search result)"
+  ],
+  "wayback_window_captures": 28,
+  "first_capture_in_window": "20240228103126",
+  "checked_capture_url": "https://web.archive.org/web/20240610140456/https://votenatalie.com/",
+  "page_evidence": "Gilbert Candidate for Mayor | Natalie DiBernardo; \"Natalie DiBernardo for Gilbert Mayor\"",
+  "other_profiles": [
+   "https://www.facebook.com/ (Natalie for Gilbert Mayor)",
+   "Instagram @NatalieforGilbertMayor"
+  ],
+  "note": "28 HTTP 200 captures in the window. The domain has older captures from 2013 to 2020 from an earlier use by the same or another owner; I judged only the 2024 capture."
+ }
+]

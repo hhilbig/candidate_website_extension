@@ -1,0 +1,49 @@
+[
+ {
+  "candidate_election_id": "1235000__2011-05-17__regular__521d4c20d5960cec",
+  "candidate_name": "Mike Hogan",
+  "election_date": "2011-05-17",
+  "status": "not_found",
+  "campaign_url": "",
+  "registrable_domain": "",
+  "lead_sources": [
+   "https://www.jaxdailyrecord.com/news/2011/may/03/two-week-countdown/"
+  ],
+  "wayback_window_captures": 0,
+  "first_capture_in_window": "",
+  "checked_capture_url": "",
+  "page_evidence": "",
+  "other_profiles": [],
+  "note": "Web search and a Jacksonville Daily Record article name http://hoganformayor.com/ as the 2011 campaign site (unverified lead). The Wayback check could not run. web.archive.org refused connections from the droplet (curl exit 7) on 8 attempts, while other sites worked. No URL was confirmed. Rerun when Wayback is reachable."
+ },
+ {
+  "candidate_election_id": "1235000__2023-05-16__regular__f578c3a7d5d308b4",
+  "candidate_name": "Donna Deegan",
+  "election_date": "2023-05-16",
+  "status": "not_found",
+  "campaign_url": "",
+  "registrable_domain": "",
+  "lead_sources": [],
+  "wayback_window_captures": 0,
+  "first_capture_in_window": "",
+  "checked_capture_url": "",
+  "page_evidence": "",
+  "other_profiles": [],
+  "note": "Web search found no campaign domain. Guessed domain donnadeegan.com is unverified. The Wayback check could not run. web.archive.org refused connections from the droplet (curl exit 7) on 8 attempts, while other sites worked. No URL was confirmed. Rerun when Wayback is reachable."
+ },
+ {
+  "candidate_election_id": "1235000__2023-05-16__regular__bcc82a1135dae853",
+  "candidate_name": "Daniel Davis",
+  "election_date": "2023-05-16",
+  "status": "not_found",
+  "campaign_url": "",
+  "registrable_domain": "",
+  "lead_sources": [],
+  "wayback_window_captures": 0,
+  "first_capture_in_window": "",
+  "checked_capture_url": "",
+  "page_evidence": "",
+  "other_profiles": [],
+  "note": "Web search found no campaign domain. Guessed domains were not checked. The Wayback check could not run. web.archive.org refused connections from the droplet (curl exit 7) on 8 attempts, while other sites worked. No URL was confirmed. Rerun when Wayback is reachable."
+ }
+]

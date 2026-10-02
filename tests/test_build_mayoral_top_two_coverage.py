@@ -360,3 +360,53 @@ def test_reviewed_identity_link_rejects_other_month():
             'candidate_year_id': 'legacy-a', 'link_basis': 'reviewed_name_variant_same_city_year_month'}
     with pytest.raises(ValueError, match='Reviewed identity link'):
         build(cities, roster, urls, [result], identity_links=[link])
+
+
+def _discovered(candidate_id, status='accepted', stamp='20201001120000', url='https://exampleb.test/'):
+    return {'candidate_election_id': candidate_id, 'final_status': status, 'campaign_url': url,
+            'checked_capture_timestamp': stamp if status == 'accepted' else '',
+            'link_basis': 'agent_search_wayback_capture_checked'}
+
+
+def _runner_up_id(cities, roster, urls, result):
+    return next(r for r in build(cities, roster, urls, [result])[3] if r['candidate_name'] == 'Example B')['candidate_election_id']
+
+
+def test_checked_discovered_url_adds_lead_and_archive_with_own_basis():
+    cities, roster, urls, result = fixture()
+    key = _runner_up_id(cities, roster, urls, result)
+    rows = build(cities, roster, urls, [result], discovered_leads=[_discovered(key)])[3]
+    row = next(r for r in rows if r['candidate_election_id'] == key)
+    assert row['url_lead'] is True and row['archive_discovery'] is True
+    assert row['url_lead_basis'] == 'agent_search_wayback_capture_checked'
+    assert row['discovered_campaign_url'] == 'https://exampleb.test/'
+    assert 'url_discovery:20201001120000' in row['evidence_refs']
+    legacy = next(r for r in rows if r['candidate_name'] == 'Example A')
+    assert legacy['url_lead_basis'] == 'legacy_url_inventory'
+
+
+def test_outside_window_discovery_is_lead_without_archive_and_rejected_is_nothing():
+    cities, roster, urls, result = fixture()
+    key = _runner_up_id(cities, roster, urls, result)
+    row = next(r for r in build(cities, roster, urls, [result], discovered_leads=[_discovered(key, 'outside_window')])[3]
+               if r['candidate_election_id'] == key)
+    assert row['url_lead'] is True and row['archive_discovery'] is not True
+    row = next(r for r in build(cities, roster, urls, [result], discovered_leads=[_discovered(key, 'rejected', url='')])[3]
+               if r['candidate_election_id'] == key)
+    assert row['url_lead'] is False and row['url_lead_basis'] == ''
+
+
+def test_discovered_capture_after_election_or_unknown_candidate_fails():
+    cities, roster, urls, result = fixture()
+    key = _runner_up_id(cities, roster, urls, result)
+    with pytest.raises(ValueError, match='before the election'):
+        build(cities, roster, urls, [result], discovered_leads=[_discovered(key, stamp='20201201000000')])
+    with pytest.raises(ValueError, match='does not match'):
+        build(cities, roster, urls, [result], discovered_leads=[_discovered('0000001__2020-11-03__regular__nobody')])
+
+
+def test_discovered_lead_cannot_replace_legacy_lead():
+    cities, roster, urls, result = fixture()
+    key = next(r for r in build(cities, roster, urls, [result])[3] if r['candidate_name'] == 'Example A')['candidate_election_id']
+    with pytest.raises(ValueError, match='already has a legacy'):
+        build(cities, roster, urls, [result], discovered_leads=[_discovered(key)])

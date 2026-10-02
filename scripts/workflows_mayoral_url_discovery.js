@@ -9,7 +9,8 @@ export const meta = {
 
 // Launch from a fresh session (web-search budget):
 //   Workflow({scriptPath: 'scripts/workflows_mayoral_url_discovery.js',
-//             args: <contents of data/municipal_discovery/top100_coverage/url_discovery/stage2_args.json>})
+//             args: <stage2_args.json entries, with or without "finalists">})
+// Without "finalists", each discover agent reads its list from stage2_args.json (keeps the Workflow call small).
 // Input: 96 cities, 473 verified finalists without a URL lead (built 2026-10-02).
 
 const REPO = '/Users/hanno/Documents/GitHub/candidate_website_extension'
@@ -78,7 +79,7 @@ const CHECK_SCHEMA = {
 const results = await pipeline(
   args,
   (c) => agent(`Find campaign websites for mayoral finalists in ${c.city_name}, ${c.state_abb} (city_id ${c.city_id}, slug ${c.slug}). These verified finalists have no URL lead yet:
-${JSON.stringify(c.finalists, null, 1)}
+${c.finalists ? JSON.stringify(c.finalists, null, 1) : `the "finalists" list of the entry with slug "${c.slug}" in ${OUT}/stage2_args.json. Read it first, for example: python3 -c 'import json; print(json.dumps([c for c in json.load(open("${OUT}/stage2_args.json")) if c["slug"]=="${c.slug}"][0]["finalists"], indent=1))'. Write one output object for every finalist in that list.`}
 ${RULES}
 Return the summary.`,
     { label: `discover:${c.slug}`, phase: 'Discover', schema: LEADS_SCHEMA, model: 'sonnet' }),

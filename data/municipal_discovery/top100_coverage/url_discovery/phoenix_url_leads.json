@@ -1,0 +1,72 @@
+[
+ {
+  "candidate_election_id": "0455000__2015-08-25__regular__6e6d3dc5085bfbff",
+  "candidate_name": "Greg Stanton",
+  "election_date": "2015-08-25",
+  "status": "not_found",
+  "campaign_url": "",
+  "registrable_domain": "",
+  "lead_sources": [],
+  "wayback_window_captures": 0,
+  "first_capture_in_window": "",
+  "checked_capture_url": "",
+  "page_evidence": "",
+  "other_profiles": [],
+  "note": "Web searches and the Wikipedia and Ballotpedia pages gave no 2015 campaign site. The domain gregstanton.com has 9 HTTP 200 captures in the window, but the page captured 2014-12-17 is a GoDaddy parking frame with no candidate name. Domains stantonforphoenix.com returned no captures. No URL was confirmed."
+ },
+ {
+  "candidate_election_id": "0455000__2015-08-25__regular__72ad429ec9e2217d",
+  "candidate_name": "Anna Maria Brennan",
+  "election_date": "2015-08-25",
+  "status": "accepted",
+  "campaign_url": "http://brennanformayor2015.com/",
+  "registrable_domain": "brennanformayor2015.com",
+  "lead_sources": [
+   "https://ballotpedia.org/Anna_Maria_Brennan%E2%80%8B%E2%80%8B",
+   "https://x.com/brennan4mayor15?lang=en"
+  ],
+  "wayback_window_captures": 413,
+  "first_capture_in_window": "20150610090757",
+  "checked_capture_url": "https://web.archive.org/web/20150801024724/http://brennanformayor2015.com/",
+  "page_evidence": "Home - Anna Brennan Mayor (site name: Anna Brennan Mayor)",
+  "other_profiles": [
+   "https://x.com/brennan4mayor15"
+  ],
+  "note": "The count of 413 covers all HTTP 200 captures of the host from 2014-08-25 to 2015-08-25. The first was on 2015-06-10. The homepage of 2015-08-01 names the candidate and the mayor race. The Ballotpedia mention came from a search summary and not from a direct page read."
+ },
+ {
+  "candidate_election_id": "0455000__2024-11-05__regular__f2a875c73fa80119",
+  "candidate_name": "Kate Gallego",
+  "election_date": "2024-11-05",
+  "status": "accepted",
+  "campaign_url": "https://www.kategallego.com/",
+  "registrable_domain": "kategallego.com",
+  "lead_sources": [
+   "https://en.wikipedia.org/wiki/2024_Phoenix_mayoral_election"
+  ],
+  "wayback_window_captures": 70,
+  "first_capture_in_window": "20231207132738",
+  "checked_capture_url": "https://web.archive.org/web/20241007080038/https://www.kategallego.com/",
+  "page_evidence": "Mayor Kate Gallego knows we've got more work to do and is ready to continue the",
+  "other_profiles": [],
+  "note": "The count of 70 covers all HTTP 200 captures of the host from 2023-11-05 to 2024-11-05. The campaign launched on 2024-05-23, and the site had captures before that date. The page text refers to Gallego in the third person as the candidate."
+ },
+ {
+  "candidate_election_id": "0455000__2024-11-05__regular__f78a939a07ceff77",
+  "candidate_name": "Matt Evans",
+  "election_date": "2024-11-05",
+  "status": "accepted",
+  "campaign_url": "https://www.mattforphoenix.com/",
+  "registrable_domain": "mattforphoenix.com",
+  "lead_sources": [
+   "https://en.wikipedia.org/wiki/2024_Phoenix_mayoral_election",
+   "https://cronkitenews.azpbs.org/2024/10/09/matt-evans-phoenix-mayor-election-2024/"
+  ],
+  "wayback_window_captures": 36,
+  "first_capture_in_window": "20240324234114",
+  "checked_capture_url": "https://web.archive.org/web/20241101184545/https://www.mattforphoenix.com/matt-vs-kate",
+  "page_evidence": "Matt vs Kate -- Matt for Mayor ... The Challenger Matt Evans vs The Current Mayor Kate Gallego",
+  "other_profiles": [],
+  "note": "The count of 36 covers all HTTP 200 captures of the host from 2023-11-05 to 2024-11-05."
+ }
+]

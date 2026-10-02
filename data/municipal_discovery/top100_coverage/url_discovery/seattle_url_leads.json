@@ -1,0 +1,36 @@
+[
+ {
+  "candidate_election_id": "5363000__2025-11-04__regular__1b4828ac1df050f2",
+  "candidate_name": "Katie Wilson",
+  "election_date": "2025-11-04",
+  "status": "accepted",
+  "campaign_url": "https://www.wilsonforseattle.com/",
+  "registrable_domain": "wilsonforseattle.com",
+  "lead_sources": [
+   "https://en.wikipedia.org/wiki/2025_Seattle_mayoral_election"
+  ],
+  "wayback_window_captures": 335,
+  "first_capture_in_window": "20250313090318",
+  "checked_capture_url": "https://web.archive.org/web/20250313090318/https://www.wilsonforseattle.com/",
+  "page_evidence": "Title 'Home | Elect Katie Wilson'; menu Platform, About, Vouchers, Endorse, Donate; text 'This is your city... a city of plenty'.",
+  "other_profiles": [],
+  "note": "Wikipedia external links on the 2025 Seattle mayoral election page give this site. The count of 335 is the number of HTTP 200 captures of the host from 2024-11-04 to 2025-11-04. The archived home page says 'Elect Katie Wilson'. It does not use the word mayor on the part read, but the site is the campaign site for the 2025 race."
+ },
+ {
+  "candidate_election_id": "5363000__2025-11-04__regular__756a280d2165e8b7",
+  "candidate_name": "Bruce Harrell",
+  "election_date": "2025-11-04",
+  "status": "accepted",
+  "campaign_url": "https://www.bruceforseattle.com/",
+  "registrable_domain": "bruceforseattle.com",
+  "lead_sources": [
+   "https://en.wikipedia.org/wiki/2025_Seattle_mayoral_election"
+  ],
+  "wayback_window_captures": 6167,
+  "first_capture_in_window": "20241107090914",
+  "checked_capture_url": "https://web.archive.org/web/20241107090914/https://www.bruceforseattle.com/",
+  "page_evidence": "Title 'Bruce Harrell for Seattle Mayor'; 'I am running because we need a Mayor to meet this moment of unprecedented challenge and opportunity'.",
+  "other_profiles": [],
+  "note": "Wikipedia external links on the 2025 Seattle mayoral election page give this site. The count of 6167 is the number of HTTP 200 captures of the host (all pages) in the window. The page text was confirmed in the Nov 2024 capture. Domains bruceharrell.com (parked page) and several guessed domains had no useful captures. Some early probes may have failed because of Wayback connection refusals."
+ }
+]

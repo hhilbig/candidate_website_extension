@@ -1,0 +1,47 @@
+[
+ {
+  "candidate_election_id": "2758000__2013-11-05__regular__d1e0e89990fb6e76",
+  "candidate_name": "Chris Coleman",
+  "election_date": "2013-11-05",
+  "status": "not_found",
+  "campaign_url": "",
+  "registrable_domain": "",
+  "lead_sources": [],
+  "wayback_window_captures": 0,
+  "first_capture_in_window": "",
+  "checked_capture_url": "",
+  "page_evidence": "",
+  "other_profiles": [],
+  "note": "No URL recorded. Web search budget was exhausted and WebFetch returned empty pages, so no lead was found. The droplet refused connections to web.archive.org (curl error 7, HTTP 000, tried twice), so no Wayback check was possible. Guessed domains were queried but all returned empty because of this failure and are NOT evidence of absence. Retry when search and Wayback access work. Domains tried: chriscoleman.org, chriscoleman.com, colemanformayor.com, chriscolemanformayor.com, coleman4mayor.com."
+ },
+ {
+  "candidate_election_id": "2758000__2025-11-04__regular__0c7e8fa41ce4d7db",
+  "candidate_name": "Kaohly Her",
+  "election_date": "2025-11-04",
+  "status": "not_found",
+  "campaign_url": "",
+  "registrable_domain": "",
+  "lead_sources": [],
+  "wayback_window_captures": 0,
+  "first_capture_in_window": "",
+  "checked_capture_url": "",
+  "page_evidence": "",
+  "other_profiles": [],
+  "note": "No URL recorded. Web search budget was exhausted and WebFetch returned empty pages, so no lead was found. The droplet refused connections to web.archive.org (curl error 7, HTTP 000, tried twice), so no Wayback check was possible. Guessed domains were queried but all returned empty because of this failure and are NOT evidence of absence. Retry when search and Wayback access work. Domains tried: kaohlyher.com, kaohlyforstpaul.com, kaohlyformayor.com, herformayor.com."
+ },
+ {
+  "candidate_election_id": "2758000__2025-11-04__regular__8a97bacd462a8d40",
+  "candidate_name": "Melvin Carter",
+  "election_date": "2025-11-04",
+  "status": "not_found",
+  "campaign_url": "",
+  "registrable_domain": "",
+  "lead_sources": [],
+  "wayback_window_captures": 0,
+  "first_capture_in_window": "",
+  "checked_capture_url": "",
+  "page_evidence": "",
+  "other_profiles": [],
+  "note": "No URL recorded. Web search budget was exhausted and WebFetch returned empty pages, so no lead was found. The droplet refused connections to web.archive.org (curl error 7, HTTP 000, tried twice), so no Wayback check was possible. Guessed domains were queried but all returned empty because of this failure and are NOT evidence of absence. Retry when search and Wayback access work. Domains tried: melvincarter.com, melvinforstpaul.com, carterformayor.com, melvincarterforstpaul.com."
+ }
+]

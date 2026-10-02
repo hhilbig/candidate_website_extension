@@ -1,0 +1,100 @@
+[
+ {
+  "candidate_election_id": "2965000__2013-04-02__regular__04cd1cbe8ee97930",
+  "candidate_name": "Francis Slay",
+  "election_date": "2013-04-02",
+  "status": "accepted",
+  "campaign_url": "http://mayorslay.com/",
+  "registrable_domain": "mayorslay.com",
+  "lead_sources": [
+   "https://web.archive.org/cdx/search/cdx?url=mayorslay.com (domain guess confirmed by Wayback)"
+  ],
+  "wayback_window_captures": 11141,
+  "first_capture_in_window": "20120402013340",
+  "checked_capture_url": "https://web.archive.org/web/20130302204015/http://mayorslay.com/",
+  "page_evidence": "Mayor Slay's Website; footer: \"Paid for by Slay for Mayor Judy Murphy, Treasurer | 2013 ... Donate | Campaign Central\"",
+  "other_profiles": [],
+  "note": "Domain found by guessing, not from a published list. The capture count includes many asset and subpage URLs. The site also carries mayor's office news, but the footer shows it is the Slay for Mayor committee site. Web search quota ran out, so no independent lead source was found."
+ },
+ {
+  "candidate_election_id": "2965000__2013-04-02__regular__5b5e4e2d8858e7bb",
+  "candidate_name": "James Mcneely",
+  "election_date": "2013-04-02",
+  "status": "not_found",
+  "campaign_url": "",
+  "registrable_domain": "",
+  "lead_sources": [],
+  "wayback_window_captures": 0,
+  "first_capture_in_window": "",
+  "checked_capture_url": "",
+  "page_evidence": "",
+  "other_profiles": [],
+  "note": "Web search quota ran out before any lead was found. Wayback probes of mcneelyformayor.com, jamesmcneely.com, mcneely4mayor.com, mcneelymayor.com, votemcneely.com and jamesmcneelyformayor.com showed no 200 capture in the window (jamesmcneely.com has only a 2025 406). No URL confirmed."
+ },
+ {
+  "candidate_election_id": "2965000__2017-04-04__regular__0843b0309e5e03c8",
+  "candidate_name": "Lyda Krewson",
+  "election_date": "2017-04-04",
+  "status": "accepted",
+  "campaign_url": "http://www.lydakrewson.com/",
+  "registrable_domain": "lydakrewson.com",
+  "lead_sources": [
+   "https://web.archive.org/web/20160820025916/http://www.krewsonformayor.com/ (archived 301 redirect from krewsonformayor.com to www.lydakrewson.com)"
+  ],
+  "wayback_window_captures": 295,
+  "first_capture_in_window": "20160509112335",
+  "checked_capture_url": "https://web.archive.org/web/20161025211751/http://www.lydakrewson.com/",
+  "page_evidence": "Page title: \"Lyda Krewson - Lyda Krewson for Mayor\"",
+  "other_profiles": [],
+  "note": "Count is all 200 captures of the host in 2016-04-04 to 2017-04-04, including subpages. The archived redirect from krewsonformayor.com supports that this is the mayoral campaign site."
+ },
+ {
+  "candidate_election_id": "2965000__2017-04-04__regular__8810aa9c7b8bc83d",
+  "candidate_name": "Andrew Jones",
+  "election_date": "2017-04-04",
+  "status": "accepted",
+  "campaign_url": "http://www.andrewjonesformayor.com/",
+  "registrable_domain": "andrewjonesformayor.com",
+  "lead_sources": [
+   "https://web.archive.org/cdx/search/cdx?url=andrewjonesformayor.com (domain guess confirmed by Wayback)"
+  ],
+  "wayback_window_captures": 23,
+  "first_capture_in_window": "20170213132143",
+  "checked_capture_url": "https://web.archive.org/web/20170225163652/http://www.andrewjonesformayor.com:80/",
+  "page_evidence": "Page title: \"ST LOUIS MAYOR REPUBLICAN PARTY ANDREW JONES\"",
+  "other_profiles": [],
+  "note": "Domain found by guessing. The page title names the candidate, the office and the party. Count includes subpages."
+ },
+ {
+  "candidate_election_id": "2965000__2025-04-08__regular__01c03dd754109c85",
+  "candidate_name": "Cara Spencer",
+  "election_date": "2025-04-08",
+  "status": "accepted",
+  "campaign_url": "https://caraspencer.com/",
+  "registrable_domain": "caraspencer.com",
+  "lead_sources": [
+   "https://web.archive.org/cdx/search/cdx?url=caraspencer.com (domain guess confirmed by Wayback)"
+  ],
+  "wayback_window_captures": 96,
+  "first_capture_in_window": "20240626152740",
+  "checked_capture_url": "https://web.archive.org/web/20240626152740/http://caraspencer.com/",
+  "page_evidence": "Page title: \"Cara Spencer for Mayor\"; archived subpages include /get-involved, /finance and /events/primary-election-watch-party",
+  "other_profiles": [],
+  "note": "Count is all 200 captures of the host in 2024-04-08 to 2025-04-08, including subpages."
+ },
+ {
+  "candidate_election_id": "2965000__2025-04-08__regular__f096476d1cc5ed3d",
+  "candidate_name": "Tishaura Jones",
+  "election_date": "2025-04-08",
+  "status": "not_found",
+  "campaign_url": "",
+  "registrable_domain": "",
+  "lead_sources": [],
+  "wayback_window_captures": 0,
+  "first_capture_in_window": "",
+  "checked_capture_url": "",
+  "page_evidence": "",
+  "other_profiles": [],
+  "note": "Web search quota ran out before any lead was found. Probed about 20 domain guesses. tishaurajones.com has no capture in the window (nearest 20220920 before, 20250710 after); both nearby captures are a Namecheap WHOIS verification page, not a campaign page. tishaura.com has captures only in 2018-2019 and a 2025 redirect. No URL confirmed."
+ }
+]

@@ -1,0 +1,100 @@
+[
+ {
+  "candidate_election_id": "0675000__2012-11-06__regular__536eaa247ae776f9",
+  "candidate_name": "Anthony Silva",
+  "election_date": "2012-11-06",
+  "status": "outside_window",
+  "campaign_url": "http://www.mayorsilva.org/",
+  "registrable_domain": "mayorsilva.org",
+  "lead_sources": [],
+  "wayback_window_captures": 0,
+  "first_capture_in_window": "",
+  "checked_capture_url": "https://web.archive.org/web/20160331084936/http://www.mayorsilva.org/",
+  "page_evidence": "",
+  "other_profiles": [],
+  "note": "A web search named mayorsilva.org as his campaign site. The earliest capture found is 2016-03-31, after the 2012 election. No capture exists in the 2011-11-07 to 2012-11-06 window. I did not test other 2012 domains successfully."
+ },
+ {
+  "candidate_election_id": "0675000__2012-11-06__regular__1d8dcffc808f288b",
+  "candidate_name": "Ann Johnston",
+  "election_date": "2012-11-06",
+  "status": "not_found",
+  "campaign_url": "",
+  "registrable_domain": "",
+  "lead_sources": [],
+  "wayback_window_captures": 0,
+  "first_capture_in_window": "",
+  "checked_capture_url": "",
+  "page_evidence": "",
+  "other_profiles": [],
+  "note": "Web search found no campaign website. I probed annjohnston.com, annjohnstonformayor.com and johnstonformayor.com in the CDX index. They returned no captures."
+ },
+ {
+  "candidate_election_id": "0675000__2016-11-08__regular__6a372d674eb13b74",
+  "candidate_name": "Michael Tubbs",
+  "election_date": "2016-11-08",
+  "status": "not_found",
+  "campaign_url": "",
+  "registrable_domain": "",
+  "lead_sources": [],
+  "wayback_window_captures": 0,
+  "first_capture_in_window": "",
+  "checked_capture_url": "",
+  "page_evidence": "",
+  "other_profiles": [
+   "https://secure.actblue.com/donate/tubbsformayor"
+  ],
+  "note": "Leads: mdtubbs.com has captures only 2011 to 2013, none in the 2015-11-09 to 2016-11-08 window. michaeltubbs.com has HTTP 200 captures in the window (for example 20160205092312, 20160328101413, 20161031062506) but it is a Squarespace personal site that exists since 2010. I could not read an in-window page that names a mayoral campaign, because later replay requests from the droplet returned empty. I did not accept it. The ActBlue page secure.actblue.com/donate/tubbsformayor is a donation page, not a website."
+ },
+ {
+  "candidate_election_id": "0675000__2016-11-08__regular__536eaa247ae776f9",
+  "candidate_name": "Anthony Silva",
+  "election_date": "2016-11-08",
+  "status": "not_found",
+  "campaign_url": "",
+  "registrable_domain": "",
+  "lead_sources": [],
+  "wayback_window_captures": 0,
+  "first_capture_in_window": "",
+  "checked_capture_url": "",
+  "page_evidence": "",
+  "other_profiles": [],
+  "note": "Lead: www.mayorsilva.org has many 200 captures in the window (first 20160331084936). I read the 20161015091252 capture. It is the sitting mayor's page (Building a Better Stockton, Strong Mayor Initiative). It has no text about a campaign, election, vote or donation, so condition (b) fails. I did not accept it."
+ },
+ {
+  "candidate_election_id": "0675000__2024-11-05__regular__9e78c284edf752d3",
+  "candidate_name": "Christina Fugazi",
+  "election_date": "2024-11-05",
+  "status": "accepted",
+  "campaign_url": "https://christinafugaziformayor.com/",
+  "registrable_domain": "christinafugaziformayor.com",
+  "lead_sources": [
+   "https://www.ballotready.org/people/christina-fugazi"
+  ],
+  "wayback_window_captures": 8,
+  "first_capture_in_window": "20240304070259",
+  "checked_capture_url": "https://web.archive.org/web/20240921115627/https://christinafugaziformayor.com/",
+  "page_evidence": "Christina Fugazi for Mayor ... I'm running for Mayor to solve Stockton's toughest problems.",
+  "other_profiles": [
+   "https://www.facebook.com/christina.fugazi/",
+   "https://x.com/ChristinaFugazi",
+   "https://www.instagram.com/mayor_fugazi/"
+  ],
+  "note": "CDX listing showed at least 8 HTTP 200 captures of the home page between 2024-03-04 and 2024-09-25, all within the 365 days before the election. The count may be higher because a later listing request failed. I read the 2024-09-21 capture."
+ },
+ {
+  "candidate_election_id": "0675000__2024-11-05__regular__cbfda081589398fe",
+  "candidate_name": "Tom Patti",
+  "election_date": "2024-11-05",
+  "status": "not_found",
+  "campaign_url": "",
+  "registrable_domain": "",
+  "lead_sources": [],
+  "wayback_window_captures": 0,
+  "first_capture_in_window": "",
+  "checked_capture_url": "",
+  "page_evidence": "",
+  "other_profiles": [],
+  "note": "Web search, Ballotpedia and guessed domains (tompatti.com, pattiformayor.com, tompattiformayor.com, patti4mayor.com) found no website with archive captures. Ballotpedia fetch returned no content."
+ }
+]

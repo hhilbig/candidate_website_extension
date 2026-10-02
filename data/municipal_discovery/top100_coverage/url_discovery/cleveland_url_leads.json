@@ -1,0 +1,32 @@
+[
+ {
+  "candidate_election_id": "3916000__2025-11-04__regular__283ee4c4cd80d9b6",
+  "candidate_name": "Justin Bibb",
+  "election_date": "2025-11-04",
+  "status": "not_found",
+  "campaign_url": "",
+  "registrable_domain": "",
+  "lead_sources": [],
+  "wayback_window_captures": 0,
+  "first_capture_in_window": "",
+  "checked_capture_url": "",
+  "page_evidence": "",
+  "other_profiles": [],
+  "note": "No URL confirmed. Web search budget was exhausted and Ballotpedia fetches returned no content. Wayback CDX from the droplet failed (curl exit 7, connection refused, even for example.com), so guessed domains (justinbibb.com, bibbforcleveland.com, lavernegore.com, goreformayor.com, lavernegoreformayor.com, votelaverne.com) returned empty results that are not valid evidence. Rerun when search and Wayback access work."
+ },
+ {
+  "candidate_election_id": "3916000__2025-11-04__regular__1a1deebdc005b59e",
+  "candidate_name": "Laverne Gore",
+  "election_date": "2025-11-04",
+  "status": "not_found",
+  "campaign_url": "",
+  "registrable_domain": "",
+  "lead_sources": [],
+  "wayback_window_captures": 0,
+  "first_capture_in_window": "",
+  "checked_capture_url": "",
+  "page_evidence": "",
+  "other_profiles": [],
+  "note": "No URL confirmed. Web search budget was exhausted and Ballotpedia fetches returned no content. Wayback CDX from the droplet failed (curl exit 7, connection refused, even for example.com), so guessed domains (justinbibb.com, bibbforcleveland.com, lavernegore.com, goreformayor.com, lavernegoreformayor.com, votelaverne.com) returned empty results that are not valid evidence. Rerun when search and Wayback access work."
+ }
+]

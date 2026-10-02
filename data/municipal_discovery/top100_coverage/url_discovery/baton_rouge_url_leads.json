@@ -1,0 +1,62 @@
+[
+ {
+  "candidate_election_id": "2205000__2012-11-06__regular__c9a1abc8055fbd5b",
+  "candidate_name": "Melvin \"Kip\" Holden",
+  "election_date": "2012-11-06",
+  "status": "not_found",
+  "campaign_url": "",
+  "registrable_domain": "",
+  "lead_sources": [],
+  "wayback_window_captures": 0,
+  "first_capture_in_window": "",
+  "checked_capture_url": "",
+  "page_evidence": "",
+  "other_profiles": [],
+  "note": "WebSearch budget was exhausted, so no web search ran. Guessed domains checked in the Wayback CDX (200 captures in window): none found."
+ },
+ {
+  "candidate_election_id": "2205000__2012-11-06__regular__eaa23d638c080226",
+  "candidate_name": "J. Michael \"Mike\" Walker, Sr.",
+  "election_date": "2012-11-06",
+  "status": "not_found",
+  "campaign_url": "",
+  "registrable_domain": "",
+  "lead_sources": [],
+  "wayback_window_captures": 0,
+  "first_capture_in_window": "",
+  "checked_capture_url": "",
+  "page_evidence": "",
+  "other_profiles": [],
+  "note": "WebSearch budget was exhausted, so no web search ran. Guessed domains checked in the Wayback CDX (200 captures in window): none found."
+ },
+ {
+  "candidate_election_id": "2205000__2024-12-07__regular__779385e5642ec510",
+  "candidate_name": "Emile \"Sid\" Edwards",
+  "election_date": "2024-12-07",
+  "status": "not_found",
+  "campaign_url": "",
+  "registrable_domain": "",
+  "lead_sources": [],
+  "wayback_window_captures": 0,
+  "first_capture_in_window": "",
+  "checked_capture_url": "",
+  "page_evidence": "",
+  "other_profiles": [],
+  "note": "WebSearch budget was exhausted, so no web search ran. Guessed domains checked in the Wayback CDX (200 captures in window): none found."
+ },
+ {
+  "candidate_election_id": "2205000__2024-12-07__regular__f450515411500a39",
+  "candidate_name": "Sharon Weston Broome",
+  "election_date": "2024-12-07",
+  "status": "not_found",
+  "campaign_url": "",
+  "registrable_domain": "",
+  "lead_sources": [],
+  "wayback_window_captures": 0,
+  "first_capture_in_window": "",
+  "checked_capture_url": "",
+  "page_evidence": "",
+  "other_profiles": [],
+  "note": "WebSearch budget was exhausted, so no web search ran. Guessed domains checked in the Wayback CDX (200 captures in window): none found. The domain sharonwestonbroome.com returned one 200 capture (20240817114512) in the first CDX query. Later CDX and replay requests returned nothing or connection refused, so the page content was not read and the site is not accepted. Retry needed."
+ }
+]

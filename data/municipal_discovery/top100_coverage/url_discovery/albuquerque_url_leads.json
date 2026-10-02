@@ -1,0 +1,62 @@
+[
+ {
+  "candidate_election_id": "3502000__2013-10-08__regular__328e098fb11d69f9",
+  "candidate_name": "Richard J. Berry",
+  "election_date": "2013-10-08",
+  "status": "not_found",
+  "campaign_url": "",
+  "registrable_domain": "",
+  "lead_sources": [],
+  "wayback_window_captures": 0,
+  "first_capture_in_window": "",
+  "checked_capture_url": "",
+  "page_evidence": "",
+  "other_profiles": [],
+  "note": "No URL confirmed. The web search budget for this session was used up, so no lead was found. On the droplet, web.archive.org refused connections (curl exit 7, port 443) on two tests, so no Wayback check was possible. Domains tried by CDX query (empty results, likely caused by the connection failure and not evidence of absence): richardberry.com, berryformayor.com, richardberryformayor.com. Retry when search budget and Wayback access return."
+ },
+ {
+  "candidate_election_id": "3502000__2013-10-08__regular__2b1455f9876257dd",
+  "candidate_name": "Pete Dinelli",
+  "election_date": "2013-10-08",
+  "status": "not_found",
+  "campaign_url": "",
+  "registrable_domain": "",
+  "lead_sources": [],
+  "wayback_window_captures": 0,
+  "first_capture_in_window": "",
+  "checked_capture_url": "",
+  "page_evidence": "",
+  "other_profiles": [],
+  "note": "No URL confirmed. The web search budget for this session was used up, so no lead was found. On the droplet, web.archive.org refused connections (curl exit 7, port 443) on two tests, so no Wayback check was possible. Domains tried by CDX query (empty results, likely caused by the connection failure and not evidence of absence): none (CDX unreachable before any domain check). Retry when search budget and Wayback access return."
+ },
+ {
+  "candidate_election_id": "3502000__2025-12-09__regular__05682de6559d00d2",
+  "candidate_name": "Timothy M. Keller",
+  "election_date": "2025-12-09",
+  "status": "not_found",
+  "campaign_url": "",
+  "registrable_domain": "",
+  "lead_sources": [],
+  "wayback_window_captures": 0,
+  "first_capture_in_window": "",
+  "checked_capture_url": "",
+  "page_evidence": "",
+  "other_profiles": [],
+  "note": "No URL confirmed. The web search budget for this session was used up, so no lead was found. On the droplet, web.archive.org refused connections (curl exit 7, port 443) on two tests, so no Wayback check was possible. Domains tried by CDX query (empty results, likely caused by the connection failure and not evidence of absence): none. Retry when search budget and Wayback access return."
+ },
+ {
+  "candidate_election_id": "3502000__2025-12-09__regular__464d68f164682931",
+  "candidate_name": "Darren White",
+  "election_date": "2025-12-09",
+  "status": "not_found",
+  "campaign_url": "",
+  "registrable_domain": "",
+  "lead_sources": [],
+  "wayback_window_captures": 0,
+  "first_capture_in_window": "",
+  "checked_capture_url": "",
+  "page_evidence": "",
+  "other_profiles": [],
+  "note": "No URL confirmed. The web search budget for this session was used up, so no lead was found. On the droplet, web.archive.org refused connections (curl exit 7, port 443) on two tests, so no Wayback check was possible. Domains tried by CDX query (empty results, likely caused by the connection failure and not evidence of absence): none. Retry when search budget and Wayback access return."
+ }
+]

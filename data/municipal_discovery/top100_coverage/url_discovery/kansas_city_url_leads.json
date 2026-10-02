@@ -1,0 +1,62 @@
+[
+ {
+  "candidate_election_id": "2938000__2011-03-22__regular__914ceddf670f54cc",
+  "candidate_name": "Sylvester James Jr.",
+  "election_date": "2011-03-22",
+  "status": "not_found",
+  "campaign_url": "",
+  "registrable_domain": "",
+  "lead_sources": [],
+  "wayback_window_captures": 0,
+  "first_capture_in_window": "",
+  "checked_capture_url": "",
+  "page_evidence": "",
+  "other_profiles": [],
+  "note": "Not confirmed. WebSearch budget was exhausted (200 of 200), Ballotpedia fetch returned empty pages, and the droplet could not reach web.archive.org (curl exit 7, connection refused) so no Wayback check was possible. Guessed domains were queried but returned no data because of the connection failure, not because captures are absent. No URL is recorded. Retry when search and Wayback access work."
+ },
+ {
+  "candidate_election_id": "2938000__2015-06-23__regular__3a7b5b999e561180",
+  "candidate_name": "Vincent Lee",
+  "election_date": "2015-06-23",
+  "status": "not_found",
+  "campaign_url": "",
+  "registrable_domain": "",
+  "lead_sources": [],
+  "wayback_window_captures": 0,
+  "first_capture_in_window": "",
+  "checked_capture_url": "",
+  "page_evidence": "",
+  "other_profiles": [],
+  "note": "Not confirmed. WebSearch budget was exhausted (200 of 200), Ballotpedia fetch returned empty pages, and the droplet could not reach web.archive.org (curl exit 7, connection refused) so no Wayback check was possible. Guessed domains were queried but returned no data because of the connection failure, not because captures are absent. No URL is recorded. Retry when search and Wayback access work."
+ },
+ {
+  "candidate_election_id": "2938000__2023-06-20__regular__1a5f2fa6bd07618f",
+  "candidate_name": "Quinton Lucas",
+  "election_date": "2023-06-20",
+  "status": "not_found",
+  "campaign_url": "",
+  "registrable_domain": "",
+  "lead_sources": [],
+  "wayback_window_captures": 0,
+  "first_capture_in_window": "",
+  "checked_capture_url": "",
+  "page_evidence": "",
+  "other_profiles": [],
+  "note": "Not confirmed. WebSearch budget was exhausted (200 of 200), Ballotpedia fetch returned empty pages, and the droplet could not reach web.archive.org (curl exit 7, connection refused) so no Wayback check was possible. Guessed domains were queried but returned no data because of the connection failure, not because captures are absent. No URL is recorded. Retry when search and Wayback access work."
+ },
+ {
+  "candidate_election_id": "2938000__2023-06-20__regular__3852e8386b54c2bf",
+  "candidate_name": "Clay Chastain",
+  "election_date": "2023-06-20",
+  "status": "not_found",
+  "campaign_url": "",
+  "registrable_domain": "",
+  "lead_sources": [],
+  "wayback_window_captures": 0,
+  "first_capture_in_window": "",
+  "checked_capture_url": "",
+  "page_evidence": "",
+  "other_profiles": [],
+  "note": "Not confirmed. WebSearch budget was exhausted (200 of 200), Ballotpedia fetch returned empty pages, and the droplet could not reach web.archive.org (curl exit 7, connection refused) so no Wayback check was possible. Guessed domains were queried but returned no data because of the connection failure, not because captures are absent. No URL is recorded. Retry when search and Wayback access work."
+ }
+]

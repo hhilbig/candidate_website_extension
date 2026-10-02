@@ -1,0 +1,52 @@
+[
+ {
+  "candidate_election_id": "0820000__2015-05-05__regular__60a68252e1814b1e",
+  "candidate_name": "Michael B. Hancock",
+  "election_date": "2015-05-05",
+  "status": "not_found",
+  "campaign_url": "",
+  "registrable_domain": "",
+  "lead_sources": [],
+  "wayback_window_captures": 0,
+  "first_capture_in_window": "",
+  "checked_capture_url": "",
+  "page_evidence": "",
+  "other_profiles": [],
+  "note": "Web searches and Ballotpedia gave no campaign domain. CDX checks of hancockformayor.com, hancock2015.com, hancockfordenver.com, hancock4denver.com, mayorhancock.com, michaelhancock.com and others returned no captures. mikehancock.com has 200 captures in the window, but the replay fetch failed, so I could not confirm that it belongs to the mayor. I did not record it."
+ },
+ {
+  "candidate_election_id": "0820000__2023-06-06__regular__e3279b6cfd77d054",
+  "candidate_name": "Mike Johnston",
+  "election_date": "2023-06-06",
+  "status": "accepted",
+  "campaign_url": "https://mikejohnstonformayor.com/",
+  "registrable_domain": "mikejohnstonformayor.com",
+  "lead_sources": [
+   "https://www.axios.com/local/denver/2023/02/13/mike-johnston-denver-mayor-race-2023",
+   "web search result naming mikejohnstonformayor.com"
+  ],
+  "wayback_window_captures": 1021,
+  "first_capture_in_window": "20221129053740",
+  "checked_capture_url": "https://web.archive.org/web/20230122220832/https://mikejohnstonformayor.com/",
+  "page_evidence": "Mike Johnston for Mayor: I'm running for mayor, because I believe in Denver.",
+  "other_profiles": [],
+  "note": "CDX returned 1021 HTTP 200 captures (all URLs on the domain) between 2022-06-06 and 2023-06-06. I read the 2023-01-22 capture. Its title is 'Mike Johnston for Mayor'."
+ },
+ {
+  "candidate_election_id": "0820000__2023-06-06__regular__a2ffb67f920136d1",
+  "candidate_name": "Kelly Brough",
+  "election_date": "2023-06-06",
+  "status": "outside_window",
+  "campaign_url": "https://kellybroughformayor.com/",
+  "registrable_domain": "kellybroughformayor.com",
+  "lead_sources": [
+   "CDX listing of kellybroughformayor.com (domain guess from the candidate name)"
+  ],
+  "wayback_window_captures": 0,
+  "first_capture_in_window": "",
+  "checked_capture_url": "",
+  "page_evidence": "",
+  "other_profiles": [],
+  "note": "The domain has HTTP 200 captures only at 20211210201334 (before the window) and 20240731135310 (after the election). No capture in 2022-06-06 to 2023-06-06. Replay fetches failed, so I did not read page content and could not confirm the domain was her campaign site. Web search found no stated campaign URL for her. The domain is a name-based guess, so treat it as unconfirmed."
+ }
+]

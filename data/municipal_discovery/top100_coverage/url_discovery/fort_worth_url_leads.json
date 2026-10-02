@@ -1,0 +1,62 @@
+[
+ {
+  "candidate_election_id": "4827000__2023-05-06__regular__a3fba50e7c62a956",
+  "candidate_name": "Mattie Parker",
+  "election_date": "2023-05-06",
+  "status": "not_found",
+  "campaign_url": "",
+  "registrable_domain": "",
+  "lead_sources": [],
+  "wayback_window_captures": 0,
+  "first_capture_in_window": "",
+  "checked_capture_url": "",
+  "page_evidence": "",
+  "other_profiles": [],
+  "note": "Not verified. The session web search budget was exhausted, so no web lead search ran. Ballotpedia fetch returned no content. The droplet could not reach web.archive.org (curl error 7, connection refused on port 443), so no Wayback check was possible. Guessed domains were queried but the empty results are not evidence, because the CDX endpoint was unreachable. No URL is recorded. Retry when Wayback access and web search are available."
+ },
+ {
+  "candidate_election_id": "4827000__2023-05-06__regular__db6efc9529d83c24",
+  "candidate_name": "Jennifer Castillo",
+  "election_date": "2023-05-06",
+  "status": "not_found",
+  "campaign_url": "",
+  "registrable_domain": "",
+  "lead_sources": [],
+  "wayback_window_captures": 0,
+  "first_capture_in_window": "",
+  "checked_capture_url": "",
+  "page_evidence": "",
+  "other_profiles": [],
+  "note": "Not verified. The session web search budget was exhausted, so no web lead search ran. Ballotpedia fetch returned no content. The droplet could not reach web.archive.org (curl error 7, connection refused on port 443), so no Wayback check was possible. Guessed domains were queried but the empty results are not evidence, because the CDX endpoint was unreachable. No URL is recorded. Retry when Wayback access and web search are available."
+ },
+ {
+  "candidate_election_id": "4827000__2025-05-03__regular__a3fba50e7c62a956",
+  "candidate_name": "Mattie Parker",
+  "election_date": "2025-05-03",
+  "status": "not_found",
+  "campaign_url": "",
+  "registrable_domain": "",
+  "lead_sources": [],
+  "wayback_window_captures": 0,
+  "first_capture_in_window": "",
+  "checked_capture_url": "",
+  "page_evidence": "",
+  "other_profiles": [],
+  "note": "Not verified. The session web search budget was exhausted, so no web lead search ran. Ballotpedia fetch returned no content. The droplet could not reach web.archive.org (curl error 7, connection refused on port 443), so no Wayback check was possible. Guessed domains were queried but the empty results are not evidence, because the CDX endpoint was unreachable. No URL is recorded. Retry when Wayback access and web search are available."
+ },
+ {
+  "candidate_election_id": "4827000__2025-05-03__regular__cb6b7e66fd5fb117",
+  "candidate_name": "Josh Lucas",
+  "election_date": "2025-05-03",
+  "status": "not_found",
+  "campaign_url": "",
+  "registrable_domain": "",
+  "lead_sources": [],
+  "wayback_window_captures": 0,
+  "first_capture_in_window": "",
+  "checked_capture_url": "",
+  "page_evidence": "",
+  "other_profiles": [],
+  "note": "Not verified. The session web search budget was exhausted, so no web lead search ran. Ballotpedia fetch returned no content. The droplet could not reach web.archive.org (curl error 7, connection refused on port 443), so no Wayback check was possible. Guessed domains were queried but the empty results are not evidence, because the CDX endpoint was unreachable. No URL is recorded. Retry when Wayback access and web search are available."
+ }
+]

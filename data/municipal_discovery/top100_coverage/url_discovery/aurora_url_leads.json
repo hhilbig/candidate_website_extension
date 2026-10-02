@@ -1,0 +1,52 @@
+[
+ {
+  "candidate_election_id": "0804000__2011-11-01__regular__5ac1afcef55e489d",
+  "candidate_name": "Ryan L. Frazier",
+  "election_date": "2011-11-01",
+  "status": "not_found",
+  "campaign_url": "",
+  "registrable_domain": "",
+  "lead_sources": [],
+  "wayback_window_captures": 0,
+  "first_capture_in_window": "",
+  "checked_capture_url": "",
+  "page_evidence": "",
+  "other_profiles": [],
+  "note": "Web searches and the Wikipedia 2011 election page gave no campaign website. Westword article returned 403. CDX checks for ryanfrazier.com, frazierformayor.com and ryanfrazierformayor.com showed no 200 captures between 2010-11-01 and 2011-11-01. No URL confirmed."
+ },
+ {
+  "candidate_election_id": "0804000__2023-11-07__regular__e9a916260b06869a",
+  "candidate_name": "Mike Coffman",
+  "election_date": "2023-11-07",
+  "status": "accepted",
+  "campaign_url": "https://www.mayormikecoffman.com/",
+  "registrable_domain": "mayormikecoffman.com",
+  "lead_sources": [
+   "https://www.coloradopolitics.com/2023/10/07/meet-auroras-2023-candidates-for-mayor-city-council-denver-voters-guide-ff95a7ce-0fae-5f7e-85ff-bbb292ae3bf4"
+  ],
+  "wayback_window_captures": 3,
+  "first_capture_in_window": "20230723005336",
+  "checked_capture_url": "https://web.archive.org/web/20231025001655/https://www.mayormikecoffman.com/",
+  "page_evidence": "Page title: \"Vote Mike Coffman | Mayor of Aurora\"",
+  "other_profiles": [],
+  "note": "Search results gave the site as mayormikecoffman.com. The CDX query for the 365 days to 2023-11-07 returned 3 HTTP 200 homepage captures (20230723005336, 20230723005434, 20231025001655) plus asset and feed captures. I read the 20231025001655 capture; its title names Coffman and the mayor race. The capture on 20230723005336 did not load when I fetched it. Wayback API was unstable and some requests failed first."
+ },
+ {
+  "candidate_election_id": "0804000__2023-11-07__regular__ff37e1acccbc7531",
+  "candidate_name": "Juan Marcano",
+  "election_date": "2023-11-07",
+  "status": "accepted",
+  "campaign_url": "https://marcanoforaurora.com/",
+  "registrable_domain": "marcanoforaurora.com",
+  "lead_sources": [
+   "https://www.denvergazette.com/?p=78739",
+   "https://directory.runforsomething.net/candidate/3668/marcano-juan/"
+  ],
+  "wayback_window_captures": 20,
+  "first_capture_in_window": "20221108205712",
+  "checked_capture_url": "https://web.archive.org/web/20231010173707/https://marcanoforaurora.com/",
+  "page_evidence": "Page title: \"Juan Marcano for Aurora - Juan Marcano represents Ward IV on Aurora City Council and is running for Mayor of Aurora.\"",
+  "other_profiles": [],
+  "note": "The site also existed in 2019 to 2020 for his council race. The count of 20 covers HTTP 200 captures of HTML pages in the window (home, about, contact, news, endorsements, plan, one other page), excluding assets; the CDX list was capped at 100 rows. Earliest in-window 200 capture is an Elijah McClain page at 20221108205712; earliest homepage capture is 20221108210455."
+ }
+]

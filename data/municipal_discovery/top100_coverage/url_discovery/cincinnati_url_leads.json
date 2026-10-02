@@ -1,0 +1,32 @@
+[
+ {
+  "candidate_election_id": "3915000__2025-11-04__regular__10f74c01d5e1da1d",
+  "candidate_name": "Aftab Pureval",
+  "election_date": "2025-11-04",
+  "status": "not_found",
+  "campaign_url": "",
+  "registrable_domain": "",
+  "lead_sources": [],
+  "wayback_window_captures": 0,
+  "first_capture_in_window": "",
+  "checked_capture_url": "",
+  "page_evidence": "",
+  "other_profiles": [],
+  "note": "Web search budget was exhausted, so no lead sources were read. The Wayback replay endpoint refused connections (curl exit 7) from the droplet after the CDX checks, so no archived page could be read. CDX showed 200 captures of pureval.com in the window (first 20241117002558; pages /blog and /jobs). I could not read any page, so I cannot tell if it is a campaign site or a personal site. Not accepted. purevalformayor.com and aftabpureval.com had no captures. Needs a manual check of pureval.com."
+ },
+ {
+  "candidate_election_id": "3915000__2025-11-04__regular__7f404e3bba3b2595",
+  "candidate_name": "Cory Bowman",
+  "election_date": "2025-11-04",
+  "status": "not_found",
+  "campaign_url": "",
+  "registrable_domain": "",
+  "lead_sources": [],
+  "wayback_window_captures": 0,
+  "first_capture_in_window": "",
+  "checked_capture_url": "",
+  "page_evidence": "",
+  "other_profiles": [],
+  "note": "Web search budget was exhausted, so no lead sources were read. The Wayback replay endpoint refused connections (curl exit 7) from the droplet after the CDX checks, so no archived page could be read. CDX showed 200 captures of corybowman.com from 20250222031421 and of bowmanformayor.com from 20241227011735 (a WordPress maintenance page, theme assets named for Sandy Bowman, so likely a different person). I could not read page content, so neither is accepted. Later CDX retries returned nothing. Needs a manual check of corybowman.com."
+ }
+]

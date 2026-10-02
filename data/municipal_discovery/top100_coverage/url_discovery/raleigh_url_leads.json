@@ -1,0 +1,81 @@
+[
+ {
+  "candidate_election_id": "3755000__2015-10-06__regular__ba32bf22c920b347",
+  "candidate_name": "Nancy McFarlane",
+  "election_date": "2015-10-06",
+  "status": "accepted",
+  "campaign_url": "http://nancymcfarlane.com/",
+  "registrable_domain": "nancymcfarlane.com",
+  "lead_sources": [
+   "Domain guess <name>.com, confirmed by Wayback only"
+  ],
+  "wayback_window_captures": 396,
+  "first_capture_in_window": "20141020023226",
+  "checked_capture_url": "https://web.archive.org/web/20141020023226/http://nancymcfarlane.com/",
+  "page_evidence": "Mayor Nancy McFarlane - Keeping Raleigh Moving Forward; menu: Meet Me, Volunteer, Contribute; section \"Campaign News Updates\"",
+  "other_profiles": [],
+  "note": "Web search budget was exhausted, so the domain was a guess checked in Wayback. Count is all URL-level 200 captures 2014-10-07 to 2015-10-06 (CDX, includes assets). Page reads as a campaign site (volunteer, contribute) from the incumbent mayor. Doubt: the page does not state the 2015 date; the site may be the older 2013 campaign site reused."
+ },
+ {
+  "candidate_election_id": "3755000__2022-11-08__regular__78b6be8dcf58e796",
+  "candidate_name": "Mary-Ann Baldwin",
+  "election_date": "2022-11-08",
+  "status": "not_found",
+  "campaign_url": "",
+  "registrable_domain": "",
+  "lead_sources": [],
+  "wayback_window_captures": 0,
+  "first_capture_in_window": "",
+  "checked_capture_url": "",
+  "page_evidence": "",
+  "other_profiles": [],
+  "note": "Web search and Ballotpedia were not reachable (search budget exhausted; Ballotpedia returned empty). Wayback CDX found no 200 captures in the window for maryannbaldwin.com/.org, baldwinforraleigh.com, baldwinformayor.com, maryannformayor.com, mabforraleigh.com, electmaryannbaldwin.com. Not confirmed."
+ },
+ {
+  "candidate_election_id": "3755000__2022-11-08__regular__cc0dcfd82f6ad9bc",
+  "candidate_name": "Terrance (Truth) Ruth",
+  "election_date": "2022-11-08",
+  "status": "not_found",
+  "campaign_url": "",
+  "registrable_domain": "terranceruth.com",
+  "lead_sources": [],
+  "wayback_window_captures": 15,
+  "first_capture_in_window": "20211115162532",
+  "checked_capture_url": "https://web.archive.org/web/20221011030050/https://terranceruth.com/",
+  "page_evidence": "",
+  "other_profiles": [],
+  "note": "Search unavailable. terranceruth.com has 200 captures in window (first 20211115162532) but the archived home page (20221011030050, 20211115162532) has no mention of mayor, campaign or election, so condition (b) fails; it is a personal commentary site. truthruth.com is a parked page. ruthforraleigh.com had no captures. Not accepted."
+ },
+ {
+  "candidate_election_id": "3755000__2024-11-05__regular__637e594e1045af72",
+  "candidate_name": "Janet Cowell",
+  "election_date": "2024-11-05",
+  "status": "not_found",
+  "campaign_url": "",
+  "registrable_domain": "cowellformayor.com",
+  "lead_sources": [],
+  "wayback_window_captures": 0,
+  "first_capture_in_window": "",
+  "checked_capture_url": "https://web.archive.org/web/20240807115108/https://www.cowellformayor.com/",
+  "page_evidence": "",
+  "other_profiles": [],
+  "note": "Search unavailable. cowellformayor.com has only a parking redirect to /lander in window (20240807115108) with no candidate content; 404 on 2023-12-22. janetcowell.com, cowellforraleigh.com, janetcowellformayor.com, cowell4raleigh.com, janetforraleigh.com, electjanetcowell.com had no 200 captures in window. Not confirmed."
+ },
+ {
+  "candidate_election_id": "3755000__2024-11-05__regular__d919d4ac61045497",
+  "candidate_name": "Paul Fitts",
+  "election_date": "2024-11-05",
+  "status": "accepted",
+  "campaign_url": "https://paulfitts.com/",
+  "registrable_domain": "paulfitts.com",
+  "lead_sources": [
+   "Domain guess, confirmed by Wayback only"
+  ],
+  "wayback_window_captures": 160,
+  "first_capture_in_window": "20240126213550",
+  "checked_capture_url": "https://web.archive.org/web/20240430032831/https://paulfitts.com/",
+  "page_evidence": "Paul Fitts - Write in Candidate for Mayor of Raleigh ... social media posts about writing in my name (Paul Fitts) as Mayor for Raleigh",
+  "other_profiles": [],
+  "note": "Count is URL-level 200 captures 2023-11-06 to 2024-11-05 (CDX, includes assets). Captures run from 2024-01 to at least 2024-04. fittsforraleigh.com also has in-window 200 captures (first 20240123142436) but its content was not readable, so it is not recorded."
+ }
+]

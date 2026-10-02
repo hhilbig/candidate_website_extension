@@ -204,5 +204,6 @@
     "data/municipal_discovery/top100_coverage/inputs/wichita_calendar.json",
     "data/municipal_discovery/top100_coverage/inputs/winston_salem_calendar.json"
   ],
-  "identity_links": "data/municipal_discovery/top100_coverage/linkage/identity_links.csv"
+  "identity_links": "data/municipal_discovery/top100_coverage/linkage/identity_links.csv",
+  "discovered_url_leads": "data/municipal_discovery/top100_coverage/linkage/discovered_url_leads.csv"
 }

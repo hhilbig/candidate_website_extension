@@ -1,0 +1,47 @@
+[
+ {
+  "candidate_election_id": "4055000__2014-03-04__regular__6ab4c7dfb81d2c83",
+  "candidate_name": "Ed Shadid",
+  "election_date": "2014-03-04",
+  "status": "not_found",
+  "campaign_url": "",
+  "registrable_domain": "",
+  "lead_sources": [],
+  "wayback_window_captures": 0,
+  "first_capture_in_window": "",
+  "checked_capture_url": "",
+  "page_evidence": "",
+  "other_profiles": [],
+  "note": "No URL confirmed. The web search budget was exhausted before any search ran, and Ballotpedia fetches returned empty pages. The droplet could not reach web.archive.org (curl exit 7, HTTP 000, twice), so no Wayback check was possible. Guessed domains were not accepted. The CDX queries for the guessed domains returned no output, but that output is not evidence because the service was unreachable. Retry when search and Wayback access work."
+ },
+ {
+  "candidate_election_id": "4055000__2022-02-08__regular__afb06641f95cde08",
+  "candidate_name": "David Holt",
+  "election_date": "2022-02-08",
+  "status": "not_found",
+  "campaign_url": "",
+  "registrable_domain": "",
+  "lead_sources": [],
+  "wayback_window_captures": 0,
+  "first_capture_in_window": "",
+  "checked_capture_url": "",
+  "page_evidence": "",
+  "other_profiles": [],
+  "note": "No URL confirmed. The web search budget was exhausted before any search ran, and Ballotpedia fetches returned empty pages. The droplet could not reach web.archive.org (curl exit 7, HTTP 000, twice), so no Wayback check was possible. Guessed domains were not accepted. The CDX queries for the guessed domains returned no output, but that output is not evidence because the service was unreachable. Retry when search and Wayback access work."
+ },
+ {
+  "candidate_election_id": "4055000__2022-02-08__regular__ffc122b0051b680c",
+  "candidate_name": "Frank Urbanic",
+  "election_date": "2022-02-08",
+  "status": "not_found",
+  "campaign_url": "",
+  "registrable_domain": "",
+  "lead_sources": [],
+  "wayback_window_captures": 0,
+  "first_capture_in_window": "",
+  "checked_capture_url": "",
+  "page_evidence": "",
+  "other_profiles": [],
+  "note": "No URL confirmed. The web search budget was exhausted before any search ran, and Ballotpedia fetches returned empty pages. The droplet could not reach web.archive.org (curl exit 7, HTTP 000, twice), so no Wayback check was possible. Guessed domains were not accepted. The CDX queries for the guessed domains returned no output, but that output is not evidence because the service was unreachable. Retry when search and Wayback access work."
+ }
+]

@@ -1,0 +1,81 @@
+[
+ {
+  "candidate_election_id": "0465000__2012-08-28__regular__b81680a9d5458dd2",
+  "candidate_name": "Jim Lane",
+  "election_date": "2012-08-28",
+  "status": "not_found",
+  "campaign_url": "",
+  "registrable_domain": "",
+  "lead_sources": [],
+  "wayback_window_captures": 0,
+  "first_capture_in_window": "",
+  "checked_capture_url": "",
+  "page_evidence": "",
+  "other_profiles": [],
+  "note": "Web searches, Wikipedia and Ballotpedia gave no campaign site. The domain laneformayor.com only shows robots.txt captures in the 2012 window and the first page capture is 2013-09-30. That page is a generic Intuit Homestead placeholder that does not name Lane. I could not tie the domain to Lane, so I did not accept it."
+ },
+ {
+  "candidate_election_id": "0465000__2012-08-28__regular__e40d6542c938b405",
+  "candidate_name": "John Washington",
+  "election_date": "2012-08-28",
+  "status": "not_found",
+  "campaign_url": "",
+  "registrable_domain": "",
+  "lead_sources": [],
+  "wayback_window_captures": 0,
+  "first_capture_in_window": "",
+  "checked_capture_url": "",
+  "page_evidence": "",
+  "other_profiles": [],
+  "note": "Web searches gave no campaign site. Guessed domains jimlane/washington4mayor type names had no captures or could not be checked because the CDX service refused connections. Washington runs scottsdalecitizen.com and scottsdaletrails.com; scottsdalecitizen.com had no 200 capture in the window. No URL confirmed."
+ },
+ {
+  "candidate_election_id": "0465000__2016-11-08__regular__b81680a9d5458dd2",
+  "candidate_name": "Jim Lane",
+  "election_date": "2016-11-08",
+  "status": "not_found",
+  "campaign_url": "",
+  "registrable_domain": "",
+  "lead_sources": [],
+  "wayback_window_captures": 0,
+  "first_capture_in_window": "",
+  "checked_capture_url": "",
+  "page_evidence": "",
+  "other_profiles": [],
+  "note": "No campaign site found by web search. laneformayor.com had no 200 capture from 2015-11 to 2016-11. Guessed domains jimlaneformayor.com, lane4mayor.com, mayorjimlane.com and jimlane4mayor.com returned no capture or could not be checked because CDX refused connections. No URL confirmed. The Jim Lane election-day label is 2016-11-08 as given in the input."
+ },
+ {
+  "candidate_election_id": "0465000__2024-11-05__regular__7d83aa4321435cce",
+  "candidate_name": "Lisa Borowsky",
+  "election_date": "2024-11-05",
+  "status": "accepted",
+  "campaign_url": "https://lisaformayor.com/",
+  "registrable_domain": "lisaformayor.com",
+  "lead_sources": [
+   "https://en.wikipedia.org/wiki/2024_Scottsdale_mayoral_election"
+  ],
+  "wayback_window_captures": 50,
+  "first_capture_in_window": "20240516211740",
+  "checked_capture_url": "https://web.archive.org/web/20240516211740/https://lisaformayor.com/",
+  "page_evidence": "Page title: 'Candidate for Mayor of Scottsdale 2024, Lisa Borowsky'; text: 'Lisa Borowsky announces 2024 Campaign for Mayor of Scottsdale.'",
+  "other_profiles": [],
+  "note": "Host query was capped at 50 rows (all URLs, status 200), so the count is a lower bound. Captures run from 2024-05-16 to 2024-10-31. Replay sometimes returned a bot-check page; the 2024-05-16 capture loaded."
+ },
+ {
+  "candidate_election_id": "0465000__2024-11-05__regular__5d1eadb04334a2b2",
+  "candidate_name": "David Ortega",
+  "election_date": "2024-11-05",
+  "status": "accepted",
+  "campaign_url": "https://www.electdaveortegamayor.com/",
+  "registrable_domain": "electdaveortegamayor.com",
+  "lead_sources": [
+   "https://en.wikipedia.org/wiki/2024_Scottsdale_mayoral_election"
+  ],
+  "wayback_window_captures": 107,
+  "first_capture_in_window": "20240417223943",
+  "checked_capture_url": "https://web.archive.org/web/20240417223943/https://www.electdaveortegamayor.com/",
+  "page_evidence": "Page title: 'Dave Ortega for Mayor of Scottsdale'",
+  "other_profiles": [],
+  "note": "Count is all status 200 captures of the host www.electdaveortegamayor.com from 2023-11-05 to 2024-11-05. The candidate is listed as David Ortega; the site uses Dave."
+ }
+]

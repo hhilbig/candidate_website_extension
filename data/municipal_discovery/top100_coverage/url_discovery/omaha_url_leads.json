@@ -1,0 +1,32 @@
+[
+ {
+  "candidate_election_id": "3137000__2025-05-13__regular__5d20b01b0d43a02b",
+  "candidate_name": "John W. Ewing, Jr.",
+  "election_date": "2025-05-13",
+  "status": "not_found",
+  "campaign_url": "",
+  "registrable_domain": "",
+  "lead_sources": [],
+  "wayback_window_captures": 0,
+  "first_capture_in_window": "",
+  "checked_capture_url": "",
+  "page_evidence": "",
+  "other_profiles": [],
+  "note": "Web search was unavailable (budget exhausted) and Ballotpedia fetches returned nothing. Guessed domains checked on droplet CDX (200 captures, 2024-05-13 to 2025-05-13): ewingforomaha.com, johnewingjr.com, ewing4omaha.com, johnewing.com, ewingformayor.com, ewingomaha.com, johnewing2025.com had none. johnewingformayor.com had two CDX 200 captures on 2025-03-22 (20250322023917, 20250322025231), but the replayed page body showed only a bare HTML doctype with no text naming Ewing or the mayoral race, so acceptance test (b) is not met. Not accepted; the domain is a lead for a later manual check. Wayback later refused connections."
+ },
+ {
+  "candidate_election_id": "3137000__2025-05-13__regular__8088567775aef50b",
+  "candidate_name": "Jean Stothert",
+  "election_date": "2025-05-13",
+  "status": "not_found",
+  "campaign_url": "",
+  "registrable_domain": "",
+  "lead_sources": [],
+  "wayback_window_captures": 0,
+  "first_capture_in_window": "",
+  "checked_capture_url": "",
+  "page_evidence": "",
+  "other_profiles": [],
+  "note": "Web search was unavailable (budget exhausted). Guessed domains with no 200 CDX captures in window: jeanstothert.com, stothertformayor.com, jeanforomaha.com, stothert.com, jeanstothertformayor.com, stothert4omaha.com, jeanstothert2025.com. No URL confirmed."
+ }
+]

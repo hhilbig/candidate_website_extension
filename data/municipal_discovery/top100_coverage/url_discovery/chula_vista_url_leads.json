@@ -1,0 +1,81 @@
+[
+ {
+  "candidate_election_id": "0613392__2014-11-04__regular__eb297b46f93f6ca6",
+  "candidate_name": "Mary Salas",
+  "election_date": "2014-11-04",
+  "status": "not_found",
+  "campaign_url": "",
+  "registrable_domain": "",
+  "lead_sources": [],
+  "wayback_window_captures": 0,
+  "first_capture_in_window": "",
+  "checked_capture_url": "",
+  "page_evidence": "",
+  "other_profiles": [],
+  "note": "Web searches and Ballotpedia gave no website. Guessed domains (marysalas.com/.org/.net, salas4mayor.com, salasformayor.com/.org, marysalasformayor.com/.org, maryformayor.com, mary4mayor.com, electmary.com, electmarysalas.com, marysalas4mayor.com, marysalasmayor.com, salasformayor2014.com, maryforchulavista.com) had no 200 capture in the window. No URL confirmed."
+ },
+ {
+  "candidate_election_id": "0613392__2014-11-04__regular__5b760c83792f447b",
+  "candidate_name": "Jerry R. Rindone",
+  "election_date": "2014-11-04",
+  "status": "accepted",
+  "campaign_url": "http://jerryrindone.com/",
+  "registrable_domain": "jerryrindone.com",
+  "lead_sources": [
+   "https://sandiegoreader.com/news/2014/aug/24/stringer-lincoln-clubs-pimp-hand-chula-vista (search result said he had a campaign site; no URL given)"
+  ],
+  "wayback_window_captures": 629,
+  "first_capture_in_window": "20140103203151",
+  "checked_capture_url": "https://web.archive.org/web/20141027221244/http://jerryrindone.com:80/",
+  "page_evidence": "Donate to Jerry's Campaign for Mayor of Chula Vista; Jerry Rindone's Candidate ID #1361773",
+  "other_profiles": [],
+  "note": "Domain found by guessing from the candidate name; the page itself confirms the candidate and the mayoral race. CDX count is all 200 captures of the host from 2013-11-04 to 2014-11-04 (query limit 1000)."
+ },
+ {
+  "candidate_election_id": "0613392__2018-11-06__regular__f04a7f75abdf5ee2",
+  "candidate_name": "Mary Casillas Salas",
+  "election_date": "2018-11-06",
+  "status": "not_found",
+  "campaign_url": "",
+  "registrable_domain": "",
+  "lead_sources": [],
+  "wayback_window_captures": 0,
+  "first_capture_in_window": "",
+  "checked_capture_url": "",
+  "page_evidence": "",
+  "other_profiles": [],
+  "note": "Web searches gave no 2018 website. The 2014 Salas domain guesses all failed. No 2018-specific domains were tested. No URL confirmed."
+ },
+ {
+  "candidate_election_id": "0613392__2022-11-08__regular__ab51a7229cf3add0",
+  "candidate_name": "John McCann",
+  "election_date": "2022-11-08",
+  "status": "accepted",
+  "campaign_url": "https://www.johnmccann.com/",
+  "registrable_domain": "johnmccann.com",
+  "lead_sources": [
+   "https://www.efundraisingconnections.com/c/McCannforMayor2022 (donate link found on the archived page)"
+  ],
+  "wayback_window_captures": 136,
+  "first_capture_in_window": "20220320135913",
+  "checked_capture_url": "https://web.archive.org/web/20220521024737/https://www.johnmccann.com/",
+  "page_evidence": "Councilmember John McCann Mayor! Making Public Safety a Priority! Endorsed by the Chula Vista Police Officers Association; donate link McCannforMayor2022",
+  "other_profiles": [],
+  "note": "Domain found by guessing. The archived page names the Chula Vista councilmember running for mayor. johnmccannformayor.com had only a parked-domain capture, not accepted."
+ },
+ {
+  "candidate_election_id": "0613392__2022-11-08__regular__e0ec4dcbab9e450a",
+  "candidate_name": "Ammar Campa-Najjar",
+  "election_date": "2022-11-08",
+  "status": "not_found",
+  "campaign_url": "",
+  "registrable_domain": "",
+  "lead_sources": [],
+  "wayback_window_captures": 0,
+  "first_capture_in_window": "",
+  "checked_capture_url": "",
+  "page_evidence": "",
+  "other_profiles": [],
+  "note": "Searches returned no URL. ammarformayor.com has one 2021-11-25 capture that is a parked-domain page, not a campaign site. Other guessed domains (ammar4mayor.com, campanajjar.com/.org, ammarcv.com, ammarforcv.com/.org, ammar4cv.com, ammarformayor.org/2022.com, ammarcampa.com, ammarforchulavista.com/.org, ammarcn.com, ammarcampanajjar.com, ammarforsd.com) had no 200 capture in the window. No URL confirmed."
+ }
+]

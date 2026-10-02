@@ -1,0 +1,54 @@
+[
+ {
+  "candidate_election_id": "4159000__2012-11-06__regular__7a6fab02f713722b",
+  "candidate_name": "Jefferson Smith",
+  "election_date": "2012-11-06",
+  "status": "accepted",
+  "campaign_url": "http://www.jeffersonsmith.com/",
+  "registrable_domain": "jeffersonsmith.com",
+  "lead_sources": [
+   "https://en.wikipedia.org/wiki/Jefferson_Smith_(politician)",
+   "https://en.wikipedia.org/wiki/2012_Portland,_Oregon,_mayoral_election"
+  ],
+  "wayback_window_captures": 399,
+  "first_capture_in_window": "20111124090640",
+  "checked_capture_url": "https://web.archive.org/web/20120624230825/http://jeffersonsmith.com:80/",
+  "page_evidence": "Jefferson Smith for Mayor | Portland is Jefferson's hometown. He attended Beaumont, Grant, and University of Oregon and returned to Portland after graduating from Harvard Law School.",
+  "other_profiles": [],
+  "note": "The Wikipedia pages list the site. The CDX query (host match, 2011-11-06 to 2012-11-06, status 200) returned 399 captures. The 2012-06-24 capture reads as the mayoral campaign site."
+ },
+ {
+  "candidate_election_id": "4159000__2024-11-05__regular__a17c5748800b811d",
+  "candidate_name": "Keith Wilson",
+  "election_date": "2024-11-05",
+  "status": "accepted",
+  "campaign_url": "https://www.keithwilsonformayor.com/",
+  "registrable_domain": "keithwilsonformayor.com",
+  "lead_sources": [
+   "Domain guess checked against the Wayback CDX (web search was unavailable); no outside page listed this URL."
+  ],
+  "wayback_window_captures": 183,
+  "first_capture_in_window": "20240214101314",
+  "checked_capture_url": "https://web.archive.org/web/20240221081421/https://www.keithwilsonformayor.com/",
+  "page_evidence": "Keith Wilson for Mayor. 'I, Keith Wilson, am a candidate for Mayor because our beloved city of Portland is crying out for change.'",
+  "other_profiles": [],
+  "note": "The URL was found by probing likely domains, not from a listing. The archived page names Keith Wilson, a mayoral candidacy and Portland, so it fits the candidate. No official page confirms the URL. keithwilson.org is a consulting site and was rejected. wilsonformayor.com returned no readable text."
+ },
+ {
+  "candidate_election_id": "4159000__2024-11-05__regular__31d23a0e358524c4",
+  "candidate_name": "Carmen Rubio",
+  "election_date": "2024-11-05",
+  "status": "accepted",
+  "campaign_url": "https://www.carmenforportland.com/",
+  "registrable_domain": "carmenforportland.com",
+  "lead_sources": [
+   "Domain guess checked against the Wayback CDX (web search was unavailable); no outside page listed this URL."
+  ],
+  "wayback_window_captures": 756,
+  "first_capture_in_window": "20231108071759",
+  "checked_capture_url": "https://web.archive.org/web/20241028021357/https://www.carmenforportland.com/about/",
+  "page_evidence": "Meet Carmen | Carmen Rubio for Mayor of Portland",
+  "other_profiles": [],
+  "note": "The first capture, 2023-11-08, shows 'Website not available'. The 2024-10-28 about page shows the campaign site, with endorsements and donate pages. carmenrubio.com is a photographer site and was rejected. carmenformayor.com only redirects to a lander page."
+ }
+]

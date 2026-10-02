@@ -1,0 +1,64 @@
+[
+ {
+  "candidate_election_id": "1245000__2013-11-05__regular__4335943bcc5650ed",
+  "candidate_name": "Tomas P. Regalado",
+  "election_date": "2013-11-05",
+  "status": "not_found",
+  "campaign_url": "",
+  "registrable_domain": "",
+  "lead_sources": [],
+  "wayback_window_captures": 0,
+  "first_capture_in_window": "",
+  "checked_capture_url": "",
+  "page_evidence": "",
+  "other_profiles": [],
+  "note": "Searched web and the 2013 official candidate list. The website field was blank; only Facebook and X accounts found. Wayback check could not run: the droplet got 'connection refused' from web.archive.org port 443 on repeated tries (archive.org itself answered). No URL was verified, so none is accepted."
+ },
+ {
+  "candidate_election_id": "1245000__2017-11-07__regular__3d8370ca83186c12",
+  "candidate_name": "Cynthia Jaquith",
+  "election_date": "2017-11-07",
+  "status": "not_found",
+  "campaign_url": "",
+  "registrable_domain": "",
+  "lead_sources": [],
+  "wayback_window_captures": 0,
+  "first_capture_in_window": "",
+  "checked_capture_url": "",
+  "page_evidence": "",
+  "other_profiles": [],
+  "note": "Searched web, Wikipedia and Ballotpedia style sources. No campaign site found. Wayback check could not run: the droplet got 'connection refused' from web.archive.org port 443 on repeated tries (archive.org itself answered). No URL was verified, so none is accepted."
+ },
+ {
+  "candidate_election_id": "1245000__2025-12-09__regular__9887b33867f487fc",
+  "candidate_name": "Eileen Higgins",
+  "election_date": "2025-12-09",
+  "status": "not_found",
+  "campaign_url": "",
+  "registrable_domain": "",
+  "lead_sources": [],
+  "wayback_window_captures": 0,
+  "first_capture_in_window": "",
+  "checked_capture_url": "",
+  "page_evidence": "",
+  "other_profiles": [],
+  "note": "Searched web. No campaign domain was named in search results; guessed domains eileenhiggins.com, eileenformiami.com and higginsformiami.com returned empty CDX output while Wayback refused connections, so they are unverified. Wayback check could not run: the droplet got 'connection refused' from web.archive.org port 443 on repeated tries (archive.org itself answered). No URL was verified, so none is accepted."
+ },
+ {
+  "candidate_election_id": "1245000__2025-12-09__regular__fb03fe53a23e07f2",
+  "candidate_name": "Emilio T. Gonzalez",
+  "election_date": "2025-12-09",
+  "status": "not_found",
+  "campaign_url": "",
+  "registrable_domain": "",
+  "lead_sources": [
+   "https://en.wikipedia.org/wiki/Emilio_T._Gonzalez"
+  ],
+  "wayback_window_captures": 0,
+  "first_capture_in_window": "",
+  "checked_capture_url": "",
+  "page_evidence": "",
+  "other_profiles": [],
+  "note": "Wikipedia (via search) lists emilioformiami.com as the campaign site, a lead only. CDX query returned empty output while Wayback refused connections. Wayback check could not run: the droplet got 'connection refused' from web.archive.org port 443 on repeated tries (archive.org itself answered). No URL was verified, so none is accepted. Recheck emilioformiami.com when Wayback is reachable."
+ }
+]

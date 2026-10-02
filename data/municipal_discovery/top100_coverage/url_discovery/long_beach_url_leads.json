@@ -1,0 +1,87 @@
+[
+ {
+  "candidate_election_id": "0643000__2010-04-13__regular__af0047104d81e1eb",
+  "candidate_name": "Stevie Danielle Merino",
+  "election_date": "2010-04-13",
+  "status": "not_found",
+  "campaign_url": "",
+  "registrable_domain": "",
+  "lead_sources": [],
+  "wayback_window_captures": 0,
+  "first_capture_in_window": "",
+  "checked_capture_url": "",
+  "page_evidence": "",
+  "other_profiles": [],
+  "note": "No campaign website named in Long Beach Post, Wikipedia, or the Liberation News and Independent Political Report coverage that could be read. Guessed domains steviemerino.com, stevieformayor.com, merinoformayor.com, merinomayor.com, votemerino.com, merino2010.com and steviemerino.org had no captures from 2009-04-13 to 2010-04-13 (merino4mayor.com query failed after retries). No URL recorded."
+ },
+ {
+  "candidate_election_id": "0643000__2022-11-08__regular__1e3759202c358045",
+  "candidate_name": "Rex Richardson",
+  "election_date": "2022-11-08",
+  "status": "accepted",
+  "campaign_url": "https://www.joinrexrichardson.com/",
+  "registrable_domain": "joinrexrichardson.com",
+  "lead_sources": [
+   "https://www.longbeach.gov/globalassets/city-clerk/media-library/documents/elections/2022/list-of-candidates-run-off"
+  ],
+  "wayback_window_captures": 310,
+  "first_capture_in_window": "20211209061519",
+  "checked_capture_url": "https://web.archive.org/web/20220813173337/https://www.joinrexrichardson.com/",
+  "page_evidence": "\"I'm ready to bring this same spirit of unity and collaboration as our next Mayor.\" Page titled Rex Richardson; includes Donate, GOTV, Voting Information.",
+  "other_profiles": [],
+  "note": "City Clerk 2022 candidate list gives joinrexrichardson.com for Rex Richardson for Mayor 2022. 310 HTTP 200 captures from 2021-11-08 to 2022-11-08 (limit 1000, so count is complete). rexrichardson.com is an unrelated Tennessee real estate site and was rejected."
+ },
+ {
+  "candidate_election_id": "0643000__2022-11-08__regular__fd66a31fd0498592",
+  "candidate_name": "Suzie Price",
+  "election_date": "2022-11-08",
+  "status": "accepted",
+  "campaign_url": "https://suzieprice4mayor.com/",
+  "registrable_domain": "suzieprice4mayor.com",
+  "lead_sources": [
+   "https://www.longbeach.gov/globalassets/city-clerk/media-library/documents/elections/2022/list-of-candidates-run-off"
+  ],
+  "wayback_window_captures": 413,
+  "first_capture_in_window": "20220111171829",
+  "checked_capture_url": "https://web.archive.org/web/20220628192236/https://suzieprice4mayor.com/",
+  "page_evidence": "\"Home - Councilwoman Suzie Price for Mayor\"; \"Meet Suzie Price: Councilwoman Suzie Price represents Long Beach's 3rd Council District.\"",
+  "other_profiles": [
+   "https://www.facebook.com/SuziePriceforMayor2022/"
+  ],
+  "note": "City Clerk 2022 candidate list gives suzieprice4mayor.com. 413 HTTP 200 captures from 2021-11-08 to 2022-11-08 (limit 1000, complete)."
+ },
+ {
+  "candidate_election_id": "0643000__2026-06-02__regular__1e3759202c358045",
+  "candidate_name": "Rex Richardson",
+  "election_date": "2026-06-02",
+  "status": "accepted",
+  "campaign_url": "https://www.joinrexrichardson.com/",
+  "registrable_domain": "joinrexrichardson.com",
+  "lead_sources": [
+   "https://www.longbeach.gov/globalassets/city-clerk/media-library/documents/elections/2026/pne-060226-official-candidates-for-website"
+  ],
+  "wayback_window_captures": 264,
+  "first_capture_in_window": "20250619113638",
+  "checked_capture_url": "https://web.archive.org/web/20260307212734/https://www.joinrexrichardson.com/",
+  "page_evidence": "\"Long Beach Mayor Rex Richardson | Delivering Results ... Re-Elect Mayor Rex Richardson ... Support Mayor Rex Richardson! Donate today.\"",
+  "other_profiles": [],
+  "note": "2026 city candidate list gives www.joinrexrichardson.com for Rex Richardson for Mayor 2026. 264 HTTP 200 captures from 2025-06-02 to 2026-06-02 (limit 1000, complete)."
+ },
+ {
+  "candidate_election_id": "0643000__2026-06-02__regular__99b8c891de70daee",
+  "candidate_name": "Joshua Rodriguez",
+  "election_date": "2026-06-02",
+  "status": "accepted",
+  "campaign_url": "https://www.josh4lbcmayor.com/",
+  "registrable_domain": "josh4lbcmayor.com",
+  "lead_sources": [
+   "https://www.longbeach.gov/globalassets/city-clerk/media-library/documents/elections/2026/pne-060226-official-candidates-for-website"
+  ],
+  "wayback_window_captures": 218,
+  "first_capture_in_window": "20250616154740",
+  "checked_capture_url": "https://web.archive.org/web/20250616154740/https://www.josh4lbcmayor.com/",
+  "page_evidence": "\"Candidates | Joshua for Long Beach City Mayor\"; \"Meet Joshua, candidate for Long Beach City Mayor! He's not a politician, he's your neighbor. Paid for Rodriguez for Long Beach City Mayor 2025\"",
+  "other_profiles": [],
+  "note": "The city list gives only the email josh4lbcmayor@gmail.com and no website. The domain josh4lbcmayor.com was derived from that email handle and then confirmed by archived page text naming the Rodriguez mayoral committee. 218 HTTP 200 captures from 2025-06-02 to 2026-06-02 (limit 1000). Wix site; the page names the candidate as Joshua and the committee as Rodriguez."
+ }
+]

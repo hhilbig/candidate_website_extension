@@ -1,0 +1,32 @@
+[
+ {
+  "candidate_election_id": "1263000__2013-11-05__regular__d79e7c9564ff8c43",
+  "candidate_name": "Rick Kriseman",
+  "election_date": "2013-11-05",
+  "status": "not_found",
+  "campaign_url": "",
+  "registrable_domain": "",
+  "lead_sources": [],
+  "wayback_window_captures": 0,
+  "first_capture_in_window": "",
+  "checked_capture_url": "",
+  "page_evidence": "",
+  "other_profiles": [],
+  "note": "No URL confirmed. Web search was unavailable (session search budget used). Wayback CDX from the droplet failed with connection refused on port 443 (HTTP 000), so no capture could be read. Candidate domains rickkriseman.com, kriseman.com, rickforstpete.com, krisemanformayor.com and rickkriseman.org returned no data. No URL is recorded because none was checked. Retry when Wayback and search are available."
+ },
+ {
+  "candidate_election_id": "1263000__2017-11-07__regular__d79e7c9564ff8c43",
+  "candidate_name": "Rick Kriseman",
+  "election_date": "2017-11-07",
+  "status": "not_found",
+  "campaign_url": "",
+  "registrable_domain": "",
+  "lead_sources": [],
+  "wayback_window_captures": 0,
+  "first_capture_in_window": "",
+  "checked_capture_url": "",
+  "page_evidence": "",
+  "other_profiles": [],
+  "note": "No URL confirmed. Web search was unavailable (session search budget used). Wayback CDX from the droplet failed with connection refused on port 443 (HTTP 000), so no capture could be read. Candidate domains rickkriseman.com, kriseman.com, rickforstpete.com, krisemanformayor.com and rickkriseman.org returned no data. No URL is recorded because none was checked. Retry when Wayback and search are available."
+ }
+]

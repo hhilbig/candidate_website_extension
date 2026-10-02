@@ -1,0 +1,32 @@
+[
+ {
+  "candidate_election_id": "4819000__2015-05-09__regular__e6f70aac9b6b1b70",
+  "candidate_name": "Mike Rawlings",
+  "election_date": "2015-05-09",
+  "status": "not_found",
+  "campaign_url": "",
+  "registrable_domain": "",
+  "lead_sources": [],
+  "wayback_window_captures": 0,
+  "first_capture_in_window": "",
+  "checked_capture_url": "",
+  "page_evidence": "",
+  "other_profiles": [],
+  "note": "Web search budget was exhausted, so no web search ran. Only guessed domains were checked on Wayback CDX. Tried: mikerawlings.com (only 301 redirect captures in the window; target not readable, no 200 capture), www.mikerawlings.com, mikerawlings.org, www.mikerawlings.org, rawlingsformayor.com, mikerawlingsformayor.com (no 200 captures 2014-05-09 to 2015-05-09). No URL was accepted."
+ },
+ {
+  "candidate_election_id": "4819000__2015-05-09__regular__9204d5c86e57ca0c",
+  "candidate_name": "Marcos Ronquillo",
+  "election_date": "2015-05-09",
+  "status": "not_found",
+  "campaign_url": "",
+  "registrable_domain": "",
+  "lead_sources": [],
+  "wayback_window_captures": 0,
+  "first_capture_in_window": "",
+  "checked_capture_url": "",
+  "page_evidence": "",
+  "other_profiles": [],
+  "note": "Web search budget was exhausted, so no web search ran. Only guessed domains were checked on Wayback CDX. Tried: ronquilloformayor.com, marcosronquillo.com, ronquillo4dallas.com, marcosformayor.com (no captures in window). No URL was accepted."
+ }
+]

@@ -1,0 +1,62 @@
+[
+ {
+  "candidate_election_id": "4748000__2015-10-08__regular__213972b3cd915d0a",
+  "candidate_name": "A C Wharton",
+  "election_date": "2015-10-08",
+  "status": "not_found",
+  "campaign_url": "",
+  "registrable_domain": "",
+  "lead_sources": [],
+  "wayback_window_captures": 0,
+  "first_capture_in_window": "",
+  "checked_capture_url": "",
+  "page_evidence": "",
+  "other_profiles": [],
+  "note": "No URL confirmed. The web search budget was exhausted, and WebFetch of Ballotpedia returned no content. I probed guessed domains (name-based formayor/4mayor/elect variants) through the Wayback CDX API on the droplet, but the droplet could not reach web.archive.org (HTTP 000, including a control query for example.com). The empty results therefore carry no information. No URL was recorded. Retry when search budget and Wayback access are available."
+ },
+ {
+  "candidate_election_id": "4748000__2019-10-03__regular__e6c9f2ac42ea34dc",
+  "candidate_name": "Willie Herenton",
+  "election_date": "2019-10-03",
+  "status": "not_found",
+  "campaign_url": "",
+  "registrable_domain": "",
+  "lead_sources": [],
+  "wayback_window_captures": 0,
+  "first_capture_in_window": "",
+  "checked_capture_url": "",
+  "page_evidence": "",
+  "other_profiles": [],
+  "note": "No URL confirmed. The web search budget was exhausted, and WebFetch of Ballotpedia returned no content. I probed guessed domains (name-based formayor/4mayor/elect variants) through the Wayback CDX API on the droplet, but the droplet could not reach web.archive.org (HTTP 000, including a control query for example.com). The empty results therefore carry no information. No URL was recorded. Retry when search budget and Wayback access are available."
+ },
+ {
+  "candidate_election_id": "4748000__2023-10-05__regular__15c085d6a8fbe7c4",
+  "candidate_name": "Paul A. Young",
+  "election_date": "2023-10-05",
+  "status": "not_found",
+  "campaign_url": "",
+  "registrable_domain": "",
+  "lead_sources": [],
+  "wayback_window_captures": 0,
+  "first_capture_in_window": "",
+  "checked_capture_url": "",
+  "page_evidence": "",
+  "other_profiles": [],
+  "note": "No URL confirmed. The web search budget was exhausted, and WebFetch of Ballotpedia returned no content. I probed guessed domains (name-based formayor/4mayor/elect variants) through the Wayback CDX API on the droplet, but the droplet could not reach web.archive.org (HTTP 000, including a control query for example.com). The empty results therefore carry no information. No URL was recorded. Retry when search budget and Wayback access are available."
+ },
+ {
+  "candidate_election_id": "4748000__2023-10-05__regular__609e60bc3447b001",
+  "candidate_name": "Floyd Bonner",
+  "election_date": "2023-10-05",
+  "status": "not_found",
+  "campaign_url": "",
+  "registrable_domain": "",
+  "lead_sources": [],
+  "wayback_window_captures": 0,
+  "first_capture_in_window": "",
+  "checked_capture_url": "",
+  "page_evidence": "",
+  "other_profiles": [],
+  "note": "No URL confirmed. The web search budget was exhausted, and WebFetch of Ballotpedia returned no content. I probed guessed domains (name-based formayor/4mayor/elect variants) through the Wayback CDX API on the droplet, but the droplet could not reach web.archive.org (HTTP 000, including a control query for example.com). The empty results therefore carry no information. No URL was recorded. Retry when search budget and Wayback access are available."
+ }
+]

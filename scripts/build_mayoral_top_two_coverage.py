@@ -181,7 +181,7 @@ def recorded_period_metadata(urls, election_date, saved, reviews, validations):
     return None
 
 
-def build(cities, roster, urls, results, reviews=(), validations=(), city_year_overrides=(), saved_evidence=(), identity_links=()):
+def build(cities, roster, urls, results, reviews=(), validations=(), city_year_overrides=(), saved_evidence=(), identity_links=(), discovered_leads=()):
     unique(cities, "city_id", "city")
     unique(roster, "candidate_year_id", "legacy candidate-year")
     unique(urls, "candidate_url_id", "URL")
@@ -210,6 +210,14 @@ def build(cities, roster, urls, results, reviews=(), validations=(), city_year_o
         if key in reviewed_links:
             raise ValueError("Duplicate reviewed identity link")
         reviewed_links[key] = link
+    # Checked URL discovery (scripts/build_mayoral_url_leads.py). It applies only to
+    # finalists without a legacy URL lead and keeps its own basis label.
+    discovered = {}
+    for lead in discovered_leads:
+        if lead["candidate_election_id"] in discovered:
+            raise ValueError("Duplicate discovered URL lead")
+        discovered[lead["candidate_election_id"]] = lead
+    used_discovered = set()
     by_candidate = defaultdict(list)
     for row in urls:
         by_candidate[row["candidate_year_id"]].append(row)
@@ -295,6 +303,25 @@ def build(cities, roster, urls, results, reviews=(), validations=(), city_year_o
             links = [r for r in links if r.get("month") and int(float(r["month"])) == day.month]
             archive, downloaded, content, refs = evidence_for(links, election_date, review_index, validation_index, saved_index)
             candidate_id = election_id + "__" + hashlib.sha256(name_key(candidate["name"]).encode()).hexdigest()[:16]
+            lead = discovered.get(candidate_id)
+            url_lead_basis = "legacy_url_inventory" if links else ""
+            discovered_url = ""
+            if lead:
+                used_discovered.add(candidate_id)
+                if links:
+                    raise ValueError("Discovered URL lead for a finalist that already has a legacy URL lead")
+                # An outside-window entry without a URL is an unconfirmed domain, not a lead.
+                if lead["final_status"] == "accepted" and not lead["campaign_url"]:
+                    raise ValueError("Accepted discovered URL lead lacks its URL")
+                if lead["final_status"] in {"accepted", "outside_window"} and lead["campaign_url"]:
+                    discovered_url = lead["campaign_url"]
+                    url_lead_basis = lead["link_basis"]
+                if lead["final_status"] == "accepted":
+                    stamp = lead["checked_capture_timestamp"]
+                    if not (period_match(stamp, election_date) and stamp[:8] <= election_date.replace("-", "")):
+                        raise ValueError("Accepted discovered URL lacks a capture before the election")
+                    archive = True
+                    refs = sorted(set(refs) | {"url_discovery:" + stamp})
             candidates.append({"candidate_election_id": candidate_id, "election_id": election_id,
                 "city_id": city["city_id"], "city_name": city["city_name"], "state_abb": city["state_abb"],
                 "year": day.year, "election_date": election_date, "election_type": kind,
@@ -302,7 +329,8 @@ def build(cities, roster, urls, results, reviews=(), validations=(), city_year_o
                 "official_votes": candidate.get("votes", ""), "result_source_url": record.get("source_url", ""),
                 "candidate_year_id": legacy_id, "identity_link_basis": link_basis,
                 "eligible": status == "verified_decisive", "verification_status": status,
-                "url_lead": bool(links), "archive_discovery": archive, "downloaded_content": downloaded,
+                "url_lead": bool(links) or bool(discovered_url), "url_lead_basis": url_lead_basis,
+                "discovered_campaign_url": discovered_url, "archive_discovery": archive, "downloaded_content": downloaded,
                 "recorded_period_capture_before_attribution": recorded_period_metadata(links, election_date, saved_index, review_index, validation_index),
                 "substantive_campaign_content_review": content, "candidate_url_ids": [r["candidate_url_id"] for r in links],
                 "exact_urls": sorted({r["exact_normalized_url"] for r in links}), "evidence_refs": refs,
@@ -310,6 +338,8 @@ def build(cities, roster, urls, results, reviews=(), validations=(), city_year_o
                 "legacy_download_flag": any(truth(r.get("downloaded_content_available", "")) is True for r in links)})
         election["legacy_contest_ids"] = sorted(set(election["legacy_contest_ids"]))
         elections.append(election)
+    if set(discovered) - used_discovered:
+        raise ValueError("Discovered URL lead does not match a candidate-election")
     unique(elections, "election_id", "election")
     unique(candidates, "candidate_election_id", "candidate-election")
     # Keep every old contest not positively reconciled. Stage labels alone do not verify results.
@@ -497,10 +527,14 @@ def main():
     identity_links = read_csv(ROOT / links_path) if links_path else []
     if links_path:
         inputs.append(Path(links_path))
+    leads_path = config.get("discovered_url_leads")
+    discovered_leads = read_csv(ROOT / leads_path) if leads_path else []
+    if leads_path:
+        inputs.append(Path(leads_path))
     hashes = {str(p): sha(ROOT / p) for p in inputs}
     result = build(read_csv(ROOT / args.cities), read_csv(ROOT / ROSTER), read_csv(ROOT / URLS), records,
                    read_csv(ROOT / REVIEWS), read_csv(ROOT / VALIDATION), overrides, read_csv(ROOT / args.saved_evidence),
-                   identity_links=identity_links)
+                   identity_links=identity_links, discovered_leads=discovered_leads)
     cities, city_years, elections, candidates, summary, outside = result
     if len(cities) != 100:
         raise ValueError("Production build requires exactly 100 cities")

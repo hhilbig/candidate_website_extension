@@ -1980,3 +1980,19 @@ roster by reviewed name variants (`scripts/build_mayoral_identity_links.py`, out
   then add a build input for new URL leads with its own basis label, as was done for identity links; rebuild,
   run `tests/test_build_mayoral_top_two_coverage.py`, commit.
 - Stage 3 (archive capture download for verified URLs) needs a separate bounded approval.
+
+**Mayoral website step, stage 2 done (October 2).** Workflow run `wf_24ab82ba-607` (96 discover plus 96 check
+Sonnet agents, 13.6 million subagent tokens, 5.1 hours; Wayback slow and intermittently refused from the droplet).
+The disk filled near the end and six check results were lost; they were rerun alone (`wf_a1de3ac7-8b3`). Checkers
+proposed 11 sites the search missed; a third agent verified 7 of them (`wf_d981f774-f22`). Result for the 473
+finalists: 155 accepted (in-window capture read), 12 outside_window, 306 not_found. Checker decisions: 1 accepted
+URL downgraded (Reno 2018, stale 2014 page); no accepted URL rejected.
+Files: `url_discovery/<slug>_url_leads.json`, `checker_verdicts.json`, `checker_proposed_urls.json`,
+`checker_proposal_verdicts.json`; combined by `scripts/build_mayoral_url_leads.py` into
+`linkage/discovered_url_leads.csv`, registered in `config/mayoral_top_two_build.json` as `discovered_url_leads`.
+New candidate columns `url_lead_basis`, `discovered_campaign_url`. Build: URL leads 349 to 514 of 822 (63 percent),
+archive discovery 23 to 178 (22 percent). Finalists in 2022 to 2026 have URL leads at 42 percent, earlier ones at
+70 percent. 58 tests pass. Workflow script change: the call passes only city fields; agents read finalists
+from `stage2_args.json`. Known limit: capture counts include asset files and some hit query limits.
+Next: stage 3 (download in-window captures for the 155 accepted URLs plus legacy leads without archive evidence)
+needs Hanno's approval of a byte budget; run it on the droplet volume or mac2, not this Mac (11 GB free or less).

@@ -1,0 +1,62 @@
+[
+ {
+  "candidate_election_id": "3231900__2017-04-04__regular__0d93a44a9c8ceaf1",
+  "candidate_name": "Debra March",
+  "election_date": "2017-04-04",
+  "status": "outside_window",
+  "campaign_url": "",
+  "registrable_domain": "marchformayor.com",
+  "lead_sources": [],
+  "wayback_window_captures": 0,
+  "first_capture_in_window": "",
+  "checked_capture_url": "",
+  "page_evidence": "",
+  "other_profiles": [],
+  "note": "Domain marchformayor.com has 200 captures only on 2016-03-06 (before the 2016-04-04 window start) and after the election; one in-window capture does not exist. The 2016 capture could not be fetched, so the owner is unknown. Not accepted. Also tried debramarch.com, debramarchformayor.com, electdebramarch.com: no captures."
+ },
+ {
+  "candidate_election_id": "3231900__2017-04-04__regular__f5ae6b4ddc4dc44b",
+  "candidate_name": "Rick Workman",
+  "election_date": "2017-04-04",
+  "status": "not_found",
+  "campaign_url": "",
+  "registrable_domain": "",
+  "lead_sources": [],
+  "wayback_window_captures": 0,
+  "first_capture_in_window": "",
+  "checked_capture_url": "",
+  "page_evidence": "",
+  "other_profiles": [],
+  "note": "rickworkman.com has 200 captures on 2016-01-09, 2016-01-26 and after the election (2017-09-11 is a GoDaddy parked page); none in the 2016-04-04 to 2017-04-04 window. electrickworkman.com first capture 2018-08. workmanformayor.com has no captures. No confirmed campaign site."
+ },
+ {
+  "candidate_election_id": "3231900__2022-06-14__regular__7f35d412816c026b",
+  "candidate_name": "Michelle Romero",
+  "election_date": "2022-06-14",
+  "status": "not_found",
+  "campaign_url": "",
+  "registrable_domain": "",
+  "lead_sources": [],
+  "wayback_window_captures": 0,
+  "first_capture_in_window": "",
+  "checked_capture_url": "",
+  "page_evidence": "",
+  "other_profiles": [],
+  "note": "Web search budget was exhausted. Tried guessed domains on the Wayback CDX (michelleromero.com, romeroformayor.com, michelleromeroformayor.com, ficadenti.com, frankficadenti.com, ficadentiformayor.com): no captures. No confirmed site."
+ },
+ {
+  "candidate_election_id": "3231900__2022-06-14__regular__726b2dbdfb16f4f9",
+  "candidate_name": "Frank Ficadenti",
+  "election_date": "2022-06-14",
+  "status": "not_found",
+  "campaign_url": "",
+  "registrable_domain": "",
+  "lead_sources": [],
+  "wayback_window_captures": 0,
+  "first_capture_in_window": "",
+  "checked_capture_url": "",
+  "page_evidence": "",
+  "other_profiles": [],
+  "note": "Web search budget was exhausted. Tried guessed domains on the Wayback CDX (michelleromero.com, romeroformayor.com, michelleromeroformayor.com, ficadenti.com, frankficadenti.com, ficadentiformayor.com): no captures. No confirmed site."
+ }
+]

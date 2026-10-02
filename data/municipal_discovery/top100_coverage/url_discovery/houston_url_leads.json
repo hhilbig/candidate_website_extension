@@ -1,0 +1,32 @@
+[
+ {
+  "candidate_election_id": "4835000__2023-12-09__regular__44b3f221b0c66635",
+  "candidate_name": "John Whitmire",
+  "election_date": "2023-12-09",
+  "status": "not_found",
+  "campaign_url": "",
+  "registrable_domain": "",
+  "lead_sources": [],
+  "wayback_window_captures": 0,
+  "first_capture_in_window": "",
+  "checked_capture_url": "",
+  "page_evidence": "",
+  "other_profiles": [],
+  "note": "Web search budget was exhausted, so no lead sources were found. Candidate domains johnwhitmire.com, whitmireformayor.com, johnwhitmireformayor.com, whitmire.com, whitmire4houston.com and johnwhitmire.org were checked in the CDX index. None has a 200 capture from 2022-12-09 to 2023-12-09. whitmireformayor.com has only a 301 capture in 2023-05 and a 200 capture in 2024-04. I did not confirm that any of these domains belongs to the candidate."
+ },
+ {
+  "candidate_election_id": "4835000__2023-12-09__regular__85280bbba80296c9",
+  "candidate_name": "Sheila Jackson Lee",
+  "election_date": "2023-12-09",
+  "status": "not_found",
+  "campaign_url": "",
+  "registrable_domain": "",
+  "lead_sources": [],
+  "wayback_window_captures": 0,
+  "first_capture_in_window": "",
+  "checked_capture_url": "",
+  "page_evidence": "",
+  "other_profiles": [],
+  "note": "Web search budget was exhausted, so no lead sources were found. sheilaformayor.com has one 200 capture on 2022-04-23, before the window, and only 301 or empty captures from 2023-01 to 2023-04. The next 200 capture is 2024-05-02. I could not read the page content, so I did not confirm ownership and did not accept the URL. sheilajacksonlee.com has no 200 capture in the window. It is probably her congressional site."
+ }
+]

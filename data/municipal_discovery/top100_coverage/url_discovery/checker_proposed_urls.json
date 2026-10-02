@@ -1,0 +1,101 @@
+[
+ {
+  "slug": "charlotte",
+  "candidate_election_id": "3712000__2013-11-05__regular__9bc8613275a9ace1",
+  "candidate_name": "Edwin B. Peacock III",
+  "election_date": "2013-11-05",
+  "status": "not_found",
+  "checker_issue": "Peacock is marked not_found, but edwinpeacock.com is his in-window mayoral campaign site and should be accepted.",
+  "checker_evidence": "Droplet CDX (edwinpeacock.com, 2012-11-05 to 2013-11-05, HTTP 200) lists 20130810014920, 20130825033158, 20130914233711, 20131011201808. I read web/20130914233711 or the first listed capture of http://www.edwinpeacock.com/ with id_ replay. Its title is 'Edwin Peacock for Mayor \u2014 Charlotte's Next Mayor'. The page says 'the Edwin Peacock campaign for Mayor announced that it has raised $126,874.17'. The writer's replay refusals were transient."
+ },
+ {
+  "slug": "colorado_springs",
+  "candidate_election_id": "0816000__2019-04-02__regular__1cf908d910f04e7e",
+  "candidate_name": "John Suthers",
+  "election_date": "2019-04-02",
+  "status": "not_found",
+  "checker_issue": "The not_found status is wrong for John Suthers. A campaign site, suthersformayor.com, has in-window 200 captures and should be accepted.",
+  "checker_evidence": "Droplet CDX query for suthersformayor.com, 2018-04-02 to 2019-04-02, returned 66 HTTP 200 captures, the first at 20180412001703 (http://www.suthersformayor.com/). The archived page at web.archive.org/web/20180412001703id_/http://www.suthersformayor.com/ has the title 'John Suthers For Mayor | I am running for Mayor of Colorado Springs' and the text 'Email John suthersformayor@comcast.net'. The writer's note says no 200 capture existed for suthersformayor.com in this window, which is false."
+ },
+ {
+  "slug": "corpus_christi",
+  "candidate_election_id": "4817000__2016-11-08__regular__ba74ddbb78822deb",
+  "candidate_name": "Nelda Martinez",
+  "election_date": "2016-11-08",
+  "status": "not_found",
+  "checker_issue": "The not_found status for Nelda Martinez 2016 is wrong. neldamartinez.com is her campaign site, with in-window 200 captures.",
+  "checker_evidence": "The CDX query for neldamartinez.com (2015-11-08 to 2016-11-08, status 200) returned captures 20160110225558, 20160504003607, 20160526212546 and 20160610081155 of http://neldamartinez.com/. The 20160610081155 page has the title 'Nelda Martinez for Mayor' and the banner '#nelda4mayor'. The writer's note says only guessed domains were tried. The obvious pattern firstlast.com was not tried."
+ },
+ {
+  "slug": "corpus_christi",
+  "candidate_election_id": "4817000__2017-05-06__special__ba74ddbb78822deb",
+  "candidate_name": "Nelda Martinez",
+  "election_date": "2017-05-06",
+  "status": "not_found",
+  "checker_issue": "Nelda Martinez 2017 special is marked not_found, but neldamartinez.com has in-window captures. This is probably accepted, or at least outside_window or needs review.",
+  "checker_evidence": "The window 2016-05-06 to 2017-05-06 contains 200 captures 20160526212546 and 20160610081155. The 20160610081155 page reads 'Nelda Martinez for Mayor'. That is her 2016 campaign content. A capture closer to the 2017 special election should be checked before acceptance. The CDX query for 2016-09 to 2016-11 returned only robots.txt and feed/ranges, and a 20161005143021 robots.txt capture with no status."
+ },
+ {
+  "slug": "gilbert",
+  "candidate_election_id": "0427400__2012-08-28__regular__c00ac5dd981e9560",
+  "candidate_name": "Steve Berman",
+  "election_date": "2012-08-28",
+  "status": "not_found",
+  "checker_issue": "Not_found entry for Steve Berman is wrong. mayorberman.com has in-window HTTP 200 captures and looks like his own mayoral campaign site. The writer said the domain had 2008 captures only. The entry should be accepted, with the capture read.",
+  "checker_evidence": "CDX for mayorberman.com, 2011-08-28 to 2012-08-28, returned captures 20111005231310, 20120115033311 and 20120219085846. The 20120115033311 capture is titled 'Gilbert Mayor Steve Berman - Mayor Berman'. It has 'Want to Help', 'Donation limits', 'Request Yard Sign' and 'John McCain asks you to vote for'. steveberman.com also has in-window captures (20110828113532 and others), which were not read."
+ },
+ {
+  "slug": "houston",
+  "candidate_election_id": "4835000__2023-12-09__regular__44b3f221b0c66635",
+  "candidate_name": "John Whitmire",
+  "election_date": "2023-12-09",
+  "status": "not_found",
+  "checker_issue": "False not_found for John Whitmire. www.johnwhitmire.com is his campaign site and has in-window 200 captures. Status should be accepted with campaign_url https://www.johnwhitmire.com/. The writer checked johnwhitmire.com with matchType=host, which missed the www host.",
+  "checker_evidence": "CDX query url=johnwhitmire.com matchType=domain, 2022-12-09 to 2023-12-09, statuscode 200, returns captures of https://www.johnwhitmire.com/ at 20221217170750, 20230112005217, 20230120174030, 20230206171331, 20230307150906 and more. The 20230307150906 capture (id_ replay) reads 'now John is running for Houston Mayor'. The note's claim that johnwhitmire.com has no 200 capture in the window is wrong. whitmireformayor.com returned no captures in my check, which differs from the writer's 301 claim, but that does not affect the finding."
+ },
+ {
+  "slug": "indianapolis_city_balance",
+  "candidate_election_id": "1836003__2015-11-03__regular__5d0053483a9fff09",
+  "candidate_name": "Joe Hogsett",
+  "election_date": "2015-11-03",
+  "status": "not_found",
+  "checker_issue": "Entry is not_found, but a Hogsett campaign site exists with many in-window captures. Writer's note says joehogsett.com had zero captures.",
+  "checker_evidence": "CDX host query joehogsett.com, 20141103-20151103, status 200, returned captures 20150124101819 through 20150801054755 (8 shown, limit 8). The 20150227183911 capture of http://www.joehogsett.com:80/ has title 'Joe Hogsett for Indianapolis'."
+ },
+ {
+  "slug": "indianapolis_city_balance",
+  "candidate_election_id": "1836003__2019-11-05__regular__5d0053483a9fff09",
+  "candidate_name": "Joe Hogsett",
+  "election_date": "2019-11-05",
+  "status": "not_found",
+  "checker_issue": "Entry is not_found, but hogsettforindy.com (listed as checked with zero captures) has an in-window 200 capture. This is a probable campaign site that needs confirmation.",
+  "checker_evidence": "CDX hogsettforindy.com, 20181105-20191105, status 200: 20190714174435 http://hogsettforindy.com/. Domain also has 2018-08-06, 2018-08-24 and 2021-12-07 captures. I did not read the page content. The 2023 window has no capture of this host."
+ },
+ {
+  "slug": "indianapolis_city_balance",
+  "candidate_election_id": "1836003__2019-11-05__regular__265d0897e1a2bd70",
+  "candidate_name": "James W. (Jim) Merritt Jr.",
+  "election_date": "2019-11-05",
+  "status": "not_found",
+  "checker_issue": "Entry is not_found, but jimmerritt.com has in-window 200 captures. The domain needs to be read to confirm it is Merritt's 2019 mayoral site.",
+  "checker_evidence": "CDX jimmerritt.com, 20181105-20191105, status 200: 20181226203922, 20190109175608, 20190523131321 (root page). The note claimed zero captures for this domain. I did not read the page content."
+ },
+ {
+  "slug": "lincoln",
+  "candidate_election_id": "3128000__2011-05-03__regular__eea76e01d9806765",
+  "candidate_name": "Chris Beutler",
+  "election_date": "2011-05-03",
+  "status": "not_found",
+  "checker_issue": "Entry says not_found and that chrisbeutler.com has no in-window 200 capture. The CDX query shows in-window 200 captures, so this is a missed lead. The status should change after a content check (likely accepted).",
+  "checker_evidence": "CDX for chrisbeutler.com, 20100503-20110503, statuscode 200: 20100726054705 http://www.chrisbeutler.com:80/, 20110203004050 http://chrisbeutler.com/, 20100729164541 .../about-chris-beutler, 20100729115543 .../beulter-blog, 20100726060029 .../calendar. Replay returned empty or timed out in 4 attempts, so I did not confirm that the page names Beutler for mayor. The note lists chrisbeutler.com as returning no capture, which contradicts this."
+ },
+ {
+  "slug": "memphis",
+  "candidate_election_id": "4748000__2023-10-05__regular__609e60bc3447b001",
+  "candidate_name": "Floyd Bonner",
+  "election_date": "2023-10-05",
+  "status": "not_found",
+  "checker_issue": "Entry is not_found, but Floyd Bonner has a campaign site, electfloydbonner.com, that is likely acceptable. Status should change to accepted after the writer re-verifies it.",
+  "checker_evidence": "Droplet CDX query for electfloydbonner.com (2022-10-05 to 2023-10-05, status 200) returned captures 20221206231150 and 20221206231207 of https://electfloydbonner.com/, plus a feed capture. The page title of capture 20221206231150 is 'Elect Floyd Bonner- Mayor of Memphis'. The domain matches the obvious pattern elect<name>.com."
+ }
+]

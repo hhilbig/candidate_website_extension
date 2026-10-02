@@ -1,0 +1,42 @@
+[
+ {
+  "candidate_election_id": "0667000__2024-11-05__regular__22dc43ed04defc67",
+  "candidate_name": "Daniel Lurie",
+  "election_date": "2024-11-05",
+  "status": "accepted",
+  "campaign_url": "https://www.daniellurie.com/",
+  "registrable_domain": "daniellurie.com",
+  "lead_sources": [
+   "https://daniellurie.com/media/press/page/3/",
+   "https://daniellurie.com/"
+  ],
+  "wayback_window_captures": 400,
+  "first_capture_in_window": "20231212151230",
+  "checked_capture_url": "https://web.archive.org/web/20231212151230/https://www.daniellurie.com/",
+  "page_evidence": "Daniel Lurie for Mayor | Daniel Lurie | San Francisco, CA ... A lifelong and proud Democrat, Daniel's story is firmly rooted in San Francisco",
+  "other_profiles": [
+   "https://www.facebook.com/danielluriesf/",
+   "https://x.com/daniellurie"
+  ],
+  "note": "CDX query hit the limit of 400 captures with status 200 in 2023-11-05 to 2024-11-05, so the count is a lower bound. The lurieforsf.org site is a transition site, not used. Domains danielluriesf.com and lurieformayor.com have no captures."
+ },
+ {
+  "candidate_election_id": "0667000__2024-11-05__regular__c7fe109f2bcec8bb",
+  "candidate_name": "London Breed",
+  "election_date": "2024-11-05",
+  "status": "accepted",
+  "campaign_url": "https://londonformayor.com/",
+  "registrable_domain": "londonformayor.com",
+  "lead_sources": [
+   "https://www.sfchronicle.com/news/article/Cybersquatter-beats-Breed-to-obvious-name-12618008.php"
+  ],
+  "wayback_window_captures": 301,
+  "first_capture_in_window": "20231128235908",
+  "checked_capture_url": "https://web.archive.org/web/20240213154841/https://londonformayor.com/",
+  "page_evidence": "London Breed ... DONATE ... Paid for by Re-Elect Mayor London Breed 2024. FPPC#1441599.",
+  "other_profiles": [
+   "https://www.facebook.com/teamlondonbreed"
+  ],
+  "note": "Count is from a CDX query with limit 400; 301 rows returned, so it is complete for the window. The archived page names the candidate and the 2024 re-election committee. The domain londonbreed.com is held by a third party, and it has no captures."
+ }
+]

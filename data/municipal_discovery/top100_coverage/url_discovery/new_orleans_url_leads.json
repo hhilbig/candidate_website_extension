@@ -1,0 +1,153 @@
+[
+ {
+  "candidate_election_id": "2255000__2010-02-06__regular__aed6064e67b6923a",
+  "candidate_name": "Mitchell \"Mitch\" Landrieu",
+  "election_date": "2010-02-06",
+  "status": "accepted",
+  "campaign_url": "http://mitchformayor.com/",
+  "registrable_domain": "mitchformayor.com",
+  "lead_sources": [
+   "Guess of domain pattern, confirmed in Wayback CDX (no web search available)"
+  ],
+  "wayback_window_captures": 8,
+  "first_capture_in_window": "20091213082942",
+  "checked_capture_url": "https://web.archive.org/web/20100103060717/http://mitchformayor.com:80/",
+  "page_evidence": "Mitch Landrieu for New Orleans Mayor ... Paid for By Mitch for Mayor Campaign Fund (c) 2009",
+  "other_profiles": [],
+  "note": "Domain found by pattern guess and confirmed by in-window capture. Count is all HTTP 200 captures on the host in the 365 days to 2010-02-06; some are duplicate timestamps."
+ },
+ {
+  "candidate_election_id": "2255000__2010-02-06__regular__a6be218b7c39095a",
+  "candidate_name": "Troy Henry",
+  "election_date": "2010-02-06",
+  "status": "accepted",
+  "campaign_url": "http://www.troyhenry.com/",
+  "registrable_domain": "troyhenry.com",
+  "lead_sources": [
+   "Domain pattern guess, confirmed in Wayback CDX"
+  ],
+  "wayback_window_captures": 131,
+  "first_capture_in_window": "20091026064858",
+  "checked_capture_url": "https://web.archive.org/web/20091213124818/http://www.troyhenry.com:80/",
+  "page_evidence": "Troy Henry for Mayor ... Mayoral candidate Troy Henry says he is looking forward to officially qualifying to run for mayor",
+  "other_profiles": [],
+  "note": "Count is all 200 captures on the host in the window, all URLs."
+ },
+ {
+  "candidate_election_id": "2255000__2014-02-01__regular__e1d120d389a41cda",
+  "candidate_name": "Mitch Landrieu",
+  "election_date": "2014-02-01",
+  "status": "accepted",
+  "campaign_url": "http://www.mitchlandrieu.com/",
+  "registrable_domain": "mitchlandrieu.com",
+  "lead_sources": [
+   "Domain pattern guess, confirmed in Wayback CDX"
+  ],
+  "wayback_window_captures": 19,
+  "first_capture_in_window": "20130619084724",
+  "checked_capture_url": "https://web.archive.org/web/20131208023334/http://www.mitchlandrieu.com/",
+  "page_evidence": "Mitch Landrieu - New Orleans Mayor ... Paid for By Re-Elect Mitch Landrieu, Inc. (c) 2013",
+  "other_profiles": [],
+  "note": "Page shows an incumbent site with a re-election committee. Count covers all URLs on the host."
+ },
+ {
+  "candidate_election_id": "2255000__2014-02-01__regular__a61e0f96982cc4c2",
+  "candidate_name": "Michael Bagneris",
+  "election_date": "2014-02-01",
+  "status": "outside_window",
+  "campaign_url": "http://bagnerisformayor.com/",
+  "registrable_domain": "bagnerisformayor.com",
+  "lead_sources": [
+   "Domain pattern guess; archived page confirms it is his site"
+  ],
+  "wayback_window_captures": 0,
+  "first_capture_in_window": "",
+  "checked_capture_url": "https://web.archive.org/web/20140209194017/http://bagnerisformayor.com/",
+  "page_evidence": "Michael Bagneris for Mayor of New Orleans ... TODAY IS ELECTION DAY (capture dated 2014-02-09, after the 2014-02-01 election)",
+  "other_profiles": [],
+  "note": "The only in-window 200 captures are robots.txt files (20140107012315, 20140107012319), no page. First page capture is 20140209194017, after the election. The site is clearly his campaign site, but no in-window page was read."
+ },
+ {
+  "candidate_election_id": "2255000__2017-11-18__regular__7455827b177e8e3a",
+  "candidate_name": "LaToya Cantrell",
+  "election_date": "2017-11-18",
+  "status": "accepted",
+  "campaign_url": "https://latoyacantrell.com/",
+  "registrable_domain": "latoyacantrell.com",
+  "lead_sources": [
+   "Domain pattern guess, confirmed in Wayback CDX"
+  ],
+  "wayback_window_captures": 508,
+  "first_capture_in_window": "20170116122327",
+  "checked_capture_url": "https://web.archive.org/web/20170507002531/https://latoyacantrell.com/",
+  "page_evidence": "Contribute today to LaToya's campaign for Mayor of New Orleans",
+  "other_profiles": [],
+  "note": "Count covers all 200 captures of all URLs on the host in the window."
+ },
+ {
+  "candidate_election_id": "2255000__2017-11-18__regular__c48d8f1de762e139",
+  "candidate_name": "Desiree M. Charbonnet",
+  "election_date": "2017-11-18",
+  "status": "accepted",
+  "campaign_url": "http://desireecharbonnet.com/",
+  "registrable_domain": "desireecharbonnet.com",
+  "lead_sources": [
+   "Domain pattern guess, confirmed in Wayback CDX"
+  ],
+  "wayback_window_captures": 373,
+  "first_capture_in_window": "20170604070350",
+  "checked_capture_url": "https://web.archive.org/web/20170604070350/http://desireecharbonnet.com/",
+  "page_evidence": "Desiree Charbonnet for Mayor ... First woman mayor of New Orleans. The right mayor to move the city forward.",
+  "other_profiles": [],
+  "note": "Count covers all URLs on the host in the window."
+ },
+ {
+  "candidate_election_id": "2255000__2021-11-13__regular__0073e0f4d9ff8ecb",
+  "candidate_name": "Vina Nguyen",
+  "election_date": "2021-11-13",
+  "status": "accepted",
+  "campaign_url": "https://www.vinanguyen4mayor.com/",
+  "registrable_domain": "vinanguyen4mayor.com",
+  "lead_sources": [
+   "Domain pattern guess, confirmed in Wayback CDX"
+  ],
+  "wayback_window_captures": 5,
+  "first_capture_in_window": "20210818131410",
+  "checked_capture_url": "https://web.archive.org/web/20210818131410/https://www.vinanguyen4mayor.com/",
+  "page_evidence": "HOME | Vina Nguyen 4 Mayor for Mayor of New Orleans 2021",
+  "other_profiles": [],
+  "note": "Only a few captures exist in the window, the first in August 2021."
+ },
+ {
+  "candidate_election_id": "2255000__2025-10-11__regular__84552f9b2e3fa06a",
+  "candidate_name": "Helena Moreno",
+  "election_date": "2025-10-11",
+  "status": "not_found",
+  "campaign_url": "",
+  "registrable_domain": "",
+  "lead_sources": [],
+  "wayback_window_captures": 0,
+  "first_capture_in_window": "",
+  "checked_capture_url": "",
+  "page_evidence": "",
+  "other_profiles": [],
+  "note": "Tried helenaformayor.com, helenamoreno.com, morenoformayor.com, helenamorenoformayor.com, helena4mayor.com and .org variants. helenaformayor.com and helenamoreno.com captures in the window are 114-byte redirect stubs to /lander (a parked page) with no candidate text. morenoformayor.com belongs to a different Joe Moreno in East Moline, IL. The real campaign domain is not confirmed. Web search was unavailable (search budget used), so no lead was found."
+ },
+ {
+  "candidate_election_id": "2255000__2025-10-11__regular__1614c57a38d6c8a9",
+  "candidate_name": "Royce Duplessis",
+  "election_date": "2025-10-11",
+  "status": "accepted",
+  "campaign_url": "https://www.royceduplessis.com/",
+  "registrable_domain": "royceduplessis.com",
+  "lead_sources": [
+   "Domain pattern guess, confirmed in Wayback CDX"
+  ],
+  "wayback_window_captures": 7,
+  "first_capture_in_window": "20250919113340",
+  "checked_capture_url": "https://web.archive.org/web/20251003115628/https://www.royceduplessis.com/",
+  "page_evidence": "Royce Duplessis for Mayor | New Orleans | Senator Royce Duplessis ... Pledge to Vote",
+  "other_profiles": [],
+  "note": "Capture 20251003115628 is the home page with a tracking query string and is within the window. I read it directly. Count covers all 200 captures on the host in the window."
+ }
+]

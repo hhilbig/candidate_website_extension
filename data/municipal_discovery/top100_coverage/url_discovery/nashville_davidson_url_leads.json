@@ -1,0 +1,87 @@
+[
+ {
+  "candidate_election_id": "4752006__2011-08-04__regular__1779d620dde834d9",
+  "candidate_name": "Karl Dean",
+  "election_date": "2011-08-04",
+  "status": "accepted",
+  "campaign_url": "http://karldean.com/",
+  "registrable_domain": "karldean.com",
+  "lead_sources": [
+   "Domain tested directly in the Wayback CDX index (no web page found that names it)."
+  ],
+  "wayback_window_captures": 139,
+  "first_capture_in_window": "20110207102331",
+  "checked_capture_url": "https://web.archive.org/web/20110207102331/http://karldean.com/",
+  "page_evidence": "Karl Dean is the sixth mayor of the Metropolitan Government of Nashville and Davidson County. He was elected ... Dean's priorities as mayor are improving schools, making neighborhoods safer.",
+  "other_profiles": [],
+  "note": "Count is HTTP 200 captures for host karldean.com from 2010-08-04 to 2011-08-04, including images and scripts. I read the 2011-02-07 home page, which is a biography page. Capture paths in the window show campaign use: /volunteer-form, /voter-information, /get-your-free-karl-dean-bumper-sticker and blog posts titled 'opening our campaign office' and 'Mayor Karl Dean gears up re-election effort'. I read only the home page text, not those pages. The domain was found by testing a likely name, so the lead source is the Wayback index. Doubt is low."
+ },
+ {
+  "candidate_election_id": "4752006__2011-08-04__regular__08614591119557f1",
+  "candidate_name": "Jacky Keeton",
+  "election_date": "2011-08-04",
+  "status": "not_found",
+  "campaign_url": "",
+  "registrable_domain": "",
+  "lead_sources": [],
+  "wayback_window_captures": 0,
+  "first_capture_in_window": "",
+  "checked_capture_url": "",
+  "page_evidence": "",
+  "other_profiles": [],
+  "note": "Web search quota was used up. Ballotpedia could not be fetched. I checked jackykeeton.com, keetonformayor.com, keeton4mayor.com, jackykeeton.org and keetonmayor.com in the Wayback CDX index for 2010-08-04 to 2011-08-04. None has a 200 capture. jackykeeton.com also has no capture from 2009 to 2013. The candidate may have used a different domain."
+ },
+ {
+  "candidate_election_id": "4752006__2015-09-10__regular__aaa81e8cf4289831",
+  "candidate_name": "Megan Barry",
+  "election_date": "2015-09-10",
+  "status": "accepted",
+  "campaign_url": "http://www.meganbarry.com/",
+  "registrable_domain": "meganbarry.com",
+  "lead_sources": [
+   "Domain tested directly in the Wayback CDX index (no web page found that names it)."
+  ],
+  "wayback_window_captures": 198,
+  "first_capture_in_window": "20140920215706",
+  "checked_capture_url": "https://web.archive.org/web/20150905200355/http://www.meganbarry.com/",
+  "page_evidence": "Page title: 'Megan Barry for Mayor'. Other in-window paths include 'ashley_judd_connie_britton_emmylou_harris_to_host_event_supporting_megan_barry_for_mayor' and 'barry_vs_freeman'.",
+  "other_profiles": [],
+  "note": "Count is HTTP 200 captures for host meganbarry.com from 2014-09-10 to 2015-09-10, including sub pages. I read only the page title and path names of the 2015-09-05 capture. The domain was found by testing a likely name. Doubt is low."
+ },
+ {
+  "candidate_election_id": "4752006__2023-09-14__regular__444f1caafbaf01cd",
+  "candidate_name": "Freddie O'Connell",
+  "election_date": "2023-09-14",
+  "status": "accepted",
+  "campaign_url": "https://www.readyforfreddie.com/",
+  "registrable_domain": "readyforfreddie.com",
+  "lead_sources": [
+   "https://en.wikipedia.org/wiki/Alice_Rolli (external link list)"
+  ],
+  "wayback_window_captures": 207,
+  "first_capture_in_window": "20220915164209",
+  "checked_capture_url": "https://web.archive.org/web/20220920220725/https://www.readyforfreddie.com/",
+  "page_evidence": "I'm also running for mayor in 2023. We're going to build a city with lower cost of living and better quality of life. (Page text refers to District 19 on the Metropolitan Council.)",
+  "other_profiles": [
+   "https://twitter.com/freddieoconnell"
+  ],
+  "note": "Count is HTTP 200 captures for host readyforfreddie.com from 2022-09-14 to 2023-09-14, including assets. The page text refers to District 19, which matches the candidate's council seat. freddieformayor.com is a different person in Fayetteville and is not used. freddieoconnell.com has no capture in the window."
+ },
+ {
+  "candidate_election_id": "4752006__2023-09-14__regular__69c74f86f9053368",
+  "candidate_name": "Alice Rolli",
+  "election_date": "2023-09-14",
+  "status": "accepted",
+  "campaign_url": "https://alicerolli.com/",
+  "registrable_domain": "alicerolli.com",
+  "lead_sources": [
+   "Domain tested directly in the Wayback CDX index (no web page found that names it)."
+  ],
+  "wayback_window_captures": 386,
+  "first_capture_in_window": "20230323023227",
+  "checked_capture_url": "https://web.archive.org/web/20230323023227/https://alicerolli.com/",
+  "page_evidence": "Embedded form metadata: pageName 'Alice Rolli for Mayor'.",
+  "other_profiles": [],
+  "note": "Count is HTTP 200 captures for host alicerolli.com from 2022-09-14 to 2023-09-14, including sub pages and assets. The first capture is on 2023-03-23. Sub pages include /meet-alice, /prorities and /news. I read only the form metadata for the mayoral reference. The domain was found by testing a likely name."
+ }
+]

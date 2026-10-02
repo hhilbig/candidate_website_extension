@@ -1,0 +1,37 @@
+[
+ {
+  "candidate_election_id": "0446000__2024-11-05__regular__82f2cb6b4435a1f0",
+  "candidate_name": "Mark A. Freeman",
+  "election_date": "2024-11-05",
+  "status": "accepted",
+  "campaign_url": "https://markfreemanformayor.com/",
+  "registrable_domain": "markfreemanformayor.com",
+  "lead_sources": [
+   "https://en.wikipedia.org/wiki/2024_Mesa_mayoral_election",
+   "https://en.wikipedia.org/wiki/Mark_Freeman_(politician)"
+  ],
+  "wayback_window_captures": 531,
+  "first_capture_in_window": "20240416100110",
+  "checked_capture_url": "https://web.archive.org/web/20241012160651/https://markfreemanformayor.com/",
+  "page_evidence": "Page title: \"Mark Freeman for Mesa Mayor | A Steady Hand For A Better Mesa\" (capture 20241012160651).",
+  "other_profiles": [],
+  "note": "Count is HTTP 200 captures of the host from 2023-11-05 to 2024-11-05 (CDX limit 5000, 531 returned). Earliest 200 capture is 2024-04-16. Web search gave the domain as a lead; the archived page title confirms the candidate and the mayoral race."
+ },
+ {
+  "candidate_election_id": "0446000__2024-11-05__regular__dc11e66bc175d26d",
+  "candidate_name": "Scott Smith",
+  "election_date": "2024-11-05",
+  "status": "accepted",
+  "campaign_url": "https://smithformesa.com/",
+  "registrable_domain": "smithformesa.com",
+  "lead_sources": [
+   "https://en.wikipedia.org/wiki/2024_Mesa_mayoral_election"
+  ],
+  "wayback_window_captures": 39,
+  "first_capture_in_window": "20240515125101",
+  "checked_capture_url": "https://web.archive.org/web/20241009215105/https://smithformesa.com/",
+  "page_evidence": "Site title \"Scott Smith for Mesa\". Archived /about page (20241009215128): \"Scott is seeking to return to the mayor's office\".",
+  "other_profiles": [],
+  "note": "Count is HTTP 200 captures of the host from 2023-11-05 to 2024-11-05 (39 returned). The home page text was mostly script and metadata; the /about capture names the candidate and the mayoral race. The domain came from a web search result, not a primary source."
+ }
+]

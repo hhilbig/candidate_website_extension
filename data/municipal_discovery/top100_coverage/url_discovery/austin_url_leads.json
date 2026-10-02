@@ -1,0 +1,68 @@
+[
+ {
+  "candidate_election_id": "4805000__2022-12-13__regular__e4c911c0e0228219",
+  "candidate_name": "Kirk Watson",
+  "election_date": "2022-12-13",
+  "status": "accepted",
+  "campaign_url": "https://www.kirkwatson.com/",
+  "registrable_domain": "kirkwatson.com",
+  "lead_sources": [
+   "https://web.archive.org/cdx/search/cdx?url=kirkwatson.com (domain tested directly; no web search possible, budget exhausted)"
+  ],
+  "wayback_window_captures": 1954,
+  "first_capture_in_window": "20220118070211",
+  "checked_capture_url": "https://web.archive.org/web/20220222155726/https://www.kirkwatson.com/",
+  "page_evidence": "Title 'Kirk Watson for Austin Mayor'; 'Pol. Adv. paid by Kirk Watson for Mayor Campaign.'",
+  "other_profiles": [],
+  "note": "Domain guessed from the candidate name and checked in Wayback. Count is all HTTP 200 captures of the host (all paths) from 2021-12-13 to 2022-12-13. Earliest capture 2022-01-18 has title 'Senator Kirk Watson - Austin Mayor'."
+ },
+ {
+  "candidate_election_id": "4805000__2022-12-13__regular__b60703073a79759e",
+  "candidate_name": "Celia Israel",
+  "election_date": "2022-12-13",
+  "status": "accepted",
+  "campaign_url": "https://www.celiaforaustin.com/",
+  "registrable_domain": "celiaforaustin.com",
+  "lead_sources": [
+   "https://web.archive.org/cdx/search/cdx?url=celiaforaustin.com (domain tested directly; no web search possible, budget exhausted)"
+  ],
+  "wayback_window_captures": 212,
+  "first_capture_in_window": "20220111161912",
+  "checked_capture_url": "https://web.archive.org/web/20220111161912/https://www.celiaforaustin.com/",
+  "page_evidence": "Title 'HOME | Celia for Austin'; 'Austin needs a Mayor with the courage to say clearly, this city belongs to all of us. Celia Israel understands the strength of cities lies in its diversity'",
+  "other_profiles": [],
+  "note": "Domain guessed and checked in Wayback. Count is all HTTP 200 captures of the host (all paths) in the 365-day window."
+ },
+ {
+  "candidate_election_id": "4805000__2024-11-05__regular__e4c911c0e0228219",
+  "candidate_name": "Kirk Watson",
+  "election_date": "2024-11-05",
+  "status": "accepted",
+  "campaign_url": "https://www.kirkwatson.com/",
+  "registrable_domain": "kirkwatson.com",
+  "lead_sources": [
+   "https://web.archive.org/cdx/search/cdx?url=kirkwatson.com (domain tested directly; no web search possible, budget exhausted)"
+  ],
+  "wayback_window_captures": 46,
+  "first_capture_in_window": "20231116074234",
+  "checked_capture_url": "https://web.archive.org/web/20241014074536/https://www.kirkwatson.com/",
+  "page_evidence": "Title 'Keep Mayor Kirk Watson | 2024 | Austin, TX'",
+  "other_profiles": [],
+  "note": "Same domain as 2022. Count is all HTTP 200 captures of the host (all paths) from 2023-11-05 to 2024-11-05. Capture read is from 2024-10-14."
+ },
+ {
+  "candidate_election_id": "4805000__2024-11-05__regular__2562ba9637800c00",
+  "candidate_name": "Carmen D. Llanes Pulido",
+  "election_date": "2024-11-05",
+  "status": "not_found",
+  "campaign_url": "",
+  "registrable_domain": "",
+  "lead_sources": [],
+  "wayback_window_captures": 0,
+  "first_capture_in_window": "",
+  "checked_capture_url": "",
+  "page_evidence": "",
+  "other_profiles": [],
+  "note": "The web search budget ended before any search ran, and Ballotpedia fetch returned empty. Guessed domains with no in-window 200 captures: carmenforaustin.com, carmenllanespulido.com, carmenllanes.com, carmenforatx.com, carmenforaustinmayor.com, llanespulido.com, carmenforaustintx.com, carmenfortexas.com, votecarmen.com, carmenllanespulido.org, carmen4austin.com. carmenformayor.com has 2 captures in window but its page only redirects to /lander (parked domain), so it is rejected. carmenforatx.org and carmenforaustin.org queries failed. A web search is needed."
+ }
+]
