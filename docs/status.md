@@ -1947,3 +1947,15 @@ cities: 172 to 72. City-years assessed: 1,528 to 1,628 of 1,700. Verified decisi
 Remaining open years concentrate in Glendale AZ (17), Santa Clarita (16; council-selected mayor but no
 period-specific official statement), Oklahoma City (5 election years), Tulsa (4), Colorado Springs (5),
 Plano (4), Sacramento (3). These need a browser or human source check (sites block automated access).
+
+**Mayoral population step closed by Hanno, October 2.** Browser pass resolved Glendale AZ (all 17 years;
+Maricopa County results, Charter Art. IX Sec. 6), Oklahoma City 2014/2018/2022 (state results application,
+Charter Art. X) and Tulsa 2013. Hanno chose to stop and record the rest as documented unresolved years.
+Final: 1,649 of 1,700 city-years assessed (97 percent); 411 verified contested elections plus 19 uncontested;
+822 finalist records. Remaining open years are documented in each calendar note (Tulsa 2016/2020/2024 not in
+state results and county site 403; Oklahoma City 2010 and 2026; Santa Clarita; Colorado Springs; Plano;
+Sacramento; about 16 single years).
+
+**Website step starting point (build summary).** Of 822 finalists: URL lead 274 (33 percent), archive
+discovery 22, downloaded content 13. 417 finalists have no identity link to the legacy discovery roster,
+so part of the URL gap is a linkage gap, not a discovery gap.
