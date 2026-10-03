@@ -215,22 +215,22 @@
     "data/municipal_discovery/top100_coverage/inputs/cities_census2020_honolulu_raw.json": "51715f85507b343cdaac745b00977637a9e045e304ad9d35124bd4eef4ded1e1",
     "data/municipal_discovery/top100_coverage/linkage/identity_links.csv": "f44ceb7305a0e5e887b14c607aa2700940912108dec642f44ff8b127eb6fd8be",
     "data/municipal_discovery/top100_coverage/inputs/stage3_saved_pages.csv": "80732848cd9254064e588533a2a240785deeafda6386721239eadfa0a2479268",
-    "data/municipal_discovery/top100_coverage/linkage/discovered_url_leads.csv": "364c855c473182c85d9a70913fd60d577d84e3779bf519a59216a2c763cd9431"
+    "data/municipal_discovery/top100_coverage/linkage/discovered_url_leads.csv": "dd4513783f6327450755aaeae12b73052af8b792d05e275347ebad3370636ff8"
   },
   "script_sha256": "46426e85d70e9079017e84f793722cf568e1004fe53203c585ad15f78e1cb988",
   "outputs": {
     "cities.csv": "4e06ea9d422efcd97b0236de473caa32ca952d1d387d610379d07d5ebde3a388",
     "city_year_audit.csv": "a9d46e666b12b6307ece6ebc9a33d1f40094f67423887a333c852888167a5f6f",
     "elections.csv": "4d178b47ccfaa7df1f26ff5c1bc514fb39dc18ccfaa1cd1d3bae4e6862d9a82f",
-    "candidate_coverage.csv": "1af129518b2d8564de007cc770e0a69d149f5d1494e0ac52b3cfef3c640724c3",
-    "coverage_breakdowns.csv": "46d3c8e98780480409fa10c4dd7df281ed8cfc9df64cc816e2459f01377caec2",
-    "missing_urls.csv": "5f2ed58d47b0089ddcc588db9cc9bc597e7b98212ba5075c4806ee1696849770",
-    "missing_period_captures.csv": "ac597afddc75e7a5212256ee9beb7a4f77930f3103cc2203164ea7f69dca82f5",
+    "candidate_coverage.csv": "38aaea5da3aa2518894c6edd3cb553f217f16bb757591f96ea971dcf5a5bd6d6",
+    "coverage_breakdowns.csv": "ef9973edbbbe97b78b58db6ce6d6f3d8e80629cf00b825b5910f07eeb3c647bb",
+    "missing_urls.csv": "bb4e5b156fa343611a32f27acb0660ab7932bf3449c03b2a22136fe68d711e09",
+    "missing_period_captures.csv": "de272430dad7cfaa29f83401904089a908ab68a37f624400d9798cc8e0440ddb",
     "missing_election_results.csv": "164212cb1c39dbfa39b19a82e4000698bb311dec204f24f20696cd805eda5628",
     "missing_election_calendars.csv": "f639ad7f845e0ad1cdded693329145b4fec354d1d853a17e878393867996899c",
-    "coverage_gaps.csv": "a4003b53a574a615c98564dafd53677a705d2fe5925aaedee3baace07d39617d",
-    "source_attempt_estimates.csv": "0709b484bfb6087c03adc225cf95aeeb6c3f73eaacc60aca533c623c677dd6f0",
-    "summary.json": "0aef05ea894800462020c04ff12a12f87c1993918bd10aac4a862846c5f6c508",
+    "coverage_gaps.csv": "8efe18509c9be9aaa5c3dd8d439c65ac8077204c028ec134420855946590e274",
+    "source_attempt_estimates.csv": "119045f3c06e479f45db32c61965dc47f3c9248876009d95f49e8f854983670e",
+    "summary.json": "37e693262ec2b5c5c3d821353b45aa028d9ce772076b8183cbacbb2247e5c310",
     "outside_scope_results.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
     "superseded_result_records.json": "cfdbaa6d8e80ab97381d91edc0698814a02ab33a82e7d306c8f68c45ff5b05d4"
   }

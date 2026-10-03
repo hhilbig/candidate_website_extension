@@ -2050,3 +2050,14 @@ restricted to the 57 finalists from 2022-2026 with no passing hit, one crawl eac
 Slack watcher (Hanno asked, October 3): `scripts/watch_mayoral_cc_sweep.py` with `scripts/slack_status.sh`
 (job-alerts format) runs on the droplet beside the Common Crawl sweep, PID 2103534, log `sweep_20261002/watch.log`.
 It posts at start, every 6 hours, once on a 30-minute stall, and at the end; it exits after the end message.
+
+**Domain sweep checked and integrated (October 3).** Workflow `wf_c6322dfb-478` (66 Sonnet agents, one per city,
+4.4 million subagent tokens, 1.8 hours) checked the 152 finalists with screened Wayback hits under the stage 2
+acceptance rule, running archive requests through mac2: 112 accepted, 2 outside_window, 38 not_found (parked
+pages, other people with the same surname, other cities). Verdicts in `sweep_20261002/sweep_check_verdicts.json`;
+basis label `domain_sweep_wayback_capture_checked`. Unlike stage 2, these verdicts had one agent check, not a
+search plus an independent check; the deterministic search and screen precede it. Build: URL leads 514 to 628 of
+822 (76 percent); elections with both finalists 207 to 263 of 411 (64 percent); winner 78 percent; any finalist
+89 percent. By period, both finalists: 2010-2017 63 percent, 2018-2021 75 percent, 2022-2026 55 percent.
+Archive discovery 295. Downloaded content unchanged at 174: the 114 new URLs have not been scraped yet (needs a
+stage 3 extension). 62 tests pass.

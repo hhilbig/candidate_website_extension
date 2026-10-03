@@ -100,7 +100,8 @@ def combine(cities: list[dict], leads_by_slug: dict[str, list[dict]], verdicts: 
                 proposal = source_items.get(key)
                 if not proposal:
                     continue
-                if final not in {"not_found", "rejected"}:
+                # An outside_window entry without a URL is an unconfirmed domain, not a lead.
+                if final not in {"not_found", "rejected"} and not (final == "outside_window" and not lead.get("campaign_url")):
                     raise ValueError(f"{slug}: {label} verdict for {key}, which is already {final}")
                 used.add((label, key))
                 if proposal["status"] != "not_found":
