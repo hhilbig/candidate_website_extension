@@ -2047,3 +2047,6 @@ Screen on mac2: 705 pages fetched, 217 contain the last name and "mayor"; after 
 pages, 182 hits for 152 finalists in 66 cities (`screened.jsonl`). Common Crawl sweep restarted on the droplet,
 restricted to the 57 finalists from 2022-2026 with no passing hit, one crawl each (1,175 queries,
 `patterns_cc_remaining.csv`). Next: agent check of the 152 finalists (needs Hanno's choice of route; see chat).
+Slack watcher (Hanno asked, October 3): `scripts/watch_mayoral_cc_sweep.py` with `scripts/slack_status.sh`
+(job-alerts format) runs on the droplet beside the Common Crawl sweep, PID 2103534, log `sweep_20261002/watch.log`.
+It posts at start, every 6 hours, once on a 30-minute stall, and at the end; it exits after the end message.

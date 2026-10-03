@@ -6,10 +6,12 @@ Inputs (data/municipal_discovery/top100_coverage/url_discovery/):
   checker_verdicts.json     {slug: {"checked": int, "problems": [...]}} from the check agents
   checker_proposal_verdicts.json  optional; a third agent's verdicts on sites that a checker
                             proposed for finalists the search marked not_found
+  sweep_20261002/sweep_check_verdicts.json  optional; agent verdicts on domain-pattern sweep hits
 
 A "reject" verdict removes the URL (final status "rejected"). A "downgrade" verdict
 sets an accepted lead to "outside_window". "minor" verdicts are kept as notes.
-A verified proposal replaces a not_found entry and gets its own basis label.
+A verified proposal or sweep hit replaces a not_found or rejected entry and gets its own basis
+label; the checker proposals are applied first.
 Every finalist sent to discovery gets one row; a city without a leads file or
 without a checker verdict is marked, never counted as accepted.
 
@@ -33,6 +35,7 @@ COLUMNS = ["candidate_election_id", "city_slug", "candidate_name", "election_dat
            "lead_sources", "checker_issue", "discovery_note", "link_basis"]
 BASIS = "agent_search_wayback_capture_checked"
 PROPOSAL_BASIS = "checker_proposal_wayback_capture_verified"
+SWEEP_BASIS = "domain_sweep_wayback_capture_checked"
 
 
 def capture_timestamp(url: str) -> str:
@@ -41,12 +44,15 @@ def capture_timestamp(url: str) -> str:
 
 
 def combine(cities: list[dict], leads_by_slug: dict[str, list[dict]], verdicts: dict[str, dict],
-            proposals: list[dict] = ()) -> list[dict]:
-    proposal_by_id = {}
-    for proposal in proposals:
-        if proposal.get("status") not in STATUSES or proposal["candidate_election_id"] in proposal_by_id:
-            raise ValueError(f"Bad or duplicate proposal verdict for {proposal.get('candidate_election_id')}")
-        proposal_by_id[proposal["candidate_election_id"]] = proposal
+            proposals: list[dict] = (), sweep: list[dict] = ()) -> list[dict]:
+    sources = []
+    for basis, label, items in ((PROPOSAL_BASIS, "checker proposal", proposals), (SWEEP_BASIS, "domain sweep", sweep)):
+        source_items = {}
+        for item in items:
+            if item.get("status") not in STATUSES or item["candidate_election_id"] in source_items:
+                raise ValueError(f"Bad or duplicate {label} verdict for {item.get('candidate_election_id')}")
+            source_items[item["candidate_election_id"]] = item
+        sources.append((basis, label, source_items))
     used = set()
     rows = []
     for city in cities:
@@ -90,15 +96,17 @@ def combine(cities: list[dict], leads_by_slug: dict[str, list[dict]], verdicts: 
                 final = lead["status"]
             lead = lead or {}
             basis = BASIS
-            proposal = proposal_by_id.get(key)
-            if proposal:
-                if final != "not_found":
-                    raise ValueError(f"{slug}: proposal verdict for {key}, which is {final}, not not_found")
-                used.add(key)
+            for source_basis, label, source_items in sources:
+                proposal = source_items.get(key)
+                if not proposal:
+                    continue
+                if final not in {"not_found", "rejected"}:
+                    raise ValueError(f"{slug}: {label} verdict for {key}, which is already {final}")
+                used.add((label, key))
                 if proposal["status"] != "not_found":
-                    lead = dict(proposal, lead_sources=["checker proposal"],
+                    lead = dict(proposal, lead_sources=[label],
                                 note=proposal["note"] + " | search note: " + lead.get("note", ""))
-                    final, basis = proposal["status"], PROPOSAL_BASIS
+                    final, basis = proposal["status"], source_basis
             keep_url = final in {"accepted", "outside_window", "accepted_unchecked"}
             rows.append({
                 "candidate_election_id": key, "city_slug": slug, "candidate_name": finalist["candidate_name"],
@@ -114,8 +122,9 @@ def combine(cities: list[dict], leads_by_slug: dict[str, list[dict]], verdicts: 
                 "lead_sources": " | ".join(lead.get("lead_sources", [])),
                 "checker_issue": " | ".join(f"{p['severity']}: {p['issue']}" for p in found),
                 "discovery_note": lead.get("note", ""), "link_basis": basis if keep_url and lead.get("campaign_url") else ""})
-    if set(proposal_by_id) - used:
-        raise ValueError(f"Proposal verdicts for finalists not in discovery: {sorted(set(proposal_by_id) - used)}")
+    unused = {(label, key) for _, label, source_items in sources for key in source_items} - used
+    if unused:
+        raise ValueError(f"Verdicts for finalists not in discovery: {sorted(unused)[:5]}")
     return rows
 
 
@@ -130,7 +139,9 @@ def main() -> int:
     verdicts = json.loads(verdicts_path.read_text()) if verdicts_path.exists() else {}
     proposals_path = DISCOVERY / "checker_proposal_verdicts.json"
     proposals = json.loads(proposals_path.read_text()) if proposals_path.exists() else []
-    rows = combine(cities, leads, verdicts, proposals)
+    sweep_path = DISCOVERY / "sweep_20261002" / "sweep_check_verdicts.json"
+    sweep = json.loads(sweep_path.read_text()) if sweep_path.exists() else []
+    rows = combine(cities, leads, verdicts, proposals, sweep)
     OUTPUT.parent.mkdir(parents=True, exist_ok=True)
     with OUTPUT.open("w", newline="") as handle:
         writer = csv.DictWriter(handle, fieldnames=COLUMNS)

@@ -1,0 +1,3046 @@
+[
+ {
+  "city_id": "0427820",
+  "city_name": "Glendale city",
+  "state_abb": "AZ",
+  "finalists": [
+   {
+    "candidate_election_id": "0427820__2012-11-06__regular__3dcfeb11bd7b367f",
+    "candidate_name": "Manuel \"Manny\" Cruz",
+    "election_date": "2012-11-06",
+    "window": [
+     "2011-11-07",
+     "2012-11-06"
+    ],
+    "hits": [
+     {
+      "domain": "cruzformayor.com",
+      "capture_url": "https://web.archive.org/web/20120223035847/http://www.cruzformayor.com:80/",
+      "title": "Manuel Cruz for Mayor of Glendale :: Press Releases"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "city_id": "0455000",
+  "city_name": "Phoenix city",
+  "state_abb": "AZ",
+  "finalists": [
+   {
+    "candidate_election_id": "0455000__2015-08-25__regular__6e6d3dc5085bfbff",
+    "candidate_name": "Greg Stanton",
+    "election_date": "2015-08-25",
+    "window": [
+     "2014-08-25",
+     "2015-08-25"
+    ],
+    "hits": [
+     {
+      "domain": "stantonforphoenix.com",
+      "capture_url": "https://web.archive.org/web/20150207074505/http://stantonforphoenix.com:80/",
+      "title": "Greg Stanton for Mayor"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "city_id": "0465000",
+  "city_name": "Scottsdale city",
+  "state_abb": "AZ",
+  "finalists": [
+   {
+    "candidate_election_id": "0465000__2012-08-28__regular__b81680a9d5458dd2",
+    "candidate_name": "Jim Lane",
+    "election_date": "2012-08-28",
+    "window": [
+     "2011-08-29",
+     "2012-08-28"
+    ],
+    "hits": [
+     {
+      "domain": "jimlaneformayor.com",
+      "capture_url": "https://web.archive.org/web/20111015051126/http://jimlaneformayor.com:80/",
+      "title": "jimlaneformayor.com"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "city_id": "0477000",
+  "city_name": "Tucson city",
+  "state_abb": "AZ",
+  "finalists": [
+   {
+    "candidate_election_id": "0477000__2011-11-08__regular__fa7dddf493880202",
+    "candidate_name": "Jonathan Rothschild",
+    "election_date": "2011-11-08",
+    "window": [
+     "2010-11-08",
+     "2011-11-08"
+    ],
+    "hits": [
+     {
+      "domain": "jonathanformayor.com",
+      "capture_url": "https://web.archive.org/web/20110202084313/http://www.jonathanformayor.com/",
+      "title": "Jonathan Rothschild for Mayor"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "city_id": "0603526",
+  "city_name": "Bakersfield city",
+  "state_abb": "CA",
+  "finalists": [
+   {
+    "candidate_election_id": "0603526__2024-03-05__regular__26fbb602bc854171",
+    "candidate_name": "Gregory Tatum",
+    "election_date": "2024-03-05",
+    "window": [
+     "2023-03-06",
+     "2024-03-05"
+    ],
+    "hits": [
+     {
+      "domain": "tatum4mayor.com",
+      "capture_url": "https://web.archive.org/web/20230423180453/http://www.tatum4mayor.com/",
+      "title": "Chris Tatum for Barboursville, WV Mayor 2015"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "city_id": "0613392",
+  "city_name": "Chula Vista city",
+  "state_abb": "CA",
+  "finalists": [
+   {
+    "candidate_election_id": "0613392__2014-11-04__regular__eb297b46f93f6ca6",
+    "candidate_name": "Mary Salas",
+    "election_date": "2014-11-04",
+    "window": [
+     "2013-11-04",
+     "2014-11-04"
+    ],
+    "hits": [
+     {
+      "domain": "marysalas.org",
+      "capture_url": "https://web.archive.org/web/20140105195827/http://marysalas.org/",
+      "title": "Mary Salas for Chula Vista Mayor Mayor 2014"
+     }
+    ]
+   },
+   {
+    "candidate_election_id": "0613392__2018-11-06__regular__f04a7f75abdf5ee2",
+    "candidate_name": "Mary Casillas Salas",
+    "election_date": "2018-11-06",
+    "window": [
+     "2017-11-06",
+     "2018-11-06"
+    ],
+    "hits": [
+     {
+      "domain": "marysalas.com",
+      "capture_url": "https://web.archive.org/web/20180411204415/http://www.marysalas.com/",
+      "title": "Mary Salas - Mary Salas for Chula Vista Mayor 2014"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "city_id": "0627000",
+  "city_name": "Fresno city",
+  "state_abb": "CA",
+  "finalists": [
+   {
+    "candidate_election_id": "0627000__2020-03-03__regular__07506401be83e755",
+    "candidate_name": "Jerry Dyer",
+    "election_date": "2020-03-03",
+    "window": [
+     "2019-03-04",
+     "2020-03-03"
+    ],
+    "hits": [
+     {
+      "domain": "jerrydyer.org",
+      "capture_url": "https://web.archive.org/web/20191113004604/http://jerrydyer.org/",
+      "title": "Jerry Dyer for Mayor \u2013 A Strong Vision for One Fresno"
+     }
+    ]
+   },
+   {
+    "candidate_election_id": "0627000__2024-03-05__regular__07506401be83e755",
+    "candidate_name": "Jerry Dyer",
+    "election_date": "2024-03-05",
+    "window": [
+     "2023-03-06",
+     "2024-03-05"
+    ],
+    "hits": [
+     {
+      "domain": "dyerformayor.com",
+      "capture_url": "https://web.archive.org/web/20240201114859/https://dyerformayor.com/",
+      "title": "Jerry Dyer - Dyer For Mayor"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "city_id": "0662000",
+  "city_name": "Riverside city",
+  "state_abb": "CA",
+  "finalists": [
+   {
+    "candidate_election_id": "0662000__2016-06-07__regular__77b8ef9bfa7a3bfd",
+    "candidate_name": "Paul Davis",
+    "election_date": "2016-06-07",
+    "window": [
+     "2015-06-08",
+     "2016-06-07"
+    ],
+    "hits": [
+     {
+      "domain": "pauldavis4mayor.com",
+      "capture_url": "https://web.archive.org/web/20160128032836/http://pauldavis4mayor.com:80/",
+      "title": "Paul Davis - Riverside City Council Ward 4"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "city_id": "0668000",
+  "city_name": "San Jose city",
+  "state_abb": "CA",
+  "finalists": [
+   {
+    "candidate_election_id": "0668000__2010-06-08__regular__9230139da379d161",
+    "candidate_name": "Chuck Reed",
+    "election_date": "2010-06-08",
+    "window": [
+     "2009-06-08",
+     "2010-06-08"
+    ],
+    "hits": [
+     {
+      "domain": "reedformayor.com",
+      "capture_url": "https://web.archive.org/web/20100405231632/http://reedformayor.com:80/",
+      "title": "Re-Elect Mayor Steve Reed"
+     }
+    ]
+   },
+   {
+    "candidate_election_id": "0668000__2010-06-08__regular__1fd43d017c2b4f11",
+    "candidate_name": "Thomas Nguyen",
+    "election_date": "2010-06-08",
+    "window": [
+     "2009-06-08",
+     "2010-06-08"
+    ],
+    "hits": [
+     {
+      "domain": "thomasnguyenformayor.com",
+      "capture_url": "https://web.archive.org/web/20100507084124/http://www.thomasnguyenformayor.com:80/",
+      "title": "Thomas Nguyen For Mayor"
+     }
+    ]
+   },
+   {
+    "candidate_election_id": "0668000__2024-03-05__regular__e1c0a54a0b3b9811",
+    "candidate_name": "Tyrone Wade",
+    "election_date": "2024-03-05",
+    "window": [
+     "2023-03-06",
+     "2024-03-05"
+    ],
+    "hits": [
+     {
+      "domain": "electwade.com",
+      "capture_url": "https://web.archive.org/web/20230320125513/https://www.electwade.com/",
+      "title": "Re-elect Mayor Wade"
+     },
+     {
+      "domain": "wade4mayor.com",
+      "capture_url": "https://web.archive.org/web/20240224150819/https://wade4mayor.com/",
+      "title": "Tyrone Wade for Mayor | Keep The Promise. Fulfill The Dream!"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "city_id": "0669000",
+  "city_name": "Santa Ana city",
+  "state_abb": "CA",
+  "finalists": [
+   {
+    "candidate_election_id": "0669000__2020-11-03__regular__af5bb186ada3063d",
+    "candidate_name": "Claudia C. Alvarez",
+    "election_date": "2020-11-03",
+    "window": [
+     "2019-11-04",
+     "2020-11-03"
+    ],
+    "hits": [
+     {
+      "domain": "alvarez4mayor.com",
+      "capture_url": "https://web.archive.org/web/20191116231727/https://alvarez4mayor.com/",
+      "title": "CLAUDIA ALVAREZ FOR SANTA ANA MAYOR \u2013 Proven Leadership For A Better Santa Ana"
+     },
+     {
+      "domain": "alvarezformayor.com",
+      "capture_url": "https://web.archive.org/web/20200804091305/http://alvarezformayor.com/",
+      "title": ""
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "city_id": "0675000",
+  "city_name": "Stockton city",
+  "state_abb": "CA",
+  "finalists": [
+   {
+    "candidate_election_id": "0675000__2012-11-06__regular__1d8dcffc808f288b",
+    "candidate_name": "Ann Johnston",
+    "election_date": "2012-11-06",
+    "window": [
+     "2011-11-07",
+     "2012-11-06"
+    ],
+    "hits": [
+     {
+      "domain": "johnstonformayor.com",
+      "capture_url": "https://web.archive.org/web/20120413100959/http://www.johnstonformayor.com:80/",
+      "title": "Home Page"
+     }
+    ]
+   },
+   {
+    "candidate_election_id": "0675000__2016-11-08__regular__536eaa247ae776f9",
+    "candidate_name": "Anthony Silva",
+    "election_date": "2016-11-08",
+    "window": [
+     "2015-11-09",
+     "2016-11-08"
+    ],
+    "hits": [
+     {
+      "domain": "mayorsilva.com",
+      "capture_url": "https://web.archive.org/web/20151204060201/http://mayorsilva.com:80/",
+      "title": "Anthony Silva, Mayor of Stockton"
+     }
+    ]
+   },
+   {
+    "candidate_election_id": "0675000__2024-11-05__regular__cbfda081589398fe",
+    "candidate_name": "Tom Patti",
+    "election_date": "2024-11-05",
+    "window": [
+     "2023-11-06",
+     "2024-11-05"
+    ],
+    "hits": [
+     {
+      "domain": "patti4mayor.com",
+      "capture_url": "https://web.archive.org/web/20240304070251/https://www.patti4mayor.com/",
+      "title": "Tom Patti for Mayor"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "city_id": "0804000",
+  "city_name": "Aurora city",
+  "state_abb": "CO",
+  "finalists": [
+   {
+    "candidate_election_id": "0804000__2011-11-01__regular__5ac1afcef55e489d",
+    "candidate_name": "Ryan L. Frazier",
+    "election_date": "2011-11-01",
+    "window": [
+     "2010-11-01",
+     "2011-11-01"
+    ],
+    "hits": [
+     {
+      "domain": "ryanfrazierforaurora.com",
+      "capture_url": "https://web.archive.org/web/20110613212608/http://www.ryanfrazierforaurora.com:80/?",
+      "title": "Welcome | Ryan Frazier for Aurora"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "city_id": "0820000",
+  "city_name": "Denver city",
+  "state_abb": "CO",
+  "finalists": [
+   {
+    "candidate_election_id": "0820000__2015-05-05__regular__60a68252e1814b1e",
+    "candidate_name": "Michael B. Hancock",
+    "election_date": "2015-05-05",
+    "window": [
+     "2014-05-05",
+     "2015-05-05"
+    ],
+    "hits": [
+     {
+      "domain": "hancockfordenver.com",
+      "capture_url": "https://web.archive.org/web/20140517120325/http://hancockfordenver.com/",
+      "title": "Michael Hancock | We are Denver."
+     },
+     {
+      "domain": "hancockformayor.com",
+      "capture_url": "https://web.archive.org/web/20140517115420/http://hancockformayor.com/",
+      "title": "Michael Hancock | We are Denver."
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "city_id": "1150000",
+  "city_name": "Washington city",
+  "state_abb": "DC",
+  "finalists": [
+   {
+    "candidate_election_id": "1150000__2010-11-02__regular__4fac0139da8405ea",
+    "candidate_name": "Carlos Allen",
+    "election_date": "2010-11-02",
+    "window": [
+     "2009-11-02",
+     "2010-11-02"
+    ],
+    "hits": [
+     {
+      "domain": "mayorallen.com",
+      "capture_url": "https://web.archive.org/web/20100516083443/http://mayorallen.com/",
+      "title": "Mayor Brenda Allen"
+     }
+    ]
+   },
+   {
+    "candidate_election_id": "1150000__2022-11-08__regular__6e10ac0f07d91f43",
+    "candidate_name": "Muriel E. Bowser",
+    "election_date": "2022-11-08",
+    "window": [
+     "2021-11-08",
+     "2022-11-08"
+    ],
+    "hits": [
+     {
+      "domain": "murielbowser.com",
+      "capture_url": "https://web.archive.org/web/20211108023738/https://www.murielbowser.com/",
+      "title": "Election | Re Elect Muriel Bowser | Our Mayor"
+     }
+    ]
+   },
+   {
+    "candidate_election_id": "1150000__2022-11-08__regular__353149db08f4e8e3",
+    "candidate_name": "Rodney Red Grant",
+    "election_date": "2022-11-08",
+    "window": [
+     "2021-11-08",
+     "2022-11-08"
+    ],
+    "hits": [
+     {
+      "domain": "grant4mayor.com",
+      "capture_url": "https://web.archive.org/web/20211201095852/https://grant4mayor.com/",
+      "title": "RedGrant4Mayor | Red Grant 4 Mayor"
+     },
+     {
+      "domain": "grantformayor.com",
+      "capture_url": "https://web.archive.org/web/20220130111347/https://grantformayor.com/",
+      "title": "Grant for Mayor \u2013 Elect Bill Grant Mayor for Canton, Georgia"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "city_id": "1235000",
+  "city_name": "Jacksonville city",
+  "state_abb": "FL",
+  "finalists": [
+   {
+    "candidate_election_id": "1235000__2011-05-17__regular__521d4c20d5960cec",
+    "candidate_name": "Mike Hogan",
+    "election_date": "2011-05-17",
+    "window": [
+     "2010-05-17",
+     "2011-05-17"
+    ],
+    "hits": [
+     {
+      "domain": "hoganformayor.com",
+      "capture_url": "https://web.archive.org/web/20100625025601/http://hoganformayor.com:80/",
+      "title": "Mike Hogan for Mayor, Jacksonville Florida"
+     }
+    ]
+   },
+   {
+    "candidate_election_id": "1235000__2023-05-16__regular__f578c3a7d5d308b4",
+    "candidate_name": "Donna Deegan",
+    "election_date": "2023-05-16",
+    "window": [
+     "2022-05-16",
+     "2023-05-16"
+    ],
+    "hits": [
+     {
+      "domain": "donnaformayor.com",
+      "capture_url": "https://web.archive.org/web/20220531134617/https://www.donnaformayor.com/",
+      "title": "Donna Deegan for Mayor"
+     }
+    ]
+   },
+   {
+    "candidate_election_id": "1235000__2023-05-16__regular__bcc82a1135dae853",
+    "candidate_name": "Daniel Davis",
+    "election_date": "2023-05-16",
+    "window": [
+     "2022-05-16",
+     "2023-05-16"
+    ],
+    "hits": [
+     {
+      "domain": "davis4mayor.com",
+      "capture_url": "https://web.archive.org/web/20221211073111/https://davis4mayor.com/",
+      "title": "Darrell Davis | Edmond Mayor"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "city_id": "1245000",
+  "city_name": "Miami city",
+  "state_abb": "FL",
+  "finalists": [
+   {
+    "candidate_election_id": "1245000__2013-11-05__regular__4335943bcc5650ed",
+    "candidate_name": "Tomas P. Regalado",
+    "election_date": "2013-11-05",
+    "window": [
+     "2012-11-05",
+     "2013-11-05"
+    ],
+    "hits": [
+     {
+      "domain": "tomasregalado.com",
+      "capture_url": "https://web.archive.org/web/20130625225516/http://tomasregalado.com/",
+      "title": "Tomas Regalado | Candidate for Mayor of Miami"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "city_id": "1253000",
+  "city_name": "Orlando city",
+  "state_abb": "FL",
+  "finalists": [
+   {
+    "candidate_election_id": "1253000__2012-04-03__regular__16b926a0a383096b",
+    "candidate_name": "Buddy Dyer",
+    "election_date": "2012-04-03",
+    "window": [
+     "2011-04-04",
+     "2012-04-03"
+    ],
+    "hits": [
+     {
+      "domain": "buddyfororlando.com",
+      "capture_url": "https://web.archive.org/web/20110803160636/http://buddyfororlando.com:80/",
+      "title": "Home | Buddy Dyer for Orlando"
+     }
+    ]
+   },
+   {
+    "candidate_election_id": "1253000__2012-04-03__regular__99b2d231db4fbf4f",
+    "candidate_name": "Phil Diamond",
+    "election_date": "2012-04-03",
+    "window": [
+     "2011-04-04",
+     "2012-04-03"
+    ],
+    "hits": [
+     {
+      "domain": "phildiamond.com",
+      "capture_url": "https://web.archive.org/web/20111117032109/http://www.phildiamond.com:80/",
+      "title": "Phil Diamond Campaign | Campaign for Phil Diamond for Orlando Mayor"
+     }
+    ]
+   },
+   {
+    "candidate_election_id": "1253000__2019-11-05__regular__16b926a0a383096b",
+    "candidate_name": "Buddy Dyer",
+    "election_date": "2019-11-05",
+    "window": [
+     "2018-11-05",
+     "2019-11-05"
+    ],
+    "hits": [
+     {
+      "domain": "buddyfororlando.com",
+      "capture_url": "https://web.archive.org/web/20190820110643/https://www.buddyfororlando.com/",
+      "title": "Buddy Dyer for Orlando Mayor"
+     }
+    ]
+   },
+   {
+    "candidate_election_id": "1253000__2023-11-07__regular__16b926a0a383096b",
+    "candidate_name": "Buddy Dyer",
+    "election_date": "2023-11-07",
+    "window": [
+     "2022-11-07",
+     "2023-11-07"
+    ],
+    "hits": [
+     {
+      "domain": "buddyfororlando.com",
+      "capture_url": "https://web.archive.org/web/20230130151901/https://www.buddyfororlando.com/",
+      "title": "Buddy Dyer for Orlando Mayor"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "city_id": "1263000",
+  "city_name": "St. Petersburg city",
+  "state_abb": "FL",
+  "finalists": [
+   {
+    "candidate_election_id": "1263000__2017-11-07__regular__d79e7c9564ff8c43",
+    "candidate_name": "Rick Kriseman",
+    "election_date": "2017-11-07",
+    "window": [
+     "2016-11-07",
+     "2017-11-07"
+    ],
+    "hits": [
+     {
+      "domain": "krisemanformayor.com",
+      "capture_url": "https://web.archive.org/web/20170801194934/http://krisemanformayor.com/",
+      "title": "Rick Kriseman for Mayor"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "city_id": "1271000",
+  "city_name": "Tampa city",
+  "state_abb": "FL",
+  "finalists": [
+   {
+    "candidate_election_id": "1271000__2011-03-22__regular__a487aeb2462ce736",
+    "candidate_name": "Rose Ferlita",
+    "election_date": "2011-03-22",
+    "window": [
+     "2010-03-22",
+     "2011-03-22"
+    ],
+    "hits": [
+     {
+      "domain": "roseformayor.com",
+      "capture_url": "https://web.archive.org/web/20110202220356/https://www.roseformayor.com/",
+      "title": "Rose for Mayor Home"
+     }
+    ]
+   },
+   {
+    "candidate_election_id": "1271000__2023-03-07__regular__34adb0d45bab1089",
+    "candidate_name": "Jane Castor",
+    "election_date": "2023-03-07",
+    "window": [
+     "2022-03-07",
+     "2023-03-07"
+    ],
+    "hits": [
+     {
+      "domain": "janecastorfortampa.com",
+      "capture_url": "https://web.archive.org/web/20221128165731/https://janecastorfortampa.com/",
+      "title": "Jane Castor for Tampa Mayor | Lifting up every neighborhood"
+     }
+    ]
+   },
+   {
+    "candidate_election_id": "1271000__2023-03-07__regular__0c37868e2df840e2",
+    "candidate_name": "Belinda Noah",
+    "election_date": "2023-03-07",
+    "window": [
+     "2022-03-07",
+     "2023-03-07"
+    ],
+    "hits": [
+     {
+      "domain": "belindaformayor.com",
+      "capture_url": "https://web.archive.org/web/20221219014710/https://www.belindaformayor.com/",
+      "title": "HOME | Dr. Belinda Noah"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "city_id": "1304000",
+  "city_name": "Atlanta city",
+  "state_abb": "GA",
+  "finalists": [
+   {
+    "candidate_election_id": "1304000__2025-11-04__regular__99abb2bd2ed115ad",
+    "candidate_name": "Andre Dickens",
+    "election_date": "2025-11-04",
+    "window": [
+     "2024-11-04",
+     "2025-11-04"
+    ],
+    "hits": [
+     {
+      "domain": "andreforatlanta.com",
+      "capture_url": "https://web.archive.org/web/20241110073736/https://andreforatlanta.com",
+      "title": "Andre Dickens - For Atlanta Mayor"
+     }
+    ]
+   },
+   {
+    "candidate_election_id": "1304000__2025-11-04__regular__b7fabc97b52c09c9",
+    "candidate_name": "Eddie Meredith",
+    "election_date": "2025-11-04",
+    "window": [
+     "2024-11-04",
+     "2025-11-04"
+    ],
+    "hits": [
+     {
+      "domain": "eddiemeredithformayor.com",
+      "capture_url": "https://web.archive.org/web/20250804160858/https://www.eddiemeredithformayor.com/",
+      "title": "Home | Eddie Meredith"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "city_id": "1571550",
+  "city_name": "Urban Honolulu CDP",
+  "state_abb": "HI",
+  "finalists": [
+   {
+    "candidate_election_id": "1571550__2010-09-18__special__a1a0d866ad31898d",
+    "candidate_name": "Kirk Caldwell",
+    "election_date": "2010-09-18",
+    "window": [
+     "2009-09-18",
+     "2010-09-18"
+    ],
+    "hits": [
+     {
+      "domain": "kirkcaldwell.com",
+      "capture_url": "https://web.archive.org/web/20100822051730/http://kirkcaldwell.com:80/64",
+      "title": "MAKA HOU \u2013 A FRESH START | Kirk Caldwell for Mayor of Honolulu"
+     }
+    ]
+   },
+   {
+    "candidate_election_id": "1571550__2024-08-10__regular__2fd201cfb9dcbc17",
+    "candidate_name": "Rick Blangiardi",
+    "election_date": "2024-08-10",
+    "window": [
+     "2023-08-11",
+     "2024-08-10"
+    ],
+    "hits": [
+     {
+      "domain": "rickblangiardi.com",
+      "capture_url": "https://web.archive.org/web/20240418115754/https://www.rickblangiardi.com/",
+      "title": "It's About You - Rick Blangiardi For Oahu Mayor"
+     }
+    ]
+   },
+   {
+    "candidate_election_id": "1571550__2024-08-10__regular__1660ea2886cbb294",
+    "candidate_name": "Choon James",
+    "election_date": "2024-08-10",
+    "window": [
+     "2023-08-11",
+     "2024-08-10"
+    ],
+    "hits": [
+     {
+      "domain": "jamesformayor.com",
+      "capture_url": "https://web.archive.org/web/20240507062425/https://www.jamesformayor.com/",
+      "title": "Home - Jamesformayor"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "city_id": "1608830",
+  "city_name": "Boise City city",
+  "state_abb": "ID",
+  "finalists": [
+   {
+    "candidate_election_id": "1608830__2023-11-07__regular__17b8dc507dc4fd97",
+    "candidate_name": "Lauren McLean",
+    "election_date": "2023-11-07",
+    "window": [
+     "2022-11-07",
+     "2023-11-07"
+    ],
+    "hits": [
+     {
+      "domain": "mcleanforboise.com",
+      "capture_url": "https://web.archive.org/web/20221108115833/https://mcleanforboise.com/",
+      "title": "McLean for Boise Mayor"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "city_id": "1714000",
+  "city_name": "Chicago city",
+  "state_abb": "IL",
+  "finalists": [
+   {
+    "candidate_election_id": "1714000__2011-02-22__regular__94916fe8f75ac1dc",
+    "candidate_name": "Rahm Emanuel",
+    "election_date": "2011-02-22",
+    "window": [
+     "2010-02-22",
+     "2011-02-22"
+    ],
+    "hits": [
+     {
+      "domain": "emanuel4mayor.com",
+      "capture_url": "https://web.archive.org/web/20110128133235/http://emanuel4mayor.com/",
+      "title": "emanuel4mayor.com"
+     },
+     {
+      "domain": "emanuelformayor.com",
+      "capture_url": "https://web.archive.org/web/20101003125407/http://emanuelformayor.com:80/",
+      "title": "emanuelformayor.com"
+     },
+     {
+      "domain": "mayoremanuel.com",
+      "capture_url": "https://web.archive.org/web/20110128100256/http://mayoremanuel.com/favicon.ico",
+      "title": "Welcome to mayoremanuel.com!"
+     },
+     {
+      "domain": "rahmemanuel4mayor.com",
+      "capture_url": "https://web.archive.org/web/20110202053536/http://rahmemanuel4mayor.com/",
+      "title": "rahmemanuel4mayor.com"
+     },
+     {
+      "domain": "rahmemanuelformayor.com",
+      "capture_url": "https://web.archive.org/web/20101003132333/http://rahmemanuelformayor.com:80/",
+      "title": "rahmemanuelformayor.com"
+     }
+    ]
+   },
+   {
+    "candidate_election_id": "1714000__2015-04-07__regular__6d97cec38e66e55d",
+    "candidate_name": "Jesus \"Chuy\" Garcia",
+    "election_date": "2015-04-07",
+    "window": [
+     "2014-04-07",
+     "2015-04-07"
+    ],
+    "hits": [
+     {
+      "domain": "garciaforchicago.com",
+      "capture_url": "https://web.archive.org/web/20141103224851/http://www.garciaforchicago.com",
+      "title": "Garcia For Chicago"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "city_id": "1825000",
+  "city_name": "Fort Wayne city",
+  "state_abb": "IN",
+  "finalists": [
+   {
+    "candidate_election_id": "1825000__2011-11-08__regular__a50da3608de33abb",
+    "candidate_name": "Thomas C. Henry",
+    "election_date": "2011-11-08",
+    "window": [
+     "2010-11-08",
+     "2011-11-08"
+    ],
+    "hits": [
+     {
+      "domain": "henryformayor.com",
+      "capture_url": "https://web.archive.org/web/20110208053402/http://henryformayor.com/",
+      "title": "henryformayor.com"
+     }
+    ]
+   },
+   {
+    "candidate_election_id": "1825000__2011-11-08__regular__5ece2ef9c0abb398",
+    "candidate_name": "Paula Hughes",
+    "election_date": "2011-11-08",
+    "window": [
+     "2010-11-08",
+     "2011-11-08"
+    ],
+    "hits": [
+     {
+      "domain": "paulahughes.com",
+      "capture_url": "https://web.archive.org/web/20101118121856/http://www.paulahughes.com:80/2011/",
+      "title": "Paula Hughes For Mayor"
+     }
+    ]
+   },
+   {
+    "candidate_election_id": "1825000__2019-11-05__regular__bf0304e528498a3f",
+    "candidate_name": "Tim Smith",
+    "election_date": "2019-11-05",
+    "window": [
+     "2018-11-05",
+     "2019-11-05"
+    ],
+    "hits": [
+     {
+      "domain": "timsmith.com",
+      "capture_url": "https://web.archive.org/web/20190111145044/https://timsmith.com/",
+      "title": "Tim Smith's Fort Lauderdale \u2013 get the real scoop"
+     },
+     {
+      "domain": "timsmithformayor.com",
+      "capture_url": "https://web.archive.org/web/20181121033619/https://timsmithformayor.com/",
+      "title": "Home - Tim Smith for Mayor"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "city_id": "1836003",
+  "city_name": "Indianapolis city (balance)",
+  "state_abb": "IN",
+  "finalists": [
+   {
+    "candidate_election_id": "1836003__2019-11-05__regular__5d0053483a9fff09",
+    "candidate_name": "Joe Hogsett",
+    "election_date": "2019-11-05",
+    "window": [
+     "2018-11-05",
+     "2019-11-05"
+    ],
+    "hits": [
+     {
+      "domain": "joehogsett.com",
+      "capture_url": "https://web.archive.org/web/20181113184901/http://joehogsett.com/",
+      "title": "Joe Hogsett for Indianapolis |"
+     }
+    ]
+   },
+   {
+    "candidate_election_id": "1836003__2019-11-05__regular__265d0897e1a2bd70",
+    "candidate_name": "James W. (Jim) Merritt Jr.",
+    "election_date": "2019-11-05",
+    "window": [
+     "2018-11-05",
+     "2019-11-05"
+    ],
+    "hits": [
+     {
+      "domain": "merrittformayor.com",
+      "capture_url": "https://web.archive.org/web/20190117230420/http://merrittformayor.com:80/",
+      "title": "merrittformayor.com - Registered at Namecheap.com"
+     }
+    ]
+   },
+   {
+    "candidate_election_id": "1836003__2023-11-07__regular__5d0053483a9fff09",
+    "candidate_name": "Joe Hogsett",
+    "election_date": "2023-11-07",
+    "window": [
+     "2022-11-07",
+     "2023-11-07"
+    ],
+    "hits": [
+     {
+      "domain": "joehogsett.com",
+      "capture_url": "https://web.archive.org/web/20221205233217/https://joehogsett.com/",
+      "title": "Mayor Joe Hogsett 2022 - Mayor Joe Hogsett"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "city_id": "2079000",
+  "city_name": "Wichita city",
+  "state_abb": "KS",
+  "finalists": [
+   {
+    "candidate_election_id": "2079000__2015-04-07__regular__026dcb693a5c9642",
+    "candidate_name": "Samuel M. Williams",
+    "election_date": "2015-04-07",
+    "window": [
+     "2014-04-07",
+     "2015-04-07"
+    ],
+    "hits": [
+     {
+      "domain": "mayorwilliams.com",
+      "capture_url": "https://web.archive.org/web/20140517150342/http://mayorwilliams.com/",
+      "title": "Donjuan Williams For Glenarden Mayor"
+     }
+    ]
+   },
+   {
+    "candidate_election_id": "2079000__2023-11-07__regular__d7fc7efd80525fda",
+    "candidate_name": "Lily Wu",
+    "election_date": "2023-11-07",
+    "window": [
+     "2022-11-07",
+     "2023-11-07"
+    ],
+    "hits": [
+     {
+      "domain": "lilywuformayor.com",
+      "capture_url": "https://web.archive.org/web/20230402183406/https://lilywuformayor.com/",
+      "title": "Lily Wu For Mayor | All for Wichita"
+     }
+    ]
+   },
+   {
+    "candidate_election_id": "2079000__2023-11-07__regular__7080967e2bec33a9",
+    "candidate_name": "Brandon Whipple",
+    "election_date": "2023-11-07",
+    "window": [
+     "2022-11-07",
+     "2023-11-07"
+    ],
+    "hits": [
+     {
+      "domain": "votewhipple.com",
+      "capture_url": "https://web.archive.org/web/20221204161404/https://www.votewhipple.com/",
+      "title": "About | Whipple for Mayor"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "city_id": "2146027",
+  "city_name": "Lexington-Fayette urban county",
+  "state_abb": "KY",
+  "finalists": [
+   {
+    "candidate_election_id": "2146027__2014-11-04__regular__4e1a4725b41f184a",
+    "candidate_name": "Jim Gray",
+    "election_date": "2014-11-04",
+    "window": [
+     "2013-11-04",
+     "2014-11-04"
+    ],
+    "hits": [
+     {
+      "domain": "grayformayor.com",
+      "capture_url": "https://web.archive.org/web/20131230203957/http://grayformayor.com/",
+      "title": "Gray for Mayor 2013"
+     }
+    ]
+   },
+   {
+    "candidate_election_id": "2146027__2022-11-08__regular__975d4cf656cc7baf",
+    "candidate_name": "Linda Gorton",
+    "election_date": "2022-11-08",
+    "window": [
+     "2021-11-08",
+     "2022-11-08"
+    ],
+    "hits": [
+     {
+      "domain": "lindagorton.com",
+      "capture_url": "https://web.archive.org/web/20211207024609/https://lindagorton.com/",
+      "title": "Mayor Linda Gorton"
+     }
+    ]
+   },
+   {
+    "candidate_election_id": "2146027__2022-11-08__regular__0f70fc4bdf166dde",
+    "candidate_name": "David Kloiber",
+    "election_date": "2022-11-08",
+    "window": [
+     "2021-11-08",
+     "2022-11-08"
+    ],
+    "hits": [
+     {
+      "domain": "davidkloiber.com",
+      "capture_url": "https://web.archive.org/web/20220125180349/https://davidkloiber.com/",
+      "title": "HOME - David Kloiber for Lexington Mayor"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "city_id": "2205000",
+  "city_name": "Baton Rouge city",
+  "state_abb": "LA",
+  "finalists": [
+   {
+    "candidate_election_id": "2205000__2012-11-06__regular__c9a1abc8055fbd5b",
+    "candidate_name": "Melvin \"Kip\" Holden",
+    "election_date": "2012-11-06",
+    "window": [
+     "2011-11-07",
+     "2012-11-06"
+    ],
+    "hits": [
+     {
+      "domain": "kipholden.com",
+      "capture_url": "https://web.archive.org/web/20111204070051/http://www.kipholden.com:80/",
+      "title": "Kip Holden - Mayor"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "city_id": "2255000",
+  "city_name": "New Orleans city",
+  "state_abb": "LA",
+  "finalists": [
+   {
+    "candidate_election_id": "2255000__2025-10-11__regular__84552f9b2e3fa06a",
+    "candidate_name": "Helena Moreno",
+    "election_date": "2025-10-11",
+    "window": [
+     "2024-10-11",
+     "2025-10-11"
+    ],
+    "hits": [
+     {
+      "domain": "morenoformayor.com",
+      "capture_url": "https://web.archive.org/web/20241014025550/http://morenoformayor.com/",
+      "title": "MorenoForMayor.com, Joe Moreno, Mayor, John Thodos, opponent, East Moline, IL, election"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "city_id": "2622000",
+  "city_name": "Detroit city",
+  "state_abb": "MI",
+  "finalists": [
+   {
+    "candidate_election_id": "2622000__2025-11-04__regular__421a9c126cabfc2d",
+    "candidate_name": "Solomon Kinloch",
+    "election_date": "2025-11-04",
+    "window": [
+     "2024-11-04",
+     "2025-11-04"
+    ],
+    "hits": [
+     {
+      "domain": "kinlochformayor.com",
+      "capture_url": "https://web.archive.org/web/20250220001417/https://www.kinlochformayor.com/",
+      "title": "Kinloch For Mayor"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "city_id": "2743000",
+  "city_name": "Minneapolis city",
+  "state_abb": "MN",
+  "finalists": [
+   {
+    "candidate_election_id": "2743000__2025-11-04__regular__d9ef74b455d48478",
+    "candidate_name": "Jacob Frey",
+    "election_date": "2025-11-04",
+    "window": [
+     "2024-11-04",
+     "2025-11-04"
+    ],
+    "hits": [
+     {
+      "domain": "jacobfrey.org",
+      "capture_url": "https://web.archive.org/web/20241217040929/https://jacobfrey.org/",
+      "title": "Re-Elect Minneapolis Mayor Jacob Frey for Our City"
+     }
+    ]
+   },
+   {
+    "candidate_election_id": "2743000__2025-11-04__regular__1ca92c04555a9e4c",
+    "candidate_name": "Omar Fateh",
+    "election_date": "2025-11-04",
+    "window": [
+     "2024-11-04",
+     "2025-11-04"
+    ],
+    "hits": [
+     {
+      "domain": "fatehformayor.com",
+      "capture_url": "https://web.archive.org/web/20241130210000/https://www.fatehformayor.com/",
+      "title": "Omar Fateh for Minneapolis Mayor"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "city_id": "2758000",
+  "city_name": "St. Paul city",
+  "state_abb": "MN",
+  "finalists": [
+   {
+    "candidate_election_id": "2758000__2013-11-05__regular__d1e0e89990fb6e76",
+    "candidate_name": "Chris Coleman",
+    "election_date": "2013-11-05",
+    "window": [
+     "2012-11-05",
+     "2013-11-05"
+    ],
+    "hits": [
+     {
+      "domain": "chriscoleman.org",
+      "capture_url": "https://web.archive.org/web/20130723112057/http://www.chriscoleman.org:80/",
+      "title": "Mayor Coleman seeks re-election for third term as Saint Paul mayor | Chris Coleman for Saint Paul"
+     },
+     {
+      "domain": "chriscolemanformayor.com",
+      "capture_url": "https://web.archive.org/web/20130531234501/http://chriscolemanformayor.com/",
+      "title": "CHRISCOLEMANFORMAYOR.COM"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "city_id": "2938000",
+  "city_name": "Kansas City city",
+  "state_abb": "MO",
+  "finalists": [
+   {
+    "candidate_election_id": "2938000__2011-03-22__regular__914ceddf670f54cc",
+    "candidate_name": "Sylvester James Jr.",
+    "election_date": "2011-03-22",
+    "window": [
+     "2010-03-22",
+     "2011-03-22"
+    ],
+    "hits": [
+     {
+      "domain": "james4mayor.com",
+      "capture_url": "https://web.archive.org/web/20110202182545/http://james4mayor.com/",
+      "title": "Home Page"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "city_id": "3128000",
+  "city_name": "Lincoln city",
+  "state_abb": "NE",
+  "finalists": [
+   {
+    "candidate_election_id": "3128000__2011-05-03__regular__eea76e01d9806765",
+    "candidate_name": "Chris Beutler",
+    "election_date": "2011-05-03",
+    "window": [
+     "2010-05-03",
+     "2011-05-03"
+    ],
+    "hits": [
+     {
+      "domain": "chrisbeutler.com",
+      "capture_url": "https://web.archive.org/web/20100726054705/http://www.chrisbeutler.com:80/",
+      "title": "Welcome to Beutler for Mayor | Chris Beutler for Mayor"
+     }
+    ]
+   },
+   {
+    "candidate_election_id": "3128000__2019-05-07__regular__c7a6ad6d59136d2d",
+    "candidate_name": "Leirion Gaylor Baird",
+    "election_date": "2019-05-07",
+    "window": [
+     "2018-05-07",
+     "2019-05-07"
+    ],
+    "hits": [
+     {
+      "domain": "bairdformayor.com",
+      "capture_url": "https://web.archive.org/web/20180827203015/https://www.bairdformayor.com/",
+      "title": "Bill Baird for Mayor"
+     }
+    ]
+   },
+   {
+    "candidate_election_id": "3128000__2023-05-02__regular__c7a6ad6d59136d2d",
+    "candidate_name": "Leirion Gaylor Baird",
+    "election_date": "2023-05-02",
+    "window": [
+     "2022-05-02",
+     "2023-05-02"
+    ],
+    "hits": [
+     {
+      "domain": "bairdformayor.com",
+      "capture_url": "https://web.archive.org/web/20230213232732/https://www.bairdformayor.com/",
+      "title": "Bill Baird for Mayor"
+     },
+     {
+      "domain": "leirionforlincoln.com",
+      "capture_url": "https://web.archive.org/web/20220522151217/https://www.leirionforlincoln.com/",
+      "title": "Leirion Gaylor Baird for Lincoln Mayor"
+     }
+    ]
+   },
+   {
+    "candidate_election_id": "3128000__2023-05-02__regular__fa93e75bff95c005",
+    "candidate_name": "Suzanne Geist",
+    "election_date": "2023-05-02",
+    "window": [
+     "2022-05-02",
+     "2023-05-02"
+    ],
+    "hits": [
+     {
+      "domain": "suzannegeistformayor.com",
+      "capture_url": "https://web.archive.org/web/20220930034059/https://www.suzannegeistformayor.com/",
+      "title": "Home | My Site 12"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "city_id": "3137000",
+  "city_name": "Omaha city",
+  "state_abb": "NE",
+  "finalists": [
+   {
+    "candidate_election_id": "3137000__2025-05-13__regular__5d20b01b0d43a02b",
+    "candidate_name": "John W. Ewing, Jr.",
+    "election_date": "2025-05-13",
+    "window": [
+     "2024-05-13",
+     "2025-05-13"
+    ],
+    "hits": [
+     {
+      "domain": "johnewingforomaha.com",
+      "capture_url": "https://web.archive.org/web/20240718020036/https://johnewingforomaha.com/",
+      "title": "John Ewing for Omaha | Mayor 2025"
+     }
+    ]
+   },
+   {
+    "candidate_election_id": "3137000__2025-05-13__regular__8088567775aef50b",
+    "candidate_name": "Jean Stothert",
+    "election_date": "2025-05-13",
+    "window": [
+     "2024-05-13",
+     "2025-05-13"
+    ],
+    "hits": [
+     {
+      "domain": "jeanstothert.com",
+      "capture_url": "https://web.archive.org/web/20240521044214/https://jeanstothert.com/",
+      "title": "Jean Stothert for Omaha Mayor 2025 Campaign"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "city_id": "3231900",
+  "city_name": "Henderson city",
+  "state_abb": "NV",
+  "finalists": [
+   {
+    "candidate_election_id": "3231900__2017-04-04__regular__0d93a44a9c8ceaf1",
+    "candidate_name": "Debra March",
+    "election_date": "2017-04-04",
+    "window": [
+     "2016-04-04",
+     "2017-04-04"
+    ],
+    "hits": [
+     {
+      "domain": "debramarch.com",
+      "capture_url": "https://web.archive.org/web/20161004192837/http://debramarch.com/",
+      "title": "Debra March For Mayor"
+     }
+    ]
+   },
+   {
+    "candidate_election_id": "3231900__2017-04-04__regular__f5ae6b4ddc4dc44b",
+    "candidate_name": "Rick Workman",
+    "election_date": "2017-04-04",
+    "window": [
+     "2016-04-04",
+     "2017-04-04"
+    ],
+    "hits": [
+     {
+      "domain": "rickworkmanformayor.com",
+      "capture_url": "https://web.archive.org/web/20170318084237/https://rickworkmanformayor.com/",
+      "title": "Rick Workman for Mayor of Henderson"
+     }
+    ]
+   },
+   {
+    "candidate_election_id": "3231900__2022-06-14__regular__7f35d412816c026b",
+    "candidate_name": "Michelle Romero",
+    "election_date": "2022-06-14",
+    "window": [
+     "2021-06-14",
+     "2022-06-14"
+    ],
+    "hits": [
+     {
+      "domain": "votemichelleromero.com",
+      "capture_url": "https://web.archive.org/web/20210615162100/https://votemichelleromero.com/",
+      "title": ""
+     }
+    ]
+   },
+   {
+    "candidate_election_id": "3231900__2022-06-14__regular__726b2dbdfb16f4f9",
+    "candidate_name": "Frank Ficadenti",
+    "election_date": "2022-06-14",
+    "window": [
+     "2021-06-14",
+     "2022-06-14"
+    ],
+    "hits": [
+     {
+      "domain": "votefrankficadenti.com",
+      "capture_url": "https://web.archive.org/web/20220409222425/https://www.votefrankficadenti.com/",
+      "title": "Mayor of Henderson | Votefrankficadenti | Henderson"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "city_id": "3240000",
+  "city_name": "Las Vegas city",
+  "state_abb": "NV",
+  "finalists": [
+   {
+    "candidate_election_id": "3240000__2015-04-07__regular__1afe16a421f5fbd6",
+    "candidate_name": "Stavros S. Anthony",
+    "election_date": "2015-04-07",
+    "window": [
+     "2014-04-07",
+     "2015-04-07"
+    ],
+    "hits": [
+     {
+      "domain": "stavrosanthonyforlasvegas.com",
+      "capture_url": "https://web.archive.org/web/20150211185059/http://www.stavrosanthonyforlasvegas.com:80/",
+      "title": "2015 Las Vegas City Mayor | Elect Stavros Anthony | Volunteer for Stavros Anthony's Campaign"
+     }
+    ]
+   },
+   {
+    "candidate_election_id": "3240000__2024-11-05__regular__a83bc2e26c079f98",
+    "candidate_name": "Shelley Berkley",
+    "election_date": "2024-11-05",
+    "window": [
+     "2023-11-06",
+     "2024-11-05"
+    ],
+    "hits": [
+     {
+      "domain": "berkley4mayor.com",
+      "capture_url": "https://web.archive.org/web/20231129121329/https://www.berkley4mayor.com/",
+      "title": "HOME | Shelley Berkley for Mayor of Las Vegas"
+     }
+    ]
+   },
+   {
+    "candidate_election_id": "3240000__2024-11-05__regular__6dec076b03777cb5",
+    "candidate_name": "Victoria Seaman",
+    "election_date": "2024-11-05",
+    "window": [
+     "2023-11-06",
+     "2024-11-05"
+    ],
+    "hits": [
+     {
+      "domain": "victoriaseaman.com",
+      "capture_url": "https://web.archive.org/web/20231207113232/https://www.victoriaseaman.com/",
+      "title": "Victoria Seaman is the experienced leader for Las Vegas Mayor."
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "city_id": "3251800",
+  "city_name": "North Las Vegas city",
+  "state_abb": "NV",
+  "finalists": [
+   {
+    "candidate_election_id": "3251800__2013-04-02__regular__e6a6049489e15c62",
+    "candidate_name": "Shari Buck",
+    "election_date": "2013-04-02",
+    "window": [
+     "2012-04-02",
+     "2013-04-02"
+    ],
+    "hits": [
+     {
+      "domain": "sharibuckfornorthlasvegas.com",
+      "capture_url": "https://web.archive.org/web/20130315032245/http://www.sharibuckfornorthlasvegas.com:80/",
+      "title": "Shari Buck for Mayor North Las Vegas | Shari Buck for Mayor | Shari Buck"
+     }
+    ]
+   },
+   {
+    "candidate_election_id": "3251800__2017-04-04__regular__cc94163a47e404fc",
+    "candidate_name": "John J. Lee",
+    "election_date": "2017-04-04",
+    "window": [
+     "2016-04-04",
+     "2017-04-04"
+    ],
+    "hits": [
+     {
+      "domain": "lee4mayor.com",
+      "capture_url": "https://web.archive.org/web/20160408010710/http://lee4mayor.com:80/",
+      "title": "Lee Harris For Mayor"
+     },
+     {
+      "domain": "votejohnlee.com",
+      "capture_url": "https://web.archive.org/web/20170322115523/http://www.votejohnlee.com:80/",
+      "title": "Elect John Lee | Mayor of North Las Vegas, Nevada"
+     }
+    ]
+   },
+   {
+    "candidate_election_id": "3251800__2022-11-08__regular__b6de7bee9451b3d0",
+    "candidate_name": "Pat Spearman",
+    "election_date": "2022-11-08",
+    "window": [
+     "2021-11-08",
+     "2022-11-08"
+    ],
+    "hits": [
+     {
+      "domain": "patspearman.com",
+      "capture_url": "https://web.archive.org/web/20211204164325/https://www.patspearman.com/",
+      "title": "SPEARMAN FOR NORTH LAS VEGAS"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "city_id": "3451000",
+  "city_name": "Newark city",
+  "state_abb": "NJ",
+  "finalists": [
+   {
+    "candidate_election_id": "3451000__2014-05-13__regular__7b36f8ae9ed2aa97",
+    "candidate_name": "Shavar D. Jeffries",
+    "election_date": "2014-05-13",
+    "window": [
+     "2013-05-13",
+     "2014-05-13"
+    ],
+    "hits": [
+     {
+      "domain": "jeffriesformayor.com",
+      "capture_url": "https://web.archive.org/web/20140325201206/http://www.jeffriesformayor.com:80/home",
+      "title": "Home - Shavar Jeffries"
+     },
+     {
+      "domain": "shavarjeffries.com",
+      "capture_url": "https://web.archive.org/web/20130530010556/http://www.shavarjeffries.com:80/",
+      "title": "Shavar Jeffries"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "city_id": "3502000",
+  "city_name": "Albuquerque city",
+  "state_abb": "NM",
+  "finalists": [
+   {
+    "candidate_election_id": "3502000__2013-10-08__regular__328e098fb11d69f9",
+    "candidate_name": "Richard J. Berry",
+    "election_date": "2013-10-08",
+    "window": [
+     "2012-10-08",
+     "2013-10-08"
+    ],
+    "hits": [
+     {
+      "domain": "berryformayor.com",
+      "capture_url": "https://web.archive.org/web/20130520122932/http://berryformayor.com/",
+      "title": "berryformayor.com"
+     },
+     {
+      "domain": "mayorberry.com",
+      "capture_url": "https://web.archive.org/web/20130412152745/http://www.mayorberry.com",
+      "title": "Mayor Richard J. Berry"
+     }
+    ]
+   },
+   {
+    "candidate_election_id": "3502000__2013-10-08__regular__2b1455f9876257dd",
+    "candidate_name": "Pete Dinelli",
+    "election_date": "2013-10-08",
+    "window": [
+     "2012-10-08",
+     "2013-10-08"
+    ],
+    "hits": [
+     {
+      "domain": "petedinelli.com",
+      "capture_url": "https://web.archive.org/web/20130510064958/http://petedinelli.com/",
+      "title": "Pete Dinelli for Mayor of Albuquerque"
+     }
+    ]
+   },
+   {
+    "candidate_election_id": "3502000__2025-12-09__regular__464d68f164682931",
+    "candidate_name": "Darren White",
+    "election_date": "2025-12-09",
+    "window": [
+     "2024-12-09",
+     "2025-12-09"
+    ],
+    "hits": [
+     {
+      "domain": "white4mayor.com",
+      "capture_url": "https://web.archive.org/web/20241209235047/https://white4mayor.com/",
+      "title": "White4Mayor \u2013 Leadership We Can Count On"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "city_id": "3712000",
+  "city_name": "Charlotte city",
+  "state_abb": "NC",
+  "finalists": [
+   {
+    "candidate_election_id": "3712000__2017-11-07__regular__5aa5f60353cc070e",
+    "candidate_name": "Vi Lyles",
+    "election_date": "2017-11-07",
+    "window": [
+     "2016-11-07",
+     "2017-11-07"
+    ],
+    "hits": [
+     {
+      "domain": "vilyles.com",
+      "capture_url": "https://web.archive.org/web/20170327133916/https://vilyles.com/",
+      "title": "Vi Lyles For Mayor - Charlotte"
+     }
+    ]
+   },
+   {
+    "candidate_election_id": "3712000__2019-11-05__regular__5aa5f60353cc070e",
+    "candidate_name": "Vi Lyles",
+    "election_date": "2019-11-05",
+    "window": [
+     "2018-11-05",
+     "2019-11-05"
+    ],
+    "hits": [
+     {
+      "domain": "vilyles.com",
+      "capture_url": "https://web.archive.org/web/20181113182449/https://vilyles.com/",
+      "title": "Vi Lyles For Mayor - Charlotte"
+     }
+    ]
+   },
+   {
+    "candidate_election_id": "3712000__2023-11-07__regular__249c09f158c0c6a9",
+    "candidate_name": "Misun Kim",
+    "election_date": "2023-11-07",
+    "window": [
+     "2022-11-07",
+     "2023-11-07"
+    ],
+    "hits": [
+     {
+      "domain": "misunkimformayor.com",
+      "capture_url": "https://web.archive.org/web/20230830133531/https://www.misunkimformayor.com/",
+      "title": "Home | Misun Kim For Mayor"
+     }
+    ]
+   },
+   {
+    "candidate_election_id": "3712000__2025-11-04__regular__5aa5f60353cc070e",
+    "candidate_name": "Vi Lyles",
+    "election_date": "2025-11-04",
+    "window": [
+     "2024-11-04",
+     "2025-11-04"
+    ],
+    "hits": [
+     {
+      "domain": "vilyles.org",
+      "capture_url": "https://web.archive.org/web/20251016030032/https://www.vilyles.org/",
+      "title": "Mayor Vi Lyles - Charlotte Mayor 2025 | Mayor Vi Lyles for Mayor of Charlotte 2025"
+     }
+    ]
+   },
+   {
+    "candidate_election_id": "3712000__2025-11-04__regular__86a13ad89964fa0f",
+    "candidate_name": "Terrie D. Donovan",
+    "election_date": "2025-11-04",
+    "window": [
+     "2024-11-04",
+     "2025-11-04"
+    ],
+    "hits": [
+     {
+      "domain": "terrieforcharlotte.com",
+      "capture_url": "https://web.archive.org/web/20250828172655/https://www.terrieforcharlotte.com/",
+      "title": "Terrie for Charlotte | Charlotte Mayoral Election | Charlotte Strong. Charlotte Safe."
+     },
+     {
+      "domain": "votedonovan.com",
+      "capture_url": "https://web.archive.org/web/20241111001132/https://votedonovan.com/",
+      "title": "Vote Donovan \u2013 Peter Donovan for MV Mayor"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "city_id": "3719000",
+  "city_name": "Durham city",
+  "state_abb": "NC",
+  "finalists": [
+   {
+    "candidate_election_id": "3719000__2013-11-05__regular__3a34008d37ae09f9",
+    "candidate_name": "William V. (Bill) Bell",
+    "election_date": "2013-11-05",
+    "window": [
+     "2012-11-05",
+     "2013-11-05"
+    ],
+    "hits": [
+     {
+      "domain": "bell4mayor.com",
+      "capture_url": "https://web.archive.org/web/20130520101252/http://bell4mayor.com/",
+      "title": "Michael Bell for Mayor"
+     },
+     {
+      "domain": "billbellformayor.com",
+      "capture_url": "https://web.archive.org/web/20130517021511/http://billbellformayor.com/",
+      "title": "Re-Elect Mayor Bill Bell ::: Building a Greater Durham Together"
+     }
+    ]
+   },
+   {
+    "candidate_election_id": "3719000__2019-11-05__regular__8f9b84575fda725c",
+    "candidate_name": "Sylvester Williams",
+    "election_date": "2019-11-05",
+    "window": [
+     "2018-11-05",
+     "2019-11-05"
+    ],
+    "hits": [
+     {
+      "domain": "mayorwilliams.com",
+      "capture_url": "https://web.archive.org/web/20190704065218/http://mayorwilliams.com:80/news.php",
+      "title": "Donjuan Williams for Glenarden Mayor"
+     }
+    ]
+   },
+   {
+    "candidate_election_id": "3719000__2023-11-07__regular__97daaf6f19dc0536",
+    "candidate_name": "Mike Woodard",
+    "election_date": "2023-11-07",
+    "window": [
+     "2022-11-07",
+     "2023-11-07"
+    ],
+    "hits": [
+     {
+      "domain": "mikewoodard.com",
+      "capture_url": "https://web.archive.org/web/20230921073324/http://mikewoodard.com/",
+      "title": "Mike Woodard for Mayor of Durham, NC"
+     }
+    ]
+   },
+   {
+    "candidate_election_id": "3719000__2025-11-04__regular__271a70d53d27e1c0",
+    "candidate_name": "Leonardo (Leo) Williams",
+    "election_date": "2025-11-04",
+    "window": [
+     "2024-11-04",
+     "2025-11-04"
+    ],
+    "hits": [
+     {
+      "domain": "leonardowilliams.com",
+      "capture_url": "https://web.archive.org/web/20241130004848/https://leonardowilliams.com/",
+      "title": "L | Q | W"
+     }
+    ]
+   },
+   {
+    "candidate_election_id": "3719000__2025-11-04__regular__eb7c96e51f5efe22",
+    "candidate_name": "Anjanee Bell",
+    "election_date": "2025-11-04",
+    "window": [
+     "2024-11-04",
+     "2025-11-04"
+    ],
+    "hits": [
+     {
+      "domain": "bellformayor.com",
+      "capture_url": "https://web.archive.org/web/20250601091040/http://bellformayor.com/feed/",
+      "title": "bellformayor.com\u00a0-\u00a0bellformayor Resources and Information."
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "city_id": "3728000",
+  "city_name": "Greensboro city",
+  "state_abb": "NC",
+  "finalists": [
+   {
+    "candidate_election_id": "3728000__2011-11-08__regular__77f86f6e17b2e09f",
+    "candidate_name": "Bill Knight",
+    "election_date": "2011-11-08",
+    "window": [
+     "2010-11-08",
+     "2011-11-08"
+    ],
+    "hits": [
+     {
+      "domain": "knightformayor.com",
+      "capture_url": "https://web.archive.org/web/20110129134156/http://knightformayor.com/",
+      "title": "knightformayor.com"
+     }
+    ]
+   },
+   {
+    "candidate_election_id": "3728000__2015-11-03__regular__523c7358af80356c",
+    "candidate_name": "Devin R. King",
+    "election_date": "2015-11-03",
+    "window": [
+     "2014-11-03",
+     "2015-11-03"
+    ],
+    "hits": [
+     {
+      "domain": "mayorking.com",
+      "capture_url": "https://web.archive.org/web/20141217161459/http://mayorking.com/",
+      "title": "INICIO"
+     }
+    ]
+   },
+   {
+    "candidate_election_id": "3728000__2025-11-04__regular__0cd1ace2f2ca3bd5",
+    "candidate_name": "Robbie Perkins",
+    "election_date": "2025-11-04",
+    "window": [
+     "2024-11-04",
+     "2025-11-04"
+    ],
+    "hits": [
+     {
+      "domain": "perkinsformayor.org",
+      "capture_url": "https://web.archive.org/web/20250719121719/http://www.perkinsformayor.org/",
+      "title": "perkinsformayor.org\u00a0-\u00a0perkinsformayor Resources and Information."
+     },
+     {
+      "domain": "voterobbieperkins.com",
+      "capture_url": "https://web.archive.org/web/20241112191658/https://voterobbieperkins.com/",
+      "title": "Vote for Robbie Perkins \u2013 Elect Robbie Perkins Mayor of Greensboro"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "city_id": "3755000",
+  "city_name": "Raleigh city",
+  "state_abb": "NC",
+  "finalists": [
+   {
+    "candidate_election_id": "3755000__2022-11-08__regular__78b6be8dcf58e796",
+    "candidate_name": "Mary-Ann Baldwin",
+    "election_date": "2022-11-08",
+    "window": [
+     "2021-11-08",
+     "2022-11-08"
+    ],
+    "hits": [
+     {
+      "domain": "maryannforraleigh.com",
+      "capture_url": "https://web.archive.org/web/20211207174821/https://www.maryannforraleigh.com/",
+      "title": "Home - Mary Ann Baldwin"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "city_id": "3775000",
+  "city_name": "Winston-Salem city",
+  "state_abb": "NC",
+  "finalists": [
+   {
+    "candidate_election_id": "3775000__2013-11-05__regular__bf6dd0b5fde826df",
+    "candidate_name": "Allen Joines",
+    "election_date": "2013-11-05",
+    "window": [
+     "2012-11-05",
+     "2013-11-05"
+    ],
+    "hits": [
+     {
+      "domain": "allenjoines.com",
+      "capture_url": "https://web.archive.org/web/20121113233050/http://allenjoines.com:80/",
+      "title": "Allen Joines .com | Partisan, Polarizing & Bad for Winston-Salem, NC."
+     },
+     {
+      "domain": "allenjoines.org",
+      "capture_url": "https://web.archive.org/web/20130525033252/http://allenjoines.org/",
+      "title": "Allen Joines .com | Partisan, Polarizing & Bad for Winston-Salem, NC."
+     },
+     {
+      "domain": "joinesformayor.org",
+      "capture_url": "https://web.archive.org/web/20130607131646/http://joinesformayor.org/",
+      "title": "Allen Joines .com | Partisan, Polarizing & Bad for Winston-Salem, NC."
+     }
+    ]
+   },
+   {
+    "candidate_election_id": "3775000__2013-11-05__regular__a86279120bc929c1",
+    "candidate_name": "James Lee Knox",
+    "election_date": "2013-11-05",
+    "window": [
+     "2012-11-05",
+     "2013-11-05"
+    ],
+    "hits": [
+     {
+      "domain": "knoxformayor.org",
+      "capture_url": "https://web.archive.org/web/20130612195422/http://knoxformayor.org/",
+      "title": "knoxformayor.org"
+     }
+    ]
+   },
+   {
+    "candidate_election_id": "3775000__2020-11-03__regular__12e0a01a69fa161b",
+    "candidate_name": "Kris McCann",
+    "election_date": "2020-11-03",
+    "window": [
+     "2019-11-04",
+     "2020-11-03"
+    ],
+    "hits": [
+     {
+      "domain": "krismccannformayor.com",
+      "capture_url": "https://web.archive.org/web/20201020230047/https://krismccannformayor.com/",
+      "title": "Kris McCann for Mayor"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "city_id": "3915000",
+  "city_name": "Cincinnati city",
+  "state_abb": "OH",
+  "finalists": [
+   {
+    "candidate_election_id": "3915000__2025-11-04__regular__10f74c01d5e1da1d",
+    "candidate_name": "Aftab Pureval",
+    "election_date": "2025-11-04",
+    "window": [
+     "2024-11-04",
+     "2025-11-04"
+    ],
+    "hits": [
+     {
+      "domain": "aftabformayor.com",
+      "capture_url": "https://web.archive.org/web/20250730030231/https://aftabformayor.com/",
+      "title": "Cincinnati Mayor Aftab Pureval"
+     }
+    ]
+   },
+   {
+    "candidate_election_id": "3915000__2025-11-04__regular__7f404e3bba3b2595",
+    "candidate_name": "Cory Bowman",
+    "election_date": "2025-11-04",
+    "window": [
+     "2024-11-04",
+     "2025-11-04"
+    ],
+    "hits": [
+     {
+      "domain": "corybowman.com",
+      "capture_url": "https://web.archive.org/web/20250222031421/https://www.corybowman.com/",
+      "title": "Home | Cory Bowman For Mayo"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "city_id": "3918000",
+  "city_name": "Columbus city",
+  "state_abb": "OH",
+  "finalists": [
+   {
+    "candidate_election_id": "3918000__2011-11-08__regular__8d468cbe4ec0757e",
+    "candidate_name": "Michael B. Coleman",
+    "election_date": "2011-11-08",
+    "window": [
+     "2010-11-08",
+     "2011-11-08"
+    ],
+    "hits": [
+     {
+      "domain": "colemanforcolumbus.com",
+      "capture_url": "https://web.archive.org/web/20101126134714/http://www.colemanforcolumbus.com:80/",
+      "title": "Coleman for Columbus"
+     }
+    ]
+   },
+   {
+    "candidate_election_id": "3918000__2011-11-08__regular__322c28be7e8be395",
+    "candidate_name": "Earl Smith",
+    "election_date": "2011-11-08",
+    "window": [
+     "2010-11-08",
+     "2011-11-08"
+    ],
+    "hits": [
+     {
+      "domain": "earlformayor.com",
+      "capture_url": "https://web.archive.org/web/20111031134518/http://earlformayor.com:80/blog",
+      "title": "Blog | Earl Smith for Mayor of Columbus"
+     },
+     {
+      "domain": "earlformayor.org",
+      "capture_url": "https://web.archive.org/web/20110701025814/http://earlformayor.org/",
+      "title": "Earl Smith for Mayor of Columbus"
+     },
+     {
+      "domain": "earlsmith.org",
+      "capture_url": "https://web.archive.org/web/20110701030221/http://earlsmith.org/",
+      "title": "Earl Smith for Mayor of Columbus"
+     },
+     {
+      "domain": "smith4mayor.com",
+      "capture_url": "https://web.archive.org/web/20110202220804/http://smith4mayor.com/",
+      "title": "Elect Larry Smith Mayor of New Baltimore"
+     }
+    ]
+   },
+   {
+    "candidate_election_id": "3918000__2019-11-05__regular__e690fcbf1d5ba41e",
+    "candidate_name": "Andrew J. Ginther",
+    "election_date": "2019-11-05",
+    "window": [
+     "2018-11-05",
+     "2019-11-05"
+    ],
+    "hits": [
+     {
+      "domain": "andrewginther.com",
+      "capture_url": "https://web.archive.org/web/20181113184937/https://andrewginther.com/",
+      "title": "Mayor Andrew J. Ginther | Mayor Andrew J. Ginther for Columbus"
+     }
+    ]
+   },
+   {
+    "candidate_election_id": "3918000__2023-11-07__regular__e690fcbf1d5ba41e",
+    "candidate_name": "Andrew J. Ginther",
+    "election_date": "2023-11-07",
+    "window": [
+     "2022-11-07",
+     "2023-11-07"
+    ],
+    "hits": [
+     {
+      "domain": "andrewginther.com",
+      "capture_url": "https://web.archive.org/web/20230117162047/https://andrewginther.com/",
+      "title": "Home Page | Andrew Ginther |"
+     }
+    ]
+   },
+   {
+    "candidate_election_id": "3918000__2023-11-07__regular__89b92eae1bd03abc",
+    "candidate_name": "Joe Motil",
+    "election_date": "2023-11-07",
+    "window": [
+     "2022-11-07",
+     "2023-11-07"
+    ],
+    "hits": [
+     {
+      "domain": "joemotil.com",
+      "capture_url": "https://web.archive.org/web/20230322125346/https://www.joemotil.com/",
+      "title": "Home | Joemotil"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "city_id": "3977000",
+  "city_name": "Toledo city",
+  "state_abb": "OH",
+  "finalists": [
+   {
+    "candidate_election_id": "3977000__2025-11-04__regular__4f34b71f5a2a85b4",
+    "candidate_name": "Roberto Torres",
+    "election_date": "2025-11-04",
+    "window": [
+     "2024-11-04",
+     "2025-11-04"
+    ],
+    "hits": [
+     {
+      "domain": "torresfortoledo.com",
+      "capture_url": "https://web.archive.org/web/20250328162824/https://torresfortoledo.com/",
+      "title": "VOTE Roberto Torres MAYOR \u2013 Independent For Toledo"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "city_id": "4055000",
+  "city_name": "Oklahoma City city",
+  "state_abb": "OK",
+  "finalists": [
+   {
+    "candidate_election_id": "4055000__2014-03-04__regular__6ab4c7dfb81d2c83",
+    "candidate_name": "Ed Shadid",
+    "election_date": "2014-03-04",
+    "window": [
+     "2013-03-04",
+     "2014-03-04"
+    ],
+    "hits": [
+     {
+      "domain": "edshadid.com",
+      "capture_url": "https://web.archive.org/web/20130517033202/http://www.edshadid.com/",
+      "title": "Ed Shadid | Oklahoma City Ward 2 Councilman"
+     }
+    ]
+   },
+   {
+    "candidate_election_id": "4055000__2022-02-08__regular__afb06641f95cde08",
+    "candidate_name": "David Holt",
+    "election_date": "2022-02-08",
+    "window": [
+     "2021-02-08",
+     "2022-02-08"
+    ],
+    "hits": [
+     {
+      "domain": "holtformayor.com",
+      "capture_url": "https://web.archive.org/web/20210306121420/http://holtformayor.com/",
+      "title": "David Holt for OKC"
+     }
+    ]
+   },
+   {
+    "candidate_election_id": "4055000__2022-02-08__regular__ffc122b0051b680c",
+    "candidate_name": "Frank Urbanic",
+    "election_date": "2022-02-08",
+    "window": [
+     "2021-02-08",
+     "2022-02-08"
+    ],
+    "hits": [
+     {
+      "domain": "frankurbanic.com",
+      "capture_url": "https://web.archive.org/web/20211106141355/https://frankurbanic.com/",
+      "title": "Home - Frank Urbanic"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "city_id": "4261000",
+  "city_name": "Pittsburgh city",
+  "state_abb": "PA",
+  "finalists": [
+   {
+    "candidate_election_id": "4261000__2025-11-04__regular__54b60a99d4fdfcce",
+    "candidate_name": "Corey O'Connor",
+    "election_date": "2025-11-04",
+    "window": [
+     "2024-11-04",
+     "2025-11-04"
+    ],
+    "hits": [
+     {
+      "domain": "coreyformayor.com",
+      "capture_url": "https://web.archive.org/web/20241212163528/https://www.coreyformayor.com/",
+      "title": "Corey O'Connor for Mayor"
+     }
+    ]
+   },
+   {
+    "candidate_election_id": "4261000__2025-11-04__regular__45406172fd56e72a",
+    "candidate_name": "Tony Moreno",
+    "election_date": "2025-11-04",
+    "window": [
+     "2024-11-04",
+     "2025-11-04"
+    ],
+    "hits": [
+     {
+      "domain": "morenoformayor.com",
+      "capture_url": "https://web.archive.org/web/20250206200256/http://morenoformayor.com/",
+      "title": "MorenoForMayor.com, Joe Moreno, Mayor, John Thodos, opponent, East Moline, IL, election"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "city_id": "4748000",
+  "city_name": "Memphis city",
+  "state_abb": "TN",
+  "finalists": [
+   {
+    "candidate_election_id": "4748000__2019-10-03__regular__e6c9f2ac42ea34dc",
+    "candidate_name": "Willie Herenton",
+    "election_date": "2019-10-03",
+    "window": [
+     "2018-10-03",
+     "2019-10-03"
+    ],
+    "hits": [
+     {
+      "domain": "herentonformayor.com",
+      "capture_url": "https://web.archive.org/web/20181202230343/http://herentonformayor.com/",
+      "title": "Herenton for Mayor \u2013 City of Memphis"
+     }
+    ]
+   },
+   {
+    "candidate_election_id": "4748000__2023-10-05__regular__15c085d6a8fbe7c4",
+    "candidate_name": "Paul A. Young",
+    "election_date": "2023-10-05",
+    "window": [
+     "2022-10-05",
+     "2023-10-05"
+    ],
+    "hits": [
+     {
+      "domain": "youngformemphis.com",
+      "capture_url": "https://web.archive.org/web/20221206231149/https://www.youngformemphis.com/",
+      "title": "Paul Young for Memphis Mayor"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "city_id": "4804000",
+  "city_name": "Arlington city",
+  "state_abb": "TX",
+  "finalists": [
+   {
+    "candidate_election_id": "4804000__2019-05-04__regular__887147faba1a22d3",
+    "candidate_name": "Jeff Williams",
+    "election_date": "2019-05-04",
+    "window": [
+     "2018-05-04",
+     "2019-05-04"
+    ],
+    "hits": [
+     {
+      "domain": "jeffwilliamsformayor.com",
+      "capture_url": "https://web.archive.org/web/20180802024713/http://www.jeffwilliamsformayor.com/",
+      "title": "Jeff Willams | For Arlington Mayor"
+     },
+     {
+      "domain": "mayorwilliams.com",
+      "capture_url": "https://web.archive.org/web/20180703233612/http://mayorwilliams.com:80/news.php",
+      "title": "Donjuan Williams for Glenarden Mayor"
+     }
+    ]
+   },
+   {
+    "candidate_election_id": "4804000__2026-05-02__regular__a58040f01e9104dc",
+    "candidate_name": "Jim Ross",
+    "election_date": "2026-05-02",
+    "window": [
+     "2025-05-02",
+     "2026-05-02"
+    ],
+    "hits": [
+     {
+      "domain": "rossformayor.org",
+      "capture_url": "https://web.archive.org/web/20250714205150/http://rossformayor.org/",
+      "title": "Ross For Mayor \u2013 Ross For Mayor"
+     }
+    ]
+   },
+   {
+    "candidate_election_id": "4804000__2026-05-02__regular__93abf9e6f624519c",
+    "candidate_name": "Steve Cavender",
+    "election_date": "2026-05-02",
+    "window": [
+     "2025-05-02",
+     "2026-05-02"
+    ],
+    "hits": [
+     {
+      "domain": "cavenderforarlington.com",
+      "capture_url": "https://web.archive.org/web/20260221034457/https://www.cavenderforarlington.com/",
+      "title": "Steve Cavender for Mayor | Arlington, Texas"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "city_id": "4817000",
+  "city_name": "Corpus Christi city",
+  "state_abb": "TX",
+  "finalists": [
+   {
+    "candidate_election_id": "4817000__2017-05-06__special__ba74ddbb78822deb",
+    "candidate_name": "Nelda Martinez",
+    "election_date": "2017-05-06",
+    "window": [
+     "2016-05-06",
+     "2017-05-06"
+    ],
+    "hits": [
+     {
+      "domain": "neldamartinez.com",
+      "capture_url": "https://web.archive.org/web/20160526212546/http://neldamartinez.com/",
+      "title": "Nelda Martinez for Mayor"
+     }
+    ]
+   },
+   {
+    "candidate_election_id": "4817000__2018-12-18__regular__6a32a6dd3833af01",
+    "candidate_name": "Joe McComb",
+    "election_date": "2018-12-18",
+    "window": [
+     "2017-12-18",
+     "2018-12-18"
+    ],
+    "hits": [
+     {
+      "domain": "electjoemccomb.com",
+      "capture_url": "https://web.archive.org/web/20180105193812/http://electjoemccomb.com:80/",
+      "title": "Joe McComb"
+     }
+    ]
+   },
+   {
+    "candidate_election_id": "4817000__2022-11-08__regular__816396dafe54663e",
+    "candidate_name": "Paulette Guajardo",
+    "election_date": "2022-11-08",
+    "window": [
+     "2021-11-08",
+     "2022-11-08"
+    ],
+    "hits": [
+     {
+      "domain": "pauletteguajardo.org",
+      "capture_url": "https://web.archive.org/web/20220311071118/https://pauletteguajardo.org/",
+      "title": "Paulette Guajardo for Corpus Christi Mayor \u2013 Strong Leadership. Proven Results."
+     }
+    ]
+   },
+   {
+    "candidate_election_id": "4817000__2024-12-14__regular__816396dafe54663e",
+    "candidate_name": "Paulette Guajardo",
+    "election_date": "2024-12-14",
+    "window": [
+     "2023-12-15",
+     "2024-12-14"
+    ],
+    "hits": [
+     {
+      "domain": "pauletteguajardo.com",
+      "capture_url": "https://web.archive.org/web/20240320001938/https://pauletteguajardo.com/",
+      "title": "Strong Leadership, Proven Results. - Re-Elect Paulette Guajardo for Corpus Christi Mayor"
+     },
+     {
+      "domain": "pauletteguajardo.org",
+      "capture_url": "https://web.archive.org/web/20240906170535/https://pauletteguajardo.org/",
+      "title": "Re-Elect Paulette Guajardo for Corpus Christi Mayor \u2013 Strong Leadership. Proven Results."
+     }
+    ]
+   },
+   {
+    "candidate_election_id": "4817000__2024-12-14__regular__836df689278beaa4",
+    "candidate_name": "Michael Hunter",
+    "election_date": "2024-12-14",
+    "window": [
+     "2023-12-15",
+     "2024-12-14"
+    ],
+    "hits": [
+     {
+      "domain": "electmichaelhunter.com",
+      "capture_url": "https://web.archive.org/web/20240821150012/https://www.electmichaelhunter.com/",
+      "title": "HOME | Michael Hunter"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "city_id": "4819000",
+  "city_name": "Dallas city",
+  "state_abb": "TX",
+  "finalists": [
+   {
+    "candidate_election_id": "4819000__2015-05-09__regular__e6f70aac9b6b1b70",
+    "candidate_name": "Mike Rawlings",
+    "election_date": "2015-05-09",
+    "window": [
+     "2014-05-09",
+     "2015-05-09"
+    ],
+    "hits": [
+     {
+      "domain": "mikerawlingsfordallas.com",
+      "capture_url": "https://web.archive.org/web/20140713011950/http://www.mikerawlingsfordallas.com:80/",
+      "title": "Mike Rawlings for Dallas"
+     }
+    ]
+   },
+   {
+    "candidate_election_id": "4819000__2015-05-09__regular__9204d5c86e57ca0c",
+    "candidate_name": "Marcos Ronquillo",
+    "election_date": "2015-05-09",
+    "window": [
+     "2014-05-09",
+     "2015-05-09"
+    ],
+    "hits": [
+     {
+      "domain": "marcosronquilloformayor.com",
+      "capture_url": "https://web.archive.org/web/20150215182520/http://www.marcosronquilloformayor.com:80/",
+      "title": "Marcos Ronquillo for Dallas Mayor"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "city_id": "4824000",
+  "city_name": "El Paso city",
+  "state_abb": "TX",
+  "finalists": [
+   {
+    "candidate_election_id": "4824000__2013-06-15__regular__beb8ae7a78a0bee0",
+    "candidate_name": "Oscar Leeser",
+    "election_date": "2013-06-15",
+    "window": [
+     "2012-06-15",
+     "2013-06-15"
+    ],
+    "hits": [
+     {
+      "domain": "oscarleeser.com",
+      "capture_url": "https://web.archive.org/web/20130530065853/http://www.oscarleeser.com",
+      "title": "Oscar Leeser for Mayor"
+     }
+    ]
+   },
+   {
+    "candidate_election_id": "4824000__2017-06-10__regular__0e1681a4b4d5cabe",
+    "candidate_name": "Dee Margo",
+    "election_date": "2017-06-10",
+    "window": [
+     "2016-06-10",
+     "2017-06-10"
+    ],
+    "hits": [
+     {
+      "domain": "margoformayor.org",
+      "capture_url": "https://web.archive.org/web/20170419060054/http://margoformayor.org:80/",
+      "title": "Home - Dee Margo for Mayor of El Paso Tx - Margo for Mayor"
+     }
+    ]
+   },
+   {
+    "candidate_election_id": "4824000__2024-12-14__regular__a1355e8ffdd68cd7",
+    "candidate_name": "Renard U. Johnson",
+    "election_date": "2024-12-14",
+    "window": [
+     "2023-12-15",
+     "2024-12-14"
+    ],
+    "hits": [
+     {
+      "domain": "johnsonformayor.com",
+      "capture_url": "https://web.archive.org/web/20240915174413/https://johnsonformayor.com/",
+      "title": "johnsonformayor.com"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "city_id": "4827000",
+  "city_name": "Fort Worth city",
+  "state_abb": "TX",
+  "finalists": [
+   {
+    "candidate_election_id": "4827000__2023-05-06__regular__a3fba50e7c62a956",
+    "candidate_name": "Mattie Parker",
+    "election_date": "2023-05-06",
+    "window": [
+     "2022-05-06",
+     "2023-05-06"
+    ],
+    "hits": [
+     {
+      "domain": "mattieformayor.com",
+      "capture_url": "https://web.archive.org/web/20220506062421/https://mattieformayor.com/",
+      "title": "Mattie Parker For Fort Worth Mayor for Fort Worth Mayor"
+     }
+    ]
+   },
+   {
+    "candidate_election_id": "4827000__2023-05-06__regular__db6efc9529d83c24",
+    "candidate_name": "Jennifer Castillo",
+    "election_date": "2023-05-06",
+    "window": [
+     "2022-05-06",
+     "2023-05-06"
+    ],
+    "hits": [
+     {
+      "domain": "castilloformayor.com",
+      "capture_url": "https://web.archive.org/web/20230307054816/https://castilloformayor.com/",
+      "title": "Home - Jennifer Castillo"
+     }
+    ]
+   },
+   {
+    "candidate_election_id": "4827000__2025-05-03__regular__a3fba50e7c62a956",
+    "candidate_name": "Mattie Parker",
+    "election_date": "2025-05-03",
+    "window": [
+     "2024-05-03",
+     "2025-05-03"
+    ],
+    "hits": [
+     {
+      "domain": "mattieformayor.com",
+      "capture_url": "https://web.archive.org/web/20240503044844/https://www.mattieformayor.com/",
+      "title": "HOME | Mattie Parker"
+     }
+    ]
+   },
+   {
+    "candidate_election_id": "4827000__2025-05-03__regular__cb6b7e66fd5fb117",
+    "candidate_name": "Josh Lucas",
+    "election_date": "2025-05-03",
+    "window": [
+     "2024-05-03",
+     "2025-05-03"
+    ],
+    "hits": [
+     {
+      "domain": "joshlucasformayor.com",
+      "capture_url": "https://web.archive.org/web/20250324173520/https://joshlucasformayor.com/",
+      "title": "Josh Lucas"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "city_id": "4829000",
+  "city_name": "Garland city",
+  "state_abb": "TX",
+  "finalists": [
+   {
+    "candidate_election_id": "4829000__2017-05-06__regular__d389e75f2e810a0b",
+    "candidate_name": "Leala H. Green",
+    "election_date": "2017-05-06",
+    "window": [
+     "2016-05-06",
+     "2017-05-06"
+    ],
+    "hits": [
+     {
+      "domain": "greenformayor.com",
+      "capture_url": "https://web.archive.org/web/20160520014949/http://greenformayor.com:80/",
+      "title": "David Green for Mayor \u00bb Duncanville, Texas"
+     }
+    ]
+   },
+   {
+    "candidate_election_id": "4829000__2025-06-07__regular__75dec96846de2b5b",
+    "candidate_name": "Deborah S. Morris",
+    "election_date": "2025-06-07",
+    "window": [
+     "2024-06-07",
+     "2025-06-07"
+    ],
+    "hits": [
+     {
+      "domain": "morrisforgarland.com",
+      "capture_url": "https://web.archive.org/web/20240814212023/https://www.morrisforgarland.com/",
+      "title": "Morris for Mayor 2025 | Garland, TX"
+     },
+     {
+      "domain": "morrisformayor.org",
+      "capture_url": "https://web.archive.org/web/20240812075517/https://www.morrisformayor.org/",
+      "title": "Kim Morris for Mayor"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "city_id": "4835000",
+  "city_name": "Houston city",
+  "state_abb": "TX",
+  "finalists": [
+   {
+    "candidate_election_id": "4835000__2023-12-09__regular__85280bbba80296c9",
+    "candidate_name": "Sheila Jackson Lee",
+    "election_date": "2023-12-09",
+    "window": [
+     "2022-12-09",
+     "2023-12-09"
+    ],
+    "hits": [
+     {
+      "domain": "votelee.com",
+      "capture_url": "https://web.archive.org/web/20231102055132/https://www.votelee.com/",
+      "title": "Home | Josh Lee For Mayor"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "city_id": "4841464",
+  "city_name": "Laredo city",
+  "state_abb": "TX",
+  "finalists": [
+   {
+    "candidate_election_id": "4841464__2014-11-04__regular__d37d83e6298a37cd",
+    "candidate_name": "Pete Saenz",
+    "election_date": "2014-11-04",
+    "window": [
+     "2013-11-04",
+     "2014-11-04"
+    ],
+    "hits": [
+     {
+      "domain": "petesaenzformayor.com",
+      "capture_url": "https://web.archive.org/web/20141024133454/http://petesaenzformayor.com:80/",
+      "title": "Home | Pete Saenz for Mayor"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "city_id": "4845000",
+  "city_name": "Lubbock city",
+  "state_abb": "TX",
+  "finalists": [
+   {
+    "candidate_election_id": "4845000__2010-05-08__regular__b93d6631de35c516",
+    "candidate_name": "Cody R. Smart",
+    "election_date": "2010-05-08",
+    "window": [
+     "2009-05-08",
+     "2010-05-08"
+    ],
+    "hits": [
+     {
+      "domain": "codysmartformayor.com",
+      "capture_url": "https://web.archive.org/web/20100423153343/http://www.codysmartformayor.com:80/",
+      "title": "Cody Smart for Mayor"
+     }
+    ]
+   },
+   {
+    "candidate_election_id": "4845000__2012-05-12__regular__520fd6c121e89f02",
+    "candidate_name": "Glen Robertson",
+    "election_date": "2012-05-12",
+    "window": [
+     "2011-05-13",
+     "2012-05-12"
+    ],
+    "hits": [
+     {
+      "domain": "robertsonformayor.com",
+      "capture_url": "https://web.archive.org/web/20110604173106/http://www.robertsonformayor.com/robots.txt",
+      "title": "www.robertsonformayor.com"
+     }
+    ]
+   },
+   {
+    "candidate_election_id": "4845000__2012-05-12__regular__260e3b85ffbc6349",
+    "candidate_name": "Tom Martin",
+    "election_date": "2012-05-12",
+    "window": [
+     "2011-05-13",
+     "2012-05-12"
+    ],
+    "hits": [
+     {
+      "domain": "tommartinformayor.com",
+      "capture_url": "https://web.archive.org/web/20120322150120/http://tommartinformayor.com:80/",
+      "title": "Tom Martin For Mayor"
+     }
+    ]
+   },
+   {
+    "candidate_election_id": "4845000__2022-05-07__regular__5c2426f7603a907e",
+    "candidate_name": "Tray Payne",
+    "election_date": "2022-05-07",
+    "window": [
+     "2021-05-07",
+     "2022-05-07"
+    ],
+    "hits": [
+     {
+      "domain": "traypayneformayor.com",
+      "capture_url": "https://web.archive.org/web/20211227204031/https://traypayneformayor.com/",
+      "title": "Tray Payne for Mayor"
+     }
+    ]
+   },
+   {
+    "candidate_election_id": "4845000__2024-06-15__regular__9e90a28d5bb2f0ed",
+    "candidate_name": "Mark McBrayer",
+    "election_date": "2024-06-15",
+    "window": [
+     "2023-06-16",
+     "2024-06-15"
+    ],
+    "hits": [
+     {
+      "domain": "mcbrayerforlubbock.com",
+      "capture_url": "https://web.archive.org/web/20240405184756/https://www.mcbrayerforlubbock.com/",
+      "title": "Mark McBrayer for Lubbock Mayor"
+     }
+    ]
+   },
+   {
+    "candidate_election_id": "4845000__2024-06-15__regular__588ad7a27f6da389",
+    "candidate_name": "Steve Massengale",
+    "election_date": "2024-06-15",
+    "window": [
+     "2023-06-16",
+     "2024-06-15"
+    ],
+    "hits": [
+     {
+      "domain": "steveforlubbock.com",
+      "capture_url": "https://web.archive.org/web/20240326162852/https://steveforlubbock.com/",
+      "title": "Steve Massengale"
+     }
+    ]
+   },
+   {
+    "candidate_election_id": "4845000__2026-05-02__regular__9e90a28d5bb2f0ed",
+    "candidate_name": "Mark McBrayer",
+    "election_date": "2026-05-02",
+    "window": [
+     "2025-05-02",
+     "2026-05-02"
+    ],
+    "hits": [
+     {
+      "domain": "mcbrayerforlubbock.com",
+      "capture_url": "https://web.archive.org/web/20250514005228/https://www.mcbrayerforlubbock.com/",
+      "title": "Mark McBrayer for Lubbock Mayor"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "city_id": "4865000",
+  "city_name": "San Antonio city",
+  "state_abb": "TX",
+  "finalists": [
+   {
+    "candidate_election_id": "4865000__2011-05-14__regular__aa40a2a243377700",
+    "candidate_name": "Juli\u00e1n Castro",
+    "election_date": "2011-05-14",
+    "window": [
+     "2010-05-14",
+     "2011-05-14"
+    ],
+    "hits": [
+     {
+      "domain": "juliancastroformayor.com",
+      "capture_url": "https://web.archive.org/web/20110208105956/http://juliancastroformayor.com/",
+      "title": "juliancastroformayor.com"
+     },
+     {
+      "domain": "mayorcastro.com",
+      "capture_url": "https://web.archive.org/web/20100516083456/http://mayorcastro.com/",
+      "title": "MAYOR JULIAN CASTRO - COMMUNITY OFFICE"
+     }
+    ]
+   },
+   {
+    "candidate_election_id": "4865000__2011-05-14__regular__a65e81d09f2935b1",
+    "candidate_name": "Will McLeod",
+    "election_date": "2011-05-14",
+    "window": [
+     "2010-05-14",
+     "2011-05-14"
+    ],
+    "hits": [
+     {
+      "domain": "mayormcleod.com",
+      "capture_url": "https://web.archive.org/web/20110107235702/http://www.mayormcleod.com/",
+      "title": "Offical Mayor McLeod Website"
+     }
+    ]
+   },
+   {
+    "candidate_election_id": "4865000__2013-05-11__regular__0beaf1ef8b222527",
+    "candidate_name": "Julian Castro",
+    "election_date": "2013-05-11",
+    "window": [
+     "2012-05-11",
+     "2013-05-11"
+    ],
+    "hits": [
+     {
+      "domain": "juliancastro.org",
+      "capture_url": "https://web.archive.org/web/20121110112658/http://juliancastro.org/",
+      "title": "Juli\u00e1n Castro | The Hollow Mayor of San Antonio"
+     },
+     {
+      "domain": "mayorcastro.com",
+      "capture_url": "https://web.archive.org/web/20120713072716/http://mayorcastro.com:80/",
+      "title": "MAYOR JULIAN CASTRO - COMMUNITY OFFICE"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "city_id": "5116000",
+  "city_name": "Chesapeake city",
+  "state_abb": "VA",
+  "finalists": [
+   {
+    "candidate_election_id": "5116000__2020-05-19__regular__f27e655416fd77ac",
+    "candidate_name": "Lenard Tyrone Myers, II",
+    "election_date": "2020-05-19",
+    "window": [
+     "2019-05-20",
+     "2020-05-19"
+    ],
+    "hits": [
+     {
+      "domain": "mayormyers.com",
+      "capture_url": "https://web.archive.org/web/20190720011105/http://mayormyers.com/robots.txt",
+      "title": "Re-Elect Myers for Mayor | 2007"
+     },
+     {
+      "domain": "myersformayor.com",
+      "capture_url": "https://web.archive.org/web/20190804161445/http://myersformayor.com:80/mfm/",
+      "title": "Mark Myers For Mayor"
+     }
+    ]
+   },
+   {
+    "candidate_election_id": "5116000__2024-11-05__regular__f13433298c106eee",
+    "candidate_name": "Richard W. \"Rick\" West",
+    "election_date": "2024-11-05",
+    "window": [
+     "2023-11-06",
+     "2024-11-05"
+    ],
+    "hits": [
+     {
+      "domain": "rickwestformayor.com",
+      "capture_url": "https://web.archive.org/web/20231204214933/https://rickwestformayor.com/",
+      "title": "Richard West \u2013 Focusing on the future."
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "city_id": "5157000",
+  "city_name": "Norfolk city",
+  "state_abb": "VA",
+  "finalists": [
+   {
+    "candidate_election_id": "5157000__2024-11-05__regular__e0c4e1befd246fd3",
+    "candidate_name": "Kenneth Cooper Alexander",
+    "election_date": "2024-11-05",
+    "window": [
+     "2023-11-06",
+     "2024-11-05"
+    ],
+    "hits": [
+     {
+      "domain": "alexanderformayor.com",
+      "capture_url": "https://web.archive.org/web/20240320033222/https://alexanderformayor.com/",
+      "title": "Kenneth Cooper Alexander For Mayor | Believe in Norfolk"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "city_id": "5167000",
+  "city_name": "Richmond city",
+  "state_abb": "VA",
+  "finalists": [
+   {
+    "candidate_election_id": "5167000__2020-11-03__regular__8222d5eb215ba04d",
+    "candidate_name": "Alexsis Evon Rodgers",
+    "election_date": "2020-11-03",
+    "window": [
+     "2019-11-04",
+     "2020-11-03"
+    ],
+    "hits": [
+     {
+      "domain": "alexsisrodgers.com",
+      "capture_url": "https://web.archive.org/web/20200630063229/https://www.alexsisrodgers.com/",
+      "title": "Alexsis Rodgers for Richmond Mayor - Home"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "city_id": "5182000",
+  "city_name": "Virginia Beach city",
+  "state_abb": "VA",
+  "finalists": [
+   {
+    "candidate_election_id": "5182000__2016-11-08__regular__94587cf954f3137b",
+    "candidate_name": "William Douglas Sessoms, Jr.",
+    "election_date": "2016-11-08",
+    "window": [
+     "2015-11-09",
+     "2016-11-08"
+    ],
+    "hits": [
+     {
+      "domain": "sessomsformayor.com",
+      "capture_url": "https://web.archive.org/web/20160802200707/http://www.sessomsformayor.com:80/",
+      "title": ""
+     }
+    ]
+   },
+   {
+    "candidate_election_id": "5182000__2024-11-05__regular__0130a1c8de500d58",
+    "candidate_name": "Sabrina D. Wooten",
+    "election_date": "2024-11-05",
+    "window": [
+     "2023-11-06",
+     "2024-11-05"
+    ],
+    "hits": [
+     {
+      "domain": "wootenformayor.com",
+      "capture_url": "https://web.archive.org/web/20240402184552/https://www.wootenformayor.com/",
+      "title": "Sabrina Wooten for Mayor of Virginia Beach | Nov. 5, 2024"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "city_id": "5367000",
+  "city_name": "Spokane city",
+  "state_abb": "WA",
+  "finalists": [
+   {
+    "candidate_election_id": "5367000__2011-11-08__regular__8f296d0fdbb10f50",
+    "candidate_name": "Mary B. Verner",
+    "election_date": "2011-11-08",
+    "window": [
+     "2010-11-08",
+     "2011-11-08"
+    ],
+    "hits": [
+     {
+      "domain": "maryverner.com",
+      "capture_url": "https://web.archive.org/web/20110208073628/http://maryverner.com/",
+      "title": "Mary Verner - The People's Mayor | Spokane, WA | Home"
+     },
+     {
+      "domain": "maryvernerformayor.com",
+      "capture_url": "https://web.archive.org/web/20110208073628/http://maryvernerformayor.com/",
+      "title": "maryvernerformayor.com"
+     }
+    ]
+   },
+   {
+    "candidate_election_id": "5367000__2023-11-07__regular__43ea8cb072f5bbba",
+    "candidate_name": "Lisa Brown",
+    "election_date": "2023-11-07",
+    "window": [
+     "2022-11-07",
+     "2023-11-07"
+    ],
+    "hits": [
+     {
+      "domain": "lisabrown4mayor.com",
+      "capture_url": "https://web.archive.org/web/20230722222209/https://lisabrown4mayor.com/",
+      "title": "Lisa Brown for Spokane Mayor"
+     },
+     {
+      "domain": "lisabrownformayor.com",
+      "capture_url": "https://web.archive.org/web/20230307193313/https://www.lisabrownformayor.com/",
+      "title": "Lisa Brown for Spokane Mayor"
+     }
+    ]
+   }
+  ]
+ }
+]

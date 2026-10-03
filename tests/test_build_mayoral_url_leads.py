@@ -58,3 +58,18 @@ def test_verified_proposal_replaces_not_found_with_own_basis():
 def test_proposal_for_accepted_entry_fails():
     with pytest.raises(ValueError):
         combine([_city('a')], {'x': [_lead('a')]}, {'x': {'problems': []}}, [_lead('a')])
+
+
+def test_sweep_verdict_applies_after_failed_proposal_and_to_rejected_entries():
+    leads = {'x': [_lead('a', 'not_found'), _lead('b')]}
+    verdicts = {'x': {'problems': [{'candidate_election_id': 'b', 'severity': 'reject', 'issue': 'other person', 'evidence': ''}]}}
+    proposals = [dict(_lead('a'), status='not_found', campaign_url='')]
+    sweep = [dict(_lead('a'), page_evidence='A for Mayor'), dict(_lead('b'), page_evidence='B for Mayor')]
+    rows = {r['candidate_election_id']: r for r in combine([_city('a', 'b')], leads, verdicts, proposals, sweep)}
+    assert rows['a']['link_basis'] == 'domain_sweep_wayback_capture_checked' and rows['a']['final_status'] == 'accepted'
+    assert rows['b']['link_basis'] == 'domain_sweep_wayback_capture_checked'
+
+
+def test_sweep_verdict_for_already_accepted_entry_fails():
+    with pytest.raises(ValueError):
+        combine([_city('a')], {'x': [_lead('a')]}, {'x': {'problems': []}}, [], [_lead('a')])
