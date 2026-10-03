@@ -181,7 +181,7 @@ def recorded_period_metadata(urls, election_date, saved, reviews, validations):
     return None
 
 
-def build(cities, roster, urls, results, reviews=(), validations=(), city_year_overrides=(), saved_evidence=(), identity_links=(), discovered_leads=()):
+def build(cities, roster, urls, results, reviews=(), validations=(), city_year_overrides=(), saved_evidence=(), identity_links=(), discovered_leads=(), stage3_pages=()):
     unique(cities, "city_id", "city")
     unique(roster, "candidate_year_id", "legacy candidate-year")
     unique(urls, "candidate_url_id", "URL")
@@ -218,6 +218,12 @@ def build(cities, roster, urls, results, reviews=(), validations=(), city_year_o
             raise ValueError("Duplicate discovered URL lead")
         discovered[lead["candidate_election_id"]] = lead
     used_discovered = set()
+    # Saved site pages from the stage 3 scrape of discovered URLs (scripts/summarize_mayoral_stage3_pages.py).
+    pages = {}
+    for row in stage3_pages:
+        if row["candidate_election_id"] in pages:
+            raise ValueError("Duplicate stage 3 page summary")
+        pages[row["candidate_election_id"]] = row
     by_candidate = defaultdict(list)
     for row in urls:
         by_candidate[row["candidate_year_id"]].append(row)
@@ -322,6 +328,15 @@ def build(cities, roster, urls, results, reviews=(), validations=(), city_year_o
                         raise ValueError("Accepted discovered URL lacks a capture before the election")
                     archive = True
                     refs = sorted(set(refs) | {"url_discovery:" + stamp})
+                saved_pages = pages.get(candidate_id)
+                if discovered_url and saved_pages and int(saved_pages["pages_with_text_in_window"]) > 0:
+                    if truth(saved_pages["files_verified"]) is not True:
+                        raise ValueError("Stage 3 saved pages failed hash verification")
+                    if saved_pages["registrable_domain"].lower() not in discovered_url.lower():
+                        raise ValueError("Stage 3 pages are not on the discovered campaign domain")
+                    archive, downloaded = True, True
+                    refs = sorted(set(refs) | {"stage3_pages:" + saved_pages["target_id"] + ":"
+                                               + saved_pages["pages_with_text_in_window"]})
             candidates.append({"candidate_election_id": candidate_id, "election_id": election_id,
                 "city_id": city["city_id"], "city_name": city["city_name"], "state_abb": city["state_abb"],
                 "year": day.year, "election_date": election_date, "election_type": kind,
@@ -527,6 +542,13 @@ def main():
     identity_links = read_csv(ROOT / links_path) if links_path else []
     if links_path:
         inputs.append(Path(links_path))
+    pages_path = config.get("stage3_saved_pages")
+    stage3_pages = read_csv(ROOT / pages_path) if pages_path else []
+    if pages_path:
+        inputs.append(Path(pages_path))
+        pages_manifest = json.loads((ROOT / Path(pages_path).with_suffix(".manifest.json")).read_text())
+        if pages_manifest["output_sha256"] != sha(ROOT / pages_path) or not pages_manifest["all_files_verified"]:
+            raise ValueError("Stage 3 page summary does not match its verified manifest")
     leads_path = config.get("discovered_url_leads")
     discovered_leads = read_csv(ROOT / leads_path) if leads_path else []
     if leads_path:
@@ -534,7 +556,8 @@ def main():
     hashes = {str(p): sha(ROOT / p) for p in inputs}
     result = build(read_csv(ROOT / args.cities), read_csv(ROOT / ROSTER), read_csv(ROOT / URLS), records,
                    read_csv(ROOT / REVIEWS), read_csv(ROOT / VALIDATION), overrides, read_csv(ROOT / args.saved_evidence),
-                   identity_links=identity_links, discovered_leads=discovered_leads)
+                   identity_links=identity_links, discovered_leads=discovered_leads,
+                   stage3_pages=stage3_pages)
     cities, city_years, elections, candidates, summary, outside = result
     if len(cities) != 100:
         raise ValueError("Production build requires exactly 100 cities")

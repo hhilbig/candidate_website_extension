@@ -2031,3 +2031,14 @@ gap 6 seconds, 5,435 queries left, log `.../sweep_20261002/commoncrawl.log`. Fix
 done; they now stay retryable (7 tests pass). The mac2 Wayback sweep still runs the old code; rerun it once after it
 ends to retry any failed queries. At the end, copy `commoncrawl_hits.jsonl` from the droplet and `wayback_hits.jsonl`
 from mac2 into the repository sweep folder before `screen`.
+
+**Stage 3 done and integrated (October 2, evening).** The mac2 run finished: 6,437 of 6,508 pages fetched (66 no
+content, 3 not available, 6 timestamp mismatch, 2 retryable request errors), 161 of 165 targets with pages,
+about 1 GB raw HTML, 21.4 million text characters; exact queue-key agreement. Raw pages and text stay on mac2
+(`~/candidate_website_extension_stage3/.../runs/production`). `scripts/summarize_mayoral_stage3_pages.py` re-hashed
+every file (raw hashes are of the decompressed HTML) and wrote `inputs/stage3_saved_pages.csv` with a manifest;
+registered as `stage3_saved_pages`. Rule: pages with text on the discovered domain within 365 days of the election
+set downloaded content. Build: downloaded content 14 to 174 of 822 finalists, both finalists 52 of 411 elections;
+archive discovery 178 to 183. 61 tests pass. The 2010-2021 elections stay low (any finalist downloaded 16 to 26
+percent) because the 349 legacy leads are not yet matched to the existing 291,044-capture corpus; that match is the
+largest remaining lever for downloaded content.

@@ -1,0 +1,8 @@
+{
+ "fetch_attempts_sha256": "281f94f9822df1bab2e857efdb399704939ae27ea1488979de7a0846e5e1f7fe",
+ "targets_sha256": "6be94096757fac245c1185d4cff4831231d7413dde2be49550ea584156d7bb0a",
+ "output_sha256": "80732848cd9254064e588533a2a240785deeafda6386721239eadfa0a2479268",
+ "rows": 165,
+ "rows_with_pages_in_window": 160,
+ "all_files_verified": true
+}

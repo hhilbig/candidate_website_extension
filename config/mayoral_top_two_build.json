@@ -205,5 +205,6 @@
     "data/municipal_discovery/top100_coverage/inputs/winston_salem_calendar.json"
   ],
   "identity_links": "data/municipal_discovery/top100_coverage/linkage/identity_links.csv",
-  "discovered_url_leads": "data/municipal_discovery/top100_coverage/linkage/discovered_url_leads.csv"
+  "discovered_url_leads": "data/municipal_discovery/top100_coverage/linkage/discovered_url_leads.csv",
+  "stage3_saved_pages": "data/municipal_discovery/top100_coverage/inputs/stage3_saved_pages.csv"
 }

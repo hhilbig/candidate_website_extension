@@ -410,3 +410,29 @@ def test_discovered_lead_cannot_replace_legacy_lead():
     key = next(r for r in build(cities, roster, urls, [result])[3] if r['candidate_name'] == 'Example A')['candidate_election_id']
     with pytest.raises(ValueError, match='already has a legacy'):
         build(cities, roster, urls, [result], discovered_leads=[_discovered(key)])
+
+
+def _pages(candidate_id, n='3', verified='True', domain='exampleb.test'):
+    return {'candidate_election_id': candidate_id, 'target_id': 'stage3_x', 'registrable_domain': domain,
+            'pages_with_text_in_window': n, 'files_verified': verified}
+
+
+def test_stage3_pages_set_downloaded_content_for_discovered_url():
+    cities, roster, urls, result = fixture()
+    key = _runner_up_id(cities, roster, urls, result)
+    row = next(r for r in build(cities, roster, urls, [result], discovered_leads=[_discovered(key, 'outside_window')],
+                                stage3_pages=[_pages(key)])[3] if r['candidate_election_id'] == key)
+    assert row['downloaded_content'] is True and row['archive_discovery'] is True
+    assert 'stage3_pages:stage3_x:3' in row['evidence_refs']
+    row = next(r for r in build(cities, roster, urls, [result], discovered_leads=[_discovered(key)],
+                                stage3_pages=[_pages(key, n='0')])[3] if r['candidate_election_id'] == key)
+    assert row['downloaded_content'] is not True
+
+
+def test_stage3_pages_need_verified_hashes_and_matching_domain():
+    cities, roster, urls, result = fixture()
+    key = _runner_up_id(cities, roster, urls, result)
+    with pytest.raises(ValueError, match='hash verification'):
+        build(cities, roster, urls, [result], discovered_leads=[_discovered(key)], stage3_pages=[_pages(key, verified='False')])
+    with pytest.raises(ValueError, match='discovered campaign domain'):
+        build(cities, roster, urls, [result], discovered_leads=[_discovered(key)], stage3_pages=[_pages(key, domain='other.test')])
