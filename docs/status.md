@@ -2025,3 +2025,9 @@ about 8 hours, PID 53784) and Common Crawl for 2022-2026 elections, the 2 latest
 Outputs `wayback_hits.jsonl`, `commoncrawl_hits.jsonl` (resumable). Next: `screen` (fetch each hit, keep pages with
 the last name and "mayor"), then a small agent check under the stage 2 acceptance rule, then integration as a
 third basis label. Option 3 (wider date window) waits for Hanno after these results.
+Update 17:25 PDT: Common Crawl throttles mac2 (HTTP 503 at once; repeated 10-minute pauses from 16:42). The CC sweep
+moved to the droplet, which the index answers normally: `/mnt/mayoral_wayback_full_snapshots/coverage_sweep_20261002`,
+gap 6 seconds, 5,435 queries left, log `.../sweep_20261002/commoncrawl.log`. Fixed: failed queries were recorded as
+done; they now stay retryable (7 tests pass). The mac2 Wayback sweep still runs the old code; rerun it once after it
+ends to retry any failed queries. At the end, copy `commoncrawl_hits.jsonl` from the droplet and `wayback_hits.jsonl`
+from mac2 into the repository sweep folder before `screen`.

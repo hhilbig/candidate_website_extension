@@ -110,7 +110,13 @@ def write_csv(path: Path, rows: list[dict]) -> None:
 def done_keys(path: Path) -> set[str]:
     if not path.exists():
         return set()
-    return {json.loads(line)["key"] for line in path.open() if line.strip()}
+    # Failed queries stay retryable: a later run queries them again (last record per key wins).
+    latest = {}
+    for line in path.open():
+        if line.strip():
+            record = json.loads(line)
+            latest[record["key"]] = record["status"]
+    return {key for key, status in latest.items() if status == "ok"}
 
 
 class Client:

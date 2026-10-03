@@ -40,3 +40,13 @@ def test_warc_body_and_screen():
     assert warc_body(record) == b'<html>x</html>'
     assert screen_text('Floyd Bonner', 'Elect Floyd Bonner Mayor of Memphis', 'bonner')[0] is True
     assert screen_text('Bonner Law', 'Attorney Floyd Bonner', 'bonner')[0] is False
+
+
+def test_failed_queries_stay_retryable(tmp_path):
+    import json
+    from scripts.sweep_mayoral_domain_patterns import done_keys
+    path = tmp_path / 'hits.jsonl'
+    path.write_text('\n'.join(json.dumps(r) for r in [
+        {'key': 'a', 'status': 'error'}, {'key': 'b', 'status': 'ok'},
+        {'key': 'c', 'status': 'error'}, {'key': 'c', 'status': 'ok'}]) + '\n')
+    assert done_keys(path) == {'b', 'c'}
