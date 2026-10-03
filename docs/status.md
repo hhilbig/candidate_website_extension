@@ -2042,3 +2042,8 @@ set downloaded content. Build: downloaded content 14 to 174 of 822 finalists, bo
 archive discovery 178 to 183. 61 tests pass. The 2010-2021 elections stay low (any finalist downloaded 16 to 26
 percent) because the 349 legacy leads are not yet matched to the existing 291,044-capture corpus; that match is the
 largest remaining lever for downloaded content.
+Update 22:15 PDT: the Wayback domain sweep finished (6,907 queries, 0 errors, 705 domain windows with captures).
+Screen on mac2: 705 pages fetched, 217 contain the last name and "mayor"; after dropping parked, spam and short
+pages, 182 hits for 152 finalists in 66 cities (`screened.jsonl`). Common Crawl sweep restarted on the droplet,
+restricted to the 57 finalists from 2022-2026 with no passing hit, one crawl each (1,175 queries,
+`patterns_cc_remaining.csv`). Next: agent check of the 152 finalists (needs Hanno's choice of route; see chat).

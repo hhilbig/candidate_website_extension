@@ -153,9 +153,9 @@ class Client:
         raise RuntimeError(f"failed after {self.attempts} attempts: {error}")
 
 
-def domain_windows(year_min: int = 0) -> list[dict]:
+def domain_windows(year_min: int = 0, patterns: str = "patterns.csv") -> list[dict]:
     seen, out = set(), []
-    for r in csv.DictReader((SWEEP / "patterns.csv").open()):
+    for r in csv.DictReader((SWEEP / patterns).open()):
         key = f"{r['domain']}|{r['window_start']}|{r['window_end']}"
         if int(r["election_date"][:4]) >= year_min and key not in seen:
             seen.add(key)
@@ -207,7 +207,7 @@ def cmd_commoncrawl(args) -> None:
     client = Client(args.gap)
     crawls = crawl_dates(client.get(CC_INDEX + "/collinfo.json").json())
     todo = []
-    for w in domain_windows(CC_FIRST_YEAR):
+    for w in domain_windows(CC_FIRST_YEAR, args.patterns):
         start, end = date.fromisoformat(w["start"]), date.fromisoformat(w["end"])
         # A crawl runs for about two weeks after its start; include crawls that began up to 14 days before the window.
         # Only the latest --max-crawls crawls before the election are queried (the CC index answers in about 8 s).
@@ -324,6 +324,7 @@ def cmd_screen(args) -> None:
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("command", choices=["patterns", "wayback", "commoncrawl", "screen"])
+    parser.add_argument("--patterns", default="patterns.csv", help="pattern file in the sweep folder")
     parser.add_argument("--max-crawls", type=int, default=2, help="Common Crawl: latest crawls per window")
     parser.add_argument("--gap", type=float, default=2.0, help="seconds between requests to one service")
     args = parser.parse_args()
