@@ -2071,3 +2071,13 @@ verified; summary `inputs/stage3b_saved_pages.csv`. Build: downloaded content 17
 elections with both finalists downloaded 88 of 411 (21 percent), winner 37 percent, any 49 percent. 2018-2021
 stays lowest (both 4 percent) because its URLs are mostly legacy leads without attribution; the Hive check of
 the 181 legacy leads with in-window captures is the next lever and needs Hanno's approval. 63 tests pass.
+
+**Legacy-lead attribution on Hive (Hanno approved October 3).** 158 legacy-lead finalists have recorded in-window
+captures but no attribution; 147 of them have saved in-window text (157 finalist x URL items, texts pulled from the
+droplet with hash checks). `scripts/hive/classify_mayoral_site_attribution.py` (prompt `mayoral-site-attribution-v1`,
+Qwen3.6-27B-FP8 at e89b16eb, temperature 0, JSON schema yes/no/unclear) with
+`scripts/hive/run_mayoral_site_attribution.sbatch` (environment copied from the extraction sbatch). Calibration:
+40 known positives (accepted URLs, stage 3 text) and 46 known negatives (sweep pages the agents rejected) in the same
+input. Hive work dir `/nfs/hive/scratch/hhilbig/mayoral_site_attribution`; jobs 24431066 (high) and 24431069 (low,
+output `decisions_low.jsonl`), whichever finishes first. Integration (not yet written): only "yes" counts, as a new
+attribution basis for the legacy URL; report calibration agreement first.
