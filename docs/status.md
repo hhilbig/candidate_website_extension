@@ -2085,3 +2085,17 @@ Slack watcher for the Hive jobs (Hanno asked, October 3): `scripts/watch_hive_at
 under caffeinate (log `build/watch_hive_attribution.log`), polls `sacct` every 2 minutes and posts through mac2's
 copy of `scripts/slack_status.sh`. It posts at start, every 6 hours while waiting, once at the end (and cancels the
 other copy), or once if both copies fail.
+
+**Common Crawl sweep done and integrated (October 4).** The droplet sweep finished (1,912 keys, 239 still failed
+after throttling retries, 26 with captures). Screen: 14 pages pass; checked by the coordinating agent from the
+screened text: 7 real sites, 2 of them already accepted by the Wayback sweep, so 5 new finalists (Brandon Johnson
+Chicago 2023, Sean Ryan Buffalo 2025, Brian Kennedy El Paso 2024, Marikay Abuzuaiter Greensboro 2025, Melvin Carter
+St. Paul 2025); rejected lee4mayor.com (spam), morenoformayor.com (East Moline), votedonovan.com (Mount Vernon WA).
+Basis `domain_sweep_commoncrawl_capture_checked`; the capture time is given directly (`capture_timestamp`). These
+count as archive discovery (a Common Crawl capture, not Wayback). Build: URL leads 633 of 822; both finalists 64.5
+percent of elections. The 239 failed queries can be retried later; low expected yield.
+Hive attribution result (job 24431069, low, 3 min 51 s): 243 of 243 parsed; legacy 139 yes, 15 no, 3 unclear;
+calibration 61 of 86 agree (positives 28 of 40, negatives 33 no, 7 yes, 6 unclear). The calibration set is noisy
+(weak positive pages, negatives that are real sites for another election year); the model is weak on election
+timing. Hanno chose an agent check of the 139 yes items: workflow `wf_5110088a-dd2`, 69 city agents, input
+`legacy_attribution/agent_check_args.json`.

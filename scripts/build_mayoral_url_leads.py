@@ -7,6 +7,7 @@ Inputs (data/municipal_discovery/top100_coverage/url_discovery/):
   checker_proposal_verdicts.json  optional; a third agent's verdicts on sites that a checker
                             proposed for finalists the search marked not_found
   sweep_20261002/sweep_check_verdicts.json  optional; agent verdicts on domain-pattern sweep hits
+  sweep_20261002/commoncrawl_verdicts.json  optional; checked Common Crawl hits (capture_timestamp given directly)
 
 A "reject" verdict removes the URL (final status "rejected"). A "downgrade" verdict
 sets an accepted lead to "outside_window". "minor" verdicts are kept as notes.
@@ -36,6 +37,7 @@ COLUMNS = ["candidate_election_id", "city_slug", "candidate_name", "election_dat
 BASIS = "agent_search_wayback_capture_checked"
 PROPOSAL_BASIS = "checker_proposal_wayback_capture_verified"
 SWEEP_BASIS = "domain_sweep_wayback_capture_checked"
+COMMONCRAWL_BASIS = "domain_sweep_commoncrawl_capture_checked"
 
 
 def capture_timestamp(url: str) -> str:
@@ -44,9 +46,10 @@ def capture_timestamp(url: str) -> str:
 
 
 def combine(cities: list[dict], leads_by_slug: dict[str, list[dict]], verdicts: dict[str, dict],
-            proposals: list[dict] = (), sweep: list[dict] = ()) -> list[dict]:
+            proposals: list[dict] = (), sweep: list[dict] = (), commoncrawl: list[dict] = ()) -> list[dict]:
     sources = []
-    for basis, label, items in ((PROPOSAL_BASIS, "checker proposal", proposals), (SWEEP_BASIS, "domain sweep", sweep)):
+    for basis, label, items in ((PROPOSAL_BASIS, "checker proposal", proposals), (SWEEP_BASIS, "domain sweep", sweep),
+                                 (COMMONCRAWL_BASIS, "common crawl", commoncrawl)):
         source_items = {}
         for item in items:
             if item.get("status") not in STATUSES or item["candidate_election_id"] in source_items:
@@ -116,7 +119,8 @@ def combine(cities: list[dict], leads_by_slug: dict[str, list[dict]], verdicts: 
                 "campaign_url": lead.get("campaign_url", "") if keep_url else "",
                 "registrable_domain": lead.get("registrable_domain", "") if keep_url else "",
                 "first_capture_in_window": lead.get("first_capture_in_window", "") if final == "accepted" else "",
-                "checked_capture_timestamp": capture_timestamp(lead.get("checked_capture_url", "")) if final == "accepted" else "",
+                "checked_capture_timestamp": (lead.get("capture_timestamp") or capture_timestamp(lead.get("checked_capture_url", "")))
+                                             if final == "accepted" else "",
                 "checked_capture_url": lead.get("checked_capture_url", "") if final == "accepted" else "",
                 "wayback_window_captures": lead.get("wayback_window_captures", ""),
                 "page_evidence": lead.get("page_evidence", "") if final == "accepted" else "",
@@ -142,7 +146,9 @@ def main() -> int:
     proposals = json.loads(proposals_path.read_text()) if proposals_path.exists() else []
     sweep_path = DISCOVERY / "sweep_20261002" / "sweep_check_verdicts.json"
     sweep = json.loads(sweep_path.read_text()) if sweep_path.exists() else []
-    rows = combine(cities, leads, verdicts, proposals, sweep)
+    cc_path = DISCOVERY / "sweep_20261002" / "commoncrawl_verdicts.json"
+    commoncrawl = json.loads(cc_path.read_text()) if cc_path.exists() else []
+    rows = combine(cities, leads, verdicts, proposals, sweep, commoncrawl)
     OUTPUT.parent.mkdir(parents=True, exist_ok=True)
     with OUTPUT.open("w", newline="") as handle:
         writer = csv.DictWriter(handle, fieldnames=COLUMNS)
