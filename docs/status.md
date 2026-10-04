@@ -2081,3 +2081,7 @@ Qwen3.6-27B-FP8 at e89b16eb, temperature 0, JSON schema yes/no/unclear) with
 input. Hive work dir `/nfs/hive/scratch/hhilbig/mayoral_site_attribution`; jobs 24431066 (high) and 24431069 (low,
 output `decisions_low.jsonl`), whichever finishes first. Integration (not yet written): only "yes" counts, as a new
 attribution basis for the legacy URL; report calibration agreement first.
+Slack watcher for the Hive jobs (Hanno asked, October 3): `scripts/watch_hive_attribution.py` runs on the primary Mac
+under caffeinate (log `build/watch_hive_attribution.log`), polls `sacct` every 2 minutes and posts through mac2's
+copy of `scripts/slack_status.sh`. It posts at start, every 6 hours while waiting, once at the end (and cancels the
+other copy), or once if both copies fail.
