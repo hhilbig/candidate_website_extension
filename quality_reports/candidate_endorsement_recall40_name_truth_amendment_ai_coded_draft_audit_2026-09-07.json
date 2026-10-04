@@ -1,0 +1,48 @@
+{
+  "version": "candidate_endorsement_recall40_name_truth_amendment_ai_coded_draft_audit_v1",
+  "status": "NO_GO_AS_HUMAN_TRUTH",
+  "task_sha256": "dc1662798e7a676a9e8ec1281b5e0b6976286435c1564ac4e092cefcb550a83e",
+  "draft_results": {
+    "path": "build/private_candidate_endorsement_recall40_name_truth_amendment_20260906a/results_ai_coded_draft.json",
+    "bytes": 624198,
+    "sha256": "1b461c191c1a8394c54f0f66f6bed56e9da5ced84fb8777a3aa0e2d4169f4c6d"
+  },
+  "draft_import_report": {
+    "path": "quality_reports/candidate_endorsement_recall40_name_truth_amendment_ai_coded_draft_import_2026-09-07.json",
+    "bytes": 25720,
+    "sha256": "f8c3015ddb426b771ef49611f3687babb257cb3dff4133c4b004b0995527bf6d"
+  },
+  "schema_validation": {
+    "passed": true,
+    "parent_count": 40,
+    "true_zero_parent_count": 8,
+    "child_count": 2225,
+    "individual_child_count": 1861,
+    "organization_child_count": 364,
+    "canonical_truth_candidate_sha256": "d9e82bce59b4740c3883f4e2b6520aaa72ec3c4aa0cc6fe3df78cccaf960c7ed"
+  },
+  "authority_failure": {
+    "responses_explicitly_marked_ai_coded_draft": 40,
+    "responses_explicitly_requesting_human_review": 2,
+    "human_authorship_or_review_established": false,
+    "reason": "Every response identifies the file as an AI-coded draft rather than final human coding. Structural validity does not establish human ground truth."
+  },
+  "stage_b_replay": {
+    "evidence_authenticated": true,
+    "technical_gate_decision": "NO_GO",
+    "authenticated_row_count": 298,
+    "technical_pass_row_count": 245,
+    "technical_fail_row_count": 53,
+    "aligned_record_count": 1832,
+    "scoring_performed": false
+  },
+  "authorizations": {
+    "human_truth": false,
+    "truth_guided_repair": false,
+    "scoring": false,
+    "production_integration": false,
+    "full_expansion": false,
+    "release": false
+  },
+  "next_action": "Complete and export the reviewed source-only human coding task without model-generated judgments."
+}

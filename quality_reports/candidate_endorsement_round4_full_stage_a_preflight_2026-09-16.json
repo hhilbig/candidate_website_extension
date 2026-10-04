@@ -1,0 +1,20 @@
+{
+  "artifact": "v2_1_endorsement_round4_production_stage_a_20260916a",
+  "artifact_manifest_sha256": "032a6694a27457ea93ea944e2f71a2eb1dade564c32e2749dd0ed46fce8fa477",
+  "context_safety_margin_tokens": 256,
+  "fits": true,
+  "max_model_len": 49152,
+  "max_output_tokens": 2048,
+  "max_prompt_tokens": 34248,
+  "measured_on": "2026-09-16",
+  "median_prompt_tokens": 17718,
+  "over_budget_batch_ids": [],
+  "over_budget_count": 0,
+  "prompt_budget_tokens": 46848,
+  "prompts_checked": 1500,
+  "selection_is_sufficient": "the 1500 largest by character count; the smallest checked is far below budget, so no unchecked prompt can exceed it",
+  "stage": "line_decision",
+  "submitted_as": "slurm array 23487528, four shards, partition low",
+  "total_batches_in_artifact": 19142,
+  "version": "candidate_endorsement_round4_prompt_token_preflight_v1"
+}

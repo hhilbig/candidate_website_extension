@@ -1,0 +1,430 @@
+{
+  "audit_type": "candidate_extraction_v2_1_exact_anchor_quote_cap_preflight",
+  "date": "2026-08-25",
+  "status": "failed_frozen_audit",
+  "release_eligible": false,
+  "hive_job_id": "21424457",
+  "gate_decision": "NO-GO",
+  "gate_failure_reason": "All 43 rows passed the deterministic technical gates, and the named biography and K Street controls recovered exact quote-bearing evidence. The model nevertheless returned zero records for three endorsement continuation windows containing bare-name lists. The predeclared dense control aa0b99eb and complete-parent controls e56c1b40 and 2e9a0cd8 therefore fail the recall gate. The 7838-window stress pilot was not submitted.",
+  "slurm": {
+    "state": "COMPLETED",
+    "exit_code": "0:0",
+    "elapsed": "00:09:30",
+    "start": "2026-08-25T04:36:11-07:00",
+    "end": "2026-08-25T04:45:41-07:00",
+    "node": "hive-dc-7-5-58",
+    "partition": "high",
+    "gpu_type": "6000_blackwell",
+    "batch_max_rss_kib": 14479000,
+    "post_write_warning": "After the atomic output and run metadata were written, vLLM logged: Process manager: force killing remaining processes count=1. Slurm still completed with exit code 0:0, all expected artifacts were present, and no temporary file remained."
+  },
+  "source": {
+    "local_export_directory": "build/hive_candidate_extraction/v2_1_quote_cap_preflight_export_20260824n",
+    "remote_input_directory": "/home/hhilbig/candidate-website-extraction/data/v2_1_quote_cap_preflight_20260824n",
+    "source_corpus_sha256": "c53d36b24b293ac5d47706aa67731f1c107d6a679cb948c9ad71a70b5c8ce7c3",
+    "source_export_manifest_sha256": "973050bc6f159bee3385788588bf0c807804c73227f0c9fbabf43809cb82c179",
+    "preflight_manifest": {
+      "path": "manifest.json",
+      "sha256": "3b3d65d62c126cc092ddb54b8e7493decceb6d4afebf7c624b1324164fbca97d",
+      "bytes": 12457
+    },
+    "preflight_selection": {
+      "path": "selection.csv",
+      "sha256": "8f7878128e23038c36ed1dd0065af4c92ea67b8cf619e75c3291164ce6242d98",
+      "bytes": 10527
+    },
+    "input_chunk": {
+      "path": "chunks/chunk_00000.jsonl.gz",
+      "compressed_sha256": "e3841e5ab94327fd5f8c675204995e3ffc07b075203ea77e9620a39d57709439",
+      "compressed_bytes": 68207,
+      "decompressed_sha256": "f6638170fcd0c4f236391d86a58f7f0634723d0d4921379757e53d310c11ebd9",
+      "decompressed_bytes": 264425,
+      "rows": 43
+    },
+    "rows": 43,
+    "unique_document_ids": 43,
+    "parent_documents": 17,
+    "parent_documents_by_route": {
+      "biography": 2,
+      "endorsements": 3,
+      "issues": 12
+    },
+    "rows_by_route": {
+      "biography": 4,
+      "endorsements": 14,
+      "issues": 25
+    },
+    "control_kind_counts": {
+      "dense_segment_context_endorsement": 1,
+      "exact_anchor_parent_closure": 9,
+      "max_complexity_biography": 1,
+      "max_density_endorsement": 1,
+      "preflight_parent_closure": 11,
+      "quote_bearing_biography_evidence": 1,
+      "quote_bearing_explicit_endorsement_evidence": 1,
+      "quote_bearing_issue_evidence": 1,
+      "quote_copula_peer": 12,
+      "quote_escape_regression": 4,
+      "quote_repetition_truncation": 1
+    },
+    "source_identity_mismatches": 0,
+    "segment_text_hash_mismatches": 0,
+    "all_selected_parents_complete": true
+  },
+  "contract": {
+    "schema_version": "2.1",
+    "model_id": "Qwen/Qwen3.6-27B-FP8",
+    "model_revision": "e89b16ebf1988b3d6befa7de50abc2d76f26eb09",
+    "runtime_lock_sha256": "4f46101fa493e38b312af034b8d740c612bd0001bab4cb0f624f4a9e1c49f5b3",
+    "runner_sha256": "522462734c4e9246cd3b9883409a2ede8a9325dfd8dbe82b153ac4fcd1f1b7e4",
+    "extraction_contract_sha256": "b8bbd34c39a44a14c886d8a8177d55efaf986b3d5c38720968c1abe25ac0db32",
+    "generation_config_sha256": "731ee4638fe03cd043754fedfa849a87ae5660878695386e727b2d2754be5991",
+    "json_schema_sha256": {
+      "biography": "ee197f260e3e2242d65ac05644d6cba72c2c2e3114fe127c579be6070ab3ffd7",
+      "endorsements": "00bbd2b5d2d67e90505b3770df2aa6fc00faf01f3aac53d0cbbbaf905f83cb33",
+      "issues": "c5b9922e9447cc5c573bd3eeefa432710a0657e37c484c46e30dc0e83a41c719"
+    },
+    "prompt_sha256": {
+      "biography": "d32cf8c87062d607cc1ee09e9485b90f2cc1a581559944583dc4839efa177960",
+      "endorsements": "f1190195f18c32b3db3c7a0e58ebf4fdcc31edb2cf72fc2c290204cd9d482c5e",
+      "issues": "e7ad149cbbdfa5657b32235c3421adc4f5ca89fa564f7075e6a26e26f00fcb19"
+    },
+    "max_model_len": 32768,
+    "max_output_tokens": 24576,
+    "seed": 20260824,
+    "temperature": 0,
+    "thinking_enabled": false,
+    "structured_decoding_backend": "xgrammar",
+    "structured_decoding_disable_any_whitespace": true,
+    "raw_structural_whitespace_validator_id": "xgrammar_fixed_separator_json_whitespace_v1",
+    "raw_structural_whitespace_validator_spec_sha256": "4a03ebdf798ceab3f841b7359d59ad17f34033c2f6e677edd74551935ffd8774",
+    "inference_display_escape_id": "minimal_non_lf_c0_backslash_u0022_v2",
+    "inference_display_escape_spec_sha256": "89d114207b6d25517f89eed76350608c3d0f3ffc9154ba6e34bac5f11971891f",
+    "json_string_control_canonicalizer_id": "raw_json_string_c0_escape_v1",
+    "json_string_control_canonicalizer_spec_sha256": "64844ef4d08777e33c01795cb86a937200b8f5d5770a6ff0724b86f50c8ec5a9",
+    "endorsement_context_provenance_spec_sha256": "0cb4c2ecfcfbea8817e009722d5edfb9277ea180e9420a83b3e6dc3362a3d22c",
+    "array_item_cap_spec_id": "route_array_item_cap_fail_closed_v1",
+    "array_item_cap_spec_sha256": "3a3a229e030a66a445d550d74524c264329c8d94e54196dfcc8a14635315e16d",
+    "route_array_item_caps": {
+      "biography": 96,
+      "endorsements": 256,
+      "issues": 128
+    },
+    "model_item_repetition_spec_id": "exact_canonical_model_item_multiplicity_v1",
+    "model_item_repetition_spec_sha256": "c3942d9e703af8a83136c4c86eb20f4ed01ddb9627c30a457dac6b2fdcf10d3b",
+    "model_item_repetition_threshold": 3
+  },
+  "preserved_output": {
+    "local_directory": "build/hive_candidate_extraction/v2_1_quote_cap_preflight_hive_output_20260824n",
+    "remote_directory": "/home/hhilbig/candidate-website-extraction/output/v2_1_quote_cap_preflight_20260824n",
+    "output_chunk": {
+      "path": "chunk_00000.out.jsonl.gz",
+      "compressed_sha256": "7da9ad931511bc81e71d7b12e8b37b2c4413385b4170b2d1bdbb503b2186e18a",
+      "compressed_bytes": 269246,
+      "decompressed_sha256": "21d45b6986cdcca5f930b28ca6a194e76a2238bd3d8d444dcd82b9c20cc419a2",
+      "decompressed_bytes": 2451570
+    },
+    "run_metadata": {
+      "path": "run_metadata.json",
+      "sha256": "7c76cbb928e593d1744cb27b1090a501f4932fbaf816167b6df8822b3d4afc9f",
+      "bytes": 7199
+    },
+    "slurm_log": {
+      "path": "job_21424457.log",
+      "sha256": "d52eb4c4ab86404e2ae455899ebd8ca65e6d1bc4066698a3014e7ca31a4912ef",
+      "bytes": 34577
+    },
+    "chunk_files": 1,
+    "run_metadata_files": 1,
+    "temporary_files": 0
+  },
+  "technical_gate": {
+    "technical_segment_gate_passed": true,
+    "finish_reason_counts": {
+      "stop": 43
+    },
+    "parse_status_counts": {
+      "parsed": 43
+    },
+    "strict_json_parsed_outputs": 43,
+    "model_schema_valid_rows": 43,
+    "public_schema_valid_rows": 43,
+    "documents_exactly_supported": 43,
+    "all_model_items_accounted_rows": 43,
+    "model_semantic_valid_rows": 41,
+    "model_semantic_invalid_rows": 2,
+    "alignment_status_counts": {
+      "complete": 35,
+      "partial_withheld": 8
+    },
+    "model_items_strictly_parsed": 1171,
+    "aligned_public_items": 1151,
+    "private_withheld_items": 20,
+    "private_withheld_reason_counts": {
+      "ambiguous_exact_span": 9,
+      "missing_exact_span": 7,
+      "invalid_item_semantics": 4
+    },
+    "public_validation_status_counts": {
+      "observed_supported": 40,
+      "observed_zero": 3
+    },
+    "observed_zero_document_ids": [
+      "2e9a0cd8e0bd57af5f8b1b8cd26e06fa8d647d845d8ddc18a8b4199a4e666e73",
+      "aa0b99eb1331464dce28db32d73a6f53bddbf7e4aa10f46f4c17c48b12720433",
+      "e56c1b40a3bc139cc9ac53e347673ab061bdc26da15a4333e928571aeff4eb32"
+    ],
+    "output_tokens_total": 91295,
+    "output_tokens_min": 9,
+    "output_tokens_max": 13926,
+    "output_token_cap_hits": 0,
+    "input_truncated_rows": 0,
+    "array_item_cap_reached_rows": 0,
+    "model_item_repetition_failure_rows": 0,
+    "max_exact_model_item_multiplicity": 1,
+    "route_model_item_count_max": {
+      "biography": 51,
+      "endorsements": 180,
+      "issues": 32
+    },
+    "raw_structural_separator_count": 15917,
+    "raw_structural_separator_space_count": 15917,
+    "raw_structural_whitespace_violation_count": 0,
+    "inference_display_escape_count": 341,
+    "inference_display_escape_codepoint_counts": {
+      "U+0009": 36,
+      "U+0022": 305
+    },
+    "inference_display_roundtrip_failures": 0,
+    "json_control_canonicalized_characters": 0,
+    "json_control_unrepaired_after_escape_count": 0,
+    "raw_to_model_hash_mismatches": 0,
+    "alignment_or_validation_recomputation_mismatches": 0,
+    "verdict": "The runner, strict parser, display codec, structural-whitespace validator, array-cap guard, repetition guard, exact aligner, and public validator behaved as specified. The deterministic technical gate passed, but that gate cannot detect a false measured zero."
+  },
+  "quote_controls": {
+    "biography": {
+      "document_id": "0555f63d681c04fcf043c385abef0ec9470e72349893543c8b10926a5f6192ce",
+      "model_items": 11,
+      "aligned_items": 11,
+      "quote_bearing_evidence_items": 5,
+      "verdict": "The biography quote-copy control passed."
+    },
+    "k_street_issue_rows": [
+      {
+        "document_id": "0f3b3c5712297a358df45f8fa3f94edd138128e3dd757522115b60e21aca70c7",
+        "model_items": 32,
+        "aligned_items": 32,
+        "quote_bearing_evidence_items": 3
+      },
+      {
+        "document_id": "3cab5c5c1cc3c6860c344a6186e172bf04a26aaf33b8be905cac0b6092a7c421",
+        "model_items": 32,
+        "aligned_items": 32,
+        "quote_bearing_evidence_items": 3
+      },
+      {
+        "document_id": "7bdfc2a16483fb4225e35bc14b9d84583ad33d2e2fe413a0059b93d2be303315",
+        "model_items": 32,
+        "aligned_items": 32,
+        "quote_bearing_evidence_items": 3
+      },
+      {
+        "document_id": "966609d243c5ca204474bbfd51ff0fdd21bc3d494365a214070ba044e91bd7fa",
+        "model_items": 19,
+        "aligned_items": 19,
+        "quote_bearing_evidence_items": 1
+      },
+      {
+        "document_id": "cd179ab68cd2246ba2bdf1715a822ec00f3e64e6af9ba9a26c5f1247c1fe8f1f",
+        "model_items": 32,
+        "aligned_items": 32,
+        "quote_bearing_evidence_items": 3
+      }
+    ],
+    "verdict": "All five K Street rows that failed job 21422367 stopped below the issue cap, had maximum exact item multiplicity one, and recovered exact quote-bearing evidence. The quote-copy and repetition regressions passed."
+  },
+  "invalid_preflight_quote_expectations": [
+    {
+      "document_id": "5fa65c8ef604e192c08138fd14334f4145feb557f26bb97ed6a30157dda2e436",
+      "old_control_kind": "quote_bearing_issue_evidence",
+      "model_items": 18,
+      "aligned_items": 18,
+      "quote_bearing_evidence_items": 0,
+      "reason_invalid": "The quotation marks in this segment do not create a required quote-bearing evidence span for its extracted claims; the segment ends at the quoted K Street heading, while the related claim continues in the next segment. The row is a valid issue boundary and complete-parent coverage control, not a quote-copy control."
+    },
+    {
+      "document_id": "03fcaab04e96c57dd9347de4b63edd681e2812e765dd3c8bce74fb58b0cae52a",
+      "old_control_kind": "quote_bearing_explicit_endorsement_evidence",
+      "model_items": 11,
+      "aligned_items": 11,
+      "quote_bearing_record_evidence_items": 0,
+      "reason_invalid": "The quoted testimonial belongs to a separate speaker. The model correctly extracted 11 name-bearing endorsement records, including Vets for Trump Organization, under exact segment-scoped Endorsements context. Requiring the separate testimonial text as record evidence would change the approved record-plus-context rule."
+    }
+  ],
+  "endorsement_recall_failure": {
+    "verdict": "The run fails because endorsement guided decoding or carried parent context suppresses dense bare-name continuation output. A syntactically valid empty array is not a measured zero when the source contains name rows under exact endorsement context.",
+    "decisive_rows": [
+      {
+        "document_id": "aa0b99eb1331464dce28db32d73a6f53bddbf7e4aa10f46f4c17c48b12720433",
+        "parent_document_id": "1aad8662c07cd4f1f6343f78fe04b5f460235f17ecf57e8e5faa43024819fde8",
+        "segment_index": 3,
+        "segment_count": 5,
+        "control_kind": "max_density_endorsement",
+        "source_characters": 3000,
+        "source_nonempty_lines": 225,
+        "source_unique_nonempty_lines": 225,
+        "context_source_scope": "parent_document",
+        "context_text": "Endorsements",
+        "current_output_tokens": 9,
+        "current_model_items": 0,
+        "current_aligned_items": 0,
+        "historical_comparison": {
+          "extraction_contract_sha256": "1a5da28b31a2ed7fb35ac970181f776a83aa03ac709c1ac772e0928f55a2a71a",
+          "generation_config_sha256": "bd16d688235686f9162337daabc0aac8eda20b132ea01f52d5fbff2c31cfc01e",
+          "endorsement_json_schema_sha256": "caf8587e2456b68caa330dff779b68b66b9c9446f532801bab3477818ed8bcac",
+          "guided_endorsement_max_items_present": false,
+          "output_tokens": 17376,
+          "model_items": 225,
+          "aligned_items": 225,
+          "withheld_items": 0
+        },
+        "diagnosis": "This is a genuine guided-schema recall regression. The same fixed-whitespace model family and source produced 225 of 225 exact records when the endorsement guided schema did not contain maxItems."
+      },
+      {
+        "document_id": "e56c1b40a3bc139cc9ac53e347673ab061bdc26da15a4333e928571aeff4eb32",
+        "parent_document_id": "df9abdfcb024b2e62dc57ceb585f6b233d23764a36704930b1e18de376d3eeb5",
+        "segment_index": 1,
+        "segment_count": 2,
+        "control_kind": "exact_anchor_parent_closure",
+        "source_characters": 1616,
+        "source_nonempty_lines": 89,
+        "estimated_valid_continuation_name_lines": 71,
+        "context_source_scope": "parent_document",
+        "context_text": "Endorsements:",
+        "current_output_tokens": 9,
+        "current_model_items": 0,
+        "current_aligned_items": 0,
+        "fixed_spacing_no_guided_max_items_comparison": {
+          "extraction_contract_sha256": "1a5da28b31a2ed7fb35ac970181f776a83aa03ac709c1ac772e0928f55a2a71a",
+          "generation_config_sha256": "bd16d688235686f9162337daabc0aac8eda20b132ea01f52d5fbff2c31cfc01e",
+          "endorsement_json_schema_sha256": "caf8587e2456b68caa330dff779b68b66b9c9446f532801bab3477818ed8bcac",
+          "guided_endorsement_max_items_present": false,
+          "output_tokens": 9,
+          "model_items": 0,
+          "aligned_items": 0,
+          "withheld_items": 0
+        },
+        "historical_comparison": {
+          "extraction_contract_sha256": "1a5da28b31a2ed7fb35ac970181f776a83aa03ac709c1ac772e0928f55a2a71a",
+          "generation_config_sha256": "88e12103cff65e7b3a2197ab08a1726325e1681cdd12d7ff406361b8e00b86ed",
+          "endorsement_json_schema_sha256": "caf8587e2456b68caa330dff779b68b66b9c9446f532801bab3477818ed8bcac",
+          "output_tokens": 7293,
+          "model_items": 72,
+          "aligned_items": 70,
+          "withheld_items": 2
+        },
+        "diagnosis": "This is a genuine carried-context continuation recall regression. Removing endorsement maxItems alone did not recover it under the fixed-spacing contract, while an earlier contract generated 72 records. The next prompt must state that exact parent_document context remains controlling context for names in the continuation segment."
+      },
+      {
+        "document_id": "2e9a0cd8e0bd57af5f8b1b8cd26e06fa8d647d845d8ddc18a8b4199a4e666e73",
+        "parent_document_id": "1aad8662c07cd4f1f6343f78fe04b5f460235f17ecf57e8e5faa43024819fde8",
+        "segment_index": 4,
+        "segment_count": 5,
+        "control_kind": "preflight_parent_closure",
+        "source_characters": 1367,
+        "source_nonempty_lines": 103,
+        "overlap_with_prior_segment_characters": 300,
+        "context_source_scope": "parent_document",
+        "context_text": "Endorsements",
+        "current_output_tokens": 9,
+        "current_model_items": 0,
+        "current_aligned_items": 0,
+        "fixed_spacing_no_guided_max_items_comparison": {
+          "extraction_contract_sha256": "1a5da28b31a2ed7fb35ac970181f776a83aa03ac709c1ac772e0928f55a2a71a",
+          "generation_config_sha256": "bd16d688235686f9162337daabc0aac8eda20b132ea01f52d5fbff2c31cfc01e",
+          "endorsement_json_schema_sha256": "caf8587e2456b68caa330dff779b68b66b9c9446f532801bab3477818ed8bcac",
+          "guided_endorsement_max_items_present": false,
+          "output_tokens": 9,
+          "model_items": 0,
+          "aligned_items": 0,
+          "withheld_items": 0
+        },
+        "suffix_o_predeclared_minimum_unique_model_identities": 87,
+        "suffix_o_predeclared_minimum_uniquely_aligned_identities": 85,
+        "suffix_o_excluded_lines": [
+          "clipped initial line ena Song",
+          "page-interface and footer text"
+        ],
+        "diagnosis": "This companion segment overlaps the preceding segment by only 300 characters and then contains additional bare-name rows. It is another genuine continuation and complete-parent recall failure, not a valid measured zero."
+      }
+    ],
+    "paired_nonfailure": {
+      "document_id": "a8885c81fde803fea71cd73c15f3e9058a77283fd1bab96cec6687f9b93cb70d",
+      "parent_document_id": "df9abdfcb024b2e62dc57ceb585f6b233d23764a36704930b1e18de376d3eeb5",
+      "segment_index": 0,
+      "segment_count": 2,
+      "model_items": 180,
+      "aligned_items": 171,
+      "withheld_items": 9,
+      "withheld_reason_counts": {
+        "ambiguous_exact_span": 6,
+        "missing_exact_span": 3
+      },
+      "diagnosis": "The model generated the first segment's identities. Six duplicated names were ambiguous exact spans, and three model strings normalized nonbreaking spaces and therefore failed exact alignment. This row is not the recall failure; its paired continuation e56c1b40 is."
+    }
+  },
+  "approved_suffix_o_correction": {
+    "status": "approved_local_correction_not_synced_or_submitted",
+    "contract_rule_changes": [
+      "Omit maxItems only from the endorsement guided JSON schema. Keep the issue maxItems value 128 and biography maxItems value 96 unchanged.",
+      "Keep the fail-closed post-generation endorsement cap at 256, the exact item repetition threshold at 3, and every strict stop, parse, nonblank, exact-span, context, and semantic gate.",
+      "Strengthen the endorsement instruction so parent_document scope means the supplied exact structural context is controlling context for the current continuation segment. The model must copy that context unchanged, may use it for bare names in the current segment even though the heading lies outside the segment, and may not extract a name that is absent from the current segment."
+    ],
+    "control_changes": {
+      "relabel_invalid_quote_controls": [
+        "5fa65c8ef604e192c08138fd14334f4145feb557f26bb97ed6a30157dda2e436",
+        "03fcaab04e96c57dd9347de4b63edd681e2812e765dd3c8bce74fb58b0cae52a"
+      ],
+      "new_single_parent_endorsement_quote_control": {
+        "document_id": "36a087fabff4e9fe643765073f0d1fa1e84d4ad25b47c69cb865d67adc97820a",
+        "parent_document_id": "5092019feb6f9fae9d18671bb9e7daec3a4ac4f372ccbdd92cca0054aae53054",
+        "segment_index": 0,
+        "segment_count": 1,
+        "required_exact_record_evidence": "Texas State Rep. Jolanda \"Jo\" Jones",
+        "required_context_source_scope": "segment",
+        "required_context_text": "Endorsements"
+      },
+      "complete_parent_closure_retained_for_document_ids": [
+        "aa0b99eb1331464dce28db32d73a6f53bddbf7e4aa10f46f4c17c48b12720433",
+        "e56c1b40a3bc139cc9ac53e347673ab061bdc26da15a4333e928571aeff4eb32",
+        "2e9a0cd8e0bd57af5f8b1b8cd26e06fa8d647d845d8ddc18a8b4199a4e666e73"
+      ]
+    },
+    "required_preflight_inventory": {
+      "rows": 44,
+      "unique_document_ids": 44,
+      "parent_documents": 18,
+      "rows_by_route": {
+        "biography": 4,
+        "endorsements": 15,
+        "issues": 25
+      }
+    },
+    "required_execution_order": [
+      "Freeze all suffix-o prompt, schema, generation, contract, source, selection, chunk, and runner hashes after focused and full offline tests pass.",
+      "Run the fresh 44-row suffix-o preflight. Treat any recurrence of the three endorsement continuation zeros, any quote-control failure, or any deterministic gate failure as NO-GO.",
+      "Only after the preflight passes, run a fresh contract-bound 7838-window complete-parent suffix-o stress pilot.",
+      "Do not resume or merge suffix-n output. Do not start the 35213-window production rerun until both suffix-o gates pass."
+    ]
+  },
+  "submission_state": {
+    "suffix_n_7838_window_stress_export_exists_locally": true,
+    "suffix_n_7838_window_stress_export_directory": "build/hive_candidate_extraction/v2_1_quote_cap_stress_pilot_export_20260824n",
+    "suffix_n_stress_synced_to_hive": false,
+    "suffix_n_stress_submitted_to_slurm": false,
+    "suffix_n_stress_hive_job_id": null,
+    "full_35213_window_rerun_submitted": false
+  },
+  "decision": "Preserve every suffix-n input, output, metadata, log, and derived audit artifact from Hive job 21424457. Do not repair, resume, merge, or publish these outputs. The technically clean run is tuning evidence only because its endorsement recall gate failed. Apply the approved combined correction in a new suffix-o contract and require a fresh preflight before any stress or production inference."
+}

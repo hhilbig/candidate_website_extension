@@ -1,0 +1,167 @@
+{
+  "audit_type": "candidate_endorsement_line_ledger_stage_a_preflight_correction",
+  "audit_date": "2026-08-25",
+  "status": "local_contract_and_export_passed_hive_not_submitted",
+  "purpose": "Replace the failed Stage-A padding-permitted guided schema and invalid prompt-token accounting with count-specific guided schemas and exact chat-template token accounting before any replacement Hive preflight.",
+  "comparison": {
+    "failed_hive_job": "21435372",
+    "failed_audit": "quality_reports/candidate_endorsement_line_ledger_stage_a_preflight_failed_21435372_2026-08-25.json",
+    "failed_audit_sha256": "7c786862071a666f7d2372493cfd02295e131eaf502b53bf889223be5d6ad5d9",
+    "failed_result": "103 of 113 batches passed; 10 failed because 83 real target slots were labeled padding. All rows falsely reported two prompt tokens because the tokenizer returned a mapping whose keys were counted.",
+    "corrected_local_result": "All 113 source batches select an exact target-count schema in which target slots cannot be padding. The exact pinned Qwen chat template leaves at least 21352 context tokens after reserving 2048 output tokens.",
+    "content_gate_status": "not_tested_by_local_export; the replacement Hive preflight remains required and the full Stage-A run remains unauthorized"
+  },
+  "assumptions": [
+    "The corrected core corpus SHA-256 remains c53d36b24b293ac5d47706aa67731f1c107d6a679cb948c9ad71a70b5c8ce7c3.",
+    "The same pinned Qwen model, revision, Hive runtime lock, seed, zero temperature, fixed-whitespace xgrammar policy, and 32768-token model length remain authoritative.",
+    "This local artifact performs no inference. A fresh Hive output directory and separate submission approval are still required.",
+    "The immutable failed-job artifacts and failed audit are retained without overwrite."
+  ],
+  "source": {
+    "full_export_directory": "build/hive_candidate_extraction/v2_1_full_export_20260824p",
+    "source_export_manifest_sha256": "f5e6545a2d2ec35a83f4184e0d328635e5fba9d3c80cd4c8a7466178b7d9172c",
+    "source_corpus_sha256": "c53d36b24b293ac5d47706aa67731f1c107d6a679cb948c9ad71a70b5c8ce7c3",
+    "source_schema_version": "1.4",
+    "replayed_segments_by_route": {
+      "biography": 8444,
+      "endorsements": 6096,
+      "issues": 20673
+    },
+    "replayed_parents_by_route": {
+      "biography": 6962,
+      "endorsements": 2583,
+      "issues": 14326
+    }
+  },
+  "correction_contract": {
+    "line_ledger_contract_sha256": "ac8d6ed7f06e58a7961e08f8d50f7a86907f1bada12f1c70f5e9963011a335c2",
+    "line_inventory_spec_sha256": "b1d79e313b42a1d1e1826f6c7687dc5b513ade605f4033d1b18e8b85dbf34aa0",
+    "line_batch_spec_sha256": "33248f961b0d4929430cbc53d6eb36503885e61c225d787b56d9f645419f1d76",
+    "prompt_sha256": {
+      "line_decision": "a5a592019dbc1aee631f11c6bbdd7b61f2d59fc173050fddc0d8b1cb1f7b1c4a",
+      "record_extraction": "ddc90ae105620211907edc553848c717e807bbd74aa0a6a762129eb3c904c95f"
+    },
+    "json_schema_catalog_sha256": {
+      "line_decision": "bbb78a98b19a0119c6f20e32b95d6585dee2678bbbb2479bfd2c8b69a8b31d8f",
+      "record_extraction": "913011667e4625f87f8bceb0f618e0c6068fe8bdd4cbca7867e1edb88b7304ad"
+    },
+    "prompt_token_count_spec_sha256": "587c65388f06ac5ca2e61bb81c053912d2204b6fb80e8b20a0051b4e14f3f755",
+    "schema_variant_rule": "Stage A selects one of 16 schemas and Stage B selects one of 8 schemas by exact real target count. Every real slot excludes padding and every unused slot permits padding only.",
+    "stage_a_variant_count": 16,
+    "stage_b_variant_count": 8,
+    "post_generation_validation": "Independent fixed-slot cardinality, slot identity, enum, nonblank, cap, repetition, restart, and exact manifest checks remain fail closed.",
+    "unchanged_issue_and_biography_routes": true
+  },
+  "preflight_export": {
+    "directory": "build/hive_candidate_extraction/v2_1_endorsement_line_ledger_stage_a_preflight_20260825b",
+    "stage": "line_decision",
+    "parent_documents": 8,
+    "source_segments": 33,
+    "model_decision_lines": 1758,
+    "batches": 113,
+    "chunks": 2,
+    "expected_batch_ids_sha256": "ecbcef016feb01945bb519cf41f53dda87661a091809b574d06e90baff836d64",
+    "ordered_schema_variant_ids_sha256": "84ca35eeaceaaf6105dba37de052efe52bbe03ba2185c0ba2345be7b815715b7",
+    "ordered_schema_variant_hashes_sha256": "e22dcc59fe88ccb65b8cb0dc498f3325ffa676d378b268457a3f69d48044dc9c",
+    "schema_variant_counts": {
+      "line_decision_targets_04_v1": 1,
+      "line_decision_targets_05_v1": 1,
+      "line_decision_targets_08_v1": 2,
+      "line_decision_targets_10_v1": 1,
+      "line_decision_targets_11_v1": 1,
+      "line_decision_targets_16_v1": 107
+    },
+    "manifest_payload_sha256": "ada9d2504d8071ae3fda19def47386328898931bc7f09f3209c8583f78a30ca2",
+    "generation_config_sha256": "57a5761dc5d35dc340d2d31c9828c403782b51dfd77e6d3824f815207d10fcb4",
+    "files": [
+      {
+        "file": "manifest.json",
+        "bytes": 37420,
+        "sha256": "66448050157a3e1b18fc44c13e31c9bab1de3e6c0035eb4967e6b63a3f4fda9e"
+      },
+      {
+        "file": "selection.csv",
+        "bytes": 2404,
+        "sha256": "c84fca8de2f3e458908749f29c91c8942a6f2931911e96d0751daa6f84b28cec"
+      },
+      {
+        "file": "chunks/chunk_00000.jsonl.gz",
+        "bytes": 230803,
+        "records": 60,
+        "sha256": "c9e10039b6b1a849df34e4ca7675c85aef47b13d98c5177d8cd034d0c0009468",
+        "content_sha256": "da1c113c3696e078e368fe169be32347684b28062ed42fe6326640628f116b1f"
+      },
+      {
+        "file": "chunks/chunk_00001.jsonl.gz",
+        "bytes": 193398,
+        "records": 53,
+        "sha256": "a95f053bbe4c956af816fa0429a1c378e8e6b133322dd4d881dbbff909569f56",
+        "content_sha256": "8cfa5fd344fb6696da6fee481727018ed938bec064a1384aadaad246a080980d"
+      }
+    ]
+  },
+  "exact_tokenizer_context_census": {
+    "scope": "all 113 suffix-b Stage-A conversations, including the exact system prompt, exact batch-specific user message, and pinned chat template",
+    "transformers_version": "5.14.1",
+    "tokenizer_class": "Qwen2Tokenizer",
+    "tokenizer_vocabulary_size": 248077,
+    "backend_tokenizer_json_sha256": "ffb7a28b27dabcc333662fd3e0b0005d9e79a1c22e31453ab5a3017fbd5f25c0",
+    "max_model_len": 32768,
+    "max_output_tokens": 2048,
+    "prompt_tokens": {
+      "minimum": 1122,
+      "p50_nearest_rank": 2175,
+      "p90_nearest_rank": 2325,
+      "p95_nearest_rank": 2872,
+      "p99_nearest_rank": 4321,
+      "maximum": 9368
+    },
+    "minimum_context_margin_tokens": 21352,
+    "rows_below_required_256_token_margin": 0,
+    "over_budget_rows": 0,
+    "largest_prompt_batch_id": "7169b1358aab412f4dbef745ebb9847a0697568defd13f3b952a0e927b8309c4",
+    "failed_job_comparison": "The failed job reported exactly 2 prompt tokens for all 113 rows. The corrected counter reads the input_ids sequence from a Mapping or BatchEncoding and rejects ambiguous or noninteger shapes."
+  },
+  "integrity_review": {
+    "verdict": "go_for_local_freeze_and_replacement_preflight_only",
+    "manifest_attacks_rejected": [
+      "fabricated embedded line-ledger contract",
+      "wrong frozen contract hash",
+      "fabricated unchanged issue/biography route hashes",
+      "wrong schema catalog hash",
+      "wrong schema variant map",
+      "wrong schema variant counts",
+      "wrong ordered schema-variant ID digest"
+    ],
+    "token_shape_probes": "8 valid forms accepted and 8 ambiguous or noninteger forms rejected",
+    "schema_review": "All 16 Stage-A and 8 Stage-B schemas have unique hashes and exact target-not-padding/padding-only enums.",
+    "inference_submission_performed": false
+  },
+  "tests": {
+    "focused_line_ledger": {
+      "passed": 22,
+      "failed": 0
+    },
+    "extraction_wide": {
+      "passed": 243,
+      "failed": 0
+    },
+    "repository_wide": {
+      "passed": 639,
+      "failed": 5,
+      "deselected": 29,
+      "unrelated_failure": "All five failures are parameterizations of tests/test_merge_municipal_temporal_validation.py::test_merge_recomputes_identity_timing_city_mayoral_and_reuse_decisions. Its fixture assigns integer 0 to a Pandas Arrow string column before line-ledger code runs; no unrelated files were changed."
+    },
+    "py_compile": "passed",
+    "sbatch_bash_syntax": "passed",
+    "git_diff_check": "passed"
+  },
+  "implementation_sha256": {
+    "src/candidate_endorsement_line_ledger.py": "c44878d5301aa0c393721fbabd31375401adbc2bd4f7a939a4e44db3e5507a11",
+    "scripts/hive/extract_candidate_endorsement_line_ledger_vllm.py": "1d3220e26d3d9ef94d0c3e5081a0d359c54e6e73939ae16a81d46307db87050d",
+    "scripts/hive/run_candidate_endorsement_line_ledger.sbatch": "9b0830a58064e24c3d18e9c29eb832a1125c5d5a83efd718687ebaa7b6dfbd6e",
+    "scripts/build_candidate_endorsement_line_ledger.py": "9ff2eebf7ccd991222f159cc01a6895768e8a76e5f58a8d54b02c6645828b820",
+    "scripts/evaluate_candidate_endorsement_line_ledger_pilot.py": "ce3596d6bbd00d862ab316c881216fc75fa4fd2c154805ef772f074b04787489"
+  },
+  "next_gate": "Sync only the frozen implementation and suffix-b export, reserve a new empty remote output directory atomically, run only the 113-batch Stage-A replacement preflight, and require every technical and unchanged content gate before building or submitting Stage B or a full Stage-A run."
+}

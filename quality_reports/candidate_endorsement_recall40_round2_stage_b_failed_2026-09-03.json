@@ -1,0 +1,629 @@
+{
+  "artifact_type": "immutable_recall40_round2_stage_b_technical_failure_audit",
+  "input_manifest_sha256": "66aabcca08a1d54a644d2399827b0dba1b56b829e225dc79f23958a6a80788e9",
+  "line_ledger_contract_sha256": "019a97f9c37569b65b0689a78747afff19b05df02a8e729472c3b9571029bfb3",
+  "generation_config_sha256": "dd20bca47b5a15b79864fcccdaa290a59c9463dead2ce257501f414f9b50b12f",
+  "output_inventory": [
+    {
+      "file": "chunk_00000.out.jsonl.gz",
+      "bytes": 116190,
+      "sha256": "fbe2f32d7dfd88a4e60072c346cf85ec4533188f295b671e5c818c6cf6c362e0"
+    },
+    {
+      "file": "chunk_00001.out.jsonl.gz",
+      "bytes": 119717,
+      "sha256": "57d911ecff26796788f0eef5503fa5bf3240ff23b418208b8c815412cf931d8e"
+    },
+    {
+      "file": "chunk_00002.out.jsonl.gz",
+      "bytes": 101037,
+      "sha256": "51036d0c03b3e1082e76c6b51994e587927f0f62094e9be6c3a63e8a0b7487c4"
+    },
+    {
+      "file": "chunk_00003.out.jsonl.gz",
+      "bytes": 108723,
+      "sha256": "c255bb6bd3a10c9bd63bdf31c7cda776e78eca1dc0cdaffb25a33c778285f883"
+    },
+    {
+      "file": "chunk_00004.out.jsonl.gz",
+      "bytes": 116973,
+      "sha256": "e9a05213e4483659a38f8d84fbc10aad8cde8517eab62ba84a227c15e9c54474"
+    },
+    {
+      "file": "chunk_00005.out.jsonl.gz",
+      "bytes": 9112,
+      "sha256": "53ba0a60475656194f0573e370200279682d44962e8aa75fb269d759d3ab274f"
+    },
+    {
+      "file": "run_metadata_shard_00000.json",
+      "bytes": 7982,
+      "sha256": "032b11b215b73a34e5f656c5c52e4c1872d17f7434b1c30f8754fe9bafd7e461"
+    },
+    {
+      "file": "run_metadata_shard_00001.json",
+      "bytes": 6718,
+      "sha256": "7b726156dad527631584819140ed89abf50fba7608d3692efc7fc046095fd0c3"
+    },
+    {
+      "file": "run_metadata_shard_00002.json",
+      "bytes": 10443,
+      "sha256": "9365d5ee12f8ba88ab381d11864affb615196cd49067eaf2d0335f91867da7ab"
+    },
+    {
+      "file": "run_metadata_shard_00003.json",
+      "bytes": 7948,
+      "sha256": "7a91e0ddd0ec2c406fc834e4a878237542f09e04f6327a8338b47776ea48e5f5"
+    },
+    {
+      "file": "run_metadata_shard_00004.json",
+      "bytes": 5457,
+      "sha256": "b4e8f88db3eb804105c4adc5e5b30f95c6cc4b9542b06aeffe201776185a8c18"
+    },
+    {
+      "file": "run_metadata_shard_00005.json",
+      "bytes": 5859,
+      "sha256": "a4f1ec6d53eee913a0331b422e00bc80e3fa0072de1388e9ab534af421cbd719"
+    }
+  ],
+  "metadata_jobs": [
+    {
+      "shard_index": 0,
+      "slurm_job_id": "22098352",
+      "technical_pass": 53,
+      "parse_status_counts": {
+        "invalid_stage_alignment": 2,
+        "invalid_stage_output": 5,
+        "parsed": 53
+      }
+    },
+    {
+      "shard_index": 1,
+      "slurm_job_id": "22098353",
+      "technical_pass": 55,
+      "parse_status_counts": {
+        "invalid_stage_output": 5,
+        "parsed": 55
+      }
+    },
+    {
+      "shard_index": 2,
+      "slurm_job_id": "22098650",
+      "technical_pass": 37,
+      "parse_status_counts": {
+        "invalid_stage_alignment": 2,
+        "invalid_stage_output": 21,
+        "parsed": 37
+      }
+    },
+    {
+      "shard_index": 3,
+      "slurm_job_id": "22098651",
+      "technical_pass": 52,
+      "parse_status_counts": {
+        "invalid_stage_output": 8,
+        "parsed": 52
+      }
+    },
+    {
+      "shard_index": 4,
+      "slurm_job_id": "22098660",
+      "technical_pass": 60,
+      "parse_status_counts": {
+        "parsed": 60
+      }
+    },
+    {
+      "shard_index": 5,
+      "slurm_job_id": "22095041",
+      "technical_pass": 4,
+      "parse_status_counts": {
+        "parsed": 4
+      }
+    }
+  ],
+  "authenticated_census": {
+    "output_rows": 304,
+    "finish_reason_stop": 304,
+    "technical_pass": 261,
+    "technical_fail": 43,
+    "invalid_stage_output": 39,
+    "invalid_stage_alignment": 4,
+    "valid_row_aligned_records": 1983,
+    "valid_row_withheld_records": 0,
+    "failed_parent_count": 13,
+    "validation_error_counts": {
+      "affiliation_not_exact_in_block": 33,
+      "compound_anchor_identity_not_distinct": 2,
+      "jurisdiction_not_exact_in_block": 3,
+      "name_not_exact_in_block": 43,
+      "split_line_name_not_fully_accounted": 1,
+      "title_not_exact_in_block": 37
+    },
+    "alignment_withheld_reason_counts": {
+      "ambiguous_exact_span": 4,
+      "invalid_item_semantics": 2,
+      "missing_exact_span": 1
+    }
+  },
+  "ordered_output_batch_ids_sha256": "297452693bc7adc82c884410076f4613511afe535083c73e92edad3b29ac0857",
+  "exact_failures": [
+    {
+      "batch_id": "e69ac30188d5ec6cf2ae1f5e8582d22494cef05738e2a50f69a4c3d279dec729",
+      "parent_document_id": "25747c12fdda2b2d97977042bdc68a685a662333279b7932c9aa98ebc4285d63",
+      "parse_status": "invalid_stage_alignment",
+      "errors": [],
+      "alignment_failure_reasons": [
+        "carrier_exact_alignment_failed"
+      ]
+    },
+    {
+      "batch_id": "b28e6dd34102ca6489610a838f9592450cfa376fda034ac3f6a550623a0b7912",
+      "parent_document_id": "2859deaf6f0bb6eac33e1f9d172a7aedc17076bbbde21b47d2c0900c81e77901",
+      "parse_status": "invalid_stage_output",
+      "errors": [
+        "slot_00:record_0:name_not_exact_in_block",
+        "slot_01:record_0:name_not_exact_in_block"
+      ],
+      "alignment_failure_reasons": []
+    },
+    {
+      "batch_id": "a49619eb9fa388e99bb9737539a7a4ae4a66373da84af1c7b9467c926d83c869",
+      "parent_document_id": "3532929b48e56c55687f314662125b2d2ddec13ea8e9b12e06749cc1e1cf4685",
+      "parse_status": "invalid_stage_output",
+      "errors": [
+        "slot_02:record_0:name_not_exact_in_block",
+        "slot_04:record_0:name_not_exact_in_block"
+      ],
+      "alignment_failure_reasons": []
+    },
+    {
+      "batch_id": "718cb22165d7bd100cbbbb2c63772a94e5be006ce4339d1c3f8ea75cdbd4d308",
+      "parent_document_id": "35e8e64b016b40c9ac257c26a3f272d8d1575f74e89cbec4d5a1cbbdebe28956",
+      "parse_status": "invalid_stage_alignment",
+      "errors": [],
+      "alignment_failure_reasons": [
+        "carrier_exact_alignment_failed",
+        "carrier_exact_alignment_failed"
+      ]
+    },
+    {
+      "batch_id": "09221424ccb7cbe9da4d771fc44bb82984e6bd5164797b66f3ebc0336b6c9439",
+      "parent_document_id": "35e8e64b016b40c9ac257c26a3f272d8d1575f74e89cbec4d5a1cbbdebe28956",
+      "parse_status": "invalid_stage_output",
+      "errors": [
+        "slot_01:record_0:title_not_exact_in_block",
+        "slot_01:record_0:affiliation_not_exact_in_block",
+        "slot_02:record_0:title_not_exact_in_block",
+        "slot_02:record_0:affiliation_not_exact_in_block"
+      ],
+      "alignment_failure_reasons": []
+    },
+    {
+      "batch_id": "8cdc18d54d3783ab89d666148047c649f706aa1b069df3bb2f1fb056e98ccafe",
+      "parent_document_id": "3f595a19394d7a35e65682c6248ba71517bc818c004c22b35d572ec68ecd274e",
+      "parse_status": "invalid_stage_output",
+      "errors": [
+        "slot_01:record_0:name_not_exact_in_block"
+      ],
+      "alignment_failure_reasons": []
+    },
+    {
+      "batch_id": "b489f36ec1644f9bc295b9c9faebebd7a7d7c73dff5cee75680e01946d3964eb",
+      "parent_document_id": "7d0d35d7a2beb5e0f736f4afc82bc2442e3097416238c557a4455efc13f0846f",
+      "parse_status": "invalid_stage_output",
+      "errors": [
+        "slot_02:split_line_name_not_fully_accounted"
+      ],
+      "alignment_failure_reasons": []
+    },
+    {
+      "batch_id": "5a4c2f936bdbf6fec588cb2157a1441c6be94de10e600903aaabf72b3496023f",
+      "parent_document_id": "8bbbdb48c6018660ebd7e590ab5408201e0b51507975e0aef587f9cde5663b1c",
+      "parse_status": "invalid_stage_output",
+      "errors": [
+        "slot_00:record_0:name_not_exact_in_block",
+        "slot_02:record_0:affiliation_not_exact_in_block",
+        "slot_03:record_0:title_not_exact_in_block",
+        "slot_04:record_0:title_not_exact_in_block",
+        "slot_05:record_0:title_not_exact_in_block",
+        "slot_07:record_0:title_not_exact_in_block"
+      ],
+      "alignment_failure_reasons": []
+    },
+    {
+      "batch_id": "2ea337948a414f646318e68164b1ec3b0a2d3644cb338d64f6c7541036a35a36",
+      "parent_document_id": "8bbbdb48c6018660ebd7e590ab5408201e0b51507975e0aef587f9cde5663b1c",
+      "parse_status": "invalid_stage_output",
+      "errors": [
+        "slot_04:record_0:name_not_exact_in_block",
+        "slot_05:record_0:name_not_exact_in_block"
+      ],
+      "alignment_failure_reasons": []
+    },
+    {
+      "batch_id": "71b45b62d033c2df903745a9b2bcadcf0c2aee30383d533ff8dc9d21ec1f4f2d",
+      "parent_document_id": "8bbbdb48c6018660ebd7e590ab5408201e0b51507975e0aef587f9cde5663b1c",
+      "parse_status": "invalid_stage_output",
+      "errors": [
+        "slot_04:record_0:title_not_exact_in_block",
+        "slot_05:record_0:title_not_exact_in_block",
+        "slot_07:record_0:title_not_exact_in_block"
+      ],
+      "alignment_failure_reasons": []
+    },
+    {
+      "batch_id": "805cdde7d688fbbb4f42c20b19001729344fb03f169b4199e1b825449517bcaf",
+      "parent_document_id": "8bbbdb48c6018660ebd7e590ab5408201e0b51507975e0aef587f9cde5663b1c",
+      "parse_status": "invalid_stage_output",
+      "errors": [
+        "slot_00:record_0:affiliation_not_exact_in_block",
+        "slot_04:record_0:title_not_exact_in_block",
+        "slot_05:record_0:affiliation_not_exact_in_block"
+      ],
+      "alignment_failure_reasons": []
+    },
+    {
+      "batch_id": "601f4059191844797f4f580eff5325b8e997521250eec68170a920dbf33cda88",
+      "parent_document_id": "8bbbdb48c6018660ebd7e590ab5408201e0b51507975e0aef587f9cde5663b1c",
+      "parse_status": "invalid_stage_output",
+      "errors": [
+        "slot_02:record_0:name_not_exact_in_block",
+        "slot_05:record_0:name_not_exact_in_block",
+        "slot_06:record_0:title_not_exact_in_block"
+      ],
+      "alignment_failure_reasons": []
+    },
+    {
+      "batch_id": "9a335d9a14df600554eb4fdaa33cb7de3ba472473d37af06232a029b1e7bdb3b",
+      "parent_document_id": "8bbbdb48c6018660ebd7e590ab5408201e0b51507975e0aef587f9cde5663b1c",
+      "parse_status": "invalid_stage_output",
+      "errors": [
+        "slot_00:record_0:title_not_exact_in_block",
+        "slot_04:record_0:affiliation_not_exact_in_block"
+      ],
+      "alignment_failure_reasons": []
+    },
+    {
+      "batch_id": "56c236356dfa4da3b9fbaeea9cec64dd597e63d1bf67280e33602a67649c01b6",
+      "parent_document_id": "8bbbdb48c6018660ebd7e590ab5408201e0b51507975e0aef587f9cde5663b1c",
+      "parse_status": "invalid_stage_output",
+      "errors": [
+        "slot_00:record_0:title_not_exact_in_block",
+        "slot_06:record_0:title_not_exact_in_block",
+        "slot_07:record_0:title_not_exact_in_block"
+      ],
+      "alignment_failure_reasons": []
+    },
+    {
+      "batch_id": "89b1e5109a6c463c5e51d690d2fa70baf1569d9d933bcdfdf8cca14649cd16ba",
+      "parent_document_id": "8bbbdb48c6018660ebd7e590ab5408201e0b51507975e0aef587f9cde5663b1c",
+      "parse_status": "invalid_stage_output",
+      "errors": [
+        "slot_00:record_0:jurisdiction_not_exact_in_block"
+      ],
+      "alignment_failure_reasons": []
+    },
+    {
+      "batch_id": "92d3e6806e6205868a6c0a0ba4db078541346516d13f1589cdca7529204c23aa",
+      "parent_document_id": "8bbbdb48c6018660ebd7e590ab5408201e0b51507975e0aef587f9cde5663b1c",
+      "parse_status": "invalid_stage_output",
+      "errors": [
+        "slot_04:record_0:name_not_exact_in_block",
+        "slot_06:record_0:title_not_exact_in_block"
+      ],
+      "alignment_failure_reasons": []
+    },
+    {
+      "batch_id": "62f0b5d05bd569b3bb92416bb70f0d047c81e89601ec3495670a5d8587aa01d0",
+      "parent_document_id": "8bbbdb48c6018660ebd7e590ab5408201e0b51507975e0aef587f9cde5663b1c",
+      "parse_status": "invalid_stage_output",
+      "errors": [
+        "slot_01:record_0:jurisdiction_not_exact_in_block",
+        "slot_02:record_0:title_not_exact_in_block",
+        "slot_03:record_0:title_not_exact_in_block",
+        "slot_04:record_0:title_not_exact_in_block",
+        "slot_04:record_0:affiliation_not_exact_in_block",
+        "slot_05:record_0:title_not_exact_in_block",
+        "slot_06:record_0:affiliation_not_exact_in_block"
+      ],
+      "alignment_failure_reasons": []
+    },
+    {
+      "batch_id": "c7696ed59c707cfee789f19012e1bd71f184f516d52f22417c787495258b48b3",
+      "parent_document_id": "8bbbdb48c6018660ebd7e590ab5408201e0b51507975e0aef587f9cde5663b1c",
+      "parse_status": "invalid_stage_output",
+      "errors": [
+        "slot_00:record_0:affiliation_not_exact_in_block",
+        "slot_01:record_0:affiliation_not_exact_in_block",
+        "slot_03:record_0:affiliation_not_exact_in_block",
+        "slot_04:record_0:affiliation_not_exact_in_block",
+        "slot_05:record_0:affiliation_not_exact_in_block",
+        "slot_07:record_0:affiliation_not_exact_in_block"
+      ],
+      "alignment_failure_reasons": []
+    },
+    {
+      "batch_id": "33db67e86c239b5585490570ddc2c51aa0d55ad10023fd9cd5c21cd138ccc3d5",
+      "parent_document_id": "8bbbdb48c6018660ebd7e590ab5408201e0b51507975e0aef587f9cde5663b1c",
+      "parse_status": "invalid_stage_output",
+      "errors": [
+        "slot_01:record_0:title_not_exact_in_block",
+        "slot_02:record_0:title_not_exact_in_block",
+        "slot_03:record_0:title_not_exact_in_block",
+        "slot_04:record_0:title_not_exact_in_block",
+        "slot_05:record_0:title_not_exact_in_block",
+        "slot_06:record_0:title_not_exact_in_block"
+      ],
+      "alignment_failure_reasons": []
+    },
+    {
+      "batch_id": "b2bfe40deec1ed8c52af30909247d8ddd1b6f183d061754ac4094eb301d87ffe",
+      "parent_document_id": "8bbbdb48c6018660ebd7e590ab5408201e0b51507975e0aef587f9cde5663b1c",
+      "parse_status": "invalid_stage_output",
+      "errors": [
+        "slot_00:record_0:affiliation_not_exact_in_block",
+        "slot_01:record_0:affiliation_not_exact_in_block",
+        "slot_02:record_0:affiliation_not_exact_in_block",
+        "slot_07:record_0:affiliation_not_exact_in_block"
+      ],
+      "alignment_failure_reasons": []
+    },
+    {
+      "batch_id": "7e3ffbea544673fa7c325bc00404357f4ed09ffbace4878ecb492cb7147b1670",
+      "parent_document_id": "8bbbdb48c6018660ebd7e590ab5408201e0b51507975e0aef587f9cde5663b1c",
+      "parse_status": "invalid_stage_output",
+      "errors": [
+        "slot_00:record_0:affiliation_not_exact_in_block",
+        "slot_01:record_0:affiliation_not_exact_in_block",
+        "slot_02:record_0:affiliation_not_exact_in_block"
+      ],
+      "alignment_failure_reasons": []
+    },
+    {
+      "batch_id": "f32867399e4f086ba7c5f428e4d1136c6a252ce9c803f83e5a4a4b55a17d5145",
+      "parent_document_id": "bb0e395a170e411a78ca383242771654f81b0a10f7ef68844179d0567cc36555",
+      "parse_status": "invalid_stage_output",
+      "errors": [
+        "slot_01:record_0:jurisdiction_not_exact_in_block"
+      ],
+      "alignment_failure_reasons": []
+    },
+    {
+      "batch_id": "53e3606e08e2c86f879d3c8f92f63fc241c90f4332a34eb6a87832c5763a8367",
+      "parent_document_id": "c6c67060e6bca8a492d37a0446de3f5ac11196b827a4fd9418930206dd248cb8",
+      "parse_status": "invalid_stage_alignment",
+      "errors": [],
+      "alignment_failure_reasons": [
+        "carrier_exact_alignment_failed",
+        "carrier_exact_alignment_failed",
+        "carrier_exact_alignment_failed"
+      ]
+    },
+    {
+      "batch_id": "42a65ee49a1169ecf8ff97e201042e9e4d6e39fbec2cc9bc73f35fedddd3ba80",
+      "parent_document_id": "d0511796a6b35c192740bda2451de11d23f58000faecfdffcbe017fc046b40be",
+      "parse_status": "invalid_stage_alignment",
+      "errors": [],
+      "alignment_failure_reasons": [
+        "carrier_exact_alignment_failed"
+      ]
+    },
+    {
+      "batch_id": "9ce4f9b1bf901501b64b35b06a2e75cb911d1797c3c1fbd05a582c627ab4ad75",
+      "parent_document_id": "e637f5b30a2a1ac5d121dd7bcdefb19c356e3ffb199a0aa1c44c8c146985804f",
+      "parse_status": "invalid_stage_output",
+      "errors": [
+        "slot_01:record_0:name_not_exact_in_block"
+      ],
+      "alignment_failure_reasons": []
+    },
+    {
+      "batch_id": "4dbeede675389b67d84617209338b9adbcb42b465dc33e56a457f2b2137f7716",
+      "parent_document_id": "e637f5b30a2a1ac5d121dd7bcdefb19c356e3ffb199a0aa1c44c8c146985804f",
+      "parse_status": "invalid_stage_output",
+      "errors": [
+        "slot_01:record_0:name_not_exact_in_block",
+        "slot_02:record_0:name_not_exact_in_block",
+        "slot_02:record_0:title_not_exact_in_block",
+        "slot_03:record_0:name_not_exact_in_block",
+        "slot_03:record_0:title_not_exact_in_block",
+        "slot_04:record_0:name_not_exact_in_block",
+        "slot_04:record_0:title_not_exact_in_block",
+        "slot_05:record_0:name_not_exact_in_block",
+        "slot_05:record_0:title_not_exact_in_block",
+        "slot_06:record_0:name_not_exact_in_block",
+        "slot_07:record_0:name_not_exact_in_block",
+        "slot_07:record_0:title_not_exact_in_block"
+      ],
+      "alignment_failure_reasons": []
+    },
+    {
+      "batch_id": "9a6f858c7a714f89f3368881ec6fa75f994d90dd1726d27c78de72945c3d2ed3",
+      "parent_document_id": "e637f5b30a2a1ac5d121dd7bcdefb19c356e3ffb199a0aa1c44c8c146985804f",
+      "parse_status": "invalid_stage_output",
+      "errors": [
+        "slot_06:record_0:name_not_exact_in_block",
+        "slot_06:record_1:name_not_exact_in_block"
+      ],
+      "alignment_failure_reasons": []
+    },
+    {
+      "batch_id": "ab85fc872af124364526af027792fa48fdd9667897dcadc4013968e6cb5988fe",
+      "parent_document_id": "e637f5b30a2a1ac5d121dd7bcdefb19c356e3ffb199a0aa1c44c8c146985804f",
+      "parse_status": "invalid_stage_output",
+      "errors": [
+        "slot_01:record_0:name_not_exact_in_block",
+        "slot_04:record_0:name_not_exact_in_block",
+        "slot_05:record_0:name_not_exact_in_block"
+      ],
+      "alignment_failure_reasons": []
+    },
+    {
+      "batch_id": "34f03cf8141ab402dabcf15d2facf4e1bdf002803fdb749a78b667373e3810c4",
+      "parent_document_id": "e637f5b30a2a1ac5d121dd7bcdefb19c356e3ffb199a0aa1c44c8c146985804f",
+      "parse_status": "invalid_stage_output",
+      "errors": [
+        "slot_00:record_0:name_not_exact_in_block",
+        "slot_03:record_0:name_not_exact_in_block",
+        "slot_03:record_1:name_not_exact_in_block",
+        "slot_03:compound_anchor_identity_not_distinct",
+        "slot_04:record_1:name_not_exact_in_block",
+        "slot_04:compound_anchor_identity_not_distinct",
+        "slot_06:record_0:affiliation_not_exact_in_block"
+      ],
+      "alignment_failure_reasons": []
+    },
+    {
+      "batch_id": "6ffb0c9b31743c71e030765ed09a20f2676705c54715961f3254205025655e4b",
+      "parent_document_id": "e637f5b30a2a1ac5d121dd7bcdefb19c356e3ffb199a0aa1c44c8c146985804f",
+      "parse_status": "invalid_stage_output",
+      "errors": [
+        "slot_07:record_0:name_not_exact_in_block"
+      ],
+      "alignment_failure_reasons": []
+    },
+    {
+      "batch_id": "9e0ce258ad4e4335b8161cd76afcb6be525d9be77848e0b19e0adb93d2d6e9ec",
+      "parent_document_id": "f0ae8fe62cf89feaae732fa412103df2537a1f3d613dc3872cd1f81bfb543081",
+      "parse_status": "invalid_stage_output",
+      "errors": [
+        "slot_07:record_0:title_not_exact_in_block"
+      ],
+      "alignment_failure_reasons": []
+    },
+    {
+      "batch_id": "3b9016b2f64c6268d5163057f593214aa066a056e8b348b56284252db7ce926a",
+      "parent_document_id": "f0ae8fe62cf89feaae732fa412103df2537a1f3d613dc3872cd1f81bfb543081",
+      "parse_status": "invalid_stage_output",
+      "errors": [
+        "slot_00:record_0:affiliation_not_exact_in_block",
+        "slot_06:record_0:affiliation_not_exact_in_block"
+      ],
+      "alignment_failure_reasons": []
+    },
+    {
+      "batch_id": "fe0d7beabf558846d3aaefc859c2efd870b2b1548fd0fd856941af6d00e3cec7",
+      "parent_document_id": "f0ae8fe62cf89feaae732fa412103df2537a1f3d613dc3872cd1f81bfb543081",
+      "parse_status": "invalid_stage_output",
+      "errors": [
+        "slot_00:record_0:affiliation_not_exact_in_block",
+        "slot_01:record_0:affiliation_not_exact_in_block",
+        "slot_05:record_0:title_not_exact_in_block",
+        "slot_06:record_0:affiliation_not_exact_in_block",
+        "slot_07:record_0:name_not_exact_in_block",
+        "slot_07:record_0:title_not_exact_in_block",
+        "slot_07:record_0:affiliation_not_exact_in_block"
+      ],
+      "alignment_failure_reasons": []
+    },
+    {
+      "batch_id": "65a094128373d552cbf3487951db700228a67e21dbc92c36e633919475be67fa",
+      "parent_document_id": "f0ae8fe62cf89feaae732fa412103df2537a1f3d613dc3872cd1f81bfb543081",
+      "parse_status": "invalid_stage_output",
+      "errors": [
+        "slot_00:record_0:affiliation_not_exact_in_block",
+        "slot_01:record_0:affiliation_not_exact_in_block",
+        "slot_04:record_0:affiliation_not_exact_in_block",
+        "slot_05:record_0:title_not_exact_in_block",
+        "slot_05:record_0:affiliation_not_exact_in_block"
+      ],
+      "alignment_failure_reasons": []
+    },
+    {
+      "batch_id": "ec240b69bbdef14cd16e207c25d5a395341efc025b4fcee00259781e73b01571",
+      "parent_document_id": "f0ae8fe62cf89feaae732fa412103df2537a1f3d613dc3872cd1f81bfb543081",
+      "parse_status": "invalid_stage_output",
+      "errors": [
+        "slot_00:record_0:affiliation_not_exact_in_block"
+      ],
+      "alignment_failure_reasons": []
+    },
+    {
+      "batch_id": "da0752069c4ba3bec415d11d2994d198c7abc5a69a381f88bb21f20502e3e0c5",
+      "parent_document_id": "fbeb7737befb21cad791f5056c19994f0281cc1fbf3d53a38d6204a5ad5f34b5",
+      "parse_status": "invalid_stage_output",
+      "errors": [
+        "slot_05:record_0:title_not_exact_in_block"
+      ],
+      "alignment_failure_reasons": []
+    },
+    {
+      "batch_id": "d7a137a7f9bf8d341d9adcd20834a101db2faad245775865694738ae9957afcd",
+      "parent_document_id": "fbeb7737befb21cad791f5056c19994f0281cc1fbf3d53a38d6204a5ad5f34b5",
+      "parse_status": "invalid_stage_output",
+      "errors": [
+        "slot_07:record_0:title_not_exact_in_block"
+      ],
+      "alignment_failure_reasons": []
+    },
+    {
+      "batch_id": "25279c52e30d09b99a5a7bbad0ec61799a115fe18eb1536b295683a40beba30e",
+      "parent_document_id": "fbeb7737befb21cad791f5056c19994f0281cc1fbf3d53a38d6204a5ad5f34b5",
+      "parse_status": "invalid_stage_output",
+      "errors": [
+        "slot_00:record_0:name_not_exact_in_block",
+        "slot_03:record_0:name_not_exact_in_block",
+        "slot_07:record_0:name_not_exact_in_block",
+        "slot_07:record_1:name_not_exact_in_block"
+      ],
+      "alignment_failure_reasons": []
+    },
+    {
+      "batch_id": "ec877849cdad0f2fef0dfd903c2ab8987d4a5d9a0369630a2e2f7bee034b04db",
+      "parent_document_id": "fbeb7737befb21cad791f5056c19994f0281cc1fbf3d53a38d6204a5ad5f34b5",
+      "parse_status": "invalid_stage_output",
+      "errors": [
+        "slot_02:record_0:name_not_exact_in_block"
+      ],
+      "alignment_failure_reasons": []
+    },
+    {
+      "batch_id": "8aa73325715b8f1e50b8bec00bec83df83a699f84bd6626ebf22296f43f25751",
+      "parent_document_id": "fbeb7737befb21cad791f5056c19994f0281cc1fbf3d53a38d6204a5ad5f34b5",
+      "parse_status": "invalid_stage_output",
+      "errors": [
+        "slot_05:record_0:name_not_exact_in_block",
+        "slot_05:record_1:name_not_exact_in_block"
+      ],
+      "alignment_failure_reasons": []
+    },
+    {
+      "batch_id": "c5ca48e65b3c06cef824b049655c52c0cd9141d0cc1b7e9cf001b165cda7e11a",
+      "parent_document_id": "fbeb7737befb21cad791f5056c19994f0281cc1fbf3d53a38d6204a5ad5f34b5",
+      "parse_status": "invalid_stage_output",
+      "errors": [
+        "slot_00:record_0:name_not_exact_in_block",
+        "slot_00:record_1:name_not_exact_in_block"
+      ],
+      "alignment_failure_reasons": []
+    },
+    {
+      "batch_id": "82c489bc8c387543f98f93653ed9c3aed5d21ccca7e9711cba10e23d63b4e50d",
+      "parent_document_id": "fbeb7737befb21cad791f5056c19994f0281cc1fbf3d53a38d6204a5ad5f34b5",
+      "parse_status": "invalid_stage_output",
+      "errors": [
+        "slot_03:record_0:name_not_exact_in_block",
+        "slot_03:record_1:name_not_exact_in_block"
+      ],
+      "alignment_failure_reasons": []
+    },
+    {
+      "batch_id": "6bdec8101ba1714be65798568d1c2d1e37c5ece24fc369a7356168f3d46cb627",
+      "parent_document_id": "fbeb7737befb21cad791f5056c19994f0281cc1fbf3d53a38d6204a5ad5f34b5",
+      "parse_status": "invalid_stage_output",
+      "errors": [
+        "slot_01:record_0:name_not_exact_in_block",
+        "slot_01:record_1:name_not_exact_in_block"
+      ],
+      "alignment_failure_reasons": []
+    }
+  ],
+  "strict_evaluator_status": "NO_GO_before_prediction_blind_human_scoring",
+  "authorization": {
+    "blind_retry_authorized": false,
+    "prediction_blind_human_truth_task_authorized": true,
+    "technical_failure_scoring_only": true,
+    "full_private_inference_authorized": false,
+    "release_authorized": false
+  }
+}

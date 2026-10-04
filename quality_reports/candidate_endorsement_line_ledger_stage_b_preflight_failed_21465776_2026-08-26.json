@@ -1,0 +1,371 @@
+{
+  "artifact_version": "candidate_endorsement_line_ledger_stage_b_failed_audit_v1",
+  "audited_at": "2026-08-26T09:12:19Z",
+  "content_audit": {
+    "aligned_record_count": 151,
+    "alignment_accounting": {
+      "invalid_technical_row_model_records_without_alignment": 8,
+      "model_records_in_technically_valid_rows": 554,
+      "model_records_total": 562,
+      "valid_row_records_aligned": 151,
+      "valid_row_records_withheld": 403,
+      "withheld_share_of_valid_row_records": 0.7274368231046931
+    },
+    "anchor_decisions": {
+      "not_endorsement": 637,
+      "records": 557,
+      "target_anchors": 1194
+    },
+    "batch_public_coverage": {
+      "false": 58,
+      "invalid_row_without_alignment": 1,
+      "true": 93
+    },
+    "clear_false_negative_control": {
+      "candidate_cycle_id": "H0TX18292-2020",
+      "context_text": "Endorsements:",
+      "model_disposition": "not_endorsement",
+      "parent_document_id": "df9abdfcb024b2e62dc57ceb585f6b233d23764a36704930b1e18de376d3eeb5",
+      "source_line_text": "John & Dee Simmons",
+      "stage_a_role": "compound_record_anchor"
+    },
+    "entity_category_mismatch_count": 72,
+    "entity_category_mismatch_patterns": {
+      "individual|labor_union": 4,
+      "individual|media_outlet": 43,
+      "individual|other_organization": 3,
+      "organization|party_official": 22
+    },
+    "model_record_count": 562,
+    "parent_census": [
+      {
+        "aligned_record_count": 10,
+        "aligned_unique_endorser_count": 9,
+        "candidate_cycle_id": "H8CO03192-2018",
+        "model_record_count": 38,
+        "model_unique_endorser_count": 37,
+        "not_endorsement_anchor_count": 0,
+        "parent_document_id": "04c8d82039daafab6c5b44bc677a2a6d45d111fe99e1a7577125f067b5a24037",
+        "record_anchor_decision_count": 38,
+        "target_anchor_count": 38,
+        "technical_failure_batch_count": 0,
+        "withheld_record_count": 28
+      },
+      {
+        "aligned_record_count": 24,
+        "aligned_unique_endorser_count": 24,
+        "candidate_cycle_id": "H4CA16288-2024",
+        "model_record_count": 112,
+        "model_unique_endorser_count": 95,
+        "not_endorsement_anchor_count": 403,
+        "parent_document_id": "1aad8662c07cd4f1f6343f78fe04b5f460235f17ecf57e8e5faa43024819fde8",
+        "record_anchor_decision_count": 112,
+        "target_anchor_count": 515,
+        "technical_failure_batch_count": 0,
+        "withheld_record_count": 88
+      },
+      {
+        "aligned_record_count": 100,
+        "aligned_unique_endorser_count": 99,
+        "candidate_cycle_id": "H8OR02161-2022",
+        "model_record_count": 123,
+        "model_unique_endorser_count": 120,
+        "not_endorsement_anchor_count": 10,
+        "parent_document_id": "266bd0ed39563683dc9b13237fa6606547e18cad89dbacef1c64aafae7f32b72",
+        "record_anchor_decision_count": 120,
+        "target_anchor_count": 130,
+        "technical_failure_batch_count": 0,
+        "withheld_record_count": 23
+      },
+      {
+        "aligned_record_count": 0,
+        "aligned_unique_endorser_count": 0,
+        "candidate_cycle_id": "H0TX02106-2020",
+        "model_record_count": 5,
+        "model_unique_endorser_count": 5,
+        "not_endorsement_anchor_count": 0,
+        "parent_document_id": "495263ff9183d6b966c1089473a5b0120bbfdb72b6525843e9a0d293259f1038",
+        "record_anchor_decision_count": 5,
+        "target_anchor_count": 5,
+        "technical_failure_batch_count": 0,
+        "withheld_record_count": 5
+      },
+      {
+        "aligned_record_count": 6,
+        "aligned_unique_endorser_count": 6,
+        "candidate_cycle_id": "H4TX18245-2024",
+        "model_record_count": 22,
+        "model_unique_endorser_count": 22,
+        "not_endorsement_anchor_count": 0,
+        "parent_document_id": "5092019feb6f9fae9d18671bb9e7daec3a4ac4f372ccbdd92cca0054aae53054",
+        "record_anchor_decision_count": 22,
+        "target_anchor_count": 22,
+        "technical_failure_batch_count": 0,
+        "withheld_record_count": 16
+      },
+      {
+        "aligned_record_count": 0,
+        "aligned_unique_endorser_count": 0,
+        "candidate_cycle_id": "S0NH00326-2020",
+        "model_record_count": 184,
+        "model_unique_endorser_count": 165,
+        "not_endorsement_anchor_count": 8,
+        "parent_document_id": "df03f7b60754314aaee0069f87a7fb54feddd5ebfcb9e66fc35851c170bb7c13",
+        "record_anchor_decision_count": 182,
+        "target_anchor_count": 190,
+        "technical_failure_batch_count": 0,
+        "withheld_record_count": 184
+      },
+      {
+        "aligned_record_count": 8,
+        "aligned_unique_endorser_count": 8,
+        "candidate_cycle_id": "H0TX18292-2020",
+        "model_record_count": 24,
+        "model_unique_endorser_count": 24,
+        "not_endorsement_anchor_count": 216,
+        "parent_document_id": "df9abdfcb024b2e62dc57ceb585f6b233d23764a36704930b1e18de376d3eeb5",
+        "record_anchor_decision_count": 24,
+        "target_anchor_count": 240,
+        "technical_failure_batch_count": 1,
+        "withheld_record_count": 8
+      },
+      {
+        "aligned_record_count": 3,
+        "aligned_unique_endorser_count": 3,
+        "candidate_cycle_id": "H2RI02184-2024",
+        "model_record_count": 54,
+        "model_unique_endorser_count": 54,
+        "not_endorsement_anchor_count": 0,
+        "parent_document_id": "ef028a46900938122cb2b836cead4d08c308b72c572363928942ecca4f8cf211",
+        "record_anchor_decision_count": 54,
+        "target_anchor_count": 54,
+        "technical_failure_batch_count": 0,
+        "withheld_record_count": 51
+      }
+    ],
+    "pilot_threshold_failures": {
+      "champion_aligned_unique": {
+        "expected": ">=222",
+        "observed": 8
+      },
+      "champion_model_unique": {
+        "expected": ">=230",
+        "observed": 24
+      },
+      "tanaka_model_unique": {
+        "expected": ">=390",
+        "observed": 95
+      }
+    },
+    "semantic_error_counts": {
+      "endorsement_context_lacks_support_marker": 349,
+      "endorsement_entity_category_mismatch": 72,
+      "explicit_text_record_lacks_direct_support_marker": 78
+    },
+    "withheld_inner_reason_counts": {
+      "ambiguous_exact_span": 2,
+      "endorsement_context_mismatch": 295,
+      "invalid_item_semantics": 43,
+      "missing_exact_span": 56
+    },
+    "withheld_outer_reason_counts": {
+      "ambiguous_exact_target_block_substring": 2,
+      "carrier_exact_alignment_failed": 396,
+      "missing_exact_target_block_substring": 5
+    },
+    "withheld_record_count": 403
+  },
+  "corrected_71c_issue_control": {
+    "bundle_manifest_sha256": "5f92e2467cfc6ab4ccbf5d21318bdc480790cb55e86c8c44985bccb77d823d24",
+    "derived_without_self_reported_counts": true,
+    "fully_accounted_private_proposal_oppose_conflict_groups": 1,
+    "gate_decision": "GO",
+    "parent_document_id": "71c197e1b81d48216f8c2cb757f1da7e2b769819dd64e0e7865645d96b62bec8",
+    "quote_bearing_resolved_issue_records": 2,
+    "segments_sha256": "38fb639935389b573ebb10cfbf63fcd2224f413b5c964da978070363efdda17b"
+  },
+  "evaluation": {
+    "content_gate_decision": "NO_GO",
+    "full_pilot_evaluator_status": "not_run_strict_fail_closed",
+    "full_pilot_evaluator_stop": "ValueError: run chunk fails typed restart replay: chunk_00001.out.jsonl.gz",
+    "overall_gate_decision": "NO_GO",
+    "technical_gate_decision": "NO_GO"
+  },
+  "input_artifacts": {
+    "batch_inventory": {
+      "chunk_00000": {
+        "bytes": 725618,
+        "records": 60,
+        "sha256": "9991163fe30b50d5f66add4696ef26c54249d7efc5a3a08cdc6ad5fe33d04370"
+      },
+      "chunk_00001": {
+        "bytes": 610129,
+        "records": 60,
+        "sha256": "1d48e54a989f958228f36103dcce7ac56cfc8a95a428b8ad18138c30c568892b"
+      },
+      "chunk_00002": {
+        "bytes": 167692,
+        "records": 32,
+        "sha256": "2ccd48897a2b929e37602cd7c52f6612be997be2c4da4111fc040860af2f88b0"
+      }
+    },
+    "expected_batch_ids_sha256": "5c465117597348648de24b0de4b1d452414a5cd981b9943d7cc795ef62bccbf7",
+    "export_dir": "build/hive_candidate_extraction/v2_1_endorsement_line_ledger_stage_b_preflight_20260826c",
+    "manifest": {
+      "bytes": 55004,
+      "payload_sha256": "4e7ebe006c2dd99ed51972463dc0ba82fe7999f4b36a4daf311893ad165d0c3c",
+      "sha256": "c836651ac154f8743680fc1e86b4fab57afbdddd287c82b648b58c54a913997c"
+    },
+    "selection": {
+      "bytes": 3781,
+      "rows": 8,
+      "sha256": "ca780d43e4dd77a075348683b71793599bd4a54d37bd83c0f8f9ad7ef7bd659b"
+    }
+  },
+  "job": {
+    "elapsed": "00:06:07",
+    "end": "2026-08-26T01:54:47",
+    "exit_code": "2:0",
+    "host": "hive-dc-7-5-58",
+    "job_id": "21465776",
+    "slurm_state": "FAILED",
+    "start": "2026-08-26T01:48:40"
+  },
+  "lineage": {
+    "a3_html_sha256": "ba9649cb0538ba6422fa6469f5455b38b0567ed988f47e5e060826a8659b73f3",
+    "a3_import_artifact_sha256": "3178d0a55dadc2b3aaa3ac2916160e22e18211637d221a91d93b78981b8c528f",
+    "a3_merge": {
+      "adjudicated_residual_count": 14,
+      "expected_residual_count": 14,
+      "ownership_conflict_count": 0,
+      "unchanged_gate_decision": "GO",
+      "unchanged_gate_failed_checks": 0,
+      "unchanged_gate_passed_checks": 11,
+      "validation_passed": true
+    },
+    "a3_results_sha256": "f0a13ba66a617f46621d48109865d2ff88c6ba068a2e329d05093152958b74db",
+    "a3_task_sha256": "e834f23d55804bc138d6dac1441dfbd96ab0449ddd34e1eeb0edf2585d96bfe5",
+    "contract_sha256": "3b184a230491c37b880f38bee74df1c0b23f98a833b72fcc110f2b7851a259f9",
+    "generation_config_sha256": "795b9d931df16a5135bc514a3069024f157bdc74538db1b0be1259e3ec0bff76",
+    "hive_implementation_files_at_job": {
+      "scripts/build_candidate_endorsement_line_ledger.py": {
+        "bytes": 99253,
+        "mtime_hive_local": "2026-08-26T01:24:50-07:00",
+        "sha256": "8c5aef7c9f93dcc012670a9c625b452d329e0eb28eba2fcd8258b1a03f4d069b"
+      },
+      "scripts/evaluate_candidate_endorsement_line_ledger_pilot.py": {
+        "bytes": 54472,
+        "mtime_hive_local": "2026-08-25",
+        "sha256": "5cde007c1c800e570441bf75546fe177d4e22b79b646c17dd193713beeb0aec2"
+      },
+      "scripts/hive/extract_candidate_endorsement_line_ledger_vllm.py": {
+        "bytes": 95893,
+        "mtime_hive_local": "2026-08-26T01:35:29-07:00",
+        "sha256": "b28a879188db91b61909ac8c38ad2a9f9677d7598658a05745206eab8b310049"
+      },
+      "scripts/hive/run_candidate_endorsement_line_ledger.sbatch": {
+        "bytes": 7224,
+        "mtime_hive_local": "2026-08-25T14:06:20-07:00",
+        "sha256": "b00a7a638e62d99270d647cb1139c04efb49cef279c66032ccc7eb420e94a384"
+      },
+      "scripts/import_candidate_endorsement_line_ledger_a3_handcode.py": {
+        "bytes": 14999,
+        "mtime_hive_local": "2026-08-26T01:06:28-07:00",
+        "sha256": "e6305e359b93525ee7603697a5f9bb3f8b4d78af46472465cd304b60c7f0619d"
+      },
+      "src/candidate_endorsement_line_ledger.py": {
+        "bytes": 153218,
+        "mtime_hive_local": "2026-08-26T01:35:44-07:00",
+        "sha256": "1728979d4af4dc7dfd185d8d347bceb883a7d620a249d59ecadf9445793c2aec"
+      }
+    },
+    "model_id": "Qwen/Qwen3.6-27B-FP8",
+    "model_revision": "e89b16ebf1988b3d6befa7de50abc2d76f26eb09",
+    "runtime_lock_sha256": "4f46101fa493e38b312af034b8d740c612bd0001bab4cb0f624f4a9e1c49f5b3",
+    "source_corpus_sha256": "c53d36b24b293ac5d47706aa67731f1c107d6a679cb948c9ad71a70b5c8ce7c3",
+    "stage_a2_evaluation_report_sha256": "1d545702fb77e59d35c5421c1ab3856b4bb3d07659813d6209863dcbf8fc08a5",
+    "stage_b_three_pass_provenance_spec_sha256": "d7a91a5e739ddcb037fa71e0bb1e5e2e84b566eaa8bdec2f17b807fd1264b7f7"
+  },
+  "output_artifacts": {
+    "downloaded_dir": "build/hive_candidate_extraction/v2_1_endorsement_line_ledger_stage_b_preflight_hive_output_20260826c_21465776",
+    "files": {
+      "chunk_00000.out.jsonl.gz": {
+        "bytes": 83426,
+        "records": 60,
+        "sha256": "9caafab39e650c1857514c179c967054d275eebee71c20ed00dd5341f0859224"
+      },
+      "chunk_00001.out.jsonl.gz": {
+        "bytes": 165913,
+        "records": 60,
+        "sha256": "11f79ee971f9e046f846dd0c0841ac9037f4d0fe546f32c953e4980c57cd3154"
+      },
+      "chunk_00002.out.jsonl.gz": {
+        "bytes": 39461,
+        "records": 32,
+        "sha256": "a00e530193983a2a6244649462e8fb7203e0ae4eb1b95001dc8d220c9c498c82"
+      },
+      "run_metadata.json": {
+        "bytes": 7278,
+        "sha256": "3047fd46be8373c25be4317c012260d5bb34829e4f307e0817e6085514ec290d"
+      }
+    },
+    "inventory_exact": true,
+    "local_remote_bytes_identical": true,
+    "nested_directories": 0,
+    "ordered_batch_ids_match_input": true,
+    "ordered_batch_ids_sha256": "5c465117597348648de24b0de4b1d452414a5cd981b9943d7cc795ef62bccbf7",
+    "output_batch_ids_unique": 152
+  },
+  "run_log": {
+    "bytes": 38650,
+    "file": "build/hive_candidate_extraction/endorsement-line-ledger_21465776.log",
+    "lines": 187,
+    "sha256": "96ca4a746fadbe488d5bd9820ee5f54c60b3031919e871f55c946d511e532f81"
+  },
+  "scope_control": {
+    "full_stage_b_submitted": false,
+    "stress_stage_b_submitted": false
+  },
+  "technical_audit": {
+    "context_margin_tokens_minimum": 12317,
+    "finish_reason_counts": {
+      "stop": 152
+    },
+    "input_batch_hashes_replay": true,
+    "input_truncated_counts": {
+      "false": 152
+    },
+    "metadata_accounting_reconciles": true,
+    "output_tokens_maximum": 1450,
+    "output_tokens_total": 85477,
+    "parse_status_counts": {
+      "invalid_stage_output": 1,
+      "parsed": 151
+    },
+    "processed_outputs": 152,
+    "prompt_tokens_maximum": 4067,
+    "raw_output_derivation_replay_count": 152,
+    "schema_variant_counts": {
+      "record_extraction_targets_02_v1": 1,
+      "record_extraction_targets_03_v1": 1,
+      "record_extraction_targets_05_v1": 1,
+      "record_extraction_targets_06_v1": 4,
+      "record_extraction_targets_08_v1": 145
+    },
+    "technical_failure": {
+      "batch_id": "596f5a2febe8372ec3da4ce9ad63c7f77861225ce01f64ea34e20265de24c6fd",
+      "candidate_cycle_id": "H0TX18292-2020",
+      "chunk_file": "chunk_00001.out.jsonl.gz",
+      "chunk_row_1_based": 59,
+      "error": "slot_00:compound_anchor_record_count_mismatch",
+      "global_row_1_based": 119,
+      "model_record_count": 1,
+      "model_record_endorser_name": "Tom and Lisa Ganucheau",
+      "parent_document_id": "df9abdfcb024b2e62dc57ceb585f6b233d23764a36704930b1e18de376d3eeb5",
+      "source_line_text": "Tom and Lisa Ganucheau",
+      "stage_a_role": "compound_record_anchor",
+      "stage_b_slot": "slot_00"
+    },
+    "technical_pass_outputs": 151
+  }
+}

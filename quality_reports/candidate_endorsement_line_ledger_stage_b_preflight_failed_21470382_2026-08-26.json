@@ -1,0 +1,53 @@
+{
+  "artifact_status": "immutable_failed_pilot_audit",
+  "content_gate_decision": "NOT_EVALUATED_STRICT_TECHNICAL_FAILURE",
+  "full_expansion_or_release_authorized": false,
+  "job": {
+    "exit_code": "2:0",
+    "job_id": "21470382",
+    "state": "FAILED"
+  },
+  "non_gating_field_observability": {
+    "affiliation_nonnull_count": 186,
+    "endorser_category_unclear_count": 792,
+    "endorser_category_unclear_rate": 0.65945,
+    "entity_type_unclear_count": 0,
+    "jurisdiction_nonnull_count": 108,
+    "model_record_count": 1201,
+    "status": "NON_GATING_DIAGNOSTIC_ONLY",
+    "title_nonnull_count": 314
+  },
+  "provenance": {
+    "input_manifest_sha256": "aef6d6263d51873854cfa7fb1e4a1d2be6a7c3bf5f1244d0be93d57931dec178",
+    "line_ledger_contract_sha256": "6753ec29d6af35fa5475bc68338820aabb8c7fe6275ceae512fa9915bf748f20",
+    "log_sha256": "1039c25d4fd427bedde363b8190a60fa3a5a674ec6f2926db2fe153805f1f7ed",
+    "output_chunk_sha256": [
+      "f157d463b034314012274b13b011f73c6f01fa2fb72234260a7191498d3b4343",
+      "e65089ed146a60d1b8c1c04570a32c1e4dd066ccd850fdf0c240109e8e5ff96f",
+      "d55246ea42a1049e61966b5ad21ec1859fd162c07bc7e157c498f0003666ed7f"
+    ],
+    "run_metadata_sha256": "a05a4bd0b2d4cc1fa97fc4debbd3232d58d7f58b8abcfea2528902e77f06fd95"
+  },
+  "residual_plan": {
+    "decisions_filled": false,
+    "exact_source_only": true,
+    "fuzzy_or_deterministic_semantic_substitution_allowed": false,
+    "human_task_required": true,
+    "invalid_batch_count": 13,
+    "nonexact_affiliation_count": 1,
+    "nonexact_field_count": 23,
+    "nonexact_name_count": 19,
+    "nonexact_title_count": 3
+  },
+  "technical_census": {
+    "invalid_stage_output_count": 13,
+    "parsed_count": 152,
+    "stage_b_aligned_record_count_in_technical_pass_batches": 1097,
+    "stage_b_withheld_record_count_in_technical_pass_batches": 0,
+    "stopped_count": 152,
+    "technical_failure_count": 13,
+    "technical_pass_count": 139,
+    "total_batches": 152
+  },
+  "version": "candidate_endorsement_line_ledger_stage_b_failed_audit_v1"
+}

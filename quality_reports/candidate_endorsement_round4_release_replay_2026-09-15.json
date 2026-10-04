@@ -1,0 +1,39 @@
+{
+  "accounted_outputs": 639,
+  "aligned_records": 2496,
+  "artifact_scope": "candidate_endorsement_round4_development_only",
+  "development_scope": true,
+  "failure_classes": {
+    "complete": 602,
+    "optional_field_repaired": 27,
+    "unresolved_target_block": 10
+  },
+  "model_calls": 0,
+  "model_records_accounted": 2510,
+  "model_records_returned": 2510,
+  "optional_field_repairs": 55,
+  "parents_complete": 26,
+  "records_with_complete_lineage": 2496,
+  "records_with_exact_parent_evidence": 2496,
+  "release_authorized": false,
+  "round4_production_contract_sha256": "f8c755ce5097345cd5e99755c62f470ac6fdfdfadc116d4b8ecc41da7797522b",
+  "scope": "development",
+  "silently_dropped_model_records": 0,
+  "stage_a_batches": 292,
+  "stage_a_input_manifest_sha256": "0a962b41e022a68eebbffe01c3f406cf41bbc55b4710251102ae6ba92f79f1d2",
+  "stage_a_parents": 40,
+  "stage_a_parsed": 292,
+  "stage_a_responses": 292,
+  "stage_b_anchors": 2512,
+  "stage_b_batches": 639,
+  "stage_b_input_manifest_sha256": "4f6113518037916c014c51a26ff7927b151915e2d0eaa4a5af5b493e13e61148",
+  "stage_b_parents": 32,
+  "stage_b_responses": 639,
+  "unresolved_target_blocks": 11,
+  "version": "candidate_endorsement_round4_release_replay_v1",
+  "withheld_reasons": {
+    "name_parts_have_no_ordered_source_projection": 11,
+    "record_evidence_has_no_single_source_segment_carrier": 3
+  },
+  "withheld_records": 14
+}

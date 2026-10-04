@@ -1,0 +1,88 @@
+{
+  "audit_type": "candidate_extraction_v2_1_full_hive_run",
+  "date": "2026-08-24",
+  "status": "failed_cancelled_frozen_audit",
+  "release_eligible": false,
+  "hive_job_id": "21296223",
+  "slurm_state": "CANCELLED by 2360097",
+  "cancellation_reason": "A rolling audit found one output-length truncation. The job was cancelled immediately because the release gate requires every window to stop and strict-parse.",
+  "array": {
+    "tasks": 30,
+    "maximum_concurrent_tasks": 4,
+    "active_tasks_cancelled": 4,
+    "tasks_not_started": 26,
+    "time_limit_per_task": "06:00:00",
+    "active_elapsed_at_cancellation": "approximately 00:19:52"
+  },
+  "source": {
+    "directory": "build/hive_candidate_extraction/v2_1_full_export_20260824e",
+    "source_corpus_sha256": "c53d36b24b293ac5d47706aa67731f1c107d6a679cb948c9ad71a70b5c8ce7c3",
+    "source_export_manifest_sha256": "973050bc6f159bee3385788588bf0c807804c73227f0c9fbabf43809cb82c179",
+    "chunks": 587,
+    "segments": 35213,
+    "parent_documents": 23871
+  },
+  "contract": {
+    "schema_version": "2.1",
+    "extraction_contract_sha256": "1a5da28b31a2ed7fb35ac970181f776a83aa03ac709c1ac772e0928f55a2a71a",
+    "generation_config_sha256": "88e12103cff65e7b3a2197ab08a1726325e1681cdd12d7ff406361b8e00b86ed",
+    "max_model_len": 32768,
+    "max_output_tokens": 24576,
+    "temperature": 0,
+    "thinking_enabled": false,
+    "arbitrary_json_whitespace_allowed": true
+  },
+  "preserved_output": {
+    "directory": "build/hive_candidate_extraction/v2_1_full_hive_output_20260824k_failed",
+    "completed_chunk_files": 20,
+    "run_metadata_files": 0,
+    "log_files": 4,
+    "rows": 1200,
+    "unique_segment_ids": 1200,
+    "parent_documents": 972,
+    "rows_by_route": {
+      "biography": 1140,
+      "endorsements": 60,
+      "issues": 0
+    },
+    "finish_reason_counts": {
+      "stop": 1199,
+      "length": 1
+    },
+    "parse_status_counts": {
+      "parsed": 1199,
+      "output_truncated": 1
+    },
+    "input_truncated_rows": 0,
+    "output_tokens_total": 1397123,
+    "output_tokens_max": 24576,
+    "inventory_files": 24,
+    "inventory_bytes": 3456440,
+    "inventory_sha_list_digest": "019d5f05fa4be61e422c9a7a734d6aa4f8140dc3edac657d27415734078bf2b9"
+  },
+  "failure": {
+    "document_id": "f151afdff5d59a2dd0625dffc3bb5181b94694d836cff3e20c07922abfa8d556",
+    "candidate_cycle_id": "H0IN01135-2022",
+    "parent_document_id": "a475c524f2a6c7fe18510dbd2e3aa5b6d28ccebaaa671161b5003ed6f3519938",
+    "route": "biography",
+    "source_chunk": "chunk_00091.jsonl.gz",
+    "output_chunk": "chunk_00091.out.jsonl.gz",
+    "source_chars": 4173,
+    "input_tokens": 993,
+    "input_truncated": false,
+    "output_tokens": 24576,
+    "finish_reason": "length",
+    "parse_status": "output_truncated",
+    "raw_output_chars": 28597,
+    "trailing_tab_characters": 23268,
+    "diagnosis": "The model generated 13 complete facts, began a fourteenth evidence string at a source phrase containing a straight quotation mark, then emitted 23,268 grammar-permitted TAB characters outside the JSON string until the output limit. This is structured-decoder whitespace degeneracy, not input or record density.",
+    "not_observed": [
+      "input truncation",
+      "schema or contract hash mismatch",
+      "OOM or process crash",
+      "invalid control outside JSON whitespace",
+      "canonicalizer failure"
+    ]
+  },
+  "decision": "Do not reuse, resume, repair, or merge this output. Keep prompts, public schemas, source display, and evidence rules unchanged. Disable arbitrary JSON whitespace at the vLLM engine-level xgrammar configuration, bind that setting into the generation identity, and retain strict non-stop rejection. First rerun the exact failing window. Then run a complete-parent stress pilot containing the prior 1,787-window pilot plus every parent with a straight-quote segment before restarting all 35,213 windows in a new directory."
+}

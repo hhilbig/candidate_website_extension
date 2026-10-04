@@ -1,0 +1,404 @@
+{
+  "audit_type": "candidate_endorsement_line_ledger_stage_a_failed_preflight",
+  "audit_version": "1.0",
+  "audit_date": "2026-08-25",
+  "immutable": true,
+  "status": "technical_pass_substantive_no_go",
+  "purpose": "Compare every suffix-b Stage-A line role from Hive job 21437036 with the frozen technical contract and the predeclared content gates for eight endorsement parent pages. The job passed every mechanical gate but failed the content and continuation-ownership gates, so it cannot supply Stage B or a public endorsement table.",
+  "comparison": "The audit compares 1758 exact model-decision lines from eight complete endorsement parents with the role and ownership required by the frozen pilot controls. It does not compare current web content with archived content; every source statement means what the archived page stated at its capture date.",
+  "assumptions": [
+    "The authenticated suffix-b input manifest and the three exact local Hive output files are the authoritative artifacts for this audit.",
+    "A technical pass means the model stopped normally, returned strict schema-valid JSON, covered every target slot, and preserved the bound provenance. It does not establish that the assigned roles are substantively correct.",
+    "The nine unowned continuations are identified below by exact source-line, parent-line, batch, slot, and line-text hashes. Personal contact text is not copied into this audit or promoted into a derived public table.",
+    "No Stage-B inference and no full Stage-A inference were submitted from this result."
+  ],
+  "job": {
+    "job_id": "21437036",
+    "slurm_state": "COMPLETED",
+    "slurm_exit_code": "0:0",
+    "host": "hive-dc-7-5-58",
+    "started_at_utc": "2026-08-25T18:50:42+00:00",
+    "completed_at_utc": "2026-08-25T18:54:36+00:00",
+    "wall_time": "00:03:54",
+    "slurm_success_was_not_content_gate_success": true
+  },
+  "frozen_input": {
+    "directory": "build/hive_candidate_extraction/v2_1_endorsement_line_ledger_stage_a_preflight_20260825b",
+    "stage": "line_decision",
+    "mode": "line_decision_preflight",
+    "parent_documents": 8,
+    "source_segments": 33,
+    "model_decision_lines": 1758,
+    "batches": 113,
+    "chunks": 2,
+    "source_corpus_sha256": "c53d36b24b293ac5d47706aa67731f1c107d6a679cb948c9ad71a70b5c8ce7c3",
+    "source_export_manifest_sha256": "f5e6545a2d2ec35a83f4184e0d328635e5fba9d3c80cd4c8a7466178b7d9172c",
+    "line_ledger_contract_sha256": "ac8d6ed7f06e58a7961e08f8d50f7a86907f1bada12f1c70f5e9963011a335c2",
+    "manifest_payload_sha256": "ada9d2504d8071ae3fda19def47386328898931bc7f09f3209c8583f78a30ca2",
+    "ordered_batch_ids_sha256": "ecbcef016feb01945bb519cf41f53dda87661a091809b574d06e90baff836d64",
+    "all_input_rows_content_sha256": "b6efbd46bbb2753cde57eaa3ff77cbc4836fa01e599ee600e19c3c9a0739aab7",
+    "files": [
+      {
+        "file": "manifest.json",
+        "bytes": 37420,
+        "sha256": "66448050157a3e1b18fc44c13e31c9bab1de3e6c0035eb4967e6b63a3f4fda9e"
+      },
+      {
+        "file": "selection.csv",
+        "bytes": 2404,
+        "sha256": "c84fca8de2f3e458908749f29c91c8942a6f2931911e96d0751daa6f84b28cec"
+      },
+      {
+        "file": "chunks/chunk_00000.jsonl.gz",
+        "bytes": 230803,
+        "records": 60,
+        "sha256": "c9e10039b6b1a849df34e4ca7675c85aef47b13d98c5177d8cd034d0c0009468",
+        "content_sha256": "da1c113c3696e078e368fe169be32347684b28062ed42fe6326640628f116b1f"
+      },
+      {
+        "file": "chunks/chunk_00001.jsonl.gz",
+        "bytes": 193398,
+        "records": 53,
+        "sha256": "a95f053bbe4c956af816fa0429a1c378e8e6b133322dd4d881dbbff909569f56",
+        "content_sha256": "8cfa5fd344fb6696da6fee481727018ed938bec064a1384aadaad246a080980d"
+      }
+    ]
+  },
+  "frozen_generation": {
+    "model_id": "Qwen/Qwen3.6-27B-FP8",
+    "model_revision": "e89b16ebf1988b3d6befa7de50abc2d76f26eb09",
+    "runtime_lock_sha256": "4f46101fa493e38b312af034b8d740c612bd0001bab4cb0f624f4a9e1c49f5b3",
+    "generation_config_sha256": "57a5761dc5d35dc340d2d31c9828c403782b51dfd77e6d3824f815207d10fcb4",
+    "prompt_sha256": "a5a592019dbc1aee631f11c6bbdd7b61f2d59fc173050fddc0d8b1cb1f7b1c4a",
+    "json_schema_catalog_sha256": "bbb78a98b19a0119c6f20e32b95d6585dee2678bbbb2479bfd2c8b69a8b31d8f",
+    "line_inventory_spec_sha256": "b1d79e313b42a1d1e1826f6c7687dc5b513ade605f4033d1b18e8b85dbf34aa0",
+    "line_batch_spec_sha256": "33248f961b0d4929430cbc53d6eb36503885e61c225d787b56d9f645419f1d76",
+    "prompt_token_count_spec_sha256": "587c65388f06ac5ca2e61bb81c053912d2204b6fb80e8b20a0051b4e14f3f755",
+    "temperature": 0.0,
+    "seed": 20260825,
+    "max_model_len": 32768,
+    "max_output_tokens": 2048,
+    "thinking_enabled": false,
+    "structured_decoding_backend": "xgrammar",
+    "disable_any_whitespace": true,
+    "schema_variant_counts": {
+      "line_decision_targets_04_v1": 1,
+      "line_decision_targets_05_v1": 1,
+      "line_decision_targets_08_v1": 2,
+      "line_decision_targets_10_v1": 1,
+      "line_decision_targets_11_v1": 1,
+      "line_decision_targets_16_v1": 107
+    }
+  },
+  "terminal_technical_result": {
+    "verdict": "PASS",
+    "input_batches": 113,
+    "output_batches": 113,
+    "ordered_batch_identity_matches": 113,
+    "finish_reason_counts": {
+      "stop": 113
+    },
+    "parse_status_counts": {
+      "parsed": 113
+    },
+    "technical_pass": 113,
+    "technical_fail": 0,
+    "schema_valid": 113,
+    "coverage_complete": 113,
+    "real_target_slots": 1758,
+    "real_targets_marked_padding": 0,
+    "padding_slots": 50,
+    "padding_slots_marked_real": 0,
+    "input_truncated": 0,
+    "output_truncated": 0,
+    "raw_structural_whitespace_invalid": 0,
+    "json_control_canonicalization_applied": 0,
+    "prompt_tokens": {
+      "minimum": 1122,
+      "p50_nearest_rank": 2175,
+      "p90_nearest_rank": 2325,
+      "p95_nearest_rank": 2872,
+      "p99_nearest_rank": 4321,
+      "maximum": 9368
+    },
+    "minimum_context_margin_tokens": 21352,
+    "output_tokens": {
+      "minimum": 198,
+      "maximum": 246,
+      "total": 24691
+    }
+  },
+  "stage_a_role_census": {
+    "real_target_role_counts": {
+      "record_anchor": 1188,
+      "compound_record_anchor": 6,
+      "record_continuation_previous": 318,
+      "record_continuation_next": 26,
+      "support_or_category_heading": 6,
+      "candidate_self": 2,
+      "navigation_form_footer": 17,
+      "nonrecord_content": 0,
+      "unclear": 195
+    },
+    "padding_role_count_outside_real_targets": 50,
+    "source_line_decision_ledger_sha256": "0cf6db52d8f39a44453fdf12da40ec20966ea16c082922b41ea291cb1e5eb918",
+    "unclear_by_parent": [
+      {
+        "control": "tanaka_dense_parent",
+        "parent_document_id": "1aad8662c07cd4f1f6343f78fe04b5f460235f17ecf57e8e5faa43024819fde8",
+        "unclear": 33
+      },
+      {
+        "control": "champion_dense_parent",
+        "parent_document_id": "df9abdfcb024b2e62dc57ceb585f6b233d23764a36704930b1e18de376d3eeb5",
+        "unclear": 16
+      },
+      {
+        "control": "quote_bearing_name",
+        "parent_document_id": "5092019feb6f9fae9d18671bb9e7daec3a4ac4f372ccbdd92cca0054aae53054",
+        "unclear": 18
+      },
+      {
+        "control": "compound_anchor",
+        "parent_document_id": "266bd0ed39563683dc9b13237fa6606547e18cad89dbacef1c64aafae7f32b72",
+        "unclear": 47
+      },
+      {
+        "control": "long_testimonial",
+        "parent_document_id": "04c8d82039daafab6c5b44bc677a2a6d45d111fe99e1a7577125f067b5a24037",
+        "unclear": 42
+      },
+      {
+        "control": "long_json_line",
+        "parent_document_id": "495263ff9183d6b966c1089473a5b0120bbfdb72b6525843e9a0d293259f1038",
+        "unclear": 10
+      },
+      {
+        "control": "magaziner_url_context",
+        "parent_document_id": "ef028a46900938122cb2b836cead4d08c308b72c572363928942ecca4f8cf211",
+        "unclear": 5
+      },
+      {
+        "control": "explicit_testimonial",
+        "parent_document_id": "df03f7b60754314aaee0069f87a7fb54feddd5ebfcb9e66fc35851c170bb7c13",
+        "unclear": 24
+      }
+    ]
+  },
+  "substantive_gate_result": {
+    "verdict": "NO_GO",
+    "zero_unresolved_required": 0,
+    "unclear_observed": 195,
+    "interface_control": {
+      "required_role": "navigation_form_footer",
+      "observed_role": "unclear",
+      "total_lines": 33,
+      "tanaka_lines": 18,
+      "champion_lines": 15,
+      "all_33_marked_unclear": true,
+      "tanaka_source_line_ids_sha256": "c2f350d944cf538cadca5aa0ecd2797337a28f0b3c1e504c2356c07cf3254be9",
+      "champion_source_line_ids_sha256": "3a502c65841ef197fd4a394317c6a4ca752bb76f1cce48d79262a4696e8c4f3d",
+      "all_source_line_ids_sha256": "b4a81c8bf07f4a2489ee37b5c01d2d595d2bade7237a2d2fd9fdcf3b905a0c12",
+      "passed": false
+    },
+    "long_json_control": {
+      "source_line_id": "7c42640254692dee92b9845f00ac172dc45dce7f31a07b3fc02c4bcef3f6e076",
+      "line_characters": 7855,
+      "required_role": "nonrecord_content",
+      "observed_role": "unclear",
+      "passed": false
+    },
+    "continuation_ownership": {
+      "unowned_continuations": 9,
+      "duplicate_continuation_owners": 0,
+      "unowned_exact": [
+        {
+          "parent_document_id": "1aad8662c07cd4f1f6343f78fe04b5f460235f17ecf57e8e5faa43024819fde8",
+          "parent_line_index": 21,
+          "source_line_id": "2d680e5f8e0164873011d06b65925bd8cd27fbe4b89c0fc36f1d219a63507425",
+          "line_text_sha256": "bf100c8d51ad2e06f78d1c0344a65f7428f70072ed3c7be7051244b733a12648",
+          "stage_a_batch_id": "49b5d703ec7521e7fe9d656e2344bd7029070f797c6d4ceeb44f8cdb5a48f092",
+          "stage_a_slot": "slot_14",
+          "stage_a_role": "record_continuation_next"
+        },
+        {
+          "parent_document_id": "1aad8662c07cd4f1f6343f78fe04b5f460235f17ecf57e8e5faa43024819fde8",
+          "parent_line_index": 22,
+          "source_line_id": "6d3204507829dbc39e3ed7d6eb4690eea96a87254ba7bd4c5c0114dd006375f7",
+          "line_text_sha256": "7dee9f02ccfdd7c143213eb8399acb847441fd50ec8a530efdfbed35148b2abd",
+          "stage_a_batch_id": "49b5d703ec7521e7fe9d656e2344bd7029070f797c6d4ceeb44f8cdb5a48f092",
+          "stage_a_slot": "slot_15",
+          "stage_a_role": "record_continuation_next"
+        },
+        {
+          "parent_document_id": "1aad8662c07cd4f1f6343f78fe04b5f460235f17ecf57e8e5faa43024819fde8",
+          "parent_line_index": 23,
+          "source_line_id": "29a627a195f761e26448d0259b7ff4749bfe9d0b65314e666fc45033b7ab6b66",
+          "line_text_sha256": "2715fb11ec13012bdc6783547e36694e9f17260eb0aa5508a6aea70a1f8fc9fb",
+          "stage_a_batch_id": "fa66edd08dd70c55e11cf13217b878f1abbf725eefb65d3f62dbfa200dcccd43",
+          "stage_a_slot": "slot_00",
+          "stage_a_role": "record_continuation_previous"
+        },
+        {
+          "parent_document_id": "04c8d82039daafab6c5b44bc677a2a6d45d111fe99e1a7577125f067b5a24037",
+          "parent_line_index": 112,
+          "source_line_id": "f6b2499c03690e58cee21554072762af69ec0553353b9ef5907734e9c0c479b0",
+          "line_text_sha256": "d4f4d21a87bfefa86903c294d38ca8880344b6ea2d1c2c8a2694d599c805c88b",
+          "stage_a_batch_id": "218fa5262ef69caa3cfc628edb8cd707c2d35bd2d4d4258c419493b100cfdbb4",
+          "stage_a_slot": "slot_00",
+          "stage_a_role": "record_continuation_previous"
+        },
+        {
+          "parent_document_id": "04c8d82039daafab6c5b44bc677a2a6d45d111fe99e1a7577125f067b5a24037",
+          "parent_line_index": 113,
+          "source_line_id": "5f874e69e9c9e2e230f593f0ac0baef16a3a20e57bc6df445f9e14439ae6f825",
+          "line_text_sha256": "b9f2c87f2e40cd07897d83a499dd7fe59cd221e2cb1430930369fac22e514f8d",
+          "stage_a_batch_id": "218fa5262ef69caa3cfc628edb8cd707c2d35bd2d4d4258c419493b100cfdbb4",
+          "stage_a_slot": "slot_01",
+          "stage_a_role": "record_continuation_previous"
+        },
+        {
+          "parent_document_id": "04c8d82039daafab6c5b44bc677a2a6d45d111fe99e1a7577125f067b5a24037",
+          "parent_line_index": 115,
+          "source_line_id": "dfa0bc54df91172b4fd21bbf0a3084453a3f862179a382874c5f81d4d57b2074",
+          "line_text_sha256": "794a28c5986a483926c953cfb7dadf9b5bb0aedfcf9139e23cbf3a9ed6c43ccc",
+          "stage_a_batch_id": "218fa5262ef69caa3cfc628edb8cd707c2d35bd2d4d4258c419493b100cfdbb4",
+          "stage_a_slot": "slot_03",
+          "stage_a_role": "record_continuation_previous"
+        },
+        {
+          "parent_document_id": "04c8d82039daafab6c5b44bc677a2a6d45d111fe99e1a7577125f067b5a24037",
+          "parent_line_index": 116,
+          "source_line_id": "272f598ea02ea32cf2c029627acce29286bad39c714398549fde3f57a744102d",
+          "line_text_sha256": "211aa60b7e34c6fbc715fc8f9ad81d4328f28609a1418221b20e91416e81edeb",
+          "stage_a_batch_id": "218fa5262ef69caa3cfc628edb8cd707c2d35bd2d4d4258c419493b100cfdbb4",
+          "stage_a_slot": "slot_04",
+          "stage_a_role": "record_continuation_previous"
+        },
+        {
+          "parent_document_id": "04c8d82039daafab6c5b44bc677a2a6d45d111fe99e1a7577125f067b5a24037",
+          "parent_line_index": 117,
+          "source_line_id": "af39c6b7074f379dd53f3a7865d769ba935b3de7a9f264f0bc0b3e05ca3a4816",
+          "line_text_sha256": "d1affc36daa19d4d15c261b3819dd83f7dc5ba26624044b7e1c1207f5f579cfa",
+          "stage_a_batch_id": "218fa5262ef69caa3cfc628edb8cd707c2d35bd2d4d4258c419493b100cfdbb4",
+          "stage_a_slot": "slot_05",
+          "stage_a_role": "record_continuation_previous"
+        },
+        {
+          "parent_document_id": "df03f7b60754314aaee0069f87a7fb54feddd5ebfcb9e66fc35851c170bb7c13",
+          "parent_line_index": 405,
+          "source_line_id": "18829023194d146574c486c2bde03d9bcd09dd44432632153efdb6e59adf4cdc",
+          "line_text_sha256": "653e01fca70fdbfad3b861a935cc853085fb79780d1b3d49900b49dbdc010021",
+          "stage_a_batch_id": "cb7badac8b19cb5c1f6672965cbf5ad707ce50bf720ba4f520a7174e8386733c",
+          "stage_a_slot": "slot_00",
+          "stage_a_role": "record_continuation_previous"
+        }
+      ],
+      "passed": false
+    },
+    "testimonial_control": {
+      "required_continuation_lines": 38,
+      "observed_role": "record_continuation_previous",
+      "role_failures": 0,
+      "deterministic_owner_failures": 0,
+      "continuation_to_anchor_map_sha256": "f2c9faf36f61c624dfdd1b94deaa4097edb1d7a8d528f67d0449e006a3768adf",
+      "all_required_continuations_assigned_once_to_the_exact_preceding_anchor": true,
+      "stage_b_inference_claimed": false,
+      "passed": true
+    },
+    "anchor_controls": {
+      "quote_bearing_line": {
+        "source_line_id": "95b2a078f8b90976a6b1336fe266ab96a8bb9605638a6019725d2309c1111ea2",
+        "required_role": "record_anchor",
+        "observed_role": "record_anchor",
+        "passed": true
+      },
+      "compound_line": {
+        "source_line_id": "749919130bee61f058243dba99570d6cb5579a18d792a4f939ce0d69e1ead000",
+        "required_role": "compound_record_anchor",
+        "observed_role": "compound_record_anchor",
+        "passed": true
+      },
+      "vets_for_trump_line": {
+        "source_line_id": "917a9324fedf4b4f898858584f78ae89c594e07279c515123b5772ccad9b01f2",
+        "required_role": "record_anchor",
+        "observed_role": "record_anchor",
+        "passed": true
+      },
+      "scope": "Stage-A anchor-role gates only; no Stage-B record extraction was submitted"
+    },
+    "candidate_controls": {
+      "observed_candidate_self_count": 2,
+      "seth_magaziner": {
+        "parent_document_id": "ef028a46900938122cb2b836cead4d08c308b72c572363928942ecca4f8cf211",
+        "parent_line_index": 0,
+        "source_line_id": "edc7c8e209ff8511b6996e9080518b6e6f677a57b74876b91c84eb75fcf651ad",
+        "line_text": "Seth Magaziner",
+        "observed_role": "candidate_self",
+        "passed": true
+      },
+      "greg_tanaka": {
+        "parent_document_id": "1aad8662c07cd4f1f6343f78fe04b5f460235f17ecf57e8e5faa43024819fde8",
+        "parent_line_index": 510,
+        "source_line_id": "af281dff680e36b1ac925ba0509577d5a648aba60189c65140e0cab0a72915bd",
+        "line_text": "Greg Tanaka",
+        "observed_role": "unclear",
+        "passed": false
+      },
+      "false_candidate_self": {
+        "parent_document_id": "266bd0ed39563683dc9b13237fa6606547e18cad89dbacef1c64aafae7f32b72",
+        "parent_line_index": 158,
+        "source_line_id": "5cac96d3488b283289854cc46cf973d12ac498a6d6c2649c9f3f07a9a18d10f1",
+        "line_text": "Addressing the climate crisis. Supporting working families. Strengthening our democracy.",
+        "observed_role": "candidate_self",
+        "passed": false
+      },
+      "passed": false
+    },
+    "interpretation": "The count-specific schema repaired the mechanical padding defect, but the Stage-A model did not distinguish interface and long nonrecord content reliably and left nine directional continuations without an anchor. Passing anchor and testimonial controls does not offset these hard failures."
+  },
+  "artifacts": {
+    "directory": "build/hive_candidate_extraction/v2_1_endorsement_line_ledger_stage_a_preflight_hive_output_20260825b_21437036",
+    "files": [
+      {
+        "file": "chunk_00000.out.jsonl.gz",
+        "bytes": 17437,
+        "rows": 60,
+        "sha256": "67f2a5c8a6a71e7f8c621eeca7bf3442aa8cf301774cb7d0ff8e895ae593dea6",
+        "content_sha256": "c6a3fcbdc954e449afc4704b5f961ce1a3d67593fb87d98c1212ffd2f65f61ac"
+      },
+      {
+        "file": "chunk_00001.out.jsonl.gz",
+        "bytes": 16233,
+        "rows": 53,
+        "sha256": "568cde783665ce37dd6828152fb978be24a01f1c15ed80ab624ba1c32968544c",
+        "content_sha256": "556eea8d3eaf4494c1ae1656a955dfbbb0b61adffc507f9bfff05200edd65ccf"
+      },
+      {
+        "file": "run_metadata.json",
+        "bytes": 8617,
+        "sha256": "7f748f1594a52d282ae00fbf34cafd7eb96fb9dd2e3b11b1bdec82288e8f34fe"
+      }
+    ],
+    "all_output_rows_content_sha256": "5f110abd176e28201c37313a3ee01b057b342214cb4aec042e44a2ee326d4287",
+    "ordered_output_batch_ids_sha256": "ecbcef016feb01945bb519cf41f53dda87661a091809b574d06e90baff836d64",
+    "source_line_decision_ledger_sha256": "0cf6db52d8f39a44453fdf12da40ec20966ea16c082922b41ea291cb1e5eb918",
+    "stage_a_provenance_sha256": "0daaadc94c5f54bfa26fb73b8451d77cee3833879b765641069dd9ea5b98494c"
+  },
+  "approved_correction": {
+    "status": "bounded_stage_a2_adjudication_approved_preflight_only",
+    "stage_a2_input_scope": {
+      "total_exact_exceptions": 206,
+      "stage_a_unclear": 195,
+      "stage_a_unowned_continuation": 9,
+      "stage_a_candidate_self": 2
+    },
+    "required_design": "Retain Stage A unchanged, adjudicate only the authenticated 206-line exception ledger with fixed slots and explicit withheld_validation, require every continuation exception to select one exact allowed adjacent anchor or a terminal not-continuation disposition, retain both passes and their hashes, and fail unless unresolved and ownership-conflict counts are zero.",
+    "review_boundary": "Implement, test, independently review, freeze the new contract and generation identities, and build a fresh bounded Stage-A2 preflight before requesting any Hive submission.",
+    "stage_a2_hive_submission_performed": false,
+    "stage_b_hive_submission_performed": false,
+    "full_stage_a_hive_submission_performed": false,
+    "release_or_human_validation_authorized": false
+  },
+  "gate_decision": "NO_GO"
+}

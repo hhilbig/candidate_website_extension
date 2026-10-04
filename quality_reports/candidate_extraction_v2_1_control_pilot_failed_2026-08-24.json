@@ -1,0 +1,169 @@
+{
+  "artifact_type": "candidate_extraction_v2_1_failed_control_stress_pilot",
+  "frozen_on": "2026-08-24",
+  "status": "failed_conditional_model_schema_do_not_reuse",
+  "decision": "The control-character correction worked, but the pilot fails the predeclared 100 percent model-schema gate. Preserve every input, output, metadata file, and log as an audit artifact. Do not patch the two invalid model items, relax invalid_schema handling, resume this output, or combine it with a later run. Encode the approved conditional field rules in the guided JSON schemas, run a one-chunk Hive compilation preflight, and rerun the complete 1,787-window pilot under one new contract hash.",
+  "hive_job": {
+    "array_job_id": "21265577",
+    "partition": "low",
+    "array": "0-3%4",
+    "array_tasks": 4,
+    "state": "COMPLETED",
+    "exit_code": "0:0",
+    "started_hive_time": "2026-08-24T10:43:53",
+    "ended_hive_time": "2026-08-24T11:15:38",
+    "task_elapsed_range": [
+      "00:19:15",
+      "00:31:45"
+    ],
+    "task_max_rss_kib_range": [
+      14430436,
+      14566696
+    ],
+    "runtime_failures": 0,
+    "notes": "Three logs end with harmless vLLM semaphore-cleanup warnings after complete atomic outputs and run metadata were written. Slurm recorded exit 0 for every task."
+  },
+  "contract": {
+    "schema_version": "2.1",
+    "source_export_schema_version": "1.4",
+    "extraction_contract_sha256": "09369d1442f978e9dfe9b84b8afdce0328432986e3c4adeb22877273052d6a8f",
+    "generation_config_sha256": "c29f0663ca2745cdfe2ff8c08a0372d6567ce6887a54808d01df3c0c8e61048c",
+    "inference_display_escape_spec_sha256": "31e9692d87610a27a7508e4bdd73eb420d4a452f31badf765249505b69ddb85c",
+    "json_string_control_canonicalizer_spec_sha256": "64844ef4d08777e33c01795cb86a937200b8f5d5770a6ff0724b86f50c8ec5a9",
+    "source_corpus_sha256": "c53d36b24b293ac5d47706aa67731f1c107d6a679cb948c9ad71a70b5c8ce7c3",
+    "model_id": "Qwen/Qwen3.6-27B-FP8",
+    "model_revision": "e89b16ebf1988b3d6befa7de50abc2d76f26eb09",
+    "runtime_lock_sha256": "4f46101fa493e38b312af034b8d740c612bd0001bab4cb0f624f4a9e1c49f5b3",
+    "temperature": 0.0,
+    "max_model_length": 32768,
+    "max_output_tokens": 24576,
+    "runner_sha256_used_on_hive": "32547348ae5be05d9fd67f90a2225298dee206db4bfc357564642bd3459d4396",
+    "runner_default_only_followup_sha256": "6fadeb9e6b1bddde517f10e691fd8221ca78cf5031d3eec5c1464385767649ac",
+    "runner_default_note": "The follow-up runner differs only by raising the direct-CLI default and minimum output budget from 16,384 to 24,576. This job explicitly received 24,576 through the unchanged wrapper, so its effective generation configuration equals the frozen hash above."
+  },
+  "input": {
+    "directory": "build/hive_candidate_extraction/v2_1_control_stress_pilot_export_20260824f",
+    "manifest_sha256": "c60da213bbbb6c2908a21f82dfd03f33f5277e1222bcd017d172e692a9daa25e",
+    "selection_sha256": "e199287a609ec9ff39e6fc3f2f64dfc74821a148a4ffdddcf497f0bd8f276b01",
+    "chunks": 30,
+    "parent_documents": 867,
+    "windows": 1787,
+    "windows_by_route": {
+      "biography": 591,
+      "endorsements": 516,
+      "issues": 680
+    },
+    "display_changed_windows": 962,
+    "prior_or_changed_unique_windows": 1021
+  },
+  "output_coverage": {
+    "chunk_files": 30,
+    "run_metadata_files": 4,
+    "temporary_files": 0,
+    "output_rows": 1787,
+    "unique_segment_ids": 1787,
+    "unique_parent_documents": 867,
+    "input_output_id_set_match": true,
+    "source_and_segment_hash_match": true,
+    "parse_status_counts": {
+      "parsed": 1787
+    },
+    "finish_reason_counts": {
+      "stop": 1787
+    },
+    "input_truncated_counts": {
+      "false": 1787
+    },
+    "output_tokens_total": 2610812,
+    "output_tokens_max": 18867
+  },
+  "control_character_result": {
+    "status": "passed",
+    "display_changed_windows": 962,
+    "canonicalized_outputs": 5,
+    "canonicalized_characters": 22,
+    "canonicalized_codepoint_counts": {
+      "U+0009": 22
+    },
+    "unrepaired_controls": 0,
+    "invalid_outside_string_controls": 0,
+    "raw_output_hash_mismatches": 0,
+    "canonicalized_characters_recovered_in_aligned_extraction": 22,
+    "interpretation": "The minimal display preserved page layout, and the narrow canonicalizer exercised its intended boundary on five genuine raw outputs. Every repaired tab decoded to the unchanged source and passed exact alignment; no permissive JSON parsing or fuzzy evidence repair was used."
+  },
+  "alignment_and_public_result": {
+    "alignment_status_counts": {
+      "complete": 1245,
+      "partial_withheld": 517,
+      "all_withheld": 23,
+      "invalid_schema": 2
+    },
+    "model_items": 30015,
+    "aligned_items": 27096,
+    "withheld_items": 2919,
+    "withheld_item_counts_by_reason": {
+      "ambiguous_exact_span": 354,
+      "endorsement_context_mismatch": 15,
+      "invalid_item_schema": 2,
+      "invalid_item_semantics": 178,
+      "missing_exact_span": 2370
+    },
+    "public_aligned_schema_valid_windows": 1787,
+    "public_aligned_exact_supported_windows": 1787,
+    "public_status_counts": {
+      "observed_supported": 1412,
+      "observed_zero": 375
+    },
+    "technical_gate_passed": false,
+    "gate_failure": "Two verbatim model outputs violated approved conditional record-schema rules. Invalid raw model schema remains a hard failure even when every invalid item is withheld from public output."
+  },
+  "invalid_schema_outputs": [
+    {
+      "route": "biography",
+      "candidate_cycle_id": "S0NV00153-2010",
+      "parent_document_id": "21d95cdfecb91e5ce93e9f1fe5127bd9dde255afacd550dfc0187b5f5cec1d5a",
+      "segment_id": "46103ad6cf69e5ce41adccf9e7671faa36dd84338b72508aa01f06512cf3cff6",
+      "segment_index": 0,
+      "invalid_item": {
+        "field": "local_roots",
+        "value": "Born in Trenton, New Jersey",
+        "timing": null,
+        "relationship": "Birth Place: Trenton, New Jersey",
+        "evidence": "Birth Place: Trenton, New Jersey"
+      },
+      "failure": "local_roots requires a non-null current, former, or unclear timing value"
+    },
+    {
+      "route": "endorsements",
+      "candidate_cycle_id": "S0AK00121-2010",
+      "parent_document_id": "d509b2bdb3f16c83c5f46450451c01b60f1428095fa1e29a96506b1107ba92f0",
+      "segment_id": "972647c3e62f61427c38f15fb0f14b509f629fedf7345f31eb26dba988a89c5a",
+      "segment_index": 1,
+      "invalid_item": {
+        "endorser_name": "Club for Growth PAC",
+        "entity_type": "organization",
+        "endorser_category": "other_organization",
+        "title": null,
+        "affiliation": "Club for Growth",
+        "jurisdiction": null,
+        "record_evidence": "Club for Growth PAC is committed to Joe.",
+        "endorsement_context_evidence": null,
+        "support_mode": "explicit_text"
+      },
+      "failure": "explicit_text requires nonempty endorsement_context_evidence"
+    }
+  ],
+  "required_revision": [
+    "Replace the generic biography item schema with three disjoint full-object oneOf branches: local_roots with non-null timing and relationship; occupation, elected-office experience, and public-service experience with non-null timing and null relationship; education and military service with nullable timing and null relationship.",
+    "Replace the generic endorsement item schema with two disjoint full-object oneOf branches: explicit_text with nonempty context evidence and page_or_section_context with nullable context evidence for the declared URL-route fallback.",
+    "Keep the independent Python schema and semantic validators and keep invalid_schema mapped to failed_schema.",
+    "Run a one-chunk Hive schema-compilation preflight, then rerun all 1,787 pilot windows under one recomputed schema, contract, and generation hash in a new empty output directory.",
+    "Require zero invalid_schema, parse, finish, truncation, or public-support failures and require all 11 known omissions before starting another 35,213-window run."
+  ],
+  "frozen_output": {
+    "directory": "build/hive_candidate_extraction/v2_1_control_stress_pilot_hive_output_20260824f_failed",
+    "files": 38,
+    "recursive_inventory_sha256": "8c88977550430626a525156140ec64a1d5f45d0128fcc7365cd9d0d5aeb85acb",
+    "inventory_hash_definition": "SHA-256 of sorted UTF-8 lines '<relative_posix_path>  <file_sha256>\\n' for 30 gzip output chunks, four run-metadata JSON files, and four Slurm logs"
+  }
+}

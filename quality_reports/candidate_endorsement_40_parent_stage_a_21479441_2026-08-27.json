@@ -1,0 +1,47 @@
+{
+  "a2_hive_submission_authorized": false,
+  "a2_input_build_authorized": true,
+  "checks": [
+    {
+      "check_id": "stage_a40_exact_authenticated_complete_run",
+      "expected": 40,
+      "observed": 40,
+      "passed": true
+    },
+    {
+      "check_id": "stage_a40_decision_coverage_nonempty",
+      "expected": ">0",
+      "observed": 1115,
+      "passed": true
+    },
+    {
+      "check_id": "stage_a40_distinct_a2_contract_required",
+      "expected": true,
+      "observed": true,
+      "passed": true
+    }
+  ],
+  "evaluation_scope": "private_recall40_stage_a_to_a2_only",
+  "failed_checks": 0,
+  "full_expansion_or_release_authorized": false,
+  "gate_decision": "GO_BUILD_OPEN_A2_INPUTS",
+  "passed_checks": 3,
+  "stage_a2_exception_inventory": {
+    "a2_inputs_built": false,
+    "exception_count": 607,
+    "exception_reason_counts": {
+      "stage_a_unclear": 586,
+      "stage_a_unowned_continuation": 21
+    },
+    "ordered_exception_source_line_ids_sha256": "59e16bdad2f9e5fb44378f389d2f817652d80ecae22faabccd1f89fbb5822ec8",
+    "requires_distinct_upstream_contract_rotation": true,
+    "scope": "private_recall40_stage_a2_inventory_only",
+    "selected_parent_count": 40,
+    "stage_a_decision_count": 1115,
+    "stage_a_decision_identity_ledger_sha256": "79f5039ea9c676a935e178ccc66de7ecf1b52c5951fab50f3ac1a66ac0cfa4f9",
+    "stage_a_generation_config_sha256": "7c89e227eb81f372125be51660d7d2adec406d3250c2f4df4e7c3a923e7c6ede",
+    "stage_a_input_manifest_sha256": "d4672273f9c2eab6e13e09b9219200d4008e33d75efc63cc9e213beba28f1fd9",
+    "stage_b_authorized": false
+  },
+  "stage_b_authorized": false
+}

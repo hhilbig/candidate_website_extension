@@ -1,0 +1,117 @@
+{
+  "audit_type": "candidate_extraction_v2_1_quote_and_whitespace_stress_pilot",
+  "date": "2026-08-24",
+  "status": "failed_frozen_audit",
+  "release_eligible": false,
+  "hive_job_id": "21304738",
+  "slurm_state": "COMPLETED",
+  "gate_decision": "failed",
+  "gate_failure_reason": "One issue window reached the 24576-token output cap after the structured decoder repeated an identical item. The release gate requires every window to finish normally and strict-parse.",
+  "source": {
+    "local_export_directory": "build/hive_candidate_extraction/v2_1_structured_whitespace_stress_pilot_export_20260824l",
+    "remote_input_directory": "/home/hhilbig/candidate-website-extraction/data/v2_1_structured_whitespace_stress_pilot_20260824l",
+    "source_corpus_sha256": "c53d36b24b293ac5d47706aa67731f1c107d6a679cb948c9ad71a70b5c8ce7c3",
+    "source_export_manifest_sha256": "973050bc6f159bee3385788588bf0c807804c73227f0c9fbabf43809cb82c179",
+    "pilot_manifest_sha256": "11cb80a3d8c9a818c541b7399154de64d9a12bd8149b9fe0b8f1984461362a42",
+    "pilot_selection_sha256": "789f6046da96b148459b1a6ef318c6e32b916ce183e12971a8b796e22b70d9bf",
+    "segments": 7838,
+    "parent_documents": 4132,
+    "rows_by_route": {
+      "biography": 2152,
+      "endorsements": 1939,
+      "issues": 3747
+    },
+    "straight_quote_characters": 66616
+  },
+  "contract": {
+    "schema_version": "2.1",
+    "extraction_contract_sha256": "1a5da28b31a2ed7fb35ac970181f776a83aa03ac709c1ac772e0928f55a2a71a",
+    "generation_config_sha256": "bd16d688235686f9162337daabc0aac8eda20b132ea01f52d5fbff2c31cfc01e",
+    "max_model_len": 32768,
+    "max_output_tokens": 24576,
+    "temperature": 0,
+    "thinking_enabled": false,
+    "structured_decoding_backend": "xgrammar",
+    "structured_decoding_disable_any_whitespace": true,
+    "straight_quote_display_rule": "preserved as a literal straight quote"
+  },
+  "preserved_output": {
+    "local_directory": "build/hive_candidate_extraction/v2_1_structured_whitespace_stress_pilot_hive_output_20260824l_failed",
+    "remote_directory": "/home/hhilbig/candidate-website-extraction/output/v2_1_structured_whitespace_stress_pilot_20260824l",
+    "chunk_files": 131,
+    "run_metadata_files": 8,
+    "temporary_files": 0,
+    "rows": 7838,
+    "unique_segment_ids": 7838,
+    "parent_documents": 4132,
+    "source_identity_mismatches": 0,
+    "finish_reason_counts": {
+      "length": 1,
+      "stop": 7837
+    },
+    "parse_status_counts": {
+      "output_truncated": 1,
+      "parsed": 7837
+    },
+    "model_schema_valid_rows": 7837,
+    "public_schema_valid_rows": 7837,
+    "input_truncated_rows": 0,
+    "output_tokens_max": 24576,
+    "canonicalized_control_characters": 24,
+    "unrepaired_control_characters": 0,
+    "invalid_outside_string_control_characters": 0,
+    "chunk_bytes": 28278025,
+    "chunk_inventory_digest": "f3e3029bf3c877243480c5c93d40d69d469b774d6564d00b2e8c80a04faee487",
+    "chunk_inventory_digest_method": "SHA-256 of sorted lines: filename, compressed-byte SHA-256, compressed bytes"
+  },
+  "failure": {
+    "document_id": "7bdfc2a16483fb4225e35bc14b9d84583ad33d2e2fe413a0059b93d2be303315",
+    "candidate_cycle_id": "S6MO00305-2006",
+    "parent_document_id": "fc409dcdcd425a928076f0954677926c7c8a9068f82ce0eea75eba41392e03f0",
+    "route": "issues",
+    "source_characters": 5877,
+    "source_bytes": 5879,
+    "input_tokens": 1104,
+    "input_truncated": false,
+    "output_tokens": 24576,
+    "finish_reason": "length",
+    "parse_status": "output_truncated",
+    "raw_output_characters": 109830,
+    "raw_output_sha256": "a2a4120db19e6897b346d844a8ee22abaf23f7aec75e4921197fe593205ef315",
+    "structural_whitespace_verdict": "passed",
+    "maximum_structural_whitespace_run": 1,
+    "repetition_diagnostic": "The output contained 33 non-loop items, then 299 complete copies of the same K Street record, and began another copy before truncation. The repeated evidence stopped at 'The ' immediately before a source straight quote.",
+    "diagnosis": "The decoder could not reliably copy straight quotes inside generated JSON strings. It closed evidence strings before source quotes and, in this row, entered a repeated-item loop. Fixed structural whitespace prevented the earlier whitespace sink but did not prevent this string-boundary failure.",
+    "not_observed": [
+      "input truncation",
+      "source identity or hash mismatch",
+      "arbitrary structural whitespace",
+      "raw control-character serialization failure",
+      "OOM or process crash"
+    ]
+  },
+  "cross_pilot_quote_diagnostic": {
+    "decoded_model_string_fields_audited": 630617,
+    "decoded_straight_quotes": 0,
+    "raw_escaped_straight_quote_sequences": 0,
+    "source_straight_quotes": 66616,
+    "issue_evidence_spans_ending_immediately_before_a_source_quote": 614,
+    "affected_parsed_issue_windows": 430,
+    "interpretation": "The failure is a route-wide quote-copy defect, not an isolated dense output."
+  },
+  "approved_corrective_contract": {
+    "extraction_contract_sha256": "87175138600c9ba032d1218f318083645fab82c20d35ab910b1b962e197bab71",
+    "generation_config_sha256": "fcce9b2077476deba9982fb4f12e0deda1dabe946a485dde9b0659da17d55cac",
+    "display_rule": "Preserve line feeds and source coordinates; display U+0022 as \\u0022, double source backslashes, and escape non-linefeed C0 controls. Strict JSON decoding restores these escapes to original Unicode before exact alignment against unchanged source text. The deterministic boundary map attests display-codec roundtrip and collision boundaries; it is not a fallback or span-repair path.",
+    "route_array_item_caps": {
+      "biography": 96,
+      "endorsements": 256,
+      "issues": 128
+    },
+    "array_cap_gate": "Any model array with item count at or above its route cap fails before alignment and cannot produce public records.",
+    "repetition_gate": "Any canonical exact model item occurring at least three times, including nonconsecutive cycles, fails the window before alignment and cannot produce public records.",
+    "nullable_string_guidance": "Nullable free-text schema nodes omit minLength for xgrammar compatibility; the independent Python Unicode-strip validator still rejects empty or whitespace-only non-null strings.",
+    "ordinary_backfills_allowed": false
+  },
+  "decision": "Preserve every file from job 21304738 as a failed audit. Do not repair, resume, merge, or publish it. Run the frozen 19-row all-route quote/cap/repetition preflight first. If it passes, rerun the complete 7838-window, 4132-parent stress pilot under the corrective contract. A new 35213-window production run remains blocked until both gates pass."
+}

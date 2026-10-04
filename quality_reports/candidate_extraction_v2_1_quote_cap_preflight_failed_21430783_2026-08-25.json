@@ -1,0 +1,314 @@
+{
+  "audit_type": "candidate_extraction_v2_1_suffix_p_quote_cap_preflight",
+  "date": "2026-08-25",
+  "status": "failed_frozen_tuning_audit",
+  "release_eligible": false,
+  "hive_job_id": "21430783",
+  "gate_decision": "NO-GO",
+  "gate_failure_reason": "Hive job 21430783 completed normally and all 44 rows passed the replayed deterministic row-level checks. The content gate still failed: endorsement continuation 2e9a0cd8 returned 1 model and 1 aligned identity against minima of 86 and 84, while issue parent 71c197e1 produced 1 quote-bearing resolved record against a minimum of 2 and no conflict containing both proposal and oppose variants. The ordinary importer also stops before row validation because its manifest reader rejects three new, contract-consistent suffix-p census and display fields. The 7838-window stress pilot was not submitted.",
+  "slurm": {
+    "state": "COMPLETED",
+    "exit_code": "0:0",
+    "elapsed": "00:10:58",
+    "submit": "2026-08-25T07:55:39-07:00",
+    "start": "2026-08-25T07:55:58-07:00",
+    "end": "2026-08-25T08:06:56-07:00",
+    "node": "hive-dc-7-5-58",
+    "partition": "high",
+    "gpu_type": "6000_blackwell",
+    "gpus": 1,
+    "cpus": 2,
+    "reserved_memory": "96G",
+    "max_memory_used": "13.89G",
+    "restarts": 0
+  },
+  "source": {
+    "local_export_directory": "build/hive_candidate_extraction/v2_1_quote_cap_preflight_export_20260824p",
+    "remote_input_directory": "/home/hhilbig/candidate-website-extraction/data/v2_1_quote_cap_preflight_20260824p",
+    "source_corpus_sha256": "c53d36b24b293ac5d47706aa67731f1c107d6a679cb948c9ad71a70b5c8ce7c3",
+    "source_export_manifest_sha256": "f5e6545a2d2ec35a83f4184e0d328635e5fba9d3c80cd4c8a7466178b7d9172c",
+    "preflight_manifest": {
+      "path": "manifest.json",
+      "sha256": "df14f66decafee5b48c0d172a8b38d19655030f0833afcb481136781f717e3b6",
+      "bytes": 17103
+    },
+    "preflight_selection": {
+      "path": "selection.csv",
+      "sha256": "039dbb565f727bcec42969fbb0c9d6b44e3dd4fcbc39572e30addaaa3afdbfe4",
+      "bytes": 10787
+    },
+    "input_chunk": {
+      "path": "chunks/chunk_00000.jsonl.gz",
+      "compressed_sha256": "86aff0f3ac434b6ea29877ba05989ba4bb1d13718ee5018878b0083c56f11e58",
+      "compressed_bytes": 70594,
+      "decompressed_sha256": "85966eb9b860b1763df0fb02a4efd08e2969588fd667001caf16f04f1026e571",
+      "decompressed_bytes": 277982,
+      "rows": 44
+    },
+    "rows": 44,
+    "unique_document_ids": 44,
+    "parent_documents": 18,
+    "parent_documents_by_route": {
+      "biography": 2,
+      "endorsements": 4,
+      "issues": 12
+    },
+    "rows_by_route": {
+      "biography": 4,
+      "endorsements": 15,
+      "issues": 25
+    },
+    "all_selected_parents_complete": true,
+    "remote_input_hashes_equal_local_input_hashes": true
+  },
+  "contract": {
+    "schema_version": "2.1",
+    "model_id": "Qwen/Qwen3.6-27B-FP8",
+    "model_revision": "e89b16ebf1988b3d6befa7de50abc2d76f26eb09",
+    "runtime_lock_sha256": "4f46101fa493e38b312af034b8d740c612bd0001bab4cb0f624f4a9e1c49f5b3",
+    "extraction_contract_sha256": "82530ab0f4126e1640dcffbe48a66bffdfab1538fc40240b5f3e55ab0eed5574",
+    "generation_config_sha256": "edfe53dd421acb30f1da4bc17404be4b5415a3d6060b77650c448d76edafc13f",
+    "json_schema_sha256": {
+      "biography": "ee197f260e3e2242d65ac05644d6cba72c2c2e3114fe127c579be6070ab3ffd7",
+      "endorsements": "267901032a0bebbca582446d0df81ea508493bd970c51c061a4cd31ebf6ec3c6",
+      "issues": "c5b9922e9447cc5c573bd3eeefa432710a0657e37c484c46e30dc0e83a41c719"
+    },
+    "prompt_sha256": {
+      "biography": "d32cf8c87062d607cc1ee09e9485b90f2cc1a581559944583dc4839efa177960",
+      "endorsements": "6a369a82639adf1ab6c068863b1a07f2ab5856eb48ffd0d639240c46be837f27",
+      "issues": "e7ad149cbbdfa5657b32235c3421adc4f5ca89fa564f7075e6a26e26f00fcb19"
+    },
+    "alignment_spec_sha256": "c55aed337762f712c7a4edcf9dd109a94c881b936955cfa5e4d6ba8c114114e5",
+    "semantic_validation_spec_sha256": "0ef0dc40eda7cd1ebfb83f4042360c432b8876315a8966756b5e79ccc795c9a5",
+    "endorsement_context_provenance_spec_sha256": "b7689a181c3b9d323ee7dff10978b53d9f51e5e68d7ea709948a6529f483edb5",
+    "user_message_template_sha256": "ace05e7a19cc203b824506d41b5ebf0f5a3aacc39dd871cbbd11e9d97c8ee7d7",
+    "inference_display_escape_spec_sha256": "92566223fd29db40a5b6031833a99992b58c4939d206ba8517d2309f9fb1724b",
+    "raw_structural_whitespace_validator_spec_sha256": "4a03ebdf798ceab3f841b7359d59ad17f34033c2f6e677edd74551935ffd8774",
+    "max_model_len": 32768,
+    "max_output_tokens": 24576,
+    "seed": 20260824,
+    "temperature": 0,
+    "thinking_enabled": false,
+    "structured_decoding_backend": "xgrammar",
+    "structured_decoding_disable_any_whitespace": true,
+    "post_generation_route_array_item_caps": {
+      "biography": 96,
+      "endorsements": 256,
+      "issues": 128
+    }
+  },
+  "preserved_output": {
+    "location": "remote_only_not_synced_by_monitor",
+    "remote_directory": "/home/hhilbig/candidate-website-extraction/output/v2_1_quote_cap_preflight_20260824p",
+    "output_chunk": {
+      "path": "chunk_00000.out.jsonl.gz",
+      "compressed_sha256": "5229808d151833ac343a8ebeb9b8093e3969903d474e0d5e93a610d7dc8c4456",
+      "compressed_bytes": 336010,
+      "decompressed_sha256": "08cf312afe3e3d8a86d461187f7bb576f60251b77b69d64bb62ba5f9a7cd89bd",
+      "decompressed_bytes": 3296437,
+      "rows": 44
+    },
+    "run_metadata": {
+      "path": "run_metadata.json",
+      "sha256": "317626c51d8c79f288f54cc4555a5a396228bc4158c4494660b2fb0ba024a9b0",
+      "bytes": 7219
+    },
+    "slurm_log": {
+      "path": "/home/hhilbig/candidate-extract-preflight-p_21430783.log",
+      "sha256": "891596f1b4b617e77d0f73f4d09af473e350b0dffc51cb50fba6627c2b30623b",
+      "bytes": 35171
+    },
+    "chunk_files": 1,
+    "run_metadata_files": 1,
+    "temporary_files": 0
+  },
+  "technical_replay": {
+    "row_level_replay_passed": true,
+    "replay_method": "The audit used the current importer validation and enrichment functions on the exact local suffix-p input bytes and streamed immutable Hive output bytes. It independently replayed the exact user message, reversible inference display and boundary map, raw structural whitespace, strict JSON parsing, schema and semantic checks, pre-alignment guards, exact alignment, parent reconstruction, run-metadata accounting, and all-output accounting. It bypassed only the manifest reader's whole-object equality check described below.",
+    "finish_reason_counts": {
+      "stop": 44
+    },
+    "parse_status_counts": {
+      "parsed": 44
+    },
+    "strict_json_parsed_outputs": 44,
+    "model_schema_valid_rows": 44,
+    "public_schema_valid_rows": 44,
+    "raw_structural_whitespace_valid_outputs": 44,
+    "raw_structural_whitespace_violation_count": 0,
+    "pre_alignment_guard_valid_outputs": 44,
+    "full_input_outputs": 44,
+    "user_message_hash_replay_passed_outputs": 44,
+    "inference_display_and_boundary_replay_passed_outputs": 44,
+    "all_model_items_accounted_outputs": 44,
+    "alignment_status_counts": {
+      "complete": 32,
+      "partial_withheld": 12
+    },
+    "processing_status_counts": {
+      "processed_success": 32,
+      "processed_partial_withheld": 12
+    },
+    "model_items_strictly_parsed": 1425,
+    "aligned_items": 1393,
+    "private_withheld_items": 32,
+    "item_accounting_identity": "1425 = 1393 aligned + 32 withheld",
+    "private_withheld_reason_counts": {
+      "ambiguous_exact_span": 5,
+      "clipped_segment_boundary": 2,
+      "endorsement_context_mismatch": 9,
+      "invalid_item_semantics": 6,
+      "missing_exact_span": 10
+    },
+    "resolved_records": 1231,
+    "withheld_overlap_conflict_groups": 53,
+    "output_tokens_total": 114451,
+    "output_tokens_max": 17300,
+    "output_token_cap_hits": 0,
+    "array_item_cap_reached_rows": 0,
+    "model_item_repetition_failure_rows": 0,
+    "max_exact_model_item_multiplicity": 1,
+    "json_control_canonicalized_characters": 0,
+    "run_metadata_reconciled_to_all_output": true,
+    "importer_manifest_compatibility_bug": {
+      "ordinary_import_passed": false,
+      "failure": "load_inputs raises: source export endorsement-context provenance differs",
+      "cause": "The importer compares the complete endorsement_context_provenance manifest object to an older six-field object. The suffix-p manifest adds three contract-consistent fields, so the exact object comparison rejects valid input before row validation.",
+      "new_fields_rejected": [
+        "inference_display_escape_id",
+        "inference_display_escape_spec_sha256",
+        "segment_complete_line_census"
+      ],
+      "checks_bypassed_for_this_read_only_replay": [
+        "whole-object equality for endorsement_context_provenance in load_inputs"
+      ],
+      "other_checks_bypassed": false,
+      "code_changed_in_this_audit": false
+    },
+    "verdict": "The immutable Hive bytes pass the 44 row-level deterministic checks when replayed directly. The ordinary importer remains blocked by a manifest compatibility bug, and the deterministic pass does not override the failed content gates."
+  },
+  "content_audit": {
+    "endorsement_segment_gates": [
+      {
+        "document_id": "aa0b99eb1331464dce28db32d73a6f53bddbf7e4aa10f46f4c17c48b12720433",
+        "minimum_non_candidate_unique_identities": 224,
+        "model_unique_non_candidate_identities": 224,
+        "aligned_unique_non_candidate_identities": 224,
+        "candidate_identity_present": false,
+        "passed": true
+      },
+      {
+        "document_id": "2e9a0cd8e0bd57af5f8b1b8cd26e06fa8d647d845d8ddc18a8b4199a4e666e73",
+        "minimum_model_unique_identities": 86,
+        "minimum_uniquely_aligned_identities": 84,
+        "model_unique_identities": 1,
+        "aligned_unique_identities": 1,
+        "model_identity": "Stephen Tse",
+        "eligible_generation_omissions": 85,
+        "classification": "generation_omission",
+        "passed": false
+      },
+      {
+        "document_id": "e56c1b40a3bc139cc9ac53e347673ab061bdc26da15a4333e928571aeff4eb32",
+        "minimum_model_unique_identities_after_clipped_exclusion": 71,
+        "minimum_uniquely_aligned_identities": 69,
+        "model_items": 72,
+        "model_unique_identities_after_excluding_cy_ruffeno": 71,
+        "aligned_unique_identities": 69,
+        "cy_ruffeno_aligned_items": 0,
+        "private_withheld_items": 3,
+        "private_withheld_reason_counts": {
+          "ambiguous_exact_span": 2,
+          "clipped_segment_boundary": 1
+        },
+        "passed": true
+      },
+      {
+        "document_id": "a8885c81fde803fea71cd73c15f3e9058a77283fd1bab96cec6687f9b93cb70d",
+        "minimum_model_items": 180,
+        "minimum_aligned_items": 171,
+        "model_items": 180,
+        "aligned_items": 171,
+        "context_extension_projection_count": 171,
+        "private_withheld_context_mismatch_items": 9,
+        "passed": true
+      },
+      {
+        "document_id": "36a087fabff4e9fe643765073f0d1fa1e84d4ad25b47c69cb865d67adc97820a",
+        "required_record_evidence": "Texas State Rep. Jolanda \"Jo\" Jones",
+        "matching_aligned_records": 1,
+        "alignment_method": "unique_exact_inference_display_substring_v1",
+        "display_anchor_adjustments": 1,
+        "passed": true
+      },
+      {
+        "document_id": "03fcaab04e96c57dd9347de4b63edd681e2812e765dd3c8bce74fb58b0cae52a",
+        "minimum_aligned_items": 11,
+        "aligned_items": 11,
+        "source_and_aligned_identity": "Vets for Trump Organization",
+        "manifest_label_interpretation": "Vets for Trump is treated as substring shorthand for the exact source identity, not as a required truncation of that identity.",
+        "passed": true
+      }
+    ],
+    "complete_parent_gates": [
+      {
+        "parent_document_id": "1aad8662c07cd4f1f6343f78fe04b5f460235f17ecf57e8e5faa43024819fde8",
+        "candidate": "Greg Tanaka",
+        "minimum_unique_non_candidate_identities": 390,
+        "observed_unique_non_candidate_identities": 391,
+        "passed": true,
+        "note": "The complete parent passes even though segment 2e9a0cd8 independently fails its continuation recall gate."
+      },
+      {
+        "parent_document_id": "df9abdfcb024b2e62dc57ceb585f6b233d23764a36704930b1e18de376d3eeb5",
+        "candidate": "Wendell Champion",
+        "minimum_unique_valid_identities": 222,
+        "reference_unique_valid_identities": 230,
+        "observed_unique_valid_identities": 223,
+        "clipped_partials_excluded": true,
+        "passed": true
+      }
+    ],
+    "issue_parent_gate": {
+      "parent_document_id": "71c197e1b81d48216f8c2cb757f1da7e2b769819dd64e0e7865645d96b62bec8",
+      "minimum_quote_bearing_resolved_issue_records": 2,
+      "quote_bearing_resolved_issue_records": 1,
+      "minimum_fully_accounted_private_conflict_groups": 1,
+      "fully_accounted_private_conflict_groups": 4,
+      "required_conflict_statement_kinds": [
+        "proposal",
+        "oppose"
+      ],
+      "observed_conflict_kind_sets": {
+        "proposal_and_support": 3,
+        "proposal_only": 1
+      },
+      "conflict_with_required_kind_pair_present": false,
+      "passed": false,
+      "diagnosis": "The parent resolves only one quote-bearing issue record. Its four private conflict groups are fully accounted, but none contains an oppose variant, so the predeclared conflict-kind gate also fails."
+    },
+    "k_street_replica_controls": {
+      "complete_parent_replicas": 5,
+      "rows": 15,
+      "normally_stopped_rows": 15,
+      "strictly_parsed_rows": 15,
+      "schema_valid_rows": 15,
+      "fixed_structural_whitespace_valid_rows": 15,
+      "array_cap_valid_rows": 15,
+      "repetition_guard_valid_rows": 15,
+      "repetition_groups": 0,
+      "parents_with_quote_bearing_k_street_records": 5,
+      "passed": true
+    },
+    "verdict": "The suffix-p changes repair the clipped-boundary, context-projection, quotation-display, and complete-parent failures tested here. The preflight is still a NO-GO because 2e9a0cd8 fails continuation recall and 71c197e1 fails both issue-parent content requirements."
+  },
+  "submission_state": {
+    "suffix_p_7838_window_stress_export_exists_locally": true,
+    "suffix_p_stress_submitted_to_slurm": false,
+    "suffix_p_stress_hive_job_id": null,
+    "full_35213_window_rerun_submitted": false,
+    "dataverse_core_touched": false,
+    "extension_published": false
+  },
+  "decision": "Preserve the suffix-p input, remote output, metadata, log, and this audit as immutable failed tuning evidence. Do not submit the suffix-p stress pilot or the 35213-window production rerun. Repair the importer manifest compatibility bug separately, but do not treat that technical repair as resolving either content failure. A new contract and fresh preflight must pass all deterministic and content gates before later inference can proceed."
+}

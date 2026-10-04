@@ -1,0 +1,79 @@
+{
+  "artifact_type": "immutable_infrastructure_failure_audit",
+  "job_id": "21566150",
+  "array_task_records": [
+    {
+      "job_id_raw": "21566150",
+      "state": "FAILED",
+      "exit_code": "1:0",
+      "elapsed": "00:01:47",
+      "start": "2026-08-27T14:38:36",
+      "end": "2026-08-27T14:40:23",
+      "node": "hive-dc-7-5-58",
+      "batch_max_rss": "27774216K"
+    },
+    {
+      "job_id_raw": "21566202",
+      "state": "FAILED",
+      "exit_code": "1:0",
+      "elapsed": "00:01:47",
+      "start": "2026-08-27T14:38:36",
+      "end": "2026-08-27T14:40:23",
+      "node": "hive-dc-7-5-58",
+      "batch_max_rss": "33830108K"
+    }
+  ],
+  "slurm_request": {
+    "partition": "high",
+    "cpus": 2,
+    "memory": "96G",
+    "gpus": 1
+  },
+  "failure_class": "infrastructure_home_quota_exhaustion",
+  "failure_stage": "vllm_torch_compile_cache_write_before_inference",
+  "home_quota_observed": "21G/21G (100%)",
+  "inference_started": false,
+  "output_artifacts_created": 0,
+  "diagnosis": {
+    "both_logs_reported_compile_cache_under_home": true,
+    "reported_cache_prefix": "/home/hhilbig/.cache/vllm/torch_compile_cache",
+    "both_logs_ended_during_compile_graph_cache_creation": true,
+    "model_weights_loaded": true,
+    "input_or_model_content_failure_observed": false
+  },
+  "input_artifact": {
+    "path": "build/hive_candidate_extraction/v2_1_endorsement_40_parent_stage_b_preflight_20260827a",
+    "manifest_sha256": "88c99e5b80ece645271ec8577de8e9680571812038c6097cef05f4022df097c5",
+    "contract_sha256": "f1672447cd5f938eefbdfc173a24e6bc93565c460830867fdd494be1f6fbad31",
+    "selection_sha256": "c552985e9b17fb79ebeff6b1dfe54caced67355b707415c3abddb53f39a48af2",
+    "chunk_sha256": [
+      "c916cac5cc9c913692559af1ece8f99bb9bbb2c78acbf962da065b32d4ecd6d2",
+      "7556d56c2bbdabdb2f816484d751d6d755d62784244c9405f16decff8b8e24e5"
+    ],
+    "unchanged_by_infrastructure_fix": true
+  },
+  "downloaded_logs": [
+    {
+      "path": "build/hive_candidate_extraction/v2_1_endorsement_40_parent_stage_b_failed_21566150/endorsement-line-ledger_21566150_0.log",
+      "bytes": 14779,
+      "sha256": "f8d2283a6cdf5558a2c6f523b4ab4ed144f0dfc2643a7bcc1943fe9d943245ec"
+    },
+    {
+      "path": "build/hive_candidate_extraction/v2_1_endorsement_40_parent_stage_b_failed_21566150/endorsement-line-ledger_21566150_1.log",
+      "bytes": 14556,
+      "sha256": "6abf86c5625d9ed4af9cc79986256678b798da20ad2e3f2f5606c14ea0e1dab1"
+    }
+  ],
+  "remedy_scope": {
+    "sbatch_only": true,
+    "vllm_cache_root": "$SCRATCH_ROOT/vllm-cache",
+    "torchinductor_cache_dir": "$SCRATCH_ROOT/torchinductor-cache",
+    "job_local_prefix_check": true,
+    "post_fix_sbatch_sha256": "9b32a74e93129450ec5f8a1039c126db6a9356ac10b51f09e644b1c041e26a76"
+  },
+  "authorization": {
+    "hive_resubmission_authorized": false,
+    "remote_deletion_authorized": false,
+    "stage_b_or_full_release_authorized": false
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "chars_per_token_at_maximum": 3.47,
+  "context_safety_margin_tokens": 256,
+  "development_window_would_abort_the_job": true,
+  "fits": true,
+  "host": "hive login node, no GPU, no model weights",
+  "max_model_len": 49152,
+  "max_output_tokens": 2048,
+  "max_prompt_tokens": 34248,
+  "measured_on": "2026-09-15",
+  "median_prompt_tokens": 18557,
+  "model": "Qwen/Qwen3.6-27B-FP8 at e89b16ebf1988b3d6befa7de50abc2d76f26eb09",
+  "over_budget_at_development_window_32768": 106,
+  "over_budget_batch_ids": [],
+  "over_budget_count": 0,
+  "prompt_budget_tokens": 46848,
+  "prompt_selection": "the 1200 largest of 19142 production Stage-A prompts by character count",
+  "prompts_checked": 1200,
+  "selection_is_sufficient": "the smallest checked prompt is 14831 tokens, far below the budget, so no unchecked prompt can exceed it",
+  "stage": "line_decision",
+  "version": "candidate_endorsement_round4_prompt_token_preflight_v1"
+}

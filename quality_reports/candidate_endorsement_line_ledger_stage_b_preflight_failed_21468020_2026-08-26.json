@@ -1,0 +1,250 @@
+{
+  "artifact_version": "candidate_endorsement_line_ledger_stage_b_failed_audit_v2",
+  "audited_at": "2026-08-26T09:59:49Z",
+  "evaluation": {
+    "content_diagnostic_gate_decision": "NO_GO",
+    "content_diagnostic_note": "The diagnostic substitutes an empty alignment report for each of the three authenticated invalid rows so all content gates can be measured. It is not a release report and cannot override the strict technical failure.",
+    "content_diagnostic_passed_checks": 17,
+    "content_diagnostic_failed_checks": 11,
+    "full_pilot_evaluator_status": "strict_fail_closed_no_report_written",
+    "full_pilot_evaluator_stop": "ValueError: run chunk fails typed restart replay: chunk_00000.out.jsonl.gz",
+    "official_report_absent": true,
+    "overall_gate_decision": "NO_GO",
+    "technical_gate_decision": "NO_GO"
+  },
+  "job": {
+    "elapsed": "00:05:21",
+    "end": "2026-08-26T02:50:39",
+    "exit_code": "2:0",
+    "host": "hive-dc-7-5-58",
+    "job_id": "21468020",
+    "partition": "high",
+    "slurm_state": "FAILED",
+    "start": "2026-08-26T02:45:18"
+  },
+  "lineage": {
+    "contract_sha256": "401bdbc23447231ead2b42cbe1c05cc11723e3a2b36404a2b6e87c6101c4ede9",
+    "generation_config_sha256": "d0db3f97e2cd257328224b4dbed02bbbfde920f1163d35144a4c52408797e622",
+    "json_schema_catalog_sha256": "c51c531c9d0440329a5b9a667368b1be0b8c0d13a0b0928268092c1405d55cdf",
+    "model_id": "Qwen/Qwen3.6-27B-FP8",
+    "model_revision": "e89b16ebf1988b3d6befa7de50abc2d76f26eb09",
+    "runtime_lock_sha256": "4f46101fa493e38b312af034b8d740c612bd0001bab4cb0f624f4a9e1c49f5b3",
+    "source_corpus_sha256": "c53d36b24b293ac5d47706aa67731f1c107d6a679cb948c9ad71a70b5c8ce7c3",
+    "stage_b_three_pass_provenance_spec_sha256": "5dfe648b16f5735da5436aec8d47f84d119aefc2bee328b73a5a95681d87ad69"
+  },
+  "input_artifacts": {
+    "export_dir": "build/hive_candidate_extraction/v2_1_endorsement_line_ledger_stage_b_preflight_20260826d",
+    "manifest": {
+      "bytes": 55951,
+      "payload_sha256": "8f074ba032e123065d05d6b6f855f57bc53284d878e5de14f64967f7cb557825",
+      "sha256": "28b84ee8c8ad78d11737299959827c901a21cd6dfd9e65249b5d45cf9cc4ddee"
+    },
+    "selection": {
+      "bytes": 3781,
+      "rows": 8,
+      "sha256": "ca780d43e4dd77a075348683b71793599bd4a54d37bd83c0f8f9ad7ef7bd659b"
+    },
+    "batch_inventory": [
+      {
+        "file": "chunk_00000.jsonl.gz",
+        "bytes": 735027,
+        "records": 60,
+        "sha256": "6bd7eaf760a0115cbf9dd7c7a9562c4aaba49fc1252e908e0b9995c65009fe4d"
+      },
+      {
+        "file": "chunk_00001.jsonl.gz",
+        "bytes": 617155,
+        "records": 60,
+        "sha256": "0a93492be408b910675035d1bcfa10852ef2e1b30c89dc1113653939bb9e224b"
+      },
+      {
+        "file": "chunk_00002.jsonl.gz",
+        "bytes": 170998,
+        "records": 32,
+        "sha256": "7013c0dbe2f2b97d83c2c46a5584915337a50f154d6d6016a0adfdf6ad63af9e"
+      }
+    ],
+    "ordered_batch_ids_sha256": "5569019ddcf9d744568344cb595e4f66aee625af0cc502e044e40f6ac1670055",
+    "parent_count": 8,
+    "target_count": 1194,
+    "total_batches": 152
+  },
+  "output_artifacts": {
+    "downloaded_dir": "build/hive_candidate_extraction/v2_1_endorsement_line_ledger_stage_b_preflight_hive_output_20260826d_21468020",
+    "files": [
+      {
+        "file": "chunk_00000.out.jsonl.gz",
+        "bytes": 51672,
+        "records": 60,
+        "sha256": "ff2ac453f97f2b14dab189e791d93cfcb4827a743ffc7ded72eb08c5d67dd214"
+      },
+      {
+        "file": "chunk_00001.out.jsonl.gz",
+        "bytes": 72288,
+        "records": 60,
+        "sha256": "10167f9f80810d07c854a9f053b1d3d047f22b9280b6e817063c028a1c2a47e9"
+      },
+      {
+        "file": "chunk_00002.out.jsonl.gz",
+        "bytes": 32573,
+        "records": 32,
+        "sha256": "47f12bb1a3915e19dfe8d61351f8345c5214ecbde1b23593a9555217ddd4a9e7"
+      },
+      {
+        "file": "run_metadata.json",
+        "bytes": 9178,
+        "sha256": "319dac8437b0435c30a576d4b0fde807be61c3b1a1111f49e96868ee0255d94d"
+      }
+    ],
+    "inventory_exact": true,
+    "local_remote_bytes_identical": true,
+    "nested_directories": 0,
+    "ordered_batch_ids_match_input": true,
+    "ordered_batch_ids_sha256": "5569019ddcf9d744568344cb595e4f66aee625af0cc502e044e40f6ac1670055",
+    "output_batch_ids_unique": 152
+  },
+  "run_log": {
+    "bytes": 38999,
+    "file": "build/hive_candidate_extraction/endorsement-line-ledger_21468020.log",
+    "lines": 190,
+    "sha256": "c18d413329035c5f9b2089a5c1bbac058f8216507b46842b7baf759b336050f6"
+  },
+  "technical_audit": {
+    "all_output_rows_exactly_rederived": true,
+    "context_margin_tokens_minimum": 12360,
+    "finish_reason_counts": {
+      "stop": 152
+    },
+    "input_truncated_counts": {
+      "false": 152
+    },
+    "metadata_accounting_reconciles": true,
+    "output_tokens_maximum": 749,
+    "output_tokens_total": 49636,
+    "parse_status_counts": {
+      "invalid_stage_output": 3,
+      "parsed": 149
+    },
+    "processed_outputs": 152,
+    "prompt_tokens_maximum": 4024,
+    "raw_output_derivation_replay_count": 152,
+    "technical_pass_outputs": 149,
+    "technical_failures": [
+      {
+        "batch_id": "38542a34f1d959f1f481b56e4788a604b0e4cb817919e8612f5bc97ce3756365",
+        "candidate_cycle_id": "H4CA16288-2024",
+        "chunk_file": "chunk_00000.out.jsonl.gz",
+        "chunk_row_1_based": 10,
+        "error": "slot_03:record_0:name_not_exact_in_anchor",
+        "global_row_1_based": 10,
+        "model_value": "Jeff Cristina",
+        "parent_document_id": "1aad8662c07cd4f1f6343f78fe04b5f460235f17ecf57e8e5faa43024819fde8",
+        "source_value": "Jeff\u00a0 Cristina, former Mayor of Campbell"
+      },
+      {
+        "batch_id": "d6dcc58f319b0af3bcb9df4ec42d4ee1778ca4416a951ca3f47968d65cdba461",
+        "candidate_cycle_id": "H8OR02161-2022",
+        "chunk_file": "chunk_00001.out.jsonl.gz",
+        "chunk_row_1_based": 11,
+        "error": "slot_07:record_0:name_not_exact_in_anchor",
+        "global_row_1_based": 71,
+        "model_value": "Elizabeth Steiner Hayward",
+        "parent_document_id": "266bd0ed39563683dc9b13237fa6606547e18cad89dbacef1c64aafae7f32b72",
+        "source_value": "State Senator, Elizabeth"
+      },
+      {
+        "batch_id": "293f5aa9fb52546bff389430ee490c4e14f0f94ff8c882dc61c94d53aee2cca7",
+        "candidate_cycle_id": "H8OR02161-2022",
+        "chunk_file": "chunk_00001.out.jsonl.gz",
+        "chunk_row_1_based": 17,
+        "errors": [
+          "slot_00:record_0:title_not_exact_in_block",
+          "slot_02:record_0:title_not_exact_in_block"
+        ],
+        "global_row_1_based": 77,
+        "model_values": [
+          "City Councilor",
+          "Former City Councilor"
+        ],
+        "parent_document_id": "266bd0ed39563683dc9b13237fa6606547e18cad89dbacef1c64aafae7f32b72",
+        "source_values": [
+          "City, Councilor",
+          "Former Madras City Councilor"
+        ]
+      }
+    ]
+  },
+  "content_census": {
+    "aligned_record_count": 222,
+    "alignment_withheld_count_in_technically_valid_rows": 950,
+    "anchor_dispositions": {
+      "records": 249,
+      "withheld_unsupported": 945
+    },
+    "anchor_withheld_share": 0.7914572864321608,
+    "carrier_alignment_failure_count": 5,
+    "carrier_alignment_failure_reasons": {
+      "ambiguous_exact_span": 3,
+      "missing_exact_span": 2
+    },
+    "compound_anchor_dispositions": {
+      "records": 1,
+      "withheld_unsupported": 5
+    },
+    "model_record_count": 251,
+    "ordinary_anchor_dispositions": {
+      "records": 248,
+      "withheld_unsupported": 940
+    },
+    "target_anchor_count": 1194
+  },
+  "content_gate_diagnostic": {
+    "method": "Authenticated rows and exact A1+A2+A3 lineage were replayed in memory. The three invalid Stage-B rows were assigned empty alignment reports with their 24 model records counted as withheld. No report file was written.",
+    "checks": [
+      {"gate": "stage_a2_exception_coverage", "passed": true, "observed": {"expected": 206, "adjudicated": 206, "coverage_complete": true}},
+      {"gate": "stage_a2_zero_unresolved_or_withheld", "passed": true, "observed": {"unresolved": 0, "withheld": 0}},
+      {"gate": "stage_a2_continuation_ownership_complete", "passed": true, "observed": {"unowned": 0, "duplicate_owner": 0, "ownership_conflict": 0}},
+      {"gate": "stage_a2_final_validation_passed", "passed": true, "observed": true},
+      {"gate": "stage_a2_candidate_controls_excluded", "passed": true},
+      {"gate": "all_stage_a_lines_decided_without_unclear", "passed": true, "observed": 0, "expected": 0},
+      {"gate": "all_stage_b_public_coverage_complete", "passed": false, "observed": {"coverage": false, "withheld": 974}, "expected": {"coverage": true, "withheld": 0}},
+      {"gate": "tanaka_full_parent_unique", "passed": false, "observed": 49, "expected": ">=390"},
+      {"gate": "tanaka_model_segment_aa0b99eb1331", "passed": false, "observed": 0, "expected": ">=224"},
+      {"gate": "tanaka_model_segment_2e9a0cd8e0bd", "passed": false, "observed": 0, "expected": ">=86"},
+      {"gate": "tanaka_aa0_uniquely_aligned", "passed": false, "observed": 0, "expected": ">=224"},
+      {"gate": "tanaka_2e9_uniquely_aligned", "passed": false, "observed": 0, "expected": ">=84"},
+      {"gate": "tanaka_exclusions", "passed": true, "observed": [], "expected": []},
+      {"gate": "tanaka_interface_exclusion", "passed": true},
+      {"gate": "champion_model_unique", "passed": false, "observed": 7, "expected": ">=230"},
+      {"gate": "champion_aligned_unique", "passed": false, "observed": 7, "expected": ">=222"},
+      {"gate": "champion_clipped_exclusion", "passed": true, "observed": false, "expected": false},
+      {"gate": "champion_interface_exclusion", "passed": true},
+      {"gate": "quote_bearing_exact_record", "passed": false, "observed": 0, "expected": ">=1"},
+      {"gate": "compound_names_same_anchor", "passed": true, "observed": ["Carrie Douglass", "Melissa Barnes-Dholakia", "Shimiko Montgomery"]},
+      {"gate": "long_testimonial_continuations", "passed": true},
+      {"gate": "long_testimonial_speakers_distinct", "passed": false, "observed": {"resolved_anchor_count": 8, "unique_name_sets": 8}, "expected": "all resolved adjacent anchors have distinct nonempty name sets"},
+      {"gate": "long_json_stage_a_nonrecord", "passed": true, "observed": {"role": "nonrecord_content", "stage_b": null}},
+      {"gate": "magaziner_url_context", "passed": true, "observed": {"records": 54, "candidate_self": false}},
+      {"gate": "explicit_testimonial_count", "passed": true, "observed": 50, "expected": ">=11"},
+      {"gate": "explicit_vets_record", "passed": false, "observed": 0, "expected": ">=1"},
+      {"gate": "issue_quote_resolved", "passed": true, "observed": 2, "expected": ">=2"},
+      {"gate": "issue_private_conflict_accounted", "passed": true, "observed": 1, "expected": ">=1"}
+    ],
+    "failed_checks": 11,
+    "gate_decision": "NO_GO",
+    "passed_checks": 17
+  },
+  "corrected_71c_issue_control": {
+    "bundle_manifest_sha256": "5f92e2467cfc6ab4ccbf5d21318bdc480790cb55e86c8c44985bccb77d823d24",
+    "derived_without_self_reported_counts": true,
+    "fully_accounted_private_proposal_oppose_conflict_groups": 1,
+    "gate_decision": "GO",
+    "parent_document_id": "71c197e1b81d48216f8c2cb757f1da7e2b769819dd64e0e7865645d96b62bec8",
+    "quote_bearing_resolved_issue_records": 2,
+    "segments_sha256": "38fb639935389b573ebb10cfbf63fcd2224f413b5c964da978070363efdda17b"
+  },
+  "scope_control": {
+    "full_stage_b_submitted": false,
+    "stress_stage_b_submitted": false
+  }
+}

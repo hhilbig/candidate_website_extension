@@ -1,0 +1,417 @@
+{
+  "audit_type": "candidate_extraction_v2_1_suffix_o_quote_cap_preflight",
+  "date": "2026-08-25",
+  "status": "failed_frozen_tuning_audit",
+  "release_eligible": false,
+  "hive_job_id": "21426930",
+  "gate_decision": "NO-GO",
+  "gate_failure_reason": "All 44 rows passed the deterministic technical gate, but the content gate failed. Endorsement continuation 2e9a0cd8 returned only one of 86 eligible non-candidate identities; a8885c81 generated 180 records with the wrong exact context and therefore aligned none; e56c1b40 publicly aligned the clipped boundary text cy Ruffeno; and 36a087fa copied literal backslash-u0022 text instead of the source quotation marks. The complete Wendell Champion parent consequently had only 69 valid aligned identities against a minimum of 222. The issue parent 71c197e1 also had only two quote-bearing resolved records against a minimum of three. The 7838-window suffix-o stress pilot was not submitted.",
+  "slurm": {
+    "state": "COMPLETED",
+    "exit_code": "0:0",
+    "elapsed": "00:10:51",
+    "submit": "2026-08-25T05:47:51-07:00",
+    "start": "2026-08-25T05:48:01-07:00",
+    "end": "2026-08-25T05:58:52-07:00",
+    "node": "hive-dc-7-5-58",
+    "partition": "high",
+    "gpu_type": "6000_blackwell",
+    "gpus": 1,
+    "max_memory_used": "13.79G",
+    "post_write_force_kill_warning_observed": false
+  },
+  "source": {
+    "local_export_directory": "build/hive_candidate_extraction/v2_1_quote_cap_preflight_export_20260824o",
+    "source_corpus_sha256": "c53d36b24b293ac5d47706aa67731f1c107d6a679cb948c9ad71a70b5c8ce7c3",
+    "authoritative_full_source_export_manifest_sha256": "973050bc6f159bee3385788588bf0c807804c73227f0c9fbabf43809cb82c179",
+    "preflight_manifest": {
+      "path": "manifest.json",
+      "sha256": "531b74f70ddc0bccc2660c2db2449405c21d8e15b3be630332118c1c6282fafa",
+      "bytes": 15395
+    },
+    "preflight_selection": {
+      "path": "selection.csv",
+      "sha256": "039dbb565f727bcec42969fbb0c9d6b44e3dd4fcbc39572e30addaaa3afdbfe4",
+      "bytes": 10787
+    },
+    "input_chunk": {
+      "path": "chunks/chunk_00000.jsonl.gz",
+      "compressed_sha256": "d6e3d5fecdb951e4a6b1c720652196f977df4c13b991b8fd84bbce0155ce6189",
+      "compressed_bytes": 69339,
+      "decompressed_sha256": "240d80f24aa7e2eb12da897ec0dbc601ceeec0d5bec9166fb2bf7d2d0b5fad3a",
+      "decompressed_bytes": 268931,
+      "rows": 44
+    },
+    "rows": 44,
+    "unique_document_ids": 44,
+    "parent_documents": 18,
+    "parent_documents_by_route": {
+      "biography": 2,
+      "endorsements": 4,
+      "issues": 12
+    },
+    "rows_by_route": {
+      "biography": 4,
+      "endorsements": 15,
+      "issues": 25
+    },
+    "all_selected_parents_complete": true,
+    "source_identity_mismatches": 0,
+    "segment_text_hash_mismatches": 0
+  },
+  "contract": {
+    "schema_version": "2.1",
+    "model_id": "Qwen/Qwen3.6-27B-FP8",
+    "model_revision": "e89b16ebf1988b3d6befa7de50abc2d76f26eb09",
+    "runtime_lock_sha256": "4f46101fa493e38b312af034b8d740c612bd0001bab4cb0f624f4a9e1c49f5b3",
+    "extraction_contract_sha256": "675dae0474ee7f77a4125e02d7847c759706afe9859d17fbfd1dc6819091a9f7",
+    "generation_config_sha256": "15ed8ee1f0ffe0c0605ba353efffea08fb2e883cd9468915c5d3ae7ffc1d00d6",
+    "json_schema_sha256": {
+      "biography": "ee197f260e3e2242d65ac05644d6cba72c2c2e3114fe127c579be6070ab3ffd7",
+      "endorsements": "267901032a0bebbca582446d0df81ea508493bd970c51c061a4cd31ebf6ec3c6",
+      "issues": "c5b9922e9447cc5c573bd3eeefa432710a0657e37c484c46e30dc0e83a41c719"
+    },
+    "prompt_sha256": {
+      "biography": "d32cf8c87062d607cc1ee09e9485b90f2cc1a581559944583dc4839efa177960",
+      "endorsements": "19b0524dd12b68bcf9a5556ca0729295bfc80c6da588f6e53b6d94ab32042378",
+      "issues": "e7ad149cbbdfa5657b32235c3421adc4f5ca89fa564f7075e6a26e26f00fcb19"
+    },
+    "max_model_len": 32768,
+    "max_output_tokens": 24576,
+    "seed": 20260824,
+    "temperature": 0,
+    "thinking_enabled": false,
+    "structured_decoding_backend": "xgrammar",
+    "structured_decoding_disable_any_whitespace": true,
+    "guided_schema_max_items": {
+      "biography": 96,
+      "endorsements": null,
+      "issues": 128
+    },
+    "post_generation_route_array_item_caps": {
+      "biography": 96,
+      "endorsements": 256,
+      "issues": 128
+    },
+    "array_item_cap_spec_sha256": "d5c09cd2a12821248ad579aac6980866632a6fd96df17efb598c65080d5ad150",
+    "model_item_repetition_spec_sha256": "c3942d9e703af8a83136c4c86eb20f4ed01ddb9627c30a457dac6b2fdcf10d3b",
+    "model_item_repetition_threshold": 3,
+    "endorsement_context_rule": "Exact parent_document context remains controlling for eligible records in the current continuation segment and must be copied unchanged."
+  },
+  "preserved_output": {
+    "local_directory": "build/hive_candidate_extraction/v2_1_quote_cap_preflight_hive_output_20260824o",
+    "output_chunk": {
+      "path": "chunk_00000.out.jsonl.gz",
+      "compressed_sha256": "97414d6787c76d84820906ef1b5e83d536b0f819e6b924b7f3eef45fd6a427a0",
+      "compressed_bytes": 319067,
+      "decompressed_sha256": "251d0cab10f20663d191815e49b95d29af645f65249a8554469e541f88c6b057",
+      "decompressed_bytes": 3075956
+    },
+    "run_metadata": {
+      "path": "run_metadata.json",
+      "sha256": "19a3f7f4018e3bfc41a49dca2361a49acfbb23c0367bcef993ecaaa0aec4b8f0",
+      "bytes": 7225
+    },
+    "slurm_log": {
+      "path": "candidate-extract-preflight-o_21426930.log",
+      "sha256": "ddea1a0de421be1592f44e57645a9041741d7be8ad4b4071660be0722e92923d",
+      "bytes": 33723
+    },
+    "chunk_files": 1,
+    "run_metadata_files": 1,
+    "temporary_files": 0
+  },
+  "causal_audit_bundle": {
+    "local_directory": "build/hive_candidate_extraction/v2_1_quote_cap_preflight_bundle_20260824o",
+    "bundle_manifest": {
+      "path": "bundle_manifest.json",
+      "sha256": "5f92e2467cfc6ab4ccbf5d21318bdc480790cb55e86c8c44985bccb77d823d24",
+      "bytes": 14332
+    },
+    "segments_enriched": {
+      "path": "segments_enriched.jsonl.gz",
+      "sha256": "38fb639935389b573ebb10cfbf63fcd2224f413b5c964da978070363efdda17b",
+      "bytes": 1001319,
+      "rows": 44
+    },
+    "human_validation": {
+      "path": "human_validation.json",
+      "sha256": "214e2e809796f3d6785fed9fc1423d9ae2b818e75873545552199ff18ba07a9e",
+      "bytes": 457,
+      "status": "pending",
+      "independent_human_only": false
+    }
+  },
+  "technical_gate": {
+    "technical_segment_gate_passed": true,
+    "finish_reason_counts": {
+      "stop": 44
+    },
+    "parse_status_counts": {
+      "parsed": 44
+    },
+    "strict_json_parsed_outputs": 44,
+    "model_schema_valid_rows": 44,
+    "public_schema_valid_rows": 44,
+    "documents_exactly_supported": 44,
+    "model_semantic_valid_rows": 43,
+    "model_semantic_invalid_rows": 1,
+    "alignment_status_counts": {
+      "complete": 33,
+      "partial_withheld": 10,
+      "all_withheld": 1
+    },
+    "model_items_strictly_parsed": 1484,
+    "aligned_public_items": 1289,
+    "private_withheld_items": 195,
+    "item_accounting_identity": "1484 = 1289 aligned + 195 withheld",
+    "private_withheld_reason_counts": {
+      "endorsement_context_mismatch": 180,
+      "missing_exact_span": 7,
+      "ambiguous_exact_span": 5,
+      "invalid_item_semantics": 3
+    },
+    "public_validation_status_counts": {
+      "observed_supported": 43,
+      "observed_zero": 1
+    },
+    "observed_zero_document_id": "a8885c81fde803fea71cd73c15f3e9058a77283fd1bab96cec6687f9b93cb70d",
+    "resolved_records": 1154,
+    "withheld_overlap_conflict_groups": 40,
+    "output_tokens_total": 116903,
+    "output_tokens_max": 17300,
+    "output_token_cap_hits": 0,
+    "input_truncated_rows": 0,
+    "array_item_cap_reached_rows": 0,
+    "model_item_repetition_failure_rows": 0,
+    "max_exact_model_item_multiplicity": 1,
+    "raw_structural_whitespace_checked_outputs": 44,
+    "raw_structural_whitespace_valid_outputs": 44,
+    "raw_structural_whitespace_violation_count": 0,
+    "json_control_canonicalized_characters": 0,
+    "verdict": "The stop, strict parse, schema, hash, fixed-separator whitespace, array-cap, repetition, item-accounting, exact-alignment, and public-schema checks all passed. This deterministic gate does not establish content recall or compliance with the predeclared semantic controls."
+  },
+  "causal_content_audit": {
+    "method": "The audit compared each target segment's source text, parsed model output, aligned public records, withheld records, exact-context fields, and complete-parent resolved records. Failures are classified by the first model or alignment step that prevents a source-supported public record.",
+    "endorsement_rows": [
+      {
+        "document_id": "aa0b99eb1331464dce28db32d73a6f53bddbf7e4aa10f46f4c17c48b12720433",
+        "parent_document_id": "1aad8662c07cd4f1f6343f78fe04b5f460235f17ecf57e8e5faa43024819fde8",
+        "segment_index": 3,
+        "segment_count": 5,
+        "source_nonempty_lines": 225,
+        "source_candidate_line_one_based": 211,
+        "candidate_name_excluded": "Greg Tanaka",
+        "eligible_unique_non_candidate_identities": 224,
+        "model_unique_identities": 224,
+        "aligned_unique_identities": 224,
+        "withheld_items": 0,
+        "model_context": "Endorsements",
+        "required_context": "Endorsements",
+        "classification": "pass",
+        "diagnosis": "The model omitted only the candidate and recovered all 224 eligible source identities. There is no generation, exact-alignment, or context failure in this segment."
+      },
+      {
+        "document_id": "2e9a0cd8e0bd57af5f8b1b8cd26e06fa8d647d845d8ddc18a8b4199a4e666e73",
+        "parent_document_id": "1aad8662c07cd4f1f6343f78fe04b5f460235f17ecf57e8e5faa43024819fde8",
+        "segment_index": 4,
+        "segment_count": 5,
+        "source_nonempty_lines": 103,
+        "source_line_audit": {
+          "clipped_line_one_based": 1,
+          "clipped_text_excluded": "ena Song",
+          "identity_line_range_one_based": "2-90",
+          "candidate_line_one_based": 10,
+          "candidate_name_excluded": "Greg Tanaka",
+          "page_interface_and_footer_line_range_one_based": "91-103",
+          "duplicate_identity_names": [
+            "Ed Wu",
+            "Tom Zhang"
+          ],
+          "unique_identity_strings_in_lines_2_through_90_including_candidate": 87,
+          "eligible_unique_non_candidate_identities": 86
+        },
+        "model_unique_identities": 1,
+        "model_identity": "Stephen Tse",
+        "aligned_unique_identities": 1,
+        "withheld_items": 0,
+        "eligible_generation_omissions": 85,
+        "model_context": "Endorsements",
+        "required_context": "Endorsements",
+        "classification": "generation_omission",
+        "corrected_gate": {
+          "minimum_non_candidate_unique_model_identities": 86,
+          "minimum_uniquely_aligned_identities": 84,
+          "exclude_candidate": "Greg Tanaka",
+          "exclude_clipped_text": "ena Song",
+          "exclude_page_interface_and_footer_text": true,
+          "model_gate_passed": false,
+          "alignment_gate_passed": false
+        },
+        "diagnosis": "The sole generated item aligns exactly and uses the exact parent context. The failure therefore precedes alignment: the model omitted 85 eligible identities from a continuation segment."
+      },
+      {
+        "document_id": "e56c1b40a3bc139cc9ac53e347673ab061bdc26da15a4333e928571aeff4eb32",
+        "parent_document_id": "df9abdfcb024b2e62dc57ceb585f6b233d23764a36704930b1e18de376d3eeb5",
+        "segment_index": 1,
+        "segment_count": 2,
+        "source_nonempty_lines": 89,
+        "source_line_audit": {
+          "clipped_line_one_based": 1,
+          "clipped_text_excluded": "cy Ruffeno",
+          "identity_line_range_one_based": "2-74",
+          "page_interface_and_footer_line_range_one_based": "75-89",
+          "eligible_unique_identities": 71,
+          "duplicate_identity_names": [
+            "Desiree Urrutia",
+            "Charles Thornburg"
+          ]
+        },
+        "model_unique_identities": 72,
+        "aligned_items": 70,
+        "valid_aligned_unique_identities": 69,
+        "withheld_items": 2,
+        "withheld_reason_counts": {
+          "ambiguous_exact_span": 2
+        },
+        "ambiguous_identity_names": [
+          "Desiree Urrutia",
+          "Charles Thornburg"
+        ],
+        "clipped_text_generated_and_aligned": "cy Ruffeno",
+        "model_context": "Endorsements:",
+        "required_context": "Endorsements:",
+        "classification": "semantic_source_boundary_failure_with_expected_exact_alignment_ambiguity",
+        "gate_result": "The minimum 71 model and 69 uniquely aligned eligible identity counts pass after the clipped item is excluded, but the exact exclusion of cy Ruffeno fails.",
+        "diagnosis": "The model generated all 71 eligible unique identities. Two duplicated names were correctly withheld as exact-span ambiguities. The content failure is the additional clipped boundary record cy Ruffeno, which was generated and publicly aligned."
+      },
+      {
+        "document_id": "a8885c81fde803fea71cd73c15f3e9058a77283fd1bab96cec6687f9b93cb70d",
+        "parent_document_id": "df9abdfcb024b2e62dc57ceb585f6b233d23764a36704930b1e18de376d3eeb5",
+        "segment_index": 0,
+        "segment_count": 2,
+        "source_heading_line_one_based": 16,
+        "source_heading": "Endorsements:",
+        "source_subheading_line_one_based": 17,
+        "source_subheading": "Individuals who endorse Wendell Champion for Congress:",
+        "model_unique_identities": 180,
+        "aligned_items": 0,
+        "withheld_items": 180,
+        "withheld_reason_counts": {
+          "endorsement_context_mismatch": 180
+        },
+        "model_context_for_all_items": "Endorsements:\nIndividuals who endorse Wendell Champion for Congress:",
+        "required_exact_context": "Endorsements:",
+        "classification": "semantic_context_failure",
+        "counterfactual_record_anchor_audit": {
+          "unique_exact_anchors": 171,
+          "ambiguous_exact_anchors": 6,
+          "missing_exact_anchors": 3,
+          "ambiguous_names": [
+            "Christine Crowder",
+            "Cheryl Linn",
+            "Johnny Nash",
+            "Kara Neary",
+            "Tonya Schram",
+            "Desiree Urrutia"
+          ],
+          "missing_exact_names_after_nonbreaking_space_normalization": [
+            "Daniel Colby",
+            "Gene Medlock",
+            "Renee Jackson"
+          ]
+        },
+        "diagnosis": "The model generated all 180 benchmark identities but changed the supplied exact context on every record. The aligner correctly withheld all 180. If context had been copied unchanged, 171 record anchors were uniquely exact, six were ambiguous duplicates, and three had model-side nonbreaking-space normalization errors."
+      },
+      {
+        "document_id": "36a087fabff4e9fe643765073f0d1fa1e84d4ad25b47c69cb865d67adc97820a",
+        "parent_document_id": "5092019feb6f9fae9d18671bb9e7daec3a4ac4f372ccbdd92cca0054aae53054",
+        "segment_index": 0,
+        "segment_count": 1,
+        "source_record_line_one_based": 21,
+        "required_record_evidence": "Texas State Rep. Jolanda \"Jo\" Jones",
+        "model_items": 22,
+        "aligned_items": 21,
+        "withheld_items": 1,
+        "withheld_reason_counts": {
+          "missing_exact_span": 1
+        },
+        "failed_endorser_name": "Jolanda Jones",
+        "model_record_evidence": "Texas State Rep. Jolanda \\u0022Jo\\u0022 Jones",
+        "model_context": "Endorsements",
+        "required_context": "Endorsements",
+        "classification": "generation_exact_copy_failure",
+        "diagnosis": "After strict JSON parsing, the record evidence still contains literal backslash-u0022 text rather than U+0022 quotation marks. The source therefore has zero exact matches, and the aligner correctly withheld the record."
+      }
+    ],
+    "complete_parent_gates": [
+      {
+        "parent_document_id": "1aad8662c07cd4f1f6343f78fe04b5f460235f17ecf57e8e5faa43024819fde8",
+        "candidate": "Greg Tanaka",
+        "minimum_unique_non_candidate_identities": 390,
+        "observed_unique_non_candidate_identities": 391,
+        "passed": true,
+        "note": "The complete-parent aggregate passes even though segment 2e9a0cd8 independently fails its continuation recall gate."
+      },
+      {
+        "parent_document_id": "df9abdfcb024b2e62dc57ceb585f6b233d23764a36704930b1e18de376d3eeb5",
+        "candidate": "Wendell Champion",
+        "reference_unique_valid_identities": 230,
+        "minimum_unique_valid_identities": 222,
+        "observed_valid_aligned_identities": 69,
+        "passed": false,
+        "note": "Segment a8885c81 contributes zero valid aligned identities because all 180 records have mismatched context; segment e56c1b40 contributes 69 after clipped text and ambiguous duplicates are excluded."
+      }
+    ],
+    "issue_resolved_record_gate": {
+      "parent_document_id": "71c197e1b81d48216f8c2cb757f1da7e2b769819dd64e0e7865645d96b62bec8",
+      "minimum_quote_bearing_resolved_issue_records": 3,
+      "quote_bearing_record_variants": 4,
+      "quote_bearing_resolved_records": 2,
+      "passed": false,
+      "classification": "overlap_resolution_gate_failure",
+      "diagnosis": "Four aligned variants contain quote-bearing evidence, but two remain withheld by overlap resolution. The literal predeclared gate counts resolved records, so the result is 2 rather than 4 and fails the minimum of 3."
+    },
+    "other_controls": {
+      "03fcaab0_endorsement_control": {
+        "model_items": 11,
+        "aligned_items": 11,
+        "required_identity_present": "Vets for Trump Organization",
+        "passed": true
+      },
+      "biography_quote_control": {
+        "quote_bearing_aligned_evidence_items": 5,
+        "passed": true
+      },
+      "k_street_quote_and_repetition_controls": {
+        "rows": 5,
+        "all_below_array_cap": true,
+        "all_max_exact_item_multiplicity": 1,
+        "all_recovered_quote_bearing_evidence": true,
+        "passed": true
+      }
+    },
+    "monitor_reconciliation": [
+      {
+        "control": "2e9a0cd8 continuation recall",
+        "initial_record": "The frozen input manifest required at least 87 unique model identities and 85 uniquely aligned identities while also excluding Greg Tanaka, clipped ena Song, and interface or footer text.",
+        "corrected_record": "The source contains 86 eligible unique non-candidate identities. Ed Wu and Tom Zhang each occur twice, so both exact anchors must remain ambiguous and withheld. The corrected gate is therefore at least 86 valid non-candidate model identities and at least 84 uniquely aligned identities, excluding Greg Tanaka, clipped ena Song, and interface or footer text. The observed 1 model and 1 aligned identity still fail decisively."
+      },
+      {
+        "control": "71c197e1 quote-bearing issue resolution",
+        "initial_record": "The first monitor summary marked this control as passing by counting four quote-bearing record variants.",
+        "corrected_record": "The literal predeclared gate counts resolved records. Only two quote-bearing records resolve, below the minimum of three, so the control fails. The two unresolved variants are not relabeled as resolved."
+      }
+    ],
+    "verdict": "The stated deterministic technical gate is valid. The overall preflight pass is not valid because the corrected literal content gates fail for 2e9a0cd8, e56c1b40, a8885c81, 36a087fa, the Wendell Champion complete parent, and 71c197e1."
+  },
+  "submission_state": {
+    "suffix_o_7838_window_stress_export_exists_locally": true,
+    "suffix_o_7838_window_stress_export_directory": "build/hive_candidate_extraction/v2_1_quote_cap_stress_pilot_export_20260824o",
+    "suffix_o_stress_submitted_to_slurm": false,
+    "suffix_o_stress_hive_job_id": null,
+    "remote_sync_not_checked_in_this_local_audit": true,
+    "full_35213_window_rerun_submitted": false
+  },
+  "decision": "Preserve every suffix-o preflight input, output, metadata, log, bundle, and this audit as immutable failed tuning evidence. Do not repair, merge, or publish job 21426930 output. Do not submit the suffix-o stress pilot or the 35213-window production rerun under this failed contract. A new contract and fresh preflight must pass every deterministic and literal content gate before later inference can proceed."
+}

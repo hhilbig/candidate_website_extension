@@ -1,0 +1,104 @@
+{
+  "audit_type": "candidate_endorsement_line_ledger_stage_a2_failed_preflight",
+  "audit_version": "1.0",
+  "audit_date": "2026-08-25",
+  "immutable": true,
+  "status": "technical_no_go_and_content_no_go",
+  "purpose": "Audit every Stage-A2 adjudication row from Hive job 21444606 and preserve the reason the result cannot feed Stage B.",
+  "comparison": "The audit compares 29 authenticated model outputs covering the frozen 206-line exception ledger with the suffix-d schema and semantic gates. It also inspects every model decision, including decisions retained inside the three invalid rows.",
+  "assumptions": [
+    "The suffix-d input manifest and downloaded job directory named below are the authoritative bytes.",
+    "A Slurm exit code of 2:0 reflects the runner's deliberate fail-closed result after all model calls stopped normally; it is not truncation or a missing-output failure.",
+    "The correction may constrain the guided schema to decisions that are already permitted by each authenticated exception reason and allowed-anchor ledger. It must not encode the expected semantic answer for a named control.",
+    "No Stage B or full-corpus job was submitted from this result."
+  ],
+  "job": {
+    "job_id": "21444606",
+    "slurm_state": "FAILED",
+    "slurm_exit_code": "2:0",
+    "host": "hive-dc-7-5-58",
+    "started_at_utc": "2026-08-25T21:31:24+00:00",
+    "completed_at_utc": "2026-08-25T21:35:29+00:00",
+    "wall_time": "00:04:40"
+  },
+  "frozen_input": {
+    "directory": "build/hive_candidate_extraction/v2_1_endorsement_line_ledger_stage_a2_preflight_20260825d",
+    "manifest_sha256": "3d9cdc18cf0a41784ebc33b3a480690e2df107a35e598e9abb0f4a796d3b53a5",
+    "line_ledger_contract_sha256": "ccdff1fb683c2664dd973cfb19874924a9350aed5387ee82474b13a5a000d5db",
+    "upstream_stage_a_contract_sha256": "ac8d6ed7f06e58a7961e08f8d50f7a86907f1bada12f1c70f5e9963011a335c2",
+    "generation_config_sha256": "3ebd255d487de2c121bf81c624dcd73b047a330d9fe2d05ae846c4f3f6451e5b",
+    "batches": 29,
+    "exception_lines": 206
+  },
+  "downloaded_output": {
+    "directory": "build/hive_candidate_extraction/v2_1_endorsement_line_ledger_stage_a2_preflight_hive_output_20260825d_21444606",
+    "files": [
+      {"file": "chunk_00000.jsonl.gz", "sha256": "a05a0c017ec921b631cc67bf579c347d435cdcbe57ce53123e37febb07c135ad"},
+      {"file": "chunk_00001.jsonl.gz", "sha256": "9ff8a9ef9579f0ffc2dfee2cb881b0f2821a4ec76ef5b32abee0806135c76068"},
+      {"file": "chunk_00002.jsonl.gz", "sha256": "96e49a7cc762e4a0cbd727fb36aef8de78d99eebe7cccf7b39cbc0354f3e85ad"},
+      {"file": "chunk_00003.jsonl.gz", "sha256": "dcbb5474b16917efe2072d7e2428bd20ff45c33aeae2e1d4be6f3ea734e452fd"},
+      {"file": "run_metadata.json", "sha256": "c36f92d60143aff858b4f223b8e6fc6ec545b1b6ec148d04616f5742b3bd8a09"},
+      {"file": "endorsement-line-ledger_21444606.log", "sha256": "c00cd6f7e1497e5bf69b5c6d28a16ca79fe5709100457e0a3b5d3b414515156d"}
+    ]
+  },
+  "technical_result": {
+    "verdict": "NO_GO",
+    "ordered_outputs": 29,
+    "finish_reason_counts": {"stop": 29},
+    "parse_status_counts": {"parsed": 26, "invalid_stage_output": 3},
+    "prompt_tokens_max": 11392,
+    "output_tokens_total": 6993,
+    "output_tokens_max": 355,
+    "minimum_context_margin_tokens": 19328,
+    "truncation_count": 0,
+    "missing_output_count": 0
+  },
+  "failure_diagnosis": {
+    "verdict": "The shared guided schema admitted decisions that the reason-aware Python validator correctly rejects.",
+    "invalid_unclear_lines": 8,
+    "invalid_unclear_decision": "not_continuation",
+    "invalid_unclear_source_line_ids": [
+      "2367c1126ed301056e6b08e86b859ee005fcc2cf66455524c9674232359de7a4",
+      "406c1b97002b3913b85c2409a0ebf4795bb4a89351e9e3b3ece1b881ef9b0488",
+      "b7c51c65d7d21f4f1260b9a0257918ac769dfad731a9ba65ff9ed9fd60ed2858",
+      "438a4e78742f20fe6020b33ec3154c47ad8862a9f2ab3b13b37fa6958720441d",
+      "40cb322dac2ad6a89709591f2c550104d7a6a733f6e67b92db6f0f1dcdb6ef96",
+      "601c77592feab9baf74ba77db15db2892ccabe1ceb891a26a62d4826cc25b766",
+      "963d5e9f2b2d019b0f84502f43b188e7c3a0da18cf04fbc04b93b0a9d577c1fa",
+      "9d9cd7d1c78710c3149782988c15c5f4214f6a8dfe1a482bf82d363709cd1e5f"
+    ],
+    "invalid_self_attachment": {
+      "source_line_id": "29a627a195f761e26448d0259b7ff4749bfe9d0b65314e666fc45033b7ab6b66",
+      "selected_anchor_source_line_id": "29a627a195f761e26448d0259b7ff4749bfe9d0b65314e666fc45033b7ab6b66",
+      "anchor_is_in_authenticated_allowed_list": false
+    }
+  },
+  "all_model_decisions": {
+    "stage_a_unclear": {"role": 187, "not_continuation": 8},
+    "stage_a_candidate_self_review": {"role": 2},
+    "stage_a_unowned_continuation": {"attach_to_anchor": 4, "not_continuation": 5},
+    "valid_row_terminal_roles": {
+      "candidate_self": 10,
+      "navigation_form_footer": 140,
+      "support_or_category_heading": 30
+    }
+  },
+  "content_gate_result": {
+    "verdict": "NO_GO_INDEPENDENT_OF_THE_STRUCTURAL_SCHEMA_FAILURE",
+    "reason": "A technically parsed unowned-continuation item attached the Army/Defense disclaimer to an endorsement anchor. The frozen pilot expects that line to terminate as nonrecord content.",
+    "source_line_id": "18829023194d146574c486c2bde03d9bcd09dd44432632153efdb6e59adf4cdc",
+    "model_anchor_source_line_id": "ce58816a2faa60c85d34fffeaf27c1c3377aeb5e7285ff4591e0b0057c62bdbe",
+    "schema_must_not_encode_expected_control_answer": true
+  },
+  "approved_narrow_correction": {
+    "guided_schema": "Condition each target slot on its authenticated exception reason. Unclear and candidate-review slots may choose role, an exact allowed attachment when present, or withheld_validation. Unowned-continuation slots may choose an exact allowed attachment, not_continuation, or withheld_validation.",
+    "anchor_rule": "The attach_to_anchor schema uses an enum of the exact ordered authenticated allowed-anchor IDs. The target line itself is excluded.",
+    "unchanged": ["historical Stage-A contract and outputs", "source bytes and exception ledger", "model family and runtime policy", "semantic Python validation", "Stage-B hold"],
+    "next_gate": "Independent review must approve the corrected contract and a fresh immutable suffix before any Hive rerun. A rerun remains content NO-GO if the Army/Defense disclaimer is attached again."
+  },
+  "submission_status": {
+    "stage_b_submitted": false,
+    "full_stage_a2_submitted": false,
+    "new_hive_submission_authorized_by_this_audit": false
+  }
+}

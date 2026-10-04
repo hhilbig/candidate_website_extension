@@ -1,0 +1,293 @@
+{
+  "audit_type": "candidate_extraction_v2_1_quote_cap_repetition_preflight",
+  "date": "2026-08-25",
+  "status": "failed_frozen_audit",
+  "release_eligible": false,
+  "hive_job_id": "21422367",
+  "gate_decision": "NO-GO",
+  "gate_failure_reason": "Five of 19 rows reached the 128-item issue cap after repeating one exact model item 95 or 97 times. None of the 17 named issue controls recovered quote-bearing evidence. The complete-parent 7838-window stress pilot was not submitted.",
+  "slurm": {
+    "state": "COMPLETED",
+    "exit_code": "0:0",
+    "elapsed": "00:07:07",
+    "start": "2026-08-25T03:44:14-07:00",
+    "end": "2026-08-25T03:51:21-07:00",
+    "node": "hive-dc-7-5-58",
+    "partition": "high",
+    "gpu_type": "6000_blackwell",
+    "batch_max_rss_kib": 14595012,
+    "post_write_warning": "After the atomic output and run metadata were written, vLLM logged: Process manager: force killing remaining processes count=1. Slurm still completed with exit code 0:0, both expected artifacts were present, and no temporary file remained."
+  },
+  "source": {
+    "local_export_directory": "build/hive_candidate_extraction/v2_1_quote_cap_preflight_export_20260824m",
+    "remote_input_directory": "/home/hhilbig/candidate-website-extraction/data/v2_1_quote_cap_preflight_20260824m",
+    "source_corpus_sha256": "c53d36b24b293ac5d47706aa67731f1c107d6a679cb948c9ad71a70b5c8ce7c3",
+    "source_export_manifest_sha256": "973050bc6f159bee3385788588bf0c807804c73227f0c9fbabf43809cb82c179",
+    "preflight_manifest": {
+      "path": "manifest.json",
+      "sha256": "b7aa255ee4f93f902738331bd8eeb5184b3e4aab1229dc9b593c078bd2fed600",
+      "bytes": 6720
+    },
+    "preflight_selection": {
+      "path": "selection.csv",
+      "sha256": "d5314d1df01f36a6ece1fd2dfcdfb7b9c79d9f3c4d9885dad9c78ebd0c18961c",
+      "bytes": 4655
+    },
+    "input_chunk": {
+      "path": "chunks/chunk_00000.jsonl.gz",
+      "sha256": "d1022c447e3c8f79995bc1c36ad71f933634767736e4a3bd00c0c5c6a894737e",
+      "bytes": 29010,
+      "rows": 19
+    },
+    "rows": 19,
+    "unique_document_ids": 19,
+    "parent_documents": 14,
+    "rows_by_route": {
+      "biography": 1,
+      "endorsements": 1,
+      "issues": 17
+    },
+    "control_kind_counts": {
+      "max_complexity_biography": 1,
+      "max_density_endorsement": 1,
+      "quote_copula_peer": 12,
+      "quote_escape_regression": 4,
+      "quote_repetition_truncation": 1
+    },
+    "source_identity_mismatches": 0,
+    "segment_text_hash_mismatches": 0
+  },
+  "contract": {
+    "schema_version": "2.1",
+    "model_id": "Qwen/Qwen3.6-27B-FP8",
+    "model_revision": "e89b16ebf1988b3d6befa7de50abc2d76f26eb09",
+    "runtime_lock_sha256": "4f46101fa493e38b312af034b8d740c612bd0001bab4cb0f624f4a9e1c49f5b3",
+    "runner_sha256": "522462734c4e9246cd3b9883409a2ede8a9325dfd8dbe82b153ac4fcd1f1b7e4",
+    "wrapper_sha256": "6f35a305ae4691d4f74c0f0d4f8512244fd34ecf9594d067025ad3dc1369b7f2",
+    "extraction_contract_sha256": "87175138600c9ba032d1218f318083645fab82c20d35ab910b1b962e197bab71",
+    "generation_config_sha256": "fcce9b2077476deba9982fb4f12e0deda1dabe946a485dde9b0659da17d55cac",
+    "json_schema_sha256": {
+      "biography": "048e39c455b90b905a3f55b2c49d0ff7618a63b181722861b1018ba6bd00e4ea",
+      "endorsements": "f6f962ee09c37a1ac95ee8822939aedb01cb239b3e3f365c095b30ee146d4162",
+      "issues": "d7d6a1713d0e2b08f86b94f4018fb40a2ba2fbce5052c41de43a515c2326892b"
+    },
+    "prompt_sha256": {
+      "biography": "d32cf8c87062d607cc1ee09e9485b90f2cc1a581559944583dc4839efa177960",
+      "endorsements": "f1190195f18c32b3db3c7a0e58ebf4fdcc31edb2cf72fc2c290204cd9d482c5e",
+      "issues": "e7ad149cbbdfa5657b32235c3421adc4f5ca89fa564f7075e6a26e26f00fcb19"
+    },
+    "max_model_len": 32768,
+    "max_output_tokens": 24576,
+    "seed": 20260824,
+    "temperature": 0,
+    "thinking_enabled": false,
+    "structured_decoding_backend": "xgrammar",
+    "structured_decoding_disable_any_whitespace": true,
+    "inference_display_escape_id": "minimal_non_lf_c0_backslash_u0022_v2",
+    "inference_display_escape_spec_sha256": "89d114207b6d25517f89eed76350608c3d0f3ffc9154ba6e34bac5f11971891f",
+    "json_string_control_canonicalizer_id": "raw_json_string_c0_escape_v1",
+    "json_string_control_canonicalizer_spec_sha256": "64844ef4d08777e33c01795cb86a937200b8f5d5770a6ff0724b86f50c8ec5a9",
+    "array_item_cap_spec_id": "route_array_item_cap_fail_closed_v1",
+    "array_item_cap_spec_sha256": "3a3a229e030a66a445d550d74524c264329c8d94e54196dfcc8a14635315e16d",
+    "route_array_item_caps": {
+      "biography": 96,
+      "endorsements": 256,
+      "issues": 128
+    },
+    "model_item_repetition_spec_id": "exact_canonical_model_item_multiplicity_v1",
+    "model_item_repetition_spec_sha256": "c3942d9e703af8a83136c4c86eb20f4ed01ddb9627c30a457dac6b2fdcf10d3b",
+    "model_item_repetition_threshold": 3
+  },
+  "preserved_output": {
+    "remote_directory": "/home/hhilbig/candidate-website-extraction/output/v2_1_quote_cap_preflight_20260824m",
+    "output_chunk": {
+      "path": "chunk_00000.out.jsonl.gz",
+      "compressed_sha256": "d811f0e557cd8899000d82d01f9d5235545c2540c3fada9e480c3fe90ddf49ec",
+      "compressed_bytes": 80930,
+      "decompressed_sha256": "20f0535286ff6c9baf805e948d6dad5b1aae454e83813d9da51d78e9fb2ef5f8",
+      "decompressed_bytes": 837823
+    },
+    "run_metadata": {
+      "path": "run_metadata.json",
+      "sha256": "a4e24ae6358b1ef7387ce4e49ba6ecb63533599af332c2dab6baaf902666da95",
+      "bytes": 7194
+    },
+    "slurm_log": {
+      "path": "/home/hhilbig/cand-v21-quote-cap-m_21422367.log",
+      "sha256": "c9049c3ffa971bab1f20a1da1e63c38047854292d80a053187df43cbcd2bee35",
+      "bytes": 30827
+    },
+    "chunk_files": 1,
+    "run_metadata_files": 1,
+    "temporary_files": 0,
+    "rows": 19,
+    "unique_document_ids": 19,
+    "parent_documents": 14,
+    "rows_by_route": {
+      "biography": 1,
+      "endorsements": 1,
+      "issues": 17
+    },
+    "sorted_source_identity_sha256": "b30a97bed3823dfdc3535051a4dd0d8f7d010ffae52867f6dd5603a067ad6555",
+    "sorted_source_identity_digest_method": "For each output row, serialize document_id, candidate_cycle_id, parent_document_id, route, segment_index, segment_count, segment_start_char, segment_end_char, raw_text_sha256, and segment_text_sha256 as canonical JSON; sort the lines by document_id; append a line feed to each line; compute SHA-256.",
+    "source_identity_mismatches": 0
+  },
+  "terminal_gate": {
+    "finish_reason_counts": {
+      "stop": 19
+    },
+    "strict_json_parsed_outputs": 19,
+    "parse_status_counts": {
+      "array_item_cap_reached": 5,
+      "parsed": 14
+    },
+    "aligned_model_schema_valid_rows": 14,
+    "public_schema_valid_rows": 14,
+    "all_model_items_accounted_rows": 14,
+    "documents_exactly_supported": 14,
+    "model_items_strictly_parsed": 826,
+    "model_items_passing_pre_alignment_guard": 186,
+    "aligned_public_items": 140,
+    "private_withheld_items": 46,
+    "private_withheld_reason_counts": {
+      "missing_exact_span": 46
+    },
+    "alignment_status_counts": {
+      "complete": 5,
+      "partial_withheld": 9,
+      "not_run_guard_failure": 5
+    },
+    "nonzero_public_outputs": 13,
+    "nonzero_public_outputs_with_exact_anchor_rate_1": 13,
+    "nonzero_public_outputs_with_evidence_support_rate_1": 13,
+    "observed_zero_outputs": 1,
+    "observed_zero_document_id": "aa0b99eb1331464dce28db32d73a6f53bddbf7e4aa10f46f4c17c48b12720433",
+    "observed_zero_control_kind": "max_density_endorsement",
+    "observed_zero_source_characters": 3000,
+    "observed_zero_source_nonempty_lines": 225,
+    "output_tokens_total": 58387,
+    "output_tokens_min": 9,
+    "output_tokens_max": 9112,
+    "output_token_cap_hits": 0,
+    "input_tokens_min": 547,
+    "input_tokens_max": 1527,
+    "context_margin_tokens_min": 6665,
+    "context_margin_tokens_max": 7645,
+    "input_truncated_rows": 0,
+    "context_over_budget_rows": 0
+  },
+  "array_cap_and_repetition_failure": {
+    "failed_rows": 5,
+    "failure_status": "array_item_cap_reached",
+    "failure_status_precedence": "The array-cap failure takes precedence over the simultaneously detected repetition failure.",
+    "common_route": "issues",
+    "common_candidate_cycle_id": "S6MO00305-2006",
+    "common_segment_text_sha256": "99ae3d3c72c7a706bf15b3827f3e5c8ceaf6eba8655546b5e1e9297743328b73",
+    "common_source_characters": 5877,
+    "common_source_quotes": 10,
+    "common_input_tokens": 1150,
+    "common_context_margin_tokens": 7042,
+    "common_model_item_count": 128,
+    "common_array_item_cap": 128,
+    "common_repeated_item_sha256": "22cdbfd33d0d05482ab352c956176a8049a91b9b0409c2c6f8e7217e1cd2fe80",
+    "common_repeated_evidence": "The ",
+    "common_repeated_claim": "The K Street Project is an effort spearheaded by Tom DeLay and Jack Abramoff to influence the hiring decisions of trade associations and lobbying firms in order to give jobs to loyal Members and theirs staffs once they left their jobs on Capitol Hill.",
+    "rows": [
+      {
+        "document_id": "0f3b3c5712297a358df45f8fa3f94edd138128e3dd757522115b60e21aca70c7",
+        "parent_document_id": "a873242d424a259a077aef8b852fd6009c6ace22363d5913ff774f985e16820b",
+        "pilot_control_kind": "quote_copula_peer",
+        "finish_reason": "stop",
+        "parse_status": "array_item_cap_reached",
+        "output_tokens": 9042,
+        "max_exact_model_item_multiplicity": 95,
+        "repeated_item_first_index_zero_based": 33,
+        "repeated_item_last_index_zero_based": 127
+      },
+      {
+        "document_id": "3cab5c5c1cc3c6860c344a6186e172bf04a26aaf33b8be905cac0b6092a7c421",
+        "parent_document_id": "057f1f2f5b83f6b6aba42e89ff7cf9dde057ff022c4b795e863346ec61274708",
+        "pilot_control_kind": "quote_copula_peer",
+        "finish_reason": "stop",
+        "parse_status": "array_item_cap_reached",
+        "output_tokens": 9033,
+        "max_exact_model_item_multiplicity": 95,
+        "repeated_item_first_index_zero_based": 33,
+        "repeated_item_last_index_zero_based": 127
+      },
+      {
+        "document_id": "7bdfc2a16483fb4225e35bc14b9d84583ad33d2e2fe413a0059b93d2be303315",
+        "parent_document_id": "fc409dcdcd425a928076f0954677926c7c8a9068f82ce0eea75eba41392e03f0",
+        "pilot_control_kind": "quote_repetition_truncation",
+        "finish_reason": "stop",
+        "parse_status": "array_item_cap_reached",
+        "output_tokens": 9035,
+        "max_exact_model_item_multiplicity": 95,
+        "repeated_item_first_index_zero_based": 33,
+        "repeated_item_last_index_zero_based": 127
+      },
+      {
+        "document_id": "966609d243c5ca204474bbfd51ff0fdd21bc3d494365a214070ba044e91bd7fa",
+        "parent_document_id": "06359e0cfa53c49d96cac0444f4fca1c0d8fe8b709a7763565dc78f31fd415f5",
+        "pilot_control_kind": "quote_copula_peer",
+        "finish_reason": "stop",
+        "parse_status": "array_item_cap_reached",
+        "output_tokens": 9034,
+        "max_exact_model_item_multiplicity": 95,
+        "repeated_item_first_index_zero_based": 33,
+        "repeated_item_last_index_zero_based": 127
+      },
+      {
+        "document_id": "cd179ab68cd2246ba2bdf1715a822ec00f3e64e6af9ba9a26c5f1247c1fe8f1f",
+        "parent_document_id": "b1231039d2f8d8adb82f891f16e0bd1655e4e1a9048144b6c65d955da20ce219",
+        "pilot_control_kind": "quote_copula_peer",
+        "finish_reason": "stop",
+        "parse_status": "array_item_cap_reached",
+        "output_tokens": 9112,
+        "max_exact_model_item_multiplicity": 97,
+        "repeated_item_first_index_zero_based": 31,
+        "repeated_item_last_index_zero_based": 127
+      }
+    ]
+  },
+  "quote_recovery": {
+    "named_issue_controls": 17,
+    "source_straight_quotes": 194,
+    "raw_u0022_escape_sequences": 52,
+    "raw_backslash_quote_escape_sequences": 0,
+    "model_outputs_with_quote_bearing_evidence": 0,
+    "aligned_outputs_with_quote_bearing_evidence": 0,
+    "aligned_outputs_with_quote_bearing_source_heading": 8,
+    "aligned_quote_bearing_source_heading_document_ids": [
+      "224e1afb9106150ded6b057d0c734199b95ab0f2e73efee2ac4c0405556c5e01",
+      "27d32ad39a51da6490c7b264e8d15bb0e9e1212b058251d09c220a066b1cfba5",
+      "2daf39bb58202e3b81a50343ba7d05ada45af5e94f4394755aa87af3a6573758",
+      "5d4209bcbd85019b199a558b6b08faa4e26689feab1d3a6c1e6a5613aa7688e6",
+      "a34443e23ccf54c547413747ee3dc781dfb2e257515603817657e74f604eea79",
+      "a92d91fc4d76ec90b64511fd6de257bd7f5830124d61a2dc1680c4ba421bf125",
+      "c59f8a0dde2f7b9022f94189b8035613fb5e29aa81e70d56935fbc46d075ab02",
+      "c7a74f196350dd7bc288d7257698dc1283a6c20b3d5c6b3332bac0c88d153cbe"
+    ],
+    "verdict": "The display codec restored quotation marks in some source-heading strings but did not recover quote-bearing evidence on any named issue control. The quote-evidence gate failed."
+  },
+  "fixed_spacing_and_control_provenance": {
+    "raw_structural_separator_count": 6711,
+    "raw_structural_separator_space_count": 6711,
+    "raw_structural_whitespace_violation_count": 0,
+    "inference_display_escape_count": 230,
+    "inference_display_escape_codepoint_counts": {
+      "U+0009": 36,
+      "U+0022": 194
+    },
+    "inference_display_interior_boundary_count": 1006,
+    "inference_display_roundtrip_failures": 0,
+    "display_provenance_recomputation_mismatches": 0,
+    "json_control_canonicalized_characters": 0,
+    "json_control_unrepaired_after_escape_count": 0,
+    "json_control_outside_string_invalid_count": 0,
+    "raw_to_model_hash_mismatches": 0,
+    "alignment_or_validation_recomputation_mismatches": 0,
+    "verdict": "Fixed structural spacing, display provenance, strict parsing, model hashes, and aligned-output recomputation behaved as specified. They did not prevent the quote-triggered repeated-item loop."
+  },
+  "decision": "Preserve every input, output, metadata, and log artifact from Hive job 21422367 as a failed audit. Do not repair, resume, merge, or publish these outputs. The 7838-window complete-parent pilot was not submitted and remains blocked. Do not start another full 35213-window production run under this contract."
+}

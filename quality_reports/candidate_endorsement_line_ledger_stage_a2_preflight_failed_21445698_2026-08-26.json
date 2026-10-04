@@ -1,0 +1,77 @@
+{
+  "audit_type": "candidate_endorsement_line_ledger_stage_a2_content_failed_preflight",
+  "audit_version": "1.0",
+  "audit_date": "2026-08-26",
+  "immutable": true,
+  "status": "technical_go_content_no_go",
+  "purpose": "Preserve the exact suffix-e Stage-A2 result and explain why its technically valid output cannot feed Stage B.",
+  "comparison": "The evaluator compares the merged 1,758-line Stage-A plus Stage-A2 ledger with eleven predeclared pilot gates. All 29 Stage-A2 rows satisfy the frozen technical contract, but six content gates fail.",
+  "assumptions": [
+    "The suffix-e manifest, downloaded output, run metadata, Slurm log, and evaluation report named below are authoritative.",
+    "A technical pass authenticates bytes, schema, complete slot coverage, and restart provenance. It does not establish that a role or continuation owner is substantively correct.",
+    "Known expected control answers may remain evaluation gates but must not be inserted into the model schema as line-specific answers.",
+    "No Stage B or full-corpus job was built or submitted from this result."
+  ],
+  "job": {
+    "job_id": "21445698",
+    "slurm_state": "COMPLETED",
+    "slurm_exit_code": "0:0",
+    "host": "hive-dc-7-5-58",
+    "started_at_utc": "2026-08-25T22:09:02+00:00",
+    "completed_at_utc": "2026-08-25T22:12:44+00:00",
+    "wall_time": "00:03:42"
+  },
+  "frozen_identity": {
+    "input_directory": "build/hive_candidate_extraction/v2_1_endorsement_line_ledger_stage_a2_preflight_20260825e",
+    "input_manifest_sha256": "4be20f42c46bdaa8ffe01406747ed9d6c22389c84753f73e72701d4c93ef4dbc",
+    "line_ledger_contract_sha256": "7e28c999c345dfc8a3ed44650a91acf23517eba419163c75836da9820b257dcb",
+    "generation_config_sha256": "12a9a2d9f4a155e0676f5a7ce1fcbb4c5b111c9149bd0bdc74bce7f2f2cf33f1",
+    "batches": 29,
+    "exception_lines": 206
+  },
+  "artifacts": [
+    {"file": "build/hive_candidate_extraction/v2_1_endorsement_line_ledger_stage_a2_preflight_hive_output_20260825e_21445698/chunk_00000.out.jsonl.gz", "bytes": 12775, "sha256": "bd70729e2cc93a0c6889509b1071920e62edbac9778247c7a92bbe0c66582562"},
+    {"file": "build/hive_candidate_extraction/v2_1_endorsement_line_ledger_stage_a2_preflight_hive_output_20260825e_21445698/run_metadata.json", "bytes": 16283, "sha256": "ab1049062e68e10b7e42b4e8d6a04ed320604f19742ac2d910de55612b440bd9"},
+    {"file": "build/hive_candidate_extraction/endorsement-line-ledger_21445698.log", "bytes": 31652, "sha256": "745d3dac116726d0e3af994272a29c117ce991df260cfb76cb4c463632c64b05"},
+    {"file": "quality_reports/candidate_endorsement_line_ledger_stage_a2_preflight_21445698_2026-08-25.json", "bytes": 322999, "sha256": "678a24954d39304d84d48f70450fb6559006ec06ba1b435c658ce17c444eeb9d"}
+  ],
+  "technical_result": {
+    "verdict": "GO",
+    "outputs": 29,
+    "technical_passes": 29,
+    "technical_failures": 0,
+    "finish_reason_counts": {"stop": 29},
+    "prompt_tokens_max": 11402,
+    "output_tokens_total": 6976,
+    "output_tokens_max": 355,
+    "minimum_context_margin_tokens": 19318
+  },
+  "content_result": {
+    "verdict": "NO_GO",
+    "passed_gates": 5,
+    "failed_gates": 6,
+    "invalid_continuation_owners": {
+      "count": 4,
+      "source_line_ids": [
+        "29a627a195f761e26448d0259b7ff4749bfe9d0b65314e666fc45033b7ab6b66",
+        "2d680e5f8e0164873011d06b65925bd8cd27fbe4b89c0fc36f1d219a63507425",
+        "6d3204507829dbc39e3ed7d6eb4690eea96a87254ba7bd4c5c0114dd006375f7",
+        "18829023194d146574c486c2bde03d9bcd09dd44432632153efdb6e59adf4cdc"
+      ]
+    },
+    "interface_lines_wrongly_candidate_self": [
+      "5c7724d06f37e57a91463b5ae414a325e3b44d951b9da1f1876d3333691639e0",
+      "d70456a0840fe5ea8ec78402c3c2b7aa057f6c4bcff08b09e259cf3141008593",
+      "ff2dc1f3299ef37af1aa9e169420354c20b4817121582140d3278c05074f2203"
+    ],
+    "long_json_wrong_role": {"source_line_id": "7c42640254692dee92b9845f00ac172dc45dce7f31a07b3fc02c4bcef3f6e076", "observed": "navigation_form_footer", "expected": "nonrecord_content"},
+    "candidate_control_wrong_role": {"source_line_id": "5cac96d3488b283289854cc46cf973d12ac498a6d6c2649c9f3f07a9a18d10f1", "observed": "candidate_self", "expected": "nonrecord_content"},
+    "passed_gate_groups": ["exception coverage", "zero unresolved or withheld", "testimonial ownership", "quote-compound-Vets anchors", "dense-parent anchor counts"]
+  },
+  "decision_boundary": {
+    "line_specific_schema_backfill_allowed": false,
+    "stage_b_allowed": false,
+    "full_corpus_allowed": false,
+    "next_step": "Adopt only source-general structural constraints that can be recomputed for every parent. Route remaining semantic exceptions to a separately authenticated adjudication or human-review layer; do not convert named pilot answers into deterministic production labels."
+  }
+}

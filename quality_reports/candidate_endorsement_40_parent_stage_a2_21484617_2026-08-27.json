@@ -1,0 +1,79 @@
+{
+  "bounded_stage_b_input_build_authorized": true,
+  "checks": [
+    {
+      "check_id": "recall40_exact_parent_closure",
+      "expected": 40,
+      "observed": 40,
+      "passed": true
+    },
+    {
+      "check_id": "recall40_exact_stage_a_line_closure",
+      "expected": 1115,
+      "observed": 1115,
+      "passed": true
+    },
+    {
+      "check_id": "recall40_exact_stage_a2_coverage",
+      "expected": 607,
+      "observed": 607,
+      "passed": true
+    },
+    {
+      "check_id": "recall40_zero_conflict_two_pass_merge",
+      "expected": {
+        "adjudicated_exception_count": 607,
+        "coverage_complete": true,
+        "duplicate_continuation_owner_count": 0,
+        "expected_exception_count": 607,
+        "ownership_conflict_count": 0,
+        "unowned_continuation_count": 0,
+        "unresolved_line_count": 0,
+        "validation_passed": true,
+        "withheld_line_count": 0
+      },
+      "observed": {
+        "adjudicated_exception_count": 607,
+        "coverage_complete": true,
+        "duplicate_continuation_owner_count": 0,
+        "expected_exception_count": 607,
+        "ownership_conflict_count": 0,
+        "unowned_continuation_count": 0,
+        "unresolved_line_count": 0,
+        "validation_passed": true,
+        "withheld_line_count": 0
+      },
+      "passed": true
+    },
+    {
+      "check_id": "recall40_final_line_identity_closure",
+      "expected": 1115,
+      "observed": 1115,
+      "passed": true
+    }
+  ],
+  "evaluation_scope": "private_recall40_stage_a2_to_bounded_stage_b_only",
+  "failed_checks": 0,
+  "final_decisions_sha256": "0cd75a67c5b8fe4e858c034474c9a96cb4670d2414e5bd05279bfaee100f5be2",
+  "full_expansion_or_release_authorized": false,
+  "gate_decision": "GO_BUILD_BOUNDED_STAGE_B_INPUTS",
+  "merge_validation": {
+    "adjudicated_exception_count": 607,
+    "coverage_complete": true,
+    "duplicate_continuation_owner_count": 0,
+    "expected_exception_count": 607,
+    "ownership_conflict_count": 0,
+    "unowned_continuation_count": 0,
+    "unresolved_line_count": 0,
+    "validation_passed": true,
+    "withheld_line_count": 0
+  },
+  "passed_checks": 5,
+  "per_line_provenance_sha256": "c660a4402521975e85a0ec2787779828c3f110d54839fe4ebbd8cb93ba0991ee",
+  "stage_a2_generation_config_sha256": "3a61f7607f5f79ad3da6a13f1de058f9899f503d4d7d2fba076bb0f1c290c01b",
+  "stage_a2_input_manifest_sha256": "ba79b091b1f39be0f86c894824b8b9f3331ff7fef14c791d2db5cbf47ebde641",
+  "stage_a2_output_batch_ids_sha256": "07f149e033d06e0de2475c3fa86aa777f1a4eaa4b3cd5581a96f087127a9f35d",
+  "stage_a_generation_config_sha256": "7c89e227eb81f372125be51660d7d2adec406d3250c2f4df4e7c3a923e7c6ede",
+  "stage_a_input_manifest_sha256": "d4672273f9c2eab6e13e09b9219200d4008e33d75efc63cc9e213beba28f1fd9",
+  "stage_b_hive_submission_authorized": false
+}

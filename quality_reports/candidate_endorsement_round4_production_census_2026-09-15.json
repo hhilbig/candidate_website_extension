@@ -1,0 +1,26 @@
+{
+  "artifact_scope": "candidate_endorsement_round4_production",
+  "deterministic_dispositions": {
+    "attested_context_anchor_boundary": 1499,
+    "empty": 316,
+    "model_decision_required": 286704,
+    "outside_attested_context_scope": 19300
+  },
+  "inventory_lines": 307819,
+  "line_inventory_scope_rule": "reconstruct_parent_inventory_base_scope_v1",
+  "model_calls": 0,
+  "model_decision_lines": 286704,
+  "parents": 2583,
+  "per_parent_sha256": "6311a00411c78fe1d51ff3913aa293de9b688d59a892183698d2d346408c0c51",
+  "round4_production_contract_sha256": "f8c755ce5097345cd5e99755c62f470ac6fdfdfadc116d4b8ecc41da7797522b",
+  "segments": 6096,
+  "source_export": "build/hive_candidate_extraction/v2_1_full_export_20260824p",
+  "source_export_manifest_sha256": "f5e6545a2d2ec35a83f4184e0d328635e5fba9d3c80cd4c8a7466178b7d9172c",
+  "stage_a_batches": 19142,
+  "stage_a_slot_count": 16,
+  "stage_b_batches_enriched_sample_estimate": 41005,
+  "stage_b_batches_note": "Only Stage-A anchors become Stage-B targets. The exact Stage-B count is known after Stage A completes.",
+  "stage_b_batches_upper_bound": 71676,
+  "stage_b_slot_count": 4,
+  "version": "candidate_endorsement_round4_production_census_v1"
+}

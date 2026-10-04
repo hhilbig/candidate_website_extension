@@ -1,0 +1,178 @@
+{
+  "audit_type": "candidate_endorsement_line_ledger_stage_a_failed_preflight",
+  "audit_version": "1.0",
+  "immutable": true,
+  "job": {
+    "job_id": "21435372",
+    "state": "FAILED",
+    "exit_code": "2:0",
+    "partition": "high",
+    "node": "hive-dc-7-5-58",
+    "gpu_count": 1,
+    "requested_memory": "96G",
+    "maximum_memory_used": "13.81G",
+    "submitted_at": "2026-08-25T09:57:49",
+    "started_at": "2026-08-25T09:58:08",
+    "ended_at": "2026-08-25T10:02:39",
+    "wall_time": "00:04:31",
+    "slurm_failure_was_expected_quality_gate": true
+  },
+  "frozen_input": {
+    "directory": "build/hive_candidate_extraction/v2_1_endorsement_line_ledger_stage_a_preflight_20260825a",
+    "manifest_sha256": "afeb0fce13b2717be0a9a196be767d5100a7cef6c2c4f98b71639cf5f9050033",
+    "ordered_batch_ids_sha256": "50b00952f7af6b9d85d994e6eb7102f019b1ebda1ad9883731eeb7109d216370",
+    "parents": 8,
+    "batches": 113,
+    "chunks": 2,
+    "source_corpus_sha256": "c53d36b24b293ac5d47706aa67731f1c107d6a679cb948c9ad71a70b5c8ce7c3"
+  },
+  "frozen_generation": {
+    "model_id": "Qwen/Qwen3.6-27B-FP8",
+    "model_revision": "e89b16ebf1988b3d6befa7de50abc2d76f26eb09",
+    "runtime_lock_sha256": "4f46101fa493e38b312af034b8d740c612bd0001bab4cb0f624f4a9e1c49f5b3",
+    "line_ledger_contract_sha256": "404b3368e94f49061356f2bf40d1b1e724dad2e2c4ec2927059c234eff726ff1",
+    "prompt_sha256": "a5a592019dbc1aee631f11c6bbdd7b61f2d59fc173050fddc0d8b1cb1f7b1c4a",
+    "json_schema_sha256": "705e2bd65dd5f9913b4c7fa13270585ac2c587a663bb0baa3d94189ae869bc04",
+    "generation_config_sha256": "ca8ebe615035df56aa349319823fcad52428cbc99e6f76a941598509e4bd9524",
+    "temperature": 0,
+    "seed": 20260825,
+    "max_model_len": 32768,
+    "max_output_tokens": 2048,
+    "thinking_enabled": false,
+    "structured_decoding_backend": "xgrammar",
+    "disable_any_whitespace": true
+  },
+  "terminal_technical_result": {
+    "input_rows": 113,
+    "output_rows": 113,
+    "unique_output_batch_ids": 113,
+    "finish_reason_stop": 113,
+    "strict_json_parsed": 113,
+    "raw_structural_whitespace_valid": 113,
+    "input_truncated": 0,
+    "output_truncated": 0,
+    "parse_status_counts": {
+      "invalid_stage_output": 10,
+      "parsed": 103
+    },
+    "technical_pass": 103,
+    "technical_fail": 10,
+    "target_slots_in_failed_rows": 137,
+    "target_slots_illegally_labeled_padding": 83,
+    "failure_rule": "every failure was target_marked_padding",
+    "gate_decision": "NO_GO"
+  },
+  "invalid_batches": [
+    {
+      "batch_id": "fb8a43c9b483dc2997ba1e4c49abb4e5dbfc33f05e95f3d96cae754e6d43dbf1",
+      "parent_document_id": "04c8d82039daafab6c5b44bc677a2a6d45d111fe99e1a7577125f067b5a24037",
+      "target_padding_count": 16
+    },
+    {
+      "batch_id": "248c886f315a767c5c4b88ec17bc7f8eeb2bd63f398570303396b8e7f21bfa83",
+      "parent_document_id": "04c8d82039daafab6c5b44bc677a2a6d45d111fe99e1a7577125f067b5a24037",
+      "target_padding_count": 4
+    },
+    {
+      "batch_id": "caae0c9e63d38e760798d51eaaecd4278a9708c40cd6e766fba3f3861c84047f",
+      "parent_document_id": "1aad8662c07cd4f1f6343f78fe04b5f460235f17ecf57e8e5faa43024819fde8",
+      "target_padding_count": 14
+    },
+    {
+      "batch_id": "32428f61a1ec049721b77d70114c8be514608a9df4488a6b8cf97e18ccf433c8",
+      "parent_document_id": "1aad8662c07cd4f1f6343f78fe04b5f460235f17ecf57e8e5faa43024819fde8",
+      "target_padding_count": 1
+    },
+    {
+      "batch_id": "3d9ecfd28e10789235adbf0c644de24f77562f4b28fffb04a7989793130d609c",
+      "parent_document_id": "1aad8662c07cd4f1f6343f78fe04b5f460235f17ecf57e8e5faa43024819fde8",
+      "target_padding_count": 5
+    },
+    {
+      "batch_id": "ab61cdb69035fc9c71c38df24e2f4eb4a63515dfed579ec8bcc4698a82279aca",
+      "parent_document_id": "266bd0ed39563683dc9b13237fa6606547e18cad89dbacef1c64aafae7f32b72",
+      "target_padding_count": 16
+    },
+    {
+      "batch_id": "69e694e326669c99f648f314013062ec100123b3f266f856c959a8d1cbfdd121",
+      "parent_document_id": "495263ff9183d6b966c1089473a5b0120bbfdb72b6525843e9a0d293259f1038",
+      "target_padding_count": 4
+    },
+    {
+      "batch_id": "ecae516cd15d62c13c0622d72ba790ec8148b291fbcf6030167b8420270b24ef",
+      "parent_document_id": "df03f7b60754314aaee0069f87a7fb54feddd5ebfcb9e66fc35851c170bb7c13",
+      "target_padding_count": 3
+    },
+    {
+      "batch_id": "5d66f3f7a2fac3890bbb4969e16b0187211a38eed599b308eae873c89dda12c1",
+      "parent_document_id": "df9abdfcb024b2e62dc57ceb585f6b233d23764a36704930b1e18de376d3eeb5",
+      "target_padding_count": 15
+    },
+    {
+      "batch_id": "1d4d39778f4bf3f238111fecba3d14e274daf5befc9d7e1a20e67ac36078982b",
+      "parent_document_id": "ef028a46900938122cb2b836cead4d08c308b72c572363928942ecca4f8cf211",
+      "target_padding_count": 5
+    }
+  ],
+  "valid_row_semantic_diagnostic": {
+    "scope": "tuning_evidence_only",
+    "valid_target_decisions": 1621,
+    "role_counts": {
+      "compound_record_anchor": 6,
+      "record_anchor": 1153,
+      "record_continuation_next": 24,
+      "record_continuation_previous": 305,
+      "unclear": 133
+    },
+    "predeclared_gate_failures": {
+      "zero_unclear": 133,
+      "tanaka_interface_valid_rows_marked_unclear": 5,
+      "long_json_role": "unclear",
+      "testimonial_continuations_wrong_direction": 7
+    },
+    "predeclared_gate_support": {
+      "quote_anchor_correct": true,
+      "compound_anchor_correct": true,
+      "clipped_partial_names_emitted": 0,
+      "tanaka_aa0_unique_anchor_coverage_across_all_rows": 224,
+      "tanaka_2e9_unique_anchor_coverage_across_all_rows": 86,
+      "champion_unique_anchor_coverage_across_all_rows": 230
+    },
+    "interpretation": "count-specific schemas can remove illegal target padding but do not by themselves guarantee the remaining semantic gates"
+  },
+  "prompt_token_accounting_defect": {
+    "reported_prompt_tokens_min": 2,
+    "reported_prompt_tokens_max": 2,
+    "reported_minimum_context_margin": 30718,
+    "root_cause": "the pinned Hive tokenizer returned a mapping and len(mapping) counted two keys rather than the input_ids sequence",
+    "impact": "the run's context-budget attestation is false even though no observed generation truncated",
+    "required_fix": "extract and validate exactly one integer input_ids sequence and fail closed on every other tokenizer return shape"
+  },
+  "artifacts": {
+    "directory": "build/hive_candidate_extraction/v2_1_endorsement_line_ledger_stage_a_preflight_hive_output_20260825a_failed_21435372",
+    "chunk_00000": {
+      "sha256": "7f8ef72aba54677c465d3d1fe0cdea797dd9640a7fdc124e36f37e49c6591146",
+      "rows": 60,
+      "content_sha256": "710ddb2b69dd5412cb92ed5f315ff6b3848932c72290f48c89661df49fe1bb88"
+    },
+    "chunk_00001": {
+      "sha256": "717e84ad20e6dbbde8d4ea4003a878a62c73226b9d2ba159a2c5391e3975f16a",
+      "rows": 53,
+      "content_sha256": "4fa8f07d5b691e80aa642d2e8ed90e1f352a370db136d28493b2f84845f61545"
+    },
+    "all_output_rows_content_sha256": "0d621d8849caa9c72eb33f05ddc3dcfd24c278c5a0ec7a255f903d67349c90c2",
+    "run_metadata_sha256": "ec6bde7da7c25543be2c0ae9f49a4e1b79351ce07bab21b9ff9496a995f62293",
+    "job_log_sha256": "9fd7480b510d45739878b1c7f46263c2072a9d07b45f5adb718e5a8d3ed5b7a8"
+  },
+  "approved_next_revision": {
+    "stage_a_schema_variants": 16,
+    "stage_b_schema_variants": 8,
+    "real_slot_rule": "padding structurally excluded",
+    "padding_slot_rule": "padding is the only allowed enum",
+    "binding": "selected variant ID and hash in every batch, manifest, output row, restart replay, run metadata, and generation identity",
+    "prompt_token_fix": "exact input_ids sequence plus versioned provenance",
+    "preserve_prompts": true,
+    "preserve_issue_and_biography_contracts": true,
+    "full_or_stress_submission_authorized": false
+  }
+}

@@ -1,0 +1,100 @@
+{
+  "artifact_type": "candidate_extraction_v2_failed_tuning_pilot",
+  "pilot_version": "2.0",
+  "frozen_on": "2026-08-24",
+  "status": "failed_do_not_run_full_corpus",
+  "decision": "Revise the internal extraction contract and rerun the complete pilot. Do not patch pilot records or submit the 35,213-window production run from this contract.",
+  "hive_job": {
+    "job_id": "21211898",
+    "partition": "low",
+    "gpu": "6000_blackwell",
+    "host": "hive-dc-7-5-58",
+    "started": "2026-08-24T06:06:38",
+    "ended": "2026-08-24T06:15:10",
+    "runtime": "00:08:32",
+    "exit_code": "0:0"
+  },
+  "contract": {
+    "schema_version": "2.0",
+    "extraction_contract_sha256": "10fa9966b00a54671c6565477b74e12663eab4cc4709941e17f16e433ce07836",
+    "source_corpus_sha256": "c53d36b24b293ac5d47706aa67731f1c107d6a679cb948c9ad71a70b5c8ce7c3",
+    "model_id": "Qwen/Qwen3.6-27B-FP8",
+    "model_revision": "e89b16ebf1988b3d6befa7de50abc2d76f26eb09",
+    "runtime_lock_sha256": "4f46101fa493e38b312af034b8d740c612bd0001bab4cb0f624f4a9e1c49f5b3",
+    "temperature": 0.0,
+    "max_output_tokens": 8192
+  },
+  "sample": {
+    "parent_documents": 36,
+    "parents_by_route": {
+      "biography": 12,
+      "endorsements": 12,
+      "issues": 12
+    },
+    "inference_windows": 69,
+    "windows_by_route": {
+      "biography": 16,
+      "endorsements": 32,
+      "issues": 21
+    },
+    "controls_per_route": {
+      "known_tuning_pages": 5,
+      "balanced_passing_pages": 1,
+      "zero_result_pages": 3,
+      "multi_segment_pages": 3
+    },
+    "known_omissions": 11
+  },
+  "technical_result": {
+    "processed_success": 12,
+    "failed_exact_span": 54,
+    "failed_parse": 3,
+    "all_successful_windows_were_empty_result_windows": true,
+    "known_omission_gate_passed": false,
+    "resolved_records": 0
+  },
+  "exact_anchor_diagnostic": {
+    "anchors_returned_in_parsed_outputs": 1217,
+    "correct_string_and_submitted_offset": 23,
+    "exact_string_with_one_different_source_location": 1082,
+    "exact_string_with_multiple_source_locations": 61,
+    "returned_string_absent_from_exact_source": 51,
+    "interpretation": "The model usually selected source text correctly but did not produce trustworthy character counts. Some absent strings removed source line breaks or joined noncontiguous passages, so normalized or fuzzy repair is prohibited."
+  },
+  "parse_diagnostic": {
+    "failed_outputs": 3,
+    "routes": {
+      "endorsements": 3
+    },
+    "raw_output_character_range": [
+      27475,
+      28887
+    ],
+    "cause": "All three outputs ended mid-record at the 8,192-token output limit."
+  },
+  "required_revision": [
+    "Derive public offsets only from exact Unicode source matches and record match count and alignment method.",
+    "Fail closed on altered, noncontiguous, or unresolved ambiguous evidence; never normalize or fuzzily repair evidence.",
+    "Capture output finish reason and token count and reject every length-truncated output.",
+    "Increase the output budget and include worst-density endorsement controls in the next pilot.",
+    "Rerun every pilot window under one recomputed prompt, schema, and contract hash before any full-corpus run."
+  ],
+  "frozen_artifacts": [
+    {
+      "file": "build/hive_candidate_extraction/v2_pilot_export_20260824b/manifest.json",
+      "sha256": "0899742b24ed7287c1b5e039d2d82f9174014138fd5bd4d1b36ebdb48d466d0b"
+    },
+    {
+      "file": "build/hive_candidate_extraction/v2_pilot_hive_output_20260824/chunk_00000.out.jsonl.gz",
+      "sha256": "ab3be88b977c400c12ea6843e257bc8c023784c762a43abec6f79ebf7753a0c4"
+    },
+    {
+      "file": "build/hive_candidate_extraction/v2_pilot_hive_output_20260824/chunk_00001.out.jsonl.gz",
+      "sha256": "2d43eef2cd99fbde7035bcba7daf6514a33c1e6fbaae9697fc5b441ee74303cd"
+    },
+    {
+      "file": "build/hive_candidate_extraction/v2_pilot_hive_output_20260824/run_metadata.json",
+      "sha256": "90ea5695cfce947ea33c304c329ec7f08cf9394fcd8acd91dc281f051cbf10c6"
+    }
+  ]
+}

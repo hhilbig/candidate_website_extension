@@ -1,0 +1,61 @@
+{
+  "artifact_type": "immutable_stage_b_technical_failure_audit",
+  "job_id": "21576064",
+  "input_manifest_sha256": "88c99e5b80ece645271ec8577de8e9680571812038c6097cef05f4022df097c5",
+  "line_ledger_contract_sha256": "f1672447cd5f938eefbdfc173a24e6bc93565c460830867fdd494be1f6fbad31",
+  "generation_config_sha256": "2c1c14a429801399b4231f3bc9a8c467e94f400903c8c6fcd95faf63d5d32d04",
+  "output_inventory": [
+    {"file": "chunk_00000.out.jsonl.gz", "bytes": 104856, "sha256": "1aa103d0a0f4f65c56e7cc2fa74c179c075847be41ea27173de740d3922475c2"},
+    {"file": "chunk_00001.out.jsonl.gz", "bytes": 5329, "sha256": "dec4fee0dc11f735e2da92d9e50356c030f825b180359569668e3bacb92d81f1"},
+    {"file": "run_metadata_shard_00000.json", "bytes": 8800, "sha256": "e1a26d49be34dea2c3f51f43cb343f86978f55aad2abe0ab8be5fe5ec519a060"},
+    {"file": "run_metadata_shard_00001.json", "bytes": 5854, "sha256": "5f6e4a8f58e49eeceb58e123a0eb45323d83741f4cf006c8f3c224418649c6b0"},
+    {"file": "endorsement-line-ledger_21576064_0.log", "bytes": 36018, "sha256": "ee02ab79014bef5a378fcd3e071abe62d53067caca22e4e0695c121d62112639"},
+    {"file": "endorsement-line-ledger_21576064_1.log", "bytes": 27207, "sha256": "051ca37fc43588531921f2ff698a09b857cdc238ef5021516d42aba77b70ce0e"}
+  ],
+  "slurm": {
+    "completed_task": {"job_id_raw": "21576064", "state": "COMPLETED", "exit_code": "0:0", "elapsed": "00:04:15", "node": "hive-dc-7-5-58"},
+    "failed_task": {"job_id_raw": "21576091", "state": "FAILED", "exit_code": "2:0", "elapsed": "00:05:22", "node": "hive-dc-7-4-58"},
+    "failure_is_deliberate_technical_gate": true
+  },
+  "authenticated_census": {
+    "output_rows": 62,
+    "finish_reason_stop": 62,
+    "technical_pass": 55,
+    "technical_fail": 7,
+    "invalid_stage_output": 6,
+    "invalid_stage_alignment": 1,
+    "valid_row_model_records": 331,
+    "valid_row_aligned_records": 331,
+    "valid_row_withheld_records": 0,
+    "failed_parent_count": 7
+  },
+  "exact_failures": [
+    {"batch_id": "7959d23cd32f101bfc2dd4ba0b0d183e201c300b21d129b62490acc9418a6731", "parse_status": "invalid_stage_output", "errors": ["slot_01:record_0:name_not_exact_in_block"]},
+    {"batch_id": "8840c0a453457b7a77807195c1e40c1bb126e74f3df374947f04ea44400a904a", "parse_status": "invalid_stage_output", "errors": ["slot_05:compound_anchor_mentions_not_fully_accounted"]},
+    {"batch_id": "cc97761e4a09614b707bf2749e28af95566c8ec3530d3c57c99b8f7fca1a091b", "parse_status": "invalid_stage_output", "errors": ["slot_01:record_0:name_not_exact_in_block"]},
+    {"batch_id": "bbc8472d024a824981554118a3dfd9e9f73c9b47b9594f528ef8dea4c3b56799", "parse_status": "invalid_stage_output", "errors": ["slot_03:record_0:name_not_exact_in_block"]},
+    {"batch_id": "b2124cddaa9eae746d4965f18c20b450445b0ed896f9d9f6a4ff4895d52da8de", "parse_status": "invalid_stage_alignment", "errors": ["slot_00:record_0:carrier_exact_alignment_failed:invalid_item_schema"]},
+    {"batch_id": "4339d98ca308826ef22f211ebbc0e6447eb53a3606b94daf74c99499ea5f33e2", "parse_status": "invalid_stage_output", "errors": ["slot_00:record_0:name_not_exact_in_block", "slot_07:record_0:name_not_exact_in_block"]},
+    {"batch_id": "2345780b3466e39d592b78b8c7217db4f225946bb997dce44033f3a767aeb824", "parse_status": "invalid_stage_output", "errors": ["slot_00:record_0:name_not_exact_in_block", "slot_01:record_0:name_not_exact_in_block", "slot_02:record_0:name_not_exact_in_block"]}
+  ],
+  "error_census_note": "The authenticated rows contain eight name_not_exact_in_block errors, not nine: 1+1+1+2+3. Together with one compound-accounting error and one alignment error, there are ten exact technical residual conditions across seven batches.",
+  "conservative_diagnostic": {
+    "scope": "technical-pass rows only; failed rows are never admitted or repaired",
+    "technical_pass_batches": 55,
+    "aligned_records": 331,
+    "withheld_records": 0,
+    "content_or_recall_gate_evaluated": false,
+    "strict_evaluator_status": "NO_GO_before_content_scoring"
+  },
+  "residual_design_verdict": {
+    "single_human_field_repair_ledger_mechanically_justified": false,
+    "reason": "Eight name errors and the compound error may admit enumerated exact-source record alternatives, but the Jamie Raskin row is already model-schema-valid and fails in deterministic carrier projection because explicit_text is paired with null endorsement_context_evidence. That condition is not a human name/title/affiliation choice and must be resolved as a separately reviewed projection-contract issue before any bounded residual ledger can prove 62-of-62 technical closure.",
+    "permitted_next_design": "After the projection issue is resolved without weakening alignment, enumerate complete record-level alternatives for the six invalid-output batches from exact authenticated block slices; validate every offered tuple through the unchanged validator and aligner; bind raw task/app/results/import bytes and the full six-file failed-run inventory; never offer free text, fuzzy substitutions, or a retry-generated answer."
+  },
+  "authorization": {
+    "retry_authorized": false,
+    "larger_run_authorized": false,
+    "stage_b_expansion_authorized": false,
+    "release_authorized": false
+  }
+}

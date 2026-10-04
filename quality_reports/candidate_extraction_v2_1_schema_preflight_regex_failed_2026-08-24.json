@@ -1,0 +1,65 @@
+{
+  "audit_type": "candidate_extraction_v2_1_schema_compilation_preflight",
+  "date": "2026-08-24",
+  "status": "failed_frozen_audit",
+  "release_eligible": false,
+  "hive_job_id": "21279840",
+  "slurm_state": "COMPLETED",
+  "slurm_exit_code": "0:0",
+  "elapsed": "00:13:33",
+  "purpose": "Repeat the three-route v2.1 guided-schema preflight after replacing the xgrammar-incompatible Unicode nonblank class with an ASCII-only nonblank pattern.",
+  "input": {
+    "directory": "build/hive_candidate_extraction/v2_1_three_route_schema_preflight_export_20260824g",
+    "records": 3,
+    "records_by_route": {
+      "biography": 1,
+      "endorsements": 1,
+      "issues": 1
+    },
+    "manifest_sha256": "0c423c427de98708436cf2fa0f354650f78c3b022e3025ef92ad25bec36afe2f",
+    "chunk_sha256": "d3a0c02fea4b14369f13db88602bc7cb4c474bb8496958595f6b3fe2d5972713"
+  },
+  "contract": {
+    "schema_version": "2.1",
+    "extraction_contract_sha256": "1a1d0d10f001b187b739fab3b78f42728087b88a8ec2bc259b6c709bac7f7e69",
+    "generation_config_sha256": "1a66cb57c4a35947ae1b5062f90185a3479aeb320ce47b3470c1486cabfc1f40",
+    "biography_schema_sha256": "49b34aef7bc53d66692110dfd03f615e6591011b6feaaa00457e0265d94f8067",
+    "endorsements_schema_sha256": "00b1ba09071fe664d3b1f9e9553cb6c38c0cf311fb00d78dfa87fad2e58b4382",
+    "issues_schema_sha256": "c7ad4313ac410dd6ccb792ca816bda2120f96728f8be63aeb66a4bfcc72c11fa"
+  },
+  "result": {
+    "output_rows": 3,
+    "finish_reason_counts": {
+      "length": 3
+    },
+    "parse_status_counts": {
+      "output_truncated": 3
+    },
+    "documents_parsed": 0,
+    "documents_schema_valid": 0,
+    "documents_exactly_supported": 0,
+    "input_truncated": 0,
+    "output_tokens_total": 73728,
+    "output_tokens_max": 24576
+  },
+  "failure": {
+    "stage": "xgrammar-guided generation",
+    "cause": "The pinned xgrammar engine compiled the unanchored one-character ASCII nonblank pattern, but treated it as a whole-string constraint. All three routes degenerated into repeated one-character records in unbounded arrays until the output-token limit.",
+    "scope": "Biography, endorsements, and issues all reproduced the same failure, so the 1,787-window pilot was not started.",
+    "not_observed": [
+      "grammar compilation error",
+      "strict JSON parse error before truncation",
+      "input truncation",
+      "OOM or process failure",
+      "contract or hash mismatch",
+      "control-character canonicalization failure"
+    ]
+  },
+  "artifacts": {
+    "output_directory": "build/hive_candidate_extraction/v2_1_three_route_schema_preflight_hive_output_20260824h",
+    "output_chunk_sha256": "a4da25585dfed497992cb5bdf06aab1df84917b380f4f2618673a4242e5f78c6",
+    "run_metadata_sha256": "79ff4e96063858a55f68b70389b9e94d29c06016b846b70710833cb354b4a066",
+    "log_sha256": "b6316a83df5566b4e9a113ea13ff55221e9332af47677a2986de430f46711d64"
+  },
+  "decision": "Do not reuse or merge this output. Remove regex pattern guidance from v2.1 strings, return to the previously stable minLength=1 schema restriction, retain the complete Python Unicode-whitespace validator as a fail-closed model-item gate, recompute all affected hashes, and repeat the same three-route preflight before any larger Hive run."
+}

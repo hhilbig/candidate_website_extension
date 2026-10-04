@@ -1,0 +1,125 @@
+{
+  "artifact_type": "versioned_failed_candidate_extraction_audit",
+  "audit_version": "1.0",
+  "frozen_on": "2026-08-24",
+  "status": "failed_substantive_validation_not_releaseable",
+  "immutability_rule": "These v1 artifacts are tuning evidence only. Do not overwrite, patch, or promote them into the public extension.",
+  "source": {
+    "source_corpus_sha256": "c53d36b24b293ac5d47706aa67731f1c107d6a679cb948c9ad71a70b5c8ce7c3",
+    "inference_windows": 35213,
+    "windows_by_route": {
+      "issues": 20673,
+      "biography": 8444,
+      "endorsements": 6096
+    },
+    "model_id": "Qwen/Qwen3.6-27B-FP8",
+    "model_revision": "e89b16ebf1988b3d6befa7de50abc2d76f26eb09",
+    "runtime_lock_sha256": "4f46101fa493e38b312af034b8d740c612bd0001bab4cb0f624f4a9e1c49f5b3"
+  },
+  "technical_audit": {
+    "parsed_windows": 35213,
+    "parse_errors": 0,
+    "schema_errors": 0,
+    "extracted_records": 449108,
+    "normalized_substring_supported_records": 440403,
+    "normalized_substring_support_rate": 0.9806171344086501,
+    "warning": "The v1 evidence check used normalized substring matching, not exact Unicode spans and offsets, and therefore is not a substantive release gate."
+  },
+  "substantive_audit": {
+    "coding_status": "complete_ai_assisted_audit",
+    "release_scope_records": 65,
+    "all_dimensions_correct": 25,
+    "all_dimensions_accuracy": 0.38461538461538464,
+    "by_route": {
+      "biography": {
+        "correct": 22,
+        "n": 30,
+        "accuracy": 0.7333333333333333
+      },
+      "issues": {
+        "correct": 2,
+        "n": 5,
+        "accuracy": 0.4
+      },
+      "endorsements": {
+        "correct": 1,
+        "n": 30,
+        "accuracy": 0.03333333333333333
+      }
+    },
+    "record_presence": {
+      "correct": 65,
+      "n": 65,
+      "rate": 1.0
+    },
+    "normalized_value_fidelity": {
+      "correct": 56,
+      "n": 65,
+      "rate": 0.8615384615384616
+    },
+    "record_type_correct": {
+      "correct": 56,
+      "n": 65,
+      "rate": 0.8615384615384616
+    },
+    "evidence_alone_support": {
+      "correct": 29,
+      "n": 65,
+      "rate": 0.4461538461538462
+    },
+    "complete_parent_page_recall": {
+      "no_missed_records": 11,
+      "n": 15,
+      "rate": 0.7333333333333333
+    },
+    "coding_provenance": {
+      "precision_rows": 75,
+      "human_confirmed_precision_rows": 50,
+      "ai_assisted_precision_rows": 25,
+      "recall_pages": 15,
+      "ai_assisted_recall_pages": 15
+    }
+  },
+  "frozen_artifacts": [
+    {
+      "file": "build/hive_candidate_extraction/full_segmented_export/manifest.json",
+      "sha256": "f3762398abf4e6da47c8cbb0595fef7e5669a5080ecdeca81852035679e5e085"
+    },
+    {
+      "file": "build/hive_candidate_extraction/full_segmented_imported/full_extractions.jsonl.gz",
+      "sha256": "444954f37c8062d7eaee67da52cef33fe49fd2a077997e0bc927df6a7e70d6a9"
+    },
+    {
+      "file": "build/hive_candidate_extraction/full_segmented_imported/full_parent_extractions.jsonl.gz",
+      "sha256": "c20c2a3443edc13f985c5cb3b2711c653f57c8b79debb62612236ddf53c950b3"
+    },
+    {
+      "file": "build/hive_candidate_extraction/full_segmented_imported/full_issue_records.parquet",
+      "sha256": "f7397060f8ec845e66ad097792a0c6cad02b56b73a69129d0cf7576199749413"
+    },
+    {
+      "file": "build/hive_candidate_extraction/full_segmented_imported/full_biography_records.parquet",
+      "sha256": "b028c6d800aad5edfbdb1f88f68ec873792e75ddb3e3afffd9df041f3f053c84"
+    },
+    {
+      "file": "build/hive_candidate_extraction/full_segmented_imported/full_endorsement_records.parquet",
+      "sha256": "8b0a75ba455715f0a5aa0e4cc4175da987b624e164c2cc27630dc985a274651c"
+    },
+    {
+      "file": "build/hive_candidate_extraction/full_segmented_imported/full_validation_report.json",
+      "sha256": "c23bee577d2ef16eb2189d62729782fd9589a8843ef3bc9d25494557fea87c17"
+    },
+    {
+      "file": "build/hive_candidate_extraction/human_validation_completed/completion_manifest.json",
+      "sha256": "c1022b051084e80fd876d9ce457b3446b36b4953801dab02b5ef3bc4106c607b"
+    },
+    {
+      "file": "build/hive_candidate_extraction/human_validation_completed/validation_score.json",
+      "sha256": "8522db47c38544a07757235ce2d4b491d2c0722c8e9f590700c29215474a103d"
+    },
+    {
+      "file": "build/hive_candidate_extraction/human_validation_completed/release_scope_validation_score.json",
+      "sha256": "8238e62cfdbbef227dbf1d7cdfba1990666f8494b722bcc84e5de983bb0cbd5a"
+    }
+  ]
+}

@@ -1,0 +1,188 @@
+{
+  "artifact_type": "candidate_extraction_v2_1_failed_full_attempt",
+  "frozen_on": "2026-08-24",
+  "status": "cancelled_failed_do_not_reuse",
+  "decision": "Preserve this partial run as a failed technical audit. Do not resume it, repair its six invalid rows, or combine any of its output with a later run. Revise the general input-display contract, rerun the stress pilot under one new contract hash, and rerun all 35,213 windows into a new empty output directory.",
+  "hive_job": {
+    "job_id": "21250200",
+    "partition": "low",
+    "array": "0-29%4",
+    "array_tasks": 30,
+    "maximum_concurrent_tasks": 4,
+    "started_hive_time": "2026-08-24T09:26:52",
+    "cancelled_hive_time": "2026-08-24T09:59:32",
+    "elapsed_for_started_tasks": "00:32:40",
+    "cancelled_by_uid": 2360097,
+    "started_tasks": [0, 1, 2, 3],
+    "unstarted_tasks": 26,
+    "completed_tasks": 0,
+    "failed_tasks": 0,
+    "scheduler_state_after_cancellation": "empty",
+    "scheduler_exit_code": "0:0",
+    "cancellation_reason": "A rolling strict-output audit found a reproducible corpus-wide JSON control-character defect. The job was cancelled before more GPU time was spent under an invalid contract."
+  },
+  "contract": {
+    "schema_version": "2.1",
+    "source_export_schema_version": "1.4",
+    "extraction_contract_sha256": "1cd69a9639267dbea62969b3cb8604bf5feeedb08fca10eadffcbb23c10613bc",
+    "source_export_manifest_sha256": "973050bc6f159bee3385788588bf0c807804c73227f0c9fbabf43809cb82c179",
+    "source_corpus_sha256": "c53d36b24b293ac5d47706aa67731f1c107d6a679cb948c9ad71a70b5c8ce7c3",
+    "model_id": "Qwen/Qwen3.6-27B-FP8",
+    "model_revision": "e89b16ebf1988b3d6befa7de50abc2d76f26eb09",
+    "runtime_lock_sha256": "4f46101fa493e38b312af034b8d740c612bd0001bab4cb0f624f4a9e1c49f5b3",
+    "temperature": 0.0,
+    "max_output_tokens": 24576,
+    "strict_json_parser": true
+  },
+  "intended_scope": {
+    "parent_documents": 23871,
+    "inference_windows": 35213,
+    "windows_by_route": {
+      "issues": 20673,
+      "biography": 8444,
+      "endorsements": 6096
+    },
+    "source_chunks": 587,
+    "output_shards": 30
+  },
+  "preserved_partial_output": {
+    "directory": "build/hive_candidate_extraction/v2_1_full_hive_output_20260824e_failed",
+    "complete_chunk_files": 35,
+    "run_metadata_files": 0,
+    "temporary_or_partial_files": 0,
+    "output_rows": 2100,
+    "share_of_intended_windows": 0.05963706585635987,
+    "parsed_rows": 2094,
+    "strict_json_parse_error_rows": 6,
+    "parsed_rows_by_route": {
+      "biography": 1200,
+      "endorsements": 714,
+      "issues": 180
+    },
+    "present_chunk_indices": [
+      0,
+      1,
+      2,
+      3,
+      30,
+      31,
+      32,
+      33,
+      60,
+      61,
+      62,
+      63,
+      90,
+      91,
+      92,
+      93,
+      120,
+      121,
+      122,
+      123,
+      150,
+      151,
+      152,
+      153,
+      180,
+      181,
+      182,
+      183,
+      210,
+      211,
+      213,
+      241,
+      243,
+      273,
+      303
+    ],
+    "output_inventory_sha256": "3d935d3880ce796b83e641b336cf00e7fe6e8ea9a078559fe78a104cc209cf4d",
+    "output_inventory_hash_definition": "SHA-256 of the sorted UTF-8 lines '<basename>  <file_sha256>\\n' for all 35 preserved chunk_*.out.jsonl.gz files",
+    "failing_chunk_sha256": {
+      "chunk_00151.out.jsonl.gz": "f5f33410d10403c0f6fe7b5c62da0431bb637bcb1ae4b65e422b4ebcb49fddf4",
+      "chunk_00182.out.jsonl.gz": "421f494e39270572f633d3f8e753db8d607da58d17332567971f628a6d0fac4c"
+    }
+  },
+  "failure_diagnostic": {
+    "failed_rows": 6,
+    "affected_route": "endorsements",
+    "affected_candidate_cycle_id": "H4MD02232-2024",
+    "affected_parent_documents": 2,
+    "affected_segments_per_parent": [0, 1, 2],
+    "finish_reason_for_every_failed_row": "stop",
+    "length_truncated_rows": 0,
+    "literal_invalid_character": "U+0009 TAB",
+    "invalid_character_occurrences_in_failed_raw_outputs": 10,
+    "representative_exact_source_values": [
+      "Ben\\tBarnes",
+      "Ivan\\tBates",
+      "Jeff\\tWaldstreicher",
+      "Jeff\\tWaldstreicher State Senator, District 18"
+    ],
+    "mechanism": "The unchanged source segment was displayed to the model with literal C0 control characters. The model copied source tabs literally inside JSON string values instead of emitting JSON escape sequences. A literal tab is invalid in a JSON string, so the required strict parser rejected the otherwise complete outputs before alignment.",
+    "why_local_row_repair_is_prohibited": "Accepting invalid JSON with a permissive parser or escaping only the six observed rows would weaken the corpus-wide contract and create nonuniform provenance. The correction must be deterministic, general, contract-bound, and applied before inference to every window."
+  },
+  "full_source_control_character_audit": {
+    "audited_windows": 35213,
+    "audited_parents": 23871,
+    "control_characters_other_than_lf_or_cr": [
+      {
+        "code_point": "U+0009",
+        "name": "TAB",
+        "occurrences": 11414,
+        "windows": 905,
+        "parents": 786,
+        "windows_by_route": {
+          "biography": 344,
+          "endorsements": 173,
+          "issues": 388
+        }
+      },
+      {
+        "code_point": "U+0003",
+        "name": "END OF TEXT",
+        "occurrences": 23,
+        "windows": 14,
+        "parents": 14,
+        "windows_by_route": {
+          "biography": 3,
+          "endorsements": 5,
+          "issues": 6
+        }
+      }
+    ],
+    "other_c0_control_code_points_found": 0,
+    "literal_backslash_display_scope": {
+      "occurrences": 114,
+      "windows": 43,
+      "parents": 33,
+      "windows_by_route": {
+        "biography": 14,
+        "endorsements": 9,
+        "issues": 20
+      }
+    },
+    "c1_controls_deliberately_unchanged": {
+      "code_point_range": "U+0080-U+009F",
+      "json_valid": true,
+      "occurrences": 9888,
+      "windows": 525,
+      "parents": 314,
+      "windows_by_route": {
+        "biography": 122,
+        "endorsements": 63,
+        "issues": 340
+      },
+      "decision": "Do not transform these characters under the narrow invalid-JSON correction. Any broader source-quality normalization would be a separate documented decision."
+    }
+  },
+  "required_corrective_gate": [
+    "Keep the authoritative extraction source text, hashes, and Unicode offsets unchanged.",
+    "Preserve line feeds and quotes in the prompt. Use one reversible minimal model-display codec that escapes backslashes and non-LF C0 controls only; do not convert the full page into JSON-string display text or alter C1 controls under this correction.",
+    "Before parsing, use one narrow lexical canonicalizer that escapes raw U+0000 through U+001F only when they occur inside a JSON string. Retain the verbatim generation, reject every other malformed condition, and pass the canonical payload through the existing strict duplicate-key, nonfinite-number, and invalid-escape parser.",
+    "Bind the display-codec and canonicalizer specification identifiers and hashes, raw and canonical payload hashes, exact repair counts, and generation configuration into the extraction contract and output provenance.",
+    "Keep exact decoded-string alignment against the unchanged source. Do not rescue display-encoded strings that fail direct source alignment.",
+    "Rerun a complete-parent stress pilot covering 867 parents and 1,787 windows. Its manifest must attest all 962 changed-display windows, all prior controls, their 1,021-window union, and named dense-tab, short-tab, and U+0003 controls.",
+    "Rerun the complete stress pilot under the new contract, then rerun all 35,213 windows into a new empty directory. Never resume or merge this cancelled output."
+  ]
+}

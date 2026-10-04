@@ -1,0 +1,58 @@
+{
+ "aligned_after": {
+  "biography": 0,
+  "endorsements": 167,
+  "issues": 137
+ },
+ "aligned_before": {
+  "biography": 0,
+  "endorsements": 167,
+  "issues": 120
+ },
+ "alignment_method_counts": {
+  "not_applicable": 55,
+  "page_or_section_route_context": 159,
+  "provided_exact_segment_span": 8,
+  "unique_exact_typographic_variant_substring_v1": 20,
+  "unique_exact_unicode_substring_v1": 366
+ },
+ "alignment_spec_sha256": "f9179f01fe426bce150d8a5efefefa04a67c67ead7e3ee5c240fb42db9993733",
+ "chunks": 33,
+ "destination": "build/hive_candidate_extraction/v2_2_seed_vary_repair_20260917a",
+ "dispositions": {
+  "gained": 6,
+  "not_parsed": 24,
+  "unchanged": 6
+ },
+ "export_dir": "build/hive_candidate_extraction/v2_1_full_export_20260824p",
+ "extraction_contract_sha256": "b0bdd1662e204e855f6e63fe0c1ffc4e378b8ede55353a464b33f5ed6ed3343b",
+ "format": "candidate-extraction-realign-v2-2-v1",
+ "generated_at": "2026-09-24T16:57:39+00:00",
+ "realigned_routes": [
+  "issues",
+  "biography",
+  "endorsements"
+ ],
+ "recovered_records": {
+  "biography": 0,
+  "endorsements": 0,
+  "issues": 17
+ },
+ "rows_by_route": {
+  "biography": 1,
+  "endorsements": 8,
+  "issues": 27
+ },
+ "schema_version": "2.2",
+ "source_output_dir": "build/hive_candidate_extraction/v2_1_seed_vary_repair_20260917a",
+ "withheld_after": {
+  "biography": 0,
+  "endorsements": 22,
+  "issues": 3
+ },
+ "withheld_before": {
+  "biography": 0,
+  "endorsements": 22,
+  "issues": 20
+ }
+}

@@ -1,0 +1,58 @@
+{
+  "audit_type": "candidate_extraction_v2_1_schema_compilation_preflight",
+  "date": "2026-08-24",
+  "status": "failed_frozen_audit",
+  "release_eligible": false,
+  "hive_job_id": "21277141",
+  "slurm_state": "COMPLETED",
+  "slurm_exit_code": "0:0",
+  "elapsed": "00:03:27",
+  "purpose": "Compile and exercise the final conditional v2.1 guided JSON schemas on one biography, one endorsement, and one issue window before the 1,787-window stress pilot.",
+  "input": {
+    "directory": "build/hive_candidate_extraction/v2_1_three_route_schema_preflight_export_20260824g",
+    "records": 3,
+    "records_by_route": {
+      "biography": 1,
+      "endorsements": 1,
+      "issues": 1
+    },
+    "manifest_sha256": "0c423c427de98708436cf2fa0f354650f78c3b022e3025ef92ad25bec36afe2f",
+    "chunk_sha256": "d3a0c02fea4b14369f13db88602bc7cb4c474bb8496958595f6b3fe2d5972713"
+  },
+  "contract": {
+    "schema_version": "2.1",
+    "extraction_contract_sha256": "328813eedd436483ace631f345724501df8f3c733baad9ec97b77eac23515bde",
+    "generation_config_sha256": "ae3fd9c225ef73d7d836addca4ebd03c24cd67fd6b2eab19a95269ae62dd9225",
+    "biography_schema_sha256": "f626f7f007f90e55f02d7151eaed6fa8d20f2b65c79ebd6e9f769d06ef5befdb",
+    "endorsements_schema_sha256": "8dd9ce0b0208198b7098f8b92b258272168abd77c66eaf1059f20cbe21d72777",
+    "issues_schema_sha256": "e2632ce85e9a2d7260871b961a691e02a891866acebade59c832b99b4f95d31a"
+  },
+  "result": {
+    "output_rows": 3,
+    "finish_reason_counts": {
+      "error": 3
+    },
+    "parse_status_counts": {
+      "generation_incomplete": 3
+    },
+    "documents_parsed": 0,
+    "documents_schema_valid": 0,
+    "input_truncated": 0,
+    "raw_output_nonempty": 0
+  },
+  "failure": {
+    "stage": "xgrammar JSON-schema compilation",
+    "engine": "xgrammar 0.2.3 through vLLM structured output",
+    "message": "tvm.error.InternalError: bitset::set: __position (which is 128) >= _Nb (which is 128)",
+    "warning": "Negative Character class contains byte greater than 127, clamping to 127.",
+    "cause": "The v2.1 nonblank-string pattern used a negated class containing Python Unicode strip characters above byte 127. The pinned xgrammar compiler cannot compile that class.",
+    "scope": "All three route schemas failed before generation because they share the nonblank-string helper."
+  },
+  "artifacts": {
+    "output_directory": "build/hive_candidate_extraction/v2_1_three_route_schema_preflight_hive_output_20260824g",
+    "output_chunk_sha256": "fa2b6fd6a8c3151b180fcbe8a570cf6f8eb666e0f94eea17198e00dbff481895",
+    "run_metadata_sha256": "a3256d2eab2283786515c18cbf977ed8a1b6d9ad37ee0bd3cfafbdb0655eea39",
+    "log_sha256": "37b0abfccda26f65f4907af8f892e4f2cfca6e6e7a4c9a614ed016999289cb5a"
+  },
+  "decision": "Do not reuse or merge this output. Retain the conditional oneOf rules, replace the incompatible guided-decoding nonblank pattern with an xgrammar-compatible restriction, retain the full Python Unicode-strip validator as a fail-closed post-generation gate, recompute all affected hashes, and repeat the three-route preflight before any larger Hive run."
+}
