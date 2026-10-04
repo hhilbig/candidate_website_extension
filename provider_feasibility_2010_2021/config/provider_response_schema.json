@@ -1,0 +1,102 @@
+{
+  "schema_version": "provider-response-v1",
+  "description": "One terminal response row per masked candidate and provider. Event-specific fields are required for every found URL; current-profile-only values remain auditable but are not eligible evidence.",
+  "row_key": [
+    "masked_candidate_id",
+    "provider_name"
+  ],
+  "required_columns": [
+    "masked_candidate_id",
+    "provider_name",
+    "match_status",
+    "provider_candidate_id",
+    "provider_election_id",
+    "provider_stage_id",
+    "candidate_name",
+    "office_name",
+    "office_level",
+    "office_branch",
+    "jurisdiction_name",
+    "state_abb",
+    "election_date",
+    "election_round",
+    "campaign_website_url",
+    "url_observation_date",
+    "provider_record_observation_date",
+    "provider_record_url",
+    "source_provenance",
+    "historical_version_status",
+    "provider_notes"
+  ],
+  "provider_name_values": [
+    "ballotready_civicengine",
+    "ballotpedia",
+    "democracy_works",
+    "vote_smart",
+    "lwv_vote411"
+  ],
+  "match_status_values": [
+    "found",
+    "no_result",
+    "match_unresolved",
+    "source_unavailable",
+    "request_error"
+  ],
+  "historical_version_status_values": [
+    "event_specific_historical",
+    "historical_record_current_url_unknown",
+    "current_profile_only",
+    "not_supplied"
+  ],
+  "found_required_fields": [
+    "provider_candidate_id",
+    "provider_election_id",
+    "candidate_name",
+    "office_name",
+    "office_level",
+    "office_branch",
+    "jurisdiction_name",
+    "state_abb",
+    "election_date",
+    "election_round",
+    "campaign_website_url",
+    "url_observation_date",
+    "provider_record_observation_date",
+    "provider_record_url",
+    "source_provenance",
+    "historical_version_status"
+  ],
+  "event_specific_eligibility": {
+    "match_status": "found",
+    "historical_version_status": "event_specific_historical",
+    "required_fields": [
+      "provider_candidate_id",
+      "provider_election_id",
+      "candidate_name",
+      "office_name",
+      "office_level",
+      "office_branch",
+      "jurisdiction_name",
+      "state_abb",
+      "election_date",
+      "election_round",
+      "campaign_website_url",
+      "url_observation_date",
+      "provider_record_observation_date",
+      "provider_record_url",
+      "source_provenance"
+    ]
+  },
+  "date_fields": [
+    "election_date",
+    "url_observation_date",
+    "provider_record_observation_date"
+  ],
+  "notes": [
+    "The provider must return a terminal row for every requested masked candidate, including no-result cases.",
+    "The election date and round must describe the candidacy that produced the URL, not a current profile.",
+    "url_observation_date records when the provider observed the campaign URL; provider_record_observation_date records the dated provider snapshot or version.",
+    "A current profile or an undated historical record is not event-specific eligible evidence.",
+    "Provider output does not itself satisfy the project's archive-based strict evidence grades; accepted URLs still require downstream temporal ownership validation."
+  ]
+}

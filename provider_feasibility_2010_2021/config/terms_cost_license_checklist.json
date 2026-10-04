@@ -1,0 +1,83 @@
+{
+  "checklist_version": "provider-due-diligence-v1",
+  "approval_rule": "Do not purchase data or activate a paid/test API until Hanno has reviewed the returned sample, quote, full terms, and projected cost per accepted strict URL.",
+  "items": [
+    {
+      "item_id": "historical_scope",
+      "question": "Which mayoral candidacies, jurisdictions, election dates, stages, and years are retained historically?",
+      "required_before_purchase": true
+    },
+    {
+      "item_id": "event_versioning",
+      "question": "Are campaign website values tied to a specific election and stage, or overwritten by the current profile?",
+      "required_before_purchase": true
+    },
+    {
+      "item_id": "observation_dates",
+      "question": "Does each URL include the date first observed, last observed, or the dated record version from which it came?",
+      "required_before_purchase": true
+    },
+    {
+      "item_id": "provenance",
+      "question": "Does each value identify its source and collection method, and may that provenance be retained in research files?",
+      "required_before_purchase": true
+    },
+    {
+      "item_id": "delivery",
+      "question": "Can the 100-case result be delivered as CSV or JSON with one terminal row per requested case?",
+      "required_before_purchase": true
+    },
+    {
+      "item_id": "sample_cost",
+      "question": "Is the masked 100-case feasibility sample free, and what minimum contract or setup charge applies?",
+      "required_before_purchase": true
+    },
+    {
+      "item_id": "production_quote",
+      "question": "What are the one-time and recurring prices for all unresolved in-scope cases, including API, export, support, and minimum-term charges?",
+      "required_before_purchase": true
+    },
+    {
+      "item_id": "academic_use",
+      "question": "Do the terms permit noncommercial academic research, internal matching, validation, and publication of aggregate results?",
+      "required_before_purchase": true
+    },
+    {
+      "item_id": "derived_urls",
+      "question": "May accepted campaign URLs, source citations, and derived match decisions be stored, shared with coauthors, and released?",
+      "required_before_purchase": true
+    },
+    {
+      "item_id": "confidentiality",
+      "question": "Which raw fields are confidential, and what safeguards prevent redistribution or bulk download?",
+      "required_before_purchase": true
+    },
+    {
+      "item_id": "retention_deletion",
+      "question": "What caching, retention, contract-end deletion, and audit-log requirements apply?",
+      "required_before_purchase": true
+    },
+    {
+      "item_id": "attribution",
+      "question": "What citation, attribution, logo, or link-back language is required?",
+      "required_before_purchase": true
+    },
+    {
+      "item_id": "third_party_sources",
+      "question": "Are campaign URLs sourced from another vendor, and do upstream terms limit research use or redistribution?",
+      "required_before_purchase": true
+    },
+    {
+      "item_id": "service_limits",
+      "question": "What API rate limits, export limits, support terms, uptime commitments, and change-notice practices apply?",
+      "required_before_purchase": false
+    }
+  ],
+  "decision_gates": {
+    "minimum_adjudicated_precision_to_continue": 0.95,
+    "maximum_projected_cost_per_accepted_url_to_continue_usd": 100,
+    "drop_if_precision_below": 0.90,
+    "drop_if_cost_per_accepted_url_above_usd": 250,
+    "sample_purchase_allowed": false
+  }
+}

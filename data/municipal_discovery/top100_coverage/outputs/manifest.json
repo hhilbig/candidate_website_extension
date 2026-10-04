@@ -219,7 +219,7 @@
     "data/municipal_discovery/top100_coverage/legacy_attribution/agent_verdicts.csv": "7ed0fe0f346d45bac8f1775d4c6b3319ede82a21ba8530b291dcf7dd9423a9b8",
     "data/municipal_discovery/top100_coverage/linkage/discovered_url_leads.csv": "f392babcad31a856f3bc1e6c1e79e89b62809f9b9b2f3608abc2f8467a55deb2"
   },
-  "script_sha256": "1bb85e05cceeb2caa0a993b6e4b4bb00f7cbfef03efa1d70945fab9d95257e2e",
+  "script_sha256": "664cfbe501dd47b5365019178e3e95c834f883194dbe2e4c28f227d221c81f67",
   "outputs": {
     "cities.csv": "4e06ea9d422efcd97b0236de473caa32ca952d1d387d610379d07d5ebde3a388",
     "city_year_audit.csv": "a9d46e666b12b6307ece6ebc9a33d1f40094f67423887a333c852888167a5f6f",

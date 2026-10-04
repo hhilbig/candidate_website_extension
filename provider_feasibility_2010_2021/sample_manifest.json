@@ -1,0 +1,112 @@
+{
+  "filter_audit": [
+    {
+      "after": 480,
+      "before": 2669,
+      "drop_share": 0.820157,
+      "dropped": 2189,
+      "expected": true,
+      "filter": "inherit common candidate screening sample",
+      "reason": "This provider pilot is nested in the approved common 480-case acquisition screen rather than drawing from a separate universe."
+    },
+    {
+      "after": 160,
+      "before": 480,
+      "drop_share": 0.666667,
+      "dropped": 320,
+      "expected": true,
+      "filter": "provider years 2018-2021 within common screen",
+      "reason": "BallotReady and Ballotpedia public product documentation supports the primary test from 2018; Democracy Works is tested only for 2020-2021."
+    },
+    {
+      "after": 100,
+      "before": 160,
+      "drop_share": 0.375,
+      "dropped": 60,
+      "expected": true,
+      "filter": "deterministic provider subsample",
+      "reason": "Provider feasibility pilot size: 25 candidate-years from each of four years."
+    }
+  ],
+  "generated_files": {
+    "frozen_unresolved_frame": {
+      "path": "data/frozen_unresolved_2010_2021.csv",
+      "rows": 2669,
+      "sha256": "fc8744ca3d4fbffdd3933a8d11261f6dbde0ddc46d8d177e25e05c1e3b5c2803"
+    },
+    "internal_sample_crosswalk": {
+      "path": "data/internal_masked_sample_crosswalk.csv",
+      "rows": 100,
+      "sha256": "71a79bad73eb068889bfb7377e0dcf846770231f86e003cc5fd23bdbaac15adc"
+    },
+    "masked_provider_sample": {
+      "path": "data/masked_provider_sample_100.csv",
+      "rows": 100,
+      "sha256": "f4f5173ce37252bfea77e02be1a4afabf1a573fb6c30fa3f8281a00314340518"
+    },
+    "provider_response_template": {
+      "path": "data/provider_response_template.csv",
+      "rows": 0,
+      "sha256": "c00a01ba98616b1a3a20681d721fb0861f7f755cb38567ba422668547ee7a039"
+    }
+  },
+  "generated_on": "2026-08-25",
+  "manifest_version": "provider-feasibility-build-v1",
+  "parent_screen_source": {
+    "path": "data/municipal_discovery/screening_2010_2021/candidate_screening_sample_2010_2021.csv",
+    "rows": 480,
+    "sha256": "646e2688005ca7c4f0f20ed027aeb7709351adbdfa9864af26e143f1caf3eb19"
+  },
+  "sampling": {
+    "democracy_works_requested_rows": 50,
+    "freeze_years": [
+      2010,
+      2021
+    ],
+    "frozen_unresolved_by_year": {
+      "2010": 203,
+      "2011": 272,
+      "2012": 171,
+      "2013": 283,
+      "2014": 180,
+      "2015": 240,
+      "2016": 180,
+      "2017": 251,
+      "2018": 259,
+      "2019": 242,
+      "2020": 212,
+      "2021": 176
+    },
+    "frozen_unresolved_rows": 2669,
+    "masking_definition": "Internal candidate/contest IDs and all known URL/outcome fields are withheld; candidate name and event context are retained because providers need them to match records.",
+    "parent_provider_era_rows": 160,
+    "parent_screen_has_covered_rows": false,
+    "parent_screen_rows": 480,
+    "pilot_years": [
+      2018,
+      2021
+    ],
+    "primary_provider_frame_rows": 889,
+    "quota_per_year": 25,
+    "sample_by_year": {
+      "2018": 25,
+      "2019": 25,
+      "2020": 25,
+      "2021": 25
+    },
+    "sample_is_exact_parent_subset": true,
+    "sample_rows": 100,
+    "seed": 20260825,
+    "unresolved_frame_has_covered_rows": false
+  },
+  "schema": {
+    "path": "provider_feasibility_2010_2021/config/provider_response_schema.json",
+    "schema_version": "provider-response-v1",
+    "sha256": "076a1aeecd81cd60387afe59184799b78019d65a89414c098d35d050ceb0aa32"
+  },
+  "unresolved_frame_source": {
+    "path": "data/municipal_discovery/screening_2010_2021/search_source_expansion/frozen_inputs/unresolved_2010_2021.csv",
+    "rows": 2669,
+    "sha256": "f2c8c6f95f471391fac223068c8e4d9dd58c950cd092e50f64a83aef8f871ed5"
+  }
+}
