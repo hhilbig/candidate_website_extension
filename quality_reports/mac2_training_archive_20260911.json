@@ -1,0 +1,16 @@
+{
+  "host": "mac2",
+  "date": "2026-09-11",
+  "removed_expanded_copy": "/Users/hannohilbig/data_scratch/bes_mii/training_lg.json",
+  "retained_archive": "/Users/hannohilbig/data_scratch/bes_mii/training_lg.tar.xz",
+  "archive_member": "training_lg.json",
+  "original_bytes": 9367108170,
+  "original_sha256": "86814a5bb514125c0105ae64da42b992ed4e8dff1d68488f054a10c952aba16a",
+  "verification": "Full archive member SHA-256 and byte count matched the original. Full tar stream consumed. Source and archive metadata unchanged during validation. No open source handles before removal.",
+  "archive_bytes": 1130464728,
+  "before_free_bytes": 20444069888,
+  "after_free_bytes": 29811306496,
+  "measured_freed_bytes": 9367236608,
+  "restore_on_mac2": "tar -xJkf /Users/hannohilbig/data_scratch/bes_mii/training_lg.tar.xz -C /Users/hannohilbig/data_scratch/bes_mii training_lg.json",
+  "verification_scope": "Byte preservation verified by streaming decompression; research pipeline not rerun. Restore JSON before using loaders that require its expanded path."
+}

@@ -22,6 +22,24 @@ Untagged `[LEARN]` entries are legacy.
 
 ## Pipelines
 
+- `[LEARN:data] 2026-09-10` — A candidate name or campaign phrase in hyperlink
+  text does not show that the link target is candidate-owned. The mayoral source
+  expansion admitted news articles and government records as `custom_domain`
+  candidate URLs. In a frozen 60-row audit, exact-URL precision was 30 percent
+  for new-candidate leads, 25 percent for additional-site leads, and 100 percent
+  for alternative URLs on already known candidate sites. Require a target-site
+  ownership check before an extracted hyperlink can add a new candidate site.
+- `[LEARN:scraping] 2026-09-10` — Retire process-based monitors after a queue
+  completes. The old House monitor ignored its June completion marker and used
+  full roster rows as its denominator, so it reported a completed scrape as
+  stopped and incomplete. A stable Wayback redirect cycle should use a distinct
+  terminal `redirect_loop` status instead of remaining retryable forever.
+- `[LEARN:scraping] 2026-09-06` — Large Wayback fetch checkpoints must not be
+  copied after every request or paired with a fully materialized pending-row
+  list. Keep the append-only journal durable, stream the queue, merge updates
+  at checkpoints, and benchmark worker counts under the production rate limit.
+  On the 291,044-capture mayoral queue, this reduced scraper RSS from 1.23 GB
+  to about 325 MB; two workers outperformed one, while four added no benefit.
 - `[LEARN:scraping] 2026-04-26` — Outlier candidates with huge archived
   subpage trees (long-serving incumbents like David Vitter, presidential
   aspirants like Marco Rubio with 400+ CDX records) can take 6+ hours
@@ -55,13 +73,12 @@ Untagged `[LEARN]` entries are legacy.
   of reason and nobody noticed for ~6 weeks. Pair the queue with a
   death/stall watcher (`watch_house_queue.sh`) that Slacks when the
   process vanishes with no "queue complete" line.
-- `[LEARN:infra] 2026-06-15` — macOS ships rsync 2.6.9 (no `--info=*`).
-  For mac↔droplet snapshot transfers use a tar-pipe
-  (`ssh A 'cd r && tar czf - path' | ssh B 'cd r && tar xzf -'`) or
-  rsync with `--stats`. Droplet has no Tailscale, so mac2→droplet must
-  route through the local Mac. Verify a transfer by comparing file count
-  AND total bytes on both ends (du differs by FS block rounding; byte
-  sum does not).
+- `[LEARN:infra] 2026-09-10` — macOS ships rsync 2.6.9 (no `--info=*`).
+  For mac-to-droplet snapshot transfers, use a tar pipe or rsync with
+  `--stats`. mac2 can SSH directly to `root@droplet` over Tailscale; use
+  that route for large transfers instead of relaying through the primary
+  Mac. Verify an archive with a compression test, member count, and matching
+  hashes of the source tar stream and the decompressed destination stream.
 - `[LEARN:scraping] 2026-06-17` — Wayback "Connection refused" is far worse
   now than the March threads=1≈0 note: a 37h House-2022 run logged ~2430
   refusals. Retry(3) + 6h-auto-pause (fires after 5 consecutive refused
@@ -108,3 +125,9 @@ Untagged `[LEARN]` entries are legacy.
   `text_quality` column instead: usable (n_char≥1500) 85.1% / thin 9.4% /
   empty 5.5%, uniform 80–89% usable across all 16 office-years. Raw `n_char`
   retained for re-thresholding. (`scripts/build_panel.py`.)
+- `[LEARN:data] 2026-09-10` — Archive-It can return a rate-limit page with
+  HTTP 200 at a timestamped replay URL. Three mayoral proposals had these
+  responses misclassified as domain reuse. Check service response content
+  before candidate identity. Preserve these cases as retryable archive errors.
+  Missing candidate identity in a blank or failed historical page also does
+  not prove that a different owner used the domain.
