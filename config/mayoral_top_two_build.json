@@ -206,5 +206,8 @@
   ],
   "identity_links": "data/municipal_discovery/top100_coverage/linkage/identity_links.csv",
   "discovered_url_leads": "data/municipal_discovery/top100_coverage/linkage/discovered_url_leads.csv",
-  "stage3_saved_pages": "data/municipal_discovery/top100_coverage/inputs/stage3_saved_pages.csv"
+  "stage3_saved_pages": [
+    "data/municipal_discovery/top100_coverage/inputs/stage3_saved_pages.csv",
+    "data/municipal_discovery/top100_coverage/inputs/stage3b_saved_pages.csv"
+  ]
 }

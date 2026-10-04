@@ -2065,3 +2065,9 @@ Stage 3 batch 2 (Hanno approved October 3): the 114 domain-sweep URLs, same meth
 in `~/candidate_website_extension_stage3/data/municipal_archive_acquisition/mayoral_stage3b_20261003/`
 (frozen targets sha256 `3df4d537…`, log `runs.log`). The target builder now takes `--batch` and `--exclude`
 (earlier batches' target files). `stage3_saved_pages` in the build config may list several batch summaries.
+Batch 2 done (October 3): 3,132 of 3,241 pages fetched (100 no content, 9 not available, 14 timestamp mismatch,
+0 retryable), all 114 targets with in-window pages, 372 MB raw HTML, 8.8 million text characters, all hashes
+verified; summary `inputs/stage3b_saved_pages.csv`. Build: downloaded content 174 to 288 of 822 finalists;
+elections with both finalists downloaded 88 of 411 (21 percent), winner 37 percent, any 49 percent. 2018-2021
+stays lowest (both 4 percent) because its URLs are mostly legacy leads without attribution; the Hive check of
+the 181 legacy leads with in-window captures is the next lever and needs Hanno's approval. 63 tests pass.
