@@ -113,7 +113,11 @@ def aggregate(rows):
     return result
 
 
-def evidence_for(urls, election_date, reviews, validations, saved=None):
+def by_candidate_rows(urls, candidate_year_id):
+    return [u for u in urls if u["candidate_year_id"] == candidate_year_id]
+
+
+def evidence_for(urls, election_date, reviews, validations, saved=None, attributed_keys=frozenset()):
     """Positive evidence only; missing inventories remain unknown, not absent."""
     archive = False
     download = False
@@ -124,6 +128,8 @@ def evidence_for(urls, election_date, reviews, validations, saved=None):
         if row.get("url_type") in {"social", "social_media", "fundraising", "officeholder_profile"}:
             continue
         accepted = any(truth(row.get(k, "")) is True for k in ("human_accepted", "sampled_audit_accepted", "ai_accepted_website"))
+        # Checked legacy attribution (legacy_attribution/agent_verdicts.csv): this URL is the candidate's own site.
+        accepted = accepted or (row["candidate_url_id"], row["candidate_year_id"]) in attributed_keys
         key = (row["candidate_url_id"], row["candidate_year_id"])
         attributed = accepted
         for evidence in reviews.get(key, []):
@@ -181,7 +187,8 @@ def recorded_period_metadata(urls, election_date, saved, reviews, validations):
     return None
 
 
-def build(cities, roster, urls, results, reviews=(), validations=(), city_year_overrides=(), saved_evidence=(), identity_links=(), discovered_leads=(), stage3_pages=()):
+def build(cities, roster, urls, results, reviews=(), validations=(), city_year_overrides=(), saved_evidence=(), identity_links=(), discovered_leads=(), stage3_pages=(),
+          legacy_attribution=()):
     unique(cities, "city_id", "city")
     unique(roster, "candidate_year_id", "legacy candidate-year")
     unique(urls, "candidate_url_id", "URL")
@@ -218,6 +225,12 @@ def build(cities, roster, urls, results, reviews=(), validations=(), city_year_o
             raise ValueError("Duplicate discovered URL lead")
         discovered[lead["candidate_election_id"]] = lead
     used_discovered = set()
+    attributed_keys = set()
+    for row in legacy_attribution:
+        if row["status"] == "accepted":
+            if row["candidate_url_id"] not in {u["candidate_url_id"] for u in by_candidate_rows(urls, row["candidate_year_id"])}:
+                raise ValueError("Legacy attribution names a URL that is not linked to its candidate-year")
+            attributed_keys.add((row["candidate_url_id"], row["candidate_year_id"]))
     # Saved site pages from the stage 3 scrape of discovered URLs (scripts/summarize_mayoral_stage3_pages.py).
     pages = {}
     for row in stage3_pages:
@@ -307,7 +320,8 @@ def build(cities, roster, urls, results, reviews=(), validations=(), city_year_o
             links = [r for r in by_candidate.get(legacy_id, []) if campaign_lead(r)]
             # Never transfer a URL across distinct election months without an explicit claim.
             links = [r for r in links if r.get("month") and int(float(r["month"])) == day.month]
-            archive, downloaded, content, refs = evidence_for(links, election_date, review_index, validation_index, saved_index)
+            archive, downloaded, content, refs = evidence_for(links, election_date, review_index, validation_index, saved_index,
+                                                              attributed_keys)
             candidate_id = election_id + "__" + hashlib.sha256(name_key(candidate["name"]).encode()).hexdigest()[:16]
             lead = discovered.get(candidate_id)
             url_lead_basis = "legacy_url_inventory" if links else ""
@@ -550,6 +564,10 @@ def main():
         pages_manifest = json.loads((ROOT / Path(pages_path).with_suffix(".manifest.json")).read_text())
         if pages_manifest["output_sha256"] != sha(ROOT / pages_path) or not pages_manifest["all_files_verified"]:
             raise ValueError("Stage 3 page summary does not match its verified manifest")
+    attribution_path = config.get("legacy_attribution")
+    legacy_attribution = read_csv(ROOT / attribution_path) if attribution_path else []
+    if attribution_path:
+        inputs.append(Path(attribution_path))
     leads_path = config.get("discovered_url_leads")
     discovered_leads = read_csv(ROOT / leads_path) if leads_path else []
     if leads_path:
@@ -558,7 +576,7 @@ def main():
     result = build(read_csv(ROOT / args.cities), read_csv(ROOT / ROSTER), read_csv(ROOT / URLS), records,
                    read_csv(ROOT / REVIEWS), read_csv(ROOT / VALIDATION), overrides, read_csv(ROOT / args.saved_evidence),
                    identity_links=identity_links, discovered_leads=discovered_leads,
-                   stage3_pages=stage3_pages)
+                   stage3_pages=stage3_pages, legacy_attribution=legacy_attribution)
     cities, city_years, elections, candidates, summary, outside = result
     if len(cities) != 100:
         raise ValueError("Production build requires exactly 100 cities")

@@ -209,5 +209,6 @@
   "stage3_saved_pages": [
     "data/municipal_discovery/top100_coverage/inputs/stage3_saved_pages.csv",
     "data/municipal_discovery/top100_coverage/inputs/stage3b_saved_pages.csv"
-  ]
+  ],
+  "legacy_attribution": "data/municipal_discovery/top100_coverage/legacy_attribution/agent_verdicts.csv"
 }

@@ -2099,3 +2099,11 @@ calibration 61 of 86 agree (positives 28 of 40, negatives 33 no, 7 yes, 6 unclea
 (weak positive pages, negatives that are real sites for another election year); the model is weak on election
 timing. Hanno chose an agent check of the 139 yes items: workflow `wf_5110088a-dd2`, 69 city agents, input
 `legacy_attribution/agent_check_args.json`.
+
+**Legacy attribution checked and integrated (October 4).** Workflow `wf_5110088a-dd2` (69 Sonnet agents, 4.4
+million subagent tokens, 1.2 hours) checked the 139 Hive "yes" items: 124 accepted, 10 outside_window, 5 not_found.
+`legacy_attribution/agent_verdicts.csv` (basis `hive_screen_then_agent_check`), registered as
+`legacy_attribution`; only accepted items make a legacy URL count as attributed, so its saved in-window pages count.
+Build: archive discovery 302 to 419, downloaded content 288 to 405 of 822 finalists. Elections, text downloaded:
+both finalists 29 percent, winner 52 percent, any 69 percent (2010-2017 both 20, 2018-2021 both 20, 2022-2026 both
+54). Website found: both 64 percent, winner 79, any 90. 71 tests pass.

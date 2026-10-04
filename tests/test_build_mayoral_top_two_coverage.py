@@ -436,3 +436,18 @@ def test_stage3_pages_need_verified_hashes_and_matching_domain():
         build(cities, roster, urls, [result], discovered_leads=[_discovered(key)], stage3_pages=[_pages(key, verified='False')])
     with pytest.raises(ValueError, match='discovered campaign domain'):
         build(cities, roster, urls, [result], discovered_leads=[_discovered(key)], stage3_pages=[_pages(key, domain='other.test')])
+
+
+def test_checked_legacy_attribution_lets_saved_pages_count():
+    cities, roster, urls, result = fixture()
+    saved = [{'candidate_url_id': 'url-a', 'candidate_year_id': 'legacy-a', 'exact_normalized_url': 'https://example.test/Campaign',
+              'capture_original_url': 'https://example.test/Campaign', 'capture_timestamp': '20201001000000',
+              'raw_saved': 'True', 'text_saved': 'True', 'raw_path': 'r', 'text_path': 't', 'raw_sha256': 'x',
+              'text_sha256': 'y', 'source_ref': 'run'}]
+    row = build(cities, roster, urls, [result], saved_evidence=saved)[3][0]
+    assert row['downloaded_content'] is not True
+    attribution = [{'candidate_url_id': 'url-a', 'candidate_year_id': 'legacy-a', 'status': 'accepted'}]
+    row = build(cities, roster, urls, [result], saved_evidence=saved, legacy_attribution=attribution)[3][0]
+    assert row['downloaded_content'] is True and row['archive_discovery'] is True
+    with pytest.raises(ValueError, match='not linked'):
+        build(cities, roster, urls, [result], legacy_attribution=[dict(attribution[0], candidate_url_id='url-z')])
