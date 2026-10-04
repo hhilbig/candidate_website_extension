@@ -2061,3 +2061,7 @@ search plus an independent check; the deterministic search and screen precede it
 89 percent. By period, both finalists: 2010-2017 63 percent, 2018-2021 75 percent, 2022-2026 55 percent.
 Archive discovery 295. Downloaded content unchanged at 174: the 114 new URLs have not been scraped yet (needs a
 stage 3 extension). 62 tests pass.
+Stage 3 batch 2 (Hanno approved October 3): the 114 domain-sweep URLs, same method and settings as batch 1, on mac2
+in `~/candidate_website_extension_stage3/data/municipal_archive_acquisition/mayoral_stage3b_20261003/`
+(frozen targets sha256 `3df4d537…`, log `runs.log`). The target builder now takes `--batch` and `--exclude`
+(earlier batches' target files). `stage3_saved_pages` in the build config may list several batch summaries.

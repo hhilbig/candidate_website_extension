@@ -542,9 +542,10 @@ def main():
     identity_links = read_csv(ROOT / links_path) if links_path else []
     if links_path:
         inputs.append(Path(links_path))
-    pages_path = config.get("stage3_saved_pages")
-    stage3_pages = read_csv(ROOT / pages_path) if pages_path else []
-    if pages_path:
+    pages_paths = config.get("stage3_saved_pages") or []
+    stage3_pages = []
+    for pages_path in [pages_paths] if isinstance(pages_paths, str) else pages_paths:
+        stage3_pages += read_csv(ROOT / pages_path)
         inputs.append(Path(pages_path))
         pages_manifest = json.loads((ROOT / Path(pages_path).with_suffix(".manifest.json")).read_text())
         if pages_manifest["output_sha256"] != sha(ROOT / pages_path) or not pages_manifest["all_files_verified"]:

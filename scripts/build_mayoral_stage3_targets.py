@@ -6,10 +6,12 @@ method (window, page cap, URL variants) is that script's, unchanged.
 
 Inputs: data/municipal_discovery/top100_coverage/linkage/discovered_url_leads.csv
         data/municipal_discovery/top100_coverage/outputs/candidate_coverage.csv
-Output: data/municipal_archive_acquisition/mayoral_stage3_20261002/candidate_site_targets.csv
+Output: data/municipal_archive_acquisition/<batch>/candidate_site_targets.csv
+A later batch passes --exclude with earlier batches' target files, so no finalist is scraped twice.
 """
 from __future__ import annotations
 
+import argparse
 import hashlib
 import json
 from pathlib import Path
@@ -20,7 +22,7 @@ import pandas as pd
 BASE = Path("data/municipal_discovery/top100_coverage")
 LEADS = BASE / "linkage/discovered_url_leads.csv"
 COVERAGE = BASE / "outputs/candidate_coverage.csv"
-OUTPUT = Path("data/municipal_archive_acquisition/mayoral_stage3_20261002/candidate_site_targets.csv")
+ACQUISITION = Path("data/municipal_archive_acquisition")
 PERIODS = ((2010, 2013), (2014, 2017), (2018, 2021), (2022, 2025), (2026, 2029))
 
 
@@ -74,14 +76,23 @@ def build_targets(leads: pd.DataFrame, coverage: pd.DataFrame) -> pd.DataFrame:
 
 
 def main() -> None:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--batch", default="mayoral_stage3_20261002")
+    parser.add_argument("--exclude", type=Path, nargs="*", default=[])
+    args = parser.parse_args()
     leads = pd.read_csv(LEADS, keep_default_na=False, dtype=str)
+    done = set()
+    for path in args.exclude:
+        done |= set(pd.read_csv(path, dtype=str)["candidate_contest_id"])
+    leads = leads[~leads["candidate_election_id"].isin(done)]
     coverage = pd.read_csv(COVERAGE, keep_default_na=False, dtype=str)
     targets = build_targets(leads, coverage)
+    OUTPUT = ACQUISITION / args.batch / "candidate_site_targets.csv"
     if targets["target_id"].duplicated().any():
         raise ValueError("duplicate target id")
     OUTPUT.parent.mkdir(parents=True, exist_ok=True)
     targets.to_csv(OUTPUT, index=False)
-    print(json.dumps({"targets": len(targets), "status": targets["url_discovery_status"].value_counts().to_dict(),
+    print(json.dumps({"excluded_finalists": len(done), "targets": len(targets), "status": targets["url_discovery_status"].value_counts().to_dict(),
                       "domains": int(targets["registrable_domain"].nunique())}))
 
 
