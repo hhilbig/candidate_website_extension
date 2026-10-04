@@ -1,0 +1,698 @@
+{
+ "task_id": "candidate_extraction_v2_precision_issues_9574e9dcbdea_b001",
+ "format": "handcode-results-v1",
+ "exported_at": "2026-09-28T05:59:04Z",
+ "n_items": 60,
+ "n_complete": 60,
+ "responses": [
+  {
+   "item_id": "2ea6b82144b828bf5a9098b2e608910cb119a27ca5d670a4ecace67ec97553ff",
+   "status": "complete",
+   "answers": {
+    "statement_present": "yes",
+    "claim_faithful": "yes",
+    "kind_correct": "yes",
+    "heading_correct": "yes",
+    "evidence_supports_statement": "yes"
+   }
+  },
+  {
+   "item_id": "ecd04a4975b1e3f43fb45637ed16cc266f8d65691c8dc56ae5c8ad5f12f2f385",
+   "status": "complete",
+   "answers": {
+    "statement_present": "no",
+    "claim_faithful": "yes",
+    "kind_correct": "yes",
+    "heading_correct": "yes",
+    "evidence_supports_statement": "yes",
+    "notes": "Evidence is a bare press-release link title in a list of links. It states no position, so no policy statement is present."
+   }
+  },
+  {
+   "item_id": "b1a09b6c41f775c626988f615da1b23981b0512d4663b5feec492cad79e0ea6d",
+   "status": "complete",
+   "answers": {
+    "statement_present": "yes",
+    "claim_faithful": "yes",
+    "kind_correct": "yes",
+    "heading_correct": "yes",
+    "evidence_supports_statement": "yes",
+    "notes": "Separate defect outside these five questions: the page belongs to Anthony Brown of Maryland, but the record is keyed to Thomas William Brown Jr. (H0AL02160, Alabama)."
+   }
+  },
+  {
+   "item_id": "e62a157b0d8c4b4cee336cc5a35f710729b9872f42705470cc338d9f32c798f6",
+   "status": "complete",
+   "answers": {
+    "statement_present": "yes",
+    "claim_faithful": "yes",
+    "kind_correct": "yes",
+    "heading_correct": "yes",
+    "evidence_supports_statement": "yes"
+   }
+  },
+  {
+   "item_id": "dd931c14e9d85fcf508fb67c231db8871ff6382dfdf2f8700346f3125e7e7495",
+   "status": "complete",
+   "answers": {
+    "statement_present": "yes",
+    "claim_faithful": "yes",
+    "kind_correct": "yes",
+    "heading_correct": "yes",
+    "evidence_supports_statement": "yes"
+   }
+  },
+  {
+   "item_id": "461b1e365e893c63bac160450946ed7a089a3ba9dc17d636b11a3b68e91646c1",
+   "status": "complete",
+   "answers": {
+    "statement_present": "no",
+    "claim_faithful": "yes",
+    "kind_correct": "yes",
+    "heading_correct": "yes",
+    "evidence_supports_statement": "yes",
+    "notes": "The sentence is a values statement and a prediction (\"we will prevail in all we face\"). It names no policy the candidate supports, opposes, or proposes."
+   }
+  },
+  {
+   "item_id": "bf0dcddb8df4c65f463a45900c7827ce34239654bb2652477603586ef1f3e1f0",
+   "status": "complete",
+   "answers": {
+    "statement_present": "yes",
+    "claim_faithful": "yes",
+    "kind_correct": "no",
+    "heading_correct": "yes",
+    "evidence_supports_statement": "yes",
+    "notes": "\"I also remain committed to passing legislation\" states an intention, not conduct. current_action is reserved for conduct; proposal or support fits."
+   }
+  },
+  {
+   "item_id": "d9e7750a2a7ec32dd3bd77078ba6865525fa8a8c6b00f2b9014d4d8ab8f8b19d",
+   "status": "complete",
+   "answers": {
+    "statement_present": "yes",
+    "claim_faithful": "yes",
+    "kind_correct": "yes",
+    "heading_correct": "yes",
+    "evidence_supports_statement": "yes"
+   }
+  },
+  {
+   "item_id": "2589c8154c9440ebeb85a778b8523fd3c8cff814bb0d116476466144091f9b4f",
+   "status": "complete",
+   "answers": {
+    "statement_present": "no",
+    "claim_faithful": "yes",
+    "kind_correct": "yes",
+    "heading_correct": "yes",
+    "evidence_supports_statement": "yes",
+    "notes": "Evidence is a bare entry in the issue list (\"KXL Pipeline\"). No position appears anywhere on this page."
+   }
+  },
+  {
+   "item_id": "c77cb3b8bb4d67ea94d2add1bd96af43a9c1a9138016ae3a5bbc1a1f28eae589",
+   "status": "complete",
+   "answers": {
+    "statement_present": "yes",
+    "claim_faithful": "yes",
+    "kind_correct": "no",
+    "heading_correct": "yes",
+    "evidence_supports_statement": "yes",
+    "notes": "\"As a U.S. Senator, Kay will work tirelessly\" is a future commitment by a challenger, not conduct in progress. proposal fits."
+   }
+  },
+  {
+   "item_id": "aeb863260861424a6623466aa7312809f2dbacdc0fd51957ec738d6d7bc746eb",
+   "status": "complete",
+   "answers": {
+    "statement_present": "yes",
+    "claim_faithful": "yes",
+    "kind_correct": "yes",
+    "heading_correct": "yes",
+    "evidence_supports_statement": "yes"
+   }
+  },
+  {
+   "item_id": "9e93fdb393c57d06ea6fcb68eaef7a22fcbb0300ad57dc4ffcd7a46a4ecaee86",
+   "status": "complete",
+   "answers": {
+    "statement_present": "yes",
+    "claim_faithful": "yes",
+    "kind_correct": "yes",
+    "heading_correct": "yes",
+    "evidence_supports_statement": "yes"
+   }
+  },
+  {
+   "item_id": "a097ec3f071155b632a973d865819dfd277b15c9a53a1ef8b175c889ea3f94a6",
+   "status": "complete",
+   "answers": {
+    "statement_present": "yes",
+    "claim_faithful": "yes",
+    "kind_correct": "yes",
+    "heading_correct": "yes",
+    "evidence_supports_statement": "yes"
+   }
+  },
+  {
+   "item_id": "a9a40b1eb21c06afb8e4de2d54e5176293cf370adcd34601bc6d65d545487434",
+   "status": "complete",
+   "answers": {
+    "statement_present": "yes",
+    "claim_faithful": "yes",
+    "kind_correct": "yes",
+    "heading_correct": "yes",
+    "evidence_supports_statement": "yes",
+    "notes": "Separate defect outside these five questions: the page is billnelson.senate.gov (Bill Nelson, Florida), but the record is keyed to E. Benjamin Nelson (S6NE00095, Nebraska)."
+   }
+  },
+  {
+   "item_id": "f66c8cbd69c495033af168f07d51f03c1c42e00306b3bfb5ae83ca15081d648c",
+   "status": "complete",
+   "answers": {
+    "statement_present": "no",
+    "claim_faithful": "yes",
+    "kind_correct": "yes",
+    "heading_correct": "yes",
+    "evidence_supports_statement": "yes",
+    "notes": "Evidence is a bare press-release link title. It states no position."
+   }
+  },
+  {
+   "item_id": "683f97b2be19cee7bfc9f34cd09fce854848d7562e2c661e8fa292a299e6f4db",
+   "status": "complete",
+   "answers": {
+    "statement_present": "no",
+    "claim_faithful": "yes",
+    "kind_correct": "yes",
+    "heading_correct": "yes",
+    "evidence_supports_statement": "yes",
+    "notes": "Evidence is a bare press-release link title. It states no position."
+   }
+  },
+  {
+   "item_id": "300f202c8eb2f4ba52684c742ef9428f7ed4d8166702031ea7732fa5129d2e79",
+   "status": "complete",
+   "answers": {
+    "statement_present": "yes",
+    "claim_faithful": "yes",
+    "kind_correct": "yes",
+    "heading_correct": "yes",
+    "evidence_supports_statement": "yes",
+    "notes": "Borderline: the span attacks the opponent, but it disapproves of his gun-control legislation as depriving citizens of constitutional rights, which is disapproval of a policy."
+   }
+  },
+  {
+   "item_id": "0d387fcdc2764d6aa01af46381120a046eb53eaf584cdb4774e3f8fb8995bd31",
+   "status": "complete",
+   "answers": {
+    "statement_present": "yes",
+    "claim_faithful": "yes",
+    "kind_correct": "yes",
+    "heading_correct": "yes",
+    "evidence_supports_statement": "yes"
+   }
+  },
+  {
+   "item_id": "2bfb48c9874fa72caa70d49c1084c95613104c397e4f2bff5bc60ba3d457098a",
+   "status": "complete",
+   "answers": {
+    "statement_present": "no",
+    "claim_faithful": "yes",
+    "kind_correct": "yes",
+    "heading_correct": "yes",
+    "evidence_supports_statement": "yes",
+    "notes": "The span describes only the opponent’s conduct in the Senate (leading filibusters of judicial nominees). It states no policy position of the candidate."
+   }
+  },
+  {
+   "item_id": "465d2f021b990b22f6b71ded242b19f67020db9d177340c61b2568dcbf247644",
+   "status": "complete",
+   "answers": {
+    "statement_present": "yes",
+    "claim_faithful": "yes",
+    "kind_correct": "no",
+    "heading_correct": "yes",
+    "evidence_supports_statement": "yes",
+    "notes": "\"I will work to fulfill\" is a future commitment by a challenger, not conduct in progress. proposal fits."
+   }
+  },
+  {
+   "item_id": "ceb0dfc286a8fd6bb432991cc67621ff0761433beb8b29302644b3f830e6e97d",
+   "status": "complete",
+   "answers": {
+    "statement_present": "yes",
+    "claim_faithful": "yes",
+    "kind_correct": "yes",
+    "heading_correct": "yes",
+    "evidence_supports_statement": "yes"
+   }
+  },
+  {
+   "item_id": "41458ce378c1ffeb2db9bf7d1d7f4e3745d424aaaa46d7b128107b1bfcba07c8",
+   "status": "complete",
+   "answers": {
+    "statement_present": "no",
+    "claim_faithful": "yes",
+    "kind_correct": "yes",
+    "heading_correct": "yes",
+    "evidence_supports_statement": "yes",
+    "notes": "\"Changing course, in Vermont and Washington, means changing the players\" is campaign framing about replacing incumbents. It names no policy the candidate supports, opposes, or proposes."
+   }
+  },
+  {
+   "item_id": "0c02a829971c83d773a5aba2f124590eea4c2f13cdd81795e443ae3d97820b74",
+   "status": "complete",
+   "answers": {
+    "statement_present": "no",
+    "claim_faithful": "yes",
+    "kind_correct": "yes",
+    "heading_correct": "yes",
+    "evidence_supports_statement": "yes",
+    "notes": "The span diagnoses voters (\"we have lost the will to fight back\"). It states no position of the candidate."
+   }
+  },
+  {
+   "item_id": "cb795a33c1c538ec51920fb87625a16b5c18d70cb4d5c7435c9110a541464ca7",
+   "status": "complete",
+   "answers": {
+    "statement_present": "yes",
+    "claim_faithful": "yes",
+    "kind_correct": "yes",
+    "heading_correct": "yes",
+    "evidence_supports_statement": "yes"
+   }
+  },
+  {
+   "item_id": "31a8da30a641fa66afcec45bc158aadda9b1fb2027ecaac6f0c3dad5750310a1",
+   "status": "complete",
+   "answers": {
+    "statement_present": "no",
+    "claim_faithful": "yes",
+    "kind_correct": "no",
+    "heading_correct": "yes",
+    "evidence_supports_statement": "yes",
+    "notes": "The span is a quoted newspaper endorsement (Valdosta Daily Times), not a statement the candidate makes; it is also a conditional prediction (\"would be ... if elected\"), so current_action is wrong."
+   }
+  },
+  {
+   "item_id": "904917e5a815d572ed2afa123f446d62af7a598fbec7206c1d32c11b862db522",
+   "status": "complete",
+   "answers": {
+    "statement_present": "yes",
+    "claim_faithful": "yes",
+    "kind_correct": "yes",
+    "heading_correct": "yes",
+    "evidence_supports_statement": "yes"
+   }
+  },
+  {
+   "item_id": "3ffb2ef9b789e23842705ddaff7dfa1977fd90f901bec7ac10bdcdf26f5787d0",
+   "status": "complete",
+   "answers": {
+    "statement_present": "yes",
+    "claim_faithful": "yes",
+    "kind_correct": "yes",
+    "heading_correct": "yes",
+    "evidence_supports_statement": "yes"
+   }
+  },
+  {
+   "item_id": "2b450a1fd216fd62a99726363e3f785f742cdfee90e6d223b227eacfb7dc248f",
+   "status": "complete",
+   "answers": {
+    "statement_present": "yes",
+    "claim_faithful": "yes",
+    "kind_correct": "yes",
+    "heading_correct": "yes",
+    "evidence_supports_statement": "yes"
+   }
+  },
+  {
+   "item_id": "5ec88a9a7d06cce84e0c44f90a6b8fbbde1d2a80f7039213911caa07c842676d",
+   "status": "complete",
+   "answers": {
+    "statement_present": "yes",
+    "claim_faithful": "yes",
+    "kind_correct": "yes",
+    "heading_correct": "yes",
+    "evidence_supports_statement": "yes"
+   }
+  },
+  {
+   "item_id": "45a578b220b4c354ba0f2be25f599288dfb0bb74cebc8b70f90043de53f6e6fe",
+   "status": "complete",
+   "answers": {
+    "statement_present": "yes",
+    "claim_faithful": "yes",
+    "kind_correct": "yes",
+    "heading_correct": "no",
+    "evidence_supports_statement": "yes",
+    "notes": "The evidence is a fragment under the bolded label \"Ensure more stability, affordability and access for Missouri families and businesses:\", which is the nearest heading above it. The record took the page section title instead. The same site structure in another item of this batch was coded with the bolded label as the heading."
+   }
+  },
+  {
+   "item_id": "476db6c11ad48919b5196f63304d115ac7ddb9a0ab4418383972ad0be807bbf8",
+   "status": "complete",
+   "answers": {
+    "statement_present": "yes",
+    "claim_faithful": "yes",
+    "kind_correct": "yes",
+    "heading_correct": "yes",
+    "evidence_supports_statement": "yes"
+   }
+  },
+  {
+   "item_id": "039247d9a96320c133931745feb4b0a49216cf04951e8c0bc2ec3c62a2d55be0",
+   "status": "complete",
+   "answers": {
+    "statement_present": "no",
+    "claim_faithful": "yes",
+    "kind_correct": "no",
+    "heading_correct": "yes",
+    "evidence_supports_statement": "yes",
+    "notes": "The span is a quoted endorsement from the 60 Plus Association president, not a statement the candidate makes; \"can be depended on to protect\" is a third-party prediction, not conduct, so current_action is wrong."
+   }
+  },
+  {
+   "item_id": "47a2f3bddffedf38f828c85c048e03e3b614333e6f50feb07de186fc539ecf33",
+   "status": "complete",
+   "answers": {
+    "statement_present": "yes",
+    "claim_faithful": "yes",
+    "kind_correct": "yes",
+    "heading_correct": "yes",
+    "evidence_supports_statement": "yes"
+   }
+  },
+  {
+   "item_id": "282ff8de438218af835258999d2bc943e36e62a53bf42f5a9c0cd6496f03823d",
+   "status": "complete",
+   "answers": {
+    "statement_present": "no",
+    "claim_faithful": "yes",
+    "kind_correct": "no",
+    "heading_correct": "yes",
+    "evidence_supports_statement": "yes",
+    "notes": "Same quoted 60 Plus Association endorsement: not a candidate statement, and not conduct, so current_action is wrong."
+   }
+  },
+  {
+   "item_id": "535c4518d83a7f0c09ba6f7bea78e8126da2ff4dce35f1cb0e6df4db21b54547",
+   "status": "complete",
+   "answers": {
+    "statement_present": "yes",
+    "claim_faithful": "yes",
+    "kind_correct": "yes",
+    "heading_correct": "yes",
+    "evidence_supports_statement": "yes"
+   }
+  },
+  {
+   "item_id": "99e1e1bc284b9a34ad79fc34d8794dbfd35b06fec041748a7ae1de6c47aaa163",
+   "status": "complete",
+   "answers": {
+    "statement_present": "yes",
+    "claim_faithful": "yes",
+    "kind_correct": "yes",
+    "heading_correct": "yes",
+    "evidence_supports_statement": "yes"
+   }
+  },
+  {
+   "item_id": "849cfd582807666ac959be4d43afc336ddcfafeefb509a2adfaa02987ae0d658",
+   "status": "complete",
+   "answers": {
+    "statement_present": "yes",
+    "claim_faithful": "yes",
+    "kind_correct": "yes",
+    "heading_correct": "yes",
+    "evidence_supports_statement": "yes",
+    "notes": "\"I will continue fighting\" presupposes conduct in progress by an incumbent, so current_action is acceptable."
+   }
+  },
+  {
+   "item_id": "fcb51cd7ca9a2f3b30e02cc5e1077c69ae2c46c561f2bbe9182f029282a63476",
+   "status": "complete",
+   "answers": {
+    "statement_present": "yes",
+    "claim_faithful": "yes",
+    "kind_correct": "yes",
+    "heading_correct": "yes",
+    "evidence_supports_statement": "yes"
+   }
+  },
+  {
+   "item_id": "9ab137987fb258506fce74ce6e151c0cca6d4e74504a4cfe0654e2f62e7136a5",
+   "status": "complete",
+   "answers": {
+    "statement_present": "yes",
+    "claim_faithful": "yes",
+    "kind_correct": "yes",
+    "heading_correct": "yes",
+    "evidence_supports_statement": "yes"
+   }
+  },
+  {
+   "item_id": "e21e1f644785ec71810a20fc15b2804c660263946531ef59d9215e5adf949491",
+   "status": "complete",
+   "answers": {
+    "statement_present": "yes",
+    "claim_faithful": "yes",
+    "kind_correct": "yes",
+    "heading_correct": "yes",
+    "evidence_supports_statement": "yes"
+   }
+  },
+  {
+   "item_id": "17564613d91389c9e22593b34d78807c9dccb000eca9c916ff78c24ab29b5c81",
+   "status": "complete",
+   "answers": {
+    "statement_present": "yes",
+    "claim_faithful": "yes",
+    "kind_correct": "yes",
+    "heading_correct": "yes",
+    "evidence_supports_statement": "yes"
+   }
+  },
+  {
+   "item_id": "3f35cc5d868eeea98b7c480dd6e5a7e1044398af2a15ff11bd05375512c2a34c",
+   "status": "complete",
+   "answers": {
+    "statement_present": "yes",
+    "claim_faithful": "yes",
+    "kind_correct": "yes",
+    "heading_correct": "yes",
+    "evidence_supports_statement": "yes"
+   }
+  },
+  {
+   "item_id": "9fdf35532b02d9137cfe56bbb183734b143609418856ea1ad0e124ede272b00e",
+   "status": "complete",
+   "answers": {
+    "statement_present": "yes",
+    "claim_faithful": "yes",
+    "kind_correct": "yes",
+    "heading_correct": "yes",
+    "evidence_supports_statement": "yes"
+   }
+  },
+  {
+   "item_id": "5eb0f96d960e7aa10d98ce46ed518f8e3c1a80b79e1452757b42dc536332524a",
+   "status": "complete",
+   "answers": {
+    "statement_present": "yes",
+    "claim_faithful": "yes",
+    "kind_correct": "yes",
+    "heading_correct": "yes",
+    "evidence_supports_statement": "yes"
+   }
+  },
+  {
+   "item_id": "b2dca3c782936ecf834b679a4da5b73210538482fa52ec431923307a17a67623",
+   "status": "complete",
+   "answers": {
+    "statement_present": "yes",
+    "claim_faithful": "yes",
+    "kind_correct": "yes",
+    "heading_correct": "yes",
+    "evidence_supports_statement": "yes"
+   }
+  },
+  {
+   "item_id": "a98e16325b7ce291ba8c3b8cba5cdf1aab49da6712e2c7f2a18b9eec921d583c",
+   "status": "complete",
+   "answers": {
+    "statement_present": "no",
+    "claim_faithful": "yes",
+    "kind_correct": "yes",
+    "heading_correct": "yes",
+    "evidence_supports_statement": "yes",
+    "notes": "\"All politics begin locally.\" is a general assertion. It states no position of the candidate."
+   }
+  },
+  {
+   "item_id": "3d0cb364cfe70cb69f670eb176870c7d839170880aceb3cabf892763455d74c6",
+   "status": "complete",
+   "answers": {
+    "statement_present": "yes",
+    "claim_faithful": "yes",
+    "kind_correct": "yes",
+    "heading_correct": "yes",
+    "evidence_supports_statement": "yes"
+   }
+  },
+  {
+   "item_id": "3aeaf4fbd6e9382a99f64082684b070d83e587eec23e3f26c3482c963720f8ca",
+   "status": "complete",
+   "answers": {
+    "statement_present": "no",
+    "claim_faithful": "yes",
+    "kind_correct": "yes",
+    "heading_correct": "yes",
+    "evidence_supports_statement": "yes",
+    "notes": "The span diagnoses voter confidence. It states no position of the candidate."
+   }
+  },
+  {
+   "item_id": "ef2fd5a8dbeb87809364a8c8ddfdd1a3ac148ff572b21a9aea8681020512c037",
+   "status": "complete",
+   "answers": {
+    "statement_present": "yes",
+    "claim_faithful": "yes",
+    "kind_correct": "yes",
+    "heading_correct": "yes",
+    "evidence_supports_statement": "yes"
+   }
+  },
+  {
+   "item_id": "b3fffce63e35009040921d85c8d800496b924a57fde6532a7eb092c4a862dc0b",
+   "status": "complete",
+   "answers": {
+    "statement_present": "no",
+    "claim_faithful": "yes",
+    "kind_correct": "yes",
+    "heading_correct": "yes",
+    "evidence_supports_statement": "yes",
+    "notes": "The span describes only the opponent’s conduct (firing a semi-automatic weapon, alleged hypocrisy). It states no policy position of the candidate."
+   }
+  },
+  {
+   "item_id": "62ffc46e1acfb330fb5ce5bdcd82b1ecee6142aa29d8265a72b70effd0bf0720",
+   "status": "complete",
+   "answers": {
+    "statement_present": "yes",
+    "claim_faithful": "yes",
+    "kind_correct": "no",
+    "heading_correct": "yes",
+    "evidence_supports_statement": "yes",
+    "notes": "\"I am committed to ... honoring our promises to veterans\" states a commitment, not conduct. current_action is reserved for conduct."
+   }
+  },
+  {
+   "item_id": "a15fb32b77eb55ea2ef6aff424ab4fd184e74749cc215344c15ad566951f1e1c",
+   "status": "complete",
+   "answers": {
+    "statement_present": "no",
+    "claim_faithful": "yes",
+    "kind_correct": "yes",
+    "heading_correct": "yes",
+    "evidence_supports_statement": "yes",
+    "notes": "Evidence is a bare press-release link title. It states no position."
+   }
+  },
+  {
+   "item_id": "e59c85de1290d025048aaa2d0d1d42a88dbf8c1aaf2293212c199c6c018c4e81",
+   "status": "complete",
+   "answers": {
+    "statement_present": "no",
+    "claim_faithful": "yes",
+    "kind_correct": "yes",
+    "heading_correct": "yes",
+    "evidence_supports_statement": "yes",
+    "notes": "The span describes only the opponent’s past statements and conduct. It states no policy position of the candidate."
+   }
+  },
+  {
+   "item_id": "7fc9c0dbef549f038948bc59737a1a7ff9e9edb66dcf5a48b951ddac0edceb4b",
+   "status": "complete",
+   "answers": {
+    "statement_present": "yes",
+    "claim_faithful": "yes",
+    "kind_correct": "yes",
+    "heading_correct": "yes",
+    "evidence_supports_statement": "yes"
+   }
+  },
+  {
+   "item_id": "8e6407b2793b451f318c2602a200e0b265637f1ff022ba04f442963a5e4a087f",
+   "status": "complete",
+   "answers": {
+    "statement_present": "yes",
+    "claim_faithful": "yes",
+    "kind_correct": "yes",
+    "heading_correct": "yes",
+    "evidence_supports_statement": "yes"
+   }
+  },
+  {
+   "item_id": "d42e2c43a41b56a906d7733d562eedbacb32f5b0998f684fa8f28028e4592449",
+   "status": "complete",
+   "answers": {
+    "statement_present": "no",
+    "claim_faithful": "yes",
+    "kind_correct": "yes",
+    "heading_correct": "yes",
+    "evidence_supports_statement": "yes",
+    "notes": "The span describes only the opponent’s voting conduct. It states no policy position of the candidate."
+   }
+  },
+  {
+   "item_id": "76fc03ea942df7b12ae3fbf588bb348e44100a390ab1b48cbb6c72699e801ba7",
+   "status": "complete",
+   "answers": {
+    "statement_present": "yes",
+    "claim_faithful": "yes",
+    "kind_correct": "yes",
+    "heading_correct": "yes",
+    "evidence_supports_statement": "yes"
+   }
+  },
+  {
+   "item_id": "d3a0bc71ef84625234383b7bdd5d664e9fde88feb24f9245f5cd0f7b31714049",
+   "status": "complete",
+   "answers": {
+    "statement_present": "no",
+    "claim_faithful": "yes",
+    "kind_correct": "yes",
+    "heading_correct": "yes",
+    "evidence_supports_statement": "yes",
+    "notes": "The span is a quoted NFIB statement about the opponent’s votes, not a statement the candidate makes."
+   }
+  },
+  {
+   "item_id": "9b8f865cb08e1344556f9714aa22bfc42679c8e75b5199359bbbdec0c6ecd368",
+   "status": "complete",
+   "answers": {
+    "statement_present": "no",
+    "claim_faithful": "yes",
+    "kind_correct": "yes",
+    "heading_correct": "yes",
+    "evidence_supports_statement": "yes",
+    "notes": "Evidence is a bare entry in the issue list (\"KXL Pipeline\"). No position appears anywhere on this page. Duplicate of an earlier item in this batch."
+   }
+  },
+  {
+   "item_id": "05a3a9710e3fe90bf595316e516bc861dbfae949da4adc322322864121626367",
+   "status": "complete",
+   "answers": {
+    "statement_present": "no",
+    "claim_faithful": "yes",
+    "kind_correct": "yes",
+    "heading_correct": "yes",
+    "evidence_supports_statement": "yes",
+    "notes": "The span is a quoted NFIB endorsement, not a statement the candidate makes."
+   }
+  }
+ ]
+}

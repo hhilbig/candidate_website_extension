@@ -1,0 +1,264 @@
+{
+ "task_id": "candidate_extraction_v2_recall_biography_9574e9dcbdea_b001",
+ "format": "handcode-results-v1",
+ "exported_at": "2026-09-28T05:57:51Z",
+ "n_items": 20,
+ "n_complete": 20,
+ "responses": [
+  {
+   "item_id": "20f53be0e10a3ea5917f979f73446cf0df4731a694b4772996c14b6fd6c130ba",
+   "status": "complete",
+   "answers": {
+    "all_requested_records_captured": "yes"
+   }
+  },
+  {
+   "item_id": "645315d79cabf1861788e4d2698676f952061fb3939026bebac6835008af2951",
+   "status": "complete",
+   "answers": {
+    "all_requested_records_captured": "no",
+    "missed_records": [
+     {
+      "type": "occupation",
+      "value": "Attending Physician, National Jewish Hospital (Denver)",
+      "evidence": "Attending Physician, National Jewish Hospital (Denver)"
+     },
+     {
+      "type": "occupation",
+      "value": "Assistant in Medicine, Children’s Hospital (Boston)",
+      "evidence": "Assistant in Medicine, Children’s Hospital (Boston)"
+     }
+    ]
+   }
+  },
+  {
+   "item_id": "a4368edee8a1421d0c69258a7773216d54b2f769690d4b981db2e3137e9dfa99",
+   "status": "complete",
+   "answers": {
+    "all_requested_records_captured": "yes"
+   }
+  },
+  {
+   "item_id": "3749c3f0060019614d6db9f4ab576f4c579a600db4872de9c0519265bda08045",
+   "status": "complete",
+   "answers": {
+    "all_requested_records_captured": "no",
+    "missed_records": [
+     {
+      "type": "elected_office_experience",
+      "value": "U.S. Senator",
+      "evidence": "For  her work as a U.S. Senator"
+     }
+    ],
+    "notes": "The page is an awards list. Award citations are outside the six eligible fields, so only the stated office is listed as a miss."
+   }
+  },
+  {
+   "item_id": "ee95c5fefae4bf66880c4cb0671f112445784f71007a9f22f3760ca3b3edb2d3",
+   "status": "complete",
+   "answers": {
+    "all_requested_records_captured": "no",
+    "missed_records": [
+     {
+      "type": "elected_office_experience",
+      "value": "Candidate for U.S. Congress in Georgia",
+      "evidence": "YG is now running for US Congress in GA and is ready to lead."
+     }
+    ]
+   }
+  },
+  {
+   "item_id": "aa7b451d6c690d5acde4718afa5ed244ab6f9a93aa4c28ac94bc7f06b1b2a608",
+   "status": "complete",
+   "answers": {
+    "all_requested_records_captured": "yes"
+   }
+  },
+  {
+   "item_id": "179d5ee19c42becd483186c51daba52aad4775a0460217fccc02b58918ac2e2d",
+   "status": "complete",
+   "answers": {
+    "all_requested_records_captured": "no",
+    "missed_records": [
+     {
+      "type": "public_service_experience",
+      "value": "Mission trips to Haiti, Guatemala, Russia and Mexico",
+      "evidence": "Those experiences were mission trips. In his travels to Haiti, Guatemala, Russia and Mexico, Marlin realized at an early age how blessed he was to be an American."
+     }
+    ]
+   }
+  },
+  {
+   "item_id": "bf8abe21469784f0b85d5f7e6c66fde11e9eb276f4ace0e24890427fbfaecfb5",
+   "status": "complete",
+   "answers": {
+    "all_requested_records_captured": "no",
+    "missed_records": [
+     {
+      "type": "public_service_experience",
+      "value": "Advocated increased awareness of mental illness as Sheriff, including hosting large seminars",
+      "evidence": "He used his position as\nSheriff to advocate increased awareness of the mental illness\n, even hosting large seminars."
+     }
+    ]
+   }
+  },
+  {
+   "item_id": "3ca0723c3e523e04889bab3a8844e7486d5bf9544ea158b0c5fce1fcd83a3215",
+   "status": "complete",
+   "answers": {
+    "all_requested_records_captured": "yes"
+   }
+  },
+  {
+   "item_id": "fcc80145c0c5fcf3c3776fe86ad4f9b17a0b486e5e5b343672168620e8cbac21",
+   "status": "complete",
+   "answers": {
+    "all_requested_records_captured": "no",
+    "missed_records": [
+     {
+      "type": "elected_office_experience",
+      "value": "Member of Congress for the Dallas district where he was born and raised",
+      "evidence": "Aly gave birth to their first child, Jordan, in Dallas, just weeks after Colin was sworn into Congress."
+     },
+     {
+      "type": "local_roots",
+      "value": "Born and raised in the district he represents",
+      "evidence": "Aly and Colin decided that he would run for Congress in the district where he was born and raised."
+     },
+     {
+      "type": "local_roots",
+      "value": "Made Dallas his home",
+      "evidence": "Aly and Colin decided to make Dallas their home."
+     },
+     {
+      "type": "education",
+      "value": "Attended law school",
+      "evidence": "Aly’s passion for helping others led her to law school where, in her second year, she met Colin in a Law of Democracy class."
+     }
+    ],
+    "notes": "The page is the spouse biography. Family facts are excluded, so only facts about the candidate are listed."
+   }
+  },
+  {
+   "item_id": "730b8a61742584d9d5398cfe1338c73fba35fca747e443e8aca22d4b33f95928",
+   "status": "complete",
+   "answers": {
+    "all_requested_records_captured": "no",
+    "missed_records": [
+     {
+      "type": "elected_office_experience",
+      "value": "Candidate for U.S. Congress",
+      "evidence": "Jon decided to run for Congress as he has seen that local leadership has been unwilling to fight for growth and investments in our area and our country that focus on long-term, high-quality jobs."
+     }
+    ]
+   }
+  },
+  {
+   "item_id": "df9260881326cf1059a5e770c8dba23e7b586f3c98078dee8fba8de98791619b",
+   "status": "complete",
+   "answers": {
+    "all_requested_records_captured": "no",
+    "missed_records": [
+     {
+      "type": "elected_office_experience",
+      "value": "Candidate for U.S. Congress in California District 18",
+      "evidence": "Peter is an America First candidate who stands against the harmful progressive policies of the Biden administration and the current Democrat Congress."
+     }
+    ]
+   }
+  },
+  {
+   "item_id": "6b4330ebdad93747d33d08da8297bccc4372d0a099b7b4dd0f109b0ecd6d0f4d",
+   "status": "complete",
+   "answers": {
+    "all_requested_records_captured": "no",
+    "missed_records": [
+     {
+      "type": "elected_office_experience",
+      "value": "Candidate for U.S. House in Michigan’s 10th congressional district",
+      "evidence": "Paul Mitchell is the right choice to represent Michigan’s 10th congressional district."
+     }
+    ]
+   }
+  },
+  {
+   "item_id": "4958c94c70246928e58bad4a941c1d805380d736c04c32516e54e9a324f8d078",
+   "status": "complete",
+   "answers": {
+    "all_requested_records_captured": "yes"
+   }
+  },
+  {
+   "item_id": "2a6e6dab1a518f30346fba866eb2dbe4e8cd4527ead67ff78cbef4bb46bab9fe",
+   "status": "complete",
+   "answers": {
+    "all_requested_records_captured": "yes"
+   }
+  },
+  {
+   "item_id": "6bcceb1633411ffee102301295eb26b1a3c2aabaf7c52277ea8fbe15c7ca3096",
+   "status": "complete",
+   "answers": {
+    "all_requested_records_captured": "no",
+    "missed_records": [
+     {
+      "type": "occupation",
+      "value": "Physicist at Fermi National Accelerator Laboratory (Fermilab)",
+      "evidence": "was proud to receive the award alongside his Fermilab colleagues Dr. Gerald Jackson and Dr. James T. Volk"
+     }
+    ],
+    "notes": "The page is a professional awards list. The awards themselves are outside the six fields; the stated Fermilab employment is the one eligible fact."
+   }
+  },
+  {
+   "item_id": "62597ad51ebb3e36dc46b097984cde991fbeabce0a48607c246967f2e255c083",
+   "status": "complete",
+   "answers": {
+    "all_requested_records_captured": "yes"
+   }
+  },
+  {
+   "item_id": "b4fac7440455111fc0c3aac90002e30a2683f325885402d3fef4dd37fea845c9",
+   "status": "complete",
+   "answers": {
+    "all_requested_records_captured": "no",
+    "missed_records": [
+     {
+      "type": "occupation",
+      "value": "Assistant United States Attorney for the Western District of Washington, Terrorism and Violent Crime unit",
+      "evidence": "As Assistant United States Attorney for the Western District of Washington"
+     },
+     {
+      "type": "public_service_experience",
+      "value": "Participated in the investigation of Zacharias Moussaoui in the Eastern District of Virginia",
+      "evidence": "Reagan also participated in the investigation of Zacharias Moussaoui"
+     },
+     {
+      "type": "public_service_experience",
+      "value": "Statewide Executive Director of the Remember Lakewood Referendum Campaign, which amended the Washington State Constitution",
+      "evidence": "Reagan served as the statewide Executive Director of the Remember Lakewood Referendum Campaign, which amended the Washington State Constitution with one of the highest vote percentages in state history."
+     },
+     {
+      "type": "public_service_experience",
+      "value": "Led the effort that made Washington the first state to recognize a legal privilege between addicts and their recovery sponsors",
+      "evidence": "Because of Reagan’s leadership, Washington State is now the first state in the nation to recognize a legal privilege in civil law between addicts and their sponsors participating in recovery programs."
+     }
+    ]
+   }
+  },
+  {
+   "item_id": "76c085c2720b4152345f987934b987d74c9307ddd9373fba8c675b3ec57f0165",
+   "status": "complete",
+   "answers": {
+    "all_requested_records_captured": "yes"
+   }
+  },
+  {
+   "item_id": "d804677ca0bafc7890225bdd78e48aa94b210146770d5e5b4363495d17d054d6",
+   "status": "complete",
+   "answers": {
+    "all_requested_records_captured": "yes"
+   }
+  }
+ ]
+}

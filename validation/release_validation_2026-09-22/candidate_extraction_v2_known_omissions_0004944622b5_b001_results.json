@@ -1,0 +1,136 @@
+{
+ "task_id": "candidate_extraction_v2_known_omissions_0004944622b5_b001",
+ "format": "handcode-results-v1",
+ "exported_at": "2026-09-23T00:28:50Z",
+ "n_items": 15,
+ "n_complete": 15,
+ "responses": [
+  {
+   "item_id": "0e15a554d55174e433d1de9fb4b1a69d0163ce1f2bf8d33db4dcbcaf8937edb3",
+   "status": "complete",
+   "answers": {
+    "semantic_recovery_confirmed": "yes",
+    "recovery_evidence_confirmed": "yes"
+   }
+  },
+  {
+   "item_id": "150567ced274de69c5ac90c186aa03599326af7997b9f28ed4dbb114fadde677",
+   "status": "complete",
+   "answers": {
+    "semantic_recovery_confirmed": "yes",
+    "recovery_evidence_confirmed": "yes"
+   }
+  },
+  {
+   "item_id": "1811020abb268baedfcab85cf1db3b2d174009f472c94265d0366ace8a29cf0a",
+   "status": "complete",
+   "answers": {
+    "semantic_recovery_confirmed": "yes",
+    "recovery_evidence_confirmed": "yes"
+   }
+  },
+  {
+   "item_id": "2483a2454a6dc58f61533ac278110f57ee40f1d388d7b073a77e2cd5e3e0d0bc",
+   "status": "complete",
+   "answers": {
+    "semantic_recovery_confirmed": "yes",
+    "recovery_evidence_confirmed": "yes"
+   }
+  },
+  {
+   "item_id": "3bca144e7f777cca1d051cea930bec6269eeafc0cb37cb8440853e5a8291be47",
+   "status": "complete",
+   "answers": {
+    "semantic_recovery_confirmed": "yes",
+    "recovery_evidence_confirmed": "yes",
+    "notes": "Near miss: the record covers only the Back the Blue bike rally clause and drops the Honor 365 walk, which a separate linked record carries."
+   }
+  },
+  {
+   "item_id": "40af18d1022007464c5914a6b8f26658be306126210bab0d33342954bee3b699",
+   "status": "complete",
+   "answers": {
+    "semantic_recovery_confirmed": "yes",
+    "recovery_evidence_confirmed": "yes"
+   }
+  },
+  {
+   "item_id": "681f3e14a49bbe76218c8de4d9faf5c341f53efab6311f517dab3c4646e1ffff",
+   "status": "complete",
+   "answers": {
+    "semantic_recovery_confirmed": "no",
+    "recovery_evidence_confirmed": "no",
+    "notes": "The record states that Berkley aims to create jobs in Nevada, which is a different clause of the same sentence and not the omitted Medicare fact."
+   }
+  },
+  {
+   "item_id": "696fbdeb2ded8ab958494b2f605f252e231f9183bd7786938dab6e713d85f10d",
+   "status": "complete",
+   "answers": {
+    "semantic_recovery_confirmed": "yes",
+    "recovery_evidence_confirmed": "yes"
+   }
+  },
+  {
+   "item_id": "738cf2095ef4f80a23a4c7dd35cbddcb04472c65b9f2b84370db774b61c88656",
+   "status": "complete",
+   "answers": {
+    "semantic_recovery_confirmed": "yes",
+    "recovery_evidence_confirmed": "yes",
+    "notes": "Near miss: the record covers only the Honor 365 9/11 Honor Walk clause and drops the Back the Blue rally, which a separate linked record carries."
+   }
+  },
+  {
+   "item_id": "8779973ed1bba625440e5d4d301bf85304a47337c26ca0a5e3c187678be36519",
+   "status": "complete",
+   "answers": {
+    "semantic_recovery_confirmed": "no",
+    "recovery_evidence_confirmed": "no",
+    "notes": "The record states that Berkley aims to build clean energy infrastructure, not that she aims to protect Medicare."
+   }
+  },
+  {
+   "item_id": "91bf76a09a97cacc59818d1577ad34b4439140ed9c004649c4cacae133c32e22",
+   "status": "complete",
+   "answers": {
+    "semantic_recovery_confirmed": "yes",
+    "recovery_evidence_confirmed": "yes"
+   }
+  },
+  {
+   "item_id": "9cfae8f63a95171c34227eb6eea2fd558b32bdb4579f51eba1f33a8120dbd4e7",
+   "status": "complete",
+   "answers": {
+    "semantic_recovery_confirmed": "yes",
+    "recovery_evidence_confirmed": "yes"
+   }
+  },
+  {
+   "item_id": "bcb6bdd9c6ad168cf838b9f32fc31fd6f9be21f76a00451baa5e8a8324992b15",
+   "status": "complete",
+   "answers": {
+    "semantic_recovery_confirmed": "no",
+    "recovery_evidence_confirmed": "no",
+    "notes": "The record states that Berkley aims to keep promises to veterans, not that she aims to protect Medicare."
+   }
+  },
+  {
+   "item_id": "c4bdcf40b107ea71c7d3650425df1d98fafeb3fd8f7162f2bf07b40112dddbed",
+   "status": "complete",
+   "answers": {
+    "semantic_recovery_confirmed": "yes",
+    "recovery_evidence_confirmed": "yes",
+    "notes": "Near miss: the record recovers the industry growth clause but drops the support for healthcare workers in the same sentence."
+   }
+  },
+  {
+   "item_id": "dae8186ab4695ec19987e92383f8d36244f81e6d1103bf32bf9eaf3de846e8b7",
+   "status": "complete",
+   "answers": {
+    "semantic_recovery_confirmed": "yes",
+    "recovery_evidence_confirmed": "yes",
+    "notes": "Near miss: the value drops the coalition of doctors, nurses, local government, and business leaders, but the quoted evidence keeps it."
+   }
+  }
+ ]
+}

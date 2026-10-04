@@ -1,0 +1,753 @@
+{
+ "task_id": "candidate_extraction_v2_precision_biography_0004944622b5_b001",
+ "format": "handcode-results-v1",
+ "exported_at": "2026-09-23T00:38:03Z",
+ "n_items": 60,
+ "n_complete": 60,
+ "responses": [
+  {
+   "item_id": "23a97001f6185f4e69ee4a6b0262c36ed77415d92bdae5e61d6ec28f068d74ad",
+   "status": "complete",
+   "answers": {
+    "fact_present": "yes",
+    "value_faithful": "yes",
+    "field_correct": "yes",
+    "timing_correct": "yes",
+    "relationship_correct": "yes",
+    "evidence_supports_fact": "yes"
+   }
+  },
+  {
+   "item_id": "2e3883527d7cefdc970d2d1efa1b3f9f6dc02cbd36a3d341688651d5d07ac6c0",
+   "status": "complete",
+   "answers": {
+    "fact_present": "yes",
+    "value_faithful": "yes",
+    "field_correct": "yes",
+    "timing_correct": "yes",
+    "relationship_correct": "yes",
+    "evidence_supports_fact": "yes"
+   }
+  },
+  {
+   "item_id": "8af661ae7b8349a36264e6f1db28333438b79cb5290564385371a73d48b6aeac",
+   "status": "complete",
+   "answers": {
+    "fact_present": "yes",
+    "value_faithful": "yes",
+    "field_correct": "yes",
+    "timing_correct": "no",
+    "relationship_correct": "yes",
+    "evidence_supports_fact": "yes",
+    "notes": "Timing is wrong: the page says \"Since 1996, Bills has worked as a secondary social studies teacher\" and \"he continues to teach economics at Rosemount High School\", so the role is current, not former."
+   }
+  },
+  {
+   "item_id": "8ea73cc3e18fe4b35fab47abd3d57b217d46ffbb390ad6728d006d6553532c07",
+   "status": "complete",
+   "answers": {
+    "fact_present": "yes",
+    "value_faithful": "yes",
+    "field_correct": "yes",
+    "timing_correct": "no",
+    "relationship_correct": "yes",
+    "evidence_supports_fact": "yes",
+    "notes": "The page says \"Over his career, he has managed\" and never states that the work ended; he still runs his own company, so former is not supported and unclear or current would fit."
+   }
+  },
+  {
+   "item_id": "1ed813f669d282e48e2fc416e7b23b841a83ceb591cefdbc9dbe3fff150d9a32",
+   "status": "complete",
+   "answers": {
+    "fact_present": "yes",
+    "value_faithful": "yes",
+    "field_correct": "yes",
+    "timing_correct": "yes",
+    "relationship_correct": "yes",
+    "evidence_supports_fact": "yes"
+   }
+  },
+  {
+   "item_id": "07466f327803a655959c32fcef909b8a1687c76524d3fedf8c5bcfa7ec314631",
+   "status": "complete",
+   "answers": {
+    "fact_present": "yes",
+    "value_faithful": "yes",
+    "field_correct": "yes",
+    "timing_correct": "yes",
+    "relationship_correct": "yes",
+    "evidence_supports_fact": "no",
+    "notes": "The span starts with the dangling \"where as an undergraduate\" and never names Brown University, so it does not support the \"at Brown University\" part of the value."
+   }
+  },
+  {
+   "item_id": "212e0e8017ead96e5dd945e4707d0a8295b5c30a1dbd659db4176c91d5266763",
+   "status": "complete",
+   "answers": {
+    "fact_present": "yes",
+    "value_faithful": "yes",
+    "field_correct": "yes",
+    "timing_correct": "yes",
+    "relationship_correct": "yes",
+    "evidence_supports_fact": "yes"
+   }
+  },
+  {
+   "item_id": "77148c6236323120cc64dd8933955acc41b346b574894e31d9d2c71ef2b3bd53",
+   "status": "complete",
+   "answers": {
+    "fact_present": "yes",
+    "value_faithful": "yes",
+    "field_correct": "yes",
+    "timing_correct": "yes",
+    "relationship_correct": "yes",
+    "evidence_supports_fact": "yes"
+   }
+  },
+  {
+   "item_id": "539c30ae29d0bf4476b3806f69815eb362b1b7bdd341d7e3cd055ca610342269",
+   "status": "complete",
+   "answers": {
+    "fact_present": "yes",
+    "value_faithful": "yes",
+    "field_correct": "yes",
+    "timing_correct": "yes",
+    "relationship_correct": "yes",
+    "evidence_supports_fact": "yes"
+   }
+  },
+  {
+   "item_id": "a90fac63368e15d0bcf2f8e37ff740c65974bfd43a14eb6f99dd1282e25ea923",
+   "status": "complete",
+   "answers": {
+    "fact_present": "yes",
+    "value_faithful": "no",
+    "field_correct": "yes",
+    "timing_correct": "yes",
+    "relationship_correct": "yes",
+    "evidence_supports_fact": "yes",
+    "notes": "The page says Rogers was \"tapped in 2003 to lead\" the subcommittee and separately says he held leadership roles \"as Chairman or Ranking Member of three\"; the title Chairman is not stated for this subcommittee."
+   }
+  },
+  {
+   "item_id": "16fd1652f77a1440c2a15e800fb9d82122475842d8c7e9bc7e15dbf4e9b9c883",
+   "status": "complete",
+   "answers": {
+    "fact_present": "yes",
+    "value_faithful": "yes",
+    "field_correct": "yes",
+    "timing_correct": "yes",
+    "relationship_correct": "yes",
+    "evidence_supports_fact": "yes"
+   }
+  },
+  {
+   "item_id": "1c16cde7139bbab2c73a52a1f8e71f69a71afcc8ae165e93d8122abfd4e15c69",
+   "status": "complete",
+   "answers": {
+    "fact_present": "yes",
+    "value_faithful": "yes",
+    "field_correct": "yes",
+    "timing_correct": "yes",
+    "relationship_correct": "yes",
+    "evidence_supports_fact": "yes"
+   }
+  },
+  {
+   "item_id": "e546aef69eaf22d2d3c65c3466a25e3cb90b36279292a08b8f095626157b2015",
+   "status": "complete",
+   "answers": {
+    "fact_present": "yes",
+    "value_faithful": "yes",
+    "field_correct": "yes",
+    "timing_correct": "yes",
+    "relationship_correct": "yes",
+    "evidence_supports_fact": "yes"
+   }
+  },
+  {
+   "item_id": "28b0339602b98923d0d21272ec40254e479c63e37da5e640f3ba7ed78acfed6d",
+   "status": "complete",
+   "answers": {
+    "fact_present": "yes",
+    "value_faithful": "yes",
+    "field_correct": "yes",
+    "timing_correct": "yes",
+    "relationship_correct": "yes",
+    "evidence_supports_fact": "yes"
+   }
+  },
+  {
+   "item_id": "de52e78cd536029a8ba527616b7d8d3f2fd2a70e533771d35b1108a4510d25a5",
+   "status": "complete",
+   "answers": {
+    "fact_present": "yes",
+    "value_faithful": "yes",
+    "field_correct": "yes",
+    "timing_correct": "yes",
+    "relationship_correct": "yes",
+    "evidence_supports_fact": "no",
+    "notes": "The span is an endorsement blurb that only uses the honorific \"Senator Schatz\"; it does not state the U.S. Senate office, which the page states in other sentences."
+   }
+  },
+  {
+   "item_id": "7dd2f3e4cc394f7983962f322547df15cb3b2962e9920561fa9bab26dd0d62a7",
+   "status": "complete",
+   "answers": {
+    "fact_present": "yes",
+    "value_faithful": "yes",
+    "field_correct": "no",
+    "timing_correct": "yes",
+    "relationship_correct": "yes",
+    "evidence_supports_fact": "yes",
+    "notes": "Membership of a high school ski team is not an occupation; the page presents it as a childhood pastime."
+   }
+  },
+  {
+   "item_id": "d9b987254fc9201b997078fa7a3ad6cf69c0519406315ae5421cfb973eb3af03",
+   "status": "complete",
+   "answers": {
+    "fact_present": "yes",
+    "value_faithful": "yes",
+    "field_correct": "yes",
+    "timing_correct": "yes",
+    "relationship_correct": "yes",
+    "evidence_supports_fact": "yes"
+   }
+  },
+  {
+   "item_id": "7d6be6cf656d3619a25cd7d716cfcf60f999286b1cc25925b0a5891c7baf8cfd",
+   "status": "complete",
+   "answers": {
+    "fact_present": "yes",
+    "value_faithful": "yes",
+    "field_correct": "yes",
+    "timing_correct": "yes",
+    "relationship_correct": "yes",
+    "evidence_supports_fact": "yes",
+    "notes": "Near miss: the value is the bare institution name and drops the stated graduation and year."
+   }
+  },
+  {
+   "item_id": "0f3a296ffb4b757919a1f419f203abc0fa68c71148f55e28a53b075b5643cb02",
+   "status": "complete",
+   "answers": {
+    "fact_present": "yes",
+    "value_faithful": "yes",
+    "field_correct": "yes",
+    "timing_correct": "yes",
+    "relationship_correct": "yes",
+    "evidence_supports_fact": "yes"
+   }
+  },
+  {
+   "item_id": "f3500f1dc959e5bcc66575d301265afc589beff6ef4db67539eed428362009c4",
+   "status": "complete",
+   "answers": {
+    "fact_present": "yes",
+    "value_faithful": "yes",
+    "field_correct": "yes",
+    "timing_correct": "yes",
+    "relationship_correct": "yes",
+    "evidence_supports_fact": "yes"
+   }
+  },
+  {
+   "item_id": "4dcd95725d71cc976e508490be9e1935621894e6cf445e56987a5eecac1d8e73",
+   "status": "complete",
+   "answers": {
+    "fact_present": "yes",
+    "value_faithful": "yes",
+    "field_correct": "yes",
+    "timing_correct": "yes",
+    "relationship_correct": "yes",
+    "evidence_supports_fact": "yes"
+   }
+  },
+  {
+   "item_id": "3a64eac5ba9ac307a8841b3b159edd907502d2dc7b2c883bf8ec1be89a01579c",
+   "status": "complete",
+   "answers": {
+    "fact_present": "yes",
+    "value_faithful": "yes",
+    "field_correct": "yes",
+    "timing_correct": "no",
+    "relationship_correct": "yes",
+    "evidence_supports_fact": "no",
+    "notes": "Timing: the page banner lists \"Texas State Senator\" as a present credential and never says he left, so former is not supported. Evidence: the span says he \"ran for the Texas Senate\", which does not establish that he held the office."
+   }
+  },
+  {
+   "item_id": "6dfc41e0bb0f0a4a10c183094cfc370ce6b8ed7b2f3b7e8badced0959c603dc1",
+   "status": "complete",
+   "answers": {
+    "fact_present": "yes",
+    "value_faithful": "yes",
+    "field_correct": "yes",
+    "timing_correct": "yes",
+    "relationship_correct": "yes",
+    "evidence_supports_fact": "yes",
+    "notes": "Near miss: the relationship \"eaten grapes straight from the vine in\" is a one-off activity, not a durable local-roots relationship, though it is verbatim and geographic."
+   }
+  },
+  {
+   "item_id": "348796569da7699e2532673314b4f324b7162bedcd736ad646a3bc9d5399ebff",
+   "status": "complete",
+   "answers": {
+    "fact_present": "yes",
+    "value_faithful": "yes",
+    "field_correct": "yes",
+    "timing_correct": "yes",
+    "relationship_correct": "yes",
+    "evidence_supports_fact": "yes"
+   }
+  },
+  {
+   "item_id": "8bdf071e94c8aa9a07223a2fc625c153060fa66f60c8bb7641e64bbd485475fe",
+   "status": "complete",
+   "answers": {
+    "fact_present": "yes",
+    "value_faithful": "yes",
+    "field_correct": "yes",
+    "timing_correct": "yes",
+    "relationship_correct": "yes",
+    "evidence_supports_fact": "yes"
+   }
+  },
+  {
+   "item_id": "e8b6d32cea9235d56bae343fdbce6aca454fc8f2043731d287913ae56790ad65",
+   "status": "complete",
+   "answers": {
+    "fact_present": "yes",
+    "value_faithful": "yes",
+    "field_correct": "yes",
+    "timing_correct": "yes",
+    "relationship_correct": "yes",
+    "evidence_supports_fact": "yes"
+   }
+  },
+  {
+   "item_id": "290216cc39498db267abbc717425f9bbb1bf1a38709978a59a351832074667a4",
+   "status": "complete",
+   "answers": {
+    "fact_present": "yes",
+    "value_faithful": "yes",
+    "field_correct": "no",
+    "timing_correct": "yes",
+    "relationship_correct": "yes",
+    "evidence_supports_fact": "yes",
+    "notes": "\"Advocate for policies that help workers and their families\" is a general characterization, not a specific public, civic or community role, project or action."
+   }
+  },
+  {
+   "item_id": "401bccf56caeae3dfa86460efaacb27b476c4629f374a54bf94b49101c7af336",
+   "status": "complete",
+   "answers": {
+    "fact_present": "yes",
+    "value_faithful": "yes",
+    "field_correct": "yes",
+    "timing_correct": "yes",
+    "relationship_correct": "yes",
+    "evidence_supports_fact": "yes"
+   }
+  },
+  {
+   "item_id": "2b48831ef36ea86bc645291f1e6576efc68849c44d2776883f2a212a86f736da",
+   "status": "complete",
+   "answers": {
+    "fact_present": "yes",
+    "value_faithful": "yes",
+    "field_correct": "yes",
+    "timing_correct": "yes",
+    "relationship_correct": "yes",
+    "evidence_supports_fact": "yes"
+   }
+  },
+  {
+   "item_id": "7d6bf41b49f78007bfab39c0ac6b6da71bece9665007766c9ee9daed69e0d671",
+   "status": "complete",
+   "answers": {
+    "fact_present": "yes",
+    "value_faithful": "yes",
+    "field_correct": "yes",
+    "timing_correct": "no",
+    "relationship_correct": "yes",
+    "evidence_supports_fact": "yes",
+    "notes": "\"Born in Rolla and raised in Lebanon\" is a historical relationship, so current is wrong; the page does not say she lives in Lebanon now."
+   }
+  },
+  {
+   "item_id": "992b9afc03f4a4bf81c2b81ede6f8ff8e3e0b038f1eb4cb7480bc2159ee6d3d1",
+   "status": "complete",
+   "answers": {
+    "fact_present": "yes",
+    "value_faithful": "yes",
+    "field_correct": "yes",
+    "timing_correct": "yes",
+    "relationship_correct": "yes",
+    "evidence_supports_fact": "yes"
+   }
+  },
+  {
+   "item_id": "8fa2b416cbd0f322c6f50f3f17b6d35e052250380da160237e084af33a76a75f",
+   "status": "complete",
+   "answers": {
+    "fact_present": "yes",
+    "value_faithful": "yes",
+    "field_correct": "yes",
+    "timing_correct": "yes",
+    "relationship_correct": "no",
+    "evidence_supports_fact": "yes",
+    "notes": "The relationship \"grew up on\" points to \"a family farm\" and the page names no place, so the record states no geographic relationship."
+   }
+  },
+  {
+   "item_id": "186075be35e0bbafeeb07bbedba283fe86b8e7058f4e9c93d8e3a50931f089c1",
+   "status": "complete",
+   "answers": {
+    "fact_present": "yes",
+    "value_faithful": "yes",
+    "field_correct": "yes",
+    "timing_correct": "yes",
+    "relationship_correct": "yes",
+    "evidence_supports_fact": "yes",
+    "notes": "Near miss: the value \"Background in military service\" is generic; the page states the concrete fact that he enlisted in the U.S. Army."
+   }
+  },
+  {
+   "item_id": "7b7b23fe01a2a5bec03a999064b1f082a1bbdba071aa51609248e2bd545d1441",
+   "status": "complete",
+   "answers": {
+    "fact_present": "yes",
+    "value_faithful": "yes",
+    "field_correct": "yes",
+    "timing_correct": "yes",
+    "relationship_correct": "yes",
+    "evidence_supports_fact": "yes"
+   }
+  },
+  {
+   "item_id": "e7e10b2de327cd0607d37e5318c405f8421e6df217ad1c051e6ec163c989bf57",
+   "status": "complete",
+   "answers": {
+    "fact_present": "yes",
+    "value_faithful": "no",
+    "field_correct": "yes",
+    "timing_correct": "yes",
+    "relationship_correct": "yes",
+    "evidence_supports_fact": "yes",
+    "notes": "The page says \"For 15 years, Hall served as an elected official on Atlanta City Council and on the Atlanta School Board\", so the 15 years covers both bodies; the value attributes all 15 years to the City Council."
+   }
+  },
+  {
+   "item_id": "ec51c2f406ae12358915869dc92b0d2e9e59e3e633d07d79dd3a062bf1697c45",
+   "status": "complete",
+   "answers": {
+    "fact_present": "yes",
+    "value_faithful": "yes",
+    "field_correct": "yes",
+    "timing_correct": "no",
+    "relationship_correct": "yes",
+    "evidence_supports_fact": "yes",
+    "notes": "\"Born and raised in Delaware, Ohio\" is a historical relationship, so current is wrong."
+   }
+  },
+  {
+   "item_id": "5db18f631bc5109471af1ef836e2390c4a3c10c5904742acd117d765c8008547",
+   "status": "complete",
+   "answers": {
+    "fact_present": "yes",
+    "value_faithful": "yes",
+    "field_correct": "yes",
+    "timing_correct": "yes",
+    "relationship_correct": "yes",
+    "evidence_supports_fact": "yes"
+   }
+  },
+  {
+   "item_id": "d212fc6cd0b578c1339c58f26eaf489cdf8c418f7e4e9056eee09419920cb34e",
+   "status": "complete",
+   "answers": {
+    "fact_present": "yes",
+    "value_faithful": "yes",
+    "field_correct": "yes",
+    "timing_correct": "yes",
+    "relationship_correct": "yes",
+    "evidence_supports_fact": "yes",
+    "notes": "Near miss: the record is in effect a current-residence claim (\"Mike still resides in Jasper\"), which the codebook says local roots must not be read as."
+   }
+  },
+  {
+   "item_id": "067f6c89821c7ee02650fbde66d708f5988e860e4545ff5b260e0fa40a6d124d",
+   "status": "complete",
+   "answers": {
+    "fact_present": "yes",
+    "value_faithful": "yes",
+    "field_correct": "yes",
+    "timing_correct": "yes",
+    "relationship_correct": "yes",
+    "evidence_supports_fact": "no",
+    "notes": "The span is the bare title \"Deputy Secretary of Health and Social Services\"; it does not carry the \"for Delaware\" attribution that the value adds."
+   }
+  },
+  {
+   "item_id": "c06a679541e5e9be9cf15ee21a150b127afd8e1de9ec4a723db63aa2c4475a96",
+   "status": "complete",
+   "answers": {
+    "fact_present": "yes",
+    "value_faithful": "yes",
+    "field_correct": "yes",
+    "timing_correct": "yes",
+    "relationship_correct": "yes",
+    "evidence_supports_fact": "no",
+    "notes": "The span says only that Mark was elected to replace Congressman Porter; it names neither the House of Representatives nor Illinois' 10th District, which the value states."
+   }
+  },
+  {
+   "item_id": "59152b0c287d46232f67515537be5fe4b2d7d4b699d7b69f0fe7ddd0e2cf1542",
+   "status": "complete",
+   "answers": {
+    "fact_present": "yes",
+    "value_faithful": "yes",
+    "field_correct": "yes",
+    "timing_correct": "yes",
+    "relationship_correct": "yes",
+    "evidence_supports_fact": "yes"
+   }
+  },
+  {
+   "item_id": "8584e2741a830c05749b0d1883b57eb1b9494c5ac2ed8570e4d37eff7c2cb7b7",
+   "status": "complete",
+   "answers": {
+    "fact_present": "yes",
+    "value_faithful": "yes",
+    "field_correct": "yes",
+    "timing_correct": "yes",
+    "relationship_correct": "yes",
+    "evidence_supports_fact": "yes"
+   }
+  },
+  {
+   "item_id": "5d594fdbaea89a6a078dc0733e2850aca4ec1396ced0ae8f9628c38d7a471431",
+   "status": "complete",
+   "answers": {
+    "fact_present": "yes",
+    "value_faithful": "yes",
+    "field_correct": "yes",
+    "timing_correct": "yes",
+    "relationship_correct": "yes",
+    "evidence_supports_fact": "yes",
+    "notes": "Near miss: the page also says he is a member of the Army Reserve and continues to train forces at Fort Bragg, so only the Iraq and Afghanistan tours are former."
+   }
+  },
+  {
+   "item_id": "03738785f29013e8892d4729c6ce8cd8e001b4381d2d955024715bc54112a911",
+   "status": "complete",
+   "answers": {
+    "fact_present": "yes",
+    "value_faithful": "yes",
+    "field_correct": "yes",
+    "timing_correct": "yes",
+    "relationship_correct": "yes",
+    "evidence_supports_fact": "yes"
+   }
+  },
+  {
+   "item_id": "79da743e401f2c6ce5591996d6aea462d431bd84830bdfe72c7f6b3035525c8b",
+   "status": "complete",
+   "answers": {
+    "fact_present": "yes",
+    "value_faithful": "yes",
+    "field_correct": "yes",
+    "timing_correct": "yes",
+    "relationship_correct": "yes",
+    "evidence_supports_fact": "yes"
+   }
+  },
+  {
+   "item_id": "a9a4243ee96002352e0254ac0a38dbe9460d04d2b4e49805eb828abcd0da4742",
+   "status": "complete",
+   "answers": {
+    "fact_present": "yes",
+    "value_faithful": "yes",
+    "field_correct": "yes",
+    "timing_correct": "yes",
+    "relationship_correct": "yes",
+    "evidence_supports_fact": "yes",
+    "notes": "Near miss: the record publishes a street-level childhood location (\"a small house on Magnolia Drive\"); it passed validation because it carries no house number."
+   }
+  },
+  {
+   "item_id": "00c9d87cf887bc3cc7066e26218fa0bbb9d7a9e832c2ceab4342fb66983aeda2",
+   "status": "complete",
+   "answers": {
+    "fact_present": "yes",
+    "value_faithful": "yes",
+    "field_correct": "yes",
+    "timing_correct": "yes",
+    "relationship_correct": "yes",
+    "evidence_supports_fact": "yes"
+   }
+  },
+  {
+   "item_id": "3e9342662f5cc53b7ee1ccf0f03318e098c24f05518f12ff81d2a73bd5acd972",
+   "status": "complete",
+   "answers": {
+    "fact_present": "yes",
+    "value_faithful": "yes",
+    "field_correct": "yes",
+    "timing_correct": "yes",
+    "relationship_correct": "yes",
+    "evidence_supports_fact": "yes"
+   }
+  },
+  {
+   "item_id": "0cbb87c0d49019a9368db33222cc972ebb09636d7b1c4e83fcdf8afd5ac44041",
+   "status": "complete",
+   "answers": {
+    "fact_present": "yes",
+    "value_faithful": "yes",
+    "field_correct": "yes",
+    "timing_correct": "yes",
+    "relationship_correct": "yes",
+    "evidence_supports_fact": "yes"
+   }
+  },
+  {
+   "item_id": "717c2f0c04c0a8cdb09eb8836701d7720e6b123c454952574bcdbb1f5a7677b2",
+   "status": "complete",
+   "answers": {
+    "fact_present": "yes",
+    "value_faithful": "yes",
+    "field_correct": "yes",
+    "timing_correct": "yes",
+    "relationship_correct": "yes",
+    "evidence_supports_fact": "yes"
+   }
+  },
+  {
+   "item_id": "7d885e474c54f9669b74c050d0bf7f585086e41380b5d048ce03e25ce971f163",
+   "status": "complete",
+   "answers": {
+    "fact_present": "yes",
+    "value_faithful": "yes",
+    "field_correct": "yes",
+    "timing_correct": "yes",
+    "relationship_correct": "yes",
+    "evidence_supports_fact": "yes",
+    "notes": "Near miss: timing former is applied to a decoration, which has no current or former state; null would fit the rule for military service better."
+   }
+  },
+  {
+   "item_id": "a158fea75bd3dc08e761c2d1935659de3bee620d338dfe9693ec714f89dcfe4a",
+   "status": "complete",
+   "answers": {
+    "fact_present": "yes",
+    "value_faithful": "yes",
+    "field_correct": "yes",
+    "timing_correct": "yes",
+    "relationship_correct": "yes",
+    "evidence_supports_fact": "yes"
+   }
+  },
+  {
+   "item_id": "2f678abfd1219febeda38c504ca59c50195fb722cd75aa3f7f72394b900c47cd",
+   "status": "complete",
+   "answers": {
+    "fact_present": "yes",
+    "value_faithful": "yes",
+    "field_correct": "yes",
+    "timing_correct": "no",
+    "relationship_correct": "yes",
+    "evidence_supports_fact": "yes",
+    "notes": "The page states no current or former distinction for the degree, so timing should be null; the other nine education records in this batch all have null timing."
+   }
+  },
+  {
+   "item_id": "50710362859b0647f1a69a9be8d88371a7b02faf66d25dc4a61b43e6cbae361f",
+   "status": "complete",
+   "answers": {
+    "fact_present": "yes",
+    "value_faithful": "yes",
+    "field_correct": "yes",
+    "timing_correct": "yes",
+    "relationship_correct": "yes",
+    "evidence_supports_fact": "yes"
+   }
+  },
+  {
+   "item_id": "ae7b6c68022e836f530baa47f945935704aa4d70729aec023697e9324d179f70",
+   "status": "complete",
+   "answers": {
+    "fact_present": "yes",
+    "value_faithful": "yes",
+    "field_correct": "yes",
+    "timing_correct": "yes",
+    "relationship_correct": "yes",
+    "evidence_supports_fact": "yes"
+   }
+  },
+  {
+   "item_id": "e1fd7447c308875a0145e08a306441c1e997a7181797708563d046095a77a7c1",
+   "status": "complete",
+   "answers": {
+    "fact_present": "yes",
+    "value_faithful": "yes",
+    "field_correct": "yes",
+    "timing_correct": "yes",
+    "relationship_correct": "yes",
+    "evidence_supports_fact": "yes"
+   }
+  },
+  {
+   "item_id": "e50baccb6596eb3acc0fe59aec3b1ad89c41f29581b9f0dfb065a3a9a5bf4c3d",
+   "status": "complete",
+   "answers": {
+    "fact_present": "yes",
+    "value_faithful": "yes",
+    "field_correct": "yes",
+    "timing_correct": "yes",
+    "relationship_correct": "yes",
+    "evidence_supports_fact": "yes"
+   }
+  },
+  {
+   "item_id": "7d9d0094ae47b94d1390ed2c06186436a0534bb86019a418cd547f0ee1141ec4",
+   "status": "complete",
+   "answers": {
+    "fact_present": "yes",
+    "value_faithful": "yes",
+    "field_correct": "yes",
+    "timing_correct": "yes",
+    "relationship_correct": "yes",
+    "evidence_supports_fact": "yes"
+   }
+  },
+  {
+   "item_id": "70dddfdfc11b8133114acc55b1cd749c83e3062f8bcec4667abe691dd7c86838",
+   "status": "complete",
+   "answers": {
+    "fact_present": "yes",
+    "value_faithful": "yes",
+    "field_correct": "yes",
+    "timing_correct": "yes",
+    "relationship_correct": "no",
+    "evidence_supports_fact": "yes",
+    "notes": "The relationship string is the whole Yell County birth and upbringing clause, which does not correspond to the recorded value \"Sixth generation Arkansan\" and embeds the place instead of stating the relationship."
+   }
+  },
+  {
+   "item_id": "2c0fa6f10c0590a03b91dfa1ff25e8c581a6aacb6b3196c4ba10264071a04d36",
+   "status": "complete",
+   "answers": {
+    "fact_present": "yes",
+    "value_faithful": "yes",
+    "field_correct": "yes",
+    "timing_correct": "yes",
+    "relationship_correct": "yes",
+    "evidence_supports_fact": "yes",
+    "notes": "Near miss: an elementary school lunch cashier role in exchange for lunch is thin for an occupation, but the page says she \"worked as\" it."
+   }
+  }
+ ]
+}

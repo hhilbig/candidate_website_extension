@@ -1,0 +1,581 @@
+{
+ "task_id": "candidate_extraction_v2_recall_issues_0004944622b5_b001",
+ "format": "handcode-results-v1",
+ "exported_at": "2026-09-23T00:37:07Z",
+ "n_items": 20,
+ "n_complete": 20,
+ "responses": [
+  {
+   "item_id": "46944e5edfe355633f30a69f53c9a496119d9274d936a5099b0bce96ab71203b",
+   "status": "complete",
+   "answers": {
+    "all_requested_records_captured": "no",
+    "missed_records": [
+     {
+      "type": "oppose",
+      "value": "Years of neglect have left the forests around Yosemite overgrown and open to catastrophic wildfire.",
+      "evidence": "Yosemite is also threatened by years of neglect of its surrounding forests, which are now dangerously overgrown and are falling victim to disease, pestilence and ultimately, catastrophic wild fire."
+     },
+     {
+      "type": "support",
+      "value": "The gateway communities and local businesses around Yosemite must be heard.",
+      "evidence": "Their voices, too, must be heard."
+     },
+     {
+      "type": "support",
+      "value": "The Park Service must welcome and accommodate park visitors, not restrict and harass them.",
+      "evidence": "Yosemite belongs to the American people, and the Park Service’s job is to welcome them and accommodate them when they visit their park – not restrict and harass them."
+     },
+     {
+      "type": "oppose",
+      "value": "Rejects the Park Service claim that the removals are a court-ordered response to the Wild and Scenic Rivers Act.",
+      "evidence": "The Park Service is attempting to justify this as a court-ordered response to the Wild and Scenic Rivers Act."
+     },
+     {
+      "type": "oppose",
+      "value": "The Park Service officials are not required to take these actions.",
+      "evidence": "The officials of the National Park Service are clearly not required to take these actions."
+     },
+     {
+      "type": "oppose",
+      "value": "Park officials have already decided and only walk through the formalities of public comment.",
+      "evidence": "It is obvious that Park officials have already made up their minds and are merely walking through the formalities."
+     },
+     {
+      "type": "oppose",
+      "value": "Making the park unpleasant will devastate the economy of the surrounding communities.",
+      "evidence": "That might be more convenient to them, but it will devastate the economy of all the surrounding communities whose economies depend on tourism."
+     },
+     {
+      "type": "support",
+      "value": "Approves of the hearing that Chairman Bishop arranged on the Park Service proposals.",
+      "evidence": "I want to thank Chairman Bishop for arranging this hearing in response to the public outcry against proposals by the National Park Service that would radically alter the purpose, nature and use of Yosemite National Park."
+     },
+     {
+      "type": "support",
+      "value": "Supports Congressional intervention to save Yosemite National Park.",
+      "evidence": "The public is crying out for Congressional intervention, and I thank you, Mr. Chairman, for taking the first step toward saving Yosemite National Park"
+     },
+     {
+      "type": "oppose",
+      "value": "Opposes moving tourist facilities away from the Yosemite Valley floor and away from the tourists.",
+      "evidence": "Understand what that means: they will move tourist facilities away from the tourists."
+     },
+     {
+      "type": "support",
+      "value": "Supports restoring the vision of the founders of the National Park Service for its next century.",
+      "evidence": "I can’t think of a better way to approach the next century of our National Park Service than to restore the vision of its founders."
+     },
+     {
+      "type": "support",
+      "value": "Supports bill provisions that cut the deferred maintenance backlog with new sources of revenue.",
+      "evidence": "Provisions in the bill help reduce the Service’s deferred maintenance backlog by creating new sources of revenue to pay for needed improvements."
+     },
+     {
+      "type": "support",
+      "value": "Supports the Centennial Act discussion draft, which prepares the Park Service for its 2016 celebration.",
+      "evidence": "The discussion draft before the sub-committee today helps the Park Service to prepare for its nation-wide celebration in 2016, as well as better equips the Service for the next century of promoting and protecting our parks."
+     },
+     {
+      "type": "past_action",
+      "value": "Requested that an organizer of the Mariposa community meeting testify at the hearing.",
+      "evidence": "I appreciate the Chairman granting my request to invite one of the organizers of this meeting to testify today."
+     },
+     {
+      "type": "past_action",
+      "value": "Met with county officials and business leaders who pursue the Gateway to Yosemite project.",
+      "evidence": "I had the opportunity to meet with a group of county officials and business leaders earlier this year who are pursuing this project as a “Gateway to Yosemite.”"
+     }
+    ]
+   }
+  },
+  {
+   "item_id": "f4a02af75d795f5c8618cc016a2c6931d277a3b47e1da8661f54a3c5496ca40c",
+   "status": "complete",
+   "answers": {
+    "all_requested_records_captured": "no",
+    "missed_records": [
+     {
+      "type": "support",
+      "value": "Reliable and safe infrastructure drives economic growth and connects families to important places.",
+      "evidence": "Reliable and safe infrastructure drives economic growth and connects us to the places that are important to us and our families."
+     },
+     {
+      "type": "support",
+      "value": "Supported the 2018 omnibus appropriations bill.",
+      "evidence": "I supported this omnibus bill"
+     },
+     {
+      "type": "oppose",
+      "value": "Calls President Trump’s budget flawed and the omnibus bill a rejection of it.",
+      "evidence": "which represents a clear and final rejection of President Trump’s flawed budget."
+     }
+    ]
+   }
+  },
+  {
+   "item_id": "3e668d895a764eb5ff760dafe051b1e0b9d3d610378290789e3fd0adfbe69069",
+   "status": "complete",
+   "answers": {
+    "all_requested_records_captured": "no",
+    "missed_records": [
+     {
+      "type": "oppose",
+      "value": "The government works only for the wealthy and well-connected and ignores ordinary Kentuckians.",
+      "evidence": "Too often our government seems to work only for the wealthy and well-connected, while the interests of ordinary Kentuckians remain ignored."
+     },
+     {
+      "type": "oppose",
+      "value": "Sen. Mitch McConnell built the campaign-money swamp.",
+      "evidence": "This is the swamp Sen. Mitch McConnell has built."
+     },
+     {
+      "type": "oppose",
+      "value": "Money in politics forces members of Congress to spend up to 70 percent of their time on fundraising.",
+      "evidence": "Second, the amount of money flowing through politics forces members of Congress to constantly raise even more money for their next campaign. They spend up to 70 percent of their time fundraising."
+     },
+     {
+      "type": "oppose",
+      "value": "Criticizes the large increase in Sen. McConnell’s net worth since his election.",
+      "evidence": "Sen. McConnell’s net worth has increased by as much as $57 million since he was elected."
+     },
+     {
+      "type": "support",
+      "value": "Supports a return to small-donor, grassroots campaign funding.",
+      "evidence": "That’s democracy speaking and that kind of movement can inspire real leaders to run. Our country needs to get back to that."
+     }
+    ]
+   }
+  },
+  {
+   "item_id": "4c782d0c058952ec1c959dea6d5388b926a7428423f2f125e1955c97248daeec",
+   "status": "complete",
+   "answers": {
+    "all_requested_records_captured": "yes"
+   }
+  },
+  {
+   "item_id": "57d2e6135908a5fe4b4dc9c39eecf9c915768ae6298082cf0af705b590483d4c",
+   "status": "complete",
+   "answers": {
+    "all_requested_records_captured": "yes"
+   }
+  },
+  {
+   "item_id": "e8ceea8a7e577ac5d38a472a62d3ab601f52a3e6c9a475cbb9d893f5e8d5e42d",
+   "status": "complete",
+   "answers": {
+    "all_requested_records_captured": "yes"
+   }
+  },
+  {
+   "item_id": "5ac9df13da21c978078b7bc2af4e0c374ae06dec086314c4f25d49ef93c38283",
+   "status": "complete",
+   "answers": {
+    "all_requested_records_captured": "yes"
+   }
+  },
+  {
+   "item_id": "7d4a5f62d68739fd45514b7ef4e94ebd6edc3215790b78b25c933327df32fc79",
+   "status": "complete",
+   "answers": {
+    "all_requested_records_captured": "no",
+    "missed_records": [
+     {
+      "type": "support",
+      "value": "Alaskans must be able to power their homes and businesses at a reasonable cost.",
+      "evidence": "We need to power our homes and businesses at a reasonable cost."
+     },
+     {
+      "type": "oppose",
+      "value": "Opposes drastic climate measures that burden the economy with billions in new taxes and regulations.",
+      "evidence": "Should we take drastic measures to combat something that may not even exist, burdening our already struggling economy with billions in new taxes and regulations?"
+     },
+     {
+      "type": "proposal",
+      "value": "Requires good science and a long-term climate trajectory before climate decisions are made.",
+      "evidence": "We need good science, and a long-term climate trajectory before we jump in and make decisions that will profoundly affect the lives of ordinary Alaskans."
+     },
+     {
+      "type": "oppose",
+      "value": "California’s Cap and Trade law made business more expensive there and raised unemployment.",
+      "evidence": "California has already passed a Cap and Trade law, which has made it even more expensive to do business there and has increased unemployment."
+     }
+    ]
+   }
+  },
+  {
+   "item_id": "6681d73b72ff473ae2a15d6a1740e7e31e751a8fc60b2a4e0eb835b278864296",
+   "status": "complete",
+   "answers": {
+    "all_requested_records_captured": "no",
+    "missed_records": [
+     {
+      "type": "support",
+      "value": "Praises the 31st District as a leader in career and technical education programs.",
+      "evidence": "I’m proud that Texas’ 31st Congressional District is a leader in CTE programs, and thousands of Central Texas student have benefited from the availability of these programs."
+     },
+     {
+      "type": "oppose",
+      "value": "Obamacare raised premiums by 82 percent and left Texans fewer health care options.",
+      "evidence": "It has raised premiums by 82% and left Texans with less options for health care."
+     },
+     {
+      "type": "support",
+      "value": "Texans deserve a system that puts them, not government bureaucrats, in charge of their health care decisions.",
+      "evidence": "Texans deserve a system that puts them, not government bureaucrats, in charge of their health care decisions."
+     },
+     {
+      "type": "oppose",
+      "value": "Opposes Washington bureaucrats who micro-manage communities.",
+      "evidence": "American’s will rebuild their communities together, not Washington bureaucrats micro-managing our lives."
+     },
+     {
+      "type": "support",
+      "value": "A solution must create a sustainable immigration system.",
+      "evidence": "As a Member of Congress from Texas who is married to an immigrant, I believe we must provide a solution to create a sustainable system."
+     }
+    ]
+   }
+  },
+  {
+   "item_id": "0aa870e122b1ceeab3012ff5a0f058e69ec445a0c3c10e4854893928a38e70d8",
+   "status": "complete",
+   "answers": {
+    "all_requested_records_captured": "no",
+    "missed_records": [
+     {
+      "type": "support",
+      "value": "The immigration laws must be enforced.",
+      "evidence": "We are a nation of laws, and our immigration laws must be enforced."
+     },
+     {
+      "type": "proposal",
+      "value": "Will lead the charge to balance the budget without raising taxes.",
+      "evidence": "I’ll lead the charge to balance the budget without raising taxes"
+     },
+     {
+      "type": "past_action",
+      "value": "Introduced a Balanced Budget Amendment to the Constitution.",
+      "evidence": "I’ve introduced a Balanced Budget Amendment to the Constitution to require the federal government to live within its means."
+     },
+     {
+      "type": "oppose",
+      "value": "Government regulations bypass constitutional limits and strangle state and local economies.",
+      "evidence": "continue to bypass Constitutional limits on federal authority and strangle state and local economies."
+     },
+     {
+      "type": "past_action",
+      "value": "Ended corruption and cronyism in the state two-year college system.",
+      "evidence": "just like I did at the state level with the two-year college system"
+     },
+     {
+      "type": "proposal",
+      "value": "Restore President Reagan’s principle of peace through strength.",
+      "evidence": "instead restore President Reagan’s principle of “peace through strength.”"
+     },
+     {
+      "type": "proposal",
+      "value": "Be a strong advocate for constituents’ VA benefits.",
+      "evidence": "by being a strong advocate for constituents’ VA benefits"
+     }
+    ]
+   }
+  },
+  {
+   "item_id": "e453f5517074a6c2c18b48da48dfd4524ba87ad271e0fbfbb18193921769916e",
+   "status": "complete",
+   "answers": {
+    "all_requested_records_captured": "no",
+    "missed_records": [
+     {
+      "type": "oppose",
+      "value": "The bureaucratic paperwork turns simple solutions into financial nightmares.",
+      "evidence": "The bureaucratic jungle of paperwork turns simple solutions into financial nightmares."
+     },
+     {
+      "type": "oppose",
+      "value": "The basic problem is the loss of integrity, ethics and accountability in government.",
+      "evidence": "Again, this also takes us back to the basic problem, the loss of Integrity, Ethics and Accountability in government."
+     },
+     {
+      "type": "proposal",
+      "value": "Return border security to the states, because the nation is not secure if the borders are not secure.",
+      "evidence": "No one can question that if we do not secure our borders we cannot secure our Nation."
+     },
+     {
+      "type": "oppose",
+      "value": "The current economic state follows from the government’s mismanagement of taxpayers’ trust.",
+      "evidence": "Our current economic state did not happen over night, but is the outcome of many issues"
+     }
+    ]
+   }
+  },
+  {
+   "item_id": "4ace9090b3ff7f517938af6a650d8b0355ee1bc8ef26782bf747d9166e32f769",
+   "status": "complete",
+   "answers": {
+    "all_requested_records_captured": "no",
+    "missed_records": [
+     {
+      "type": "oppose",
+      "value": "Continued spending by an out-of-control democrat Congress will lower living standards and cause poverty.",
+      "evidence": "If spending by an out-of-control democrat Congress continues to spend as in the past our living standard will decline and poverty for the nation will ensue."
+     },
+     {
+      "type": "support",
+      "value": "Voters should elect a person who will fight for a strong and sound currency.",
+      "evidence": "Therefore when you cast your vote you need to vote for a person that will fight for a strong and sound currency."
+     },
+     {
+      "type": "proposal",
+      "value": "Stop the spending of money the country does not have.",
+      "evidence": "This will only stop when the spending of money we don’t have stops. Stop the spending."
+     },
+     {
+      "type": "proposal",
+      "value": "Vote only for fiscally conservative candidates.",
+      "evidence": "Vote only for fiscally conservative candidates."
+     },
+     {
+      "type": "oppose",
+      "value": "The Biden and Democrat-sponsored budget makes the price of almost everything rise.",
+      "evidence": "With the Biden and Democrat-sponsored budget in place, you can see the effects right now. The basic price of almost everything is rising at an alarming rate."
+     },
+     {
+      "type": "oppose",
+      "value": "Opposes the democratic party support for defunding the police.",
+      "evidence": "Now with the crazy democratic party support of defunding the police, encouraging anarchy, BLM (Marxist organization), and with Antifa intimidation."
+     },
+     {
+      "type": "oppose",
+      "value": "The Democrat Party is no friend of the minorities in America.",
+      "evidence": "In my opinion, the Democrat Party still clings to its roots. They are no friends of the minorities in America."
+     },
+     {
+      "type": "proposal",
+      "value": "All student loans should only pay for tuition.",
+      "evidence": "All student loans should only pay for tuition."
+     },
+     {
+      "type": "oppose",
+      "value": "Obama and the Democrats replaced bank loan terms with government funding, which raised student loan rates.",
+      "evidence": "When Obama and the Democrats took over they did away with the banks’ terms and used our government to fund the loans. The catch here was that process then caused the rates to rise."
+     },
+     {
+      "type": "oppose",
+      "value": "Allowing student loan money for costs other than tuition was a big mistake.",
+      "evidence": "Also, they allowed the money to be used for other things not related to tuition. Big mistake."
+     },
+     {
+      "type": "oppose",
+      "value": "Student debt got out of control because of government control and government policies.",
+      "evidence": "Student debt got out of control and now we see the consequences of government control and government policies that encouraged student debt."
+     },
+     {
+      "type": "proposal",
+      "value": "Defund the public unions and put children’s education first.",
+      "evidence": "We need to defund the public unions and put our children’s education first."
+     },
+     {
+      "type": "oppose",
+      "value": "The country spends the most on education but scores 38th in math and 24th in science.",
+      "evidence": "We as a country spend the most on education for our children, yet we don’t get what we pay for. Our country scores on the world stage 38th in maths, 24th in science. This is unacceptable."
+     },
+     {
+      "type": "oppose",
+      "value": "Democrats support limits on what citizens hear or read and direct Big Tech and broadcasters to do the same.",
+      "evidence": "If you are paying attention you will observe that Democrats are in support of limiting what every citizen hears or reads. They are directing Big Tech, Social Media, and major broadcasting stations to do the same."
+     }
+    ]
+   }
+  },
+  {
+   "item_id": "3aad0aea3bb384af708324ec61c3dfba0e18e75137212185a0af8e1c79ff58ad",
+   "status": "complete",
+   "answers": {
+    "all_requested_records_captured": "yes"
+   }
+  },
+  {
+   "item_id": "eeafff93586066b44bb32ef9715c0cda3318099b2fcbd71235ee65384d971d2d",
+   "status": "complete",
+   "answers": {
+    "all_requested_records_captured": "yes"
+   }
+  },
+  {
+   "item_id": "98d00f86262b68387c42ff6477b5c029421d8081b0f5f2815910320627286f63",
+   "status": "complete",
+   "answers": {
+    "all_requested_records_captured": "yes"
+   }
+  },
+  {
+   "item_id": "f0ef59a11ff15c2f90320276961a465dfa63835394db8c103ff645b3377fb4a6",
+   "status": "complete",
+   "answers": {
+    "all_requested_records_captured": "yes"
+   }
+  },
+  {
+   "item_id": "7c931d5647500b65f855c6d0d5cafbdae29cc1c25b489e8661d5f486e8e9758e",
+   "status": "complete",
+   "answers": {
+    "all_requested_records_captured": "no",
+    "missed_records": [
+     {
+      "type": "proposal",
+      "value": "Prohibit Members of Congress from receiving a salary if they do not pass a budget.",
+      "evidence": "Prohibit Members of Congress from receiving a salary if they don’t pass a budget."
+     },
+     {
+      "type": "proposal",
+      "value": "Safeguard women’s access to reproductive health care, including safe abortion services.",
+      "evidence": "Safeguard women’s access to reproductive healthcare."
+     },
+     {
+      "type": "proposal",
+      "value": "Break up big ag and increase support to small- and medium-sized farms.",
+      "evidence": "Break up “big ag” and increase support to small- and medium-sized farms to ensure fair competition."
+     },
+     {
+      "type": "proposal",
+      "value": "Build local and regional food supply chains.",
+      "evidence": "Build local and regional food supply chains"
+     },
+     {
+      "type": "proposal",
+      "value": "Allow SNAP benefits to be used on organic foods.",
+      "evidence": "Allow SNAP benefits to be used on organic foods."
+     },
+     {
+      "type": "proposal",
+      "value": "Adjust fines based on the ability of defendants to pay.",
+      "evidence": "adjust fines based on defendants’ ability to pay"
+     },
+     {
+      "type": "proposal",
+      "value": "Phase out disability benefits to remove the benefits cliff.",
+      "evidence": "and phasing out benefits to get rid of the “cliff.”"
+     },
+     {
+      "type": "proposal",
+      "value": "Create real, effective red flag laws that let officials remove guns from people at extreme risk.",
+      "evidence": "Create real, effective “red flag” laws"
+     },
+     {
+      "type": "proposal",
+      "value": "Codify civil rights protections for vulnerable students.",
+      "evidence": "Codify civil rights protections for our vulnerable students"
+     },
+     {
+      "type": "proposal",
+      "value": "Establish universal Pre-K for all three- and four-year-olds.",
+      "evidence": "Establish universal Pre-K"
+     },
+     {
+      "type": "proposal",
+      "value": "Pay educators salaries that match the value of their work and give them mentorship and professional development.",
+      "evidence": "by paying them salaries commensurate with the value of the work they do and providing excellent mentorship and professional development programs."
+     },
+     {
+      "type": "oppose",
+      "value": "Opposes the attempt of the Trump Department of Education to privatize the public school system.",
+      "evidence": "Our public school system is under assault; Donald Trump’s Department of Education is trying to privatize it. We cannot allow that to happen."
+     },
+     {
+      "type": "proposal",
+      "value": "Treat opioid use disorder as a medical problem and not as a criminal problem.",
+      "evidence": "we must treat opioid use disorder as the medical problem that it is"
+     },
+     {
+      "type": "proposal",
+      "value": "Guarantee access to long-term substance abuse treatment and mental health treatment through universal healthcare.",
+      "evidence": "Guarantee access to long-term substance abuse treatment and mental health treatment"
+     },
+     {
+      "type": "proposal",
+      "value": "Ensure first responders have the resources to save lives in emergency situations.",
+      "evidence": "Ensure first responders have the resources"
+     },
+     {
+      "type": "proposal",
+      "value": "Increase the number of substance abuse treatment providers in underserved communities.",
+      "evidence": "Increase the number of substance abuse treatment providers,"
+     },
+     {
+      "type": "proposal",
+      "value": "Prosecute drug dealers and hold the pharmaceutical companies responsible for flooding communities with opioids.",
+      "evidence": "prosecute drug dealers and hold the pharmaceutical companies responsible"
+     }
+    ]
+   }
+  },
+  {
+   "item_id": "473988fd38387c40803c4d4bb87565434608ea3db142ab53f6ea2f721844ac0d",
+   "status": "complete",
+   "answers": {
+    "all_requested_records_captured": "no",
+    "missed_records": [
+     {
+      "type": "oppose",
+      "value": "Blames the Bush-era wars, tax cuts for the wealthiest and insurance company giveaways for the $1.4 trillion deficit.",
+      "evidence": "Through a combination of two wars that he charged to the national credit card, tax cuts to the wealthiest Americans, giveaways to the insurance companies, and the worst recession since the Great Depression, President Bush left President Obama with a deficit of $1.4 trillion"
+     }
+    ]
+   }
+  },
+  {
+   "item_id": "eac4a1dc9e5102655bb54b39be20d6f614ea9c5810ddebd43b71621f79bc99ab",
+   "status": "complete",
+   "answers": {
+    "all_requested_records_captured": "no",
+    "missed_records": [
+     {
+      "type": "proposal",
+      "value": "Ensure universal pre-Kindergarten is available and accessible to all families.",
+      "evidence": "Jesse believes we must ensure universal pre-Kindergarten, and full-day Kindergarten, is available and accessible to all families, regardless of their income, their zip code or the child’s abilities."
+     },
+     {
+      "type": "proposal",
+      "value": "Ensure full-day Kindergarten is available and accessible to all families.",
+      "evidence": "Jesse believes we must ensure universal pre-Kindergarten, and full-day Kindergarten, is available and accessible to all families, regardless of their income, their zip code or the child’s abilities."
+     },
+     {
+      "type": "oppose",
+      "value": "Oppose the expansion of charter schools at the federal level.",
+      "evidence": "We need to oppose the expansion of charter schools at the federal level to ensure resources are not being allocated to publicly-funded, privately-run schools that lack local oversight."
+     },
+     {
+      "type": "support",
+      "value": "Supports expanding vocational opportunities for students who choose a trade.",
+      "evidence": "Jesse supports expanding and supporting vocational opportunities for students who choose to pursue a trade."
+     },
+     {
+      "type": "proposal",
+      "value": "Provide wrap-around services to vulnerable students, including mental health services, food insecurity programs, ESL support and resources for students with disabilities.",
+      "evidence": "We must also provide the wrap-around services that the most vulnerable students need to succeed, including access to mental health services, programs for students experiencing food insecurity, support for English as a Second Language (ESL) students, and adequate resources for students with disabilities."
+     },
+     {
+      "type": "proposal",
+      "value": "Re-direct federal resources now used for police militarization to education and wrap-around services.",
+      "evidence": "Jesse will partner with States and local districts to support re-directing federal resources currently used for the militarization of our police force to reinvest in budget needs for supporting education and wrap-around services."
+     },
+     {
+      "type": "proposal",
+      "value": "Fight the efforts of Betsy DeVos to block students from debt relief.",
+      "evidence": "She will also fight Betsy DeVos’ efforts to block students from getting the debt relief they deserve"
+     }
+    ]
+   }
+  },
+  {
+   "item_id": "a75bd8ade2aa6e4b573b2a4241cd15ec76b4a009466c2bf79790295e26a9cae1",
+   "status": "complete",
+   "answers": {
+    "all_requested_records_captured": "yes"
+   }
+  }
+ ]
+}

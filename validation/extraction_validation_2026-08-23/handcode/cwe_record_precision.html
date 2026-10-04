@@ -1,0 +1,692 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Handcoding</title>
+<style>
+  :root {
+    --bg: #f6f7f9; --panel: #ffffff; --border: #d9dde3; --text: #1c2128; --muted: #59626e;
+    --accent: #2563eb; --accent-soft: #dbeafe;
+    --green: #16803c; --green-soft: #dcfce7; --amber: #b45309; --amber-soft: #fef3c7;
+    --red: #b91c1c; --mark: #fde68a; --mark-text: #1c2128;
+    --code-bg: #f1f3f6; --key: #7c3aed;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #14181d; --panel: #1c2128; --border: #333b45; --text: #e8ebef; --muted: #9aa4b0;
+      --accent: #60a5fa; --accent-soft: #1e3a5f;
+      --green: #4ade80; --green-soft: #14361f; --amber: #fbbf24; --amber-soft: #3a2d0d;
+      --red: #f87171; --mark: #6b5900; --mark-text: #f3edd0;
+      --code-bg: #22282f; --key: #c4b5fd;
+    }
+  }
+  * { box-sizing: border-box; }
+  html, body { height: 100%; }
+  body { margin: 0; background: var(--bg); color: var(--text);
+    font: 14px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+  button { font: inherit; color: inherit; background: var(--panel); border: 1px solid var(--border);
+    border-radius: 6px; padding: 4px 10px; cursor: pointer; }
+  button:hover { border-color: var(--accent); }
+  button.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+  input, textarea, select { font: inherit; color: var(--text); background: var(--panel);
+    border: 1px solid var(--border); border-radius: 6px; padding: 4px 8px; }
+  textarea { width: 100%; resize: vertical; }
+  kbd { background: var(--code-bg); border: 1px solid var(--border); border-bottom-width: 2px;
+    border-radius: 4px; padding: 0 5px; font-size: 12px; font-family: ui-monospace, Menlo, monospace; }
+  mark { background: var(--mark); color: var(--mark-text); border-radius: 2px; padding: 0 1px; }
+
+  #app { display: flex; flex-direction: column; height: 100vh; }
+  header { display: flex; align-items: center; gap: 14px; padding: 8px 16px;
+    background: var(--panel); border-bottom: 1px solid var(--border); flex-wrap: wrap; }
+  header h1 { font-size: 16px; margin: 0; white-space: nowrap; }
+  #progress-wrap { flex: 1; min-width: 140px; display: flex; align-items: center; gap: 8px; }
+  #progress-bar { flex: 1; height: 8px; background: var(--code-bg); border-radius: 4px; overflow: hidden; }
+  #progress-fill { height: 100%; width: 0; background: var(--green); transition: width .2s; }
+  #progress-text { font-size: 12px; color: var(--muted); white-space: nowrap; }
+  #banner { display: none; position: fixed; top: 52px; left: 50%; transform: translateX(-50%);
+    z-index: 30; padding: 8px 18px; font-size: 13px; border-radius: 8px;
+    border: 1px solid var(--border); box-shadow: 0 4px 14px rgba(0,0,0,.18); }
+  #banner.info { display: block; background: var(--accent-soft); }
+  #banner.warn { display: block; background: var(--amber-soft); }
+
+  #main { display: flex; flex: 1; min-height: 0; }
+  #sidebar { width: 220px; border-right: 1px solid var(--border); background: var(--panel);
+    display: flex; flex-direction: column; }
+  #filter-row { display: flex; gap: 6px; padding: 8px; border-bottom: 1px solid var(--border); }
+  #filter-row button { flex: 1; font-size: 12px; padding: 2px 6px; }
+  #filter-row button.active { background: var(--accent-soft); border-color: var(--accent); }
+  #item-list { flex: 1; overflow-y: auto; }
+  .item-row { display: flex; align-items: center; gap: 8px; padding: 5px 10px; cursor: pointer;
+    border-left: 3px solid transparent; font-size: 13px; }
+  .item-row:hover { background: var(--bg); }
+  .item-row.current { border-left-color: var(--accent); background: var(--accent-soft); }
+  .item-row .idx { color: var(--muted); font-size: 11px; width: 24px; text-align: right; flex: none; }
+  .item-row .lbl { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--border); flex: none; }
+  .dot.partial { background: var(--amber); }
+  .dot.complete { background: var(--green); }
+
+  #content { flex: 1; display: flex; min-width: 0; }
+  #display-pane { flex: 3; overflow-y: auto; padding: 16px 20px; min-width: 0; }
+  #question-pane { flex: 2; min-width: 320px; max-width: 480px; overflow-y: auto;
+    border-left: 1px solid var(--border); background: var(--panel); padding: 14px 16px; }
+
+  .item-header { display: flex; align-items: baseline; gap: 10px; margin-bottom: 10px; }
+  .item-header h2 { font-size: 15px; margin: 0; }
+  .item-header .pos { color: var(--muted); font-size: 12px; }
+  .dfield { margin-bottom: 14px; }
+  .dfield .dlabel { font-size: 11px; text-transform: uppercase; letter-spacing: .05em;
+    color: var(--muted); margin-bottom: 4px; }
+  .dfield pre { background: var(--code-bg); border: 1px solid var(--border); border-radius: 8px;
+    padding: 10px 12px; margin: 0; overflow-x: auto; font-size: 12.5px;
+    font-family: ui-monospace, Menlo, monospace; white-space: pre-wrap; word-break: break-word; }
+  .dfield .jkey { color: var(--key); }
+  .dfield .text-block { background: var(--panel); border: 1px solid var(--border); border-radius: 8px;
+    padding: 10px 14px; white-space: pre-wrap; max-height: 46vh; overflow-y: auto; }
+  .badges { display: flex; flex-wrap: wrap; gap: 6px; }
+  .badge { background: var(--code-bg); border: 1px solid var(--border); border-radius: 12px;
+    padding: 2px 10px; font-size: 12px; }
+  .badge b { font-weight: 600; }
+
+  .q { border: 1px solid var(--border); border-radius: 8px; padding: 9px 12px; margin-bottom: 10px; }
+  .q.active { border-color: var(--accent); box-shadow: 0 0 0 2px var(--accent-soft); }
+  .q .qlabel { font-weight: 600; margin-bottom: 2px; }
+  .q .qhelp { font-size: 12px; color: var(--muted); margin-bottom: 6px; }
+  .q .opts { display: flex; flex-wrap: wrap; gap: 6px; }
+  .opt { border: 1px solid var(--border); border-radius: 6px; padding: 3px 10px; cursor: pointer;
+    background: var(--panel); font-size: 13px; }
+  .opt .num { color: var(--muted); font-size: 11px; margin-right: 4px; }
+  .opt.selected { background: var(--accent); border-color: var(--accent); color: #fff; }
+  .opt.selected .num { color: #e0eaff; }
+  .struct-table { width: 100%; border-collapse: collapse; margin-bottom: 6px; }
+  .struct-table th { text-align: left; font-size: 11px; color: var(--muted); padding: 2px 4px; }
+  .struct-table td { padding: 2px 4px; }
+  .struct-table input { width: 100%; font-size: 12.5px; }
+  .struct-table .del { color: var(--red); border: none; background: none; font-size: 14px; }
+  .notes-box { margin-top: 4px; }
+  #nav-row { display: flex; gap: 8px; margin-top: 12px; }
+  #nav-row button { flex: 1; }
+
+  .overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,.45); z-index: 10;
+    align-items: center; justify-content: center; }
+  .overlay.open { display: flex; }
+  .modal { background: var(--panel); border: 1px solid var(--border); border-radius: 10px;
+    max-width: 720px; width: 90%; max-height: 80vh; overflow-y: auto; padding: 20px 24px; }
+  .modal h2 { margin-top: 0; }
+  .modal table { border-collapse: collapse; }
+  .modal td { padding: 3px 12px 3px 0; }
+  .req-star { color: var(--red); }
+</style>
+</head>
+<body>
+<script id="task-data" type="application/json">{"task_id": "cwe_record_precision", "title": "Record precision — candidate extraction validation", "instructions": "### Record precision\n75 sampled model records. For each, compare the model record with the source context (the claimed evidence is highlighted) and answer the four questions.\n- Code only what the supplied text establishes. Do not use outside knowledge.\n- Be strict on the last question: for example, a candidate's name followed by \"for Senate\" does not by itself prove prior elected office.\n- Add a brief note for any `no`.", "items": [{"id": "b14902bbbe5f8990d9b540d2ede9297cc866405cbf48cfb27811b50de6c22bf1", "label": "Neese, Mark Bradley Mr. (2020) · education", "display": [{"label": "Candidate", "format": "badges", "content": {"Name": "Neese, Mark Bradley Mr.", "Year": 2020, "Party": "republican", "Route": "biography", "Subtype": "education", "Evidence exact match": "True"}}, {"label": "Model record", "format": "json", "content": "{\"evidence\": \"he is currently completing his Doctorate in Educational Leadership at Dallas Baptist University.\", \"field\": \"education\", \"value\": \"Completing Doctorate in Educational Leadership at Dallas Baptist University\"}"}, {"label": "Source context", "format": "text", "content": "tely needs secure borders as well. His mother became a US citizen in 1968 so he believes immigration reform is needed to ensure safety and security.\nAs an educator of over 20 years, Mark has served thousands of families as students pursue their purpose. He believes we are all life-long learners and he is currently completing his Doctorate in Educational Leadership at Dallas Baptist University.\nMark is dedicated to supporting other students as they pursue college and careers plans and he knows promoting education promotes economic development in both urban and rural settings. Less government involvement and lower taxes assist in this process.\nCopyright © 2020\nMark Neese for Congress\nScrol", "highlight": ["he is currently completing his Doctorate in Educational Leadership at Dallas Baptist University."]}]}, {"id": "8cbd6d9baab5712e71e67fe78ac9f138d50153ca3ad42c338c7d0db94818d30b", "label": "Sinema, Kyrsten (2018) · education", "display": [{"label": "Candidate", "format": "badges", "content": {"Name": "Sinema, Kyrsten", "Year": 2018, "Party": "democrat", "Route": "biography", "Subtype": "education", "Evidence exact match": "True"}}, {"label": "Model record", "format": "json", "content": "{\"evidence\": \"she went to BYU\", \"field\": \"education\", \"value\": \"Attended BYU\"}"}, {"label": "Source context", "format": "text", "content": "e even homeless. But they got by thanks to family, church, and hard work. Kyrsten’s childhood experience showed her the power of hard work and the importance of helping others.\nEducation was Kyrsten’s ticket to a better life. With the help of student loans, academic scholarships, and financial aid, she went to BYU and then ASU, where she now teaches as a proud Sun Devil.\nAfter graduating, she worked with students and families in Arizona who faced some of the same challenges she did. Kyrsten’s commitment to service led her to the Arizona Legislature, where she passed a law to help veterans get in–state tuitio", "highlight": ["she went to BYU"]}]}, {"id": "3e7984b64725bd7ca2b514e1d480a424a93cc4ef75bba82b538d3ec8de14bfba", "label": "Wright, Kenneth (2020) · education", "display": [{"label": "Candidate", "format": "badges", "content": {"Name": "Wright, Kenneth", "Year": 2020, "Party": "republican", "Route": "biography", "Subtype": "education", "Evidence exact match": "True"}}, {"label": "Model record", "format": "json", "content": "{\"evidence\": \"California Lutheran College, Thousand Oaks, California, BA\", \"field\": \"education\", \"value\": \"California Lutheran College, BA\"}"}, {"label": "Source context", "format": "text", "content": "ed “early surgery” on my son and with the grace of God we had an excellent result. My son later qualified as an expert marksman in the United States Marines.\nEducation\nHigh School\nCollege California\nMedical School\nInternship\nResidency\nFellowship\nBoard\nSouth Torrance High School, Torrance California\nCalifornia Lutheran College, Thousand Oaks, California, BA\nBoston University School of Medicine, Boston, Massachusetts, MD\nUCLA Harbor General Hospital, Torrance, California\nDepartment of Ophthalmology, Estelle Doheny Eye Institute, Los Angeles County University of Southern California Medical Center, Los Angeles, California\nStrabismus and Ocular Motility: ", "highlight": ["California Lutheran College, Thousand Oaks, California, BA"]}]}, {"id": "15fd99ee7a5dbb40f49a37fd7d8fad3da4c54d3e5fabd4ba0f103bb7185901c2", "label": "Jackson, Ronny Lynn (2020) · education", "display": [{"label": "Candidate", "format": "badges", "content": {"Name": "Jackson, Ronny Lynn", "Year": 2020, "Party": "republican", "Route": "biography", "Subtype": "education", "Evidence exact match": "True"}}, {"label": "Model record", "format": "json", "content": "{\"evidence\": \"he went on to graduate from Texas A&M University at Galveston\", \"field\": \"education\", \"value\": \"Texas A&M University at Galveston\"}"}, {"label": "Source context", "format": "text", "content": "n has worked full time since the age of 14.  Employed at the local grocery store and later as a roustabout in the oil field, he paid for his entire undergraduate education while still serving his local community as a volunteer firefighter.  After beginning his education at the local junior college, he went on to graduate from Texas A&M University at Galveston and then attended medical school at the University of Texas Medical Branch.  During his time in medical school, he served in the Navy Reserves, and immediately upon graduating in 1995, he was assigned to the Naval Hospital in Portsmouth Virginia, where he began his active duty military career as an", "highlight": ["he went on to graduate from Texas A&M University at Galveston"]}]}, {"id": "50386d4c9bee8cf27fe3c3d1267aacb93e0b2044bf1b2289bba568b82f00d796", "label": "Rashid, Qasim (2020) · education", "display": [{"label": "Candidate", "format": "badges", "content": {"Name": "Rashid, Qasim", "Year": 2020, "Party": "democrat", "Route": "biography", "Subtype": "education", "Evidence exact match": "True"}}, {"label": "Model record", "format": "json", "content": "{\"evidence\": \"Qasim earned his law degree from the University of Richmond School of Law\", \"field\": \"education\", \"value\": \"Law degree from the University of Richmond School of Law\"}"}, {"label": "Source context", "format": "text", "content": "Follow us:\nHome\nDonate\nHome\nDonate\nHome\nQasim Rashid\nService • Leadership • Compassion\nQasim believes in service, leadership, and compassion. He is an immigrant, a proud American Muslim, and above all a devoted father and husband. His wife, Ayesha, is a small business owner and volunteers with interfaith outreach in the community. Together, they have three beautiful children and live in Stafford.\nQasim is running as a Democrat to transform his advocacy into policy for the working families of Virginia’s 1st District.\nQasim earned his law degree from the University of Richmond School of Law and ", "highlight": ["Qasim earned his law degree from the University of Richmond School of Law"]}]}, {"id": "72c313c3aa6e2ebee29dc50de2e52157f81aff6e4452a237315fd5938dbc346e", "label": "Dominguez, Juan (2024) · family", "display": [{"label": "Candidate", "format": "badges", "content": {"Name": "Dominguez, Juan", "Year": 2024, "Party": "democrat", "Route": "biography", "Subtype": "family", "Evidence exact match": "True"}}, {"label": "Model record", "format": "json", "content": "{\"evidence\": \"with his wife Cheyenne Dominguez\", \"field\": \"family\", \"value\": \"Wife is Cheyenne Dominguez\"}"}, {"label": "Source context", "format": "text", "content": "erformers in multiple industries. While on vacation in 2016, Juan helped rescue 3 teenagers drowning in the ocean on Miami Beach. The next day he was recognized and awarded by the Miami Beach Police Department. As the saying goes, “once a soldier, always a soldier.”\nJuan resides in Severna Park, MD with his wife Cheyenne Dominguez and their two boys, Sovann and Marcellus, and two dogs, Tucker and Junior. In his spare time he enjoys tennis, and coaching youth baseball and basketball. He’s also run a total of 11 marathons throughout the US. The family is a proud supporter of The United States Naval Academy (with the exception ", "highlight": ["with his wife Cheyenne Dominguez"]}]}, {"id": "ba4e808d10893fb1ed0a808720d133b3a382646237af6a2e87f7a48d9aca23c6", "label": "Jones, Mondaire (2020) · family", "display": [{"label": "Candidate", "format": "badges", "content": {"Name": "Jones, Mondaire", "Year": 2020, "Party": "democrat", "Route": "biography", "Subtype": "family", "Evidence exact match": "True"}}, {"label": "Model record", "format": "json", "content": "{\"evidence\": \"Mondaire was born to a young, single mother at Nyack Hospital\", \"field\": \"family\", \"value\": \"Born to a young, single mother\"}"}, {"label": "Source context", "format": "text", "content": "SIGN TODAY >>\nDonate Today\nHome\nAbout\nPlatform\nVolunteer\nEndorsements\nPOLLING PLACE LOOK-UP\nMedia\nDonate\nHome\nAbout\nPlatform\nVolunteer\nEndorsements\nPOLLING PLACE LOOK-UP\nMedia\nDonate\nMEET\nMondaire\nJones\nMondaire is a lawyer, nonprofit leader, activist, and champion of children and working families.\nMondaire was born to a young, single mother at Nyack Hospital and raised in the working-class Village of Spring Valley, which is in Rockland County. Life wasn’t easy, but the Jones family managed. And Mondaire’s mother always encouraged him to dream big in spite of their circumstances.\nAfter Mondaire was born, his mother dropped out of college. She worked mul", "highlight": ["Mondaire was born to a young, single mother at Nyack Hospital"]}]}, {"id": "9d9e4486f0ab5e8dd44e012872868fe0efcf4a82c2c01bb54386f4eefa89c85a", "label": "Buck, George William Phd (2020) · family", "display": [{"label": "Candidate", "format": "badges", "content": {"Name": "Buck, George William Phd", "Year": 2020, "Party": "republican", "Route": "biography", "Subtype": "family", "Evidence exact match": "True"}}, {"label": "Model record", "format": "json", "content": "{\"evidence\": \"George Buck is a proud father of two\", \"field\": \"family\", \"value\": \"Father of two\"}"}, {"label": "Source context", "format": "text", "content": "Skip to content\nMENU\nHome\nMeet George\nIssues\nNews\nContact\nFacebook\nTwitter\nDONATE\nMeet George\nGeorge Buck is a proud father of two, Military Veteran, Retired Firefighter, and has written books on counter-terrorism and emergency management. He is a pro-life, pro-Second Amendment, pro-business America-First conservative who has demonstrated energetic leadership, clear vision, and a passion for service. George is a proven servant", "highlight": ["George Buck is a proud father of two"]}]}, {"id": "eefec68ada16eb3f1c53b4455ab2686cd68138000aaae11e43909a4c841ad17b", "label": "Adams, Alma Shealey (2018) · family", "display": [{"label": "Candidate", "format": "badges", "content": {"Name": "Adams, Alma Shealey", "Year": 2018, "Party": "democrat", "Route": "biography", "Subtype": "family", "Evidence exact match": "True"}}, {"label": "Model record", "format": "json", "content": "{\"evidence\": \"As a mother, grandmother and teacher\", \"field\": \"family\", \"value\": \"mother\"}"}, {"label": "Source context", "format": "text", "content": "Top\nYouTube\nTwitter\nFacebook\nAlma Adams for Congress\nWelcome to the home of Alma Adams for Congress\nHome\nAbout Alma\nVoter Info\nDistrict Info\nIssues\nJoin The Campaign\n22nd Mad Hatter’s\nContribute\nEndorsements\nMENU\nCLOSE\nback\n“As a mother, grandmother and teacher, I’m outraged by how Republicans in Congress keep ignoring the needs of our families. With your help, I’ll go to Congress and fight to stop them.”\n– Alma Adams\nFor Congresswoman Alma Adams, education and women’s rights aren’t political issues, they are personal issues that have shaped who she is to", "highlight": ["As a mother, grandmother and teacher"]}]}, {"id": "ce1ee8b5febb774d3eff67fe68acbed4780dd99876944f09ea82a0faf4a76c2b", "label": "Pureval, Aftab (2018) · family", "display": [{"label": "Candidate", "format": "badges", "content": {"Name": "Pureval, Aftab", "Year": 2018, "Party": "democrat", "Route": "biography", "Subtype": "family", "Evidence exact match": "True"}}, {"label": "Model record", "format": "json", "content": "{\"evidence\": \"Aftab and wife, Whitney\", \"field\": \"family\", \"value\": \"Wife: Whitney\"}"}, {"label": "Source context", "format": "text", "content": " to serve on the board of the Women’s Fund. He is also on the boards of the Ohio Innocence Project, Cincinnati Union Bethel, and the Cincinnati Symphony Orchestra. He has been awarded the NAACP Theodore Berry Award for Service and been recognized by the Business Courier as one of their 40 under 40.\nAftab and wife, Whitney, live downtown.\nShare On Facebook\nShare On Twitter\nShare Via Email\nPaid for by Aftab for Ohio\ninfo@aftabforohio.com |\nPrivacy Policy\nCincinnati Web Design\nby Scott Botkins", "highlight": ["Aftab and wife, Whitney"]}]}, {"id": "fed77c694449f8d94f43cdd7cf848065b7e44c6ff31ecb0635a9e5e9b48684f1", "label": "Nadler, Jerrold L. (2022) · local_roots", "display": [{"label": "Candidate", "format": "badges", "content": {"Name": "Nadler, Jerrold L.", "Year": 2022, "Party": "democrat", "Route": "biography", "Subtype": "local_roots", "Evidence exact match": "True"}}, {"label": "Model record", "format": "json", "content": "{\"evidence\": \"He lives on the Upper West Side\", \"field\": \"local_roots\", \"value\": \"Lives on the Upper West Side\"}"}, {"label": "Source context", "format": "text", "content": "ls had safe air for educators and students to breathe and ensured that small businesses received the support they needed to stay open.\nThe son of a chicken farmer, Jerry was born in Brooklyn and is a graduate of Crown Heights Yeshiva, Stuyvesant High School, Columbia College and Fordham Law School. He lives on the Upper West Side with his wife Joyce. They have one son, Michael, and they recently became proud grandparents.\nPledge\nYour Support\nGet the latest updates from Congressman Nadler and the campaign.\nChip in today\nGet the latest updates from Congressman Nadler and the campaign.\n$10\n$25\n$100\n$250\n$500\nOther amount\nIf yo", "highlight": ["He lives on the Upper West Side"]}]}, {"id": "1b29719f9171cf6214d1554496d85029b88397dd6d8a20424e1d3b4e7e6f43c9", "label": "Mitchell, Briane Nelson (2014) · local_roots", "display": [{"label": "Candidate", "format": "badges", "content": {"Name": "Mitchell, Briane Nelson", "Year": 2014, "Party": "democrat", "Route": "biography", "Subtype": "local_roots", "Evidence exact match": "True"}}, {"label": "Model record", "format": "json", "content": "{\"evidence\": \"Nels and Mary live in West Boise\", \"field\": \"local_roots\", \"value\": \"Lives in West Boise\"}"}, {"label": "Source context", "format": "text", "content": " is a second-year law student.  The girls grew up with sports.  Nels volunteered as their soccer coach when they were teenagers, and Nels taught both daughters to fish.\nNels has hunted, fished, skied and hiked his whole life, and he and his wife, Mary Kimmel, have a deep love for Idaho’s outdoors.  Nels and Mary live in West Boise, with two rescue dogs, another adopted dog, a Quarter Horse and a cat.\nNels remains extremely close to his two brothers and his 91-year-old mother, who still lives in Boise.  He has established a scholarship at Boise High in memory of his father and in honor of his mother.\nNels credits his parents ", "highlight": ["Nels and Mary live in West Boise"]}]}, {"id": "9bac65aaa9a72648d9d09752197d3047746c1f250b7c07db46813cad165b28a7", "label": "Foster, G. William (Bill) (2024) · local_roots", "display": [{"label": "Candidate", "format": "badges", "content": {"Name": "Foster, G. William (Bill)", "Year": 2024, "Party": "democrat", "Route": "biography", "Subtype": "local_roots", "Evidence exact match": "True"}}, {"label": "Model record", "format": "json", "content": "{\"evidence\": \"In 1984, Bill moved to Illinois to work at Fermilab\", \"field\": \"local_roots\", \"value\": \"Illinois\"}"}, {"label": "Source context", "format": "text", "content": "d by a nearby supernova (exploding star), and in 2024 it was\nrecognized with a historical site marker by the American Physical Society\nCDF – The Collider Detector at the Fermilab Tevatron\nThe Collider Detector at Fermilab, being rolled out of the collision hall after the discovery of the Top Quark.\nIn 1984, Bill moved to Illinois to work at Fermilab, joining a globally-recognized team working on the cutting edge of particle physics. The Collider Detector at Fermilab (CDF) is the first and largest detector at the Fermilab Tevatron, the world’s highest-energy particle accelerator. The goal of the experiment was to discover the identity and prope", "highlight": ["In 1984, Bill moved to Illinois to work at Fermilab"]}]}, {"id": "fab64f221a44809bb7c74619b62b5ccea06d92af146c995b2b0ac6d6c0221e10", "label": "Flynn, William (2014) · local_roots", "display": [{"label": "Candidate", "format": "badges", "content": {"Name": "Flynn, William", "Year": 2014, "Party": "republican", "Route": "biography", "Subtype": "local_roots", "Evidence exact match": "True"}}, {"label": "Model record", "format": "json", "content": "{\"evidence\": \"Calling North Carolina home since 1966\", \"field\": \"local_roots\", \"value\": \"Has lived in North Carolina since 1966\"}"}, {"label": "Source context", "format": "text", "content": " attended Raleigh’s Needham B. Broughton High School. He completed undergraduate studies in 1980 at the University of North Carolina in Chapel Hill. He and his wife, Ann, live in Forsyth County and attend Kernersville’s Main Street Baptist Church. They are the proud parents of three adult children.\nCalling North Carolina home since 1966, Bill Flynn built his commercial broadcast career in the Tarheel State. His radio shows have targeted Charlotte, Winston-Salem, Greensboro, Burlington, Durham, Raleigh and Chapel Hill markets, and beyond. Bill has served on executive committees for numerous charitable concerns including Korner’s Fo", "highlight": ["Calling North Carolina home since 1966"]}]}, {"id": "bb1967e02df898e14fe87aaae2937c0bb407faa9fed6330f00e483e545a13277", "label": "Pence, Gregory J. (2018) · local_roots", "display": [{"label": "Candidate", "format": "badges", "content": {"Name": "Pence, Gregory J.", "Year": 2018, "Party": "republican", "Route": "biography", "Subtype": "local_roots", "Evidence exact match": "True"}}, {"label": "Model record", "format": "json", "content": "{\"evidence\": \"He is an unwavering pro-life, pro-Second Amendment, and faith-driven conservative whose roots in the Sixth District date back nearly 60 years.\", \"field\": \"local_roots\", \"value\": \"roots in the Sixth District date back nearly 60 years\"}"}, {"label": "Source context", "format": "text", "content": "Videos\nRequest a Yard Sign\nGet Involved\nDonate\nAbout\nReady To Serve Again!\nGreg Pence is a proud husband, grandfather, Marine officer and small businessman. He is an unwavering pro-life, pro-Second Amendment, and faith-driven conservative whose roots in the Sixth District date back nearly 60 years.\nGreg is a staunch supporter of the Trump-Pence agenda and will fight alongside the President to Make America Great Again. Greg Pence will ensure Indiana’s Sixth District continues its strong tradition of leadership in Congress.\nGreg joined the Marine Corps at a young age in 1979 in his hometown of ", "highlight": ["He is an unwavering pro-life, pro-Second Amendment, and faith-driven conservative whose roots in the Sixth District date back nearly 60 years."]}]}, {"id": "45f4083889d7ef150c5c464a79b0c697b8c1147459df8b46446c7e40174b2b7f", "label": "Kirk, Mark Steven (2016) · military_service", "display": [{"label": "Candidate", "format": "badges", "content": {"Name": "Kirk, Mark Steven", "Year": 2016, "Party": "republican", "Route": "biography", "Subtype": "military_service", "Evidence exact match": "True"}}, {"label": "Model record", "format": "json", "content": "{\"evidence\": \"He served for 23 years until retiring in 2013 with the rank of commander.\", \"field\": \"military_service\", \"value\": \"Served in the Navy Reserve for 23 years until retiring in 2013 with the rank of commander\"}"}, {"label": "Source context", "format": "text", "content": "Georgetown University. He worked for 10th District Congressman John Porter and later at the World Bank, at the State Department, at a private law firm, and as counsel for the House International Relations Committee.\nIn 1989, Mark was commissioned as an intelligence officer in the U.S. Navy Reserve. He served for 23 years until retiring in 2013 with the rank of commander. He considers his service in the Navy Reserve the greatest honor of his life.\nWhen Congressman Porter retired in 2000, Mark was elected to replace him. He served five terms representing the people of Illinois’ 10th District in the House of Representatives before being elected in 2010 to represent Il", "highlight": ["He served for 23 years until retiring in 2013 with the rank of commander."]}]}, {"id": "fea270b79de2e062193f9adff48e81f7ed7e625e0cb953ec9a5d838b0f9c852f", "label": "Dorilas, Rod Mr. (2022) · military_service", "display": [{"label": "Candidate", "format": "badges", "content": {"Name": "Dorilas, Rod Mr.", "Year": 2022, "Party": "republican", "Route": "biography", "Subtype": "military_service", "Evidence exact match": "True"}}, {"label": "Model record", "format": "json", "content": "{\"evidence\": \"serving for six years as a Petty Officer Second Class\", \"field\": \"military_service\", \"value\": \"Served for six years as a Petty Officer Second Class\"}"}, {"label": "Source context", "format": "text", "content": "ration son of two immigrants from Haiti. His father immigrated to Florida to pick crops, and eventually his parents went on to own a small business. From a young age, his parents instilled in him the importance of hard work, integrity, and service.\nAt age 17, Rod enlisted in the United States Navy, serving for six years as a Petty Officer Second Class and Assistant Engagement Control Officer onboard the USS The Sullivans, stationed in Jacksonville. There, he was responsible for planning and executing the deployment of Tomahawk Land Attack Missiles on the Ballistic Missile Defense destroyer.\nUpon completion of his military service, Rod attended l", "highlight": ["serving for six years as a Petty Officer Second Class"]}]}, {"id": "8af31d66ad4370853ff8600bb45d6260e5989330b3164276111e3bc9e31317c1", "label": "Jones, Rob (2020) · military_service", "display": [{"label": "Candidate", "format": "badges", "content": {"Name": "Jones, Rob", "Year": 2020, "Party": "republican", "Route": "biography", "Subtype": "military_service", "Evidence exact match": "True"}}, {"label": "Model record", "format": "json", "content": "{\"evidence\": \"Rob has been awarded the Purple Heart Medal\", \"field\": \"military_service\", \"value\": \"Awarded the Purple Heart Medal\"}"}, {"label": "Source context", "format": "text", "content": "31 full 26.2 mile marathons in 31 days in 31 different major cities, once again raising awareness and funds for wounded veteran charities. He raised over $225,000 and ran the last marathon around the war memorials on the National Mall in Washington, D.C. on Veterans Day.\nFor his service to America, Rob has been awarded the Purple Heart Medal, the Navy and Marine Corps Achievement Medal, the Combat Action Ribbon, the Operation Enduring Freedom Campaign Medal and the Operation Iraqi Freedom Campaign Medal\nRob lives in Middleburg with his wife Pam. Together, they own a small vegetable farm.\nRob Jones is the Patriot Virginia needs in Washi", "highlight": ["Rob has been awarded the Purple Heart Medal"]}]}, {"id": "d57ee4f7641c682ece0a67eaf0febda4ff514868fc4d6e44902ccea7d5d76dbf", "label": "Colvin, Jesse (2018) · military_service", "display": [{"label": "Candidate", "format": "badges", "content": {"Name": "Colvin, Jesse", "Year": 2018, "Party": "democrat", "Route": "biography", "Subtype": "military_service", "Evidence exact match": "True"}}, {"label": "Model record", "format": "json", "content": "{\"evidence\": \"Jesse Colvin is a former member of the United States Army.\", \"field\": \"military_service\", \"value\": \"Former member of the United States Army\"}"}, {"label": "Source context", "format": "text", "content": "e afforded us. When we look out at today’s political landscape, we don’t see these values represented. For those reasons, I feel called to service for the people of Maryland’s 1st Congressional District.\nClick\nhere\nto read more about Jesse’s values.\nBack to top\nPaid for by Jesse Colvin for Congress\nJesse Colvin is a former member of the United States Army. Use of his military rank, job titles, and photographs in uniform does not imply endorsement by the Army or the Department of Defense.", "highlight": ["Jesse Colvin is a former member of the United States Army."]}]}, {"id": "241e6104eeb0b2cf0a80b9165cac88980aaa35fabb652f65a400abceb19b7441", "label": "Riggleman, Denver Lee Mr. Iii (2018) · military_service", "display": [{"label": "Candidate", "format": "badges", "content": {"Name": "Riggleman, Denver Lee Mr. Iii", "Year": 2018, "Party": "republican", "Route": "biography", "Subtype": "military_service", "Evidence exact match": "True"}}, {"label": "Model record", "format": "json", "content": "{\"evidence\": \"and in the National Security Agency (NSA) at Fort Meade, Maryland.\", \"field\": \"military_service\", \"value\": \"Served in the National Security Agency (NSA) at Fort Meade, Maryland.\"}"}, {"label": "Source context", "format": "text", "content": "41 Starlifter enlisted avionics technician at McGuire AFB, New Jersey.  Denver was awarded a scholarship to the University of Virginia in 1996.  He graduated in 1998 and then subsequently served as a commissioned officer with the 366th Fighter Wing and 34th Bomb Squadron at Mountain Home AFB, Idaho and in the National Security Agency (NSA) at Fort Meade, Maryland.\nSmall  Businessman\nDenver Riggleman and his wife, Christine, dreamed for years of starting their own distillery, and in 2013 built, and now operate, Silverback Distillery in Afton, Virginia. Denver and his wife currently distill and distribute Gin, Vodka and Whiskeys. Denver has also been CEO of se", "highlight": ["and in the National Security Agency (NSA) at Fort Meade, Maryland."]}]}, {"id": "0916f0956322f112f017df6406167641afcecc7458363cbc29227c0b4be3a676", "label": "Franken, Al (2014) · occupation", "display": [{"label": "Candidate", "format": "badges", "content": {"Name": "Franken, Al", "Year": 2014, "Party": "democrat", "Route": "biography", "Subtype": "occupation", "Evidence exact match": "True"}}, {"label": "Model record", "format": "json", "content": "{\"evidence\": \"He wrote three #1 New York Times best-sellers\", \"field\": \"occupation\", \"value\": \"Author\"}"}, {"label": "Source context", "format": "text", "content": " the news with his parents at home in St. Louis Park. And when he left “Saturday Night Live” in 1995, he became more politically active, using the wit he’d honed as an entertainer to advocate for progressive values – and against the bullies and extremists who had come to dominate American politics.\nHe wrote three #1 New York Times best-sellers, and found that as rewarding as it was to entertain, political advocacy was in his blood.\nMaking people laugh is the best thing in the world. But when I wrote the. . . book, people would come up to me and say, “Thank you. Thank you for saying what needed to be said.” And that was really something.\n", "highlight": ["He wrote three #1 New York Times best-sellers"]}]}, {"id": "53b24b782324c09f006eb7d8d51305d913b16dcbb84dcc6de734b019f1f35995", "label": "Malik, Anita (2018) · occupation", "display": [{"label": "Candidate", "format": "badges", "content": {"Name": "Malik, Anita", "Year": 2018, "Party": "democrat", "Route": "biography", "Subtype": "occupation", "Evidence exact match": "True"}}, {"label": "Model record", "format": "json", "content": "{\"evidence\": \"and was Deputy Director of ASU’s Donald W. Reynolds National Center for Business Journalism\", \"field\": \"occupation\", \"value\": \"Deputy Director of ASU’s Donald W. Reynolds National Center for Business Journalism\"}"}, {"label": "Source context", "format": "text", "content": "Menu\nMEET ANITA\nISSUES\nThe Economy\nHealth Care\nImmigration\nEducation\nReproductive Rights\nDigital Innovation\nThe Wage Gap\nEnvironment\nGun Safety\nCampaign Finance Reform\nLGBTQ+\nDisability Rights\nPeace and Denuclearization\nMarijuana Reform\nVeterans\nSUPPORT\nNEWS\nIn the News\nPress Releases\nVideos & Ads\nTAKE ACTION\nSign Up to Volunteer\nWrite Postcards\nJoin Anita’s VoterCircle\nAttend an Event\nRequest a Yard Sign\nContact Us\nDONATE\nMeet Anita\n“Listen first. Then lead.”\nIn May 2017, Anita Malik made a bold choice. She stepped down from her role as Chief Operating Officer of a content technology company ", "highlight": ["and was Deputy Director of ASU’s Donald W. Reynolds National Center for Business Journalism"]}]}, {"id": "7a4e327e34309e3ccdff188c9c4a2021f923c43c50392e35ac633d28fd6bedc1", "label": "Testerman, Karen (2014) · occupation", "display": [{"label": "Candidate", "format": "badges", "content": {"Name": "Testerman, Karen", "Year": 2014, "Party": "republican", "Route": "biography", "Subtype": "occupation", "Evidence exact match": "True"}}, {"label": "Model record", "format": "json", "content": "{\"evidence\": \"A radio talk show host, Karen is a strong advocate for citizen involvement\", \"field\": \"occupation\", \"value\": \"radio talk show host\"}"}, {"label": "Source context", "format": "text", "content": "iberty Harbor Academy, NH Chapter of Smart Girl Politics, and other entities. Karen has worked closely with the Granite State Taxpayers, Second Amendment Sisters, the Coalition of New Hampshire Taxpayers, Right to Work and the Granite State Patriots demonstrating her ability in building coalitions.\nA radio talk show host, Karen is a strong advocate for citizen involvement, and she strives to educate, encourage and guide her listeners into action. A former teacher, Karen holds a Bachelor of Science degree in Microbiology. As a military mother and wife, Karen has worked closely with several military organizations.\nSupport Testerman for Senate\nFollow Testerman for Sena", "highlight": ["A radio talk show host, Karen is a strong advocate for citizen involvement"]}]}, {"id": "859301543d4cfff4fcc43ba1551a7bea8231bdc250f5dc06adec3a166bc5be77", "label": "Sangari, Sargis (2018) · occupation", "display": [{"label": "Candidate", "format": "badges", "content": {"Name": "Sangari, Sargis", "Year": 2018, "Party": "republican", "Route": "biography", "Subtype": "occupation", "Evidence exact match": "True"}}, {"label": "Model record", "format": "json", "content": "{\"evidence\": \"LTC Sangari is the CEO of the Near East Center For Strategic Engagement (NEC-SE).\", \"field\": \"occupation\", \"value\": \"CEO of the Near East Center For Strategic Engagement (NEC-SE)\"}"}, {"label": "Source context", "format": "text", "content": " the latest doctrinal tenants in a thorough analysis of the final draft of the strategic manual on the Concept for the Shaping Warfighting Functions that improved the nesting of the new concepts into the extent Warfighting Functions and the U.S Army Special Operation Command Commanders 2022 vision.\nLTC Sangari is the CEO of the Near East Center For Strategic Engagement (NEC-SE).  NEC-SE was established on 11 SEP 14 in honor of the attacks which took place against the United States in 2001.  In less than three years from its establishment NEC-SE has received close to 240,000 likes on their Facebook page and website.  NEC-SE postings have been read and referenced in over 143", "highlight": ["LTC Sangari is the CEO of the Near East Center For Strategic Engagement (NEC-SE)."]}]}, {"id": "30ae879a7da2565071a4ff21be9666e396db7d097a07c3e15346d662f9f9f660", "label": "Hampson, Beth (2022) · occupation", "display": [{"label": "Candidate", "format": "badges", "content": {"Name": "Hampson, Beth", "Year": 2022, "Party": "democrat", "Route": "biography", "Subtype": "occupation", "Evidence exact match": "True"}}, {"label": "Model record", "format": "json", "content": "{\"evidence\": \"She’s a regional leader in adult education and workforce development\", \"field\": \"occupation\", \"value\": \"Regional leader in adult education and workforce development\"}"}, {"label": "Source context", "format": "text", "content": "BETH HAMPSON\nFOR CONGRESS\nHome\nAbout\nIssues\nGet Involved\nContact\nMore\nUse tab to navigate through the menu items.\nDONATE\nSUBSCRIBE\nLog In\nMEET BETH\nAs an educator, Beth has spent twenty years helping educational organizations serve their communities and students reach their goals. She’s a regional leader in adult education and workforce development and has also worked as a leader and teacher in K-12 and higher education.\nA lifelong Californian, Beth came to the North Bay almost a decade ago to be with family in Sonoma County. She served as a guest teacher in grades K-12 in multiple Sonoma County school districts and taught middle school in Wi", "highlight": ["She’s a regional leader in adult education and workforce development"]}]}, {"id": "3c8a1ee618ceeb5297875fa95e57eea5cce90bb3f97b800956ce93c5987f2ecf", "label": "Braun, Mike (2018) · other", "display": [{"label": "Candidate", "format": "badges", "content": {"Name": "Braun, Mike", "Year": 2018, "Party": "republican", "Route": "biography", "Subtype": "other", "Evidence exact match": "True"}}, {"label": "Model record", "format": "json", "content": "{\"evidence\": \"has previously received endorsements from Indiana Right to Life and has a lifetime A Rating from the NRA.\", \"field\": \"other\", \"value\": \"Received endorsements from Indiana Right to Life and a lifetime A Rating from the NRA\"}"}, {"label": "Source context", "format": "text", "content": ".\nAs a State Representative, Mike has partnered with conservative leaders like Vice President Mike Pence to deliver results for Hoosiers. The 2016 Indiana General Assembly was ranked as the most conservative legislative body in the country. Mike has also been a strong defender of Hoosier values and has previously received endorsements from Indiana Right to Life and has a lifetime A Rating from the NRA.\nMike still resides in Jasper and recently celebrated his 40th wedding anniversary with Maureen. Mike and Maureen have four grown children, Jason, Jeff, Ashley and Kristen. Jason, Jeff and Kristen work with him at Meyer. Mike and Maureen are members of St. Joseph Catholic Church in Jasper.\nMike is r", "highlight": ["has previously received endorsements from Indiana Right to Life and has a lifetime A Rating from the NRA."]}]}, {"id": "8da8cdccbbb5884ff936d4eed8840e8c6fda046d67ae4ca1328951f14ced31b6", "label": "Caine, Scott (2020) · other", "display": [{"label": "Candidate", "format": "badges", "content": {"Name": "Caine, Scott", "Year": 2020, "Party": "republican", "Route": "biography", "Subtype": "other", "Evidence exact match": "True"}}, {"label": "Model record", "format": "json", "content": "{\"evidence\": \"Scott is an active member of his church family\", \"field\": \"other\", \"value\": \"Active member of his church family\"}"}, {"label": "Source context", "format": "text", "content": " years of active duty, Scott and his family lived in 22 different houses scattered all over the world. The family’s home base has always remained in Florida, where he retains strong ties to family and friends. In fact, he has been a registered voter in Indian River County since he was 18 years old!\nScott is an active member of his church family, participates in annual mission trips, and leads a weekly Sunday School class.\nScott and his wife, Pam love to take advantage of Florida’s beautiful weather by spending as much time outdoors golfing, running, or working on home improvement projects.\nCAINE’S PRIORITIES\nDefending Individual Freedoms\n", "highlight": ["Scott is an active member of his church family"]}]}, {"id": "c341a4dfae6b05d619a4a7b0715c5e6d5a8e05e938f8d3cf04712f1f7adbf90f", "label": "Marshall, Roger W (2020) · other", "display": [{"label": "Candidate", "format": "badges", "content": {"Name": "Marshall, Roger W", "Year": 2020, "Party": "republican", "Route": "biography", "Subtype": "other", "Evidence exact match": "True"}}, {"label": "Model record", "format": "json", "content": "{\"evidence\": \"Dr. Marshall was named Teacher of the Year by all other residents and faculty\", \"field\": \"other\", \"value\": \"Named Teacher of the Year by residents and faculty during residency.\"}"}, {"label": "Source context", "format": "text", "content": " in Congress.\nA Kansas native, Dr. Marshall earned his undergraduate degree in biochemistry from Kansas State University, before graduating from the University of Kansas School of Medicine. He received his Medical Doctorate in 1987. During the final year of his residency in St. Petersburg, Florida, Dr. Marshall was named Teacher of the Year by all other residents and faculty and earned the Resident Research Award. In addition, Dr. Marshall scored in the top one percent in the nation on the final exam given to all OB-GYN residents.\nAfter completing his residency, Dr. Marshall moved back home to Kansas, and started his practice in Great Bend in 1991.\nYour Congressman.\nWh", "highlight": ["Dr. Marshall was named Teacher of the Year by all other residents and faculty"]}]}, {"id": "2b65c00f793a69b4e3ae720cd46b2e06124a9c43b24333000cd7b525a148c39f", "label": "Baird, James R Dr. (2020) · other", "display": [{"label": "Candidate", "format": "badges", "content": {"Name": "Baird, James R Dr.", "Year": 2020, "Party": "republican", "Route": "biography", "Subtype": "other", "Evidence exact match": "True"}}, {"label": "Model record", "format": "json", "content": "{\"evidence\": \"Gobin United Methodist Church – 1975-Present\", \"field\": \"other\", \"value\": \"Member of Gobin United Methodist Church, 1975-Present\"}"}, {"label": "Source context", "format": "text", "content": "rict\n❖ Greencastle Rotary Club – President\n❖ Other non-profit organizations too numerous to mention\nORGANIZATIONS\n❖ VFW\n❖ American Legion\n❖ Indiana Farm Bureau\n❖ OCS 2-70\n❖ Indiana Beef Cattle Association\n❖ American Quarter Horse Association\n❖ Purdue Dean of Agriculture’s Advisory Council\nRELIGIOUS\nGobin United Methodist Church – 1975-Present", "highlight": ["Gobin United Methodist Church – 1975-Present"]}]}, {"id": "ce4d24fc3f665293639e05114967a33453c445b0594565522ee5d5c334858166", "label": "Tester, Jon (2012) · other", "display": [{"label": "Candidate", "format": "badges", "content": {"Name": "Tester, Jon", "Year": 2012, "Party": "democrat", "Route": "biography", "Subtype": "other", "Evidence exact match": "True"}}, {"label": "Model record", "format": "json", "content": "{\"evidence\": \"He also visited Montana soldiers in Afghanistan.\", \"field\": \"other\", \"value\": \"Visited Montana soldiers in Afghanistan\"}"}, {"label": "Source context", "format": "text", "content": "nity center on base.\nA steadfast advocate for America’s troops, Jon proudly supports their service any way he can. In 2009, Jon helped lead the effort to pass a 3.9 percent pay raise for America’s troops because it was “the right thing to do.”\nJon has twice traveled to Iraq to visit Montana troops. He also visited Montana soldiers in Afghanistan. These visits reaffirmed Jon’s belief that the United States must do everything it can to end both conflicts responsibly, without “taking our eye off the ball” in the war on terrorism.\nBehind every Montana Soldier, Sailor, Airman, Marine, and Guardsman is a family that sacrifices too. That’s why in ", "highlight": ["He also visited Montana soldiers in Afghanistan."]}]}, {"id": "d48f2a8c14cbe5eaac7722d83ca75ce8b6d93d1db66276c798336546e7eef8f8", "label": "Tlaib, Rashida (2022) · prior_elected_office", "display": [{"label": "Candidate", "format": "badges", "content": {"Name": "Tlaib, Rashida", "Year": 2022, "Party": "democrat", "Route": "biography", "Subtype": "prior_elected_office", "Evidence exact match": "True"}}, {"label": "Model record", "format": "json", "content": "{\"evidence\": \"While serving in Lansing for 6 years as a Michigan State Representative\", \"field\": \"prior_elected_office\", \"value\": \"Michigan State Representative\"}"}, {"label": "Source context", "format": "text", "content": " that everyone—not just the wealthy and privileged—deserves access to opportunity and a better quality of life, Rashida Tlaib has dedicated her life to amplifying and addressing the concerns of everyday people in her district, across Michigan, and around the country.\nServing as State Representative\nWhile serving in Lansing for 6 years as a Michigan State Representative, Rashida was instrumental in restoring and securing millions of dollars for free health clinics, lead abatement programs, Meals on Wheels delivery for seniors, before- and after-school programs, and bilingual education.\nShe authored laws to protect homeowners from fraudulent mortgage bankers, stop ", "highlight": ["While serving in Lansing for 6 years as a Michigan State Representative"]}]}, {"id": "e1b057489ded0d48a93a4c6cf2f81d0b27d91ec689b6fb25f3d82b2e46fba8d7", "label": "Perry, Scott (2024) · prior_elected_office", "display": [{"label": "Candidate", "format": "badges", "content": {"Name": "Perry, Scott", "Year": 2024, "Party": "republican", "Route": "biography", "Subtype": "prior_elected_office", "Evidence exact match": "True"}}, {"label": "Model record", "format": "json", "content": "{\"evidence\": \"Perry served three terms as a Pennsylvania State Representative\", \"field\": \"prior_elected_office\", \"value\": \"Pennsylvania State Representative (three terms)\"}"}, {"label": "Source context", "format": "text", "content": "ntact\nDonate\nHome\nIssues\nGallery\nVoting\nVolunteer\nContact\nDonate\nABOUT\nABOUT SCOTT\nRepresentative of the 10th Congressional District, Pennsylvania\nScott Perry brings a unique background of hard work, small business, military leadership and community involvement to the U.S. House of Representatives. Perry served three terms as a Pennsylvania State Representative, where he established a record for protecting Taxpayers’ interests in Harrisburg. While serving there, he was assigned to the Committees on Appropriations, Consumer Affairs, Labor Relations, Veterans Affairs, Emergency Preparedness, and Rules.\nPerry earned the privilege of serving as the Congressma", "highlight": ["Perry served three terms as a Pennsylvania State Representative"]}]}, {"id": "476731c77b9b8b4ce1cbeb1cae4e2bf1c26059172e199207306f1d39af3ff4d3", "label": "Nickel, Wiley (2024) · prior_elected_office", "display": [{"label": "Candidate", "format": "badges", "content": {"Name": "Nickel, Wiley", "Year": 2024, "Party": "democrat", "Route": "biography", "Subtype": "prior_elected_office", "Evidence exact match": "True"}}, {"label": "Model record", "format": "json", "content": "{\"evidence\": \"As a father, husband, attorney, state senator, and Congressman for North Carolina\", \"field\": \"prior_elected_office\", \"value\": \"Congressman for North Carolina\"}"}, {"label": "Source context", "format": "text", "content": "Sign up for our newsletter to stay involved.\nSkip to content\nHome\nAs a father, husband, attorney, state senator, and Congressman for North Carolina, Wiley Nickel has committed his life to public service and delivering for working families.\nAt a young age, Wiley Nickel saw firsthand how a health care crisis can shake a family when he lost his father to lung cancer as a high schooler.\nWiley worked for two White House administrations — including ", "highlight": ["As a father, husband, attorney, state senator, and Congressman for North Carolina"]}]}, {"id": "27515a036c3ee1eae821db90e3513f0b9eae7f346a311a2bede694156efd2762", "label": "Liccardo, Sam T. (2024) · prior_elected_office", "display": [{"label": "Candidate", "format": "badges", "content": {"Name": "Liccardo, Sam T.", "Year": 2024, "Party": "democrat", "Route": "biography", "Subtype": "prior_elected_office", "Evidence exact match": "True"}}, {"label": "Model record", "format": "json", "content": "{\"evidence\": \"As Mayor of San José, the Bay Area’s largest city\", \"field\": \"prior_elected_office\", \"value\": \"Mayor of San José\"}"}, {"label": "Source context", "format": "text", "content": "for Congress to focus Washington on the big issues like homelessness, crime, and the punishing cost of living. To a Congress that has been called the least productive in decades, Liccardo says “Let’s Get it Done!” on the problems that matter most to the Peninsula, Silicon Valley, and the Coastside.\nAs Mayor of San José, the Bay Area’s largest city, Liccardo’s innovative efforts to confront homelessness include pioneering the conversion of motels to housing in 2016, four years prior to California adopting it as a statewide model. He piloted the development of quick-build prefabricated housing communities that were constructed at a fraction of", "highlight": ["As Mayor of San José, the Bay Area’s largest city"]}]}, {"id": "fcf0b9d95df8cdef8edc6a93b24a282f8a5204faacff2b58a3a6a61d6cb84894", "label": "Sabatini, Anthony (2022) · prior_elected_office", "display": [{"label": "Candidate", "format": "badges", "content": {"Name": "Sabatini, Anthony", "Year": 2022, "Party": "republican", "Route": "biography", "Subtype": "prior_elected_office", "Evidence exact match": "True"}}, {"label": "Model record", "format": "json", "content": "{\"evidence\": \"Anthony Sabatini serves as a member of the Florida House of Representatives, representing District 32 in Central Florida.\", \"field\": \"prior_elected_office\", \"value\": \"Member of the Florida House of Representatives, representing District 32\"}"}, {"label": "Source context", "format": "text", "content": "Learn about Anthony Sabatini’s new project to elect Florida Freedom Fighters!\nAbout\nBio\nVolunteer\nMedia\nContact\nAnthony Sabatini\nBiography\nAnthony Sabatini serves as a member of the Florida House of Representatives, representing District 32 in Central Florida.\nFive of his legislative bills have been signed into law by Governor DeSantis. He has filed and sponsored legislation on a variety of issues, such as legislation to crack down on Big-Tech censorship, mandate the use of E-Verify, make Florida a Second-Amendment Sanctuary, tighten election laws, elimi", "highlight": ["Anthony Sabatini serves as a member of the Florida House of Representatives, representing District 32 in Central Florida."]}]}, {"id": "825c999da96f43c27f4d9663f812ad9d9c59cee022f7d4be8c0c8e7d0d5306c5", "label": "Carnahan, Robin (2010) · prior_public_service", "display": [{"label": "Candidate", "format": "badges", "content": {"Name": "Carnahan, Robin", "Year": 2010, "Party": "democrat", "Route": "biography", "Subtype": "prior_public_service", "Evidence exact match": "True"}}, {"label": "Model record", "format": "json", "content": "{\"evidence\": \"Carnahan worked in central and eastern Europe with the National Democratic Institute\", \"field\": \"prior_public_service\", \"value\": \"Worked with the National Democratic Institute in central and eastern Europe\"}"}, {"label": "Source context", "format": "text", "content": "ness and law. She served at the Export-Import Bank of the United States where she explored innovative ways to help American companies increase their sale of goods and services abroad. She also specialized in business and corporate law at a major Missouri law firm.\nAfter the fall of the Berlin Wall, Carnahan worked in central and eastern Europe with the National Democratic Institute helping rebuild the region’s economies and governments by drafting voting laws, training new political leaders and monitoring elections.\nMissouri roots and dedication\nA fifth generation Missourian, Carnahan grew up in Rolla, Missouri, and graduated from Rolla High School. Her parents, Mel and Jean ", "highlight": ["Carnahan worked in central and eastern Europe with the National Democratic Institute"]}]}, {"id": "8ef5ad6822d585b25b1464a5816af589b4eb1df1fb4014112344657265c9fca5", "label": "Mitchell, Briane Nelson (2014) · prior_public_service", "display": [{"label": "Candidate", "format": "badges", "content": {"Name": "Mitchell, Briane Nelson", "Year": 2014, "Party": "democrat", "Route": "biography", "Subtype": "prior_public_service", "Evidence exact match": "True"}}, {"label": "Model record", "format": "json", "content": "{\"evidence\": \"Nels served six years on the University of Idaho Law School Advisory Council\", \"field\": \"prior_public_service\", \"value\": \"served six years on the University of Idaho Law School Advisory Council\"}"}, {"label": "Source context", "format": "text", "content": "ce to further his ideal of fairness and help secure a level playing field for everyone.  As an Associate Regional Director and Regional Trial Counsel for the Securities and Exchange Commission, Nels managed a staff of 75 employees investigating and prosecuting financial fraud in the western states.\nNels served six years on the University of Idaho Law School Advisory Council, and has been a part- time teacher at the University of Idaho Law School for ten years. He has also served on committees for Columbia University, the American Bar Association and the U.S. State Department.\nThe Mitchell Family\nNels has two grown daughters:  Brianne is a practicing attorney; Brittany", "highlight": ["Nels served six years on the University of Idaho Law School Advisory Council"]}]}, {"id": "b7109b2b9ebd0490a82b23038fc90a44f17709bc7a11b59decf5ab6b74be5db8", "label": "Lesinski, John (2020) · prior_public_service", "display": [{"label": "Candidate", "format": "badges", "content": {"Name": "Lesinski, John", "Year": 2020, "Party": "democrat", "Route": "biography", "Subtype": "prior_public_service", "Evidence exact match": "True"}}, {"label": "Model record", "format": "json", "content": "{\"evidence\": \"and the nationally accredited Child Care and Learning Center, a local non-profit preschool and child care center.\", \"field\": \"prior_public_service\", \"value\": \"Board member of the Child Care and Learning Center\"}"}, {"label": "Source context", "format": "text", "content": "o bring more manufacturing and e-commerce distribution jobs to the Commonwealth.\nElected Office & Public Service\nSoon after moving to the Virginia Piedmont, John was asked to join the Board of Directors of the Headwaters Foundation, the private endowment for public education in Rappahannock County, and the nationally accredited Child Care and Learning Center, a local non-profit preschool and child care center.\nIn 2011, John was elected to the Rappahannock County School Board and served as chairman throughout his entire four year term. During his term the school district improved from non-accredited to fully accredited at both its elementary and high school levels.\nIn 2015, John successfully ran for the R", "highlight": ["and the nationally accredited Child Care and Learning Center, a local non-profit preschool and child care center."]}]}, {"id": "c4599fe9081edd92d02b03c9b76d290fc31cd14e6b27fa1cf56d987cbe13465b", "label": "Perdue, David (2020) · prior_public_service", "display": [{"label": "Candidate", "format": "badges", "content": {"Name": "Perdue, David", "Year": 2020, "Party": "republican", "Route": "biography", "Subtype": "prior_public_service", "Evidence exact match": "True"}}, {"label": "Model record", "format": "json", "content": "{\"evidence\": \"Senate Committee on Foreign Affairs\", \"field\": \"prior_public_service\", \"value\": \"Member of Senate Committee on Foreign Affairs\"}"}, {"label": "Source context", "format": "text", "content": "est economic turnaround in history prior to COVID-19.  Now, David is putting his real-world experience to work as we defeat this virus and rebuild our economy.\nIn the Senate, David advocates for Georgia on the Senate Armed Services Committee, Senate Committee on Banking, Housing, and Urban Affairs, Senate Committee on Foreign Affairs, and Senate Committee on the Budget.\nDavid and Bonnie have two sons and three grandsons. The couple attends Wesley United Methodist Church in St. Simons.\nDELIVERING RESULTS FOR GEORGIA:\nCOVID:\nSince the beginning of this unprecedented #COVID19 crisis, David’s highest priority has been ensuring Geor", "highlight": ["Senate Committee on Foreign Affairs"]}]}, {"id": "f5a67f723c7e0b76da5abb8e4e937a75e9667474dd97e0fb0981314fc52ee393", "label": "Bass, Karen (2020) · prior_public_service", "display": [{"label": "Candidate", "format": "badges", "content": {"Name": "Bass, Karen", "Year": 2020, "Party": "democrat", "Route": "biography", "Subtype": "prior_public_service", "Evidence exact match": "True"}}, {"label": "Model record", "format": "json", "content": "{\"evidence\": \"Karen founded Community Coalition, a community-based social justice organization in South L.A.\", \"field\": \"prior_public_service\", \"value\": \"Founder of Community Coalition\"}"}, {"label": "Source context", "format": "text", "content": "rg and Michael Villines, received the prestigious John F. Kennedy Profile in Courage Award, which has also been awarded to President Barack Obama and Secretary-General of the United Nations Kofi Annan.\nIn 1990, in response to the crack-cocaine and gang violence crisis that was gripping Los Angeles, Karen founded Community Coalition, a community-based social justice organization in South L.A. that empowers the African-American and Latino community across generations to address substance abuse, poverty and crime in South Los Angeles. Through her leadership at Community Coalition, Karen worked to engage community residents in addressing the root causes of injustice. The organization has b", "highlight": ["Karen founded Community Coalition, a community-based social justice organization in South L.A."]}]}, {"id": "ee27217f0b96071f33f32431629b3a9d4e48f37c6bd42bd279e2dfe230f9c80f", "label": "Kim, Young (2020) · elected_official", "display": [{"label": "Candidate", "format": "badges", "content": {"Name": "Kim, Young", "Year": 2020, "Party": "republican", "Route": "endorsements", "Subtype": "elected_official", "Evidence exact match": "True"}}, {"label": "Model record", "format": "json", "content": "{\"endorser_type\": \"elected_official\", \"evidence\": \"State Assembly Republican Leader Scott Baugh, ret.\", \"name\": \"Scott Baugh\", \"organization\": \"State Assembly\"}"}, {"label": "Source context", "format": "text", "content": " Ling Chang\nState Senator Pat Bates\nState Senator Bob Huff, ret.\nState Senator Janet Nguyen, ret.\nState Senator Dick Ackerman, ret.\nState Senator John Lewis, ret.\nState Assembly Republican Leader Marie Waldron\nState Assemblyman Steven Choi\nState Assemblyman Tyler Diep\nState Assemblyman Phillip Chen\nState Assembly Republican Leader Scott Baugh, ret.\nState Assemblyman Matt Harper, ret.\nState Assemblyman Van Tran, ret.\nState Assemblyman Bob Pacheco, ret.\nState Assemblyman Jim Silva, ret.\nState Assemblyman David Hadley, ret.\nLOCAL ELECTED OFFICIALS\nAnaheim Mayor Harry Sidhu\nAnaheim Councilmember Steve Fassel\nAnaheim Councilmember Trevor O’Neil\nAn", "highlight": ["State Assembly Republican Leader Scott Baugh, ret."]}]}, {"id": "f824871c394166efbe0cbfae22e6e643f20a82c5a7ccfcfcb9553ef9075ff35e", "label": "Hoadley, Jon (2020) · elected_official", "display": [{"label": "Candidate", "format": "badges", "content": {"Name": "Hoadley, Jon", "Year": 2020, "Party": "democrat", "Route": "endorsements", "Subtype": "elected_official", "Evidence exact match": "True"}}, {"label": "Model record", "format": "json", "content": "{\"endorser_type\": \"elected_official\", \"evidence\": \"Congresswoman Rashida Tlaib, \\nMichigan's 13th District\", \"name\": \"Rashida Tlaib\", \"organization\": \"Michigan's 13th District\"}"}, {"label": "Source context", "format": "text", "content": "amala Harris, \nU.S. Senator - California\nGretchen Whitmer, Michigan's Governor\nGarlin Gilchrist, Michigan's Lieutenant Governor\nElizabeth Warren, U.S. Senator - Massachusetts\nUS Senator Cory Booker - New Jersey\nDana Nessel, Michigan Attorney General\nCongressman Andy Levin,\n \nMichigan's 9th District\nCongresswoman Rashida Tlaib, \nMichigan's 13th District\nCongresswoman Pramila Jayapal, Washington’s 7th District\nCongressman Joaquin Castro - \nTexas' 20th District\nSean McCann, State Senator\nJeff Getting - Kalamazoo County Prosecutor\nMondaire Jones -  Democratic nominee New York’s 17th Congressional District\nMark Schauer, Former Michigan Congressman Dis", "highlight": ["Congresswoman Rashida Tlaib, \nMichigan's 13th District"]}]}, {"id": "423b11aed265c559590476a85c763a1a609f0ab313c452adb9d05096a9ce2e73", "label": "Fitzpatrick, Brian (2020) · elected_official", "display": [{"label": "Candidate", "format": "badges", "content": {"Name": "Fitzpatrick, Brian", "Year": 2020, "Party": "republican", "Route": "endorsements", "Subtype": "elected_official", "Evidence exact match": "True"}}, {"label": "Model record", "format": "json", "content": "{\"endorser_type\": \"elected_official\", \"evidence\": \"New Britain Borough Mayor David Holewinski\", \"name\": \"David Holewinski\", \"organization\": \"New Britain Borough\"}"}, {"label": "Source context", "format": "text", "content": "or William Clark\nLower Southampton Township Supervisor Ed Shannon\nLower Southampton Township Auditor Tracey Freels\nMiddletown Township Tax Collector Ray Chapman\nMiddletown Township Constable Chuck Benhayon\nMilford Township Supervisor Thomas Courduff\nMorrisville Borough Councilwoman Danielle Larison\nNew Britain Borough Mayor David Holewinski\nNew Britain Borough Councilman Jeffrey Gilmore\nNew Britain Borough Councilwoman Mary Pat McGinn Holewinski\nNewtown Township Supervisor Kyle Davis\nFormer Newtown Township Supervisor & Candidate for State Representative in PA 31st District Ryan Gallagher\nNewtown Township Auditor Warren Keyser\nCouncil", "highlight": ["New Britain Borough Mayor David Holewinski"]}]}, {"id": "155ede9672c60bcfc0c41a3844ed1a07fc935879b9cda8f61910a1a898b4ac86", "label": "Van Hollen, Chris (2016) · elected_official", "display": [{"label": "Candidate", "format": "badges", "content": {"Name": "Van Hollen, Chris", "Year": 2016, "Party": "democrat", "Route": "endorsements", "Subtype": "elected_official", "Evidence exact match": "True"}}, {"label": "Model record", "format": "json", "content": "{\"endorser_type\": \"elected_official\", \"evidence\": \"Barbara Condos, Councilmember, Somerset-Montgomery County\", \"name\": \"Barbara Condos\", \"organization\": null}"}, {"label": "Source context", "format": "text", "content": " Delegate, Montgomery County\nMark Chang, State Delegate, Anne Arundel County\nDave Chapman, Honorary Mayor of Lake Arbor, Prince George’s County\nVirginia Clagett, Former State Delegate, Anne Arundel County\nMary Pat Clarke, Councilmember, Baltimore City\nLuke Clippinger, State Delegate, Baltimore City\nBarbara Condos, Councilmember, Somerset-Montgomery County\nGrace Connolly, Register of Wills, Baltimore County\nJoan Carter Conway, State Senator, Baltimore City\nBonnie Cullison, State Delegate, Montgomery County\nRobert Curran, Councilmember, Baltimore City\nUlysses Currie, State Senator, Prince George’s County\nC Richard D’Amato, Former Delegate, Anne Arunde", "highlight": ["Barbara Condos, Councilmember, Somerset-Montgomery County"]}]}, {"id": "6e9d346612387bf97f4232a4899a1b12980c5e9fb0250795e596776b30d22325", "label": "Schiff, Adam (2024) · elected_official", "display": [{"label": "Candidate", "format": "badges", "content": {"Name": "Schiff, Adam", "Year": 2024, "Party": "democrat", "Route": "endorsements", "Subtype": "elected_official", "Evidence exact match": "True"}}, {"label": "Model record", "format": "json", "content": "{\"endorser_type\": \"elected_official\", \"evidence\": \"Hilda Solis, Los Angeles County Supervisor\", \"name\": \"Hilda Solis\", \"organization\": null}"}, {"label": "Source context", "format": "text", "content": " San Luis Obispo County Supervisor\nJimmy Paulding, San Luis Obispo County Supervisor\nLeticia Perez, Kern County Supervisor\nAaron Peskin, President, San Francisco County Board of Supervisors\nKatie Rice, Marin County Supervisor and Coastal Commissioner\nRosemarie Smallcombe, Mariposa County Supervisor\nHilda Solis, Los Angeles County Supervisor\nRichard Valle, Kings County Supervisor\nBrad Wagenknecht, Napa County Supervisor\nDas Williams, Santa Barbara County Supervisor\nTed Williams, Mendocino County Supervisor\nMayors\nAshleigh Aitken, Mayor of Anaheim\nAdele Andrade Stadler, Mayor of Alhambra\nKaren Bass, Mayor of Los Angeles\nPhil Brock, Mayo", "highlight": ["Hilda Solis, Los Angeles County Supervisor"]}]}, {"id": "b5ca2cda1f4ad2664b87a755b13f4646d06f1a7767266409b4c423b320a52bb9", "label": "Klee Hood, Sarah (2024) · individual", "display": [{"label": "Candidate", "format": "badges", "content": {"Name": "Klee Hood, Sarah", "Year": 2024, "Party": "democrat", "Route": "endorsements", "Subtype": "individual", "Evidence exact match": "True"}}, {"label": "Model record", "format": "json", "content": "{\"endorser_type\": \"individual\", \"evidence\": \"MARY O'NEILL\", \"name\": \"MARY O'NEILL\", \"organization\": null}"}, {"label": "Source context", "format": "text", "content": " Chair\nTOM ELTER\nOnondaga County Activist\nLUCRETIA HUNT\nOneida County City of Utica Democratic Committee, Vice Chair\nBRANWEN RHIANNON DREW\nHEATHER WASIELEWSKI\nOneida County Activist\nNANCY WHEELER\nOneida County Village of Remsen Democratic Committee, Chairperson\nKATHY COLLETT\nBRITT HYSELL\nJON HYSELL\nMARY O'NEILL\nRICHARD FLESHER\nOnondaga County Skaneateles\nDARBY O'BRIEN\nSUSAN GEHRIG\nOneida County Trenton Democratic Committee\nDOREEN MARKSON\nOneida County Former Kirkland Democratic Committee Member\nGERMAINE GOGEL\nMONA PERROTTI\nBILL PERROTTI\nOneida County NYSUT, Retired\nALAN COLE\nDUCSON NGUYEN\nTompkins County ", "highlight": ["MARY O'NEILL"]}]}, {"id": "0c57003f6aec76adad3bb52f8860c16b6c5888f3d74e2545558e0309393f043b", "label": "Smith, D. Adam (2018) · individual", "display": [{"label": "Candidate", "format": "badges", "content": {"Name": "Smith, D. Adam", "Year": 2018, "Party": "democrat", "Route": "endorsements", "Subtype": "individual", "Evidence exact match": "True"}}, {"label": "Model record", "format": "json", "content": "{\"endorser_type\": \"individual\", \"evidence\": \"Becky Lewis\", \"name\": \"Becky Lewis\", \"organization\": null}"}, {"label": "Source context", "format": "text", "content": "forth\nDebadutta Dash\nHassan Diis\nPam Eakes\nJeffrey Finn\nSara Franklin\nAl Garman\nKevin Geiger\nJames Grayson\nChad Harper\nJeffrey Hattori\nRod Hearne\nLem Howell\nFrank Igiron\nRobert Kangas\nConnie Kelliher\nMark Kelly\nNavy Captain and Astronaut (ret.)\nBea Kriloff\nLee Lambert\nJeanne Legault\nMaria Leininger\nBecky Lewis\nEric Liu\nSharon Mast\nRichard Mitchell\nRoger Nyhus\nEstela Ortega\nChelsea Orvella\nMichael Parham\nRick Polintan\nJason Puracal\nTeresa Purcell\nAnne Roberts Thorpe\nPatty Rose\nMarvin Rosete\nSonja Rossman\nJoe Schocken\nLinda Seltzer\nAnn Simon\nBetty Speith-Croll\nAlec Stephens\nOmaha Sternberg\nBailey Stober\nKa", "highlight": ["Becky Lewis"]}]}, {"id": "e139a2a270466489acaf3b1b1818e3fe1c36738d8101c0572eb474180f7e54f0", "label": "Khanna, Rohit (2020) · individual", "display": [{"label": "Candidate", "format": "badges", "content": {"Name": "Khanna, Rohit", "Year": 2020, "Party": "democrat", "Route": "endorsements", "Subtype": "individual", "Evidence exact match": "True"}}, {"label": "Model record", "format": "json", "content": "{\"endorser_type\": \"individual\", \"evidence\": \"David Lee, SV Angel\", \"name\": \"David Lee\", \"organization\": \"SV Angel\"}"}, {"label": "Source context", "format": "text", "content": "\nFred Khosravi, Incept LLC\nRick Klau, Startup Lab – Google Ventures\nKittu Kolluri, NEA\nSteve Krausz, U.S. Venture Partners\nGary Kremen, Match.Com & Clean Power Finance\nAshok Krishnamurthi\nBrigette Lau, The Social+Capital Partnership\nGary Lauder, Lauder Partners LLC\nLaura Lauder, Lauder Partners LLC\nDavid Lee, SV Angel\nBill Lenihan, Switch Lighting Co.\nEllen Levy, Silicon Valley Connect (formerly with LinkedIn)\nJessica Livingston, Y Combinator\nJoe Lonsdale, Formation 8\nRonald Lott, RML Enterprises\nAntonio Lucio, Visa\nStephen Luczo, Seagate\nRichard Lyons, UC Berkeley\nRajeev Madhavan, Magma Design Automation and Am", "highlight": ["David Lee, SV Angel"]}]}, {"id": "ecf0baef65c7bc31d0fa5012123f619f69d525da6969d08dd78b5681d31f0bc0", "label": "Young, Todd Christopher (2022) · individual", "display": [{"label": "Candidate", "format": "badges", "content": {"Name": "Young, Todd Christopher", "Year": 2022, "Party": "republican", "Route": "endorsements", "Subtype": "individual", "Evidence exact match": "False"}}, {"label": "Model record", "format": "json", "content": "{\"endorser_type\": \"individual\", \"evidence\": \"Switzerland County Chairman Bill Springer\", \"name\": \"Bill Springer\", \"organization\": \"Switzerland County Republican Party\"}"}, {"label": "Source context", "format": "text", "content": "Todd Young for U.S. Senate\nHome\nAbout\nNews\nIssues\nAccomplishments\nEndorsements\nGet Involved\nCoalitions\nThe Hoosier Bolt\nShop\nMEET TODD\nDONATE\nEndorsements\nOver 320 prominent Hoosier conservatives have already endorsed Todd. These supporters include former Vice President Mike Pence, every Indiana Republican statewide officeholder, every Indiana Republican Member of Congress, and over 90% of Republican County Chairs.\nDo you support Todd? Give him your endorsement today:\nENDORSE TODD\nHoosier Vice Presidents\nVice President Dan Quayle\nVice President Mike Pence\nTrump Administration Hoosiers\nDirector", "highlight": ["Switzerland County Chairman Bill Springer"]}]}, {"id": "194404eb2fa8016a1807f9a2a7bf51c799b0cee3661acdfddbeffc650f387aa1", "label": "Van Duyne, Elizabeth Ann (2020) · individual", "display": [{"label": "Candidate", "format": "badges", "content": {"Name": "Van Duyne, Elizabeth Ann", "Year": 2020, "Party": "republican", "Route": "endorsements", "Subtype": "individual", "Evidence exact match": "True"}}, {"label": "Model record", "format": "json", "content": "{\"endorser_type\": \"individual\", \"evidence\": \"Mona Bailey, Board of Directors and Co-Chair of Public Policy Committee at United Way of Tarrant County\", \"name\": \"Mona Bailey\", \"organization\": \"United Way of Tarrant County\"}"}, {"label": "Source context", "format": "text", "content": ", Former Denton County Judge\nHon. Gary Griffith, Former Dallas City Council\nHon. Martin Schelling, Former Southlake City Council\nHon. Dan Branch TX HD 108\nHon. And Mrs. Andrew Wambsganss, Former Mayor of Southlake, TX\nHon. Maurine Dickey, Former Dallas County Commissioner\nOther Endorsement of Note:\nMona Bailey, Board of Directors and Co-Chair of Public Policy Committee at United Way of Tarrant County, Jeff Austin III, TxDOT Commissioner, Dana Loesch, NRA Spokesperson, Hon. Gordon England, Former Secretary of the Navy, Julie McCarty, True Texas Project CEO\nPrecinct Chairs\nFirst Name\nLast Name\nCounty\nPrecinct\nAmy\nBriggs\n4627\nBrenda\nBrodrick\n2303\nJan\nBurke\n2301\nBurrows\n2802\nChristian\nGuillot\n4092\n", "highlight": ["Mona Bailey, Board of Directors and Co-Chair of Public Policy Committee at United Way of Tarrant County"]}]}, {"id": "5d460c9d7b811fe5631ae371eb307a6fa05d46e2423f185fb446398e36fc26a2", "label": "Adams, Jennifer (2024) · labor_union", "display": [{"label": "Candidate", "format": "badges", "content": {"Name": "Adams, Jennifer", "Year": 2024, "Party": "democrat", "Route": "endorsements", "Subtype": "labor_union", "Evidence exact match": "True"}}, {"label": "Model record", "format": "json", "content": "{\"endorser_type\": \"labor_union\", \"evidence\": \"UAW - Region 8\", \"name\": \"UAW - Region 8\", \"organization\": null}"}, {"label": "Source context", "format": "text", "content": "e Honorable Alex Sink\nThe Honorable Dick Batchelor\nFL State Senator Lori Berman\nFL State Senator Tina Polsky\nFL State Senator Tracie Davis\nFL State Senator Shevrin Jones\nFL State Rep. LaVon Bracy Davis\nSheriff John Mina\nMayor Jerry Demings\nProperty Appraiser Amy Mercado\nCity Commissioner Tony Ortiz\nUAW - Region 8\nIBEW Local 606\nUnited Association (UA)\nIron Workers Local 808\nMoms Demand Action\n(Gun Sense Candidate)\nDemocratic Environmental Caucus of FL\nJewish Democratic Council of America\nMike Johnson\n(U.S. Veteran & Republican Primary Challenger to Mills)\nxml version=\"1.0\" encoding=\"UTF-8\"?\n\"Your\nHometown\nC", "highlight": ["UAW - Region 8"]}]}, {"id": "7a0e6f51373bb3102978492eccdf82116536ce95668134cba628e11efc0e781c", "label": "Delbene, Suzan K (2020) · labor_union", "display": [{"label": "Candidate", "format": "badges", "content": {"Name": "Delbene, Suzan K", "Year": 2020, "Party": "democrat", "Route": "endorsements", "Subtype": "labor_union", "Evidence exact match": "True"}}, {"label": "Model record", "format": "json", "content": "{\"endorser_type\": \"labor_union\", \"evidence\": \"United Association Local 26 Plumbers and Pipefitters (UA)\", \"name\": \"United Association Local 26 Plumbers and Pipefitters (UA)\", \"organization\": null}"}, {"label": "Source context", "format": "text", "content": "orkers, Local Union 77 (IBEW)\nInternational Longshore and Warehouse Union (ILWU)\nInternational Union of Painters and Allied Trades (IUPAT)\nNational Education Association (NEA)\nPacific Northwest Regional Council of Carpenters\nRetired Public Employees Council of Washington\nTeamsters, Joint Council 28\nUnited Association Local 26 Plumbers and Pipefitters (UA)\nUnited Auto Workers, Local 4121 (UAW)\nWashington Federation of State Employees (AFSCME)\nWashington Machinists Council (IAM)\nWashington State Building and Construction Trades\nWashington State Labor Council (AFL-CIO)\nCivic Organizations\nAlliance for Gun Responsibility\nEnd Citizens United\nHumane Socie", "highlight": ["United Association Local 26 Plumbers and Pipefitters (UA)"]}]}, {"id": "49a9c8ccfaef0ed7bb2fa73f9fa627a9cdb4d68867c1dbe01d439b5f193e1aee", "label": "Kilmer, Derek (2020) · labor_union", "display": [{"label": "Candidate", "format": "badges", "content": {"Name": "Kilmer, Derek", "Year": 2020, "Party": "democrat", "Route": "endorsements", "Subtype": "labor_union", "Evidence exact match": "True"}}, {"label": "Model record", "format": "json", "content": "{\"endorser_type\": \"labor_union\", \"evidence\": \"Washington State Legislative Board Sheet Metal, Air, Rail and Transportation Union-Transportation Division (SMART-TD)\", \"name\": \"Washington State Legislative Board Sheet Metal, Air, Rail and Transportation Union-Transportation Division (SMART-TD)\", \"organization\": null}"}, {"label": "Source context", "format": "text", "content": "Longshore & Warehouse Union (ILWU)\nService Employees International Union (SEIU) 775\nCommunications Workers of America (CWA)\nWashington Federation of State Employees (AFSCME Council 28)\nRetired Public Employees Council of Washington\nInternational Union of Painters & Allied Trades (IUPAT) District #5\nWashington State Legislative Board Sheet Metal, Air, Rail and Transportation Union-Transportation Division (SMART-TD)\nWashington State Legislative Board Brotherhood of Locomotive Engineers and Trainmen (BLET)\nWashington Machinists Council\nWashington Building & Construction Trades Council\nOlympic Building Trades Union Council\nPuget Sound Metal Trades Council\nInternational Brotherhood of Electrical Workers (IBEW) Lo", "highlight": ["Washington State Legislative Board Sheet Metal, Air, Rail and Transportation Union-Transportation Division (SMART-TD)"]}]}, {"id": "5bfa8e6a8ceaa35a4635b0cccec326398b2d7a1a35bf18ab39d3999f1e39f47f", "label": "Ryan, Timothy (2022) · labor_union", "display": [{"label": "Candidate", "format": "badges", "content": {"Name": "Ryan, Timothy", "Year": 2022, "Party": "democrat", "Route": "endorsements", "Subtype": "labor_union", "Evidence exact match": "True"}}, {"label": "Model record", "format": "json", "content": "{\"endorser_type\": \"labor_union\", \"evidence\": \"Ohio Education Association\", \"name\": \"Ohio Education Association\", \"organization\": null}"}, {"label": "Source context", "format": "text", "content": "-CWA\nIndiana/Kentucky/Ohio Regional Council of Carpenters\nInternational Association of Machinist & Aerospace Workers\nInternational Union of Painters & Allied Trades District Council 6\nMarine Engineers Beneficial Association\nOhio Association of Professional Fire Fighters\nOhio Conference of Teamsters\nOhio Education Association\nOhio Federation of Teachers\nOhio State Conference of IBEW\nOhio Building and Construction Trades Council\nSEIU District 1199\nSMART Transportation Division\nSMART Sheet Metal Workers\nUnited Association of Plumbers and Pipefitters\nUnited Auto Workers\nUnited Food & Commercial Workers\nUnited Mine Workers ", "highlight": ["Ohio Education Association"]}]}, {"id": "e94cb92a98032e5a67e21a4e63aea8887a4dbf3d28b8f1d8838f8638fa83f4b8", "label": "Mccaskill, Claire (2006) · labor_union", "display": [{"label": "Candidate", "format": "badges", "content": {"Name": "Mccaskill, Claire", "Year": 2006, "Party": "democrat", "Route": "endorsements", "Subtype": "labor_union", "Evidence exact match": "True"}}, {"label": "Model record", "format": "json", "content": "{\"endorser_type\": \"labor_union\", \"evidence\": \"Kansas City Carpenters\", \"name\": \"Kansas City Carpenters\", \"organization\": null}"}, {"label": "Source context", "format": "text", "content": "os\nAudio\nWrite a Letter to the Editor\nVolunteer\nSend an ePostcard\nRegister to Vote\nDownload Hi-Res Photos\nMore Downloads\nEndorsements\nClaire McCaskill is proud to have the support of the following organizations:\nMissouri AFL-CIO\nLeague of Conservation Voters\nMissouri State Fraternal Order of Police\nKansas City Carpenters\nRaytown Democratic Association\nBuilding and Construction Trades Council of Springfield, Missouri\nWomen's Political Caucus (National Chapter as well as the Greater Kansas City Chapter)\nTeamsters Joint Council No. 13\nNational Association of Social Workers\nMissouri Nurses Association\nMissouri National", "highlight": ["Kansas City Carpenters"]}]}, {"id": "a0faeb61fcc094973b87b5f5a4fec4bf8d11b312265acfdfab6ac58ffa7b4531", "label": "Delbene, Suzan K (2024) · newspaper_or_media", "display": [{"label": "Candidate", "format": "badges", "content": {"Name": "Delbene, Suzan K", "Year": 2024, "Party": "democrat", "Route": "endorsements", "Subtype": "newspaper_or_media", "Evidence exact match": "True"}}, {"label": "Model record", "format": "json", "content": "{\"endorser_type\": \"newspaper_or_media\", \"evidence\": \"The Seattle Medium\", \"name\": \"The Seattle Medium\", \"organization\": null}"}, {"label": "Source context", "format": "text", "content": "olitan Democratic Club of Seattle\nSnohomish County Democrats\nWashington State Democrats for Diversity and Inclusion\nWashington State Democrats Environment and Climate Caucus\nYoung Democrats of the University of Washington\nYoung Democrats of Washington\nNewspapers\nThe Everett Herald\nThe Seattle Times\nThe Seattle Medium\nThe Stranger\nLabor\nAmerican Federation of Government Employees, District 11 (AFGE)\nAssociation of Flight Attendants-CWA (AFA)\nCommunications Workers of America, Local 7803 (CWA)\nInternational Brotherhood of Electrical Workers, Local Union 77 (IBEW)\nInternational Brotherhood of Electrical Workers, L", "highlight": ["The Seattle Medium"]}]}, {"id": "bec1a6effccf180edbd7a6cb95c9aa27fd38a8a6941964a0617bb161fd1c1cd9", "label": "Strickland, Marilyn (2024) · newspaper_or_media", "display": [{"label": "Candidate", "format": "badges", "content": {"Name": "Strickland, Marilyn", "Year": 2024, "Party": "democrat", "Route": "endorsements", "Subtype": "newspaper_or_media", "Evidence exact match": "True"}}, {"label": "Model record", "format": "json", "content": "{\"endorser_type\": \"newspaper_or_media\", \"evidence\": \"The Tacoma News Tribune\", \"name\": \"The Tacoma News Tribune\", \"organization\": null}"}, {"label": "Source context", "format": "text", "content": "ie Bowman, Port of Seattle Commissioner\nClaire Petrich, Port of Tacoma Commissioner (fmr.)\nAaron Pointer, Metro Parks Commissioner\nJesse Baines Jr., Metro Parks Commissioner\nAndrea Cobb, Board of Directors, Tacoma Public Schools\nEnrique Leon, Board of Directors, Tacoma Public Schools\nOrganizations:\nThe Tacoma News Tribune\nThe Olympian\nThe Seattle Times\nThe Seattle Medium\nNorthwest Asian Weekly\nPlanned Parenthood Action Fund\nReproductive Freedom for All\nInternational Association of Fire Fighters Local 31\nWashington State Labor Council\nWashington Federation of State Employees\nWashington State Building & Construction T", "highlight": ["The Tacoma News Tribune"]}]}, {"id": "1133f0ef413c3848bd44dbabc2d2dbe49bfbf45e078cbe35f5476d88934be54d", "label": "Smith, D. Adam (2020) · newspaper_or_media", "display": [{"label": "Candidate", "format": "badges", "content": {"Name": "Smith, D. Adam", "Year": 2020, "Party": "democrat", "Route": "endorsements", "Subtype": "newspaper_or_media", "Evidence exact match": "True"}}, {"label": "Model record", "format": "json", "content": "{\"endorser_type\": \"newspaper_or_media\", \"evidence\": \"The Seattle Times\", \"name\": \"The Seattle Times\", \"organization\": null}"}, {"label": "Source context", "format": "text", "content": "ocrats\nPierce County Professional Firefighters IAFF Local 726\nPierce County Young Democrats\nPlanned Parenthood Action Fund\nRetired Public Employees Council of Washington\nSEIU 775\nSEIU 925\nSeattle Indivisible\nSeattle Metropolitan Elections Committee\nStonewall Democrats\nTeamsters Joint Council No. 28\nThe Seattle Times\nThe Stranger\nThe Urbanist\nUAW Local 4121\nWA Federation of State Employees, AFSCME, Council 28\nWashington Education Association\nWashington Machinists Council\nWashington State Building and Construction Trades Council, AFL-CIO\nWashington State Democrats Environment and Climate Caucus\nWashington State ", "highlight": ["The Seattle Times"]}]}, {"id": "2789e23aea787618f209679d037b8d433e594adb77310caefa0ef7df04f2f53f", "label": "Tlaib, Rashida (2022) · newspaper_or_media", "display": [{"label": "Candidate", "format": "badges", "content": {"Name": "Tlaib, Rashida", "Year": 2022, "Party": "democrat", "Route": "endorsements", "Subtype": "newspaper_or_media", "Evidence exact match": "True"}}, {"label": "Model record", "format": "json", "content": "{\"endorser_type\": \"newspaper_or_media\", \"evidence\": \"Detroit Free Press\", \"name\": \"Detroit Free Press\", \"organization\": null}"}, {"label": "Source context", "format": "text", "content": "E) Council 25\nAmerican Federation of Teachers (AFT) Michigan\nArab American Democratic Action Fund\nThe Black Slate\nBlue America PAC\nBrand New Congress\nClean Water Action\nCommon Defense\nDemocracy for America\nDemocratic Socialists of America\nDetroit Action\nDetroit Federation of Musicians (AFM Local 5)\nDetroit Free Press\nEmgage Michigan PAC\nEnd Citizens United\nEqual Rights Amendment (ERA) Coalition\nFriends of the Earth Action\nIfNotNow\nHuman Rights Campaign PAC\nJewish Voice for Peace (JVP) Action\nLeague of Conservation Voters Action Fund\nLet America Vote\nLGBT Detroit Mobilization\nMetro Detroit Democratic Socialists ", "highlight": ["Detroit Free Press"]}]}, {"id": "99971c8045aec0e9316637a293562b1bfc1ab2b5faf18858762154cb5473a2fd", "label": "Delbene, Suzan K (2018) · newspaper_or_media", "display": [{"label": "Candidate", "format": "badges", "content": {"Name": "Delbene, Suzan K", "Year": 2018, "Party": "democrat", "Route": "endorsements", "Subtype": "newspaper_or_media", "Evidence exact match": "True"}}, {"label": "Model record", "format": "json", "content": "{\"endorser_type\": \"newspaper_or_media\", \"evidence\": \"Bellingham Herald\", \"name\": \"Bellingham Herald\", \"organization\": null}"}, {"label": "Source context", "format": "text", "content": "About\nNews\nIssues\nHome\nAbout\nNews\nIssues\nSIGN UP\nVolunteer\n$15\n$25\n$100\nSign Up\n2016 Endorsements\nNewspapers\nThe Seattle Times\nEverett Herald\nBellingham Herald\nThe Stranger\nElected Officials\nSenator Patty Murray\nSenator Maria Cantwell\nCongressman Rick Larsen\nCongressman Derek Kilmer\nCongressman Jim McDermott\nCongressman Adam Smith\nCongressman Denny Heck\nGovernor Jay Inslee\nKing County Executive Dow Constantine\nKing County Councilmember Claudia Balducci\nKi", "highlight": ["Bellingham Herald"]}]}, {"id": "e042698181aaa10c49b6a05aefd0c44584fee015f3ef14040f6c4b000e0a595d", "label": "Miller, Joseph W (2010) · organization", "display": [{"label": "Candidate", "format": "badges", "content": {"Name": "Miller, Joseph W", "Year": 2010, "Party": "republican", "Route": "endorsements", "Subtype": "organization", "Evidence exact match": "True"}}, {"label": "Model record", "format": "json", "content": "{\"endorser_type\": \"organization\", \"evidence\": \"Joe Miller is the clear choice for true conservatives in this election,” observed FreedomWorks PAC Chairman Dick Armey.\", \"name\": \"FreedomWorks\", \"organization\": null}"}, {"label": "Source context", "format": "text", "content": "it. He’s a principled conservative. He stands up for limited government and our traditional family values. He knows that in order to grow the economy, Washington has to stop taking our money–they’re growing a huge bureaucracy. I strongly support Joe Miller for the United States Senate.\nFreedomWorks\nJoe Miller is the clear choice for true conservatives in this election,” observed FreedomWorks PAC Chairman Dick Armey. “He has enough common sense to recognize that a nation cannot tax its way to growth, or spend its way to prosperity. We need to support candidates like Joe who will hold the line on spending and make job creation and fixing the economy the top priority.”\nRep. Bob Lynn\nI join with fellow Republicans", "highlight": ["Joe Miller is the clear choice for true conservatives in this election,” observed FreedomWorks PAC Chairman Dick Armey."]}]}, {"id": "5d0bfde081443e035b5504d9db96786957609a532bbc51765f4ac6b8f3472771", "label": "Enoch, Vanessa L. Dr. (2018) · organization", "display": [{"label": "Candidate", "format": "badges", "content": {"Name": "Enoch, Vanessa L. Dr.", "Year": 2018, "Party": "democrat", "Route": "endorsements", "Subtype": "organization", "Evidence exact match": "True"}}, {"label": "Model record", "format": "json", "content": "{\"endorser_type\": \"organization\", \"evidence\": \"The Ohio Democratic Party\", \"name\": \"The Ohio Democratic Party\", \"organization\": null}"}, {"label": "Source context", "format": "text", "content": "mocracy Oxford\nFriends of Intelligent Democracy\nInternational Union of Operating Engineers\nMiami County Democratic Party\nNational Women’s Political Caucus\nOhio AFL-CIO\nOhio Association of Public School Employees (OAPSE/AFSCME LOCAL 4, AFL-CIO)\nOhio Civil Service Employees Association (OCSEA/AFSCME)\nThe Ohio Democratic Party\nOhio Students for Gun Legislation\nSustainable Politicians\nDistinctions:\nMom’s Demand Action Gun Sense Candidate Distinction\nPlease\nclick the link\nto endorse Doc Enoch as a Democracy for America Candidate!\nFollow Us\nReducing Rising Healthcare Costs\nHealthcare costs are outrageous. It is a travesty t", "highlight": ["The Ohio Democratic Party"]}]}, {"id": "e87c71944c17903e0e75a743ed46f26c8e6450d2b7aebae90c4517753332a60f", "label": "Maloney, Carolyn B. (2018) · organization", "display": [{"label": "Candidate", "format": "badges", "content": {"Name": "Maloney, Carolyn B.", "Year": 2018, "Party": "democrat", "Route": "endorsements", "Subtype": "organization", "Evidence exact match": "True"}}, {"label": "Model record", "format": "json", "content": "{\"endorser_type\": \"organization\", \"evidence\": \"Lambda Independent Democrats of Brooklyn\", \"name\": \"Lambda Independent Democrats of Brooklyn\", \"organization\": null}"}, {"label": "Source context", "format": "text", "content": "ganizations:\nChelsea Reform Democratic Club\nCoalition for a District Alternative\nDowntown Independent Democrats\nEleanor Roosevelt Democratic Club\nFour Freedoms Democratic Club\nHell’s Kitchen Democrats\nGramercy Stuyvesant Independent Democrats\nGrand Street Democrats\nJim Owles Liberal Democratic Club\nLambda Independent Democrats of Brooklyn\nLenox Hill Democratic Club\nLexington Democratic Club\nPowhatan Democratic Club\nSeneca Democratic Club\nStonewall Democratic Club of New York City\nTaminent Democratic Club\nTilden Democratic Club\nVillage Independent Democrats\nVillage Reform Democratic Club\nWorking Families Party\nWomens Equality Party\nL", "highlight": ["Lambda Independent Democrats of Brooklyn"]}]}, {"id": "0e76a8c01bf4b8f82aeed1d2cf4ba3fe3e65e26382f0101cfb5479bf761a09f3", "label": "Frankel, Lois J. (2024) · organization", "display": [{"label": "Candidate", "format": "badges", "content": {"Name": "Frankel, Lois J.", "Year": 2024, "Party": "democrat", "Route": "endorsements", "Subtype": "organization", "Evidence exact match": "True"}}, {"label": "Model record", "format": "json", "content": "{\"endorser_type\": \"organization\", \"evidence\": \"“We are excited and proud to endorse this expansive group of pro-Israel champions who have consistently demonstrated a steadfast commitment to our Democratic values, including maintaining the United States’ alliance with Israel.”\", \"name\": \"Democratic Majority for Israel\", \"organization\": null}"}, {"label": "Source context", "format": "text", "content": " to FL's 22nd Congressional District.\"\nPopulation Connection Action Fund\n\"We endorse candidates for national office who work to protect reproductive health and rights and who demonstrate a strong commitment to working on behalf of women and families around the world.\"\nDemocratic Majority for Israel\n“We are excited and proud to endorse this expansive group of pro-Israel champions who have consistently demonstrated a steadfast commitment to our Democratic values, including maintaining the United States’ alliance with Israel.”\nFlorida for All Coalition\n\"We are thrilled to announce that [Lois] received the endorsement of the Florida for All coalition, a locally rooted coalition of progressive organizations, including Dream Defenders, FLIC Votes, Florida Planned Parenthood PAC, New Florida Majority, Organize Florida, and S", "highlight": ["“We are excited and proud to endorse this expansive group of pro-Israel champions who have consistently demonstrated a steadfast commitment to our Democratic values, including maintaining the United States’ alliance with Israel.”"]}]}, {"id": "30a35818534fa67bdf66b661b051ee2ea52ff055a711d47add305fcfd77f2d94", "label": "Pallotta, Frank (2022) · organization", "display": [{"label": "Candidate", "format": "badges", "content": {"Name": "Pallotta, Frank", "Year": 2022, "Party": "republican", "Route": "endorsements", "Subtype": "organization", "Evidence exact match": "True"}}, {"label": "Model record", "format": "json", "content": "{\"endorser_type\": \"organization\", \"evidence\": \"Ellis Marples Hardyston GOP Municipal Chairman\", \"name\": \"Ellis Marples\", \"organization\": \"Hardyston GOP\"}"}, {"label": "Source context", "format": "text", "content": "Home\nMeet Frank\nIssues\nVoter Information\nMedia\nNews\nPress Releases\nFrankly Speaking\n666 888 0000\nDonate Now\nJoin Us\nDonate\nHome\nMeet Frank\nIssues\nVoter Information\nMedia\nNews\nPress Releases\nFrankly Speaking\nMayors\nCarlos Rendo\nWoodcliff Lake\nBrian Kaminski\nHardyston Twp.\nJerry DiMaio\nHackettstown\nPeter Calamari\nWashington Twp.\nJohn Roth\nMahwah Fmr.\nJoseph Kennedy Jr.\nBelvidere\nGregory Corcoran\nLafayette Twp.\nGlen Jasionowski\nRiver Vale\nJohn Glidden\nCloster\nJames Barsa\nNorwood\nKen Gabbert\nUpper Saddle River Fmr.\nAnthony Frato Sr.\nBranchville\nNicholas Civitan\nFrankford Twp.\nJoe Watters\nMansfield", "highlight": ["Ellis Marples Hardyston GOP Municipal Chairman"]}]}, {"id": "d2d3a3951b7fe5e6f984eaedc605903494c738305dea6afee5814fa4579f9450", "label": "Timken, Jane (2022) · other", "display": [{"label": "Candidate", "format": "badges", "content": {"Name": "Timken, Jane", "Year": 2022, "Party": "republican", "Route": "endorsements", "Subtype": "other", "Evidence exact match": "True"}}, {"label": "Model record", "format": "json", "content": "{\"endorser_type\": \"other\", \"evidence\": \"Donna Owens 11th District\", \"name\": \"Donna Owens\", \"organization\": null}"}, {"label": "Source context", "format": "text", "content": "Home\nNews\nEndorsements\nVideos\nIssues\nGet Involved\nDonate\nEndorsements\nLook Who Stands With Jane!\nRick Perales\nGreene County Commissioner\nSheriff Matt Treglia\nSheriff Larry Mincks\nWashington County\nSheriff William Niemi\nAshtabula County\nDewey Stokes\nFormer President of the National Fraternal Order of Police\nJane Timken has received\nthe endorsement of\nOver 150 Conservative Leaders\nfrom across Ohio!\nIN EVERY CORNER OF OHIO, CONSERVATIVE CHAMPIONS ARE COALESCING AROUND JANE AND HER TRUSTED LEADERSHIP FOR OHIOANS.\nOver 150 of Ohio’s Conservative\nLeaders Have Endorsed Jane Timken.\nNational\nKellyanne", "highlight": ["Donna Owens 11th District"]}]}, {"id": "fb9e99cbd0f0975f6721f56dfafa635c379dbdb68f4e8c5e3a0c031f3da32bfc", "label": "Stefanik, Elise M. (2018) · other", "display": [{"label": "Candidate", "format": "badges", "content": {"Name": "Stefanik, Elise M.", "Year": 2018, "Party": "republican", "Route": "endorsements", "Subtype": "other", "Evidence exact match": "True"}}, {"label": "Model record", "format": "json", "content": "{\"endorser_type\": \"other\", \"evidence\": \"Richard Giardino, Fulton County\", \"name\": \"Richard Giardino\", \"organization\": null}"}, {"label": "Source context", "format": "text", "content": "ber, Ward 1, City of Johnstown\nNancy Hart, Town Clerk, Town of Johnstown\nRichard Handy, Supervisor, Ward 1, City of Johnstown\nJames Groff, Town Supervisor, Northampton\nWarren Greene, Supervisor, Ward 6, Gloversville\nJennifer Gilston, Town Council Member, Broadalbin\nLinda Gilbert, Town Clerk, Caroga\nRichard Giardino, Fulton County\nRichard Fogarty, Town Council Member, Stratford\nJohn Callery, Supervisor, Ward 3, City of Johnstown\nTerri Brubaker, Village Clerk, Village of Mayfield\nCynthia Breh, Town Supervisor, Oppenheim\nEdgar “Terry” Blodgett, County Treasurer, Fulton County\nJohn Blackmon, Supervisor, Ward 3, Gloversville\nPet", "highlight": ["Richard Giardino, Fulton County"]}]}, {"id": "4d0496b49f357b963110377d27a34a86c5fb465df2da69da2368cb557e1f9755", "label": "Jones, Mondaire (2020) · other", "display": [{"label": "Candidate", "format": "badges", "content": {"Name": "Jones, Mondaire", "Year": 2020, "Party": "democrat", "Route": "endorsements", "Subtype": "other", "Evidence exact match": "True"}}, {"label": "Model record", "format": "json", "content": "{\"endorser_type\": \"other\", \"evidence\": \"Doris Dalton\\nReverend\\nWhite Plains\", \"name\": \"Doris Dalton\", \"organization\": \"White Plains\"}"}, {"label": "Source context", "format": "text", "content": "\nJoan Grangenois-Thomas\nTrustee\nVillage of Port Chester\nLisa Rudley\nPresident\nOssining Board of Education\nQuantel Bazemore\nFormer Trustee\nVillage of Ossining\nLisa Copeland\nCity of Mount Vernon\nDelia Farquharson\nCity of Mount Vernon\nErwin Lee Trollinger\nReverend\nCalvary Baptist Church – White Plains\nDoris Dalton\nReverend\nWhite Plains\nPeter Bernstein\nOrganizer\nIrvington Activists\nLisa Genn\nOrganizer\nIrvington Activists\nKat Brezler\nCo-Founder\nThe People for Bernie Sanders\nKelly Marx\nFounder\nWestchester March for Our Lives\nLutonya Russell\nExecutive Director\nBoys and Girls Club of New Rochelle\nSusan Van Dolsen\nCo-Organizer\nWestches", "highlight": ["Doris Dalton\nReverend\nWhite Plains"]}]}, {"id": "11c145b2a29826867d8d1994835e6bf2842b6ab643409f0a3c800571e675c963", "label": "Maloney, Carolyn B. (2022) · other", "display": [{"label": "Candidate", "format": "badges", "content": {"Name": "Maloney, Carolyn B.", "Year": 2022, "Party": "democrat", "Route": "endorsements", "Subtype": "other", "Evidence exact match": "True"}}, {"label": "Model record", "format": "json", "content": "{\"endorser_type\": \"other\", \"evidence\": \"District Leader Daisy Paez\", \"name\": \"Daisy Paez\", \"organization\": \"District Leader\"}"}, {"label": "Source context", "format": "text", "content": "Councilwoman Carlina Rivera\nCity Councilwoman Gale Brewer\nCity Councilman Erik Bottcher\nCity Councilman Keith Powers\nCity Councilwoman Julie Menin\nFmr. City Councilman Ben Kallos\nFmr. City Councilman Costa Constantinides\nFmr. Speaker of the NYC City Council Christine Quinn\nLocal Democratic Leaders:\nDistrict Leader Daisy Paez\nDistrict Leader Lee Berman\nDistrict Leader Mike Corbett\nDistrict Leader Breeana Mulligan\nRichard Corman, President, Downtown Independent Democrats\nDistrict Leader Charles Bayor\nDistrict Leader Sylvia di Pietro\nDistrict Leader Jenny Low\nDistrict Leader Louise Dankberg\nDistrict Lader Sandro Sherrod\nE", "highlight": ["District Leader Daisy Paez"]}]}, {"id": "884cd686337f74fd0913cbc599261bafffd22e2c7881617b3ff17af5197adae0", "label": "Walters, Mimi (2018) · other", "display": [{"label": "Candidate", "format": "badges", "content": {"Name": "Walters, Mimi", "Year": 2018, "Party": "republican", "Route": "endorsements", "Subtype": "other", "Evidence exact match": "True"}}, {"label": "Model record", "format": "json", "content": "{\"endorser_type\": \"other\", \"evidence\": \"Director Steven LaMar, Irvine Ranch Water District\", \"name\": \"Steven LaMar\", \"organization\": \"Irvine Ranch Water District\"}"}, {"label": "Source context", "format": "text", "content": "ct of Southern California\nDirector Duane D. Cave, Moulton Niguel Water District\nDirector Charles Gibson, Santa Margarita Water District\nDirector Edward Mandich, Trabuco Canyon Water District\nDirector John Withers, Irvine Ranch Water District\nDirector Mary Aileen Matheis, Irvine Ranch Water District\nDirector Steven LaMar, Irvine Ranch Water District\nDirector Larry Dick, Municipal Water District of Orange County\nNotice: JavaScript is required for this content.\nPaid for by Walters for Congress ID# C00546853\nPhone: (949) 288-2171\n18872 MacArthur Blvd. Unit 100, Irvine, CA 92612", "highlight": ["Director Steven LaMar, Irvine Ranch Water District"]}]}, {"id": "cfded2ba35e9d6f807946cc78baf6af578973c7e9d5f83e9d6eb4f77b6cbf348", "label": "Ryan, Patrick (2018) · issue_statement", "display": [{"label": "Candidate", "format": "badges", "content": {"Name": "Ryan, Patrick", "Year": 2018, "Party": "democrat", "Route": "issues", "Subtype": "issue_statement", "Evidence exact match": "True"}}, {"label": "Model record", "format": "json", "content": "{\"claim\": \"Pat Ryan has called for universal background checks.\", \"evidence\": \"universal background checks\", \"heading\": \"Keeping our community safe\"}"}, {"label": "Source context", "format": "text", "content": " enforcement funding. In Congress Pat has already voted for increasing law-enforcement budgets. Having carried weapons of war in combat Pat understands the devastating power they can inflict and has called for the passage of commonsense gun reforms including, red flag laws, assault weapons ban, and universal background checks. Pat is committed to increasing mental health and addiction recovery resources to make sure that those who need it get the help they require. As County Executive, he reinstated the County's Mental Health Department, bolstered funding for mental health services, and is building the county's first-ev", "highlight": ["universal background checks"]}]}, {"id": "7fbd545dd77f1e9c4619fddca287b94504568529db58cfaa71f32e4b2efc4310", "label": "Kaiman, Jon (2022) · issue_statement", "display": [{"label": "Candidate", "format": "badges", "content": {"Name": "Kaiman, Jon", "Year": 2022, "Party": "democrat", "Route": "issues", "Subtype": "issue_statement", "Evidence exact match": "False"}}, {"label": "Model record", "format": "json", "content": "{\"claim\": \"The candidate supports further discussion on the option of judges remanding defendants to custody as an alternative to setting bail, regardless of affordability.\", \"evidence\": \"There is also an argument to be made that as an alternative to setting bail, a judge should remand, or confine to custody... This option is worthy of further discussion.\", \"heading\": \"Public Safety\"}"}, {"label": "Source context", "format": "text", "content": "Kaiman for Congress\nMenu\nAbout\nNews\nIssues\nVolunteer\nIntern\nDonate\nPublic Safety\nThere is a growing loss of confidence in governments’ ability to protect the public from harm caused by defendants being released immediately after being arrested. We need to address these concerns by amending bail reform laws recently passed and investing in additional probation oversight for those who are released.\nThere has been much consternation over recent bail reform laws and the impact they are having on crime and safety. In some respects, the bail law achieves its purpose by reducing the number of people ", "highlight": ["There is also an argument to be made that as an alternative to setting bail, a judge should remand, or confine to custody... This option is worthy of further discussion."]}]}, {"id": "86cb4de64c523aa1f4a004338e88fee78abd65da2f387f134a6cae7536e113ad", "label": "Silverstein, Matthew Benjamin (2014) · issue_statement", "display": [{"label": "Candidate", "format": "badges", "content": {"Name": "Silverstein, Matthew Benjamin", "Year": 2014, "Party": "democrat", "Route": "issues", "Subtype": "issue_statement", "Evidence exact match": "True"}}, {"label": "Model record", "format": "json", "content": "{\"claim\": \"Matt believes the free market should guide energy policy.\", \"evidence\": \"Matt believes the free market should guide our energy policy.\", \"heading\": \"Energy\"}"}, {"label": "Source context", "format": "text", "content": "h Jim Inhofe has fought against.\nOur approach to energy must put Oklahoma first\nMatt won’t allow special interests to guide his energy policy and he won’t promote out of state resources over Oklahoma’s own resources.\nJim Inhofe embraces out of state coal.  While he wants to pick winners and losers, Matt believes the free market should guide our energy policy.  Oklahoma is in a unique position to lead on new energy as well as old and that is what we should be doing in a 21\nCentury economy.  Oklahoma energy can and will lead our nation towards energy independence and away from the grasp of OPEC.\nReal Equality for Women\nWomen are paid less than men for the", "highlight": ["Matt believes the free market should guide our energy policy."]}]}, {"id": "d0dee2287a7fe9ebfb88f47e520ed3fb298c350ab6cd628bdabee4340baedec6", "label": "Cavell, David F (2020) · issue_statement", "display": [{"label": "Candidate", "format": "badges", "content": {"Name": "Cavell, David F", "Year": 2020, "Party": "democrat", "Route": "issues", "Subtype": "issue_statement", "Evidence exact match": "True"}}, {"label": "Model record", "format": "json", "content": "{\"claim\": \"Guarantee every American free testing, affordable care, and equitable treatment immediately.\", \"evidence\": \"We need to guarantee every American free testing, affordable care, and equitable treatment immediately.\", \"heading\": \"Racial & Criminal Justice\"}"}, {"label": "Source context", "format": "text", "content": " is happening in every state.\nIn this terrible moment, we are reminded that\nour nation is only as strong as the most vulnerable among us\nThat’s why we must\naddress the underlying disparities in our healthcare system,\nand protect the Affordable Care Act as we move toward a healthcare-for-all system. We need to guarantee every American free testing, affordable care, and equitable treatment immediately.\nWith tens of millions of Americans unemployed, we must\nprotect families from financial devastation\nby:\nProviding financial support to the individuals, families most impacted by this crisis\nHelping small businesses\nHelping non-profits and community organizations\nSupporting our cities and towns\nLike ", "highlight": ["We need to guarantee every American free testing, affordable care, and equitable treatment immediately."]}]}, {"id": "5a8b7551597f839e682f77723679fd6aa4032ec0060683035b847b5dc807778e", "label": "Christensen, Adam J (2020) · issue_statement", "display": [{"label": "Candidate", "format": "badges", "content": {"Name": "Christensen, Adam J", "Year": 2020, "Party": "democrat", "Route": "issues", "Subtype": "issue_statement", "Evidence exact match": "True"}}, {"label": "Model record", "format": "json", "content": "{\"claim\": \"Will fight to eliminate the Charleston Loophole allowing gun purchases if background checks are not completed within 3 business days.\", \"evidence\": \"Also, I will fight to get rid of the Charleston Loophole, which allows gun buyers to purchase their weapon without any obstacles if a background check is not completed within 3 business days\", \"heading\": \"No More Mass Or Everyday Shootings\"}"}, {"label": "Source context", "format": "text", "content": "earms and using them against their partners\nThe presence of a firearm in a domestic violence situation increases risk of\nhomicide by 500%\nI will introduce legislation to get rid of the Boyfriend Loophole that allows partners who are not married to obtain guns, even if they were previously convicted\nAlso, I will fight to get rid of the Charleston Loophole, which allows gun buyers to purchase their weapon without any obstacles if a background check is not completed within 3 business days\n-Hold the gun industry accountable\nEliminate state gun preemption laws which curb the authority of local officials to\nenact gun control legislation\nProhibit the NRA from lobbying city officials to pass contradictory laws that allow guns in areas where other weapons (such as knives) are not allowed\n", "highlight": ["Also, I will fight to get rid of the Charleston Loophole, which allows gun buyers to purchase their weapon without any obstacles if a background check is not completed within 3 business days"]}]}], "questions": [{"id": "record_present_in_page", "label": "Record present in page?", "type": "yesno", "help": "Does the page actually state the claimed fact, policy position, or endorsement?"}, {"id": "normalized_value_faithful", "label": "Normalized value faithful?", "type": "yesno", "help": "Does the model's normalized value preserve the source's meaning?"}, {"id": "record_type_correct", "label": "Record type correct?", "type": "yesno", "help": "Is the record assigned to the right category (see Route / Subtype badges)?"}, {"id": "evidence_alone_supports_record", "label": "Evidence alone supports record?", "type": "yesno", "help": "Does the quoted (highlighted) evidence, by itself, establish the complete record? Be strict."}]}</script>
+<div id="app">
+  <header>
+    <h1 id="task-title"></h1>
+    <div id="progress-wrap">
+      <div id="progress-bar"><div id="progress-fill"></div></div>
+      <span id="progress-text"></span>
+    </div>
+    <button id="btn-instructions" title="i">Instructions</button>
+    <button id="btn-help" title="?">Shortcuts</button>
+    <label style="font-size:12px; display:flex; align-items:center; gap:4px;">
+      <input type="checkbox" id="auto-advance" checked> auto-advance
+    </label>
+    <button id="btn-import">Import</button>
+    <input type="file" id="import-file" accept=".json" style="display:none">
+    <button id="btn-export" class="primary">Export results</button>
+  </header>
+  <div id="banner"></div>
+  <div id="main">
+    <div id="sidebar">
+      <div id="filter-row">
+        <button data-filter="all" class="active">All</button>
+        <button data-filter="incomplete">Incomplete</button>
+      </div>
+      <div id="item-list"></div>
+    </div>
+    <div id="content">
+      <div id="display-pane"></div>
+      <div id="question-pane"></div>
+    </div>
+  </div>
+</div>
+
+<div class="overlay" id="instructions-overlay"><div class="modal">
+  <h2 id="instr-title">Instructions</h2>
+  <div id="instr-body"></div>
+  <p style="text-align:right"><button onclick="toggleOverlay('instructions-overlay', false)">Close</button></p>
+</div></div>
+
+<div class="overlay" id="export-overlay"><div class="modal">
+  <h2>Export results</h2>
+  <p id="export-summary" style="margin-top:0"></p>
+  <textarea id="export-json" readonly rows="12"
+    style="font-family: ui-monospace, Menlo, monospace; font-size: 12px;"></textarea>
+  <p style="display:flex; gap:8px; justify-content:flex-end">
+    <button id="btn-copy-json">Copy to clipboard</button>
+    <button id="btn-download-json" class="primary">Download file</button>
+    <button onclick="toggleOverlay('export-overlay', false)">Close</button>
+  </p>
+</div></div>
+
+<div class="overlay" id="help-overlay"><div class="modal">
+  <h2>Keyboard shortcuts</h2>
+  <table>
+    <tr><td><kbd>y</kbd> / <kbd>n</kbd></td><td>answer active yes/no question</td></tr>
+    <tr><td><kbd>1</kbd>–<kbd>9</kbd></td><td>pick / toggle option of active question</td></tr>
+    <tr><td><kbd>x</kbd></td><td>clear active question's answer</td></tr>
+    <tr><td><kbd>↑</kbd> / <kbd>↓</kbd></td><td>move between questions</td></tr>
+    <tr><td><kbd>←</kbd> / <kbd>→</kbd> or <kbd>k</kbd> / <kbd>j</kbd></td><td>previous / next item</td></tr>
+    <tr><td><kbd>g</kbd></td><td>jump to next incomplete item</td></tr>
+    <tr><td><kbd>e</kbd></td><td>edit notes</td></tr>
+    <tr><td><kbd>Esc</kbd></td><td>leave text field / close dialog</td></tr>
+    <tr><td><kbd>i</kbd> / <kbd>?</kbd></td><td>instructions / this help</td></tr>
+  </table>
+  <p style="color:var(--muted); font-size:12px">Progress autosaves in this browser. Export regularly; the exported
+  JSON is the authoritative record and can be re-imported here.</p>
+  <p style="text-align:right"><button onclick="toggleOverlay('help-overlay', false)">Close</button></p>
+</div></div>
+
+<script>
+"use strict";
+// ---------- setup ----------
+const TASK = JSON.parse(document.getElementById("task-data").textContent);
+const STORAGE_KEY = "handcode:" + TASK.task_id;
+const items = TASK.items;
+const questions = (TASK.questions || []).slice();
+if (!questions.some(q => q.id === "notes")) {
+  questions.push({ id: "notes", label: "Notes", type: "text", required: false,
+    help: "Anything worth flagging; required reasoning for problematic answers." });
+}
+
+let state = { responses: {} };   // itemId -> {qid: value}
+let cur = 0;                     // current item index
+let activeQ = 0;                 // index into visibleQuestions(cur)
+let filter = "all";
+let storageOK = true;
+
+try {
+  const saved = localStorage.getItem(STORAGE_KEY);
+  if (saved) state = JSON.parse(saved);
+  localStorage.setItem(STORAGE_KEY + ":probe", "1");
+  localStorage.removeItem(STORAGE_KEY + ":probe");
+} catch (e) {
+  storageOK = false;
+}
+
+function save() {
+  if (!storageOK) return;
+  try { localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); } catch (e) { storageOK = false; }
+}
+function resp(itemId) {
+  if (!state.responses[itemId]) state.responses[itemId] = {};
+  return state.responses[itemId];
+}
+
+// ---------- question logic ----------
+function isRequired(q) {
+  if (typeof q.required === "boolean") return q.required;
+  return !(q.type === "text" || q.type === "structured" || q.type === "multiselect");
+}
+function isVisible(q, itemId) {
+  if (!q.show_if) return true;
+  const v = resp(itemId)[q.show_if.question];
+  if (Array.isArray(q.show_if.in)) return q.show_if.in.includes(v);
+  return v === q.show_if.equals;
+}
+function isAnswered(q, itemId) {
+  const v = resp(itemId)[q.id];
+  switch (q.type) {
+    case "yesno": case "select": return v === 0 || !!v;
+    case "scale": case "numeric": return typeof v === "number" && !Number.isNaN(v);
+    case "multiselect": return Array.isArray(v) && v.length > 0;
+    case "text": return typeof v === "string" && v.trim() !== "";
+    case "structured":
+      return Array.isArray(v) && v.some(row => Object.values(row).some(x => String(x || "").trim() !== ""));
+    default: return !!v;
+  }
+}
+function visibleQuestions(i) {
+  const id = items[i].id;
+  return questions.filter(q => isVisible(q, id));
+}
+function itemStatus(i) {
+  const id = items[i].id;
+  const vis = visibleQuestions(i);
+  const req = vis.filter(isRequired);
+  const anyAnswered = vis.some(q => isAnswered(q, id));
+  const allReq = req.length > 0 && req.every(q => isAnswered(q, id));
+  if (allReq) return "complete";
+  if (anyAnswered) return "partial";
+  return "pending";
+}
+
+// ---------- rendering helpers ----------
+function esc(s) {
+  return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+}
+function renderJSONContent(content) {
+  let obj = content;
+  if (typeof content === "string") { try { obj = JSON.parse(content); } catch (e) { /* leave as string */ } }
+  const s = typeof obj === "string" ? obj : JSON.stringify(obj, null, 2);
+  return esc(s).replace(/(&quot;|")([^"\n]+?)\1(\s*):/g, '<span class="jkey">$1$2$1</span>$3:');
+}
+function renderTextContent(content, highlights) {
+  let html = esc(content);
+  (highlights || []).forEach(h => {
+    const hEsc = esc(h);
+    if (!hEsc.trim()) return;
+    const pattern = hEsc.replace(/[.*+?^${}()|[\]\\]/g, "\\$&").replace(/\s+/g, "\\s+");
+    try { html = html.replace(new RegExp(pattern, "g"), m => "<mark>" + m + "</mark>"); } catch (e) {}
+  });
+  return html;
+}
+function renderMarkdownLite(src) {
+  const lines = String(src).split("\n");
+  let html = "", inList = false, para = [];
+  const inline = s => esc(s)
+    .replace(/\*\*([^*]+)\*\*/g, "<b>$1</b>")
+    .replace(/`([^`]+)`/g, "<code>$1</code>");
+  const flushPara = () => { if (para.length) { html += "<p>" + inline(para.join(" ")) + "</p>"; para = []; } };
+  const closeList = () => { if (inList) { html += "</ul>"; inList = false; } };
+  for (const line of lines) {
+    const t = line.trim();
+    if (t.startsWith("### ")) { flushPara(); closeList(); html += "<h3>" + inline(t.slice(4)) + "</h3>"; }
+    else if (t.startsWith("- ")) { flushPara(); if (!inList) { html += "<ul>"; inList = true; } html += "<li>" + inline(t.slice(2)) + "</li>"; }
+    else if (t === "") { flushPara(); closeList(); }
+    else para.push(t);
+  }
+  flushPara(); closeList();
+  return html;
+}
+
+// ---------- main render ----------
+function renderSidebar() {
+  const list = document.getElementById("item-list");
+  list.innerHTML = "";
+  items.forEach((it, i) => {
+    const st = itemStatus(i);
+    if (filter === "incomplete" && st === "complete" && i !== cur) return;
+    const row = document.createElement("div");
+    row.className = "item-row" + (i === cur ? " current" : "");
+    row.innerHTML = '<span class="idx">' + (i + 1) + '</span><span class="dot ' + st + '"></span>' +
+      '<span class="lbl">' + esc(it.label || it.id) + "</span>";
+    row.onclick = () => { cur = i; activeQ = 0; render(); };
+    list.appendChild(row);
+  });
+}
+function renderProgress() {
+  const n = items.length;
+  const done = items.map((_, i) => itemStatus(i)).filter(s => s === "complete").length;
+  document.getElementById("progress-fill").style.width = (100 * done / n) + "%";
+  document.getElementById("progress-text").textContent = done + " / " + n + " complete";
+}
+function renderDisplay() {
+  const pane = document.getElementById("display-pane");
+  const it = items[cur];
+  let html = '<div class="item-header"><h2>' + esc(it.label || it.id) + "</h2>" +
+    '<span class="pos">item ' + (cur + 1) + " of " + items.length + "</span></div>";
+  (it.display || []).forEach(f => {
+    html += '<div class="dfield">';
+    if (f.label) html += '<div class="dlabel">' + esc(f.label) + "</div>";
+    if (f.format === "badges") {
+      html += '<div class="badges">';
+      Object.entries(f.content || {}).forEach(([k, v]) => {
+        html += '<span class="badge"><b>' + esc(k) + ":</b> " + esc(v == null ? "—" : v) + "</span>";
+      });
+      html += "</div>";
+    } else if (f.format === "json") {
+      html += "<pre>" + renderJSONContent(f.content) + "</pre>";
+    } else if (f.format === "image") {
+      html += '<img src="' + esc(f.content) + '" alt="' + esc(f.label || "display image") +
+        '" style="max-width:100%; border:1px solid var(--border); border-radius:8px;">';
+    } else {
+      html += '<div class="text-block">' + renderTextContent(f.content == null ? "" : f.content, f.highlight) + "</div>";
+    }
+    html += "</div>";
+  });
+  pane.innerHTML = html;
+}
+function renderQuestions() {
+  const pane = document.getElementById("question-pane");
+  const it = items[cur];
+  const vis = visibleQuestions(cur);
+  if (activeQ >= vis.length) activeQ = Math.max(0, vis.length - 1);
+  pane.innerHTML = "";
+  vis.forEach((q, qi) => {
+    const box = document.createElement("div");
+    box.className = "q" + (qi === activeQ ? " active" : "");
+    box.dataset.qid = q.id;
+    const req = isRequired(q) ? ' <span class="req-star">*</span>' : "";
+    let inner = '<div class="qlabel">' + esc(q.label || q.id) + req + "</div>";
+    if (q.help) inner += '<div class="qhelp">' + esc(q.help) + "</div>";
+    box.innerHTML = inner;
+    // On mousedown only move the highlight via classes — a re-render here would destroy
+    // the option button under the pointer before its click event fires.
+    box.addEventListener("mousedown", () => {
+      if (activeQ !== qi) {
+        activeQ = qi;
+        pane.querySelectorAll(".q").forEach((el, k) => el.classList.toggle("active", k === qi));
+      }
+    });
+    const v = resp(it.id)[q.id];
+
+    if (q.type === "yesno" || q.type === "select" || q.type === "scale" || q.type === "multiselect") {
+      let opts;
+      if (q.type === "yesno") opts = ["yes", "no"];
+      else if (q.type === "scale") {
+        opts = [];
+        for (let s = (q.min ?? 1); s <= (q.max ?? 5); s++) opts.push(s);
+      } else opts = q.options || [];
+      const wrap = document.createElement("div");
+      wrap.className = "opts";
+      opts.forEach((o, oi) => {
+        const b = document.createElement("button");
+        b.type = "button";
+        const sel = q.type === "multiselect" ? Array.isArray(v) && v.includes(o) : v === o;
+        b.className = "opt" + (sel ? " selected" : "");
+        const keyHint = q.type === "yesno" ? (oi === 0 ? "y" : "n") : (oi < 9 ? String(oi + 1) : "");
+        b.innerHTML = (keyHint ? '<span class="num">' + keyHint + "</span>" : "") + esc(o);
+        b.onclick = () => { activeQ = qi; setOption(q, o); };
+        wrap.appendChild(b);
+      });
+      box.appendChild(wrap);
+    } else if (q.type === "numeric") {
+      const inp = document.createElement("input");
+      inp.type = "number";
+      if (q.min != null) inp.min = q.min;
+      if (q.max != null) inp.max = q.max;
+      if (q.step != null) inp.step = q.step;
+      inp.value = (typeof v === "number") ? v : "";
+      inp.addEventListener("change", () => {
+        const num = inp.value === "" ? null : Number(inp.value);
+        setAnswer(q, (num == null || Number.isNaN(num)) ? undefined : num, false);
+      });
+      inp.addEventListener("focus", () => { activeQ = qi; });
+      box.appendChild(inp);
+    } else if (q.type === "text") {
+      const ta = document.createElement("textarea");
+      ta.rows = q.id === "notes" ? 2 : 3;
+      ta.value = v || "";
+      ta.addEventListener("input", () => { resp(it.id)[q.id] = ta.value; save(); });
+      ta.addEventListener("blur", () => { renderSidebar(); renderProgress(); });
+      ta.addEventListener("focus", () => { activeQ = qi; });
+      box.appendChild(ta);
+    } else if (q.type === "structured") {
+      box.appendChild(renderStructured(q, it.id));
+    }
+    pane.appendChild(box);
+  });
+  const nav = document.createElement("div");
+  nav.id = "nav-row";
+  const prev = document.createElement("button");
+  prev.textContent = "← previous";
+  prev.onclick = () => gotoItem(cur - 1);
+  const next = document.createElement("button");
+  next.textContent = "next →";
+  next.className = "primary";
+  next.onclick = () => gotoItem(cur + 1);
+  nav.appendChild(prev); nav.appendChild(next);
+  pane.appendChild(nav);
+}
+function renderStructured(q, itemId) {
+  const wrap = document.createElement("div");
+  const rows = Array.isArray(resp(itemId)[q.id]) ? resp(itemId)[q.id] : [];
+  const table = document.createElement("table");
+  table.className = "struct-table";
+  const fields = q.fields || [{ id: "value", label: "Value" }];
+  table.innerHTML = "<tr>" + fields.map(f => "<th>" + esc(f.label || f.id) + "</th>").join("") + "<th></th></tr>";
+  rows.forEach((row, ri) => {
+    const tr = document.createElement("tr");
+    fields.forEach(f => {
+      const td = document.createElement("td");
+      const inp = document.createElement("input");
+      inp.value = row[f.id] || "";
+      inp.placeholder = f.placeholder || "";
+      inp.addEventListener("input", () => { row[f.id] = inp.value; save(); });
+      inp.addEventListener("blur", () => { renderSidebar(); renderProgress(); });
+      td.appendChild(inp);
+      tr.appendChild(td);
+    });
+    const tdDel = document.createElement("td");
+    const del = document.createElement("button");
+    del.className = "del"; del.textContent = "✕"; del.title = "remove row";
+    del.onclick = () => { rows.splice(ri, 1); resp(itemId)[q.id] = rows; save(); render(); };
+    tdDel.appendChild(del);
+    tr.appendChild(tdDel);
+    table.appendChild(tr);
+  });
+  wrap.appendChild(table);
+  const add = document.createElement("button");
+  add.textContent = "+ add entry";
+  add.onclick = () => {
+    const row = {};
+    fields.forEach(f => row[f.id] = "");
+    rows.push(row);
+    resp(itemId)[q.id] = rows;
+    save(); render();
+    const inputs = document.querySelectorAll('.q[data-qid="' + q.id + '"] .struct-table input');
+    const first = inputs[inputs.length - fields.length];
+    if (first) first.focus();
+  };
+  wrap.appendChild(add);
+  return wrap;
+}
+function render() {
+  renderSidebar(); renderProgress(); renderDisplay(); renderQuestions();
+}
+
+// ---------- actions ----------
+function setOption(q, opt) {
+  const id = items[cur].id;
+  if (q.type === "multiselect") {
+    let v = Array.isArray(resp(id)[q.id]) ? resp(id)[q.id].slice() : [];
+    if (v.includes(opt)) v = v.filter(x => x !== opt); else v.push(opt);
+    resp(id)[q.id] = v;
+    save(); render();
+  } else {
+    setAnswer(q, opt, true);
+  }
+}
+function setAnswer(q, value, advance) {
+  const id = items[cur].id;
+  if (value === undefined) delete resp(id)[q.id]; else resp(id)[q.id] = value;
+  save();
+  if (advance) advanceAfterAnswer(); else render();
+}
+function advanceAfterAnswer() {
+  const vis = visibleQuestions(cur);
+  const id = items[cur].id;
+  let nextIdx = -1;
+  for (let k = 1; k <= vis.length; k++) {
+    const idx = (activeQ + k) % vis.length;
+    if (isRequired(vis[idx]) && !isAnswered(vis[idx], id)) { nextIdx = idx; break; }
+  }
+  if (nextIdx >= 0) {
+    activeQ = nextIdx;
+    render();
+  } else if (document.getElementById("auto-advance").checked && itemStatus(cur) === "complete") {
+    render();
+    setTimeout(() => gotoNextIncomplete(), 120);
+  } else {
+    render();
+  }
+}
+function gotoItem(i) {
+  if (i < 0 || i >= items.length) return;
+  cur = i; activeQ = 0;
+  render();
+  document.getElementById("display-pane").scrollTop = 0;
+}
+function gotoNextIncomplete() {
+  for (let k = 1; k <= items.length; k++) {
+    const i = (cur + k) % items.length;
+    if (itemStatus(i) !== "complete") { gotoItem(i); return; }
+  }
+  showBanner("All items complete — export your results.", "info");
+}
+function showBanner(msg, cls) {
+  const b = document.getElementById("banner");
+  b.textContent = msg; b.className = cls;
+  clearTimeout(showBanner._t);
+  showBanner._t = setTimeout(() => { b.className = ""; }, 6000);
+}
+function toggleOverlay(id, open) {
+  const el = document.getElementById(id);
+  el.classList.toggle("open", open === undefined ? !el.classList.contains("open") : open);
+}
+
+// ---------- export / import ----------
+function buildResults() {
+  const out = {
+    task_id: TASK.task_id, title: TASK.title || "", format: "handcode-results-v1",
+    exported_at: new Date().toISOString(),
+    n_items: items.length,
+    n_complete: items.map((_, i) => itemStatus(i)).filter(s => s === "complete").length,
+    responses: items.map((it, i) => {
+      const answers = {};
+      visibleQuestions(i).forEach(q => {
+        let v = resp(it.id)[q.id];
+        if (q.type === "structured" && Array.isArray(v)) {
+          v = v.filter(row => Object.values(row).some(x => String(x || "").trim() !== ""));
+        }
+        if (v !== undefined && v !== "" && !(Array.isArray(v) && v.length === 0)) answers[q.id] = v;
+      });
+      return { item_id: it.id, status: itemStatus(i), answers: answers };
+    })
+  };
+  return out;
+}
+document.getElementById("btn-export").onclick = () => {
+  const res = buildResults();
+  document.getElementById("export-json").value = JSON.stringify(res, null, 2);
+  document.getElementById("export-summary").textContent =
+    res.n_complete + " of " + res.n_items + " items complete. Save as " + TASK.task_id + "_results.json" +
+    (res.n_complete < res.n_items ? " — partial exports can be re-imported later." : ".");
+  toggleOverlay("export-overlay", true);
+};
+document.getElementById("btn-download-json").onclick = () => {
+  const blob = new Blob([document.getElementById("export-json").value], { type: "application/json" });
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(blob);
+  a.download = TASK.task_id + "_results.json";
+  document.body.appendChild(a);
+  a.click();
+  a.remove();
+  setTimeout(() => URL.revokeObjectURL(a.href), 5000);
+  showBanner("Download started: " + a.download + " — if no file appeared, use Copy to clipboard.", "info");
+};
+document.getElementById("btn-copy-json").onclick = async () => {
+  const ta = document.getElementById("export-json");
+  try {
+    await navigator.clipboard.writeText(ta.value);
+    showBanner("Results JSON copied to clipboard.", "info");
+  } catch (e) {
+    ta.select();
+    document.execCommand("copy");
+    showBanner("Results JSON copied (fallback).", "info");
+  }
+};
+document.getElementById("btn-import").onclick = () => document.getElementById("import-file").click();
+document.getElementById("import-file").addEventListener("change", ev => {
+  const file = ev.target.files[0];
+  if (!file) return;
+  const reader = new FileReader();
+  reader.onload = () => {
+    try {
+      const data = JSON.parse(reader.result);
+      if (data.task_id !== TASK.task_id) {
+        showBanner("Import refused: file is for task '" + data.task_id + "', this page is '" + TASK.task_id + "'.", "warn");
+        return;
+      }
+      const byId = {};
+      items.forEach(it => byId[it.id] = true);
+      let n = 0;
+      (data.responses || []).forEach(r => {
+        if (byId[r.item_id] && r.answers && Object.keys(r.answers).length) {
+          state.responses[r.item_id] = r.answers; n++;
+        }
+      });
+      save(); render();
+      showBanner("Imported answers for " + n + " items.", "info");
+    } catch (e) {
+      showBanner("Import failed: " + e.message, "warn");
+    }
+  };
+  reader.readAsText(file);
+  ev.target.value = "";
+});
+
+// ---------- keyboard ----------
+document.addEventListener("keydown", ev => {
+  const tag = (document.activeElement && document.activeElement.tagName) || "";
+  const typing = tag === "INPUT" || tag === "TEXTAREA" || tag === "SELECT";
+  if (ev.key === "Escape") {
+    if (typing) { document.activeElement.blur(); render(); }
+    else { toggleOverlay("instructions-overlay", false); toggleOverlay("help-overlay", false); }
+    return;
+  }
+  if (typing) return;
+  if (ev.metaKey || ev.ctrlKey || ev.altKey) return;
+  const overlayOpen = document.querySelector(".overlay.open");
+  if (overlayOpen) {
+    if (ev.key === "i") toggleOverlay("instructions-overlay", false);
+    if (ev.key === "?") toggleOverlay("help-overlay", false);
+    return;
+  }
+  const vis = visibleQuestions(cur);
+  const q = vis[activeQ];
+  switch (ev.key) {
+    case "ArrowLeft": case "k": gotoItem(cur - 1); ev.preventDefault(); break;
+    case "ArrowRight": case "j": gotoItem(cur + 1); ev.preventDefault(); break;
+    case "ArrowUp": activeQ = Math.max(0, activeQ - 1); render(); ev.preventDefault(); break;
+    case "ArrowDown": activeQ = Math.min(vis.length - 1, activeQ + 1); render(); ev.preventDefault(); break;
+    case "g": gotoNextIncomplete(); break;
+    case "i": toggleOverlay("instructions-overlay"); break;
+    case "?": toggleOverlay("help-overlay"); break;
+    case "e": {
+      const ta = document.querySelector('.q[data-qid="notes"] textarea');
+      if (ta) { ta.focus(); ev.preventDefault(); }
+      break;
+    }
+    case "x": if (q) setAnswer(q, undefined, false); break;
+    case "y": if (q && q.type === "yesno") setAnswer(q, "yes", true); break;
+    case "n": if (q && q.type === "yesno") setAnswer(q, "no", true); break;
+    default: {
+      const d = parseInt(ev.key, 10);
+      if (q && d >= 1 && d <= 9) {
+        let opts;
+        if (q.type === "scale") {
+          opts = [];
+          for (let s = (q.min ?? 1); s <= (q.max ?? 5); s++) opts.push(s);
+        } else if (q.type === "select" || q.type === "multiselect") opts = q.options || [];
+        if (opts && d <= opts.length) setOption(q, opts[d - 1]);
+      }
+    }
+  }
+});
+
+// ---------- init ----------
+document.getElementById("task-title").textContent = TASK.title || TASK.task_id;
+document.title = (TASK.title || TASK.task_id) + " — handcoding";
+document.getElementById("instr-title").textContent = (TASK.title || "Task") + " — instructions";
+document.getElementById("instr-body").innerHTML = renderMarkdownLite(TASK.instructions || "No instructions provided.");
+document.getElementById("btn-instructions").onclick = () => toggleOverlay("instructions-overlay");
+document.getElementById("btn-help").onclick = () => toggleOverlay("help-overlay");
+document.querySelectorAll("#filter-row button").forEach(b => {
+  b.onclick = () => {
+    filter = b.dataset.filter;
+    document.querySelectorAll("#filter-row button").forEach(x => x.classList.toggle("active", x === b));
+    renderSidebar();
+  };
+});
+if (!storageOK) showBanner("Browser autosave unavailable here — export results frequently.", "warn");
+// resume at first incomplete item
+cur = 0;
+for (let i = 0; i < items.length; i++) if (itemStatus(i) !== "complete") { cur = i; break; }
+render();
+</script>
+</body>
+</html>

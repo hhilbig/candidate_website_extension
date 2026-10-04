@@ -1,0 +1,234 @@
+{
+ "task_id": "candidate_extraction_v2_recall_endorsements_9574e9dcbdea_b001",
+ "format": "handcode-results-v1",
+ "exported_at": "2026-09-28T05:58:50Z",
+ "n_items": 20,
+ "n_complete": 20,
+ "responses": [
+  {
+   "item_id": "7c76bd2f3d75b596270557e467c7375504853f772e9e7b794dcd15821da2cd14",
+   "status": "complete",
+   "answers": {
+    "all_requested_records_captured": "yes"
+   }
+  },
+  {
+   "item_id": "a0b7cb51f1cabbfb30c1e0508317341abf0b4657e1b1906690622ee1462c36fd",
+   "status": "complete",
+   "answers": {
+    "all_requested_records_captured": "yes"
+   }
+  },
+  {
+   "item_id": "436db88bf0efad0bddc8442956bfa6f4654334652fd2f6fc454311b8c05c763f",
+   "status": "complete",
+   "answers": {
+    "all_requested_records_captured": "yes"
+   }
+  },
+  {
+   "item_id": "659463dab41d9f954fa4d2a3543b86172b386e6366eb4e6052175998826c796c",
+   "status": "complete",
+   "answers": {
+    "all_requested_records_captured": "yes"
+   }
+  },
+  {
+   "item_id": "27ffac7e4b786d53a4639a281c7b5ce64a5f1c2bab696b558a05a7da8093deff",
+   "status": "complete",
+   "answers": {
+    "all_requested_records_captured": "no",
+    "missed_records": [
+     {
+      "type": "organization — media_outlet",
+      "value": "The AFRO American Newspaper",
+      "evidence": "The AFRO American Newspaper"
+     },
+     {
+      "type": "organization — labor_union",
+      "value": "AFSCME Maryland Council 3",
+      "evidence": "AFSCME Maryland Council 3"
+     }
+    ]
+   }
+  },
+  {
+   "item_id": "1372bcbcd427f368e7848dfacb2b64655136c4690cc51cc61f81b8adec9bac07",
+   "status": "complete",
+   "answers": {
+    "all_requested_records_captured": "no",
+    "missed_records": [
+     {
+      "type": "organization — other_organization",
+      "value": "Winning for Women",
+      "evidence": "Winning for Women"
+     },
+     {
+      "type": "organization — other_organization",
+      "value": "Maggie’s List",
+      "evidence": "Maggie’s List"
+     },
+     {
+      "type": "organization — other_organization",
+      "value": "Hispanic 100",
+      "evidence": "Hispanic 100"
+     }
+    ]
+   }
+  },
+  {
+   "item_id": "92db0713610fe4d0ace49f01939fe96891d9db0fd4140e6dd1ee47d247f105bc",
+   "status": "complete",
+   "answers": {
+    "all_requested_records_captured": "yes"
+   }
+  },
+  {
+   "item_id": "33708412f1ded91f288630ecd20de3b51b689930968b19562565ec651a9cf7a7",
+   "status": "complete",
+   "answers": {
+    "all_requested_records_captured": "no",
+    "missed_records": [
+     {
+      "type": "organization — other_organization",
+      "value": "END CITIZENS UNITED",
+      "evidence": "END CITIZENS UNITED"
+     },
+     {
+      "type": "organization — other_organization",
+      "value": "peace action",
+      "evidence": "peace action"
+     }
+    ]
+   }
+  },
+  {
+   "item_id": "d23438bde323a250fb7de1d24c9423987f2cbf0351b68fa2cab940afd17dee05",
+   "status": "complete",
+   "answers": {
+    "all_requested_records_captured": "yes"
+   }
+  },
+  {
+   "item_id": "cdf2a9425aa79e25125065bd7a1e33772b46c35bb66272c3e51dc7772635e427",
+   "status": "complete",
+   "answers": {
+    "all_requested_records_captured": "yes"
+   }
+  },
+  {
+   "item_id": "9a34fb770ab423ce2e671b9fc394e442b74b4f1b3d194dc318bc0b8277f96287",
+   "status": "complete",
+   "answers": {
+    "all_requested_records_captured": "no",
+    "missed_records": [
+     {
+      "type": "organization — media_outlet",
+      "value": "The New York Times",
+      "evidence": "Jerry has been endorsed by the New York Times!"
+     },
+     {
+      "type": "individual — other_individual",
+      "value": "Tony Simone",
+      "evidence": "Tony Simone – Democratic Nominee for AD 75"
+     }
+    ],
+    "notes": "The New York Times endorsement is stated in prose at the top of the page (\"Jerry has been endorsed by the New York Times!\"), not in the Elected Officials list. Tony Simone is the fourth entry of the Elected Officials list."
+   }
+  },
+  {
+   "item_id": "d6cc9b4193c7b1e9d6d1bbee5c4578b32b8a985c92042b96dbb0b957344c3af2",
+   "status": "complete",
+   "answers": {
+    "all_requested_records_captured": "yes"
+   }
+  },
+  {
+   "item_id": "dfb933e626f92ef6eb4701bf17b805927cdd6c3d7659afe8677e3c87cd1d4f61",
+   "status": "complete",
+   "answers": {
+    "all_requested_records_captured": "yes"
+   }
+  },
+  {
+   "item_id": "2dc33bc38f2615081bb173dc0af984a0b8864a4bb34494b0f9691d6a5e466b4c",
+   "status": "complete",
+   "answers": {
+    "all_requested_records_captured": "no",
+    "missed_records": [
+     {
+      "type": "organization — other_organization",
+      "value": "Sunrise Movement NYC Hub",
+      "evidence": "Recommended by Sunrise Movement NYC Hub as one of the \"best progressives\" to vote for, in their 2020 voter guide."
+     }
+    ],
+    "notes": "Sunrise Movement NYC Hub appears under the page's \"Distinctions\" heading as a voter-guide recommendation to vote for the candidate. It is a support statement, so it is eligible; the percentage ratings, the NRA letter grade and the Govtrack ranking in the same block are not."
+   }
+  },
+  {
+   "item_id": "6eee18306af96173c1c0bc385d94046780c9653acf48f5af0c7f4979e5e9e021",
+   "status": "complete",
+   "answers": {
+    "all_requested_records_captured": "no",
+    "missed_records": [
+     {
+      "type": "organization — other_organization",
+      "value": "The Collective PAC",
+      "evidence": "The Collective PAC Endorses Michael Blake for Congresses (NY-15)"
+     }
+    ],
+    "notes": "The page is a press release whose whole subject is the endorsement. The other names in the quoted passage (Kamala Harris, Cory Booker, Lauren Underwood) are other candidates the PAC endorsed, not endorsers of this candidate."
+   }
+  },
+  {
+   "item_id": "e4252a9565fa62d154d9528e89765481ea2e0c624aa8666fbb1270dd4818f258",
+   "status": "complete",
+   "answers": {
+    "all_requested_records_captured": "yes"
+   }
+  },
+  {
+   "item_id": "6c9e4c859529b94e0d5b7177edca5cd22a28233bc5b9ae30786f1cadd098c923",
+   "status": "complete",
+   "answers": {
+    "all_requested_records_captured": "yes"
+   }
+  },
+  {
+   "item_id": "8c122ccbe42c220a1e3479ecf81be08cba1ee00a20c8aad6762797dd6fbffc87",
+   "status": "complete",
+   "answers": {
+    "all_requested_records_captured": "no",
+    "missed_records": [
+     {
+      "type": "individual — private_individual",
+      "value": "Becky Wolfe",
+      "evidence": "Pat & Becky Wolfe Endorse Steve Darden"
+     }
+    ],
+    "notes": "The letter is titled \"Pat & Becky Wolfe Endorse Steve Darden\" and signed \"Pat & Becky Wolfe, Jonesborough\". The model holds Pat Wolfe from the summary list but not Becky Wolfe."
+   }
+  },
+  {
+   "item_id": "ae82d144bd009ae6866ec9b57bb2cfe6b597f115398dfae58d198e65933dfaa2",
+   "status": "complete",
+   "answers": {
+    "all_requested_records_captured": "no",
+    "missed_records": [
+     {
+      "type": "organization — other_organization",
+      "value": "We Want Bernie, Worcester",
+      "evidence": "We Want Bernie, Worcester"
+     }
+    ]
+   }
+  },
+  {
+   "item_id": "4e9c7b9292daa2afada3ff99e9d9a28590fcb62c60603224b3e6d78537374a7e",
+   "status": "complete",
+   "answers": {
+    "all_requested_records_captured": "yes"
+   }
+  }
+ ]
+}

@@ -1,0 +1,708 @@
+{
+ "task_id": "candidate_extraction_v2_precision_issues_0004944622b5_b001",
+ "format": "handcode-results-v1",
+ "exported_at": "2026-09-23T00:39:07Z",
+ "n_items": 60,
+ "n_complete": 60,
+ "responses": [
+  {
+   "item_id": "ecd04a4975b1e3f43fb45637ed16cc266f8d65691c8dc56ae5c8ad5f12f2f385",
+   "status": "complete",
+   "answers": {
+    "statement_present": "no",
+    "claim_faithful": "yes",
+    "kind_correct": "yes",
+    "heading_correct": "no",
+    "evidence_supports_statement": "yes",
+    "notes": "Evidence is a press-release link title ('Kennedy on Closing of the IRS's Investigation of NAACP') that states no position or action; the nearest heading 'Promotion of Civil Rights' is present on the page, so null is wrong."
+   }
+  },
+  {
+   "item_id": "b52ecf96054a6790e82e851f6203ed7e9b5921d3ed877ad6ad3de67f69aacd9d",
+   "status": "complete",
+   "answers": {
+    "statement_present": "yes",
+    "claim_faithful": "yes",
+    "kind_correct": "yes",
+    "heading_correct": "yes",
+    "evidence_supports_statement": "yes"
+   }
+  },
+  {
+   "item_id": "461b1e365e893c63bac160450946ed7a089a3ba9dc17d636b11a3b68e91646c1",
+   "status": "complete",
+   "answers": {
+    "statement_present": "no",
+    "claim_faithful": "yes",
+    "kind_correct": "yes",
+    "heading_correct": "yes",
+    "evidence_supports_statement": "yes",
+    "notes": "'If and as we stay true to our principles and heritage, we will prevail in all we face.' is a conditional prediction on a beliefs page; it states nothing the candidate supports, opposes, proposes, did, or is doing."
+   }
+  },
+  {
+   "item_id": "792008bba1b654d8f4c9050fb3d64ee061603c5edb56546a13447a988ce2e8cf",
+   "status": "complete",
+   "answers": {
+    "statement_present": "no",
+    "claim_faithful": "yes",
+    "kind_correct": "yes",
+    "heading_correct": "yes",
+    "evidence_supports_statement": "yes",
+    "notes": "The claim describes Schumer's past statement and the hypocrisy charge; it states no policy position of the candidate himself."
+   }
+  },
+  {
+   "item_id": "ce26cfe7d906c4a8a01dc64ad68265753011056868ccfd044f38413185a65326",
+   "status": "complete",
+   "answers": {
+    "statement_present": "yes",
+    "claim_faithful": "yes",
+    "kind_correct": "yes",
+    "heading_correct": "no",
+    "evidence_supports_statement": "yes",
+    "notes": "The section heading 'Education' stands directly above the evidence, so null is wrong."
+   }
+  },
+  {
+   "item_id": "dae3d642ac26fe4d549f21cb9ab24b02ab5570d8ec10168c374272b8c3babd62",
+   "status": "complete",
+   "answers": {
+    "statement_present": "yes",
+    "claim_faithful": "yes",
+    "kind_correct": "yes",
+    "heading_correct": "no",
+    "evidence_supports_statement": "yes",
+    "notes": "The section heading 'TACKLING SYSTEMS OF OPPRESSION' stands above the evidence, so null is wrong."
+   }
+  },
+  {
+   "item_id": "f4fe23461f6b5f42e77b42574c0a78eb14d4998e21086a023dff190c1d00211e",
+   "status": "complete",
+   "answers": {
+    "statement_present": "no",
+    "claim_faithful": "yes",
+    "kind_correct": "yes",
+    "heading_correct": "yes",
+    "evidence_supports_statement": "yes",
+    "notes": "The evidence reports Schumer's FEC fine, which is the opponent's conduct, not what the candidate supports, opposes, proposes, did, or is doing."
+   }
+  },
+  {
+   "item_id": "1893e2472c43ed95e6907e5f0594b078819d0aea3093b66de16948f96452993c",
+   "status": "complete",
+   "answers": {
+    "statement_present": "yes",
+    "claim_faithful": "yes",
+    "kind_correct": "yes",
+    "heading_correct": "yes",
+    "evidence_supports_statement": "no",
+    "notes": "The evidence is the bare noun phrase 'proper safety protocols around research of concern', which carries no verb and no actor and cannot support 'Prioritizes ... in Congress'."
+   }
+  },
+  {
+   "item_id": "0defe54ca1c3dfa67d2dd5e548c80a94730302184af3fcba8a0b12debd1d5c0f",
+   "status": "complete",
+   "answers": {
+    "statement_present": "yes",
+    "claim_faithful": "yes",
+    "kind_correct": "yes",
+    "heading_correct": "yes",
+    "evidence_supports_statement": "yes"
+   }
+  },
+  {
+   "item_id": "2589c8154c9440ebeb85a778b8523fd3c8cff814bb0d116476466144091f9b4f",
+   "status": "complete",
+   "answers": {
+    "statement_present": "no",
+    "claim_faithful": "no",
+    "kind_correct": "yes",
+    "heading_correct": "yes",
+    "evidence_supports_statement": "no",
+    "notes": "The page is an issue index with topic labels only. The evidence 'KXL Pipeline' is the heading itself, states no position, and does not support a claim that the candidate addresses the issue."
+   }
+  },
+  {
+   "item_id": "71e9022c96d04ec32b79251dd7f02be6384bfd27f1ccb7864d63da57604787e7",
+   "status": "complete",
+   "answers": {
+    "statement_present": "yes",
+    "claim_faithful": "yes",
+    "kind_correct": "yes",
+    "heading_correct": "no",
+    "evidence_supports_statement": "yes",
+    "notes": "The page heading 'Top Campaign Issues' stands above the bullet, so null is wrong."
+   }
+  },
+  {
+   "item_id": "c77cb3b8bb4d67ea94d2add1bd96af43a9c1a9138016ae3a5bbc1a1f28eae589",
+   "status": "complete",
+   "answers": {
+    "statement_present": "yes",
+    "claim_faithful": "yes",
+    "kind_correct": "no",
+    "heading_correct": "no",
+    "evidence_supports_statement": "yes",
+    "notes": "'As a U.S. Senator, Kay will work tirelessly ...' is a future commitment by a non-incumbent, so proposal fits, not current_action. The page heading 'Hagan: Protecting our Promises to our Military and Veterans' is present, so null is wrong."
+   }
+  },
+  {
+   "item_id": "aeb863260861424a6623466aa7312809f2dbacdc0fd51957ec738d6d7bc746eb",
+   "status": "complete",
+   "answers": {
+    "statement_present": "yes",
+    "claim_faithful": "yes",
+    "kind_correct": "yes",
+    "heading_correct": "yes",
+    "evidence_supports_statement": "yes"
+   }
+  },
+  {
+   "item_id": "c0d6faf23f87f34a6021509be06263dcc7addd5d79b7315935252d6d6e3caabb",
+   "status": "complete",
+   "answers": {
+    "statement_present": "yes",
+    "claim_faithful": "yes",
+    "kind_correct": "yes",
+    "heading_correct": "yes",
+    "evidence_supports_statement": "yes"
+   }
+  },
+  {
+   "item_id": "b37f271d1eb5189b7181903b83f67c51b060429ee05a34ae68de4b90fb1b0243",
+   "status": "complete",
+   "answers": {
+    "statement_present": "yes",
+    "claim_faithful": "yes",
+    "kind_correct": "yes",
+    "heading_correct": "no",
+    "evidence_supports_statement": "yes",
+    "notes": "The section heading 'Iraq' stands directly above the evidence, so null is wrong."
+   }
+  },
+  {
+   "item_id": "683f97b2be19cee7bfc9f34cd09fce854848d7562e2c661e8fa292a299e6f4db",
+   "status": "complete",
+   "answers": {
+    "statement_present": "no",
+    "claim_faithful": "yes",
+    "kind_correct": "yes",
+    "heading_correct": "no",
+    "evidence_supports_statement": "yes",
+    "notes": "Evidence is a press-release link title that states no position or action; the nearest heading 'Promotion of Civil Rights' is present, so null is wrong."
+   }
+  },
+  {
+   "item_id": "2a1006d39f01a72be3ac063f6bcca6b80f5fa116603c642aed8733c045ea66fb",
+   "status": "complete",
+   "answers": {
+    "statement_present": "yes",
+    "claim_faithful": "yes",
+    "kind_correct": "yes",
+    "heading_correct": "yes",
+    "evidence_supports_statement": "yes"
+   }
+  },
+  {
+   "item_id": "300f202c8eb2f4ba52684c742ef9428f7ed4d8166702031ea7732fa5129d2e79",
+   "status": "complete",
+   "answers": {
+    "statement_present": "yes",
+    "claim_faithful": "yes",
+    "kind_correct": "yes",
+    "heading_correct": "yes",
+    "evidence_supports_statement": "yes"
+   }
+  },
+  {
+   "item_id": "0d387fcdc2764d6aa01af46381120a046eb53eaf584cdb4774e3f8fb8995bd31",
+   "status": "complete",
+   "answers": {
+    "statement_present": "yes",
+    "claim_faithful": "yes",
+    "kind_correct": "yes",
+    "heading_correct": "yes",
+    "evidence_supports_statement": "yes"
+   }
+  },
+  {
+   "item_id": "1cfaa5d588ff55faf5be6238e91ae07fcf795a9872ba221f78933637a450e583",
+   "status": "complete",
+   "answers": {
+    "statement_present": "yes",
+    "claim_faithful": "yes",
+    "kind_correct": "yes",
+    "heading_correct": "no",
+    "evidence_supports_statement": "yes",
+    "notes": "The page heading 'Issues' stands above the evidence, so null is wrong."
+   }
+  },
+  {
+   "item_id": "98e725ed9c1cf97f8a7c935eb721cf92fe712a15f1e86de22749ee94d9037963",
+   "status": "complete",
+   "answers": {
+    "statement_present": "yes",
+    "claim_faithful": "yes",
+    "kind_correct": "yes",
+    "heading_correct": "yes",
+    "evidence_supports_statement": "yes"
+   }
+  },
+  {
+   "item_id": "14ba39d83a89e62869a0320a80df65c79cca091f9f6ab55ffba46b4debd5efb6",
+   "status": "complete",
+   "answers": {
+    "statement_present": "yes",
+    "claim_faithful": "yes",
+    "kind_correct": "yes",
+    "heading_correct": "no",
+    "evidence_supports_statement": "no",
+    "notes": "The evidence 'Everyone knows this system is broken.' never names immigration, so it cannot support the claim on its own. The headings 'Questions and Answers with Elizabeth on Important Issues:' and the Q&A label above the evidence make null wrong."
+   }
+  },
+  {
+   "item_id": "0c02a829971c83d773a5aba2f124590eea4c2f13cdd81795e443ae3d97820b74",
+   "status": "complete",
+   "answers": {
+    "statement_present": "no",
+    "claim_faithful": "yes",
+    "kind_correct": "yes",
+    "heading_correct": "yes",
+    "evidence_supports_statement": "yes",
+    "notes": "'we have lost the will to fight back against an overreaching government' is a diagnosis about voters; it states nothing the candidate supports, opposes, proposes, did, or is doing."
+   }
+  },
+  {
+   "item_id": "6e2ddc40e9a0b75b21918000847d7c1608c4b41edda1c6f61268e756100d50e6",
+   "status": "complete",
+   "answers": {
+    "statement_present": "yes",
+    "claim_faithful": "yes",
+    "kind_correct": "yes",
+    "heading_correct": "yes",
+    "evidence_supports_statement": "yes"
+   }
+  },
+  {
+   "item_id": "aec202e064dd3044a6c67919a2ce1d713ad33cb0334041464fc2cd365a843e6c",
+   "status": "complete",
+   "answers": {
+    "statement_present": "no",
+    "claim_faithful": "yes",
+    "kind_correct": "no",
+    "heading_correct": "yes",
+    "evidence_supports_statement": "yes",
+    "notes": "'Future unfunded liabilities will not be met unless drastic measures are taken.' is a prediction that names no measure, so it is not a proposal; unclear would be the correct kind."
+   }
+  },
+  {
+   "item_id": "83c5df0295bdbaac582a47aced418dec7b5bf277c3c64df3cd8099e9d4fd7c89",
+   "status": "complete",
+   "answers": {
+    "statement_present": "yes",
+    "claim_faithful": "yes",
+    "kind_correct": "yes",
+    "heading_correct": "yes",
+    "evidence_supports_statement": "no",
+    "notes": "The evidence is the bare noun phrase '$2.5 billion from Proposition 1', which does not state who coauthored or passed anything."
+   }
+  },
+  {
+   "item_id": "d4a65769149bb8e5a26e1217f5b78c7f12290c4f6cce1849bfec5cd55989af1e",
+   "status": "complete",
+   "answers": {
+    "statement_present": "yes",
+    "claim_faithful": "yes",
+    "kind_correct": "no",
+    "heading_correct": "yes",
+    "evidence_supports_statement": "yes",
+    "notes": "The statement is critical of federal involvement in health care, so support is the wrong valence; oppose or unclear would fit."
+   }
+  },
+  {
+   "item_id": "8714f1c299716043c3186e51683c394b4fae312e13500a39a6b05dffc6387c2f",
+   "status": "complete",
+   "answers": {
+    "statement_present": "yes",
+    "claim_faithful": "yes",
+    "kind_correct": "yes",
+    "heading_correct": "no",
+    "evidence_supports_statement": "yes",
+    "notes": "The headings 'Lisa on the issues' and the section label 'Economic strength' stand above the evidence, so null is wrong."
+   }
+  },
+  {
+   "item_id": "c4ba4786e72c2114000a32e9b71dc7c7ca1bf2a568d61064e3e390f26e2187e6",
+   "status": "complete",
+   "answers": {
+    "statement_present": "yes",
+    "claim_faithful": "yes",
+    "kind_correct": "yes",
+    "heading_correct": "yes",
+    "evidence_supports_statement": "yes"
+   }
+  },
+  {
+   "item_id": "c1df4666fcb9acffc4b657036c236e5f00a7527e81f2ff6aebcbd3cda1c9ccbe",
+   "status": "complete",
+   "answers": {
+    "statement_present": "yes",
+    "claim_faithful": "yes",
+    "kind_correct": "yes",
+    "heading_correct": "no",
+    "evidence_supports_statement": "yes",
+    "notes": "The page heading 'Standing with Our Veterans' stands directly above the evidence, so null is wrong."
+   }
+  },
+  {
+   "item_id": "45a578b220b4c354ba0f2be25f599288dfb0bb74cebc8b70f90043de53f6e6fe",
+   "status": "complete",
+   "answers": {
+    "statement_present": "yes",
+    "claim_faithful": "yes",
+    "kind_correct": "yes",
+    "heading_correct": "yes",
+    "evidence_supports_statement": "yes"
+   }
+  },
+  {
+   "item_id": "6c576e241c8df0a6f133bc10973cd5c42542b1dd9139893e4bf0c5876f0a5e5d",
+   "status": "complete",
+   "answers": {
+    "statement_present": "yes",
+    "claim_faithful": "yes",
+    "kind_correct": "yes",
+    "heading_correct": "yes",
+    "evidence_supports_statement": "yes"
+   }
+  },
+  {
+   "item_id": "039247d9a96320c133931745feb4b0a49216cf04951e8c0bc2ec3c62a2d55be0",
+   "status": "complete",
+   "answers": {
+    "statement_present": "no",
+    "claim_faithful": "no",
+    "kind_correct": "no",
+    "heading_correct": "no",
+    "evidence_supports_statement": "yes",
+    "notes": "The evidence is an endorsement quote from Jim Martin of the 60 Plus Association, not a statement by the candidate. The claim 'Will protect Social Security.' presents the endorser's assertion as the candidate's own commitment and drops the attribution. current_action is wrong for a future commitment. The endorser heading '60 Plus Association' stands directly above the evidence, so null is wrong."
+   }
+  },
+  {
+   "item_id": "3d0872de4879955872f49d381fedb2384c5b51872746d9d39db8430919470269",
+   "status": "complete",
+   "answers": {
+    "statement_present": "yes",
+    "claim_faithful": "yes",
+    "kind_correct": "yes",
+    "heading_correct": "yes",
+    "evidence_supports_statement": "yes"
+   }
+  },
+  {
+   "item_id": "921c8e368e8ca8a2233ca31efa20fcb8a00b4168e5c26394c2461b396fb5e739",
+   "status": "complete",
+   "answers": {
+    "statement_present": "yes",
+    "claim_faithful": "yes",
+    "kind_correct": "yes",
+    "heading_correct": "yes",
+    "evidence_supports_statement": "yes"
+   }
+  },
+  {
+   "item_id": "66478f824bc5e432b273662a06531a5c360c54f4cfd2f3ee30dfb798f076d4ab",
+   "status": "complete",
+   "answers": {
+    "statement_present": "yes",
+    "claim_faithful": "yes",
+    "kind_correct": "yes",
+    "heading_correct": "yes",
+    "evidence_supports_statement": "yes"
+   }
+  },
+  {
+   "item_id": "990733db61ec0c7ba2afc8db5d031162c7401cd54be1de5f9f29726cb0ec1de7",
+   "status": "complete",
+   "answers": {
+    "statement_present": "yes",
+    "claim_faithful": "yes",
+    "kind_correct": "yes",
+    "heading_correct": "yes",
+    "evidence_supports_statement": "yes"
+   }
+  },
+  {
+   "item_id": "4b81957cde87d48897af9fe0459324061ef827cf229dc20311680d0b83078861",
+   "status": "complete",
+   "answers": {
+    "statement_present": "no",
+    "claim_faithful": "yes",
+    "kind_correct": "yes",
+    "heading_correct": "no",
+    "evidence_supports_statement": "yes",
+    "notes": "'Georgia's number one industry is agriculture.' is a factual assertion about the state economy, not a position or an action. The section heading 'Agriculture' stands directly above the evidence, so null is wrong."
+   }
+  },
+  {
+   "item_id": "7311f6d267688246cea10b324f65858b1ed1ce33b76ad01a98a20af43eb0d39c",
+   "status": "complete",
+   "answers": {
+    "statement_present": "yes",
+    "claim_faithful": "no",
+    "kind_correct": "yes",
+    "heading_correct": "yes",
+    "evidence_supports_statement": "yes",
+    "notes": "The page text is truncated at 'I have worked to ensure' and never states the object; the claim completes it with 'security measures', which the page does not say."
+   }
+  },
+  {
+   "item_id": "849cfd582807666ac959be4d43afc336ddcfafeefb509a2adfaa02987ae0d658",
+   "status": "complete",
+   "answers": {
+    "statement_present": "yes",
+    "claim_faithful": "yes",
+    "kind_correct": "yes",
+    "heading_correct": "yes",
+    "evidence_supports_statement": "yes"
+   }
+  },
+  {
+   "item_id": "fcb51cd7ca9a2f3b30e02cc5e1077c69ae2c46c561f2bbe9182f029282a63476",
+   "status": "complete",
+   "answers": {
+    "statement_present": "yes",
+    "claim_faithful": "yes",
+    "kind_correct": "yes",
+    "heading_correct": "no",
+    "evidence_supports_statement": "yes",
+    "notes": "The page heading 'Veterans' stands above the evidence, so null is wrong."
+   }
+  },
+  {
+   "item_id": "9ab137987fb258506fce74ce6e151c0cca6d4e74504a4cfe0654e2f62e7136a5",
+   "status": "complete",
+   "answers": {
+    "statement_present": "yes",
+    "claim_faithful": "yes",
+    "kind_correct": "yes",
+    "heading_correct": "yes",
+    "evidence_supports_statement": "no",
+    "notes": "The evidence 'restores fairness and opportunity' is a bare verb phrase with no subject and no policy named, so it cannot support a claim about what the candidate supports."
+   }
+  },
+  {
+   "item_id": "c24a1ce27d1fcf835ab9c622b2475ddcc4d759e3b3f4f28908e3aaaac1b0bd3f",
+   "status": "complete",
+   "answers": {
+    "statement_present": "no",
+    "claim_faithful": "yes",
+    "kind_correct": "yes",
+    "heading_correct": "yes",
+    "evidence_supports_statement": "yes",
+    "notes": "The archived page is Bill Nelson's Florida Senate site (billnelson.senate.gov, Everglades and Florida rivers), but the record is filed under E Benjamin Nelson, NE senate 2006, so the statement is not this candidate's."
+   }
+  },
+  {
+   "item_id": "9fdf35532b02d9137cfe56bbb183734b143609418856ea1ad0e124ede272b00e",
+   "status": "complete",
+   "answers": {
+    "statement_present": "yes",
+    "claim_faithful": "yes",
+    "kind_correct": "yes",
+    "heading_correct": "yes",
+    "evidence_supports_statement": "yes"
+   }
+  },
+  {
+   "item_id": "a98e16325b7ce291ba8c3b8cba5cdf1aab49da6712e2c7f2a18b9eec921d583c",
+   "status": "complete",
+   "answers": {
+    "statement_present": "no",
+    "claim_faithful": "yes",
+    "kind_correct": "yes",
+    "heading_correct": "yes",
+    "evidence_supports_statement": "yes",
+    "notes": "'All politics begin locally.' is an aphorism; it states nothing the candidate supports, opposes, proposes, did, or is doing."
+   }
+  },
+  {
+   "item_id": "3656f0c435be1679fef683ff09d68f621aad35d5bfbc00017031cc4b5d4d3c91",
+   "status": "complete",
+   "answers": {
+    "statement_present": "no",
+    "claim_faithful": "yes",
+    "kind_correct": "yes",
+    "heading_correct": "yes",
+    "evidence_supports_statement": "yes",
+    "notes": "The evidence explicitly says 'I have not taken a position on this bill as yet', so the page states no position, no proposal and no action."
+   }
+  },
+  {
+   "item_id": "fb018e1ea6dc3c4f12c21def9b9ea10699e983eade314e0f20e025f90877890c",
+   "status": "complete",
+   "answers": {
+    "statement_present": "no",
+    "claim_faithful": "no",
+    "kind_correct": "yes",
+    "heading_correct": "no",
+    "evidence_supports_statement": "yes",
+    "notes": "The evidence is State Sen. Eric Johnson's endorsement quote, not the candidate's own statement, and the claim presents the endorser's characterization as the candidate's action with no attribution. The endorser heading 'State Sen. Eric Johnson' stands directly above the evidence, so null is wrong."
+   }
+  },
+  {
+   "item_id": "9d83526bb9db8ed44a2e077652607efbcb41d27d5a8e00e065573b9916bfa571",
+   "status": "complete",
+   "answers": {
+    "statement_present": "yes",
+    "claim_faithful": "yes",
+    "kind_correct": "yes",
+    "heading_correct": "yes",
+    "evidence_supports_statement": "yes"
+   }
+  },
+  {
+   "item_id": "3db780c1947afca289c26d929b196cd3994dd765dc8568120c4091a6619c4af5",
+   "status": "complete",
+   "answers": {
+    "statement_present": "no",
+    "claim_faithful": "yes",
+    "kind_correct": "yes",
+    "heading_correct": "yes",
+    "evidence_supports_statement": "yes",
+    "notes": "The archived page is Anthony Brown's Maryland campaign site ('Paid for by Anthony Brown for Congress', Maryland record), but the record is filed under Thomas William Brown Jr., AL house 2020 republican."
+   }
+  },
+  {
+   "item_id": "1173456f5f5bd5dea71afd5807eee7040d9d8bc77481a859b13323a59d35ad8b",
+   "status": "complete",
+   "answers": {
+    "statement_present": "yes",
+    "claim_faithful": "yes",
+    "kind_correct": "yes",
+    "heading_correct": "yes",
+    "evidence_supports_statement": "yes"
+   }
+  },
+  {
+   "item_id": "62ffc46e1acfb330fb5ce5bdcd82b1ecee6142aa29d8265a72b70effd0bf0720",
+   "status": "complete",
+   "answers": {
+    "statement_present": "yes",
+    "claim_faithful": "yes",
+    "kind_correct": "no",
+    "heading_correct": "yes",
+    "evidence_supports_statement": "yes",
+    "notes": "'I am committed to ... honoring our promises to veterans' is a stated preference, not conduct, so current_action is wrong; support would fit."
+   }
+  },
+  {
+   "item_id": "a15fb32b77eb55ea2ef6aff424ab4fd184e74749cc215344c15ad566951f1e1c",
+   "status": "complete",
+   "answers": {
+    "statement_present": "no",
+    "claim_faithful": "yes",
+    "kind_correct": "yes",
+    "heading_correct": "no",
+    "evidence_supports_statement": "yes",
+    "notes": "Evidence is a press-release link title that states no position or action; the nearest heading 'Higher Education Standards' is present, so null is wrong."
+   }
+  },
+  {
+   "item_id": "6c13ec6d4ab89a4cbeefe3c8226ad596f6f93683d36c224a8d6e71ba91ff9679",
+   "status": "complete",
+   "answers": {
+    "statement_present": "yes",
+    "claim_faithful": "yes",
+    "kind_correct": "no",
+    "heading_correct": "no",
+    "evidence_supports_statement": "yes",
+    "notes": "'has consistently been a strong supporter of the military' is a preference, not conduct, so past_action is wrong. The section heading 'Military and Veterans' stands directly above the evidence, so null is wrong."
+   }
+  },
+  {
+   "item_id": "8e6407b2793b451f318c2602a200e0b265637f1ff022ba04f442963a5e4a087f",
+   "status": "complete",
+   "answers": {
+    "statement_present": "yes",
+    "claim_faithful": "yes",
+    "kind_correct": "yes",
+    "heading_correct": "yes",
+    "evidence_supports_statement": "yes"
+   }
+  },
+  {
+   "item_id": "2f8fcaebfc8638d64e7aa9678b3a66ad91cfbb5ed245e403aa4593ffc17e1db1",
+   "status": "complete",
+   "answers": {
+    "statement_present": "yes",
+    "claim_faithful": "yes",
+    "kind_correct": "yes",
+    "heading_correct": "no",
+    "evidence_supports_statement": "yes",
+    "notes": "The headings 'Gas Prices' and 'Problem' stand directly above the evidence, so null is wrong."
+   }
+  },
+  {
+   "item_id": "76fc03ea942df7b12ae3fbf588bb348e44100a390ab1b48cbb6c72699e801ba7",
+   "status": "complete",
+   "answers": {
+    "statement_present": "no",
+    "claim_faithful": "yes",
+    "kind_correct": "yes",
+    "heading_correct": "yes",
+    "evidence_supports_statement": "yes",
+    "notes": "Personal military service is a biographical fact for the biography route, not a policy statement."
+   }
+  },
+  {
+   "item_id": "d3a0bc71ef84625234383b7bdd5d664e9fde88feb24f9245f5cd0f7b31714049",
+   "status": "complete",
+   "answers": {
+    "statement_present": "no",
+    "claim_faithful": "yes",
+    "kind_correct": "yes",
+    "heading_correct": "no",
+    "evidence_supports_statement": "yes",
+    "notes": "The evidence is an NFIB endorsement quote about the opponent, not a policy statement by the candidate. The endorser heading 'National Federation of Independent Business' stands above the evidence, so null is wrong."
+   }
+  },
+  {
+   "item_id": "9b8f865cb08e1344556f9714aa22bfc42679c8e75b5199359bbbdec0c6ecd368",
+   "status": "complete",
+   "answers": {
+    "statement_present": "no",
+    "claim_faithful": "no",
+    "kind_correct": "yes",
+    "heading_correct": "yes",
+    "evidence_supports_statement": "no",
+    "notes": "Same defect as the other Domina record: the page is an issue index, the evidence 'KXL Pipeline' is the heading itself, states no position, and does not support the claim."
+   }
+  },
+  {
+   "item_id": "413fd4ece1b20f36a81d801a7c42c813a9c3536f422b349344b6961e026dc4a0",
+   "status": "complete",
+   "answers": {
+    "statement_present": "no",
+    "claim_faithful": "yes",
+    "kind_correct": "no",
+    "heading_correct": "yes",
+    "evidence_supports_statement": "yes",
+    "notes": "'I know the immigration issue well ...' asserts the candidate's own knowledge, not a position or an action, so it is not a policy statement and current_action is the wrong kind; unclear would fit."
+   }
+  },
+  {
+   "item_id": "f9dce2c7cb6f761c4bfae73d748d267f53d036d690dd3be7d3729480c17b63e0",
+   "status": "complete",
+   "answers": {
+    "statement_present": "yes",
+    "claim_faithful": "yes",
+    "kind_correct": "yes",
+    "heading_correct": "no",
+    "evidence_supports_statement": "yes",
+    "notes": "The headings 'Future Works II' and 'REFORM TARP TO SUPPORT MAIN STREET, NOT WALL STREET' stand above the evidence, so null is wrong."
+   }
+  }
+ ]
+}

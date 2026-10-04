@@ -1,0 +1,760 @@
+{
+ "task_id": "candidate_extraction_v2_precision_endorsements_9574e9dcbdea_b001",
+ "format": "handcode-results-v1",
+ "exported_at": "2026-09-28T06:13:21Z",
+ "n_items": 60,
+ "n_complete": 60,
+ "responses": [
+  {
+   "item_id": "788bf63947ab42fa1436bd1e625e22dc190a960c8ccaf67145624abef7ef61ac",
+   "status": "complete",
+   "answers": {
+    "endorser_present": "yes",
+    "name_correct": "yes",
+    "entity_category_correct": "yes",
+    "optional_fields_correct": "yes",
+    "record_evidence_supports_identity": "yes",
+    "combined_record_context_support": "yes"
+   }
+  },
+  {
+   "item_id": "f60a077517dc045ad2c98ebab004ba12ddea41bd6811bca611fafb25b0a8698a",
+   "status": "complete",
+   "answers": {
+    "endorser_present": "yes",
+    "name_correct": "yes",
+    "entity_category_correct": "yes",
+    "optional_fields_correct": "yes",
+    "record_evidence_supports_identity": "yes",
+    "combined_record_context_support": "yes"
+   }
+  },
+  {
+   "item_id": "1ed06ce9433b7fd80579cb106485351656f93a5c11b599d13004b8fe18ab8f31",
+   "status": "complete",
+   "answers": {
+    "endorser_present": "yes",
+    "name_correct": "yes",
+    "entity_category_correct": "no",
+    "optional_fields_correct": "yes",
+    "record_evidence_supports_identity": "yes",
+    "combined_record_context_support": "no",
+    "notes": "Category: the page lists it under \"Organizational Endorsements\" as a named organization that is not a union, media outlet or party, so other_organization applies and unclear is not warranted. Context: the cited heading \"Newspaper Endorsements\" governs a different section 11870 chars away; the governing heading for this entry is \"Organizational Endorsements\"."
+   }
+  },
+  {
+   "item_id": "ec261032d63e7ca85614b8beb73a7dc408be252b1614278b698eea07ac4d9b27",
+   "status": "complete",
+   "answers": {
+    "endorser_present": "yes",
+    "name_correct": "yes",
+    "entity_category_correct": "no",
+    "optional_fields_correct": "yes",
+    "record_evidence_supports_identity": "yes",
+    "combined_record_context_support": "yes",
+    "notes": "Category: the page states \"Commissioner, City of Los Angeles\", an appointed public office, so government_official applies, not private_individual."
+   }
+  },
+  {
+   "item_id": "06859c21130407730970a1ad2f1b4e4bc5ab5a836340eeb86cc79ee060e676f3",
+   "status": "complete",
+   "answers": {
+    "endorser_present": "yes",
+    "name_correct": "yes",
+    "entity_category_correct": "no",
+    "optional_fields_correct": "yes",
+    "record_evidence_supports_identity": "yes",
+    "combined_record_context_support": "yes",
+    "notes": "Category: the page states he is \"Mayor of Apache Junction\", so government_official applies, not other_individual."
+   }
+  },
+  {
+   "item_id": "c9b8e3784fd55b34679323215143cf5c2185161fe41148329176301e8e245d3d",
+   "status": "complete",
+   "answers": {
+    "endorser_present": "yes",
+    "name_correct": "yes",
+    "entity_category_correct": "no",
+    "optional_fields_correct": "yes",
+    "record_evidence_supports_identity": "yes",
+    "combined_record_context_support": "yes",
+    "notes": "Category: the page states she is a retired WFRV-TV anchor in Green Bay and lists her under INDIVIDUALS, so the page does give a basis and unclear is not warranted."
+   }
+  },
+  {
+   "item_id": "f666838c4cd4fe4278c7f58dba84f2561b2d2ea87e59020f655f0993a09fd47a",
+   "status": "complete",
+   "answers": {
+    "endorser_present": "yes",
+    "name_correct": "yes",
+    "entity_category_correct": "no",
+    "optional_fields_correct": "yes",
+    "record_evidence_supports_identity": "yes",
+    "combined_record_context_support": "yes",
+    "notes": "Category: the page gives only the bare name \"The GOP Trumpeter\" in a mixed list of people and groups. Nothing on the page states it is a publication, so media_outlet is an outside inference; unclear or other_organization fits the page."
+   }
+  },
+  {
+   "item_id": "440f0f45b2afa127fd97d9b43a93a8b603889f1b5c27414394f6b0d12f3ed381",
+   "status": "complete",
+   "answers": {
+    "endorser_present": "yes",
+    "name_correct": "yes",
+    "entity_category_correct": "no",
+    "optional_fields_correct": "yes",
+    "record_evidence_supports_identity": "no",
+    "combined_record_context_support": "no",
+    "notes": "Crossed-entry span. The page reads \"Illinois Education Association / IEA is an association composed of ... teachers / Red to Blue / Red to Blue is a ... program at the DCCC\". The evidence takes the IEA description line and adds this endorser name. Category labor_union comes from that neighbouring teachers-association line; the page describes Red to Blue as a DCCC program. support_mode explicit_text is wrong because the span states nothing about Red to Blue supporting Casten."
+   }
+  },
+  {
+   "item_id": "97337d857826d71cc2cdd2f5245dd90f78654757e22bc25caf54294abf8b1e79",
+   "status": "complete",
+   "answers": {
+    "endorser_present": "yes",
+    "name_correct": "yes",
+    "entity_category_correct": "yes",
+    "optional_fields_correct": "yes",
+    "record_evidence_supports_identity": "yes",
+    "combined_record_context_support": "yes"
+   }
+  },
+  {
+   "item_id": "6a2eb266fbb785cd5ca0e60fb5d957cf80f7804a2eac67ffab618829492612f8",
+   "status": "complete",
+   "answers": {
+    "endorser_present": "yes",
+    "name_correct": "yes",
+    "entity_category_correct": "no",
+    "optional_fields_correct": "yes",
+    "record_evidence_supports_identity": "yes",
+    "combined_record_context_support": "no",
+    "notes": "Category: the page states \"Congressman Steve Scalise, House Republican Whip (LA-1)\", so government_official applies. Crossed-entry span: this page is name-then-quote (proved by \"Julie A. Conway, Executive Director, VIEW PAC\" followed by the VIEW PAC quote), so the quote inside the span belongs to the preceding entry, Kevin McCarthy. explicit_text therefore rests on another endorser statement; the identity line itself is his own."
+   }
+  },
+  {
+   "item_id": "834d4c794d637f193d6103e526f56cf9c2aa5f55c685d8784d58d97aa35bbe78",
+   "status": "complete",
+   "answers": {
+    "endorser_present": "yes",
+    "name_correct": "yes",
+    "entity_category_correct": "yes",
+    "optional_fields_correct": "yes",
+    "record_evidence_supports_identity": "yes",
+    "combined_record_context_support": "yes"
+   }
+  },
+  {
+   "item_id": "93d7d0bad8f6f239ef52ba5b69decfbf6c0d86bcef51bb58297d5c863d2558ea",
+   "status": "complete",
+   "answers": {
+    "endorser_present": "yes",
+    "name_correct": "yes",
+    "entity_category_correct": "yes",
+    "optional_fields_correct": "yes",
+    "record_evidence_supports_identity": "yes",
+    "combined_record_context_support": "no",
+    "notes": "Crossed-entry span. The page is name-then-quote (first entry \"Caroline and Victor Douglas, St. Louis\" is followed by a quote that says \"Victor and I ...\"). The quote inside the span is Catherine Rodgers statement, so support_mode explicit_text rests on the preceding entry; Kruse own support comes only from the Supporters section."
+   }
+  },
+  {
+   "item_id": "33f5f2c52985224ce27886b761110cd66548664be21924bbbd6415421afcc7ab",
+   "status": "complete",
+   "answers": {
+    "endorser_present": "yes",
+    "name_correct": "yes",
+    "entity_category_correct": "no",
+    "optional_fields_correct": "yes",
+    "record_evidence_supports_identity": "yes",
+    "combined_record_context_support": "yes",
+    "notes": "Category: the page states \"San Juan Capistrano City Councilmember\", so government_official applies, not other_individual."
+   }
+  },
+  {
+   "item_id": "ca1897482c5850f3df8c5152af2f25970b799a022a8b85b2ff091081df55994b",
+   "status": "complete",
+   "answers": {
+    "endorser_present": "yes",
+    "name_correct": "yes",
+    "entity_category_correct": "yes",
+    "optional_fields_correct": "no",
+    "record_evidence_supports_identity": "no",
+    "combined_record_context_support": "yes",
+    "notes": "Crossed-entry span. The list is \"Name, / Senator, GA-nn\". The span takes Nan Orrock district line and adds this endorser name. Tate own line is \"Senator, GA-38\", so affiliation GA-36 belongs to Orrock."
+   }
+  },
+  {
+   "item_id": "d4bd8843224ce29e39593ad0719d865ef35f9a84e57999969dce733b456543de",
+   "status": "complete",
+   "answers": {
+    "endorser_present": "yes",
+    "name_correct": "yes",
+    "entity_category_correct": "yes",
+    "optional_fields_correct": "yes",
+    "record_evidence_supports_identity": "yes",
+    "combined_record_context_support": "yes"
+   }
+  },
+  {
+   "item_id": "686eb5064b75832a4009dea387efc544eb6858502444401351469e62052b63ba",
+   "status": "complete",
+   "answers": {
+    "endorser_present": "yes",
+    "name_correct": "yes",
+    "entity_category_correct": "yes",
+    "optional_fields_correct": "yes",
+    "record_evidence_supports_identity": "yes",
+    "combined_record_context_support": "yes"
+   }
+  },
+  {
+   "item_id": "249f87853c823025cfbc872c74771cd05cca701dd39cac2a91188a2e26a297a2",
+   "status": "complete",
+   "answers": {
+    "endorser_present": "yes",
+    "name_correct": "yes",
+    "entity_category_correct": "yes",
+    "optional_fields_correct": "yes",
+    "record_evidence_supports_identity": "yes",
+    "combined_record_context_support": "yes"
+   }
+  },
+  {
+   "item_id": "af51b9db907c842f02db87f7b3b0ccfaba0de6ca26a705dc3dfd46815f4d82ba",
+   "status": "complete",
+   "answers": {
+    "endorser_present": "yes",
+    "name_correct": "yes",
+    "entity_category_correct": "yes",
+    "optional_fields_correct": "yes",
+    "record_evidence_supports_identity": "yes",
+    "combined_record_context_support": "yes"
+   }
+  },
+  {
+   "item_id": "06bd241ac661cd30c1cb5b5761b671f8f0f366975b5ef63218c24568a33d8e4c",
+   "status": "complete",
+   "answers": {
+    "endorser_present": "yes",
+    "name_correct": "yes",
+    "entity_category_correct": "yes",
+    "optional_fields_correct": "yes",
+    "record_evidence_supports_identity": "yes",
+    "combined_record_context_support": "yes"
+   }
+  },
+  {
+   "item_id": "8e82283673baba65a541a33a15a54874be7d0af4ce5443e613931b68e5bdf7f3",
+   "status": "complete",
+   "answers": {
+    "endorser_present": "yes",
+    "name_correct": "yes",
+    "entity_category_correct": "yes",
+    "optional_fields_correct": "yes",
+    "record_evidence_supports_identity": "yes",
+    "combined_record_context_support": "yes"
+   }
+  },
+  {
+   "item_id": "3d863e76f67b25a279cbb2419187b1df4ea36d133e1f158268654c4fc290153a",
+   "status": "complete",
+   "answers": {
+    "endorser_present": "yes",
+    "name_correct": "yes",
+    "entity_category_correct": "no",
+    "optional_fields_correct": "no",
+    "record_evidence_supports_identity": "no",
+    "combined_record_context_support": "yes",
+    "notes": "Crossed-entry span. The list is NAME then descriptor (proved by \"REP. CHRISSY HOULAHAN / U.S. Congresswoman PA-06\"). The span takes CAROL GEHRIG descriptor \"Oneida County Oneida County Democratic Committee, Member\" and adds this endorser name. Cantelmo own descriptor is \"Tompkins County Ithaca Common Council, Ward 5\", so title, affiliation and jurisdiction are the neighbour values and the correct category is government_official."
+   }
+  },
+  {
+   "item_id": "28d83de591752d66532a47d09c9bf126781ee75d195a0b8cbf909bed4e648db3",
+   "status": "complete",
+   "answers": {
+    "endorser_present": "yes",
+    "name_correct": "yes",
+    "entity_category_correct": "no",
+    "optional_fields_correct": "no",
+    "record_evidence_supports_identity": "no",
+    "combined_record_context_support": "yes",
+    "notes": "Crossed-entry span. The list is name then district. \"Mattaponi District\" belongs to Floyd Thomas; Icenhour own district is Jamestown. Category: the section heading is \"Virginia Local Elected Officials\", so government_official applies."
+   }
+  },
+  {
+   "item_id": "51b5ae6d156c75cc2f1f55f0dc8202eebb224741ca2a0a206683aa72a429e5dd",
+   "status": "complete",
+   "answers": {
+    "endorser_present": "yes",
+    "name_correct": "yes",
+    "entity_category_correct": "no",
+    "optional_fields_correct": "yes",
+    "record_evidence_supports_identity": "yes",
+    "combined_record_context_support": "yes",
+    "notes": "Category: the page states \"Town of Hamilton Supervisor\", an elected local office, so government_official applies."
+   }
+  },
+  {
+   "item_id": "3dd344f606dc369c6b88e8a79554c3f24557e77c965f6bce3bcc73ce5ddecfb1",
+   "status": "complete",
+   "answers": {
+    "endorser_present": "yes",
+    "name_correct": "yes",
+    "entity_category_correct": "yes",
+    "optional_fields_correct": "yes",
+    "record_evidence_supports_identity": "yes",
+    "combined_record_context_support": "yes"
+   }
+  },
+  {
+   "item_id": "9f0ef7e075edddacfd3d3c5df0993feb4b1baf9a59ae27672e18cbb7914ee860",
+   "status": "complete",
+   "answers": {
+    "endorser_present": "yes",
+    "name_correct": "yes",
+    "entity_category_correct": "no",
+    "optional_fields_correct": "no",
+    "record_evidence_supports_identity": "no",
+    "combined_record_context_support": "yes",
+    "notes": "Crossed-entry span. The page reads \"Communication Workers of America / District 6 / Workers Defense Action Fund\", so \"District 6\" is the CWA sub-line and the jurisdiction value is the neighbour value. Category: the section \"LOCAL & STATE ORGANIZATIONS\" mixes unions with non-unions such as Indivisible and Democratic Socialists of America, and the page states nothing that makes this Action Fund a union."
+   }
+  },
+  {
+   "item_id": "c6a8e8971c7242bc3a24b60c1da620a72ee1b991d6341091616512aaf2e9179d",
+   "status": "complete",
+   "answers": {
+    "endorser_present": "yes",
+    "name_correct": "yes",
+    "entity_category_correct": "yes",
+    "optional_fields_correct": "no",
+    "record_evidence_supports_identity": "no",
+    "combined_record_context_support": "no",
+    "notes": "Crossed-entry span. The list is name then \"-City, descriptor\". \"-Orangeburg, Former CEO of Cox Wood, Inc.\" belongs to the preceding entry Bill Cox; Vitali own line is \"-Columbia, Former Senior US advisor to the Southern Region of Afghanistan\". Context: the cited heading \"Organization Endorsements\" governs a different section; Vitali sits under \"Individual Leader Endorsements\"."
+   }
+  },
+  {
+   "item_id": "4b51fe96f5e7669d63f0d8caedc01a8dd4e44525913bc367454e54c8071bf198",
+   "status": "complete",
+   "answers": {
+    "endorser_present": "yes",
+    "name_correct": "yes",
+    "entity_category_correct": "yes",
+    "optional_fields_correct": "yes",
+    "record_evidence_supports_identity": "yes",
+    "combined_record_context_support": "yes"
+   }
+  },
+  {
+   "item_id": "0edfb09f1d1ac2a60f929682c419649e51cfc32b2ef6828218f7d76f5de4d14c",
+   "status": "complete",
+   "answers": {
+    "endorser_present": "yes",
+    "name_correct": "yes",
+    "entity_category_correct": "yes",
+    "optional_fields_correct": "yes",
+    "record_evidence_supports_identity": "yes",
+    "combined_record_context_support": "yes"
+   }
+  },
+  {
+   "item_id": "745e90dabde95dfa80362b90b213e2af6a15ce314d56c03f9591632b6ab3ec04",
+   "status": "complete",
+   "answers": {
+    "endorser_present": "yes",
+    "name_correct": "yes",
+    "entity_category_correct": "yes",
+    "optional_fields_correct": "yes",
+    "record_evidence_supports_identity": "yes",
+    "combined_record_context_support": "no",
+    "notes": "Crossed-entry span. The page is newspaper name then editorial text for every entry, and the text after \"St. Paul Pioneer Press\" says Coleman \"distinguished himself as ... mayor of our city\", that is St. Paul. The editorial inside the span therefore belongs to the Minneapolis Star Tribune, so support_mode explicit_text rests on another outlet statement."
+   }
+  },
+  {
+   "item_id": "a4d163c4fb0f19665e347b26aeb7961a5136b4a81ae2bf8037bca6be7047ee31",
+   "status": "complete",
+   "answers": {
+    "endorser_present": "yes",
+    "name_correct": "yes",
+    "entity_category_correct": "yes",
+    "optional_fields_correct": "no",
+    "record_evidence_supports_identity": "no",
+    "combined_record_context_support": "yes",
+    "notes": "Crossed-entry span. \"Senator, GA-42\" belongs to Elena Parent; Davenport own line is \"Senator, GA-44\"."
+   }
+  },
+  {
+   "item_id": "11e27663f91f21793fa9314b2c2184351fd227176e88bf12abf992f395426b75",
+   "status": "complete",
+   "answers": {
+    "endorser_present": "yes",
+    "name_correct": "yes",
+    "entity_category_correct": "yes",
+    "optional_fields_correct": "yes",
+    "record_evidence_supports_identity": "yes",
+    "combined_record_context_support": "yes"
+   }
+  },
+  {
+   "item_id": "6addde8d0dea561ad64ea62a0646516044cdd38cacdd5b9c6883b8e32431765a",
+   "status": "complete",
+   "answers": {
+    "endorser_present": "yes",
+    "name_correct": "yes",
+    "entity_category_correct": "no",
+    "optional_fields_correct": "yes",
+    "record_evidence_supports_identity": "yes",
+    "combined_record_context_support": "no",
+    "notes": "Category: the page states he is National Political Director of the Collective PAC, a PAC and not a party, so other_individual fits and party_official does not. Crossed-entry span: this section is quote then attribution (it opens with \"Why we are supporting Dr. Kermit:\" followed by a quote and then \"- Fiona Ma CPA\"), so the quote inside the span belongs to the next attribution, Bill Dodd. explicit_text therefore rests on another endorser statement."
+   }
+  },
+  {
+   "item_id": "a9687af266b96ea4a15f50166f6c7a322d92c86e559d8827ed69444295bab09b",
+   "status": "complete",
+   "answers": {
+    "endorser_present": "yes",
+    "name_correct": "yes",
+    "entity_category_correct": "yes",
+    "optional_fields_correct": "yes",
+    "record_evidence_supports_identity": "yes",
+    "combined_record_context_support": "yes"
+   }
+  },
+  {
+   "item_id": "c733efe15045fb9c1808b2d36204b9f369f8e024e2a4895f19ca35dab69eb185",
+   "status": "complete",
+   "answers": {
+    "endorser_present": "yes",
+    "name_correct": "yes",
+    "entity_category_correct": "yes",
+    "optional_fields_correct": "yes",
+    "record_evidence_supports_identity": "yes",
+    "combined_record_context_support": "yes"
+   }
+  },
+  {
+   "item_id": "213196b7569a48ff6584434b9cb2504191b3b9dd98750b3489b5eb8d0e07f3b4",
+   "status": "complete",
+   "answers": {
+    "endorser_present": "yes",
+    "name_correct": "yes",
+    "entity_category_correct": "no",
+    "optional_fields_correct": "yes",
+    "record_evidence_supports_identity": "yes",
+    "combined_record_context_support": "no",
+    "notes": "Category: the name itself states \"International Union of Painters and Allied Trades, AFL-CIO, CLC\", so labor_union applies and unclear is not warranted. Context: the cited heading \"Newspaper Endorsements\" governs a different section; this entry sits under \"Organizational Endorsements\"."
+   }
+  },
+  {
+   "item_id": "65cbf07944067c083aa9e97b1fb27bb9fb79d8e052512b853bbb161ddb32e77a",
+   "status": "complete",
+   "answers": {
+    "endorser_present": "yes",
+    "name_correct": "yes",
+    "entity_category_correct": "yes",
+    "optional_fields_correct": "yes",
+    "record_evidence_supports_identity": "yes",
+    "combined_record_context_support": "yes"
+   }
+  },
+  {
+   "item_id": "2b4ee115b3025f62196d91167fe1412c391d034d65e520deebfc00a6bf08cbbb",
+   "status": "complete",
+   "answers": {
+    "endorser_present": "yes",
+    "name_correct": "yes",
+    "entity_category_correct": "no",
+    "optional_fields_correct": "yes",
+    "record_evidence_supports_identity": "yes",
+    "combined_record_context_support": "yes",
+    "notes": "Category: the page states \"Rep. John Madigan, District 115\", a sitting state representative, so government_official applies."
+   }
+  },
+  {
+   "item_id": "78a21d521526357b5b8471644c8572812e32246255e331cc8ffdfc16d0088996",
+   "status": "complete",
+   "answers": {
+    "endorser_present": "yes",
+    "name_correct": "yes",
+    "entity_category_correct": "yes",
+    "optional_fields_correct": "yes",
+    "record_evidence_supports_identity": "yes",
+    "combined_record_context_support": "yes"
+   }
+  },
+  {
+   "item_id": "212a82c498f98331c055a50186893ea84108064d7fb40aae235f205e994166ed",
+   "status": "complete",
+   "answers": {
+    "endorser_present": "yes",
+    "name_correct": "yes",
+    "entity_category_correct": "yes",
+    "optional_fields_correct": "yes",
+    "record_evidence_supports_identity": "yes",
+    "combined_record_context_support": "yes"
+   }
+  },
+  {
+   "item_id": "f65d84b3d1275322c1e9d5d2fa28818ed4f25c4c969ad647f041e2750fe5c9e4",
+   "status": "complete",
+   "answers": {
+    "endorser_present": "yes",
+    "name_correct": "yes",
+    "entity_category_correct": "yes",
+    "optional_fields_correct": "no",
+    "record_evidence_supports_identity": "no",
+    "combined_record_context_support": "yes",
+    "notes": "Crossed-entry span. The list is name then descriptor. \"US Army - Register of Deeds Hillsborough County - Manchester\" belongs to Edward Sapienza; Dumont own descriptor is \"USMC - Information Security - Penacook\", so all three optional fields are the neighbour values."
+   }
+  },
+  {
+   "item_id": "56c66ebefca5b2d4ad7a71560a4709382a6bd9ce0bbacb9a28406af124b70086",
+   "status": "complete",
+   "answers": {
+    "endorser_present": "yes",
+    "name_correct": "yes",
+    "entity_category_correct": "yes",
+    "optional_fields_correct": "yes",
+    "record_evidence_supports_identity": "yes",
+    "combined_record_context_support": "yes"
+   }
+  },
+  {
+   "item_id": "7fddf7612a5924ac8cc02534714aa666efb5a842ba2bf8848bdc30d43d94e77a",
+   "status": "complete",
+   "answers": {
+    "endorser_present": "yes",
+    "name_correct": "yes",
+    "entity_category_correct": "no",
+    "optional_fields_correct": "yes",
+    "record_evidence_supports_identity": "yes",
+    "combined_record_context_support": "yes",
+    "notes": "Category: the page lists him under \"County Sheriffs of the First Congressional District\" as \"Sheriff Bob Spoden (D) - Rock County\", so government_official applies."
+   }
+  },
+  {
+   "item_id": "f48390d9a0a1f17585a4df6a0a438f9787d51d9b9e44d43f21e1021c3a818b51",
+   "status": "complete",
+   "answers": {
+    "endorser_present": "yes",
+    "name_correct": "yes",
+    "entity_category_correct": "yes",
+    "optional_fields_correct": "yes",
+    "record_evidence_supports_identity": "yes",
+    "combined_record_context_support": "yes"
+   }
+  },
+  {
+   "item_id": "e49c1ce7497617d58b671dbc11e55f6a3ccab4971174a77b3474b884446d0e41",
+   "status": "complete",
+   "answers": {
+    "endorser_present": "yes",
+    "name_correct": "yes",
+    "entity_category_correct": "yes",
+    "optional_fields_correct": "yes",
+    "record_evidence_supports_identity": "yes",
+    "combined_record_context_support": "yes"
+   }
+  },
+  {
+   "item_id": "6fe9412821b4f91643f3e1977325635c3fdf91dedacf6074ec75f29b6fb6820c",
+   "status": "complete",
+   "answers": {
+    "endorser_present": "yes",
+    "name_correct": "yes",
+    "entity_category_correct": "yes",
+    "optional_fields_correct": "no",
+    "record_evidence_supports_identity": "no",
+    "combined_record_context_support": "yes",
+    "notes": "Crossed-entry span. \"Owner of Clint’s Hot Dog Cart and Casual Catering - Lansing\" belongs to the preceding entry Clint Tarver, whose name matches the business; Broughton own descriptor is \", Rochester Hills\". All three optional fields are the neighbour values."
+   }
+  },
+  {
+   "item_id": "c1f87263c9c4ba4bcf20b74d9dff717cd6f53f509f996b5bac98ee0d36d20960",
+   "status": "complete",
+   "answers": {
+    "endorser_present": "yes",
+    "name_correct": "yes",
+    "entity_category_correct": "yes",
+    "optional_fields_correct": "yes",
+    "record_evidence_supports_identity": "yes",
+    "combined_record_context_support": "no",
+    "notes": "Crossed-entry span, same layout as the other capture of this page. The quote inside the span is Catherine Rodgers statement, so support_mode explicit_text rests on the preceding entry."
+   }
+  },
+  {
+   "item_id": "bb41abfabf4896da2b4dbae816c00476e23577bd811e2d7fb4afe7c962c5fc8d",
+   "status": "complete",
+   "answers": {
+    "endorser_present": "yes",
+    "name_correct": "no",
+    "entity_category_correct": "yes",
+    "optional_fields_correct": "no",
+    "record_evidence_supports_identity": "no",
+    "combined_record_context_support": "yes",
+    "notes": "Name keeps the title \"Sen.\" inside endorser_name. Crossed-entry span: this section is quote then name then office line, and \"Commissioner of the Revenue, City of Charlottesville\" is the office line of the preceding endorser Todd D. Divers. Pekarsky own office line is \"Virginia Senate, District 36\", which the record instead puts in jurisdiction, so title and affiliation are the neighbour values. The quote itself is hers, so explicit_text holds."
+   }
+  },
+  {
+   "item_id": "98585d1b2583583b8a1c2b5642e781d2b66a3f69d0612c65bf9e8e4828f3a9ae",
+   "status": "complete",
+   "answers": {
+    "endorser_present": "yes",
+    "name_correct": "yes",
+    "entity_category_correct": "yes",
+    "optional_fields_correct": "yes",
+    "record_evidence_supports_identity": "yes",
+    "combined_record_context_support": "yes"
+   }
+  },
+  {
+   "item_id": "b9d5e6932cc6990e622f0c6e3e3ab6e9a4d85806e9010e2115f6f5e123f34ced",
+   "status": "complete",
+   "answers": {
+    "endorser_present": "yes",
+    "name_correct": "yes",
+    "entity_category_correct": "no",
+    "optional_fields_correct": "yes",
+    "record_evidence_supports_identity": "yes",
+    "combined_record_context_support": "yes",
+    "notes": "Category: the page identifies him as \"House Republican Whip Steve Scalise (R-LA)\", a sitting member of Congress, so government_official applies rather than party_official."
+   }
+  },
+  {
+   "item_id": "329749c547756750d35be91aac3eafefa73c95f029c999df66a1f2d0e7fdabba",
+   "status": "complete",
+   "answers": {
+    "endorser_present": "yes",
+    "name_correct": "yes",
+    "entity_category_correct": "yes",
+    "optional_fields_correct": "no",
+    "record_evidence_supports_identity": "no",
+    "combined_record_context_support": "yes",
+    "notes": "Crossed-entry span. \"-Spartanburg, Former 4th District GOP Congressional Candidate, Professor at Wofford College\" belongs to the preceding entry Christina Jeffery; Pratt own line is \"-Columbia, Former 6th District GOP Congressional Nominee\"."
+   }
+  },
+  {
+   "item_id": "78f83ecaf66e870254e0bae910e98eb5877b89ee247050d5964a605feedd0fb2",
+   "status": "complete",
+   "answers": {
+    "endorser_present": "yes",
+    "name_correct": "yes",
+    "entity_category_correct": "yes",
+    "optional_fields_correct": "yes",
+    "record_evidence_supports_identity": "yes",
+    "combined_record_context_support": "yes"
+   }
+  },
+  {
+   "item_id": "bdced42e232529b132c054e27bd460851bc8115acdcf9178c6b2874fdaaecfa1",
+   "status": "complete",
+   "answers": {
+    "endorser_present": "yes",
+    "name_correct": "no",
+    "entity_category_correct": "no",
+    "optional_fields_correct": "yes",
+    "record_evidence_supports_identity": "no",
+    "combined_record_context_support": "yes",
+    "notes": "Name: \"local chapter\" is a fragment of the sentence \"National Electrical Contractors Association, and local chapter, endorses Bacon\" and does not name an entity; the endorser name is National Electrical Contractors Association. Because of that the evidence span does not establish a separate endorser identity. Category: the page identifies NECA as a contractors association, so other_organization applies rather than unclear."
+   }
+  },
+  {
+   "item_id": "56f772b403b89187df409ba5a523aebd1a037f717a480e91c50dc678c5ed3429",
+   "status": "complete",
+   "answers": {
+    "endorser_present": "yes",
+    "name_correct": "yes",
+    "entity_category_correct": "yes",
+    "optional_fields_correct": "no",
+    "record_evidence_supports_identity": "no",
+    "combined_record_context_support": "yes",
+    "notes": "Crossed-entry span. The list is \"Rep./Sen. Name\" then \"District nn (City), role\". \"District 13 (Nampa), Assistant Majority Leader\" belongs to the preceding entry Rep. Brent Crane; Vander Woude own line is \"District 22 (Nampa), Majority Caucus Chairman\"."
+   }
+  },
+  {
+   "item_id": "d757eab7427e6e1f4fae118b2f2a8dedcbcbb49233fac3fbe92933e4e0181207",
+   "status": "complete",
+   "answers": {
+    "endorser_present": "yes",
+    "name_correct": "yes",
+    "entity_category_correct": "yes",
+    "optional_fields_correct": "yes",
+    "record_evidence_supports_identity": "yes",
+    "combined_record_context_support": "yes"
+   }
+  },
+  {
+   "item_id": "6e8b96c38b498119f7efaff904fcece148949e3cfe7a1923fddb2c9b47900930",
+   "status": "complete",
+   "answers": {
+    "endorser_present": "yes",
+    "name_correct": "yes",
+    "entity_category_correct": "yes",
+    "optional_fields_correct": "yes",
+    "record_evidence_supports_identity": "yes",
+    "combined_record_context_support": "yes"
+   }
+  },
+  {
+   "item_id": "fe56c4ce3cdcee1ff0ddb3b96558e78bdb2bf57b838aac0e8e346ad227e448d2",
+   "status": "complete",
+   "answers": {
+    "endorser_present": "yes",
+    "name_correct": "yes",
+    "entity_category_correct": "yes",
+    "optional_fields_correct": "yes",
+    "record_evidence_supports_identity": "yes",
+    "combined_record_context_support": "yes"
+   }
+  },
+  {
+   "item_id": "1b108c631706c719b6ab803eaab0d0172baa261505d77335b304b06b21971b36",
+   "status": "complete",
+   "answers": {
+    "endorser_present": "yes",
+    "name_correct": "yes",
+    "entity_category_correct": "yes",
+    "optional_fields_correct": "yes",
+    "record_evidence_supports_identity": "yes",
+    "combined_record_context_support": "yes"
+   }
+  },
+  {
+   "item_id": "172d1373c556ff901a77a4c99597ef4d45393f299b86a5f9fa009f41c53f40d6",
+   "status": "complete",
+   "answers": {
+    "endorser_present": "yes",
+    "name_correct": "yes",
+    "entity_category_correct": "no",
+    "optional_fields_correct": "yes",
+    "record_evidence_supports_identity": "yes",
+    "combined_record_context_support": "yes",
+    "notes": "Category: the page attributes the quote to \"Rep. Seth Moulton (MA-6)\", a sitting member of Congress, so government_official applies."
+   }
+  },
+  {
+   "item_id": "7963ac2c7f19f7d4dcf9852448e0fbdfe74baecd4f14ee580c551a049b94847f",
+   "status": "complete",
+   "answers": {
+    "endorser_present": "yes",
+    "name_correct": "yes",
+    "entity_category_correct": "yes",
+    "optional_fields_correct": "yes",
+    "record_evidence_supports_identity": "yes",
+    "combined_record_context_support": "yes"
+   }
+  },
+  {
+   "item_id": "24a5f5b80231ebd32523569809c5849827d851603aaa9b537a416e03a84f8953",
+   "status": "complete",
+   "answers": {
+    "endorser_present": "yes",
+    "name_correct": "yes",
+    "entity_category_correct": "no",
+    "optional_fields_correct": "yes",
+    "record_evidence_supports_identity": "yes",
+    "combined_record_context_support": "yes",
+    "notes": "Category: the page states \"Blair McGowan, Owner, The Crofoot, Pontiac\", so the page does give a basis and unclear is not warranted; a private business owner fits private_individual or other_individual."
+   }
+  }
+ ]
+}

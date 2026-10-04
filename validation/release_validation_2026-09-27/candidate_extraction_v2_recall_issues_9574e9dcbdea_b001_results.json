@@ -1,0 +1,429 @@
+{
+ "task_id": "candidate_extraction_v2_recall_issues_9574e9dcbdea_b001",
+ "format": "handcode-results-v1",
+ "exported_at": "2026-09-28T06:01:03Z",
+ "n_items": 20,
+ "n_complete": 20,
+ "responses": [
+  {
+   "item_id": "46944e5edfe355633f30a69f53c9a496119d9274d936a5099b0bce96ab71203b",
+   "status": "complete",
+   "answers": {
+    "all_requested_records_captured": "no",
+    "missed_records": [
+     {
+      "type": "oppose",
+      "value": "Opposes the years of neglect of the forests surrounding Yosemite, which are now dangerously overgrown and falling victim to disease, pestilence and catastrophic wildfire",
+      "evidence": "Yosemite is also threatened by years of neglect of its surrounding forests, which are now dangerously overgrown and are falling victim to disease, pestilence and ultimately, catastrophic wild fire."
+     },
+     {
+      "type": "oppose",
+      "value": "Opposes park managers making Yosemite inconvenient and unpleasant for visitors, which will devastate the economy of all the surrounding communities that depend on tourism",
+      "evidence": "the more inconvenient and unpleasant park managers make it for Yosemite visitors, the fewer visitors they’ll have.  That might be more convenient to them, but it will devastate the economy of all the surrounding communities whose economies depend on tourism."
+     },
+     {
+      "type": "oppose",
+      "value": "Opposes the Park Service extending the public comment period by only 12 days after 13 members of the California Congressional delegation asked for an extension",
+      "evidence": "when 13 members of the California Congressional delegation, including liberal Democrats and conservative Republicans alike, asked for an extension of the public comment period, the Park Service grudgingly extended it by all of 12 days."
+     },
+     {
+      "type": "oppose",
+      "value": "Opposes the Park Service being spread thin and falling behind on necessary projects as Congress voted to add new units to the system, now 409 units",
+      "evidence": "As the Park Service has gradually taken on new responsibilities and Congress has voted to add new units to the system, the Park Service has fallen behind on necessary projects. With 409 units now included in the system, the Park Service is spread thin."
+     },
+     {
+      "type": "oppose",
+      "value": "Opposes the steady decline in per capita visitation to the national parks and the drop in overnight stays",
+      "evidence": "Per capita visitation to our Parks has steadily declined since the peaks of the late 80’s and early 90’s and overnight stays are down in absolute numbers."
+     }
+    ]
+   }
+  },
+  {
+   "item_id": "f4a02af75d795f5c8618cc016a2c6931d277a3b47e1da8661f54a3c5496ca40c",
+   "status": "complete",
+   "answers": {
+    "all_requested_records_captured": "yes"
+   }
+  },
+  {
+   "item_id": "3e668d895a764eb5ff760dafe051b1e0b9d3d610378290789e3fd0adfbe69069",
+   "status": "complete",
+   "answers": {
+    "all_requested_records_captured": "no",
+    "missed_records": [
+     {
+      "type": "oppose",
+      "value": "Opposes the amount of money flowing through politics, which forces members of Congress to spend up to 70 percent of their time fundraising instead of working for constituents",
+      "evidence": "Second, the amount of money flowing through politics forces members of Congress to constantly raise even more money for their next campaign. They spend up to 70 percent of their time fundraising."
+     }
+    ]
+   }
+  },
+  {
+   "item_id": "4c782d0c058952ec1c959dea6d5388b926a7428423f2f125e1955c97248daeec",
+   "status": "complete",
+   "answers": {
+    "all_requested_records_captured": "yes"
+   }
+  },
+  {
+   "item_id": "57d2e6135908a5fe4b4dc9c39eecf9c915768ae6298082cf0af705b590483d4c",
+   "status": "complete",
+   "answers": {
+    "all_requested_records_captured": "yes"
+   }
+  },
+  {
+   "item_id": "e8ceea8a7e577ac5d38a472a62d3ab601f52a3e6c9a475cbb9d893f5e8d5e42d",
+   "status": "complete",
+   "answers": {
+    "all_requested_records_captured": "yes"
+   }
+  },
+  {
+   "item_id": "5ac9df13da21c978078b7bc2af4e0c374ae06dec086314c4f25d49ef93c38283",
+   "status": "complete",
+   "answers": {
+    "all_requested_records_captured": "yes"
+   }
+  },
+  {
+   "item_id": "7d4a5f62d68739fd45514b7ef4e94ebd6edc3215790b78b25c933327df32fc79",
+   "status": "complete",
+   "answers": {
+    "all_requested_records_captured": "no",
+    "missed_records": [
+     {
+      "type": "support",
+      "value": "Supports powering homes and businesses at a reasonable cost, noting Alaskans face some of the highest energy costs in the nation",
+      "evidence": "We need to power our homes and businesses at a reasonable cost."
+     },
+     {
+      "type": "proposal",
+      "value": "Proposes requiring good science and a long-term climate trajectory before making climate decisions that affect ordinary Alaskans",
+      "evidence": "We need good science, and a long-term climate trajectory before we jump in and make decisions that will profoundly affect the lives of ordinary Alaskans."
+     }
+    ]
+   }
+  },
+  {
+   "item_id": "6681d73b72ff473ae2a15d6a1740e7e31e751a8fc60b2a4e0eb835b278864296",
+   "status": "complete",
+   "answers": {
+    "all_requested_records_captured": "no",
+    "missed_records": [
+     {
+      "type": "support",
+      "value": "Supports a health care system that puts Texans, not government bureaucrats, in charge of their health care decisions",
+      "evidence": "Texans deserve a system that puts them, not government bureaucrats, in charge of their health care decisions."
+     },
+     {
+      "type": "proposal",
+      "value": "Proposes providing a solution that creates a sustainable immigration system",
+      "evidence": "I believe we must provide a solution to create a sustainable system."
+     }
+    ]
+   }
+  },
+  {
+   "item_id": "0aa870e122b1ceeab3012ff5a0f058e69ec445a0c3c10e4854893928a38e70d8",
+   "status": "complete",
+   "answers": {
+    "all_requested_records_captured": "no",
+    "missed_records": [
+     {
+      "type": "support",
+      "value": "Supports enforcement of the nation's immigration laws",
+      "evidence": "We are a nation of laws, and our immigration laws must be enforced."
+     },
+     {
+      "type": "oppose",
+      "value": "Opposes government regulations that bypass Constitutional limits on federal authority and strangle state and local economies",
+      "evidence": "Government Regulations continue to bypass Constitutional limits on federal authority and strangle state and local economies."
+     },
+     {
+      "type": "past_action",
+      "value": "Ended corruption and cronyism at the state level in the two-year college system",
+      "evidence": "just like I did at the state level with the two-year college system"
+     },
+     {
+      "type": "past_action",
+      "value": "Made great progress on many important local infrastructure projects as Congressman",
+      "evidence": "As your Congressman, I have made great progress on many important local infrastructure projects."
+     },
+     {
+      "type": "proposal",
+      "value": "Proposes to do much more to ensure national defense and to serve and honor veterans",
+      "evidence": "But we must do more – much more – to ensure our national defense and to serve and honor our veterans."
+     }
+    ]
+   }
+  },
+  {
+   "item_id": "e453f5517074a6c2c18b48da48dfd4524ba87ad271e0fbfbb18193921769916e",
+   "status": "complete",
+   "answers": {
+    "all_requested_records_captured": "no",
+    "missed_records": [
+     {
+      "type": "oppose",
+      "value": "Opposes the bureaucratic paperwork in government agencies that turns simple solutions into financial nightmares",
+      "evidence": "The bureaucratic jungle of paperwork turns simple solutions into financial nightmares."
+     }
+    ]
+   }
+  },
+  {
+   "item_id": "4ace9090b3ff7f517938af6a650d8b0355ee1bc8ef26782bf747d9166e32f769",
+   "status": "complete",
+   "answers": {
+    "all_requested_records_captured": "no",
+    "missed_records": [
+     {
+      "type": "support",
+      "value": "Supports a strong and sound currency",
+      "evidence": "you need to vote for a person that will fight for a strong and sound currency"
+     },
+     {
+      "type": "oppose",
+      "value": "Opposes defunding the police",
+      "evidence": "Now with the crazy democratic party support of defunding the police, encouraging anarchy, BLM (Marxist organization), and with Antifa intimidation."
+     },
+     {
+      "type": "oppose",
+      "value": "Opposes current education results, stating the country spends the most on education yet scores 38th in math and 24th in science",
+      "evidence": "We as a country spend the most on education for our children, yet we don’t get what we pay for. Our country scores on the world stage 38th in maths, 24th in science. This is unacceptable."
+     },
+     {
+      "type": "proposal",
+      "value": "Proposes that all student loans pay only for tuition",
+      "evidence": "All student loans should only pay for tuition."
+     },
+     {
+      "type": "oppose",
+      "value": "Opposes the Obama-era change that replaced bank loan terms with government-funded student loans and caused loan rates to rise",
+      "evidence": "When Obama and the Democrats took over they did away with the banks’ terms and used our government to fund the loans. The catch here was that process then caused the rates to rise."
+     }
+    ]
+   }
+  },
+  {
+   "item_id": "3aad0aea3bb384af708324ec61c3dfba0e18e75137212185a0af8e1c79ff58ad",
+   "status": "complete",
+   "answers": {
+    "all_requested_records_captured": "yes"
+   }
+  },
+  {
+   "item_id": "eeafff93586066b44bb32ef9715c0cda3318099b2fcbd71235ee65384d971d2d",
+   "status": "complete",
+   "answers": {
+    "all_requested_records_captured": "no",
+    "missed_records": [
+     {
+      "type": "past_action",
+      "value": "Helped secure federal funding that generates local economic development",
+      "evidence": "Locally, Ed has helped to secure federal funding that generates economic development."
+     }
+    ]
+   }
+  },
+  {
+   "item_id": "98d00f86262b68387c42ff6477b5c029421d8081b0f5f2815910320627286f63",
+   "status": "complete",
+   "answers": {
+    "all_requested_records_captured": "yes"
+   }
+  },
+  {
+   "item_id": "f0ef59a11ff15c2f90320276961a465dfa63835394db8c103ff645b3377fb4a6",
+   "status": "complete",
+   "answers": {
+    "all_requested_records_captured": "yes"
+   }
+  },
+  {
+   "item_id": "7c931d5647500b65f855c6d0d5cafbdae29cc1c25b489e8661d5f486e8e9758e",
+   "status": "complete",
+   "answers": {
+    "all_requested_records_captured": "no",
+    "missed_records": [
+     {
+      "type": "support",
+      "value": "Supports ensuring every American has both affordable insurance coverage and access to high quality healthcare",
+      "evidence": "We must ensure that every American has both affordable insurance coverage and access to high quality healthcare."
+     },
+     {
+      "type": "proposal",
+      "value": "Proposes to build an economy that works for everyone with better-paying jobs, long-term economic growth, and a fair tax system",
+      "evidence": "It’s time to build an economy that works for everyone with better-paying jobs, long-term economic growth, and a fair tax system."
+     },
+     {
+      "type": "support",
+      "value": "Supports policy that supports small- and medium-sized farms so they can compete and thrive",
+      "evidence": "We need policy that supports our small- and medium-sized farms, allowing them to compete and thrive."
+     },
+     {
+      "type": "support",
+      "value": "Supports helping farmers be good stewards of natural resources",
+      "evidence": "And we need to help our farmers be good stewards of our natural resources."
+     },
+     {
+      "type": "proposal",
+      "value": "Proposes to build local and regional food supply chains so communities and institutions have access to healthy locally produced food and small- and medium-sized farms have accessible distribution",
+      "evidence": "Build local and regional food supply chains\nto help ensure that communities and institutions have access to healthy locally produced food and small- and medium-sized farms have accessible distribution for their products."
+     },
+     {
+      "type": "proposal",
+      "value": "Proposes to allow SNAP benefits to be used on organic foods",
+      "evidence": "Allow SNAP benefits to be used on organic foods."
+     },
+     {
+      "type": "proposal",
+      "value": "Proposes to shift the criminal legal system's focus from punishment to rehabilitation",
+      "evidence": "Shift the system’s focus from punishment to rehabilitation"
+     },
+     {
+      "type": "support",
+      "value": "Supports ensuring that people with disabilities share equitably in all that society has to offer",
+      "evidence": "it is long past time to ensure that people with disabilities share equitably in all that society has to offer"
+     },
+     {
+      "type": "support",
+      "value": "Praises the Americans with Disabilities Act as landmark legislation that moved the country a long way towards justice",
+      "evidence": "The Americans with Disabilities Act was landmark legislation that moved us a long way towards justice these past 30 years."
+     },
+     {
+      "type": "support",
+      "value": "Supports addressing the epidemic of gun violence in the country",
+      "evidence": "it’s past time to address the epidemic of gun violence in our country"
+     },
+     {
+      "type": "support",
+      "value": "Supports continuing the central and western New York tradition of protecting and preserving land, water, and air",
+      "evidence": "we need to continue the central and western New York tradition of protecting and preserving our land, water, and air"
+     },
+     {
+      "type": "support",
+      "value": "Supports the position that providing quality education is one of the government's most important obligations to the people",
+      "evidence": "Providing quality education is one of the government’s most important obligations to the people."
+     },
+     {
+      "type": "proposal",
+      "value": "Proposes to codify civil rights protections for vulnerable students so safe learning environments are permanently available to every student",
+      "evidence": "Codify civil rights protections for our vulnerable students\nso that safe learning environments are permanently available to every student no matter their race, ability, gender identity, sexual orientation, religion, or other identity group."
+     },
+     {
+      "type": "proposal",
+      "value": "Proposes to establish universal Pre-K for all three- and four-year-olds",
+      "evidence": "Establish universal Pre-K\nfor all three- and four-year-olds so they have the best shot at success in school and beyond."
+     },
+     {
+      "type": "support",
+      "value": "Supports paying educators salaries commensurate with the value of the work they do",
+      "evidence": "Treat educators as the professionals they are\nby paying them salaries commensurate with the value of the work they do"
+     },
+     {
+      "type": "support",
+      "value": "Supports providing educators with excellent mentorship and professional development programs",
+      "evidence": "providing excellent mentorship and professional development programs"
+     },
+     {
+      "type": "proposal",
+      "value": "Proposes to treat opioid use disorder as a medical problem rather than as a criminal problem",
+      "evidence": "we must treat opioid use disorder as the medical problem that it is\nrather than as a criminal problem."
+     },
+     {
+      "type": "proposal",
+      "value": "Proposes to guarantee access to long-term substance abuse treatment and mental health treatment through universal healthcare",
+      "evidence": "Guarantee access to long-term substance abuse treatment and mental health treatment\nthrough universal healthcare."
+     },
+     {
+      "type": "proposal",
+      "value": "Proposes to ensure first responders have the resources they need to save lives in emergency situations",
+      "evidence": "Ensure first responders have the resources\nthey need to save lives in emergency situations."
+     },
+     {
+      "type": "proposal",
+      "value": "Proposes to increase the number of substance abuse treatment providers, especially in underserved communities, by incentivizing practitioners and investing in community-based programs",
+      "evidence": "Increase the number of substance abuse treatment providers,\nespecially in underserved communities, by incentivizing practitioners and investing in community-based programs."
+     },
+     {
+      "type": "proposal",
+      "value": "Proposes to stem the flow of opioids into communities",
+      "evidence": "Stem the flow of opioids into our communities."
+     },
+     {
+      "type": "proposal",
+      "value": "Proposes to prosecute drug dealers",
+      "evidence": "prosecute drug dealers"
+     }
+    ]
+   }
+  },
+  {
+   "item_id": "473988fd38387c40803c4d4bb87565434608ea3db142ab53f6ea2f721844ac0d",
+   "status": "complete",
+   "answers": {
+    "all_requested_records_captured": "yes"
+   }
+  },
+  {
+   "item_id": "eac4a1dc9e5102655bb54b39be20d6f614ea9c5810ddebd43b71621f79bc99ab",
+   "status": "complete",
+   "answers": {
+    "all_requested_records_captured": "no",
+    "missed_records": [
+     {
+      "type": "support",
+      "value": "Approves of the Massachusetts Student Opportunity Act as historic law that will increase state education investment and begin to provide the neediest schools with equity",
+      "evidence": "In Massachusetts, the Student Opportunity Act (SOA) is historic law that will increase the money the state invests in education and will begin to provide our neediest schools with equity."
+     },
+     {
+      "type": "support",
+      "value": "Supports providing the most vulnerable students with wrap-around services, including access to mental health services",
+      "evidence": "We must also provide the wrap-around services that the most vulnerable students need to succeed, including access to mental health services"
+     },
+     {
+      "type": "support",
+      "value": "Supports programs for students experiencing food insecurity",
+      "evidence": "programs for students experiencing food insecurity"
+     },
+     {
+      "type": "support",
+      "value": "Supports support for English as a Second Language (ESL) students",
+      "evidence": "support for English as a Second Language (ESL) students"
+     },
+     {
+      "type": "support",
+      "value": "Supports adequate resources for students with disabilities",
+      "evidence": "adequate resources for students with disabilities"
+     },
+     {
+      "type": "proposal",
+      "value": "Proposes to partner with states and local districts to re-direct federal resources now used for the militarization of the police force to education and wrap-around services",
+      "evidence": "Jesse will partner with States and local districts to support re-directing federal resources currently used for the militarization of our police force to reinvest in budget needs for supporting education and wrap-around services."
+     },
+     {
+      "type": "oppose",
+      "value": "Opposes the expansion of charter schools at the federal level and the privatization of public schools",
+      "evidence": "We need to oppose the expansion of charter schools at the federal level to ensure resources are not being allocated to publicly-funded, privately-run schools that lack local oversight."
+     },
+     {
+      "type": "support",
+      "value": "Supports expanding and supporting vocational opportunities for students who choose to pursue a trade",
+      "evidence": "Jesse supports expanding and supporting vocational opportunities for students who choose to pursue a trade."
+     }
+    ]
+   }
+  },
+  {
+   "item_id": "a75bd8ade2aa6e4b573b2a4241cd15ec76b4a009466c2bf79790295e26a9cae1",
+   "status": "complete",
+   "answers": {
+    "all_requested_records_captured": "yes"
+   }
+  }
+ ]
+}

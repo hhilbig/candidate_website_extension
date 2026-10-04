@@ -1,0 +1,1029 @@
+{
+  "task_id": "candidate_extraction_v2_known_omissions_0004944622b5_b001",
+  "title": "Candidate extraction v2: known-omission recovery",
+  "instructions": "### Review rule\n- This is a tuning-regression check, not a holdout estimate.\n- Compare the known omitted fact with the linked model record.\n- Confirm semantics only when the linked record recovers the same fact.\n- Confirm evidence only when exact page text supports that recovery.",
+  "items": [
+    {
+      "id": "0e15a554d55174e433d1de9fb4b1a69d0163ce1f2bf8d33db4dcbcaf8937edb3",
+      "label": "Moore, Blake | issues",
+      "display": [
+        {
+          "label": "Known omission and linked record",
+          "format": "badges",
+          "content": {
+            "Candidate": "Moore, Blake",
+            "Candidate-year ID": "H0UT01205-2022",
+            "State": "UT",
+            "Office": "house",
+            "Year": 2022,
+            "Party": "republican",
+            "Route": "issues",
+            "Segments": 3,
+            "Omission ID": "44ffde27c603b1b001c1d759e886312a8dfcf1dbe1f3303c3298712c9520f16a",
+            "Linked record ID": "6e250cfcf38934ebee9a3e5468b3b1a638e39b02d5a7d370316015c42c574fce"
+          }
+        },
+        {
+          "label": "Known omitted fact",
+          "format": "json",
+          "content": {
+            "expected_type": "issue_statement",
+            "expected_value": "Welcomed the Supreme Court decision overturning the private-employer vaccine mandate",
+            "known_evidence": "I am glad the Supreme Court overturned Biden's sweeping private employer mandates"
+          }
+        },
+        {
+          "label": "Linked resolved model record",
+          "format": "json",
+          "content": {
+            "record": {
+              "claim": "Is glad the Supreme Court overturned Biden's sweeping private employer mandates.",
+              "evidence": "I am glad the Supreme Court overturned Biden's sweeping private employer mandates",
+              "evidence_alignment_method": "unique_exact_unicode_substring_v1",
+              "evidence_end_char": 1131,
+              "evidence_exact_match_count": 1,
+              "evidence_start_char": 1050,
+              "source_heading": null,
+              "source_heading_alignment_method": "not_applicable",
+              "source_heading_end_char": null,
+              "source_heading_exact_match_count": 0,
+              "source_heading_start_char": null,
+              "source_model_item_id": "860453b5246f0220fc9a7b7ac8c1a793fd46e666a0548355c9ba31e62c656836",
+              "statement_kind": "support"
+            },
+            "parent_page_offsets": {
+              "evidence_parent_end_char": 10804,
+              "evidence_parent_start_char": 10723,
+              "source_heading_parent_end_char": null,
+              "source_heading_parent_start_char": null
+            },
+            "overlap_resolution": "single_variant"
+          }
+        },
+        {
+          "label": "Complete archived page text",
+          "format": "text",
+          "content": "Meet Blake\nResults\nNews\nFighting\nIssues\nEvents\nEndorsements\nContribute\nMeet Blake\nResults\nNews\nFighting\nIssues\nEvents\nEndorsements\nBlake Moore for Congress\nContribute\nBlake Moore isn’t Afraid to take a Stand\nEnergy\nMany Utahns can no longer afford to fill up their gas tanks with gas above $5 a gallon. The Biden administration passes the buck by blaming everything except its own anti-energy agenda, but we need an all-of-the-above approach to our energy policy to keep prices down. As Ranking Member of the Oversight and Investigations Subcommittee of the House Natural Resources Committee, I am leading House Republican efforts to end the Biden energy ban and lower dependence on foreign oil and gas. My legislation would rebuild American energy production, require the timely issuance of permits to develop energy and approve pipelines, end Biden's regulatory attacks on energy producers, and lower skyrocketing gas prices so that Utahns aren't suffering from Biden's executive overreach. Limiting U.S. energy development and leaning on foreign countries to produce and sell energy is not environmentally friendly; it puts our environment, economy, and national security at risk.\nPro-Life\nI am proud to be the only candidate endorsed by the Susan B. Anthony List and National Right to Life. I pray that Roe v. Wade will be overturned to return to the states their ability to restrict abortion and protect families. We should work for the day when abortion is unthinkable, and I am committed to ensuring that expecting women have the resources and support they need to bring new life into the world. I have proudly cosponsored and voted for legislation to stop taxpayer funding of abortion, coordinate resources for low-income expecting mothers, protect the conscience rights of healthcare providers, and more.\nAfghanistan\nAmericans deserve to know what went wrong in Biden's disastrous handling of the Afghanistan withdrawal. Last August, I introduced the\nAfghanistan Accountability Act\nto immediately identify the breakdown between Biden, the DOD, and the intelligence community that facilitated this crisis. The bill was incorporated into the National Defense Authorization Act, along with provisions to prohibit the DOD from providing any financial support to the Taliban, require plans to rescue Americans still in Afghanistan, and identify and recover U.S. military equipment left behind. I was proud to be appointed to Leader McCarthy's task force to hold Biden accountable for the Afghanistan withdrawal and protect U.S. national security. My team and I spent the summer and fall helping evacuate Americans and Afghans from the country, and our casework continues to this day. It is unconscionable that the Biden administration left Americans to die because it failed to devise a plan for a responsible withdrawal, and I will keep pressing on the Armed Services committee until we have all the answers we are demanding and we ensure there are systems in place that will prevent a foreign policy crisis of this magnitude from ever happening again.\nHealthcare\nUtah has one of the country's most innovative healthcare sectors. I am helping grow this industry, supporting healthcare workers, and fighting for choice and transparency in our healthcare system to empower our families. I am cosponsoring legislation to lower health prices and prescription drug costs with competition, make healthcare more affordable, address failures in medical supply chains and shore up American manufacturing, and expand access to telehealth and cures.\nChina\nMaintaining our competitive edge against China should be one of Congress's top priorities, and I am committed to strengthening our national security, building up U.S. manufacturing, securing our supply chains, and defending American intellectual property. In an exceptional move for a freshman legislator, House Leadership selected me to serve alongside committee chairs and ranking members as a conferee on the House-Senate conference committee to counter China and maintain America's competitive edge in science and technology. We must ensure America continues to boast the world's strongest, most diverse economy and military as our global competitors seek to undermine international norms.\nImmigration\nPresident Biden's border crisis endangers our national security, and I have spent countless hours holding DHS Secretary Mayorkas accountable for failed policies. From undermining the Remain in Mexico Policy to failing to address the fentanyl crisis that is killing Americans, this administration has abdicated its basic responsibility to secure our borders. I voted to restrict the Biden administration from sending checks to people who violated U.S. immigration laws and I defended the use of Title 42, which gives our Border Patrol more tools to manage our border. I recently visited the border and I also invited a border patrol agent to testify in front of the Oversight and Investigations Subcommittee about how Biden's border policies are allowing drugs to flow across our border and into our communities.\nLegal immigration is the only way that people should enter our nation. As we enhance border security, we can also look at streamlining the immigration system more broadly. Immigrants play an important role in our society and economy, and we can welcome and encourage lawful entry into our nation for those who seek to contribute to this great nation without harming the American workforce.\nInflation\nI convened a debt and deficit task force in Ogden with local community leaders to create a roadmap on how to grow the economy, save our vital programs for vulnerable Americans, and better target America's spending. We are committed to drafting productive solutions that represent Utah's First District, and we are publishing a strategy document to lay out our concerns and recommendations.\nThe sad reality is that inflation is costing hardworking Utah families $511 per month. Thanks to tax-and-spend policies that are contributing to inflation, Utahns are grappling with the rising costs of gas, groceries, utilities, housing, and clothing. I am committed to finding solutions to harmful spending policies so Utahns can keep more of their own money in their own pockets and save for their futures.\nIn Congress, I support the Federal Agency Sunset Commission Act and the Fiscal State of the Nation Resolution to make government more efficient and force legislators to face the true fiscal health of our government. I also am working to recoup the hundreds of billions of dollars from COVID-19 relief funds that were never obligated. We should use these wasted dollars for debt reduction, not additional spending. Reversing the debt-to-GDP ratio is at the top of my fiscal agenda.\nFunding the Police\nPolice officers are the backbone of our communities, and I have been honored to host multiple roundtable discussions with First District law enforcement officials to discuss challenges with hiring and retention, funding streams, and fighting crime. I joined colleagues on wheels for a Back the Blue bike rally at the National Law Enforcement Officers Memorial to honor police officers during National Police Week, spoke at Honor 365’s 9/11 Honor Walk in Layton to pay my respects to fallen local heroes, including Ogden Officer Nate Lyday, and am humbled to display a photo of Officer Nate Lyday in my office to remind me everyday of how we can better protect those who sacrifice all to protect us. I am horrified that America experienced more officer deaths in the line of duty in 2021 than in any year since 1995. We are facing a crime crisis with record police shootings and homicide rates in 2021, and I am fighting radical efforts to defund the police because keeping communities safe should be at the center of all we do.\nUkraine\nI am grieved by Russia's war in Ukraine, and I have used my leadership positions on the House Natural Resources and Armed Services Committees to support Ukraine and hold Russia accountable. I am disappointed that President Biden failed to provide meaningful lethal aid to Ukraine or enact costly sanctions ahead of Russia's invasion and has continued to move the goal post on full and effective sanctions on Russian banks and oligarchs. Nonetheless, I believe we must work across the aisle and with our allies and partners across the world to deter aggression, prosecute Putin for his war crimes, and enforce the rules-based international order.\nOne of the simplest responses to this invasion should be to reduce dependence on Russian energy so American allies stop financing Putin's war. As Ranking Member of the House Natural Resources Oversight and Investigations Subcommittee, I am leading Republican oversight of President Biden's destructive energy policies. In this critical position, I am confronting Russia's invasion of Ukraine by urging the Administration to lift oil and gas restrictions on federal land, rebuild U.S. energy production, and provide oil and gas to our European allies. I am also drafting legislation to enhance American energy production; cosponsoring strategic legislation to impose costly sanctions on Russia and support lethal aid to Ukraine; and leading the way to modernize our military and maintain our competitive advantage on the House Armed Services Committee.\nElection Integrity\nEnsuring our elections are safe and secure should be a top priority for all Americans. In a way, I began helping to secure Utah's elections long ago. Growing up, my mom enlisted me to help sort ballots when she served as a clerk in the Weber County Clerk's Office. In Congress, I have worked hard to support election integrity by opposing H.R. 1, the Democrats' egregious legislation to give the federal government control over state elections, overturn voter ID laws, and allow taxpayer funding for political campaigns. I have welcomed Weber County's Clerk and Auditor Ricky Hatch to testify before members of Congress and share Weber County's secure voting processes. I have also spoken out against corporate boycotts of states like Georgia that have secured their election systems. I will safeguard the constitutional right of state and local officials to administer their own elections and ensure that each and every legal vote is counted.\nMandates\nFederal vaccine mandates have no place in the United States of America, and I have worked hard to fight President Biden's federal overreach at every turn through legislation, letters to the Biden administration, court briefs, and more. These mandates infringe on our individual liberties and force Americans out of the workplace at a time when inflation is skyrocketing. Mandates are counterproductive and an affront to struggling American families. I am glad the Supreme Court overturned Biden's sweeping private employer mandates, and I was proud to file an amicus brief arguing that the Biden administration overstepped its authority. I believe we need to communicate the effectiveness of vaccines and other public health measures in a politically neutral manner and also factor in the role of natural immunity when setting public health measures. In addition, I used my role on the House Armed Services Committee to ensure that service members who chose not to take the COVID-19 vaccine could not be dishonorably discharged from the military, and to require DOD to establish standards under which service members could request vaccine exemptions.\nSite Information\nContact the campaign:\n(801) 900-3213‬\nPaid for by Blake Moore for Congress\nAll rights reserved\nNavigate\nAbout Blake\nPriorities\nAction\nFollow Blake\nSign up to receive news and updates.\nEmail Address\nSign Up\nThank you!",
+          "highlight": [
+            "I am glad the Supreme Court overturned Biden's sweeping private employer mandates"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "150567ced274de69c5ac90c186aa03599326af7997b9f28ed4dbb114fadde677",
+      "label": "Leger, Teresa | issues",
+      "display": [
+        {
+          "label": "Known omission and linked record",
+          "format": "badges",
+          "content": {
+            "Candidate": "Leger, Teresa",
+            "Candidate-year ID": "H0NM03102-2020",
+            "State": "NM",
+            "Office": "house",
+            "Year": 2020,
+            "Party": "democrat",
+            "Route": "issues",
+            "Segments": 1,
+            "Omission ID": "db9755e1cba48f8d54d204eee80b2defdb9145decd55b4d6ef3c63193c7263bf",
+            "Linked record ID": "fa2e7bc9d736db6a3eeda1f60d27abd2b3df9655c286ceca54e975bc86830d83"
+          }
+        },
+        {
+          "label": "Known omitted fact",
+          "format": "json",
+          "content": {
+            "expected_type": "issue_statement",
+            "expected_value": "Helped families afford their first home",
+            "known_evidence": "helping families afford their first home"
+          }
+        },
+        {
+          "label": "Linked resolved model record",
+          "format": "json",
+          "content": {
+            "record": {
+              "claim": "Teresa Leger has helped families afford their first home.",
+              "evidence": "helping families afford their first home",
+              "evidence_alignment_method": "unique_exact_unicode_substring_v1",
+              "evidence_end_char": 523,
+              "evidence_exact_match_count": 1,
+              "evidence_start_char": 483,
+              "source_heading": null,
+              "source_heading_alignment_method": "not_applicable",
+              "source_heading_end_char": null,
+              "source_heading_exact_match_count": 0,
+              "source_heading_start_char": null,
+              "source_model_item_id": "7d76f901f0bcc66d8df5af5abe1787bbdcbd2d2a0c12d98ab42c74fac53fce8a",
+              "statement_kind": "past_action"
+            },
+            "parent_page_offsets": {
+              "evidence_parent_end_char": 523,
+              "evidence_parent_start_char": 483,
+              "source_heading_parent_end_char": null,
+              "source_heading_parent_start_char": null
+            },
+            "overlap_resolution": "single_variant"
+          }
+        },
+        {
+          "label": "Complete archived page text",
+          "format": "text",
+          "content": "PO Box 2675\nSanta Fe, NM 87504\nStay informed!\nSign up with your name and email address to receive news and updates.\nPAID FOR BY TERESA FOR ALL\nContribute\nMEET TERESA\nPRESS\nEndorsements\nISSUES\nVOLUNTEER\nCONTACT\nHELPFUL LINKS\nMore\nwhat Teresa's talking about\nI believe in -- and have spent my life -- building communities.\nWhether it’s working with Pueblos here in Northern New Mexico to build rural health clinics, raising civil rights issues to ensure that all votes are counted, or helping families afford their first home.\nWhen you think about this nation’s aspirational foundation -- the pursuit of happiness and a more perfect union -- what it really comes down to is building thriving communities.\nThese are key principles of ensuring healthy, vibrant, and inclusive communities.\nHealth\nFight for Medicare for All and ensure all Americans have access to quality, affordable health care\nImmigration\nChampion a humane, comprehensive immigration policy\nEducation\nPrioritize education to provide opportunity to all\nRights\nStand up for reproductive freedom\nEconomy\nPromote a vibrant, equitable economy\nSafety\nProtect our communities and families from gun violence\nSustainability\nProtect our air, land, and water and promote a Green New Deal\nInfrastructure\nInvest in 21st century infrastructure that does not leave rural communities behind\nDiversity\nCelebrate and support our diverse communities and histories",
+          "highlight": [
+            "helping families afford their first home"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1811020abb268baedfcab85cf1db3b2d174009f472c94265d0366ace8a29cf0a",
+      "label": "Moore, Blake | issues",
+      "display": [
+        {
+          "label": "Known omission and linked record",
+          "format": "badges",
+          "content": {
+            "Candidate": "Moore, Blake",
+            "Candidate-year ID": "H0UT01205-2022",
+            "State": "UT",
+            "Office": "house",
+            "Year": 2022,
+            "Party": "republican",
+            "Route": "issues",
+            "Segments": 3,
+            "Omission ID": "5790a44a0ae50327bc18975380b71b2972f795de3ff5f3afc49ac6432a4b6c52",
+            "Linked record ID": "5ac2fa99bdf751b03087b88132ce97a7b89eff59814fe189333a72ce4df7d763"
+          }
+        },
+        {
+          "label": "Known omitted fact",
+          "format": "json",
+          "content": {
+            "expected_type": "issue_statement",
+            "expected_value": "Keep pressing for answers and safeguards after the Afghanistan withdrawal",
+            "known_evidence": "I will keep pressing on the Armed Services committee until we have all the answers we are demanding and we ensure there are systems in place that will prevent a foreign policy crisis of this magnitude from ever happening again."
+          }
+        },
+        {
+          "label": "Linked resolved model record",
+          "format": "json",
+          "content": {
+            "record": {
+              "claim": "Will keep pressing on the Armed Services committee to get answers and ensure systems are in place to prevent future foreign policy crises.",
+              "evidence": "I will keep pressing on the Armed Services committee until we have all the answers we are demanding and we ensure there are systems in place that will prevent a foreign policy crisis of this magnitude from ever happening again",
+              "evidence_alignment_method": "unique_exact_unicode_substring_v1",
+              "evidence_end_char": 3056,
+              "evidence_exact_match_count": 1,
+              "evidence_start_char": 2830,
+              "source_heading": null,
+              "source_heading_alignment_method": "not_applicable",
+              "source_heading_end_char": null,
+              "source_heading_exact_match_count": 0,
+              "source_heading_start_char": null,
+              "source_model_item_id": "0305483c319ead0caab5815c5ced38e4e313173ba0d5c134e8bf901cfaba8465",
+              "statement_kind": "current_action"
+            },
+            "parent_page_offsets": {
+              "evidence_parent_end_char": 3056,
+              "evidence_parent_start_char": 2830,
+              "source_heading_parent_end_char": null,
+              "source_heading_parent_start_char": null
+            },
+            "overlap_resolution": "single_variant"
+          }
+        },
+        {
+          "label": "Complete archived page text",
+          "format": "text",
+          "content": "Meet Blake\nResults\nNews\nFighting\nIssues\nEvents\nEndorsements\nContribute\nMeet Blake\nResults\nNews\nFighting\nIssues\nEvents\nEndorsements\nBlake Moore for Congress\nContribute\nBlake Moore isn’t Afraid to take a Stand\nEnergy\nMany Utahns can no longer afford to fill up their gas tanks with gas above $5 a gallon. The Biden administration passes the buck by blaming everything except its own anti-energy agenda, but we need an all-of-the-above approach to our energy policy to keep prices down. As Ranking Member of the Oversight and Investigations Subcommittee of the House Natural Resources Committee, I am leading House Republican efforts to end the Biden energy ban and lower dependence on foreign oil and gas. My legislation would rebuild American energy production, require the timely issuance of permits to develop energy and approve pipelines, end Biden's regulatory attacks on energy producers, and lower skyrocketing gas prices so that Utahns aren't suffering from Biden's executive overreach. Limiting U.S. energy development and leaning on foreign countries to produce and sell energy is not environmentally friendly; it puts our environment, economy, and national security at risk.\nPro-Life\nI am proud to be the only candidate endorsed by the Susan B. Anthony List and National Right to Life. I pray that Roe v. Wade will be overturned to return to the states their ability to restrict abortion and protect families. We should work for the day when abortion is unthinkable, and I am committed to ensuring that expecting women have the resources and support they need to bring new life into the world. I have proudly cosponsored and voted for legislation to stop taxpayer funding of abortion, coordinate resources for low-income expecting mothers, protect the conscience rights of healthcare providers, and more.\nAfghanistan\nAmericans deserve to know what went wrong in Biden's disastrous handling of the Afghanistan withdrawal. Last August, I introduced the\nAfghanistan Accountability Act\nto immediately identify the breakdown between Biden, the DOD, and the intelligence community that facilitated this crisis. The bill was incorporated into the National Defense Authorization Act, along with provisions to prohibit the DOD from providing any financial support to the Taliban, require plans to rescue Americans still in Afghanistan, and identify and recover U.S. military equipment left behind. I was proud to be appointed to Leader McCarthy's task force to hold Biden accountable for the Afghanistan withdrawal and protect U.S. national security. My team and I spent the summer and fall helping evacuate Americans and Afghans from the country, and our casework continues to this day. It is unconscionable that the Biden administration left Americans to die because it failed to devise a plan for a responsible withdrawal, and I will keep pressing on the Armed Services committee until we have all the answers we are demanding and we ensure there are systems in place that will prevent a foreign policy crisis of this magnitude from ever happening again.\nHealthcare\nUtah has one of the country's most innovative healthcare sectors. I am helping grow this industry, supporting healthcare workers, and fighting for choice and transparency in our healthcare system to empower our families. I am cosponsoring legislation to lower health prices and prescription drug costs with competition, make healthcare more affordable, address failures in medical supply chains and shore up American manufacturing, and expand access to telehealth and cures.\nChina\nMaintaining our competitive edge against China should be one of Congress's top priorities, and I am committed to strengthening our national security, building up U.S. manufacturing, securing our supply chains, and defending American intellectual property. In an exceptional move for a freshman legislator, House Leadership selected me to serve alongside committee chairs and ranking members as a conferee on the House-Senate conference committee to counter China and maintain America's competitive edge in science and technology. We must ensure America continues to boast the world's strongest, most diverse economy and military as our global competitors seek to undermine international norms.\nImmigration\nPresident Biden's border crisis endangers our national security, and I have spent countless hours holding DHS Secretary Mayorkas accountable for failed policies. From undermining the Remain in Mexico Policy to failing to address the fentanyl crisis that is killing Americans, this administration has abdicated its basic responsibility to secure our borders. I voted to restrict the Biden administration from sending checks to people who violated U.S. immigration laws and I defended the use of Title 42, which gives our Border Patrol more tools to manage our border. I recently visited the border and I also invited a border patrol agent to testify in front of the Oversight and Investigations Subcommittee about how Biden's border policies are allowing drugs to flow across our border and into our communities.\nLegal immigration is the only way that people should enter our nation. As we enhance border security, we can also look at streamlining the immigration system more broadly. Immigrants play an important role in our society and economy, and we can welcome and encourage lawful entry into our nation for those who seek to contribute to this great nation without harming the American workforce.\nInflation\nI convened a debt and deficit task force in Ogden with local community leaders to create a roadmap on how to grow the economy, save our vital programs for vulnerable Americans, and better target America's spending. We are committed to drafting productive solutions that represent Utah's First District, and we are publishing a strategy document to lay out our concerns and recommendations.\nThe sad reality is that inflation is costing hardworking Utah families $511 per month. Thanks to tax-and-spend policies that are contributing to inflation, Utahns are grappling with the rising costs of gas, groceries, utilities, housing, and clothing. I am committed to finding solutions to harmful spending policies so Utahns can keep more of their own money in their own pockets and save for their futures.\nIn Congress, I support the Federal Agency Sunset Commission Act and the Fiscal State of the Nation Resolution to make government more efficient and force legislators to face the true fiscal health of our government. I also am working to recoup the hundreds of billions of dollars from COVID-19 relief funds that were never obligated. We should use these wasted dollars for debt reduction, not additional spending. Reversing the debt-to-GDP ratio is at the top of my fiscal agenda.\nFunding the Police\nPolice officers are the backbone of our communities, and I have been honored to host multiple roundtable discussions with First District law enforcement officials to discuss challenges with hiring and retention, funding streams, and fighting crime. I joined colleagues on wheels for a Back the Blue bike rally at the National Law Enforcement Officers Memorial to honor police officers during National Police Week, spoke at Honor 365’s 9/11 Honor Walk in Layton to pay my respects to fallen local heroes, including Ogden Officer Nate Lyday, and am humbled to display a photo of Officer Nate Lyday in my office to remind me everyday of how we can better protect those who sacrifice all to protect us. I am horrified that America experienced more officer deaths in the line of duty in 2021 than in any year since 1995. We are facing a crime crisis with record police shootings and homicide rates in 2021, and I am fighting radical efforts to defund the police because keeping communities safe should be at the center of all we do.\nUkraine\nI am grieved by Russia's war in Ukraine, and I have used my leadership positions on the House Natural Resources and Armed Services Committees to support Ukraine and hold Russia accountable. I am disappointed that President Biden failed to provide meaningful lethal aid to Ukraine or enact costly sanctions ahead of Russia's invasion and has continued to move the goal post on full and effective sanctions on Russian banks and oligarchs. Nonetheless, I believe we must work across the aisle and with our allies and partners across the world to deter aggression, prosecute Putin for his war crimes, and enforce the rules-based international order.\nOne of the simplest responses to this invasion should be to reduce dependence on Russian energy so American allies stop financing Putin's war. As Ranking Member of the House Natural Resources Oversight and Investigations Subcommittee, I am leading Republican oversight of President Biden's destructive energy policies. In this critical position, I am confronting Russia's invasion of Ukraine by urging the Administration to lift oil and gas restrictions on federal land, rebuild U.S. energy production, and provide oil and gas to our European allies. I am also drafting legislation to enhance American energy production; cosponsoring strategic legislation to impose costly sanctions on Russia and support lethal aid to Ukraine; and leading the way to modernize our military and maintain our competitive advantage on the House Armed Services Committee.\nElection Integrity\nEnsuring our elections are safe and secure should be a top priority for all Americans. In a way, I began helping to secure Utah's elections long ago. Growing up, my mom enlisted me to help sort ballots when she served as a clerk in the Weber County Clerk's Office. In Congress, I have worked hard to support election integrity by opposing H.R. 1, the Democrats' egregious legislation to give the federal government control over state elections, overturn voter ID laws, and allow taxpayer funding for political campaigns. I have welcomed Weber County's Clerk and Auditor Ricky Hatch to testify before members of Congress and share Weber County's secure voting processes. I have also spoken out against corporate boycotts of states like Georgia that have secured their election systems. I will safeguard the constitutional right of state and local officials to administer their own elections and ensure that each and every legal vote is counted.\nMandates\nFederal vaccine mandates have no place in the United States of America, and I have worked hard to fight President Biden's federal overreach at every turn through legislation, letters to the Biden administration, court briefs, and more. These mandates infringe on our individual liberties and force Americans out of the workplace at a time when inflation is skyrocketing. Mandates are counterproductive and an affront to struggling American families. I am glad the Supreme Court overturned Biden's sweeping private employer mandates, and I was proud to file an amicus brief arguing that the Biden administration overstepped its authority. I believe we need to communicate the effectiveness of vaccines and other public health measures in a politically neutral manner and also factor in the role of natural immunity when setting public health measures. In addition, I used my role on the House Armed Services Committee to ensure that service members who chose not to take the COVID-19 vaccine could not be dishonorably discharged from the military, and to require DOD to establish standards under which service members could request vaccine exemptions.\nSite Information\nContact the campaign:\n(801) 900-3213‬\nPaid for by Blake Moore for Congress\nAll rights reserved\nNavigate\nAbout Blake\nPriorities\nAction\nFollow Blake\nSign up to receive news and updates.\nEmail Address\nSign Up\nThank you!",
+          "highlight": [
+            "I will keep pressing on the Armed Services committee until we have all the answers we are demanding and we ensure there are systems in place that will prevent a foreign policy crisis of this magnitude from ever happening again.",
+            "I will keep pressing on the Armed Services committee until we have all the answers we are demanding and we ensure there are systems in place that will prevent a foreign policy crisis of this magnitude from ever happening again"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "2483a2454a6dc58f61533ac278110f57ee40f1d388d7b073a77e2cd5e3e0d0bc",
+      "label": "Leger, Teresa | issues",
+      "display": [
+        {
+          "label": "Known omission and linked record",
+          "format": "badges",
+          "content": {
+            "Candidate": "Leger, Teresa",
+            "Candidate-year ID": "H0NM03102-2020",
+            "State": "NM",
+            "Office": "house",
+            "Year": 2020,
+            "Party": "democrat",
+            "Route": "issues",
+            "Segments": 1,
+            "Omission ID": "0f830f072163d4f3c765a05ed085a25afe3ae4f9caafd9d8c0fcfdbed07d67a7",
+            "Linked record ID": "30ad9cc27e74fdea8a78883692d737accfc26ad2968539407e89283812c40aa6"
+          }
+        },
+        {
+          "label": "Known omitted fact",
+          "format": "json",
+          "content": {
+            "expected_type": "issue_statement",
+            "expected_value": "Worked with Pueblos to build rural health clinics",
+            "known_evidence": "working with Pueblos here in Northern New Mexico to build rural health clinics"
+          }
+        },
+        {
+          "label": "Linked resolved model record",
+          "format": "json",
+          "content": {
+            "record": {
+              "claim": "Teresa Leger has worked with Pueblos in Northern New Mexico to build rural health clinics.",
+              "evidence": "working with Pueblos here in Northern New Mexico to build rural health clinics",
+              "evidence_alignment_method": "unique_exact_unicode_substring_v1",
+              "evidence_end_char": 412,
+              "evidence_exact_match_count": 1,
+              "evidence_start_char": 334,
+              "source_heading": null,
+              "source_heading_alignment_method": "not_applicable",
+              "source_heading_end_char": null,
+              "source_heading_exact_match_count": 0,
+              "source_heading_start_char": null,
+              "source_model_item_id": "cdcd9599cf75db9f9e274e41957417a7951082c306cb91f75464c2d1d4d29fb4",
+              "statement_kind": "past_action"
+            },
+            "parent_page_offsets": {
+              "evidence_parent_end_char": 412,
+              "evidence_parent_start_char": 334,
+              "source_heading_parent_end_char": null,
+              "source_heading_parent_start_char": null
+            },
+            "overlap_resolution": "single_variant"
+          }
+        },
+        {
+          "label": "Complete archived page text",
+          "format": "text",
+          "content": "PO Box 2675\nSanta Fe, NM 87504\nStay informed!\nSign up with your name and email address to receive news and updates.\nPAID FOR BY TERESA FOR ALL\nContribute\nMEET TERESA\nPRESS\nEndorsements\nISSUES\nVOLUNTEER\nCONTACT\nHELPFUL LINKS\nMore\nwhat Teresa's talking about\nI believe in -- and have spent my life -- building communities.\nWhether it’s working with Pueblos here in Northern New Mexico to build rural health clinics, raising civil rights issues to ensure that all votes are counted, or helping families afford their first home.\nWhen you think about this nation’s aspirational foundation -- the pursuit of happiness and a more perfect union -- what it really comes down to is building thriving communities.\nThese are key principles of ensuring healthy, vibrant, and inclusive communities.\nHealth\nFight for Medicare for All and ensure all Americans have access to quality, affordable health care\nImmigration\nChampion a humane, comprehensive immigration policy\nEducation\nPrioritize education to provide opportunity to all\nRights\nStand up for reproductive freedom\nEconomy\nPromote a vibrant, equitable economy\nSafety\nProtect our communities and families from gun violence\nSustainability\nProtect our air, land, and water and promote a Green New Deal\nInfrastructure\nInvest in 21st century infrastructure that does not leave rural communities behind\nDiversity\nCelebrate and support our diverse communities and histories",
+          "highlight": [
+            "working with Pueblos here in Northern New Mexico to build rural health clinics"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "3bca144e7f777cca1d051cea930bec6269eeafc0cb37cb8440853e5a8291be47",
+      "label": "Moore, Blake | issues",
+      "display": [
+        {
+          "label": "Known omission and linked record",
+          "format": "badges",
+          "content": {
+            "Candidate": "Moore, Blake",
+            "Candidate-year ID": "H0UT01205-2022",
+            "State": "UT",
+            "Office": "house",
+            "Year": 2022,
+            "Party": "republican",
+            "Route": "issues",
+            "Segments": 3,
+            "Omission ID": "ba030aeb76c37933642e91f0f42dccd481390ad7d3cecb40d1596ca5c8947bfd",
+            "Linked record ID": "fa9d1c6d9a1bf563194ec169e48eaa2f16f344cf2562354ddfc37fb19245d190"
+          }
+        },
+        {
+          "label": "Known omitted fact",
+          "format": "json",
+          "content": {
+            "expected_type": "issue_statement",
+            "expected_value": "Participated in Back the Blue and police memorial events",
+            "known_evidence": "I joined colleagues on wheels for a Back the Blue bike rally at the National Law Enforcement Officers Memorial to honor police officers during National Police Week, spoke at Honor 365’s 9/11 Honor Walk in Layton to pay my respects to fallen local heroes"
+          }
+        },
+        {
+          "label": "Linked resolved model record",
+          "format": "json",
+          "content": {
+            "record": {
+              "claim": "Joined colleagues for a Back the Blue bike rally at the National Law Enforcement Officers Memorial to honor police officers.",
+              "evidence": "I joined colleagues on wheels for a Back the Blue bike rally at the National Law Enforcement Officers Memorial to honor police officers during National Police Week",
+              "evidence_alignment_method": "unique_exact_unicode_substring_v1",
+              "evidence_end_char": 1921,
+              "evidence_exact_match_count": 1,
+              "evidence_start_char": 1758,
+              "source_heading": "Funding the Police",
+              "source_heading_alignment_method": "unique_exact_unicode_substring_v1",
+              "source_heading_end_char": 1508,
+              "source_heading_exact_match_count": 1,
+              "source_heading_start_char": 1490,
+              "source_model_item_id": "1fd862430232871b7291693eebcfcaf669f070c9d673c45d0235a2051397ebc7",
+              "statement_kind": "past_action"
+            },
+            "parent_page_offsets": {
+              "evidence_parent_end_char": 7179,
+              "evidence_parent_start_char": 7016,
+              "source_heading_parent_end_char": 6766,
+              "source_heading_parent_start_char": 6748
+            },
+            "overlap_resolution": "single_variant"
+          }
+        },
+        {
+          "label": "Complete archived page text",
+          "format": "text",
+          "content": "Meet Blake\nResults\nNews\nFighting\nIssues\nEvents\nEndorsements\nContribute\nMeet Blake\nResults\nNews\nFighting\nIssues\nEvents\nEndorsements\nBlake Moore for Congress\nContribute\nBlake Moore isn’t Afraid to take a Stand\nEnergy\nMany Utahns can no longer afford to fill up their gas tanks with gas above $5 a gallon. The Biden administration passes the buck by blaming everything except its own anti-energy agenda, but we need an all-of-the-above approach to our energy policy to keep prices down. As Ranking Member of the Oversight and Investigations Subcommittee of the House Natural Resources Committee, I am leading House Republican efforts to end the Biden energy ban and lower dependence on foreign oil and gas. My legislation would rebuild American energy production, require the timely issuance of permits to develop energy and approve pipelines, end Biden's regulatory attacks on energy producers, and lower skyrocketing gas prices so that Utahns aren't suffering from Biden's executive overreach. Limiting U.S. energy development and leaning on foreign countries to produce and sell energy is not environmentally friendly; it puts our environment, economy, and national security at risk.\nPro-Life\nI am proud to be the only candidate endorsed by the Susan B. Anthony List and National Right to Life. I pray that Roe v. Wade will be overturned to return to the states their ability to restrict abortion and protect families. We should work for the day when abortion is unthinkable, and I am committed to ensuring that expecting women have the resources and support they need to bring new life into the world. I have proudly cosponsored and voted for legislation to stop taxpayer funding of abortion, coordinate resources for low-income expecting mothers, protect the conscience rights of healthcare providers, and more.\nAfghanistan\nAmericans deserve to know what went wrong in Biden's disastrous handling of the Afghanistan withdrawal. Last August, I introduced the\nAfghanistan Accountability Act\nto immediately identify the breakdown between Biden, the DOD, and the intelligence community that facilitated this crisis. The bill was incorporated into the National Defense Authorization Act, along with provisions to prohibit the DOD from providing any financial support to the Taliban, require plans to rescue Americans still in Afghanistan, and identify and recover U.S. military equipment left behind. I was proud to be appointed to Leader McCarthy's task force to hold Biden accountable for the Afghanistan withdrawal and protect U.S. national security. My team and I spent the summer and fall helping evacuate Americans and Afghans from the country, and our casework continues to this day. It is unconscionable that the Biden administration left Americans to die because it failed to devise a plan for a responsible withdrawal, and I will keep pressing on the Armed Services committee until we have all the answers we are demanding and we ensure there are systems in place that will prevent a foreign policy crisis of this magnitude from ever happening again.\nHealthcare\nUtah has one of the country's most innovative healthcare sectors. I am helping grow this industry, supporting healthcare workers, and fighting for choice and transparency in our healthcare system to empower our families. I am cosponsoring legislation to lower health prices and prescription drug costs with competition, make healthcare more affordable, address failures in medical supply chains and shore up American manufacturing, and expand access to telehealth and cures.\nChina\nMaintaining our competitive edge against China should be one of Congress's top priorities, and I am committed to strengthening our national security, building up U.S. manufacturing, securing our supply chains, and defending American intellectual property. In an exceptional move for a freshman legislator, House Leadership selected me to serve alongside committee chairs and ranking members as a conferee on the House-Senate conference committee to counter China and maintain America's competitive edge in science and technology. We must ensure America continues to boast the world's strongest, most diverse economy and military as our global competitors seek to undermine international norms.\nImmigration\nPresident Biden's border crisis endangers our national security, and I have spent countless hours holding DHS Secretary Mayorkas accountable for failed policies. From undermining the Remain in Mexico Policy to failing to address the fentanyl crisis that is killing Americans, this administration has abdicated its basic responsibility to secure our borders. I voted to restrict the Biden administration from sending checks to people who violated U.S. immigration laws and I defended the use of Title 42, which gives our Border Patrol more tools to manage our border. I recently visited the border and I also invited a border patrol agent to testify in front of the Oversight and Investigations Subcommittee about how Biden's border policies are allowing drugs to flow across our border and into our communities.\nLegal immigration is the only way that people should enter our nation. As we enhance border security, we can also look at streamlining the immigration system more broadly. Immigrants play an important role in our society and economy, and we can welcome and encourage lawful entry into our nation for those who seek to contribute to this great nation without harming the American workforce.\nInflation\nI convened a debt and deficit task force in Ogden with local community leaders to create a roadmap on how to grow the economy, save our vital programs for vulnerable Americans, and better target America's spending. We are committed to drafting productive solutions that represent Utah's First District, and we are publishing a strategy document to lay out our concerns and recommendations.\nThe sad reality is that inflation is costing hardworking Utah families $511 per month. Thanks to tax-and-spend policies that are contributing to inflation, Utahns are grappling with the rising costs of gas, groceries, utilities, housing, and clothing. I am committed to finding solutions to harmful spending policies so Utahns can keep more of their own money in their own pockets and save for their futures.\nIn Congress, I support the Federal Agency Sunset Commission Act and the Fiscal State of the Nation Resolution to make government more efficient and force legislators to face the true fiscal health of our government. I also am working to recoup the hundreds of billions of dollars from COVID-19 relief funds that were never obligated. We should use these wasted dollars for debt reduction, not additional spending. Reversing the debt-to-GDP ratio is at the top of my fiscal agenda.\nFunding the Police\nPolice officers are the backbone of our communities, and I have been honored to host multiple roundtable discussions with First District law enforcement officials to discuss challenges with hiring and retention, funding streams, and fighting crime. I joined colleagues on wheels for a Back the Blue bike rally at the National Law Enforcement Officers Memorial to honor police officers during National Police Week, spoke at Honor 365’s 9/11 Honor Walk in Layton to pay my respects to fallen local heroes, including Ogden Officer Nate Lyday, and am humbled to display a photo of Officer Nate Lyday in my office to remind me everyday of how we can better protect those who sacrifice all to protect us. I am horrified that America experienced more officer deaths in the line of duty in 2021 than in any year since 1995. We are facing a crime crisis with record police shootings and homicide rates in 2021, and I am fighting radical efforts to defund the police because keeping communities safe should be at the center of all we do.\nUkraine\nI am grieved by Russia's war in Ukraine, and I have used my leadership positions on the House Natural Resources and Armed Services Committees to support Ukraine and hold Russia accountable. I am disappointed that President Biden failed to provide meaningful lethal aid to Ukraine or enact costly sanctions ahead of Russia's invasion and has continued to move the goal post on full and effective sanctions on Russian banks and oligarchs. Nonetheless, I believe we must work across the aisle and with our allies and partners across the world to deter aggression, prosecute Putin for his war crimes, and enforce the rules-based international order.\nOne of the simplest responses to this invasion should be to reduce dependence on Russian energy so American allies stop financing Putin's war. As Ranking Member of the House Natural Resources Oversight and Investigations Subcommittee, I am leading Republican oversight of President Biden's destructive energy policies. In this critical position, I am confronting Russia's invasion of Ukraine by urging the Administration to lift oil and gas restrictions on federal land, rebuild U.S. energy production, and provide oil and gas to our European allies. I am also drafting legislation to enhance American energy production; cosponsoring strategic legislation to impose costly sanctions on Russia and support lethal aid to Ukraine; and leading the way to modernize our military and maintain our competitive advantage on the House Armed Services Committee.\nElection Integrity\nEnsuring our elections are safe and secure should be a top priority for all Americans. In a way, I began helping to secure Utah's elections long ago. Growing up, my mom enlisted me to help sort ballots when she served as a clerk in the Weber County Clerk's Office. In Congress, I have worked hard to support election integrity by opposing H.R. 1, the Democrats' egregious legislation to give the federal government control over state elections, overturn voter ID laws, and allow taxpayer funding for political campaigns. I have welcomed Weber County's Clerk and Auditor Ricky Hatch to testify before members of Congress and share Weber County's secure voting processes. I have also spoken out against corporate boycotts of states like Georgia that have secured their election systems. I will safeguard the constitutional right of state and local officials to administer their own elections and ensure that each and every legal vote is counted.\nMandates\nFederal vaccine mandates have no place in the United States of America, and I have worked hard to fight President Biden's federal overreach at every turn through legislation, letters to the Biden administration, court briefs, and more. These mandates infringe on our individual liberties and force Americans out of the workplace at a time when inflation is skyrocketing. Mandates are counterproductive and an affront to struggling American families. I am glad the Supreme Court overturned Biden's sweeping private employer mandates, and I was proud to file an amicus brief arguing that the Biden administration overstepped its authority. I believe we need to communicate the effectiveness of vaccines and other public health measures in a politically neutral manner and also factor in the role of natural immunity when setting public health measures. In addition, I used my role on the House Armed Services Committee to ensure that service members who chose not to take the COVID-19 vaccine could not be dishonorably discharged from the military, and to require DOD to establish standards under which service members could request vaccine exemptions.\nSite Information\nContact the campaign:\n(801) 900-3213‬\nPaid for by Blake Moore for Congress\nAll rights reserved\nNavigate\nAbout Blake\nPriorities\nAction\nFollow Blake\nSign up to receive news and updates.\nEmail Address\nSign Up\nThank you!",
+          "highlight": [
+            "I joined colleagues on wheels for a Back the Blue bike rally at the National Law Enforcement Officers Memorial to honor police officers during National Police Week, spoke at Honor 365’s 9/11 Honor Walk in Layton to pay my respects to fallen local heroes",
+            "Funding the Police",
+            "I joined colleagues on wheels for a Back the Blue bike rally at the National Law Enforcement Officers Memorial to honor police officers during National Police Week"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "40af18d1022007464c5914a6b8f26658be306126210bab0d33342954bee3b699",
+      "label": "Berkley, Shelley | issues",
+      "display": [
+        {
+          "label": "Known omission and linked record",
+          "format": "badges",
+          "content": {
+            "Candidate": "Berkley, Shelley",
+            "Candidate-year ID": "S2NV00209-2012",
+            "State": "NV",
+            "Office": "senate",
+            "Year": 2012,
+            "Party": "democrat",
+            "Route": "issues",
+            "Segments": 1,
+            "Omission ID": "5f266ab26feec40d236f46151199b63a8914dda3dce28457d9e51dc4116d178a",
+            "Linked record ID": "1f7a3eefd9c4a2768f8941f8dfb37d2d0aaa549c12239e17ec1e4eac05b903b4"
+          }
+        },
+        {
+          "label": "Known omitted fact",
+          "format": "json",
+          "content": {
+            "expected_type": "issue_statement",
+            "expected_value": "Protect Medicare",
+            "known_evidence": "Running to create jobs in Nevada, protect Medicare, build clean energy infrastructure, and make sure we keep the promises we've made to our veterans."
+          }
+        },
+        {
+          "label": "Linked resolved model record",
+          "format": "json",
+          "content": {
+            "record": {
+              "claim": "Shelley Berkley aims to protect Medicare.",
+              "evidence": "protect Medicare",
+              "evidence_alignment_method": "unique_exact_unicode_substring_v1",
+              "evidence_end_char": 50,
+              "evidence_exact_match_count": 1,
+              "evidence_start_char": 34,
+              "source_heading": null,
+              "source_heading_alignment_method": "not_applicable",
+              "source_heading_end_char": null,
+              "source_heading_exact_match_count": 0,
+              "source_heading_start_char": null,
+              "source_model_item_id": "5b962855152f933e438899e7bfdf75e849be06aca98d42ad4f38ae51264a0b10",
+              "statement_kind": "proposal"
+            },
+            "parent_page_offsets": {
+              "evidence_parent_end_char": 50,
+              "evidence_parent_start_char": 34,
+              "source_heading_parent_end_char": null,
+              "source_heading_parent_start_char": null
+            },
+            "overlap_resolution": "single_variant"
+          }
+        },
+        {
+          "label": "Complete archived page text",
+          "format": "text",
+          "content": "Running to create jobs in Nevada, protect Medicare, build clean energy infrastructure, and make sure we keep the promises we've made to our veterans.\nFollow Shelley on Twitter »\nAbout\nIssues\nNews\nVideos\nFact Check\nTake Action\nStore\nShelley on the Issues\nYou don’t earn a reputation as the hardest working person in Congress by sitting on the sidelines. Shelley has been in the thick of the debates in Congress standing up for Nevadans and the issues that matter most to them.\nCreating Jobs / Economy\nShelley’s number one, two and three priorities are jobs, jobs and more jobs.\nProtecting Social Security & Medicare\nFor more than 75 years, Social Security has been a bedrock promise to our nation that 408,000 Nevadans rely on.\nHousing / Foreclosure\nNo state’s homeowners have been hit harder by the foreclosure crisis than Nevada.\nNational Security\nOn foreign policy, Shelley has stood with our allies to promote democracy.\nVeterans\nShelley has stood up for Nevada’s veterans throughout her career in public service.\nClean Energy Jobs\nVast wind, solar and geothermal potential gives Nevada the opportunity to lead the nation in clean energy jobs.\nPreservation / Conservation\nNevada’s natural beauty is a national treasure and an economic asset that we must preserve for future generations.\nYucca Mountain\nShelley hasn’t just worked to stop the project.  She’s worked to solve the problem.\nEducation\nShelley knows the importance of ensuring that all Nevada students have access to the same opportunities that she had.\nHealth Care\nThe new health insurance reform law wasn’t perfect, but it reined in some of the worst abuses by the health insurance companies.\nImmigration\nShelley feels strongly opportunities should not be denied to hard-working, tax-paying families in Nevada.\nNews Archives\nSelect Month\nOctober 2012  (24)\nSeptember 2012  (15)\nAugust 2012  (24)\nJuly 2012  (24)\nJune 2012  (13)\nMay 2012  (8)\nApril 2012  (11)\nMarch 2012  (11)\nFebruary 2012  (12)\nJanuary 2012  (5)\nDecember 2011  (12)\nNovember 2011  (12)\nOctober 2011  (11)\nSeptember 2011  (2)\nAugust 2011  (6)\nLatest Tweets\nFollow Shelley on Twitter »\nFriends of Shelley\nRecent Photos\nMore on Flickr »\nShelley Berkley\nfor senate\nAbout Shelley\nIssues\nNews\nFact Check\nTake Action\nStore\nPrivacy Policy\nContact Us\nPaid for By Berkley for Senate",
+          "highlight": [
+            "Running to create jobs in Nevada, protect Medicare, build clean energy infrastructure, and make sure we keep the promises we've made to our veterans.",
+            "protect Medicare"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "681f3e14a49bbe76218c8de4d9faf5c341f53efab6311f517dab3c4646e1ffff",
+      "label": "Berkley, Shelley | issues",
+      "display": [
+        {
+          "label": "Known omission and linked record",
+          "format": "badges",
+          "content": {
+            "Candidate": "Berkley, Shelley",
+            "Candidate-year ID": "S2NV00209-2012",
+            "State": "NV",
+            "Office": "senate",
+            "Year": 2012,
+            "Party": "democrat",
+            "Route": "issues",
+            "Segments": 1,
+            "Omission ID": "5f266ab26feec40d236f46151199b63a8914dda3dce28457d9e51dc4116d178a",
+            "Linked record ID": "3ebd141f4137acf0dc90d42b5f740d813edf778471fe918cea65302d2a94b364"
+          }
+        },
+        {
+          "label": "Known omitted fact",
+          "format": "json",
+          "content": {
+            "expected_type": "issue_statement",
+            "expected_value": "Protect Medicare",
+            "known_evidence": "Running to create jobs in Nevada, protect Medicare, build clean energy infrastructure, and make sure we keep the promises we've made to our veterans."
+          }
+        },
+        {
+          "label": "Linked resolved model record",
+          "format": "json",
+          "content": {
+            "record": {
+              "claim": "Shelley Berkley aims to create jobs in Nevada.",
+              "evidence": "Running to create jobs in Nevada",
+              "evidence_alignment_method": "unique_exact_unicode_substring_v1",
+              "evidence_end_char": 32,
+              "evidence_exact_match_count": 1,
+              "evidence_start_char": 0,
+              "source_heading": null,
+              "source_heading_alignment_method": "not_applicable",
+              "source_heading_end_char": null,
+              "source_heading_exact_match_count": 0,
+              "source_heading_start_char": null,
+              "source_model_item_id": "4bc9d5d06f6c5507f90ae12622aad31060eeb7d06203216fb0d05427ad753a78",
+              "statement_kind": "proposal"
+            },
+            "parent_page_offsets": {
+              "evidence_parent_end_char": 32,
+              "evidence_parent_start_char": 0,
+              "source_heading_parent_end_char": null,
+              "source_heading_parent_start_char": null
+            },
+            "overlap_resolution": "single_variant"
+          }
+        },
+        {
+          "label": "Complete archived page text",
+          "format": "text",
+          "content": "Running to create jobs in Nevada, protect Medicare, build clean energy infrastructure, and make sure we keep the promises we've made to our veterans.\nFollow Shelley on Twitter »\nAbout\nIssues\nNews\nVideos\nFact Check\nTake Action\nStore\nShelley on the Issues\nYou don’t earn a reputation as the hardest working person in Congress by sitting on the sidelines. Shelley has been in the thick of the debates in Congress standing up for Nevadans and the issues that matter most to them.\nCreating Jobs / Economy\nShelley’s number one, two and three priorities are jobs, jobs and more jobs.\nProtecting Social Security & Medicare\nFor more than 75 years, Social Security has been a bedrock promise to our nation that 408,000 Nevadans rely on.\nHousing / Foreclosure\nNo state’s homeowners have been hit harder by the foreclosure crisis than Nevada.\nNational Security\nOn foreign policy, Shelley has stood with our allies to promote democracy.\nVeterans\nShelley has stood up for Nevada’s veterans throughout her career in public service.\nClean Energy Jobs\nVast wind, solar and geothermal potential gives Nevada the opportunity to lead the nation in clean energy jobs.\nPreservation / Conservation\nNevada’s natural beauty is a national treasure and an economic asset that we must preserve for future generations.\nYucca Mountain\nShelley hasn’t just worked to stop the project.  She’s worked to solve the problem.\nEducation\nShelley knows the importance of ensuring that all Nevada students have access to the same opportunities that she had.\nHealth Care\nThe new health insurance reform law wasn’t perfect, but it reined in some of the worst abuses by the health insurance companies.\nImmigration\nShelley feels strongly opportunities should not be denied to hard-working, tax-paying families in Nevada.\nNews Archives\nSelect Month\nOctober 2012  (24)\nSeptember 2012  (15)\nAugust 2012  (24)\nJuly 2012  (24)\nJune 2012  (13)\nMay 2012  (8)\nApril 2012  (11)\nMarch 2012  (11)\nFebruary 2012  (12)\nJanuary 2012  (5)\nDecember 2011  (12)\nNovember 2011  (12)\nOctober 2011  (11)\nSeptember 2011  (2)\nAugust 2011  (6)\nLatest Tweets\nFollow Shelley on Twitter »\nFriends of Shelley\nRecent Photos\nMore on Flickr »\nShelley Berkley\nfor senate\nAbout Shelley\nIssues\nNews\nFact Check\nTake Action\nStore\nPrivacy Policy\nContact Us\nPaid for By Berkley for Senate",
+          "highlight": [
+            "Running to create jobs in Nevada, protect Medicare, build clean energy infrastructure, and make sure we keep the promises we've made to our veterans.",
+            "Running to create jobs in Nevada"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "696fbdeb2ded8ab958494b2f605f252e231f9183bd7786938dab6e713d85f10d",
+      "label": "Moore, Blake | issues",
+      "display": [
+        {
+          "label": "Known omission and linked record",
+          "format": "badges",
+          "content": {
+            "Candidate": "Moore, Blake",
+            "Candidate-year ID": "H0UT01205-2022",
+            "State": "UT",
+            "Office": "house",
+            "Year": 2022,
+            "Party": "republican",
+            "Route": "issues",
+            "Segments": 3,
+            "Omission ID": "097bb69cbcdc4893cc1dda73da75cd8c5af97670b1dba65d7c7c5d844582fd1a",
+            "Linked record ID": "7cd1c5644accc541837ad7478d48aa6492b8fec76619846f16de23bc3e1bc7bb"
+          }
+        },
+        {
+          "label": "Known omitted fact",
+          "format": "json",
+          "content": {
+            "expected_type": "issue_statement",
+            "expected_value": "Invited a Border Patrol agent to testify about drugs crossing the border",
+            "known_evidence": "I also invited a border patrol agent to testify in front of the Oversight and Investigations Subcommittee about how Biden's border policies are allowing drugs to flow across our border and into our communities."
+          }
+        },
+        {
+          "label": "Linked resolved model record",
+          "format": "json",
+          "content": {
+            "record": {
+              "claim": "Invited a border patrol agent to testify about how Biden's border policies allow drugs to flow across the border.",
+              "evidence": "I also invited a border patrol agent to testify in front of the Oversight and Investigations Subcommittee about how Biden's border policies are allowing drugs to flow across our border and into our communities",
+              "evidence_alignment_method": "unique_exact_unicode_substring_v1",
+              "evidence_end_char": 5066,
+              "evidence_exact_match_count": 1,
+              "evidence_start_char": 4857,
+              "source_heading": "Immigration",
+              "source_heading_alignment_method": "unique_exact_unicode_substring_v1",
+              "source_heading_end_char": 4255,
+              "source_heading_exact_match_count": 1,
+              "source_heading_start_char": 4244,
+              "source_model_item_id": "25acdc0f08d6e0ee6c2353360ec4283c8f19134cc1dc3559812cfa6452273191",
+              "statement_kind": "past_action"
+            },
+            "parent_page_offsets": {
+              "evidence_parent_end_char": 5066,
+              "evidence_parent_start_char": 4857,
+              "source_heading_parent_end_char": 4255,
+              "source_heading_parent_start_char": 4244
+            },
+            "overlap_resolution": "single_variant"
+          }
+        },
+        {
+          "label": "Complete archived page text",
+          "format": "text",
+          "content": "Meet Blake\nResults\nNews\nFighting\nIssues\nEvents\nEndorsements\nContribute\nMeet Blake\nResults\nNews\nFighting\nIssues\nEvents\nEndorsements\nBlake Moore for Congress\nContribute\nBlake Moore isn’t Afraid to take a Stand\nEnergy\nMany Utahns can no longer afford to fill up their gas tanks with gas above $5 a gallon. The Biden administration passes the buck by blaming everything except its own anti-energy agenda, but we need an all-of-the-above approach to our energy policy to keep prices down. As Ranking Member of the Oversight and Investigations Subcommittee of the House Natural Resources Committee, I am leading House Republican efforts to end the Biden energy ban and lower dependence on foreign oil and gas. My legislation would rebuild American energy production, require the timely issuance of permits to develop energy and approve pipelines, end Biden's regulatory attacks on energy producers, and lower skyrocketing gas prices so that Utahns aren't suffering from Biden's executive overreach. Limiting U.S. energy development and leaning on foreign countries to produce and sell energy is not environmentally friendly; it puts our environment, economy, and national security at risk.\nPro-Life\nI am proud to be the only candidate endorsed by the Susan B. Anthony List and National Right to Life. I pray that Roe v. Wade will be overturned to return to the states their ability to restrict abortion and protect families. We should work for the day when abortion is unthinkable, and I am committed to ensuring that expecting women have the resources and support they need to bring new life into the world. I have proudly cosponsored and voted for legislation to stop taxpayer funding of abortion, coordinate resources for low-income expecting mothers, protect the conscience rights of healthcare providers, and more.\nAfghanistan\nAmericans deserve to know what went wrong in Biden's disastrous handling of the Afghanistan withdrawal. Last August, I introduced the\nAfghanistan Accountability Act\nto immediately identify the breakdown between Biden, the DOD, and the intelligence community that facilitated this crisis. The bill was incorporated into the National Defense Authorization Act, along with provisions to prohibit the DOD from providing any financial support to the Taliban, require plans to rescue Americans still in Afghanistan, and identify and recover U.S. military equipment left behind. I was proud to be appointed to Leader McCarthy's task force to hold Biden accountable for the Afghanistan withdrawal and protect U.S. national security. My team and I spent the summer and fall helping evacuate Americans and Afghans from the country, and our casework continues to this day. It is unconscionable that the Biden administration left Americans to die because it failed to devise a plan for a responsible withdrawal, and I will keep pressing on the Armed Services committee until we have all the answers we are demanding and we ensure there are systems in place that will prevent a foreign policy crisis of this magnitude from ever happening again.\nHealthcare\nUtah has one of the country's most innovative healthcare sectors. I am helping grow this industry, supporting healthcare workers, and fighting for choice and transparency in our healthcare system to empower our families. I am cosponsoring legislation to lower health prices and prescription drug costs with competition, make healthcare more affordable, address failures in medical supply chains and shore up American manufacturing, and expand access to telehealth and cures.\nChina\nMaintaining our competitive edge against China should be one of Congress's top priorities, and I am committed to strengthening our national security, building up U.S. manufacturing, securing our supply chains, and defending American intellectual property. In an exceptional move for a freshman legislator, House Leadership selected me to serve alongside committee chairs and ranking members as a conferee on the House-Senate conference committee to counter China and maintain America's competitive edge in science and technology. We must ensure America continues to boast the world's strongest, most diverse economy and military as our global competitors seek to undermine international norms.\nImmigration\nPresident Biden's border crisis endangers our national security, and I have spent countless hours holding DHS Secretary Mayorkas accountable for failed policies. From undermining the Remain in Mexico Policy to failing to address the fentanyl crisis that is killing Americans, this administration has abdicated its basic responsibility to secure our borders. I voted to restrict the Biden administration from sending checks to people who violated U.S. immigration laws and I defended the use of Title 42, which gives our Border Patrol more tools to manage our border. I recently visited the border and I also invited a border patrol agent to testify in front of the Oversight and Investigations Subcommittee about how Biden's border policies are allowing drugs to flow across our border and into our communities.\nLegal immigration is the only way that people should enter our nation. As we enhance border security, we can also look at streamlining the immigration system more broadly. Immigrants play an important role in our society and economy, and we can welcome and encourage lawful entry into our nation for those who seek to contribute to this great nation without harming the American workforce.\nInflation\nI convened a debt and deficit task force in Ogden with local community leaders to create a roadmap on how to grow the economy, save our vital programs for vulnerable Americans, and better target America's spending. We are committed to drafting productive solutions that represent Utah's First District, and we are publishing a strategy document to lay out our concerns and recommendations.\nThe sad reality is that inflation is costing hardworking Utah families $511 per month. Thanks to tax-and-spend policies that are contributing to inflation, Utahns are grappling with the rising costs of gas, groceries, utilities, housing, and clothing. I am committed to finding solutions to harmful spending policies so Utahns can keep more of their own money in their own pockets and save for their futures.\nIn Congress, I support the Federal Agency Sunset Commission Act and the Fiscal State of the Nation Resolution to make government more efficient and force legislators to face the true fiscal health of our government. I also am working to recoup the hundreds of billions of dollars from COVID-19 relief funds that were never obligated. We should use these wasted dollars for debt reduction, not additional spending. Reversing the debt-to-GDP ratio is at the top of my fiscal agenda.\nFunding the Police\nPolice officers are the backbone of our communities, and I have been honored to host multiple roundtable discussions with First District law enforcement officials to discuss challenges with hiring and retention, funding streams, and fighting crime. I joined colleagues on wheels for a Back the Blue bike rally at the National Law Enforcement Officers Memorial to honor police officers during National Police Week, spoke at Honor 365’s 9/11 Honor Walk in Layton to pay my respects to fallen local heroes, including Ogden Officer Nate Lyday, and am humbled to display a photo of Officer Nate Lyday in my office to remind me everyday of how we can better protect those who sacrifice all to protect us. I am horrified that America experienced more officer deaths in the line of duty in 2021 than in any year since 1995. We are facing a crime crisis with record police shootings and homicide rates in 2021, and I am fighting radical efforts to defund the police because keeping communities safe should be at the center of all we do.\nUkraine\nI am grieved by Russia's war in Ukraine, and I have used my leadership positions on the House Natural Resources and Armed Services Committees to support Ukraine and hold Russia accountable. I am disappointed that President Biden failed to provide meaningful lethal aid to Ukraine or enact costly sanctions ahead of Russia's invasion and has continued to move the goal post on full and effective sanctions on Russian banks and oligarchs. Nonetheless, I believe we must work across the aisle and with our allies and partners across the world to deter aggression, prosecute Putin for his war crimes, and enforce the rules-based international order.\nOne of the simplest responses to this invasion should be to reduce dependence on Russian energy so American allies stop financing Putin's war. As Ranking Member of the House Natural Resources Oversight and Investigations Subcommittee, I am leading Republican oversight of President Biden's destructive energy policies. In this critical position, I am confronting Russia's invasion of Ukraine by urging the Administration to lift oil and gas restrictions on federal land, rebuild U.S. energy production, and provide oil and gas to our European allies. I am also drafting legislation to enhance American energy production; cosponsoring strategic legislation to impose costly sanctions on Russia and support lethal aid to Ukraine; and leading the way to modernize our military and maintain our competitive advantage on the House Armed Services Committee.\nElection Integrity\nEnsuring our elections are safe and secure should be a top priority for all Americans. In a way, I began helping to secure Utah's elections long ago. Growing up, my mom enlisted me to help sort ballots when she served as a clerk in the Weber County Clerk's Office. In Congress, I have worked hard to support election integrity by opposing H.R. 1, the Democrats' egregious legislation to give the federal government control over state elections, overturn voter ID laws, and allow taxpayer funding for political campaigns. I have welcomed Weber County's Clerk and Auditor Ricky Hatch to testify before members of Congress and share Weber County's secure voting processes. I have also spoken out against corporate boycotts of states like Georgia that have secured their election systems. I will safeguard the constitutional right of state and local officials to administer their own elections and ensure that each and every legal vote is counted.\nMandates\nFederal vaccine mandates have no place in the United States of America, and I have worked hard to fight President Biden's federal overreach at every turn through legislation, letters to the Biden administration, court briefs, and more. These mandates infringe on our individual liberties and force Americans out of the workplace at a time when inflation is skyrocketing. Mandates are counterproductive and an affront to struggling American families. I am glad the Supreme Court overturned Biden's sweeping private employer mandates, and I was proud to file an amicus brief arguing that the Biden administration overstepped its authority. I believe we need to communicate the effectiveness of vaccines and other public health measures in a politically neutral manner and also factor in the role of natural immunity when setting public health measures. In addition, I used my role on the House Armed Services Committee to ensure that service members who chose not to take the COVID-19 vaccine could not be dishonorably discharged from the military, and to require DOD to establish standards under which service members could request vaccine exemptions.\nSite Information\nContact the campaign:\n(801) 900-3213‬\nPaid for by Blake Moore for Congress\nAll rights reserved\nNavigate\nAbout Blake\nPriorities\nAction\nFollow Blake\nSign up to receive news and updates.\nEmail Address\nSign Up\nThank you!",
+          "highlight": [
+            "I also invited a border patrol agent to testify in front of the Oversight and Investigations Subcommittee about how Biden's border policies are allowing drugs to flow across our border and into our communities.",
+            "Immigration",
+            "I also invited a border patrol agent to testify in front of the Oversight and Investigations Subcommittee about how Biden's border policies are allowing drugs to flow across our border and into our communities"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "738cf2095ef4f80a23a4c7dd35cbddcb04472c65b9f2b84370db774b61c88656",
+      "label": "Moore, Blake | issues",
+      "display": [
+        {
+          "label": "Known omission and linked record",
+          "format": "badges",
+          "content": {
+            "Candidate": "Moore, Blake",
+            "Candidate-year ID": "H0UT01205-2022",
+            "State": "UT",
+            "Office": "house",
+            "Year": 2022,
+            "Party": "republican",
+            "Route": "issues",
+            "Segments": 3,
+            "Omission ID": "ba030aeb76c37933642e91f0f42dccd481390ad7d3cecb40d1596ca5c8947bfd",
+            "Linked record ID": "0870d1ab9b45291a20a9e7dab2ec07089f9b4f495e64f10baf9cb90bbb38aa33"
+          }
+        },
+        {
+          "label": "Known omitted fact",
+          "format": "json",
+          "content": {
+            "expected_type": "issue_statement",
+            "expected_value": "Participated in Back the Blue and police memorial events",
+            "known_evidence": "I joined colleagues on wheels for a Back the Blue bike rally at the National Law Enforcement Officers Memorial to honor police officers during National Police Week, spoke at Honor 365’s 9/11 Honor Walk in Layton to pay my respects to fallen local heroes"
+          }
+        },
+        {
+          "label": "Linked resolved model record",
+          "format": "json",
+          "content": {
+            "record": {
+              "claim": "Spoke at Honor 365’s 9/11 Honor Walk in Layton to pay respects to fallen local heroes.",
+              "evidence": "spoke at Honor 365’s 9/11 Honor Walk in Layton to pay my respects to fallen local heroes, including Ogden Officer Nate Lyday",
+              "evidence_alignment_method": "unique_exact_unicode_substring_v1",
+              "evidence_end_char": 2047,
+              "evidence_exact_match_count": 1,
+              "evidence_start_char": 1923,
+              "source_heading": "Funding the Police",
+              "source_heading_alignment_method": "unique_exact_unicode_substring_v1",
+              "source_heading_end_char": 1508,
+              "source_heading_exact_match_count": 1,
+              "source_heading_start_char": 1490,
+              "source_model_item_id": "b7e2ad6853c3278d6d003664ecc8fb36a5a0ba9d503c6044b04ac7441646dae8",
+              "statement_kind": "past_action"
+            },
+            "parent_page_offsets": {
+              "evidence_parent_end_char": 7305,
+              "evidence_parent_start_char": 7181,
+              "source_heading_parent_end_char": 6766,
+              "source_heading_parent_start_char": 6748
+            },
+            "overlap_resolution": "single_variant"
+          }
+        },
+        {
+          "label": "Complete archived page text",
+          "format": "text",
+          "content": "Meet Blake\nResults\nNews\nFighting\nIssues\nEvents\nEndorsements\nContribute\nMeet Blake\nResults\nNews\nFighting\nIssues\nEvents\nEndorsements\nBlake Moore for Congress\nContribute\nBlake Moore isn’t Afraid to take a Stand\nEnergy\nMany Utahns can no longer afford to fill up their gas tanks with gas above $5 a gallon. The Biden administration passes the buck by blaming everything except its own anti-energy agenda, but we need an all-of-the-above approach to our energy policy to keep prices down. As Ranking Member of the Oversight and Investigations Subcommittee of the House Natural Resources Committee, I am leading House Republican efforts to end the Biden energy ban and lower dependence on foreign oil and gas. My legislation would rebuild American energy production, require the timely issuance of permits to develop energy and approve pipelines, end Biden's regulatory attacks on energy producers, and lower skyrocketing gas prices so that Utahns aren't suffering from Biden's executive overreach. Limiting U.S. energy development and leaning on foreign countries to produce and sell energy is not environmentally friendly; it puts our environment, economy, and national security at risk.\nPro-Life\nI am proud to be the only candidate endorsed by the Susan B. Anthony List and National Right to Life. I pray that Roe v. Wade will be overturned to return to the states their ability to restrict abortion and protect families. We should work for the day when abortion is unthinkable, and I am committed to ensuring that expecting women have the resources and support they need to bring new life into the world. I have proudly cosponsored and voted for legislation to stop taxpayer funding of abortion, coordinate resources for low-income expecting mothers, protect the conscience rights of healthcare providers, and more.\nAfghanistan\nAmericans deserve to know what went wrong in Biden's disastrous handling of the Afghanistan withdrawal. Last August, I introduced the\nAfghanistan Accountability Act\nto immediately identify the breakdown between Biden, the DOD, and the intelligence community that facilitated this crisis. The bill was incorporated into the National Defense Authorization Act, along with provisions to prohibit the DOD from providing any financial support to the Taliban, require plans to rescue Americans still in Afghanistan, and identify and recover U.S. military equipment left behind. I was proud to be appointed to Leader McCarthy's task force to hold Biden accountable for the Afghanistan withdrawal and protect U.S. national security. My team and I spent the summer and fall helping evacuate Americans and Afghans from the country, and our casework continues to this day. It is unconscionable that the Biden administration left Americans to die because it failed to devise a plan for a responsible withdrawal, and I will keep pressing on the Armed Services committee until we have all the answers we are demanding and we ensure there are systems in place that will prevent a foreign policy crisis of this magnitude from ever happening again.\nHealthcare\nUtah has one of the country's most innovative healthcare sectors. I am helping grow this industry, supporting healthcare workers, and fighting for choice and transparency in our healthcare system to empower our families. I am cosponsoring legislation to lower health prices and prescription drug costs with competition, make healthcare more affordable, address failures in medical supply chains and shore up American manufacturing, and expand access to telehealth and cures.\nChina\nMaintaining our competitive edge against China should be one of Congress's top priorities, and I am committed to strengthening our national security, building up U.S. manufacturing, securing our supply chains, and defending American intellectual property. In an exceptional move for a freshman legislator, House Leadership selected me to serve alongside committee chairs and ranking members as a conferee on the House-Senate conference committee to counter China and maintain America's competitive edge in science and technology. We must ensure America continues to boast the world's strongest, most diverse economy and military as our global competitors seek to undermine international norms.\nImmigration\nPresident Biden's border crisis endangers our national security, and I have spent countless hours holding DHS Secretary Mayorkas accountable for failed policies. From undermining the Remain in Mexico Policy to failing to address the fentanyl crisis that is killing Americans, this administration has abdicated its basic responsibility to secure our borders. I voted to restrict the Biden administration from sending checks to people who violated U.S. immigration laws and I defended the use of Title 42, which gives our Border Patrol more tools to manage our border. I recently visited the border and I also invited a border patrol agent to testify in front of the Oversight and Investigations Subcommittee about how Biden's border policies are allowing drugs to flow across our border and into our communities.\nLegal immigration is the only way that people should enter our nation. As we enhance border security, we can also look at streamlining the immigration system more broadly. Immigrants play an important role in our society and economy, and we can welcome and encourage lawful entry into our nation for those who seek to contribute to this great nation without harming the American workforce.\nInflation\nI convened a debt and deficit task force in Ogden with local community leaders to create a roadmap on how to grow the economy, save our vital programs for vulnerable Americans, and better target America's spending. We are committed to drafting productive solutions that represent Utah's First District, and we are publishing a strategy document to lay out our concerns and recommendations.\nThe sad reality is that inflation is costing hardworking Utah families $511 per month. Thanks to tax-and-spend policies that are contributing to inflation, Utahns are grappling with the rising costs of gas, groceries, utilities, housing, and clothing. I am committed to finding solutions to harmful spending policies so Utahns can keep more of their own money in their own pockets and save for their futures.\nIn Congress, I support the Federal Agency Sunset Commission Act and the Fiscal State of the Nation Resolution to make government more efficient and force legislators to face the true fiscal health of our government. I also am working to recoup the hundreds of billions of dollars from COVID-19 relief funds that were never obligated. We should use these wasted dollars for debt reduction, not additional spending. Reversing the debt-to-GDP ratio is at the top of my fiscal agenda.\nFunding the Police\nPolice officers are the backbone of our communities, and I have been honored to host multiple roundtable discussions with First District law enforcement officials to discuss challenges with hiring and retention, funding streams, and fighting crime. I joined colleagues on wheels for a Back the Blue bike rally at the National Law Enforcement Officers Memorial to honor police officers during National Police Week, spoke at Honor 365’s 9/11 Honor Walk in Layton to pay my respects to fallen local heroes, including Ogden Officer Nate Lyday, and am humbled to display a photo of Officer Nate Lyday in my office to remind me everyday of how we can better protect those who sacrifice all to protect us. I am horrified that America experienced more officer deaths in the line of duty in 2021 than in any year since 1995. We are facing a crime crisis with record police shootings and homicide rates in 2021, and I am fighting radical efforts to defund the police because keeping communities safe should be at the center of all we do.\nUkraine\nI am grieved by Russia's war in Ukraine, and I have used my leadership positions on the House Natural Resources and Armed Services Committees to support Ukraine and hold Russia accountable. I am disappointed that President Biden failed to provide meaningful lethal aid to Ukraine or enact costly sanctions ahead of Russia's invasion and has continued to move the goal post on full and effective sanctions on Russian banks and oligarchs. Nonetheless, I believe we must work across the aisle and with our allies and partners across the world to deter aggression, prosecute Putin for his war crimes, and enforce the rules-based international order.\nOne of the simplest responses to this invasion should be to reduce dependence on Russian energy so American allies stop financing Putin's war. As Ranking Member of the House Natural Resources Oversight and Investigations Subcommittee, I am leading Republican oversight of President Biden's destructive energy policies. In this critical position, I am confronting Russia's invasion of Ukraine by urging the Administration to lift oil and gas restrictions on federal land, rebuild U.S. energy production, and provide oil and gas to our European allies. I am also drafting legislation to enhance American energy production; cosponsoring strategic legislation to impose costly sanctions on Russia and support lethal aid to Ukraine; and leading the way to modernize our military and maintain our competitive advantage on the House Armed Services Committee.\nElection Integrity\nEnsuring our elections are safe and secure should be a top priority for all Americans. In a way, I began helping to secure Utah's elections long ago. Growing up, my mom enlisted me to help sort ballots when she served as a clerk in the Weber County Clerk's Office. In Congress, I have worked hard to support election integrity by opposing H.R. 1, the Democrats' egregious legislation to give the federal government control over state elections, overturn voter ID laws, and allow taxpayer funding for political campaigns. I have welcomed Weber County's Clerk and Auditor Ricky Hatch to testify before members of Congress and share Weber County's secure voting processes. I have also spoken out against corporate boycotts of states like Georgia that have secured their election systems. I will safeguard the constitutional right of state and local officials to administer their own elections and ensure that each and every legal vote is counted.\nMandates\nFederal vaccine mandates have no place in the United States of America, and I have worked hard to fight President Biden's federal overreach at every turn through legislation, letters to the Biden administration, court briefs, and more. These mandates infringe on our individual liberties and force Americans out of the workplace at a time when inflation is skyrocketing. Mandates are counterproductive and an affront to struggling American families. I am glad the Supreme Court overturned Biden's sweeping private employer mandates, and I was proud to file an amicus brief arguing that the Biden administration overstepped its authority. I believe we need to communicate the effectiveness of vaccines and other public health measures in a politically neutral manner and also factor in the role of natural immunity when setting public health measures. In addition, I used my role on the House Armed Services Committee to ensure that service members who chose not to take the COVID-19 vaccine could not be dishonorably discharged from the military, and to require DOD to establish standards under which service members could request vaccine exemptions.\nSite Information\nContact the campaign:\n(801) 900-3213‬\nPaid for by Blake Moore for Congress\nAll rights reserved\nNavigate\nAbout Blake\nPriorities\nAction\nFollow Blake\nSign up to receive news and updates.\nEmail Address\nSign Up\nThank you!",
+          "highlight": [
+            "I joined colleagues on wheels for a Back the Blue bike rally at the National Law Enforcement Officers Memorial to honor police officers during National Police Week, spoke at Honor 365’s 9/11 Honor Walk in Layton to pay my respects to fallen local heroes",
+            "Funding the Police",
+            "spoke at Honor 365’s 9/11 Honor Walk in Layton to pay my respects to fallen local heroes, including Ogden Officer Nate Lyday"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "8779973ed1bba625440e5d4d301bf85304a47337c26ca0a5e3c187678be36519",
+      "label": "Berkley, Shelley | issues",
+      "display": [
+        {
+          "label": "Known omission and linked record",
+          "format": "badges",
+          "content": {
+            "Candidate": "Berkley, Shelley",
+            "Candidate-year ID": "S2NV00209-2012",
+            "State": "NV",
+            "Office": "senate",
+            "Year": 2012,
+            "Party": "democrat",
+            "Route": "issues",
+            "Segments": 1,
+            "Omission ID": "5f266ab26feec40d236f46151199b63a8914dda3dce28457d9e51dc4116d178a",
+            "Linked record ID": "6c3fff2014c143ef32473497d8da90651c295caa12397f961856160916bbb9cd"
+          }
+        },
+        {
+          "label": "Known omitted fact",
+          "format": "json",
+          "content": {
+            "expected_type": "issue_statement",
+            "expected_value": "Protect Medicare",
+            "known_evidence": "Running to create jobs in Nevada, protect Medicare, build clean energy infrastructure, and make sure we keep the promises we've made to our veterans."
+          }
+        },
+        {
+          "label": "Linked resolved model record",
+          "format": "json",
+          "content": {
+            "record": {
+              "claim": "Shelley Berkley aims to build clean energy infrastructure.",
+              "evidence": "build clean energy infrastructure",
+              "evidence_alignment_method": "unique_exact_unicode_substring_v1",
+              "evidence_end_char": 85,
+              "evidence_exact_match_count": 1,
+              "evidence_start_char": 52,
+              "source_heading": null,
+              "source_heading_alignment_method": "not_applicable",
+              "source_heading_end_char": null,
+              "source_heading_exact_match_count": 0,
+              "source_heading_start_char": null,
+              "source_model_item_id": "f2125ec21cb886a1da5153178a9839dc6f4fe8ef73a45743b057632b45b37729",
+              "statement_kind": "proposal"
+            },
+            "parent_page_offsets": {
+              "evidence_parent_end_char": 85,
+              "evidence_parent_start_char": 52,
+              "source_heading_parent_end_char": null,
+              "source_heading_parent_start_char": null
+            },
+            "overlap_resolution": "single_variant"
+          }
+        },
+        {
+          "label": "Complete archived page text",
+          "format": "text",
+          "content": "Running to create jobs in Nevada, protect Medicare, build clean energy infrastructure, and make sure we keep the promises we've made to our veterans.\nFollow Shelley on Twitter »\nAbout\nIssues\nNews\nVideos\nFact Check\nTake Action\nStore\nShelley on the Issues\nYou don’t earn a reputation as the hardest working person in Congress by sitting on the sidelines. Shelley has been in the thick of the debates in Congress standing up for Nevadans and the issues that matter most to them.\nCreating Jobs / Economy\nShelley’s number one, two and three priorities are jobs, jobs and more jobs.\nProtecting Social Security & Medicare\nFor more than 75 years, Social Security has been a bedrock promise to our nation that 408,000 Nevadans rely on.\nHousing / Foreclosure\nNo state’s homeowners have been hit harder by the foreclosure crisis than Nevada.\nNational Security\nOn foreign policy, Shelley has stood with our allies to promote democracy.\nVeterans\nShelley has stood up for Nevada’s veterans throughout her career in public service.\nClean Energy Jobs\nVast wind, solar and geothermal potential gives Nevada the opportunity to lead the nation in clean energy jobs.\nPreservation / Conservation\nNevada’s natural beauty is a national treasure and an economic asset that we must preserve for future generations.\nYucca Mountain\nShelley hasn’t just worked to stop the project.  She’s worked to solve the problem.\nEducation\nShelley knows the importance of ensuring that all Nevada students have access to the same opportunities that she had.\nHealth Care\nThe new health insurance reform law wasn’t perfect, but it reined in some of the worst abuses by the health insurance companies.\nImmigration\nShelley feels strongly opportunities should not be denied to hard-working, tax-paying families in Nevada.\nNews Archives\nSelect Month\nOctober 2012  (24)\nSeptember 2012  (15)\nAugust 2012  (24)\nJuly 2012  (24)\nJune 2012  (13)\nMay 2012  (8)\nApril 2012  (11)\nMarch 2012  (11)\nFebruary 2012  (12)\nJanuary 2012  (5)\nDecember 2011  (12)\nNovember 2011  (12)\nOctober 2011  (11)\nSeptember 2011  (2)\nAugust 2011  (6)\nLatest Tweets\nFollow Shelley on Twitter »\nFriends of Shelley\nRecent Photos\nMore on Flickr »\nShelley Berkley\nfor senate\nAbout Shelley\nIssues\nNews\nFact Check\nTake Action\nStore\nPrivacy Policy\nContact Us\nPaid for By Berkley for Senate",
+          "highlight": [
+            "Running to create jobs in Nevada, protect Medicare, build clean energy infrastructure, and make sure we keep the promises we've made to our veterans.",
+            "build clean energy infrastructure"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "91bf76a09a97cacc59818d1577ad34b4439140ed9c004649c4cacae133c32e22",
+      "label": "Cassidy, William M. | biography",
+      "display": [
+        {
+          "label": "Known omission and linked record",
+          "format": "badges",
+          "content": {
+            "Candidate": "Cassidy, William M.",
+            "Candidate-year ID": "S4LA00107-2020",
+            "State": "LA",
+            "Office": "senate",
+            "Year": 2020,
+            "Party": "republican",
+            "Route": "biography",
+            "Segments": 1,
+            "Omission ID": "4fae87997214234a73a517ee09334637f84ba6771627ad0d11e25e2268c18bce",
+            "Linked record ID": "32bc743d845c841c94d490e36bc44136f625c29df7c474631affb7a8388ec324"
+          }
+        },
+        {
+          "label": "Known omitted fact",
+          "format": "json",
+          "content": {
+            "expected_type": "public_service_experience",
+            "expected_value": "Led volunteers in converting an abandoned K-Mart into an emergency healthcare facility after Hurricane Katrina",
+            "known_evidence": "In the wake of Hurricane Katrina, Bill led a group of volunteers to convert an abandoned K-Mart building into an emergency health care facility"
+          }
+        },
+        {
+          "label": "Linked resolved model record",
+          "format": "json",
+          "content": {
+            "record": {
+              "evidence": "In the wake of Hurricane Katrina, Bill led a group of volunteers to convert an abandoned K-Mart building into an emergency health care facility, providing basic health care to hurricane evacuees",
+              "evidence_alignment_method": "unique_exact_unicode_substring_v1",
+              "evidence_end_char": 1524,
+              "evidence_exact_match_count": 1,
+              "evidence_start_char": 1330,
+              "field": "public_service_experience",
+              "relationship": null,
+              "source_model_item_id": "299768665e78b99325fe6e772fc0a226608d834be123879347bcc6858c921e8b",
+              "timing": "former",
+              "value": "Led volunteers to convert an abandoned K-Mart building into an emergency health care facility after Hurricane Katrina"
+            },
+            "parent_page_offsets": {
+              "evidence_parent_end_char": 1524,
+              "evidence_parent_start_char": 1330
+            },
+            "overlap_resolution": "single_variant"
+          }
+        },
+        {
+          "label": "Complete archived page text",
+          "format": "text",
+          "content": "Menu\nMedia Center\nFighting for You\nClose\nMedia Center\nFighting for You\nMeet the Cassidys\nBill grew up in Baton Rouge, Louisiana, attending elementary school at Jefferson Terrace and Westminster. He went on to graduate from Tara High School where he played basketball and football. Bill earned his undergraduate and medical school degrees at LSU. During his medical residency, he met his wife Laura while attending the same bible study. After their residencies, they moved back to Bill’s hometown.\nBill worked in Louisiana’s charity hospital system for over 25 years making sure the less fortunate in our state were able to receive quality health care. Laura served as chief of surgery at the LSU Health Sciences Center teaching hospital in Baton Rouge. Bill co-founded the Greater Baton Rouge Community Clinic, a clinic providing free dental and health care to working families without insurance, while Laura entered private practice and became the first female surgeon in Louisiana to specialize in breast cancer. She worked to progress breast conservation surgery and other treatment options for women.\nBill also brought together doctors, nurses, local government and business leaders together to build a program that vaccinated 36,000 greater Baton Rouge area children against Hepatitis B at no cost to the schools or parents.\nIn the wake of Hurricane Katrina, Bill led a group of volunteers to convert an abandoned K-Mart building into an emergency health care facility, providing basic health care to hurricane evacuees. His top priority has always been making sure every family can get the care they need.\nAs a conservative in the Senate, he is focused on passing legislation that actually addresses the kitchen-table issues every family faces. Bill is fighting to lower the cost of health care and ensuring Louisianans can choose the doctor and care that’s best for their families.\nHe helped lead Trump’s fight to cut taxes for middle-class families and bring jobs back from overseas. He is working to empower students to receive a better education and the tools they need to succeed. He is cutting red tape to allow small-business owners and Louisiana job creators to thrive. Bill continues to fight for and protect Louisiana energy workers who are the backbone of our state and nation’s economy. Bill requested to be a member of the Senate Veterans’ Affairs Committee to make sure our veterans have the support they need when returning home.\nAfter discovering their daughter had dyslexia, Laura and Bill realized the lack of resources for students like her who have difficulty reading. Laura helped start the Louisiana Key Academy, a public charter school for children with dyslexia, while Bill has led efforts in Congress to increase awareness of the challenges for students with dyslexia.\nBill and Laura live in Baton Rouge and attend church at the Chapel on the Campus. They are blessed with three children and one grandchild.\nBill Cassidy for U.S. Senate\nPO BOX 80505\nBaton Rouge, LA 70898\n[email protected]\n225-726-7570\nUpdates\nPaid for by Bill Cassidy for US Senate\nPrivacy Policy\nOur campaign is fueled by grassroots supporters like you.\nChip in to help Bill's fight for Louisiana!\n$100\n$50\n$25\n$10\nOther",
+          "highlight": [
+            "In the wake of Hurricane Katrina, Bill led a group of volunteers to convert an abandoned K-Mart building into an emergency health care facility",
+            "In the wake of Hurricane Katrina, Bill led a group of volunteers to convert an abandoned K-Mart building into an emergency health care facility, providing basic health care to hurricane evacuees"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "9cfae8f63a95171c34227eb6eea2fd558b32bdb4579f51eba1f33a8120dbd4e7",
+      "label": "Leger, Teresa | issues",
+      "display": [
+        {
+          "label": "Known omission and linked record",
+          "format": "badges",
+          "content": {
+            "Candidate": "Leger, Teresa",
+            "Candidate-year ID": "H0NM03102-2020",
+            "State": "NM",
+            "Office": "house",
+            "Year": 2020,
+            "Party": "democrat",
+            "Route": "issues",
+            "Segments": 1,
+            "Omission ID": "75c4981ccc726837d14bd7cd293ba5b7659b98e469f6f169062d48da5a8636a3",
+            "Linked record ID": "018f4af665631b455fd0d511b09353c288989c2211b8a5df45d7155494be0401"
+          }
+        },
+        {
+          "label": "Known omitted fact",
+          "format": "json",
+          "content": {
+            "expected_type": "issue_statement",
+            "expected_value": "Raised civil-rights issues to ensure all votes are counted",
+            "known_evidence": "raising civil rights issues to ensure that all votes are counted"
+          }
+        },
+        {
+          "label": "Linked resolved model record",
+          "format": "json",
+          "content": {
+            "record": {
+              "claim": "Teresa Leger has raised civil rights issues to ensure that all votes are counted.",
+              "evidence": "raising civil rights issues to ensure that all votes are counted",
+              "evidence_alignment_method": "unique_exact_unicode_substring_v1",
+              "evidence_end_char": 478,
+              "evidence_exact_match_count": 1,
+              "evidence_start_char": 414,
+              "source_heading": null,
+              "source_heading_alignment_method": "not_applicable",
+              "source_heading_end_char": null,
+              "source_heading_exact_match_count": 0,
+              "source_heading_start_char": null,
+              "source_model_item_id": "9b0aa08a8eb700e9820657e5f612b52ec41700a1867cdf3c2ed72ca6e66ec47c",
+              "statement_kind": "past_action"
+            },
+            "parent_page_offsets": {
+              "evidence_parent_end_char": 478,
+              "evidence_parent_start_char": 414,
+              "source_heading_parent_end_char": null,
+              "source_heading_parent_start_char": null
+            },
+            "overlap_resolution": "single_variant"
+          }
+        },
+        {
+          "label": "Complete archived page text",
+          "format": "text",
+          "content": "PO Box 2675\nSanta Fe, NM 87504\nStay informed!\nSign up with your name and email address to receive news and updates.\nPAID FOR BY TERESA FOR ALL\nContribute\nMEET TERESA\nPRESS\nEndorsements\nISSUES\nVOLUNTEER\nCONTACT\nHELPFUL LINKS\nMore\nwhat Teresa's talking about\nI believe in -- and have spent my life -- building communities.\nWhether it’s working with Pueblos here in Northern New Mexico to build rural health clinics, raising civil rights issues to ensure that all votes are counted, or helping families afford their first home.\nWhen you think about this nation’s aspirational foundation -- the pursuit of happiness and a more perfect union -- what it really comes down to is building thriving communities.\nThese are key principles of ensuring healthy, vibrant, and inclusive communities.\nHealth\nFight for Medicare for All and ensure all Americans have access to quality, affordable health care\nImmigration\nChampion a humane, comprehensive immigration policy\nEducation\nPrioritize education to provide opportunity to all\nRights\nStand up for reproductive freedom\nEconomy\nPromote a vibrant, equitable economy\nSafety\nProtect our communities and families from gun violence\nSustainability\nProtect our air, land, and water and promote a Green New Deal\nInfrastructure\nInvest in 21st century infrastructure that does not leave rural communities behind\nDiversity\nCelebrate and support our diverse communities and histories",
+          "highlight": [
+            "raising civil rights issues to ensure that all votes are counted"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bcb6bdd9c6ad168cf838b9f32fc31fd6f9be21f76a00451baa5e8a8324992b15",
+      "label": "Berkley, Shelley | issues",
+      "display": [
+        {
+          "label": "Known omission and linked record",
+          "format": "badges",
+          "content": {
+            "Candidate": "Berkley, Shelley",
+            "Candidate-year ID": "S2NV00209-2012",
+            "State": "NV",
+            "Office": "senate",
+            "Year": 2012,
+            "Party": "democrat",
+            "Route": "issues",
+            "Segments": 1,
+            "Omission ID": "5f266ab26feec40d236f46151199b63a8914dda3dce28457d9e51dc4116d178a",
+            "Linked record ID": "d3e4c455bb10e7a3b5163e870b6584e2cbd4706dba5549065d2351478abcc4f9"
+          }
+        },
+        {
+          "label": "Known omitted fact",
+          "format": "json",
+          "content": {
+            "expected_type": "issue_statement",
+            "expected_value": "Protect Medicare",
+            "known_evidence": "Running to create jobs in Nevada, protect Medicare, build clean energy infrastructure, and make sure we keep the promises we've made to our veterans."
+          }
+        },
+        {
+          "label": "Linked resolved model record",
+          "format": "json",
+          "content": {
+            "record": {
+              "claim": "Shelley Berkley aims to keep promises made to veterans.",
+              "evidence": "make sure we keep the promises we've made to our veterans",
+              "evidence_alignment_method": "unique_exact_unicode_substring_v1",
+              "evidence_end_char": 148,
+              "evidence_exact_match_count": 1,
+              "evidence_start_char": 91,
+              "source_heading": null,
+              "source_heading_alignment_method": "not_applicable",
+              "source_heading_end_char": null,
+              "source_heading_exact_match_count": 0,
+              "source_heading_start_char": null,
+              "source_model_item_id": "5bf2ad9a18c04232f84fe178e804998a7fef5adc22d98e1530c19fa230ff1ca8",
+              "statement_kind": "proposal"
+            },
+            "parent_page_offsets": {
+              "evidence_parent_end_char": 148,
+              "evidence_parent_start_char": 91,
+              "source_heading_parent_end_char": null,
+              "source_heading_parent_start_char": null
+            },
+            "overlap_resolution": "single_variant"
+          }
+        },
+        {
+          "label": "Complete archived page text",
+          "format": "text",
+          "content": "Running to create jobs in Nevada, protect Medicare, build clean energy infrastructure, and make sure we keep the promises we've made to our veterans.\nFollow Shelley on Twitter »\nAbout\nIssues\nNews\nVideos\nFact Check\nTake Action\nStore\nShelley on the Issues\nYou don’t earn a reputation as the hardest working person in Congress by sitting on the sidelines. Shelley has been in the thick of the debates in Congress standing up for Nevadans and the issues that matter most to them.\nCreating Jobs / Economy\nShelley’s number one, two and three priorities are jobs, jobs and more jobs.\nProtecting Social Security & Medicare\nFor more than 75 years, Social Security has been a bedrock promise to our nation that 408,000 Nevadans rely on.\nHousing / Foreclosure\nNo state’s homeowners have been hit harder by the foreclosure crisis than Nevada.\nNational Security\nOn foreign policy, Shelley has stood with our allies to promote democracy.\nVeterans\nShelley has stood up for Nevada’s veterans throughout her career in public service.\nClean Energy Jobs\nVast wind, solar and geothermal potential gives Nevada the opportunity to lead the nation in clean energy jobs.\nPreservation / Conservation\nNevada’s natural beauty is a national treasure and an economic asset that we must preserve for future generations.\nYucca Mountain\nShelley hasn’t just worked to stop the project.  She’s worked to solve the problem.\nEducation\nShelley knows the importance of ensuring that all Nevada students have access to the same opportunities that she had.\nHealth Care\nThe new health insurance reform law wasn’t perfect, but it reined in some of the worst abuses by the health insurance companies.\nImmigration\nShelley feels strongly opportunities should not be denied to hard-working, tax-paying families in Nevada.\nNews Archives\nSelect Month\nOctober 2012  (24)\nSeptember 2012  (15)\nAugust 2012  (24)\nJuly 2012  (24)\nJune 2012  (13)\nMay 2012  (8)\nApril 2012  (11)\nMarch 2012  (11)\nFebruary 2012  (12)\nJanuary 2012  (5)\nDecember 2011  (12)\nNovember 2011  (12)\nOctober 2011  (11)\nSeptember 2011  (2)\nAugust 2011  (6)\nLatest Tweets\nFollow Shelley on Twitter »\nFriends of Shelley\nRecent Photos\nMore on Flickr »\nShelley Berkley\nfor senate\nAbout Shelley\nIssues\nNews\nFact Check\nTake Action\nStore\nPrivacy Policy\nContact Us\nPaid for By Berkley for Senate",
+          "highlight": [
+            "Running to create jobs in Nevada, protect Medicare, build clean energy infrastructure, and make sure we keep the promises we've made to our veterans.",
+            "make sure we keep the promises we've made to our veterans"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c4bdcf40b107ea71c7d3650425df1d98fafeb3fd8f7162f2bf07b40112dddbed",
+      "label": "Moore, Blake | issues",
+      "display": [
+        {
+          "label": "Known omission and linked record",
+          "format": "badges",
+          "content": {
+            "Candidate": "Moore, Blake",
+            "Candidate-year ID": "H0UT01205-2022",
+            "State": "UT",
+            "Office": "house",
+            "Year": 2022,
+            "Party": "republican",
+            "Route": "issues",
+            "Segments": 3,
+            "Omission ID": "9463bc0ef49bee0681b127670fd00388152f27072925df6887ddf413ff90ef4a",
+            "Linked record ID": "7c15e932f0e7d7dbd828a1b2b14ca0d83806848965ff7171d9cff4c0e38d49f8"
+          }
+        },
+        {
+          "label": "Known omitted fact",
+          "format": "json",
+          "content": {
+            "expected_type": "issue_statement",
+            "expected_value": "Support healthcare workers and growth in Utah's healthcare industry",
+            "known_evidence": "I am helping grow this industry, supporting healthcare workers"
+          }
+        },
+        {
+          "label": "Linked resolved model record",
+          "format": "json",
+          "content": {
+            "record": {
+              "claim": "Is helping grow the healthcare industry in Utah.",
+              "evidence": "I am helping grow this industry",
+              "evidence_alignment_method": "unique_exact_unicode_substring_v1",
+              "evidence_end_char": 3166,
+              "evidence_exact_match_count": 1,
+              "evidence_start_char": 3135,
+              "source_heading": "Healthcare",
+              "source_heading_alignment_method": "unique_exact_unicode_substring_v1",
+              "source_heading_end_char": 3068,
+              "source_heading_exact_match_count": 1,
+              "source_heading_start_char": 3058,
+              "source_model_item_id": "a4e3832887d4f47d8b3df6d70c19bf3b1bcb5947a782921812836e5a81f3ceb2",
+              "statement_kind": "current_action"
+            },
+            "parent_page_offsets": {
+              "evidence_parent_end_char": 3166,
+              "evidence_parent_start_char": 3135,
+              "source_heading_parent_end_char": 3068,
+              "source_heading_parent_start_char": 3058
+            },
+            "overlap_resolution": "single_variant"
+          }
+        },
+        {
+          "label": "Complete archived page text",
+          "format": "text",
+          "content": "Meet Blake\nResults\nNews\nFighting\nIssues\nEvents\nEndorsements\nContribute\nMeet Blake\nResults\nNews\nFighting\nIssues\nEvents\nEndorsements\nBlake Moore for Congress\nContribute\nBlake Moore isn’t Afraid to take a Stand\nEnergy\nMany Utahns can no longer afford to fill up their gas tanks with gas above $5 a gallon. The Biden administration passes the buck by blaming everything except its own anti-energy agenda, but we need an all-of-the-above approach to our energy policy to keep prices down. As Ranking Member of the Oversight and Investigations Subcommittee of the House Natural Resources Committee, I am leading House Republican efforts to end the Biden energy ban and lower dependence on foreign oil and gas. My legislation would rebuild American energy production, require the timely issuance of permits to develop energy and approve pipelines, end Biden's regulatory attacks on energy producers, and lower skyrocketing gas prices so that Utahns aren't suffering from Biden's executive overreach. Limiting U.S. energy development and leaning on foreign countries to produce and sell energy is not environmentally friendly; it puts our environment, economy, and national security at risk.\nPro-Life\nI am proud to be the only candidate endorsed by the Susan B. Anthony List and National Right to Life. I pray that Roe v. Wade will be overturned to return to the states their ability to restrict abortion and protect families. We should work for the day when abortion is unthinkable, and I am committed to ensuring that expecting women have the resources and support they need to bring new life into the world. I have proudly cosponsored and voted for legislation to stop taxpayer funding of abortion, coordinate resources for low-income expecting mothers, protect the conscience rights of healthcare providers, and more.\nAfghanistan\nAmericans deserve to know what went wrong in Biden's disastrous handling of the Afghanistan withdrawal. Last August, I introduced the\nAfghanistan Accountability Act\nto immediately identify the breakdown between Biden, the DOD, and the intelligence community that facilitated this crisis. The bill was incorporated into the National Defense Authorization Act, along with provisions to prohibit the DOD from providing any financial support to the Taliban, require plans to rescue Americans still in Afghanistan, and identify and recover U.S. military equipment left behind. I was proud to be appointed to Leader McCarthy's task force to hold Biden accountable for the Afghanistan withdrawal and protect U.S. national security. My team and I spent the summer and fall helping evacuate Americans and Afghans from the country, and our casework continues to this day. It is unconscionable that the Biden administration left Americans to die because it failed to devise a plan for a responsible withdrawal, and I will keep pressing on the Armed Services committee until we have all the answers we are demanding and we ensure there are systems in place that will prevent a foreign policy crisis of this magnitude from ever happening again.\nHealthcare\nUtah has one of the country's most innovative healthcare sectors. I am helping grow this industry, supporting healthcare workers, and fighting for choice and transparency in our healthcare system to empower our families. I am cosponsoring legislation to lower health prices and prescription drug costs with competition, make healthcare more affordable, address failures in medical supply chains and shore up American manufacturing, and expand access to telehealth and cures.\nChina\nMaintaining our competitive edge against China should be one of Congress's top priorities, and I am committed to strengthening our national security, building up U.S. manufacturing, securing our supply chains, and defending American intellectual property. In an exceptional move for a freshman legislator, House Leadership selected me to serve alongside committee chairs and ranking members as a conferee on the House-Senate conference committee to counter China and maintain America's competitive edge in science and technology. We must ensure America continues to boast the world's strongest, most diverse economy and military as our global competitors seek to undermine international norms.\nImmigration\nPresident Biden's border crisis endangers our national security, and I have spent countless hours holding DHS Secretary Mayorkas accountable for failed policies. From undermining the Remain in Mexico Policy to failing to address the fentanyl crisis that is killing Americans, this administration has abdicated its basic responsibility to secure our borders. I voted to restrict the Biden administration from sending checks to people who violated U.S. immigration laws and I defended the use of Title 42, which gives our Border Patrol more tools to manage our border. I recently visited the border and I also invited a border patrol agent to testify in front of the Oversight and Investigations Subcommittee about how Biden's border policies are allowing drugs to flow across our border and into our communities.\nLegal immigration is the only way that people should enter our nation. As we enhance border security, we can also look at streamlining the immigration system more broadly. Immigrants play an important role in our society and economy, and we can welcome and encourage lawful entry into our nation for those who seek to contribute to this great nation without harming the American workforce.\nInflation\nI convened a debt and deficit task force in Ogden with local community leaders to create a roadmap on how to grow the economy, save our vital programs for vulnerable Americans, and better target America's spending. We are committed to drafting productive solutions that represent Utah's First District, and we are publishing a strategy document to lay out our concerns and recommendations.\nThe sad reality is that inflation is costing hardworking Utah families $511 per month. Thanks to tax-and-spend policies that are contributing to inflation, Utahns are grappling with the rising costs of gas, groceries, utilities, housing, and clothing. I am committed to finding solutions to harmful spending policies so Utahns can keep more of their own money in their own pockets and save for their futures.\nIn Congress, I support the Federal Agency Sunset Commission Act and the Fiscal State of the Nation Resolution to make government more efficient and force legislators to face the true fiscal health of our government. I also am working to recoup the hundreds of billions of dollars from COVID-19 relief funds that were never obligated. We should use these wasted dollars for debt reduction, not additional spending. Reversing the debt-to-GDP ratio is at the top of my fiscal agenda.\nFunding the Police\nPolice officers are the backbone of our communities, and I have been honored to host multiple roundtable discussions with First District law enforcement officials to discuss challenges with hiring and retention, funding streams, and fighting crime. I joined colleagues on wheels for a Back the Blue bike rally at the National Law Enforcement Officers Memorial to honor police officers during National Police Week, spoke at Honor 365’s 9/11 Honor Walk in Layton to pay my respects to fallen local heroes, including Ogden Officer Nate Lyday, and am humbled to display a photo of Officer Nate Lyday in my office to remind me everyday of how we can better protect those who sacrifice all to protect us. I am horrified that America experienced more officer deaths in the line of duty in 2021 than in any year since 1995. We are facing a crime crisis with record police shootings and homicide rates in 2021, and I am fighting radical efforts to defund the police because keeping communities safe should be at the center of all we do.\nUkraine\nI am grieved by Russia's war in Ukraine, and I have used my leadership positions on the House Natural Resources and Armed Services Committees to support Ukraine and hold Russia accountable. I am disappointed that President Biden failed to provide meaningful lethal aid to Ukraine or enact costly sanctions ahead of Russia's invasion and has continued to move the goal post on full and effective sanctions on Russian banks and oligarchs. Nonetheless, I believe we must work across the aisle and with our allies and partners across the world to deter aggression, prosecute Putin for his war crimes, and enforce the rules-based international order.\nOne of the simplest responses to this invasion should be to reduce dependence on Russian energy so American allies stop financing Putin's war. As Ranking Member of the House Natural Resources Oversight and Investigations Subcommittee, I am leading Republican oversight of President Biden's destructive energy policies. In this critical position, I am confronting Russia's invasion of Ukraine by urging the Administration to lift oil and gas restrictions on federal land, rebuild U.S. energy production, and provide oil and gas to our European allies. I am also drafting legislation to enhance American energy production; cosponsoring strategic legislation to impose costly sanctions on Russia and support lethal aid to Ukraine; and leading the way to modernize our military and maintain our competitive advantage on the House Armed Services Committee.\nElection Integrity\nEnsuring our elections are safe and secure should be a top priority for all Americans. In a way, I began helping to secure Utah's elections long ago. Growing up, my mom enlisted me to help sort ballots when she served as a clerk in the Weber County Clerk's Office. In Congress, I have worked hard to support election integrity by opposing H.R. 1, the Democrats' egregious legislation to give the federal government control over state elections, overturn voter ID laws, and allow taxpayer funding for political campaigns. I have welcomed Weber County's Clerk and Auditor Ricky Hatch to testify before members of Congress and share Weber County's secure voting processes. I have also spoken out against corporate boycotts of states like Georgia that have secured their election systems. I will safeguard the constitutional right of state and local officials to administer their own elections and ensure that each and every legal vote is counted.\nMandates\nFederal vaccine mandates have no place in the United States of America, and I have worked hard to fight President Biden's federal overreach at every turn through legislation, letters to the Biden administration, court briefs, and more. These mandates infringe on our individual liberties and force Americans out of the workplace at a time when inflation is skyrocketing. Mandates are counterproductive and an affront to struggling American families. I am glad the Supreme Court overturned Biden's sweeping private employer mandates, and I was proud to file an amicus brief arguing that the Biden administration overstepped its authority. I believe we need to communicate the effectiveness of vaccines and other public health measures in a politically neutral manner and also factor in the role of natural immunity when setting public health measures. In addition, I used my role on the House Armed Services Committee to ensure that service members who chose not to take the COVID-19 vaccine could not be dishonorably discharged from the military, and to require DOD to establish standards under which service members could request vaccine exemptions.\nSite Information\nContact the campaign:\n(801) 900-3213‬\nPaid for by Blake Moore for Congress\nAll rights reserved\nNavigate\nAbout Blake\nPriorities\nAction\nFollow Blake\nSign up to receive news and updates.\nEmail Address\nSign Up\nThank you!",
+          "highlight": [
+            "I am helping grow this industry, supporting healthcare workers",
+            "Healthcare",
+            "I am helping grow this industry"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "dae8186ab4695ec19987e92383f8d36244f81e6d1103bf32bf9eaf3de846e8b7",
+      "label": "Cassidy, William M. | biography",
+      "display": [
+        {
+          "label": "Known omission and linked record",
+          "format": "badges",
+          "content": {
+            "Candidate": "Cassidy, William M.",
+            "Candidate-year ID": "S4LA00107-2020",
+            "State": "LA",
+            "Office": "senate",
+            "Year": 2020,
+            "Party": "republican",
+            "Route": "biography",
+            "Segments": 1,
+            "Omission ID": "4a22ef54190208153e2ac4ecfdf556c145ef6389b6d0d7930fa238970b2a7f77",
+            "Linked record ID": "80e057f2338de1ecb1bf127e1486262765d44609648637c4324dfb4809824180"
+          }
+        },
+        {
+          "label": "Known omitted fact",
+          "format": "json",
+          "content": {
+            "expected_type": "public_service_experience",
+            "expected_value": "Brought together doctors, nurses, local government, and business leaders to vaccinate 36,000 Baton Rouge-area children against Hepatitis B at no cost",
+            "known_evidence": "Bill also brought together doctors, nurses, local government and business leaders together to build a program that vaccinated 36,000 greater Baton Rouge area children against Hepatitis B at no cost to the schools or parents."
+          }
+        },
+        {
+          "label": "Linked resolved model record",
+          "format": "json",
+          "content": {
+            "record": {
+              "evidence": "Bill also brought together doctors, nurses, local government and business leaders together to build a program that vaccinated 36,000 greater Baton Rouge area children against Hepatitis B at no cost to the schools or parents",
+              "evidence_alignment_method": "unique_exact_unicode_substring_v1",
+              "evidence_end_char": 1328,
+              "evidence_exact_match_count": 1,
+              "evidence_start_char": 1105,
+              "field": "public_service_experience",
+              "relationship": null,
+              "source_model_item_id": "620854edebb5ee59593e79174a039c162a125ec2f4947786355eb11166e7a713",
+              "timing": "former",
+              "value": "Built a program that vaccinated 36,000 greater Baton Rouge area children against Hepatitis B at no cost"
+            },
+            "parent_page_offsets": {
+              "evidence_parent_end_char": 1328,
+              "evidence_parent_start_char": 1105
+            },
+            "overlap_resolution": "single_variant"
+          }
+        },
+        {
+          "label": "Complete archived page text",
+          "format": "text",
+          "content": "Menu\nMedia Center\nFighting for You\nClose\nMedia Center\nFighting for You\nMeet the Cassidys\nBill grew up in Baton Rouge, Louisiana, attending elementary school at Jefferson Terrace and Westminster. He went on to graduate from Tara High School where he played basketball and football. Bill earned his undergraduate and medical school degrees at LSU. During his medical residency, he met his wife Laura while attending the same bible study. After their residencies, they moved back to Bill’s hometown.\nBill worked in Louisiana’s charity hospital system for over 25 years making sure the less fortunate in our state were able to receive quality health care. Laura served as chief of surgery at the LSU Health Sciences Center teaching hospital in Baton Rouge. Bill co-founded the Greater Baton Rouge Community Clinic, a clinic providing free dental and health care to working families without insurance, while Laura entered private practice and became the first female surgeon in Louisiana to specialize in breast cancer. She worked to progress breast conservation surgery and other treatment options for women.\nBill also brought together doctors, nurses, local government and business leaders together to build a program that vaccinated 36,000 greater Baton Rouge area children against Hepatitis B at no cost to the schools or parents.\nIn the wake of Hurricane Katrina, Bill led a group of volunteers to convert an abandoned K-Mart building into an emergency health care facility, providing basic health care to hurricane evacuees. His top priority has always been making sure every family can get the care they need.\nAs a conservative in the Senate, he is focused on passing legislation that actually addresses the kitchen-table issues every family faces. Bill is fighting to lower the cost of health care and ensuring Louisianans can choose the doctor and care that’s best for their families.\nHe helped lead Trump’s fight to cut taxes for middle-class families and bring jobs back from overseas. He is working to empower students to receive a better education and the tools they need to succeed. He is cutting red tape to allow small-business owners and Louisiana job creators to thrive. Bill continues to fight for and protect Louisiana energy workers who are the backbone of our state and nation’s economy. Bill requested to be a member of the Senate Veterans’ Affairs Committee to make sure our veterans have the support they need when returning home.\nAfter discovering their daughter had dyslexia, Laura and Bill realized the lack of resources for students like her who have difficulty reading. Laura helped start the Louisiana Key Academy, a public charter school for children with dyslexia, while Bill has led efforts in Congress to increase awareness of the challenges for students with dyslexia.\nBill and Laura live in Baton Rouge and attend church at the Chapel on the Campus. They are blessed with three children and one grandchild.\nBill Cassidy for U.S. Senate\nPO BOX 80505\nBaton Rouge, LA 70898\n[email protected]\n225-726-7570\nUpdates\nPaid for by Bill Cassidy for US Senate\nPrivacy Policy\nOur campaign is fueled by grassroots supporters like you.\nChip in to help Bill's fight for Louisiana!\n$100\n$50\n$25\n$10\nOther",
+          "highlight": [
+            "Bill also brought together doctors, nurses, local government and business leaders together to build a program that vaccinated 36,000 greater Baton Rouge area children against Hepatitis B at no cost to the schools or parents.",
+            "Bill also brought together doctors, nurses, local government and business leaders together to build a program that vaccinated 36,000 greater Baton Rouge area children against Hepatitis B at no cost to the schools or parents"
+          ]
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "id": "semantic_recovery_confirmed",
+      "label": "Does this linked model record recover the known omitted fact?",
+      "type": "yesno"
+    },
+    {
+      "id": "recovery_evidence_confirmed",
+      "label": "Does exact page evidence support this semantic recovery?",
+      "type": "yesno"
+    }
+  ]
+}
