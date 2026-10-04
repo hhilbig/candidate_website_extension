@@ -2113,3 +2113,12 @@ at least one own custom-domain URL (5 shared-host URLs skipped, including two Co
 `scripts/build_mayoral_stage3_targets.py --legacy` built 231 finalist x domain targets (202 domains), frozen in
 `data/municipal_archive_acquisition/mayoral_stage3L_20261004/`, scraped on mac2 with the batch 1 settings
 (log `runs.log`). Then: Hive screen of in-window pages, agent check of the yes items, and only accepted targets count.
+Resume note (October 4, 15:15 PDT, session ending): the legacy scrape runs detached on mac2 and needs no session
+(3,152 of 6,308 pages at 15:10, expected end about 16:10). Next, in a fresh session: (1) confirm `fetch_audit.json`
+stage `fetch_complete`; (2) on mac2 run `scripts/summarize_mayoral_stage3_pages.py --targets <batch>/candidate_site_targets.csv
+--run-dir <batch>/runs/production --output <batch>/stage3_saved_pages.csv`, copy it to
+`inputs/stage3L_saved_pages.csv` with its manifest, add it to `stage3_legacy_pages` in the build config;
+(3) run `scripts/build_mayoral_legacy_site_items.py` on mac2, then the Hive job with that items file
+(`scripts/hive/run_mayoral_site_attribution.sbatch`, INPUT/OUTPUT env vars); (4) agent check of the Hive "yes"
+items as in `wf_5110088a-dd2`, write verdicts keyed by target_id with status, register as `legacy_site_attribution`;
+(5) rebuild, test, commit, report coverage. Hanno approved all of these steps.
