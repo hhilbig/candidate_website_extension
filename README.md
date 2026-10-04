@@ -3,8 +3,9 @@
 This repository builds a dataset of archived US congressional campaign
 websites. It extends the House candidate corpus assembled by Di Tella, Kotti,
 Le Pennec, and Pons (2025) from 2018 through 2024 and adds Senate candidates
-from 2002 through 2024. The release contains 7,353 captured candidate-years
-drawn from 799,058 archived pages.
+from 2002 through 2024. The corrected release contains 7,348 captured
+candidate-years drawn from 797,554 archived page rows. The full eligible
+population contains 15,041 candidate-years, including those without text.
 
 The candidate population consists of Democratic and Republican House and
 Senate candidates whose election year recorded by the FEC equals the target
@@ -13,7 +14,11 @@ scrape House years already covered by ICPSR 226001.
 
 ## Release documentation
 
-- [Release README](docs/RELEASE_README.md): population, inventory of five files,
+- [Current project status](docs/status.md): completed historical correction
+  and the remaining release checklists
+- [Claude Code handoff](CLAUDE_CODE_HANDOFF.md): task state, entry points, and
+  transfer instructions; [CLAUDE.md](CLAUDE.md) holds the persistent rules
+- [Release README](docs/RELEASE_README.md): population, inventory of eight files,
   construction, limitations, terms of use, and reproduction commands
 - [Codebook](docs/deliverable_codebook.md): fields, keys, and missing values
 - [Website](https://www.hannohilbig.com/candidatewebsites/): coverage and
@@ -34,7 +39,7 @@ python3 -m venv .venv-release
 .venv-release/bin/python scripts/validate_release.py build/release_candidate
 ```
 
-The build writes the five data products and `manifest.json` to a separate
+The build writes the eight data products and `manifest.json` to a separate
 staging directory. It does not overwrite an existing release.
 
 ## Run the collection pipeline

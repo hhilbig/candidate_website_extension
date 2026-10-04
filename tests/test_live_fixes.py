@@ -14,7 +14,10 @@ import threading
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 import requests
+import pytest
 from bs4 import BeautifulSoup
+
+pytestmark = pytest.mark.live
 
 from src.utils import RateLimiter
 from src.extract_text import (

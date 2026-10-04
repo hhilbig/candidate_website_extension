@@ -1,0 +1,37 @@
+{
+  "automatic_exclusions_applied": 0,
+  "candidates_with_findings": 796,
+  "counts_by_finding_class": {
+    "error": 8,
+    "review_flag": 844
+  },
+  "counts_by_proposed_action": {
+    "exclude": 10,
+    "manual_review": 841,
+    "retain_date_range": 1
+  },
+  "counts_by_review_status": {
+    "approved": 11,
+    "pending": 841
+  },
+  "counts_by_signal": {
+    "candidate_name_low_support": 343,
+    "extreme_raw_page_count": 3,
+    "foreign_location_content_dominates": 54,
+    "house_district_out_of_range": 2,
+    "official_domain_geography_mismatch": 11,
+    "parked_or_spam_content_dominates": 12,
+    "raw_crosswalk_district_mismatch": 5,
+    "runaway_snapshot_day": 138,
+    "senate_district_nonzero": 1,
+    "shared_year_domain": 104,
+    "state_legislative_content_dominates": 147,
+    "text_state_mismatch": 11,
+    "third_party_content_dominates": 21
+  },
+  "crosswalk_candidate_count": 7353,
+  "findings_total": 852,
+  "raw_row_count": 799058,
+  "required_next_step": "Human review; record any decision in the adjudication ledger separately.",
+  "schema_version": "1.0"
+}

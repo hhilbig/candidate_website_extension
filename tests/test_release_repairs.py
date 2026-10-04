@@ -1,7 +1,13 @@
 import pandas as pd
+import pytest
 
 from scripts.icpsr_replicate_coding import queue_topic_document
-from scripts.rebuild_release import _blank_unsupported_topics, _correct_raw_counts
+from scripts.rebuild_release import (
+    _blank_unsupported_topics,
+    _correct_raw_counts,
+    _correct_raw_snapshot_count,
+    _prepare_output_dir,
+)
 
 
 def test_raw_counts_are_recomputed_from_preserved_text():
@@ -17,6 +23,15 @@ def test_raw_counts_are_recomputed_from_preserved_text():
     assert out.n_words.tolist() == [2, 0]
     assert out.n_tags.tolist() == [2, 1]
     assert out.n_clean_tags.tolist() == [0, 0]
+
+
+def test_raw_snapshot_count_is_recomputed_after_date_filtering():
+    rows = pd.DataFrame({
+        "date": ["20140105010101", "20140105010101"],
+        "n_snap": [109, 109],
+    })
+    out = _correct_raw_snapshot_count(rows)
+    assert out.n_snap.tolist() == [1, 1]
 
 
 def test_empty_topic_documents_are_not_queued():
@@ -41,3 +56,11 @@ def test_topic_scores_are_blank_without_supporting_text():
     assert out.loc[1, topic_names].isna().all()
     assert out.loc[0, home_names].isna().all()
     assert out.loc[1, home_names].notna().all()
+
+
+def test_rebuild_refuses_a_nonempty_output_directory(tmp_path):
+    out = tmp_path / "release"
+    out.mkdir()
+    (out / "stale.csv").write_text("x\n1\n")
+    with pytest.raises(FileExistsError, match="not empty"):
+        _prepare_output_dir(out)

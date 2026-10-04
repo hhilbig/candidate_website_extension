@@ -8,5 +8,8 @@ year,office,state,cand_id,action,reason
 2018,house,DC,H0DC00165,exclude,Generic Google URL captured unrelated Google content
 2002,senate,NE,S8NE00026,exclude,Email address was parsed as a law-firm website
 2020,house,TX,H8TX22206,exclude,Expired campaign domain served non-campaign content
+2020,house,MI,H0MI07135,exclude,New Jersey Representative Chris Smith's government site was assigned to an unrelated Michigan candidate
+2024,house,OR,H4OR06013,exclude,Unrelated Indonesian economics site with a Cape Town contact was captured as campaign content
+2024,senate,MN,S4MN00023,exclude,Ballotpedia text was mixed with unrelated gambling spam
 2018,house,LA,H8LA01122,retain,Malformed stored URL resolves to a genuine campaign domain
 2018,house,AK,H4AK00057,retain,Google Sites URL contains genuine campaign content
