@@ -2107,3 +2107,9 @@ million subagent tokens, 1.2 hours) checked the 139 Hive "yes" items: 124 accept
 Build: archive discovery 302 to 419, downloaded content 288 to 405 of 822 finalists. Elections, text downloaded:
 both finalists 29 percent, winner 52 percent, any 69 percent (2010-2017 both 20, 2018-2021 both 20, 2022-2026 both
 54). Website found: both 64 percent, winner 79, any 90. 71 tests pass.
+
+**Legacy-lead scrape (Hanno approved October 4).** 215 finalists have a legacy URL lead but no downloaded text and
+at least one own custom-domain URL (5 shared-host URLs skipped, including two Corpus Christi council-minutes pages).
+`scripts/build_mayoral_stage3_targets.py --legacy` built 231 finalist x domain targets (202 domains), frozen in
+`data/municipal_archive_acquisition/mayoral_stage3L_20261004/`, scraped on mac2 with the batch 1 settings
+(log `runs.log`). Then: Hive screen of in-window pages, agent check of the yes items, and only accepted targets count.

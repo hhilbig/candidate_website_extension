@@ -7,6 +7,8 @@ method (window, page cap, URL variants) is that script's, unchanged.
 Inputs: data/municipal_discovery/top100_coverage/linkage/discovered_url_leads.csv
         data/municipal_discovery/top100_coverage/outputs/candidate_coverage.csv
 Output: data/municipal_archive_acquisition/<batch>/candidate_site_targets.csv
+With --legacy, targets are instead the legacy URL leads (own custom domains only) of finalists
+that have a URL lead but no downloaded text; their attribution is checked after the scrape.
 A later batch passes --exclude with earlier batches' target files, so no finalist is scraped twice.
 """
 from __future__ import annotations
@@ -75,10 +77,52 @@ def build_targets(leads: pd.DataFrame, coverage: pd.DataFrame) -> pd.DataFrame:
     return pd.DataFrame(rows).sort_values("target_id").reset_index(drop=True)
 
 
+LEGACY_URLS = Path("quality_reports/mayoral_source_restart_2026-09-14/completion/v7/attribution_review_complete/"
+                   "candidate_urls_with_capture_reviews.csv")
+
+
+def build_legacy_targets(coverage: pd.DataFrame, urls: pd.DataFrame) -> pd.DataFrame:
+    import ast
+    eligible = coverage[(coverage["eligible"] == "True") & (coverage["url_lead"] == "True")
+                        & (coverage["downloaded_content"] != "True") & (coverage["url_lead_basis"] == "legacy_url_inventory")]
+    urls = urls.set_index("candidate_url_id")
+    rows = {}
+    for record in eligible.to_dict("records"):
+        for url_id in ast.literal_eval(record["candidate_url_ids"]):
+            row = urls.loc[url_id]
+            url, domain = row["exact_normalized_url"], row["registrable_domain"].lower()
+            parts = urlsplit(url)
+            host = (parts.hostname or "").lower()
+            if row["url_type"] != "custom_domain" or host not in {domain, f"www.{domain}"}:
+                continue
+            key = (record["candidate_election_id"], domain)
+            if key in rows:
+                rows[key]["campaign_urls"].append(url)
+                rows[key]["url_ids"].append(url_id)
+                continue
+            day = pd.Timestamp(record["election_date"])
+            rows[key] = {"record": record, "domain": domain, "root": f"{parts.scheme}://{host}/", "campaign_urls": [url],
+                         "url_ids": [url_id], "day": day}
+    out = []
+    for (candidate_election_id, domain), item in rows.items():
+        record, day = item["record"], item["day"]
+        out.append({
+            "target_id": "stage3L_" + hashlib.sha256(f"{candidate_election_id}|{domain}".encode()).hexdigest()[:24],
+            "candidate_year_id": record["candidate_year_id"], "candidate_contest_id": candidate_election_id,
+            "contest": record["election_id"], "full_name": record["candidate_name"], "geo_name": record["city_name"],
+            "state_abb": record["state_abb"], "year": day.year, "month": day.month, "period": period(day.year),
+            "registrable_domain": domain, "site_root_url": item["root"], "primary_exact_url": item["campaign_urls"][0],
+            "url_type": "custom_domain", "campaign_claim_count": len(item["url_ids"]),
+            "campaign_claim_ids_json": json.dumps(item["url_ids"]), "campaign_urls_json": json.dumps(item["campaign_urls"]),
+            "evidence_urls_json": "[]", "url_discovery_status": "legacy_unattributed", "election_date": record["election_date"]})
+    return pd.DataFrame(out).sort_values("target_id").reset_index(drop=True)
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--batch", default="mayoral_stage3_20261002")
     parser.add_argument("--exclude", type=Path, nargs="*", default=[])
+    parser.add_argument("--legacy", action="store_true")
     args = parser.parse_args()
     leads = pd.read_csv(LEADS, keep_default_na=False, dtype=str)
     done = set()
@@ -86,7 +130,10 @@ def main() -> None:
         done |= set(pd.read_csv(path, dtype=str)["candidate_contest_id"])
     leads = leads[~leads["candidate_election_id"].isin(done)]
     coverage = pd.read_csv(COVERAGE, keep_default_na=False, dtype=str)
-    targets = build_targets(leads, coverage)
+    if args.legacy:
+        targets = build_legacy_targets(coverage, pd.read_csv(LEGACY_URLS, keep_default_na=False, dtype=str, low_memory=False))
+    else:
+        targets = build_targets(leads, coverage)
     OUTPUT = ACQUISITION / args.batch / "candidate_site_targets.csv"
     if targets["target_id"].duplicated().any():
         raise ValueError("duplicate target id")
