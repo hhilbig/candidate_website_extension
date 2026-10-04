@@ -451,3 +451,18 @@ def test_checked_legacy_attribution_lets_saved_pages_count():
     assert row['downloaded_content'] is True and row['archive_discovery'] is True
     with pytest.raises(ValueError, match='not linked'):
         build(cities, roster, urls, [result], legacy_attribution=[dict(attribution[0], candidate_url_id='url-z')])
+
+
+def test_legacy_site_pages_count_only_after_target_attribution():
+    cities, roster, urls, result = fixture()
+    key = next(r for r in build(cities, roster, urls, [result])[3] if r['candidate_name'] == 'Example A')['candidate_election_id']
+    page = {'candidate_election_id': key, 'target_id': 'stage3L_x', 'registrable_domain': 'example.test',
+            'pages_with_text_in_window': '4', 'files_verified': 'True'}
+    row = next(r for r in build(cities, roster, urls, [result], legacy_site_pages=[page])[3] if r['candidate_election_id'] == key)
+    assert row['downloaded_content'] is not True
+    row = next(r for r in build(cities, roster, urls, [result], legacy_site_pages=[page],
+                                legacy_site_attribution=[{'target_id': 'stage3L_x', 'status': 'accepted'}])[3]
+               if r['candidate_election_id'] == key)
+    assert row['downloaded_content'] is True and 'stage3_legacy_pages:stage3L_x:4' in row['evidence_refs']
+    with pytest.raises(ValueError, match='without a page summary'):
+        build(cities, roster, urls, [result], legacy_site_attribution=[{'target_id': 'stage3L_y', 'status': 'accepted'}])

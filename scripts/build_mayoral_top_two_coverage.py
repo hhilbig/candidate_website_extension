@@ -188,7 +188,7 @@ def recorded_period_metadata(urls, election_date, saved, reviews, validations):
 
 
 def build(cities, roster, urls, results, reviews=(), validations=(), city_year_overrides=(), saved_evidence=(), identity_links=(), discovered_leads=(), stage3_pages=(),
-          legacy_attribution=()):
+          legacy_attribution=(), legacy_site_pages=(), legacy_site_attribution=()):
     unique(cities, "city_id", "city")
     unique(roster, "candidate_year_id", "legacy candidate-year")
     unique(urls, "candidate_url_id", "URL")
@@ -225,6 +225,13 @@ def build(cities, roster, urls, results, reviews=(), validations=(), city_year_o
             raise ValueError("Duplicate discovered URL lead")
         discovered[lead["candidate_election_id"]] = lead
     used_discovered = set()
+    # Legacy-lead site scrape (stage 3L): a target's saved pages count only after its own attribution check.
+    accepted_targets = {r["target_id"] for r in legacy_site_attribution if r["status"] == "accepted"}
+    legacy_pages = defaultdict(list)
+    for row in legacy_site_pages:
+        legacy_pages[row["candidate_election_id"]].append(row)
+    if accepted_targets - {r["target_id"] for r in legacy_site_pages}:
+        raise ValueError("Legacy site attribution names a target without a page summary")
     attributed_keys = set()
     for row in legacy_attribution:
         if row["status"] == "accepted":
@@ -351,6 +358,14 @@ def build(cities, roster, urls, results, reviews=(), validations=(), city_year_o
                     archive, downloaded = True, True
                     refs = sorted(set(refs) | {"stage3_pages:" + saved_pages["target_id"] + ":"
                                                + saved_pages["pages_with_text_in_window"]})
+            for site in legacy_pages.get(candidate_id, []):
+                if site["target_id"] in accepted_targets and int(site["pages_with_text_in_window"]) > 0:
+                    if not links:
+                        raise ValueError("Legacy site pages for a finalist without a legacy URL lead")
+                    if truth(site["files_verified"]) is not True:
+                        raise ValueError("Legacy site pages failed hash verification")
+                    archive, downloaded = True, True
+                    refs = sorted(set(refs) | {"stage3_legacy_pages:" + site["target_id"] + ":" + site["pages_with_text_in_window"]})
             candidates.append({"candidate_election_id": candidate_id, "election_id": election_id,
                 "city_id": city["city_id"], "city_name": city["city_name"], "state_abb": city["state_abb"],
                 "year": day.year, "election_date": election_date, "election_type": kind,
@@ -564,6 +579,17 @@ def main():
         pages_manifest = json.loads((ROOT / Path(pages_path).with_suffix(".manifest.json")).read_text())
         if pages_manifest["output_sha256"] != sha(ROOT / pages_path) or not pages_manifest["all_files_verified"]:
             raise ValueError("Stage 3 page summary does not match its verified manifest")
+    legacy_site_pages = []
+    for pages_path in config.get("stage3_legacy_pages") or []:
+        legacy_site_pages += read_csv(ROOT / pages_path)
+        inputs.append(Path(pages_path))
+        pages_manifest = json.loads((ROOT / Path(pages_path).with_suffix(".manifest.json")).read_text())
+        if pages_manifest["output_sha256"] != sha(ROOT / pages_path) or not pages_manifest["all_files_verified"]:
+            raise ValueError("Legacy page summary does not match its verified manifest")
+    site_attribution_path = config.get("legacy_site_attribution")
+    legacy_site_attribution = read_csv(ROOT / site_attribution_path) if site_attribution_path else []
+    if site_attribution_path:
+        inputs.append(Path(site_attribution_path))
     attribution_path = config.get("legacy_attribution")
     legacy_attribution = read_csv(ROOT / attribution_path) if attribution_path else []
     if attribution_path:
@@ -576,7 +602,8 @@ def main():
     result = build(read_csv(ROOT / args.cities), read_csv(ROOT / ROSTER), read_csv(ROOT / URLS), records,
                    read_csv(ROOT / REVIEWS), read_csv(ROOT / VALIDATION), overrides, read_csv(ROOT / args.saved_evidence),
                    identity_links=identity_links, discovered_leads=discovered_leads,
-                   stage3_pages=stage3_pages, legacy_attribution=legacy_attribution)
+                   stage3_pages=stage3_pages, legacy_attribution=legacy_attribution,
+                   legacy_site_pages=legacy_site_pages, legacy_site_attribution=legacy_site_attribution)
     cities, city_years, elections, candidates, summary, outside = result
     if len(cities) != 100:
         raise ValueError("Production build requires exactly 100 cities")
