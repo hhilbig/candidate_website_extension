@@ -36,6 +36,8 @@ Verdicts: `legacy_site_attribution/agent_verdicts.csv`, registered as `legacy_si
 
 **C. Stage 3 repair batch (running on mac2; 2,225 pages queued at 21:40 PDT on October 4; the archive was slow).** `mayoral_stage3r_20261004`: 63 targets (50 repair accepted, 5 Common Crawl, 8 outside_window), 54 domains, frozen targets sha256 `e5fa5477…`.
 Run in `~/candidate_website_extension_stage3/data/municipal_archive_acquisition/mayoral_stage3r_20261004/`, log `runs.log`, same settings as batch 2.
+Slack watcher on mac2: `scripts/watch_mayoral_stage3_scrape.py` (job-alerts format; start, 6-hourly, 30-minute stall, end), log `watch.log` in the batch folder.
+On the night of October 4 the archive returned many HTTP 500 errors; the scraper keeps those pages retryable. Rerun the same command afterwards to retry them.
 **Next:** when `runs/production/fetch_audit.json` shows `fetch_complete`, run `scripts/summarize_mayoral_stage3_pages.py` on mac2.
 Copy the result to `inputs/stage3r_saved_pages.csv`, add it to `stage3_saved_pages` in the build config, rebuild, test, and commit.
 
@@ -114,6 +116,14 @@ These runs came after the September 30 fix for the `Invalid IPv6 URL` stop.
 
 **Action:** check the daily `rc` line and the free space once a week. Act only if a run fails.
 After November 17, build the final outputs and run the coverage checks.
+
+## Deferred: Wayback scraping skill audit, October 4, 2026
+
+A check of `scripts/scrape_mayoral_wayback_batch.py` against the `wayback-scraping` skill found these gaps. None blocks a release requirement now.
+
+- The fetch journal is deleted at each compaction, rows carry no attempt ID, and no attempt count is kept for each page. On a restart, failed pages are retried in queue order, not least-attempted first.
+- The backoff has no jitter. The CDX query has no explicit guard for a result that reaches the 50,000-row limit (the largest so far is 7,005).
+- Agent workflows that query the archive through mac2 share no rate limit with each other or with the scraper. Run such workflows at low concurrency and not alongside a scrape.
 
 ## 2. Extracted variables: open items for a later version
 
