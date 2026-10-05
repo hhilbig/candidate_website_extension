@@ -1,0 +1,48 @@
+[
+ {
+  "candidate_election_id": "1714000__2011-02-22__regular__94916fe8f75ac1dc",
+  "candidate_name": "Rahm Emanuel",
+  "election_date": "2011-02-22",
+  "status": "accepted",
+  "campaign_url": "http://www.chicagoforrahm.com/",
+  "registrable_domain": "chicagoforrahm.com",
+  "lead_sources": [
+   "https://www.washingtontimes.com/news/2010/oct/3/emanuel-chicago-im-running/",
+   "https://www.mprnews.org/story/2010/10/03/emanuel"
+  ],
+  "searches_run": [
+   "WebSearch: Rahm Emanuel 2011 Chicago mayor campaign website",
+   "CDX chicagoforrahm.com 2010-02-22..2011-02-22 status 200",
+   "CDX rahmemanuel.com 2010-02-22..2011-02-22 status 200"
+  ],
+  "wayback_window_captures": 932,
+  "first_capture_in_window": "20101004072411",
+  "checked_capture_url": "https://web.archive.org/web/20101116170155/http://www.chicagoforrahm.com/action/personal-fundraising",
+  "page_evidence": "Team Rahm is our campaign's official grassroots fundraising group, made up of people from all over Chicago who want to see Rahm Emanuel as our city's next mayor.",
+  "other_profiles": [],
+  "note": "Web search reported that Emanuel announced his run in a video on ChicagoforRahm.com. The CDX count of 932 is for host chicagoforrahm.com with HTTP 200 from 2010-02-22 to 2011-02-22, limit 5000. Pages show footer 'Paid for by Chicago for Rahm Emanuel'. The domain rahmemanuel.com has 3 in-window captures (first 20101211100037); I did not read them, and chicagoforrahm.com is the accepted site."
+ },
+ {
+  "candidate_election_id": "1714000__2023-04-04__regular__e7803958b856cbef",
+  "candidate_name": "Paul Vallas",
+  "election_date": "2023-04-04",
+  "status": "accepted",
+  "campaign_url": "https://paulvallas2023.com/",
+  "registrable_domain": "paulvallas2023.com",
+  "lead_sources": [
+   "https://www.nbcchicago.com/news/local/chicago-politics/heres-who-is-running-for-chicago-mayor-in-the-2023-election/3059575/",
+   "https://ballotpedia.org/Paul_Vallas"
+  ],
+  "searches_run": [
+   "WebSearch: Paul Vallas 2023 Chicago mayor campaign website",
+   "CDX paulvallas2023.com 2022-04-04..2023-04-04 status 200",
+   "CDX paulvallas.com 2022-04-04..2023-04-04 status 200"
+  ],
+  "wayback_window_captures": 815,
+  "first_capture_in_window": "20220601123251",
+  "checked_capture_url": "https://web.archive.org/web/20221030133600/https://paulvallas2023.com/",
+  "page_evidence": "Paul Vallas for Mayor of Chicago (page title); site description: 'Paul Vallas has a long history of successful and innovative crisis management both in his hometown Chicago'; menu 'Join Team Vallas'.",
+  "other_profiles": [],
+  "note": "Web search reported paulvallas2023.com as the campaign site. The CDX count of 815 is for host paulvallas2023.com with HTTP 200 from 2022-04-04 to 2023-04-04, limit 2000. The window ends on the runoff date; the 2023-02-28 first-round date is inside it. paulvallas.com returned no in-window 200 captures. The lead URLs come from search result lists; I did not open them. Some Wayback requests from mac2 failed transiently and were retried."
+ }
+]

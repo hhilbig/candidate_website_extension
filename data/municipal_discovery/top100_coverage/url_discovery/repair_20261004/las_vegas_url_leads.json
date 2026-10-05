@@ -1,0 +1,108 @@
+[
+ {
+  "candidate_election_id": "3240000__2011-06-07__regular__5124cab58d06c308",
+  "candidate_name": "Carolyn G. Goodman",
+  "election_date": "2011-06-07",
+  "status": "accepted",
+  "campaign_url": "http://www.carolyngoodman.com/",
+  "registrable_domain": "carolyngoodman.com",
+  "lead_sources": [
+   "domain guess carolyngoodman.com, confirmed in the archive"
+  ],
+  "searches_run": [
+   "WebSearch: Carolyn Goodman Las Vegas mayor campaign website",
+   "Wikipedia raw pages: Carolyn_Goodman, 2011/2015/2019 Las Vegas mayoral election, Phil_Collins_(politician), Chris_Giunchigliani",
+   "Ballotpedia via mac2 (no usable content)"
+  ],
+  "wayback_window_captures": 92,
+  "first_capture_in_window": "20110207005632",
+  "checked_capture_url": "https://web.archive.org/web/20110310033401/http://www.carolyngoodman.com/",
+  "page_evidence": "Carolyn Goodman for Las Vegas Mayor 2011",
+  "other_profiles": [],
+  "note": "Stage 2 wrongly reported no captures (its droplet CDX requests had failed). 92 HTTP 200 captures from 2011-02-07 to 2011-06-07 (CDX limit 500 not reached). Page read through the non-id_ replay; the id_ replay returned empty. Count is from one CDX run."
+ },
+ {
+  "candidate_election_id": "3240000__2011-06-07__regular__32ab111efd94be92",
+  "candidate_name": "Chris Giunchigliani",
+  "election_date": "2011-06-07",
+  "status": "not_found",
+  "campaign_url": "",
+  "registrable_domain": "",
+  "lead_sources": [],
+  "searches_run": [
+   "WebSearch: Carolyn Goodman Las Vegas mayor campaign website",
+   "Wikipedia raw pages: Carolyn_Goodman, 2011/2015/2019 Las Vegas mayoral election, Phil_Collins_(politician), Chris_Giunchigliani",
+   "Ballotpedia via mac2 (no usable content)"
+  ],
+  "wayback_window_captures": 0,
+  "first_capture_in_window": "",
+  "checked_capture_url": "",
+  "page_evidence": "",
+  "other_profiles": [],
+  "note": "Searches ran; no Wikipedia or news page links a 2011 campaign site. Checked in the archive for 2010-06-07 to 2011-06-07: giunchigliani.com (200 captures only 2010-06 to 2010-10, before the Feb 2011 announcement, her commissioner site; only 302s in 2011), chrisforvegas.com, chris4mayor.com, chrisgforvegas.com, chrisgiunchigliani.com, chrisg4mayor.com (no captures), chrisformayor.com (one 2011-04-07 capture, a generic parked page, no candidate named). Not accepted."
+ },
+ {
+  "candidate_election_id": "3240000__2015-04-07__regular__5124cab58d06c308",
+  "candidate_name": "Carolyn G. Goodman",
+  "election_date": "2015-04-07",
+  "status": "accepted",
+  "campaign_url": "http://www.carolyngoodman.com/",
+  "registrable_domain": "carolyngoodman.com",
+  "lead_sources": [
+   "domain guess carolyngoodman.com, confirmed in the archive"
+  ],
+  "searches_run": [
+   "WebSearch: Carolyn Goodman Las Vegas mayor campaign website",
+   "Wikipedia raw pages: Carolyn_Goodman, 2011/2015/2019 Las Vegas mayoral election, Phil_Collins_(politician), Chris_Giunchigliani",
+   "Ballotpedia via mac2 (no usable content)"
+  ],
+  "wayback_window_captures": 68,
+  "first_capture_in_window": "20140517054118",
+  "checked_capture_url": "https://web.archive.org/web/20150306190016/http://www.carolyngoodman.com:80/",
+  "page_evidence": "Re-Elect Mayor Carolyn Goodman | ... let's build a stronger downtown core ... by re-electing Carolyn G. Goodman. Support Mayor Goodman by contributing online.",
+  "other_profiles": [],
+  "note": "68 HTTP 200 captures in 2014-04-07 to 2015-04-07. Page from 2015-03-06 is a re-election site."
+ },
+ {
+  "candidate_election_id": "3240000__2019-04-02__regular__5124cab58d06c308",
+  "candidate_name": "Carolyn G. Goodman",
+  "election_date": "2019-04-02",
+  "status": "outside_window",
+  "campaign_url": "http://carolyngoodman.com/",
+  "registrable_domain": "carolyngoodman.com",
+  "lead_sources": [
+   "domain guess carolyngoodman.com, confirmed in the archive"
+  ],
+  "searches_run": [
+   "WebSearch: Carolyn Goodman Las Vegas mayor campaign website",
+   "Wikipedia raw pages: Carolyn_Goodman, 2011/2015/2019 Las Vegas mayoral election, Phil_Collins_(politician), Chris_Giunchigliani",
+   "Ballotpedia via mac2 (no usable content)"
+  ],
+  "wayback_window_captures": 0,
+  "first_capture_in_window": "",
+  "checked_capture_url": "",
+  "page_evidence": "",
+  "other_profiles": [],
+  "note": "In 2018-04-02 to 2019-04-02 the only 200 captures of carolyngoodman.com are robots.txt (2018-06-30, 2018-08-01). Homepage captures 2018-08-06 and 2019-07-31 have no status (-). Last page-level 200 capture is 2015-03-24; next is 2019-12-02 (302). goodman4mayor.com has 200 captures in window but the 2018-08-05 capture is a GoDaddy parking page, so it was rejected. No readable page from the window, so not accepted."
+ },
+ {
+  "candidate_election_id": "3240000__2019-04-02__regular__5fd36b47cbf55509",
+  "candidate_name": "Phil Collins",
+  "election_date": "2019-04-02",
+  "status": "incomplete",
+  "campaign_url": "",
+  "registrable_domain": "",
+  "lead_sources": [],
+  "searches_run": [
+   "WebSearch: Carolyn Goodman Las Vegas mayor campaign website",
+   "Wikipedia raw pages: Carolyn_Goodman, 2011/2015/2019 Las Vegas mayoral election, Phil_Collins_(politician), Chris_Giunchigliani",
+   "Ballotpedia via mac2 (no usable content)"
+  ],
+  "wayback_window_captures": 0,
+  "first_capture_in_window": "",
+  "checked_capture_url": "",
+  "page_evidence": "",
+  "other_profiles": [],
+  "note": "Searches ran; no page links a 2019 campaign site. Checked in the archive for 2018-04-02 to 2019-04-02: philcollinsformayor.com, philforvegas.com, philcollins4mayor.com, philcollinsvegas.com, philcollinscampaign.blogspot.com, philcollins4president.weebly.com (no captures), philcollins.com (musician Phil Collins site), collins4mayor.com (Bill Collins for Mayor, another person). votephilcollins.com request failed (HTTP 000) after 3 tries, so that guess is unchecked (mac2 to web.archive.org CDX failed 6 times in total). Status is incomplete, not not_found."
+ }
+]

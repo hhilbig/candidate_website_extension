@@ -8,6 +8,9 @@ Inputs (data/municipal_discovery/top100_coverage/url_discovery/):
                             proposed for finalists the search marked not_found
   sweep_20261002/sweep_check_verdicts.json  optional; agent verdicts on domain-pattern sweep hits
   sweep_20261002/commoncrawl_verdicts.json  optional; checked Common Crawl hits (capture_timestamp given directly)
+  repair_20261004/          optional; a repeated search for stage 2 not_found entries whose search never ran or
+                            whose archive check failed: <slug>_url_leads.json plus repair_checker_verdicts.json.
+                            "incomplete" entries are not applied and keep their earlier status.
 
 A "reject" verdict removes the URL (final status "rejected"). A "downgrade" verdict
 sets an accepted lead to "outside_window". "minor" verdicts are kept as notes.
@@ -38,6 +41,7 @@ BASIS = "agent_search_wayback_capture_checked"
 PROPOSAL_BASIS = "checker_proposal_wayback_capture_verified"
 SWEEP_BASIS = "domain_sweep_wayback_capture_checked"
 COMMONCRAWL_BASIS = "domain_sweep_commoncrawl_capture_checked"
+REPAIR_BASIS = "agent_search_repair_wayback_capture_checked"
 
 
 def capture_timestamp(url: str) -> str:
@@ -46,10 +50,11 @@ def capture_timestamp(url: str) -> str:
 
 
 def combine(cities: list[dict], leads_by_slug: dict[str, list[dict]], verdicts: dict[str, dict],
-            proposals: list[dict] = (), sweep: list[dict] = (), commoncrawl: list[dict] = ()) -> list[dict]:
+            proposals: list[dict] = (), sweep: list[dict] = (), commoncrawl: list[dict] = (),
+            repair: list[dict] = ()) -> list[dict]:
     sources = []
     for basis, label, items in ((PROPOSAL_BASIS, "checker proposal", proposals), (SWEEP_BASIS, "domain sweep", sweep),
-                                 (COMMONCRAWL_BASIS, "common crawl", commoncrawl)):
+                                 (COMMONCRAWL_BASIS, "common crawl", commoncrawl), (REPAIR_BASIS, "repair search", repair)):
         source_items = {}
         for item in items:
             if item.get("status") not in STATUSES or item["candidate_election_id"] in source_items:
@@ -133,6 +138,31 @@ def combine(cities: list[dict], leads_by_slug: dict[str, list[dict]], verdicts: 
     return rows
 
 
+def repair_verdicts(leads_by_slug: dict[str, list[dict]], verdicts: dict[str, dict]) -> tuple[list[dict], int]:
+    """Apply the repair checker's verdicts; return the applicable items and the count left incomplete."""
+    items, incomplete = [], 0
+    for slug, leads in leads_by_slug.items():
+        if slug not in verdicts:
+            raise ValueError(f"repair {slug}: no checker verdict")
+        severity = {}
+        for problem in verdicts[slug].get("problems", []):
+            if problem["severity"] in {"reject", "downgrade"}:
+                if severity.get(problem["candidate_election_id"]) != "reject":
+                    severity[problem["candidate_election_id"]] = problem["severity"]
+        for lead in leads:
+            if lead.get("status") == "incomplete":
+                incomplete += 1
+                continue
+            lead = dict(lead)
+            found = severity.get(lead["candidate_election_id"])
+            if lead.get("status") == "accepted" and found == "reject":
+                lead.update(status="not_found", campaign_url="", note=lead.get("note", "") + " | repair checker rejected")
+            elif lead.get("status") == "accepted" and found == "downgrade":
+                lead.update(status="outside_window", note=lead.get("note", "") + " | repair checker downgraded")
+            items.append(lead)
+    return items, incomplete
+
+
 def main() -> int:
     cities = json.loads((DISCOVERY / "stage2_args.json").read_text())
     leads = {}
@@ -148,7 +178,13 @@ def main() -> int:
     sweep = json.loads(sweep_path.read_text()) if sweep_path.exists() else []
     cc_path = DISCOVERY / "sweep_20261002" / "commoncrawl_verdicts.json"
     commoncrawl = json.loads(cc_path.read_text()) if cc_path.exists() else []
-    rows = combine(cities, leads, verdicts, proposals, sweep, commoncrawl)
+    repair_dir = DISCOVERY / "repair_20261004"
+    repair, repair_incomplete = [], 0
+    if (repair_dir / "repair_checker_verdicts.json").exists():
+        repair_args = json.loads((repair_dir / "repair_args.json").read_text())
+        repair_leads = {c["slug"]: json.loads((repair_dir / f"{c['slug']}_url_leads.json").read_text()) for c in repair_args}
+        repair, repair_incomplete = repair_verdicts(repair_leads, json.loads((repair_dir / "repair_checker_verdicts.json").read_text()))
+    rows = combine(cities, leads, verdicts, proposals, sweep, commoncrawl, repair)
     OUTPUT.parent.mkdir(parents=True, exist_ok=True)
     with OUTPUT.open("w", newline="") as handle:
         writer = csv.DictWriter(handle, fieldnames=COLUMNS)
@@ -157,7 +193,7 @@ def main() -> int:
     counts = {}
     for row in rows:
         counts[row["final_status"]] = counts.get(row["final_status"], 0) + 1
-    print(json.dumps({"finalists": len(rows), "final_status": counts}, indent=1))
+    print(json.dumps({"finalists": len(rows), "final_status": counts, "repair_incomplete_not_applied": repair_incomplete}, indent=1))
     return 0
 
 

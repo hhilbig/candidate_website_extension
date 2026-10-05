@@ -1,0 +1,114 @@
+[
+ {
+  "candidate_election_id": "3712000__2019-11-05__regular__5aa5f60353cc070e",
+  "candidate_name": "Vi Lyles",
+  "election_date": "2019-11-05",
+  "status": "accepted",
+  "campaign_url": "https://vilyles.com/",
+  "registrable_domain": "vilyles.com",
+  "lead_sources": [
+   "https://www.vilyles.org/ (search result, 2025 site)",
+   "WebSearch results naming vilyles.com as campaign site (Facebook page ViLylesCLT)",
+   "stage 2 note: vilyles.com existed 2013-2016"
+  ],
+  "searches_run": [
+   "WebSearch: Vi Lyles campaign website Charlotte mayor 2023 re-elect",
+   "WebSearch: Lyles Charlotte mayor campaign vilyles OR lylesformayor OR reelect website donate",
+   "WebSearch: Vi Lyles mayor 2019 re-election campaign website",
+   "Wikipedia: Vi Lyles, 2022 Charlotte mayoral election, 2019/2023 election pages via mac2 (no campaign URL)",
+   "Ballotpedia via mac2 returned empty body (blocked); WebFetch of Ballotpedia empty",
+   "Wayback CDX via mac2: vilyles.com, vilyles.org, vilyles.net, lylesformayor.com etc, domain and window queries"
+  ],
+  "wayback_window_captures": 346,
+  "first_capture_in_window": "20181113182449",
+  "checked_capture_url": "https://web.archive.org/web/20190915101955/https://vilyles.com/",
+  "page_evidence": "Page title 'Vi Lyles For Mayor - Charlotte'; endorsement page captured 20190915102049: 'The BPC endorsement shows... ready to elect an experienced Mayor' (Vi Lyles campaign).",
+  "other_profiles": [
+   "https://www.facebook.com/ViLylesCLT/",
+   "https://twitter.com/vilyles",
+   "https://www.instagram.com/vilylesclt/"
+  ],
+  "note": "Stage 2 was wrong: CDX shows 346 HTTP 200 captures of vilyles.com between 2018-11-06 and 2019-11-05 (count includes sub-pages and query URLs). The archived home page and endorsement page name Vi Lyles and a mayoral campaign. Doubt: the page text in the window is partly carried over from the 2017 campaign (for example May 2017 endorsement), so it may not be updated 2019 content."
+ },
+ {
+  "candidate_election_id": "3712000__2022-07-26__regular__4118ccb7afb934dc",
+  "candidate_name": "Vi Alexander Lyles",
+  "election_date": "2022-07-26",
+  "status": "outside_window",
+  "campaign_url": "https://vilyles.com/",
+  "registrable_domain": "vilyles.com",
+  "lead_sources": [
+   "WebSearch results naming vilyles.com as campaign site"
+  ],
+  "searches_run": [
+   "WebSearch: Vi Lyles campaign website Charlotte mayor 2023 re-elect",
+   "WebSearch: Lyles Charlotte mayor campaign vilyles OR lylesformayor OR reelect website donate",
+   "WebSearch: Vi Lyles mayor 2019 re-election campaign website",
+   "Wikipedia: Vi Lyles, 2022 Charlotte mayoral election, 2019/2023 election pages via mac2 (no campaign URL)",
+   "Ballotpedia via mac2 returned empty body (blocked); WebFetch of Ballotpedia empty",
+   "Wayback CDX via mac2: vilyles.com, vilyles.org, vilyles.net, lylesformayor.com etc, domain and window queries"
+  ],
+  "wayback_window_captures": 0,
+  "first_capture_in_window": "",
+  "checked_capture_url": "",
+  "page_evidence": "",
+  "other_profiles": [
+   "https://www.facebook.com/ViLylesCLT/"
+  ],
+  "note": "No HTTP 200 capture of vilyles.com between 2021-07-27 and 2022-07-26. Nearest before: 20191221000241 (oEmbed URL, not a page) and 20191105181248 (privacy page). Nearest after: first HTTP 200 capture after the election is 20221128124702 (asset file), then 20240423113050 (home page). vilyles.org has captures only 20180809185511 and 20251016030032. Domain vilyles.com is the Vi Lyles campaign site, but archive window is empty."
+ },
+ {
+  "candidate_election_id": "3712000__2022-07-26__regular__4e8e200e2fd4f611",
+  "candidate_name": "Stephanie de Sarachaga-Bilbao",
+  "election_date": "2022-07-26",
+  "status": "outside_window",
+  "campaign_url": "https://www.stephanieforcharlotte.com/",
+  "registrable_domain": "stephanieforcharlotte.com",
+  "lead_sources": [
+   "https://www.tuesdayforumcharlotte.org/2022/05/10/stephanie-de-sarachaga-bilbao/",
+   "https://vote-usa.org/intro.aspx?state=nc&id=ncdesarachagabilbaostephanietheresa"
+  ],
+  "searches_run": [
+   "WebSearch: Stephanie de Sarachaga-Bilbao Charlotte mayor 2022 Democratic primary campaign website",
+   "WebSearch: de Sarachaga-Bilbao OR Sarachaga for Charlotte mayor Republican website stephanie",
+   "Tuesday Forum and Vote-USA candidate pages via mac2 (both list the website)",
+   "Wayback CDX via mac2 for stephanieforcharlotte.com, window 2021-07-26 to 2022-07-26 (0 captures) and earliest captures",
+   "CDX also for stephanie4charlotte.com, stephaniefornc.com, stephanieformayor.com, sarachagabilbao.com, stephaniebilbao.com, bilbaoformayor.com (no captures; some early queries may have timed out)",
+   "stephanie4mayor.com has 2020-2021 captures but is not linked from her candidate pages and was not accepted"
+  ],
+  "wayback_window_captures": 0,
+  "first_capture_in_window": "",
+  "checked_capture_url": "",
+  "page_evidence": "",
+  "other_profiles": [],
+  "note": "The candidate pages name stephanieforcharlotte.com as her website. The first Wayback capture is 2022-11-07, after the 2022-07-26 election. No capture exists in the 365 days before the election. Nearest capture: 20221107171504 (after). No earlier capture exists. The domain was not read in archive, so no page evidence. Domain stephanie4mayor.com was seen with 2020-2021 captures but no link to this candidate; not accepted."
+ },
+ {
+  "candidate_election_id": "3712000__2023-11-07__regular__5aa5f60353cc070e",
+  "candidate_name": "Vi Lyles",
+  "election_date": "2023-11-07",
+  "status": "outside_window",
+  "campaign_url": "https://vilyles.com/",
+  "registrable_domain": "vilyles.com",
+  "lead_sources": [
+   "WebSearch results naming vilyles.com as campaign site",
+   "Search result summary: campaign website 'In development' at the time of the 2023 election"
+  ],
+  "searches_run": [
+   "WebSearch: Vi Lyles campaign website Charlotte mayor 2023 re-elect",
+   "WebSearch: Lyles Charlotte mayor campaign vilyles OR lylesformayor OR reelect website donate",
+   "WebSearch: Vi Lyles mayor 2019 re-election campaign website",
+   "Wikipedia: Vi Lyles, 2022 Charlotte mayoral election, 2019/2023 election pages via mac2 (no campaign URL)",
+   "Ballotpedia via mac2 returned empty body (blocked); WebFetch of Ballotpedia empty",
+   "Wayback CDX via mac2: vilyles.com, vilyles.org, vilyles.net, lylesformayor.com etc, domain and window queries"
+  ],
+  "wayback_window_captures": 1,
+  "first_capture_in_window": "",
+  "checked_capture_url": "",
+  "page_evidence": "",
+  "other_profiles": [
+   "https://www.facebook.com/ViLylesCLT/"
+  ],
+  "note": "Only one HTTP 200 capture of vilyles.com between 2022-11-08 and 2023-11-07: 20221128124702, an error-page SVG asset, not a campaign page. First home page capture after the election is 20240423113050. No page evidence available. Nearest before window: 20191221000241. wayback_window_captures counts that single asset. first_capture_in_window left empty because the capture is not a page."
+ }
+]

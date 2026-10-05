@@ -1,0 +1,29 @@
+[
+ {
+  "candidate_election_id": "4748000__2015-10-08__regular__213972b3cd915d0a",
+  "candidate_name": "A C Wharton",
+  "election_date": "2015-10-08",
+  "status": "accepted",
+  "campaign_url": "http://acwharton.com/",
+  "registrable_domain": "acwharton.com",
+  "lead_sources": [
+   "https://en.wikipedia.org/wiki/A_C_Wharton",
+   "https://en.wikipedia.org/wiki/2015_Memphis_mayoral_election"
+  ],
+  "searches_run": [
+   "WebSearch: A C Wharton Memphis mayor 2015 campaign website",
+   "WebSearch: Wharton Memphis mayor 2015 reelection whartonformayor OR reelect Mayor Wharton",
+   "mac2 curl of ballotpedia.org/A_C_Wharton (no campaign website line found; wrong page slug)"
+  ],
+  "wayback_window_captures": 218,
+  "first_capture_in_window": "20150102222820",
+  "checked_capture_url": "https://web.archive.org/web/20150508094505/http://www.acwharton.com:80/",
+  "page_evidence": "\"AC Wharton, Mayor. Memphis, Tennessee\"; \"Take Action: Donate, Volunteer, Register to Vote\"; news item \"Memphis Mayor Wharton to run for second full term\"",
+  "other_profiles": [
+   "https://www.facebook.com/mayoracwharton",
+   "https://twitter.com/mayoracwharton",
+   "https://instagram.com/acwharton901/"
+  ],
+  "note": "The search result named acwharton.com as his website. CDX through mac2 (after several timeouts) found 218 HTTP 200 captures from 2015-01-02 to 2015-10-06, the last two days before the election. The archived home page names the candidate, offers Donate and Volunteer links, and announces a run for a second full term. The 200-count covers the whole host and includes non-page URLs. The site is the incumbent mayor's site, used for the reelection campaign."
+ }
+]

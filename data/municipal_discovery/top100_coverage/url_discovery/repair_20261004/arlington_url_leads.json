@@ -1,0 +1,144 @@
+[
+ {
+  "registrable_domain": "",
+  "lead_sources": [],
+  "searches_run": [
+   "WebSearch: Robert Cluck Arlington Texas mayor campaign website 2011 2013 2015",
+   "WebSearch: Carl Scrivner Arlington mayor 2011 campaign website",
+   "WebSearch: Jerry Pikulinski Arlington mayor 2013 campaign website",
+   "WebSearch: Jim Ross Arlington mayor 2026 campaign website",
+   "WebFetch: en.wikipedia.org Mayoral_elections_in_Arlington,_Texas and Robert_Cluck (no campaign links)",
+   "Ballotpedia via mac2 curl: blocked (CloudFront 403)"
+  ],
+  "wayback_window_captures": 0,
+  "first_capture_in_window": "",
+  "checked_capture_url": "",
+  "page_evidence": "",
+  "other_profiles": [],
+  "campaign_url": "",
+  "candidate_election_id": "4804000__2011-05-14__regular__f2eafdf8b73551b2",
+  "candidate_name": "Robert Cluck",
+  "election_date": "2011-05-14",
+  "status": "incomplete",
+  "note": "Window 2010-05-14 to 2011-05-14: 0 captures for cluckformayor.com, mayorcluck.com, reelectcluck.com, electcluck.com, cluck4mayor.com, cluckforarlington.com. drcluck.com has 2 captures (20110208045156, favicon) but is a parked domain page with ads. robertcluck.com query failed after 3 attempts twice (archive timeouts), so it was not checked. Searches found no campaign website. mayorcluck.com (2015 campaign site) has no capture in this window."
+ },
+ {
+  "registrable_domain": "",
+  "lead_sources": [],
+  "searches_run": [
+   "WebSearch: Robert Cluck Arlington Texas mayor campaign website 2011 2013 2015",
+   "WebSearch: Carl Scrivner Arlington mayor 2011 campaign website",
+   "WebSearch: Jerry Pikulinski Arlington mayor 2013 campaign website",
+   "WebSearch: Jim Ross Arlington mayor 2026 campaign website",
+   "WebFetch: en.wikipedia.org Mayoral_elections_in_Arlington,_Texas and Robert_Cluck (no campaign links)",
+   "Ballotpedia via mac2 curl: blocked (CloudFront 403)"
+  ],
+  "wayback_window_captures": 0,
+  "first_capture_in_window": "",
+  "checked_capture_url": "",
+  "page_evidence": "",
+  "other_profiles": [],
+  "campaign_url": "",
+  "candidate_election_id": "4804000__2011-05-14__regular__ead77a98b32f75e4",
+  "candidate_name": "Carl Scrivner",
+  "election_date": "2011-05-14",
+  "status": "not_found",
+  "note": "Searches ran and found no campaign website. Guessed domains checked in the 365-day window with 0 HTTP 200 captures each: scrivnerformayor.com, carlscrivner.com, scrivner4mayor.com, carlscrivnerformayor.com, electcarlscrivner.com. Ballotpedia could not be fetched (403 from CloudFront on mac2). The checks all completed."
+ },
+ {
+  "registrable_domain": "mayorcluck.com",
+  "lead_sources": [],
+  "searches_run": [
+   "WebSearch: Robert Cluck Arlington Texas mayor campaign website 2011 2013 2015",
+   "WebSearch: Carl Scrivner Arlington mayor 2011 campaign website",
+   "WebSearch: Jerry Pikulinski Arlington mayor 2013 campaign website",
+   "WebSearch: Jim Ross Arlington mayor 2026 campaign website",
+   "WebFetch: en.wikipedia.org Mayoral_elections_in_Arlington,_Texas and Robert_Cluck (no campaign links)",
+   "Ballotpedia via mac2 curl: blocked (CloudFront 403)"
+  ],
+  "wayback_window_captures": 0,
+  "first_capture_in_window": "",
+  "checked_capture_url": "",
+  "page_evidence": "",
+  "other_profiles": [],
+  "campaign_url": "",
+  "candidate_election_id": "4804000__2013-05-11__regular__f2eafdf8b73551b2",
+  "candidate_name": "Robert Cluck",
+  "election_date": "2013-05-11",
+  "status": "outside_window",
+  "note": "Window 2012-05-11 to 2013-05-11: 0 captures for mayorcluck.com, robertcluck.com, cluckformayor.com, reelectcluck.com, electcluck.com, cluck4mayor.com, cluckforarlington.com, mayorcluck.com. drcluck.com has only robots.txt captures in this window and was a parked page in 2011 and 2014. mayorcluck.com is the Cluck campaign site in 2015; its nearest capture in the 2014-2015 window is 20150228081829, after this election. No evidence the site existed in 2013. Treated as no accepted site for 2013."
+ },
+ {
+  "registrable_domain": "",
+  "lead_sources": [],
+  "searches_run": [
+   "WebSearch: Robert Cluck Arlington Texas mayor campaign website 2011 2013 2015",
+   "WebSearch: Carl Scrivner Arlington mayor 2011 campaign website",
+   "WebSearch: Jerry Pikulinski Arlington mayor 2013 campaign website",
+   "WebSearch: Jim Ross Arlington mayor 2026 campaign website",
+   "WebFetch: en.wikipedia.org Mayoral_elections_in_Arlington,_Texas and Robert_Cluck (no campaign links)",
+   "Ballotpedia via mac2 curl: blocked (CloudFront 403)"
+  ],
+  "wayback_window_captures": 0,
+  "first_capture_in_window": "",
+  "checked_capture_url": "",
+  "page_evidence": "",
+  "other_profiles": [],
+  "campaign_url": "",
+  "candidate_election_id": "4804000__2013-05-11__regular__e1eefbefd98cb8cd",
+  "candidate_name": "Jerry Pikulinski",
+  "election_date": "2013-05-11",
+  "status": "not_found",
+  "note": "Searches ran and found no campaign website. Guessed domains checked in the 365-day window with 0 HTTP 200 captures each: pikulinski.com, jerrypikulinski.com, pikulinskiformayor.com, pikulinski4mayor.com, electpikulinski.com. Ballotpedia could not be fetched (403 from CloudFront on mac2). The checks all completed."
+ },
+ {
+  "registrable_domain": "mayorcluck.com",
+  "lead_sources": [
+   "Guessed domain; confirmed by Wayback capture"
+  ],
+  "searches_run": [
+   "WebSearch: Robert Cluck Arlington Texas mayor campaign website 2011 2013 2015",
+   "WebSearch: Carl Scrivner Arlington mayor 2011 campaign website",
+   "WebSearch: Jerry Pikulinski Arlington mayor 2013 campaign website",
+   "WebSearch: Jim Ross Arlington mayor 2026 campaign website",
+   "WebFetch: en.wikipedia.org Mayoral_elections_in_Arlington,_Texas and Robert_Cluck (no campaign links)",
+   "Ballotpedia via mac2 curl: blocked (CloudFront 403)"
+  ],
+  "wayback_window_captures": 15,
+  "first_capture_in_window": "20150228081829",
+  "checked_capture_url": "https://web.archive.org/web/20150331061732/http://www.mayorcluck.com:80/",
+  "page_evidence": "Arlington Mayor Bob Cluck ... Pol. Ad Paid for by Re-Elect Mayor Robert Cluck Campaign",
+  "other_profiles": [],
+  "campaign_url": "http://www.mayorcluck.com:80/",
+  "candidate_election_id": "4804000__2015-05-09__regular__f2eafdf8b73551b2",
+  "candidate_name": "Robert Cluck",
+  "election_date": "2015-05-09",
+  "status": "accepted",
+  "note": "Window 2014-05-09 to 2015-05-09: 15 HTTP 200 captures. Page names Cluck and a re-election campaign. Page text is short and does not say 'for Mayor' verbatim; 'Re-Elect Mayor Robert Cluck Campaign' is the evidence. No search result listed this domain; found by guessing. drcluck.com (parked page in 2011 and 2014) rejected."
+ },
+ {
+  "registrable_domain": "reelectjimross.com",
+  "lead_sources": [
+   "WebSearch result for Jim Ross 2026 (site named reelectjimross.com)"
+  ],
+  "searches_run": [
+   "WebSearch: Robert Cluck Arlington Texas mayor campaign website 2011 2013 2015",
+   "WebSearch: Carl Scrivner Arlington mayor 2011 campaign website",
+   "WebSearch: Jerry Pikulinski Arlington mayor 2013 campaign website",
+   "WebSearch: Jim Ross Arlington mayor 2026 campaign website",
+   "WebFetch: en.wikipedia.org Mayoral_elections_in_Arlington,_Texas and Robert_Cluck (no campaign links)",
+   "Ballotpedia via mac2 curl: blocked (CloudFront 403)"
+  ],
+  "wayback_window_captures": 74,
+  "first_capture_in_window": "20250514230150",
+  "checked_capture_url": "https://web.archive.org/web/20260419083147/https://reelectjimross.com/",
+  "page_evidence": "Reelect Jim Ross for Mayor | Arlington, Texas ... I'm announcing my candidacy for re-election as Mayor of Arlington for a third and final term this coming May.",
+  "other_profiles": [],
+  "campaign_url": "https://reelectjimross.com/",
+  "candidate_election_id": "4804000__2026-05-02__regular__a58040f01e9104dc",
+  "candidate_name": "Jim Ross",
+  "election_date": "2026-05-02",
+  "status": "accepted",
+  "note": "Window 2025-05-02 to 2026-05-02: 74 HTTP 200 captures (count from CDX, limit 1000). First capture listed is the earliest by timestamp. Capture 20260419083147 read in full. jimrossformayor.com (Stage 2 lead) is a parked page and was not used."
+ }
+]

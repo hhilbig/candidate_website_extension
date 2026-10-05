@@ -1,0 +1,104 @@
+[
+ {
+  "candidate_election_id": "1825000__2011-11-08__regular__a50da3608de33abb",
+  "candidate_name": "Thomas C. Henry",
+  "election_date": "2011-11-08",
+  "status": "accepted",
+  "campaign_url": "http://www.tomhenryformayor.com/",
+  "registrable_domain": "tomhenryformayor.com",
+  "lead_sources": [
+   "https://en.wikipedia.org/wiki/Tom_Henry (lists tomhenryformayor.org, a later site; the .com domain was found by guessing)"
+  ],
+  "searches_run": [
+   "WebSearch: Tom Henry Fort Wayne mayor campaign website 2023 re-election",
+   "WebSearch: \"TomHenryforMayor.org\"",
+   "WebSearch: Ballotpedia Thomas Henry Fort Wayne mayoral election 2015 campaign website",
+   "WebSearch: Tom Henry 2011 Fort Wayne mayor campaign website Paula Hughes Henry for Mayor",
+   "WebFetch: https://en.wikipedia.org/wiki/Tom_Henry",
+   "mac2 fetch of ballotpedia.org/Tom_Henry (HTTP 403 from CloudFront)",
+   "CDX guesses: henryformayor.com, tomhenry.org, tomhenryformayor.com, henry4mayor.com, tomhenryformayor.org"
+  ],
+  "wayback_window_captures": 115,
+  "first_capture_in_window": "20110207131205",
+  "checked_capture_url": "https://web.archive.org/web/20111022005532/http://www.tomhenryformayor.com:80/",
+  "page_evidence": "Home | Tom Henry for Mayor ... I'm running for re-election to finish the work that we've started. Paid for and authorized by Henry for Mayor committee, Mark Andorfer Treasurer.",
+  "other_profiles": [],
+  "note": "The .com domain was guessed, not found in a source. Window 2010-11-09 to 2011-11-08 has 115 HTTP 200 captures (matchType=domain), last 20111103. Page names Tom Henry and his re-election. The .org domain has no capture before 2015. Other 2011 domains with captures (henryformayor.com, tomhenry.org) were not read, and henryformayor.com may belong to another party."
+ },
+ {
+  "candidate_election_id": "1825000__2015-11-03__regular__a50da3608de33abb",
+  "candidate_name": "Thomas C. Henry",
+  "election_date": "2015-11-03",
+  "status": "accepted",
+  "campaign_url": "http://www.tomhenryformayor.org/",
+  "registrable_domain": "tomhenryformayor.org",
+  "lead_sources": [
+   "https://en.wikipedia.org/wiki/Tom_Henry"
+  ],
+  "searches_run": [
+   "WebSearch: Tom Henry Fort Wayne mayor campaign website 2023 re-election",
+   "WebSearch: \"TomHenryforMayor.org\"",
+   "WebSearch: Ballotpedia Thomas Henry Fort Wayne mayoral election 2015 campaign website",
+   "WebSearch: Tom Henry 2011 Fort Wayne mayor campaign website Paula Hughes Henry for Mayor",
+   "WebFetch: https://en.wikipedia.org/wiki/Tom_Henry",
+   "mac2 fetch of ballotpedia.org/Tom_Henry (HTTP 403 from CloudFront)"
+  ],
+  "wayback_window_captures": 46,
+  "first_capture_in_window": "20150110033245",
+  "checked_capture_url": "https://web.archive.org/web/20151008035218/http://www.tomhenryformayor.org:80/",
+  "page_evidence": "Tom Henry for Mayor ... Paid for and authorized by Henry for Mayor. P.O. Box 5713, Fort Wayne, IN 46895. Mark Andorfer, Treasurer.",
+  "other_profiles": [],
+  "note": "Window 2014-11-04 to 2015-11-03 has 46 HTTP 200 captures (matchType=domain). Wikipedia lists this site as the campaign website. Capture read is 2015-10-08. The page shows a Henry for Mayor committee disclaimer and no explicit 2015 election text on the home page extract."
+ },
+ {
+  "candidate_election_id": "1825000__2023-11-07__regular__a50da3608de33abb",
+  "candidate_name": "Thomas C Henry",
+  "election_date": "2023-11-07",
+  "status": "accepted",
+  "campaign_url": "https://www.tomhenryformayor.org/",
+  "registrable_domain": "tomhenryformayor.org",
+  "lead_sources": [
+   "https://en.wikipedia.org/wiki/Tom_Henry",
+   "https://www.21alivenews.com/2022/06/17/henry-address-his-political-future-next-week (search result naming TomHenryforMayor.org)"
+  ],
+  "searches_run": [
+   "WebSearch: Tom Henry Fort Wayne mayor campaign website 2023 re-election",
+   "WebSearch: \"TomHenryforMayor.org\"",
+   "WebSearch: Ballotpedia Thomas Henry Fort Wayne mayoral election 2015 campaign website",
+   "WebSearch: Tom Henry 2011 Fort Wayne mayor campaign website Paula Hughes Henry for Mayor",
+   "WebFetch: https://en.wikipedia.org/wiki/Tom_Henry",
+   "mac2 fetch of ballotpedia.org/Tom_Henry (HTTP 403 from CloudFront)"
+  ],
+  "wayback_window_captures": 423,
+  "first_capture_in_window": "20221108091238",
+  "checked_capture_url": "https://web.archive.org/web/20231107132055/https://www.tomhenryformayor.org/",
+  "page_evidence": "Tom Henry FOR MAYOR 2023: Mayor Tom Henry is proud to announce he'll be seeking an unprecedented fifth consecutive, four-year term as Fort Wayne mayor. Paid for and authorized by the Henry for Mayor Committee.",
+  "other_profiles": [],
+  "note": "Window 2022-11-08 to 2023-11-07 has 423 HTTP 200 captures (matchType=domain). Capture read is dated on election day."
+ },
+ {
+  "candidate_election_id": "1825000__2023-11-07__regular__373d99d22f744fee",
+  "candidate_name": "Thomas (Tom) Didier",
+  "election_date": "2023-11-07",
+  "status": "not_found",
+  "campaign_url": "",
+  "registrable_domain": "",
+  "lead_sources": [],
+  "searches_run": [
+   "WebSearch: Tom Didier Fort Wayne mayor 2023 campaign website",
+   "WebSearch: \"Didier for Mayor\" Fort Wayne website didierformayor OR tomdidier.com ...",
+   "WebSearch: Tom Didier \"Fort Wayne First\" mayor campaign site donate volunteer",
+   "WebSearch (extended): Tom Didier Fort Wayne mayor Facebook OR campaign site Paid for by Didier for Mayor committee 2023",
+   "WebSearch: \"Citizens to Elect Tom Didier\" website",
+   "WebFetch/mac2 of Ballotpedia, Waynedale News and WANE pages (403 or blocked)"
+  ],
+  "wayback_window_captures": 0,
+  "first_capture_in_window": "",
+  "checked_capture_url": "",
+  "page_evidence": "",
+  "other_profiles": [
+   "https://www.linkedin.com/company/tom-didier-fort-wayne"
+  ],
+  "note": "Searches ran but no source named a campaign website. Committee name is Citizens to Elect Tom Didier. CDX for 2022-11-08 to 2023-11-07 returned no 200 captures for didierformayor.com, tomdidier.com, tomdidierformayor.com, tomdidierformayor.org, didier4mayor.com, fortwaynefirst.com, fortwaynefirst.org, didierforfortwayne.com, didierfortwayne.com, tomdidier.org, didierformayor.org, electtomdidier.com, tomdidier2023.com, didier2023.com, votedidier.com, electdidier.com. Ballotpedia, Waynedale News and WANE pages could not be read, so a site named only there is possible."
+ }
+]

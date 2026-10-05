@@ -1,0 +1,27 @@
+[
+ {
+  "candidate_election_id": "4835000__2023-12-09__regular__85280bbba80296c9",
+  "candidate_name": "Sheila Jackson Lee",
+  "election_date": "2023-12-09",
+  "status": "outside_window",
+  "campaign_url": "https://sheilaformayor.com/",
+  "registrable_domain": "sheilaformayor.com",
+  "lead_sources": [
+   "Stage 2 domain guess; no news or Ballotpedia page found that names this domain"
+  ],
+  "searches_run": [
+   "WebSearch: Sheila Jackson Lee Houston mayor 2023 campaign website",
+   "WebSearch: \"Sheila Jackson Lee\" for Houston mayor campaign site sheilaformayor.com OR sheilajacksonlee.com OR sjlformayor",
+   "WebFetch ballotpedia.org/Sheila_Jackson_Lee (empty page)",
+   "ssh mac2 curl ballotpedia.org/Sheila_Jackson_Lee (no matching links)",
+   "WebFetch houstonlanding.org Jackson Lee article (mentions a campaign website, no URL)",
+   "WebFetch offthekuff.com (connection refused)"
+  ],
+  "wayback_window_captures": 0,
+  "first_capture_in_window": "",
+  "checked_capture_url": "",
+  "page_evidence": "",
+  "other_profiles": [],
+  "note": "No in-window 200 capture exists for sheilaformayor.com in 2022-12-09 to 2023-12-09. In-window captures are 20230123024929, 20230123024934 and 20230329150141 with no status, and 20230407082850 with status 301. The nearest 200 captures are 20220423181451 (before) and 20240502224326 (after). I could not read either page: the replay requests returned empty bodies, so I did not confirm that the site belongs to the candidate. Other domains with no 200 capture in the window: sheila4mayor.com, sheilajacksonlee.com, sheilajacksonleeformayor.com, sjlformayor.com. The archive request for jacksonleeformayor.com failed three times (HTTP 000), so that guess is unchecked. News articles say the campaign had a website, but no search result gave its address. Treat the true campaign domain as still unknown."
+ }
+]

@@ -1,0 +1,27 @@
+[
+ {
+  "candidate_election_id": "1235000__2023-05-16__regular__bcc82a1135dae853",
+  "candidate_name": "Daniel Davis",
+  "election_date": "2023-05-16",
+  "status": "accepted",
+  "campaign_url": "https://danieldavisjacksonville.com/",
+  "registrable_domain": "danieldavisjacksonville.com",
+  "lead_sources": [
+   "https://jaxtoday.org/2023/04/20/may-voter-guide-jacksonville-mayor/",
+   "https://en.wikipedia.org/wiki/2023_Jacksonville_mayoral_election"
+  ],
+  "searches_run": [
+   "WebSearch: Daniel Davis Jacksonville mayor 2023 campaign website",
+   "mac2 curl: ballotpedia.org/Daniel_Davis_(Florida) (no links returned)",
+   "mac2 curl: jaxtoday.org May 2023 voter guide",
+   "mac2 curl: jaxdailyrecord.com 2022-09-08 article",
+   "mac2 curl: en.wikipedia.org 2023 Jacksonville mayoral election"
+  ],
+  "wayback_window_captures": 212,
+  "first_capture_in_window": "20230112225600",
+  "checked_capture_url": "https://web.archive.org/web/20230319090431/https://danieldavisjacksonville.com/",
+  "page_evidence": "Title 'Daniel Davis | Jacksonville Grown. Ready to Lead.' Text: 'Jacksonville Sheriff TK Waters Endorses Daniel Davis for Mayor' and 'Jacksonville's next mayor needs to believe in our city...Daniel Davis is truly...'",
+  "other_profiles": [],
+  "note": "The count of 212 is all 200-status captures of the host from 2022-05-16 to 2023-05-16, including assets and robots.txt. Home page 200 captures start 2023-01-12 and the last is 2023-05-07. Two earlier fetches of other captures returned empty bodies; the 20230319090431 capture was read in full (71665 bytes). The archived page is the candidate's own site, not a social profile."
+ }
+]

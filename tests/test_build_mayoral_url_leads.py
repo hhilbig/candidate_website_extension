@@ -73,3 +73,24 @@ def test_sweep_verdict_applies_after_failed_proposal_and_to_rejected_entries():
 def test_sweep_verdict_for_already_accepted_entry_fails():
     with pytest.raises(ValueError):
         combine([_city('a')], {'x': [_lead('a')]}, {'x': {'problems': []}}, [], [_lead('a')])
+
+
+def test_repair_verdicts_apply_checker_and_skip_incomplete():
+    from scripts.build_mayoral_url_leads import repair_verdicts
+    leads = {'x': [_lead('a'), _lead('b'), _lead('c'), _lead('d', 'incomplete'), _lead('e', 'not_found')]}
+    verdicts = {'x': {'problems': [{'candidate_election_id': 'b', 'severity': 'reject', 'issue': '', 'evidence': ''},
+                                   {'candidate_election_id': 'c', 'severity': 'downgrade', 'issue': '', 'evidence': ''},
+                                   {'candidate_election_id': 'a', 'severity': 'minor', 'issue': '', 'evidence': ''}]}}
+    items, incomplete = repair_verdicts(leads, verdicts)
+    status = {i['candidate_election_id']: i['status'] for i in items}
+    assert status == {'a': 'accepted', 'b': 'not_found', 'c': 'outside_window', 'e': 'not_found'} and incomplete == 1
+    with pytest.raises(ValueError):
+        repair_verdicts(leads, {})
+
+
+def test_repair_search_replaces_not_found_with_own_basis():
+    leads = {'x': [_lead('a', 'not_found'), _lead('b', 'not_found')]}
+    repair = [dict(_lead('a'), page_evidence='A for Mayor'), dict(_lead('b'), status='not_found', campaign_url='')]
+    rows = {r['candidate_election_id']: r for r in combine([_city('a', 'b')], leads, {'x': {'problems': []}}, repair=repair)}
+    assert rows['a']['final_status'] == 'accepted' and rows['a']['link_basis'] == 'agent_search_repair_wayback_capture_checked'
+    assert rows['b']['final_status'] == 'not_found' and rows['b']['link_basis'] == ''

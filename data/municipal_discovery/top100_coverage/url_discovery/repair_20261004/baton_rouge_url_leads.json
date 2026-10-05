@@ -1,0 +1,67 @@
+[
+ {
+  "candidate_election_id": "2205000__2012-11-06__regular__eaa23d638c080226",
+  "candidate_name": "J. Michael \"Mike\" Walker, Sr.",
+  "election_date": "2012-11-06",
+  "status": "incomplete",
+  "campaign_url": "",
+  "registrable_domain": "",
+  "lead_sources": [],
+  "searches_run": [
+   "WebSearch: Mike Walker Baton Rouge mayor-president 2012 campaign website",
+   "WebSearch: Walker mayor-president Baton Rouge 2012 domain guesses",
+   "WebSearch (extended): Mike Walker Sr. Baton Rouge Metro Council mayor 2012 Walker for Mayor",
+   "WebFetch: wrkf.org crime-is-walkers-mantra; wafb.com candidate profile; theleif.org 2012-elections; en.wikipedia 2012 Baton Rouge mayoral election (via mac2). No website named. Ballotpedia pages returned empty via mac2."
+  ],
+  "note": "Searches ran but no campaign website was named in any source. Guessed domains were checked in the CDX for 2011-11-07 to 2012-11-06. Four returned zero rows: walkerformayor.com, mikewalker4mayor.com, mikewalkerbr.com, mikewalkersr.com. Four requests failed with curl errors 28 or 35 and were not checked: mikewalkerformayor.com, votemikewalker.com, electmikewalker.com, mikewalkerforbr.com. Not recorded as not_found because those checks did not finish and no lead was found.",
+  "wayback_window_captures": 0,
+  "first_capture_in_window": "",
+  "checked_capture_url": "",
+  "page_evidence": "",
+  "other_profiles": []
+ },
+ {
+  "candidate_election_id": "2205000__2024-12-07__regular__779385e5642ec510",
+  "candidate_name": "Emile \"Sid\" Edwards",
+  "election_date": "2024-12-07",
+  "status": "incomplete",
+  "campaign_url": "https://sidforthewin.com/",
+  "registrable_domain": "sidforthewin.com",
+  "lead_sources": [
+   "https://en.wikipedia.org/wiki/2024_Baton_Rouge_mayoral_election (external link sidforthewin.com in the candidates list)"
+  ],
+  "searches_run": [
+   "WebSearch: Sharon Weston Broome mayor campaign website 2024 Baton Rouge",
+   "WebSearch: Sid Edwards for Mayor-President Baton Rouge 2024 campaign website",
+   "https://en.wikipedia.org/wiki/2024_Baton_Rouge_mayoral_election (fetched via mac2)"
+  ],
+  "wayback_window_captures": 21,
+  "first_capture_in_window": "20240720181533",
+  "checked_capture_url": "https://web.archive.org/web/20240720181533/https://sidforthewin.com/",
+  "other_profiles": [],
+  "page_evidence": "",
+  "note": "Strong lead. The CDX for 2023-12-08 to 2024-12-07 lists about 21 HTTP 200 captures of sidforthewin.com (first 20240720181533). The 21 may be capped by the limit parameter of 50 only if more exist; the count is of rows returned. Replay requests for 20240725081854 and 20240811120157 returned empty or a 114 byte error body, and 3 further retries failed, so no archived page was read. Condition (b), a page naming the candidate and the mayoral race, is not met. Retry the replay later. The domain is probably accepted once a page is read."
+ },
+ {
+  "candidate_election_id": "2205000__2024-12-07__regular__f450515411500a39",
+  "candidate_name": "Sharon Weston Broome",
+  "election_date": "2024-12-07",
+  "status": "incomplete",
+  "campaign_url": "https://www.mayorsharonwestonbroome.com/",
+  "registrable_domain": "mayorsharonwestonbroome.com",
+  "lead_sources": [
+   "https://en.wikipedia.org/wiki/2024_Baton_Rouge_mayoral_election (external link mayorsharonwestonbroome.com)"
+  ],
+  "searches_run": [
+   "WebSearch: Sharon Weston Broome mayor campaign website 2024 Baton Rouge",
+   "WebSearch: Sid Edwards for Mayor-President Baton Rouge 2024 campaign website",
+   "https://en.wikipedia.org/wiki/2024_Baton_Rouge_mayoral_election (fetched via mac2)"
+  ],
+  "wayback_window_captures": 50,
+  "first_capture_in_window": "20240229145907",
+  "checked_capture_url": "https://web.archive.org/web/20241109033310/https://www.mayorsharonwestonbroome.com/",
+  "other_profiles": [],
+  "page_evidence": "",
+  "note": "Strong lead. The CDX for 2023-12-08 to 2024-12-07 returned at least 50 HTTP 200 captures (limit 50 reached, so the true count may be higher) from 20240229145907 to 20241205180845, with subpages such as /about-her and /events. Replay requests for the 20241109033310 capture failed in 3 tries (empty body). No archived page was read, so condition (b) is not met. Old lead sharonwestonbroome.com has 1 capture (20240817114512), content unread. Retry the replay later."
+ }
+]

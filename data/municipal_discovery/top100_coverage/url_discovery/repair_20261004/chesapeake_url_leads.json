@@ -1,0 +1,155 @@
+[
+ {
+  "candidate_election_id": "5116000__2012-05-01__regular__546f9202156e180d",
+  "candidate_name": "Alan Paul Krasnoff",
+  "election_date": "2012-05-01",
+  "status": "incomplete",
+  "campaign_url": "",
+  "registrable_domain": "",
+  "lead_sources": [],
+  "searches_run": [
+   "WebSearch: <name> Chesapeake mayor <year> campaign website (4 combined queries, one per election); WebSearch budget (200) then ran out",
+   "WebFetch https://en.wikipedia.org/wiki/Mayoral_elections_in_Chesapeake,_Virginia (no candidate sites)",
+   "Ballotpedia candidate pages via WebFetch and mac2 curl (empty)",
+   "bing and duckduckgo via mac2 (blocked or empty)"
+  ],
+  "wayback_window_captures": 0,
+  "first_capture_in_window": "",
+  "checked_capture_url": "",
+  "page_evidence": "",
+  "other_profiles": [],
+  "note": "Checked in archive with no 200 capture in window: krasnoffformayor.com, alankrasnoff.com. krasnoff4mayor.com failed 3 times with timeouts, so it is not checked. Wikipedia lists only the city council page. Status incomplete because of that unfinished check and the exhausted search budget after the first queries."
+ },
+ {
+  "candidate_election_id": "5116000__2012-05-01__regular__7e60646d46b5bfda",
+  "candidate_name": "Burnie Fletcher Mansfield, Jr.",
+  "election_date": "2012-05-01",
+  "status": "not_found",
+  "campaign_url": "",
+  "registrable_domain": "",
+  "lead_sources": [],
+  "searches_run": [
+   "WebSearch: <name> Chesapeake mayor <year> campaign website (4 combined queries, one per election); WebSearch budget (200) then ran out",
+   "WebFetch https://en.wikipedia.org/wiki/Mayoral_elections_in_Chesapeake,_Virginia (no candidate sites)",
+   "Ballotpedia candidate pages via WebFetch and mac2 curl (empty)",
+   "bing and duckduckgo via mac2 (blocked or empty)"
+  ],
+  "wayback_window_captures": 0,
+  "first_capture_in_window": "",
+  "checked_capture_url": "",
+  "page_evidence": "",
+  "other_profiles": [],
+  "note": "No lead found. burniemansfield.com has no 200 capture in the 2011-05-02 to 2012-05-01 window. mansfieldformayor.com has only robots.txt captures in the window (8 seen, Dec 2011) and no page naming Burnie Mansfield; its other captures are a 2008 about page and a 2022 site, probably a different Mansfield. Not accepted."
+ },
+ {
+  "candidate_election_id": "5116000__2018-05-01__special__9f146c3a09c7d68a",
+  "candidate_name": "Richard Wayne West",
+  "election_date": "2018-05-01",
+  "status": "outside_window",
+  "campaign_url": "http://rickwestformayor.com/",
+  "registrable_domain": "rickwestformayor.com",
+  "lead_sources": [
+   "https://en.wikipedia.org/wiki/Rick_West_(Virginia_politician)"
+  ],
+  "searches_run": [
+   "WebSearch: <name> Chesapeake mayor <year> campaign website (4 combined queries, one per election); WebSearch budget (200) then ran out",
+   "WebFetch https://en.wikipedia.org/wiki/Mayoral_elections_in_Chesapeake,_Virginia (no candidate sites)",
+   "Ballotpedia candidate pages via WebFetch and mac2 curl (empty)",
+   "bing and duckduckgo via mac2 (blocked or empty)"
+  ],
+  "wayback_window_captures": 1,
+  "first_capture_in_window": "20180331183052",
+  "checked_capture_url": "https://web.archive.org/web/20180805212752/http://rickwestformayor.com/",
+  "page_evidence": "Title of the archived page from 2018-08-05 (after the election): 'Richard West For Mayor - Focused on the future.'",
+  "other_profiles": [],
+  "note": "Wikipedia links rickwestformayor.com/about/. In the window 2017-05-02 to 2018-05-01 the only 200 capture is robots.txt (2018-03-31), which does not name the candidate. First HTML capture is 2018-08-05, 96 days after the election. Treated as outside_window. rickwest.com check failed 3 times with timeouts."
+ },
+ {
+  "candidate_election_id": "5116000__2018-05-01__special__22f8e367c01cd777",
+  "candidate_name": "Jo Anne Marie Gallant",
+  "election_date": "2018-05-01",
+  "status": "accepted",
+  "campaign_url": "http://momformayor.com/",
+  "registrable_domain": "momformayor.com",
+  "lead_sources": [
+   "https://www.wtkr.com/2018/05/01/price-west-win-newport-news-chesapeake-mayoral-race (Gallant called 'Mom for Mayor'; search result, domain guessed from that name)"
+  ],
+  "searches_run": [
+   "WebSearch: <name> Chesapeake mayor <year> campaign website (4 combined queries, one per election); WebSearch budget (200) then ran out",
+   "WebFetch https://en.wikipedia.org/wiki/Mayoral_elections_in_Chesapeake,_Virginia (no candidate sites)",
+   "Ballotpedia candidate pages via WebFetch and mac2 curl (empty)",
+   "bing and duckduckgo via mac2 (blocked or empty)"
+  ],
+  "wayback_window_captures": 50,
+  "first_capture_in_window": "20171208224756",
+  "checked_capture_url": "https://web.archive.org/web/20180118045158/http://momformayor.com/",
+  "page_evidence": "Archived page title: 'Jo Anne Gallant \"Mom For Mayor\" - Vote in Chesapeake on May 1, 2018'",
+  "other_profiles": [],
+  "note": "The count 50 is the query limit, so the true count is at least 50. First capture is the earliest among those 50 returned, not guaranteed earliest overall. joannegallant.com and gallantformayor.com had 0 captures in window."
+ },
+ {
+  "candidate_election_id": "5116000__2020-05-19__regular__9f146c3a09c7d68a",
+  "candidate_name": "Richard Wayne West",
+  "election_date": "2020-05-19",
+  "status": "outside_window",
+  "campaign_url": "http://rickwestformayor.com/",
+  "registrable_domain": "rickwestformayor.com",
+  "lead_sources": [
+   "https://en.wikipedia.org/wiki/Rick_West_(Virginia_politician)"
+  ],
+  "searches_run": [
+   "WebSearch: <name> Chesapeake mayor <year> campaign website (4 combined queries, one per election); WebSearch budget (200) then ran out",
+   "WebFetch https://en.wikipedia.org/wiki/Mayoral_elections_in_Chesapeake,_Virginia (no candidate sites)",
+   "Ballotpedia candidate pages via WebFetch and mac2 curl (empty)",
+   "bing and duckduckgo via mac2 (blocked or empty)"
+  ],
+  "wayback_window_captures": 0,
+  "first_capture_in_window": "",
+  "checked_capture_url": "https://web.archive.org/web/20190517222235/http://rickwestformayor.com/",
+  "page_evidence": "Page not read (timeouts). Home page capture 20190517222235 is 3 days before the window start 2019-05-20.",
+  "other_profiles": [],
+  "note": "No 200 capture in window 2019-05-20 to 2020-05-19 (CDX query returned 0; rickwest.com also 0). Nearest captures: 20190517222235 before, 20200811151354 after the election. The same site shows 'Richard West For Mayor' in a 2018 capture."
+ },
+ {
+  "candidate_election_id": "5116000__2020-05-19__regular__f27e655416fd77ac",
+  "candidate_name": "Lenard Tyrone Myers, II",
+  "election_date": "2020-05-19",
+  "status": "incomplete",
+  "campaign_url": "http://lenardmyers.com/",
+  "registrable_domain": "lenardmyers.com",
+  "lead_sources": [],
+  "searches_run": [
+   "WebSearch: <name> Chesapeake mayor <year> campaign website (4 combined queries, one per election); WebSearch budget (200) then ran out",
+   "WebFetch https://en.wikipedia.org/wiki/Mayoral_elections_in_Chesapeake,_Virginia (no candidate sites)",
+   "Ballotpedia candidate pages via WebFetch and mac2 curl (empty)",
+   "bing and duckduckgo via mac2 (blocked or empty)"
+  ],
+  "wayback_window_captures": 1,
+  "first_capture_in_window": "20190802194739",
+  "checked_capture_url": "https://web.archive.org/web/20190802194739/http://lenardmyers.com/",
+  "page_evidence": "",
+  "other_profiles": [],
+  "note": "lenardmyers.com has one 200 capture in window (2019-08-02), but the page read failed 5 times with timeouts, so page content and owner are not confirmed. lenardmyersformayor.com and myers4mayor.com had 0 captures. Needs a page read to accept."
+ },
+ {
+  "candidate_election_id": "5116000__2024-11-05__regular__274eca882f4f52d4",
+  "candidate_name": "Don J. Carey III",
+  "election_date": "2024-11-05",
+  "status": "incomplete",
+  "campaign_url": "",
+  "registrable_domain": "",
+  "lead_sources": [],
+  "searches_run": [
+   "WebSearch: <name> Chesapeake mayor <year> campaign website (4 combined queries, one per election); WebSearch budget (200) then ran out",
+   "WebFetch https://en.wikipedia.org/wiki/Mayoral_elections_in_Chesapeake,_Virginia (no candidate sites)",
+   "Ballotpedia candidate pages via WebFetch and mac2 curl (empty)",
+   "bing and duckduckgo via mac2 (blocked or empty)"
+  ],
+  "wayback_window_captures": 0,
+  "first_capture_in_window": "",
+  "checked_capture_url": "",
+  "page_evidence": "",
+  "other_profiles": [],
+  "note": "Checked with 0 captures in window 2023-11-06 to 2024-11-05: doncareyformayor.com, doncarey.com, careyforchesapeake.com, careyformayor.com. donforchesapeake.com failed 3 times with timeouts. No lead found in WTKR article or search results."
+ }
+]

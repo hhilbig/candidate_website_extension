@@ -1,0 +1,167 @@
+[
+ {
+  "candidate_election_id": "3451000__2018-05-08__regular__9eeb596e6a104922",
+  "candidate_name": "Ras J. Baraka",
+  "election_date": "2018-05-08",
+  "status": "accepted",
+  "campaign_url": "http://rasjbaraka.com/",
+  "registrable_domain": "rasjbaraka.com",
+  "lead_sources": [
+   "https://en.wikipedia.org/wiki/2026_Newark_mayoral_election (links rasjbaraka.com)",
+   "CDX search of rasjbaraka.com"
+  ],
+  "searches_run": [
+   "WebSearch: Ras Baraka campaign website mayor Newark 2018 re-election",
+   "WebSearch: Gayle Chaneyfield Jenkins Newark mayor 2018 campaign website",
+   "WebSearch: Sheila Montague Newark mayor 2022 campaign website",
+   "WebSearch: Jhamar Youngblood Newark mayor 2026 campaign website",
+   "WebSearch: Ras Baraka 2026 mayor Newark campaign website reelection",
+   "WebSearch: \"Chaneyfield Jenkins\" for mayor Newark website gayle campaign donate",
+   "Fetched via mac2 Wikipedia 2018, 2022 and 2026 Newark mayoral election pages (external links)",
+   "Ballotpedia candidate pages via mac2 (returned a 919-byte block page, no content)"
+  ],
+  "wayback_window_captures": 328,
+  "first_capture_in_window": "20170512045102",
+  "checked_capture_url": "https://web.archive.org/web/20170531024147/http://rasjbaraka.com/",
+  "page_evidence": "WE ARE NEWARK - MAYOR RAS J. BARAKA 2018 ... COUNTDOWN TO VICTORY; title 'Ras Baraka | Believe in Newark'",
+  "other_profiles": [],
+  "note": "Window 2017-05-08 to 2018-05-08, all 200 captures of the host including assets. The stage 2 lead rasbaraka.com is rejected: its 2018-03-23 capture is a GoDaddy parked page. rasjbaraka.com is the campaign site. Fetching the archived homepage worked on the first read only for the first 20 KB."
+ },
+ {
+  "candidate_election_id": "3451000__2018-05-08__regular__dee9688ee6781929",
+  "candidate_name": "Gayle Chaneyfield Jenkins",
+  "election_date": "2018-05-08",
+  "status": "not_found",
+  "campaign_url": "",
+  "registrable_domain": "",
+  "lead_sources": [],
+  "searches_run": [
+   "WebSearch: Ras Baraka campaign website mayor Newark 2018 re-election",
+   "WebSearch: Gayle Chaneyfield Jenkins Newark mayor 2018 campaign website",
+   "WebSearch: Sheila Montague Newark mayor 2022 campaign website",
+   "WebSearch: Jhamar Youngblood Newark mayor 2026 campaign website",
+   "WebSearch: Ras Baraka 2026 mayor Newark campaign website reelection",
+   "WebSearch: \"Chaneyfield Jenkins\" for mayor Newark website gayle campaign donate",
+   "Fetched via mac2 Wikipedia 2018, 2022 and 2026 Newark mayoral election pages (external links)",
+   "Ballotpedia candidate pages via mac2 (returned a 919-byte block page, no content)"
+  ],
+  "wayback_window_captures": 0,
+  "first_capture_in_window": "",
+  "checked_capture_url": "",
+  "page_evidence": "",
+  "other_profiles": [],
+  "note": "Web search ran (two queries) and found news coverage but no campaign website. Wikipedia 2018 page lists no official campaign website. Ballotpedia was not readable. Guessed domains checked in the CDX for 2017-05-08 to 2018-05-08: gaylechaneyfieldjenkins.com, gaylejenkins.com, chaneyfieldjenkins.com, gayleformayor.com, gaylefornewark.com, gaylecjenkins.com, gayleforcommunity.com. Only gayleformayor.com had any 200 capture in the window and it was robots.txt only (the host has a 2013 homepage and a 2018-08-07 homepage after the election), so it is not accepted and has no evidence of belonging to her. No social profile found."
+ },
+ {
+  "candidate_election_id": "3451000__2022-05-10__regular__3f8b3ae6b8cbea06",
+  "candidate_name": "Ras Baraka",
+  "election_date": "2022-05-10",
+  "status": "accepted",
+  "campaign_url": "http://rasjbaraka.com/",
+  "registrable_domain": "rasjbaraka.com",
+  "lead_sources": [
+   "CDX search of rasjbaraka.com",
+   "Same site as 2018 campaign"
+  ],
+  "searches_run": [
+   "WebSearch: Ras Baraka campaign website mayor Newark 2018 re-election",
+   "WebSearch: Gayle Chaneyfield Jenkins Newark mayor 2018 campaign website",
+   "WebSearch: Sheila Montague Newark mayor 2022 campaign website",
+   "WebSearch: Jhamar Youngblood Newark mayor 2026 campaign website",
+   "WebSearch: Ras Baraka 2026 mayor Newark campaign website reelection",
+   "WebSearch: \"Chaneyfield Jenkins\" for mayor Newark website gayle campaign donate",
+   "Fetched via mac2 Wikipedia 2018, 2022 and 2026 Newark mayoral election pages (external links)",
+   "Ballotpedia candidate pages via mac2 (returned a 919-byte block page, no content)"
+  ],
+  "wayback_window_captures": 881,
+  "first_capture_in_window": "20210513095615",
+  "checked_capture_url": "https://web.archive.org/web/20220418011942/http://rasjbaraka.com/about/",
+  "page_evidence": "Re-Elect Ras J. Baraka 2022 ... Copyright 2022 by The Committee To Re-Elect Ras Baraka 2022; 'Who Is Ras Baraka?' Mayor Ras J. Baraka",
+  "other_profiles": [],
+  "note": "Window 2021-05-10 to 2022-05-10. The archived homepage returned empty bodies on three tries, so the about page capture was read. rasbaraka.com had only 3 captures in the window (no readable campaign page) and is not used."
+ },
+ {
+  "candidate_election_id": "3451000__2022-05-10__regular__bbe3c9f98b3aec2f",
+  "candidate_name": "Sheila Montague",
+  "election_date": "2022-05-10",
+  "status": "not_found",
+  "campaign_url": "",
+  "registrable_domain": "sheilamontague.com",
+  "lead_sources": [
+   "https://en.wikipedia.org/wiki/2022_Newark_mayoral_election (external link 'Sheila Montague for Mayor' to https://www.sheilamontague.com/)"
+  ],
+  "searches_run": [
+   "WebSearch: Ras Baraka campaign website mayor Newark 2018 re-election",
+   "WebSearch: Gayle Chaneyfield Jenkins Newark mayor 2018 campaign website",
+   "WebSearch: Sheila Montague Newark mayor 2022 campaign website",
+   "WebSearch: Jhamar Youngblood Newark mayor 2026 campaign website",
+   "WebSearch: Ras Baraka 2026 mayor Newark campaign website reelection",
+   "WebSearch: \"Chaneyfield Jenkins\" for mayor Newark website gayle campaign donate",
+   "Fetched via mac2 Wikipedia 2018, 2022 and 2026 Newark mayoral election pages (external links)",
+   "Ballotpedia candidate pages via mac2 (returned a 919-byte block page, no content)"
+  ],
+  "wayback_window_captures": 6,
+  "first_capture_in_window": "20220220094951",
+  "checked_capture_url": "https://web.archive.org/web/20220502185325/https://www.sheilamontague.com/",
+  "page_evidence": "Title 'Newark Board of Education | Sheila Montague for Newark, NJ'; 'Open the Door'; Donate, Meet & Greet Fundraiser. No archived text uses the word Mayor.",
+  "other_profiles": [],
+  "note": "NEEDS HUMAN REVIEW. Wikipedia lists https://www.sheilamontague.com/ as her mayoral campaign site and it has 200 captures in the window (2022-02-20 to 2022-05-02, only the homepage). The archived homepage (captures 20220403131047 and 20220502185325) names her and has donate and fundraiser pages but never says Mayor, so criterion (b) is not met under the strict rule. Likely the correct site; a reviewer may choose to accept it."
+ },
+ {
+  "candidate_election_id": "3451000__2026-05-12__regular__9eeb596e6a104922",
+  "candidate_name": "Ras J. Baraka",
+  "election_date": "2026-05-12",
+  "status": "accepted",
+  "campaign_url": "https://rasjbaraka.com/",
+  "registrable_domain": "rasjbaraka.com",
+  "lead_sources": [
+   "https://en.wikipedia.org/wiki/2026_Newark_mayoral_election (external link 'Ras Baraka for Mayor' to https://rasjbaraka.com)"
+  ],
+  "searches_run": [
+   "WebSearch: Ras Baraka campaign website mayor Newark 2018 re-election",
+   "WebSearch: Gayle Chaneyfield Jenkins Newark mayor 2018 campaign website",
+   "WebSearch: Sheila Montague Newark mayor 2022 campaign website",
+   "WebSearch: Jhamar Youngblood Newark mayor 2026 campaign website",
+   "WebSearch: Ras Baraka 2026 mayor Newark campaign website reelection",
+   "WebSearch: \"Chaneyfield Jenkins\" for mayor Newark website gayle campaign donate",
+   "Fetched via mac2 Wikipedia 2018, 2022 and 2026 Newark mayoral election pages (external links)",
+   "Ballotpedia candidate pages via mac2 (returned a 919-byte block page, no content)"
+  ],
+  "wayback_window_captures": 72,
+  "first_capture_in_window": "20250824024252",
+  "checked_capture_url": "https://web.archive.org/web/20260512091522/http://rasjbaraka.com/host-an-event/",
+  "page_evidence": "Host An Event To Re-Elect Mayor Ras Baraka",
+  "other_profiles": [],
+  "note": "Window 2025-05-12 to 2026-05-12. Doubt: the archived site content is old (the host-an-event page text mentions 'my 2018 re-election' and the footer of 2026 captures of other pages reads 2022 campaign wording), so the site was not updated for 2026. It is still the campaign site Wikipedia links for 2026 and the pages say Re-Elect Mayor Ras Baraka. The homepage capture is a script shell with no text."
+ },
+ {
+  "candidate_election_id": "3451000__2026-05-12__regular__d92169301e43f8c4",
+  "candidate_name": "Jhamar D. Youngblood",
+  "election_date": "2026-05-12",
+  "status": "accepted",
+  "campaign_url": "https://www.jhamayor.com/",
+  "registrable_domain": "jhamayor.com",
+  "lead_sources": [
+   "https://en.wikipedia.org/wiki/2026_Newark_mayoral_election (external link 'Jhamar Youngblood for Mayor')"
+  ],
+  "searches_run": [
+   "WebSearch: Ras Baraka campaign website mayor Newark 2018 re-election",
+   "WebSearch: Gayle Chaneyfield Jenkins Newark mayor 2018 campaign website",
+   "WebSearch: Sheila Montague Newark mayor 2022 campaign website",
+   "WebSearch: Jhamar Youngblood Newark mayor 2026 campaign website",
+   "WebSearch: Ras Baraka 2026 mayor Newark campaign website reelection",
+   "WebSearch: \"Chaneyfield Jenkins\" for mayor Newark website gayle campaign donate",
+   "Fetched via mac2 Wikipedia 2018, 2022 and 2026 Newark mayoral election pages (external links)",
+   "Ballotpedia candidate pages via mac2 (returned a 919-byte block page, no content)"
+  ],
+  "wayback_window_captures": 12,
+  "first_capture_in_window": "20251106235125",
+  "checked_capture_url": "https://web.archive.org/web/20260430160354/https://www.jhamayor.com/",
+  "page_evidence": "Jhamar Youngblood for Mayor ... I'm Jhamar Youngblood, a Newark native ... As mayor, I'll make Newark's government efficient, transparent, and accountable",
+  "other_profiles": [
+   "https://goodparty.org/candidate/jhamar-youngblood/newark-city-mayor",
+   "https://substack.com/@jhamar"
+  ],
+  "note": "Window 2025-05-12 to 2026-05-12. jhamar.com had no 200 captures in the window."
+ }
+]

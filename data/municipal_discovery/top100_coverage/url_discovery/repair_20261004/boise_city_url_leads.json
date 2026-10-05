@@ -1,0 +1,69 @@
+[
+ {
+  "candidate_election_id": "1608830__2011-11-08__regular__1254ee6d3cf398a6",
+  "candidate_name": "David B Hall",
+  "election_date": "2011-11-08",
+  "status": "not_found",
+  "campaign_url": "",
+  "registrable_domain": "",
+  "lead_sources": [],
+  "searches_run": [
+   "WebSearch: David Hall Boise mayor 2011 campaign website",
+   "WebSearch: \"David Hall\" Boise mayor 2011 College of Western Idaho candidate Bieter opponent website",
+   "Page: en.wikipedia.org/wiki/2011_Boise_mayoral_election (no website listed)",
+   "Page: cityofboise.org city clerk candidate page (no website)",
+   "Ballotpedia via mac2 returned a 403 block page"
+  ],
+  "wayback_window_captures": 0,
+  "first_capture_in_window": "",
+  "checked_capture_url": "",
+  "page_evidence": "",
+  "other_profiles": [],
+  "note": "Searches ran and found no website lead. Guessed domains checked in CDX from mac2 (window 2010-11-09 to 2011-11-08, HTTP 200 returned, zero 200 captures): davidhallforboise.com, davehallforboise.com, davidhall4mayor.com, davidhallformayor.com, hallforboise.com, hallformayor.com. Candidate was a student with a small campaign; a website may never have existed."
+ },
+ {
+  "candidate_election_id": "1608830__2015-11-03__regular__3f50af484cb21e03",
+  "candidate_name": "Judy Peavey-Derr",
+  "election_date": "2015-11-03",
+  "status": "incomplete",
+  "campaign_url": "",
+  "registrable_domain": "",
+  "lead_sources": [],
+  "searches_run": [
+   "WebSearch: Judy Peavey-Derr Boise mayor 2015 campaign website",
+   "WebSearch: \"Peavey-Derr\" for mayor Boise website",
+   "WebSearch: Judy Peavey-Derr mayor campaign judy boise 2015 paid for by / www. / facebook",
+   "Page: en.wikipedia.org/wiki/2015_Boise_mayoral_election (no website)",
+   "Page: boiseguardian.com 2015-10-29 campaign repository and 2015-09-04 (no website URL)",
+   "Ballotpedia via mac2 returned a 403 block page; KTVB via WebFetch returned 403"
+  ],
+  "wayback_window_captures": 0,
+  "first_capture_in_window": "",
+  "checked_capture_url": "",
+  "page_evidence": "",
+  "other_profiles": [],
+  "note": "No search result gave a website. Guessed domains with CDX run from mac2 (window 2014-11-04 to 2015-11-03): judyforboise.com, peaveyderr.com, judyforboisemayor.com, judyderr.com, judy4boise.com, peaveyderrforboise.com had no 200 captures. judypeaveyderr.com has 200 captures in window (first 20141217163537) but the archived home page is titled 'Idaho Senate Candidate Judy Peavey-Derr' and does not mention a mayoral race, so it is rejected (old Senate-race site). electjudy.com has one 200 capture, 20150801093304, but the replay fetch failed on 3+ attempts from mac2 (empty response), so its content was not read and ownership is unknown. Status is incomplete for that reason. Retry electjudy.com replay later."
+ },
+ {
+  "candidate_election_id": "1608830__2023-11-07__regular__fc077cb6738c47bd",
+  "candidate_name": "Mike Masterson",
+  "election_date": "2023-11-07",
+  "status": "accepted",
+  "campaign_url": "https://www.mastersonforboisemayor.com/",
+  "registrable_domain": "mastersonforboisemayor.com",
+  "lead_sources": [
+   "https://en.wikipedia.org/wiki/2023_Boise_mayoral_election"
+  ],
+  "searches_run": [
+   "WebSearch: Mike Masterson Boise mayor 2023 campaign website",
+   "Page: en.wikipedia.org/wiki/2023_Boise_mayoral_election (cites a web.archive.org copy of mastersonforboisemayor.com)",
+   "Page: boisedev.com 2023-03-20 Masterson article (no website URL)"
+  ],
+  "wayback_window_captures": 33,
+  "first_capture_in_window": "20230518000024",
+  "checked_capture_url": "https://web.archive.org/web/20230604221731/https://www.mastersonforboisemayor.com/why-im-running",
+  "page_evidence": "Page title: \"Why I'm Running \u2014 Masterson for Boise Mayor\"; og:site_name \"Masterson for Boise Mayor\".",
+  "other_profiles": [],
+  "note": "CDX from mac2 for host mastersonforboisemayor.com, window 2022-11-08 to 2023-11-07, returned 33 HTTP 200 captures across all paths (home page first captured 20230518000024). The count covers all paths, not only the home page. Page text read through the id_ replay."
+ }
+]

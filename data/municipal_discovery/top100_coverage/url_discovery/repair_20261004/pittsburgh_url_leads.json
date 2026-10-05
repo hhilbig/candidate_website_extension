@@ -1,0 +1,23 @@
+[
+ {
+  "candidate_election_id": "4261000__2025-11-04__regular__45406172fd56e72a",
+  "candidate_name": "Tony Moreno",
+  "election_date": "2025-11-04",
+  "status": "accepted",
+  "campaign_url": "https://realsteelmayor.com/",
+  "registrable_domain": "realsteelmayor.com",
+  "lead_sources": [
+   "WebSearch result for 'Tony Moreno Pittsburgh mayor 2025 campaign website' (search summary and publicsource.org candidate profile)"
+  ],
+  "searches_run": [
+   "Tony Moreno Pittsburgh mayor 2025 campaign website",
+   "Tony Moreno Republican candidate Pittsburgh mayor Ballotpedia"
+  ],
+  "wayback_window_captures": 97,
+  "first_capture_in_window": "20250403133654",
+  "checked_capture_url": "https://web.archive.org/web/20250422213621/https://realsteelmayor.com/",
+  "page_evidence": "Tony Moreno for Mayor of Pittsburgh | Join Tony Moreno and help him fight for a more prosperous city.",
+  "other_profiles": [],
+  "note": "Web search ran. The domain realsteelmayor.com has 97 HTTP 200 captures from 2024-11-04 to 2025-11-04 (count from CDX with limit 5000, all file types). The archived home page of 2025-04-22 is titled Tony Moreno for Mayor of Pittsburgh. Stage 2 guessed other domains and missed this one."
+ }
+]

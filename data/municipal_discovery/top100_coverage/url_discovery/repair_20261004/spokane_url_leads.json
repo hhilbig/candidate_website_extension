@@ -1,0 +1,31 @@
+[
+ {
+  "candidate_election_id": "5367000__2019-11-05__regular__76bdb5f7687d87ab",
+  "candidate_name": "Nadine Woodward",
+  "election_date": "2019-11-05",
+  "status": "outside_window",
+  "campaign_url": "https://www.mayorspokane.com/",
+  "registrable_domain": "mayorspokane.com",
+  "lead_sources": [
+   "https://www.spokesman.com/elections/2019/2019-washington-primary-election/candidates/nadine-woodward/"
+  ],
+  "searches_run": [
+   "WebSearch: Nadine Woodward Spokane mayor 2019 campaign website",
+   "WebSearch: Nadine Woodward mayor Spokane Spokane Solutions website (extended)",
+   "WebFetch: en.wikipedia.org/wiki/2019_Spokane_mayoral_election (no website listed)",
+   "Ballotpedia Nadine_Woodward via Wayback copy 2022-07-22 through mac2 (no campaign website listed)",
+   "WebFetch: Spokesman-Review 2019 primary candidate page (lists website mayorspokane.com, Facebook Nadine4Mayor, X MayorSpokane)",
+   "WebFetch: inlander.com article (HTTP 429)",
+   "CDX checks via mac2: mayorspokane.com, nadinewoodward.com, nadine4mayor.com, nadineformayor.com, nadine4spokane.com, nadineforspokane.com"
+  ],
+  "wayback_window_captures": 0,
+  "first_capture_in_window": "",
+  "checked_capture_url": "",
+  "page_evidence": "",
+  "other_profiles": [
+   "https://www.facebook.com/Nadine4Mayor/",
+   "https://x.com/MayorSpokane"
+  ],
+  "note": "The Spokesman-Review candidate page lists mayorspokane.com as her website, but the page may show her later mayor-era channels. The CDX index has no 200 capture of mayorspokane.com in 2018-11-05 to 2019-11-05. The earliest capture is 2023-02-09 (301), the earliest 200 is 2023-02-09 22:17. nadinewoodward.com has captures only from 2024-04-16. nadine4mayor.com, nadineformayor.com, nadine4spokane.com and nadineforspokane.com have no captures at all. No page was read, so no candidate page text was verified. The WebSearch budget ran out after the second search. Several CDX requests failed with HTTP 000 and were retried until one returned HTTP 200."
+ }
+]

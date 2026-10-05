@@ -1,0 +1,49 @@
+[
+ {
+  "candidate_election_id": "3128000__2011-05-03__regular__64758d90848af331",
+  "candidate_name": "Tammy Buffington",
+  "election_date": "2011-05-03",
+  "status": "not_found",
+  "campaign_url": "",
+  "registrable_domain": "",
+  "lead_sources": [],
+  "searches_run": [
+   "WebSearch: Tammy Buffington Lincoln mayor 2011 campaign website",
+   "WebSearch: \"Buffington\" Lincoln Nebraska mayor 2011 buffingtonformayor OR tammy for mayor (extended)",
+   "WebSearch: \"Tammy Buffington\" Lincoln mayor candidate Republican businesswoman Facebook OR website",
+   "WebFetch: https://www.klkntv.com/?p=252601",
+   "Wikipedia 2011 Lincoln, Nebraska mayoral election (references, via mac2)",
+   "Ballotpedia Tammy_Buffington (via mac2; empty response)"
+  ],
+  "wayback_window_captures": 0,
+  "first_capture_in_window": "",
+  "checked_capture_url": "",
+  "page_evidence": "",
+  "other_profiles": [],
+  "note": "Three web searches ran and two news or reference pages were read. None named a campaign website. Stage 2 domains were not repeated. New domains checked in the CDX window 2010-05-03 to 2011-05-03 through mac2: tammy4mayor.com, buffington4mayor.com, votebuffington.com, tammybuffington2011.com, buffingtonformayor.com, tammyformayor.com, tammy4lincoln.com. Only tammy4mayor.com had captures. They are from Tammy de Weerd, mayor of Meridian, Idaho (capture 20100124202245 reads 'Tammy De Weerd For Mayor'), so the site is not Buffington's. The Ballotpedia fetch returned nothing, so that source was not read. The result is not_found with the doubt that the website may have existed under a name that no search returned."
+ },
+ {
+  "candidate_election_id": "3128000__2019-05-07__regular__c7a6ad6d59136d2d",
+  "candidate_name": "Leirion Gaylor Baird",
+  "election_date": "2019-05-07",
+  "status": "accepted",
+  "campaign_url": "http://www.leirionforlincoln.com/",
+  "registrable_domain": "leirionforlincoln.com",
+  "lead_sources": [
+   "https://www.leirionforlincoln.com/?p=635",
+   "https://www.leirionforlincoln.com/leirion-gaylor-baird-to-run-for-mayor/",
+   "https://en.wikipedia.org/wiki/Leirion_Gaylor_Baird"
+  ],
+  "searches_run": [
+   "WebSearch: Leirion Gaylor Baird for Lincoln mayor 2019 campaign website",
+   "CDX leirionforlincoln.com 2018-05-07 to 2019-05-07 status 200",
+   "Replay of captures 20180604115614, 20181125070201, 20181228072738, 20190508072102 and the announcement page"
+  ],
+  "wayback_window_captures": 74,
+  "first_capture_in_window": "20180604115614",
+  "checked_capture_url": "https://web.archive.org/web/20181125070201/http://www.leirionforlincoln.com/",
+  "page_evidence": "Leirion Gaylor Baird for Mayor of Lincoln. Thank you for your interest in my candidacy for Mayor. Our website is currently under construction.",
+  "other_profiles": [],
+  "note": "The CDX query returned 74 HTTP 200 captures from 2018-06-04 to 2019-04-07; many are robots.txt, feeds or assets. The 20181125 capture is a coming-soon page that names her and the mayoral candidacy. The June 2018 home page was an earlier council re-election site by the same candidate. The capture at 20190508 (one day after the election) reads 'Why I am running for Mayor'. It is outside the window and was used only as a consistency check. The domain is her own, so the evidence is acceptable, but the in-window mayoral content is thin."
+ }
+]

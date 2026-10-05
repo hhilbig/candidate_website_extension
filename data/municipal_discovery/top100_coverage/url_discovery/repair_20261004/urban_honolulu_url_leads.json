@@ -1,0 +1,24 @@
+[
+ {
+  "candidate_election_id": "1571550__2024-08-10__regular__1660ea2886cbb294",
+  "candidate_name": "Choon James",
+  "election_date": "2024-08-10",
+  "status": "accepted",
+  "campaign_url": "https://www.votechoon.com/",
+  "registrable_domain": "votechoon.com",
+  "lead_sources": [
+   "https://en.wikipedia.org/wiki/2024_Honolulu_mayoral_election",
+   "WebSearch result for Choon James Honolulu mayor 2024 campaign website (stated www.votechoon.com)"
+  ],
+  "searches_run": [
+   "WebSearch: Choon James Honolulu mayor 2024 campaign website",
+   "mac2 curl of ballotpedia.org/Choon_James (no campaign link extracted)"
+  ],
+  "wayback_window_captures": 85,
+  "first_capture_in_window": "20231002140938",
+  "checked_capture_url": "https://web.archive.org/web/20240805215705/https://www.votechoon.com/",
+  "page_evidence": "Choon James - for MAYOR ... Choon James For Mayor ... ChoonJamesMayor@gmail.com",
+  "other_profiles": [],
+  "note": "CDX via mac2 for 2023-08-11 to 2024-08-10 returned 85 HTTP 200 captures (count across all site URLs, limit 5000). Earliest is 20231002140938 (a get-involved page); earliest root capture is 20231002144214. Read the 2024-08-05 root capture; it names Choon James and the mayoral race."
+ }
+]

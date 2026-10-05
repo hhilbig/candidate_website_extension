@@ -2,7 +2,7 @@
   "version": "top_two_coverage_v1",
   "cutoff": "2026-09-14",
   "inputs": {
-    "config/mayoral_top_two_build.json": "bfa8bc0de3603f0fadb1ab88f06cda458ae4f0b06e93cf066dfe4d1c7aa1f414",
+    "config/mayoral_top_two_build.json": "ebb0d0934b7d3b9f0df372cee0fbf9a5d76a4e31086d5d363846f7b08c9688d6",
     "data/municipal_discovery/top100_coverage/inputs/cities_2020_top100.csv": "f808b441ddc20275ba0513be433a33a7970aa5a96b378020f16580f61ca0e679",
     "data/municipal_discovery/exhaustive_source_expansion_20260908/ownership_repair_20260910/combined/candidate_roster.csv": "98dbd8e1c38ee18a13932be89c01231fb956ec31d0ff08233d6927f7ef24aee6",
     "quality_reports/mayoral_source_restart_2026-09-14/completion/v7/attribution_review_complete/candidate_urls_with_capture_reviews.csv": "a6e59bd0aaa1972eee9ff80cf52292c14dc6f57988154ce06c861ccd8959ea51",
@@ -216,23 +216,24 @@
     "data/municipal_discovery/top100_coverage/linkage/identity_links.csv": "f44ceb7305a0e5e887b14c607aa2700940912108dec642f44ff8b127eb6fd8be",
     "data/municipal_discovery/top100_coverage/inputs/stage3_saved_pages.csv": "80732848cd9254064e588533a2a240785deeafda6386721239eadfa0a2479268",
     "data/municipal_discovery/top100_coverage/inputs/stage3b_saved_pages.csv": "dac007cb0f125e11aa69cf1116ed612aa2169623da6a6ba876660df132e8c5d6",
+    "data/municipal_discovery/top100_coverage/inputs/stage3L_saved_pages.csv": "19cd4dbe49db4235ab8e2cb63894efc8734f9277bd5cb05318672d9be9637207",
     "data/municipal_discovery/top100_coverage/legacy_attribution/agent_verdicts.csv": "7ed0fe0f346d45bac8f1775d4c6b3319ede82a21ba8530b291dcf7dd9423a9b8",
-    "data/municipal_discovery/top100_coverage/linkage/discovered_url_leads.csv": "f392babcad31a856f3bc1e6c1e79e89b62809f9b9b2f3608abc2f8467a55deb2"
+    "data/municipal_discovery/top100_coverage/linkage/discovered_url_leads.csv": "bf7cda344bbf9da0f5590bf7e9cf31b2916ddb97ccbdf1b744522f2c53428a6a"
   },
   "script_sha256": "664cfbe501dd47b5365019178e3e95c834f883194dbe2e4c28f227d221c81f67",
   "outputs": {
     "cities.csv": "4e06ea9d422efcd97b0236de473caa32ca952d1d387d610379d07d5ebde3a388",
     "city_year_audit.csv": "a9d46e666b12b6307ece6ebc9a33d1f40094f67423887a333c852888167a5f6f",
     "elections.csv": "4d178b47ccfaa7df1f26ff5c1bc514fb39dc18ccfaa1cd1d3bae4e6862d9a82f",
-    "candidate_coverage.csv": "7d1207bfe60fce2753795c5ee8820cab864c4eee6a445090558cb09f2bc120c8",
-    "coverage_breakdowns.csv": "27c741697fd7d16815c5e62e24692f50e71e3203d20e356a3e0c62b7a8976696",
-    "missing_urls.csv": "7407771a448e0ea86162d03b0924fd53139d41e564e5c701dad912282b7a6c3c",
-    "missing_period_captures.csv": "ced75815e8b8d12a0524c7fb4a87d1219dc3098c8dbb86c24f84a19f4436b1eb",
+    "candidate_coverage.csv": "468728df8edb8df1679b98c86e091fcb7d67e11b09ccbfd2df4915c826660d38",
+    "coverage_breakdowns.csv": "c93e348a38df0e3bbef5d8579d1eb428bf998adb0823f6c10c7f199950f3aa6b",
+    "missing_urls.csv": "34e6598774af78e8c8d0831e69feb4fb34866a1fb1902b272aa6e0c774053b3a",
+    "missing_period_captures.csv": "45268f4cfc06eb68df63a4e6746139363ce159efb6c7b5a4b9146f36ece21dd2",
     "missing_election_results.csv": "164212cb1c39dbfa39b19a82e4000698bb311dec204f24f20696cd805eda5628",
     "missing_election_calendars.csv": "f639ad7f845e0ad1cdded693329145b4fec354d1d853a17e878393867996899c",
-    "coverage_gaps.csv": "808b68034fda0c859c40157a1d81de3db15f2383faadb0e1ae5901e771923ca1",
-    "source_attempt_estimates.csv": "e34e9eced5f6a889cfc007187dd1f5653f15285cb66733c76eeba3be1bd5a882",
-    "summary.json": "da4d4be36edff5c36d6d18df7a25fc68f1841847b355f99f496087c8819db084",
+    "coverage_gaps.csv": "53533cca50bbda554634be7b5c00c0d81b4baaf2d7eb512c4557ce3fa6dd5eae",
+    "source_attempt_estimates.csv": "67452a2ea7340c6e9242e33cfda2df405a735d5947ad6d2a8e00fd729f707e6c",
+    "summary.json": "302d09111fb734a7b60e3e41fb36e25b6b3e6c97f73633d385c7da426aadd5e6",
     "outside_scope_results.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
     "superseded_result_records.json": "cfdbaa6d8e80ab97381d91edc0698814a02ab33a82e7d306c8f68c45ff5b05d4"
   }

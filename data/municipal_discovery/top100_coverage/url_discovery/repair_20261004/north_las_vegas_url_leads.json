@@ -1,0 +1,68 @@
+[
+ {
+  "candidate_election_id": "3251800__2013-04-02__regular__155b15ab7e3fe907",
+  "candidate_name": "John Lee",
+  "election_date": "2013-04-02",
+  "registrable_domain": "",
+  "campaign_url": "",
+  "lead_sources": [],
+  "searches_run": [
+   "WebSearch: John Lee North Las Vegas mayor 2013 campaign website",
+   "WebSearch: John Lee 2013 mayoral candidates with name variants",
+   "WebFetch: Wikipedia 2013 NLV mayoral election and John Lee pages (no campaign link)",
+   "Las Vegas Sun Jan and Feb 2013 articles (paywalled or no URL)",
+   "Ballotpedia John Jay Lee (403 on WebFetch and mac2)",
+   "Vote Smart (403)"
+  ],
+  "wayback_window_captures": 0,
+  "first_capture_in_window": "",
+  "checked_capture_url": "",
+  "page_evidence": "",
+  "other_profiles": [],
+  "status": "not_found",
+  "note": "Search ran. No lead to a campaign site found. Guessed domains checked in the archive on mac2 with no 200 capture in the window: johnjaylee.com (only a 2005 robots.txt), johnleenv.com, votejohnlee.com, johnleeformayor.org, johnlee4mayor.com, johnleenlv.org, johnleemayor.com. Stage 2 also checked johnleeformayor.com, johnleenlv.com, electjohnlee.com, mayorjohnlee.com, leeformayor.com. Ballotpedia and Vote Smart returned 403, so the Ballotpedia campaign link was not read."
+ },
+ {
+  "candidate_election_id": "3251800__2017-04-04__regular__29ced36465c703b0",
+  "candidate_name": "Gary Bouchard",
+  "election_date": "2017-04-04",
+  "registrable_domain": "cleanupnlv.org",
+  "campaign_url": "http://cleanupnlv.org/",
+  "lead_sources": [
+   "WebSearch result text citing Cleanupnlv.org as Bouchard campaign site (Ballotpedia Gary_Bouchard summary)"
+  ],
+  "searches_run": [
+   "WebSearch: Gary Bouchard North Las Vegas mayor 2017 campaign website",
+   "WebSearch: \"Gary Bouchard\" North Las Vegas mayor 2017 candidate website"
+  ],
+  "wayback_window_captures": 3,
+  "first_capture_in_window": "20170321185348",
+  "checked_capture_url": "https://web.archive.org/web/20170321185348/http://cleanupnlv.org/",
+  "page_evidence": "\"Gary Bouchard for Mayor\" / \"COME MEET GARY BOUCHARD\" / \"GARY BOUCHARD for Mayor ... AS YOUR MAYOR MY JOB IS TO SERVE YOU!\"",
+  "other_profiles": [],
+  "status": "accepted",
+  "note": "CDX in 2016-04-05 to 2017-04-04 shows three 200 captures (20170321185348 home page, 20170404175759 home page, 20170404175753 robots.txt). Read the 20170321185348 capture. The Ballotpedia page could not be fetched directly (403); the domain came from a search summary and the archived page confirms it. Stage 2 rejected garybouchard.com (2025 captures only); that domain is not used."
+ },
+ {
+  "candidate_election_id": "3251800__2022-11-08__regular__b3ed5356508006b0",
+  "candidate_name": "Pamela A. Goynes-Brown",
+  "election_date": "2022-11-08",
+  "registrable_domain": "goynesbrownformayor.com",
+  "campaign_url": "https://goynesbrownformayor.com/",
+  "lead_sources": [
+   "https://www.ballotready.org/people/pamela-goynes-brown"
+  ],
+  "searches_run": [
+   "WebSearch: Pamela Goynes-Brown North Las Vegas mayor 2022 campaign website",
+   "WebFetch: BallotReady profile (lists campaign website)",
+   "WebFetch: Wikipedia 2022 NLV mayoral election (no campaign link)"
+  ],
+  "wayback_window_captures": 32,
+  "first_capture_in_window": "20211206024641",
+  "checked_capture_url": "https://web.archive.org/web/20220520010840/https://goynesbrownformayor.com/",
+  "page_evidence": "\"The official website of Councilwoman Pamela Goynes-Brown for North Las Vegas Mayor.\" (meta description); site name \"Pamela Goynes-Brown for North Las Vegas Mayor\"",
+  "other_profiles": [],
+  "status": "accepted",
+  "note": "Stage 2 reported no 200 capture; that came from the refused droplet request. On mac2, CDX for 2021-11-09 to 2022-11-08 returns 32 home page captures with status 200 (count of the home page URL only; the first query hit the 200-row limit with asset files). Read the 20220520010840 capture. Capture dates run from 2021-12-06."
+ }
+]

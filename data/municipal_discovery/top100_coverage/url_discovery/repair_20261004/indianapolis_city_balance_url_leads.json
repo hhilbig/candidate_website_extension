@@ -1,0 +1,50 @@
+[
+ {
+  "candidate_election_id": "1836003__2019-11-05__regular__5d0053483a9fff09",
+  "candidate_name": "Joe Hogsett",
+  "election_date": "2019-11-05",
+  "status": "accepted",
+  "campaign_url": "http://joehogsett.com/",
+  "registrable_domain": "joehogsett.com",
+  "lead_sources": [
+   "https://en.wikipedia.org/wiki/2023_Indianapolis_mayoral_election (links joehogsett.com)"
+  ],
+  "searches_run": [
+   "WebSearch: Joe Hogsett 2019 Indianapolis mayor campaign website",
+   "Wikipedia: Joe_Hogsett, 2019_Indianapolis_mayoral_election, 2023_Indianapolis_mayoral_election (via mac2)",
+   "Ballotpedia Joe_Hogsett (empty response via WebFetch and mac2)"
+  ],
+  "wayback_window_captures": 385,
+  "first_capture_in_window": "20181113184901",
+  "checked_capture_url": "https://web.archive.org/web/20190508174622/http://joehogsett.com/",
+  "page_evidence": "Title 'Joe Hogsett for Indianapolis'; text: 'As Mayor, Joe Hogsett will use the same results-oriented approach to stem the city's violent crime epidemic...'. A second 2019 capture of /category/news/ is titled 'Joe Hogsett for Mayor' ('Official campaign website for Indianapolis Mayor Joe Hogsett', keywords 2019).",
+  "other_profiles": [],
+  "note": "Stage 2 wrongly reported this domain as parked; the in-window captures (2018-11-06 to 2019-11-05, 385 HTTP 200 captures across the site, counted with host match) show an active WordPress campaign site. The home page biography text appears to be reused from the 2015 campaign (future tense, 'will'), so the 2019 relevance rests on the 2019 title, meta tags, and the live site timing. Hogsett's 2023 campaign also used this domain, not relevant for this 2019 election."
+ },
+ {
+  "candidate_election_id": "1836003__2023-11-07__regular__21565cabd41e1b45",
+  "candidate_name": "Jefferson Scott Shreve",
+  "election_date": "2023-11-07",
+  "status": "accepted",
+  "campaign_url": "https://shreveformayor.com/",
+  "registrable_domain": "shreveformayor.com",
+  "lead_sources": [
+   "https://en.wikipedia.org/wiki/2023_Indianapolis_mayoral_election (links https://shreveformayor.com/)"
+  ],
+  "searches_run": [
+   "WebSearch: Jefferson Shreve 2023 Indianapolis mayor campaign website",
+   "Wikipedia: Jefferson_Shreve, 2023_Indianapolis_mayoral_election (via mac2)",
+   "Ballotpedia Jefferson_Shreve (empty response)"
+  ],
+  "wayback_window_captures": 32,
+  "first_capture_in_window": "20230307235813",
+  "checked_capture_url": "https://web.archive.org/web/20230501034240/https://shreveformayor.com/",
+  "page_evidence": "Page title 'Shreve for Mayor - Time for a Change' with an 'About Jefferson' section.",
+  "other_profiles": [
+   "https://facebook.com/ShreveForMayor",
+   "https://instagram.com/shreveformayor",
+   "https://twitter.com/JeffersonShreve"
+  ],
+  "note": "Stage 2 reported zero captures for shreveformayor.com; the archive lists many 200 captures in the window 2022-11-08 to 2023-11-07. The count is a lower bound because the CDX query was capped at 40 rows (includes some non-root paths, excludes 301/404). Social profile URLs were taken from the archived page markup."
+ }
+]
