@@ -213,5 +213,6 @@
   "legacy_attribution": "data/municipal_discovery/top100_coverage/legacy_attribution/agent_verdicts.csv",
   "stage3_legacy_pages": [
     "data/municipal_discovery/top100_coverage/inputs/stage3L_saved_pages.csv"
-  ]
+  ],
+  "legacy_site_attribution": "data/municipal_discovery/top100_coverage/legacy_site_attribution/agent_verdicts.csv"
 }
