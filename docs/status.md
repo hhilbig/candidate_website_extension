@@ -20,26 +20,27 @@ Hanno set the target on October 4, 2026:
 
 ## Resume here
 
-**The legacy-lead scrape is complete (October 4, 16:18 PDT).** It scraped 231 finalist x domain targets for 215 finalists who have an old URL lead but no downloaded text.
-Folder on mac2: `~/candidate_website_extension_stage3/data/municipal_archive_acquisition/mayoral_stage3L_20261004/`, log `runs.log`.
-`runs/production/fetch_audit.json` shows stage `fetch_complete` and exact queue-key agreement.
-Result: 6,094 of 6,308 pages fetched (219 of them with a timestamp mismatch), 179 of 231 targets with pages, 497 MB raw HTML, 22.3 million text characters.
-Not fetched: 136 not available, 69 no content, 7 not HTML, 2 retryable request errors.
-Frozen targets in the repository: `data/municipal_archive_acquisition/mayoral_stage3L_20261004/`.
+Updated October 4, 2026, 21:00 PDT. Three mayoral jobs were running at that time. Hanno approved all of them.
 
-Next steps. Hanno approved all of them on October 4.
+**A. Stage 2 repair search (done, commit `7d49bc9`).** Stage 2 recorded 112 finalists as `not_found`, but its notes show that no web search ran or the archive check failed.
+Workflow `wf_ca7d0158-af4` (`scripts/workflows_mayoral_url_repair.js`, 72 Sonnet agents, 5.5 million tokens, 3.7 hours) searched again, with Wayback requests through mac2.
+Result: 50 accepted, 9 outside_window, 29 not_found, 24 `incomplete`. Files: `url_discovery/repair_20261004/`.
+The lead builder applies these as basis `agent_search_repair_wayback_capture_checked`. `incomplete` entries keep their stage 2 status.
+Two causes made entries incomplete: Wayback timeouts from mac2 when about 10 agents ran at once, and the shared WebSearch budget (200 calls for each workflow run).
+The checkers also flagged weak `not_found` entries with an unchecked domain, for example Jim Gray (Lexington 2014), Sheila Montague (Newark 2022), Richard Berry (`mayorberry.com`, Albuquerque 2013).
+Repair attempt count for this blocker: 1. **Next:** one follow-up pass at low concurrency (one or two agents at a time) for the 24 incomplete and the flagged entries. A search fallback that does not use WebSearch is needed. After that pass, the attempt count is 2; stop and report.
 
-1. Done: the fetch audit is complete (see above).
-2. On mac2, run `scripts/summarize_mayoral_stage3_pages.py --targets <batch>/candidate_site_targets.csv --run-dir <batch>/runs/production --output <batch>/stage3_saved_pages.csv`.
-   Copy the result to `data/municipal_discovery/top100_coverage/inputs/stage3L_saved_pages.csv` with its manifest.
-   Add it to `stage3_legacy_pages` in `config/mayoral_top_two_build.json`.
-3. On mac2, run `scripts/build_mayoral_legacy_site_items.py`.
-   Then submit the Hive job `scripts/hive/run_mayoral_site_attribution.sbatch` with that items file (INPUT and OUTPUT environment variables).
-4. Let agents check the Hive "yes" items, as in workflow `wf_5110088a-dd2`.
-   Write verdicts keyed by `target_id` with a status. Register them as `legacy_site_attribution`.
-5. Rebuild with `scripts/build_mayoral_top_two_coverage.py`, run `tests/test_build_mayoral_top_two_coverage.py`, commit, and report coverage.
+**B. Legacy-lead attribution (running).** Hive job 24455257 screened 139 stage 3L items (113 yes, 26 no): `legacy_site_attribution/hive_decisions.jsonl`.
+Workflow `wf_066a43c7-be2` (`scripts/workflows_mayoral_legacy_site_check.js`) checks the 113 yes items, one agent per city.
+**Next:** write its verdicts to `legacy_site_attribution/agent_verdicts.csv` with columns `target_id,status,...`.
+Register that file as `legacy_site_attribution` in `config/mayoral_top_two_build.json`, rebuild, and test.
 
-After step 5, continue with the next coverage lever in the mayoral section below.
+**C. Stage 3 repair batch (running on mac2).** `mayoral_stage3r_20261004`: 63 targets (50 repair accepted, 5 Common Crawl, 8 outside_window), 54 domains, frozen targets sha256 `e5fa5477…`.
+Run in `~/candidate_website_extension_stage3/data/municipal_archive_acquisition/mayoral_stage3r_20261004/`, log `runs.log`, same settings as batch 2.
+**Next:** when `runs/production/fetch_audit.json` shows `fetch_complete`, run `scripts/summarize_mayoral_stage3_pages.py` on mac2.
+Copy the result to `inputs/stage3r_saved_pages.csv`, add it to `stage3_saved_pages` in the build config, rebuild, test, and commit.
+
+Coverage after A, before B and C: URL leads 691 of 822 finalists; a site for both finalists in 74 percent of elections; downloaded text unchanged at 405 finalists.
 
 ## 3. Mayoral extension
 
