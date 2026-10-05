@@ -30,17 +30,18 @@ Two causes made entries incomplete: Wayback timeouts from mac2 when about 10 age
 The checkers also flagged weak `not_found` entries with an unchecked domain, for example Jim Gray (Lexington 2014), Sheila Montague (Newark 2022), Richard Berry (`mayorberry.com`, Albuquerque 2013).
 Repair attempt count for this blocker: 1. **Next:** one follow-up pass at low concurrency (one or two agents at a time) for the 24 incomplete and the flagged entries. A search fallback that does not use WebSearch is needed. After that pass, the attempt count is 2; stop and report.
 
-**B. Legacy-lead attribution (running).** Hive job 24455257 screened 139 stage 3L items (113 yes, 26 no): `legacy_site_attribution/hive_decisions.jsonl`.
-Workflow `wf_066a43c7-be2` (`scripts/workflows_mayoral_legacy_site_check.js`) checks the 113 yes items, one agent per city.
-**Next:** write its verdicts to `legacy_site_attribution/agent_verdicts.csv` with columns `target_id,status,...`.
-Register that file as `legacy_site_attribution` in `config/mayoral_top_two_build.json`, rebuild, and test.
+**B. Legacy-lead attribution (done, commit `cfcd437`).** Hive job 24455257 screened 139 stage 3L items (113 yes, 26 no).
+Workflow `wf_066a43c7-be2` checked the 113 yes items: 104 accepted, 1 not_found, 8 `incomplete` (archive timeouts).
+Verdicts: `legacy_site_attribution/agent_verdicts.csv`, registered as `legacy_site_attribution`. The 8 incomplete items belong in the follow-up pass of A.
 
-**C. Stage 3 repair batch (running on mac2).** `mayoral_stage3r_20261004`: 63 targets (50 repair accepted, 5 Common Crawl, 8 outside_window), 54 domains, frozen targets sha256 `e5fa5477…`.
+**C. Stage 3 repair batch (running on mac2; 2,225 pages queued at 21:40 PDT on October 4; the archive was slow).** `mayoral_stage3r_20261004`: 63 targets (50 repair accepted, 5 Common Crawl, 8 outside_window), 54 domains, frozen targets sha256 `e5fa5477…`.
 Run in `~/candidate_website_extension_stage3/data/municipal_archive_acquisition/mayoral_stage3r_20261004/`, log `runs.log`, same settings as batch 2.
 **Next:** when `runs/production/fetch_audit.json` shows `fetch_complete`, run `scripts/summarize_mayoral_stage3_pages.py` on mac2.
 Copy the result to `inputs/stage3r_saved_pages.csv`, add it to `stage3_saved_pages` in the build config, rebuild, test, and commit.
 
-Coverage after A, before B and C: URL leads 691 of 822 finalists; a site for both finalists in 74 percent of elections; downloaded text unchanged at 405 finalists.
+Coverage after A and B, before C: URL leads 691 of 822 finalists; a site for both finalists in 74 percent of elections.
+Downloaded text 509 of 822 finalists. Of 411 elections, text for both finalists 43 percent, winner 64 percent, any finalist 81 percent.
+Both finalists by period: 2010–2017 42 percent, 2018–2021 34 percent, 2022–2026 54 percent.
 
 ## 3. Mayoral extension
 
