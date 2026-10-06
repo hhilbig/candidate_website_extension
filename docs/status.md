@@ -34,16 +34,15 @@ Repair attempt count for this blocker: 1. **Next:** one follow-up pass at low co
 Workflow `wf_066a43c7-be2` checked the 113 yes items: 104 accepted, 1 not_found, 8 `incomplete` (archive timeouts).
 Verdicts: `legacy_site_attribution/agent_verdicts.csv`, registered as `legacy_site_attribution`. The 8 incomplete items belong in the follow-up pass of A.
 
-**C. Stage 3 repair batch (running on mac2; 2,225 pages queued at 21:40 PDT on October 4; the archive was slow).** `mayoral_stage3r_20261004`: 63 targets (50 repair accepted, 5 Common Crawl, 8 outside_window), 54 domains, frozen targets sha256 `e5fa5477…`.
-Run in `~/candidate_website_extension_stage3/data/municipal_archive_acquisition/mayoral_stage3r_20261004/`, log `runs.log`, same settings as batch 2.
-Slack watcher on mac2: `scripts/watch_mayoral_stage3_scrape.py` (job-alerts format; start, 6-hourly, 30-minute stall, end), log `watch.log` in the batch folder.
-On the night of October 4 the archive returned many HTTP 500 errors; the scraper keeps those pages retryable. Rerun the same command afterwards to retry them.
-**Next:** when `runs/production/fetch_audit.json` shows `fetch_complete`, run `scripts/summarize_mayoral_stage3_pages.py` on mac2.
-Copy the result to `inputs/stage3r_saved_pages.csv`, add it to `stage3_saved_pages` in the build config, rebuild, test, and commit.
+**C. Stage 3 repair batch (done).** `mayoral_stage3r_20261004`: 63 targets (50 repair accepted, 5 Common Crawl, 8 outside_window), 54 domains.
+Pass 1 ended October 5 with 112 retryable pages after archive HTTP 500 errors; the retry pass on October 6 recovered 100.
+Result: 2,193 of 2,225 pages fetched, 6 still retryable, 58 targets with pages, 57 with pages in the window. Summary `inputs/stage3r_saved_pages.csv`, registered in `stage3_saved_pages`.
 
-Coverage after A and B, before C: URL leads 691 of 822 finalists; a site for both finalists in 74 percent of elections.
-Downloaded text 509 of 822 finalists. Of 411 elections, text for both finalists 43 percent, winner 64 percent, any finalist 81 percent.
-Both finalists by period: 2010–2017 42 percent, 2018–2021 34 percent, 2022–2026 54 percent.
+**Next:** the follow-up pass for A and B (24 incomplete repair entries, 8 incomplete attribution items, flagged weak `not_found` entries), one or two agents at a time, not alongside a scrape.
+
+Coverage on October 6 after A, B and C: URL leads 691 of 822 finalists; downloaded text 566 of 822.
+Of 411 elections: text for both finalists 52 percent, winner 72 percent, any finalist 86 percent. A known site for both finalists 74 percent.
+Text for both finalists by period: 2010–2017 49 percent, 2018–2021 38 percent, 2022–2026 70 percent.
 
 ## 3. Mayoral extension
 
