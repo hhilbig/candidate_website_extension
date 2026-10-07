@@ -8,14 +8,16 @@ export const meta = {
   ],
 }
 
-// Second and last repair attempt on the stage 2 search blocker (CLAUDE.md two-attempt rule).
+// Repair attempts 2 (args.out 'followup', October 6) and 3 (args.out 'followup2', October 7, approved by Hanno)
+// on the stage 2 search blocker. Attempt 3 redoes only the entries still incomplete after attempt 2;
+// its input adds followup_note and followup_domains_tried.
 // Runs one agent at a time so Wayback requests through mac2 are not overloaded.
 const REPO = '/Users/hanno/Documents/GitHub/candidate_website_extension'
-const OUT = REPO + '/data/municipal_discovery/top100_coverage/url_discovery/repair_20261004/followup'
+const OUT = REPO + '/data/municipal_discovery/top100_coverage/url_discovery/repair_20261004/' + (args.out || 'followup')
 const LEGACY_ARGS = REPO + '/data/municipal_discovery/top100_coverage/legacy_site_attribution/followup_check_args.json'
 
 const RULES = `
-CONTEXT. This is the follow-up to the October 4 repair search. Each finalist has "reason": "incomplete" (the first repair could not finish, usually because Wayback requests timed out or the search budget ran out) or "checker_flagged_..." (an independent checker found an unchecked domain or a likely site). Read "first_repair_note" and "first_repair_domains_tried" first, and finish exactly what is open. You run alone, so the archive is not under load from other agents.
+CONTEXT. This is the follow-up to the October 4 repair search. Each finalist has "reason": "incomplete" (the first repair could not finish, usually because Wayback requests timed out or the search budget ran out) or "checker_flagged_..." (an independent checker found an unchecked domain or a likely site). Read "first_repair_note" and "first_repair_domains_tried" (and, when present, "followup_note" and "followup_domains_tried" from the second attempt) first, and finish exactly what is open. You run alone, so the archive is not under load from other agents.
 
 GOAL. For each listed mayoral finalist, find the URL of the candidate's own campaign website used for that election, and confirm it with the Internet Archive. A Facebook, X/Twitter, Instagram or similar social profile is NOT a campaign website; record it only in "other_profiles". An official city page (council member page, mayor's office page) is NOT a campaign website. These are finalists in the 100 largest US cities, so most of them had a campaign website.
 

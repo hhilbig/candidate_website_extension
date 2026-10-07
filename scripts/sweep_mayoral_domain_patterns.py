@@ -4,6 +4,8 @@ Stage 2 search agents missed some sites (independent checkers found 11 in about
 170 spot checks, one because a host-only query skipped the www host). This script
 tries the usual campaign domain patterns for every finalist without a URL lead.
 It searches the Wayback CDX index (whole domain, 365 days up to the election) and,
+with --window after, the 120 days after the election (option 3, approved October 7, 2026: the stage 3
+scrape keeps pages up to 120 days after the election, and the text rule counts pages within 365 days),
 for 2022-2026 elections, the Common Crawl index for crawls in the same window.
 A hit only becomes a lead after its page text passes the screen (candidate last
 name and "mayor") and a separate check applies the stage 2 acceptance rule.
@@ -75,8 +77,13 @@ def domain_patterns(name: str, city: str) -> list[str]:
     return sorted(d for d in domains if len(d) > 6)
 
 
+WINDOW = "before"
+
+
 def window(election_date: str) -> tuple[date, date]:
     day = date.fromisoformat(election_date)
+    if WINDOW == "after":
+        return day + timedelta(days=1), day + timedelta(days=120)
     return day - timedelta(days=365), day
 
 
@@ -322,12 +329,17 @@ def cmd_screen(args) -> None:
 
 
 def main() -> int:
+    global SWEEP, WINDOW
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("command", choices=["patterns", "wayback", "commoncrawl", "screen"])
     parser.add_argument("--patterns", default="patterns.csv", help="pattern file in the sweep folder")
     parser.add_argument("--max-crawls", type=int, default=2, help="Common Crawl: latest crawls per window")
     parser.add_argument("--gap", type=float, default=2.0, help="seconds between requests to one service")
+    parser.add_argument("--sweep-dir", default=str(SWEEP), help="output folder for this sweep")
+    parser.add_argument("--window", choices=["before", "after"], default="before",
+                        help="before: 365 days up to the election; after: the 120 days after it")
     args = parser.parse_args()
+    SWEEP, WINDOW = Path(args.sweep_dir), args.window
     {"patterns": cmd_patterns, "wayback": cmd_wayback, "commoncrawl": cmd_commoncrawl, "screen": cmd_screen}[args.command](args)
     return 0
 
