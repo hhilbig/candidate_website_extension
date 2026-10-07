@@ -1,0 +1,71 @@
+[
+ {
+  "candidate_election_id": "3775000__2013-11-05__regular__bf6dd0b5fde826df",
+  "candidate_name": "Allen Joines",
+  "election_date": "2013-11-05",
+  "status": "incomplete",
+  "campaign_url": "",
+  "registrable_domain": "",
+  "lead_sources": [],
+  "searches_run": [
+   "WebSearch refused: session budget of 200 searches used",
+   "DuckDuckGo via mac2: 'Allen Joines Winston-Salem mayor 2013 campaign website' (ran; only Forsyth County finance report PDFs and city biography page)",
+   "DuckDuckGo via mac2: 5 more queries returned empty pages (blocked)",
+   "Bing via mac2: 3 queries returned unrelated results",
+   "page: en.wikipedia.org/wiki/Allen_Joines external links (via mac2)",
+   "page: web.archive.org copy of ballotpedia.org/Allen_Joines (empty); ballotpedia.org/James_Knox (no campaign site link; likely another person)"
+  ],
+  "wayback_window_captures": 0,
+  "first_capture_in_window": "",
+  "checked_capture_url": "",
+  "page_evidence": "",
+  "other_profiles": [],
+  "note": "Status incomplete: search tools failed (WebSearch budget used up, DuckDuckGo blocked after one query, Bing returned noise) and Ballotpedia for Joines returned empty content. New CDX checks (2012-11-05 to 2013-11-05, HTTP 200): joinesmayor.com, mayorjoines.org, joinesforws.com, allenjoines2013.com, joines2013.com, reelectmayorjoines.com, joinesformayor.net, joines4mayor.org, allenjoines.net had no captures. First repair already excluded joinesformayor.com/.org, allenjoines.com (opposition site) and others. No candidate URL found."
+ },
+ {
+  "candidate_election_id": "3775000__2013-11-05__regular__a86279120bc929c1",
+  "candidate_name": "James Lee Knox",
+  "election_date": "2013-11-05",
+  "status": "incomplete",
+  "campaign_url": "",
+  "registrable_domain": "",
+  "lead_sources": [],
+  "searches_run": [
+   "WebSearch refused: session budget of 200 searches used",
+   "DuckDuckGo via mac2: 'Allen Joines Winston-Salem mayor 2013 campaign website' (ran; only Forsyth County finance report PDFs and city biography page)",
+   "DuckDuckGo via mac2: 5 more queries returned empty pages (blocked)",
+   "Bing via mac2: 3 queries returned unrelated results",
+   "page: en.wikipedia.org/wiki/Allen_Joines external links (via mac2)",
+   "page: web.archive.org copy of ballotpedia.org/Allen_Joines (empty); ballotpedia.org/James_Knox (no campaign site link; likely another person)"
+  ],
+  "wayback_window_captures": 0,
+  "first_capture_in_window": "",
+  "checked_capture_url": "",
+  "page_evidence": "",
+  "other_profiles": [],
+  "note": "Status incomplete: search tools failed (see searches) so no Knox-specific search ran. New CDX checks (2012-11-05 to 2013-11-05, HTTP 200): jlknox.com has 200 captures (first 20130604182023) but the page is a parked 'JlKnox.com: The Leading Jl Knox Site' ad page, no candidate name or mayoral reference. knoxformayor.org has 200 captures (first 20130612195422) but is a parked domain with ad scripts. jameslknox.com, voteknox.com, jamesknox4mayor.com, knoxmayor.com (robots.txt only) have no usable captures. Not accepted."
+ },
+ {
+  "candidate_election_id": "3775000__2020-11-03__regular__bf6dd0b5fde826df",
+  "candidate_name": "Allen Joines",
+  "election_date": "2020-11-03",
+  "status": "incomplete",
+  "campaign_url": "",
+  "registrable_domain": "",
+  "lead_sources": [],
+  "searches_run": [
+   "WebSearch refused: session budget of 200 searches used",
+   "DuckDuckGo via mac2: 'Allen Joines Winston-Salem mayor 2013 campaign website' (ran; only Forsyth County finance report PDFs and city biography page)",
+   "DuckDuckGo via mac2: 5 more queries returned empty pages (blocked)",
+   "Bing via mac2: 3 queries returned unrelated results",
+   "page: en.wikipedia.org/wiki/Allen_Joines external links (via mac2)",
+   "page: web.archive.org copy of ballotpedia.org/Allen_Joines (empty); ballotpedia.org/James_Knox (no campaign site link; likely another person)"
+  ],
+  "wayback_window_captures": 0,
+  "first_capture_in_window": "",
+  "checked_capture_url": "",
+  "page_evidence": "",
+  "other_profiles": [],
+  "note": "Status incomplete: search tools failed (see searches) and Ballotpedia for Joines returned empty content. New CDX checks (2019-11-03 to 2020-11-03, HTTP 200): joinesformayor.net, allenjoinesformayor.org, joinesformayor2020.com, mayorjoines.net, joinesforwinstonsalem.com, joines4ws.com had no captures. First repair excluded 11 other domains. Only a Facebook page was seen earlier, no URL recorded."
+ }
+]

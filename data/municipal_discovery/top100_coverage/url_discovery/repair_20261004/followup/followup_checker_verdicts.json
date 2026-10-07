@@ -1,0 +1,165 @@
+{
+ "miami": {
+  "checked": 1,
+  "problems": [
+   {
+    "candidate_election_id": "1245000__2017-11-07__regular__3d8370ca83186c12",
+    "severity": "minor",
+    "issue": "Ballotpedia candidate page not read, so a listed campaign website is not excluded",
+    "evidence": "The note says the Ballotpedia page returned empty content on WebFetch and 0 bytes from mac2. A search ran (DuckDuckGo through mac2 re-run here; results were Ballotpedia, miami.gov, voterfocus, Militant, none naming a campaign site). I re-ran the CDX queries from mac2 for cynthiajaquith.com, jaquith2017.com, jaquithformayor.com and jaquithformiami.com for 2016-11-07 to 2017-11-07. All returned zero captures, so the named domains were checked and not_found holds. The Ballotpedia gap is disclosed in the note."
+   }
+  ]
+ },
+ "boise_city": {
+  "checked": 1,
+  "problems": [
+   {
+    "candidate_election_id": "1608830__2015-11-03__regular__3f50af484cb21e03",
+    "severity": "minor",
+    "issue": "Ballotpedia page not read, so a Ballotpedia-listed campaign site was not ruled out",
+    "evidence": "The note admits Ballotpedia could not be read. My own Ballotpedia fetch via mac2 timed out (curl exit 28). The DuckDuckGo search I ran did run and returned cityofboise, Wikipedia, Ballotpedia, Boise Guardian, Idaho Statesman and KTVB pages. The Wikipedia page for the 2015 Boise mayoral election lists no candidate website. electjudy.com CDX reproduced exactly as in the note: one 200 capture in window (20150801093304), and the other captures are 404s. Five other guessed domains (judyforboise.com, peaveyderr.com, judyderr.com, judyforboise.org, electjudyderr.com) had no 200 captures in window. No reject or downgrade is needed."
+   }
+  ]
+ },
+ "fort_wayne": {
+  "checked": 1,
+  "problems": []
+ },
+ "wichita": {
+  "checked": 1,
+  "problems": [
+   {
+    "candidate_election_id": "2079000__2015-04-07__regular__026dcb693a5c9642",
+    "severity": "minor",
+    "issue": "domain not checked",
+    "evidence": "The note says mac2 timed out several times and that 'a few further guessed domains were not finished and are not claimed as checked.' The rules allow not_found only if every guessed domain was checked, so the status should be incomplete. The unfinished domains are not named. I could not re-run the CDX queries, because mac2 timed out on SSH (port 22, 100.70.29.103) during this check. I verified only that the six named domains and the 13 first-repair domains appear in the file and in followup_args.json. I did not verify their CDX results."
+   },
+   {
+    "candidate_election_id": "2079000__2015-04-07__regular__026dcb693a5c9642",
+    "severity": "minor",
+    "issue": "search did not run",
+    "evidence": "Of the DuckDuckGo queries, only one returned results. The searches_run field says 'two further queries returned empty result pages' and does not list their text. The KSN candidate profile, live Ballotpedia and bizjournals pages were blocked. WebSearch was refused. The only substantive lead check is one DuckDuckGo query plus the Wikipedia references and a 2015 Ballotpedia snapshot, so the search coverage is thin for a 'not_found'."
+   }
+  ]
+ },
+ "lexington_fayette": {
+  "checked": 0,
+  "problems": []
+ },
+ "baton_rouge": {
+  "checked": 3,
+  "problems": []
+ },
+ "kansas_city": {
+  "checked": 4,
+  "problems": [
+   {
+    "candidate_election_id": "2938000__2023-06-20__regular__1a5f2fa6bd07618f",
+    "severity": "minor",
+    "issue": "field error: capture counts and checked capture are not home-page evidence",
+    "evidence": "CDX gives 31 HTTP 200 rows, but 17 are robots.txt, sitemap.xml or search URLs. Only 14 are real pages. first_capture_in_window 20220621181614 is a robots.txt capture. checked_capture_url 20230520111448 is sitemap.xml, not a page. Home-page captures exist (first 20221130210930, also 20230608115141). The note says 'including the home page on 2022-11-30', so the note is correct but the fields are loose. Acceptance still holds: the archived 2023-06-08 home page is titled 'Mayor Quinton Lucas' and says 'Quinton Lucas is running for Mayor of Kansas City, Missouri ... vote for him for Mayor of KC', and the 2023-06-08 about page lists a 'Mayor Q Yard Sign' menu item. The meta text still names the 2019 election, which the writer already noted as doubt."
+   },
+   {
+    "candidate_election_id": "2938000__2011-03-22__regular__914ceddf670f54cc",
+    "severity": "minor",
+    "issue": "none; accepted entry confirmed",
+    "evidence": "CDX for slyjamesformayor.com 2010-03-22 to 2011-03-22 returned 236 HTTP 200 lines, first 20110203060357. The archived home page is titled 'Sly James for Mayor' with Contribute and Email Sign Up menu items. Entry holds. No fix needed."
+   }
+  ]
+ },
+ "las_vegas": {
+  "checked": 3,
+  "problems": [
+   {
+    "candidate_election_id": "3240000__2011-06-07__regular__32ab111efd94be92",
+    "severity": "minor",
+    "issue": "search weak, no result list",
+    "evidence": "No accepted entries in file. For Giunchigliani, WebSearch was refused and the DuckDuckGo and Bing fallbacks returned empty pages, so the search was attempted but gave no leads. Re-ran CDX for giunchigliani.com and chrisforvegas.com (2010-06-07 to 2011-06-07): no 200 captures. votechris.com has 3 captures, but they are RoysePAC images, so the writer was right to reject it. Listed domains appear checked."
+   },
+   {
+    "candidate_election_id": "3240000__2019-04-02__regular__5124cab58d06c308",
+    "severity": "minor",
+    "issue": "status outside_window should perhaps be not_found",
+    "evidence": "Re-ran CDX for carolyngoodman.com (2018-04-02 to 2019-04-02): only 2 robots.txt 200 captures, matching the note. No post-election or pre-window campaign capture is recorded, so outside_window with an empty campaign_url is odd. The note explains the parked pages. No accepted URL."
+   },
+   {
+    "candidate_election_id": "3240000__2019-04-02__regular__5fd36b47cbf55509",
+    "severity": "minor",
+    "issue": "outside_window verified; registrable_domain is the host platform",
+    "evidence": "Re-ran CDX for philcollinsforclarkcounty.weebly.com: 13 captures with 200 status in the window, first 20181119023640, which matches the entry. The only HTML page is the treasurer campaign, and the mayoral wording is only in the 2019-04-18 capture, so outside_window holds. registrable_domain is weebly.com, which is the platform, not the candidate's own domain."
+   }
+  ]
+ },
+ "newark": {
+  "checked": 1,
+  "problems": [
+   {
+    "candidate_election_id": "3451000__2022-05-10__regular__bbe3c9f98b3aec2f",
+    "severity": "minor",
+    "issue": "status not_found does not fit the evidence; search did not run in follow-up and a found domain failed criterion (b)",
+    "evidence": "No accepted entries exist. I re-ran CDX through mac2. sheilamontague.com has HTTP 200 captures on 20220220094951, 20220403131047, 20220403131340 and 20220502185325, all inside the window. That matches the note's count of 4. The 20220502185325 replay has title 'Newark Board of Education | Sheila Montague for Newark, NJ'. The description is about a seat as a representative of Newark Board of Education students and families. It never names a mayoral race. The site may be a school-board platform and not her mayoral site. The follow-up note admits WebSearch was refused and DuckDuckGo was blocked, so no new search ran. The first-repair searches were listed, so a search did run. The domain was checked. Under the status rules, a found domain that fails criterion (b) with no new search is better recorded as incomplete, or as a reviewed lead. This is not a wrong URL acceptance."
+   }
+  ]
+ },
+ "albuquerque": {
+  "checked": 1,
+  "problems": []
+ },
+ "greensboro": {
+  "checked": 1,
+  "problems": []
+ },
+ "winston_salem": {
+  "checked": 0,
+  "problems": []
+ },
+ "arlington": {
+  "checked": 1,
+  "problems": [
+   {
+    "candidate_election_id": "4804000__2011-05-14__regular__f2eafdf8b73551b2",
+    "severity": "minor",
+    "issue": "domain not checked",
+    "evidence": "The only entry (Robert Cluck, 2011-05-14) has status incomplete, not accepted or not_found, so there was nothing to verify by CDX. The note says mayorrobertcluck.com timed out once (rc 28) and was not rechecked. The searches_run list shows no search that returned results (WebSearch refused, DuckDuckGo bot challenge, Bing with no parsable links, Ballotpedia fetch empty). The follow-up task required retrying up to 3 times and using a fallback search, so the open items remain open. I did not re-run any queries."
+   }
+  ]
+ },
+ "houston": {
+  "checked": 1,
+  "problems": []
+ },
+ "laredo": {
+  "checked": 6,
+  "problems": [
+   {
+    "candidate_election_id": "4841464__2018-12-13__regular__d37d83e6298a37cd",
+    "severity": "minor",
+    "issue": "outside_window entry leaves campaign_url empty and does not record the nearest capture timestamps in the fields; the 29 in-window captures are only robots.txt, so the count is misleading",
+    "evidence": "status outside_window, campaign_url '', first_capture_in_window '', wayback_window_captures 29; the note says all 29 are robots.txt and the nearest page capture is 20150222133958. petesaenzformayor.com is a plausible 2018 site with no in-window page evidence."
+   }
+  ]
+ },
+ "san_antonio": {
+  "checked": 2,
+  "problems": [
+   {
+    "candidate_election_id": "4865000__2011-05-14__regular__08d5b9be1b6ecd80",
+    "severity": "minor",
+    "issue": "wayback_window_captures is 0 although willmcleod.com has in-window 200 captures (a different person)",
+    "evidence": "CDX for willmcleod.com shows 200 captures on 20101123, 20110208 and 20110504. The 20110504 page is an image-only index page ('indexrevisedagain.jpg') with no mayoral text, which supports the writer's judgment that it is another person's site. The note already explains this. The 0 count only means 0 accepted captures. The status not_found is correct. Searches ran (DuckDuckGo via mac2, SA Current, Wikipedia). I confirmed the ten other named domains have no 200 captures from 2010-05-14 to 2011-05-15."
+   }
+  ]
+ },
+ "chesapeake": {
+  "checked": 0,
+  "problems": []
+ },
+ "norfolk": {
+  "checked": 0,
+  "problems": []
+ },
+ "spokane": {
+  "checked": 1,
+  "problems": []
+ }
+}

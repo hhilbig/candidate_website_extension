@@ -1,0 +1,113 @@
+[
+ {
+  "candidate_election_id": "2938000__2011-03-22__regular__914ceddf670f54cc",
+  "candidate_name": "Sylvester James Jr.",
+  "election_date": "2011-03-22",
+  "status": "accepted",
+  "campaign_url": "http://www.slyjamesformayor.com/",
+  "registrable_domain": "slyjamesformayor.com",
+  "lead_sources": [
+   "https://en.wikipedia.org/wiki/Sly_James"
+  ],
+  "searches_run": [
+   "WebSearch (budget exhausted, refused)",
+   "DuckDuckGo html via mac2 (CAPTCHA, no results)",
+   "Bing via mac2 and WebFetch (irrelevant results for the names)",
+   "Ballotpedia candidate pages via mac2, WebFetch and Wayback (blocked or empty)",
+   "https://en.wikipedia.org/wiki/2011_Kansas_City_mayoral_election",
+   "https://en.wikipedia.org/wiki/2015_Kansas_City_mayoral_election",
+   "https://en.wikipedia.org/wiki/2023_Kansas_City_mayoral_election",
+   "https://en.wikipedia.org/wiki/Sly_James",
+   "https://en.wikipedia.org/wiki/Clay_Chastain"
+  ],
+  "wayback_window_captures": 236,
+  "first_capture_in_window": "20110203060357",
+  "checked_capture_url": "https://web.archive.org/web/20110203060357/http://www.slyjamesformayor.com/",
+  "page_evidence": "Thank you for visiting the Sly James for Mayor campaign website. ... Sly James knows that Kansas City is a great city facing many challenges.",
+  "other_profiles": [],
+  "note": "Wikipedia article Sly_James links this archived site. CDX shows 236 HTTP 200 captures from 2010-03-22 to 2011-03-22, first on 2011-02-03. The checked capture names the candidate and the mayoral campaign. sylvesterjames.com (parked Dutch page) and kcmayor.org (2014 city page, no 2011 captures) were checked and rejected."
+ },
+ {
+  "candidate_election_id": "2938000__2015-06-23__regular__3a7b5b999e561180",
+  "candidate_name": "Vincent Lee",
+  "election_date": "2015-06-23",
+  "status": "incomplete",
+  "campaign_url": "",
+  "registrable_domain": "",
+  "lead_sources": [],
+  "searches_run": [
+   "WebSearch (budget exhausted, refused)",
+   "DuckDuckGo html via mac2 (CAPTCHA, no results)",
+   "Bing via mac2 and WebFetch (irrelevant results for the names)",
+   "Ballotpedia candidate pages via mac2, WebFetch and Wayback (blocked or empty)",
+   "https://en.wikipedia.org/wiki/2011_Kansas_City_mayoral_election",
+   "https://en.wikipedia.org/wiki/2015_Kansas_City_mayoral_election",
+   "https://en.wikipedia.org/wiki/2023_Kansas_City_mayoral_election",
+   "https://en.wikipedia.org/wiki/Sly_James",
+   "https://en.wikipedia.org/wiki/Clay_Chastain"
+  ],
+  "wayback_window_captures": 0,
+  "first_capture_in_window": "",
+  "checked_capture_url": "",
+  "page_evidence": "",
+  "other_profiles": [],
+  "note": "No search tool returned usable results for this candidate: WebSearch budget exhausted, DuckDuckGo showed a CAPTCHA, Bing returned unrelated results, Ballotpedia was blocked. Wikipedia pages list no site. The Wayback archive worked. Guessed domains checked in window 2014-06-23 to 2015-06-23: vincentlee.com (parked 'Welcome to VincentLee.com' page, not a campaign), leeformayor.com (domain-for-rent page), vlee.com (2 captures, 404/blank), and about 10 other guesses with no captures. No accepted site. Not recorded as not_found because the web search did not work."
+ },
+ {
+  "candidate_election_id": "2938000__2023-06-20__regular__1a5f2fa6bd07618f",
+  "candidate_name": "Quinton Lucas",
+  "election_date": "2023-06-20",
+  "status": "accepted",
+  "campaign_url": "https://quintonlucas.org/",
+  "registrable_domain": "quintonlucas.org",
+  "lead_sources": [
+   "https://quintonlucas.org/ (DuckDuckGo result for 'Quinton Lucas for mayor 2023 campaign website')",
+   "https://www.ballotready.org/people/quinton-lucas"
+  ],
+  "searches_run": [
+   "WebSearch (budget exhausted, refused)",
+   "DuckDuckGo html via mac2 (CAPTCHA, no results)",
+   "Bing via mac2 and WebFetch (irrelevant results for the names)",
+   "Ballotpedia candidate pages via mac2, WebFetch and Wayback (blocked or empty)",
+   "https://en.wikipedia.org/wiki/2011_Kansas_City_mayoral_election",
+   "https://en.wikipedia.org/wiki/2015_Kansas_City_mayoral_election",
+   "https://en.wikipedia.org/wiki/2023_Kansas_City_mayoral_election",
+   "https://en.wikipedia.org/wiki/Sly_James",
+   "https://en.wikipedia.org/wiki/Clay_Chastain"
+  ],
+  "wayback_window_captures": 31,
+  "first_capture_in_window": "20220621181614",
+  "checked_capture_url": "https://web.archive.org/web/20230520111448/https://quintonlucas.org/",
+  "page_evidence": "Quinton Lucas is running for Mayor of Kansas City, Missouri. Support Councilman Lucas ... and vote for him for Mayor of KC (site meta description; text still mentions the 2019 election)",
+  "other_profiles": [
+   "https://www.facebook.com/quinton.lucas/"
+  ],
+  "note": "CDX shows 31 HTTP 200 captures from 2022-06-20 to 2023-06-20, including the home page on 2022-11-30 and 2023-03-08, and about-mayor-q, mayorqyardsign and engage-with-team-q pages in May-June 2023. The site is a campaign Squarespace site titled Mayor Quinton Lucas. Doubt: the meta description is left over from 2019, but the pages include campaign pages such as a yard sign page."
+ },
+ {
+  "candidate_election_id": "2938000__2023-06-20__regular__3852e8386b54c2bf",
+  "candidate_name": "Clay Chastain",
+  "election_date": "2023-06-20",
+  "status": "incomplete",
+  "campaign_url": "",
+  "registrable_domain": "",
+  "lead_sources": [],
+  "searches_run": [
+   "WebSearch (budget exhausted, refused)",
+   "DuckDuckGo html via mac2 (CAPTCHA, no results)",
+   "Bing via mac2 and WebFetch (irrelevant results for the names)",
+   "Ballotpedia candidate pages via mac2, WebFetch and Wayback (blocked or empty)",
+   "https://en.wikipedia.org/wiki/2011_Kansas_City_mayoral_election",
+   "https://en.wikipedia.org/wiki/2015_Kansas_City_mayoral_election",
+   "https://en.wikipedia.org/wiki/2023_Kansas_City_mayoral_election",
+   "https://en.wikipedia.org/wiki/Sly_James",
+   "https://en.wikipedia.org/wiki/Clay_Chastain"
+  ],
+  "wayback_window_captures": 0,
+  "first_capture_in_window": "",
+  "checked_capture_url": "",
+  "page_evidence": "",
+  "other_profiles": [],
+  "note": "No search tool returned usable results: WebSearch budget exhausted, DuckDuckGo CAPTCHA, Bing returned results about clay as a material. Ballotpedia blocked. Wikipedia 2023 election and Clay_Chastain pages list no campaign site. Wayback worked. Domains checked in window 2022-06-20 to 2023-06-20 with zero captures: claychastain.com, claychastain.org, chastainformayor.com, chastain4mayor.com, clay4mayor.com, chastainmayor.com, and 6 more guesses. claychastain.com holds an unrelated personal blog of another person. No accepted site. Not recorded as not_found because the web search did not work."
+ }
+]

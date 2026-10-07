@@ -49,6 +49,10 @@ def build_targets(leads: pd.DataFrame, coverage: pd.DataFrame) -> pd.DataFrame:
         host = (parts.hostname or "").lower()
         domain = lead["registrable_domain"].lower()
         if host not in {domain, f"www.{domain}"}:
+            # The scrape method works on whole registrable domains. A shared-host site (for example a
+            # weebly.com subdomain) outside the window cannot add in-window text, so it is skipped.
+            if lead["final_status"] == "outside_window":
+                continue
             raise ValueError(f"campaign URL host is not the registrable domain: {url}")
         day = pd.Timestamp(lead["election_date"])
         evidence = [u for u in [lead["checked_capture_url"]] + lead["lead_sources"].split(" | ") if u]

@@ -1,0 +1,132 @@
+[
+ {
+  "city_id": "3719000",
+  "city_name": "Durham city",
+  "state_abb": "NC",
+  "items": [
+   {
+    "item_id": "stage3L_4a8cf740c21b5533526fc4ab",
+    "candidate_name": "Sylvester Williams",
+    "election_date": "2013-11-05",
+    "url": "https://www.sylvesterwilliamsformayor.com/",
+    "saved_captures": [
+     "https://web.archive.org/web/20130517022649/http://sylvesterwilliamsformayor.com"
+    ],
+    "model_reason": "The archived page explicitly identifies Sylvester Williams as a candidate for Durham City Mayor in 2013, includes campaign navigation and donation instructions, and features the required legal disclaimer for his campaign committee.",
+    "first_check_note": "web.archive.org did not respond from mac2. CDX and homepage requests timed out (curl exit 28, HTTP 000) on four attempts, with 30-second waits between retries. mac2 reaches google.com (HTTP 200), so the fault is the archive, not mac2's network. No capture was read. The saved capture is dated 2013-05-17, before the 2013-11-05 election, but it was not verified."
+   },
+   {
+    "item_id": "stage3L_847317d5dbb30900e43a8933",
+    "candidate_name": "William V. (Bill) Bell",
+    "election_date": "2015-11-03",
+    "url": "http://www.billbellformayordurhamnc.com/",
+    "saved_captures": [
+     "https://web.archive.org/web/20151029224725/http://www.billbellformayordurhamnc.com:80/about/",
+     "https://web.archive.org/web/20151029224759/http://www.billbellformayordurhamnc.com:80/contribute-2/"
+    ],
+    "model_reason": "The site explicitly identifies itself as Bill Bell's campaign for Mayor of Durham, includes a donation page for the 'William V. Bell Campaign Committee,' and references the 2015 election year in the copyright.",
+    "first_check_note": "web.archive.org did not respond from mac2. CDX requests timed out (curl exit 28, HTTP 000), and the homepage request also failed. No capture was read. The saved captures are dated 2015-10-29, before the 2015-11-03 election, but they were not verified."
+   },
+   {
+    "item_id": "stage3L_bcd992de0cd191dfdcb47861",
+    "candidate_name": "Steve Schewel",
+    "election_date": "2019-11-05",
+    "url": "https://www.stevefordurham.com/",
+    "saved_captures": [
+     "https://web.archive.org/web/20190630070753/https://www.stevefordurham.com/trash/",
+     "https://web.archive.org/web/20190820102950/https://www.stevefordurham.com/meet-steve/"
+    ],
+    "model_reason": "The site explicitly identifies itself as Steve Schewel's campaign for Durham, includes a section titled 'Why I ran for Mayor', and features the required campaign committee footer.",
+    "first_check_note": "web.archive.org did not respond from mac2. Repeated CDX requests timed out (curl exit 28, HTTP 000). No capture was read. The saved captures are dated 2019-06-30 and 2019-08-20, before the 2019-11-05 election, but they were not verified. The 'Why I ran for Mayor' wording in the model's reason could mean this is a post-election or other-year page, so this item needs a real check."
+   }
+  ]
+ },
+ {
+  "city_id": "0667000",
+  "city_name": "San Francisco city",
+  "state_abb": "CA",
+  "items": [
+   {
+    "item_id": "stage3L_632aca4c34721a7057f02b3f",
+    "candidate_name": "London Breed",
+    "election_date": "2018-06-05",
+    "url": "https://londonformayor.com/",
+    "saved_captures": [
+     "https://web.archive.org/web/20180129140239/http://www.londonformayor.com:80/join",
+     "https://web.archive.org/web/20180128231237/http://www.londonformayor.com:80/accomplishments"
+    ],
+    "model_reason": "The archived pages explicitly identify the site as London Breed's campaign for Mayor of San Francisco in 2018, featuring standard campaign elements like donation links, volunteer sign-ups, and a legal disclaimer for the 2018 election.",
+    "first_check_note": "web.archive.org was unreachable from mac2. CDX and replay requests timed out or returned an SSL connect error (curl exit 28 and 35, http_code 000) across at least 4 attempts. The example.com request from mac2 worked, so the failure is at the archive. The window is 2017-06-06 to 2018-06-05. No verdict was formed."
+   },
+   {
+    "item_id": "stage3L_932de373a3d0929a1c1e3475",
+    "candidate_name": "London N. Breed",
+    "election_date": "2019-11-05",
+    "url": "http://londonformayor.com/",
+    "saved_captures": [
+     "https://web.archive.org/web/20181125213736/https://www.londonformayor.com/about/",
+     "https://web.archive.org/web/20181125152234/https://www.londonformayor.com/endorsements/"
+    ],
+    "model_reason": "The footer explicitly identifies the site as the official campaign page for London Breed's 2019 mayoral re-election in San Francisco.",
+    "first_check_note": "web.archive.org was unreachable from mac2 (CDX timeout, http_code 000). The window is 2018-11-06 to 2019-11-05. The saved captures are from 2018-11-25, which falls in this window. They were not read. No verdict was formed."
+   }
+  ]
+ },
+ {
+  "city_id": "4865000",
+  "city_name": "San Antonio city",
+  "state_abb": "TX",
+  "items": [
+   {
+    "item_id": "stage3L_72a7e9a3c5b27b45de661046",
+    "candidate_name": "Greg Brockhouse",
+    "election_date": "2021-05-01",
+    "url": "https://www.gregbrockhouse.com/",
+    "saved_captures": [
+     "https://web.archive.org/web/20210121023953/https://gregbrockhouse.com/issues/",
+     "https://web.archive.org/web/20210418180228/https://www.gregbrockhouse.com/post/brockhouse-releases-comprehensive-public-safety-plan"
+    ],
+    "model_reason": "The archived pages explicitly identify Greg Brockhouse as a mayoral candidate for San Antonio in the 2021 election, featuring campaign-specific content such as policy platforms, calls to donate and volunteer, and opposition to the incumbent mayor.",
+    "first_check_note": "The archive could not be read. The CDX query for gregbrockhouse.com (2020-05-02 to 2021-05-01) failed 3 times from mac2: curl exit 35 (SSL connect error), then exit 28 (timeout) twice, with a 30 second wait between tries. A replay fetch of the saved 2021-04-18 capture also timed out (exit 28, no HTTP code). So the 200-capture condition and the page content are unverified. The saved captures (2021-01-21 /issues/ and 2021-04-18 public safety post) fall inside the window and the model reason is plausible, but no verdict was made from it."
+   }
+  ]
+ },
+ {
+  "city_id": "3502000",
+  "city_name": "Albuquerque city",
+  "state_abb": "NM",
+  "items": [
+   {
+    "item_id": "stage3L_7c28f0570afd8bc9d44268c7",
+    "candidate_name": "Manuel Gonzales III",
+    "election_date": "2021-11-02",
+    "url": "http://www.mannyforabq.com/",
+    "saved_captures": [
+     "https://web.archive.org/web/20210927041829/https://www.mannyforabq.com/team-1",
+     "https://web.archive.org/web/20211023110830/https://www.mannyforabq.com/press-release-one"
+    ],
+    "model_reason": "The archived pages explicitly identify the site as Manny Gonzales's campaign for Mayor of Albuquerque, featuring endorsements, a candidacy announcement, and a campaign committee footer.",
+    "first_check_note": "web.archive.org did not respond from mac2. The CDX query timed out (curl exit 28) on 3 attempts with 30 s waits. The replay fetch of the saved 2021-09-27 capture returned HTTP 000 (timeout). archive.org itself returned 200, so the failure is specific to web.archive.org. Neither rule (a) nor rule (b) was checked. The saved captures, dated 2021-09-27 and 2021-10-23, fall before the 2021-11-02 election and the model reason describes a campaign for Mayor. These claims are unverified. Re-run when web.archive.org is reachable."
+   }
+  ]
+ },
+ {
+  "city_id": "1836003",
+  "city_name": "Indianapolis city (balance)",
+  "state_abb": "IN",
+  "items": [
+   {
+    "item_id": "stage3L_af8b97d8d8380792e57097e2",
+    "candidate_name": "Greg Ballard",
+    "election_date": "2011-11-08",
+    "url": "http://www.mayorgregballard.com/",
+    "saved_captures": [
+     "https://web.archive.org/web/20111027191748/http://mayorgregballard.com:80/",
+     "https://web.archive.org/web/20110310215239/http://www.mayorgregballard.com:80/2.10.11%20With%20A%20Modified%20Consent%20Decree,%20Indianapolis%20Is%20Cleaning%20Up.html"
+    ],
+    "model_reason": "The footer explicitly identifies the site as being paid for by the Greg Ballard for Mayor Committee, confirming it is his campaign website for the mayoral race.",
+    "first_check_note": "The CDX query (window 2010-11-09 to 2011-11-08) failed 4 times with timeouts or recv failures, with 30 s waits between tries. A replay fetch of the saved 2011-10-27 capture also timed out. I could not check criteria (a) or (b). The model's reason (footer 'Paid for by Greg Ballard for Mayor Committee') is unverified. The saved 2011-10-27 capture falls inside the window and is the first one to read when the archive is reachable."
+   }
+  ]
+ }
+]

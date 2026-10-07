@@ -1,0 +1,27 @@
+[
+ {
+  "candidate_election_id": "5367000__2019-11-05__regular__76bdb5f7687d87ab",
+  "candidate_name": "Nadine Woodward",
+  "election_date": "2019-11-05",
+  "status": "outside_window",
+  "campaign_url": "https://www.mayorspokane.com/",
+  "registrable_domain": "mayorspokane.com",
+  "lead_sources": [
+   "https://www.spokesman.com/elections/2019/2019-washington-primary-election/candidates/nadine-woodward/"
+  ],
+  "searches_run": [
+   "DuckDuckGo via mac2: Nadine Woodward Spokane mayor 2019 campaign website",
+   "Spokesman-Review 2019 candidate page (fetched via mac2)",
+   "earlier: WebSearch x2, Wikipedia 2019 Spokane mayoral election, Ballotpedia via Wayback"
+  ],
+  "wayback_window_captures": 0,
+  "first_capture_in_window": "",
+  "checked_capture_url": "",
+  "page_evidence": "",
+  "other_profiles": [
+   "https://www.facebook.com/Nadine4Mayor/",
+   "https://x.com/MayorSpokane"
+  ],
+  "note": "The Spokesman-Review lists mayorspokane.com as her website. The CDX index (checked 2026-10-06 via mac2, HTTP 200) has no capture of it from 2018-11-05 to 2019-11-05. Earliest captures: 2023-02-09 (301) and 2023-02-09 22:17 (200). nadinewoodward.com has captures only from 2024-04-16. No capture in the window exists for nadine4mayor.com/.org, nadineformayor.com, nadine4spokane.com/.org, nadineforspokane.com, woodwardformayor.com, nadinewoodward.org, electnadine.com, votenadine.com, nadinewoodwardformayor.com, nadinewoodward2019.com, nadine2019.com. No page from the window was read, so no candidate evidence was verified. The WebSearch budget is used up. The DuckDuckGo fallback ran and found no other campaign domain."
+ }
+]

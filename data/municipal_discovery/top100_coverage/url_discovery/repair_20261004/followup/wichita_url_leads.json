@@ -1,0 +1,25 @@
+[
+ {
+  "candidate_election_id": "2079000__2015-04-07__regular__026dcb693a5c9642",
+  "candidate_name": "Samuel M. Williams",
+  "election_date": "2015-04-07",
+  "status": "not_found",
+  "campaign_url": "",
+  "registrable_domain": "",
+  "lead_sources": [],
+  "searches_run": [
+   "WebSearch refused (budget used up)",
+   "DuckDuckGo via mac2: Sam Williams Wichita mayor 2015 campaign website (ran, 10 result pages, none a campaign site)",
+   "DuckDuckGo via mac2: two further queries returned empty result pages",
+   "https://en.wikipedia.org/wiki/2015_Wichita_mayoral_election (references list no campaign site)",
+   "https://web.archive.org/web/2015id_/https://ballotpedia.org/Samuel_M._Williams (2015 snapshot lists no campaign website)",
+   "https://www.ksn.com/news/samuel-m-williams-candidate-for-wichita-mayor/ (fetch blocked by bot wall)"
+  ],
+  "wayback_window_captures": 0,
+  "first_capture_in_window": "",
+  "checked_capture_url": "",
+  "page_evidence": "",
+  "other_profiles": [],
+  "note": "No website lead found in search results, Wikipedia references or the 2015 Ballotpedia snapshot. Wayback CDX (via mac2, window 2014-04-07 to 2015-04-07) returned no 200 captures for samwilliamsmayor.com, samwilliams4mayor.com, samwilliamsks.com, votesamwilliams.com, sam4mayor.org, samwilliamsformayor.org. The 13 domains from the first repair were not repeated. Ballotpedia live, KSN and bizjournals pages were blocked, and mac2 timed out several times, so a few further guessed domains were not finished and are not claimed as checked."
+ }
+]

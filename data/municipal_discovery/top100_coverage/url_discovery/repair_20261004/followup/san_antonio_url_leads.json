@@ -1,0 +1,49 @@
+[
+ {
+  "candidate_election_id": "4865000__2011-05-14__regular__a65e81d09f2935b1",
+  "candidate_name": "Will McLeod",
+  "election_date": "2011-05-14",
+  "status": "not_found",
+  "campaign_url": "",
+  "registrable_domain": "",
+  "lead_sources": [
+   "https://www.sacurrent.com/news/city-council-election-2011-mayor-2290682/"
+  ],
+  "searches_run": [
+   "DuckDuckGo via mac2: Will McLeod San Antonio mayor 2011 campaign website",
+   "DuckDuckGo via mac2: Will McLeod mayor San Antonio 2011 Will for Mayor website",
+   "WebFetch https://www.sacurrent.com/news/city-council-election-2011-mayor-2290682/",
+   "WebFetch https://en.wikipedia.org/wiki/2011_San_Antonio_mayoral_election",
+   "Ballotpedia candidate page via mac2 (empty response)"
+  ],
+  "wayback_window_captures": 0,
+  "first_capture_in_window": "",
+  "checked_capture_url": "https://web.archive.org/web/20110208015026im_/http://willmcleod.com/indexrevisedagain.jpg",
+  "page_evidence": "willmcleod.com in-window pages show only an image reading 'Will McLeod Spring/Summer 2010' with '(c) Will McLeod, LLC' (a fashion line). No mayoral reference.",
+  "other_profiles": [
+   "https://www.youtube.com/user/WillForMayorSA"
+  ],
+  "note": "The 5 captures of willmcleod.com (2010-11-23 to 2011-05-04) belong to a fashion designer with the same name; I read the page HTML and the home image. Archive checked with no 200 captures: willmcleod.org, mcleodforsa.com, willformayor.com, willformayorsa.com, willformayor.org, willmcleodsa.com, votewillmcleod.com (plus willmcleodformayor.com, mcleod4mayor.com, mcleodformayor.com in the first repair). SA Current says the only web presence was a YouTube page. Status not_found."
+ },
+ {
+  "candidate_election_id": "4865000__2013-05-11__regular__08d5b9be1b6ecd80",
+  "candidate_name": "Rhett R. Smith",
+  "election_date": "2013-05-11",
+  "status": "incomplete",
+  "campaign_url": "",
+  "registrable_domain": "",
+  "lead_sources": [],
+  "searches_run": [
+   "WebFetch https://en.wikipedia.org/wiki/2013_San_Antonio_mayoral_election (no website listed)",
+   "WebFetch https://ballotpedia.org/Rhett_Smith (blank page)",
+   "DuckDuckGo via mac2 (several queries): returned a captcha page, no results",
+   "WebSearch: refused, budget of 200 used"
+  ],
+  "wayback_window_captures": 0,
+  "first_capture_in_window": "",
+  "checked_capture_url": "",
+  "page_evidence": "",
+  "other_profiles": [],
+  "note": "The CDX requests worked. Zero 200 captures in 2012-05-11 to 2013-05-11 for rhettsmith.blogspot.com, rhettsmithsa.com, rhettsmithsa.org, rhettforsa.com, rhettsmith.net, voterhettsmith.com. rhettsmith.org has only a robots.txt capture on 2013-01-14, no page. No search tool worked in this run (WebSearch budget used up, DuckDuckGo captcha), so I did not confirm a search. Status incomplete, not not_found."
+ }
+]

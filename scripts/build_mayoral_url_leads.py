@@ -11,6 +11,8 @@ Inputs (data/municipal_discovery/top100_coverage/url_discovery/):
   repair_20261004/          optional; a repeated search for stage 2 not_found entries whose search never ran or
                             whose archive check failed: <slug>_url_leads.json plus repair_checker_verdicts.json.
                             "incomplete" entries are not applied and keep their earlier status.
+  repair_20261004/followup/ optional; a second pass for unfinished or checker-flagged repair entries. Its result
+                            replaces the first repair result for every finalist it redid.
 
 A "reject" verdict removes the URL (final status "rejected"). A "downgrade" verdict
 sets an accepted lead to "outside_window". "minor" verdicts are kept as notes.
@@ -163,6 +165,21 @@ def repair_verdicts(leads_by_slug: dict[str, list[dict]], verdicts: dict[str, di
     return items, incomplete
 
 
+def f_list(city: dict) -> list[dict]:
+    return city["finalists"]
+
+
+def merge_followup(first_leads: dict[str, list[dict]], first: list[dict], redone: set[str],
+                   followup: list[dict], followup_incomplete: int) -> tuple[list[dict], int]:
+    """The follow-up pass replaces the first repair result for every finalist it redid."""
+    if {i["candidate_election_id"] for i in followup} - redone:
+        raise ValueError("follow-up results for finalists that were not sent to the follow-up")
+    kept = [i for i in first if i["candidate_election_id"] not in redone]
+    first_incomplete = sum(1 for leads in first_leads.values() for lead in leads
+                           if lead.get("status") == "incomplete" and lead["candidate_election_id"] not in redone)
+    return kept + followup, first_incomplete + followup_incomplete
+
+
 def main() -> int:
     cities = json.loads((DISCOVERY / "stage2_args.json").read_text())
     leads = {}
@@ -184,6 +201,13 @@ def main() -> int:
         repair_args = json.loads((repair_dir / "repair_args.json").read_text())
         repair_leads = {c["slug"]: json.loads((repair_dir / f"{c['slug']}_url_leads.json").read_text()) for c in repair_args}
         repair, repair_incomplete = repair_verdicts(repair_leads, json.loads((repair_dir / "repair_checker_verdicts.json").read_text()))
+        followup_dir = repair_dir / "followup"
+        if (followup_dir / "followup_checker_verdicts.json").exists():
+            followup_args = json.loads((followup_dir / "followup_args.json").read_text())
+            followup_leads = {c["slug"]: json.loads((followup_dir / f"{c['slug']}_url_leads.json").read_text()) for c in followup_args}
+            redone = {f["candidate_election_id"] for c in followup_args for f in f_list(c)}
+            followup, followup_incomplete = repair_verdicts(followup_leads, json.loads((followup_dir / "followup_checker_verdicts.json").read_text()))
+            repair, repair_incomplete = merge_followup(repair_leads, repair, redone, followup, followup_incomplete)
     rows = combine(cities, leads, verdicts, proposals, sweep, commoncrawl, repair)
     OUTPUT.parent.mkdir(parents=True, exist_ok=True)
     with OUTPUT.open("w", newline="") as handle:

@@ -1,0 +1,62 @@
+[
+ {
+  "candidate_election_id": "5116000__2012-05-01__regular__546f9202156e180d",
+  "candidate_name": "Alan Paul Krasnoff",
+  "election_date": "2012-05-01",
+  "status": "incomplete",
+  "campaign_url": "",
+  "registrable_domain": "",
+  "lead_sources": [],
+  "searches_run": [
+   "WebSearch (refused, budget used up)",
+   "DuckDuckGo via mac2 (bot challenge, no results)",
+   "WebFetch https://ballotpedia.org/Lenard_Myers (empty)"
+  ],
+  "wayback_window_captures": 0,
+  "first_capture_in_window": "",
+  "checked_capture_url": "",
+  "page_evidence": "",
+  "other_profiles": [],
+  "note": "No web search could run: WebSearch refused (session budget 200 of 200 used); DuckDuckGo via mac2 returned a bot challenge page (no results); WebFetch of Ballotpedia returned empty. Wayback CDX (via mac2, window 2011-05-01 to 2012-05-01, status 200) found 0 captures for krasnoff4mayor.com (now checked, earlier timed out), krasnoffformayor.com, alankrasnoff.com, mayorkrasnoff.com, reelectkrasnoff.com. krasnoff.com has 11 captures in window but shows an art gallery (artinspace, buyart, marinegarden), so it is not the mayor's site and is rejected. Status incomplete because no search ran, so not_found does not apply."
+ },
+ {
+  "candidate_election_id": "5116000__2020-05-19__regular__f27e655416fd77ac",
+  "candidate_name": "Lenard Tyrone Myers, II",
+  "election_date": "2020-05-19",
+  "status": "incomplete",
+  "campaign_url": "",
+  "registrable_domain": "",
+  "lead_sources": [],
+  "searches_run": [
+   "WebSearch (refused, budget used up)",
+   "DuckDuckGo via mac2 (bot challenge, no results)",
+   "WebFetch https://ballotpedia.org/Lenard_Myers (empty)"
+  ],
+  "wayback_window_captures": 0,
+  "first_capture_in_window": "",
+  "checked_capture_url": "",
+  "page_evidence": "",
+  "other_profiles": [],
+  "note": "No web search could run: WebSearch refused (session budget 200 of 200 used); DuckDuckGo via mac2 returned a bot challenge page (no results); WebFetch of Ballotpedia returned empty. lenardmyers.com has one 200 capture in window (20190802194739). The page read worked on try 1 and shows only a GoDaddy parked-domain iframe, with no candidate name or mayoral text, so it is rejected. CDX found 0 captures in window 2019-05-20 to 2020-05-19 for lenardmyersformayor.com, myers4mayor.com, lenardmyers2020.com, lenardmyers.org, electlenardmyers.com. myersformayor.com has 12 captures but belongs to Mark Myers, Greenwood mayor race, so it is rejected. Status incomplete because no search ran."
+ },
+ {
+  "candidate_election_id": "5116000__2024-11-05__regular__274eca882f4f52d4",
+  "candidate_name": "Don J. Carey III",
+  "election_date": "2024-11-05",
+  "status": "incomplete",
+  "campaign_url": "",
+  "registrable_domain": "",
+  "lead_sources": [],
+  "searches_run": [
+   "WebSearch (refused, budget used up)",
+   "DuckDuckGo via mac2 (bot challenge, no results)",
+   "WebFetch https://ballotpedia.org/Lenard_Myers (empty)"
+  ],
+  "wayback_window_captures": 0,
+  "first_capture_in_window": "",
+  "checked_capture_url": "",
+  "page_evidence": "",
+  "other_profiles": [],
+  "note": "No web search could run: WebSearch refused (session budget 200 of 200 used); DuckDuckGo via mac2 returned a bot challenge page (no results); WebFetch of Ballotpedia returned empty. CDX (via mac2, window 2023-11-06 to 2024-11-05, status 200) found 0 captures for donforchesapeake.com (now checked, earlier timed out), doncarey.com, doncareyformayor.com, careyformayor.com, careyforchesapeake.com, doncarey4chesapeake.com, doncareyforchesapeake.com, carey4mayor.com. Status incomplete because no search ran."
+ }
+]

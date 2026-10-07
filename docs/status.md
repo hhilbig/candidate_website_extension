@@ -38,9 +38,19 @@ Verdicts: `legacy_site_attribution/agent_verdicts.csv`, registered as `legacy_si
 Pass 1 ended October 5 with 112 retryable pages after archive HTTP 500 errors; the retry pass on October 6 recovered 100.
 Result: 2,193 of 2,225 pages fetched, 6 still retryable, 58 targets with pages, 57 with pages in the window. Summary `inputs/stage3r_saved_pages.csv`, registered in `stage3_saved_pages`.
 
-**Next:** the follow-up pass for A and B (24 incomplete repair entries, 8 incomplete attribution items, flagged weak `not_found` entries), one or two agents at a time, not alongside a scrape.
+**D. Follow-up pass (done, October 6–7).** Workflow `wf_2007bf4d-b90` (`scripts/workflows_mayoral_followup.js`, 43 Sonnet agents run one at a time, 2.9 million tokens, 8 hours).
+It redid 39 repair entries (24 incomplete, 15 flagged by checkers): 9 accepted, 6 outside_window, 6 not_found, 18 still `incomplete`.
+It also redid the 8 incomplete legacy attribution items: 7 accepted, 1 not_found.
+Most remaining incomplete entries failed because mac2 stopped answering or the archive timed out; WebSearch was refused and DuckDuckGo through mac2 served as the search fallback.
+**This was repair attempt 2 on the stage 2 search blocker. The two-attempt limit is reached.** The 18 incomplete entries stay documented as unresolved (`followup/<slug>_url_leads.json`); the build keeps their earlier `not_found` status and reports the count as `repair_incomplete_not_applied`.
+Any further attempt on them needs Hanno's decision.
 
-Coverage on October 6 after A, B and C: URL leads 691 of 822 finalists; downloaded text 566 of 822.
+**E. Last scrape batch (running on mac2).** `mayoral_stage3f_20261007`: 10 targets (8 accepted, 2 outside_window) from the follow-up. Watcher `watch.log` in the batch folder.
+Shared-host leads outside the window (one weebly.com site) are skipped by `scripts/build_mayoral_stage3_targets.py`.
+**Next:** summarize to `inputs/stage3f_saved_pages.csv`, register in `stage3_saved_pages`, rebuild, test, commit, then the release steps.
+
+Coverage on October 7 after A to D, before E: URL leads 701 of 822 finalists; downloaded text 573 of 822.
+The election shares below are from October 6, before D; D adds 7 finalists with text.
 Of 411 elections: text for both finalists 52 percent, winner 72 percent, any finalist 86 percent. A known site for both finalists 74 percent.
 Text for both finalists by period: 2010–2017 49 percent, 2018–2021 38 percent, 2022–2026 70 percent.
 

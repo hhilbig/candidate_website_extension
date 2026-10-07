@@ -94,3 +94,14 @@ def test_repair_search_replaces_not_found_with_own_basis():
     rows = {r['candidate_election_id']: r for r in combine([_city('a', 'b')], leads, {'x': {'problems': []}}, repair=repair)}
     assert rows['a']['final_status'] == 'accepted' and rows['a']['link_basis'] == 'agent_search_repair_wayback_capture_checked'
     assert rows['b']['final_status'] == 'not_found' and rows['b']['link_basis'] == ''
+
+
+def test_followup_replaces_first_repair_result():
+    from scripts.build_mayoral_url_leads import merge_followup
+    first_leads = {'x': [_lead('a', 'incomplete'), _lead('b', 'not_found'), _lead('c'), _lead('d', 'incomplete')]}
+    first = [_lead('b', 'not_found'), _lead('c')]
+    merged, incomplete = merge_followup(first_leads, first, {'a', 'b'}, [_lead('a'), _lead('b')], 0)
+    assert {i['candidate_election_id']: i['status'] for i in merged} == {'a': 'accepted', 'b': 'accepted', 'c': 'accepted'}
+    assert incomplete == 1
+    with pytest.raises(ValueError):
+        merge_followup(first_leads, first, {'a'}, [_lead('c')], 0)
