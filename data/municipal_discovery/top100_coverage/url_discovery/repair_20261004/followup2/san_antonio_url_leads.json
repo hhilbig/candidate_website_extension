@@ -1,0 +1,26 @@
+[
+ {
+  "candidate_election_id": "4865000__2013-05-11__regular__08d5b9be1b6ecd80",
+  "candidate_name": "Rhett R. Smith",
+  "election_date": "2013-05-11",
+  "status": "incomplete",
+  "campaign_url": "",
+  "registrable_domain": "",
+  "lead_sources": [],
+  "searches_run": [
+   "WebSearch: refused, budget of 200 used",
+   "DuckDuckGo html and lite via mac2: captcha page, no results",
+   "Mojeek via mac2: captcha page, no results",
+   "Bing via mac2 and WebFetch: returned unrelated pages (time zones, pharmacy), no usable results",
+   "Wikipedia API search for Rhett Smith San Antonio mayor: found only the 2015 and 2017 San Antonio mayoral election pages",
+   "Wikipedia raw text of the 2013, 2015 and 2017 San Antonio mayoral election pages: no website for Rhett Smith",
+   "WebFetch https://ballotpedia.org/Rhett_R._Smith: empty page"
+  ],
+  "wayback_window_captures": 0,
+  "first_capture_in_window": "",
+  "checked_capture_url": "",
+  "page_evidence": "",
+  "other_profiles": [],
+  "note": "No working web search ran, so this is not not_found. Wikipedia calls him a perennial candidate and Green Party activist (2015 page); he also ran in 2015 and 2017. New domain checks this run (all-time CDX, 200 captures): rhettsmith.us, rhettsmith.info, rhettrsmith.com, rhett4sa.com, rhettforsanantonio.com, rhettforsanantonio.org, rhettsmithformayor.org, rhettsmith4mayor.com, rhettsmithformayor.net, electrhettsmith.com, votersmith.com, rhettsmithmayor.com, rhettsmithsanantonio.com, greenpartysa.org: no captures. rhettsmith.com: captures only from 2004 (a different earlier site, not checked further). rhettsmith.org: 200 captures 2011-09-04, 2011-09-24 (outside the window, more than one year before), then one 200 capture of the home page on 2013-06-21 (after the election; the text read is a parked page with ad styles and no candidate content), and robots.txt only on 2013-01-14 and 2013-05-17. I could not confirm that rhettsmith.org belongs to this candidate. The 2011 pages returned empty bodies from the archive, so I could not read them. If a search can run, the open check is whether rhettsmith.org or another site named him in 2012-05-11 to 2013-05-11. From the data seen, no in-window capture exists for any tested domain."
+ }
+]

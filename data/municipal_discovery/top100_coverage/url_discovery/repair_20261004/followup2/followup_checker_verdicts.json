@@ -1,0 +1,81 @@
+{
+ "lexington_fayette": {
+  "checked": 1,
+  "problems": []
+ },
+ "kansas_city": {
+  "checked": 2,
+  "problems": [
+   {
+    "candidate_election_id": "2938000__2023-06-20__regular__3852e8386b54c2bf",
+    "severity": "minor",
+    "issue": "domain not fully checked",
+    "evidence": "My CDX query for claychastain.com (2022-06-20 to 2023-06-20, no status filter) returned one capture, 20230331195855 http://claychastain.com/ with status '-' (redirect or revisit record). The note says no captures for claychastain.com, which holds only for the 200 filter. The redirect target was not recorded. The CDX request for the target timed out in my retries. votechastain.com is confirmed as a Bluehost parked page in the 20220701205044 capture. The 20221108 capture was empty or unreadable in my read, and the note calls it an expired page. No accepted entry exists, and the not_found status is plausible."
+   }
+  ]
+ },
+ "greensboro": {
+  "checked": 2,
+  "problems": [
+   {
+    "candidate_election_id": "3728000__2013-11-05__regular__c18d9fdebf4a3e60",
+    "severity": "minor",
+    "issue": "domain not checked",
+    "evidence": "The note says 'A few earlier-listed domains were not re-run' and Ballotpedia was not readable. Searches did run (Brave via mac2), and 16 domains were listed as checked. But the not_found rests on an incomplete domain list."
+   },
+   {
+    "candidate_election_id": "3728000__2017-11-07__regular__c18d9fdebf4a3e60",
+    "severity": "minor",
+    "issue": "wayback_window_captures count is wrong",
+    "evidence": "My CDX re-run for 20161107-20171107 with limit=100 returned 98 HTTP 200 rows, below the limit. The file reports 60 and says the limit was hit. The accepted status holds: the 20170722013702 capture of the home page has the title 'Re-elect Nancy Vaughan Mayor of Greensboro', and the first in-window capture is 20170708190516."
+   }
+  ]
+ },
+ "winston_salem": {
+  "checked": 1,
+  "problems": []
+ },
+ "arlington": {
+  "checked": 1,
+  "problems": [
+   {
+    "candidate_election_id": "4804000__2011-05-14__regular__f2eafdf8b73551b2",
+    "severity": "minor",
+    "issue": "Ballotpedia campaign-website link not read; doubt already disclosed in note",
+    "evidence": "No entry was accepted, so there was nothing to reject. I re-ran the mac2 CDX query for all 16 named domains (window 2010-05-14 to 2011-05-14). Only drcluck.com had captures: 20110208045156 and 20110208045202. The 20110208045156 page is a parked domain-ad page titled drcluck.com, not a campaign site. A fresh Brave search through mac2 returned no campaign domain. Wikidata Q1487079 has no website property (P856). My own Ballotpedia fetch through mac2 returned no usable link. The not_found status holds, with a small residual doubt that Ballotpedia lists a site neither the writer nor I could read."
+   }
+  ]
+ },
+ "laredo": {
+  "checked": 5,
+  "problems": [
+   {
+    "candidate_election_id": "4841464__2014-11-04__regular__b88635b5cc64352d",
+    "severity": "minor",
+    "issue": "domain not checked",
+    "evidence": "Note names jerryforwebb.com as seen in search but says it was not checked. My CDX query (matchType=domain, 2013-11-04 to 2014-11-04) returned 0 HTTP 200 captures, so the not_found result holds."
+   },
+   {
+    "candidate_election_id": "4841464__2022-12-17__regular__c40495c66071649e",
+    "severity": "minor",
+    "issue": "domain not checked",
+    "evidence": "victortrevino.com is not in the checked list (only victortrevino.net). It has one in-window 200 capture, 20211226021842, which is an 'Under Construction' page with no candidate or mayoral text. It is not a campaign site, so not_found holds."
+   }
+  ]
+ },
+ "san_antonio": {
+  "checked": 0,
+  "problems": []
+ },
+ "chesapeake": {
+  "checked": 1,
+  "problems": [
+   {
+    "candidate_election_id": "5116000__2024-11-05__regular__274eca882f4f52d4",
+    "severity": "minor",
+    "issue": "Accepted entry holds. Small field and note doubts only: first_capture_in_window differs from my CDX result, and the note says the page lacks the word Mayor, but it contains it.",
+    "evidence": "CDX (matchType=domain, 2023-11-06 to 2024-11-05, status 200) returned 44 captures, matching the file. The first line was 20231106181316 for https://www.votedoncarey.com/, but the file says 20231106180848. A host-type query returned 0 lines twice, so the writer may have used a different variant. The checked capture 20240611204440 /about contains 'Mayor' 10 times, 'carey4mayor' 12 times and 'Chesapeake' 10 times. Page title 'Meet Don | Vote Don Carey'. The site belongs to the candidate's 2024 Chesapeake mayoral campaign."
+   }
+  ]
+ }
+}

@@ -1,0 +1,121 @@
+[
+ {
+  "candidate_election_id": "4841464__2010-12-11__regular__3d373e6673bf42b0",
+  "candidate_name": "Raul G. Salinas",
+  "election_date": "2010-12-11",
+  "status": "not_found",
+  "campaign_url": "",
+  "registrable_domain": "",
+  "lead_sources": [
+   "https://ballotpedia.org/Raul_G._Salinas"
+  ],
+  "searches_run": [
+   "Brave search via mac2: Raul Salinas Laredo mayor 2010 website",
+   "Ballotpedia Raul_G._Salinas via Wayback copy (only city mayor page linked)",
+   "Texas Tribune 2010 Laredo mayor race result in search"
+  ],
+  "wayback_window_captures": 0,
+  "first_capture_in_window": "",
+  "checked_capture_url": "",
+  "page_evidence": "",
+  "other_profiles": [
+   "https://x.com/raulgsalinas",
+   "https://x.com/MayorRSalinas"
+  ],
+  "note": "Searches ran through Brave on mac2 (WebSearch budget was used up). No search result, Ballotpedia page, or news article named a campaign website. Domains checked in the archive (one request at a time through mac2): raulsalinas.net, raulsalinas.org, salinasformayor.org, raulgsalinas.org, salinas4mayor.com, mayorsalinas.com, raulsalinasmayor.com, mayorraulsalinas.com, raulsalinaslaredo.com, reelectsalinas.com (plus the second-attempt list), all 0 HTTP 200 captures in 2009-12-11 to 2010-12-11. No accepted site."
+ },
+ {
+  "candidate_election_id": "4841464__2014-11-04__regular__b88635b5cc64352d",
+  "candidate_name": "Jerry Garza",
+  "election_date": "2014-11-04",
+  "status": "not_found",
+  "campaign_url": "",
+  "registrable_domain": "",
+  "lead_sources": [
+   "https://ballotpedia.org/Jerry_Garza"
+  ],
+  "searches_run": [
+   "Brave search via mac2: \"Jerry Garza\" Laredo mayor 2014 campaign website",
+   "Ballotpedia Jerry_Garza (search result; Wayback copy gave 403)"
+  ],
+  "wayback_window_captures": 0,
+  "first_capture_in_window": "",
+  "checked_capture_url": "",
+  "page_evidence": "",
+  "other_profiles": [
+   "https://www.facebook.com/jerry.garza.54/"
+  ],
+  "note": "Searches ran through Brave on mac2 (WebSearch budget was used up). No search result, Ballotpedia page, or news article named a campaign website. Domains checked in the archive (one request at a time through mac2): jerrygarza.org, garza4mayor.com, jerrygarzamayor.com, jerrygarzalaredo.com, jgarza4mayor.com, mayorjerrygarza.com, jerrygarzaformayor.org, all 0 captures in window. jerrygarza.com (3 captures) was read earlier and is a har.com real-estate frameset. jerryforwebb.com appeared in search but is a later Webb County campaign, not the 2014 mayoral race, and was not checked. No accepted site."
+ },
+ {
+  "candidate_election_id": "4841464__2018-12-13__regular__87ed027f58df5963",
+  "candidate_name": "Roque Vela, Jr.",
+  "election_date": "2018-12-13",
+  "status": "not_found",
+  "campaign_url": "",
+  "registrable_domain": "",
+  "lead_sources": [
+   "https://ballotpedia.org/Roque_Vela_Jr.",
+   "https://www.lmtonline.com/news/article/18-runner-up-former-councilman-announces-17444874.php"
+  ],
+  "searches_run": [
+   "Brave search via mac2: \"Roque Vela\" Laredo mayor campaign website",
+   "Ballotpedia Roque_Vela_Jr. via Wayback copy (no campaign website listed)",
+   "Laredo Morning Times 2018 and 2022 articles (no website mentioned)"
+  ],
+  "wayback_window_captures": 0,
+  "first_capture_in_window": "",
+  "checked_capture_url": "",
+  "page_evidence": "",
+  "other_profiles": [
+   "https://x.com/roquevelajr1",
+   "https://www.facebook.com/roquevelajr2022/"
+  ],
+  "note": "Searches ran through Brave on mac2 (WebSearch budget was used up). No search result, Ballotpedia page, or news article named a campaign website. Domains checked in the archive (one request at a time through mac2): roquevela.net, roquevelamayor.com, velamayor.com (only robots.txt in window), vela4mayor.com, roque4mayor.com, roqueformayor.com (one capture 20180808033210, a Coming Soon placeholder), roque4laredo.com, votevela.com; earlier list also 0 captures. No accepted site."
+ },
+ {
+  "candidate_election_id": "4841464__2022-12-17__regular__c40495c66071649e",
+  "candidate_name": "Victor D. Treviño",
+  "election_date": "2022-12-17",
+  "status": "not_found",
+  "campaign_url": "",
+  "registrable_domain": "",
+  "lead_sources": [
+   "https://www.kgns.tv/2022/08/26/dr-trevino-announces-candidacy-mayor/"
+  ],
+  "searches_run": [
+   "Brave search via mac2: \"Victor Trevino\" Laredo mayor 2022 campaign website",
+   "Kgns announcement article 2022-08-26 and Wikipedia 2022 Laredo mayoral election page (no website)",
+   "Facebook page drtforlaredomayor read (no site link)"
+  ],
+  "wayback_window_captures": 0,
+  "first_capture_in_window": "",
+  "checked_capture_url": "",
+  "page_evidence": "",
+  "other_profiles": [
+   "https://www.facebook.com/drtforlaredomayor/"
+  ],
+  "note": "Searches ran through Brave on mac2 (WebSearch budget was used up). No search result, Ballotpedia page, or news article named a campaign website. Domains checked in the archive (one request at a time through mac2): victortrevino.net, trevino2022.com, trevinoformayor.org, victorlaredo.com (photographer estate, unrelated), victor4mayor.org, victortrevinotx.com, victortrevino4mayor.com, vdtrevino.com, trevino4laredo.com, drtforlaredomayor.com, drtforlaredo.com, drtrevino.com (Sugar Land dentist, unrelated), drvictortrevino.com, drtrevinoformayor.com, drt4laredo.com; earlier checks also found no usable site. No accepted site."
+ },
+ {
+  "candidate_election_id": "4841464__2022-12-17__regular__0e1da3175dcbe5d9",
+  "candidate_name": "Mercurio Martinez III",
+  "election_date": "2022-12-17",
+  "status": "not_found",
+  "campaign_url": "",
+  "registrable_domain": "",
+  "lead_sources": [
+   "https://ballotpedia.org/Mercurio_Martinez_III"
+  ],
+  "searches_run": [
+   "Brave search via mac2: \"Mercurio Martinez III\" Laredo mayor",
+   "Ballotpedia Mercurio_Martinez_III via Wayback copy (no campaign website listed)"
+  ],
+  "wayback_window_captures": 0,
+  "first_capture_in_window": "",
+  "checked_capture_url": "",
+  "page_evidence": "",
+  "other_profiles": [],
+  "note": "Searches ran through Brave on mac2 (WebSearch budget was used up). No search result, Ballotpedia page, or news article named a campaign website. Domains checked in the archive (one request at a time through mac2): mercuriomartinezforlaredo.com, mercurio4mayor.org, mercuriolaredo.com, mercuriomartinezmayor.com, mercurio2022.com, votemercurio.org, mercurioformayor.org, mercurio3.com, martinez4mayor.com, all 0 captures in window; earlier attempt found only GoDaddy parking pages. No accepted site."
+ }
+]

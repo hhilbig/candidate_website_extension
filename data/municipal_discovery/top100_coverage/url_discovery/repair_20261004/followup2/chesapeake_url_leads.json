@@ -1,0 +1,79 @@
+[
+ {
+  "candidate_election_id": "5116000__2012-05-01__regular__546f9202156e180d",
+  "candidate_name": "Alan Paul Krasnoff",
+  "election_date": "2012-05-01",
+  "status": "incomplete",
+  "campaign_url": "",
+  "registrable_domain": "",
+  "lead_sources": [],
+  "searches_run": [
+   "WebSearch (refused, 200 of 200 session budget used)",
+   "Bing via mac2 (returned unrelated results for name queries)",
+   "Brave via mac2 (block page)",
+   "DuckDuckGo html and lite via mac2 (bot challenge page)",
+   "Google via WebFetch (no results)",
+   "Ballotpedia via mac2 curl (HTTP 202 challenge) and WebFetch (empty)",
+   "Ballotpedia via Wayback (HTTP 402/timeouts)",
+   "Wikipedia raw page Mayoral_elections_in_Chesapeake,_Virginia (no candidate sites)"
+  ],
+  "wayback_window_captures": 0,
+  "first_capture_in_window": "",
+  "checked_capture_url": "",
+  "page_evidence": "",
+  "other_profiles": [],
+  "note": "No web search could run: WebSearch budget is used up and every fallback engine and Ballotpedia failed or returned unrelated results. CDX (window 2011-05-01 to 2012-05-01, status 200) found 0 captures for krasnoffmayor.com, alankrasnoff.org and krasnoffforchesapeake.com, in addition to the domains from earlier attempts (krasnoff4mayor.com, krasnoffformayor.com, alankrasnoff.com, mayorkrasnoff.com, reelectkrasnoff.com). krasnoff.com is an art gallery site and stays rejected. Not not_found because no search ran."
+ },
+ {
+  "candidate_election_id": "5116000__2020-05-19__regular__f27e655416fd77ac",
+  "candidate_name": "Lenard Tyrone Myers, II",
+  "election_date": "2020-05-19",
+  "status": "incomplete",
+  "campaign_url": "",
+  "registrable_domain": "",
+  "lead_sources": [],
+  "searches_run": [
+   "WebSearch (refused, 200 of 200 session budget used)",
+   "Bing via mac2 (returned unrelated results for name queries)",
+   "Brave via mac2 (block page)",
+   "DuckDuckGo html and lite via mac2 (bot challenge page)",
+   "Google via WebFetch (no results)",
+   "Ballotpedia via mac2 curl (HTTP 202 challenge) and WebFetch (empty)",
+   "Ballotpedia via Wayback (HTTP 402/timeouts)",
+   "Wikipedia raw page Mayoral_elections_in_Chesapeake,_Virginia (no candidate sites)"
+  ],
+  "wayback_window_captures": 0,
+  "first_capture_in_window": "",
+  "checked_capture_url": "",
+  "page_evidence": "",
+  "other_profiles": [],
+  "note": "No web search could run: WebSearch budget is used up and every fallback engine and Ballotpedia failed or returned unrelated results. CDX (window 2019-05-20 to 2020-05-19, status 200) found 0 captures for lenardmyersii.com, myersforchesapeake.com, lenardmyers.org, votelenardmyers.com and myersformayor2020.com, in addition to earlier domains. lenardmyers.com (one capture 20190802194739) is a GoDaddy parked page and stays rejected. Not not_found because no search ran."
+ },
+ {
+  "candidate_election_id": "5116000__2024-11-05__regular__274eca882f4f52d4",
+  "candidate_name": "Don J. Carey III",
+  "election_date": "2024-11-05",
+  "status": "accepted",
+  "campaign_url": "https://www.votedoncarey.com/",
+  "registrable_domain": "votedoncarey.com",
+  "lead_sources": [
+   "Guessed domain vote<name>.com; no search result source (all search tools failed). Confirmed through Wayback only."
+  ],
+  "searches_run": [
+   "WebSearch (refused, 200 of 200 session budget used)",
+   "Bing via mac2 (returned unrelated results for name queries)",
+   "Brave via mac2 (block page)",
+   "DuckDuckGo html and lite via mac2 (bot challenge page)",
+   "Google via WebFetch (no results)",
+   "Ballotpedia via mac2 curl (HTTP 202 challenge) and WebFetch (empty)",
+   "Ballotpedia via Wayback (HTTP 402/timeouts)",
+   "Wikipedia raw page Mayoral_elections_in_Chesapeake,_Virginia (no candidate sites)"
+  ],
+  "wayback_window_captures": 44,
+  "first_capture_in_window": "20231106180848",
+  "checked_capture_url": "https://web.archive.org/web/20240611204440/https://www.votedoncarey.com/about",
+  "page_evidence": "Page title 'Meet Don | Vote Don Carey'; text 'Don Carey has dedicated his life to serving others... longtime resident of Chesapeake'; donation links to https://secure.actblue.com/donate/carey4mayor (refcode=Mayor25, Mayor50).",
+  "other_profiles": [],
+  "note": "CDX for votedoncarey.com (window 2023-11-06 to 2024-11-05, status 200) returned 44 captures (limit 100), first 20231106180848, last 20241024033823, pages: home, about, platform, contact, endorsements, yardsign, blog. The archived page names Don Carey, Chesapeake, and has ActBlue links named carey4mayor, and a yard sign request form. The page text read does not say the words 'for Mayor' in visible text; the mayoral link is the ActBlue carey4mayor donation URL. Accepted with that minor doubt. No web search ran, so no other domains were excluded by search."
+ }
+]

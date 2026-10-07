@@ -47,13 +47,14 @@ def build_targets(leads: pd.DataFrame, coverage: pd.DataFrame) -> pd.DataFrame:
         url = lead["campaign_url"]
         parts = urlsplit(url)
         host = (parts.hostname or "").lower()
-        domain = lead["registrable_domain"].lower()
+        domain = lead["registrable_domain"].lower().split()[0]  # some agents add a note after the domain
+        url_type = "custom_domain"
         if host not in {domain, f"www.{domain}"}:
-            # The scrape method works on whole registrable domains. A shared-host site (for example a
-            # weebly.com subdomain) outside the window cannot add in-window text, so it is skipped.
-            if lead["final_status"] == "outside_window":
-                continue
-            raise ValueError(f"campaign URL host is not the registrable domain: {url}")
+            # A site on a shared host (for example a wordpress.com or weebly.com subdomain) is scraped by
+            # its own host name, so the prefix query covers only that subdomain, not the whole host.
+            if not host.endswith("." + domain):
+                raise ValueError(f"campaign URL host is not the registrable domain: {url}")
+            domain, url_type = host.removeprefix("www."), "shared_host_subdomain"
         day = pd.Timestamp(lead["election_date"])
         evidence = [u for u in [lead["checked_capture_url"]] + lead["lead_sources"].split(" | ") if u]
         rows.append({
@@ -70,7 +71,7 @@ def build_targets(leads: pd.DataFrame, coverage: pd.DataFrame) -> pd.DataFrame:
             "registrable_domain": domain,
             "site_root_url": f"{parts.scheme}://{host}/",
             "primary_exact_url": url,
-            "url_type": "custom_domain",
+            "url_type": url_type,
             "campaign_claim_count": 1,
             "campaign_claim_ids_json": json.dumps([lead["link_basis"] + ":" + lead["candidate_election_id"]]),
             "campaign_urls_json": json.dumps([url]),
