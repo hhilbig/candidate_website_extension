@@ -45,14 +45,16 @@ Most remaining incomplete entries failed because mac2 stopped answering or the a
 **This was repair attempt 2 on the stage 2 search blocker. The two-attempt limit is reached.** The 18 incomplete entries stay documented as unresolved (`followup/<slug>_url_leads.json`); the build keeps their earlier `not_found` status and reports the count as `repair_incomplete_not_applied`.
 Any further attempt on them needs Hanno's decision.
 
-**E. Last scrape batch (running on mac2).** `mayoral_stage3f_20261007`: 10 targets (8 accepted, 2 outside_window) from the follow-up. Watcher `watch.log` in the batch folder.
+**E. Last scrape batch (done).** `mayoral_stage3f_20261007`: 10 targets, 165 pages fetched, 0 retryable, 8 targets with pages in the window. Summary `inputs/stage3f_saved_pages.csv`, registered.
 Shared-host leads outside the window (one weebly.com site) are skipped by `scripts/build_mayoral_stage3_targets.py`.
-**Next:** summarize to `inputs/stage3f_saved_pages.csv`, register in `stage3_saved_pages`, rebuild, test, commit, then the release steps.
 
-Coverage on October 7 after A to D, before E: URL leads 701 of 822 finalists; downloaded text 573 of 822.
-The election shares below are from October 6, before D; D adds 7 finalists with text.
-Of 411 elections: text for both finalists 52 percent, winner 72 percent, any finalist 86 percent. A known site for both finalists 74 percent.
-Text for both finalists by period: 2010–2017 49 percent, 2018–2021 38 percent, 2022–2026 70 percent.
+**Collection status.** The approved collection levers are done: stage 2 search and its two repair attempts, the domain sweeps, the legacy-lead scrape and attribution, and four stage 3 batches.
+Open, needs Hanno's decision: the 18 entries still `incomplete` after repair attempt 2, the 239 failed Common Crawl queries, and "option 3" (a wider date window for finalists with no URL lead).
+**Next authorized steps:** the release steps in the mayoral section (content checks, frozen build with gap list, README, codebook, manifest).
+
+Final collection coverage, October 7: URL leads 701 of 822 finalists; downloaded text 581 of 822.
+Of 411 elections: text for both finalists 54 percent, winner 74 percent, any finalist 87 percent. A known site for both finalists 76 percent, winner 88 percent, any 94 percent.
+Text for both finalists by period: 2010–2017 52 percent, 2018–2021 40 percent, 2022–2026 71 percent.
 
 ## 3. Mayoral extension
 
