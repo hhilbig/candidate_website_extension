@@ -5,7 +5,8 @@ Posts once at start, every 6 hours while running, once on a 30-minute stall
 Run on mac2 from ~/candidate_website_extension_stage3, for example:
   BATCH=data/municipal_archive_acquisition/mayoral_stage3r_20261004 \
     nohup caffeinate -i python3 scripts/watch_mayoral_stage3_scrape.py > $BATCH/watch.log 2>&1 &
-Set BATCH_LABEL to a short name for the Task line. Set WATCH_DRY_RUN=1 to print messages instead of posting.
+Set BATCH_LABEL to a short name for the Task line. RUN_NAME and LOG_NAME select another run folder and log
+(for the uncapped fetch: RUN_NAME=uncapped LOG_NAME=uncapped.log); QUIET_START=1 skips the start message. Set WATCH_DRY_RUN=1 to print messages instead of posting.
 """
 from __future__ import annotations
 
@@ -19,19 +20,19 @@ from pathlib import Path
 from zoneinfo import ZoneInfo
 
 BATCH = Path(os.environ["BATCH"])
-RUN = BATCH / "runs" / "production"
-LOG = BATCH / "runs.log"
+RUN = BATCH / "runs" / os.environ.get("RUN_NAME", "production")
+LOG = BATCH / os.environ.get("LOG_NAME", "runs.log")
 HELPER = Path("scripts/slack_status.sh")
 PROJECT = "Candidate websites, mayoral extension"
 TASK = "Wayback page download, " + os.environ.get("BATCH_LABEL", BATCH.name)
-WHERE = f"log {BATCH.name}/runs.log"
+WHERE = f"log {BATCH.name}/{LOG.name}"
 PACIFIC = ZoneInfo("America/Los_Angeles")
 POLL, PROGRESS_EVERY, STALL_AFTER = 300, 6 * 3600, 1800
 DONE = {"fetched", "fetched_timestamp_mismatch", "no_content", "not_available", "non_html", "redirect_loop"}
 
 
 def running() -> bool:
-    return subprocess.run(["pgrep", "-f", f"{BATCH}/frozen/targets.csv"], capture_output=True).returncode == 0
+    return subprocess.run(["pgrep", "-f", f"{BATCH}/frozen/targets.csv.*--run-dir {RUN}"], capture_output=True).returncode == 0
 
 
 def counts() -> tuple[int, int, int]:
@@ -76,8 +77,9 @@ def main() -> None:
     done, _, planned = counts()
     samples = [(started, done)]
     last_progress, stalled = started, False
-    post("FYI", f"Watcher started. {done:,} of {planned:,} pages have a final result.",
-         "Estimate follows in the next update.")
+    if not os.environ.get("QUIET_START"):
+        post("FYI", f"Watcher started. {done:,} of {planned:,} pages have a final result.",
+             "Estimate follows in the next update.")
     while True:
         time.sleep(POLL)
         done, fetched, planned = counts()
