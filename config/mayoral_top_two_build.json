@@ -211,7 +211,8 @@
     "data/municipal_discovery/top100_coverage/inputs/stage3b_saved_pages.csv",
     "data/municipal_discovery/top100_coverage/inputs/stage3r_saved_pages.csv",
     "data/municipal_discovery/top100_coverage/inputs/stage3f_saved_pages.csv",
-    "data/municipal_discovery/top100_coverage/inputs/stage3g_saved_pages.csv"
+    "data/municipal_discovery/top100_coverage/inputs/stage3g_saved_pages.csv",
+    "data/municipal_discovery/top100_coverage/inputs/stage3a_saved_pages.csv"
   ],
   "legacy_attribution": "data/municipal_discovery/top100_coverage/legacy_attribution/agent_verdicts.csv",
   "stage3_legacy_pages": [

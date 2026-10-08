@@ -48,13 +48,20 @@ Any further attempt on them needs Hanno's decision.
 **E. Last scrape batch (done).** `mayoral_stage3f_20261007`: 10 targets, 165 pages fetched, 0 retryable, 8 targets with pages in the window. Summary `inputs/stage3f_saved_pages.csv`, registered.
 Shared-host leads outside the window (one weebly.com site) are skipped by `scripts/build_mayoral_stage3_targets.py`.
 
-**Collection status.** The approved collection levers are done: stage 2 search and its two repair attempts, the domain sweeps, the legacy-lead scrape and attribution, and four stage 3 batches.
-Open, needs Hanno's decision: the 18 entries still `incomplete` after repair attempt 2, the 239 failed Common Crawl queries, and "option 3" (a wider date window for finalists with no URL lead).
+**F. Repair attempt 3 (done, approved by Hanno October 7).** `wf_8c7b26fc-575` redid the 18 entries still incomplete: 3 accepted, 10 not_found, 5 still incomplete (`followup2/`). The lead builder chains the passes.
+The stage 3 target builder now scrapes a site on a shared host (wordpress.com, weebly.com) by its own host name. Batch `mayoral_stage3g_20261007` (4 targets, 29 pages).
+
+**G. Option 3, after-election sweep (done, approved by Hanno October 7).** `scripts/sweep_mayoral_domain_patterns.py --window after` queried the 120 days after each election for the 121 finalists without a URL lead (2,699 domain windows on the droplet, 0 errors; 120 with captures; 38 pages passed the screen).
+Workflow `wf_fe9a8fc0-38f` (`scripts/workflows_mayoral_sweep_after_check.js`, three agents at a time) checked 26 finalists: 5 accepted, 8 outside_window, 12 not_found, 1 incomplete.
+Basis `domain_sweep_after_election_capture_checked`, applied last. Batch `mayoral_stage3a_20261008` (13 targets, 268 pages, all 13 with pages in the window).
+An outside_window site contributes text only through pages within 365 days of the election, here the first 120 days after it.
+
+**Collection status.** All approved collection levers are done. Unresolved and documented: 5 repair entries and 1 sweep entry still incomplete; 239 failed Common Crawl queries (not retried, low expected yield).
 **Next authorized steps:** the release steps in the mayoral section (content checks, frozen build with gap list, README, codebook, manifest).
 
-Final collection coverage, October 7: URL leads 701 of 822 finalists; downloaded text 581 of 822.
-Of 411 elections: text for both finalists 54 percent, winner 74 percent, any finalist 87 percent. A known site for both finalists 76 percent, winner 88 percent, any 94 percent.
-Text for both finalists by period: 2010–2017 52 percent, 2018–2021 40 percent, 2022–2026 71 percent.
+Final collection coverage, October 8: URL leads 717 of 822 finalists; downloaded text 598 of 822.
+Of 411 elections: text for both finalists 57 percent, winner 77 percent, any finalist 89 percent. A known site for both finalists 79 percent, winner 91 percent, any 95 percent.
+Text for both finalists by period: 2010–2017 55 percent, 2018–2021 40 percent, 2022–2026 75 percent.
 
 ## 3. Mayoral extension
 
