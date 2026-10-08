@@ -222,22 +222,22 @@
     "data/municipal_discovery/top100_coverage/inputs/stage3L_saved_pages.csv": "19cd4dbe49db4235ab8e2cb63894efc8734f9277bd5cb05318672d9be9637207",
     "data/municipal_discovery/top100_coverage/legacy_site_attribution/agent_verdicts.csv": "5685b2d748722e9e393344ac09a1468dbb5494c0d32f839aded667164fe36968",
     "data/municipal_discovery/top100_coverage/legacy_attribution/agent_verdicts.csv": "7ed0fe0f346d45bac8f1775d4c6b3319ede82a21ba8530b291dcf7dd9423a9b8",
-    "data/municipal_discovery/top100_coverage/linkage/discovered_url_leads.csv": "0af5ae478349e0ad9eb248d2d70056e776ff9f30f7ce075b3fd0f507723ac983"
+    "data/municipal_discovery/top100_coverage/linkage/discovered_url_leads.csv": "51918f1e66e1c6b7d7c2e9638cc128069f9aac13c6a27ff3bd1bfaf00eeecaad"
   },
   "script_sha256": "664cfbe501dd47b5365019178e3e95c834f883194dbe2e4c28f227d221c81f67",
   "outputs": {
     "cities.csv": "4e06ea9d422efcd97b0236de473caa32ca952d1d387d610379d07d5ebde3a388",
     "city_year_audit.csv": "a9d46e666b12b6307ece6ebc9a33d1f40094f67423887a333c852888167a5f6f",
     "elections.csv": "4d178b47ccfaa7df1f26ff5c1bc514fb39dc18ccfaa1cd1d3bae4e6862d9a82f",
-    "candidate_coverage.csv": "742215ed1b62301e9fda8e48d2ac84c0638c2481d2869d8755fa02b1b2449812",
-    "coverage_breakdowns.csv": "6e3efd28937504b839adba26cb9fc5ec2a6c8e9745d9b8dc534d71ccc116e317",
-    "missing_urls.csv": "a65f1354159daeefb8ec33ce17bc85601363f56ce8a0b3e8408ef01b52a7208a",
-    "missing_period_captures.csv": "b2b6b3c3d12abc205fcf5e2e3e9a849816627af4db556f91134f00cdff82923d",
+    "candidate_coverage.csv": "7bc1924d112ddfe4ecb116d78ae8fae12c8fa3fe582b94fb730d7a0ad8fbe525",
+    "coverage_breakdowns.csv": "2ec838c720152a7bec027c1b54b9c4b6456d1a18009aa7b343bfe65ec1d94d32",
+    "missing_urls.csv": "5d25a6b555214a2505b70a6f136b6fd0560209621f2899b493d358e9ae73f34a",
+    "missing_period_captures.csv": "9e8599a6bb0938f744b22d093ee5a662a53a825aef8e819abda97bf55e397c70",
     "missing_election_results.csv": "164212cb1c39dbfa39b19a82e4000698bb311dec204f24f20696cd805eda5628",
     "missing_election_calendars.csv": "f639ad7f845e0ad1cdded693329145b4fec354d1d853a17e878393867996899c",
-    "coverage_gaps.csv": "d233952c5c0340f620848d85dddd0035a5cc65aea653166a9bc31deb50a2b963",
-    "source_attempt_estimates.csv": "da95aeda072b55441d817f5fdf2bfddb64557178378a30773604b2c771c4c3ae",
-    "summary.json": "9366163e1018e4ec06bdd3c4c2abad516fd69075e4a9cc00691907800b6f0e5f",
+    "coverage_gaps.csv": "fabbadc82a72530e665dc7ce067c9ff9bd048fc12b815a18133831849b89ee2a",
+    "source_attempt_estimates.csv": "09fccd2d8bf329cf675e02166aa461b5b3c784d44e35728316c6ed9e52ab99c2",
+    "summary.json": "df5142a9803f1db37d46a5073659f47d3d6b0955fac42c61edea1fe1713c6e3a",
     "outside_scope_results.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
     "superseded_result_records.json": "cfdbaa6d8e80ab97381d91edc0698814a02ab33a82e7d306c8f68c45ff5b05d4"
   }

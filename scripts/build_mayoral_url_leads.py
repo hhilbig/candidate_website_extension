@@ -11,6 +11,8 @@ Inputs (data/municipal_discovery/top100_coverage/url_discovery/):
   repair_20261004/          optional; a repeated search for stage 2 not_found entries whose search never ran or
                             whose archive check failed: <slug>_url_leads.json plus repair_checker_verdicts.json.
                             "incomplete" entries are not applied and keep their earlier status.
+  sweep_after_20261007/sweep_check_verdicts.json  optional; checked hits from the 120 days after the election
+                            (option 3); applied last.
   repair_20261004/followup/ and followup2/  optional; repair attempts 2 and 3 for unfinished or checker-flagged
                             entries. Each later pass replaces the earlier result for every finalist it redid.
 
@@ -44,6 +46,7 @@ PROPOSAL_BASIS = "checker_proposal_wayback_capture_verified"
 SWEEP_BASIS = "domain_sweep_wayback_capture_checked"
 COMMONCRAWL_BASIS = "domain_sweep_commoncrawl_capture_checked"
 REPAIR_BASIS = "agent_search_repair_wayback_capture_checked"
+SWEEP_AFTER_BASIS = "domain_sweep_after_election_capture_checked"
 
 
 def capture_timestamp(url: str) -> str:
@@ -53,10 +56,11 @@ def capture_timestamp(url: str) -> str:
 
 def combine(cities: list[dict], leads_by_slug: dict[str, list[dict]], verdicts: dict[str, dict],
             proposals: list[dict] = (), sweep: list[dict] = (), commoncrawl: list[dict] = (),
-            repair: list[dict] = ()) -> list[dict]:
+            repair: list[dict] = (), sweep_after: list[dict] = ()) -> list[dict]:
     sources = []
     for basis, label, items in ((PROPOSAL_BASIS, "checker proposal", proposals), (SWEEP_BASIS, "domain sweep", sweep),
-                                 (COMMONCRAWL_BASIS, "common crawl", commoncrawl), (REPAIR_BASIS, "repair search", repair)):
+                                 (COMMONCRAWL_BASIS, "common crawl", commoncrawl), (REPAIR_BASIS, "repair search", repair),
+                                 (SWEEP_AFTER_BASIS, "after-election sweep", sweep_after)):
         source_items = {}
         for item in items:
             if item.get("status") not in STATUSES or item["candidate_election_id"] in source_items:
@@ -213,7 +217,11 @@ def main() -> int:
             followup, followup_incomplete = repair_verdicts(followup_leads, json.loads((followup_dir / "followup_checker_verdicts.json").read_text()))
             repair, repair_incomplete = merge_followup({"all": list(current.values())}, repair, redone, followup, followup_incomplete)
             current.update({lead["candidate_election_id"]: lead for leads in followup_leads.values() for lead in leads})
-    rows = combine(cities, leads, verdicts, proposals, sweep, commoncrawl, repair)
+    after_path = DISCOVERY / "sweep_after_20261007" / "sweep_check_verdicts.json"
+    sweep_after = json.loads(after_path.read_text()) if after_path.exists() else []
+    after_incomplete = sum(1 for item in sweep_after if item["status"] == "incomplete")
+    sweep_after = [item for item in sweep_after if item["status"] != "incomplete"]
+    rows = combine(cities, leads, verdicts, proposals, sweep, commoncrawl, repair, sweep_after)
     OUTPUT.parent.mkdir(parents=True, exist_ok=True)
     with OUTPUT.open("w", newline="") as handle:
         writer = csv.DictWriter(handle, fieldnames=COLUMNS)
@@ -222,7 +230,8 @@ def main() -> int:
     counts = {}
     for row in rows:
         counts[row["final_status"]] = counts.get(row["final_status"], 0) + 1
-    print(json.dumps({"finalists": len(rows), "final_status": counts, "repair_incomplete_not_applied": repair_incomplete}, indent=1))
+    print(json.dumps({"finalists": len(rows), "final_status": counts, "repair_incomplete_not_applied": repair_incomplete,
+                      "after_sweep_incomplete_not_applied": after_incomplete}, indent=1))
     return 0
 
 
