@@ -1,7 +1,11 @@
 {
- "fetch_attempts_sha256": "bc9b5b39e6dbe4fcc60b66d1358d89591f85d3e35e832534e5d98b3242b76e1d",
+ "fetch_attempts_sha256": {
+  "data/municipal_archive_acquisition/mayoral_stage3L_20261004/runs/production": "bc9b5b39e6dbe4fcc60b66d1358d89591f85d3e35e832534e5d98b3242b76e1d",
+  "data/municipal_archive_acquisition/mayoral_stage3L_20261004/runs/uncapped": "1c323874161d0f1e0e9365d878c855376ac6032a3325c449fa532ee434495ebf",
+  "data/municipal_archive_acquisition/mayoral_stage3L_20261004/runs/carymoon_extra": "021c54800d2f9a963579e25bf9a5ab74f9b95623e1cedba35bd64ad3d59d0347"
+ },
  "targets_sha256": "5d9d2b3ece50f90add4b541c7e0d11fc1335445b5aeff4e15cbde2d167ab4488",
- "output_sha256": "19cd4dbe49db4235ab8e2cb63894efc8734f9277bd5cb05318672d9be9637207",
+ "output_sha256": "6a811d978c008c5dfb7410781526bf8b864f75324de84833a68b0d207916a99b",
  "rows": 231,
  "rows_with_pages_in_window": 175,
  "all_files_verified": true

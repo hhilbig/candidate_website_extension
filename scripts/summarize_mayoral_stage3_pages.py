@@ -6,7 +6,8 @@ target: pages saved with text on the campaign domain, and how many fall within
 365 days of the election (the build's period rule). No archive requests.
 
 Run where the run directory lives (mac2), then copy the CSV and manifest into
-data/municipal_discovery/top100_coverage/inputs/.
+data/municipal_discovery/top100_coverage/inputs/. Pass --run-dir more than once to combine a batch's
+capped run with its later uncapped run (runs/uncapped) or another supplement (October 8, 2026).
 """
 from __future__ import annotations
 
@@ -52,7 +53,8 @@ def summarize(targets: list[dict], attempts: list[dict], run_dir: Path, verify=T
         fetched = [r for r in by_target.get(target["target_id"], []) if r["fetch_status"] == "fetched"]
         with_text = [r for r in fetched if int(r["text_characters"] or 0) > 0]
         window = [r for r in with_text if in_window(r["effective_timestamp"] or r["timestamp"], election)]
-        verified = all((run_dir / r[p]).exists() and (not verify or content_sha(run_dir / r[p]) == r[h])
+        verified = all((r.get("_run_dir", run_dir) / r[p]).exists()
+                       and (not verify or content_sha(r.get("_run_dir", run_dir) / r[p]) == r[h])
                        for r in window for p, h in (("raw_html_path", "raw_html_sha256"), ("text_path", "text_sha256")))
         stamps = sorted(r["effective_timestamp"] or r["timestamp"] for r in window)
         out.append({"candidate_election_id": target["candidate_contest_id"], "target_id": target["target_id"],
@@ -68,17 +70,26 @@ def summarize(targets: list[dict], attempts: list[dict], run_dir: Path, verify=T
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--targets", type=Path, required=True, help="candidate_site_targets.csv (has election_date)")
-    parser.add_argument("--run-dir", type=Path, required=True)
+    parser.add_argument("--run-dir", type=Path, required=True, action="append",
+                        help="a run folder; repeat to combine the capped run with supplements")
     parser.add_argument("--output", type=Path, required=True)
     args = parser.parse_args()
     targets = list(csv.DictReader(args.targets.open()))
-    attempts_path = args.run_dir / "fetch_attempts.csv"
-    rows = summarize(targets, list(csv.DictReader(attempts_path.open())), args.run_dir)
+    attempts, seen = [], set()
+    for run_dir in args.run_dir:
+        for row in csv.DictReader((run_dir / "fetch_attempts.csv").open()):
+            if row["capture_id"] in seen:
+                raise ValueError(f"capture {row['capture_id']} appears in more than one run folder")
+            seen.add(row["capture_id"])
+            attempts.append(dict(row, _run_dir=run_dir))
+    rows = summarize(targets, attempts, args.run_dir[0])
     with args.output.open("w", newline="") as handle:
         writer = csv.DictWriter(handle, fieldnames=FIELDS)
         writer.writeheader()
         writer.writerows(rows)
-    manifest = {"fetch_attempts_sha256": sha(attempts_path), "targets_sha256": sha(args.targets),
+    shas = {str(d): sha(d / "fetch_attempts.csv") for d in args.run_dir}
+    manifest = {"fetch_attempts_sha256": shas[str(args.run_dir[0])] if len(shas) == 1 else shas,
+                "targets_sha256": sha(args.targets),
                 "output_sha256": sha(args.output), "rows": len(rows),
                 "rows_with_pages_in_window": sum(r["pages_with_text_in_window"] > 0 for r in rows),
                 "all_files_verified": all(r["files_verified"] for r in rows)}
