@@ -121,11 +121,20 @@ The raw pages stay on mac2 in `~/candidate_website_extension_stage3/`. The repos
 4. A wider date window for the 189 finalists with no URL lead ("option 3"). **This needs Hanno's approval.**
    A wider window brings a risk of pages from the wrong election.
 
-**Release steps after collection.**
+**Release pipeline (decided by Hanno October 9, 2026).**
+- Venue: a separate Harvard Dataverse dataset with its own DOI, not a version of `doi:10.7910/DVN/BZ2JRS`.
+- Page corpus: every fetched page of a credited site, with days from the election and an in-window flag (365 days).
+- Content check: deterministic page flags plus a site-level model check on Hive (open-weight model), calibrated against the agents' earlier verdicts. Failing sites are excluded with a reason code.
+- Finalist panel text: every distinct in-window page of the site, one copy per page, in a stable order.
 
-1. Content checks on the downloaded text: the right candidate, the right election, not a parked or spam page.
-2. A frozen build with coverage tables and an explicit list of the remaining gaps.
-3. A README, codebook, coverage summary and manifest. Then Hanno's approval, then publication.
+Stages, each with its own check:
+1. Freeze inputs: coverage outputs, page manifest and page files with hashes; add Ronnie Bastin's pages from the older droplet corpus.
+2. Page corpus: re-extract text from raw HTML with the House/Senate extractor and boilerplate filter; mark duplicate texts within a site.
+3. Page flags: empty or app shell, parked or for sale, spam, redirect to another domain, timestamp substitution, other election years named. Parked, spam and off-domain pages are excluded; the rest are flags.
+4. Hive site check: root, longest and two random pages per site; own campaign site, this election, usable content.
+5. Release files: city-year universe (1,700), elections, finalists (822, with coverage status and reason code), page corpus (parquet), finalist panel.
+6. Validator and tests: unique keys, reconciled counts, hash trace for every page, no excluded or out-of-window page in the panel, consistent reason codes, drops above 20 percent reported.
+7. README, codebook, coverage summary, gap list, `manifest.json`; then Hanno's approval before publication.
 
 Release does not require a website for every finalist or a fixed coverage percentage.
 It requires the full population to be assessed, the agreed collection work to finish, and missing evidence to stay explicit.
