@@ -146,6 +146,12 @@ Stages, each with its own check:
 - Stages 5 and 6 written and tested on a dry run with all sites passing: `scripts/build_mayoral_release.py`, `scripts/validate_mayoral_release.py` (writes `manifest.json`), `tests/test_mayoral_release.py` (4 pass).
   Dry run: 822 eligible finalists = 592 text, 119 site_not_archived, 100 no_url_lead, 6 no_usable_pages, 5 check_incomplete; 25,682 of 33,237 pages usable; no drop above 20 percent.
 
+**Legacy-lead search (approved by Hanno October 9, running).** 107 finalists had only an old roster URL without an archived copy in the window, and no search had ever run for them (stage 2, the repairs and the sweeps covered only finalists without any URL lead). 92 of them are in 2014–2021, which explains the 2018–2021 dip in coverage.
+- Domain-pattern sweep before and after the election on the droplet: `scripts/run_mayoral_legacy_sweep.sh`, folder `url_discovery/legacy_search_20261009/sweep_before|sweep_after`, jobstatus `mayoral-legacy-sweep`.
+- Agent search and independent check, three cities at a time: `scripts/workflows_mayoral_legacy_search.js`, run `wf_44cc61ab-187`, outputs `url_discovery/legacy_search_20261009/<slug>_url_leads.json`.
+- Next: screen the sweep hits into the agents' results, integrate (the coverage build must let a checked new URL replace an unarchived old roster URL), scrape new sites uncapped with the junk filter, give them the site check, then build the release.
+The release build waits for this.
+
 Release does not require a website for every finalist or a fixed coverage percentage.
 It requires the full population to be assessed, the agreed collection work to finish, and missing evidence to stay explicit.
 Detailed queues and limits: [mayoral_url_discovery.md](mayoral_url_discovery.md).
