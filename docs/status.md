@@ -136,6 +136,13 @@ Stages, each with its own check:
 6. Validator and tests: unique keys, reconciled counts, hash trace for every page, no excluded or out-of-window page in the panel, consistent reason codes, drops above 20 percent reported.
 7. README, codebook, coverage summary, gap list, `manifest.json`; then Hanno's approval before publication.
 
+**Release progress, October 9.**
+- Stage 1 done: page manifest with all 598 finalists (33,237 pages), including Ronnie Bastin's two pages copied from the older droplet corpus to mac2 as `legacy_all_inventory_20260906`.
+- Stages 2 and 3 done: `scripts/build_mayoral_page_corpus.py` wrote mac2 `release_mayoral/mayoral_page_corpus.parquet`.
+  Audit `quality_reports/mayoral_release/page_corpus_audit_2026-10-09.json`: 800 pages excluded by rule (449 empty, 331 parked or placeholder, of which 271 are directory listings, 21 spam), 4,093 duplicate texts; 592 of 598 finalists keep usable pages in the window.
+  Two rule revisions after inspecting samples: parked phrases count only on pages under 1,200 characters (real campaign pages mention road construction or events "coming soon"), and spam terms count only on pages that do not name the candidate (campaigns discuss casinos; Chinese-language campaign pages are a flag, not spam).
+- Next: stage 4, the Hive site check.
+
 Release does not require a website for every finalist or a fixed coverage percentage.
 It requires the full population to be assessed, the agreed collection work to finish, and missing evidence to stay explicit.
 Detailed queues and limits: [mayoral_url_discovery.md](mayoral_url_discovery.md).

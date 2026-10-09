@@ -25,8 +25,8 @@ csv.field_size_limit(sys.maxsize)
 ACQ = Path("data/municipal_archive_acquisition")
 RUNS = ("production", "uncapped", "carymoon_extra")
 FETCHED = {"fetched"}
-FIELDS = ["candidate_election_id", "target_id", "batch", "run", "registrable_domain", "original_url", "timestamp",
-          "effective_timestamp", "days_from_election", "in_text_window", "text_path", "text_sha256", "text_characters",
+FIELDS = ["candidate_election_id", "target_id", "capture_id", "batch", "run", "registrable_domain", "original_url",
+          "timestamp", "effective_replay_url", "effective_timestamp", "days_from_election", "in_text_window", "text_path", "text_sha256", "text_characters",
           "raw_html_path", "raw_html_sha256"]
 
 
@@ -72,9 +72,11 @@ def main() -> None:
                     stamp = row["effective_timestamp"] or row["timestamp"]
                     days = (datetime.strptime(stamp[:8], "%Y%m%d").date() - date.fromisoformat(dates[row["target_id"]])).days
                     window = abs(days) <= 365
-                    writer.writerow({"candidate_election_id": finalist, "target_id": row["target_id"], "batch": batch.name,
+                    writer.writerow({"candidate_election_id": finalist, "target_id": row["target_id"],
+                                     "capture_id": row["capture_id"], "batch": batch.name,
                                      "run": run, "registrable_domain": row.get("registrable_domain", ""),
                                      "original_url": row["original_url"], "timestamp": row["timestamp"],
+                                     "effective_replay_url": row["effective_replay_url"],
                                      "effective_timestamp": row["effective_timestamp"], "days_from_election": days,
                                      "in_text_window": window, "text_path": f"{batch}/runs/{run}/{row['text_path']}",
                                      "text_sha256": row["text_sha256"], "text_characters": row["text_characters"],
