@@ -11,13 +11,13 @@ slack_status FYI "Candidate websites, mayoral extension" "Wayback page download,
   "Started. 7 batches with about 9,300 pages for 44 campaign sites." "About 4 to 6 hours, rough until the first batch ends." "log uncapped_fetch.log"
 for b in $BATCHES; do
   B=$A/$b
-  echo "$(date -Is) start $b"
+  echo "$(date +%Y-%m-%dT%H:%M:%S%z) start $b"
   BATCH=$B BATCH_LABEL="uncapped pages, $b" RUN_NAME=uncapped LOG_NAME=uncapped.log QUIET_START=1 \
     nohup python3 scripts/watch_mayoral_stage3_scrape.py > $B/uncapped_watch.log 2>&1 < /dev/null &
   PYTHONPATH=. .venv/bin/python scripts/scrape_mayoral_wayback_batch.py fetch --targets $B/frozen/targets.csv \
     --manifest $B/frozen/manifest.json --run-dir $B/runs/uncapped --workers 2 --rate-limit-seconds 1.0 \
     --max-raw-bytes 20000000000 --log-level INFO > $B/uncapped.log 2>&1
   rc=$?
-  echo "$(date -Is) end $b rc=$rc"
+  echo "$(date +%Y-%m-%dT%H:%M:%S%z) end $b rc=$rc"
 done
-echo "$(date -Is) all batches done"
+echo "$(date +%Y-%m-%dT%H:%M:%S%z) all batches done"

@@ -56,14 +56,13 @@ Workflow `wf_fe9a8fc0-38f` (`scripts/workflows_mayoral_sweep_after_check.js`, th
 Basis `domain_sweep_after_election_capture_checked`, applied last. Batch `mayoral_stage3a_20261008` (13 targets, 268 pages, all 13 with pages in the window).
 An outside_window site contributes text only through pages within 365 days of the election, here the first 120 days after it.
 
-**H. Every archived page, not only 150 (decided by Hanno October 8, running).** All 598 finalists with text came from capped site scrapes:
+**H. Every archived page, not only 150 (decided by Hanno October 8, done October 8).** All 598 finalists with text came from capped site scrapes:
 467 from the mac2 stage 3 batches and 131 from the August 26 droplet batches (`covered_151_20260826`, `full_discovery_740_20260826`, `openai_residual_expansion_357_20260826`), all with at most 150 pages per site.
-`scripts/build_mayoral_uncapped_queue.py` builds, from each batch's existing capture inventory (no new CDX query), a queue of the pages the cap left out: one capture per distinct page, nearest the election.
+`scripts/build_mayoral_uncapped_queue.py` built, from each batch's existing capture inventory (no new CDX query), a queue of the pages the cap left out: one capture per distinct page, nearest the election.
 It fetches only campaign sites the coverage build credits (allowed target lists on mac2 in `uncap_allowed/`; the August batches also hold news sites, google.com and non-finalists, which are excluded), and it drops non-content URLs (assets, platform paths, tokens, crawler loops, calendar and tracking query variants). The drop share is above 20 percent in every batch; the audit in each `runs/uncapped/uncapped_queue_audit.json` gives exact counts, and the inventories stay on disk.
-Result: about 9,300 new pages for 44 sites. `scripts/run_mayoral_uncapped_fetch.sh` fetches them on mac2, one batch at a time, log `uncapped_fetch.log`, with a Slack watcher per batch.
-Known limit: in stage 3L, all four URL variants of two sites reached the CDX limit of 50,000 rows, so their page lists are truncated. Andrew Janz is not credited (not fetched). Cary Moon (Seattle 2017, `carymoonformayor.com`) is credited; her list is dominated by event-calendar variants. **To do after the run:** one extra CDX query for her site that excludes `/events/`, then fetch any new content pages.
-The runner's `date -Is` is not valid on macOS (log lines lack time stamps); fix after the run ends, not while it runs.
-**Next:** after the run, fold the `uncapped` run folders into the page summaries and the corpus; the coverage counts do not change, the pages per site do.
+Result: `scripts/run_mayoral_uncapped_fetch.sh` fetched 9,269 of 9,292 queued pages for 44 sites on mac2 (0 retryable; the rest no content or not available), in `runs/uncapped/` of each batch. The August batch folders are now also on mac2 (inventories copied from the droplet; the droplet root disk has under 2 GB free).
+Cary Moon (Seattle 2017): all four URL variants had reached the CDX limit of 50,000 rows, mostly event-calendar links. A CDX query without `/events/` gave 117 pages, 27 of them new; fetched in `runs/carymoon_extra/` of stage 3L. Andrew Janz also hit the limit but is not credited.
+**Next:** fold the `uncapped` and `carymoon_extra` run folders into the page summaries and the release corpus. Coverage counts do not change; pages per site do.
 
 **Collection status.** All approved collection levers are done. Unresolved and documented: 5 repair entries and 1 sweep entry still incomplete; 239 failed Common Crawl queries (not retried, low expected yield).
 **Next authorized steps:** the release steps in the mayoral section (content checks, frozen build with gap list, README, codebook, manifest).
