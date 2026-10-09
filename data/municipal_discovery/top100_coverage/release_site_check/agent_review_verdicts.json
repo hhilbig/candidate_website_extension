@@ -1,0 +1,434 @@
+[
+ {
+  "item_id": "release|0455000__2024-11-05__regular__f2a875c73fa80119|stage3_a94369b83eaa9517f80587e5",
+  "status": "pass",
+  "reason": "campaign_site_this_election",
+  "checked_capture_url": "https://web.archive.org/web/20241202132710/https://www.kategallego.com/more-about-me",
+  "evidence": "\"Kate Gallego for Phoenix Mayor ... Get involved with the campaign. Paid for by Kate Gallego for Phoenix Mayor. Authorized by Kate Gallego.\" Navigation also has a \"Contribute\" button and \"Stay Updated\".",
+  "note": "The local model called this an official page because it describes the incumbent's record. The site is the candidate's own campaign site: campaign committee footer, donate button, and a privacy policy for the \"Kate Gallego for Phoenix Mayor\" campaign (capture 20241106, one day after the 2024-11-05 election). Small doubt: sample captures are on or after election day, and the policy text is dated 2022. The site is visibly in use for the 2024 campaign (\"ready to continue the job\"). I did not fetch more pages."
+ },
+ {
+  "item_id": "release|0412000__2022-08-02__regular__6856ce9ce26b0b06|stage3_cb9ef209dc9841b8633420a9",
+  "status": "pass",
+  "reason": "campaign_site_this_election",
+  "checked_capture_url": "https://web.archive.org/web/20220930214738/http://kevinhartke.com/endorsements/",
+  "evidence": "Footer: \"Paid for by Kevin Hartke for Chandler\"; endorsements page lists current officials; homepage (2021-09-17 capture): \"what the latest update on the campaign is\", \"I will make sure that our police and fire departments have the staff...\"",
+  "note": "The site is the incumbent mayor's own campaign site (kevinhartke.com, committee footer, Donate, Endorsements), still live and in use in 2021-2022. Some news content is left over from 2018, but the endorsements page was captured Sept 2022 and bio text says \"Mayor for 3 years\", so the site was used for 2022. The model's rule that 2018 content makes it 2018-only is wrong. Some doubt: no 2022-specific slogan was seen, and the only endorsement capture is dated after the Aug 2 2022 primary."
+ },
+ {
+  "item_id": "release|0627000__2024-03-05__regular__07506401be83e755|stage3_bc4a07788ec01e99018f7e08",
+  "status": "pass",
+  "reason": "campaign_site_this_election",
+  "checked_capture_url": "https://web.archive.org/web/20240418012134/https://dyerformayor.com/",
+  "evidence": "\"I would appreciate your vote to serve another four years.\" and \"DONATE TO JERRY DYER FOR MAYOR\", footer \"\u00a9 2024 Dyer For Mayor\"",
+  "note": "The model doubt is wrong. This is the incumbent's own re-election site with donate, volunteer and endorsement calls. The contact page (20240527) says updates from dyerformayor2024. The captures are after the 2024-03-05 election, but the site is clearly the 2024 mayoral campaign. I did not read extra archive pages."
+ },
+ {
+  "item_id": "release|0613392__2014-11-04__regular__eb297b46f93f6ca6|stage3_ba22da2cde8509f0977f8b0d",
+  "status": "pass",
+  "reason": "campaign_site_this_election",
+  "checked_capture_url": "https://web.archive.org/web/20131018105323/http://marysalas.org/chulavista.html",
+  "evidence": "Paid for by Mary Salas for Chula Vista Mayor 2014, ID# 1358847 ... Donate to Mary Salas ... Campaign",
+  "note": "The sampled May 2014 capture was a Bluehost parking page, but Oct 2013 captures of the same domain (home, donate, endorsements, get involved) show her mayoral campaign committee site. Some pages say City Council in the title, but the footer names the Chula Vista Mayor 2014 committee. The site may have been parked for part of 2014; a pass rests on the Oct 2013 captures, which fall within 365 days of the election."
+ },
+ {
+  "item_id": "release|0636770__2018-11-06__regular__b3abb044aaf7af5e|stage3_290091f00af5b233caa112d4",
+  "status": "exclude",
+  "reason": "different_person",
+  "checked_capture_url": "https://web.archive.org/web/20181127204907/https://wagnerformayor.com/",
+  "evidence": "Tim's Platform as mayor of west milford ... Wagner For Mayor, 835 West Brook Road, West Milford, New Jersey",
+  "note": "The site is Tim Wagner's campaign for mayor of West Milford, NJ. It has no link to Donald P. Wagner or Irvine, CA. The sample has one page, and it is clear enough to decide."
+ },
+ {
+  "item_id": "release|0643000__2026-06-02__regular__1e3759202c358045|stage3_9879a79a24a325d463bf3836",
+  "status": "pass",
+  "reason": "campaign_site_this_election",
+  "checked_capture_url": "https://web.archive.org/web/20260122095324/https://www.joinrexrichardson.com/?fbclid=IwAR0XC1lT_yIBhJBGUNcq1umc4FhCDNNOhux0yotDovhD0qajkKhBqGZmLsk",
+  "evidence": "Page title in Jan 2026 capture: \"Re-Election Mayor Rex Richardson\"; sample pages (Aug 2025) carry the nav \"Get Involved / Endorsements\" and the footer \"Paid for by Rex Richardson for Mayor 2026 #1478758\".",
+  "note": "Incumbent mayor's own re-election site for the 2026-06-02 Long Beach election. The model doubted it because the issue pages still contain 2021-era COVID text carried over from the 2022 campaign. The site is visibly in use for 2026 (2026 committee footer, re-election title, captures through May 2026), so carried-over content does not matter. The Jan 2026 homepage was JavaScript-rendered, so only the title was readable. Doubt is small."
+ },
+ {
+  "item_id": "release|0667000__2024-11-05__regular__22dc43ed04defc67|stage3_ebe70592510827e0621f8e8b",
+  "status": "pass",
+  "reason": "campaign_site_this_election",
+  "checked_capture_url": "https://web.archive.org/web/20241007015025/https://daniellurie.com/privacy/",
+  "evidence": "\"This Privacy Policy explains how information about you is collected, used and disclosed by Daniel Lurie for Mayor 2024.\" Site menu also has Volunteer, Daniel's Values, and policy pages (Public Safety, Housing).",
+  "note": "The model doubt came from the first sample page, a wp-json endpoint dump with no readable text. The other two pages (May 2024 Spanish privacy page, Oct 2024 English privacy page) clearly show the site of the Lurie for Mayor 2024 campaign, captured within 365 days before the 2024-11-05 election. Little doubt."
+ },
+ {
+  "item_id": "release|0662000__2024-03-05__regular__ca6edc296235cbd6|stage3_ee03a1dd8e512a54a179aedd",
+  "status": "exclude",
+  "reason": "not_campaign_site",
+  "checked_capture_url": "https://web.archive.org/web/20240326223512/https://jessicaqattawi.com/",
+  "evidence": "Marketing & Advertising Expert ... established NV Media, LLC, situated in downtown Riverside",
+  "note": "Only one usable capture exists in the 365-day window (2024-03-26, after the 2024-03-05 election). It is a personal/business portfolio with no mayor, vote, donate or committee content. Wayback CDX lists no other 200 captures between 2022-02 and 2025-03. A later post on the site announces a city council campaign, which is outside this election. Some doubt remains because no pre-election capture exists."
+ },
+ {
+  "item_id": "release|0668000__2024-03-05__regular__ecceb9dda0076bda|stage3_26616091193fb414720a1d6c",
+  "status": "pass",
+  "reason": "campaign_site_this_election",
+  "checked_capture_url": "https://web.archive.org/web/20240221090057/https://mahanforsanjose.com/askmatt/",
+  "evidence": "\"Why is Matt Mahan running for Mayor of San Jose?\" and, in the May 2024 privacy page, \"Matt Mahan for San Jose Mayor operates the https://www.mahanforsanjose.com\"",
+  "note": "The site is the incumbent's own campaign-committee site, live 2 weeks before the 2024-03-05 election. Much text is carried over from the 2022 race (Cindy Chavez Q&A), but the site is visibly in use as the mayoral campaign site in the period. The model's doubt rests on the incumbent description. One CDX check on mac2 timed out; the verdict does not depend on it."
+ },
+ {
+  "item_id": "release|0669000__2012-11-06__regular__c2cefd64eab3e3cf|stage3_4d5a145ffb9b9bcdf5342e2e",
+  "status": "exclude",
+  "reason": "not_campaign_site",
+  "checked_capture_url": "https://web.archive.org/web/20121103021655/http://miguelpulido.com:80/Miguel_Pulido/Welcome.html",
+  "evidence": "\"Mickadeit: The city races with big impact ... the Pulido Era is over.\" Page lists only critical press (Voice of OC, OC Register) and \"Read more news about Santa Ana Mayor Miguel Pulido here!\"",
+  "note": "Pulido was the incumbent mayor in 2012. The site holds only critical news clippings about him. It has no re-elect, donate, volunteer or committee text. It looks like a critic's site on his name, not his campaign. The full CDX listing on mac2 timed out twice, so I checked only the two sample pages and the raw HTML of the Nov 3 2012 capture. Some doubt remains."
+ },
+ {
+  "item_id": "release|0816000__2023-05-16__regular__2f5f29d739f6b64a|stage3_327e1f718613f20adc403b19",
+  "status": "pass",
+  "reason": "campaign_site_this_election",
+  "checked_capture_url": "https://web.archive.org/web/20230521003144/https://winwithwayne.org/issues",
+  "evidence": "\"As mayor, I will ensure our public safety needs are prioritized.\" Site menu: Endorsements, About Wayne, Voter Info, Donate, Volunteer.",
+  "note": "winwithwayne.org is Wayne Williams' own campaign site for the 2023 Colorado Springs mayoral election. The model saw only the Gazette endorsement reprinted on the home page. The site also has an issues page in his first-person voice, donate and volunteer links, and a voter information page. Captures are dated 5 to 8 days after the 16 May 2023 election. No real doubt."
+ },
+ {
+  "item_id": "release|0675000__2020-11-03__regular__4963c7365d7dcb38|stage3L_fdbc8de3034d5936e6a7a076",
+  "status": "pass",
+  "reason": "campaign_site_this_election",
+  "checked_capture_url": "https://web.archive.org/web/20201105174141/http://lincolnforstockton.com/vision/",
+  "evidence": "Footer: \"Paid for by Kevin Lincoln for Mayor 2020\"; menu has Endorsements, Take Action, Donate.",
+  "note": "Model doubt was wrong. The capture is two days after the 3 Nov 2020 election, and a 1 Nov 2020 capture shows the same bio and platform. The committee footer and Donate link confirm the site was in use for the mayoral campaign."
+ },
+ {
+  "item_id": "release|0675000__2024-11-05__regular__cbfda081589398fe|stage3_0f4c49c8799d7d796e09dbb2",
+  "status": "pass",
+  "reason": "campaign_site_this_election",
+  "checked_capture_url": "https://web.archive.org/web/20241112185601/https://www.patti4mayor.com/home",
+  "evidence": "Menu: Contribute, Make Endorsement, Volunteer; \"Latest updates from the campaign\"; \"candidacy for Mayor of Stockton\".",
+  "note": "Model doubt was wrong. The news items are campaign-posted reprints on the candidate's own site (patti4mayor.com), which has donate, volunteer and endorsement calls. The 24 Oct 2024 and 12 Nov 2024 captures fall within the 2024 general election period."
+ },
+ {
+  "item_id": "release|1150000__2014-11-04__regular__6855e89761d02ee1|full_discovery_target_87e2066c2a18ffb72d2d93d8",
+  "status": "pass",
+  "reason": "campaign_site_this_election",
+  "checked_capture_url": "https://web.archive.org/web/20141125025743/http://www.davidcatania.com:80/10_2_14_metro_weekly",
+  "evidence": "Menu: \"Get Involved / Volunteer / Attend an Event / Get a Yard Sign / Donate\"; press item \"David Catania's campaign for mayor is historic\"; second page: \"Democrats for David!\" yard sign",
+  "note": "The model doubted the site because the sampled page is a reprinted news article. The page sits on David Catania's own site with campaign navigation (volunteer, yard sign, donate, platform) and mayoral-race content. The Feb 2014 capture is his council-era site, but the Oct to Dec 2014 captures are clearly the mayoral campaign. Low doubt."
+ },
+ {
+  "item_id": "release|1271000__2011-03-22__regular__34a66c0de0265735|stage3L_575af0299e6917387469d019",
+  "status": "pass",
+  "reason": "campaign_site_this_election",
+  "checked_capture_url": "https://web.archive.org/web/20110306012155/http://www.bobbuckhorn.com:80/economic.html",
+  "evidence": "\"Now more than ever we need a Mayor that is focused on the future... As Mayor, I will continue to fight against anti-competitive taxes\" (site nav: spread the word, News, Endorsements)",
+  "note": "The model mistook the endorsement reprint for the whole site. bobbuckhorn.com is Buckhorn's own campaign site, with first-person mayoral plans and radio interviews (\"we're all in and we expect to win\"). The captures are from Jan to Apr 2011, before the 2011-03-22 election. Little doubt."
+ },
+ {
+  "item_id": "release|1271000__2011-03-22__regular__a487aeb2462ce736|stage3_cd3cf3128410f5a5c6ba21c3",
+  "status": "pass",
+  "reason": "campaign_site_this_election",
+  "checked_capture_url": "https://web.archive.org/web/20110108203324/http://dev.roseformayor.com:80/",
+  "evidence": "\"Vote Rose Ferlita for Mayor on March 1, 2011!\" ... \"Political Advertisement Paid for and Approved by Rose Ferlita, Nonpartisan, for Mayor.\" with a CONTRIBUTE link and a yard sign request",
+  "note": "The sample page was a post-election GoDaddy parking page, which is why the model said no. Earlier captures from Jan 2011 on the dev.roseformayor.com subdomain show a full campaign site. The page text says March 1 (the first-round date), while the listed election date is 2011-03-22 (the runoff). Both are the same 2011 Tampa mayoral race. The 2011-02-02 www capture came back empty, so the decision rests on the dev subdomain capture."
+ },
+ {
+  "item_id": "release|1608830__2023-11-07__regular__17b8dc507dc4fd97|stage3_e7c74f8b22607b7d6e393469",
+  "status": "pass",
+  "reason": "campaign_site_this_election",
+  "checked_capture_url": "https://web.archive.org/web/20231026002725/https://mcleanforboise.com/vote",
+  "evidence": "\"Stay in the loop about the nov 7 election. Make your vote count.\" Also, on the 2022 platform page: \"Hello, Boise! I'm running for Mayor\" and \"I'm running to be your next Mayor\".",
+  "note": "Domain mcleanforboise.com is Lauren McLean's own site. It is the incumbent mayor of Boise, Idaho. The model confused her with a person in Oklahoma, but the content refers to Boise and Ada County. The Oct 2023 capture is two weeks before the 2023-11-07 election. The 'work' page lists her record as mayor, which is re-election content. No real doubt."
+ },
+ {
+  "item_id": "release|1304000__2025-11-04__regular__99abb2bd2ed115ad|stage3_c1c1e27e026ebd4099d4fbf3",
+  "status": "pass",
+  "reason": "campaign_site_this_election",
+  "checked_capture_url": "https://web.archive.org/web/20251006230936/https://andreforatlanta.com/contribute/",
+  "evidence": "\"Help Us Reach Our Goals ... JOIN OUR TEAM AND CONTRIBUTE NOW DONATE NOW! ... PAID FOR BY ANDRE FOR ATLANTA\"",
+  "note": "Andre Dickens's own campaign domain (andreforatlanta.com). The model's 'official page' doubt is wrong: the site header says Atlanta Mayor but carries a donate page, a Get Involved page, and a campaign committee footer. The capture is 4 weeks before the 2025-11-04 election. Sample pages are mostly carried-over 2021 campaign articles and a wp-json dump, so the main content is old, but the site was visibly in active campaign use in Oct 2025."
+ },
+ {
+  "item_id": "release|2205000__2012-11-06__regular__c9a1abc8055fbd5b|stage3_a39ec0dea2aa9af39c595076",
+  "status": "pass",
+  "reason": "campaign_site_this_election",
+  "checked_capture_url": "https://web.archive.org/web/20121105213617/http://www.kipholden.com:80/events.aspx",
+  "evidence": "\"On Tuesday, Mayor Kip Holden will officially kick off his re-election campaign. and everyone is invited to attend\" (June 12th, 2012). Nav includes VOTING and DONATE.",
+  "note": "The incumbent's own kipholden.com site, captured one day before the 2012-11-06 election. It has donate and voting pages and re-election events. The model called it an official page only because it describes his record. Little doubt remains."
+ },
+ {
+  "item_id": "release|1836003__2019-11-05__regular__5d0053483a9fff09|stage3_a167306c0996b3cf2095cd62",
+  "status": "pass",
+  "reason": "campaign_site_this_election",
+  "checked_capture_url": "https://web.archive.org/web/20191221212304/https://joehogsett.com/",
+  "evidence": "\"Vote November 5th ... Mayor Joe is moving Indianapolis forward ... Join the Campaign. Stay up-to-date on Mayor Joe's campaign\"",
+  "note": "The model doubted the site because two sample pages are 2015 content. The home page, captured 2019-12-21, is a 2019 re-election page: it says Vote November 5th, has a Join the Campaign sign-up, and covers the incumbent's four-year record. This matches the 2019-11-05 election date. No extra pages were fetched."
+ },
+ {
+  "item_id": "release|2758000__2021-11-02__regular__8a97bacd462a8d40|stage3L_8c661d56e8eb3eb3c9ed6bb7",
+  "status": "pass",
+  "reason": "campaign_site_this_election",
+  "checked_capture_url": "https://web.archive.org/web/20210928013351/https://www.melvincarter.org/vision/",
+  "evidence": "Menu: \"Contribute / Make a Donation / Merch Store / Lawn Sign Request / Get Involved\"; \"Carter's 'Community-First Police Reform' initiative\"; \"Please retweet & be sure to vote Nov 2!\"",
+  "note": "Melvin Carter is the incumbent St. Paul mayor. The site melvincarter.org is his own campaign site: it has donation, lawn sign and volunteer links, a policy platform and a vote reminder for 2 Nov 2021. The model doubt (no explicit 'Vote for' line) is wrong because the donate, lawn-sign and #RunThru pages show active re-election use. No real doubt."
+ },
+ {
+  "item_id": "release|3128000__2011-05-03__regular__eea76e01d9806765|stage3_c87e0c6220fd45a752047592",
+  "status": "exclude",
+  "reason": "other_election_only",
+  "checked_capture_url": "https://web.archive.org/web/20110203004050/http://chrisbeutler.com/",
+  "evidence": "Homepage Feb 2011 still shows \"Beutler Wins! ... May 8, 2007\" and \"Paid for by Citizens for Beutler ... \u00a9 2006-2007\"",
+  "note": "chrisbeutler.com is the 2007 mayoral campaign site, frozen. All 2011 captures (Feb to Sep 2011, plus Feb 2012) carry only 2007 content, with no 2011 re-election, donate or vote call. The CDX shows no 2011-specific pages. Small doubt: the site stayed online and a re-election use cannot be fully ruled out, but nothing in the archive shows it."
+ },
+ {
+  "item_id": "release|3128000__2015-05-05__regular__9e191f7f4746e391|full_discovery_target_00891ab140cf0c4463e1c80d",
+  "status": "exclude",
+  "reason": "other_office",
+  "checked_capture_url": "https://web.archive.org/web/20141216194139/http://andystebbing.com/",
+  "evidence": "\"Paid for by Andy Stebbing for County Treasurer Committee\"; \"Recently I announced that I will be seeking a second term\" as County Treasurer",
+  "note": "The site is Stebbing's county treasurer re-election site. The CDX has captures only up to Dec 2014 (none in 2015), and none mention a mayoral run. Small doubt: later 2015 content, if any, is not archived."
+ },
+ {
+  "item_id": "release|3240000__2019-04-02__regular__5fd36b47cbf55509|stage3_a889fcac5d60cbe7ec48b8a3",
+  "status": "pass",
+  "reason": "campaign_site_this_election",
+  "checked_capture_url": "https://web.archive.org/web/20190418202613/https://philcollinsforclarkcounty.weebly.com/",
+  "evidence": "Phil decided to run for mayor of Las Vegas. On January 31, he filed for that race. ... He will be counting on your support for the Mayoral Election. Election day is April 2. Early voting is March 16-29.",
+  "note": "The site is Phil Collins' own site. It began as his 2018 Clark County Treasurer campaign, which is what the model saw. The April 2019 capture, 16 days after the 2 April 2019 election, shows it in use for the Las Vegas mayoral race, with a Contact/Donate tab and early-voting dates. The model's doubt is wrong. The only doubt is that the mayoral capture falls after election day, but it is within the 365-day window and the content is clearly for this election."
+ },
+ {
+  "item_id": "release|3137000__2025-05-13__regular__8088567775aef50b|stage3_9691a33f19edcbba59e8294d",
+  "status": "pass",
+  "reason": "campaign_site_this_election",
+  "checked_capture_url": "https://web.archive.org/web/20250330151813/https://jeanstothert.com/priorities",
+  "evidence": "\"A Record of Progress. Momentum for Our Future.\" ... \"Omaha saw a remarkable 17% reduction in crime rates in 2024 ... I pledge to maintain leadership\"",
+  "note": "Captures from 30-31 March 2025, about six weeks before the 13 May 2025 election. The page cites 2024 results and gives forward-looking pledges, so it was in use for the 2025 race. The model's pandemic quote is carried-over text from the earlier campaign. The site is her own personal domain and uses campaign-style priorities pages. I did not see an explicit donate or committee footer in the sample. My extra archive requests on mac2 failed (timeout, then empty), so I decided from the sample. Moderate-high confidence."
+ },
+ {
+  "item_id": "release|3251800__2022-11-08__regular__b6de7bee9451b3d0|stage3_b2bd4676b31893343e4ee725",
+  "status": "pass",
+  "reason": "campaign_site_this_election",
+  "checked_capture_url": "https://web.archive.org/web/20221110210002/https://www.patspearman.com/new-page",
+  "evidence": "\"APPROVED & PAID FOR BY SPEARMAN FOR NORTH LAS VEGAS MAYOR\"; the /issues page says \"As Mayor I'll: ... Invest in expanding and improving our greenspaces\"",
+  "note": "The model only read the About page, which keeps the old Nevada Senator header. The issues page and the committee footer show a mayoral campaign for North Las Vegas. The capture is dated two days after the 2022-11-08 election. I did not read more pages."
+ },
+ {
+  "item_id": "release|3260600__2022-11-08__regular__6ef08439ddeb11c0|stage3_ddb0e629052bd504da987680",
+  "status": "pass",
+  "reason": "campaign_site_this_election",
+  "checked_capture_url": "https://web.archive.org/web/20221109193705/https://eddielorton.com/in-the-news/",
+  "evidence": "\"In less than 12 weeks, Reno voters will select our next mayor. The differences between myself and my opponent \u2014 termed-out mayor Hillary Schieve \u2014 could not be greater.\" (Eddie Lorton, Aug 9, 2022); site also has DONATE and JOIN ME nav.",
+  "note": "The model's doubt came from the 'Reno 2026 Plan' label. A January 2022 capture of the same page is titled 'Reno 2022 Plan', so the page was renamed for the next cycle. The 9 Nov 2022 capture still carries the 2022 mayoral campaign content, donate and join links. Low doubt."
+ },
+ {
+  "item_id": "release|3436000__2013-05-14__regular__ffe4e91b8d390902|stage3_428e736394c5328dcbc56cff",
+  "status": "exclude",
+  "reason": "different_person",
+  "checked_capture_url": "https://web.archive.org/web/20130906072355/http://electhealy.com/why.htm",
+  "evidence": "\"Why Does Jim Continue to Serve? ... This challenge is why I am running for re-election\" (DuPage County Board; other pages cover DuPage County budget and Naperville/Aurora roads)",
+  "note": "All three sample pages are from the site of Jim Healy, a DuPage County Board member in Illinois. None mention Jersey City, NJ, or a mayoral campaign. The site does not belong to Jerramiah Healy. I did not read extra archive pages because the three samples agree."
+ },
+ {
+  "item_id": "release|3451000__2026-05-12__regular__9eeb596e6a104922|stage3_3ea22f1ac959dfa4206a29e8",
+  "status": "pass",
+  "reason": "campaign_site_this_election",
+  "checked_capture_url": "https://web.archive.org/web/20260512095247/https://rasjbaraka.com/about/",
+  "evidence": "Nav: \"Mayor's Bio, Accomplishments, Donate, Events, Volunteer\"; footer: \"Re-Elect Ras J. Baraka 2022 ... The Committee To Re-Elect Ras Baraka 2022\"",
+  "note": "This is Baraka's own committee re-election site, with donate and volunteer calls, captured on election day 2026-05-12 and in Aug 2025. The footer and content date from 2022 and were not updated. The site is still live as his campaign site in the 2026 window, so I count carried-over content as in use. The model's reason (2022 footer) is a staleness doubt, not evidence of another office or person."
+ },
+ {
+  "item_id": "release|3712000__2011-11-08__regular__731e5e54c6bdd56c|full_discovery_target_ff2530710ee1b0dc705dab64",
+  "status": "pass",
+  "reason": "campaign_site_this_election",
+  "checked_capture_url": "https://web.archive.org/web/20110925052329/http://www.anthonyfoxx.com:80/article.cfm?articletype=2&articleid=32",
+  "evidence": "Sep 2011 capture of anthonyfoxx.com shows campaign calls \"CONTRIBUTE / VOLUNTEER / SPREAD THE WORD / EMAIL SIGN-UP\" and a news clip about \"Charlotte Mayor Anthony Foxx\". The Jan-Apr 2011 captures show \"Contribute\" and \"the next mayor of Charlotte must have a record of making public safety a top priority\".",
+  "note": "The model's doubt is wrong. Foxx was the sitting mayor running for re-election on 2011-11-08. The site is his own campaign site, in use with donate and volunteer calls in the 365 days before the election. The council-era issue pages and the District Map link are carried-over content. Small doubt: no capture shows the words \"re-elect\" directly, and the early 2011 issue pages use 2009 campaign wording. I did not read more archive pages."
+ },
+ {
+  "item_id": "release|3611000__2017-11-07__regular__759cccf821e4614f|stage3_4399be051ab15b3f88129734",
+  "status": "pass",
+  "reason": "campaign_site_this_election",
+  "checked_capture_url": "https://web.archive.org/web/20170629212156/http://mayorbyronbrown.com/robots.txt",
+  "evidence": "Welcome to my campaign website. ... But our work is not done, and I need your support. -Mayor Byron Brown, Endorsed Democrat",
+  "note": "Incumbent's own site, captured June 2017, with a Contribute link, a campaign welcome and current 2017 content (Webster Block under construction, $1.7 billion in development). The news page still lists 2013 re-election items, which is what the model saw. The home page shows the site in use for the 2017 campaign. Extra archive page reads on mac2 returned no text, so the decision rests on the sample pages. Moderate doubt: no explicit 2017 or re-elect wording on the home page."
+ },
+ {
+  "item_id": "release|3755000__2022-11-08__regular__78b6be8dcf58e796|stage3_0bf4b70c420cc642edd4d4fd",
+  "status": "pass",
+  "reason": "campaign_site_this_election",
+  "checked_capture_url": "https://web.archive.org/web/20221105121110/https://www.maryannforraleigh.com/authors/mary-ann-baldwin",
+  "evidence": "\"I Filed for Re-Election! July 6, 2022 ... I just officially filed for re-election!\" ... \"that's why I'm running for re-election.\" Site has Volunteer and Donate tabs and \"Sign up for updates above for the latest from the campaign trail!\"",
+  "note": "The model is wrong. Baldwin was the sitting mayor of Raleigh (elected 2019), so the re-election site is her 2022 mayoral campaign site. Capture is 3 days before the 2022-11-08 election. The site also carries older 2020 council-era news posts, but it is in active use for the 2022 campaign. Minor doubt: the captured page does not say the word \"mayor\" explicitly; I relied on the known office of the incumbent and the city-wide topics."
+ },
+ {
+  "item_id": "release|3719000__2013-11-05__regular__3a34008d37ae09f9|stage3_07a00d3fdb2afbb3c3db4ee9",
+  "status": "exclude",
+  "reason": "other_election_only",
+  "checked_capture_url": "https://web.archive.org/web/20130725232621/http://billbellformayor.com/index.html",
+  "evidence": "Home page \"Re-Elect Mayor Bill Bell ::: Building a Greater Durham Together\"; newest news clip \"Bell likely to face pastor in Durham Mayoral Race, News & Observer - 10/12/11\"; footer \"William V. Bell Campaign Committee\"",
+  "note": "Archive reads fine. Captures from May and July 2013 show the unchanged 2011 re-election site with no 2013 content. From Oct 2013 the domain carries Parajumpers spam posts (the model sample). The model was right to doubt it, but the reason is 2011-only campaign content plus later spam. Doubt: the committee footer and donate/volunteer pages stayed live in 2013, so a reader could treat this as a carried-over site in use; I found no 2013-specific sign of use."
+ },
+ {
+  "item_id": "release|3915000__2025-11-04__regular__10f74c01d5e1da1d|stage3_a67ba1ef639573d650284325",
+  "status": "pass",
+  "reason": "campaign_site_this_election",
+  "checked_capture_url": "https://web.archive.org/web/20251105153102/https://www.aftabformayor.com/economy",
+  "evidence": "Domain aftabformayor.com with a JOIN button; text: \"Under Mayor Aftab's leadership, Cincinnati is experiencing unprecedented investment and population growth\"; \"Mayor Aftab has turned Cincinnati into a national leader\"",
+  "note": "This is the incumbent's own re-election site (aftabformayor.com, JOIN call, record-based pitch). The local model's doubt rests on the incumbent-record content, which is the normal form of an incumbent campaign site. The sampled captures are one day after the 2025-11-04 election and March 2026; I could not fetch earlier captures (the CDX request to mac2 timed out once, not retried). Moderate confidence on timing, high on identity and office."
+ },
+ {
+  "item_id": "release|3916000__2025-11-04__regular__283ee4c4cd80d9b6|stage3_5247d712b1c05c5aa3c2a0e3",
+  "status": "pass",
+  "reason": "campaign_site_this_election",
+  "checked_capture_url": "https://web.archive.org/web/20250807090022/https://www.bibbforcle.com/endorsements",
+  "evidence": "Menu: \"Donate / Home / Meet Justin / Vote / Volunteer\"; \"joint endorsement for Justin Bibb for Mayor\"",
+  "note": "bibbforcle.com is Bibb's own campaign site. Captures from May to Sep 2025 show active Donate, Vote and Volunteer menus and an endorsements page, so the incumbent's site was in use in the 2025 period. The footer copyright of 2021 and some carried-over 2021 plan text do not make it an earlier-election-only site. I did not read the home page; the archive fetch returned nothing and I decided from the three samples."
+ },
+ {
+  "item_id": "release|3918000__2011-11-08__regular__8d468cbe4ec0757e|stage3_fcb984327e11ca199b615ac4",
+  "status": "pass",
+  "reason": "campaign_site_this_election",
+  "checked_capture_url": "https://web.archive.org/web/20110725021739/http://www.colemanforcolumbus.com/index.php?option=com_content&view=category&layout=blog&id=4&Itemid=2&limitstart=25",
+  "evidence": "Domain colemanforcolumbus.com; navigation 'Home / Meet the Mayor / News / Photos / Contact / Updates / Volunteer / Contribute'",
+  "note": "Incumbent re-election site (Coleman for Columbus) captured July 2011, before the Nov 2011 election. Body text is mayoral news, which the model read as an official page, but the Volunteer and Contribute navigation and the 'for Columbus' domain show a campaign site. I did not fetch more archive pages."
+ },
+ {
+  "item_id": "release|3918000__2019-11-05__regular__e690fcbf1d5ba41e|stage3_01fd72527036020df2a509cc",
+  "status": "pass",
+  "reason": "campaign_site_this_election",
+  "checked_capture_url": "https://web.archive.org/web/20191211200110/https://andrewginther.com/striking-the-root/",
+  "evidence": "Navigation 'Mayor Andrew Ginther / Meet Andy / Issues / Get Involved / News / Donate'; footer 'PAID FOR BY FRIENDS FOR GINTHER'; 'let's continue to build our great city'",
+  "note": "Personal campaign site with donate and get-involved calls and a campaign committee footer, captured Dec 2019, within a year after the Nov 2019 election. Some content is older campaign material carried over, which the rule allows. The sample captures are after the election; I did not check earlier captures."
+ },
+ {
+  "item_id": "release|3918000__2023-11-07__regular__e690fcbf1d5ba41e|stage3_75f7a1aaf2c635be25854b8e",
+  "status": "pass",
+  "reason": "campaign_site_this_election",
+  "checked_capture_url": "https://web.archive.org/web/20231106235245/https://andrewginther.com/issues/",
+  "evidence": "Capture one day before the election; 'SIGN UP / DONATE / GET INVOLVED' and 'Mayor Ginther is fighting to make Columbus work all of us.'",
+  "note": "Same campaign site as 2019, in active campaign use the day before the 7 Nov 2023 election, with sign-up and donate calls and issue pages. The model's date doubt (it says he was re-elected in 2021) is wrong: Columbus held its mayoral election in 2023."
+ },
+ {
+  "item_id": "release|3977000__2013-11-05__regular__c749276208d84681|stage3L_9aacdcb78c817b25dee91aff",
+  "status": "pass",
+  "reason": "campaign_site_this_election",
+  "checked_capture_url": "https://web.archive.org/web/20130613182939/http://mikebellfortoledo.com/",
+  "evidence": "Home page titled \"Mike Bell for Toledo\": \"Let's continue working for progress in Toledo.\" Footer of the Oct 2013 blog capture: \"Paid for by Bell for Mayor ... Norman Bell Treasurer.\"",
+  "note": "The model doubted the site because the treasurer is Norman Bell. A treasurer sharing the surname is normal for a campaign committee. The home page (June 2013) is the re-election site of incumbent Mayor Mike Bell, with testimonials about \"Mayor Bell\" and a \"Bell for Mayor\" committee footer. Only one sample page was given. I read the home capture on mac2 to confirm."
+ },
+ {
+  "item_id": "release|4752006__2018-05-24__special__108fd6080a4aaaa2|full_discovery_target_9194e5f0f996b82b453ccceb",
+  "status": "pass",
+  "reason": "campaign_site_this_election",
+  "checked_capture_url": "https://web.archive.org/web/20180424054145/http://www.davidbriley.com:80/get-involved.html",
+  "evidence": "\"Get Involved with David's Campaign. Join Team Briley today! ... Paid for by David Briley for Mayor | Hannah Paramore, Treasurer\"",
+  "note": "Capture is one month before the 2018-05-24 special mayoral election. The site has donate, volunteer and yard-sign calls and a campaign committee footer. The model's doubt rests on the sworn-in date, but the site is the incumbent's own campaign site. No real doubt."
+ },
+ {
+  "item_id": "release|4260000__2023-11-07__regular__6fb0568ec8281225|stage3_e496c734a2f24bc4574df7d2",
+  "status": "pass",
+  "reason": "campaign_site_this_election",
+  "checked_capture_url": "https://web.archive.org/web/20231108212634/https://www.cherelleparker.com/259-2/",
+  "evidence": "Parker Plan for Creating Economic Opportunity; menu: Donate, Issues, About Cherelle, Scheduling, Endorsements; footer 'Paid for by People for Parker'",
+  "note": "The model's doubt is wrong. The treasurer named in the footer is the treasurer of Parker's own committee, People for Parker. The site is cherelleparker.com, with donate, scheduling and endorsements links and issue plans. Captures are dated 8 Nov to 1 Dec 2023, right around the 7 Nov 2023 election. The site was in use for the Philadelphia mayoral campaign."
+ },
+ {
+  "item_id": "release|4817000__2020-12-15__regular__6a32a6dd3833af01|stage3_e202202b8f0ca2c14dff9b04",
+  "status": "pass",
+  "reason": "campaign_site_this_election",
+  "checked_capture_url": "https://web.archive.org/web/20201020160356/https://www.joemccomb.com/",
+  "evidence": "McCOMB for MAYOR ... Donate Now ... Joe McComb \u2013 Known, Trusted, and the Best Choice for Mayor of Corpus Christi",
+  "note": "Incumbent mayor's re-election site with donate and volunteer calls, captured 20 Oct 2020, about two months before the 15 Dec 2020 mayoral election. The model's doubt rests on a mention of the 3 Nov election, which does not show the site was for another race. The Mar 2021 capture is a hosting error page, which is after the election and does not change the verdict."
+ },
+ {
+  "item_id": "release|4804000__2026-05-02__regular__a58040f01e9104dc|stage3_009f5f58e34348bfd729bf67",
+  "status": "pass",
+  "reason": "campaign_site_this_election",
+  "checked_capture_url": "https://web.archive.org/web/20260512002935/https://reelectjimross.com/",
+  "evidence": "\"I'm announcing my candidacy for re-election as Mayor of Arlington for a third and final term this coming May.\" Nav: Donate, Get a Yard Sign, Work the Polls, Endorsements.",
+  "note": "The domain is reelectjimross.com, and the site is the incumbent mayor's own re-election site. It has yard sign, donate and volunteer calls and an endorsement list. The model quote about Jeff Williams is not on the sampled pages. Captures are dated 5 to 12 May 2026, just after the 2 May election, but the content is for this election. No real doubt."
+ },
+ {
+  "item_id": "release|4837000__2017-05-06__regular__d17c066854fa72f3|stage3_5e912917c2b15a26c6cbcd15",
+  "status": "pass",
+  "reason": "campaign_site_this_election",
+  "checked_capture_url": "https://web.archive.org/web/20170511082756/http://www.rickleads.com:80/issues.html",
+  "evidence": "\"Here are some of my priorities, should I have the honor to serve you as the next Mayor of Irving.\" Banner: \"Election Day is Saturday, May 6.\"",
+  "note": "The model quoted a City Council ad footer, likely carried over from his earlier council campaigns. The sampled captures from 26 Apr to 15 May 2017 show a Mayor campaign: about page says he is qualified to be Irving's next Mayor, and the endorse page lists former Irving mayors. The site is his own and in use for the 6 May 2017 mayoral election. I did not fetch more pages."
+ },
+ {
+  "item_id": "release|4827000__2011-06-18__regular__b81680a9d5458dd2|stage3L_b483a3353b0cb7421110b19e",
+  "status": "pass",
+  "reason": "campaign_site_this_election",
+  "checked_capture_url": "https://web.archive.org/web/20110409214433/http://jimlaneformayor.com:80/",
+  "evidence": "\"would be honored to earn your vote for Mayor of Fort Worth\"; footer \"Political Advertisement paid for by the Jim Lane Campaign\"; Contribute, Yard Sign, Join the Team",
+  "note": "The model objected that the site names the May 14 election while the listed date is June 18. June 18 is the runoff of the same 2011 mayoral race, and Lane was the runner-up. The site is his own campaign site for that race. Small doubt: the sample captures are from April 2011, before the runoff, but the site belongs to the same campaign."
+ },
+ {
+  "item_id": "release|4827000__2017-05-06__regular__aa53c9e45ddddd05|stage3L_8e7c2e6514d1ab53088269d5",
+  "status": "pass",
+  "reason": "campaign_site_this_election",
+  "checked_capture_url": "https://web.archive.org/web/20170513113731/http://www.betsypriceformayor.com/priorities/",
+  "evidence": "Site betsypriceformayor.com with Join and Donate menu items; \"I've outlined my priorities as leading a fiscally responsible city\"",
+  "note": "The model was wrong that she did not seek re-election in 2017. Price ran and won on 2017-05-06 as the incumbent. The site is her own re-election campaign site with Donate and Join calls, captured in March and May 2017. I did not read further pages; the sample was enough."
+ },
+ {
+  "item_id": "release|4827000__2025-05-03__regular__a3fba50e7c62a956|stage3_af5ffcde153e98781c597dee",
+  "status": "pass",
+  "reason": "campaign_site_this_election",
+  "checked_capture_url": "https://web.archive.org/web/20241214190801/https://www.mattieformayor.com/endorsements",
+  "evidence": "\"We enthusiastically endorse Mattie Parker for Fort Worth Mayor.\" Menu: Join Campaign, Donate; April 2025 pages: \"Mattie Parker for Mayor\" privacy policy and SMS terms",
+  "note": "The model's objection (re-elected in 2023) does not matter. This is her own campaign committee site with endorsements, donate and volunteer calls, captured December 2024 and April 2025, before the 2025-05-03 election. I did not check whether she faced an opponent."
+ },
+ {
+  "item_id": "release|4865000__2015-06-13__regular__cbd73abebfc92d69|stage3_4d6399280f2b30eaa3942093",
+  "status": "pass",
+  "reason": "campaign_site_this_election",
+  "checked_capture_url": "https://web.archive.org/web/20150624102432/http://www.ivytaylor.com/meet-ivy/",
+  "evidence": "Footer on every sampled page: \"Copyright \u00a9 2015 Ivy Taylor for Mayor\"; menu has \"Volunteer\" and \"Donate\".",
+  "note": "The model's doubt came from her saying \"now as Mayor\". She was the incumbent, and the site is her own re-election site with donate and volunteer calls and a campaign footer. The sampled captures are dated 24 June 2015, 11 days after the 13 June 2015 runoff, but the site content and footer are the 2015 campaign. Low doubt."
+ },
+ {
+  "item_id": "release|4845000__2020-11-03__regular__6e08870ec6364b35|full_discovery_target_93df8cbc9dcccf8abe7239a8",
+  "status": "pass",
+  "reason": "campaign_site_this_election",
+  "checked_capture_url": "https://web.archive.org/web/20201124195934/https://mayordanpope.com/issues/",
+  "evidence": "Nav: HOME / ABOUT / ISSUES / VIDEOS / DONATE; \"LEADERSHIP EXPERIENCE THAT'S MOVING LUBBOCK FORWARD. ... I promise to be accessible and accountable to citizens.\"",
+  "note": "mayordanpope.com is the incumbent's own domain, not a government site. It has a donate button and first-person platform pages, so it works as a re-election site. The model's \"official page\" call is the known incumbent error. Doubt: the sample captures are all from 2020-11-24, three weeks after the election. They show no explicit vote-for text. The archive was offline (\"Temporarily Offline\"), so I could not read earlier captures."
+ },
+ {
+  "item_id": "release|4845000__2026-05-02__regular__6b6dc9345312598b|stage3_5674e6551a5369c8eb8aee83",
+  "status": "pass",
+  "reason": "campaign_site_this_election",
+  "checked_capture_url": "https://web.archive.org/web/20250825024200/https://www.stephensandersformayor.com/news",
+  "evidence": "\"Stephen Sanders FOR MAYOR ... CAMPAIGN NEWS ... Support Our Cause DONATE VOLUNTEER ... SUBSCRIBE TO OUR NEWSLETTER Get the latest updates from the campaign trail\"",
+  "note": "Domain and branding are a Lubbock mayoral campaign (Lubbock TX address). The capture is from Aug 2025, inside the 365 days before the 2026-05-02 election. The \"2023\" Wix footer credits the site builder and does not date the campaign. Doubt: only one usable page, with no election date stated. The archive was offline, so I could not read more pages."
+ },
+ {
+  "item_id": "release|4845000__2026-05-02__regular__9e90a28d5bb2f0ed|stage3_5d9cfe68ff712f118a538086",
+  "status": "pass",
+  "reason": "campaign_site_this_election",
+  "checked_capture_url": "https://web.archive.org/web/20260505025353/https://www.mcbrayerforlubbock.com/",
+  "evidence": "\"WHY I AM RUNNING FOR RE-ELECTION AS YOUR MAYOR ... I am asking for your vote for another term as Mayor ... Election Day: Saturday, May 2\"; footer \"Pol. adv. paid for by McBrayer for Mayor Campaign\"",
+  "note": "The model is wrong. The same Mark McBrayer (the mayor) ran for council District 3 and then district judge earlier, and the site carries that older content. The 2026 captures show a mayoral re-election campaign with early voting dates, a donate link, and a campaign committee footer. The 20260315 capture still shows the older District 3 text, but the later captures are for this election."
+ },
+ {
+  "item_id": "release|5116000__2020-05-19__regular__9f146c3a09c7d68a|stage3_897f2698e362ce8efa257f43",
+  "status": "pass",
+  "reason": "campaign_site_this_election",
+  "checked_capture_url": "https://web.archive.org/web/20200811151354/http://rickwestformayor.com/",
+  "evidence": "\"VOTE THIS TUESDAY MAY 19TH. VOTING INFORMATION\" ... \"I ask for your support so I may continue to represent you as your Mayor\" ... \"Paid for and Authorized by Friends of Mayor Rick West\"",
+  "note": "Rick West is the incumbent mayor Richard Wayne West. The model's name doubt is wrong, since Rick is the short form of Richard. The captures are dated August 2020, after the May 19, 2020 election, but the saved page still shows the May 19 vote banner, a volunteer and donate call, and a campaign committee footer. This is the candidate's own re-election site for this election. Little doubt remains."
+ },
+ {
+  "item_id": "release|5157000__2010-05-04__regular__f7e6c5b075a4e257|stage3_040052a2398c239679c5cb7e",
+  "status": "pass",
+  "reason": "campaign_site_this_election",
+  "checked_capture_url": "https://web.archive.org/web/20100123011320/http://www.daunhester.com:80/volunteer.php",
+  "evidence": "Volunteer: \"Make Telephone Calls to Voters ... 1761 Church Street Norfolk, VA 23504 ... Work Election Day. The polls open at 6:00am and close at 7:00pm.\" Footer: \"Copyright 2010 Daun Sessoms Hester\"; also a Voting Locations page listing the Norfolk precincts.",
+  "note": "Captured Jan 2010, about 3.5 months before the 2010-05-04 election. Site is a clear candidate campaign site (donate, volunteer, supporter signup, election-day work, Norfolk polling places). No sampled page or fetched page uses the word Mayor, so the office is inferred from the citywide precinct list and the Norfolk election date. This is a moderate doubt. Other pages I tried (meet, issues, media) returned empty or not archived."
+ },
+ {
+  "item_id": "release|5157000__2024-11-05__regular__e0c4e1befd246fd3|stage3_86ff19562f1febf8d99d1298",
+  "status": "pass",
+  "reason": "campaign_site_this_election",
+  "checked_capture_url": "https://web.archive.org/web/20240612215110/https://alexanderformayor.com/issues/",
+  "evidence": "Site domain alexanderformayor.com, page title \"Alexander for Mayor\", footer \"Paid for and Authorized by Alexander for Mayor Campaign Committee\"; issues page lists platform items.",
+  "note": "Incumbent mayor's re-election site. The model called it official because it describes his record, but the campaign committee footer and the for-Mayor domain show it is his own campaign site. Captures from June to November 2024 fall in the window before the 2024-11-05 election. Low doubt."
+ }
+]
