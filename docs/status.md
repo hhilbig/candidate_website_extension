@@ -141,7 +141,10 @@ Stages, each with its own check:
 - Stages 2 and 3 done: `scripts/build_mayoral_page_corpus.py` wrote mac2 `release_mayoral/mayoral_page_corpus.parquet`.
   Audit `quality_reports/mayoral_release/page_corpus_audit_2026-10-09.json`: 800 pages excluded by rule (449 empty, 331 parked or placeholder, of which 271 are directory listings, 21 spam), 4,093 duplicate texts; 592 of 598 finalists keep usable pages in the window.
   Two rule revisions after inspecting samples: parked phrases count only on pages under 1,200 characters (real campaign pages mention road construction or events "coming soon"), and spam terms count only on pages that do not name the candidate (campaigns discuss casinos; Chinese-language campaign pages are a flag, not spam).
-- Next: stage 4, the Hive site check.
+- Stage 4 running: `scripts/build_mayoral_release_site_items.py` made 596 site items for 592 finalists (root page and longest page in the window) plus the 46 known negatives from the October 4 calibration; same classifier `mayoral-site-attribution-v1` as before. Hive jobs 24714339 (high) and 24714340 (low), work dir `/nfs/hive/scratch/hhilbig/mayoral_site_attribution`, output `decisions_release_<partition>.jsonl`.
+  Rule: "yes" passes; "no" and "unclear" go to an agent review under the October 4 rule; a site is excluded only if the agent confirms. The Hive model was weak on election timing in the October 4 calibration, so a model "no" alone does not exclude.
+- Stages 5 and 6 written and tested on a dry run with all sites passing: `scripts/build_mayoral_release.py`, `scripts/validate_mayoral_release.py` (writes `manifest.json`), `tests/test_mayoral_release.py` (4 pass).
+  Dry run: 822 eligible finalists = 592 text, 119 site_not_archived, 100 no_url_lead, 6 no_usable_pages, 5 check_incomplete; 25,682 of 33,237 pages usable; no drop above 20 percent.
 
 Release does not require a website for every finalist or a fixed coverage percentage.
 It requires the full population to be assessed, the agreed collection work to finish, and missing evidence to stay explicit.
