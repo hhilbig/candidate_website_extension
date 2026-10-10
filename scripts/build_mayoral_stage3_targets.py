@@ -135,10 +135,18 @@ def main() -> None:
         # Checked leads that replace an unarchived old roster URL (legacy-lead search, October 9, 2026).
         extra = pd.read_csv(LEGACY_SEARCH_LEADS, keep_default_na=False, dtype=str)
         leads = pd.concat([leads, extra[leads.columns]], ignore_index=True)
+    # Earlier batches exclude a finalist only together with the domain they scraped: a domain accepted later for the
+    # same finalist must still be scraped (defect found October 10, 2026; three accepted sites had been skipped).
     done = set()
     for path in args.exclude:
-        done |= set(pd.read_csv(path, dtype=str)["candidate_contest_id"])
-    leads = leads[~leads["candidate_election_id"].isin(done)]
+        earlier = pd.read_csv(path, dtype=str, keep_default_na=False)
+        done |= set(zip(earlier["candidate_contest_id"], earlier["registrable_domain"].str.lower()))
+    def lead_domain(row) -> str:
+        host = (urlsplit(row["campaign_url"]).hostname or "").lower()
+        domain = (row["registrable_domain"] or "").lower().split()[0] if row["registrable_domain"] else ""
+        return host.removeprefix("www.") if domain and host not in {domain, f"www.{domain}"} and host.endswith("." + domain) else domain
+    keep = [(cid, lead_domain(r)) not in done for cid, r in zip(leads["candidate_election_id"], leads.to_dict("records"))]
+    leads = leads[keep]
     coverage = pd.read_csv(COVERAGE, keep_default_na=False, dtype=str)
     if args.legacy:
         targets = build_legacy_targets(coverage, pd.read_csv(LEGACY_URLS, keep_default_na=False, dtype=str, low_memory=False))
@@ -149,7 +157,7 @@ def main() -> None:
         raise ValueError("duplicate target id")
     OUTPUT.parent.mkdir(parents=True, exist_ok=True)
     targets.to_csv(OUTPUT, index=False)
-    print(json.dumps({"excluded_finalists": len(done), "targets": len(targets), "status": targets["url_discovery_status"].value_counts().to_dict(),
+    print(json.dumps({"excluded_finalist_domains": len(done), "targets": len(targets), "status": targets["url_discovery_status"].value_counts().to_dict(),
                       "domains": int(targets["registrable_domain"].nunique())}))
 
 

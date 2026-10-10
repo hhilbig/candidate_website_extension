@@ -14,11 +14,20 @@ rule-based flags. Three flags exclude a page from the finalist panel; the others
                                    spam terms on a page that does not name the candidate
   excluded  off_domain             the archive served the page from a different registrable domain
   excluded  empty                  fewer than 50 characters of visible text
+  excluded  binary_or_garbled      NUL bytes, or more than 5 percent replacement or control characters (an image or
+                                   a broken page served as HTML)
+  excluded  error_or_challenge     a page under 1,500 characters that is a bot challenge, an access-denied or a
+                                   "page not found" page
+  excluded  listing_page           an address that lists other pages: tag, author, category, feed, comments,
+                                   search, paging (/page/2/), date archives without a post, calendar views
   flag      app_shell              fewer than 40 words and a request for JavaScript or a loading message
   flag      other_year_only        the page names years, but not the election year or the year before
   flag      names_candidate        the page names the candidate's last name
   flag      non_latin_text         mostly non-Latin text (the House/Senate CJK rule); campaigns publish such pages
-  flag      duplicate_of           an earlier page of the same finalist has the same extracted text
+  flag      duplicate_of           an earlier page of the same finalist has the same extracted text, or the same
+                                   address after removing the scheme, "www.", a trailing slash and the query
+Days from the election are computed from the finalist's election date (October 10, 2026: the August batches'
+target files hold only the election month, which had shifted the August pages by up to two weeks).
 
 The corpus keeps every page with its flags. Nothing is deleted; exclusion is a column.
 Run on mac2 from ~/candidate_website_extension_stage3 (the page files live there).
@@ -58,6 +67,15 @@ SPAM = re.compile(r"\b(casino|viagra|cialis|payday loans?|slot online|judi|poker
                   r"cbd gummies|essay writing service)\b", re.I)
 SHELL = re.compile(r"(enable javascript|requires javascript|javascript is (disabled|required)|loading\W{0,3}$|"
                    r"you need to enable javascript)", re.I | re.M)
+CHALLENGE = re.compile(
+    r"(just a moment|checking your browser|attention required|access denied|verify you are (a )?human|"
+    r"ddos protection|403 forbidden|404 not found|error 404|page not found|page cannot be found|"
+    r"could not be found|nothing (was )?found|the page you (are looking for|requested)|this page (does not|doesn't) exist|"
+    r"website is currently not available)", re.I)
+CHALLENGE_MAX_CHARS = 1500
+LISTING_PATH = re.compile(r"/(tag|tags|author|category|categories|feed|rss|comments|search)(/|$)|/page/\d+/?$|"
+                          r"^/\d{4}(/\d{1,2}){0,2}/?$|/calendar/action|/events/(list|month|day|week|photo)(/|$)", re.I)
+LISTING_QUERY = re.compile(r"(^|&)(ajaxcalendar|replytocom|share|s|paged|range|tribe-bar-date|eventdisplay)=", re.I)
 YEAR = re.compile(r"\b(20[0-3]\d)\b")
 APOSTROPHE = re.compile(r"['’`]")
 BOOLEAN = ("in_text_window", "names_candidate", "app_shell", "other_year_only", "non_latin_text", "excluded")
@@ -79,6 +97,11 @@ def last_name(name: str) -> str:
     return APOSTROPHE.sub("", words[-1].lower().strip(".")) if words else ""
 
 
+def address_key(url: str) -> str:
+    parts = urlsplit(url)
+    return (parts.hostname or "").lower().removeprefix("www.") + (parts.path or "/").rstrip("/").lower()
+
+
 def flags(text: str, page: dict, last: str, election_year: int) -> tuple[list[str], dict]:
     reasons = []
     eff = re.sub(r"^https?://web\.archive\.org/web/\d{14}(id_)?/", "", page["effective_replay_url"] or "")
@@ -87,6 +110,14 @@ def flags(text: str, page: dict, last: str, election_year: int) -> tuple[list[st
     plain = text.replace("#+#", "\n")
     if len(plain.strip()) < 50:
         reasons.append("empty")
+    odd = sum(1 for ch in plain if ch == "\ufffd" or (unicodedata.category(ch) == "Cc" and ch not in "\n\r\t"))
+    if page.get("_had_nul") or (plain and odd / len(plain) > 0.05):
+        reasons.append("binary_or_garbled")
+    if len(plain) < CHALLENGE_MAX_CHARS and CHALLENGE.search(plain):
+        reasons.append("error_or_challenge")
+    address = urlsplit(page["original_url"])
+    if LISTING_PATH.search(address.path or "/") or LISTING_QUERY.search(address.query or ""):
+        reasons.append("listing_page")
     directory_listing = plain.lstrip().lower().startswith("index of /")
     if directory_listing or (len(plain) < PARKED_MAX_CHARS and PARKED.search(plain)):
         reasons.append("parked_or_placeholder")
@@ -117,7 +148,12 @@ def main() -> None:
 
     people = {r["candidate_election_id"]: r for r in csv.DictReader(args.candidates.open())}
     pages = list(csv.DictReader(gzip.open(args.manifest, "rt")))
-    pages.sort(key=lambda p: (p["candidate_election_id"], abs(int(p["days_from_election"])), p["capture_id"]))
+    from datetime import date, datetime
+    for page in pages:
+        stamp = page["effective_timestamp"] or page["timestamp"]
+        election = date.fromisoformat(people[page["candidate_election_id"]]["election_date"])
+        page["days_from_election"] = (datetime.strptime(stamp[:8], "%Y%m%d").date() - election).days
+    pages.sort(key=lambda p: (p["candidate_election_id"], abs(p["days_from_election"]), p["capture_id"]))
     _status("set", args.status_id, "--project", "Candidate websites, mayoral extension",
             "--task", "Build the mayoral page corpus with page checks", "--total", str(len(pages)), "--unit", "pages")
     schema = pa.schema([(c, pa.string()) if c not in {"days_from_election", "n_char", "n_words", "n_tags", "n_clean_tags"}
@@ -126,6 +162,7 @@ def main() -> None:
     schema = pa.schema([schema.field(c) for c in COLUMNS])
     writer = pq.ParquetWriter(args.output, schema, compression="zstd")
     seen_text: dict[tuple[str, str], str] = {}
+    seen_address: dict[tuple[str, str], str] = {}
     counts: Counter = Counter()
     batch = []
     for i, page in enumerate(pages, 1):
@@ -134,10 +171,16 @@ def main() -> None:
         if hashlib.sha256(raw).hexdigest() != page["raw_html_sha256"]:
             raise ValueError(f"raw HTML hash differs for {page['capture_id']}")
         text = extract_visible_text(BeautifulSoup(raw, "html.parser"))
+        page["_had_nul"] = "\x00" in text
+        text = text.replace("\x00", "")
         clean = icpsr_clean_text(text)
         reasons, info = flags(text, page, last_name(person["candidate_name"]), int(person["election_date"][:4]))
         text_sha = hashlib.sha256(text.encode()).hexdigest()
         dup = seen_text.setdefault((page["candidate_election_id"], text_sha), page["capture_id"])
+        same_address = seen_address.setdefault((page["candidate_election_id"], address_key(page["original_url"])),
+                                               page["capture_id"])
+        if dup == page["capture_id"] and same_address != page["capture_id"]:
+            dup = same_address
         for r in reasons:
             counts[r] += 1
         counts["pages"] += 1
@@ -147,8 +190,8 @@ def main() -> None:
             "target_id": page["target_id"], "batch": page["batch"], "run": page["run"],
             "site_domain": registrable(urlsplit(page["original_url"]).hostname or ""),
             "original_url": page["original_url"], "snap_url": f"https://web.archive.org/web/{stamp}/{page['original_url']}",
-            "capture_timestamp": stamp, "days_from_election": int(page["days_from_election"]),
-            "in_text_window": page["in_text_window"] == "True", "page_type": classify_page_type(page["original_url"]),
+            "capture_timestamp": stamp, "days_from_election": page["days_from_election"],
+            "in_text_window": abs(page["days_from_election"]) <= 365, "page_type": classify_page_type(page["original_url"]),
             "text": text, "n_char": len(text), "n_words": len(text.split()), "n_tags": clean["n_tags"],
             "n_clean_tags": clean["n_clean_tags"], "text_sha256": text_sha, "raw_html_sha256": page["raw_html_sha256"],
             **info, "duplicate_of": "" if dup == page["capture_id"] else dup,
@@ -165,7 +208,8 @@ def main() -> None:
     usable = {c for c, e, w, d in zip(data["candidate_election_id"], data["excluded"], data["in_text_window"],
                                       data["duplicate_of"]) if not e and w and not d}
     audit = {"pages": counts["pages"], "excluded_pages": counts["excluded_pages"],
-             "exclusion_reasons": {k: v for k, v in counts.items() if k in {"off_domain", "empty", "parked_or_placeholder", "spam"}},
+             "exclusion_reasons": {k: v for k, v in counts.items() if k in {"off_domain", "empty", "parked_or_placeholder", "spam",
+                                                                     "binary_or_garbled", "error_or_challenge", "listing_page"}},
              "duplicate_pages": counts["duplicate_pages"], "finalists": len(set(data["candidate_election_id"])),
              "finalists_with_usable_in_window_pages": len(usable)}
     args.output.with_suffix(".audit.json").write_text(json.dumps(audit, indent=1) + "\n")
