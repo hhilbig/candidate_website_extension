@@ -1,0 +1,25 @@
+[
+ {
+  "candidate_election_id": "3918000__2015-11-03__regular__8fd1c41036d38579",
+  "candidate_name": "Zach Scott",
+  "election_date": "2015-11-03",
+  "status": "accepted",
+  "campaign_url": "http://scottforcolumbus.com:80/",
+  "registrable_domain": "scottforcolumbus.com",
+  "lead_sources": [
+   "old roster URL http://www.scottforcolumbus.com"
+  ],
+  "searches_run": [
+   "WebSearch: Zach Scott Columbus mayor 2015 campaign website (refused, search budget used up)",
+   "Wayback CDX scottforcolumbus.com matchType=domain, all years, via mac2",
+   "Wayback CDX scottforcolumbus.com in window 20141103-20151103, status 200",
+   "Wayback CDX scottforcolumbus.net in window (timed out, not completed)"
+  ],
+  "wayback_window_captures": 3,
+  "first_capture_in_window": "20150214054633",
+  "checked_capture_url": "https://web.archive.org/web/20150214054633/http://scottforcolumbus.com:80/",
+  "page_evidence": "title ScottforColumbus.com; meta description 'Sheriff Zach Scott, Candidate for City of Columbus Mayor'; keywords 'Zach Scott for Mayor'",
+  "other_profiles": [],
+  "note": "Old roster URL is correct. Three 200 captures in the window: the home page on 2015-02-14 and two robots.txt files on 2015-10-11. The home page is a frameset that points to scottforcolumbus.net; the scottforcolumbus.net archive check timed out, so the frame target was not read. Later captures (Dec 2015 on) show subpages /zach-scott/, /vision/, /endorsements/. Web search was refused (budget used up), so no web search ran; acceptance rests on the archive page text."
+ }
+]

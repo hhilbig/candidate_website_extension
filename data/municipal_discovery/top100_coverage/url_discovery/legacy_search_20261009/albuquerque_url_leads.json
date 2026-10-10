@@ -1,0 +1,91 @@
+[
+ {
+  "candidate_election_id": "3502000__2017-11-14__regular__05682de6559d00d2",
+  "candidate_name": "Timothy M. Keller",
+  "election_date": "2017-11-14",
+  "status": "accepted",
+  "campaign_url": "http://www.tk4abq.com/",
+  "registrable_domain": "tk4abq.com",
+  "lead_sources": [
+   "https://web.archive.org/web/2023/https://ballotpedia.org/Tim_Keller_(New_Mexico) (reference: Tim Keller campaign website, Endorsements, http://www.tk4abq.com/endorsements)"
+  ],
+  "searches_run": [
+   "Brave Search via mac2: Tim Keller Albuquerque mayor 2017 campaign website",
+   "Brave Search via mac2: Dan Lewis Albuquerque mayor 2017 campaign website",
+   "Brave Search via mac2: \"Dan Lewis\" 2017 Albuquerque mayoral runoff candidate website",
+   "Brave Search via mac2: Albuquerque 2017 mayoral candidates list websites",
+   "Wikipedia: Tim_Keller_(politician), 2017_Albuquerque_mayoral_election, 2021_Albuquerque_mayoral_election",
+   "Archived Ballotpedia: Tim_Keller_(New_Mexico), Dan_Lewis, Mayoral_election_in_Albuquerque,_New_Mexico_(2017)",
+   "Wayback CDX checks of mayortimkeller.com, lewis4abq.com, and guessed domains (timkeller.com, time4tim.com, tim4mayor.com, votekeller.com, electkeller.com, lewisformayor.com and others)"
+  ],
+  "wayback_window_captures": 586,
+  "first_capture_in_window": "20170124014033",
+  "checked_capture_url": "https://web.archive.org/web/20170514194123/http://www.tk4abq.com:80/",
+  "page_evidence": "Tim Keller for Albuquerque ... That's why I'm running ... to bring a people-powered vision to the Mayor's office.",
+  "other_profiles": [
+   "https://twitter.com/ABQKeepKeller",
+   "https://www.facebook.com/TimKellerNM/"
+  ],
+  "note": "WebSearch tool refused (budget used); Brave Search through mac2 was used instead. The old roster URL mayortimkeller.com has no capture before 2025, so it is wrong for 2017. The 2017 site is tk4abq.com. The 586 count is all HTTP 200 captures of the host (all paths) from 2016-11-14 to 2017-11-14."
+ },
+ {
+  "candidate_election_id": "3502000__2017-11-14__regular__b6ff7baf40b30399",
+  "candidate_name": "Dan Lewis",
+  "election_date": "2017-11-14",
+  "status": "accepted",
+  "campaign_url": "http://www.lewisabq.com/",
+  "registrable_domain": "lewisabq.com",
+  "lead_sources": [
+   "https://web.archive.org/web/2023/https://ballotpedia.org/Dan_Lewis (reference: Dan Lewis campaign website, Issues, accessed May 11, 2017, http://www.lewisabq.com/dansplan/)"
+  ],
+  "searches_run": [
+   "Brave Search via mac2: Tim Keller Albuquerque mayor 2017 campaign website",
+   "Brave Search via mac2: Dan Lewis Albuquerque mayor 2017 campaign website",
+   "Brave Search via mac2: \"Dan Lewis\" 2017 Albuquerque mayoral runoff candidate website",
+   "Brave Search via mac2: Albuquerque 2017 mayoral candidates list websites",
+   "Wikipedia: Tim_Keller_(politician), 2017_Albuquerque_mayoral_election, 2021_Albuquerque_mayoral_election",
+   "Archived Ballotpedia: Tim_Keller_(New_Mexico), Dan_Lewis, Mayoral_election_in_Albuquerque,_New_Mexico_(2017)",
+   "Wayback CDX checks of mayortimkeller.com, lewis4abq.com, and guessed domains (timkeller.com, time4tim.com, tim4mayor.com, votekeller.com, electkeller.com, lewisformayor.com and others)"
+  ],
+  "wayback_window_captures": 114,
+  "first_capture_in_window": "20170416161913",
+  "checked_capture_url": "https://web.archive.org/web/20170510213646/http://www.lewisabq.com/",
+  "page_evidence": "Dan Lewis | Reform. Renew. ABQ. ... Let's send a proven job creator to City Hall ... PAID FOR BY LEWIS FOR MAYOR.",
+  "other_profiles": [
+   "https://www.facebook.com/LewisABQ",
+   "https://twitter.com/LewisABQ",
+   "https://www.instagram.com/lewisabq/"
+  ],
+  "note": "WebSearch tool refused (budget used); Brave Search through mac2 was used instead. The old roster URL lewis4abq.com has its first capture in 2021, so it is the 2021 site and not the 2017 site. The 2017 site is www.lewisabq.com. The 114 count is all HTTP 200 captures of the www host (all paths) in the window."
+ },
+ {
+  "candidate_election_id": "3502000__2021-11-02__regular__05682de6559d00d2",
+  "candidate_name": "Timothy M. Keller",
+  "election_date": "2021-11-02",
+  "status": "accepted",
+  "campaign_url": "https://keepkeller.com/",
+  "registrable_domain": "keepkeller.com",
+  "lead_sources": [
+   "https://en.wikipedia.org/wiki/2021_Albuquerque_mayoral_election (external link https://www.keepkeller.com/)"
+  ],
+  "searches_run": [
+   "Brave Search via mac2: Tim Keller Albuquerque mayor 2017 campaign website",
+   "Brave Search via mac2: Dan Lewis Albuquerque mayor 2017 campaign website",
+   "Brave Search via mac2: \"Dan Lewis\" 2017 Albuquerque mayoral runoff candidate website",
+   "Brave Search via mac2: Albuquerque 2017 mayoral candidates list websites",
+   "Wikipedia: Tim_Keller_(politician), 2017_Albuquerque_mayoral_election, 2021_Albuquerque_mayoral_election",
+   "Archived Ballotpedia: Tim_Keller_(New_Mexico), Dan_Lewis, Mayoral_election_in_Albuquerque,_New_Mexico_(2017)",
+   "Wayback CDX checks of mayortimkeller.com, lewis4abq.com, and guessed domains (timkeller.com, time4tim.com, tim4mayor.com, votekeller.com, electkeller.com, lewisformayor.com and others)"
+  ],
+  "wayback_window_captures": 62,
+  "first_capture_in_window": "20210323003746",
+  "checked_capture_url": "https://web.archive.org/web/20210501011856/https://keepkeller.com/",
+  "page_evidence": "Keep Keller ... Re-Elect Mayor Tim. Help us qualify for public financing. ... Tim Keller was born and raised in Albuquerque. Before he was elected Mayor in 2017,",
+  "other_profiles": [
+   "https://www.facebook.com/ABQKeepKeller",
+   "https://www.instagram.com/ABQKeepKeller/",
+   "https://twitter.com/ABQKeepKeller"
+  ],
+  "note": "WebSearch tool refused (budget used); Brave Search through mac2 was used instead. The old roster URL mayortimkeller.com has no capture before 2025, so it is wrong for 2021. The 62 count is all HTTP 200 captures of the host in the window."
+ }
+]

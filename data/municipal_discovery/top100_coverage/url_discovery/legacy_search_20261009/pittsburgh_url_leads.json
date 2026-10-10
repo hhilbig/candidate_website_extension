@@ -1,0 +1,27 @@
+[
+ {
+  "candidate_election_id": "4261000__2013-11-05__regular__ffcf5e9a781cd5f7",
+  "candidate_name": "Josh Wander",
+  "election_date": "2013-11-05",
+  "status": "accepted",
+  "campaign_url": "http://www.votewander.com:80/",
+  "registrable_domain": "votewander.com",
+  "lead_sources": [
+   "http://www.votewander.com/ (old roster URL)",
+   "https://en.wikipedia.org/wiki/2013_Pittsburgh_mayoral_election"
+  ],
+  "searches_run": [
+   "WebSearch: Josh Wander Pittsburgh mayor 2013 campaign website (refused, budget used up)",
+   "mac2 DuckDuckGo html and lite queries (returned empty pages)",
+   "mac2 Bing query (no usable results)",
+   "WebFetch ballotpedia.org/Josh_Wander (empty)",
+   "mac2 fetch of Wikipedia 2013 Pittsburgh mayoral election"
+  ],
+  "wayback_window_captures": 1,
+  "first_capture_in_window": "20131031062415",
+  "checked_capture_url": "https://web.archive.org/web/20131031062415/http://www.votewander.com:80/",
+  "page_evidence": "Title 'Josh Wander - The endorsed candidate'; meta description 'Josh Wander - The endorsed candidate Pittsburgh'; keywords 'Josh Wander, Pittsburgh, elections'",
+  "other_profiles": [],
+  "note": "The old roster URL is the campaign site. CDX shows one HTTP 200 capture of the homepage in the window (2013-10-31), plus a robots.txt capture. The archived page is a Wix shell. The word mayor does not appear in it. The page names the candidate, Pittsburgh and elections. Wikipedia confirms Wander was the 2013 Republican nominee for Pittsburgh mayor. Web search tools failed, so no independent search page confirmed the site. The mayoral link rests on that match."
+ }
+]

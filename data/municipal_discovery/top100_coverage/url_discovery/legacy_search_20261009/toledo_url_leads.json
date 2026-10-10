@@ -1,0 +1,18 @@
+[
+ {"candidate_election_id":"3977000__2015-11-03__special__c749276208d84681","candidate_name":"Michael P. Bell","election_date":"2015-11-03",
+  "status":"incomplete","campaign_url":"","registrable_domain":"",
+  "lead_sources":[],
+  "searches_run":["WebSearch: Mike Bell Toledo mayor 2015 campaign website (refused, budget used)","mac2 DuckDuckGo html search (returned a challenge page, no results)","mac2 Bing search (no result links)","WebFetch en.wikipedia.org/wiki/2015_Toledo_mayoral_election (no Bell website listed)","WebFetch ballotpedia.org/Mike_Bell and /Mike_Bell_(Ohio) (empty page)"],
+  "wayback_window_captures":0,"first_capture_in_window":"","checked_capture_url":"","page_evidence":"",
+  "other_profiles":[],
+  "note":"No web search ran: WebSearch budget was used up and the mac2 search fallbacks returned no results. Old URL mikebellfortoledo.com has 200 captures in the window, but the archived page is an unrelated Japanese-language site about house moving (no Bell, no mayoral text), so it is rejected. friendsofmikebell.com has no captures at all. Guessed domains with no captures from 2014-11-04 to 2015-11-03: mikebellfortoledo.org, mikebell2015.com, mikebellformayor.com, bellfortoledo.com, mikebelltoledo.com, votemikebell.com, mikebell.com, electmikebell.com, bellformayor.com, friendsofmikebell.org. Not recorded as not_found because no search finished."},
+ {"candidate_election_id":"3977000__2017-11-07__regular__deaf5453edc5e0fe","candidate_name":"Wade Kapszukiewicz","election_date":"2017-11-07",
+  "status":"accepted","campaign_url":"http://electwade.com/","registrable_domain":"electwade.com",
+  "lead_sources":["https://www.electwade.com/ (old roster URL)"],
+  "searches_run":["WebSearch: Wade Kapszukiewicz Toledo mayor 2017 campaign website (refused, budget used)","Wayback CDX via mac2 for electwade.com, 2016-11-08 to 2017-11-07","Fetched archived home, about and vision pages via mac2"],
+  "wayback_window_captures":73,"first_capture_in_window":"20170511115811",
+  "checked_capture_url":"https://web.archive.org/web/20170514045101/http://electwade.com:80/vision/",
+  "page_evidence":"Elect Wade site. About: \"As Lucas County Treasurer, Wade Kapszukiewicz has worked...\" Vision: \"I'm not the Mayor... When I'm mayor, we're going to bring fundamental change to the way our local government operates.\"",
+  "other_profiles":[],
+  "note":"Old roster URL is correct. Web search did not run (budget used), so the lead is the old roster URL only. The count of 73 is the number of 200 captures of all electwade.com host URLs in the window, not only pages. The first capture in the window is the first by date in the CDX list I read, 20170511115811."}
+]

@@ -1,0 +1,52 @@
+[
+ {
+  "candidate_election_id": "3916000__2013-11-05__regular__fc8343592436e3ac",
+  "candidate_name": "Frank G. Jackson",
+  "election_date": "2013-11-05",
+  "status": "accepted",
+  "campaign_url": "http://www.mayorfrankjackson.com/",
+  "registrable_domain": "mayorfrankjackson.com",
+  "lead_sources": [
+   "domain guess from candidate name, confirmed in Wayback CDX",
+   "https://en.wikipedia.org/wiki/2013_Cleveland_mayoral_election (no campaign site listed)"
+  ],
+  "searches_run": [
+   "WebSearch refused (budget used up)",
+   "DuckDuckGo html and lite via mac2: bot challenge page, no results",
+   "Bing via mac2: unrelated results",
+   "https://en.wikipedia.org/wiki/2013_Cleveland_mayoral_election",
+   "https://en.wikipedia.org/wiki/Frank_G._Jackson",
+   "Ballotpedia fetch via mac2 (403)",
+   "CDX checks: forabettercleveland.com, frankjacksonformayor.com, frankjackson2013.com, frankgjackson.com, electfrankjackson.com, jacksonformayor.com, frankjacksonmayor.com, frankjackson.com, mayorfrankjackson.com, jacksonforcleveland.com, friendsoffrankjackson.com"
+  ],
+  "wayback_window_captures": 48,
+  "first_capture_in_window": "20130613055622",
+  "checked_capture_url": "https://web.archive.org/web/20131029075453/http://www.mayorfrankjackson.com/volunteer/",
+  "page_evidence": "Volunteers: You can make a difference in the outcome of Mayor Frank Jackson's campaign for re-election. (home page 20130822: 'Mayor Frank Jackson has served the City of Cleveland since 1989 ... Volunteer, donate')",
+  "other_profiles": [],
+  "note": "Found by domain guess, not by a search result. Old roster URLs failed: frankjacksonformayor.com is a registrar parking page in 2013 (capture 20130603); forabettercleveland.com has captures only from 2017 (later campaign). jacksonformayor.com was a domain-for-sale page. The 48 window count is all 200 captures of the host, including subpages and robots.txt."
+ },
+ {
+  "candidate_election_id": "3916000__2017-11-07__regular__ea689cba44ceec56",
+  "candidate_name": "Zack Reed",
+  "election_date": "2017-11-07",
+  "status": "accepted",
+  "campaign_url": "http://zackreed.com/",
+  "registrable_domain": "zackreed.com",
+  "lead_sources": [
+   "old roster URL http://zackreed.com/ (checked in Wayback)"
+  ],
+  "searches_run": [
+   "WebSearch refused (budget used up)",
+   "DuckDuckGo html and lite via mac2: bot challenge page, no results",
+   "Bing via mac2: unrelated results",
+   "CDX check zackreed.com, window 2016-11-07 to 2017-11-07"
+  ],
+  "wayback_window_captures": 300,
+  "first_capture_in_window": "20161107004443",
+  "checked_capture_url": "https://web.archive.org/web/20170706233912/http://zackreed.com/issues/",
+  "page_evidence": "After I am elected Mayor of the City of Cleveland I will open City Hall every Saturday morning ... (home page title 'Home - Zack Reed 2017'; donate-now and events pages in window)",
+  "other_profiles": [],
+  "note": "The old roster URL is correct and has in-window captures. The web search tools failed, so no independent search lead confirmed it. The 300 count is all 200 captures of the host in the window, including subpages and robots.txt; the first one (20161107004443) is on www."
+ }
+]

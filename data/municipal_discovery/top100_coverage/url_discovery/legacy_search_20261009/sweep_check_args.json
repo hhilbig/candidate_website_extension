@@ -1,0 +1,561 @@
+[
+ {
+  "city_id": "3712000",
+  "city_name": "Charlotte city",
+  "state_abb": "NC",
+  "finalists": [
+   {
+    "candidate_election_id": "3712000__2019-11-05__regular__4108bb9facc4a497",
+    "candidate_name": "David Michael Rice",
+    "election_date": "2019-11-05",
+    "search_status": "incomplete",
+    "search_note": "The old URL davidmichaelrice.com has 200 captures in the window (for example 20191001154127), but the page belongs to a writer named David Rice (memoir 'Desert Soliloquy') and does not mention a mayoral campaign. I rejected it. The real campaign site was not found because all search tools failed or gave unrelated results. I guessed domains (riceformayor.com, davidriceformayor.com, davidrice4mayor.com, rice4mayor.com, ricecharlotte.com, davidricecharlotte.com, votedavidrice.com, davidrice2019.com) but mac2 CDX requests were slow and the batch did not finish, so I treat none as checked. Status i",
+    "hits": [
+     {
+      "window": "before",
+      "domain": "riceformayor.com",
+      "capture_url": "https://web.archive.org/web/20181108192614/http://www.riceformayor.com:80/",
+      "title": "Katherine Rice for Mayor"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "city_id": "4805000",
+  "city_name": "Austin city",
+  "state_abb": "TX",
+  "finalists": [
+   {
+    "candidate_election_id": "4805000__2012-05-12__regular__af83ed584c168fb4",
+    "candidate_name": "Lee Leffingwell",
+    "election_date": "2012-05-12",
+    "search_status": "outside_window",
+    "search_note": "No HTTP 200 capture of leffingwellformayor.com in the 365 days before 2012-05-12 or before 2011-05-14 (Leffingwell's real re-election was 2011-05-14, so the roster date 2012-05-12 looks wrong). Nearest captures: 20090228191327 (before) and 20120602205651 (after). leffingwell.com has in-window captures but belongs to Leffingwell & Associates, not the campaign. No other campaign domain found.",
+    "hits": [
+     {
+      "window": "before",
+      "domain": "mayorleffingwell.com",
+      "capture_url": "https://web.archive.org/web/20110809091949/http://www.mayorleffingwell.com:80/",
+      "title": "Austin Mayor Lee Leffingwell"
+     },
+     {
+      "window": "after",
+      "domain": "leffingwellformayor.com",
+      "capture_url": "https://web.archive.org/web/20120708002949/http://leffingwellformayor.com:80/?",
+      "title": "- Re-Elect Lee Leffingwell for Mayor"
+     },
+     {
+      "window": "after",
+      "domain": "mayorleffingwell.com",
+      "capture_url": "https://web.archive.org/web/20120815045634/http://www.mayorleffingwell.com:80/",
+      "title": "Austin Mayor Lee Leffingwell"
+     }
+    ]
+   },
+   {
+    "candidate_election_id": "4805000__2014-12-16__regular__b89245003bf99e1e",
+    "candidate_name": "Mike Martinez",
+    "election_date": "2014-12-16",
+    "search_status": "not_found",
+    "search_note": "Checked mikemartinezforaustin.com (in-window 200 captures 20140103, 20140630 are Japanese spam pages, not the campaign; 20130814 capture has no candidate text), martinezforaustin.com (spam), martinezformayor.com and mikeformayor.com (parked), mikemartinez.com (parked); mikemartinezformayor.com, mikemartinezmayor.com, mikemartinezforaustin.org/.net, mikemartinez2014.com, votemikemartinez.com, mikemartinezatx.com have no captures. Search tools were weak, so the real site may exist under a domain not found.",
+    "hits": [
+     {
+      "window": "before",
+      "domain": "martinezformayor.com",
+      "capture_url": "https://web.archive.org/web/20140101030829/http://martinezformayor.com/",
+      "title": "Political Web Names - We have the domain name for your campaign"
+     },
+     {
+      "window": "after",
+      "domain": "martinezformayor.com",
+      "capture_url": "https://web.archive.org/web/20141217230124/http://martinezformayor.com/",
+      "title": "Political Web Names - We have the domain name for your campaign"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "city_id": "4817000",
+  "city_name": "Corpus Christi city",
+  "state_abb": "TX",
+  "finalists": [
+   {
+    "candidate_election_id": "4817000__2012-11-06__regular__ba74ddbb78822deb",
+    "candidate_name": "Nelda Martinez",
+    "election_date": "2012-11-06",
+    "search_status": "outside_window",
+    "search_note": "In the 365-day window the archive holds only robots.txt captures (20120511083806 and 20121222 is after the election), no page that names the candidate. Nearest page captures: 20110207210912 (before window) and 20130615230304 (after election). The domain is very probably the 2012 campaign site, but no in-window page was archived, so it is not accepted.",
+    "hits": [
+     {
+      "window": "before",
+      "domain": "neldamartinez.com",
+      "capture_url": "https://web.archive.org/web/20120511083806/http://www.neldamartinez.com/robots.txt",
+      "title": "Elect Nelda Martinez for Mayor of Corpus Christi"
+     },
+     {
+      "window": "after",
+      "domain": "neldamartinez.com",
+      "capture_url": "https://web.archive.org/web/20121222010039/http://www.neldamartinez.com/robots.txt",
+      "title": "Elect Nelda Martinez for Mayor of Corpus Christi"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "city_id": "3719000",
+  "city_name": "Durham city",
+  "state_abb": "NC",
+  "finalists": [
+   {
+    "candidate_election_id": "3719000__2011-11-08__regular__8f9b84575fda725c",
+    "candidate_name": "Sylvester Williams",
+    "election_date": "2011-11-08",
+    "search_status": "outside_window",
+    "search_note": "The only HTTP 200 captures of sylvesterwilliamsformayor.com are the home page of 2013-05-17 and robots.txt files from 2013-06-27 to 2013-10-20. All are after the 2011 election. No capture exists in the window. This domain may belong to a later campaign (Williams ran again in 2019), so I cannot confirm that it served the 2011 campaign. WebSearch refused (budget used up). DuckDuckGo and Bing through mac2 were blocked or returned no usable results after the first query. Candidate leads came from the old roster URL, CDX checks, Wikipedia and Indy Week pages.",
+    "hits": [
+     {
+      "window": "before",
+      "domain": "mayorwilliams.com",
+      "capture_url": "https://web.archive.org/web/20110911212502/http://www.mayorwilliams.com:80/",
+      "title": "Donjuan Williams For Glenarden Mayor"
+     }
+    ]
+   },
+   {
+    "candidate_election_id": "3719000__2021-11-02__regular__e68b57260a6c4ae8",
+    "candidate_name": "Javiera Caballero",
+    "election_date": "2021-11-02",
+    "search_status": "outside_window",
+    "search_note": "The domain javieracaballeroparadurham.com has HTTP 200 captures only from 2019-08-22 to 2019-11-08, before the window. These belong to her 2019 council campaign. The next captures are 404 on 2019-12-24 and 2020-02-19. javieracaballeroformayor.com has only robots.txt and favicon 200 captures (2021-12-09, 2022-03-14) and 403 home page captures, all after the election. I did not find the real 2021 mayoral site. WebSearch refused (budget used up). DuckDuckGo and Bing through mac2 were blocked or returned no usable results after the first query. Candidate leads came from the old roster URL, CDX che",
+    "hits": [
+     {
+      "window": "before",
+      "domain": "javieraformayor.com",
+      "capture_url": "https://web.archive.org/web/20210830190712/https://www.javieraformayor.com/",
+      "title": "Javiera for Mayor"
+     },
+     {
+      "window": "after",
+      "domain": "javieraformayor.com",
+      "capture_url": "https://web.archive.org/web/20211107141558/https://www.javieraformayor.com/",
+      "title": "Javiera for Mayor"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "city_id": "4824000",
+  "city_name": "El Paso city",
+  "state_abb": "TX",
+  "finalists": [
+   {
+    "candidate_election_id": "4824000__2020-12-12__regular__0e1681a4b4d5cabe",
+    "candidate_name": "Dee Margo",
+    "election_date": "2020-12-12",
+    "search_status": "outside_window",
+    "search_note": "Window 2019-12-12 to 2020-12-12. The only in-window captures of margoformayor.org are robots.txt (200, 20201116024723) and a 301 of the home page (20201116024725). No HTML 200 capture exists in the window. Nearest HTML 200 captures: 20191108061352 before the window and 20210227162428 after it. The site is the 2019 re-election campaign (Re-Elect Dee Margo) site; it was in use for the 2020 runoff but the archive does not confirm it inside the window. margoformayor.com has captures only in 2018; deemargo.com has none. Web search tools did not work, so no other candidate domain was searched; statu",
+    "hits": [
+     {
+      "window": "before",
+      "domain": "margoforelpaso.com",
+      "capture_url": "https://web.archive.org/web/20200818100346/https://margoforelpaso.com/",
+      "title": "Margo for Mayor \u2013 Re-Elect Dee Margo"
+     },
+     {
+      "window": "after",
+      "domain": "margoformayor.org",
+      "capture_url": "https://web.archive.org/web/20210227162428/http://margoformayor.org/",
+      "title": "Welcome margoformayor.org - BlueHost.com"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "city_id": "0626000",
+  "city_name": "Fremont city",
+  "state_abb": "CA",
+  "finalists": [
+   {
+    "candidate_election_id": "0626000__2012-11-06__regular__8aaadd937e288b3b",
+    "candidate_name": "Bill Harrison",
+    "election_date": "2012-11-06",
+    "search_status": "outside_window",
+    "search_note": "No 200 capture of billharrisonformayor.com in window 20111107-20121106. Earliest 200 captures are 20171030164611, 20180829154517, 20181229085514, after both elections. harrisonforfremont.com has no 200 captures at all. Also checked billharrison.com, billharrison.org (2013 captures, unrelated or empty, after the 2012 window), harrisonformayor.com, harrison4fremont.com, billharrison4mayor.com, voteharrison.com: no in-window captures. I could not read the 2017 capture, and the search tools gave no lead naming the candidate, so the domain is unconfirmed as his site. Search coverage was weak (WebSe",
+    "hits": [
+     {
+      "window": "before",
+      "domain": "mayorharrison.com",
+      "capture_url": "https://web.archive.org/web/20121012000928/http://www.mayorharrison.com:80/",
+      "title": "Harrison Cleaver for Mayor of Huntington Avenue | Northeastern University"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "city_id": "0427820",
+  "city_name": "Glendale city",
+  "state_abb": "AZ",
+  "finalists": [
+   {
+    "candidate_election_id": "0427820__2016-08-30__regular__5a47bf95a1f34dba",
+    "candidate_name": "Jerry Weiers",
+    "election_date": "2016-08-30",
+    "search_status": "outside_window",
+    "search_note": "jerryweiers.com has 200 captures only in 2008-2009 and from 2020-08-10 on. None fall in 2015-08-31 to 2016-08-30. Nearest before: 20090329162255. Nearest after: 20200810080605. No web search worked, so a different 2016 campaign domain was not ruled out.",
+    "hits": [
+     {
+      "window": "before",
+      "domain": "weiersformayor.com",
+      "capture_url": "https://web.archive.org/web/20160111073244/http://weiersformayor.com/",
+      "title": "Weiers for Mayor - Home"
+     },
+     {
+      "window": "after",
+      "domain": "weiersformayor.com",
+      "capture_url": "https://web.archive.org/web/20161004102548/http://weiersformayor.com:80/",
+      "title": "Weiers for Mayor - Home"
+     }
+    ]
+   },
+   {
+    "candidate_election_id": "0427820__2020-08-04__regular__5a47bf95a1f34dba",
+    "candidate_name": "Jerry Weiers",
+    "election_date": "2020-08-04",
+    "search_status": "outside_window",
+    "search_note": "jerryweiers.com has no 200 capture in 2019-08-05 to 2020-08-04. First capture is 20200810080605, six days after the election. Nearest before: 20090329162255. No web search worked, so a different 2020 campaign domain was not ruled out.",
+    "hits": [
+     {
+      "window": "before",
+      "domain": "weiersformayor.com",
+      "capture_url": "https://web.archive.org/web/20190920135334/http://weiersformayor.com/",
+      "title": "Weiers for Mayor - Home"
+     },
+     {
+      "window": "after",
+      "domain": "jerryweiers.com",
+      "capture_url": "https://web.archive.org/web/20200810080605/https://www.jerryweiers.com/",
+      "title": "Home | Weiers"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "city_id": "0636770",
+  "city_name": "Irvine city",
+  "state_abb": "CA",
+  "finalists": [
+   {
+    "candidate_election_id": "0636770__2016-11-08__regular__b3abb044aaf7af5e",
+    "candidate_name": "Donald P. Wagner",
+    "election_date": "2016-11-08",
+    "search_status": "incomplete",
+    "search_note": "Incomplete. WebSearch refused (budget of 200 calls used). DuckDuckGo through mac2 returned only a challenge page with no results. web.archive.org CDX and replay requests through mac2 timed out on 4 attempts over several minutes (curl error 28 or code 000), while archive.org and google.com answered 200. No domain was verified. Old roster URLs: http://wagnerforcalifornia.com, https://wagnerforcalifornia.com/?page_id=221. No campaign URL is recorded because none was checked.",
+    "hits": [
+     {
+      "window": "before",
+      "domain": "votewagner.com",
+      "capture_url": "https://web.archive.org/web/20160501070218/http://www.votewagner.com/",
+      "title": "Elect Tony Wagner to the MN State Senate, District 44"
+     },
+     {
+      "window": "before",
+      "domain": "wagnerformayor.com",
+      "capture_url": "https://web.archive.org/web/20161003153341/http://wagnerformayor.com:80/",
+      "title": "Wagner for Mayor"
+     }
+    ]
+   },
+   {
+    "candidate_election_id": "0636770__2020-11-03__regular__1efc765cf2a1d307",
+    "candidate_name": "Farrah N. Khan",
+    "election_date": "2020-11-03",
+    "search_status": "incomplete",
+    "search_note": "Incomplete. WebSearch refused (budget of 200 calls used). DuckDuckGo through mac2 returned only a challenge page with no results. web.archive.org CDX and replay requests through mac2 timed out on 4 attempts over several minutes (curl error 28 or code 000), while archive.org and google.com answered 200. No domain was verified. Old roster URLs: https://www.farrahnkhan.com/. No campaign URL is recorded because none was checked.",
+    "hits": [
+     {
+      "window": "before",
+      "domain": "farrahforirvine.com",
+      "capture_url": "https://web.archive.org/web/20200810073003/https://www.farrahforirvine.com/",
+      "title": "Home | Farrah Khan for Irvine Mayor"
+     },
+     {
+      "window": "after",
+      "domain": "farrahforirvine.com",
+      "capture_url": "https://web.archive.org/web/20201119211429/https://www.farrahforirvine.com/",
+      "title": "Home | Farrah Khan for Irvine Mayor"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "city_id": "4837000",
+  "city_name": "Irving city",
+  "state_abb": "TX",
+  "finalists": [
+   {
+    "candidate_election_id": "4837000__2011-06-18__regular__fadc6df66e506ec9",
+    "candidate_name": "Beth Van Duyne",
+    "election_date": "2011-06-18",
+    "search_status": "incomplete",
+    "search_note": "WebSearch budget was exhausted. Fallback searches through mac2 failed: DuckDuckGo returned no results (bot page) and Bing returned only unrelated pages. Wikipedia lists only bethfortexas.com (her later congressional site); Ballotpedia fetch returned empty. Old URL bethfortexas.com has no 200 capture before 2018 and none in the window. Guessed domains with no capture in the CDX: bethforirving.com/.org/.net, vanduyneformayor.com, electbethvanduyne.com, vanduyne.com, vanduyneforirving.com. bethvanduyne.com (first 200 in 2021) and bethvanduyne.org (first 200 in 2021) have only later captures. The ",
+    "hits": [
+     {
+      "window": "before",
+      "domain": "bethforirving.com",
+      "capture_url": "https://web.archive.org/web/20101001194205/http://www.bethforirving.com:80/",
+      "title": "Beth Van  Duyne for Irving"
+     },
+     {
+      "window": "after",
+      "domain": "bethforirving.com",
+      "capture_url": "https://web.archive.org/web/20110827162442/http://bethforirving.com:80/",
+      "title": "Beth Van Duyne For Mayor of Irving"
+     }
+    ]
+   },
+   {
+    "candidate_election_id": "4837000__2014-05-10__regular__fadc6df66e506ec9",
+    "candidate_name": "Beth Van Duyne",
+    "election_date": "2014-05-10",
+    "search_status": "incomplete",
+    "search_note": "WebSearch budget was exhausted. Fallback searches through mac2 failed: DuckDuckGo returned no results (bot page) and Bing returned only unrelated pages. Wikipedia lists only bethfortexas.com (her later congressional site); Ballotpedia fetch returned empty. Old URL bethfortexas.com has no 200 capture before 2018 and none in the window. Guessed domains with no capture in the CDX: bethforirving.com/.org/.net, vanduyneformayor.com, electbethvanduyne.com, vanduyne.com, vanduyneforirving.com. bethvanduyne.com (first 200 in 2021) and bethvanduyne.org (first 200 in 2021) have only later captures. The ",
+    "hits": [
+     {
+      "window": "before",
+      "domain": "bethforirving.com",
+      "capture_url": "https://web.archive.org/web/20130512121142/http://bethforirving.com/",
+      "title": "Beth Van Duyne For Mayor of Irving"
+     },
+     {
+      "window": "after",
+      "domain": "bethforirving.com",
+      "capture_url": "https://web.archive.org/web/20140517014822/http://bethforirving.com/",
+      "title": "Beth Van Duyne For Mayor of Irving"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "city_id": "0643000",
+  "city_name": "Long Beach city",
+  "state_abb": "CA",
+  "finalists": [
+   {
+    "candidate_election_id": "0643000__2010-04-13__regular__959505847fa02e3f",
+    "candidate_name": "Bob Foster",
+    "election_date": "2010-04-13",
+    "search_status": "outside_window",
+    "search_note": "mayorbobfoster.com has no capture before 20101217014609 (first capture, HTTP 200, after the election). Captures continue to 2013. No capture in the 365 days before 2010-04-13. fosterformayor.com has a 200 capture on 20090414025020, but it is the site of Mayor Scott Foster, a different person, so I rejected it. Web search tools did not work, so another 2010 domain may exist.",
+    "hits": [
+     {
+      "window": "before",
+      "domain": "fosterformayor.com",
+      "capture_url": "https://web.archive.org/web/20090414025020/http://fosterformayor.com:80/howheworks.aspx",
+      "title": "How Mayor Foster Works"
+     },
+     {
+      "window": "after",
+      "domain": "electfoster.com",
+      "capture_url": "https://web.archive.org/web/20100414120552/http://www.electfoster.com:80/",
+      "title": "Re-Elect Mike Foster"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "city_id": "1253000",
+  "city_name": "Orlando city",
+  "state_abb": "FL",
+  "finalists": [
+   {
+    "candidate_election_id": "1253000__2015-11-03__regular__16b926a0a383096b",
+    "candidate_name": "Buddy Dyer",
+    "election_date": "2015-11-03",
+    "search_status": "incomplete",
+    "search_note": "No working web search ran: WebSearch budget is used up and the DuckDuckGo fallback returned no results. Wayback CDX (via mac2) for 2014-11-04 to 2015-11-03 shows no 200 capture for buddy.vote or buddydyer.com. Other captures exist only outside the window: buddy.vote first 200 capture 20241209172109 (old roster URL, a later campaign); dyerformayor.com first 200 capture 20180806125203; buddydyer08.com 2007-2009 captures (2008 campaign). Domains with no captures at all: buddydyer.org, buddydyerformayor.com, buddydyer2015.com, electbuddydyer.com, buddydyer.net, buddydyer.vote, www.buddydyer.com, b",
+    "hits": [
+     {
+      "window": "before",
+      "domain": "buddyfororlando.com",
+      "capture_url": "https://web.archive.org/web/20150914200924/http://www.buddyfororlando.com/",
+      "title": "Buddy Dyer for Orlando Mayor"
+     },
+     {
+      "window": "after",
+      "domain": "buddyfororlando.com",
+      "capture_url": "https://web.archive.org/web/20151120133021/http://www.buddyfororlando.com:80/?",
+      "title": "Buddy Dyer for Orlando Mayor"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "city_id": "0668000",
+  "city_name": "San Jose city",
+  "state_abb": "CA",
+  "finalists": [
+   {
+    "candidate_election_id": "0668000__2014-11-04__regular__de2a6e1bda27d353",
+    "candidate_name": "Dave Cortese",
+    "election_date": "2014-11-04",
+    "search_status": "incomplete",
+    "search_note": "No web search worked: WebSearch budget was used up and DuckDuckGo through mac2 returned a bot challenge with no results. The Wayback CDX request for the old URL (http://www.davecortese.com, domain davecortese.com) timed out on mac2 at 45 to 60 seconds on 3 or more tries, while the web.archive.org home page returned 200. No URL was accepted and no domain was fully checked, so this is not a not_found result. Retry when the CDX endpoint responds and a search tool works.",
+    "hits": [
+     {
+      "window": "before",
+      "domain": "davecorteseformayor.com",
+      "capture_url": "https://web.archive.org/web/20140101010705/http://davecorteseformayor.com/",
+      "title": "davecorteseformayor.com"
+     },
+     {
+      "window": "after",
+      "domain": "davecorteseformayor.com",
+      "capture_url": "https://web.archive.org/web/20141217002542/http://davecorteseformayor.com/",
+      "title": "davecorteseformayor.com"
+     }
+    ]
+   },
+   {
+    "candidate_election_id": "0668000__2018-06-05__regular__c94ef18523f2c915",
+    "candidate_name": "Steve Brown",
+    "election_date": "2018-06-05",
+    "search_status": "incomplete",
+    "search_note": "No web search worked: WebSearch budget was used up and DuckDuckGo through mac2 returned a bot challenge with no results. The Wayback CDX request for the old URL (http://www.stevebrown4mayor.com/, domain stevebrown4mayor.com) timed out on mac2 at 45 to 60 seconds on 3 or more tries, while the web.archive.org home page returned 200. No URL was accepted and no domain was fully checked, so this is not a not_found result. Retry when the CDX endpoint responds and a search tool works.",
+    "hits": [
+     {
+      "window": "before",
+      "domain": "brown4mayor.com",
+      "capture_url": "https://web.archive.org/web/20180109223152/http://brown4mayor.com/",
+      "title": "Michael Brown for Grand Forks Mayor"
+     },
+     {
+      "window": "after",
+      "domain": "brown4mayor.com",
+      "capture_url": "https://web.archive.org/web/20180806151908/http://brown4mayor.com/",
+      "title": "Michael Brown for Grand Forks Mayor"
+     },
+     {
+      "window": "after",
+      "domain": "brownformayor.com",
+      "capture_url": "https://web.archive.org/web/20180805220738/http://brownformayor.com/",
+      "title": "brownformayor.com"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "city_id": "0446000",
+  "city_name": "Mesa city",
+  "state_abb": "AZ",
+  "finalists": [
+   {
+    "candidate_election_id": "0446000__2020-08-04__regular__1dad06bd58932955",
+    "candidate_name": "John Giles",
+    "election_date": "2020-08-04",
+    "search_status": "outside_window",
+    "search_note": "The site johngilesformayor.com is the Giles campaign site and appears in search results. Wayback has no capture of the domain between 2017-12-22 (last 200, www host) and 2020-11-04 (first later capture, 200). So there is no capture in the 365 days to 2020-08-04. Replay of the later captures returned empty bodies, so the page text was not confirmed. Status is outside_window. Guessed domains gilesformesa.com, mayorgiles.com, johngilesmesa.com and johngiles.org had no captures; the last guesses in the list (gilesformayor.com, giles2020.com, votejohngiles.com, johngilesformayor.org) were not finis",
+    "hits": [
+     {
+      "window": "after",
+      "domain": "johngilesformayor.com",
+      "capture_url": "https://web.archive.org/web/20201009150813/https://www.johngilesformayor.com/",
+      "title": "John Giles for Mesa Mayor 2020 \u2013 Mesa, Arizona"
+     }
+    ]
+   },
+   {
+    "candidate_election_id": "0446000__2020-08-04__regular__eed1c2c41f7aee7e",
+    "candidate_name": "Verl Farnsworth",
+    "election_date": "2020-08-04",
+    "search_status": "outside_window",
+    "search_note": "The site verlformayor.com is the Farnsworth mayoral campaign site. Its first Wayback capture is 2020-10-15, 72 days after the 2020-08-04 election date. No earlier capture exists. Nearest captures: 20201015154225, 20201026192650, 20201104135838. Status is outside_window.",
+    "hits": [
+     {
+      "window": "after",
+      "domain": "verlformayor.com",
+      "capture_url": "https://web.archive.org/web/20201015154225/https://verlformayor.com/",
+      "title": "Verl Farnsworth For Mesa Mayor"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "city_id": "0602000",
+  "city_name": "Anaheim city",
+  "state_abb": "CA",
+  "finalists": [
+   {
+    "candidate_election_id": "0602000__2010-11-02__regular__e5e31638ed9821b5",
+    "candidate_name": "Tom Tait",
+    "election_date": "2010-11-02",
+    "search_status": "outside_window",
+    "search_note": "The domain taitformayor.com has 200 captures only after the election. The first is 20110129013632; the next is 20111106033722. No capture exists before the election. The page text of the first capture did not load, so it is not read. Both search tools failed, so no other domain was found by search.",
+    "hits": [
+     {
+      "window": "after",
+      "domain": "taitformayor.com",
+      "capture_url": "https://web.archive.org/web/20110129013632/http://taitformayor.com/",
+      "title": "www.TaitForMayor.com"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "city_id": "3755000",
+  "city_name": "Raleigh city",
+  "state_abb": "NC",
+  "finalists": [
+   {
+    "candidate_election_id": "3755000__2013-10-08__regular__b6ca278c8219853b",
+    "candidate_name": "Robert Weltzin",
+    "election_date": "2013-10-08",
+    "search_status": "outside_window",
+    "search_note": "bobweltzin.com is a Weltzin mayoral campaign site, but its first archived capture is 2015-07-31, from the 2015 campaign (Vote October 6th). No capture exists in the 365 days before 2013-10-08. The site may have been used in 2013 but the archive has no proof. No web search worked, so a different 2013 domain cannot be excluded.",
+    "hits": [
+     {
+      "window": "after",
+      "domain": "robertweltzin.com",
+      "capture_url": "https://web.archive.org/web/20131010013853/http://www.robertweltzin.com/",
+      "title": "Weltzin for Office"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "city_id": "3977000",
+  "city_name": "Toledo city",
+  "state_abb": "OH",
+  "finalists": [
+   {
+    "candidate_election_id": "3977000__2015-11-03__special__c749276208d84681",
+    "candidate_name": "Michael P. Bell",
+    "election_date": "2015-11-03",
+    "search_status": "incomplete",
+    "search_note": "No web search ran: WebSearch budget was used up and the mac2 search fallbacks returned no results. Old URL mikebellfortoledo.com has 200 captures in the window, but the archived page is an unrelated Japanese-language site about house moving (no Bell, no mayoral text), so it is rejected. friendsofmikebell.com has no captures at all. Guessed domains with no captures from 2014-11-04 to 2015-11-03: mikebellfortoledo.org, mikebell2015.com, mikebellformayor.com, bellfortoledo.com, mikebelltoledo.com, votemikebell.com, mikebell.com, electmikebell.com, bellformayor.com, friendsofmikebell.org. Not reco",
+    "hits": [
+     {
+      "window": "after",
+      "domain": "bellformayor.com",
+      "capture_url": "https://web.archive.org/web/20151211055553/https://bellformayor.com/",
+      "title": "Home - Chris Bell for Houston Mayor"
+     }
+    ]
+   }
+  ]
+ }
+]

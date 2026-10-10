@@ -1,0 +1,24 @@
+[
+ {
+  "candidate_election_id": "3915000__2017-11-07__regular__ae970c1cb3ed1b07",
+  "candidate_name": "Yvette Simpson",
+  "election_date": "2017-11-07",
+  "status": "accepted",
+  "campaign_url": "http://yvettesimpson.com/",
+  "registrable_domain": "yvettesimpson.com",
+  "lead_sources": [
+   "old_roster_urls in search_args.json (http://yvettesimpson.com/)"
+  ],
+  "searches_run": [
+   "WebSearch: Yvette Simpson Cincinnati mayor 2017 campaign website (refused, budget used up)",
+   "DuckDuckGo HTML via mac2, same query (page returned, no result links parsed)",
+   "Wayback CDX host/domain queries for yvettesimpson.com via mac2"
+  ],
+  "wayback_window_captures": 313,
+  "first_capture_in_window": "20170102014923",
+  "checked_capture_url": "https://web.archive.org/web/20171021180249/http://yvettesimpson.com/",
+  "page_evidence": "Yvette Simpson For Cincinnati Mayor",
+  "other_profiles": [],
+  "note": "Both web searches failed, so no independent web lead was found. The old roster URL itself passed the archive check: 313 HTTP 200 captures from 2016-11-07 to 2017-11-07 (counted with limit 500, not truncated), including 20171107015013 on election day. The 2017-10-21 capture is titled 'Yvette Simpson For Mayor of Cincinnati' and has an endorsements page and events pages. No other domain was checked."
+ }
+]

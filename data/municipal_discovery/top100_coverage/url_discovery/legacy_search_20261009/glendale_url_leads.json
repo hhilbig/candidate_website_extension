@@ -1,0 +1,48 @@
+[
+ {
+  "campaign_url": "https://www.jerryweiers.com/",
+  "registrable_domain": "jerryweiers.com",
+  "lead_sources": [
+   "https://www.jerryweiers.com/ (old roster URL)"
+  ],
+  "searches_run": [
+   "WebSearch refused: budget used up (200 of 200)",
+   "DuckDuckGo via mac2: 'Jerry Weiers Glendale mayor campaign website' returned a bot-challenge page, no results",
+   "CDX jerryweiers.com matchType=domain, election window and full history",
+   "CDX guesses with no captures at all: weiersformayor.com, jerryweiersformayor.com, jerry4mayor.com, electjerryweiers.com, weiers4mayor.com"
+  ],
+  "wayback_window_captures": 0,
+  "first_capture_in_window": "",
+  "other_profiles": [],
+  "candidate_election_id": "0427820__2016-08-30__regular__5a47bf95a1f34dba",
+  "candidate_name": "Jerry Weiers",
+  "election_date": "2016-08-30",
+  "status": "outside_window",
+  "checked_capture_url": "https://web.archive.org/web/20090329162255/http://www.jerryweiers.com:80/",
+  "page_evidence": "Re-Elect Republican Jerry Weiers for State Representative (2009 capture; a state house race, not the mayoral race)",
+  "note": "jerryweiers.com has 200 captures only in 2008-2009 and from 2020-08-10 on. None fall in 2015-08-31 to 2016-08-30. Nearest before: 20090329162255. Nearest after: 20200810080605. No web search worked, so a different 2016 campaign domain was not ruled out."
+ },
+ {
+  "campaign_url": "https://www.jerryweiers.com/",
+  "registrable_domain": "jerryweiers.com",
+  "lead_sources": [
+   "https://www.jerryweiers.com/ (old roster URL)"
+  ],
+  "searches_run": [
+   "WebSearch refused: budget used up (200 of 200)",
+   "DuckDuckGo via mac2: 'Jerry Weiers Glendale mayor campaign website' returned a bot-challenge page, no results",
+   "CDX jerryweiers.com matchType=domain, election window and full history",
+   "CDX guesses with no captures at all: weiersformayor.com, jerryweiersformayor.com, jerry4mayor.com, electjerryweiers.com, weiers4mayor.com"
+  ],
+  "wayback_window_captures": 0,
+  "first_capture_in_window": "",
+  "other_profiles": [],
+  "candidate_election_id": "0427820__2020-08-04__regular__5a47bf95a1f34dba",
+  "candidate_name": "Jerry Weiers",
+  "election_date": "2020-08-04",
+  "status": "outside_window",
+  "checked_capture_url": "https://web.archive.org/web/20200810080605/https://www.jerryweiers.com/",
+  "page_evidence": "Capture is a Wix page; I read the raw HTML head only and found no candidate text. Not accepted.",
+  "note": "jerryweiers.com has no 200 capture in 2019-08-05 to 2020-08-04. First capture is 20200810080605, six days after the election. Nearest before: 20090329162255. No web search worked, so a different 2020 campaign domain was not ruled out."
+ }
+]

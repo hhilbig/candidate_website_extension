@@ -1,0 +1,94 @@
+[
+ {
+  "candidate_election_id": "4837000__2011-06-18__regular__fadc6df66e506ec9",
+  "candidate_name": "Beth Van Duyne",
+  "election_date": "2011-06-18",
+  "status": "incomplete",
+  "campaign_url": "",
+  "registrable_domain": "",
+  "lead_sources": [
+   "https://en.wikipedia.org/wiki/Beth_Van_Duyne"
+  ],
+  "searches_run": [
+   "WebSearch (refused: budget used up)",
+   "Bing via mac2: Beth Van Duyne Irving mayor 2011 campaign website (irrelevant results)",
+   "Bing via mac2: Beth Van Duyne for Irving mayor 2014 election (irrelevant results)",
+   "DuckDuckGo via mac2 (no results)",
+   "WebFetch en.wikipedia.org/wiki/Beth_Van_Duyne",
+   "WebFetch ballotpedia.org/Beth_Van_Duyne (empty)"
+  ],
+  "wayback_window_captures": 0,
+  "first_capture_in_window": "",
+  "checked_capture_url": "",
+  "page_evidence": "",
+  "other_profiles": [],
+  "note": "WebSearch budget was exhausted. Fallback searches through mac2 failed: DuckDuckGo returned no results (bot page) and Bing returned only unrelated pages. Wikipedia lists only bethfortexas.com (her later congressional site); Ballotpedia fetch returned empty. Old URL bethfortexas.com has no 200 capture before 2018 and none in the window. Guessed domains with no capture in the CDX: bethforirving.com/.org/.net, vanduyneformayor.com, electbethvanduyne.com, vanduyne.com, vanduyneforirving.com. bethvanduyne.com (first 200 in 2021) and bethvanduyne.org (first 200 in 2021) have only later captures. The search for the real 2011/2014 site was not completed, so the result is incomplete, not not_found."
+ },
+ {
+  "candidate_election_id": "4837000__2014-05-10__regular__fadc6df66e506ec9",
+  "candidate_name": "Beth Van Duyne",
+  "election_date": "2014-05-10",
+  "status": "incomplete",
+  "campaign_url": "",
+  "registrable_domain": "",
+  "lead_sources": [
+   "https://en.wikipedia.org/wiki/Beth_Van_Duyne"
+  ],
+  "searches_run": [
+   "WebSearch (refused: budget used up)",
+   "Bing via mac2: Beth Van Duyne Irving mayor 2011 campaign website (irrelevant results)",
+   "Bing via mac2: Beth Van Duyne for Irving mayor 2014 election (irrelevant results)",
+   "DuckDuckGo via mac2 (no results)",
+   "WebFetch en.wikipedia.org/wiki/Beth_Van_Duyne",
+   "WebFetch ballotpedia.org/Beth_Van_Duyne (empty)"
+  ],
+  "wayback_window_captures": 0,
+  "first_capture_in_window": "",
+  "checked_capture_url": "",
+  "page_evidence": "",
+  "other_profiles": [],
+  "note": "WebSearch budget was exhausted. Fallback searches through mac2 failed: DuckDuckGo returned no results (bot page) and Bing returned only unrelated pages. Wikipedia lists only bethfortexas.com (her later congressional site); Ballotpedia fetch returned empty. Old URL bethfortexas.com has no 200 capture before 2018 and none in the window. Guessed domains with no capture in the CDX: bethforirving.com/.org/.net, vanduyneformayor.com, electbethvanduyne.com, vanduyne.com, vanduyneforirving.com. bethvanduyne.com (first 200 in 2021) and bethvanduyne.org (first 200 in 2021) have only later captures. The search for the real 2011/2014 site was not completed, so the result is incomplete, not not_found."
+ },
+ {
+  "candidate_election_id": "4837000__2017-05-06__regular__487ca5c3a53b63d9",
+  "candidate_name": "Kristi Weaver Pena",
+  "election_date": "2017-05-06",
+  "status": "accepted",
+  "campaign_url": "https://kristiforirving.com/",
+  "registrable_domain": "kristiforirving.com",
+  "lead_sources": [
+   "old roster URL http://kristiforirving.com/"
+  ],
+  "searches_run": [
+   "Bing via mac2: Kristi Weaver Pena Irving mayor 2017 campaign website (irrelevant)",
+   "Wayback CDX kristiforirving.com 2016-05-06 to 2017-05-06"
+  ],
+  "wayback_window_captures": 33,
+  "first_capture_in_window": "20170406124219",
+  "checked_capture_url": "https://web.archive.org/web/20170406124224/https://kristiforirving.com/",
+  "page_evidence": "Kristi for Irving | Home ... I'm looking forward to serving as Irving's next mayor.",
+  "other_profiles": [],
+  "note": "The old roster URL is the correct site. The 33 count includes assets (css, images); the home page captures 20170406124224 and 20170503034723 are HTTP 200. The 20170503 capture returned an empty body on id_ replay, so the quote comes from the 20170406 capture. The page does not show the full candidate name beyond the site title Kristi for Irving; the candidate is the first-name match to Kristi Weaver Pena. Web search did not run successfully (search tools returned irrelevant results)."
+ },
+ {
+  "candidate_election_id": "4837000__2020-11-03__regular__d17c066854fa72f3",
+  "candidate_name": "Rick Stopfer",
+  "election_date": "2020-11-03",
+  "status": "accepted",
+  "campaign_url": "http://www.rickleads.com/",
+  "registrable_domain": "rickleads.com",
+  "lead_sources": [
+   "old roster URL http://www.rickleads.com"
+  ],
+  "searches_run": [
+   "Wayback CDX rickleads.com 2019-11-03 to 2020-11-03",
+   "Bing via mac2: Rick Stopfer Irving mayor 2020 campaign website (irrelevant)"
+  ],
+  "wayback_window_captures": 19,
+  "first_capture_in_window": "20201021013153",
+  "checked_capture_url": "https://web.archive.org/web/20201021013153/http://www.rickleads.com/",
+  "page_evidence": "ELECT RICK STOPFER FOR IRVING MAYOR Election Day is Tuesday, November 3. Early voting begins Tuesday, October 13.",
+  "other_profiles": [],
+  "note": "The old roster URL is the correct site. The count includes assets; home page captures 20201021013153 and 20201103081105 are HTTP 200."
+ }
+]

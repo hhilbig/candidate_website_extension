@@ -1,0 +1,26 @@
+[
+ {
+  "candidate_election_id": "1714000__2015-04-07__regular__94916fe8f75ac1dc",
+  "candidate_name": "Rahm Emanuel",
+  "election_date": "2015-04-07",
+  "status": "accepted",
+  "campaign_url": "http://www.chicagotogether.org/",
+  "registrable_domain": "chicagotogether.org",
+  "lead_sources": [
+   "Task hint naming chicagotogether.org as a typical big-city campaign domain; confirmed by archived page text, not by a web page citing it"
+  ],
+  "searches_run": [
+   "WebSearch: Rahm Emanuel 2015 Chicago mayor campaign website (refused, budget used up)",
+   "DuckDuckGo via mac2: Rahm Emanuel 2015 mayor campaign website Chicago (results: Wikipedia, Ballotpedia, no campaign domain)",
+   "DuckDuckGo via mac2: Rahm Emanuel reelection 2015 official campaign site (no results)",
+   "https://en.wikipedia.org/wiki/2015_Chicago_mayoral_election and Rahm_Emanuel links (no campaign domain)",
+   "https://ballotpedia.org/Rahm_Emanuel (no campaign link extracted)"
+  ],
+  "wayback_window_captures": 592,
+  "first_capture_in_window": "20140517075825",
+  "checked_capture_url": "https://web.archive.org/web/20141119201429/http://www.chicagotogether.org/",
+  "page_evidence": "Title 'Rahm for Chicago'; footer 'Paid for by Chicago for Rahm Emanuel'; menu 'Stand with Rahm, Commit to Vote, Volunteer, Contribute, Endorsements'. A 2015-04-07 capture of /blog/public-safety/ says 'Rahm believes that every child and family in Chicago...'.",
+  "other_profiles": [],
+  "note": "Count is HTTP 200 captures of the whole domain (all URLs) from 2014-04-07 to 2015-04-07; the first one is robots.txt, the first root page is 20140517075828. Old roster URLs checked: voteemanuel.com has no capture before 2019; chicagoforrahm.com only 2010 captures; neither is a 2015 site. Other domains checked and rejected: rahmforchicago.com (2010 fan blog 'Following the race to be Chicago's next mayor', not the candidate), rahmemanuel.com (parked page), rahmemanuel.org (domain for sale), rahm.com (RealNames email), rahm.org (family page), mayorrahm.com (empty index); rahm2015.com, reelectrahm.com, voterahm.com, friendsofrahm.com had no captures. The search tool was refused; only two DuckDuckGo queries and two page reads ran, so the domain came from the task hint and was accepted on archive evidence. Several first Wayback requests failed with SSL errors and were retried."
+ }
+]

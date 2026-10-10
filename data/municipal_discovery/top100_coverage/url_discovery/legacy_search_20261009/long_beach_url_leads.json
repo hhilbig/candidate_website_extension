@@ -1,0 +1,73 @@
+[
+ {
+  "candidate_election_id": "0643000__2010-04-13__regular__959505847fa02e3f",
+  "candidate_name": "Bob Foster",
+  "election_date": "2010-04-13",
+  "status": "outside_window",
+  "campaign_url": "http://mayorbobfoster.com/",
+  "registrable_domain": "mayorbobfoster.com",
+  "lead_sources": [
+   "old roster URL"
+  ],
+  "searches_run": [
+   "WebSearch (budget exhausted, refused)",
+   "Bing and DuckDuckGo via mac2 (returned unrelated results or a bot page)",
+   "Wikipedia Bob_Foster_(mayor) (no external links)",
+   "CDX mayorbobfoster.com domain",
+   "CDX bobfoster.com, fosterformayor.com, bobfosterformayor.com, electbobfoster.com, votebobfoster.com, bobfoster2010.com, bobfosterlb.com for 2009-04-13 to 2010-04-13"
+  ],
+  "wayback_window_captures": 0,
+  "first_capture_in_window": "",
+  "checked_capture_url": "",
+  "page_evidence": "",
+  "other_profiles": [],
+  "note": "mayorbobfoster.com has no capture before 20101217014609 (first capture, HTTP 200, after the election). Captures continue to 2013. No capture in the 365 days before 2010-04-13. fosterformayor.com has a 200 capture on 20090414025020, but it is the site of Mayor Scott Foster, a different person, so I rejected it. Web search tools did not work, so another 2010 domain may exist."
+ },
+ {
+  "candidate_election_id": "0643000__2018-04-10__regular__9d3616bb53a08ff6",
+  "candidate_name": "Robert Garcia",
+  "election_date": "2018-04-10",
+  "status": "accepted",
+  "campaign_url": "http://www.robertgarcia.com/",
+  "registrable_domain": "robertgarcia.com",
+  "lead_sources": [
+   "https://en.wikipedia.org/wiki/Robert_Garcia_(California_politician) (external link robertgarcia.com)"
+  ],
+  "searches_run": [
+   "WebSearch (budget exhausted, refused)",
+   "Bing and DuckDuckGo via mac2 (returned unrelated results or a bot page)",
+   "Wikipedia Robert_Garcia_(California_politician) external links",
+   "CDX www.robertgarcia.com 2017-04-10 to 2018-04-10",
+   "CDX keepitlongbeach.com 2017-04-10 to 2018-04-10"
+  ],
+  "wayback_window_captures": 46,
+  "first_capture_in_window": "20170530023107",
+  "checked_capture_url": "https://web.archive.org/web/20170530023107/http://www.robertgarcia.com/",
+  "page_evidence": "Robert Garcia for Mayor ... DONATE ... Robert Garcia for Mayor 2018 ID#1395891",
+  "other_profiles": [],
+  "note": "46 HTTP 200 captures of www.robertgarcia.com host in the window, including pages such as fundraising_by_the_numbers and an event page. Old roster URL keepitlongbeach.com is wrong: the 2018-01-24 capture shows the site of Mineo Gonzalez, not Garcia."
+ },
+ {
+  "candidate_election_id": "0643000__2018-04-10__regular__8f5f1f8720172395",
+  "candidate_name": "James Henry \"Henk\" Conn",
+  "election_date": "2018-04-10",
+  "status": "incomplete",
+  "campaign_url": "",
+  "registrable_domain": "henkconn.com",
+  "lead_sources": [
+   "old roster URL https://henkconn.com"
+  ],
+  "searches_run": [
+   "WebSearch (budget exhausted, refused)",
+   "Bing and DuckDuckGo via mac2 (returned unrelated results or a bot page)",
+   "CDX henkconn.com domain 2017-04-10 to 2018-04-10",
+   "Ballotpedia and Wikipedia Henk_Conn fetch (empty or no page)"
+  ],
+  "wayback_window_captures": 1,
+  "first_capture_in_window": "20180408075253",
+  "checked_capture_url": "https://web.archive.org/web/20180408075253/https://www.henkconn.com/",
+  "page_evidence": "",
+  "other_profiles": [],
+  "note": "One HTTP 200 capture of https://www.henkconn.com/ on 2018-04-08, two days before the election. It is a Wix page rendered by JavaScript. The archived HTML has only the site title 'henkconn' and no readable text naming Conn or a mayoral race. So condition (b) is not met and I do not accept it. The domain is very likely his campaign site, but no search result confirmed it because the search tools failed. A manual check of the rendered capture would decide."
+ }
+]

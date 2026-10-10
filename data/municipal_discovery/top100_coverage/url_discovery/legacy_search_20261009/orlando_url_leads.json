@@ -1,0 +1,25 @@
+[
+ {
+  "candidate_election_id": "1253000__2015-11-03__regular__16b926a0a383096b",
+  "candidate_name": "Buddy Dyer",
+  "election_date": "2015-11-03",
+  "status": "incomplete",
+  "campaign_url": "",
+  "registrable_domain": "",
+  "lead_sources": [
+   "https://en.wikipedia.org/wiki/Buddy_Dyer"
+  ],
+  "searches_run": [
+   "WebSearch: Buddy Dyer Orlando mayor 2015 campaign website (refused, budget used up)",
+   "DuckDuckGo via mac2, 3 queries (returned no result links, only the DuckDuckGo start page)",
+   "WebFetch https://ballotpedia.org/Buddy_Dyer (empty page)",
+   "WebFetch https://en.wikipedia.org/wiki/Buddy_Dyer (only lists buddydyer08.com, 2008 campaign)"
+  ],
+  "wayback_window_captures": 0,
+  "first_capture_in_window": "",
+  "checked_capture_url": "",
+  "page_evidence": "",
+  "other_profiles": [],
+  "note": "No working web search ran: WebSearch budget is used up and the DuckDuckGo fallback returned no results. Wayback CDX (via mac2) for 2014-11-04 to 2015-11-03 shows no 200 capture for buddy.vote or buddydyer.com. Other captures exist only outside the window: buddy.vote first 200 capture 20241209172109 (old roster URL, a later campaign); dyerformayor.com first 200 capture 20180806125203; buddydyer08.com 2007-2009 captures (2008 campaign). Domains with no captures at all: buddydyer.org, buddydyerformayor.com, buddydyer2015.com, electbuddydyer.com, buddydyer.net, buddydyer.vote, www.buddydyer.com, buddydyer2015.org, dyer2015.com, buddydyer4mayor.com. Window captures of buddydyer08.com were not queried completely (the last request timed out), so that domain is not fully checked. Marked incomplete because no search ran."
+ }
+]

@@ -1,0 +1,29 @@
+[
+ {
+  "candidate_election_id": "3260600__2010-11-02__regular__decc624e54211372",
+  "candidate_name": "Chad Dehne",
+  "election_date": "2010-11-02",
+  "status": "accepted",
+  "campaign_url": "http://www.renocitizen.com/mayorchad.htm",
+  "registrable_domain": "renocitizen.com",
+  "lead_sources": [
+   "https://renocitizen.com/mayorchad.htm",
+   "https://renocitizen.com/chadplat.htm",
+   "https://ballotpedia.org/Chad_Dehne"
+  ],
+  "searches_run": [
+   "WebSearch refused (budget used up)",
+   "DuckDuckGo via mac2: Chad Dehne Reno mayor 2010 campaign",
+   "DuckDuckGo via mac2: Chad Dehne for Reno mayor website",
+   "CDX renocitizen.com host 2009-11-02..2010-11-02",
+   "CDX chaddehne.com domain (no captures)",
+   "CDX renocitizen.com/mayorchad.htm and /chadplat.htm"
+  ],
+  "wayback_window_captures": 2,
+  "first_capture_in_window": "20100524082146",
+  "checked_capture_url": "https://web.archive.org/web/20100524082146/http://www.renocitizen.com:80/mayorchad.htm",
+  "page_evidence": "Archived mayorchad.htm: 'VOTE FOR CHAD DEHNE ... Brought to You by the Committee to Elect DEHNE'. Archived chadplat.htm (20100525110733): 'The Chadillac Makes A Great Reno Mayor' / 'CHAD DEHNE for Reno City Council!'",
+  "other_profiles": [],
+  "note": "The old roster URL renocitizen.com is the site of Sam Dehne, the candidate's father, and its home page is not a campaign page. The candidate pages mayorchad.htm and chadplat.htm sit on that domain. The mayoral wording is weak: the title says Reno Mayor, but the body also says City Council, which may be old text. Accepted with doubt. Other captures of these two pages in window: mayorchad.htm 1, chadplat.htm 1."
+ }
+]

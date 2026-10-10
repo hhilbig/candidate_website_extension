@@ -1,0 +1,77 @@
+[
+ {
+  "candidate_election_id": "1608830__2011-11-08__regular__a844180aac45f29e",
+  "candidate_name": "David Bieter",
+  "election_date": "2011-11-08",
+  "status": "accepted",
+  "campaign_url": "http://www.bieterforboise.com/",
+  "registrable_domain": "bieterforboise.com",
+  "lead_sources": [
+   "https://html.duckduckgo.com/html/?q=David+Bieter+for+Mayor+Boise+campaign+website",
+   "https://www.cityofboise.org/departments/city-clerk/city-elections/candidates/david-h-bieter/"
+  ],
+  "searches_run": [
+   "DuckDuckGo via mac2: David Bieter for Mayor Boise campaign website",
+   "City of Boise candidate page for David H. Bieter (no campaign URL listed)",
+   "Wayback CDX domain checks via mac2: bieter4boise.com, bieterforboise.com, bieterforboise.org, bieter.com, daveforboise.com, bieterformayor.com, bieter2019.com, davebieter.com, reelectbieter.com, bieter4mayor.com, votebieter.com, bieter2015.com, bieter2011.com"
+  ],
+  "wayback_window_captures": 52,
+  "first_capture_in_window": "20110910131031",
+  "checked_capture_url": "https://web.archive.org/web/20110910131031/http://www.bieterforboise.com/",
+  "page_evidence": "Dave Bieter for Boise Mayor ... Making sure that experience was preserved ... was the biggest reason I ran for Mayor eight years ago.",
+  "other_profiles": [
+   "https://www.facebook.com/bieterforboise/"
+  ],
+  "note": "The old roster URL bieter4boise.com has no capture before 2016-03-04, so it is not valid for 2011. The domain bieterforboise.com holds the candidate site in the window. Window 2010-11-08 to 2011-11-08. The count is HTTP 200 captures of the host (www and bare, all paths)."
+ },
+ {
+  "candidate_election_id": "1608830__2015-11-03__regular__1970d781edc1f18c",
+  "candidate_name": "David H. Bieter",
+  "election_date": "2015-11-03",
+  "status": "outside_window",
+  "campaign_url": "http://bieter4boise.com/",
+  "registrable_domain": "bieter4boise.com",
+  "lead_sources": [
+   "https://html.duckduckgo.com/html/?q=David+Bieter+for+Mayor+Boise+campaign+website",
+   "https://www.cityofboise.org/departments/city-clerk/city-elections/candidates/david-h-bieter/"
+  ],
+  "searches_run": [
+   "DuckDuckGo via mac2: David Bieter for Mayor Boise campaign website",
+   "City of Boise candidate page for David H. Bieter (no campaign URL listed)",
+   "Wayback CDX domain checks via mac2: bieter4boise.com, bieterforboise.com, bieterforboise.org, bieter.com, daveforboise.com, bieterformayor.com, bieter2019.com, davebieter.com, reelectbieter.com, bieter4mayor.com, votebieter.com, bieter2015.com, bieter2011.com"
+  ],
+  "wayback_window_captures": 0,
+  "first_capture_in_window": "",
+  "checked_capture_url": "",
+  "page_evidence": "",
+  "other_profiles": [
+   "https://www.facebook.com/bieterforboise/"
+  ],
+  "note": "The 2015 campaign site was probably bieter4boise.com (WordPress uploads dated 2015-09 and 2015-10 in the 2019 capture). The archive has no capture of it in 2014-11-03 to 2015-11-03. Nearest capture is 20160304064449 (after the election). No earlier capture exists. The domain bieterforboise.com has 44 captures in the window, but all show a parked or spam page (Sedo parking, Japanese spam), so it is not the campaign site for 2015. bieter.com has only 403 pages in the window. The match of bieter4boise.com to 2015 comes from the upload paths, not from an archived in-window page."
+ },
+ {
+  "candidate_election_id": "1608830__2019-12-03__regular__1970d781edc1f18c",
+  "candidate_name": "David H. Bieter",
+  "election_date": "2019-12-03",
+  "status": "accepted",
+  "campaign_url": "https://bieterforboise.com/",
+  "registrable_domain": "bieterforboise.com",
+  "lead_sources": [
+   "https://html.duckduckgo.com/html/?q=David+Bieter+for+Mayor+Boise+campaign+website",
+   "https://www.cityofboise.org/departments/city-clerk/city-elections/candidates/david-h-bieter/"
+  ],
+  "searches_run": [
+   "DuckDuckGo via mac2: David Bieter for Mayor Boise campaign website",
+   "City of Boise candidate page for David H. Bieter (no campaign URL listed)",
+   "Wayback CDX domain checks via mac2: bieter4boise.com, bieterforboise.com, bieterforboise.org, bieter.com, daveforboise.com, bieterformayor.com, bieter2019.com, davebieter.com, reelectbieter.com, bieter4mayor.com, votebieter.com, bieter2015.com, bieter2011.com"
+  ],
+  "wayback_window_captures": 197,
+  "first_capture_in_window": "20190527044137",
+  "checked_capture_url": "https://web.archive.org/web/20190527044141/https://bieterforboise.com/",
+  "page_evidence": "Bieter for Boise ... Stand with Dave and help build a team that will fight tirelessly ... Mayor Bieter's record. Page of 20191118054111: 'Dave is a family man ... will gladly be supporting him in November' (runoff FAQ, endorsements).",
+  "other_profiles": [
+   "https://www.facebook.com/bieterforboise/"
+  ],
+  "note": "Window 2018-12-03 to 2019-12-03. The old roster URL bieter4boise.com has only asset files and a phpMyAdmin page in the window (2019-04 and 2019-05), no home page, so the 2019 site is bieterforboise.com. Count is HTTP 200 captures of the domain, all paths."
+ }
+]

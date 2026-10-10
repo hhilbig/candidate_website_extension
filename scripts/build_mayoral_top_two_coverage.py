@@ -335,7 +335,9 @@ def build(cities, roster, urls, results, reviews=(), validations=(), city_year_o
             discovered_url = ""
             if lead:
                 used_discovered.add(candidate_id)
-                if links:
+                # A checked lead from the legacy-lead search (October 9, 2026) may replace an old roster URL that had
+                # no archived copy in the window; the roster URL's own evidence is kept.
+                if links and lead.get("replaces_legacy") != "True":
                     raise ValueError("Discovered URL lead for a finalist that already has a legacy URL lead")
                 # An outside-window entry without a URL is an unconfirmed domain, not a lead.
                 if lead["final_status"] == "accepted" and not lead["campaign_url"]:
@@ -598,6 +600,10 @@ def main():
     discovered_leads = read_csv(ROOT / leads_path) if leads_path else []
     if leads_path:
         inputs.append(Path(leads_path))
+    legacy_leads_path = config.get("legacy_search_leads")
+    if legacy_leads_path:
+        discovered_leads = discovered_leads + read_csv(ROOT / legacy_leads_path)
+        inputs.append(Path(legacy_leads_path))
     hashes = {str(p): sha(ROOT / p) for p in inputs}
     result = build(read_csv(ROOT / args.cities), read_csv(ROOT / ROSTER), read_csv(ROOT / URLS), records,
                    read_csv(ROOT / REVIEWS), read_csv(ROOT / VALIDATION), overrides, read_csv(ROOT / args.saved_evidence),

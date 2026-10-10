@@ -1,0 +1,60 @@
+[
+ {
+  "election_date": "2020-08-04",
+  "status": "outside_window",
+  "wayback_window_captures": 0,
+  "first_capture_in_window": "",
+  "candidate_election_id": "0446000__2020-08-04__regular__1dad06bd58932955",
+  "candidate_name": "John Giles",
+  "campaign_url": "https://www.johngilesformayor.com/",
+  "registrable_domain": "johngilesformayor.com",
+  "lead_sources": [
+   "https://en.wikipedia.org/wiki/John_Giles_(mayor)",
+   "https://search.brave.com/search?q=%22Giles%22+%22for+Mesa%22+mayor+2020+campaign+site+donate+volunteer"
+  ],
+  "searches_run": [
+   "Brave Search via mac2: John Giles Mesa mayor 2020 reelection campaign website",
+   "Brave Search via mac2: Giles for Mesa mayor 2020 campaign site donate volunteer",
+   "Wikipedia: John Giles (mayor), 2020 Mesa mayoral election",
+   "Wayback CDX domain guesses: johngiles.com (different person, printing consultant), johngiles.org, gilesformesa.com, mayorgiles.com, johngilesmesa.com (no usable in-window captures)",
+   "WebSearch refused (budget used); DuckDuckGo via mac2 returned no results"
+  ],
+  "checked_capture_url": "",
+  "page_evidence": "",
+  "other_profiles": [
+   "https://www.facebook.com/MayorGiles/",
+   "https://twitter.com/mayorgiles",
+   "https://twitter.com/johngilestweet",
+   "https://www.instagram.com/mayorgiles/"
+  ],
+  "note": "The site johngilesformayor.com is the Giles campaign site and appears in search results. Wayback has no capture of the domain between 2017-12-22 (last 200, www host) and 2020-11-04 (first later capture, 200). So there is no capture in the 365 days to 2020-08-04. Replay of the later captures returned empty bodies, so the page text was not confirmed. Status is outside_window. Guessed domains gilesformesa.com, mayorgiles.com, johngilesmesa.com and johngiles.org had no captures; the last guesses in the list (gilesformayor.com, giles2020.com, votejohngiles.com, johngilesformayor.org) were not finished."
+ },
+ {
+  "election_date": "2020-08-04",
+  "status": "outside_window",
+  "wayback_window_captures": 0,
+  "first_capture_in_window": "",
+  "candidate_election_id": "0446000__2020-08-04__regular__eed1c2c41f7aee7e",
+  "candidate_name": "Verl Farnsworth",
+  "campaign_url": "https://verlformayor.com/",
+  "registrable_domain": "verlformayor.com",
+  "lead_sources": [
+   "https://en.wikipedia.org/wiki/2020_Mesa_mayoral_election",
+   "https://search.brave.com/search?q=Verl+Farnsworth+Mesa+mayor+2020+campaign+website"
+  ],
+  "searches_run": [
+   "Brave Search via mac2: Verl Farnsworth Mesa mayor 2020 campaign website",
+   "Brave Search via mac2: Farnsworth for Mesa mayor 2020 donate volunteer Verl",
+   "Wikipedia: 2020 Mesa mayoral election",
+   "Wayback CDX for verlformayor.com (all years)",
+   "WebSearch refused (budget used); DuckDuckGo via mac2 returned no results"
+  ],
+  "checked_capture_url": "https://web.archive.org/web/20201015154225/https://verlformayor.com/",
+  "page_evidence": "Verl Farnsworth For Mesa Mayor ... Start A New Path Forward - VOTE VERL FARNSWORTH (capture 2020-10-15, after the election date)",
+  "other_profiles": [
+   "https://www.facebook.com/VerlForMayor/",
+   "https://www.facebook.com/FarnsworthForMesa"
+  ],
+  "note": "The site verlformayor.com is the Farnsworth mayoral campaign site. Its first Wayback capture is 2020-10-15, 72 days after the 2020-08-04 election date. No earlier capture exists. Nearest captures: 20201015154225, 20201026192650, 20201104135838. Status is outside_window."
+ }
+]

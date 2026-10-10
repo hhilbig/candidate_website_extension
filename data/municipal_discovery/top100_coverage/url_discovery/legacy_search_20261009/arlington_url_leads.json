@@ -1,0 +1,76 @@
+[
+ {
+  "candidate_election_id": "4804000__2017-05-06__regular__16bb9026515e45b2",
+  "candidate_name": "Chris Dobson",
+  "election_date": "2017-05-06",
+  "status": "not_found",
+  "campaign_url": "",
+  "registrable_domain": "",
+  "lead_sources": [
+   "https://ballotpedia.org/Chris_Dobson",
+   "https://sonodob.wixsite.com/dobi4mayor"
+  ],
+  "searches_run": [
+   "DuckDuckGo via mac2: Chris Dobson Arlington Texas mayor 2017 campaign website",
+   "CDX sonodob.wixsite.com/dobi4mayor prefix 2010-2030 (empty)",
+   "CDX host sonodob.wixsite.com, votedob.com, dobi4mayor.com, dobiformayor.com (all empty)",
+   "CDX chrisdobson.com (captures to 2016; different person or older site, not verified)"
+  ],
+  "wayback_window_captures": 0,
+  "first_capture_in_window": "",
+  "checked_capture_url": "",
+  "page_evidence": "",
+  "other_profiles": [
+   "https://www.facebook.com/ChrisDobiDobson/",
+   "https://www.facebook.com/votedob/"
+  ],
+  "note": "The only campaign site found is sonodob.wixsite.com/dobi4mayor. The Wayback index has no capture of it at any date. WebSearch budget was used up; one DuckDuckGo search ran through mac2. A second DuckDuckGo query later returned nothing."
+ },
+ {
+  "candidate_election_id": "4804000__2019-05-04__regular__fe3801b77cbbafed",
+  "candidate_name": "Ruby Faye Woolridge",
+  "election_date": "2019-05-04",
+  "status": "outside_window",
+  "campaign_url": "",
+  "registrable_domain": "rubyforarlington.com",
+  "lead_sources": [
+   "old roster URL http://vote4ruby.org (Wayback CDX)"
+  ],
+  "searches_run": [
+   "CDX host vote4ruby.org 2010-2030",
+   "archived pages of vote4ruby.org 20171014, 20180323, 20180809, 20181119, 20190103",
+   "CDX host rubyformayor.com, woolridgeformayor.com, rubywoolridge.com, votewoolridge.com (empty)",
+   "CDX host rubyforarlington.com 2017-2020",
+   "DuckDuckGo via mac2, 3 queries on the candidate name (no results returned; rate limited)",
+   "WebSearch refused (budget used up)"
+  ],
+  "wayback_window_captures": 0,
+  "first_capture_in_window": "",
+  "checked_capture_url": "https://web.archive.org/web/20200805065823/https://rubyforarlington.com/",
+  "page_evidence": "",
+  "other_profiles": [],
+  "note": "vote4ruby.org was her 2018 Congress (TX-6) site. Its in-window captures (2018-08 to 2019-01) show a parked or spam page or a firewall block, with no mayoral text. rubyforarlington.com has captures only from 2020-08-05 to 2020-09-21, after the election; I did not read them and the page may be for a later race. Web search for the 2019 mayoral site did not work, so a different 2019 domain could exist."
+ },
+ {
+  "candidate_election_id": "4804000__2021-06-05__regular__199de6ddd94b378c",
+  "candidate_name": "Michael Glaspie",
+  "election_date": "2021-06-05",
+  "status": "accepted",
+  "campaign_url": "https://glaspieforarlington.com/",
+  "registrable_domain": "glaspieforarlington.com",
+  "lead_sources": [
+   "old roster URL https://glaspieforarlington.com (confirmed in Wayback)"
+  ],
+  "searches_run": [
+   "CDX host glaspieforarlington.com 2010-2030",
+   "DuckDuckGo via mac2 query on name (no results returned)",
+   "archived page read 20210426225503"
+  ],
+  "wayback_window_captures": 4,
+  "first_capture_in_window": "20210426225503",
+  "checked_capture_url": "https://web.archive.org/web/20210426225503/https://glaspieforarlington.com/",
+  "page_evidence": "Michael Glaspie for Arlington Mayor ... Vote for Michael Glaspie for Arlington Mayor",
+  "other_profiles": [],
+  "note": "Window 2020-06-05 to 2021-06-05. In-window 200 captures: 20210426, 20210502 (2), 20210505 (4 rows counting a duplicate-timestamp pair as 2 for 20210502). Later captures in 2021-06 and 2023 are outside the window."
+ }
+]

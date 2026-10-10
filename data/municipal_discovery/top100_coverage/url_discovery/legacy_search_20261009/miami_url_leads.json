@@ -1,0 +1,54 @@
+[
+ {
+  "candidate_election_id": "1245000__2021-11-02__regular__0ebd3056ef1be1e4",
+  "candidate_name": "Francis X. Suarez",
+  "election_date": "2021-11-02",
+  "status": "incomplete",
+  "campaign_url": "",
+  "registrable_domain": "",
+  "lead_sources": [
+   "https://en.wikipedia.org/wiki/2021_Miami_mayoral_election",
+   "https://floridapolitics.com/archives/467740-miami-mayor-francis-suarez-dusts-opponents-in-final-fundraising-stretch-ahead-of-tuesday-election/"
+  ],
+  "searches_run": [
+   "WebSearch: refused, budget of 200 used",
+   "mac2 DuckDuckGo html and lite: no results (HTTP 202)",
+   "mac2 Bing: no usable results",
+   "Wikipedia 2021 Miami mayoral election page (links read)",
+   "Wikipedia Francis X. Suarez page (links read)",
+   "Florida Politics article on final fundraising stretch (links read)",
+   "Ballotpedia via mac2: blocked (HTTP 202)"
+  ],
+  "wayback_window_captures": 0,
+  "first_capture_in_window": "",
+  "checked_capture_url": "",
+  "page_evidence": "",
+  "other_profiles": [],
+  "note": "No web search engine worked, so the search step did not finish. Old URL francisformiami.com: the archive has home page captures only in 2017 and early 2018. In the 365 days before 2021-11-02 it has only robots.txt captures (20211102194542 is the nearest; it has no candidate text). Guessed domains with no capture in window: francissuarez.com, francisxsuarez.com, reelectsuarez.com, electfrancis.com, mayorsuarez.com, teamsuarez.com, francisformiami.org, francisformiami.net, francisformayor.com, suarezformayor.com, suarez4miami.com, francis4miami.com, francissuarez.org, suarezmayor.com, francisformiamiagain.com. suarezmiami.com has captures but is a real estate site. A new search is needed to find the 2021 site."
+ },
+ {
+  "candidate_election_id": "1245000__2021-11-02__regular__970a39df196721ca",
+  "candidate_name": "Max Martinez",
+  "election_date": "2021-11-02",
+  "status": "accepted",
+  "campaign_url": "https://www.mm44mia.com/",
+  "registrable_domain": "mm44mia.com",
+  "lead_sources": [
+   "https://floridapolitics.com/archives/467740-miami-mayor-francis-suarez-dusts-opponents-in-final-fundraising-stretch-ahead-of-tuesday-election/"
+  ],
+  "searches_run": [
+   "WebSearch: refused, budget of 200 used",
+   "mac2 DuckDuckGo and Bing: no usable results",
+   "Florida Politics article on final fundraising stretch (found the link mm44mia.com)",
+   "Wayback CDX checks of max4mia.com and guessed domains maxformiami.com, maxmartinezformiami.com, max4miami.com, martinezformiami.com, votemax.com, maxmartinez.com"
+  ],
+  "wayback_window_captures": 74,
+  "first_capture_in_window": "20201229032800",
+  "checked_capture_url": "https://web.archive.org/web/20211017041050/https://www.mm44mia.com/",
+  "page_evidence": "Max Martinez 44th Mayor of the City of Miami ... Issues ... Donate ... Request VBM ... Volunteer ... Road to 44",
+  "other_profiles": [
+   "https://twitter.com/max4mia"
+  ],
+  "note": "The old roster URL max4mia.com has no capture in the window; max4mia is his social handle, linked from the page. The count of 74 is all 200 captures of mm44mia.com pages in the window, not only the home page; the home page has 14. The page names the candidate and the Donate and Request VBM links show a campaign. maxmartinez.com has captures but belongs to another person."
+ }
+]

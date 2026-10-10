@@ -1,0 +1,40 @@
+[
+ {
+  "candidate_election_id": "0668000__2014-11-04__regular__de2a6e1bda27d353",
+  "candidate_name": "Dave Cortese",
+  "election_date": "2014-11-04",
+  "status": "incomplete",
+  "campaign_url": "",
+  "registrable_domain": "",
+  "lead_sources": [],
+  "searches_run": [
+   "WebSearch refused: budget of 200 calls used",
+   "DuckDuckGo html via mac2: HTTP 202 challenge, no results"
+  ],
+  "wayback_window_captures": 0,
+  "first_capture_in_window": "",
+  "checked_capture_url": "",
+  "page_evidence": "",
+  "other_profiles": [],
+  "note": "No web search worked: WebSearch budget was used up and DuckDuckGo through mac2 returned a bot challenge with no results. The Wayback CDX request for the old URL (http://www.davecortese.com, domain davecortese.com) timed out on mac2 at 45 to 60 seconds on 3 or more tries, while the web.archive.org home page returned 200. No URL was accepted and no domain was fully checked, so this is not a not_found result. Retry when the CDX endpoint responds and a search tool works."
+ },
+ {
+  "candidate_election_id": "0668000__2018-06-05__regular__c94ef18523f2c915",
+  "candidate_name": "Steve Brown",
+  "election_date": "2018-06-05",
+  "status": "incomplete",
+  "campaign_url": "",
+  "registrable_domain": "",
+  "lead_sources": [],
+  "searches_run": [
+   "WebSearch refused: budget of 200 calls used",
+   "DuckDuckGo html via mac2: HTTP 202 challenge, no results"
+  ],
+  "wayback_window_captures": 0,
+  "first_capture_in_window": "",
+  "checked_capture_url": "",
+  "page_evidence": "",
+  "other_profiles": [],
+  "note": "No web search worked: WebSearch budget was used up and DuckDuckGo through mac2 returned a bot challenge with no results. The Wayback CDX request for the old URL (http://www.stevebrown4mayor.com/, domain stevebrown4mayor.com) timed out on mac2 at 45 to 60 seconds on 3 or more tries, while the web.archive.org home page returned 200. No URL was accepted and no domain was fully checked, so this is not a not_found result. Retry when the CDX endpoint responds and a search tool works."
+ }
+]

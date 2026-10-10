@@ -1,0 +1,646 @@
+{
+ "anchorage": {
+  "checked": 1,
+  "problems": []
+ },
+ "anaheim": {
+  "checked": 2,
+  "problems": [
+   {
+    "candidate_election_id": "0602000__2018-11-06__regular__02bcd559843ec7c6",
+    "severity": "minor",
+    "issue": "first_capture_in_window and note are inconsistent with CDX; no web search ran",
+    "evidence": "CDX (host, 200 only, 2017-11-06 to 2018-11-06) returns 47 captures, so the count is correct. The earliest 200 capture is 20180331065302, not 20171113081837 as the field says. The note says the first capture is a robots.txt file at 20171113, which the 200-filtered query does not show. The 20180404073315 capture names Harry Sidhu for Mayor of Anaheim ('real world experience', 'Endorse Harry', 'For Mayor'), so acceptance holds. The writer's own searches_run lists WebSearch refused and DuckDuckGo captcha, so the lead rests on the old roster URL only."
+   }
+  ]
+ },
+ "albuquerque": {
+  "checked": 3,
+  "problems": []
+ },
+ "aurora": {
+  "checked": 1,
+  "problems": [
+   {
+    "candidate_election_id": "0804000__2019-11-05__regular__e9a916260b06869a",
+    "severity": "minor",
+    "issue": "No accepted or not_found entries to verify. The only entry is status incomplete, which is a valid status. lead_sources lists Ballotpedia and 5280 pages that the note says were never opened, so they are not leads the writer read.",
+    "evidence": "The note says 'Ballotpedia and 5280 pages were not opened'. A CDX retry through mac2 for mayormikecoffman.com (20181105 to 20191105, status 200) returned an empty body. That result does not show whether the archive holds zero captures or the request failed. The incomplete status stays correct, and the CDX query needs a later retry."
+   }
+  ]
+ },
+ "arlington": {
+  "checked": 3,
+  "problems": [
+   {
+    "candidate_election_id": "4804000__2021-06-05__regular__199de6ddd94b378c",
+    "severity": "minor",
+    "issue": "note field is garbled",
+    "evidence": "CDX through mac2 for 20200605-20210605 shows 4 HTTP 200 captures of the home page (20210426225503, 20210502032435, 20210502045143, 20210505123531). The count of 4 and the first capture are correct. The note text '20210505 (4 rows counting a duplicate-timestamp pair...)' is confusing. The archived page title reads 'Michael Glaspie for Arlington Mayor', so the accepted status holds."
+   },
+   {
+    "candidate_election_id": "4804000__2017-05-06__regular__16bb9026515e45b2",
+    "severity": "minor",
+    "issue": "domain not checked",
+    "evidence": "chrisdobson.com is listed as 'different person or older site, not verified'. The domain was found but not confirmed or ruled out. CDX for sonodob.wixsite.com, votedob.com and dobi4mayor.com returned empty for 2016-05-06 to 2017-05-06, which matches the file. Only one DuckDuckGo search ran (WebSearch was unavailable), so the search is thin."
+   },
+   {
+    "candidate_election_id": "4804000__2019-05-04__regular__fe3801b77cbbafed",
+    "severity": "minor",
+    "issue": "search did not run; domain not checked",
+    "evidence": "WebSearch was refused and all DuckDuckGo queries returned no results, so no search produced results. The status should be 'incomplete' rather than outside_window. The rubyforarlington.com captures (2020-08 to 2020-09) were never read, so it is not confirmed that this is her mayoral site. campaign_url and page_evidence are empty. My own CDX re-check of rubyforarlington.com timed out (curl exit 35, Wayback unreachable from mac2), so I could not confirm the capture dates."
+   }
+  ]
+ },
+ "austin": {
+  "checked": 3,
+  "problems": [
+   {
+    "candidate_election_id": "4805000__2018-11-06__regular__c277ac9842d67a77",
+    "severity": "minor",
+    "issue": "Accepted entry holds, but the note is imprecise and no independent search ran",
+    "evidence": "I re-ran the CDX query via mac2. adlerforaustin.com has 114 HTTP 200 rows from 2017-11-21 to 2018-01-24, so the in-window status is confirmed. The 20171228200020 capture reads 'Reelect Mayor Steve Adler ... donate to his reelection campaign ... Pol. Adv. paid for by the Steve Adler Campaign'. This is the candidate's own campaign site. However, the 114 count includes assets and sub-pages. searches_run lists only CDX queries and the old roster URL, and mayoradler.com was not read."
+   },
+   {
+    "candidate_election_id": "4805000__2012-05-12__regular__af83ed584c168fb4",
+    "severity": "minor",
+    "issue": "outside_window confirmed; the nearest-capture note is incomplete",
+    "evidence": "CDX for leffingwellformayor.com shows 200 captures only at 20090125, 20090228 and from 20120602 onward. There are none in 2011-05-12 to 2012-05-12, or in 2010-05-14 to 2011-05-14. The note gives 20120602205651 as the nearest after capture, which is the first capture but is a ?page_id=14 subpage; the first root-page capture is 20120708002949. No candidate-election domain was accepted, so the status holds."
+   },
+   {
+    "candidate_election_id": "4805000__2014-12-16__regular__b89245003bf99e1e",
+    "severity": "minor",
+    "issue": "not_found: searches ran, but the domain check is partly unverifiable and the search was weak",
+    "evidence": "I re-ran CDX for the window 2013-12-16 to 2014-12-16. mikemartinezforaustin.com has captures at 20140103 and 20140630, which the writer calls spam. martinezformayor.com and mikemartinez.com have only parked-style captures. mikeformayor.com, martinezforaustin.com and mikemartinez2014.com have none. mikeforaustin.com has 200 captures at 20140105 and 20140517 that the writer never listed in the note. The id_ replays I fetched for mikeforaustin.com and mikemartinez.com returned no text, so I could not confirm their content. No accepted result was found, so not_found is plausible. The note itself admits that the search tools were weak."
+   }
+  ]
+ },
+ "baton_rouge": {
+  "checked": 2,
+  "problems": [
+   {
+    "candidate_election_id": "2205000__2020-12-05__regular__513800feb6c4322c",
+    "severity": "minor",
+    "issue": "note understates evidence; no web search confirmed the site",
+    "evidence": "I confirmed 5 HTTP 200 root captures for stevecarterforbr.com in 2019-12-05 to 2020-12-05 (first 20200904170206). The capture 20201109155233 (also 20201124154348) has title 'Steve Carter | Steve Carter for BR' and meta text 'Steve Carter is the candidate for EBR Mayor-Preisdent'. The site is his own mayoral campaign site, so acceptance holds. The note says the text had no 'mayor'. The meta description supplies that evidence and could be recorded. The searches_run DuckDuckGo query returned an empty parse, so the only lead is the old roster URL. The checked capture 20201101084352 returned an empty body on my replay."
+   },
+   {
+    "candidate_election_id": "2205000__2016-12-10__regular__432258e41dad5e7e",
+    "severity": "minor",
+    "issue": "domain not checked",
+    "evidence": "I could not re-run the Wayback CDX for bodi2016.com. Three queries through mac2 (host match, exact URL, and a later-date query) timed out or failed with curl exit 28 or 35, so the outside_window claim is unverified by me. The note says only robots.txt 403 captures in the window and the first HTML 200 on 20170913012140. The writer also read only one capture of mackbodiwhite.com and did not check other plausible domains such as bodiwhite.com or bodiforbr.com. No candidate result is marked accepted, so there is no reject-level problem."
+   }
+  ]
+ },
+ "baltimore": {
+  "checked": 2,
+  "problems": [
+   {
+    "candidate_election_id": "2404000__2016-11-08__regular__fa0a91d1c76cd742",
+    "severity": "minor",
+    "issue": "note field is inaccurate",
+    "evidence": "The note says no capture exists after April 2016. A CDX query (200 captures, 2015-11-09 to 2016-11-08) shows 682 captures that continue to October 2016: May 29, June 85, July 6, Aug 1, Oct 2. The acceptance still holds. The 2016-03-06 capture title is 'SHEILA DIXON FOR MAYOR' on the sheiladixonformayor.com WordPress site, and the 682 count is correct."
+   }
+  ]
+ },
+ "boise_city": {
+  "checked": 2,
+  "problems": [
+   {
+    "candidate_election_id": "1608830__2019-12-03__regular__1970d781edc1f18c",
+    "severity": "minor",
+    "issue": "page_evidence is attributed to the 20191118054111 capture without naming its path",
+    "evidence": "The quote 'Dave is a family man ... gladly be supporting him in November' is on /alan-shealy/ (and similar endorsement pages) at 20191118054111, not on the home page. The checked home capture 20190527044141 is titled 'Bieter for Boise' with the schema description 'accomplished a lot... Boise's future'. CDX recount confirms 197 HTTP 200 captures in 2018-12-03 to 2019-12-03 and first capture 20190527044141. The site is his own and in window, so acceptance holds."
+   }
+  ]
+ },
+ "chula_vista": {
+  "checked": 1,
+  "problems": [
+   {
+    "candidate_election_id": "0613392__2018-11-06__regular__efa3abf16389fc04",
+    "severity": "minor",
+    "issue": "search did not run (weak coverage); domains not all checked",
+    "evidence": "No accepted entries; the one not_found entry stands on a limited search. WebSearch was refused. I re-ran a DuckDuckGo query through mac2 and it returned no results, so no search result list exists to confirm. Ballotpedia returned no content. The note itself admits search coverage was limited. I re-ran CDX through mac2 and confirmed hectorvote.com has only 3 captures, all 2013-02, none in the 2017-11-06 to 2018-11-06 window. The first four guessed domains (gastelumformayor.com, hectorgastelum.com, hectorformayor.com, gastelum4mayor.com) returned no in-window captures. The mac2 CDX queries were slow, so I did not finish the others in the list. The writer's claim of no captures is plausible but not independently confirmed for those. The status should stay not_found only if the search is judged to have run; consider incomplete."
+   }
+  ]
+ },
+ "charlotte": {
+  "checked": 2,
+  "problems": [
+   {
+    "candidate_election_id": "3712000__2017-11-07__regular__fec2b73b83ceee68",
+    "severity": "minor",
+    "issue": "first_capture_in_window points to a robots.txt capture, not a page",
+    "evidence": "CDX re-run via mac2 returned 35 in-window 200 rows. 20170309173548 is http://www.electkennysmith.com/robots.txt. Only two are HTML: 20170728191329 and 20171022121630. Acceptance itself holds: the 20171022121630 capture has title 'Elect Kenny Smith | Charlotte, NC' and description 'Republican mayoral candidate Kenny Smith believes Charlotte Deserves better.'"
+   },
+   {
+    "candidate_election_id": "3712000__2019-11-05__regular__4108bb9facc4a497",
+    "severity": "minor",
+    "issue": "domain not checked",
+    "evidence": "Status is incomplete, not not_found, which is correct. The note says eight guessed domains (riceformayor.com, davidriceformayor.com, etc.) were not checked in the archive because the CDX batch did not finish. WebSearch was refused, DuckDuckGo hit a CAPTCHA and Bing gave unrelated results, so no usable search ran. The domain checks and a working search still need to be run."
+   }
+  ]
+ },
+ "chicago": {
+  "checked": 1,
+  "problems": [
+   {
+    "candidate_election_id": "1714000__2015-04-07__regular__94916fe8f75ac1dc",
+    "severity": "minor",
+    "issue": "wayback_window_captures count does not reproduce; lead_sources cites no web page",
+    "evidence": "The accepted URL holds up: my CDX query through mac2 returned HTTP 200 captures of chicagotogether.org in the window, including 20141119201429. That capture has the title 'Rahm for Chicago' and the footer 'Paid for by Chicago for Rahm Emanuel'. My count of 200 captures from 20140407 to 20150407 is 508, not the recorded 592. The writer's lead_sources entry is only a task hint, not a page that links the site to the candidate."
+   }
+  ]
+ },
+ "columbus": {
+  "checked": 1,
+  "problems": [
+   {
+    "candidate_election_id": "3918000__2015-11-03__regular__8fd1c41036d38579",
+    "severity": "minor",
+    "issue": "Acceptance rests on one frameset page; frame target not read and no web search ran",
+    "evidence": "mac2 CDX (20141103-20151103, 200) returned 3 captures: 20150214054633 home page, two robots.txt on 20151011. The home page is a frameset pointing to scottforcolumbus.net. Its meta description reads 'Sheriff Zach Scott, Candidate for City of Columbus Mayor'. The count of 3, first capture and page_evidence all match the file. The URL is Scott's own campaign domain. The only lead is the old roster URL, and the web search was refused. The note discloses all of this."
+   }
+  ]
+ },
+ "cincinnati": {
+  "checked": 1,
+  "problems": [
+   {
+    "candidate_election_id": "3915000__2017-11-07__regular__ae970c1cb3ed1b07",
+    "severity": "minor",
+    "issue": "page_evidence does not match the archived title",
+    "evidence": "The CDX query through mac2 returned 313 HTTP 200 captures in 2016-11-07 to 2017-11-07, as the file says. The 20171021180249 capture has the title 'Yvette Simpson For Mayor of Cincinnati'. The file's page_evidence reads 'Yvette Simpson For Cincinnati Mayor'. The accepted status holds. The note also says no independent web lead was found because both searches failed."
+   }
+  ]
+ },
+ "cleveland": {
+  "checked": 2,
+  "problems": [
+   {
+    "candidate_election_id": "3916000__2013-11-05__regular__fc8343592436e3ac",
+    "severity": "minor",
+    "issue": "lead found by domain guess, not search",
+    "evidence": "Verified: CDX returned 48 HTTP 200 captures in window (first 20130613055622). Archived volunteer page says 'Mayor Frank Jackson's campaign for re-election'. Accepted entry holds. Note: no search tool produced the lead; it came from a domain guess, which the note states."
+   },
+   {
+    "candidate_election_id": "3916000__2017-11-07__regular__ea689cba44ceec56",
+    "severity": "minor",
+    "issue": "no independent search lead",
+    "evidence": "Verified: CDX returned 300 HTTP 200 captures in window (first 20161107004443). Archived issues page title 'Issues - Zack Reed 2017' and text 'elected Mayor of the City of Cleveland'. Accepted entry holds. Note: searches only produced failures; the note states this."
+   }
+  ]
+ },
+ "dallas": {
+  "checked": 1,
+  "problems": []
+ },
+ "detroit": {
+  "checked": 2,
+  "problems": [
+   {
+    "candidate_election_id": "2622000__2021-11-02__regular__b0bccd2d54040251",
+    "severity": "minor",
+    "issue": "Weak page evidence and no search ran for Duggan; count includes asset URLs",
+    "evidence": "CDX rerun through mac2 reproduces 1029 day-collapsed 200 rows for host dugganfordetroit.com in 2020-11-03..2021-11-02, with the first at 20201109234620 and the last at 20211021211410. The rows include wp-json and js assets, so the count is not a count of page captures. The checked capture is the Duggan for Detroit campaign site (Organization 'Duggan for Detroit', title 'Duggan for Detroit - Detroit Mayor Mike Duggan'), so the site itself holds. The page_evidence quote is partly my reading of the note and does not name the 2021 race. Accepted notes say the news feed is from 2018, and the searches_run entry says no search ran to completion. No 2021 page text was verified."
+   },
+   {
+    "candidate_election_id": "2622000__2017-11-07__regular__55b8ad3872e1ce4f",
+    "severity": "minor",
+    "issue": "domain not checked",
+    "evidence": "The mac2 CDX rerun for 2016-11-08..2017-11-07 confirmed theyoungmovement.com has only a robots.txt 200 (20170821080900). The Brave searches ran, but the note names no 2017 campaign domain from any result. The writer claims colemanyoungformayor.com and the other guessed domains had no captures. The reruns I completed for colemanyoung4detroit.com and the other guessed domains returned empty or timed out, so these are unconfirmed. The not_found verdict is plausible, but the lead_sources entry is a later council site (colemanyoung4detroit.com/about/), not a search result for 2017."
+   }
+  ]
+ },
+ "corpus_christi": {
+  "checked": 1,
+  "problems": [
+   {
+    "candidate_election_id": "4817000__2014-11-04__regular__ba74ddbb78822deb",
+    "severity": "minor",
+    "issue": "wayback_window_captures counts non-page captures; evidence is thin",
+    "evidence": "CDX (mac2, 2013-11-05 to 2014-11-04, status 200) returns 8 rows, but only 3 are HTML pages (20140104231921, 20140225150255, 20140517175525). The rest are robots.txt and favicon. first_capture_in_window 20140104231918 is a robots.txt capture. The accepted capture 20140517175525 is a frameset page. Its title is 'Elect Nelda Martinez for Mayor of Corpus Christi' and its meta keywords say '2012 election, corpus christi, mayor, nelda, martinez'. It frames neldamartinez.nationbuilder.com. Acceptance holds because the candidate and the mayoral race are named on the in-window page."
+   }
+  ]
+ },
+ "el_paso": {
+  "checked": 1,
+  "problems": [
+   {
+    "candidate_election_id": "4824000__2020-12-12__regular__0e1681a4b4d5cabe",
+    "severity": "minor",
+    "issue": "No entry has status accepted, so nothing to reject. The one entry (outside_window) holds, but no real web search ran, so other campaign domains for the 2020 runoff were not searched.",
+    "evidence": "My mac2 CDX query for margoformayor.org (2019-10-01 to 2021-04-01) matched the entry. The only HTML 200 captures are 20191108061352 (before the window) and 20210227162428 (after it). In the window (2019-12-12 to 2020-12-12) there are only a robots.txt 200 (20201116024723) and a home-page 301 (20201116024725). searches_run shows WebSearch refused and DuckDuckGo returned no result links. Status outside_window is correct, and it is not not_found, so the guessed domains were the only leads checked."
+   }
+  ]
+ },
+ "fort_worth": {
+  "checked": 1,
+  "problems": [
+   {
+    "candidate_election_id": "4827000__2019-05-04__regular__b8794e6043c9d6b9",
+    "severity": "minor",
+    "issue": "lead_sources and searches_run weak for accepted entry",
+    "evidence": "Accepted entry for peoples4mayor.com holds. CDX via mac2 for 2018-05-04 to 2019-05-04 with status 200 returned 65 captures; first is 20190415074930. The archived page title and logo read 'Deborah Peoples for Mayor'. Only minor point: lead_sources lists 'old roster URL' and no web search ran; page_evidence is the title only, with no explicit Fort Worth or election text seen."
+   }
+  ]
+ },
+ "durham": {
+  "checked": 4,
+  "problems": []
+ },
+ "glendale": {
+  "checked": 2,
+  "problems": [
+   {
+    "candidate_election_id": "0427820__2016-08-30__regular__5a47bf95a1f34dba",
+    "severity": "minor",
+    "issue": "search did not run",
+    "evidence": "File has no accepted or not_found entries. Both are outside_window. My CDX re-run via mac2 for jerryweiers.com (matchType=domain, 2015-08-31 to 2016-08-30) returned zero captures, so outside_window is correct. But WebSearch was refused and the DuckDuckGo query hit a bot challenge, so no web search ran. A different 2016 campaign domain is not ruled out, as the note says."
+   },
+   {
+    "candidate_election_id": "0427820__2020-08-04__regular__5a47bf95a1f34dba",
+    "severity": "minor",
+    "issue": "search did not run",
+    "evidence": "My CDX re-run for jerryweiers.com (2019-08-05 to 2020-08-04) returned zero captures, so outside_window is correct. No web search ran (WebSearch refused, DuckDuckGo bot challenge). Another 2020 campaign domain is not ruled out. Both entries share an identical searches_run list, so the Weiers 2020 entry has no search specific to the 2020 race."
+   }
+  ]
+ },
+ "fremont": {
+  "checked": 2,
+  "problems": [
+   {
+    "candidate_election_id": "0626000__2016-11-08__regular__8aaadd937e288b3b",
+    "severity": "minor",
+    "issue": "Note claims harrisonforfremont.com has no 200 captures at all; this is wrong",
+    "evidence": "CDX for harrisonforfremont.com shows 200 captures 20130506 to 20160818, including 20160110034727 and 20160818113327, both inside the 2016 window (20151109-20161108). The Aug 2016 capture is a GoDaddy parking page. The Jan 2016 capture has no visible text (empty body). Neither names the candidate, so outside_window/no acceptance still holds, but the domain was not properly checked and the note is inaccurate. No in-window capture of billharrisonformayor.com exists (first 200 is 20171030), which confirms the status."
+   },
+   {
+    "candidate_election_id": "0626000__2012-11-06__regular__8aaadd937e288b3b",
+    "severity": "minor",
+    "issue": "Weak search coverage; domain unconfirmed as the candidate's site",
+    "evidence": "All web searches were refused, irrelevant or blocked by bot challenge, and the 2017 capture was never read. CDX confirms 0 in-window captures for billharrisonformayor.com, billharrison.com and harrisonforfremont.com in 20111107-20121106 (only a 404 on 20120915), so no accepted URL was missed among those domains. Status outside_window is acceptable, though a status of incomplete or not_found with a note about the unconfirmed search would be more accurate, because the 'nearest capture' fields are empty and the leads were never confirmed."
+   },
+   {
+    "candidate_election_id": "0626000__2016-11-08__regular__8aaadd937e288b3b",
+    "severity": "minor",
+    "issue": "Search did not run (effectively)",
+    "evidence": "searches_run lists WebSearch refused, DuckDuckGo bot challenge, Bing irrelevant results. No search produced a usable lead. The earlier harrisonforfremont.com domain (used by Harrison since 2013) was found by guess only and not read."
+   }
+  ]
+ },
+ "fresno": {
+  "checked": 1,
+  "problems": [
+   {
+    "candidate_election_id": "0627000__2020-03-03__regular__2fa9831de2caf4c5",
+    "severity": "minor",
+    "issue": "wayback_window_captures counts only text/html 200 captures, while the field is defined as the count of all 200 captures in the window",
+    "evidence": "CDX for janzformayor.com, 2019-03-04 to 2020-03-03, statuscode:200, no mimetype filter, returned 220 rows. The file reports 50. The note says the 50 is HTML-only, so this is documented. The accept decision is not affected."
+   }
+  ]
+ },
+ "henderson": {
+  "checked": 1,
+  "problems": [
+   {
+    "candidate_election_id": "3231900__2013-04-02__regular__b310c68216c4dc1e",
+    "severity": "minor",
+    "issue": "wayback_window_captures count is off by one",
+    "evidence": "My CDX query (andyhafen.com, matchType=domain, 20120402-20130402, statuscode 200) returned 13 captures; the file says 12. The 13th is http://www.andyhafen.com:80/ at 20130127060817. The acceptance holds: the capture 20130128025635 of /mayor/ is Andy Hafen's campaign site, and the archived donations page (20130128042349) says 'I am running an aggressive grassroots campaign to be re-elected the Mayor of Henderson.' The site title is 'Henderson Nevada Mayor Andy Hafen'. The first in-window capture is 20130127015122, as recorded."
+   }
+  ]
+ },
+ "irvine": {
+  "checked": 0,
+  "problems": []
+ },
+ "greensboro": {
+  "checked": 1,
+  "problems": []
+ },
+ "jersey_city": {
+  "checked": 1,
+  "problems": []
+ },
+ "irving": {
+  "checked": 4,
+  "problems": [
+   {
+    "candidate_election_id": "4837000__2011-06-18__regular__fadc6df66e506ec9",
+    "severity": "minor",
+    "issue": "search did not run (status incomplete, not an accepted or not_found entry)",
+    "evidence": "Note says DuckDuckGo via mac2 returned no results. The checker ran a DuckDuckGo query through mac2 for another Irving candidate and it returned a full result list. The Van Duyne 2011 and 2014 search should be retried by this route."
+   },
+   {
+    "candidate_election_id": "4837000__2014-05-10__regular__fadc6df66e506ec9",
+    "severity": "minor",
+    "issue": "search did not run (status incomplete)",
+    "evidence": "Same as the 2011 entry. DuckDuckGo html endpoint through mac2 works, so the claim of no results does not hold. The status incomplete is correct while the search is open."
+   },
+   {
+    "candidate_election_id": "4837000__2017-05-06__regular__487ca5c3a53b63d9",
+    "severity": "minor",
+    "issue": "The archived page does not show the surname, and the note says no web search ran successfully",
+    "evidence": "CDX confirms HTTP 200 captures of the home page at 20170406124224 and 20170503034723, inside the window. The id_ replay of 20170406124224 shows the title Kristi for Irving and the text \"I'm looking forward to serving as Irving's next mayor.\" It also names Mayor Beth Van Duyne. The surname Pena or Weaver does not appear. A DuckDuckGo search through mac2 lists the Ballotpedia page for Kristi Weaver Pena and the 2017 Irving election page. Acceptance holds. The first-name match and the 2017 mayoral race are consistent. Add a Ballotpedia or news lead for the identity."
+   },
+   {
+    "candidate_election_id": "4837000__2020-11-03__regular__d17c066854fa72f3",
+    "severity": "minor",
+    "issue": "No problem with acceptance. The note and fields hold.",
+    "evidence": "CDX shows HTTP 200 home page captures at 20201021013153 and 20201103081105, in the window. The id_ replay of 20201021013153 has the title ELECT RICK STOPFER FOR IRVING MAYOR and the line Election Day is Tuesday, November 3. The candidate name and the mayoral race match."
+   }
+  ]
+ },
+ "jacksonville": {
+  "checked": 2,
+  "problems": []
+ },
+ "lincoln": {
+  "checked": 2,
+  "problems": [
+   {
+    "candidate_election_id": "3128000__2015-05-05__regular__eea76e01d9806765",
+    "severity": "minor",
+    "issue": "note field inaccurate",
+    "evidence": "Accepted correctly. CDX (host, 20140505-20150505, status 200) returns 130 rows, matching the count, but only 55 are text/html; the rest are images, css, js, text, xml. The note says the 130 'includes images', consistent. However the field first_capture_in_window 20140521160112 is a favicon.ico; first HTML capture is 20141129123645, and first robots.txt is 20140517212048. Archived /contribute/ page (20150406071506) reads 'I would be honored to serve one more term as your Mayor... Citizens For Beutler... volunteer for Beutler for Mayor', so it is the campaign site. Also the note says 'Web search did not run' with DuckDuckGo returning nothing, which is acceptable since the candidate is accepted. Verification used local curl, not mac2: mac2 could not reach web.archive.org (port 443 connect timeout after 75 s, retried twice, while example.com and archive.org worked)."
+   },
+   {
+    "candidate_election_id": "3128000__2019-05-07__regular__0e5e6990219a4a27",
+    "severity": "minor",
+    "issue": "verified, no defect; check done outside mac2",
+    "evidence": "CDX (host, 20180507-20190507, status 200) returns 5 rows with 200: one text/html (20181124224746 /), favicon x2 (octet-stream), main.css x2 (one has 20181129010304, one 20190122083118), so the count of 5 holds only if lamm.jpg (403) and robots.txt (403) are excluded; actual list has 6 rows with status 200 (home, favicon x2, main.css x2 = 5). Archived home page reads 'Cyndi Lamm for Mayor of Lincoln... Cyndi Lamm is the Republican candidate for Mayor of Lincoln, Nebraska in 2019. Donate to Cyndi!', so it is her campaign site. Checked via local curl because mac2 could not reach web.archive.org."
+   }
+  ]
+ },
+ "louisville": {
+  "checked": 2,
+  "problems": []
+ },
+ "long_beach": {
+  "checked": 1,
+  "problems": []
+ },
+ "lubbock": {
+  "checked": 1,
+  "problems": [
+   {
+    "candidate_election_id": "4845000__2016-05-07__regular__6e08870ec6364b35",
+    "severity": "minor",
+    "issue": "Home page capture did not replay in recheck; evidence rests on the donate page",
+    "evidence": "CDX recheck confirmed 2 HTTP 200 captures in window (20160121193953 home, 20160123062109 donate.html). The home page id_ fetch returned no body in 3 tries. The donate page loaded and shows title 'Pope For Mayor | Lubbock, TX | Donate' and footer 'Pope for Mayor, Barry Orr Treasurer', so the site is Dan Pope's own mayoral campaign site. Acceptance holds."
+   }
+  ]
+ },
+ "madison": {
+  "checked": 1,
+  "problems": []
+ },
+ "mesa": {
+  "checked": 2,
+  "problems": [
+   {
+    "candidate_election_id": "0446000__2020-08-04__regular__1dad06bd58932955",
+    "severity": "minor",
+    "issue": "domain not checked",
+    "evidence": "The note says gilesformayor.com, giles2020.com, votejohngiles.com and johngilesformayor.org were not finished. I ran the CDX query for these domains (plus mesagiles.com) for 2019-08-04 to 2020-08-04 through mac2. All returned no captures. The outside_window status holds."
+   },
+   {
+    "candidate_election_id": "0446000__2020-08-04__regular__1dad06bd58932955",
+    "severity": "minor",
+    "issue": "note has wrong capture dates",
+    "evidence": "The CDX for johngilesformayor.com shows 200 captures of www on 2019-01-23 (not 2017-12-22 as the note says). The only capture in the window is a 301 on 2019-08-18 (johngilesformayor.com, not 200). The first later capture is a 200 on 2020-10-09 (not 2020-11-04). There is still no 200 capture between 2019-08-04 and 2020-08-04, so the status is correct."
+   },
+   {
+    "candidate_election_id": "0446000__2020-08-04__regular__eed1c2c41f7aee7e",
+    "severity": "minor",
+    "issue": "none to the status",
+    "evidence": "CDX for verlformayor.com starts at 20201015154225 (200), then 20201026192650 and 20201104135838. There is no capture before 2020-08-04, so outside_window is correct. The nearest timestamps in the note match."
+   }
+  ]
+ },
+ "minneapolis": {
+  "checked": 1,
+  "problems": []
+ },
+ "new_york": {
+  "checked": 1,
+  "problems": []
+ },
+ "miami": {
+  "checked": 1,
+  "problems": []
+ },
+ "orlando": {
+  "checked": 1,
+  "problems": []
+ },
+ "norfolk": {
+  "checked": 1,
+  "problems": [
+   {
+    "candidate_election_id": "5157000__2014-05-06__regular__157c38d75327c9a4",
+    "severity": "minor",
+    "issue": "Weak in-window evidence. The accepted page is a frame whose only readable text is the title, and the readable inner pages are 2010 content.",
+    "evidence": "Mac2 CDX for fraimformayor.com, 2013-05-06 to 2014-05-06, status 200, returns 59 rows. This matches the writer's count and includes the 20130527041528 and 20140109112337 home captures. The 20140109112337 capture has the title 'Re-Elect Mayor Paul Fraim' and no body text; the framed target www.mayorfraim.com has no capture before 2014-05-19. The 20130824120321 announcement.htm page reads 'Announcement to Run for Mayor 2010, Tuesday, November 17, 2009'. The acceptance rests on the title and the 'Re-Elect' wording in January 2014. This is the correct candidate and the correct domain, so I do not recommend a reject or a downgrade. The note already states the 2010 content caveat. Searches: web search was refused and DuckDuckGo and Bing gave no results. The domain came from a name-pattern guess, and the other guessed domains were checked in the CDX."
+   }
+  ]
+ },
+ "oklahoma_city": {
+  "checked": 2,
+  "problems": [
+   {
+    "candidate_election_id": "4055000__2018-02-13__regular__cdfb448fbe17f7a8",
+    "severity": "minor",
+    "issue": "status outside_window rests on an unconfirmed site",
+    "evidence": "No entry has status accepted or not_found, so no accepted URL needed re-verification. The note says the taylorforokc.com captures (2018-08-07 301, 2018-08-24 404, favicon 200) are 'not confirmed as his site', and campaign_url is empty. outside_window should apply only when the candidate's site is established. Without that, the status is closer to incomplete. My own re-check of taylorforokc.com and taylor4ok.org CDX queries through mac2 timed out (curl exit 28/35), so I could not confirm the capture dates."
+   },
+   {
+    "candidate_election_id": "4055000__2014-03-04__regular__cdfb448fbe17f7a8_placeholder_ignore",
+    "severity": "minor",
+    "issue": "Mick Cornett: domain not checked (mickcornett.com)",
+    "evidence": "The note says the mickcornett.com window query timed out three times, so the entry is correctly marked incomplete. The status is consistent with the rules. The domain still needs a successful check. My own re-query of mickcornett.com for 2013-03-04 to 2014-03-04 through mac2 also did not return."
+   }
+  ]
+ },
+ "phoenix": {
+  "checked": 2,
+  "problems": [
+   {
+    "candidate_election_id": "0455000__2019-03-12__special__f2a875c73fa80119",
+    "severity": "minor",
+    "issue": "wayback_window_captures is capped by the query limit",
+    "evidence": "The writer's CDX query used limit=50 and the field says 50, which the note admits is the limit. My rerun with limit=50 also returned exactly 50 rows, so the true count of in-window 200 captures is at least 50. Acceptance holds: the 20181111072815 capture reads 'Vote Kate Gallego for Mayor of Phoenix, Arizona' and the site name is 'Kate Gallego for Phoenix Mayor'."
+   }
+  ]
+ },
+ "pittsburgh": {
+  "checked": 1,
+  "problems": [
+   {
+    "candidate_election_id": "4261000__2013-11-05__regular__ffcf5e9a781cd5f7",
+    "severity": "minor",
+    "issue": "Archived page never mentions mayor; acceptance relies on name match plus Wikipedia",
+    "evidence": "I re-ran the CDX query through mac2 for 20121105 to 20131105. It returned one 200 capture of the homepage, 20131031062415 (http://www.votewander.com:80/). It also returned a 301 and a robots.txt capture. I read the capture. The title is 'Josh Wander - The endorsed candidate', and the keywords are 'Josh, Josh Wander, Pittsburgh, elections, usa'. It is a Wix shell with no 'mayor' text. The capture is in the window and names the candidate and Pittsburgh. The site was registered to Wander, who was the 2013 Pittsburgh mayoral nominee. The writer's note already discloses the missing 'mayor' wording, so I accept the entry."
+   }
+  ]
+ },
+ "raleigh": {
+  "checked": 3,
+  "problems": [
+   {
+    "candidate_election_id": "3755000__2019-10-08__regular__08df7aea870f2924",
+    "severity": "minor",
+    "issue": "Accepted site shows only 2017 campaign content in the window; the 2019-election use is unproven",
+    "evidence": "CDX through mac2 confirms 72-plus 200 captures between 2018-10-09 and 2019-10-08, with HTML pages up to 20190326. The pages read 'CHARLES FRANCIS FOR RALEIGH MAYOR', 'Vote Early! You can vote now until Saturday, November 4', 'Copyright 2017', and a N&O article dated 2017-10-28 about the Nov 7, 2017 runoff. The site meets both acceptance rules and is Francis's own site, so I left it accepted. The writer's note already states the doubt. No web search ran to find a separate 2019 site (WebSearch was refused), so the entry lacks a search for a 2019-specific domain."
+   }
+  ]
+ },
+ "richmond": {
+  "checked": 1,
+  "problems": []
+ },
+ "reno": {
+  "checked": 1,
+  "problems": [
+   {
+    "candidate_election_id": "3260600__2010-11-02__regular__decc624e54211372",
+    "severity": "reject",
+    "issue": "Accepted page is not a 2010 mayoral campaign site. The in-window capture advertises a City Council candidacy on Sam Dehne's domain.",
+    "evidence": "CDX through mac2 confirmed one 200 capture of renocitizen.com/mayorchad.htm (20100524082146) and one of chadplat.htm (20100525110733). The first CDX query for the whole host timed out twice, so the host-wide count of 2 was not reproduced. The fetched 20100524082146 page reads 'VOTE FOR CHAD DEHNE FOR RENO CITY COUNCIL'. Its only mayor text is 'CHAD DEHNE Would Have Made a Great Reno Mayor back in 2006', plus filenames and image names containing 'mayorchad'. It also carries a 'Late Breaking Bulletin' about stolen votes, and says the 'Committee to Elect DEHNE' brought the page. chadplat.htm says 'The Chadillac Makes A Great Reno Mayor' and also 'Reno City Council!'. No in-window text refers to a 2010 mayoral run. Ballotpedia and Wikipedia pages could not be read to settle the race. The domain is the father's (Sam Dehne's) general site, as the writer's note says. The writer's quoted page_evidence omits the 'CITY COUNCIL' headline and the '2006' qualifier."
+   }
+  ]
+ },
+ "san_antonio": {
+  "checked": 2,
+  "problems": [
+   {
+    "candidate_election_id": "4865000__2019-06-08__regular__cef602b6dd43e892",
+    "severity": "minor",
+    "issue": "note field is inaccurate: it says the word mayor does not appear in the archived text",
+    "evidence": "The in-window capture 20190519101420 of https://gregbrockhouse.com/issues/ says \"as Mayor, I will change that and work hard to help residents keep more of their money\". The accepted URL is correct. The note and page_evidence could cite this page. The home capture 20190518213342 names the June 8, 2019 Run-Off. The 2018-12-25 home capture lists District 6 council issues, which is the earlier campaign."
+   }
+  ]
+ },
+ "san_jose": {
+  "checked": 2,
+  "problems": []
+ },
+ "santa_ana": {
+  "checked": 2,
+  "problems": [
+   {
+    "candidate_election_id": "0669000__2020-11-03__regular__cf3c2896dcf50dcd",
+    "severity": "minor",
+    "issue": "page_evidence is only the page title; first_capture_in_window refers to the root page only",
+    "evidence": "Accepted entry holds. CDX returns 50 HTTP 200 captures in 2019-11-04..2020-11-03 (root 20200809075811 to 20201101085016). Capture 20201024200809 has title 'Vicente Sarmiento | Sarmiento for Mayor' and meta 'Santa Ana City Council Member Vicente Sarmiento is running for Mayor of Santa Ana'. The /about/ capture 20200809073415 is earlier than the recorded first capture. A stronger quote was available but the evidence is sufficient."
+   }
+  ]
+ },
+ "san_francisco": {
+  "checked": 2,
+  "problems": [
+   {
+    "candidate_election_id": "0667000__2019-11-05__regular__e7b35ed0079171eb",
+    "severity": "reject",
+    "issue": "Status outside_window is wrong. The old roster domain has an in-window HTTP 200 capture that names the candidate and the mayoral race.",
+    "evidence": "CDX query via mac2 (ellenformayor2019.com, host match, 20181106-20191105, statuscode 200) returns 2 captures: 20190611165229 (a PDF) and 20191019103937 https://ellenformayor2019.com/index.html?nocache. The 20191019103937 page reads 'Ellen Lee Zhou for Mayor 2019' and 'Vote for me Ellen for Mayor ... on November 5'. The note says no capture in the window. It should be accepted with wayback_window_captures 2, first_capture_in_window 20190611165229 (or 20191019103937 for HTML). The earlier empty CDX result was likely a timeout or an https/URL-variant miss."
+   },
+   {
+    "candidate_election_id": "0667000__2019-11-05__regular__e7b35ed0079171eb",
+    "severity": "minor",
+    "issue": "search did not run",
+    "evidence": "searches_run states WebSearch was refused and DuckDuckGo/Bing returned no results. Several guessed domains were probed once and the note says empty replies may be timeouts. zhouforsf.com CDX in the window returned an empty result in my check. The note says its status was not confirmed."
+   },
+   {
+    "candidate_election_id": "0667000__2015-11-03__regular__dcfa5b5397ffabfc",
+    "severity": "minor",
+    "issue": "search did not run",
+    "evidence": "Accepted entry is valid: CDX via mac2 for francisco.nationbuilder.com in 20141104-20151103 returns 8 HTTP 200 captures (first 20150419053852). The capture 20150420024849 has title 'Francisco Herrera for Mayor'. The only gap is that searches_run shows no web search ran, so no second lead was checked. The shared-host subdomain is acceptable as the campaign site."
+   }
+  ]
+ },
+ "scottsdale": {
+  "checked": 1,
+  "problems": [
+   {
+    "candidate_election_id": "0465000__2020-11-03__regular__7d83aa4321435cce",
+    "severity": "minor",
+    "issue": "page_evidence quote is not verbatim",
+    "evidence": "The accepted entry holds. CDX for standupforscottsdale.com (2019-11-04 to 2020-11-03, status 200) returned 91 captures, 26 of them HTML, first 20200708024248. Capture 20201024091924 has the title 'Lisa Borowsky For Mayor - Stand Up For Scottsdale' and the meta text 'Elect Lisa Borowsky for Mayor of Scottsdale, Arizona'. The recorded quote 'Elect Lisa Borowsky for Scottsdale Mayor ...' differs slightly from the page, which says 'for Mayor of Scottsdale, Arizona'. The note says about 36 HTML pages; the check found 26. The first_capture timestamp in the file is 20200708024247, while the CDX shows ...4248. No change to the accepted status is needed."
+   }
+  ]
+ },
+ "stockton": {
+  "checked": 1,
+  "problems": [
+   {
+    "candidate_election_id": "0675000__2020-11-03__regular__6a372d674eb13b74",
+    "severity": "minor",
+    "issue": "Accepted site is Tubbs's own official/personal site, with no explicit 2020 re-election wording on the page; acceptance rests on it being the candidate's own site.",
+    "evidence": "CDX through mac2 for mtubbs.com (2019-11-04 to 2020-11-03, HTTP 200) returned 69 rows, matching the count in the file; first root capture is 20200708184837 (file says ...834, a few seconds off). Capture 20201006123511 of http://mtubbs.com/ is titled 'Michael D. Tubbs | Official Website - Join Our Movement to #ReinventStockton' and describes him as the mayor of Stockton. I found no 're-elect', 'donate', 'volunteer' or 'vote' wording in it. The site is his own, not a social profile, a city page or a different person. The writer already recorded this doubt in the note. lead_sources lists only the old roster URL, not a page that mentions the site."
+   }
+  ]
+ },
+ "st_petersburg": {
+  "checked": 1,
+  "problems": [
+   {
+    "candidate_election_id": "1263000__2021-11-02__regular__e2a47afff67e3822",
+    "severity": "minor",
+    "issue": "No web search returned results; lead is only the old roster domain",
+    "evidence": "CDX rerun through mac2 for kenwelch.com, 2020-11-02 to 2021-11-02, gave 33 HTTP 200 captures of the root page, first 20201127171039, matching the file. The 20211010185715 capture reads: 'Political advertisement paid for and approved by Ken Welch for Mayor of St. Petersburg, Nonpartisan.' The acceptance holds. The note says WebSearch was refused and DuckDuckGo returned nothing, so no independent lead was found. The Tampa Bay Times endorsement text in page_evidence was not re-checked."
+   }
+  ]
+ },
+ "tucson": {
+  "checked": 2,
+  "problems": [
+   {
+    "candidate_election_id": "0477000__2019-11-05__regular__26c1f22cc978800d",
+    "severity": "minor",
+    "issue": "search did not run (web search failed; accepted from old roster URL only)",
+    "evidence": "CDX via mac2 confirms 6 HTTP 200 home-page captures in 20181105-20191105 (first 20190709125204). Capture 20191102061807 has title 'Regina Romero for Tucson Mayor'. Acceptance holds. Only the note and lead_sources show that no web search succeeded."
+   },
+   {
+    "candidate_election_id": "0477000__2019-11-05__regular__2ab4e56d30dc93d8",
+    "severity": "minor",
+    "issue": "search did not run (web search failed; accepted from old roster URL only)",
+    "evidence": "CDX via mac2 confirms 2 HTTP 200 home-page captures in window (first 20190821082509). Capture 20191023220535 has title 'Home - Ackerley For Mayor'. Archived resume and priorities pages (20191023220429, 20191023220500) name Ed Ackerley, Tucson and a run for Mayor. Acceptance holds."
+   }
+  ]
+ },
+ "virginia_beach": {
+  "checked": 1,
+  "problems": []
+ },
+ "toledo": {
+  "checked": 2,
+  "problems": [
+   {
+    "candidate_election_id": "3977000__2017-11-07__regular__deaf5453edc5e0fe",
+    "severity": "minor",
+    "issue": "Accepted entry holds, with one note gap: no web search ran, so lead_sources lists only the old roster URL.",
+    "evidence": "CDX via mac2 for electwade.com, 2016-11-08 to 2017-11-07, status 200, returned 73 captures. The earliest is 20170511115811 (/about/), which matches the file. The archived /vision/ page at 20170514045101 reads 'When I'm mayor, we're going to bring fundamental change to the way our local government operates.' The site is Wade Kapszukiewicz's own campaign site and the evidence quote is accurate. The file already states that the search did not run."
+   }
+  ]
+ },
+ "wichita": {
+  "checked": 2,
+  "problems": [
+   {
+    "candidate_election_id": "2079000__2019-11-05__regular__7080967e2bec33a9",
+    "severity": "minor",
+    "issue": "searches_run lists a DuckDuckGo query for Jeff Longwell, not for Whipple. The Whipple URL still holds, because it is the old roster URL and the archive confirms it.",
+    "evidence": "CDX for votewhipple.com, 2018-11-05 to 2019-11-05, returned 7 HTTP 200 captures (the first is 20190816055101 on /home, and robots.txt is included in the count). The 20190824205448 capture has the title 'About | Whipple for Wichita Mayor'. I did not find the quoted sentence 'Whipple has the vision...' with my own grep. Wix client-side rendering may hide it from the raw HTML."
+   },
+   {
+    "candidate_election_id": "2079000__2019-11-05__regular__d25d80a3b2a49216",
+    "severity": "minor",
+    "issue": "The domain was guessed and no web search result listed it. The accepted site still holds.",
+    "evidence": "CDX for jefflongwellformayor.com returned 1 HTTP 200 capture in the window (20191017175143). The page title is 'Jeff Longwell For Mayor | Jeff Longwell Mayor'. It is the candidate's own site, with a 2017 creation date and a 2019 modification date."
+   }
+  ]
+ }
+}

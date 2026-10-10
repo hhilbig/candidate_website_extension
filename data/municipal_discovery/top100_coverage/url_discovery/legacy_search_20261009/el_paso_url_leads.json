@@ -1,0 +1,25 @@
+[
+ {
+  "candidate_election_id": "4824000__2020-12-12__regular__0e1681a4b4d5cabe",
+  "candidate_name": "Dee Margo",
+  "election_date": "2020-12-12",
+  "status": "outside_window",
+  "campaign_url": "https://margoformayor.org/",
+  "registrable_domain": "margoformayor.org",
+  "lead_sources": [
+   "old_roster_urls in search_args.json"
+  ],
+  "searches_run": [
+   "WebSearch: Dee Margo 2020 El Paso mayor runoff campaign website (refused: budget used up)",
+   "WebFetch https://ballotpedia.org/Dee_Margo (empty content)",
+   "DuckDuckGo html via mac2 (returned a page with no result links)",
+   "Wayback CDX margoformayor.org, margoformayor.com, deemargo.com (domain and host matches)"
+  ],
+  "wayback_window_captures": 0,
+  "first_capture_in_window": "",
+  "checked_capture_url": "https://web.archive.org/web/20191108061352/https://margoformayor.org/",
+  "page_evidence": "Margo for Mayor - Re-Elect Dee Margo (title of the 2019-11-08 capture, 34 days before the window opens)",
+  "other_profiles": [],
+  "note": "Window 2019-12-12 to 2020-12-12. The only in-window captures of margoformayor.org are robots.txt (200, 20201116024723) and a 301 of the home page (20201116024725). No HTML 200 capture exists in the window. Nearest HTML 200 captures: 20191108061352 before the window and 20210227162428 after it. The site is the 2019 re-election campaign (Re-Elect Dee Margo) site; it was in use for the 2020 runoff but the archive does not confirm it inside the window. margoformayor.com has captures only in 2018; deemargo.com has none. Web search tools did not work, so no other candidate domain was searched; status is outside_window, not not_found."
+ }
+]

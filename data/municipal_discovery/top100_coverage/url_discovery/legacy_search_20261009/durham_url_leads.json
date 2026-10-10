@@ -1,0 +1,140 @@
+[
+ {
+  "candidate_election_id": "3719000__2011-11-08__regular__3a34008d37ae09f9",
+  "candidate_name": "William V. (Bill) Bell",
+  "election_date": "2011-11-08",
+  "status": "accepted",
+  "campaign_url": "http://www.williambellformayor.com/",
+  "registrable_domain": "williambellformayor.com",
+  "lead_sources": [
+   "old roster URL http://www.williambellformayor.com/"
+  ],
+  "searches_run": [
+   "Wayback CDX host query williambellformayor.com 2010-11-09 to 2011-11-08",
+   "Wayback CDX domain query, all years"
+  ],
+  "wayback_window_captures": 24,
+  "first_capture_in_window": "20101127005706",
+  "checked_capture_url": "https://web.archive.org/web/20111016123442/http://www.williambellformayor.com/",
+  "page_evidence": "William A. Bell Sr. for Mayor ... Paid for by the Committee to Elect William A. Bell Sr. Mayor",
+  "other_profiles": [],
+  "note": "The old roster URL works. The site has 24 HTTP 200 captures in the window. The page of 2011-10-16 names the candidate and the mayoral race. The page carries the name William A. Bell Sr., which is the same person as William V. (Bill) Bell. No web search ran for this one, because the first lead was accepted."
+ },
+ {
+  "candidate_election_id": "3719000__2011-11-08__regular__8f9b84575fda725c",
+  "candidate_name": "Sylvester Williams",
+  "election_date": "2011-11-08",
+  "status": "outside_window",
+  "campaign_url": "http://sylvesterwilliamsformayor.com/",
+  "registrable_domain": "sylvesterwilliamsformayor.com",
+  "lead_sources": [
+   "old roster URL http://sylvesterwilliamsformayor.com/",
+   "https://indyweek.com/news/politics/elections/sylvester-williams/ (lists only a Facebook group)"
+  ],
+  "searches_run": [
+   "DuckDuckGo via mac2: Sylvester Williams Durham mayor 2011 campaign website",
+   "https://en.wikipedia.org/wiki/2011_Durham_mayoral_election",
+   "https://indyweek.com/news/politics/elections/sylvester-williams/",
+   "Wayback CDX domain query sylvesterwilliamsformayor.com, all years",
+   "CDX guesses: sylvesterwilliams.com, votesylvesterwilliams.com, sylvesterwilliams4mayor.com, pastorsylvesterwilliams.com (no captures)"
+  ],
+  "wayback_window_captures": 0,
+  "first_capture_in_window": "",
+  "checked_capture_url": "https://web.archive.org/web/20130517022649/http://sylvesterwilliamsformayor.com",
+  "page_evidence": "",
+  "other_profiles": [
+   "https://www.facebook.com/groups/103209079781459/",
+   "https://www.facebook.com/Pastor-Sylvester-Williams-Working-for-the-Community-136778848896/"
+  ],
+  "note": "The only HTTP 200 captures of sylvesterwilliamsformayor.com are the home page of 2013-05-17 and robots.txt files from 2013-06-27 to 2013-10-20. All are after the 2011 election. No capture exists in the window. This domain may belong to a later campaign (Williams ran again in 2019), so I cannot confirm that it served the 2011 campaign. WebSearch refused (budget used up). DuckDuckGo and Bing through mac2 were blocked or returned no usable results after the first query. Candidate leads came from the old roster URL, CDX checks, Wikipedia and Indy Week pages."
+ },
+ {
+  "candidate_election_id": "3719000__2015-11-03__regular__bd2bedea03803c38",
+  "candidate_name": "James Lyons",
+  "election_date": "2015-11-03",
+  "status": "accepted",
+  "campaign_url": "http://www.jameslyonsformayor.com/",
+  "registrable_domain": "jameslyonsformayor.com",
+  "lead_sources": [
+   "old roster URL http://www.jameslyonsformayor.com"
+  ],
+  "searches_run": [
+   "Wayback CDX host query jameslyonsformayor.com 2014-11-04 to 2015-11-03",
+   "Wayback CDX domain query, all years"
+  ],
+  "wayback_window_captures": 3,
+  "first_capture_in_window": "20150829013141",
+  "checked_capture_url": "https://web.archive.org/web/20151031155453/http://www.jameslyonsformayor.com:80/",
+  "page_evidence": "Committee to Elect James Lyons for Mayor",
+  "other_profiles": [],
+  "note": "The old roster URL works. The window has 3 HTTP 200 captures of the home page (2015-08-29, 2015-09-29, 2015-10-31). The page of 2015-10-31 is a Wix page. Its title names the candidate and the mayoral race. The page has little other text. No web search ran, because the first lead was accepted."
+ },
+ {
+  "candidate_election_id": "3719000__2017-11-07__regular__26ea588f0a7460d6",
+  "candidate_name": "Farad Ali",
+  "election_date": "2017-11-07",
+  "status": "accepted",
+  "campaign_url": "https://faradali4mayor.com/",
+  "registrable_domain": "faradali4mayor.com",
+  "lead_sources": [
+   "old roster URL https://www.faradali4mayor.com/"
+  ],
+  "searches_run": [
+   "Wayback CDX host query faradali4mayor.com 2016-11-08 to 2017-11-07",
+   "Wayback CDX domain query, all years"
+  ],
+  "wayback_window_captures": 88,
+  "first_capture_in_window": "20170728141338",
+  "checked_capture_url": "https://web.archive.org/web/20171009064203/https://faradali4mayor.com/about/",
+  "page_evidence": "Farad Ali \u2013 Farad Ali For Mayor ... Paid For By Farad Ali For Mayor",
+  "other_profiles": [],
+  "note": "The site has 88 HTTP 200 captures in the window (all URLs of the host, first on 2017-07-28). The archived URL has no www; the old roster URL has www. The about page of 2017-10-09 names the candidate and the mayoral race. No web search ran, because the first lead was accepted."
+ },
+ {
+  "candidate_election_id": "3719000__2019-11-05__regular__c74991a3804b2db8",
+  "candidate_name": "Steve Schewel",
+  "election_date": "2019-11-05",
+  "status": "accepted",
+  "campaign_url": "https://www.stevefordurham.com/",
+  "registrable_domain": "stevefordurham.com",
+  "lead_sources": [
+   "old roster URL https://www.stevefordurham.com/"
+  ],
+  "searches_run": [
+   "Wayback CDX host query stevefordurham.com 2018-11-06 to 2019-11-05",
+   "Wayback CDX domain query, all years"
+  ],
+  "wayback_window_captures": 107,
+  "first_capture_in_window": "20181113183737",
+  "checked_capture_url": "https://web.archive.org/web/20191017025705/https://www.stevefordurham.com/",
+  "page_evidence": "Steve Schewel for Durham ... Paid for by The Committee to Elect Steve Schewel",
+  "other_profiles": [],
+  "note": "The site has 107 HTTP 200 captures in the window. The home page of 2019-10-17 names the candidate and carries the committee line. Schewel was the sitting mayor, and the page text refers to him as Mayor Schewel. No web search ran, because the first lead was accepted."
+ },
+ {
+  "candidate_election_id": "3719000__2021-11-02__regular__e68b57260a6c4ae8",
+  "candidate_name": "Javiera Caballero",
+  "election_date": "2021-11-02",
+  "status": "outside_window",
+  "campaign_url": "https://www.javieracaballeroparadurham.com/",
+  "registrable_domain": "javieracaballeroparadurham.com",
+  "lead_sources": [
+   "old roster URL https://www.javieracaballeroparadurham.com/platform",
+   "https://en.wikipedia.org/wiki/2021_Durham_mayoral_election (no Caballero campaign site listed)",
+   "https://en.wikipedia.org/wiki/Javiera_Caballero"
+  ],
+  "searches_run": [
+   "DuckDuckGo and Bing through mac2 (blocked or no usable results)",
+   "https://9thstreetjournal.org/2021/09/20/mayoral-candidate-javiera-caballero-envisions-a-durham-for-all/ (no site link found)",
+   "https://indyweek.com/news/politics/elections/javiera-caballero/",
+   "Wayback CDX all years: javieracaballeroparadurham.com, javieracaballeroformayor.com",
+   "CDX guesses: javieracaballero.com, caballeroparadurham.com, javieraparadurham.com, caballeroformayor.com (no captures)"
+  ],
+  "wayback_window_captures": 0,
+  "first_capture_in_window": "",
+  "checked_capture_url": "https://web.archive.org/web/20191020034328/https://www.javieracaballeroparadurham.com/",
+  "page_evidence": "",
+  "other_profiles": [],
+  "note": "The domain javieracaballeroparadurham.com has HTTP 200 captures only from 2019-08-22 to 2019-11-08, before the window. These belong to her 2019 council campaign. The next captures are 404 on 2019-12-24 and 2020-02-19. javieracaballeroformayor.com has only robots.txt and favicon 200 captures (2021-12-09, 2022-03-14) and 403 home page captures, all after the election. I did not find the real 2021 mayoral site. WebSearch refused (budget used up). DuckDuckGo and Bing through mac2 were blocked or returned no usable results after the first query. Candidate leads came from the old roster URL, CDX checks, Wikipedia and Indy Week pages."
+ }
+]

@@ -1,0 +1,51 @@
+[
+ {
+  "candidate_election_id": "2148006__2014-11-04__regular__166e94736b0ad8f8",
+  "candidate_name": "Bob DeVore",
+  "election_date": "2014-11-04",
+  "status": "outside_window",
+  "campaign_url": "https://morewithdevore.com/",
+  "registrable_domain": "morewithdevore.com",
+  "lead_sources": [
+   "https://morewithdevore.com/ (old roster URL; also top DuckDuckGo result for the candidate)"
+  ],
+  "searches_run": [
+   "DDG: Bob DeVore Louisville mayor 2014 campaign website",
+   "DDG: Bob DeVore Louisville mayor 2014 Republican candidate website",
+   "DDG: \"DeVore\" \"Louisville mayor\" 2014 \"DeVore for Mayor\"",
+   "DDG: Robert DeVore Louisville mayor 2014 Republican primary campaign site",
+   "Wikipedia 2014 Louisville mayoral election (no candidate site listed)",
+   "Ballotpedia Bob_DeVore (fetch returned no usable text)"
+  ],
+  "wayback_window_captures": 0,
+  "first_capture_in_window": "",
+  "checked_capture_url": "",
+  "page_evidence": "",
+  "other_profiles": [
+   "https://www.facebook.com/morewithdevore/"
+  ],
+  "note": "morewithdevore.com has no capture in the window 2013-11-04 to 2014-11-04. Its earliest capture is 20230314010227, so it belongs to a later campaign. Guessed domains with no in-window capture: devoreformayor.com, devore4mayor.com, bobdevoreformayor.com, devoreforlouisville.com, devore2014.com, devoremayor.com. bobdevore.com, voteforbob.com and robertdevore.com had in-window captures but belong to other people (poetry site, unrelated site, software developer), so they are rejected. WebSearch was out of budget; DuckDuckGo through mac2 was used. The 2014 site may exist under an unknown domain. Wikipedia names him Robert DeVore (WDRB: Robert DeVore files to challenge Mayor Greg Fischer as Republican)."
+ },
+ {
+  "candidate_election_id": "2148006__2018-11-06__regular__11a58c6aae02cc36",
+  "candidate_name": "Greg Fischer",
+  "election_date": "2018-11-06",
+  "status": "accepted",
+  "campaign_url": "https://gregfischer.com/",
+  "registrable_domain": "gregfischer.com",
+  "lead_sources": [
+   "old roster URL https://www.gregfischer.com/ (confirmed by Wayback)"
+  ],
+  "searches_run": [
+   "DDG: Greg Fischer mayor 2018 reelection campaign website (no results returned)",
+   "DDG: Greg Fischer Louisville mayor 2018 campaign website gregfischer.com (no results returned)",
+   "Wayback CDX host query gregfischer.com 2017-11-06 to 2018-11-06"
+  ],
+  "wayback_window_captures": 4,
+  "first_capture_in_window": "20180317155023",
+  "checked_capture_url": "https://web.archive.org/web/20180821001516/https://gregfischer.com/",
+  "page_evidence": "Re-elect Mayor Greg Fischer ... Committee to re-elect Greg Fischer ... Statement from Mayor Greg Fischer 'Serving as Mayor of Louisville is the greatest honor'",
+  "other_profiles": [],
+  "note": "Count 4 is the number of 200 captures of the home page in the window (20180317155023, 20180821001516, 20181010073225, 20181106125803). The host also has many 200 captures of feeds, robots.txt and assets. The 20181010 capture is a Wix page titled Gfmayor. The 20181106125803 capture returned no body on replay. The 20180821001516 page was read and names the candidate and the re-election campaign."
+ }
+]

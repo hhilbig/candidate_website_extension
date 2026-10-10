@@ -1,0 +1,24 @@
+[
+ {
+  "candidate_election_id": "3436000__2013-05-14__regular__b42d2a3a213ca100",
+  "candidate_name": "Steven Fulop",
+  "election_date": "2013-05-14",
+  "status": "accepted",
+  "campaign_url": "http://stevenfulop.com:80/",
+  "registrable_domain": "stevenfulop.com",
+  "lead_sources": [
+   "old roster URL https://stevenfulop.com/"
+  ],
+  "searches_run": [
+   "WebSearch: Steven Fulop 2013 Jersey City mayor campaign website (refused, budget used up)",
+   "DuckDuckGo via mac2: Steven Fulop 2013 Jersey City mayor campaign website (returned no parsable results)",
+   "Wayback CDX host query for stevenfulop.com, 2012-05-14 to 2013-05-14, status 200"
+  ],
+  "wayback_window_captures": 121,
+  "first_capture_in_window": "20120525021506",
+  "checked_capture_url": "https://web.archive.org/web/20121228185936/http://stevenfulop.com:80/",
+  "page_evidence": "There is no question it's an uphill battle to run for mayor against the Jersey City political machine... Steven Fulop",
+  "other_profiles": [],
+  "note": "The old roster URL is the campaign site. The CDX query returned 121 HTTP 200 captures in the 365 days up to the election (limit 5000). The 2012-12-28 home page is a Fulop campaign page that talks about running for mayor, with donate and volunteer links. Both web searches failed, so no independent web lead was found. The Wayback evidence alone supports acceptance."
+ }
+]

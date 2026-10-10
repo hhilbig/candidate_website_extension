@@ -23,6 +23,7 @@ import pandas as pd
 
 BASE = Path("data/municipal_discovery/top100_coverage")
 LEADS = BASE / "linkage/discovered_url_leads.csv"
+LEGACY_SEARCH_LEADS = BASE / "linkage/legacy_search_leads.csv"
 COVERAGE = BASE / "outputs/candidate_coverage.csv"
 ACQUISITION = Path("data/municipal_archive_acquisition")
 PERIODS = ((2010, 2013), (2014, 2017), (2018, 2021), (2022, 2025), (2026, 2029))
@@ -130,6 +131,10 @@ def main() -> None:
     parser.add_argument("--legacy", action="store_true")
     args = parser.parse_args()
     leads = pd.read_csv(LEADS, keep_default_na=False, dtype=str)
+    if LEGACY_SEARCH_LEADS.exists():
+        # Checked leads that replace an unarchived old roster URL (legacy-lead search, October 9, 2026).
+        extra = pd.read_csv(LEGACY_SEARCH_LEADS, keep_default_na=False, dtype=str)
+        leads = pd.concat([leads, extra[leads.columns]], ignore_index=True)
     done = set()
     for path in args.exclude:
         done |= set(pd.read_csv(path, dtype=str)["candidate_contest_id"])

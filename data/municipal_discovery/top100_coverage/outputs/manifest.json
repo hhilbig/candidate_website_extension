@@ -2,7 +2,7 @@
   "version": "top_two_coverage_v1",
   "cutoff": "2026-09-14",
   "inputs": {
-    "config/mayoral_top_two_build.json": "3959a81ea553fd7c7d47ff2114b87051b6ca9f52e742d251df1b97d473f3755b",
+    "config/mayoral_top_two_build.json": "a3d2ee85857513dd3270bd198ed86cb69d5150882895bd414411d24159c901bc",
     "data/municipal_discovery/top100_coverage/inputs/cities_2020_top100.csv": "f808b441ddc20275ba0513be433a33a7970aa5a96b378020f16580f61ca0e679",
     "data/municipal_discovery/exhaustive_source_expansion_20260908/ownership_repair_20260910/combined/candidate_roster.csv": "98dbd8e1c38ee18a13932be89c01231fb956ec31d0ff08233d6927f7ef24aee6",
     "quality_reports/mayoral_source_restart_2026-09-14/completion/v7/attribution_review_complete/candidate_urls_with_capture_reviews.csv": "a6e59bd0aaa1972eee9ff80cf52292c14dc6f57988154ce06c861ccd8959ea51",
@@ -223,22 +223,23 @@
     "data/municipal_discovery/top100_coverage/inputs/stage3L_saved_pages.csv": "6a811d978c008c5dfb7410781526bf8b864f75324de84833a68b0d207916a99b",
     "data/municipal_discovery/top100_coverage/legacy_site_attribution/agent_verdicts.csv": "5685b2d748722e9e393344ac09a1468dbb5494c0d32f839aded667164fe36968",
     "data/municipal_discovery/top100_coverage/legacy_attribution/agent_verdicts.csv": "7ed0fe0f346d45bac8f1775d4c6b3319ede82a21ba8530b291dcf7dd9423a9b8",
-    "data/municipal_discovery/top100_coverage/linkage/discovered_url_leads.csv": "51918f1e66e1c6b7d7c2e9638cc128069f9aac13c6a27ff3bd1bfaf00eeecaad"
+    "data/municipal_discovery/top100_coverage/linkage/discovered_url_leads.csv": "51918f1e66e1c6b7d7c2e9638cc128069f9aac13c6a27ff3bd1bfaf00eeecaad",
+    "data/municipal_discovery/top100_coverage/linkage/legacy_search_leads.csv": "e355104680db614f88954f392f0622fb0deec8362c24a48bad4ed8a0e75fc895"
   },
-  "script_sha256": "664cfbe501dd47b5365019178e3e95c834f883194dbe2e4c28f227d221c81f67",
+  "script_sha256": "5cea46ece4b2bd0b7147ea7cddfa02dccc7841dc31b5caa25b57a5258d68c935",
   "outputs": {
     "cities.csv": "4e06ea9d422efcd97b0236de473caa32ca952d1d387d610379d07d5ebde3a388",
     "city_year_audit.csv": "a9d46e666b12b6307ece6ebc9a33d1f40094f67423887a333c852888167a5f6f",
     "elections.csv": "4d178b47ccfaa7df1f26ff5c1bc514fb39dc18ccfaa1cd1d3bae4e6862d9a82f",
-    "candidate_coverage.csv": "0ee580edf3063b96c575310ba3667458aa26bd7d5eb64ddeb3204d6a177d56c8",
-    "coverage_breakdowns.csv": "505744b08b98157b73d99410455e760cd60970dde94c6622756652e4d79bcb8a",
+    "candidate_coverage.csv": "b7b5c1f8b19f318f619ed9b9d214b78376c090e7e31dcbb59dd8e101559d009a",
+    "coverage_breakdowns.csv": "0996c8f2647ad069ad0ba2ff7e2338ae9e00f021edf3fa2ce179b44143e34162",
     "missing_urls.csv": "5d25a6b555214a2505b70a6f136b6fd0560209621f2899b493d358e9ae73f34a",
-    "missing_period_captures.csv": "b2b6b3c3d12abc205fcf5e2e3e9a849816627af4db556f91134f00cdff82923d",
+    "missing_period_captures.csv": "3fd0dfddffa1b6f773927a06a7395032505fdc8ca88d55f6352d57e5ee30fd33",
     "missing_election_results.csv": "164212cb1c39dbfa39b19a82e4000698bb311dec204f24f20696cd805eda5628",
     "missing_election_calendars.csv": "f639ad7f845e0ad1cdded693329145b4fec354d1d853a17e878393867996899c",
-    "coverage_gaps.csv": "cc255a359e31b7bf42a4a543ea2a11d116b88031cd2faabd268607a23c069627",
-    "source_attempt_estimates.csv": "03add5404a04fbed73d49e1c631a713bf322182bb407b00ccf6db2861513887b",
-    "summary.json": "a71ee9b566c42f1627eecd3e65ed81fca60d88030f707cf467c618829ed2480c",
+    "coverage_gaps.csv": "20231305d808b041c95949825c67266f4d1bf40eb289d2d3f85d548943d5463f",
+    "source_attempt_estimates.csv": "27b46df7250f2280794673f625f31be1cacc871f9d84003c731b61dd87f36c1d",
+    "summary.json": "8836cbda857e79888326a6db8efb60aed83bba8c2a08db355d4f48c2cdcadf45",
     "outside_scope_results.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
     "superseded_result_records.json": "cfdbaa6d8e80ab97381d91edc0698814a02ab33a82e7d306c8f68c45ff5b05d4"
   }

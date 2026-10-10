@@ -1,0 +1,64 @@
+[
+ {
+  "candidate_election_id": "1235000__2011-05-17__regular__7afbb4a6c9a48240",
+  "candidate_name": "Alvin Brown",
+  "election_date": "2011-05-17",
+  "status": "accepted",
+  "campaign_url": "http://alvinbrownformayor.com:80/",
+  "registrable_domain": "alvinbrownformayor.com",
+  "lead_sources": [
+   "Guessed domain (<name>formayor.com pattern) after old roster URL mayoralvinbrown.com had no capture in the window",
+   "https://search.brave.com/search?q=mayoralvinbrown.com (only showed later @MayoralAlvinBrown social profiles)"
+  ],
+  "searches_run": [
+   "WebSearch: Alvin Brown Jacksonville mayor 2011 campaign website (refused, budget used)",
+   "Brave via mac2: Alvin Brown for Mayor Jacksonville 2011 campaign website",
+   "Brave via mac2: Alvin Brown Jacksonville mayor 2011 mayoralvinbrown",
+   "Brave via mac2: mayoralvinbrown.com",
+   "https://en.wikipedia.org/wiki/Alvin_Brown (no campaign site listed)",
+   "https://web.archive.org/web/2015/https://ballotpedia.org/Alvin_Brown (2015 page, no 2011 site)",
+   "CDX checks: mayoralvinbrown.com, alvinbrown.com, alvinbrownformayor.com, alvinbrownmayor.com, alvinbrown2011.com, electalvinbrown.com, alvinbrownforjax.com, alvinbrown4mayor.com"
+  ],
+  "wayback_window_captures": 5,
+  "first_capture_in_window": "20100606170426",
+  "checked_capture_url": "https://web.archive.org/web/20100606170426/http://alvinbrownformayor.com:80/",
+  "page_evidence": "Title 'Alvin Brown For Mayor of Jacksonville 2011'; footer 'Political advertisement paid for and approved by Alvin Brown for Mayor of Jacksonville. Contributions to the Alvin Brown Campaign are not deductible...'",
+  "other_profiles": [
+   "https://twitter.com/MayoralAlvinBrown",
+   "https://www.facebook.com/MayorAlvinBrown/",
+   "https://www.youtube.com/mayoralvinbrown"
+  ],
+  "note": "Five 200 captures between 2010-06-06 and 2010-07-08 (home, contact, node/1, rss). All 5 are in the 365-day window; none were found later in the window. Old roster URL mayoralvinbrown.com has no capture in the window. alvinbrown.com is an unrelated marketing business site and was rejected. The URL was found by guessing the domain, not from a source page that names it."
+ },
+ {
+  "candidate_election_id": "1235000__2019-03-19__regular__dd4cc194190890b2",
+  "candidate_name": "Anna Lopez Brosche",
+  "election_date": "2019-03-19",
+  "status": "not_found",
+  "campaign_url": "",
+  "registrable_domain": "",
+  "lead_sources": [],
+  "searches_run": [
+   "WebSearch (refused, budget used): Anna Lopez Brosche mayor 2019 campaign website",
+   "Brave via mac2: Anna Brosche for Mayor Jacksonville campaign website",
+   "Brave via mac2: annabrosche.com",
+   "Brave via mac2: Jacksonville mayor 2019 candidates campaign websites",
+   "Brave via mac2: Anna Brosche for Mayor Jacksonville facebook website",
+   "Brave via mac2: Jacksonville mayoral election 2019 ballotpedia",
+   "DuckDuckGo via mac2 (blocked by bot check) and Bing via mac2 (no usable results)",
+   "https://en.wikipedia.org/wiki/Anna_Brosche and 2019_Jacksonville_mayoral_election (no campaign site listed)",
+   "Wayback copy of ballotpedia.org/Anna_Lopez_Brosche (Nov 2018, no campaign site)",
+   "news articles from floridapolitics, actionnewsjax, news4jax (no domain named)",
+   "CDX checks: annaformayor.com, annabrosche.com, annabroschemayor.com, broscheformayor.com, electannabrosche.com, annabrosche.org, broscheforjax.com, annalopezbrosche.com, annaforjax.com, hireanna2019.com, hireanna2019.org, hireanna.com, jaxforanna.com, jacksonvilleforanna.com, annabroschemayor.com, annabroscheformayor.com, annaforjacksonville.com"
+  ],
+  "wayback_window_captures": 0,
+  "first_capture_in_window": "",
+  "checked_capture_url": "",
+  "page_evidence": "",
+  "other_profiles": [
+   "https://www.instagram.com/hireanna2019/",
+   "https://twitter.com/annabrosche"
+  ],
+  "note": "Old roster URL annaformayor.com has 200 captures in the window (4 home page captures, 2018-03-31 to 2018-11-09) but the pages are a Namecheap or GoDaddy parking page that does not name the candidate, so it was rejected. annabrosche.com has one in-window 200 capture (2018-08-04), also a GoDaddy parking page. The campaign Instagram handle hireanna2019 suggests a domain like hireanna2019.com, which has no Wayback captures at all (3 attempts). The real campaign domain was not identified; the Ballotpedia live page could not be fetched. Possible that the campaign used only social media or a domain with no archive copy."
+ }
+]

@@ -149,7 +149,11 @@ Stages, each with its own check:
 **Legacy-lead search (approved by Hanno October 9, running).** 107 finalists had only an old roster URL without an archived copy in the window, and no search had ever run for them (stage 2, the repairs and the sweeps covered only finalists without any URL lead). 92 of them are in 2014–2021, which explains the 2018–2021 dip in coverage.
 - Domain-pattern sweep before and after the election on the droplet: `scripts/run_mayoral_legacy_sweep.sh`, folder `url_discovery/legacy_search_20261009/sweep_before|sweep_after`, jobstatus `mayoral-legacy-sweep`.
 - Agent search and independent check, three cities at a time: `scripts/workflows_mayoral_legacy_search.js`, run `wf_44cc61ab-187`, outputs `url_discovery/legacy_search_20261009/<slug>_url_leads.json`.
-- Next: screen the sweep hits into the agents' results, integrate (the coverage build must let a checked new URL replace an unarchived old roster URL), scrape new sites uncapped with the junk filter, give them the site check, then build the release.
+- Agent search done (116 agents, 7.9 million tokens, 10.9 hours): 62 accepted, 23 outside_window, 6 not_found, 16 incomplete; the checkers rejected 2. Many roster URLs belonged to a later or earlier campaign (Tim Keller 2017 used tk4abq.com, the roster held mayortimkeller.com).
+- Domain sweep done (droplet): before 2,378 queries, 257 with captures; after 2,378 queries, 165 with captures. Hits that passed the screen for 23 finalists the search left open go to an agent check, `scripts/workflows_mayoral_legacy_sweep_check.js` (run `wf_c56a8985-1e3`).
+- Integration: `scripts/build_mayoral_legacy_search_leads.py` writes `linkage/legacy_search_leads.csv` (61 accepted, 21 outside_window, 9 not_found; incomplete ones keep the roster URL), registered as `legacy_search_leads`. The coverage build lets such a lead replace an unarchived roster URL (`replaces_legacy`); the targets builder reads it too. Archive discovery 603 to 661 finalists.
+- Batch `mayoral_stage3s_20261010` (82 targets, 78 domains) is frozen; `scripts/run_mayoral_full_site_batch.sh` runs the capped and the uncapped fetch in one go on mac2. It starts after the sweep check, so agents and the scrape do not share the archive.
+- Then: the new sites go through the page corpus, the page rules and the site check; then the release build.
 The release build waits for this.
 
 Release does not require a website for every finalist or a fixed coverage percentage.

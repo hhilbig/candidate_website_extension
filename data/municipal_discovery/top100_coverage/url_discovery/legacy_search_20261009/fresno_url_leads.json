@@ -1,0 +1,28 @@
+[
+ {
+  "candidate_election_id": "0627000__2020-03-03__regular__2fa9831de2caf4c5",
+  "candidate_name": "Andrew Janz",
+  "election_date": "2020-03-03",
+  "status": "accepted",
+  "campaign_url": "http://janzformayor.com/",
+  "registrable_domain": "janzformayor.com",
+  "lead_sources": [
+   "https://en.wikipedia.org/wiki/2020_Fresno_mayoral_election",
+   "https://web.archive.org/web/20191219183119id_/https://janz4mayor.com/ (spoof site, not accepted)"
+  ],
+  "searches_run": [
+   "WebSearch: Andrew Janz for Fresno mayor 2020 campaign website (refused, budget used up)",
+   "DuckDuckGo html via mac2 (3 queries, returned no result list)",
+   "Bing via mac2 (3 queries, returned unrelated results)",
+   "https://en.wikipedia.org/wiki/Andrew_Janz",
+   "https://en.wikipedia.org/wiki/2020_Fresno_mayoral_election",
+   "Wayback CDX probes for guessed domains: janzformayor.com, janz4mayor.com, andrewjanz.com, janzforfresno.com, janz4fresno.com, andrewjanzformayor.com, votejanz.com, janz2020.com, electjanz.com, andrewjanz.org, fresnoforjanz.com, andrewjanzforcongress.com (failed on retry)"
+  ],
+  "wayback_window_captures": 50,
+  "first_capture_in_window": "20190524045018",
+  "checked_capture_url": "https://web.archive.org/web/20190524045018/http://janzformayor.com/",
+  "page_evidence": "Andrew Janz for Fresno City Mayor ... Andrew Janz is a Fresno County prosecutor running against Lee Brand for Mayor of Fresno.",
+  "other_profiles": [],
+  "note": "Domain found by guess, not by search: web search was out of budget and the DuckDuckGo and Bing fallbacks returned no usable results. The count of 50 is HTML captures with HTTP 200 from 2019-03-04 to 2020-03-03 (CDX limit 500, mimetype text/html); asset captures excluded. Last in-window capture 20200218072615. The old roster URL andrewjanzforcongress.com/issues is the 2018 congressional site; its CDX check failed on retry so it is unchecked. janz4mayor.com has one 2019-12 capture but is a spoof (text says Fresno does not need another mediocre white guy, needle programs in elementary schools) and is rejected. andrewjanz.com is a GoDaddy parked page in 2019. Doubt: ownership of janzformayor.com rests on the page text (candidate bio, Voter Protection Project, Nunes 2018 race)."
+ }
+]

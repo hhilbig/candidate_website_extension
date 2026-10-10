@@ -1,0 +1,78 @@
+[
+ {
+  "candidate_election_id": "0636770__2012-11-06__regular__c4f027b5dc701288",
+  "candidate_name": "Larry Agran",
+  "election_date": "2012-11-06",
+  "status": "incomplete",
+  "campaign_url": "",
+  "registrable_domain": "",
+  "lead_sources": [],
+  "searches_run": [
+   "WebSearch 'Larry Agran Irvine mayor campaign website' refused: budget used up",
+   "DuckDuckGo html via mac2: challenge page, no results"
+  ],
+  "wayback_window_captures": 0,
+  "first_capture_in_window": "",
+  "checked_capture_url": "",
+  "page_evidence": "",
+  "other_profiles": [],
+  "note": "Incomplete. WebSearch refused (budget of 200 calls used). DuckDuckGo through mac2 returned only a challenge page with no results. web.archive.org CDX and replay requests through mac2 timed out on 4 attempts over several minutes (curl error 28 or code 000), while archive.org and google.com answered 200. No domain was verified. Old roster URLs: http://mayorlarryagran.org, https://www.mayorlarryagran.org/. No campaign URL is recorded because none was checked."
+ },
+ {
+  "candidate_election_id": "0636770__2016-11-08__regular__b3abb044aaf7af5e",
+  "candidate_name": "Donald P. Wagner",
+  "election_date": "2016-11-08",
+  "status": "incomplete",
+  "campaign_url": "",
+  "registrable_domain": "",
+  "lead_sources": [],
+  "searches_run": [
+   "WebSearch 'Donald P. Wagner Irvine mayor campaign website' refused: budget used up",
+   "DuckDuckGo html via mac2: challenge page, no results"
+  ],
+  "wayback_window_captures": 0,
+  "first_capture_in_window": "",
+  "checked_capture_url": "",
+  "page_evidence": "",
+  "other_profiles": [],
+  "note": "Incomplete. WebSearch refused (budget of 200 calls used). DuckDuckGo through mac2 returned only a challenge page with no results. web.archive.org CDX and replay requests through mac2 timed out on 4 attempts over several minutes (curl error 28 or code 000), while archive.org and google.com answered 200. No domain was verified. Old roster URLs: http://wagnerforcalifornia.com, https://wagnerforcalifornia.com/?page_id=221. No campaign URL is recorded because none was checked."
+ },
+ {
+  "candidate_election_id": "0636770__2018-11-06__regular__4a020ad731a990d6",
+  "candidate_name": "Ed Pope",
+  "election_date": "2018-11-06",
+  "status": "incomplete",
+  "campaign_url": "",
+  "registrable_domain": "",
+  "lead_sources": [],
+  "searches_run": [
+   "WebSearch 'Ed Pope Irvine mayor campaign website' refused: budget used up",
+   "DuckDuckGo html via mac2: challenge page, no results"
+  ],
+  "wayback_window_captures": 0,
+  "first_capture_in_window": "",
+  "checked_capture_url": "",
+  "page_evidence": "",
+  "other_profiles": [],
+  "note": "Incomplete. WebSearch refused (budget of 200 calls used). DuckDuckGo through mac2 returned only a challenge page with no results. web.archive.org CDX and replay requests through mac2 timed out on 4 attempts over several minutes (curl error 28 or code 000), while archive.org and google.com answered 200. No domain was verified. Old roster URLs: http://voteforedpope.com. No campaign URL is recorded because none was checked."
+ },
+ {
+  "candidate_election_id": "0636770__2020-11-03__regular__1efc765cf2a1d307",
+  "candidate_name": "Farrah N. Khan",
+  "election_date": "2020-11-03",
+  "status": "incomplete",
+  "campaign_url": "",
+  "registrable_domain": "",
+  "lead_sources": [],
+  "searches_run": [
+   "WebSearch 'Farrah N. Khan Irvine mayor campaign website' refused: budget used up",
+   "DuckDuckGo html via mac2: challenge page, no results"
+  ],
+  "wayback_window_captures": 0,
+  "first_capture_in_window": "",
+  "checked_capture_url": "",
+  "page_evidence": "",
+  "other_profiles": [],
+  "note": "Incomplete. WebSearch refused (budget of 200 calls used). DuckDuckGo through mac2 returned only a challenge page with no results. web.archive.org CDX and replay requests through mac2 timed out on 4 attempts over several minutes (curl error 28 or code 000), while archive.org and google.com answered 200. No domain was verified. Old roster URLs: https://www.farrahnkhan.com/. No campaign URL is recorded because none was checked."
+ }
+]

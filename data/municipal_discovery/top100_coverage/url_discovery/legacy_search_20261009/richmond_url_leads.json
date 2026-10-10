@@ -1,0 +1,29 @@
+[
+ {
+  "candidate_election_id": "5167000__2016-11-08__regular__557a7ccc54293642",
+  "candidate_name": "John Frederick Berry",
+  "election_date": "2016-11-08",
+  "status": "accepted",
+  "campaign_url": "http://www.jackberryformayor.com/",
+  "registrable_domain": "jackberryformayor.com",
+  "lead_sources": [
+   "old roster URL http://jackberryformayor.com",
+   "https://rvahub.com/2016/08/19/mayoral-candidate-jack-berry-releases-campaign-video/",
+   "https://en.wikipedia.org/wiki/2016_Richmond,_Virginia,_mayoral_election"
+  ],
+  "searches_run": [
+   "WebSearch: Jack Berry Richmond mayor 2016 campaign website (refused, budget used)",
+   "DuckDuckGo via mac2: Jack Berry Richmond mayor 2016 campaign website",
+   "Wayback CDX via mac2 for jackberryformayor.com, 2015-11-09 to 2016-11-08"
+  ],
+  "wayback_window_captures": 50,
+  "first_capture_in_window": "20160603044331",
+  "checked_capture_url": "https://web.archive.org/web/20161009164649/http://www.jackberryformayor.com/",
+  "page_evidence": "Page title: \"Jack Berry for Mayor | Proven Leader - Richmond, VA\"",
+  "other_profiles": [
+   "https://www.facebook.com/JackBerryforMayor/",
+   "https://www.youtube.com/@jackberryformayor2681"
+  ],
+  "note": "CDX query hit the limit of 50, so the count is a lower bound; all returned rows are HTTP 200 and dated 2016-06-03 to 2016-11-02. The old roster URL works, the site is the 2016 campaign site. I confirmed the title on the 2016-10-09 capture; the body text is mostly scripts."
+ }
+]
