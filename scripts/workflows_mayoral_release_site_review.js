@@ -7,7 +7,9 @@ export const meta = {
 // Hive job 24714340 answered "no" or "unclear". The Hive model is weak on election timing and reads incumbents'
 // re-election sites as official pages, so its verdict alone excludes nothing.
 const REPO = '/Users/hanno/Documents/GitHub/candidate_website_extension'
-const ARGS = REPO + '/data/municipal_discovery/top100_coverage/release_site_check/review_args.json'
+// args: either the city list (first round, review_args.json) or {file, cities} for a later round.
+const ARGS = REPO + '/data/municipal_discovery/top100_coverage/release_site_check/' + (args.file || 'review_args.json')
+const CITIES = args.cities || args
 const SCHEMA = {
   type: 'object',
   properties: {
@@ -34,7 +36,7 @@ If the sample is thin, read more pages: this machine cannot reach web.archive.or
   ssh mac2 'curl -s --max-time 60 "https://web.archive.org/web/<timestamp>id_/<original>"' | python3 -c 'import sys,re,html; t=sys.stdin.read(); t=re.sub(r"(?s)<(script|style).*?</\\1>"," ",t); print(re.sub(r"\\s+"," ",html.unescape(re.sub(r"<[^>]+>"," ",t)))[:4000])'
 If a request fails, wait 30 seconds and retry, up to 3 times. Report the capture that decided your verdict, a short quote in evidence, and a plain note on any doubt. Edit no file. Return one verdict per site.`
 const out = []
-for (let i = 0; i < args.length; i += 2) {
-  out.push(...await parallel(args.slice(i, i + 2).map(c => () => agent(prompt(c), { label: `review:${c.city_name}`, phase: 'Review', schema: SCHEMA, model: 'sonnet' }))))
+for (let i = 0; i < CITIES.length; i += 2) {
+  out.push(...await parallel(CITIES.slice(i, i + 2).map(c => () => agent(prompt(c), { label: `review:${c.city_name}`, phase: 'Review', schema: SCHEMA, model: 'sonnet' }))))
 }
 return out

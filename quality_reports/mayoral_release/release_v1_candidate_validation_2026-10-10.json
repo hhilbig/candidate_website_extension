@@ -1,0 +1,24 @@
+{
+ "valid": true,
+ "errors": [],
+ "error_count": 0,
+ "eligible_finalists": 822,
+ "text_status": {
+  "text": 650,
+  "site_not_archived": 33,
+  "no_usable_pages": 13,
+  "no_url_lead": 100,
+  "check_incomplete": 16,
+  "excluded_site_check": 10
+ },
+ "panel_rows": 650,
+ "page_drops": {
+  "pages": 35290,
+  "excluded_by_page_rule": 1186,
+  "duplicate_text": 4518,
+  "failed_site_check": 183,
+  "outside_window": 3653,
+  "usable": 27064
+ },
+ "drops_above_20_percent": {}
+}

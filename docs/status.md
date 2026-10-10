@@ -156,6 +156,12 @@ Stages, each with its own check:
 - Then: the new sites go through the page corpus, the page rules and the site check; then the release build.
 The release build waits for this.
 
+**Release candidate v1 built and validated (October 10).** `build/mayoral_release_v1_candidate/` (six data files, `manifest.json`, `README.md`, `CODEBOOK.md`; documents also in `docs/mayoral_release/`). Validator report `quality_reports/mayoral_release/release_v1_candidate_validation_2026-10-10.json`: valid, no drop above 20 percent.
+- 650 of 822 eligible finalists have usable text; 272 of 411 elections (66 percent) both finalists, 348 (85 percent) winner, 378 (92 percent) any. 100 no_url_lead, 33 site_not_archived, 16 check_incomplete, 13 no_usable_pages, 10 excluded_site_check.
+- Site check: 665 sites, Hive jobs 24714340 and 24731028, agent reviews `wf_5a06b8f6-8cf` and `wf_ce74850f-42c`; 654 pass, 11 excluded; Cyndi Lamm 2019 counts only up to election day (`pages_until`). Final verdicts `release_site_check/site_check.csv`.
+- Page corpus rebuilt from `scripts/build_mayoral_target_map.py` (targets matched per batch and domain) on mac2: 35,290 pages, 27,064 usable.
+- **Waiting for Hanno:** license and takedown contact (proposed: same terms as the House/Senate deposit), review of README and codebook, then approval to create the separate Dataverse dataset and upload. Nothing is published.
+
 Release does not require a website for every finalist or a fixed coverage percentage.
 It requires the full population to be assessed, the agreed collection work to finish, and missing evidence to stay explicit.
 Detailed queues and limits: [mayoral_url_discovery.md](mayoral_url_discovery.md).

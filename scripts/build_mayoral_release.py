@@ -5,7 +5,8 @@ Inputs (all hashed in the manifest):
                      candidate_coverage) from scripts/build_mayoral_top_two_coverage.py
   page corpus        mayoral_page_corpus.parquet from scripts/build_mayoral_page_corpus.py (stages 2 and 3)
   site check         site_check.csv: one row per credited site (candidate_election_id, target_id, status
-                     pass or excluded, reason), from the Hive check and the agent review (stage 4)
+                     pass or excluded, reason, source, pages_until), from the Hive check and the agent review
+                     (stage 4); pages_until limits a passing site to pages captured up to that date
 
 Outputs in --out-dir (which must not exist, so no earlier release is overwritten):
   mayoral_cities.csv            100 cities, the fixed 2020 Census population
@@ -59,10 +60,18 @@ def write_csv(path: Path, rows: list[dict], columns: list[str]) -> None:
 
 
 def incomplete_checks() -> set[str]:
-    """Finalists whose last search pass ended incomplete (repair attempt 3 and the after-election sweep)."""
+    """Finalists whose last search pass ended incomplete (repair attempt 3, the after-election sweep and the
+    legacy-lead search)."""
     out = set()
     for path in sorted((DISCOVERY / "repair_20261004" / "followup2").glob("*_url_leads.json")):
         out |= {lead["candidate_election_id"] for lead in json.loads(path.read_text()) if lead["status"] == "incomplete"}
+    # Legacy-lead search (October 9): incomplete entries that no checked sweep hit resolved later.
+    legacy = DISCOVERY / "legacy_search_20261009"
+    resolved_path = REPO / "data/municipal_discovery/top100_coverage/linkage/legacy_search_leads.csv"
+    resolved = {r["candidate_election_id"] for r in read_csv(resolved_path)} if resolved_path.exists() else set()
+    for path in sorted(legacy.glob("*_url_leads.json")):
+        out |= {lead["candidate_election_id"] for lead in json.loads(path.read_text())
+                if lead["status"] == "incomplete" and lead["candidate_election_id"] not in resolved}
     sweep = DISCOVERY / "sweep_after_20261007" / "sweep_check_verdicts.json"
     if sweep.exists():
         out |= {v["candidate_election_id"] for v in json.loads(sweep.read_text()) if v["status"] == "incomplete"}
@@ -102,8 +111,17 @@ def build(corpus_path: Path, site_check_path: Path, out_dir: Path) -> dict:
     people = read_csv(COVERAGE / "candidate_coverage.csv")
     sites = {(r["candidate_election_id"], r["target_id"]): r for r in read_csv(site_check_path)}
     corpus = pq.read_table(corpus_path)
-    passed = [sites.get((c, t), {}).get("status") == "pass" for c, t in
-              zip(corpus["candidate_election_id"].to_pylist(), corpus["target_id"].to_pylist())]
+    def site_passes(finalist: str, target: str, stamp: str) -> bool:
+        row = sites.get((finalist, target), {})
+        if row.get("status") != "pass":
+            return False
+        # A site can pass only up to a date, when the domain was taken over after the election.
+        until = row.get("pages_until", "")
+        return not until or stamp[:8] <= until.replace("-", "")
+
+    passed = [site_passes(c, t, s) for c, t, s in zip(corpus["candidate_election_id"].to_pylist(),
+                                                     corpus["target_id"].to_pylist(),
+                                                     corpus["capture_timestamp"].to_pylist())]
     usable = pc.and_(pc.and_(corpus["in_text_window"], pc.invert(corpus["excluded"])),
                      pc.and_(pc.equal(corpus["duplicate_of"], ""), pa.array(passed)))
     corpus = corpus.append_column("site_check_passed", pa.array(passed)).append_column("release_usable", usable)
