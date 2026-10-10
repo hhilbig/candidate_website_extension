@@ -42,12 +42,12 @@ def election_dates(batch: Path) -> dict[str, str]:
 
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    parser.add_argument("--map", type=Path, required=True, help="JSON {batch or _stage3: {target_id: candidate_election_id}}")
+    parser.add_argument("--map", type=Path, required=True,
+                        help="JSON {batch: {target_id: candidate_election_id}} from scripts/build_mayoral_target_map.py")
     parser.add_argument("--output", type=Path, required=True)
     args = parser.parse_args()
     mapping = json.loads(args.map.read_text())
-    stage3 = mapping.pop("_stage3", {})
-    batches = sorted(ACQ.glob("mayoral_stage3*")) + [ACQ / b for b in mapping]
+    batches = sorted(ACQ / b for b in mapping)
     per_finalist = defaultdict(lambda: {"pages": 0, "pages_in_window": 0, "chars_in_window": 0, "pages_capped_run": 0,
                                         "sites": set()})
     seen, rows_out = set(), 0
@@ -55,7 +55,7 @@ def main() -> None:
         writer = csv.DictWriter(handle, fieldnames=FIELDS)
         writer.writeheader()
         for batch in batches:
-            credited = mapping.get(batch.name, stage3)
+            credited = mapping[batch.name]
             dates = election_dates(batch)
             for run in RUNS:
                 attempts = batch / "runs" / run / "fetch_attempts.csv"
