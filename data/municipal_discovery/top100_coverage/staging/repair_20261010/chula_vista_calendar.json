@@ -1,0 +1,17 @@
+[
+ {
+  "city_id": "0613392",
+  "year": 2010,
+  "status": "complete",
+  "expected_election_dates": [
+   "2010-06-08"
+  ],
+  "source_url": "https://www.sdvote.com/content/dam/rov/en/archive/201006cvpdf.zip",
+  "additional_source_urls": [
+   "http://web.archive.org/web/20191115104434id_/https://chulavista.municipal.codes/Charter/300",
+   "https://chulavista.municipal.codes/Charter/300",
+   "https://www.sdvote.com/content/dam/rov/en/archive/201011cvpdf.zip"
+  ],
+  "note": "The San Diego County Registrar official results for the June 8, 2010 election show a Chula Vista mayoral contest. Cheryl Cox received 18,771 votes, 53.55 percent of the 33,333 votes cast. The Internet Archive copy of Chula Vista Charter section 300(E), captured 2019-11-15, says a Mayor candidate is deemed elected on receipt of a majority of the votes cast at the general municipal election. Charter section 900 holds that election on the date of the state primary. Section 300(E) says that only beginning in 2014 are mayoral elections held in the top-two manner. Cox therefore won outright on June 8, 2010. The county November 2, 2010 results contain no Chula Vista mayoral contest, which agrees with this reading. The 2019 capture is the current charter text; its 2014 transition clause shows the majority rule applied before 2014."
+ }
+]

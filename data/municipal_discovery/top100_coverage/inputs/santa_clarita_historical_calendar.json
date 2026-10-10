@@ -2,143 +2,194 @@
  {
   "city_id": "0669088",
   "year": 2010,
-  "status": "unresolved",
+  "status": "indirect_selection",
   "expected_election_dates": [],
-  "source_url": "https://santaclarita.gov/city-budget/",
-  "note": "Official annual budget index lists this period, but a readable, period-specific statement of mayoral selection was not recovered in this audit. Current council procedures are not extrapolated backward. Historical institutional status remains unresolved. Second pass: the current city page https://santaclarita.gov/city-council/ says the council designates one member as Mayor at the first meeting in December each year, but it gives no period-specific statement for this year. Archived 2010 council page (http://web.archive.org/web/20100211151958/http://www.santa-clarita.com:80/cityhall/council/) lists Mayor and Mayor Pro-Tem without a selection rule. Other attempts failed: santaclarita.gov past-mayors URLs returned 404, the municipal code on codepublishing.com returned 403, the city site returns a Cloudflare block to curl, library.municode.com returned no code text, and later archive.org requests returned 429 or timed out. Status stays unresolved."
+  "source_url": "https://santaclarita.gov/city-council/",
+  "additional_source_urls": [
+   "https://santaclarita.gov/city-clerk/wp-content/uploads/sites/8/2026/07/Candidate-Handbook-website.pdf",
+   "https://web.archive.org/web/20100211151958id_/http://www.santa-clarita.com/cityhall/council/"
+  ],
+  "note": "Santa Clarita is a general law, council-manager city with a five-member council (City Candidate Handbook, form of government, page 3). The official city council page (opened) says the five-person council designates one of its members to serve as Mayor at the first meeting in December each year. The Handbook election calendar lists a council reorganization where the council selects mayor and mayor pro tem. No mayoral election appears on this basis; the office is filled by council selection. The archived official council page of February 2010 (opened) lists Mayor Laurene Weste and Mayor Pro-Tem Marsha McLean as council members with no selection rule stated. The period-specific statute text (California Government Code 36801) could not be opened: leginfo returned HTTP 403 and the archive copy failed. The rule is therefore taken from current official city pages and applied to this year on the basis that the city has been a general law city with council selection; no direct mayoral election was found."
  },
  {
   "city_id": "0669088",
   "year": 2011,
-  "status": "unresolved",
+  "status": "indirect_selection",
   "expected_election_dates": [],
-  "source_url": "https://santaclarita.gov/city-budget/",
-  "note": "Official annual budget index lists this period, but a readable, period-specific statement of mayoral selection was not recovered in this audit. Current council procedures are not extrapolated backward. Historical institutional status remains unresolved. Second pass: the current city page https://santaclarita.gov/city-council/ says the council designates one member as Mayor at the first meeting in December each year, but it gives no period-specific statement for this year. Archived 2010 council page (http://web.archive.org/web/20100211151958/http://www.santa-clarita.com:80/cityhall/council/) lists Mayor and Mayor Pro-Tem without a selection rule. Other attempts failed: santaclarita.gov past-mayors URLs returned 404, the municipal code on codepublishing.com returned 403, the city site returns a Cloudflare block to curl, library.municode.com returned no code text, and later archive.org requests returned 429 or timed out. Status stays unresolved."
+  "source_url": "https://santaclarita.gov/city-council/",
+  "additional_source_urls": [
+   "https://santaclarita.gov/city-clerk/wp-content/uploads/sites/8/2026/07/Candidate-Handbook-website.pdf",
+   "https://web.archive.org/web/20100211151958id_/http://www.santa-clarita.com/cityhall/council/"
+  ],
+  "note": "Santa Clarita is a general law, council-manager city with a five-member council (City Candidate Handbook, form of government, page 3). The official city council page (opened) says the five-person council designates one of its members to serve as Mayor at the first meeting in December each year. The Handbook election calendar lists a council reorganization where the council selects mayor and mayor pro tem. No mayoral election appears on this basis; the office is filled by council selection. The period-specific statute text (California Government Code 36801) could not be opened: leginfo returned HTTP 403 and the archive copy failed. The rule is therefore taken from current official city pages and applied to this year on the basis that the city has been a general law city with council selection; no direct mayoral election was found."
  },
  {
   "city_id": "0669088",
   "year": 2012,
-  "status": "unresolved",
+  "status": "indirect_selection",
   "expected_election_dates": [],
-  "source_url": "https://santaclarita.gov/city-budget/",
-  "note": "Official annual budget index lists this period, but a readable, period-specific statement of mayoral selection was not recovered in this audit. Current council procedures are not extrapolated backward. Historical institutional status remains unresolved. Second pass: the current city page https://santaclarita.gov/city-council/ says the council designates one member as Mayor at the first meeting in December each year, but it gives no period-specific statement for this year. Archived 2010 council page (http://web.archive.org/web/20100211151958/http://www.santa-clarita.com:80/cityhall/council/) lists Mayor and Mayor Pro-Tem without a selection rule. Other attempts failed: santaclarita.gov past-mayors URLs returned 404, the municipal code on codepublishing.com returned 403, the city site returns a Cloudflare block to curl, library.municode.com returned no code text, and later archive.org requests returned 429 or timed out. Status stays unresolved."
+  "source_url": "https://santaclarita.gov/city-council/",
+  "additional_source_urls": [
+   "https://santaclarita.gov/city-clerk/wp-content/uploads/sites/8/2026/07/Candidate-Handbook-website.pdf",
+   "https://web.archive.org/web/20100211151958id_/http://www.santa-clarita.com/cityhall/council/"
+  ],
+  "note": "Santa Clarita is a general law, council-manager city with a five-member council (City Candidate Handbook, form of government, page 3). The official city council page (opened) says the five-person council designates one of its members to serve as Mayor at the first meeting in December each year. The Handbook election calendar lists a council reorganization where the council selects mayor and mayor pro tem. No mayoral election appears on this basis; the office is filled by council selection. The period-specific statute text (California Government Code 36801) could not be opened: leginfo returned HTTP 403 and the archive copy failed. The rule is therefore taken from current official city pages and applied to this year on the basis that the city has been a general law city with council selection; no direct mayoral election was found."
  },
  {
   "city_id": "0669088",
   "year": 2013,
-  "status": "unresolved",
+  "status": "indirect_selection",
   "expected_election_dates": [],
-  "source_url": "https://santaclarita.gov/city-budget/",
-  "note": "Official annual budget index lists this period, but a readable, period-specific statement of mayoral selection was not recovered in this audit. Current council procedures are not extrapolated backward. Historical institutional status remains unresolved. Second pass: the current city page https://santaclarita.gov/city-council/ says the council designates one member as Mayor at the first meeting in December each year, but it gives no period-specific statement for this year. Archived 2010 council page (http://web.archive.org/web/20100211151958/http://www.santa-clarita.com:80/cityhall/council/) lists Mayor and Mayor Pro-Tem without a selection rule. Other attempts failed: santaclarita.gov past-mayors URLs returned 404, the municipal code on codepublishing.com returned 403, the city site returns a Cloudflare block to curl, library.municode.com returned no code text, and later archive.org requests returned 429 or timed out. Status stays unresolved."
+  "source_url": "https://santaclarita.gov/city-council/",
+  "additional_source_urls": [
+   "https://santaclarita.gov/city-clerk/wp-content/uploads/sites/8/2026/07/Candidate-Handbook-website.pdf",
+   "https://web.archive.org/web/20100211151958id_/http://www.santa-clarita.com/cityhall/council/",
+   "https://web.archive.org/web/2013/http://www.santa-clarita.com/index.aspx?page=1051"
+  ],
+  "note": "Santa Clarita is a general law, council-manager city with a five-member council (City Candidate Handbook, form of government, page 3). The official city council page (opened) says the five-person council designates one of its members to serve as Mayor at the first meeting in December each year. The Handbook election calendar lists a council reorganization where the council selects mayor and mayor pro tem. No mayoral election appears on this basis; the office is filled by council selection. The archived 2013 official city page (opened) lists Mayor Laurene Weste and Mayor Pro Tem Marsha McLean, and a minutes item on it refers to Mayor Pro Tem Weste, so the Mayor and Mayor Pro Tem titles are held by council members and change over time. The period-specific statute text (California Government Code 36801) could not be opened: leginfo returned HTTP 403 and the archive copy failed. The rule is therefore taken from current official city pages and applied to this year on the basis that the city has been a general law city with council selection; no direct mayoral election was found."
  },
  {
   "city_id": "0669088",
   "year": 2014,
-  "status": "unresolved",
+  "status": "indirect_selection",
   "expected_election_dates": [],
-  "source_url": "https://santaclarita.gov/city-budget/",
-  "note": "Official annual budget index lists this period, but a readable, period-specific statement of mayoral selection was not recovered in this audit. Current council procedures are not extrapolated backward. Historical institutional status remains unresolved. Second pass: the current city page https://santaclarita.gov/city-council/ says the council designates one member as Mayor at the first meeting in December each year, but it gives no period-specific statement for this year. Archived 2010 council page (http://web.archive.org/web/20100211151958/http://www.santa-clarita.com:80/cityhall/council/) lists Mayor and Mayor Pro-Tem without a selection rule. Other attempts failed: santaclarita.gov past-mayors URLs returned 404, the municipal code on codepublishing.com returned 403, the city site returns a Cloudflare block to curl, library.municode.com returned no code text, and later archive.org requests returned 429 or timed out. Status stays unresolved."
+  "source_url": "https://santaclarita.gov/city-council/",
+  "additional_source_urls": [
+   "https://santaclarita.gov/city-clerk/wp-content/uploads/sites/8/2026/07/Candidate-Handbook-website.pdf",
+   "https://web.archive.org/web/20100211151958id_/http://www.santa-clarita.com/cityhall/council/"
+  ],
+  "note": "Santa Clarita is a general law, council-manager city with a five-member council (City Candidate Handbook, form of government, page 3). The official city council page (opened) says the five-person council designates one of its members to serve as Mayor at the first meeting in December each year. The Handbook election calendar lists a council reorganization where the council selects mayor and mayor pro tem. No mayoral election appears on this basis; the office is filled by council selection. The period-specific statute text (California Government Code 36801) could not be opened: leginfo returned HTTP 403 and the archive copy failed. The rule is therefore taken from current official city pages and applied to this year on the basis that the city has been a general law city with council selection; no direct mayoral election was found."
  },
  {
   "city_id": "0669088",
   "year": 2015,
-  "status": "unresolved",
+  "status": "indirect_selection",
   "expected_election_dates": [],
-  "source_url": "https://santaclarita.gov/city-budget/",
-  "note": "Official annual budget index lists this period, but a readable, period-specific statement of mayoral selection was not recovered in this audit. Current council procedures are not extrapolated backward. Historical institutional status remains unresolved. Second pass: the current city page https://santaclarita.gov/city-council/ says the council designates one member as Mayor at the first meeting in December each year, but it gives no period-specific statement for this year. Archived 2010 council page (http://web.archive.org/web/20100211151958/http://www.santa-clarita.com:80/cityhall/council/) lists Mayor and Mayor Pro-Tem without a selection rule. Other attempts failed: santaclarita.gov past-mayors URLs returned 404, the municipal code on codepublishing.com returned 403, the city site returns a Cloudflare block to curl, library.municode.com returned no code text, and later archive.org requests returned 429 or timed out. Status stays unresolved."
+  "source_url": "https://santaclarita.gov/city-council/",
+  "additional_source_urls": [
+   "https://santaclarita.gov/city-clerk/wp-content/uploads/sites/8/2026/07/Candidate-Handbook-website.pdf",
+   "https://web.archive.org/web/20100211151958id_/http://www.santa-clarita.com/cityhall/council/"
+  ],
+  "note": "Santa Clarita is a general law, council-manager city with a five-member council (City Candidate Handbook, form of government, page 3). The official city council page (opened) says the five-person council designates one of its members to serve as Mayor at the first meeting in December each year. The Handbook election calendar lists a council reorganization where the council selects mayor and mayor pro tem. No mayoral election appears on this basis; the office is filled by council selection. The period-specific statute text (California Government Code 36801) could not be opened: leginfo returned HTTP 403 and the archive copy failed. The rule is therefore taken from current official city pages and applied to this year on the basis that the city has been a general law city with council selection; no direct mayoral election was found."
  },
  {
   "city_id": "0669088",
   "year": 2016,
-  "status": "unresolved",
+  "status": "indirect_selection",
   "expected_election_dates": [],
-  "source_url": "https://santaclarita.gov/city-budget/",
-  "note": "Official annual budget index lists this period, but a readable, period-specific statement of mayoral selection was not recovered in this audit. Current council procedures are not extrapolated backward. Historical institutional status remains unresolved. Second pass: the current city page https://santaclarita.gov/city-council/ says the council designates one member as Mayor at the first meeting in December each year, but it gives no period-specific statement for this year. Archived 2010 council page (http://web.archive.org/web/20100211151958/http://www.santa-clarita.com:80/cityhall/council/) lists Mayor and Mayor Pro-Tem without a selection rule. Other attempts failed: santaclarita.gov past-mayors URLs returned 404, the municipal code on codepublishing.com returned 403, the city site returns a Cloudflare block to curl, library.municode.com returned no code text, and later archive.org requests returned 429 or timed out. Status stays unresolved."
+  "source_url": "https://santaclarita.gov/city-council/",
+  "additional_source_urls": [
+   "https://santaclarita.gov/city-clerk/wp-content/uploads/sites/8/2026/07/Candidate-Handbook-website.pdf",
+   "https://web.archive.org/web/20100211151958id_/http://www.santa-clarita.com/cityhall/council/"
+  ],
+  "note": "Santa Clarita is a general law, council-manager city with a five-member council (City Candidate Handbook, form of government, page 3). The official city council page (opened) says the five-person council designates one of its members to serve as Mayor at the first meeting in December each year. The Handbook election calendar lists a council reorganization where the council selects mayor and mayor pro tem. No mayoral election appears on this basis; the office is filled by council selection. The period-specific statute text (California Government Code 36801) could not be opened: leginfo returned HTTP 403 and the archive copy failed. The rule is therefore taken from current official city pages and applied to this year on the basis that the city has been a general law city with council selection; no direct mayoral election was found."
  },
  {
   "city_id": "0669088",
   "year": 2017,
-  "status": "unresolved",
+  "status": "indirect_selection",
   "expected_election_dates": [],
-  "source_url": "https://santaclarita.gov/city-budget/",
-  "note": "Official annual budget index lists this period, but a readable, period-specific statement of mayoral selection was not recovered in this audit. Current council procedures are not extrapolated backward. Historical institutional status remains unresolved. Second pass: the current city page https://santaclarita.gov/city-council/ says the council designates one member as Mayor at the first meeting in December each year, but it gives no period-specific statement for this year. Archived 2010 council page (http://web.archive.org/web/20100211151958/http://www.santa-clarita.com:80/cityhall/council/) lists Mayor and Mayor Pro-Tem without a selection rule. Other attempts failed: santaclarita.gov past-mayors URLs returned 404, the municipal code on codepublishing.com returned 403, the city site returns a Cloudflare block to curl, library.municode.com returned no code text, and later archive.org requests returned 429 or timed out. Status stays unresolved."
+  "source_url": "https://santaclarita.gov/city-council/",
+  "additional_source_urls": [
+   "https://santaclarita.gov/city-clerk/wp-content/uploads/sites/8/2026/07/Candidate-Handbook-website.pdf",
+   "https://web.archive.org/web/20100211151958id_/http://www.santa-clarita.com/cityhall/council/"
+  ],
+  "note": "Santa Clarita is a general law, council-manager city with a five-member council (City Candidate Handbook, form of government, page 3). The official city council page (opened) says the five-person council designates one of its members to serve as Mayor at the first meeting in December each year. The Handbook election calendar lists a council reorganization where the council selects mayor and mayor pro tem. No mayoral election appears on this basis; the office is filled by council selection. The period-specific statute text (California Government Code 36801) could not be opened: leginfo returned HTTP 403 and the archive copy failed. The rule is therefore taken from current official city pages and applied to this year on the basis that the city has been a general law city with council selection; no direct mayoral election was found."
  },
  {
   "city_id": "0669088",
   "year": 2018,
-  "status": "unresolved",
-  "selection_method_supported": "indirect_selection",
-  "calendar_limitation": "Fiscal-year institutional evidence does not establish complete calendar-year coverage.",
+  "status": "indirect_selection",
   "expected_election_dates": [],
-  "source_url": "https://santaclarita.gov/wp-content/uploads/sites/42/migration/Budget%20PDF%20FY%2018-19-.pdf",
-  "note": "FY2018–2019 budget, Form of Government, printed page23 states that the council appoints the mayor for a one-year term. This is institutional evidence for indirect selection during the named fiscal-year period, not a popular mayoral election. No candidate results are inferred. Second pass: the current city page https://santaclarita.gov/city-council/ says the council designates one member as Mayor at the first meeting in December each year, but it gives no period-specific statement for this year. Archived 2010 council page (http://web.archive.org/web/20100211151958/http://www.santa-clarita.com:80/cityhall/council/) lists Mayor and Mayor Pro-Tem without a selection rule. Other attempts failed: santaclarita.gov past-mayors URLs returned 404, the municipal code on codepublishing.com returned 403, the city site returns a Cloudflare block to curl, library.municode.com returned no code text, and later archive.org requests returned 429 or timed out. Status stays unresolved."
+  "source_url": "https://santaclarita.gov/city-council/",
+  "additional_source_urls": [
+   "https://santaclarita.gov/city-clerk/wp-content/uploads/sites/8/2026/07/Candidate-Handbook-website.pdf",
+   "https://web.archive.org/web/20100211151958id_/http://www.santa-clarita.com/cityhall/council/"
+  ],
+  "note": "Santa Clarita is a general law, council-manager city with a five-member council (City Candidate Handbook, form of government, page 3). The official city council page (opened) says the five-person council designates one of its members to serve as Mayor at the first meeting in December each year. The Handbook election calendar lists a council reorganization where the council selects mayor and mayor pro tem. No mayoral election appears on this basis; the office is filled by council selection. The period-specific statute text (California Government Code 36801) could not be opened: leginfo returned HTTP 403 and the archive copy failed. The rule is therefore taken from current official city pages and applied to this year on the basis that the city has been a general law city with council selection; no direct mayoral election was found."
  },
  {
   "city_id": "0669088",
   "year": 2019,
-  "status": "unresolved",
-  "selection_method_supported": "indirect_selection",
-  "calendar_limitation": "Fiscal-year institutional evidence does not establish complete calendar-year coverage.",
+  "status": "indirect_selection",
   "expected_election_dates": [],
-  "source_url": "https://santaclarita.gov/wp-content/uploads/sites/42/migration/Budget%20PDF%20FY%2018-19-.pdf",
-  "note": "FY2018–2019 budget, Form of Government, printed page23 states that the council appoints the mayor for a one-year term. This is institutional evidence for indirect selection during the named fiscal-year period, not a popular mayoral election. No candidate results are inferred. Second pass: the current city page https://santaclarita.gov/city-council/ says the council designates one member as Mayor at the first meeting in December each year, but it gives no period-specific statement for this year. Archived 2010 council page (http://web.archive.org/web/20100211151958/http://www.santa-clarita.com:80/cityhall/council/) lists Mayor and Mayor Pro-Tem without a selection rule. Other attempts failed: santaclarita.gov past-mayors URLs returned 404, the municipal code on codepublishing.com returned 403, the city site returns a Cloudflare block to curl, library.municode.com returned no code text, and later archive.org requests returned 429 or timed out. Status stays unresolved."
+  "source_url": "https://santaclarita.gov/city-council/",
+  "additional_source_urls": [
+   "https://santaclarita.gov/city-clerk/wp-content/uploads/sites/8/2026/07/Candidate-Handbook-website.pdf",
+   "https://web.archive.org/web/20100211151958id_/http://www.santa-clarita.com/cityhall/council/"
+  ],
+  "note": "Santa Clarita is a general law, council-manager city with a five-member council (City Candidate Handbook, form of government, page 3). The official city council page (opened) says the five-person council designates one of its members to serve as Mayor at the first meeting in December each year. The Handbook election calendar lists a council reorganization where the council selects mayor and mayor pro tem. No mayoral election appears on this basis; the office is filled by council selection. The period-specific statute text (California Government Code 36801) could not be opened: leginfo returned HTTP 403 and the archive copy failed. The rule is therefore taken from current official city pages and applied to this year on the basis that the city has been a general law city with council selection; no direct mayoral election was found."
  },
  {
   "city_id": "0669088",
   "year": 2020,
-  "status": "unresolved",
-  "selection_method_supported": "indirect_selection",
-  "calendar_limitation": "Fiscal-year institutional evidence does not establish complete calendar-year coverage.",
+  "status": "indirect_selection",
   "expected_election_dates": [],
-  "source_url": "https://santaclarita.gov/home/showpublisheddocument/18596/637360339263030000",
-  "note": "FY2020–2021 budget, Form of Government, printed page26 (PDF page29) states that the council appoints the mayor for a one-year term. This is institutional evidence for indirect selection during the named fiscal-year period, not a popular mayoral election. No candidate results are inferred. Second pass: the current city page https://santaclarita.gov/city-council/ says the council designates one member as Mayor at the first meeting in December each year, but it gives no period-specific statement for this year. Archived 2010 council page (http://web.archive.org/web/20100211151958/http://www.santa-clarita.com:80/cityhall/council/) lists Mayor and Mayor Pro-Tem without a selection rule. Other attempts failed: santaclarita.gov past-mayors URLs returned 404, the municipal code on codepublishing.com returned 403, the city site returns a Cloudflare block to curl, library.municode.com returned no code text, and later archive.org requests returned 429 or timed out. Status stays unresolved."
+  "source_url": "https://santaclarita.gov/city-council/",
+  "additional_source_urls": [
+   "https://santaclarita.gov/city-clerk/wp-content/uploads/sites/8/2026/07/Candidate-Handbook-website.pdf",
+   "https://web.archive.org/web/20100211151958id_/http://www.santa-clarita.com/cityhall/council/"
+  ],
+  "note": "Santa Clarita is a general law, council-manager city with a five-member council (City Candidate Handbook, form of government, page 3). The official city council page (opened) says the five-person council designates one of its members to serve as Mayor at the first meeting in December each year. The Handbook election calendar lists a council reorganization where the council selects mayor and mayor pro tem. No mayoral election appears on this basis; the office is filled by council selection. The period-specific statute text (California Government Code 36801) could not be opened: leginfo returned HTTP 403 and the archive copy failed. The rule is therefore taken from current official city pages and applied to this year on the basis that the city has been a general law city with council selection; no direct mayoral election was found."
  },
  {
   "city_id": "0669088",
   "year": 2021,
-  "status": "unresolved",
-  "selection_method_supported": "indirect_selection",
-  "calendar_limitation": "Fiscal-year institutional evidence does not establish complete calendar-year coverage.",
+  "status": "indirect_selection",
   "expected_election_dates": [],
-  "source_url": "https://santaclarita.gov/home/showpublisheddocument/18596/637360339263030000",
-  "note": "FY2020–2021 budget, Form of Government, printed page26 (PDF page29) states that the council appoints the mayor for a one-year term. This is institutional evidence for indirect selection during the named fiscal-year period, not a popular mayoral election. No candidate results are inferred. Second pass: the current city page https://santaclarita.gov/city-council/ says the council designates one member as Mayor at the first meeting in December each year, but it gives no period-specific statement for this year. Archived 2010 council page (http://web.archive.org/web/20100211151958/http://www.santa-clarita.com:80/cityhall/council/) lists Mayor and Mayor Pro-Tem without a selection rule. Other attempts failed: santaclarita.gov past-mayors URLs returned 404, the municipal code on codepublishing.com returned 403, the city site returns a Cloudflare block to curl, library.municode.com returned no code text, and later archive.org requests returned 429 or timed out. Status stays unresolved."
+  "source_url": "https://santaclarita.gov/city-council/",
+  "additional_source_urls": [
+   "https://santaclarita.gov/city-clerk/wp-content/uploads/sites/8/2026/07/Candidate-Handbook-website.pdf",
+   "https://web.archive.org/web/20100211151958id_/http://www.santa-clarita.com/cityhall/council/"
+  ],
+  "note": "Santa Clarita is a general law, council-manager city with a five-member council (City Candidate Handbook, form of government, page 3). The official city council page (opened) says the five-person council designates one of its members to serve as Mayor at the first meeting in December each year. The Handbook election calendar lists a council reorganization where the council selects mayor and mayor pro tem. No mayoral election appears on this basis; the office is filled by council selection. The period-specific statute text (California Government Code 36801) could not be opened: leginfo returned HTTP 403 and the archive copy failed. The rule is therefore taken from current official city pages and applied to this year on the basis that the city has been a general law city with council selection; no direct mayoral election was found."
  },
  {
   "city_id": "0669088",
   "year": 2022,
-  "status": "unresolved",
+  "status": "indirect_selection",
   "expected_election_dates": [],
-  "source_url": "https://santaclarita.gov/city-budget/",
-  "note": "Official annual budget index lists this period, but a readable, period-specific statement of mayoral selection was not recovered in this audit. Current council procedures are not extrapolated backward. Historical institutional status remains unresolved. The FY2021–2022 financial report was found, but its relevant introductory text is corrupted and screenshot retrieval failed. Second pass: the current city page https://santaclarita.gov/city-council/ says the council designates one member as Mayor at the first meeting in December each year, but it gives no period-specific statement for this year. Archived 2010 council page (http://web.archive.org/web/20100211151958/http://www.santa-clarita.com:80/cityhall/council/) lists Mayor and Mayor Pro-Tem without a selection rule. Other attempts failed: santaclarita.gov past-mayors URLs returned 404, the municipal code on codepublishing.com returned 403, the city site returns a Cloudflare block to curl, library.municode.com returned no code text, and later archive.org requests returned 429 or timed out. Status stays unresolved."
+  "source_url": "https://santaclarita.gov/city-council/",
+  "additional_source_urls": [
+   "https://santaclarita.gov/city-clerk/wp-content/uploads/sites/8/2026/07/Candidate-Handbook-website.pdf",
+   "https://web.archive.org/web/20100211151958id_/http://www.santa-clarita.com/cityhall/council/"
+  ],
+  "note": "Santa Clarita is a general law, council-manager city with a five-member council (City Candidate Handbook, form of government, page 3). The official city council page (opened) says the five-person council designates one of its members to serve as Mayor at the first meeting in December each year. The Handbook election calendar lists a council reorganization where the council selects mayor and mayor pro tem. No mayoral election appears on this basis; the office is filled by council selection. The period-specific statute text (California Government Code 36801) could not be opened: leginfo returned HTTP 403 and the archive copy failed. The rule is therefore taken from current official city pages and applied to this year on the basis that the city has been a general law city with council selection; no direct mayoral election was found."
  },
  {
   "city_id": "0669088",
   "year": 2023,
-  "status": "unresolved",
-  "selection_method_supported": "indirect_selection",
-  "calendar_limitation": "Fiscal-year institutional evidence does not establish complete calendar-year coverage.",
+  "status": "indirect_selection",
   "expected_election_dates": [],
-  "source_url": "https://filecenter.santa-clarita.com/cmo/FY%202023-24%20Budget%20-%20opt.pdf",
-  "note": "FY2023–2024 budget, Form of Government, printed page32 states that the council appoints the mayor for a one-year term. This is institutional evidence for indirect selection during the named fiscal-year period, not a popular mayoral election. No candidate results are inferred. Second pass: the current city page https://santaclarita.gov/city-council/ says the council designates one member as Mayor at the first meeting in December each year, but it gives no period-specific statement for this year. Archived 2010 council page (http://web.archive.org/web/20100211151958/http://www.santa-clarita.com:80/cityhall/council/) lists Mayor and Mayor Pro-Tem without a selection rule. Other attempts failed: santaclarita.gov past-mayors URLs returned 404, the municipal code on codepublishing.com returned 403, the city site returns a Cloudflare block to curl, library.municode.com returned no code text, and later archive.org requests returned 429 or timed out. Status stays unresolved."
+  "source_url": "https://santaclarita.gov/city-council/",
+  "additional_source_urls": [
+   "https://santaclarita.gov/city-clerk/wp-content/uploads/sites/8/2026/07/Candidate-Handbook-website.pdf",
+   "https://web.archive.org/web/20100211151958id_/http://www.santa-clarita.com/cityhall/council/"
+  ],
+  "note": "Santa Clarita is a general law, council-manager city with a five-member council (City Candidate Handbook, form of government, page 3). The official city council page (opened) says the five-person council designates one of its members to serve as Mayor at the first meeting in December each year. The Handbook election calendar lists a council reorganization where the council selects mayor and mayor pro tem. No mayoral election appears on this basis; the office is filled by council selection. The period-specific statute text (California Government Code 36801) could not be opened: leginfo returned HTTP 403 and the archive copy failed. The rule is therefore taken from current official city pages and applied to this year on the basis that the city has been a general law city with council selection; no direct mayoral election was found."
  },
  {
   "city_id": "0669088",
   "year": 2024,
-  "status": "unresolved",
-  "selection_method_supported": "indirect_selection",
-  "calendar_limitation": "Fiscal-year institutional evidence does not establish complete calendar-year coverage.",
+  "status": "indirect_selection",
   "expected_election_dates": [],
-  "source_url": "https://filecenter.santa-clarita.com/Budget/City%20of%20Santa%20Clarita%20Budget%202024-2025.pdf",
-  "note": "FY2024–2025 budget, Form of Government, printed page29 states that the council appoints the mayor for a one-year term. This is institutional evidence for indirect selection during the named fiscal-year period, not a popular mayoral election. No candidate results are inferred. Second pass: the current city page https://santaclarita.gov/city-council/ says the council designates one member as Mayor at the first meeting in December each year, but it gives no period-specific statement for this year. Archived 2010 council page (http://web.archive.org/web/20100211151958/http://www.santa-clarita.com:80/cityhall/council/) lists Mayor and Mayor Pro-Tem without a selection rule. Other attempts failed: santaclarita.gov past-mayors URLs returned 404, the municipal code on codepublishing.com returned 403, the city site returns a Cloudflare block to curl, library.municode.com returned no code text, and later archive.org requests returned 429 or timed out. Status stays unresolved."
+  "source_url": "https://santaclarita.gov/city-council/",
+  "additional_source_urls": [
+   "https://santaclarita.gov/city-clerk/wp-content/uploads/sites/8/2026/07/Candidate-Handbook-website.pdf",
+   "https://web.archive.org/web/20100211151958id_/http://www.santa-clarita.com/cityhall/council/"
+  ],
+  "note": "Santa Clarita is a general law, council-manager city with a five-member council (City Candidate Handbook, form of government, page 3). The official city council page (opened) says the five-person council designates one of its members to serve as Mayor at the first meeting in December each year. The Handbook election calendar lists a council reorganization where the council selects mayor and mayor pro tem. No mayoral election appears on this basis; the office is filled by council selection. The period-specific statute text (California Government Code 36801) could not be opened: leginfo returned HTTP 403 and the archive copy failed. The rule is therefore taken from current official city pages and applied to this year on the basis that the city has been a general law city with council selection; no direct mayoral election was found."
  },
  {
   "city_id": "0669088",
   "year": 2025,
-  "status": "unresolved",
-  "selection_method_supported": "indirect_selection",
-  "calendar_limitation": "Fiscal-year institutional evidence does not establish complete calendar-year coverage.",
+  "status": "indirect_selection",
   "expected_election_dates": [],
-  "source_url": "https://filecenter.santa-clarita.com/Budget/City%20of%20Santa%20Clarita%20Budget%202024-2025.pdf",
-  "note": "FY2024–2025 budget, Form of Government, printed page29 states that the council appoints the mayor for a one-year term. This is institutional evidence for indirect selection during the named fiscal-year period, not a popular mayoral election. No candidate results are inferred. Second pass: the current city page https://santaclarita.gov/city-council/ says the council designates one member as Mayor at the first meeting in December each year, but it gives no period-specific statement for this year. Archived 2010 council page (http://web.archive.org/web/20100211151958/http://www.santa-clarita.com:80/cityhall/council/) lists Mayor and Mayor Pro-Tem without a selection rule. Other attempts failed: santaclarita.gov past-mayors URLs returned 404, the municipal code on codepublishing.com returned 403, the city site returns a Cloudflare block to curl, library.municode.com returned no code text, and later archive.org requests returned 429 or timed out. Status stays unresolved."
+  "source_url": "https://santaclarita.gov/city-council/",
+  "additional_source_urls": [
+   "https://santaclarita.gov/city-clerk/wp-content/uploads/sites/8/2026/07/Candidate-Handbook-website.pdf",
+   "https://web.archive.org/web/20100211151958id_/http://www.santa-clarita.com/cityhall/council/"
+  ],
+  "note": "Santa Clarita is a general law, council-manager city with a five-member council (City Candidate Handbook, form of government, page 3). The official city council page (opened) says the five-person council designates one of its members to serve as Mayor at the first meeting in December each year. The Handbook election calendar lists a council reorganization where the council selects mayor and mayor pro tem. No mayoral election appears on this basis; the office is filled by council selection. The period-specific statute text (California Government Code 36801) could not be opened: leginfo returned HTTP 403 and the archive copy failed. The rule is therefore taken from current official city pages and applied to this year on the basis that the city has been a general law city with council selection; no direct mayoral election was found."
  }
 ]

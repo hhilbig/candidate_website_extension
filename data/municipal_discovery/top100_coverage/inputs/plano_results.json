@@ -6,29 +6,33 @@
   "election_date": "2013-05-11",
   "election_type": "regular",
   "stage": "general",
-  "verification_status": "unresolved",
+  "verification_status": "verified_decisive",
   "certification_status": "source_verified",
   "source_url": "https://www.collincountytx.gov/docs/default-source/elections/results-archive/may-11-2013-combined-election-day-and-early-ballots-statement-of-votes-cast.pdf?sfvrsn=bff3acea_0",
-  "source_locator": "Councilmember, Place No. 6 (Mayor) Plano, jurisdiction-wide Total rows of the statement of votes cast (PDF pages 1200-1201 of 1500)",
+  "source_locator": "Councilmember, Place No. 6 (Mayor) Plano, jurisdiction-wide Total rows of the statement of votes cast (PDF pages 1200-1201 of 1500); plus Denton County: Denton County Clarity election results (election id 46771, version 117194), reports/summary.zip, rows 132-133 CITY OF PLANO - COUNCILMEMBER, PLACE NO. 6 (MAYOR): LaRosiliere 163, Moses 100 (2 of 2 precincts reporting)",
   "certification_source_url": "https://www.collincountytx.gov/elections/election-results-archive",
   "additional_source_urls": [
+   "https://results.enr.clarityelections.com/TX/Denton/46771/117194/reports/summary.zip",
+   "https://results.enr.clarityelections.com/TX/Denton/",
    "https://www.collincountytx.gov/elections/election-results-archive"
   ],
-  "verification_note": "Harry LaRosiliere received 9,711 votes (58.69%) and Fred Moses received 6,836 (41.31%) of 16,547 total votes. A majority elected the winner on May 11, 2013, so no runoff was held. These totals are Collin County only and are not citywide. Plano lies partly in Denton County, and the Denton County results could not be opened (bot challenge on votedenton.gov). The winner is not in doubt on the Collin figures, but the citywide totals are unresolved, so the year is unresolved in plano_calendar.json.",
+  "verification_note": "Citywide totals are the sum of the Collin County official statement of votes cast and the Denton County official results (Plano precincts 2020 and 2099). Collin: Harry LaRosiliere 9,711, Fred Moses 6,836 (sum 16,547). Denton: Harry LaRosiliere 163, Fred Moses 100 (sum 263). Citywide: Harry LaRosiliere 9,874, Fred Moses 6,936. Harry LaRosiliere won a majority (58.7%), so no runoff was held. Neither official source lists write-in votes for this contest. The election date matches the candidate field in both sources.",
   "candidates": [
    {
     "name": "Harry LaRosiliere",
     "role": "winner",
-    "votes": 9711,
+    "votes": 9874,
     "candidate_year_id": ""
    },
    {
     "name": "Fred Moses",
     "role": "runner_up",
-    "votes": 6836,
+    "votes": 6936,
     "candidate_year_id": ""
    }
-  ]
+  ],
+  "total_votes": 16810,
+  "total_votes_basis": "sum of all candidates, citywide (Collin County plus Denton County portions); no write-in votes are listed in either official source"
  },
  {
   "city_name": "Plano",
@@ -37,29 +41,33 @@
   "election_date": "2017-05-06",
   "election_type": "regular",
   "stage": "general",
-  "verification_status": "unresolved",
+  "verification_status": "verified_decisive",
   "certification_status": "source_verified",
   "source_url": "https://www.collincountytx.gov/docs/default-source/elections/results-archive/may-6-2017-combined-election-day-and-early-ballots-accumulated-totals-final.pdf?sfvrsn=3305428e_0",
-  "source_locator": "Plano Councilmember P6 Mayor, page 5 of 13, combined early voting and election day accumulated totals",
+  "source_locator": "Plano Councilmember P6 Mayor, page 5 of 13, combined early voting and election day accumulated totals; plus Denton County: Denton County Clarity election results (election id 69572, version 285479), json/en/summary.json and reports/detailxml.zip, contest Plano Councilmember, Place No. 6 (Mayor); precinct 2020 and 2099, 2 of 2 reporting",
   "certification_source_url": "https://www.collincountytx.gov/elections/election-results-archive",
   "additional_source_urls": [
+   "https://results.enr.clarityelections.com/TX/Denton/69572/285479/json/en/summary.json",
+   "https://results.enr.clarityelections.com/TX/Denton/",
    "https://www.collincountytx.gov/elections/election-results-archive"
   ],
-  "verification_note": "Harry LaRosiliere received 13,923 votes (52.27%) and Lily Bao 11,260 (42.27%). Others: Douglas Reeves 947, Bill Lisle III 508. Total votes 26,638. A majority elected the winner, so no runoff was held. These totals are Collin County only and are not citywide. Plano lies partly in Denton County, and the Denton County results could not be opened (bot challenge on votedenton.gov). The winner is not in doubt on the Collin figures, but the citywide totals are unresolved, so the year is unresolved in plano_calendar.json.",
+  "verification_note": "Citywide totals are the sum of the Collin County official statement of votes cast and the Denton County official results (Plano precincts 2020 and 2099). Collin: Harry LaRosiliere 13,923, Lily Bao 11,260, Douglas Reeves 947, Bill Lisle III 508 (sum 26,638). Denton: Harry LaRosiliere 270, Lily Bao 253, Douglas Reeves 16, Bill Lisle III 15 (sum 554). Citywide: Harry LaRosiliere 14,193, Lily Bao 11,513, Douglas Reeves 963, Bill Lisle III 523. Harry LaRosiliere won a majority (52.2%), so no runoff was held. Neither official source lists write-in votes for this contest. The election date matches the candidate field in both sources.",
   "candidates": [
    {
     "name": "Harry LaRosiliere",
     "role": "winner",
-    "votes": 13923,
+    "votes": 14193,
     "candidate_year_id": ""
    },
    {
     "name": "Lily Bao",
     "role": "runner_up",
-    "votes": 11260,
+    "votes": 11513,
     "candidate_year_id": ""
    }
-  ]
+  ],
+  "total_votes": 27192,
+  "total_votes_basis": "sum of all candidates, citywide (Collin County plus Denton County portions); no write-in votes are listed in either official source"
  },
  {
   "city_name": "Plano",
@@ -68,29 +76,33 @@
   "election_date": "2021-05-01",
   "election_type": "regular",
   "stage": "general",
-  "verification_status": "unresolved",
+  "verification_status": "verified_decisive",
   "certification_status": "source_verified",
   "source_url": "https://www.collincountytx.gov/docs/default-source/elections/results-archive/may-1-2021-general-election-combined-accumulated-totals.pdf?sfvrsn=46b1aa05_0",
-  "source_locator": "Councilmember, Place No. 6 (Mayor), PDF page 19 of 36",
+  "source_locator": "Councilmember, Place No. 6 (Mayor), PDF page 19 of 36; plus Denton County: Denton County Clarity election results (election id 109016, version 277042), json/en/summary.json and reports/detailxml.zip, contest City of Plano Councilmember, Place No. 6 (Mayor); precinct 2020 and 2099, 2 of 2 reporting",
   "certification_source_url": "https://www.collincountytx.gov/elections/election-results-archive",
   "additional_source_urls": [
+   "https://results.enr.clarityelections.com/TX/Denton/109016/277042/json/en/summary.json",
+   "https://results.enr.clarityelections.com/TX/Denton/",
    "https://www.collincountytx.gov/elections/election-results-archive"
   ],
-  "verification_note": "John Muns received 18,104 votes (53.00%) and Lily Bao 14,705 (43.05%). Lydia Ortega received 1,348. Total votes cast 34,157. A majority elected the winner, so no runoff was held. These totals are Collin County only and are not citywide. Plano lies partly in Denton County, and the Denton County results could not be opened (bot challenge on votedenton.gov). The winner is not in doubt on the Collin figures, but the citywide totals are unresolved, so the year is unresolved in plano_calendar.json.",
+  "verification_note": "Citywide totals are the sum of the Collin County official statement of votes cast and the Denton County official results (Plano precincts 2020 and 2099). Collin: John Muns 18,104, Lily Bao 14,705, Lydia Ortega 1,348 (sum 34,157). Denton: John Muns 378, Lily Bao 414, Lydia Ortega 22 (sum 814). Citywide: John Muns 18,482, Lily Bao 15,119, Lydia Ortega 1,370. John Muns won a majority (52.8%), so no runoff was held. Neither official source lists write-in votes for this contest. The election date matches the candidate field in both sources.",
   "candidates": [
    {
     "name": "John Muns",
     "role": "winner",
-    "votes": 18104,
+    "votes": 18482,
     "candidate_year_id": ""
    },
    {
     "name": "Lily Bao",
     "role": "runner_up",
-    "votes": 14705,
+    "votes": 15119,
     "candidate_year_id": ""
    }
-  ]
+  ],
+  "total_votes": 34971,
+  "total_votes_basis": "sum of all candidates, citywide (Collin County plus Denton County portions); no write-in votes are listed in either official source"
  },
  {
   "city_name": "Plano",
@@ -107,7 +119,7 @@
   "additional_source_urls": [
    "https://www.collincountytx.gov/elections/election-results-archive"
   ],
-  "verification_note": "John Muns was the only candidate and received 14,611 votes (100%). Undervotes were 5,982. This is an uncontested election, so only the winner is recorded. These totals are Collin County only and are not citywide. Plano lies partly in Denton County, and the Denton County results could not be opened (bot challenge on votedenton.gov). The winner is not in doubt on the Collin figures, but the citywide totals are unresolved, so the year is unresolved in plano_calendar.json.",
+  "verification_note": "John Muns was the only candidate and received 14,611 votes in the Collin County portion. Denton County official results (Clarity, election id 123614 for May 3, 2025 and id 123838 for the runoff) list no City of Plano contest, but absence from a summary is not a confirmed zero for the Denton part of Plano. Totals are Collin only. The year stays unresolved.",
   "candidates": [
    {
     "name": "John Muns",

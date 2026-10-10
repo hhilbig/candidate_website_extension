@@ -1,0 +1,16 @@
+[
+ {
+  "city_id": "4748000",
+  "year": 2011,
+  "status": "unresolved",
+  "expected_election_dates": [],
+  "source_url": "https://www.electionsshelbytn.gov/past-elections/",
+  "additional_source_urls": [
+   "https://www.memphistn.gov/gov-guide/",
+   "https://www.electionsshelbytn.gov/past-elections/2012-past-elections/",
+   "http://web.archive.org/web/20111106063714/http://www.shelbyvote.com/",
+   "http://web.archive.org/web/20111106063714/http://www.shelbyvote.com/index.aspx?nid=83"
+  ],
+  "note": "The City of Memphis government guide gives a four-year mayoral term and places a regular mayoral election in 2011 (cycle 2011, 2015, 2019, 2023, 2027). Secondary sources give October 6, 2011 as the date; they are not used for results. No official 2011 results document was found. Tried in this pass: (1) the Shelby County Election Commission past-elections index and the 2010 and 2011 year pages (no 2011 link; year pages return HTTP 404); (2) the WordPress media library API of electionsshelbytn.gov, searched for 2011, Memphis, mayor, SOVC, minutes, results and 10.6; its earliest minutes are from 2014 and its earliest statements of votes cast are from March 2012, and the only Memphis runoff file (SOVC-Memphis-Run-off-11-3_RN767.pdf) is the November 19, 2015 runoff; (3) the Internet Archive copy of the former site shelbyvote.com (snapshot 2011-11-06 of https://www.shelbyvote.com/ and its Election Reports page, nid=83), which only links to an external results site, shelbyelections.com, and to a report list (DocumentView.aspx?DID=45) that did not load; (4) the Wayback CDX index for shelbyelections.com, which holds only a February 2011 home page and no results files, and for shelbyvote.com 2011-2013, which lists no 2011 results document. The Wayback Machine timed out on most other fetches (document center pages for FID=34). The web search budget was used up, so council minutes and state sources were not searched. The year stays unresolved."
+ }
+]

@@ -1,268 +1,269 @@
 [
-  {
-    "city_id": "2404000",
-    "year": 2010,
-    "status": "no_election",
-    "expected_election_dates": [],
-    "source_url": "https://codes.baltimorecity.gov/us/md/cities/baltimore/charter/IV/1",
-    "additional_source_urls": [
-      "https://elections.maryland.gov/elections/archive/index.html",
-      "https://elections.maryland.gov/elections/archive/special_elections_past.html",
-      "https://codes.baltimorecity.gov/us/md/cities/baltimore/charter/IV/2",
-      "https://elections.maryland.gov/elections/archive/2012/ballot_question_language.html",
-      "https://msa.maryland.gov/msa/speccol/sc2600/sc2685/html/bcmayors.html",
-      "https://msa.maryland.gov/megafile/msa/speccol/sc3500/sc3520/014500/014500/html/14500bio.html"
-    ],
-    "note": "No public mayoral election. State Archives records council-president succession on February 4, 2010; the next public mayoral election was November 8, 2011. State special-election archive lists no mayoral special."
-  },
-  {
-    "city_id": "2404000",
-    "year": 2011,
-    "status": "complete",
-    "expected_election_dates": [
-      "2011-11-08"
-    ],
-    "source_url": "https://elections.maryland.gov/elections/archive/baltimore/2011.html",
-    "additional_source_urls": [
-      "https://elections.maryland.gov/elections/archive/index.html",
-      "https://elections.maryland.gov/elections/archive/special_elections_past.html",
-      "https://codes.baltimorecity.gov/us/md/cities/baltimore/charter/IV/2",
-      "https://elections.maryland.gov/elections/archive/2012/ballot_question_language.html",
-      "https://msa.maryland.gov/msa/speccol/sc2600/sc2685/html/bcmayors.html"
-    ],
-    "note": "Official election source records the mayoral general election. Party primaries are not decisive mayoral elections. Charter schedule and state special-election archive corroborate one mayoral general election this year."
-  },
-  {
-    "city_id": "2404000",
-    "year": 2012,
-    "status": "no_election",
-    "expected_election_dates": [],
-    "source_url": "https://codes.baltimorecity.gov/us/md/cities/baltimore/charter/IV/1",
-    "additional_source_urls": [
-      "https://elections.maryland.gov/elections/archive/index.html",
-      "https://elections.maryland.gov/elections/archive/special_elections_past.html",
-      "https://codes.baltimorecity.gov/us/md/cities/baltimore/charter/IV/2",
-      "https://elections.maryland.gov/elections/archive/2012/ballot_question_language.html",
-      "https://msa.maryland.gov/msa/speccol/sc2600/sc2685/html/bcmayors.html"
-    ],
-    "note": "No public mayoral election. State archive, charter election schedule and vacancy succession provision support this disposition; absence is not inferred from the candidate roster."
-  },
-  {
-    "city_id": "2404000",
-    "year": 2013,
-    "status": "no_election",
-    "expected_election_dates": [],
-    "source_url": "https://codes.baltimorecity.gov/us/md/cities/baltimore/charter/IV/1",
-    "additional_source_urls": [
-      "https://elections.maryland.gov/elections/archive/index.html",
-      "https://elections.maryland.gov/elections/archive/special_elections_past.html",
-      "https://codes.baltimorecity.gov/us/md/cities/baltimore/charter/IV/2",
-      "https://elections.maryland.gov/elections/archive/2012/ballot_question_language.html",
-      "https://msa.maryland.gov/msa/speccol/sc2600/sc2685/html/bcmayors.html"
-    ],
-    "note": "No public mayoral election. State archive, charter election schedule and vacancy succession provision support this disposition; absence is not inferred from the candidate roster."
-  },
-  {
-    "city_id": "2404000",
-    "year": 2014,
-    "status": "no_election",
-    "expected_election_dates": [],
-    "source_url": "https://codes.baltimorecity.gov/us/md/cities/baltimore/charter/IV/1",
-    "additional_source_urls": [
-      "https://elections.maryland.gov/elections/archive/index.html",
-      "https://elections.maryland.gov/elections/archive/special_elections_past.html",
-      "https://codes.baltimorecity.gov/us/md/cities/baltimore/charter/IV/2",
-      "https://elections.maryland.gov/elections/archive/2012/ballot_question_language.html",
-      "https://msa.maryland.gov/msa/speccol/sc2600/sc2685/html/bcmayors.html"
-    ],
-    "note": "No public mayoral election. State archive, charter election schedule and vacancy succession provision support this disposition; absence is not inferred from the candidate roster."
-  },
-  {
-    "city_id": "2404000",
-    "year": 2015,
-    "status": "no_election",
-    "expected_election_dates": [],
-    "source_url": "https://codes.baltimorecity.gov/us/md/cities/baltimore/charter/IV/1",
-    "additional_source_urls": [
-      "https://elections.maryland.gov/elections/archive/index.html",
-      "https://elections.maryland.gov/elections/archive/special_elections_past.html",
-      "https://codes.baltimorecity.gov/us/md/cities/baltimore/charter/IV/2",
-      "https://elections.maryland.gov/elections/archive/2012/ballot_question_language.html",
-      "https://msa.maryland.gov/msa/speccol/sc2600/sc2685/html/bcmayors.html"
-    ],
-    "note": "No mayoral election. The 2012 municipal-election charter amendment moved the next election to 2016 and adjusted the terms of officials elected in 2011. Charter ratification note and state election archive corroborate the change."
-  },
-  {
-    "city_id": "2404000",
-    "year": 2016,
-    "status": "complete",
-    "expected_election_dates": [
-      "2016-11-08"
-    ],
-    "source_url": "https://elections.maryland.gov/elections/archive/2016/index.html",
-    "additional_source_urls": [
-      "https://elections.maryland.gov/elections/archive/index.html",
-      "https://elections.maryland.gov/elections/archive/special_elections_past.html",
-      "https://codes.baltimorecity.gov/us/md/cities/baltimore/charter/IV/2",
-      "https://elections.maryland.gov/elections/archive/2012/ballot_question_language.html",
-      "https://msa.maryland.gov/msa/speccol/sc2600/sc2685/html/bcmayors.html"
-    ],
-    "note": "Official election source records the mayoral general election. Party primaries are not decisive mayoral elections. Charter schedule and state special-election archive corroborate one mayoral general election this year."
-  },
-  {
-    "city_id": "2404000",
-    "year": 2017,
-    "status": "no_election",
-    "expected_election_dates": [],
-    "source_url": "https://codes.baltimorecity.gov/us/md/cities/baltimore/charter/IV/1",
-    "additional_source_urls": [
-      "https://elections.maryland.gov/elections/archive/index.html",
-      "https://elections.maryland.gov/elections/archive/special_elections_past.html",
-      "https://codes.baltimorecity.gov/us/md/cities/baltimore/charter/IV/2",
-      "https://elections.maryland.gov/elections/archive/2012/ballot_question_language.html",
-      "https://msa.maryland.gov/msa/speccol/sc2600/sc2685/html/bcmayors.html"
-    ],
-    "note": "No public mayoral election. State archive, charter election schedule and vacancy succession provision support this disposition; absence is not inferred from the candidate roster."
-  },
-  {
-    "city_id": "2404000",
-    "year": 2018,
-    "status": "no_election",
-    "expected_election_dates": [],
-    "source_url": "https://codes.baltimorecity.gov/us/md/cities/baltimore/charter/IV/1",
-    "additional_source_urls": [
-      "https://elections.maryland.gov/elections/archive/index.html",
-      "https://elections.maryland.gov/elections/archive/special_elections_past.html",
-      "https://codes.baltimorecity.gov/us/md/cities/baltimore/charter/IV/2",
-      "https://elections.maryland.gov/elections/archive/2012/ballot_question_language.html",
-      "https://msa.maryland.gov/msa/speccol/sc2600/sc2685/html/bcmayors.html"
-    ],
-    "note": "No public mayoral election. State archive, charter election schedule and vacancy succession provision support this disposition; absence is not inferred from the candidate roster."
-  },
-  {
-    "city_id": "2404000",
-    "year": 2019,
-    "status": "no_election",
-    "expected_election_dates": [],
-    "source_url": "https://codes.baltimorecity.gov/us/md/cities/baltimore/charter/IV/1",
-    "additional_source_urls": [
-      "https://elections.maryland.gov/elections/archive/index.html",
-      "https://elections.maryland.gov/elections/archive/special_elections_past.html",
-      "https://codes.baltimorecity.gov/us/md/cities/baltimore/charter/IV/2",
-      "https://elections.maryland.gov/elections/archive/2012/ballot_question_language.html",
-      "https://msa.maryland.gov/msa/speccol/sc2600/sc2685/html/bcmayors.html",
-      "https://www.msa.maryland.gov/msa/mdmanual/36loc/bcity/former/html/msa14510.html"
-    ],
-    "note": "No public mayoral election. State Archives records the council president becoming acting mayor April 2 and mayor May 2, 2019. Charter vacancy succession fills the remainder of the term; this was not a special mayoral election."
-  },
-  {
-    "city_id": "2404000",
-    "year": 2020,
-    "status": "complete",
-    "expected_election_dates": [
-      "2020-11-03"
-    ],
-    "source_url": "https://elections.maryland.gov/elections/archive/2020/results/general/gen_results_2020_4_by_county_030.html",
-    "additional_source_urls": [
-      "https://elections.maryland.gov/elections/archive/index.html",
-      "https://elections.maryland.gov/elections/archive/special_elections_past.html",
-      "https://codes.baltimorecity.gov/us/md/cities/baltimore/charter/IV/2",
-      "https://elections.maryland.gov/elections/archive/2012/ballot_question_language.html",
-      "https://msa.maryland.gov/msa/speccol/sc2600/sc2685/html/bcmayors.html"
-    ],
-    "note": "Official election source records the mayoral general election. Party primaries are not decisive mayoral elections. Charter schedule and state special-election archive corroborate one mayoral general election this year."
-  },
-  {
-    "city_id": "2404000",
-    "year": 2021,
-    "status": "no_election",
-    "expected_election_dates": [],
-    "source_url": "https://codes.baltimorecity.gov/us/md/cities/baltimore/charter/IV/1",
-    "additional_source_urls": [
-      "https://elections.maryland.gov/elections/archive/index.html",
-      "https://elections.maryland.gov/elections/archive/special_elections_past.html",
-      "https://codes.baltimorecity.gov/us/md/cities/baltimore/charter/IV/2",
-      "https://elections.maryland.gov/elections/archive/2012/ballot_question_language.html",
-      "https://msa.maryland.gov/msa/speccol/sc2600/sc2685/html/bcmayors.html"
-    ],
-    "note": "No public mayoral election. State archive, charter election schedule and vacancy succession provision support this disposition; absence is not inferred from the candidate roster."
-  },
-  {
-    "city_id": "2404000",
-    "year": 2022,
-    "status": "no_election",
-    "expected_election_dates": [],
-    "source_url": "https://codes.baltimorecity.gov/us/md/cities/baltimore/charter/IV/1",
-    "additional_source_urls": [
-      "https://elections.maryland.gov/elections/archive/index.html",
-      "https://elections.maryland.gov/elections/archive/special_elections_past.html",
-      "https://codes.baltimorecity.gov/us/md/cities/baltimore/charter/IV/2",
-      "https://elections.maryland.gov/elections/archive/2012/ballot_question_language.html",
-      "https://msa.maryland.gov/msa/speccol/sc2600/sc2685/html/bcmayors.html"
-    ],
-    "note": "No public mayoral election. State archive, charter election schedule and vacancy succession provision support this disposition; absence is not inferred from the candidate roster."
-  },
-  {
-    "city_id": "2404000",
-    "year": 2023,
-    "status": "no_election",
-    "expected_election_dates": [],
-    "source_url": "https://codes.baltimorecity.gov/us/md/cities/baltimore/charter/IV/1",
-    "additional_source_urls": [
-      "https://elections.maryland.gov/elections/archive/index.html",
-      "https://elections.maryland.gov/elections/archive/special_elections_past.html",
-      "https://codes.baltimorecity.gov/us/md/cities/baltimore/charter/IV/2",
-      "https://elections.maryland.gov/elections/archive/2012/ballot_question_language.html",
-      "https://msa.maryland.gov/msa/speccol/sc2600/sc2685/html/bcmayors.html"
-    ],
-    "note": "No public mayoral election. State archive, charter election schedule and vacancy succession provision support this disposition; absence is not inferred from the candidate roster."
-  },
-  {
-    "city_id": "2404000",
-    "year": 2024,
-    "status": "complete",
-    "expected_election_dates": [
-      "2024-11-05"
-    ],
-    "source_url": "https://msa.maryland.gov/msa/mdmanual/36loc/bcity/elect/general/bcit2024.html",
-    "additional_source_urls": [
-      "https://elections.maryland.gov/elections/archive/index.html",
-      "https://elections.maryland.gov/elections/archive/special_elections_past.html",
-      "https://codes.baltimorecity.gov/us/md/cities/baltimore/charter/IV/2",
-      "https://elections.maryland.gov/elections/archive/2012/ballot_question_language.html",
-      "https://msa.maryland.gov/msa/speccol/sc2600/sc2685/html/bcmayors.html"
-    ],
-    "note": "Official election source records the mayoral general election. Party primaries are not decisive mayoral elections. Charter schedule and state special-election archive corroborate one mayoral general election this year."
-  },
-  {
-    "city_id": "2404000",
-    "year": 2025,
-    "status": "no_election",
-    "expected_election_dates": [],
-    "source_url": "https://codes.baltimorecity.gov/us/md/cities/baltimore/charter/IV/1",
-    "additional_source_urls": [
-      "https://elections.maryland.gov/elections/archive/index.html",
-      "https://elections.maryland.gov/elections/archive/special_elections_past.html",
-      "https://codes.baltimorecity.gov/us/md/cities/baltimore/charter/IV/2",
-      "https://elections.maryland.gov/elections/archive/2012/ballot_question_language.html",
-      "https://msa.maryland.gov/msa/speccol/sc2600/sc2685/html/bcmayors.html"
-    ],
-    "note": "No public mayoral election. State archive, charter election schedule and vacancy succession provision support this disposition; absence is not inferred from the candidate roster."
-  },
-  {
-    "city_id": "2404000",
-    "year": 2026,
-    "status": "no_election",
-    "expected_election_dates": [],
-    "source_url": "https://codes.baltimorecity.gov/us/md/cities/baltimore/charter/IV/1",
-    "additional_source_urls": [
-      "https://elections.maryland.gov/elections/archive/index.html",
-      "https://elections.maryland.gov/elections/archive/special_elections_past.html",
-      "https://codes.baltimorecity.gov/us/md/cities/baltimore/charter/IV/2",
-      "https://elections.maryland.gov/elections/archive/2012/ballot_question_language.html",
-      "https://msa.maryland.gov/msa/speccol/sc2600/sc2685/html/bcmayors.html",
-      "https://elections.maryland.gov/elections/2026/index.html"
-    ],
-    "note": "No mayoral election through September 14, 2026. Charter IV section 1 sets the four-year presidential-year schedule, and section 2 fills vacancies by succession, not special election. State 2026 election page identifies the gubernatorial cycle; no mayoral special appears in the state special-election archive."
-  }
+ {
+  "city_id": "2404000",
+  "year": 2010,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://codes.baltimorecity.gov/us/md/cities/baltimore/charter/IV/1",
+  "additional_source_urls": [
+   "https://elections.maryland.gov/elections/archive/index.html",
+   "https://elections.maryland.gov/elections/archive/special_elections_past.html",
+   "https://codes.baltimorecity.gov/us/md/cities/baltimore/charter/IV/2",
+   "https://elections.maryland.gov/elections/archive/2012/ballot_question_language.html",
+   "https://msa.maryland.gov/msa/speccol/sc2600/sc2685/html/bcmayors.html",
+   "https://msa.maryland.gov/megafile/msa/speccol/sc3500/sc3520/014500/014500/html/14500bio.html"
+  ],
+  "note": "No public mayoral election. State Archives records council-president succession on February 4, 2010; the next public mayoral election was November 8, 2011. State special-election archive lists no mayoral special."
+ },
+ {
+  "city_id": "2404000",
+  "year": 2011,
+  "status": "complete",
+  "expected_election_dates": [
+   "2011-11-08"
+  ],
+  "source_url": "https://www.baltimorecity.gov/media/document/201120baltimore20city20general20electionpdf",
+  "additional_source_urls": [
+   "https://web.archive.org/web/20251027055936id_/https://boe.baltimorecity.gov/sites/default/files/2011%2520Baltimore%2520City%2520General%2520Election.pdf",
+   "https://www.baltimorecity.gov/boe/our-work/election-information/past-results",
+   "https://elections.maryland.gov/elections/archive/baltimore/2011.html",
+   "https://codes.baltimorecity.gov/us/md/cities/baltimore/charter/IV/1",
+   "https://msa.maryland.gov/msa/mdmanual/36loc/bcity/elect/general/bcit2011.html"
+  ],
+  "note": "The Baltimore City Board of Elections Statement of Votes Cast for the general election of November 8, 2011 lists one mayoral contest. The same PDF is on the board index page and in the Internet Archive. The earlier 404 was caused by a double-encoded file name on the old boe.baltimorecity.gov path. The Maryland State Archives Manual figures differ from the official board totals, so the official board totals are used."
+ },
+ {
+  "city_id": "2404000",
+  "year": 2012,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://codes.baltimorecity.gov/us/md/cities/baltimore/charter/IV/1",
+  "additional_source_urls": [
+   "https://elections.maryland.gov/elections/archive/index.html",
+   "https://elections.maryland.gov/elections/archive/special_elections_past.html",
+   "https://codes.baltimorecity.gov/us/md/cities/baltimore/charter/IV/2",
+   "https://elections.maryland.gov/elections/archive/2012/ballot_question_language.html",
+   "https://msa.maryland.gov/msa/speccol/sc2600/sc2685/html/bcmayors.html"
+  ],
+  "note": "No public mayoral election. State archive, charter election schedule and vacancy succession provision support this disposition; absence is not inferred from the candidate roster."
+ },
+ {
+  "city_id": "2404000",
+  "year": 2013,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://codes.baltimorecity.gov/us/md/cities/baltimore/charter/IV/1",
+  "additional_source_urls": [
+   "https://elections.maryland.gov/elections/archive/index.html",
+   "https://elections.maryland.gov/elections/archive/special_elections_past.html",
+   "https://codes.baltimorecity.gov/us/md/cities/baltimore/charter/IV/2",
+   "https://elections.maryland.gov/elections/archive/2012/ballot_question_language.html",
+   "https://msa.maryland.gov/msa/speccol/sc2600/sc2685/html/bcmayors.html"
+  ],
+  "note": "No public mayoral election. State archive, charter election schedule and vacancy succession provision support this disposition; absence is not inferred from the candidate roster."
+ },
+ {
+  "city_id": "2404000",
+  "year": 2014,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://codes.baltimorecity.gov/us/md/cities/baltimore/charter/IV/1",
+  "additional_source_urls": [
+   "https://elections.maryland.gov/elections/archive/index.html",
+   "https://elections.maryland.gov/elections/archive/special_elections_past.html",
+   "https://codes.baltimorecity.gov/us/md/cities/baltimore/charter/IV/2",
+   "https://elections.maryland.gov/elections/archive/2012/ballot_question_language.html",
+   "https://msa.maryland.gov/msa/speccol/sc2600/sc2685/html/bcmayors.html"
+  ],
+  "note": "No public mayoral election. State archive, charter election schedule and vacancy succession provision support this disposition; absence is not inferred from the candidate roster."
+ },
+ {
+  "city_id": "2404000",
+  "year": 2015,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://codes.baltimorecity.gov/us/md/cities/baltimore/charter/IV/1",
+  "additional_source_urls": [
+   "https://elections.maryland.gov/elections/archive/index.html",
+   "https://elections.maryland.gov/elections/archive/special_elections_past.html",
+   "https://codes.baltimorecity.gov/us/md/cities/baltimore/charter/IV/2",
+   "https://elections.maryland.gov/elections/archive/2012/ballot_question_language.html",
+   "https://msa.maryland.gov/msa/speccol/sc2600/sc2685/html/bcmayors.html"
+  ],
+  "note": "No mayoral election. The 2012 municipal-election charter amendment moved the next election to 2016 and adjusted the terms of officials elected in 2011. Charter ratification note and state election archive corroborate the change."
+ },
+ {
+  "city_id": "2404000",
+  "year": 2016,
+  "status": "complete",
+  "expected_election_dates": [
+   "2016-11-08"
+  ],
+  "source_url": "https://elections.maryland.gov/elections/archive/2016/index.html",
+  "additional_source_urls": [
+   "https://elections.maryland.gov/elections/archive/index.html",
+   "https://elections.maryland.gov/elections/archive/special_elections_past.html",
+   "https://codes.baltimorecity.gov/us/md/cities/baltimore/charter/IV/2",
+   "https://elections.maryland.gov/elections/archive/2012/ballot_question_language.html",
+   "https://msa.maryland.gov/msa/speccol/sc2600/sc2685/html/bcmayors.html"
+  ],
+  "note": "Official election source records the mayoral general election. Party primaries are not decisive mayoral elections. Charter schedule and state special-election archive corroborate one mayoral general election this year."
+ },
+ {
+  "city_id": "2404000",
+  "year": 2017,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://codes.baltimorecity.gov/us/md/cities/baltimore/charter/IV/1",
+  "additional_source_urls": [
+   "https://elections.maryland.gov/elections/archive/index.html",
+   "https://elections.maryland.gov/elections/archive/special_elections_past.html",
+   "https://codes.baltimorecity.gov/us/md/cities/baltimore/charter/IV/2",
+   "https://elections.maryland.gov/elections/archive/2012/ballot_question_language.html",
+   "https://msa.maryland.gov/msa/speccol/sc2600/sc2685/html/bcmayors.html"
+  ],
+  "note": "No public mayoral election. State archive, charter election schedule and vacancy succession provision support this disposition; absence is not inferred from the candidate roster."
+ },
+ {
+  "city_id": "2404000",
+  "year": 2018,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://codes.baltimorecity.gov/us/md/cities/baltimore/charter/IV/1",
+  "additional_source_urls": [
+   "https://elections.maryland.gov/elections/archive/index.html",
+   "https://elections.maryland.gov/elections/archive/special_elections_past.html",
+   "https://codes.baltimorecity.gov/us/md/cities/baltimore/charter/IV/2",
+   "https://elections.maryland.gov/elections/archive/2012/ballot_question_language.html",
+   "https://msa.maryland.gov/msa/speccol/sc2600/sc2685/html/bcmayors.html"
+  ],
+  "note": "No public mayoral election. State archive, charter election schedule and vacancy succession provision support this disposition; absence is not inferred from the candidate roster."
+ },
+ {
+  "city_id": "2404000",
+  "year": 2019,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://codes.baltimorecity.gov/us/md/cities/baltimore/charter/IV/1",
+  "additional_source_urls": [
+   "https://elections.maryland.gov/elections/archive/index.html",
+   "https://elections.maryland.gov/elections/archive/special_elections_past.html",
+   "https://codes.baltimorecity.gov/us/md/cities/baltimore/charter/IV/2",
+   "https://elections.maryland.gov/elections/archive/2012/ballot_question_language.html",
+   "https://msa.maryland.gov/msa/speccol/sc2600/sc2685/html/bcmayors.html",
+   "https://www.msa.maryland.gov/msa/mdmanual/36loc/bcity/former/html/msa14510.html"
+  ],
+  "note": "No public mayoral election. State Archives records the council president becoming acting mayor April 2 and mayor May 2, 2019. Charter vacancy succession fills the remainder of the term; this was not a special mayoral election."
+ },
+ {
+  "city_id": "2404000",
+  "year": 2020,
+  "status": "complete",
+  "expected_election_dates": [
+   "2020-11-03"
+  ],
+  "source_url": "https://elections.maryland.gov/elections/archive/2020/results/general/gen_results_2020_4_by_county_030.html",
+  "additional_source_urls": [
+   "https://elections.maryland.gov/elections/archive/index.html",
+   "https://elections.maryland.gov/elections/archive/special_elections_past.html",
+   "https://codes.baltimorecity.gov/us/md/cities/baltimore/charter/IV/2",
+   "https://elections.maryland.gov/elections/archive/2012/ballot_question_language.html",
+   "https://msa.maryland.gov/msa/speccol/sc2600/sc2685/html/bcmayors.html"
+  ],
+  "note": "Official election source records the mayoral general election. Party primaries are not decisive mayoral elections. Charter schedule and state special-election archive corroborate one mayoral general election this year."
+ },
+ {
+  "city_id": "2404000",
+  "year": 2021,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://codes.baltimorecity.gov/us/md/cities/baltimore/charter/IV/1",
+  "additional_source_urls": [
+   "https://elections.maryland.gov/elections/archive/index.html",
+   "https://elections.maryland.gov/elections/archive/special_elections_past.html",
+   "https://codes.baltimorecity.gov/us/md/cities/baltimore/charter/IV/2",
+   "https://elections.maryland.gov/elections/archive/2012/ballot_question_language.html",
+   "https://msa.maryland.gov/msa/speccol/sc2600/sc2685/html/bcmayors.html"
+  ],
+  "note": "No public mayoral election. State archive, charter election schedule and vacancy succession provision support this disposition; absence is not inferred from the candidate roster."
+ },
+ {
+  "city_id": "2404000",
+  "year": 2022,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://codes.baltimorecity.gov/us/md/cities/baltimore/charter/IV/1",
+  "additional_source_urls": [
+   "https://elections.maryland.gov/elections/archive/index.html",
+   "https://elections.maryland.gov/elections/archive/special_elections_past.html",
+   "https://codes.baltimorecity.gov/us/md/cities/baltimore/charter/IV/2",
+   "https://elections.maryland.gov/elections/archive/2012/ballot_question_language.html",
+   "https://msa.maryland.gov/msa/speccol/sc2600/sc2685/html/bcmayors.html"
+  ],
+  "note": "No public mayoral election. State archive, charter election schedule and vacancy succession provision support this disposition; absence is not inferred from the candidate roster."
+ },
+ {
+  "city_id": "2404000",
+  "year": 2023,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://codes.baltimorecity.gov/us/md/cities/baltimore/charter/IV/1",
+  "additional_source_urls": [
+   "https://elections.maryland.gov/elections/archive/index.html",
+   "https://elections.maryland.gov/elections/archive/special_elections_past.html",
+   "https://codes.baltimorecity.gov/us/md/cities/baltimore/charter/IV/2",
+   "https://elections.maryland.gov/elections/archive/2012/ballot_question_language.html",
+   "https://msa.maryland.gov/msa/speccol/sc2600/sc2685/html/bcmayors.html"
+  ],
+  "note": "No public mayoral election. State archive, charter election schedule and vacancy succession provision support this disposition; absence is not inferred from the candidate roster."
+ },
+ {
+  "city_id": "2404000",
+  "year": 2024,
+  "status": "complete",
+  "expected_election_dates": [
+   "2024-11-05"
+  ],
+  "source_url": "https://s3.amazonaws.com/baltimorecity.gov.if-us-east-1/s3fs-public/2025-05/2024 PG EL45 Official.pdf",
+  "additional_source_urls": [
+   "https://s3.amazonaws.com/baltimorecity.gov.if-us-east-1/s3fs-public/2025-05/2024 PG EL45A Official.pdf",
+   "https://www.baltimorecity.gov/boe/our-work/election-information/past-results",
+   "https://elections.maryland.gov/elections/archive/2024/General_Results/gen_results_2024_by_county_3.html",
+   "https://elections.maryland.gov/elections/archive/baltimore/2024.html",
+   "https://codes.baltimorecity.gov/us/md/cities/baltimore/charter/IV/1",
+   "https://msa.maryland.gov/msa/mdmanual/36loc/bcity/elect/general/bcit2024.html"
+  ],
+  "note": "The Baltimore City Board of Elections official Presidential General Election summary report (run date 12/12/24) lists one mayoral contest decided in the general election of November 5, 2024. The board past-results page links the report. The Maryland State Archives Manual figures differ from the official board totals, so the official board totals are used."
+ },
+ {
+  "city_id": "2404000",
+  "year": 2025,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://codes.baltimorecity.gov/us/md/cities/baltimore/charter/IV/1",
+  "additional_source_urls": [
+   "https://elections.maryland.gov/elections/archive/index.html",
+   "https://elections.maryland.gov/elections/archive/special_elections_past.html",
+   "https://codes.baltimorecity.gov/us/md/cities/baltimore/charter/IV/2",
+   "https://elections.maryland.gov/elections/archive/2012/ballot_question_language.html",
+   "https://msa.maryland.gov/msa/speccol/sc2600/sc2685/html/bcmayors.html"
+  ],
+  "note": "No public mayoral election. State archive, charter election schedule and vacancy succession provision support this disposition; absence is not inferred from the candidate roster."
+ },
+ {
+  "city_id": "2404000",
+  "year": 2026,
+  "status": "no_election",
+  "expected_election_dates": [],
+  "source_url": "https://codes.baltimorecity.gov/us/md/cities/baltimore/charter/IV/1",
+  "additional_source_urls": [
+   "https://elections.maryland.gov/elections/archive/index.html",
+   "https://elections.maryland.gov/elections/archive/special_elections_past.html",
+   "https://codes.baltimorecity.gov/us/md/cities/baltimore/charter/IV/2",
+   "https://elections.maryland.gov/elections/archive/2012/ballot_question_language.html",
+   "https://msa.maryland.gov/msa/speccol/sc2600/sc2685/html/bcmayors.html",
+   "https://elections.maryland.gov/elections/2026/index.html"
+  ],
+  "note": "No mayoral election through September 14, 2026. Charter IV section 1 sets the four-year presidential-year schedule, and section 2 fills vacancies by succession, not special election. State 2026 election page identifies the gubernatorial cycle; no mayoral special appears in the state special-election archive."
+ }
 ]

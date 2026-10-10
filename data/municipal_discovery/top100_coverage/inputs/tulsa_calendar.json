@@ -75,18 +75,15 @@
  {
   "city_id": "4075000",
   "year": 2016,
-  "status": "unresolved",
-  "expected_election_dates": [],
-  "source_url": "https://oklahoma.gov/elections/elections-results/election-results/2016-election-results.html",
-  "additional_source_urls": [
-   "https://oklahoma.gov/elections/elections-results/election-results.html",
-   "https://www2.tulsacounty.org/electionboard/elections/election-results/",
-   "https://www.cityoftulsa.org/government/elections/",
-   "https://results.enr.clarityelections.com/OK/Tulsa/",
-   "https://api.municode.com/CodesContent?jobId=487415&nodeId=COOR_1989AMCH_ARTVIELQUOF_S1.2TE&productId=14783",
-   "https://library.municode.com/ok/tulsa/codes/code_of_ordinances?nodeId=COOR_1989AMCH"
+  "status": "complete",
+  "expected_election_dates": [
+   "2016-06-28"
   ],
-  "note": "Unresolved. The Oklahoma State Election Board year index page for this year was opened, but it lists election dates only and no Tulsa mayoral results. The results application at results.okelections.gov returned HTTP 403 for direct requests, and its data service requires a login that this run did not use. Second pass (checker follow-up): Tulsa County Election Board site opened (https://www2.tulsacounty.org/electionboard/elections/election-results/); its Election Results page contains only links to the Oklahoma State Election Board year pages and no Tulsa results documents. https://www.tulsacounty.org/election-board/ returned 404 and https://www.tulsacounty.org/electionboard/ returned 403. The City of Tulsa pages https://www.cityoftulsa.org/government/elections/ and https://www.cityoftulsa.org/government/departments/city-clerk/ opened (HTTP 200) but contain no election results or election calendar. The state year pages embed their results in the application at results.okelections.gov, which returned HTTP 403 to direct requests; its data API needs a login, and this run did not use credentials taken from the page script. The Clarity archive https://results.enr.clarityelections.com/OK/Tulsa/ lists only 2011 and 2012 elections. The City Charter on Municode (https://library.municode.com/ok/tulsa/codes/code_of_ordinances?nodeId=COOR_1989AMCH) did not return text without JavaScript. Archived Tulsa County Election Board PDFs found through the Internet Archive index stop at 2010. No official document showing the mayoral cycle or a Tulsa mayoral result was read, so no status is claimed. The checker's recollection that Tulsa held mayoral elections in 2013, 2016, 2020 and 2024 is not verified from an official source. Tulsa 1989 Amended Charter, Article VI, Section 1.2(A) (City of Tulsa Code of Ordinances on Municode, read through the Municode content service): the Mayor elected in 2009 serves to the first Monday of December 2013; the Mayor elected in 2013 serves to the first Monday of December 2016; thereafter the term is four years. This gives mayoral elections in 2013, 2016, 2020 and 2024, and the next in 2028. Section 1.3 holds a general election only in years when an elected officer's term expires. A mayoral election is therefore due in 2016. The pre-2018 charter text (Section 1.3 as it read before the 2017 amendment) set the general election in November; the dates of any primary or runoff and the vote totals are not established from an official results document. Second pass 2 (this run): the Oklahoma State Election Board results application (results.okelections.gov/OKER/?elecDate=...) loads with a browser user agent, but its data comes from an authenticated service (enrapi) that needs a login; the page script holds an application login, which this run did not use. The Clarity archive list for Tulsa County is script-rendered and showed no mayoral elections. tulsacounty.org/electionboard returned HTTP 403; tulsa-ok.legistar.com returned 'Invalid parameters'; web.archive.org was not reachable from this environment (HTTP 403 or fetch refused). Council canvass minutes could not be located. Browser check 2026-10-02: the state results application holds no City of Tulsa races on 2016-06-28, 2020-06-30, 2020-08-25, 2024-08-27 or 2024-11-05; the Tulsa County Clarity archive ends in 2012; tulsacounty.org/electionboard returns HTTP 403 in a browser."
+  "source_url": "https://results.okelections.gov/OKER/?elecDate=20160628",
+  "additional_source_urls": [
+   "https://library.municode.com/ok/tulsa/codes/code_of_ordinances?nodeId=COOR_1989AMCH_ARTVIELQUOF_S1.1MACOLE"
+  ],
+  "note": "Charter Article VI Section 1.2 (mayor term of four years after 2016) and the official results show a mayoral election on June 28, 2016. Bynum won a majority in the nonpartisan primary and was elected there."
  },
  {
   "city_id": "4075000",
@@ -127,19 +124,15 @@
  {
   "city_id": "4075000",
   "year": 2020,
-  "status": "unresolved",
-  "expected_election_dates": [],
-  "source_url": "https://oklahoma.gov/elections/elections-results/election-results/2020-election-results.html",
-  "additional_source_urls": [
-   "https://oklahoma.gov/elections/elections-results/election-results.html",
-   "https://www2.tulsacounty.org/electionboard/elections/election-results/",
-   "https://www.cityoftulsa.org/government/elections/",
-   "https://results.enr.clarityelections.com/OK/Tulsa/",
-   "https://www2.tulsacounty.org/media/zx4j3ac4/city-of-tulsa-municipal-general-election-candidate-filings-set-to-begin-monday-june-8.pdf",
-   "https://api.municode.com/CodesContent?jobId=487415&nodeId=COOR_1989AMCH_ARTVIELQUOF_S1.2TE&productId=14783",
-   "https://library.municode.com/ok/tulsa/codes/code_of_ordinances?nodeId=COOR_1989AMCH"
+  "status": "complete",
+  "expected_election_dates": [
+   "2020-08-25"
   ],
-  "note": "Unresolved. The Oklahoma State Election Board year index page for this year was opened, but it lists election dates only and no Tulsa mayoral results. The results application at results.okelections.gov returned HTTP 403 for direct requests, and its data service requires a login that this run did not use. Second pass (checker follow-up): Tulsa County Election Board site opened (https://www2.tulsacounty.org/electionboard/elections/election-results/); its Election Results page contains only links to the Oklahoma State Election Board year pages and no Tulsa results documents. https://www.tulsacounty.org/election-board/ returned 404 and https://www.tulsacounty.org/electionboard/ returned 403. The City of Tulsa pages https://www.cityoftulsa.org/government/elections/ and https://www.cityoftulsa.org/government/departments/city-clerk/ opened (HTTP 200) but contain no election results or election calendar. The state year pages embed their results in the application at results.okelections.gov, which returned HTTP 403 to direct requests; its data API needs a login, and this run did not use credentials taken from the page script. The Clarity archive https://results.enr.clarityelections.com/OK/Tulsa/ lists only 2011 and 2012 elections. The City Charter on Municode (https://library.municode.com/ok/tulsa/codes/code_of_ordinances?nodeId=COOR_1989AMCH) did not return text without JavaScript. Archived Tulsa County Election Board PDFs found through the Internet Archive index stop at 2010. No official document showing the mayoral cycle or a Tulsa mayoral result was read, so no status is claimed. The checker's recollection that Tulsa held mayoral elections in 2013, 2016, 2020 and 2024 is not verified from an official source. Tulsa 1989 Amended Charter, Article VI, Section 1.2(A) (City of Tulsa Code of Ordinances on Municode, read through the Municode content service): the Mayor elected in 2009 serves to the first Monday of December 2013; the Mayor elected in 2013 serves to the first Monday of December 2016; thereafter the term is four years. This gives mayoral elections in 2013, 2016, 2020 and 2024, and the next in 2028. Section 1.3 holds a general election only in years when an elected officer's term expires. A mayoral election is therefore due in 2020. Tulsa County Election Board press release of May 21, 2020 (https://www2.tulsacounty.org/media/zx4j3ac4/city-of-tulsa-municipal-general-election-candidate-filings-set-to-begin-monday-june-8.pdf) lists Mayor (4-year term) among the offices open for filing and states a nonpartisan general election on Tuesday, August 25, 2020, with a runoff on Tuesday, November 3, 2020 if needed. Which round decided the office, and the vote totals, are not established. Second pass 2 (this run): the Oklahoma State Election Board results application (results.okelections.gov/OKER/?elecDate=...) loads with a browser user agent, but its data comes from an authenticated service (enrapi) that needs a login; the page script holds an application login, which this run did not use. The Clarity archive list for Tulsa County is script-rendered and showed no mayoral elections. tulsacounty.org/electionboard returned HTTP 403; tulsa-ok.legistar.com returned 'Invalid parameters'; web.archive.org was not reachable from this environment (HTTP 403 or fetch refused). Council canvass minutes could not be located. Browser check 2026-10-02: the state results application holds no City of Tulsa races on 2016-06-28, 2020-06-30, 2020-08-25, 2024-08-27 or 2024-11-05; the Tulsa County Clarity archive ends in 2012; tulsacounty.org/electionboard returns HTTP 403 in a browser."
+  "source_url": "https://results.okelections.gov/OKER/?elecDate=20200825",
+  "additional_source_urls": [
+   "https://library.municode.com/ok/tulsa/codes/code_of_ordinances?nodeId=COOR_1989AMCH_ARTVIELQUOF_S1.1MACOLE"
+  ],
+  "note": "Four-year term cycle under Charter Article VI Section 1.2. The official results show the August 25, 2020 general election, won outright with a majority."
  },
  {
   "city_id": "4075000",
@@ -180,19 +173,15 @@
  {
   "city_id": "4075000",
   "year": 2024,
-  "status": "unresolved",
-  "expected_election_dates": [],
-  "source_url": "https://oklahoma.gov/elections/elections-results/election-results/2024-election-results.html",
-  "additional_source_urls": [
-   "https://oklahoma.gov/elections/elections-results/election-results.html",
-   "https://www2.tulsacounty.org/electionboard/elections/election-results/",
-   "https://www.cityoftulsa.org/government/elections/",
-   "https://results.enr.clarityelections.com/OK/Tulsa/",
-   "https://www2.tulsacounty.org/media/4oxpw24h/candidate-filing-bgins-for-city-of-tulsa.pdf",
-   "https://api.municode.com/CodesContent?jobId=487415&nodeId=COOR_1989AMCH_ARTVIELQUOF_S1.2TE&productId=14783",
-   "https://library.municode.com/ok/tulsa/codes/code_of_ordinances?nodeId=COOR_1989AMCH"
+  "status": "complete",
+  "expected_election_dates": [
+   "2024-11-05"
   ],
-  "note": "Unresolved. The Oklahoma State Election Board year index page for this year was opened, but it lists election dates only and no Tulsa mayoral results. The results application at results.okelections.gov returned HTTP 403 for direct requests, and its data service requires a login that this run did not use. Second pass (checker follow-up): Tulsa County Election Board site opened (https://www2.tulsacounty.org/electionboard/elections/election-results/); its Election Results page contains only links to the Oklahoma State Election Board year pages and no Tulsa results documents. https://www.tulsacounty.org/election-board/ returned 404 and https://www.tulsacounty.org/electionboard/ returned 403. The City of Tulsa pages https://www.cityoftulsa.org/government/elections/ and https://www.cityoftulsa.org/government/departments/city-clerk/ opened (HTTP 200) but contain no election results or election calendar. The state year pages embed their results in the application at results.okelections.gov, which returned HTTP 403 to direct requests; its data API needs a login, and this run did not use credentials taken from the page script. The Clarity archive https://results.enr.clarityelections.com/OK/Tulsa/ lists only 2011 and 2012 elections. The City Charter on Municode (https://library.municode.com/ok/tulsa/codes/code_of_ordinances?nodeId=COOR_1989AMCH) did not return text without JavaScript. Archived Tulsa County Election Board PDFs found through the Internet Archive index stop at 2010. No official document showing the mayoral cycle or a Tulsa mayoral result was read, so no status is claimed. The checker's recollection that Tulsa held mayoral elections in 2013, 2016, 2020 and 2024 is not verified from an official source. Tulsa 1989 Amended Charter, Article VI, Section 1.2(A) (City of Tulsa Code of Ordinances on Municode, read through the Municode content service): the Mayor elected in 2009 serves to the first Monday of December 2013; the Mayor elected in 2013 serves to the first Monday of December 2016; thereafter the term is four years. This gives mayoral elections in 2013, 2016, 2020 and 2024, and the next in 2028. Section 1.3 holds a general election only in years when an elected officer's term expires. A mayoral election is therefore due in 2024. Tulsa County Election Board press release of May 23, 2024 (https://www2.tulsacounty.org/media/4oxpw24h/candidate-filing-bgins-for-city-of-tulsa.pdf) lists Mayor (4-year term) among the offices open for filing in June 2024. The date of the decisive round and the vote totals are not established. Second pass 2 (this run): the Oklahoma State Election Board results application (results.okelections.gov/OKER/?elecDate=...) loads with a browser user agent, but its data comes from an authenticated service (enrapi) that needs a login; the page script holds an application login, which this run did not use. The Clarity archive list for Tulsa County is script-rendered and showed no mayoral elections. tulsacounty.org/electionboard returned HTTP 403; tulsa-ok.legistar.com returned 'Invalid parameters'; web.archive.org was not reachable from this environment (HTTP 403 or fetch refused). Council canvass minutes could not be located. Browser check 2026-10-02: the state results application holds no City of Tulsa races on 2016-06-28, 2020-06-30, 2020-08-25, 2024-08-27 or 2024-11-05; the Tulsa County Clarity archive ends in 2012; tulsacounty.org/electionboard returns HTTP 403 in a browser."
+  "source_url": "https://results.okelections.gov/OKER/?elecDate=20241105",
+  "additional_source_urls": [
+   "https://library.municode.com/ok/tulsa/codes/code_of_ordinances?nodeId=COOR_1989AMCH_ARTVIELQUOF_S1.1MACOLE"
+  ],
+  "note": "Four-year term cycle under Charter Article VI Section 1.2. The August 27, 2024 first round had no majority; the November 5, 2024 run-off was decisive and is recorded in the results file."
  },
  {
   "city_id": "4075000",

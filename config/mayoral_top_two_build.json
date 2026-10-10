@@ -99,7 +99,9 @@
     "data/municipal_discovery/top100_coverage/inputs/virginia_beach_results.json",
     "data/municipal_discovery/top100_coverage/inputs/washington_results.json",
     "data/municipal_discovery/top100_coverage/inputs/wichita_results.json",
-    "data/municipal_discovery/top100_coverage/inputs/winston_salem_results.json"
+    "data/municipal_discovery/top100_coverage/inputs/winston_salem_results.json",
+    "data/municipal_discovery/top100_coverage/inputs/baltimore_results.json",
+    "data/municipal_discovery/top100_coverage/inputs/san_diego_results.json"
   ],
   "city_year_audits": [
     "data/municipal_discovery/top100_coverage/inputs/city_year_dispositions.json",

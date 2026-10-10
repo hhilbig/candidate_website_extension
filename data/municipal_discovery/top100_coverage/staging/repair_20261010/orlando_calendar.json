@@ -1,0 +1,14 @@
+[
+ {
+  "city_id": "1253000",
+  "year": 2010,
+  "status": "unresolved",
+  "expected_election_dates": [],
+  "source_url": "https://voteorangefl.gov/?s=orlando+general+election",
+  "additional_source_urls": [
+   "https://www.orlando.gov/Our-Government/Mayor-City-Council",
+   "https://voteorangefl.gov/election-record/2012-orlando-general-election-2012-04-03/"
+  ],
+  "note": "No official source for this year could be opened. The Orange County Supervisor of Elections archive lists Orlando general elections only from 2012-04-03 onward. Earlier pass: site searches, the Florida Division of Elections archive (it excludes municipal elections), the city clerk page, and archived SOE pages gave no 2010 Orlando record. Pass 3 (2026-10-10): the web search budget was exhausted. Searches of voteorangefl.gov through mac2 for orlando 2008, 2004, 2010 and municipal returned no election record before 2012. The Wayback CDX listing for ocfelections.com (2008-2013) and the availability API returned no 2008 or 2010 municipal results page. Guessed voteorangefl.gov URL for a 2008 Orlando election returned HTTP 404. The orlando.gov Mayor-City-Council page states only that the Mayor serves a four-year term and gives no election years. The 2011 and 2012 rows show Orlando held no 2011 election and held its next mayoral general on 2012-04-03, but no official document confirms whether a mayoral round was held in 2010. The year stays unresolved."
+ }
+]

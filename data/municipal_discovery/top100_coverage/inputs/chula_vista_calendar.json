@@ -2,15 +2,17 @@
  {
   "city_id": "0613392",
   "year": 2010,
-  "status": "unresolved",
-  "expected_election_dates": [],
+  "status": "complete",
+  "expected_election_dates": [
+   "2010-06-08"
+  ],
   "source_url": "https://www.sdvote.com/content/dam/rov/en/archive/201006cvpdf.zip",
   "additional_source_urls": [
-   "https://www.sdvote.com/content/dam/rov/en/archive/201011cvpdf.zip",
-   "https://web.archive.org/web/20260408064512/https://www.chulavistaca.gov/departments/city-clerk/elections",
-   "https://web.archive.org/web/2026/https://chulavista.municipal.codes/Charter/300"
+   "http://web.archive.org/web/20191115104434id_/https://chulavista.municipal.codes/Charter/300",
+   "https://chulavista.municipal.codes/Charter/300",
+   "https://www.sdvote.com/content/dam/rov/en/archive/201011cvpdf.zip"
   ],
-  "note": "San Diego County Registrar official results for the June 8, 2010 primary show a Chula Vista mayoral contest: Cheryl Cox 18,771 (53.55 percent), Steve Castaneda 9,886, Dominguez 4,561. The county November 2, 2010 results contain no Chula Vista mayoral contest. The office was probably decided in the primary, but no official source was found for the 2010 rule that a primary majority elects the mayor. The current charter (sections 300 and 901) and the clerk page describe a top-two runoff with no majority exception, and the legislative history in the charter shows section 300 was amended on 11-06-12, so the pre-2012 text differs. The pre-2012 charter text could not be retrieved (city site HTTP 403, municipal code site HTTP 403, no archived 2010 charter found). The year is marked unresolved and no result is recorded. Second pass: the web search budget was exhausted, and WebFetch could not open web.archive.org. Direct curl to the Internet Archive returned HTTP 429 (availability API) or no response, the municipal code site returned HTTP 403, the city clerk page returned HTTP 403, and the Municode library page returned no charter text. No official source for the pre-2012 primary-majority rule was obtained, so the year stays unresolved."
+  "note": "The San Diego County Registrar official results for the June 8, 2010 election show a Chula Vista mayoral contest. Cheryl Cox received 18,771 votes, 53.55 percent of the 33,333 votes cast. The Internet Archive copy of Chula Vista Charter section 300(E), captured 2019-11-15, says a Mayor candidate is deemed elected on receipt of a majority of the votes cast at the general municipal election. Charter section 900 holds that election on the date of the state primary. Section 300(E) says that only beginning in 2014 are mayoral elections held in the top-two manner. Cox therefore won outright on June 8, 2010. The county November 2, 2010 results contain no Chula Vista mayoral contest, which agrees with this reading. The 2019 capture is the current charter text; its 2014 transition clause shows the majority rule applied before 2014."
  },
  {
   "city_id": "0613392",

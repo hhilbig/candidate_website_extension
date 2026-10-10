@@ -1,0 +1,69 @@
+[
+ {
+  "city_id": "0666000",
+  "year": 2012,
+  "status": "complete",
+  "expected_election_dates": [
+   "2012-11-06"
+  ],
+  "source_url": "https://www.sandiego.gov/city-clerk/elections/city/past/races/2012elections",
+  "additional_source_urls": [
+   "https://www.sandiego.gov/sites/default/files/mayorresults.pdf",
+   "https://www.sandiego.gov/city-clerk/elections/city/past/races"
+  ],
+  "note": "City Clerk mayoral history lists a June 5 primary and a November 6 runoff. The November 6 runoff is the decisive election and is recorded."
+ },
+ {
+  "city_id": "0666000",
+  "year": 2013,
+  "status": "earlier_round_only",
+  "expected_election_dates": [],
+  "source_url": "https://www.sandiego.gov/sites/default/files/mayorresults.pdf",
+  "additional_source_urls": [
+   "https://www.sandiego.gov/city-clerk/elections/city/past/races"
+  ],
+  "note": "The November 19, 2013 special mayoral primary had no majority winner. The runoff was held February 11, 2014 and is recorded under 2014."
+ },
+ {
+  "city_id": "0666000",
+  "year": 2014,
+  "status": "complete",
+  "expected_election_dates": [
+   "2014-02-11"
+  ],
+  "source_url": "https://www.sandiego.gov/sites/default/files/legacy/city-clerk/elections/city/pdf/2014specialelectionresults.pdf",
+  "additional_source_urls": [
+   "https://www.sandiego.gov/sites/default/files/mayorresults.pdf",
+   "https://www.sandiego.gov/city-clerk/elections/city/past/races"
+  ],
+  "note": "The City Clerk certificate shows the February 11, 2014 special runoff between Faulconer and Alvarez."
+ },
+ {
+  "city_id": "0666000",
+  "year": 2016,
+  "status": "complete",
+  "expected_election_dates": [
+   "2016-06-07"
+  ],
+  "source_url": "https://www.sandiego.gov/sites/default/files/officialresults06072016_5.pdf",
+  "additional_source_urls": [
+   "https://www.sandiego.gov/sites/default/files/mayorresults.pdf",
+   "https://www.sandiego.gov/city-clerk/elections/city/past/races/2016elections",
+   "https://docs.sandiego.gov/citycharter/charter_amendments/articleII/sec10.pdf"
+  ],
+  "note": "The City Clerk certificate shows the June 7, 2016 primary. Faulconer won a majority. The mayoral history lists no runoff, so this first round was decisive. Charter Article II Section 10, as amended 06-03-2014, states that a majority in the primary elects the officer."
+ },
+ {
+  "city_id": "0666000",
+  "year": 2020,
+  "status": "complete",
+  "expected_election_dates": [
+   "2020-11-03"
+  ],
+  "source_url": "https://www.sandiego.gov/sites/default/files/certificate-of-city-clerk-municipal-general-election-110320.pdf",
+  "additional_source_urls": [
+   "https://www.sandiego.gov/city-clerk/elections/city/past/races/2020elections"
+  ],
+  "note": "The City Clerk certificate shows the November 3, 2020 general election between Gloria and Bry. The March 3 primary was an earlier round."
+ }
+]

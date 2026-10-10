@@ -17,13 +17,13 @@
   "expected_election_dates": [],
   "source_url": "https://coloradosprings.gov/election-history",
   "additional_source_urls": [
-   "https://cocs-lf-1.docunavservices.com/WL-CityAdministration/DocView.aspx?id=7103&dbid=0&repo=City-Administration",
    "https://cocs-lf-1.docunavservices.com/WL-CityAdministration/DocView.aspx?id=13881&dbid=0&repo=City-Administration",
-   "https://cocs-lf-1.docunavservices.com/WL-CityAdministration/DocView.aspx?id=7102&dbid=0&repo=City-Administration",
    "https://cocs-lf-1.docunavservices.com/WL-CityAdministration/DocView.aspx?id=13877&dbid=0&repo=City-Administration",
+   "https://cocs-lf-1.docunavservices.com/WL-CityAdministration/DocView.aspx?id=7103&dbid=0&repo=City-Administration",
+   "https://cocs-lf-1.docunavservices.com/WL-CityAdministration/DocView.aspx?id=7102&dbid=0&repo=City-Administration",
    "https://coloradosprings.gov/election"
   ],
-  "note": "Re-check: the city clerk election history page (https://coloradosprings.gov/election-history), re-fetched in this pass, lists the April 5, 2011 General Municipal election (results id 13881, by precinct id 13877) and the May 17, 2011 Mayoral Runoff (results id 7103, by precinct id 7102). The checker's claim that the index has no 2011 row is not supported; the index has these rows. The results documents are Laserfiche pages on cocs-lf-1.docunavservices.com. Curl with a cookie jar and a browser user agent returned HTTP 200 with an HTML page that says 'Access denied. [9013]' for each id, on two attempts, in several URL forms (DocView, ElectronicFile, DocumentService). The Internet Archive copies of these URLs are small HTML shells without results. WebFetch cannot open archive.org. The county elections page gave no archived municipal results, and no further web search was possible. Winner, runner-up and vote totals cannot be read from an official document, so the year stays unresolved and no result is recorded. Second pass: WebFetch of https://coloradosprings.gov/election-history again returned the same Laserfiche links. Curl with a cookie jar and browser user agent to the Laserfiche results page returned HTTP 200 with a 2 KB HTML page without results. WebFetch of web.archive.org is blocked, and curl to the Wayback availability and CDX endpoints returned HTTP 429 and then timed out. The amlegal charter page returned a Cloudflare challenge to curl. WebSearch was unavailable because the session budget was used. No official document with candidate names and totals could be opened, so the year stays unresolved."
+  "note": "The index lists the April 5, 2011 General Municipal election (id 13881) and the May 17, 2011 Mayoral Runoff (id 7103). The city page says voters changed the form of government in November 2010, so a mayoral election in 2011 is expected, but no results could be opened. Third pass: re-fetched the election history index with curl (HTTP 200). Laserfiche DocView pages returned HTTP 200 with 'Access denied. [9013]' with a browser user agent, cookie jar and referer from the index; the same link with the index's searchid returned 'Entry not found. [9001]'. Chrome navigation worked but page reading was blocked by the extension for this domain. The Wayback availability API returned no snapshot of the Laserfiche URL. The El Paso County clerk results page lists only 2025 and 2026 files. The amlegal charter returned HTTP 403, the clerk news page returned a certificate error, and WebSearch was out of budget. No official document with names and totals could be opened."
  },
  {
   "city_id": "0816000",
@@ -33,9 +33,12 @@
   "source_url": "https://coloradosprings.gov/election-history",
   "additional_source_urls": [
    "https://cocs-lf-1.docunavservices.com/WL-CityAdministration/DocView.aspx?id=7065&dbid=0&repo=City-Administration",
+   "https://cocs-lf-1.docunavservices.com/WL-CityAdministration/DocView.aspx?id=7066&dbid=0&repo=City-Administration",
+   "https://cocs-lf-1.docunavservices.com/WL-CityAdministration/DocView.aspx?id=7083&dbid=0&repo=City-Administration",
+   "https://cocs-lf-1.docunavservices.com/WL-CityAdministration/DocView.aspx?id=7084&dbid=0&repo=City-Administration",
    "https://coloradosprings.gov/election"
   ],
-  "note": "The city clerk election history index lists an August 28, 2012 Special Municipal Election. Its results link (Laserfiche id 7065) returned 'Access denied. [9013]' in Chrome and 'Cookies are not enabled' via curl and WebFetch. The ballot content of that election could not be confirmed, so the absence of a mayoral contest is not verified. Second pass: WebFetch of https://coloradosprings.gov/election-history again returned the same Laserfiche links. Curl with a cookie jar and browser user agent to the Laserfiche results page returned HTTP 200 with a 2 KB HTML page without results. WebFetch of web.archive.org is blocked, and curl to the Wayback availability and CDX endpoints returned HTTP 429 and then timed out. The amlegal charter page returned a Cloudflare challenge to curl. WebSearch was unavailable because the session budget was used. No official document with candidate names and totals could be opened, so the year stays unresolved."
+  "note": "The index lists an August 28, 2012 Special Municipal election (id 7065, 7066) and a coordinated election. Whether a mayoral contest was on the ballot is not confirmed. Third pass: re-fetched the election history index with curl (HTTP 200). Laserfiche DocView pages returned HTTP 200 with 'Access denied. [9013]' with a browser user agent, cookie jar and referer from the index; the same link with the index's searchid returned 'Entry not found. [9001]'. Chrome navigation worked but page reading was blocked by the extension for this domain. The Wayback availability API returned no snapshot of the Laserfiche URL. The El Paso County clerk results page lists only 2025 and 2026 files. The amlegal charter returned HTTP 403, the clerk news page returned a certificate error, and WebSearch was out of budget. No official document with names and totals could be opened."
  },
  {
   "city_id": "0816000",
@@ -44,10 +47,11 @@
   "expected_election_dates": [],
   "source_url": "https://coloradosprings.gov/election-history",
   "additional_source_urls": [
-   "https://coloradosprings.gov/election",
-   "https://cocs-lf-1.docunavservices.com/WL-CityAdministration/DocView.aspx?id=7523&dbid=0&repo=City-Administration"
+   "https://cocs-lf-1.docunavservices.com/WL-CityAdministration/DocView.aspx?id=7522&dbid=0&repo=City-Administration",
+   "https://cocs-lf-1.docunavservices.com/WL-CityAdministration/DocView.aspx?id=7523&dbid=0&repo=City-Administration",
+   "https://coloradosprings.gov/election"
   ],
-  "note": "The city clerk election history index lists an April general municipal election in this year, but its results document (Laserfiche) could not be opened: 'Access denied. [9013]' in Chrome and a cookie error via curl and WebFetch. The city election page gives April 6, 2027 as the next mayoral election, but no opened official document states the mayoral term cycle for this year, so no election is not confirmed. Second pass: WebFetch of https://coloradosprings.gov/election-history again returned the same Laserfiche links. Curl with a cookie jar and browser user agent to the Laserfiche results page returned HTTP 200 with a 2 KB HTML page without results. WebFetch of web.archive.org is blocked, and curl to the Wayback availability and CDX endpoints returned HTTP 429 and then timed out. The amlegal charter page returned a Cloudflare challenge to curl. WebSearch was unavailable because the session budget was used. No official document with candidate names and totals could be opened, so the year stays unresolved."
+  "note": "The index lists a 2013 General Municipal election. No opened official document states the mayoral cycle for this year, so no mayoral election is not confirmed. Third pass: re-fetched the election history index with curl (HTTP 200). Laserfiche DocView pages returned HTTP 200 with 'Access denied. [9013]' with a browser user agent, cookie jar and referer from the index; the same link with the index's searchid returned 'Entry not found. [9001]'. Chrome navigation worked but page reading was blocked by the extension for this domain. The Wayback availability API returned no snapshot of the Laserfiche URL. The El Paso County clerk results page lists only 2025 and 2026 files. The amlegal charter returned HTTP 403, the clerk news page returned a certificate error, and WebSearch was out of budget. No official document with names and totals could be opened."
  },
  {
   "city_id": "0816000",
@@ -67,13 +71,13 @@
   "expected_election_dates": [],
   "source_url": "https://coloradosprings.gov/election-history",
   "additional_source_urls": [
-   "https://cocs-lf-1.docunavservices.com/WL-CityAdministration/DocView.aspx?id=7328&dbid=0&repo=City-Administration",
    "https://cocs-lf-1.docunavservices.com/WL-CityAdministration/DocView.aspx?id=8044&dbid=0&repo=City-Administration",
-   "https://cocs-lf-1.docunavservices.com/WL-CityAdministration/DocView.aspx?id=7326&dbid=0&repo=City-Administration",
    "https://cocs-lf-1.docunavservices.com/WL-CityAdministration/DocView.aspx?id=8043&dbid=0&repo=City-Administration",
+   "https://cocs-lf-1.docunavservices.com/WL-CityAdministration/DocView.aspx?id=7328&dbid=0&repo=City-Administration",
+   "https://cocs-lf-1.docunavservices.com/WL-CityAdministration/DocView.aspx?id=7326&dbid=0&repo=City-Administration",
    "https://coloradosprings.gov/election"
   ],
-  "note": "Re-check: the city clerk election history page (https://coloradosprings.gov/election-history), re-fetched in this pass, lists the April 7, 2015 General Municipal election (results id 8044, by precinct id 8043) and the May 19, 2015 Mayoral Runoff (results id 7328, by precinct id 7326). The checker's claim that the index has no 2015 row is not supported; the index has these rows. The results documents are Laserfiche pages on cocs-lf-1.docunavservices.com. Curl with a cookie jar and a browser user agent returned HTTP 200 with an HTML page that says 'Access denied. [9013]' for each id, on two attempts, in several URL forms (DocView, ElectronicFile, DocumentService). The Internet Archive copies of these URLs are small HTML shells without results. WebFetch cannot open archive.org. The county elections page gave no archived municipal results, and no further web search was possible. Winner, runner-up and vote totals cannot be read from an official document, so the year stays unresolved and no result is recorded. Second pass: WebFetch of https://coloradosprings.gov/election-history again returned the same Laserfiche links. Curl with a cookie jar and browser user agent to the Laserfiche results page returned HTTP 200 with a 2 KB HTML page without results. WebFetch of web.archive.org is blocked, and curl to the Wayback availability and CDX endpoints returned HTTP 429 and then timed out. The amlegal charter page returned a Cloudflare challenge to curl. WebSearch was unavailable because the session budget was used. No official document with candidate names and totals could be opened, so the year stays unresolved."
+  "note": "The index lists the April 7, 2015 General Municipal election (id 8044), the May 19, 2015 Mayoral Run-Off (id 7328) and a 2015 Special Municipal election. Results documents could not be opened. Third pass: re-fetched the election history index with curl (HTTP 200). Laserfiche DocView pages returned HTTP 200 with 'Access denied. [9013]' with a browser user agent, cookie jar and referer from the index; the same link with the index's searchid returned 'Entry not found. [9001]'. Chrome navigation worked but page reading was blocked by the extension for this domain. The Wayback availability API returned no snapshot of the Laserfiche URL. The El Paso County clerk results page lists only 2025 and 2026 files. The amlegal charter returned HTTP 403, the clerk news page returned a certificate error, and WebSearch was out of budget. No official document with names and totals could be opened."
  },
  {
   "city_id": "0816000",
@@ -93,10 +97,13 @@
   "expected_election_dates": [],
   "source_url": "https://coloradosprings.gov/election-history",
   "additional_source_urls": [
-   "https://coloradosprings.gov/election",
-   "https://cocs-lf-1.docunavservices.com/WL-CityAdministration/DocView.aspx?id=7940&dbid=0&repo=City-Administration"
+   "https://cocs-lf-1.docunavservices.com/WL-CityAdministration/DocView.aspx?id=14240&dbid=0&repo=City-Administration",
+   "https://cocs-lf-1.docunavservices.com/WL-CityAdministration/DocView.aspx?id=14239&dbid=0&repo=City-Administration",
+   "https://cocs-lf-1.docunavservices.com/WL-CityAdministration/DocView.aspx?id=14729&dbid=0&repo=City-Administration",
+   "https://cocs-lf-1.docunavservices.com/WL-CityAdministration/DocView.aspx?id=14730&dbid=0&repo=City-Administration",
+   "https://coloradosprings.gov/election"
   ],
-  "note": "The city clerk election history index lists an April general municipal election in this year, but its results document (Laserfiche) could not be opened: 'Access denied. [9013]' in Chrome and a cookie error via curl and WebFetch. The city election page gives April 6, 2027 as the next mayoral election, but no opened official document states the mayoral term cycle for this year, so no election is not confirmed. Second pass: WebFetch of https://coloradosprings.gov/election-history again returned the same Laserfiche links. Curl with a cookie jar and browser user agent to the Laserfiche results page returned HTTP 200 with a 2 KB HTML page without results. WebFetch of web.archive.org is blocked, and curl to the Wayback availability and CDX endpoints returned HTTP 429 and then timed out. The amlegal charter page returned a Cloudflare challenge to curl. WebSearch was unavailable because the session budget was used. No official document with candidate names and totals could be opened, so the year stays unresolved."
+  "note": "The index lists a 2017 General Municipal and a 2017 Special Municipal election. No opened official document states the mayoral cycle for this year, so no mayoral election is not confirmed. Third pass: re-fetched the election history index with curl (HTTP 200). Laserfiche DocView pages returned HTTP 200 with 'Access denied. [9013]' with a browser user agent, cookie jar and referer from the index; the same link with the index's searchid returned 'Entry not found. [9001]'. Chrome navigation worked but page reading was blocked by the extension for this domain. The Wayback availability API returned no snapshot of the Laserfiche URL. The El Paso County clerk results page lists only 2025 and 2026 files. The amlegal charter returned HTTP 403, the clerk news page returned a certificate error, and WebSearch was out of budget. No official document with names and totals could be opened."
  },
  {
   "city_id": "0816000",

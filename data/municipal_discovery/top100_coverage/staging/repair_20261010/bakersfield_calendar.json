@@ -1,0 +1,16 @@
+[
+ {
+  "city_id": "0603526",
+  "year": 2016,
+  "status": "unresolved",
+  "expected_election_dates": [],
+  "source_url": "https://bakersfield.municipal.codes/Charter/ArtVII",
+  "additional_source_urls": [
+   "http://web.archive.org/web/20180522032128/http://www.kernvote.com/elections/sovc.asp",
+   "https://bakersfield.municipal.codes/Charter/ArtIII",
+   "https://www.bakersfieldcity.us/our-government",
+   "https://www.kernvote.com/elections/other/past-election-results"
+  ],
+  "note": "This is a regular mayoral election year in the cycle (2012 and 2020 are decided mayoral elections). The year stays unresolved because no official results document could be opened. The Kern County statements of votes index (Internet Archive copy of kernvote.com/elections/sovc.asp, capture 20180812085754) lists SOVC_June_7_2016_full.pdf and SOVC_Nov_8_2016_full.pdf, but the Internet Archive has no readable capture of either file. The CDX listing for elections.co.kern.ca.us/elections/SOVC/ has no 2016 election file. Captures of www.kernvote.com/sovc/2016/SOVC_June_7_2016_full.pdf (2021-11-04) are HTTP 302 redirects with no content, and kernvote.com/sovc/2016/ returned 404 in its capture. The live kernvote.com host returns HTTP 403 (Akamai) to scripted requests, and its current past-results index starts in 2017. No Bakersfield city clerk results page was found, and the web search budget ran out before other official copies could be searched. The winner, stage and vote totals were not confirmed from an official source. Second pass: curl to https://www.kernvote.com/sovc/2016/SOVC_June_7_2016_full.pdf returned HTTP 403 Access Denied (Akamai). The Wayback URL web.archive.org/web/2016/http://elections.co.kern.ca.us/elections/SOVC/SOVC_June_7_2016_full.pdf returned 404. CDX queries for that file, for elections.co.kern.ca.us/elections/SOVC/*2016*, for kernvote.com/sovc prefix (only the 2021 captures with status 302 and 404), for Clarity ENR Kern pages and for bakersfieldcity.us election pages returned no usable capture. The web search budget was exhausted, so no council minutes could be searched. The year stays unresolved. Third pass: the live kernvote.com past-results index opened in a real browser and starts at June 6, 2017. Browser requests to kernvote.com/sovc/2016/SOVC_June_7_2016_full.pdf, kernvote.com/sovc/2016/SOVC_Nov_8_2016_full.pdf, kernvote.com/elections/sovc.asp and elections.co.kern.ca.us/elections/SOVC/SOVC_Nov_8_2016_full.pdf all showed a browser error page. The Internet Archive availability API returned no snapshot for the elections.co.kern.ca.us files or the kernvote.com/sovc/2016 file. The CDX listing for elections.co.kern.ca.us/elections/results/ has no 2016 folder. WebSearch refused (budget used). The winner, stage and vote totals were not confirmed from an official source."
+ }
+]

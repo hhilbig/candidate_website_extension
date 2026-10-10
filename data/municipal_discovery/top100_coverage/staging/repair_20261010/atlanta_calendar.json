@@ -1,0 +1,15 @@
+[
+ {
+  "city_id": "1304000",
+  "year": 2013,
+  "status": "unresolved",
+  "expected_election_dates": [],
+  "source_url": "https://library.municode.com/ga/atlanta/codes/code_of_ordinances?nodeId=PTICHRELA_SPACH_ART5ELRECOIN_CH1COEL_S5-102REELTIHOVO",
+  "additional_source_urls": [
+   "https://www.fultoncountyga.gov/inside-fulton-county/fulton-county-departments/registration-and-elections/search-elections",
+   "https://www.dekalbcountyga.gov/sites/default/files/2026-03/2013%20Election%20Results.zip",
+   "https://results.enr.clarityelections.com/GA/Fulton/"
+  ],
+  "note": "The charter cycle (section 5-102) puts a regular mayoral election on November 5, 2013. No official result document could be opened. The Fulton County election results search lists only the January 2013 special and the December 3, 2013 runoff summary, which has no mayoral contest. The Fulton Clarity list has no November 2013 election. The old Fulton download for the November 2013 general municipal summary is gone (not archived). The DeKalb County November 5, 2013 summary and statement of votes cast contain no Atlanta contests. Second pass: Fulton Clarity archive (CDX) holds no 2013 election pages; the Fulton site, the Atlanta city clerk page (HTTP 403) and the Wayback CDX for fultoncountyga.gov returned no November 2013 results document. Still unresolved. Third pass (this repair): WebSearch was refused because the search budget was used up. Wayback CDX queries through mac2 for results.enr.clarityelections.com/GA/Fulton/ (prefix, status 200) return no 2013 election pages; the earliest Fulton Clarity capture is from 2019. CDX queries for atlantaga.gov and fultoncountyga.gov with election, result, canvass, Municipal, Nov and 2013 filters (2013 to 2014) returned no rows. Queries for fultonelections.com, fultoncountyga.gov/elections and fultoncountyga.gov/images/stories/elections returned no rows or timed out. No official document with the November 5, 2013 mayoral totals was opened. Status stays unresolved."
+ }
+]

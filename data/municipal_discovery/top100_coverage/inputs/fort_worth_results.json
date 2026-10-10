@@ -34,6 +34,60 @@
   "city_name": "Fort Worth",
   "state_abb": "TX",
   "roster_place_fips": "4827000",
+  "election_date": "2013-05-11",
+  "election_type": "regular",
+  "stage": "general",
+  "verification_status": "verified_decisive",
+  "certification_status": "certified",
+  "source_url": "https://publicdocuments.fortworthtexas.gov/CSODOCS/DocView.aspx?id=26491&dbid=0&repo=City-Secretary",
+  "source_locator": "Resolution 4205-05-2013, page 1 preamble (unopposed mayoral candidacy, Ordinance 20657-03-2013) and page 3 Section 6 (Betsy Price declared elected Mayor)",
+  "certification_source_url": "https://publicdocuments.fortworthtexas.gov/CSODOCS/DocView.aspx?id=26491&dbid=0&repo=City-Secretary",
+  "additional_source_urls": [
+   "https://www.fortworthtexas.gov/departments/citysecretary/elections/election-history"
+  ],
+  "verification_note": "The mayoral election was canceled because only one candidate filed. Ordinance 20657-03-2013 declared the unopposed candidate elected on the authority of Texas Election Code section 2.053, and Resolution 4205-05-2013 names Betsy Price as Mayor. No mayoral ballots were cast, so the vote count is 0 and the election_date is the scheduled general election date. Winner only is recorded because the contest was uncontested.",
+  "candidates": [
+   {
+    "name": "Betsy Price",
+    "role": "winner",
+    "votes": 0,
+    "candidate_year_id": ""
+   }
+  ],
+  "total_votes": 0,
+  "total_votes_basis": "No mayoral votes were cast; the election was canceled and the sole candidate declared elected."
+ },
+ {
+  "city_name": "Fort Worth",
+  "state_abb": "TX",
+  "roster_place_fips": "4827000",
+  "election_date": "2015-05-09",
+  "election_type": "regular",
+  "stage": "general",
+  "verification_status": "verified_decisive",
+  "certification_status": "certified",
+  "source_url": "https://publicdocuments.fortworthtexas.gov/CSODOCS/DocView.aspx?id=47571&dbid=0&repo=City-Secretary",
+  "source_locator": "Resolution 4453-05-2015, page 1 preamble (unopposed mayoral candidacy, Ordinance 21692-03-2015) and page 3 Section 6 (Betsy Price declared elected Mayor)",
+  "certification_source_url": "https://publicdocuments.fortworthtexas.gov/CSODOCS/DocView.aspx?id=47571&dbid=0&repo=City-Secretary",
+  "additional_source_urls": [
+   "https://www.fortworthtexas.gov/departments/citysecretary/elections/election-history"
+  ],
+  "verification_note": "The mayoral election was canceled because only one candidate filed. Ordinance 21692-03-2015 declared the unopposed candidate elected on the authority of Texas Election Code section 2.053, and Resolution 4453-05-2015 names Betsy Price as Mayor. No mayoral ballots were cast, so the vote count is 0 and the election_date is the scheduled general election date. Winner only is recorded because the contest was uncontested.",
+  "candidates": [
+   {
+    "name": "Betsy Price",
+    "role": "winner",
+    "votes": 0,
+    "candidate_year_id": ""
+   }
+  ],
+  "total_votes": 0,
+  "total_votes_basis": "No mayoral votes were cast; the election was canceled and the sole candidate declared elected."
+ },
+ {
+  "city_name": "Fort Worth",
+  "state_abb": "TX",
+  "roster_place_fips": "4827000",
   "election_date": "2017-05-06",
   "election_type": "regular",
   "stage": "general",

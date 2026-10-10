@@ -1,0 +1,33 @@
+[
+ {
+  "city_name": "Oklahoma City",
+  "state_abb": "OK",
+  "roster_place_fips": "4055000",
+  "election_date": "2026-02-10",
+  "election_type": "regular",
+  "stage": "general",
+  "verification_status": "verified_decisive",
+  "certification_status": "source_verified",
+  "source_url": "https://results.okelections.gov/OKER/?elecDate=20260210",
+  "source_locator": "Local Results tab, entity CITY OF OKLAHOMA CITY, race FOR MAYOR, summary results table (Total Votes column)",
+  "certification_source_url": "https://results.okelections.gov/OKER/?elecDate=20260210",
+  "additional_source_urls": [],
+  "verification_note": "The Oklahoma State Election Board page is labeled Official Results and shows 279 of 279 precincts reporting. David Holt received 33,625 votes (86.49 percent), Matthew Pallares 5,253 (13.51 percent). The table total is 38,878 (absentee 1,562, mail 958, election day 36,358, citywide). Holt won a majority, so no runoff followed. Re-verified on 2026-10-10 in a browser session (Local Results tab, entity CITY OF OKLAHOMA CITY, race FOR MAYOR, 279 of 279 precincts, Server TLU 02/13/2026 05:03:10 PM): Holt 33,625 (absentee 1,405, mail 830, election day 31,390), Pallares 5,253 (157, 128, 4,968), table total 38,878. The page header reads Official Results. Plain HTTP clients (WebFetch, curl) receive 403 from this site, so the figures can only be read in a browser; the earlier 403 reports do not indicate a data problem.",
+  "candidates": [
+   {
+    "name": "David Holt",
+    "role": "winner",
+    "votes": 33625,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Matthew Pallares",
+    "role": "runner_up",
+    "votes": 5253,
+    "candidate_year_id": ""
+   }
+  ],
+  "total_votes": 38878,
+  "total_votes_basis": "sum of all candidates, citywide, from the official table total; no write-in line is shown"
+ }
+]

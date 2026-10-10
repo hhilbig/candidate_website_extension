@@ -35,13 +35,16 @@
  {
   "city_id": "2622000",
   "year": 2013,
-  "status": "unresolved",
-  "expected_election_dates": [],
-  "source_url": "https://devtraining.detroitmi.gov/sites/training.detroitmi/files/2018-05/2_29_2012_CharterDocument_2_1_WITHOUT_COMMENTARY_1.pdf",
-  "additional_source_urls": [
-   "https://training.detroitmi.gov/sites/training.detroitmi/files/2018-05/general_election_nov_2013_official_summary_report.pdf"
+  "status": "complete",
+  "expected_election_dates": [
+   "2013-11-05"
   ],
-  "note": "A mayoral general election was held in Detroit on November 5, 2013 (four-year cycle under the charter, consistent with the 2017 and 2021 elections). The previously cited PDF (also reachable at detroitmi.gov/sites/detroitmi.localhost/files/2018-05/...) is a Wayne County Board of Canvassers Write-In Report for Mayor of Detroit. It lists only precinct-level write-in names and does not show Duggan, Napoleon or citywide totals. Searches for an official county, city or state results document failed: the Wayne County clerk 2013 URL guess returned 404, the detroitmi.gov election-results pages returned 404 or a dynamic app, miboecfr.nictusa.com returned 403, and mielections.us did not respond. The year is left unresolved because no official source with the vote totals was opened. Second pass: WebSearch budget was exhausted. The detroitmi.gov Nov 2013 summary PDF was fetched again and pdftotext shows only the write-in report (no citywide Duggan or Napoleon totals). Guessed Wayne County URL .../2013-november-5/off_1113.pdf returned 404. waynecountymi.gov election-results index returned 404. michigan.gov/sos election-results page returned 403. Wayback CDX queries for waynecounty.com/clerk and detroitmi.gov returned empty or timed out, and web.archive.org page fetch was blocked in WebFetch. No official vote totals were opened, so the year stays unresolved."
+  "source_url": "https://www.waynecountymi.gov/files/assets/mainsite/v/1/clerk/documents/elections/election-results/2013-november-5/13novdmy.pdf",
+  "additional_source_urls": [
+   "https://www.waynecountymi.gov/Government/Elected-Officials/Clerk/Elections/Election-Results-Candidates/2011-2015-Elections/2013/November-5-2013-General-Election-Results",
+   "https://devtraining.detroitmi.gov/sites/training.detroitmi/files/2018-05/2_29_2012_CharterDocument_2_1_WITHOUT_COMMENTARY_1.pdf"
+  ],
+  "note": "The Wayne County Clerk results index lists the November 5, 2013 general election. Its Detroit Mayor/Clerk/At-Large Council document (City of Detroit, Nov. 5, 2013 General Election, printed 11/18/13) shows the mayoral contest. Detroit charter section 3-105 sets the regular city election in November 2013. Duggan won the general election and no runoff followed."
  },
  {
   "city_id": "2622000",

@@ -13,14 +13,18 @@
  {
   "city_id": "4817000",
   "year": 2011,
-  "status": "unresolved",
-  "expected_election_dates": [],
+  "status": "complete",
+  "expected_election_dates": [
+   "2011-05-14"
+  ],
   "source_url": "https://www.corpuschristitx.gov/media/vain2ouz/ctysec-2011-general-election-summary.pdf",
   "additional_source_urls": [
    "https://www.corpuschristitx.gov/department-directory/city-secretary/elections/archived-election-results/",
-   "https://www.corpuschristitx.gov/media/ajlfo1wx/ctysec-2011-runoff-summary.pdf"
+   "https://www.corpuschristitx.gov/media/ajlfo1wx/ctysec-2011-runoff-summary.pdf",
+   "https://web.archive.org/web/2012id_/http://www.sos.state.tx.us/elections/laws/advisory2011-03.shtml",
+   "http://www.sos.state.tx.us/elections/laws/advisory2011-03.shtml"
   ],
-  "note": "The city 2011 general election summary shows a mayoral race (Adame 9,442; Moon 2,386; Madrigal 1,308) with a print date of May 16, 2011. It prints no election date and gives surnames only. The 2011 runoff PDF is a District 3 precinct registration table headed Runoff Election - June 18, 2011 and has no mayoral result. The Texas Secretary of State uniform-date pages returned HTTP 403 (www.sos.state.tx.us and www.sos.texas.gov, 2011-election-dates.shtml). No official document that states the election date was found, so the year is unresolved. Second pass: the city 2011 general election PDF was read again (text extracted); it shows a mayoral race (Moon 2,386; Adame 9,442; Madrigal 1,308; 13,136 total votes; 108 of 108 boxes) and a print stamp of May 16, 2011, with no election date. The city archive page lists no canvass or minutes for 2011. The Texas Secretary of State 2011 election-dates page returned HTTP 403 again (WebFetch and curl). The Texas statutes site (statutes.capitol.texas.gov Election Code ch. 41) returned a script shell with no section text. Wayback CDX and availability requests for the Secretary of State page returned no snapshot (availability API empty) or HTTP 429 and timeouts. The Chrome browser extension was not connected, and the web search budget was exhausted. No official document stating the election date was opened, so the year stays unresolved."
+  "note": "The city 2011 general election summary shows a mayoral race with Adame 9,442 of 13,136 votes (71.88 percent), so no mayoral runoff was needed. The city PDF prints no election date. The Texas Secretary of State Election Advisory No. 2011-03 (Wayback copy) names May 14, 2011 as the uniform election date for the spring 2011 general election. The city report print stamp is May 16, 2011, which fits that date. The June 18, 2011 city runoff PDF lists only a District 3 table and no mayoral result."
  },
  {
   "city_id": "4817000",

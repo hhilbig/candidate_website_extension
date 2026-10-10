@@ -1,0 +1,16 @@
+[
+ {
+  "city_id": "2622000",
+  "year": 2013,
+  "status": "complete",
+  "expected_election_dates": [
+   "2013-11-05"
+  ],
+  "source_url": "https://www.waynecountymi.gov/files/assets/mainsite/v/1/clerk/documents/elections/election-results/2013-november-5/13novdmy.pdf",
+  "additional_source_urls": [
+   "https://www.waynecountymi.gov/Government/Elected-Officials/Clerk/Elections/Election-Results-Candidates/2011-2015-Elections/2013/November-5-2013-General-Election-Results",
+   "https://devtraining.detroitmi.gov/sites/training.detroitmi/files/2018-05/2_29_2012_CharterDocument_2_1_WITHOUT_COMMENTARY_1.pdf"
+  ],
+  "note": "The Wayne County Clerk results index lists the November 5, 2013 general election. Its Detroit Mayor/Clerk/At-Large Council document (City of Detroit, Nov. 5, 2013 General Election, printed 11/18/13) shows the mayoral contest. Detroit charter section 3-105 sets the regular city election in November 2013. Duggan won the general election and no runoff followed."
+ }
+]

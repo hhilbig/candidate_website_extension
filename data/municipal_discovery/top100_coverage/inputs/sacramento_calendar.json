@@ -26,14 +26,17 @@
  {
   "city_id": "0664000",
   "year": 2012,
-  "status": "unresolved",
-  "expected_election_dates": [],
+  "status": "complete",
+  "expected_election_dates": [
+   "2012-06-05"
+  ],
   "source_url": "https://elections.saccounty.gov/content/dam/vre/documents/election-information-archive/sac_032284.pdf",
   "additional_source_urls": [
-   "https://elections.saccounty.gov/content/vre/us/en/list-of-elected-officials/list-of-elected-officials--cities.html",
-   "https://web.archive.org/web/2023/https://www.cityofsacramento.gov/clerk/elections"
+   "https://www.cityofsacramento.gov/content/dam/portal/clerk/Elections/08312026_Ranked%20Choice%20Voting%20for%20Sacramento%20Act.pdf",
+   "https://elections.saccounty.gov/content/dam/vre/documents/election-information-archive/2012%20November%206%2c%202012%20Presidential%20General%20Election%20Qualified%20Candidate%20List.pdf",
+   "https://web.archive.org/web/20200911112217id_/https://elections.saccounty.net/ElectionInformation/Documents/2020-Nov-General/FINAL%20-%20Measure%20A%20-%20City%20of%20Sacramento%20-%20Eng.pdf"
   ],
-  "note": "A mayoral primary was held on the date in the results file, with official county vote totals. The year is unresolved because no official source states that a primary majority elects the mayor, and the November general election was not checked for a mayoral contest. Second pass 2026-10-01, targeted fix: the rule that a primary majority elects the mayor could not be established from an official source that states it. Tried: the archived City Clerk elections page (describes only the 2024 election and says a run-off is held 'if needed'); the county list of city officials (shows 2024 results only); https://codelibrary.amlegal.com (HTTP 403); library.municode.com charter path (no charter text returned); cityofsacramento.gov clerk pages candidate-information, running-for-sacramento-city-council and elections (no text on a majority rule); guessed clerk charter URLs returned HTTP 404. WebSearch was unavailable (search budget used). The county statement does not show that no mayoral contest was held in the later general election. The vote totals below are official, but the decisive stage is not confirmed, so the year is unresolved."
+  "note": "The mayoral nominating primary on 2012-06-05 elected the mayor by majority, so it is the decisive election. The county's qualified candidate list for the Nov 6, 2012 general election lists only City Council Districts 2 and 4 and a Charter Commission for the City of Sacramento; it lists no mayoral contest. The cycle comes from the County Elections Office voter information document for Measure A (Nov 2020), archived copy in additional_source_urls (original URL https://elections.saccounty.net/ElectionInformation/Documents/2020-Nov-General/FINAL%20-%20Measure%20A%20-%20City%20of%20Sacramento%20-%20Eng.pdf). Its charter text states that the mayoral office is elected in 2024 and every fourth year thereafter, and that the mayoral term is four years. This gives 2012, 2016, 2020 and 2024 by four-year spacing. This is the proposed charter text of Measure A, so the cycle is stated for 2024 onward and 2012 to 2020 follow by the four-year spacing; the vote documents for each year show a mayoral contest. The county list of city officials was removed as a cycle source because it shows only the current mayor. The majority rule is stated in the City Clerk document cited in additional_source_urls (restated as proposed charter text, not the charter page)."
  },
  {
   "city_id": "0664000",
@@ -74,14 +77,17 @@
  {
   "city_id": "0664000",
   "year": 2016,
-  "status": "unresolved",
-  "expected_election_dates": [],
+  "status": "complete",
+  "expected_election_dates": [
+   "2016-06-07"
+  ],
   "source_url": "https://elections.saccounty.gov/content/dam/vre/documents/election-information-archive/June%202016%20presidential%20primary%20election%20-%20statement%20of%20the%20vote.pdf",
   "additional_source_urls": [
-   "https://elections.saccounty.gov/content/vre/us/en/list-of-elected-officials/list-of-elected-officials--cities.html",
-   "https://web.archive.org/web/2023/https://www.cityofsacramento.gov/clerk/elections"
+   "https://www.cityofsacramento.gov/content/dam/portal/clerk/Elections/08312026_Ranked%20Choice%20Voting%20for%20Sacramento%20Act.pdf",
+   "https://elections.saccounty.gov/content/dam/vre/documents/election-information-archive/Statement%20of%20the%20Vote.pdf",
+   "https://web.archive.org/web/20200911112217id_/https://elections.saccounty.net/ElectionInformation/Documents/2020-Nov-General/FINAL%20-%20Measure%20A%20-%20City%20of%20Sacramento%20-%20Eng.pdf"
   ],
-  "note": "A mayoral primary was held on the date in the results file, with official county vote totals. The year is unresolved because no official source states that a primary majority elects the mayor, and the November general election was not checked for a mayoral contest. Second pass 2026-10-01, targeted fix: the rule that a primary majority elects the mayor could not be established from an official source that states it. Tried: the archived City Clerk elections page (describes only the 2024 election and says a run-off is held 'if needed'); the county list of city officials (shows 2024 results only); https://codelibrary.amlegal.com (HTTP 403); library.municode.com charter path (no charter text returned); cityofsacramento.gov clerk pages candidate-information, running-for-sacramento-city-council and elections (no text on a majority rule); guessed clerk charter URLs returned HTTP 404. WebSearch was unavailable (search budget used). The county statement does not show that no mayoral contest was held in the later general election. The vote totals below are official, but the decisive stage is not confirmed, so the year is unresolved."
+  "note": "The mayoral nominating primary on 2016-06-07 elected the mayor by majority, so it is the decisive election. The county statement of the vote for the Nov 8, 2016 general election contains no Mayor of Sacramento contest (text search finds only Mayor of Elk Grove) while it lists City of Sacramento council contests. The cycle comes from the County Elections Office voter information document for Measure A (Nov 2020), archived copy in additional_source_urls (original URL https://elections.saccounty.net/ElectionInformation/Documents/2020-Nov-General/FINAL%20-%20Measure%20A%20-%20City%20of%20Sacramento%20-%20Eng.pdf). Its charter text states that the mayoral office is elected in 2024 and every fourth year thereafter, and that the mayoral term is four years. This gives 2012, 2016, 2020 and 2024 by four-year spacing. This is the proposed charter text of Measure A, so the cycle is stated for 2024 onward and 2012 to 2020 follow by the four-year spacing; the vote documents for each year show a mayoral contest. The county list of city officials was removed as a cycle source because it shows only the current mayor. The majority rule is stated in the City Clerk document cited in additional_source_urls (restated as proposed charter text, not the charter page)."
  },
  {
   "city_id": "0664000",
@@ -122,14 +128,17 @@
  {
   "city_id": "0664000",
   "year": 2020,
-  "status": "unresolved",
-  "expected_election_dates": [],
+  "status": "complete",
+  "expected_election_dates": [
+   "2020-03-03"
+  ],
   "source_url": "https://elections.saccounty.gov/content/dam/vre/documents/archived/2020/M2020-Statement%20of%20the%20Vote%20-%20Web%20and%20CD%20Version.pdf",
   "additional_source_urls": [
-   "https://elections.saccounty.gov/content/vre/us/en/list-of-elected-officials/list-of-elected-officials--cities.html",
-   "https://web.archive.org/web/2023/https://www.cityofsacramento.gov/clerk/elections"
+   "https://www.cityofsacramento.gov/content/dam/portal/clerk/Elections/08312026_Ranked%20Choice%20Voting%20for%20Sacramento%20Act.pdf",
+   "https://elections.saccounty.gov/content/dam/vre/documents/archived/2020/N2020-Statement-of-the-Vote.pdf",
+   "https://web.archive.org/web/20200911112217id_/https://elections.saccounty.net/ElectionInformation/Documents/2020-Nov-General/FINAL%20-%20Measure%20A%20-%20City%20of%20Sacramento%20-%20Eng.pdf"
   ],
-  "note": "A mayoral primary was held on the date in the results file, with official county vote totals. The year is unresolved because no official source states that a primary majority elects the mayor, and the November general election was not checked for a mayoral contest. Second pass 2026-10-01, targeted fix: the rule that a primary majority elects the mayor could not be established from an official source that states it. Tried: the archived City Clerk elections page (describes only the 2024 election and says a run-off is held 'if needed'); the county list of city officials (shows 2024 results only); https://codelibrary.amlegal.com (HTTP 403); library.municode.com charter path (no charter text returned); cityofsacramento.gov clerk pages candidate-information, running-for-sacramento-city-council and elections (no text on a majority rule); guessed clerk charter URLs returned HTTP 404. WebSearch was unavailable (search budget used). The county statement does not show that no mayoral contest was held in the later general election. The vote totals below are official, but the decisive stage is not confirmed, so the year is unresolved."
+  "note": "The mayoral nominating primary on 2020-03-03 elected the mayor by majority, so it is the decisive election. The county statement of the vote for the Nov 3, 2020 general election contains no Mayor of Sacramento contest (only Mayor of Elk Grove and City of Sacramento Measure A on mayoral accountability). The cycle comes from the County Elections Office voter information document for Measure A (Nov 2020), archived copy in additional_source_urls (original URL https://elections.saccounty.net/ElectionInformation/Documents/2020-Nov-General/FINAL%20-%20Measure%20A%20-%20City%20of%20Sacramento%20-%20Eng.pdf). Its charter text states that the mayoral office is elected in 2024 and every fourth year thereafter, and that the mayoral term is four years. This gives 2012, 2016, 2020 and 2024 by four-year spacing. This is the proposed charter text of Measure A, so the cycle is stated for 2024 onward and 2012 to 2020 follow by the four-year spacing; the vote documents for each year show a mayoral contest. The county list of city officials was removed as a cycle source because it shows only the current mayor. The majority rule is stated in the City Clerk document cited in additional_source_urls (restated as proposed charter text, not the charter page)."
  },
  {
   "city_id": "0664000",

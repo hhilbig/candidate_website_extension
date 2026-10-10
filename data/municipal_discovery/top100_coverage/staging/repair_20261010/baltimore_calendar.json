@@ -1,0 +1,37 @@
+[
+ {
+  "city_id": "2404000",
+  "year": 2011,
+  "status": "complete",
+  "expected_election_dates": [
+   "2011-11-08"
+  ],
+  "source_url": "https://www.baltimorecity.gov/media/document/201120baltimore20city20general20electionpdf",
+  "additional_source_urls": [
+   "https://web.archive.org/web/20251027055936id_/https://boe.baltimorecity.gov/sites/default/files/2011%2520Baltimore%2520City%2520General%2520Election.pdf",
+   "https://www.baltimorecity.gov/boe/our-work/election-information/past-results",
+   "https://elections.maryland.gov/elections/archive/baltimore/2011.html",
+   "https://codes.baltimorecity.gov/us/md/cities/baltimore/charter/IV/1",
+   "https://msa.maryland.gov/msa/mdmanual/36loc/bcity/elect/general/bcit2011.html"
+  ],
+  "note": "The Baltimore City Board of Elections Statement of Votes Cast for the general election of November 8, 2011 lists one mayoral contest. The same PDF is on the board index page and in the Internet Archive. The earlier 404 was caused by a double-encoded file name on the old boe.baltimorecity.gov path. The Maryland State Archives Manual figures differ from the official board totals, so the official board totals are used."
+ },
+ {
+  "city_id": "2404000",
+  "year": 2024,
+  "status": "complete",
+  "expected_election_dates": [
+   "2024-11-05"
+  ],
+  "source_url": "https://s3.amazonaws.com/baltimorecity.gov.if-us-east-1/s3fs-public/2025-05/2024 PG EL45 Official.pdf",
+  "additional_source_urls": [
+   "https://s3.amazonaws.com/baltimorecity.gov.if-us-east-1/s3fs-public/2025-05/2024 PG EL45A Official.pdf",
+   "https://www.baltimorecity.gov/boe/our-work/election-information/past-results",
+   "https://elections.maryland.gov/elections/archive/2024/General_Results/gen_results_2024_by_county_3.html",
+   "https://elections.maryland.gov/elections/archive/baltimore/2024.html",
+   "https://codes.baltimorecity.gov/us/md/cities/baltimore/charter/IV/1",
+   "https://msa.maryland.gov/msa/mdmanual/36loc/bcity/elect/general/bcit2024.html"
+  ],
+  "note": "The Baltimore City Board of Elections official Presidential General Election summary report (run date 12/12/24) lists one mayoral contest decided in the general election of November 5, 2024. The board past-results page links the report. The Maryland State Archives Manual figures differ from the official board totals, so the official board totals are used."
+ }
+]

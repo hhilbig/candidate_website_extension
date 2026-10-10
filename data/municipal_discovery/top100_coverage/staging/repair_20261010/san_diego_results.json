@@ -1,0 +1,140 @@
+[
+ {
+  "city_name": "San Diego",
+  "state_abb": "CA",
+  "roster_place_fips": "0666000",
+  "election_date": "2012-11-06",
+  "election_type": "regular",
+  "stage": "runoff",
+  "verification_status": "verified_decisive",
+  "certification_status": "certified",
+  "source_url": "https://www.sandiego.gov/sites/default/files/legacy/city-clerk/pdf/results121106.pdf",
+  "source_locator": "MAYOR table, top of page 1 (Official Final Results, update December 4, 2012)",
+  "certification_source_url": "https://www.sandiego.gov/sites/default/files/legacy/city-clerk/pdf/results121106.pdf",
+  "additional_source_urls": [
+   "https://www.sandiego.gov/sites/default/files/mayorresults.pdf",
+   "https://www.sandiego.gov/sites/default/files/legacy/city-clerk/elections/city/pdf/mayorcanvas121106.pdf",
+   "https://www.sandiego.gov/city-clerk/elections/city/past/races/2012elections"
+  ],
+  "verification_note": "City Clerk official final results show Bob Filner 245092 (52.49%) and Carl DeMaio 221870 (47.51%). The City Clerk mayoral history page lists the same counts and a runoff total of 466962. The mayoral canvass shows the same candidate totals.",
+  "candidates": [
+   {
+    "name": "Bob Filner",
+    "role": "winner",
+    "votes": 245092,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Carl DeMaio",
+    "role": "runner_up",
+    "votes": 221870,
+    "candidate_year_id": ""
+   }
+  ],
+  "total_votes": 466962,
+  "total_votes_basis": "sum of the two runoff candidates, citywide; no write-in line in the runoff"
+ },
+ {
+  "city_name": "San Diego",
+  "state_abb": "CA",
+  "roster_place_fips": "0666000",
+  "election_date": "2014-02-11",
+  "election_type": "special",
+  "stage": "runoff",
+  "verification_status": "verified_decisive",
+  "certification_status": "certified",
+  "source_url": "https://www.sandiego.gov/sites/default/files/legacy/city-clerk/elections/city/pdf/2014specialelectionresults.pdf",
+  "source_locator": "Certificate of City Clerk, item (d), FOR THE OFFICE OF MAYOR",
+  "certification_source_url": "https://www.sandiego.gov/sites/default/files/legacy/city-clerk/elections/city/pdf/2014specialelectionresults.pdf",
+  "additional_source_urls": [
+   "https://www.sandiego.gov/sites/default/files/mayorresults.pdf",
+   "https://www.sandiego.gov/city-clerk/elections/city/past/races"
+  ],
+  "verification_note": "The certificate shows Kevin Faulconer 153491 (52.89%) and David Alvarez 136701 (47.11%). Total for office of mayor is 290192. The certificate is dated February 28, 2014; the election date is February 11, 2014.",
+  "candidates": [
+   {
+    "name": "Kevin Faulconer",
+    "role": "winner",
+    "votes": 153491,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "David Alvarez",
+    "role": "runner_up",
+    "votes": 136701,
+    "candidate_year_id": ""
+   }
+  ],
+  "total_votes": 290192,
+  "total_votes_basis": "total for office of mayor in the certificate, citywide"
+ },
+ {
+  "city_name": "San Diego",
+  "state_abb": "CA",
+  "roster_place_fips": "0666000",
+  "election_date": "2016-06-07",
+  "election_type": "regular",
+  "stage": "primary_nominating",
+  "verification_status": "verified_decisive",
+  "certification_status": "certified",
+  "source_url": "https://www.sandiego.gov/sites/default/files/officialresults06072016_5.pdf",
+  "source_locator": "Certificate of City Clerk (corrected 7/11/16), FOR THE OFFICE OF MAYOR",
+  "certification_source_url": "https://www.sandiego.gov/sites/default/files/officialresults06072016_5.pdf",
+  "additional_source_urls": [
+   "https://www.sandiego.gov/sites/default/files/mayorresults.pdf",
+   "https://www.sandiego.gov/city-clerk/elections/city/past/races/2016elections",
+   "https://docs.sandiego.gov/citycharter/charter_amendments/articleII/sec10.pdf"
+  ],
+  "verification_note": "The certificate shows Kevin Faulconer 181147 (57.16%), Lori Saldana 73932 (23.33%) and Ed Harris 61458 (19.39%). Total for office of mayor is 316537. Faulconer won a majority, and the City Clerk mayoral history lists the runoff as none. The rule is San Diego Charter Article II Section 10 as amended 06-03-2014 (effective 07-24-2014, in force on 2016-06-07): all elective officers are nominated at the municipal primary, and a candidate who receives a majority of votes cast for all candidates for nomination is declared elected. Voters replaced this text on 11-08-2016 (effective 12-19-2016), after this election. The Clerk mayoral history PDF is kept only as a results cross-check.",
+  "candidates": [
+   {
+    "name": "Kevin Faulconer",
+    "role": "winner",
+    "votes": 181147,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Lori Saldana",
+    "role": "runner_up",
+    "votes": 73932,
+    "candidate_year_id": ""
+   }
+  ],
+  "total_votes": 316537,
+  "total_votes_basis": "total for office of mayor in the certificate, citywide, all three candidates",
+  "decisive_stage_source_url": "https://docs.sandiego.gov/citycharter/charter_amendments/articleII/sec10.pdf"
+ },
+ {
+  "city_name": "San Diego",
+  "state_abb": "CA",
+  "roster_place_fips": "0666000",
+  "election_date": "2020-11-03",
+  "election_type": "regular",
+  "stage": "general",
+  "verification_status": "verified_decisive",
+  "certification_status": "certified",
+  "source_url": "https://www.sandiego.gov/sites/default/files/certificate-of-city-clerk-municipal-general-election-110320.pdf",
+  "source_locator": "Certificate of City Clerk, page 1, FOR THE OFFICE OF MAYOR",
+  "certification_source_url": "https://www.sandiego.gov/sites/default/files/certificate-of-city-clerk-municipal-general-election-110320.pdf",
+  "additional_source_urls": [
+   "https://www.sandiego.gov/city-clerk/elections/city/past/races/2020elections"
+  ],
+  "verification_note": "The certificate shows Todd Gloria 346662 (55.95%) and Barbara Bry 272887 (44.05%). Total for office of mayor is 619549.",
+  "candidates": [
+   {
+    "name": "Todd Gloria",
+    "role": "winner",
+    "votes": 346662,
+    "candidate_year_id": ""
+   },
+   {
+    "name": "Barbara Bry",
+    "role": "runner_up",
+    "votes": 272887,
+    "candidate_year_id": ""
+   }
+  ],
+  "total_votes": 619549,
+  "total_votes_basis": "total for office of mayor in the certificate, citywide"
+ }
+]
