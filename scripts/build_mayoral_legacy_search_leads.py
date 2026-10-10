@@ -29,6 +29,7 @@ SWEEP_BASIS = "legacy_lead_sweep_wayback_capture_checked"
 def main() -> int:
     args = json.loads((SEARCH / "search_args.json").read_text())
     slug_of = {f["candidate_election_id"]: c["slug"] for c in args for f in c["finalists"]}
+    finalist = {f["candidate_election_id"]: f for c in args for f in c["finalists"]}
     leads = {c["slug"]: json.loads((SEARCH / f"{c['slug']}_url_leads.json").read_text()) for c in args}
     items, incomplete = repair_verdicts(leads, json.loads((SEARCH / "checker_verdicts.json").read_text()))
     final = {i["candidate_election_id"]: dict(i, link_basis=SEARCH_BASIS) for i in items}
@@ -48,8 +49,8 @@ def main() -> int:
         status = lead["status"]
         keep = status in {"accepted", "outside_window"} and lead.get("campaign_url")
         rows.append({
-            "candidate_election_id": key, "city_slug": slug_of[key], "candidate_name": lead.get("candidate_name", ""),
-            "election_date": lead.get("election_date", ""), "discovery_status": status, "checker_severity": "",
+            "candidate_election_id": key, "city_slug": slug_of[key], "candidate_name": finalist[key]["candidate_name"],
+            "election_date": finalist[key]["election_date"], "discovery_status": status, "checker_severity": "",
             "final_status": status if keep or status == "not_found" else "not_found",
             "campaign_url": lead["campaign_url"] if keep else "",
             "registrable_domain": (lead.get("registrable_domain") or "").split()[0] if keep and lead.get("registrable_domain") else "",
