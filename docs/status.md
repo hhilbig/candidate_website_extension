@@ -162,6 +162,21 @@ The release build waits for this.
 - Page corpus rebuilt from `scripts/build_mayoral_target_map.py` (targets matched per batch and domain) on mac2: 35,290 pages, 27,064 usable.
 - **Waiting for Hanno:** license and takedown contact (proposed: same terms as the House/Senate deposit), review of README and codebook, then approval to create the separate Dataverse dataset and upload. Nothing is published.
 
+**Pre-publication review and approved rework (October 10).** Three Opus reviews (`quality_reports/mayoral_release/coverage_review_2026-10-10.md`, `future_user_review_2026-10-10.md`, `city_expansion_assessment_2026-10-10.md`).
+Demonstrated defects (affected requirement: a correct, documented release), smallest corrections, and the return condition (validator passes on the rebuilt release):
+1. `days_from_election` and `in_text_window` use the 15th of the election month for the three August batches (12,549 pages, 131 finalists). Fix: compute from the finalist's election date in the corpus builder.
+2. 41 usable pages hold NUL bytes or binary content; bot-challenge, "page not found" and listing pages (tag, author, paging, calendar) count as usable; some addresses repeat. Fix: new page rules and URL-normalized duplicates.
+3. `--exclude` in `build_mayoral_stage3_targets.py` drops a finalist instead of a finalist and domain, so three accepted sites were never scraped (Sheila Jackson Lee 2023, Javiera Caballero 2021, Jerry Weiers 2016); Ron Nirenberg 2017 fetch errors were never retried; billbellformayor.com belongs to Bill Bell 2011, not 2013. Fix: key on finalist and domain, scrape and check these sites.
+4. Labels: archived URLs rejected as not the campaign site are labelled `site_not_archived`; Chris Adler 2012 has a council-video "lead"; README errors (window after the election is 120 days, "three attempts", calendar links, Honolulu is a CDP). Fix: status `site_rejected`, corrected README.
+Approved by Hanno on October 10:
+- (a) Reopen the population for the out-of-population elections: Sacramento 2012/2016/2020, Plano 2013/2017/2021, about 21 major races with unverified results (San Diego 2012–2020, Detroit 2013, Atlanta 2013, Baltimore 2011/2024, Tulsa, Memphis 2011 and others), and Tulsa 2024. Verify results, then discovery and scrape for their finalists.
+- (b) A fourth search pass on the stage 2 search blocker for about 58 finalists (38 stage-2-only `no_url_lead`, 11 one-attempt `check_incomplete`, 9 excluded without recovery) plus the new finalists from (a), with a working search engine from the start and an archived-Ballotpedia lookup. Repair attempt count on this blocker becomes 4.
+- (c) Candidate variables: total votes and vote shares from full official results; incumbency derived from the data (2010 from an outside source or marked missing); a person ID.
+- (d) Usability: `phase` column, one `election_id` format, neutral batch and run names, loading example.
+- License: same terms as the House/Senate deposit (CC BY 4.0 on the compilation); proposed takedown contact hhilbig@ucdavis.edu, to be confirmed.
+- The 20-city expansion pilot is not run now.
+Order: defects 1–4, then (a), then (b), then (c) and (d), then one rebuild, site check, validation and documentation.
+
 Release does not require a website for every finalist or a fixed coverage percentage.
 It requires the full population to be assessed, the agreed collection work to finish, and missing evidence to stay explicit.
 Detailed queues and limits: [mayoral_url_discovery.md](mayoral_url_discovery.md).
