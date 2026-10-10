@@ -6,17 +6,19 @@ export const meta = {
 // Hanno asked on October 10, 2026 to pilot a cheaper model for the web search. Answer key: the October 4 repair
 // results for the same finalists (url_discovery/repair_20261004/). The rules equal the follow-up pass rules.
 const REPO = '/Users/hanno/Documents/GitHub/candidate_website_extension'
-const OUT = REPO + '/data/municipal_discovery/top100_coverage/url_discovery/haiku_pilot_20261010'
+// Second run (October 10): Brave through mac2 as the search engine, two cities at a time.
+const OUT = REPO + '/data/municipal_discovery/top100_coverage/url_discovery/haiku_pilot_20261010/' + (args.run || 'run1')
 const RULES = `
 CONTEXT. No campaign website is known yet for these finalists. Search for it.
 
 GOAL. For each listed mayoral finalist, find the URL of the candidate's own campaign website used for that election, and confirm it with the Internet Archive. A Facebook, X/Twitter, Instagram or similar social profile is NOT a campaign website; record it only in "other_profiles". An official city page (council member page, mayor's office page) is NOT a campaign website. These are finalists in the 100 largest US cities, so most of them had a campaign website.
 
 WHERE TO LOOK (leads only; the Wayback check below decides acceptance):
-- Web search for the candidate's name, city, "mayor" and the election year. Use the WebSearch tool (load it with ToolSearch if needed) and WebFetch.
-- Ballotpedia candidate pages (they often list "Campaign website"), Wikipedia infoboxes and references, Vote411 / League of Women Voters guides, local news candidate profiles, official candidate lists.
-- If WebSearch is refused (budget used up) or WebFetch fails, search through mac2 instead, for example: ssh mac2 'curl -sL --max-time 60 -A "Mozilla/5.0" "https://html.duckduckgo.com/html/?q=<url-encoded query>"' | python3 -c 'import sys,re,html; t=sys.stdin.read(); print("\n".join(html.unescape(m) for m in re.findall(r"uddg=([^&\"]+)", t))[:4000])' and fetch result pages the same way. A DuckDuckGo result list counts as a search that ran.
-- Typical campaign domains: <name>formayor.com, <name>4mayor.com, <lastname>formayor.com, vote<name>.com, <name><year>.com, <name>.com. Big-city campaigns often use their own name, for example chicagotogether.org.
+- Search with Brave through mac2 (the session's WebSearch budget is used up; do not use WebSearch). For example:
+  ssh -n mac2 'curl -sL --max-time 60 -A "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 Chrome/124 Safari/537.36" "https://search.brave.com/search?q=<url-encoded query>"' | python3 -c 'import sys,re; t=sys.stdin.read(); print("\n".join(dict.fromkeys(u for u in re.findall(r"href=\"(https?://[^\"]+)\"", t) if "brave" not in u))[:3000])'
+  Query the candidate's name, city, "mayor" and the election year, then variations ("campaign", "for mayor", the year). Wait 5 seconds between searches.
+- Read Ballotpedia, Wikipedia, Vote411 and local news pages through WebFetch, or through mac2 with curl if WebFetch fails; they often list the campaign website.
+- Typical campaign domains: <name>formayor.com, <name>4mayor.com, <lastname>formayor.com, vote<name>.com, <name><year>.com, <name>.com, re-elect variants.
 
 WAYBACK CHECK (required for acceptance). Run every Wayback request through mac2, which reaches web.archive.org directly. Do NOT use the droplet. For example:
   ssh mac2 'curl -s --max-time 60 "https://web.archive.org/cdx/search/cdx?url=<domain>&matchType=host&from=<YYYYMMDD 365 days before election>&to=<YYYYMMDD of election>&fl=timestamp,original,statuscode&filter=statuscode:200&limit=50"'
@@ -51,6 +53,11 @@ const LEADS_SCHEMA = {
 }
 
 
-return await parallel(args.map(c => () => agent(`Find campaign websites for mayoral finalists in ${c.city_name}, ${c.state_abb} (city_id ${c.city_id}, slug ${c.slug}). Read your finalists first: python3 -c 'import json; print(json.dumps([c for c in json.load(open("${OUT}/pilot_args.json")) if c["slug"]=="${c.slug}"][0]["finalists"], indent=1))'. Write one output object for every finalist in that list.
+const CITIES = args.cities || args
+const out = []
+for (let i = 0; i < CITIES.length; i += 2) {
+  out.push(...await parallel(CITIES.slice(i, i + 2).map(c => () => agent(`Find campaign websites for mayoral finalists in ${c.city_name}, ${c.state_abb} (city_id ${c.city_id}, slug ${c.slug}). Read your finalists first: python3 -c 'import json; print(json.dumps([c for c in json.load(open("${OUT}/../pilot_args.json")) if c["slug"]=="${c.slug}"][0]["finalists"], indent=1))'. Write one output object for every finalist in that list.
 ${RULES}
-Return the summary.`, { label: `discover:${c.slug}`, phase: 'Discover', schema: LEADS_SCHEMA, model: 'haiku' })))
+Return the summary.`, { label: `${args.model || 'haiku'}:${c.slug}`, phase: 'Discover', schema: LEADS_SCHEMA, model: args.model || 'haiku' }))))
+}
+return out

@@ -1,0 +1,124 @@
+[
+  {
+    "candidate_election_id": "3451000__2018-05-08__regular__9eeb596e6a104922",
+    "candidate_name": "Ras J. Baraka",
+    "election_date": "2018-05-08",
+    "status": "incomplete",
+    "campaign_url": "",
+    "registrable_domain": "",
+    "lead_sources": [],
+    "searches_run": [
+      "WebSearch quota exhausted (200/200 calls used in session)",
+      "DuckDuckGo through mac2 returned no structured results",
+      "Wayback CDX API through mac2 experienced connection errors"
+    ],
+    "wayback_window_captures": 0,
+    "first_capture_in_window": "",
+    "checked_capture_url": "",
+    "page_evidence": "",
+    "other_profiles": [],
+    "note": "WebSearch reached quota limit before any Newark queries could run. DuckDuckGo fallback through mac2 did not return parseable results. Wayback API requests through mac2 timed out or returned empty results. Unable to complete search."
+  },
+  {
+    "candidate_election_id": "3451000__2018-05-08__regular__dee9688ee6781929",
+    "candidate_name": "Gayle Chaneyfield Jenkins",
+    "election_date": "2018-05-08",
+    "status": "incomplete",
+    "campaign_url": "",
+    "registrable_domain": "",
+    "lead_sources": [],
+    "searches_run": [
+      "WebSearch quota exhausted before this query",
+      "DuckDuckGo through mac2 returned no structured results",
+      "Wayback CDX API through mac2 experienced connection errors"
+    ],
+    "wayback_window_captures": 0,
+    "first_capture_in_window": "",
+    "checked_capture_url": "",
+    "page_evidence": "",
+    "other_profiles": [],
+    "note": "Same tool limitations as above. Search tools unavailable for this candidate."
+  },
+  {
+    "candidate_election_id": "3451000__2022-05-10__regular__3f8b3ae6b8cbea06",
+    "candidate_name": "Ras Baraka",
+    "election_date": "2022-05-10",
+    "status": "incomplete",
+    "campaign_url": "",
+    "registrable_domain": "rasbaraka.com",
+    "lead_sources": [
+      "Wayback Machine CDX query"
+    ],
+    "searches_run": [
+      "Wayback CDX check found rasbaraka.com with 200 captures in 2021-2022",
+      "Content verification fetch timed out"
+    ],
+    "wayback_window_captures": 3,
+    "first_capture_in_window": "20211219191841",
+    "checked_capture_url": "https://web.archive.org/web/20211219191841id_/http://rasbaraka.com/",
+    "page_evidence": "Partial content retrieved but appears to be generic landing page (Google AdSense placeholder), not campaign website content.",
+    "other_profiles": [],
+    "note": "Found rasbaraka.com domain with Wayback captures, but content retrieved appears to be a placeholder/parked domain rather than an active campaign website. Need manual verification of actual page content or alternative domain."
+  },
+  {
+    "candidate_election_id": "3451000__2022-05-10__regular__bbe3c9f98b3aec2f",
+    "candidate_name": "Sheila Montague",
+    "election_date": "2022-05-10",
+    "status": "incomplete",
+    "campaign_url": "",
+    "registrable_domain": "",
+    "lead_sources": [],
+    "searches_run": [
+      "WebSearch quota exhausted before any queries",
+      "Wayback CDX API through mac2 failed to return results"
+    ],
+    "wayback_window_captures": 0,
+    "first_capture_in_window": "",
+    "checked_capture_url": "",
+    "page_evidence": "",
+    "other_profiles": [],
+    "note": "Unable to search for this 2022 runner-up candidate due to WebSearch quota exhaustion and Wayback API tool failures."
+  },
+  {
+    "candidate_election_id": "3451000__2026-05-12__regular__9eeb596e6a104922",
+    "candidate_name": "Ras J. Baraka",
+    "election_date": "2026-05-12",
+    "status": "incomplete",
+    "campaign_url": "",
+    "registrable_domain": "rasbaraka.com",
+    "lead_sources": [
+      "Known domain from prior election cycle"
+    ],
+    "searches_run": [
+      "WebSearch quota exhausted",
+      "DuckDuckGo fallback failed",
+      "Wayback CDX API through mac2 timed out for 2026 window"
+    ],
+    "wayback_window_captures": 0,
+    "first_capture_in_window": "",
+    "checked_capture_url": "",
+    "page_evidence": "",
+    "other_profiles": [],
+    "note": "Cannot verify 2026 captures due to tool failures. rasbaraka.com known to exist from 2022 cycle but cannot confirm 2026 campaign activity or provide Wayback evidence for this election."
+  },
+  {
+    "candidate_election_id": "3451000__2026-05-12__regular__d92169301e43f8c4",
+    "candidate_name": "Jhamar D. Youngblood",
+    "election_date": "2026-05-12",
+    "status": "incomplete",
+    "campaign_url": "",
+    "registrable_domain": "",
+    "lead_sources": [],
+    "searches_run": [
+      "WebSearch quota exhausted",
+      "DuckDuckGo through mac2 returned no results",
+      "Wayback CDX attempts timed out"
+    ],
+    "wayback_window_captures": 0,
+    "first_capture_in_window": "",
+    "checked_capture_url": "",
+    "page_evidence": "",
+    "other_profiles": [],
+    "note": "No search results available for this 2026 runner-up candidate. All search and verification tools unavailable or failed."
+  }
+]

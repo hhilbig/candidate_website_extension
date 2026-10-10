@@ -1,0 +1,47 @@
+[
+  {
+    "candidate_election_id": "3916000__2025-11-04__regular__283ee4c4cd80d9b6",
+    "candidate_name": "Justin Bibb",
+    "election_date": "2025-11-04",
+    "status": "incomplete",
+    "campaign_url": "",
+    "registrable_domain": "",
+    "lead_sources": [],
+    "searches_run": [
+      "WebSearch: Justin Bibb mayor Cleveland campaign website 2025 (budget exhausted)",
+      "DuckDuckGo: Justin Bibb Cleveland mayor campaign website 2025 (CAPTCHA blocked)",
+      "Wayback CDX: bibbformayor.com (no response)",
+      "Wayback CDX: justinbibb.com (no response)",
+      "Wayback CDX: bibb2025.com (no response)",
+      "Ballotpedia: 2025 Cleveland mayoral election (connection failed)"
+    ],
+    "wayback_window_captures": 0,
+    "first_capture_in_window": "",
+    "checked_capture_url": "",
+    "page_evidence": "",
+    "other_profiles": [],
+    "note": "WebSearch exhausted (200/200 calls used). DuckDuckGo search hit CAPTCHA. Ballotpedia not accessible. Wayback CDX queries returned no response via mac2. Could not verify campaign website."
+  },
+  {
+    "candidate_election_id": "3916000__2025-11-04__regular__1a1deebdc005b59e",
+    "candidate_name": "Laverne Gore",
+    "election_date": "2025-11-04",
+    "status": "incomplete",
+    "campaign_url": "",
+    "registrable_domain": "",
+    "lead_sources": [],
+    "searches_run": [
+      "WebSearch: exhausted budget",
+      "DuckDuckGo: blocked by CAPTCHA",
+      "Wayback CDX: goreformayor.com (no response)",
+      "Wayback CDX: lavemegore.com (no response)",
+      "Wayback CDX: gore2025.com (no response)"
+    ],
+    "wayback_window_captures": 0,
+    "first_capture_in_window": "",
+    "checked_capture_url": "",
+    "page_evidence": "",
+    "other_profiles": [],
+    "note": "Same as Justin Bibb. Search tools failed. Could not complete campaign website search."
+  }
+]
