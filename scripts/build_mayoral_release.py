@@ -37,13 +37,26 @@ from scripts.icpsr_replicate_coding import icpsr_clean_text  # noqa: E402
 
 COVERAGE = REPO / "data/municipal_discovery/top100_coverage/outputs"
 DISCOVERY = REPO / "data/municipal_discovery/top100_coverage/url_discovery"
-STATUSES = ("text", "excluded_site_check", "no_usable_pages", "site_not_archived", "check_incomplete", "no_url_lead")
-FINALIST_COLUMNS = ["candidate_election_id", "election_id", "city_id", "city_name", "state_abb", "year", "election_date",
-                    "election_type", "candidate_name", "official_result_role", "official_votes", "result_source_url",
+STATUSES = ("text", "excluded_site_check", "no_usable_pages", "site_rejected", "site_not_archived", "check_incomplete",
+            "no_url_lead")
+INPUTS = REPO / "data/municipal_discovery/top100_coverage/inputs"
+REJECTIONS = REPO / "data/municipal_discovery/top100_coverage/release_site_check/roster_url_rejections.csv"
+RUN_NAMES = {"production": "first_150_pages", "uncapped": "remaining_pages", "carymoon_extra": "supplementary_query"}
+NICKNAMES = {"bill": "william", "billy": "william", "will": "william", "bob": "robert", "rob": "robert", "bobby": "robert",
+             "jim": "james", "jimmy": "james", "mike": "michael", "tom": "thomas", "dave": "david", "joe": "joseph",
+             "rick": "richard", "dick": "richard", "ed": "edward", "eddie": "edward", "steve": "steven", "chris": "christopher",
+             "kate": "katherine", "katie": "katherine", "betsy": "elizabeth", "beth": "elizabeth", "liz": "elizabeth",
+             "dan": "daniel", "danny": "daniel", "tony": "anthony", "andy": "andrew", "drew": "andrew", "ron": "ronald",
+             "don": "donald", "pat": "patrick", "matt": "matthew", "sam": "samuel", "ben": "benjamin", "greg": "gregory",
+             "jeff": "jeffrey", "ken": "kenneth", "larry": "lawrence", "jerry": "gerald", "terry": "terrence",
+             "sue": "susan", "nick": "nicholas", "rich": "richard", "charlie": "charles", "chuck": "charles"}
+FINALIST_COLUMNS = ["candidate_election_id", "person_id", "election_id", "city_id", "city_name", "state_abb", "year",
+                    "election_date", "election_type", "candidate_name", "official_result_role", "official_votes",
+                    "top_two_vote_share", "total_votes", "vote_share", "incumbent", "result_source_url",
                     "eligible", "verification_status", "url_lead", "url_lead_basis", "campaign_urls", "text_status",
                     "n_sites", "n_pages_usable", "n_char_usable"]
-PANEL_COLUMNS = ["candidate_election_id", "election_id", "city_id", "city_name", "state_abb", "year", "election_date",
-                 "candidate_name", "official_result_role", "n_sites", "n_pages", "first_capture", "last_capture",
+PANEL_COLUMNS = ["candidate_election_id", "person_id", "election_id", "city_id", "city_name", "state_abb", "year", "election_date",
+                 "candidate_name", "official_result_role", "incumbent", "n_sites", "n_pages", "n_pages_before_election", "first_capture", "last_capture",
                  "n_char", "n_words", "n_tags", "n_clean_tags", "text", "text_clean"]
 
 
@@ -86,18 +99,57 @@ def truth(value: str) -> bool:
     return str(value).strip().lower() == "true"
 
 
-def text_status(person: dict, usable_pages: int, site_states: list[str], incomplete: set[str]) -> str:
+def text_status(person: dict, usable_pages: int, site_states: list[str], incomplete: set[str],
+                rejected: frozenset = frozenset()) -> str:
     if usable_pages:
         return "text"
     if site_states and all(s == "excluded" for s in site_states):
         return "excluded_site_check"
     if truth(person["downloaded_content"]):
         return "no_usable_pages"
+    if person["candidate_election_id"] in rejected:
+        return "site_rejected"
     if person["candidate_election_id"] in incomplete:
         return "check_incomplete"
     if truth(person["url_lead"]):
         return "site_not_archived"
     return "no_url_lead"
+
+
+def name_parts(name: str) -> tuple[str, str]:
+    """(canonical first name, last name) for person matching within a city."""
+    import re
+    import unicodedata
+    plain = unicodedata.normalize("NFKD", name).encode("ascii", "ignore").decode().lower()
+    plain = re.sub(r"\(.*?\)|\".*?\"|'[^']*'", " ", plain)
+    words = [w.strip(".,") for w in plain.replace(",", " ").split()]
+    words = [w for w in words if w and w not in {"jr", "sr", "ii", "iii", "iv", "dr"} and len(w) > 1]
+    if not words:
+        return "", ""
+    first = NICKNAMES.get(words[0], words[0])
+    return first, words[-1]
+
+
+def person_ids(people: list[dict]) -> dict[str, str]:
+    """One ID per person and city: same city, same last name, same canonical first initial (e.g. Ed Lee = Edwin M. Lee)."""
+    import hashlib
+    out = {}
+    for p in people:
+        first, last = name_parts(p["candidate_name"])
+        key = f"{p['city_id']}|{last}|{first[:1]}"
+        out[p["candidate_election_id"]] = "person_" + hashlib.sha256(key.encode()).hexdigest()[:12]
+    return out
+
+
+def total_votes_by_election() -> dict[tuple[str, str], tuple[str, str]]:
+    """(city roster fips or city_id, election_date) -> (total_votes, basis) from the results inputs, where recorded."""
+    out = {}
+    for path in INPUTS.glob("*_results.json"):
+        for rec in json.loads(path.read_text()):
+            if rec.get("total_votes") not in (None, ""):
+                out[(str(rec.get("roster_place_fips", "")).lstrip("0"), rec["election_date"])] = (
+                    str(rec["total_votes"]), rec.get("total_votes_basis", ""))
+    return out
 
 
 def build(corpus_path: Path, site_check_path: Path, out_dir: Path) -> dict:
@@ -124,24 +176,64 @@ def build(corpus_path: Path, site_check_path: Path, out_dir: Path) -> dict:
                                                      corpus["capture_timestamp"].to_pylist())]
     usable = pc.and_(pc.and_(corpus["in_text_window"], pc.invert(corpus["excluded"])),
                      pc.and_(pc.equal(corpus["duplicate_of"], ""), pa.array(passed)))
+    days = corpus["days_from_election"].to_pylist()
+    phase = pa.array(["before" if d < 0 else "election_day" if d == 0 else "after" for d in days])
+    # Neutral provenance names: collection rounds in date order, and what each run collected.
+    rounds = {b: f"round_{i:02d}" for i, b in enumerate(sorted(set(corpus["batch"].to_pylist()),
+                                                                key=lambda b: (b.rsplit("_", 1)[-1], b)), 1)}
+    corpus = corpus.set_column(corpus.schema.get_field_index("batch"), "batch",
+                               pa.array([rounds[b] for b in corpus["batch"].to_pylist()]))
+    corpus = corpus.set_column(corpus.schema.get_field_index("run"), "run",
+                               pa.array([RUN_NAMES.get(r, r) for r in corpus["run"].to_pylist()]))
+    corpus = corpus.append_column("phase", phase)
     corpus = corpus.append_column("site_check_passed", pa.array(passed)).append_column("release_usable", usable)
+    (out_dir.parent / f"{out_dir.name}_round_names.json").write_text(json.dumps(rounds, indent=1))
     pq.write_table(corpus, out_dir / "mayoral_page_corpus.parquet", compression="zstd")
 
     pages = defaultdict(list)
     for row in corpus.filter(usable).select(["candidate_election_id", "target_id", "original_url", "capture_timestamp",
-                                             "text"]).to_pylist():
+                                             "text", "phase"]).to_pylist():
         pages[row["candidate_election_id"]].append(row)
     site_states = defaultdict(list)
     for (finalist, _), row in sites.items():
         site_states[finalist].append(row["status"])
     incomplete = incomplete_checks()
+    rejected = frozenset(r["candidate_election_id"] for r in read_csv(REJECTIONS)) if REJECTIONS.exists() else frozenset()
+    pids = person_ids(people)
+    totals = total_votes_by_election()
+    cities = {r["city_id"]: r for r in read_csv(COVERAGE / "cities.csv")}
+    by_election = defaultdict(list)
+    for person in people:
+        by_election[person["election_id"]].append(person)
+    # Incumbency, derived: the finalist won the city's previous decisive election in the data. Unknown ("") for a
+    # city's first election in the data, since the earlier mayor is not recorded here.
+    decisive = sorted({(p["city_id"], p["election_date"], p["election_id"]) for p in people
+                       if truth(p["eligible"])})
+    previous_winner, incumbent = {}, {}
+    for city_id, date, election_id in decisive:
+        winners = [pids[p["candidate_election_id"]] for p in by_election[election_id] if p["official_result_role"] == "winner"]
+        prior = previous_winner.get(city_id)
+        for p in by_election[election_id]:
+            incumbent[p["candidate_election_id"]] = "" if prior is None else str(pids[p["candidate_election_id"]] == prior)
+        if winners:
+            previous_winner[city_id] = winners[0]
     finalists, panel = [], []
     for person in people:
+        votes = [int(p["official_votes"]) for p in by_election[person["election_id"]] if str(p["official_votes"]).isdigit()]
+        own_votes = int(person["official_votes"]) if str(person["official_votes"]).isdigit() else None
+        city = cities.get(person["city_id"], {})
+        total = totals.get((str(city.get("roster_place_fips") or person["city_id"]).lstrip("0"), person["election_date"])) \
+            or totals.get((person["city_id"].lstrip("0"), person["election_date"]))
+        person = {**person, "person_id": pids[person["candidate_election_id"]],
+                  "incumbent": incumbent.get(person["candidate_election_id"], "") if truth(person["eligible"]) else "",
+                  "top_two_vote_share": round(own_votes / sum(votes), 4) if own_votes is not None and len(votes) == 2 and sum(votes) else "",
+                  "total_votes": total[0] if total else "",
+                  "vote_share": round(own_votes / int(total[0]), 4) if total and own_votes is not None and int(total[0]) else ""}
         own = sorted(pages.get(person["candidate_election_id"], []),
                      key=lambda p: (p["target_id"], depth(p["original_url"]), p["original_url"], p["capture_timestamp"]))
         urls = json.loads(person["exact_urls"] or "[]") + ([person["discovered_campaign_url"]] if person["discovered_campaign_url"] else [])
-        status = text_status(person, len(own), site_states.get(person["candidate_election_id"], []), incomplete) \
-            if truth(person["eligible"]) else ""
+        status = text_status(person, len(own), site_states.get(person["candidate_election_id"], []), incomplete,
+                             rejected) if truth(person["eligible"]) else ""
         text = "#+#".join(p["text"] for p in own)
         finalists.append({**person, "campaign_urls": json.dumps(urls), "text_status": status,
                           "n_sites": len({p["target_id"] for p in own}), "n_pages_usable": len(own), "n_char_usable": len(text)})
@@ -149,6 +241,7 @@ def build(corpus_path: Path, site_check_path: Path, out_dir: Path) -> dict:
             clean = icpsr_clean_text(text)
             stamps = sorted(p["capture_timestamp"] for p in own)
             panel.append({**person, "n_sites": len({p["target_id"] for p in own}), "n_pages": len(own),
+                          "n_pages_before_election": sum(p["phase"] == "before" for p in own),
                           "first_capture": stamps[0], "last_capture": stamps[-1], "n_char": len(text),
                           "n_words": len(text.split()), "n_tags": clean["n_tags"], "n_clean_tags": clean["n_clean_tags"],
                           "text": text, "text_clean": clean["text"]})

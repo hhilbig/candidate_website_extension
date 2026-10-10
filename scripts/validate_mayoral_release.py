@@ -23,7 +23,8 @@ from pathlib import Path
 from urllib.parse import urlsplit
 
 csv.field_size_limit(sys.maxsize)
-STATUSES = {"text", "excluded_site_check", "no_usable_pages", "site_not_archived", "check_incomplete", "no_url_lead"}
+STATUSES = {"text", "excluded_site_check", "no_usable_pages", "site_rejected", "site_not_archived", "check_incomplete",
+            "no_url_lead"}
 DATA_FILES = ["mayoral_cities.csv", "mayoral_city_years.csv", "mayoral_elections.csv", "mayoral_finalists.csv",
               "mayoral_finalist_panel.csv", "mayoral_page_corpus.parquet"]
 
@@ -70,6 +71,9 @@ def validate(release: Path) -> dict:
             check(f["text_status"] == "", f"{f['candidate_election_id']}: ineligible finalist has a text status")
         if f["text_status"] == "no_url_lead":
             check(f["url_lead"] != "True", f"{f['candidate_election_id']}: no_url_lead but a URL lead exists")
+        if "person_id" in f:
+            check(f["person_id"].startswith("person_"), f"{f['candidate_election_id']}: person_id missing")
+            check(f["incumbent"] in {"True", "False", ""}, f"{f['candidate_election_id']}: bad incumbent value")
     with_text = {f["candidate_election_id"] for f in eligible if f["text_status"] == "text"}
     panel_ids = [p["candidate_election_id"] for p in panel]
     check(len(panel_ids) == len(set(panel_ids)), "panel has duplicate finalists")
@@ -82,6 +86,10 @@ def validate(release: Path) -> dict:
         rule = r["in_text_window"] and not r["excluded"] and not r["duplicate_of"] and r["site_check_passed"]
         check(r["release_usable"] == rule, f"{r['page_id']}: release_usable differs from the rule")
         check(abs(r["days_from_election"]) <= 365 or not r["release_usable"], f"{r['page_id']}: usable outside window")
+        if "phase" in r:
+            d = r["days_from_election"]
+            check(r["phase"] == ("before" if d < 0 else "election_day" if d == 0 else "after"), f"{r['page_id']}: phase")
+        check("\x00" not in r["text"] or not r["release_usable"], f"{r['page_id']}: usable page contains NUL bytes")
         if r["release_usable"]:
             usable[r["candidate_election_id"]].append(r)
     by_id = {f["candidate_election_id"]: f for f in finalists}

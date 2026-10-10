@@ -77,3 +77,13 @@ def test_validator_rejects_status_without_panel(tmp_path):
     rows[1]["text_status"] = "text"
     write(root / "mayoral_finalists.csv", rows)
     assert any("panel rows differ" in e for e in validate(root)["errors"])
+
+
+def test_site_rejected_status_and_person_matching():
+    from scripts.build_mayoral_release import name_parts, person_ids
+    assert text_status(person(url_lead="True"), 0, [], set(), frozenset({"a"})) == "site_rejected"
+    assert name_parts("Ed Lee")[1] == name_parts("Edwin M. Lee")[1] == "lee"
+    people = [{"candidate_election_id": i, "city_id": "c", "candidate_name": n} for i, n in
+              [("1", "Bill Bell"), ("2", "William V. (Bill) Bell"), ("3", "Anjanee Bell"), ("4", "Ed Lee"), ("5", "Edwin M. Lee")]]
+    ids = person_ids(people)
+    assert ids["1"] == ids["2"] != ids["3"] and ids["4"] == ids["5"]
