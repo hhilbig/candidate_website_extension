@@ -175,6 +175,7 @@ Approved by Hanno on October 10:
 - (d) Usability: `phase` column, one `election_id` format, neutral batch and run names, loading example.
 - License: same terms as the House/Senate deposit (CC BY 4.0 on the compilation); proposed takedown contact hhilbig@ucdavis.edu, to be confirmed.
 - The 20-city expansion pilot is not run now.
+Model pilot for (b), October 10 (Hanno asked whether Haiku can replace Sonnet for search): same 20 finalists in Jersey City, Newark, Fort Wayne, Albuquerque and Cleveland, same script (`scripts/workflows_mayoral_haiku_search_pilot.js`), Brave search, two cities at a time; answer key `url_discovery/repair_20261004/`. Haiku 4.5 (run2, `wf_a5f2ae57-ea2`, 357k tokens): 6 of 15 known sites found, 6 known sites called not_found (Baraka x3, Henry x3), 5 incomplete, one Board of Education page accepted without the mayoral check, one result file not written. Sonnet (run3, `wf_ec2095da-c81`, 418k tokens): 14 of 15 known sites found (Gore recorded not_found under the strict rule, URL kept for review), plus two sites the key missed (Berry 2013 mayorberry.com, Didier 2023 tomdidierfortwayne.com), no false acceptance. Decision proposed: Sonnet for the fourth pass. Outputs `url_discovery/haiku_pilot_20261010/`.
 Order: defects 1–4, then (a), then (b), then (c) and (d), then one rebuild, site check, validation and documentation.
 
 Release does not require a website for every finalist or a fixed coverage percentage.
