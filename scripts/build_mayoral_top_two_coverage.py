@@ -604,6 +604,19 @@ def main():
     if legacy_leads_path:
         discovered_leads = discovered_leads + read_csv(ROOT / legacy_leads_path)
         inputs.append(Path(legacy_leads_path))
+    # The fourth search pass (October 10, 2026): an accepted or outside-window result with a URL replaces an earlier
+    # lead for the same finalist; any other result is added only for a finalist without an earlier lead.
+    pass4_path = config.get("pass4_url_leads")
+    if pass4_path:
+        merged = {lead["candidate_election_id"]: lead for lead in discovered_leads}
+        if len(merged) != len(discovered_leads):
+            raise ValueError("Duplicate discovered URL lead")
+        for lead in read_csv(ROOT / pass4_path):
+            better = lead["final_status"] in {"accepted", "outside_window"} and lead["campaign_url"]
+            if better or lead["candidate_election_id"] not in merged:
+                merged[lead["candidate_election_id"]] = lead
+        discovered_leads = list(merged.values())
+        inputs.append(Path(pass4_path))
     hashes = {str(p): sha(ROOT / p) for p in inputs}
     result = build(read_csv(ROOT / args.cities), read_csv(ROOT / ROSTER), read_csv(ROOT / URLS), records,
                    read_csv(ROOT / REVIEWS), read_csv(ROOT / VALIDATION), overrides, read_csv(ROOT / args.saved_evidence),

@@ -15,6 +15,9 @@ Inputs (data/municipal_discovery/top100_coverage/url_discovery/):
                             (option 3); applied last.
   repair_20261004/followup/ and followup2/  optional; repair attempts 2 and 3 for unfinished or checker-flagged
                             entries. Each later pass replaces the earlier result for every finalist it redid.
+  pass4_20261010/           optional; the fourth search pass (October 10, 2026), which includes finalists added by
+                            the population repair. Written to a separate file, linkage/pass4_url_leads.csv; the
+                            coverage build lets an accepted or outside-window result there replace an earlier lead.
 
 A "reject" verdict removes the URL (final status "rejected"). A "downgrade" verdict
 sets an accepted lead to "outside_window". "minor" verdicts are kept as notes.
@@ -47,6 +50,8 @@ SWEEP_BASIS = "domain_sweep_wayback_capture_checked"
 COMMONCRAWL_BASIS = "domain_sweep_commoncrawl_capture_checked"
 REPAIR_BASIS = "agent_search_repair_wayback_capture_checked"
 SWEEP_AFTER_BASIS = "domain_sweep_after_election_capture_checked"
+PASS4_BASIS = "agent_search_pass4_wayback_capture_checked"
+PASS4_OUTPUT = BASE / "linkage" / "pass4_url_leads.csv"
 
 
 def capture_timestamp(url: str) -> str:
@@ -184,6 +189,37 @@ def merge_followup(first_leads: dict[str, list[dict]], first: list[dict], redone
     return kept + followup, first_incomplete + followup_incomplete
 
 
+def pass4_rows(pass_dir: Path) -> tuple[list[dict], int]:
+    """Rows for the fourth search pass after its checker verdicts; incomplete entries are not applied."""
+    pass_args = json.loads((pass_dir / "pass4_args.json").read_text())
+    leads = {c["slug"]: json.loads((pass_dir / f"{c['slug']}_url_leads.json").read_text()) for c in pass_args}
+    items, incomplete = repair_verdicts(leads, json.loads((pass_dir / "pass4_checker_verdicts.json").read_text()))
+    sent = {f["candidate_election_id"]: (c["slug"], f) for c in pass_args for f in f_list(c)}
+    rows, seen = [], set()
+    for item in items:
+        key = item["candidate_election_id"]
+        if key not in sent or key in seen or item.get("status") not in STATUSES:
+            raise ValueError(f"pass4: bad, unknown or duplicate entry for {key}")
+        seen.add(key)
+        slug, finalist = sent[key]
+        final = item["status"]
+        keep_url = final in {"accepted", "outside_window"} and bool(item.get("campaign_url"))
+        rows.append({
+            "candidate_election_id": key, "city_slug": slug, "candidate_name": finalist["candidate_name"],
+            "election_date": finalist["election_date"], "discovery_status": final, "checker_severity": "",
+            "final_status": final, "campaign_url": item.get("campaign_url", "") if keep_url else "",
+            "registrable_domain": item.get("registrable_domain", "") if keep_url else "",
+            "first_capture_in_window": item.get("first_capture_in_window", "") if final == "accepted" else "",
+            "checked_capture_timestamp": capture_timestamp(item.get("checked_capture_url", "")) if final == "accepted" else "",
+            "checked_capture_url": item.get("checked_capture_url", "") if final == "accepted" else "",
+            "wayback_window_captures": item.get("wayback_window_captures", ""),
+            "page_evidence": item.get("page_evidence", "") if final == "accepted" else "",
+            "lead_sources": " | ".join(item.get("lead_sources", [])), "checker_issue": "",
+            "discovery_note": item.get("note", ""), "link_basis": PASS4_BASIS if keep_url else "",
+            "replaces_legacy": "True", "search_group": finalist["group"]})
+    return rows, incomplete
+
+
 def main() -> int:
     cities = json.loads((DISCOVERY / "stage2_args.json").read_text())
     leads = {}
@@ -232,6 +268,17 @@ def main() -> int:
         counts[row["final_status"]] = counts.get(row["final_status"], 0) + 1
     print(json.dumps({"finalists": len(rows), "final_status": counts, "repair_incomplete_not_applied": repair_incomplete,
                       "after_sweep_incomplete_not_applied": after_incomplete}, indent=1))
+    pass_dir = DISCOVERY / "pass4_20261010"
+    if (pass_dir / "pass4_checker_verdicts.json").exists():
+        rows4, incomplete4 = pass4_rows(pass_dir)
+        with PASS4_OUTPUT.open("w", newline="") as handle:
+            writer = csv.DictWriter(handle, fieldnames=COLUMNS + ["replaces_legacy", "search_group"])
+            writer.writeheader()
+            writer.writerows(rows4)
+        counts4 = {}
+        for row in rows4:
+            counts4[row["final_status"]] = counts4.get(row["final_status"], 0) + 1
+        print(json.dumps({"pass4_finalists": len(rows4), "final_status": counts4, "incomplete_not_applied": incomplete4}, indent=1))
     return 0
 
 
