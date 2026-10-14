@@ -352,6 +352,11 @@ def build(cities, roster, urls, results, reviews=(), validations=(), city_year_o
                     archive = True
                     refs = sorted(set(refs) | {"url_discovery:" + stamp})
                 saved_pages = pages.get(candidate_id)
+                # A fourth-pass lead replaces a site that the release site check rejected; pages saved from the
+                # rejected domain no longer count for this finalist.
+                if (discovered_url and saved_pages and lead["link_basis"] == "agent_search_pass4_wayback_capture_checked"
+                        and saved_pages["registrable_domain"].lower() not in discovered_url.lower()):
+                    saved_pages = None
                 if discovered_url and saved_pages and int(saved_pages["pages_with_text_in_window"]) > 0:
                     if truth(saved_pages["files_verified"]) is not True:
                         raise ValueError("Stage 3 saved pages failed hash verification")

@@ -187,6 +187,11 @@ Defect: for the other 16 cities (57 finalists), macOS refused the agents access 
 Hanno decided on October 13 that the rerun of these 16 cities completes the approved fourth pass; it is not a fifth repair attempt.
 Rerun `wf_51ccf5e6-dc5` (same script, `args.out` set to a folder outside `~/Documents`, in the session scratchpad `pass4_rerun/`), jobstatus `mayoral_search_pass4_rerun`. Wayback from mac2 answered only part of the requests at the start.
 Next: copy the 16 files into `pass4_20261010/`, merge the checker verdicts, rebuild the leads, then run the `stage3v` scrape from the droplet (the archive does not answer the home network).
+Rerun result (October 14, 18.6 hours, 2.4 million tokens): 57 finalists, 38 accepted, 3 outside_window, 16 incomplete. Brave (HTTP 429) and the archive (HTTP 503) blocked mac2 from about 07:00 on October 14, which caused most incomplete entries.
+Integrated: 16 files copied, verdicts merged (one downgrade: Pulido 2018). The coordinating agent replaced two Tulsa capture links that had only a date (Bynum 2016 and 2020) with real in-window captures. Whole pass: 53 accepted, 7 outside_window, 19 not_found, 20 incomplete (not applied).
+`pass4_url_leads` is registered in `config/mayoral_top_two_build.json`. The coverage build ignores pages from a rejected domain when a pass 4 lead replaces it (Healy 2013, Beutler 2011, Fraim 2014, Pulido 2012).
+Coverage of 860 finalists: URL lead 728 to 769, archive capture 678 to 725, downloaded text 673 to 669 (the four rejected sites). 56 tests pass.
+Open decision for Hanno: whether to search the 20 incomplete entries again as part of pass 4. Next: build the `stage3v` targets with the pass 4 sites and scrape them.
 
 
 Release does not require a website for every finalist or a fixed coverage percentage.
