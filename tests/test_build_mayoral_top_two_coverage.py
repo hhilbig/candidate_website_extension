@@ -438,6 +438,20 @@ def test_stage3_pages_need_verified_hashes_and_matching_domain():
         build(cities, roster, urls, [result], discovered_leads=[_discovered(key)], stage3_pages=[_pages(key, domain='other.test')])
 
 
+def test_stage3_pages_on_two_domains_use_the_lead_domain():
+    cities, roster, urls, result = fixture()
+    key = _runner_up_id(cities, roster, urls, result)
+    two = [_pages(key, n='0', domain='other.test'), dict(_pages(key, n='5'), target_id='stage3_y')]
+    row = next(r for r in build(cities, roster, urls, [result], discovered_leads=[_discovered(key)], stage3_pages=two)[3]
+               if r['candidate_election_id'] == key)
+    assert row['downloaded_content'] is True and 'stage3_pages:stage3_y:5' in row['evidence_refs']
+    with pytest.raises(ValueError, match='Duplicate stage 3'):
+        build(cities, roster, urls, [result], discovered_leads=[_discovered(key)], stage3_pages=[_pages(key), _pages(key)])
+    with pytest.raises(ValueError, match='none on the discovered'):
+        build(cities, roster, urls, [result], discovered_leads=[_discovered(key)],
+              stage3_pages=[_pages(key, domain='other.test'), _pages(key, domain='third.test')])
+
+
 def test_checked_legacy_attribution_lets_saved_pages_count():
     cities, roster, urls, result = fixture()
     saved = [{'candidate_url_id': 'url-a', 'candidate_year_id': 'legacy-a', 'exact_normalized_url': 'https://example.test/Campaign',

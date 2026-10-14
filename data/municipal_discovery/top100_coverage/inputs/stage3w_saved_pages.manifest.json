@@ -1,0 +1,11 @@
+{
+ "fetch_attempts_sha256": {
+  "data/municipal_archive_acquisition/mayoral_stage3w_20261014/runs/production": "83c527e82698926fd8e54338a1ed6e1cb76a536a614462cd17505988a89b8f95",
+  "data/municipal_archive_acquisition/mayoral_stage3w_20261014/runs/uncapped": "508d6347d5e222214051e0ef38d710909eb42bfbf9fb0d5e8f47e7e6df7a73b8"
+ },
+ "targets_sha256": "92c6c049ccf77e85d04756536b3d7cc717eb93f01db3abe4a842a994a9325a6b",
+ "output_sha256": "2f5e5555ac0b45df0118961bb35d2040156ddeedca9f83c60ad20a5606b20702",
+ "rows": 57,
+ "rows_with_pages_in_window": 54,
+ "all_files_verified": true
+}

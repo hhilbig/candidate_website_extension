@@ -239,11 +239,13 @@ def build(cities, roster, urls, results, reviews=(), validations=(), city_year_o
                 raise ValueError("Legacy attribution names a URL that is not linked to its candidate-year")
             attributed_keys.add((row["candidate_url_id"], row["candidate_year_id"]))
     # Saved site pages from the stage 3 scrape of discovered URLs (scripts/summarize_mayoral_stage3_pages.py).
-    pages = {}
+    # A finalist can have pages from more than one domain when a later batch scraped a newly accepted domain
+    # (October 14, 2026); the build uses the summary on the domain of the finalist's checked lead.
+    pages = defaultdict(list)
     for row in stage3_pages:
-        if row["candidate_election_id"] in pages:
+        if any(r["registrable_domain"].lower() == row["registrable_domain"].lower() for r in pages[row["candidate_election_id"]]):
             raise ValueError("Duplicate stage 3 page summary")
-        pages[row["candidate_election_id"]] = row
+        pages[row["candidate_election_id"]].append(row)
     by_candidate = defaultdict(list)
     for row in urls:
         by_candidate[row["candidate_year_id"]].append(row)
@@ -351,7 +353,11 @@ def build(cities, roster, urls, results, reviews=(), validations=(), city_year_o
                         raise ValueError("Accepted discovered URL lacks a capture before the election")
                     archive = True
                     refs = sorted(set(refs) | {"url_discovery:" + stamp})
-                saved_pages = pages.get(candidate_id)
+                summaries = pages.get(candidate_id, [])
+                on_lead = [r for r in summaries if discovered_url and r["registrable_domain"].lower() in discovered_url.lower()]
+                saved_pages = on_lead[0] if on_lead else (summaries[0] if len(summaries) == 1 else None)
+                if not on_lead and len(summaries) > 1:
+                    raise ValueError("Several stage 3 page summaries and none on the discovered campaign domain")
                 # A fourth-pass lead replaces a site that the release site check rejected; pages saved from the
                 # rejected domain no longer count for this finalist.
                 if (discovered_url and saved_pages and lead["link_basis"] == "agent_search_pass4_wayback_capture_checked"

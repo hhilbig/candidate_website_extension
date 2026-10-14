@@ -1,0 +1,5 @@
+candidate_election_id,target_id,registrable_domain,election_date,pages_fetched,pages_with_text,pages_with_text_in_window,text_characters_in_window,first_timestamp_in_window,last_timestamp_in_window,files_verified
+3755000__2013-10-08__regular__b6ca278c8219853b,stage3_0fdc7e05886f7f6ea776e41d,robertweltzin.com,2013-10-08,1,1,1,9032,20131010013853,20131010013853,True
+0427820__2016-08-30__regular__5a47bf95a1f34dba,stage3_ba0c3037eb29ab32d938dc22,weiersformayor.com,2016-08-30,7,7,7,6556,20160111073244,20160727153448,True
+4835000__2023-12-09__regular__85280bbba80296c9,stage3_ef7968fdd5091ced033daed1,sheilaforhouston.com,2023-12-09,18,18,18,41659,20231029083851,20231207204654,True
+3719000__2021-11-02__regular__e68b57260a6c4ae8,stage3_fd0d999b6cb7e6bff005b47a,javieraformayor.com,2021-11-02,18,18,18,25661,20210922222614,20211118024525,True

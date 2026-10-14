@@ -1,0 +1,7 @@
+candidate_election_id,target_id,registrable_domain,election_date,pages_fetched,pages_with_text,pages_with_text_in_window,text_characters_in_window,first_timestamp_in_window,last_timestamp_in_window,files_verified
+5167000__2012-11-06__regular__b834a5c224c3cef0,stage3_02cde732e64d5018532ad0d4,dwightjonesformayor.com,2012-11-06,0,0,0,0,,,True
+5167000__2024-11-05__regular__ecbe52183bf66698,stage3_23bfc56844d26b1672ace543,mosbyrva.com,2024-11-05,26,26,26,84494,20240518111117,20250120164052,True
+0613392__2010-06-08__regular__3abed72847870237,stage3_5a123e632fb375286cda1b16,coxformayor.com,2010-06-08,7,7,7,27081,20100125192621,20100423041320,True
+3260600__2010-11-02__regular__4aa476f96bc965a5,stage3_6b00cedbe884a925ece93d48,bobcashell.com,2010-11-02,4,4,0,0,,,True
+0669000__2016-11-08__regular__09ea0f0bc9f70231,stage3_d97d28945ce825e6e17a2eb1,benjamin4mayor.com,2016-11-08,17,17,17,57073,20161018074348,20161129174950,True
+0465000__2016-11-08__regular__b81680a9d5458dd2,stage3_de4a9709ddab42e444cb45c3,lane4scottsdale2016.com,2016-11-08,18,18,18,58783,20160307223421,20161118030505,True
