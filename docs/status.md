@@ -191,7 +191,10 @@ Rerun result (October 14, 18.6 hours, 2.4 million tokens): 57 finalists, 38 acce
 Integrated: 16 files copied, verdicts merged (one downgrade: Pulido 2018). The coordinating agent replaced two Tulsa capture links that had only a date (Bynum 2016 and 2020) with real in-window captures. Whole pass: 53 accepted, 7 outside_window, 19 not_found, 20 incomplete (not applied).
 `pass4_url_leads` is registered in `config/mayoral_top_two_build.json`. The coverage build ignores pages from a rejected domain when a pass 4 lead replaces it (Healy 2013, Beutler 2011, Fraim 2014, Pulido 2012).
 Coverage of 860 finalists: URL lead 728 to 769, archive capture 678 to 725, downloaded text 673 to 669 (the four rejected sites). 56 tests pass.
-Open decision for Hanno: whether to search the 20 incomplete entries again as part of pass 4. Next: build the `stage3v` targets with the pass 4 sites and scrape them.
+Open decision for Hanno: whether to search the 20 incomplete entries again as part of pass 4.
+Batch `mayoral_stage3v_20261010` (4 sites from defect 3) is complete on mac2: 44 of 44 pages fetched, no new uncapped pages. Its jobstatus entry "failed" is out of date. Its page summary is not yet folded into `inputs/`.
+Batch `mayoral_stage3w_20261014`: `build_mayoral_stage3_targets.py` now reads `pass4_url_leads.csv` (a pass 4 lead replaces the earlier lead). 57 targets (52 accepted, 5 outside_window), 47 domains, all from pass 4. Started on mac2 October 14 with `run_mayoral_full_site_batch.sh`, jobstatus `mayoral-scrape-mayoral_stage3w_20261014`; mac2 reached the archive again.
+Next: when stage3w ends, summarize the stage3v and stage3w pages into `inputs/`, rebuild coverage, then the page corpus, page rules, site check, release build and validation.
 
 
 Release does not require a website for every finalist or a fixed coverage percentage.

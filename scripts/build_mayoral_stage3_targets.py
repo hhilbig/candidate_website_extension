@@ -24,6 +24,7 @@ import pandas as pd
 BASE = Path("data/municipal_discovery/top100_coverage")
 LEADS = BASE / "linkage/discovered_url_leads.csv"
 LEGACY_SEARCH_LEADS = BASE / "linkage/legacy_search_leads.csv"
+PASS4_LEADS = BASE / "linkage/pass4_url_leads.csv"
 COVERAGE = BASE / "outputs/candidate_coverage.csv"
 ACQUISITION = Path("data/municipal_archive_acquisition")
 PERIODS = ((2010, 2013), (2014, 2017), (2018, 2021), (2022, 2025), (2026, 2029))
@@ -134,6 +135,13 @@ def main() -> None:
     if LEGACY_SEARCH_LEADS.exists():
         # Checked leads that replace an unarchived old roster URL (legacy-lead search, October 9, 2026).
         extra = pd.read_csv(LEGACY_SEARCH_LEADS, keep_default_na=False, dtype=str)
+        leads = pd.concat([leads, extra[leads.columns]], ignore_index=True)
+    if PASS4_LEADS.exists():
+        # The fourth search pass (October 10, 2026): a result with a URL replaces the earlier lead for that finalist,
+        # as in the coverage build.
+        extra = pd.read_csv(PASS4_LEADS, keep_default_na=False, dtype=str)
+        extra = extra[extra["campaign_url"].ne("") & extra["final_status"].isin(["accepted", "outside_window"])]
+        leads = leads[~leads["candidate_election_id"].isin(extra["candidate_election_id"])]
         leads = pd.concat([leads, extra[leads.columns]], ignore_index=True)
     # Earlier batches exclude a finalist only together with the domain they scraped: a domain accepted later for the
     # same finalist must still be scraped (defect found October 10, 2026; three accepted sites had been skipped).
