@@ -9,7 +9,9 @@ export const meta = {
 // Approved by Hanno on October 10, 2026 (docs/status.md, approval (b)); repair attempt 4 on the stage 2 search blocker.
 // Input: pass4_args.json from scripts/build_mayoral_pass4_args.py. Model: Sonnet, chosen after the Haiku pilot.
 const REPO = '/Users/hanno/Documents/GitHub/candidate_website_extension'
-const OUT = REPO + '/data/municipal_discovery/top100_coverage/url_discovery/pass4_20261010'
+// args.out overrides the output folder. The October 13 rerun used a folder outside ~/Documents,
+// because macOS refused the agents access to ~/Documents for the last 16 cities on October 10.
+const OUT = args.out || REPO + '/data/municipal_discovery/top100_coverage/url_discovery/pass4_20261010'
 const RULES = `
 CONTEXT. Each finalist has a "group":
 - "stage2_only": the first search ran without a working search engine. Search from the start.

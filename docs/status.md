@@ -20,6 +20,10 @@ Hanno set the target on October 4, 2026:
 
 ## Resume here
 
+**October 13 estimate.** About 80 percent of the release work is complete. Tracks 1 and 2 are complete. Track 3 (mayoral) is about 70 percent complete and holds most of the remaining steps. Track 4 (2026) is about 85 percent complete; only the wait to November 17 and the final build remain.
+Remaining agent time about 1.5–2 days (rerun of 16 cities, `stage3v` scrape, rebuild, site check, validation, documents). Hanno's time about 2 hours (README, codebook, publication approval). The November 17 endpoint controls the wall-clock finish.
+Largest uncertainty: whether the Internet Archive accepts the scrape traffic. Current mayoral state: see "Fourth pass, result and rerun (October 13)" in section 3. The October 4 text below is history.
+
 Updated October 4, 2026, 21:00 PDT. Three mayoral jobs were running at that time. Hanno approved all of them.
 
 **A. Stage 2 repair search (done, commit `7d49bc9`).** Stage 2 recorded 112 finalists as `not_found`, but its notes show that no web search ran or the archive check failed.
@@ -173,11 +177,17 @@ Approved by Hanno on October 10:
 - (b) A fourth search pass on the stage 2 search blocker for about 58 finalists (38 stage-2-only `no_url_lead`, 11 one-attempt `check_incomplete`, 9 excluded without recovery) plus the new finalists from (a), with a working search engine from the start and an archived-Ballotpedia lookup. Repair attempt count on this blocker becomes 4.
 - (c) Candidate variables: total votes and vote shares from full official results; incumbency derived from the data (2010 from an outside source or marked missing); a person ID.
 - (d) Usability: `phase` column, one `election_id` format, neutral batch and run names, loading example.
-- License: same terms as the House/Senate deposit (CC BY 4.0 on the compilation); proposed takedown contact hhilbig@ucdavis.edu, to be confirmed.
+- License: same terms as the House/Senate deposit (CC BY 4.0 on the compilation); takedown contact hhilbig@ucdavis.edu (confirmed by Hanno October 13).
 - The 20-city expansion pilot is not run now.
 Model pilot for (b), October 10 (Hanno asked whether Haiku can replace Sonnet for search): same 20 finalists in Jersey City, Newark, Fort Wayne, Albuquerque and Cleveland, same script (`scripts/workflows_mayoral_haiku_search_pilot.js`), Brave search, two cities at a time; answer key `url_discovery/repair_20261004/`. Haiku 4.5 (run2, `wf_a5f2ae57-ea2`, 357k tokens): 6 of 15 known sites found, 6 known sites called not_found (Baraka x3, Henry x3), 5 incomplete, one Board of Education page accepted without the mayoral check, one result file not written. Sonnet (run3, `wf_ec2095da-c81`, 418k tokens): 14 of 15 known sites found (Gore recorded not_found under the strict rule, URL kept for review), plus two sites the key missed (Berry 2013 mayorberry.com, Didier 2023 tomdidierfortwayne.com), no false acceptance. Hanno chose Sonnet. Outputs `url_discovery/haiku_pilot_20261010/`.
 Fourth search pass started October 10: `scripts/build_mayoral_pass4_args.py` selected 99 finalists in 36 cities (41 stage2_only, 11 check_incomplete, 9 excluded, 38 new_finalist); workflow `wf_b4c470bf-1ec` (`scripts/workflows_mayoral_search_pass4.js`), Sonnet, Brave plus archived Ballotpedia, two cities at a time, independent check per city. Outputs `url_discovery/pass4_20261010/`. Next: save the checker verdicts, add the pass as a source in `build_mayoral_url_leads.py` (the new finalists are not in `stage2_args.json`), then scrape the accepted sites with stage3v.
 Order: defects 1–4, then (a), then (b), then (c) and (d), then one rebuild, site check, validation and documentation.
+**Fourth pass, result and rerun (October 13).** `wf_b4c470bf-1ec` (6.4 hours, 4.6 million tokens) wrote results for 20 of 36 cities (42 finalists: 16 accepted, 3 outside_window, 19 not_found, 4 incomplete). Checker verdicts: `pass4_checker_verdicts.json`.
+Defect: for the other 16 cities (57 finalists), macOS refused the agents access to `~/Documents` ("Operation not permitted"). No search ran for them and no file exists.
+Hanno decided on October 13 that the rerun of these 16 cities completes the approved fourth pass; it is not a fifth repair attempt.
+Rerun `wf_51ccf5e6-dc5` (same script, `args.out` set to a folder outside `~/Documents`, in the session scratchpad `pass4_rerun/`), jobstatus `mayoral_search_pass4_rerun`. Wayback from mac2 answered only part of the requests at the start.
+Next: copy the 16 files into `pass4_20261010/`, merge the checker verdicts, rebuild the leads, then run the `stage3v` scrape from the droplet (the archive does not answer the home network).
+
 
 Release does not require a website for every finalist or a fixed coverage percentage.
 It requires the full population to be assessed, the agreed collection work to finish, and missing evidence to stay explicit.
