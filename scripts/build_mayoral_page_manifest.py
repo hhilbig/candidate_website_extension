@@ -23,7 +23,7 @@ from pathlib import Path
 
 csv.field_size_limit(sys.maxsize)
 ACQ = Path("data/municipal_archive_acquisition")
-RUNS = ("production", "uncapped", "carymoon_extra")
+RUNS = ("production", "uncapped", "carymoon_extra", "prefetch")  # prefetch: pre-election copies (October 16)
 FETCHED = {"fetched"}
 FIELDS = ["candidate_election_id", "target_id", "capture_id", "batch", "run", "registrable_domain", "original_url",
           "timestamp", "effective_replay_url", "effective_timestamp", "days_from_election", "in_text_window", "text_path", "text_sha256", "text_characters",

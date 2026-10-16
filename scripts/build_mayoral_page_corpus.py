@@ -20,6 +20,8 @@ rule-based flags. Three flags exclude a page from the finalist panel; the others
                                    "page not found" page
   excluded  listing_page           an address that lists other pages: tag, author, category, feed, comments,
                                    search, paging (/page/2/), date archives without a post, calendar views
+  excluded  not_a_page             an address of a file that is not a page (script, style, font, image, PDF, XML),
+                                   or a platform, admin, sitemap, mail-form or bot-check path
   flag      app_shell              fewer than 40 words and a request for JavaScript or a loading message
   flag      other_year_only        the page names years, but not the election year or the year before
   flag      names_candidate        the page names the candidate's last name
@@ -61,7 +63,8 @@ PARKED = re.compile(
     r"domain parking|hosting account (has been )?suspended|account (has been )?suspended|"
     r"this account has been suspended|website coming soon|site coming soon|under construction|"
     r"future home of|this domain has expired|domain has expired|domain name expired|renew (this|your) domain|"
-    r"recently been registered|related searches|sedo\b)", re.I)
+    r"recently been registered|related searches|sedo\b|web hosting - courtesy of|just another wordpress site|"
+    r"welcome to wordpress\. this is your first post)", re.I)
 PARKED_MAX_CHARS = 1200
 SPAM = re.compile(r"\b(casino|viagra|cialis|payday loans?|slot online|judi|poker online|replica watches|"
                   r"cbd gummies|essay writing service)\b", re.I)
@@ -71,11 +74,16 @@ CHALLENGE = re.compile(
     r"(just a moment|checking your browser|attention required|access denied|verify you are (a )?human|"
     r"ddos protection|403 forbidden|404 not found|error 404|page not found|page cannot be found|"
     r"could not be found|nothing (was )?found|the page you (are looking for|requested)|this page (does not|doesn't) exist|"
-    r"website is currently not available)", re.I)
+    r"website is currently not available|request is being verified)", re.I)
 CHALLENGE_MAX_CHARS = 1500
 LISTING_PATH = re.compile(r"/(tag|tags|author|category|categories|feed|rss|comments|search)(/|$)|/page/\d+/?$|"
                           r"^/\d{4}(/\d{1,2}){0,2}/?$|/calendar/action|/events/(list|month|day|week|photo)(/|$)", re.I)
 LISTING_QUERY = re.compile(r"(^|&)(ajaxcalendar|replytocom|share|s|paged|range|tribe-bar-date|eventdisplay)=", re.I)
+# Addresses that are not content pages: files of a non-page type, and platform, admin, sitemap and bot-check paths
+# (added October 16, 2026 after the first-user review found such pages among the usable ones).
+NOT_A_PAGE = re.compile(r"\.(css|js|mjs|json|xml|txt|ico|png|jpe?g|gif|svg|webp|woff2?|ttf|eot|otf|map|pdf|docx?|zip)$|"
+                        r"/(wp-admin|wp-login\.php|wp-json|xmlrpc\.php|_Incapsula_Resource)(/|$)|sitemap[^/]*$", re.I)
+NOT_A_PAGE_QUERY = re.compile(r"(^|&)(option=com_mailto|tmpl=component)", re.I)
 YEAR = re.compile(r"\b(20[0-3]\d)\b")
 APOSTROPHE = re.compile(r"['’`]")
 BOOLEAN = ("in_text_window", "names_candidate", "app_shell", "other_year_only", "non_latin_text", "excluded")
@@ -118,6 +126,8 @@ def flags(text: str, page: dict, last: str, election_year: int) -> tuple[list[st
     address = urlsplit(page["original_url"])
     if LISTING_PATH.search(address.path or "/") or LISTING_QUERY.search(address.query or ""):
         reasons.append("listing_page")
+    if NOT_A_PAGE.search(address.path or "/") or NOT_A_PAGE_QUERY.search(address.query or ""):
+        reasons.append("not_a_page")
     directory_listing = plain.lstrip().lower().startswith("index of /")
     if directory_listing or (len(plain) < PARKED_MAX_CHARS and PARKED.search(plain)):
         reasons.append("parked_or_placeholder")
@@ -153,7 +163,10 @@ def main() -> None:
         stamp = page["effective_timestamp"] or page["timestamp"]
         election = date.fromisoformat(people[page["candidate_election_id"]]["election_date"])
         page["days_from_election"] = (datetime.strptime(stamp[:8], "%Y%m%d").date() - election).days
-    pages.sort(key=lambda p: (p["candidate_election_id"], abs(p["days_from_election"]), p["capture_id"]))
+    # The first copy of a page wins the duplicate check: copies from before election day come first (nearest the
+    # election first), then copies from election day or later (October 16, 2026: pre-election copies fetched).
+    pages.sort(key=lambda p: (p["candidate_election_id"], p["days_from_election"] >= 0, abs(p["days_from_election"]),
+                              p["capture_id"]))
     _status("set", args.status_id, "--project", "Candidate websites, mayoral extension",
             "--task", "Build the mayoral page corpus with page checks", "--total", str(len(pages)), "--unit", "pages")
     schema = pa.schema([(c, pa.string()) if c not in {"days_from_election", "n_char", "n_words", "n_tags", "n_clean_tags"}
@@ -209,7 +222,7 @@ def main() -> None:
                                       data["duplicate_of"]) if not e and w and not d}
     audit = {"pages": counts["pages"], "excluded_pages": counts["excluded_pages"],
              "exclusion_reasons": {k: v for k, v in counts.items() if k in {"off_domain", "empty", "parked_or_placeholder", "spam",
-                                                                     "binary_or_garbled", "error_or_challenge", "listing_page"}},
+                                                                     "binary_or_garbled", "error_or_challenge", "listing_page", "not_a_page"}},
              "duplicate_pages": counts["duplicate_pages"], "finalists": len(set(data["candidate_election_id"])),
              "finalists_with_usable_in_window_pages": len(usable)}
     args.output.with_suffix(".audit.json").write_text(json.dumps(audit, indent=1) + "\n")

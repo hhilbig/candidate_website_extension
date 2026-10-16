@@ -7,7 +7,8 @@ Checks, each recomputed from the release files themselves:
              a no_url_lead finalist has no URL lead; text_status "text" if and only if a panel row exists
   pages      page_id unique; release_usable equals the documented rule; no excluded, duplicate,
              out-of-window or failed-site page is usable
-  panel      each panel row has the number of usable pages and the exact joined text of those pages
+  panel      each panel row has the number of usable pages and the exact joined text of those pages, and the
+             joined text of its pre-election pages
   manifest   manifest.json lists every data file with its row count and SHA-256, and they match
 It prints a JSON report and exits 1 if any check fails. Drops above 20 percent are reported, not failed.
 """
@@ -92,6 +93,9 @@ def validate(release: Path) -> dict:
         check("\x00" not in r["text"] or not r["release_usable"], f"{r['page_id']}: usable page contains NUL bytes")
         if r["release_usable"]:
             usable[r["candidate_election_id"]].append(r)
+        if "also_in_election" in r:
+            check(not r["also_in_election"] or r["release_usable"], f"{r['page_id']}: also_in_election on an unusable page")
+            check(r["candidate_election_id"] not in r["also_in_election"].split(";"), f"{r['page_id']}: also_in_election names itself")
     by_id = {f["candidate_election_id"]: f for f in finalists}
     for p in panel:
         own = sorted(usable[p["candidate_election_id"]],
@@ -99,6 +103,12 @@ def validate(release: Path) -> dict:
         check(int(p["n_pages"]) == len(own) == int(by_id[p["candidate_election_id"]]["n_pages_usable"]),
               f"{p['candidate_election_id']}: page count differs between panel, finalists and corpus")
         check(p["text"] == "#+#".join(r["text"] for r in own), f"{p['candidate_election_id']}: panel text differs")
+        if "text_before" in p:
+            before = [r for r in own if r["phase"] == "before"]
+            check(p["text_before"] == "#+#".join(r["text"] for r in before), f"{p['candidate_election_id']}: text_before differs")
+            check(int(p["n_pages_before_election"]) == len(before)
+                  and int(p["n_pages_after_election"]) == len(own) - len(before),
+                  f"{p['candidate_election_id']}: before/after page counts differ")
     check(set(usable) == with_text, "finalists with usable pages differ from finalists with text")
 
     manifest_path = release / "manifest.json"
