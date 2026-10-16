@@ -19,6 +19,35 @@ The dataset is a companion to our archived campaign websites of US House and Sen
 
 `manifest.json` lists each data file with its row and column counts, size and SHA-256 checksum. The codebook (`CODEBOOK.md`) defines every column.
 
+## Loading the data
+
+In Python (pandas and pyarrow):
+
+```python
+import pandas as pd
+
+finalists = pd.read_csv("mayoral_finalists.csv", dtype=str)
+population = finalists[finalists["eligible"] == "True"]           # the 860 finalists
+panel = pd.read_csv("mayoral_finalist_panel.csv")                  # one row per finalist with text
+pages = pd.read_parquet("mayoral_page_corpus.parquet")
+usable = pages[pages["release_usable"]]                            # the pages that make up the panel
+before = usable[usable["phase"] == "before"]                       # only pages archived before election day
+```
+
+In R (readr and arrow):
+
+```r
+library(readr)
+library(arrow)
+
+finalists <- read_csv("mayoral_finalists.csv", col_types = cols(.default = "c"))
+panel <- read_csv("mayoral_finalist_panel.csv")
+pages <- read_parquet("mayoral_page_corpus.parquet")
+usable <- pages[pages$release_usable, ]
+```
+
+Join files on `candidate_election_id` (finalist), `election_id` (election) or `city_id` (city). `person_id` links the elections of one person in one city.
+
 ## Population
 
 1. **Cities.** The 100 largest incorporated places by 2020 Census population (`mayoral_cities.csv`). The list is fixed; a city that grew into the top 100 after 2020 is not included.
