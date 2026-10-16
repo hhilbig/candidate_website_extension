@@ -66,7 +66,7 @@ One row per winner or runner-up of a recorded election. Rows with `eligible` = `
 | `incumbent` | `True` if the finalist won the city's previous election in the population; empty for a city's first election in the data (198 eligible finalists) and for finalists outside the population |
 | `eligible`, `verification_status` | Population membership; the election's `verification_status` |
 | `url_lead` | `True` if a campaign website is known |
-| `url_lead_basis` | How the website was found: `legacy_url_inventory` (older roster, checked against archived pages); `agent_search_wayback_capture_checked` (agent search); `agent_search_repair_wayback_capture_checked` (second agent search where the first did not finish); `domain_sweep_wayback_capture_checked`, `domain_sweep_commoncrawl_capture_checked`, `domain_sweep_after_election_capture_checked` (common campaign domains tried in the Wayback Machine or Common Crawl); `checker_proposal_wayback_capture_verified` (proposed by a checking agent, verified by a third); `legacy_lead_search_wayback_capture_checked`, `legacy_lead_sweep_wayback_capture_checked` (search for finalists whose roster URL had no archived copy near the election); `agent_search_pass4_wayback_capture_checked` (final agent search). Every basis except the first includes an independent agent check |
+| `url_lead_basis` | Source of the website: `legacy_url_inventory` (older candidate roster, checked against archived pages); values starting with `agent_search`, `legacy_lead` or `checker_proposal` (web search by an AI agent); values starting with `domain_sweep` (common campaign domains tested in the Wayback Machine or Common Crawl). Sites from searches were confirmed by a second, independent agent |
 | `campaign_urls` | Known campaign website addresses (JSON list) |
 | `text_status` | Status of the website text for eligible finalists; values in `README.md` |
 | `n_sites`, `n_pages_usable`, `n_char_usable` | Websites, usable pages, and characters of the joined usable text |
@@ -79,7 +79,8 @@ One row per downloaded page. Excluded and duplicate pages stay in the file with 
 |---|---|
 | `page_id` | Page key (one archived capture) |
 | `candidate_election_id` | Finalist |
-| `target_id`, `batch`, `run` | Provenance: the collection target (one finalist and one website), the collection round (`round_01` … in date order), and the part of the round (`first_150_pages`, `remaining_pages`, or `supplementary_query` for pages from one extra archive query) |
+| `target_id` | One finalist and one website |
+| `batch`, `run` | Download job that collected the page (`round_01` …; `first_150_pages`, `remaining_pages`, `supplementary_query`). Provenance only |
 | `site_domain` | Registrable domain of the website |
 | `original_url`, `snap_url` | Address of the page as archived, and the Wayback Machine address of the copy |
 | `capture_timestamp` | Archive time, `YYYYMMDDhhmmss` (UTC) |
