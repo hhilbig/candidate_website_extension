@@ -50,7 +50,7 @@ def main() -> None:
     batches = sorted(ACQ / b for b in mapping)
     per_finalist = defaultdict(lambda: {"pages": 0, "pages_in_window": 0, "chars_in_window": 0, "pages_capped_run": 0,
                                         "sites": set()})
-    seen, rows_out = set(), 0
+    seen, rows_out, prefetch_repeats = set(), 0, 0
     with gzip.open(args.output, "wt", newline="") as handle:
         writer = csv.DictWriter(handle, fieldnames=FIELDS)
         writer.writeheader()
@@ -66,6 +66,9 @@ def main() -> None:
                     if not finalist or row["fetch_status"] not in FETCHED or int(row["text_characters"] or 0) == 0:
                         continue
                     key = (batch.name, row["capture_id"])
+                    if key in seen and run == "prefetch":  # an earlier run already holds this pre-election copy
+                        prefetch_repeats += 1
+                        continue
                     if key in seen:
                         raise ValueError(f"capture listed twice: {key}")
                     seen.add(key)
@@ -95,7 +98,7 @@ def main() -> None:
         writer.writerow(["candidate_election_id", "sites", "pages", "pages_capped_run", "pages_in_window", "chars_in_window"])
         for finalist, s in sorted(per_finalist.items()):
             writer.writerow([finalist, len(s["sites"]), s["pages"], s["pages_capped_run"], s["pages_in_window"], s["chars_in_window"]])
-    print(json.dumps({"pages": rows_out, "finalists": len(per_finalist),
+    print(json.dumps({"pages": rows_out, "prefetch_repeats_skipped": prefetch_repeats, "finalists": len(per_finalist),
                       "finalists_with_pages_in_window": sum(1 for s in per_finalist.values() if s["pages_in_window"])}))
 
 
