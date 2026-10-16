@@ -30,7 +30,7 @@ def write(path, rows):
 
 
 def release(tmp_path):
-    cities = [{"city_id": f"c{i}"} for i in range(100)]
+    cities = [{"city_id": f"c{i}", "county_fips": f"c{i}"[:2] + "001", "county_fips_all": f"c{i}"[:2] + "001"} for i in range(100)]
     years = [{"city_id": f"c{i}", "year": str(y)} for i in range(100) for y in range(2010, 2027)]
     write(tmp_path / "mayoral_cities.csv", cities)
     write(tmp_path / "mayoral_city_years.csv", years)

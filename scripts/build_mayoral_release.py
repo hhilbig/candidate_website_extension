@@ -9,7 +9,7 @@ Inputs (all hashed in the manifest):
                      (stage 4); pages_until limits a passing site to pages captured up to that date
 
 Outputs in --out-dir (which must not exist, so no earlier release is overwritten):
-  mayoral_cities.csv            100 cities, the fixed 2020 Census population
+  mayoral_cities.csv            100 cities, the fixed 2020 Census population and county codes
   mayoral_city_years.csv        1,700 city-years with their assessment status
   mayoral_elections.csv         every recorded election with its verification status
   mayoral_finalists.csv         every recorded finalist; eligible ones carry a text status and reason
@@ -36,6 +36,7 @@ sys.path.insert(0, str(REPO))
 from scripts.icpsr_replicate_coding import icpsr_clean_text  # noqa: E402
 
 COVERAGE = REPO / "data/municipal_discovery/top100_coverage/outputs"
+COUNTY_PARTS = REPO / "data/municipal_discovery/top100_coverage/inputs/city_county_parts_2020.csv"  # Census 2020 PL API
 DISCOVERY = REPO / "data/municipal_discovery/top100_coverage/url_discovery"
 STATUSES = ("text", "excluded_site_check", "no_usable_pages", "site_rejected", "site_not_archived", "check_incomplete",
             "no_url_lead")
@@ -64,6 +65,22 @@ PANEL_COLUMNS = ["candidate_election_id", "person_id", "election_id", "city_id",
 def read_csv(path: Path) -> list[dict]:
     with path.open(newline="") as handle:
         return list(csv.DictReader(handle))
+
+
+def add_counties(cities: list[dict]) -> list[dict]:
+    """Add the main county (the city-county part with the largest 2020 population), all counties, and the
+    main county's share of the summed city-county parts."""
+    parts = defaultdict(list)
+    for row in read_csv(COUNTY_PARTS):
+        parts[row["city_id"]].append((int(row["population_2020_part"]), row["county_fips"]))
+    out = []
+    for city in cities:
+        own = sorted(parts[city["city_id"]], reverse=True)
+        if not own:
+            raise ValueError(f"no county parts for {city['city_id']}")
+        out.append({**city, "county_fips": own[0][1], "county_fips_all": ";".join(f for _, f in own),
+                    "county_population_share": round(own[0][0] / sum(p for p, _ in own), 4)})
+    return out
 
 
 def write_csv(path: Path, rows: list[dict], columns: list[str]) -> None:
@@ -258,6 +275,8 @@ def build(corpus_path: Path, site_check_path: Path, out_dir: Path) -> dict:
     for name, source in (("mayoral_cities.csv", "cities.csv"), ("mayoral_city_years.csv", "city_year_audit.csv"),
                          ("mayoral_elections.csv", "elections.csv")):
         rows = read_csv(COVERAGE / source)
+        if name == "mayoral_cities.csv":
+            rows = add_counties(rows)
         write_csv(out_dir / name, rows, list(rows[0]))
     counts = defaultdict(int)
     for row in finalists:

@@ -57,6 +57,10 @@ def validate(release: Path) -> dict:
     panel = read(release / "mayoral_finalist_panel.csv")
     city_ids = {c["city_id"] for c in cities}
     check(len(cities) == len(city_ids) == 100, f"expected 100 unique cities, found {len(cities)}")
+    for c in cities:
+        counties = c["county_fips_all"].split(";")
+        check(len(c["county_fips"]) == 5 and counties[0] == c["county_fips"]
+              and all(f[:2] == c["city_id"][:2] for f in counties), f"{c['city_id']}: county codes inconsistent")
     check(len({(y["city_id"], y["year"]) for y in years}) == len(years) == 1700, "city-years are not 1,700 unique rows")
     check({y["city_id"] for y in years} <= city_ids, "a city-year names an unknown city")
     election_ids = {e["election_id"] for e in elections}

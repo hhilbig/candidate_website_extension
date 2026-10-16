@@ -13,7 +13,7 @@
 | `mayoral_page_corpus.parquet` | `page_id` | `candidate_election_id` → finalists |
 | `mayoral_finalist_panel.csv` | `candidate_election_id` | `candidate_election_id` → finalists |
 
-`city_id` is the 2020 Census place GEOID. `election_id` combines `city_id`, the election date and the election type. `candidate_election_id` adds a hash of the candidate's normalized name. `person_id` links the elections of one person in one city. An empty cell means "not applicable" or "not recorded", never zero.
+`city_id` is the 2020 Census place GEOID. `election_id` combines `city_id`, the election date and the election type. `candidate_election_id` adds a hash of the candidate's normalized name. `person_id` links the elections of one person in one city. Read ID columns as text: `city_id` has a leading zero for some states. An empty cell (an empty string in the Parquet file) means "not applicable" or "not recorded", never zero.
 
 ## `mayoral_cities.csv`
 
@@ -26,6 +26,9 @@
 | `crosswalk_status` | Match to the older roster: `exact_geoid`, `explicit_historical_alias`, or `missing_roster_city` (Santa Clarita, where the council selects the mayor) |
 | `jurisdiction_note`, `jurisdiction_source_url` | Note and source for consolidated city-county governments and similar cases |
 | `source_url` | Census source of the population figure |
+| `county_fips` | Five-digit FIPS code of the county that holds the largest part of the city's 2020 population |
+| `county_fips_all` | All counties the city lies in, largest part first, joined by `;` |
+| `county_population_share` | Share of the city's 2020 population in `county_fips` (2020 Census, population of each city-county part) |
 
 ## `mayoral_city_years.csv`
 
@@ -44,7 +47,7 @@
 |---|---|
 | `election_id`, `city_id`, `city_name`, `state_abb`, `year`, `election_date` | The election |
 | `election_type` | `regular`, `special` or `unresolved` |
-| `stage` | Round of the election, for example `general`, `runoff`, `ranked_choice_final` or `primary_nominating`; `single_recorded_mayoral_contest_per_city_year_stage_not_explicit` where the source does not name the round |
+| `stage` | Round of the election: `general`; `runoff`; `primary_nominating` (a primary or first round that a candidate won outright, so it decided the office); `ranked_choice_final` or `ranked_choice` (the final round of a ranked-choice count); `special` (a special election); `verified_general_election` (a label from the older roster, results not verified); `single_recorded_mayoral_contest_per_city_year_stage_not_explicit` (the source does not name the round) |
 | `verification_status` | `verified_decisive`: decided who became mayor, with at least two candidates, so in the population; `uncontested`: one candidate; `legacy_results_unverified`: results only from the older roster; `unresolved`, `unresolved_final_pair`: the result could not be verified |
 | `certification_status`, `certification_source_url` | Whether the result was certified, canvassed or checked against an official source, and that source |
 | `source_url`, `source_locator`, `verification_note` | Source of the result, the place in the source, and notes |
@@ -62,7 +65,6 @@ One row per winner or runner-up of a recorded election. Rows with `eligible` = `
 | `official_result_role` | `winner` or `runner_up` |
 | `official_votes`, `result_source_url` | Votes and the official result source |
 | `top_two_vote_share` | Share of the votes of the two finalists; empty if a vote count is missing |
-| `total_votes`, `vote_share` | Total votes cast and the finalist's share of them; recorded only where the official result gives a total (38 eligible finalists) |
 | `incumbent` | `True` if the finalist won the city's previous election in the population; empty for a city's first election in the data (198 eligible finalists) and for finalists outside the population |
 | `eligible`, `verification_status` | Population membership; the election's `verification_status` |
 | `url_lead` | `True` if a campaign website is known |
@@ -84,18 +86,20 @@ One row per downloaded page. Excluded and duplicate pages stay in the file with 
 | `site_domain` | Registrable domain of the website |
 | `original_url`, `snap_url` | Address of the page as archived, and the Wayback Machine address of the copy |
 | `capture_timestamp` | Archive time, `YYYYMMDDhhmmss` (UTC) |
-| `days_from_election`, `phase` | Days from the election to the capture (negative before it), and `before`, `election_day` or `after` |
+| `days_from_election`, `phase` | Days from the election to the capture (negative before it), and `before`, `election_day` or `after`, both from the archive date, not the date the page was written |
 | `in_text_window` | `True` if the capture is within 365 days of the election |
 | `page_type` | Type from the address: `homepage`, `issues`, `biography`, `endorsements`, `news`, `action` (donate, volunteer), `constituent_services`, `other` |
 | `text`, `n_char`, `n_words` | Visible text with segments joined by `#+#`, and its characters and words |
 | `n_tags`, `n_clean_tags` | Number of segments, and of segments kept by the cleaning rule (see `text_clean`) |
 | `text_sha256`, `raw_html_sha256` | SHA-256 of the text and of the archived HTML |
+| `names_candidate`, `app_shell`, `other_year_only`, `non_latin_text`, `also_in_election` | Information flags. They do not affect `release_usable` |
 | `names_candidate` | `True` if the page contains the candidate's last name |
 | `app_shell` | `True` if the page has fewer than 40 words and asks for JavaScript or shows only a loading message |
 | `other_year_only` | `True` if the page names years, but not the election year or the year before |
 | `non_latin_text` | `True` if the page is mostly in a non-Latin script |
-| `duplicate_of` | `page_id` of an earlier page of the same finalist with the same text, or the same address after removing the scheme, "www.", a trailing slash and the query |
-| `excluded`, `exclusion_reason` | `True` if a page rule applies; reasons joined by `;`: `empty` (under 50 characters); `parked_or_placeholder` (a directory listing, or under 1,200 characters saying the domain is for sale, parked, expired, suspended or under construction); `spam` (platform profile spam, or five or more gambling, drug or loan terms on a page that does not name the candidate); `binary_or_garbled` (NUL bytes, or over 5 percent replacement or control characters); `error_or_challenge` (under 1,500 characters and a bot challenge, access-denied or "page not found" page); `listing_page` (an address that lists other pages: tag, author, category, feed, comments, search, paging, date archive or calendar view) |
+| `duplicate_of` | `page_id` of the copy kept instead of this page: a page of the same finalist with the same text, or the same address after removing the scheme, "www.", a trailing slash and the query. The kept copy is the one from before the election where one exists, otherwise the copy nearest the election |
+| `also_in_election` | For a usable page, the other `candidate_election_id`s of the same person that have a usable page with the same text or the same `snap_url`, joined by `;`. A site reused across campaigns shows up here |
+| `excluded`, `exclusion_reason` | `True` if a page rule applies; reasons joined by `;`: `empty` (under 50 characters); `parked_or_placeholder` (a directory listing, or under 1,200 characters saying the domain is for sale, parked, expired, suspended or under construction); `spam` (platform profile spam, or five or more gambling, drug or loan terms on a page that does not name the candidate); `binary_or_garbled` (NUL bytes, or over 5 percent replacement or control characters); `error_or_challenge` (under 1,500 characters and a bot challenge, access-denied or "page not found" page); `listing_page` (an address that lists other pages: tag, author, category, feed, comments, search, paging, date archive or calendar view); `not_a_page` (a file or system address, not an HTML page: style sheets, scripts, images, documents, `robots.txt`, sitemaps, WordPress admin and login addresses) |
 | `site_check_passed` | `True` if the site passed the site check; for the one site taken over after the election, only pages up to election day |
 | `release_usable` | `True` if `in_text_window`, not `excluded`, no `duplicate_of`, and `site_check_passed` |
 
@@ -106,8 +110,9 @@ One row per eligible finalist with at least one usable page.
 | Column | Definition |
 |---|---|
 | `candidate_election_id` … `official_result_role`, `person_id`, `incumbent` | As in `mayoral_finalists.csv` |
-| `n_sites`, `n_pages`, `n_pages_before_election` | Websites, usable pages, and usable pages archived before election day |
+| `n_sites`, `n_pages`, `n_pages_before_election`, `n_pages_after_election` | Websites, usable pages, and usable pages archived before election day and on or after it |
 | `first_capture`, `last_capture` | Earliest and latest capture among the usable pages |
 | `text` | Text of all usable pages, ordered by website, address depth, address and capture time, joined by `#+#` |
 | `n_char`, `n_words`, `n_tags`, `n_clean_tags` | As in the corpus, for the joined text |
-| `text_clean` | `text` after the cleaning rule of ICPSR 226001: addresses and digits removed, and only segments of ten or more words with sentence punctuation and a capital letter kept. Empty for 8 finalists |
+| `text_clean` | `text` after the cleaning rule of ICPSR 226001: addresses and digits removed, and only segments of ten or more words with sentence punctuation and a capital letter kept. Empty for 6 finalists |
+| `text_before`, `n_char_before`, `text_clean_before` | As `text`, `n_char` and `text_clean`, for the usable pages archived before election day only; empty if there are none (27 finalists) |
