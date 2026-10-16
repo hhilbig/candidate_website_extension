@@ -53,3 +53,11 @@ def test_manifest_skips_prefetch_copy_already_fetched(tmp_path, monkeypatch):
     manifest.main()
     with gzip.open(tmp_path / "m.csv.gz", "rt") as handle:
         assert [(r["capture_id"], r["run"]) for r in csv.DictReader(handle)] == [("c1", "production"), ("c2", "prefetch")]
+
+
+def test_not_a_page_system_folders():
+    for url in ["https://a.com/wp-content/themes/born-to-give/", "https://a.com/cdn-cgi/l/email-protection",
+                "https://a.com/x/jd.gallery.js.php", "https://a.com/wordpress-resources-at-siteground/",
+                "https://a.com/cgi-bin/FormMail.pl"]:
+        assert "not_a_page" in reasons(CAMPAIGN, url), url
+    assert "not_a_page" not in reasons(CAMPAIGN, "https://a.com/content/plan/")

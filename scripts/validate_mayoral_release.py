@@ -87,7 +87,13 @@ def validate(release: Path) -> dict:
     corpus = pq.read_table(release / "mayoral_page_corpus.parquet").to_pylist()
     check(len({r["page_id"] for r in corpus}) == len(corpus), "page_id is not unique")
     usable = defaultdict(list)
+    by_id = {r["page_id"]: r for r in corpus}
     for r in corpus:
+        if r["duplicate_of"]:
+            kept = by_id.get(r["duplicate_of"])
+            check(kept is not None and kept["candidate_election_id"] == r["candidate_election_id"]
+                  and kept["in_text_window"] and not kept["excluded"] and not kept["duplicate_of"],
+                  f"{r['page_id']}: duplicate_of does not point to a kept page of the same finalist")
         rule = r["in_text_window"] and not r["excluded"] and not r["duplicate_of"] and r["site_check_passed"]
         check(r["release_usable"] == rule, f"{r['page_id']}: release_usable differs from the rule")
         check(abs(r["days_from_election"]) <= 365 or not r["release_usable"], f"{r['page_id']}: usable outside window")

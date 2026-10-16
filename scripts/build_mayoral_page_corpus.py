@@ -21,13 +21,14 @@ rule-based flags. Three flags exclude a page from the finalist panel; the others
   excluded  listing_page           an address that lists other pages: tag, author, category, feed, comments,
                                    search, paging (/page/2/), date archives without a post, calendar views
   excluded  not_a_page             an address of a file that is not a page (script, style, font, image, PDF, XML),
-                                   or a platform, admin, sitemap, mail-form or bot-check path
+                                   or a platform, admin, theme, plugin, CGI, sitemap, mail-form or bot-check path
   flag      app_shell              fewer than 40 words and a request for JavaScript or a loading message
   flag      other_year_only        the page names years, but not the election year or the year before
   flag      names_candidate        the page names the candidate's last name
   flag      non_latin_text         mostly non-Latin text (the House/Senate CJK rule); campaigns publish such pages
-  flag      duplicate_of           an earlier page of the same finalist has the same extracted text, or the same
-                                   address after removing the scheme, "www.", a trailing slash and the query
+  flag      duplicate_of           a kept page of the same finalist has the same extracted text, or the same
+                                   address after removing the scheme, "www.", a trailing slash and the query; only a
+                                   page that passes the page rules inside the 365-day window can be the kept page
 Days from the election are computed from the finalist's election date (October 10, 2026: the August batches'
 target files hold only the election month, which had shifted the August pages by up to two weeks).
 
@@ -82,7 +83,8 @@ LISTING_QUERY = re.compile(r"(^|&)(ajaxcalendar|replytocom|share|s|paged|range|t
 # Addresses that are not content pages: files of a non-page type, and platform, admin, sitemap and bot-check paths
 # (added October 16, 2026 after the first-user review found such pages among the usable ones).
 NOT_A_PAGE = re.compile(r"\.(css|js|mjs|json|xml|txt|ico|png|jpe?g|gif|svg|webp|woff2?|ttf|eot|otf|map|pdf|docx?|zip)$|"
-                        r"/(wp-admin|wp-login\.php|wp-json|xmlrpc\.php|_Incapsula_Resource)(/|$)|sitemap[^/]*$", re.I)
+                        r"/(wp-admin|wp-content|wp-includes|wp-login\.php|wp-json|xmlrpc\.php|_Incapsula_Resource|cdn-cgi|cgi-bin)(/|$)|"
+                        r"\.js\.php$|/wordpress-resources-at-siteground/?$|sitemap[^/]*$", re.I)
 NOT_A_PAGE_QUERY = re.compile(r"(^|&)(option=com_mailto|tmpl=component)", re.I)
 YEAR = re.compile(r"\b(20[0-3]\d)\b")
 APOSTROPHE = re.compile(r"['’`]")
@@ -189,11 +191,13 @@ def main() -> None:
         clean = icpsr_clean_text(text)
         reasons, info = flags(text, page, last_name(person["candidate_name"]), int(person["election_date"][:4]))
         text_sha = hashlib.sha256(text.encode()).hexdigest()
-        dup = seen_text.setdefault((page["candidate_election_id"], text_sha), page["capture_id"])
-        same_address = seen_address.setdefault((page["candidate_election_id"], address_key(page["original_url"])),
-                                               page["capture_id"])
-        if dup == page["capture_id"] and same_address != page["capture_id"]:
-            dup = same_address
+        # Only a page that passes the page rules inside the text window can be the kept copy, so a duplicate never
+        # points to an excluded or out-of-window copy (second first-user review, October 16, 2026).
+        text_key = (page["candidate_election_id"], text_sha)
+        address = (page["candidate_election_id"], address_key(page["original_url"]))
+        dup = seen_text.get(text_key) or seen_address.get(address) or page["capture_id"]
+        if dup == page["capture_id"] and not reasons and abs(page["days_from_election"]) <= 365:
+            seen_text[text_key] = seen_address[address] = page["capture_id"]
         for r in reasons:
             counts[r] += 1
         counts["pages"] += 1

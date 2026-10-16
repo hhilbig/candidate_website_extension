@@ -4,7 +4,7 @@
 
 This dataset holds the archived campaign websites of the winner and the runner-up of mayoral elections in the 100 largest US cities, from January 2010 to September 14, 2026. All pages come from the Internet Archive's Wayback Machine. Each page keeps its archived address and archive date, so every record can be traced to its source.
 
-The dataset accompanies our archived campaign websites of US House and Senate candidates (Harvard Dataverse, doi:10.7910/DVN/BZ2JRS). Text is extracted with the same code, so page text from the two datasets is comparable.
+The dataset accompanies our archived campaign websites of US House and Senate candidates (Harvard Dataverse, doi:10.7910/DVN/BZ2JRS). Page text is extracted with the same code in both datasets. The House/Senate panel keeps one snapshot per candidate (the one with the most text), while this panel joins all usable pages. For a like-for-like comparison, build documents from the page corpus.
 
 ## Files
 
@@ -15,7 +15,7 @@ The dataset accompanies our archived campaign websites of US House and Senate ca
 | `mayoral_elections.csv` | 464 | A recorded mayoral election |
 | `mayoral_finalists.csv` | 882 | A winner or runner-up of a recorded election, with the status of their website text |
 | `mayoral_page_corpus.parquet` | 44,189 | An archived page of a finalist's campaign website |
-| `mayoral_finalist_panel.csv` | 703 | A finalist with usable text, with the text of all usable pages joined, and separately the text from before the election |
+| `mayoral_finalist_panel.csv` | 704 | A finalist with usable text, with the text of all usable pages joined, and separately the text from before the election |
 
 `CODEBOOK.md` defines every column and the keys that link the files. `manifest.json` gives each file's row and column counts, size and SHA-256 checksum.
 
@@ -55,18 +55,18 @@ We combined an older roster of candidate URLs with web searches by AI agents (Cl
 
 ## Usable pages
 
-A page is usable (`release_usable`) if it was archived within 365 days of the election, is not a duplicate, is not excluded by a page rule (empty, parked, spam, error, listing and non-HTML pages; see `exclusion_reason`), and its site passed the site check. Of two copies of the same page, the one from before the election is kept. For the site check, an open-weight language model (Qwen3.6-27B) read each site, and an agent reviewed every site the model doubted; it excluded 14 sites. 20,857 of the 44,189 pages are usable, from 706 of the 735 sites, and 17,640 of the usable pages (85 percent) were archived before election day.
+A page is usable (`release_usable`) if it was archived within 365 days of the election, is not excluded by a page rule (empty, parked, spam, error, listing and non-HTML pages; see `exclusion_reason`), is not a duplicate, and its site passed the site check. Pages archived earlier or later stay in the corpus but are not usable. Of two copies of the same page, the kept copy is a usable one from before the election where one exists. For the site check, an open-weight language model (Qwen3.6-27B) read each site that had pages in the window, and an agent reviewed every site the model doubted; it excluded 14 sites. 21,220 of the 44,189 pages are usable, from 707 of the 735 sites, and 17,811 of the usable pages (84 percent) were archived before election day.
 
 ## Coverage
 
-703 of the 860 finalists (82 percent) have usable text, and 302 of the 430 elections (70 percent) have text for both finalists. `text_status` gives the reason when text is missing:
+704 of the 860 finalists (82 percent) have usable text, and 302 of the 430 elections (70 percent) have text for both finalists. `text_status` gives the reason when text is missing:
 
 | Status | Finalists | Meaning |
 |---|---:|---|
-| `text` | 703 | Usable pages exist |
+| `text` | 704 | Usable pages exist |
 | `no_url_lead` | 75 | No search found a campaign website |
 | `site_not_archived` | 37 | A website is known, but the archive holds no copy within a year of the election |
-| `no_usable_pages` | 16 | Pages were downloaded, but none is usable |
+| `no_usable_pages` | 15 | Pages were downloaded, but none is usable |
 | `excluded_site_check` | 13 | The site check excluded every downloaded site |
 | `check_incomplete` | 11 | The last search could not finish because the search engine or the archive stopped responding |
 | `site_rejected` | 5 | The search rejected the only known site and found no other |

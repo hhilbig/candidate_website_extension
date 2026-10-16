@@ -82,7 +82,7 @@ One row per downloaded page. Excluded and duplicate pages stay in the file with 
 | `page_id` | Page key (one archived capture) |
 | `candidate_election_id` | Finalist |
 | `target_id` | One finalist and one website |
-| `batch`, `run` | Download job that collected the page (`round_01` …; `first_150_pages`, `remaining_pages`, `supplementary_query`). Provenance only |
+| `batch`, `run` | Download job that collected the page (`round_01` …; `first_150_pages`, `remaining_pages`, `supplementary_query`, `pre_election_copy`). Provenance only |
 | `site_domain` | Registrable domain of the website |
 | `original_url`, `snap_url` | Address of the page as archived, and the Wayback Machine address of the copy |
 | `capture_timestamp` | Archive time, `YYYYMMDDhhmmss` (UTC) |
@@ -97,9 +97,9 @@ One row per downloaded page. Excluded and duplicate pages stay in the file with 
 | `app_shell` | `True` if the page has fewer than 40 words and asks for JavaScript or shows only a loading message |
 | `other_year_only` | `True` if the page names years, but not the election year or the year before |
 | `non_latin_text` | `True` if the page is mostly in a non-Latin script |
-| `duplicate_of` | `page_id` of the copy kept instead of this page: a page of the same finalist with the same text, or the same address after removing the scheme, "www.", a trailing slash and the query. The kept copy is the one from before the election where one exists, otherwise the copy nearest the election |
+| `duplicate_of` | `page_id` of the copy kept instead of this page: a page of the same finalist with the same text, or the same address after removing the scheme, "www.", a trailing slash and the query. The kept copy always passes the page rules inside the 365-day window: the copy from before the election where one exists, otherwise the copy nearest the election |
 | `also_in_election` | For a usable page, the other `candidate_election_id`s of the same person that have a usable page with the same text or the same `snap_url`, joined by `;`. A site reused across campaigns shows up here |
-| `excluded`, `exclusion_reason` | `True` if a page rule applies; reasons joined by `;`: `empty` (under 50 characters); `parked_or_placeholder` (a directory listing, or under 1,200 characters saying the domain is for sale, parked, expired, suspended or under construction); `spam` (platform profile spam, or five or more gambling, drug or loan terms on a page that does not name the candidate); `binary_or_garbled` (NUL bytes, or over 5 percent replacement or control characters); `error_or_challenge` (under 1,500 characters and a bot challenge, access-denied or "page not found" page); `listing_page` (an address that lists other pages: tag, author, category, feed, comments, search, paging, date archive or calendar view); `not_a_page` (a file or system address, not an HTML page: style sheets, scripts, images, documents, `robots.txt`, sitemaps, WordPress admin and login addresses) |
+| `excluded`, `exclusion_reason` | `True` if a page rule applies; reasons joined by `;`: `empty` (under 50 characters); `parked_or_placeholder` (a directory listing, or under 1,200 characters saying the domain is for sale, parked, expired, suspended or under construction); `spam` (platform profile spam, or five or more gambling, drug or loan terms on a page that does not name the candidate); `binary_or_garbled` (NUL bytes, or over 5 percent replacement or control characters); `error_or_challenge` (under 1,500 characters and a bot challenge, access-denied or "page not found" page); `listing_page` (an address that lists other pages: tag, author, category, feed, comments, search, paging, date archive or calendar view); `not_a_page` (a file or system address, not an HTML page: style sheets, scripts, images, documents, `robots.txt`, sitemaps, WordPress admin, login, theme and plugin addresses, CGI scripts and email-protection pages) |
 | `site_check_passed` | `True` if the site passed the site check; for the one site taken over after the election, only pages up to election day |
 | `release_usable` | `True` if `in_text_window`, not `excluded`, no `duplicate_of`, and `site_check_passed` |
 
@@ -114,5 +114,5 @@ One row per eligible finalist with at least one usable page.
 | `first_capture`, `last_capture` | Earliest and latest capture among the usable pages |
 | `text` | Text of all usable pages, ordered by website, address depth, address and capture time, joined by `#+#` |
 | `n_char`, `n_words`, `n_tags`, `n_clean_tags` | As in the corpus, for the joined text |
-| `text_clean` | `text` after the cleaning rule of ICPSR 226001: addresses and digits removed, and only segments of ten or more words with sentence punctuation and a capital letter kept. Empty for 6 finalists |
-| `text_before`, `n_char_before`, `text_clean_before` | As `text`, `n_char` and `text_clean`, for the usable pages archived before election day only; empty if there are none (27 finalists) |
+| `text_clean` | `text` after the cleaning rule of ICPSR 226001: addresses and digits removed, and only segments of ten or more words with sentence punctuation and a capital letter kept. Digits are removed, including amounts and proposition numbers. Empty for 6 finalists |
+| `text_before`, `n_char_before`, `text_clean_before` | As `text`, `n_char` and `text_clean`, for the usable pages archived before election day only; empty if there are none (28 finalists) |
