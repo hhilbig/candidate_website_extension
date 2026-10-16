@@ -87,3 +87,18 @@ def test_site_rejected_status_and_person_matching():
               [("1", "Bill Bell"), ("2", "William V. (Bill) Bell"), ("3", "Anjanee Bell"), ("4", "Ed Lee"), ("5", "Edwin M. Lee")]]
     ids = person_ids(people)
     assert ids["1"] == ids["2"] != ids["3"] and ids["4"] == ids["5"]
+
+
+def test_pass4_status_replaces_earlier_incomplete(tmp_path, monkeypatch):
+    import scripts.build_mayoral_release as release
+    sweep = tmp_path / "sweep_after_20261007"
+    sweep.mkdir()
+    (sweep / "sweep_check_verdicts.json").write_text(json.dumps(
+        [{"candidate_election_id": "a", "status": "incomplete"}, {"candidate_election_id": "b", "status": "incomplete"}]))
+    pass4 = tmp_path / "pass4_20261010"
+    pass4.mkdir()
+    (pass4 / "x_url_leads.json").write_text(json.dumps(
+        [{"candidate_election_id": "a", "status": "not_found"}, {"candidate_election_id": "c", "status": "incomplete"}]))
+    monkeypatch.setattr(release, "DISCOVERY", tmp_path)
+    monkeypatch.setattr(release, "REPO", tmp_path)
+    assert release.incomplete_checks() == {"b", "c"}

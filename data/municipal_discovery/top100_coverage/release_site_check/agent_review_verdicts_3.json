@@ -1,0 +1,90 @@
+[
+ {
+  "item_id": "release|0664000__2020-03-03__regular__2873ec2e3da002e7|stage3_ec4ef4e7a988fc88a17c3c80",
+  "status": "pass",
+  "reason": "campaign_site_this_election",
+  "checked_capture_url": "https://web.archive.org/web/20200213003747/https://www.steinberg4sac.com/",
+  "evidence": "\"Sacramento Mayor 2020\" ... \"Any amount you can give will help our campaign to make sure Darrell is re-elected.\" ... \"Paid for by Steinberg for Sacramento Mayor 2020 \u2022 ID# 1388020\"",
+  "note": "The model is wrong. Darrell Steinberg was the sitting Mayor of Sacramento, inaugurated in 2016 (not Kevin Johnson in 2020), and he ran for re-election in the 2020-03-03 primary. The capture of 2020-02-13 is 19 days before the election. It shows a campaign committee footer, a contribute call, a volunteer call, and re-election language. The 2019-11-18 About page confirms the same campaign branding. No real doubt."
+ },
+ {
+  "item_id": "release|0666000__2016-06-07__regular__e5bafb01eea0919b|stage3_8c7a63092dcb89e0af2f97be",
+  "status": "pass",
+  "reason": "campaign_site_this_election",
+  "checked_capture_url": "https://web.archive.org/web/20160611223254/http://www.kevinfaulconer.com:80/",
+  "evidence": "\"Paid for by Faulconer for Mayor 2016 ... FPPC #1377181\"; nav has Join, Donate, and \"Support Kevin\"",
+  "note": "This is the incumbent's own re-election site, with a campaign committee footer, donate and join calls, and a voter registration call. The model's doubt rested on capture dates after the 7 June 2016 primary. Faulconer was the candidate for that election, and the captures are within days of it (11 and 30 June 2016), so the site was in use for this election. I did not read more pages because the sample decides the verdict."
+ },
+ {
+  "item_id": "release|2255000__2025-10-11__regular__84552f9b2e3fa06a|stage3_ea336e70415fffc43a08d1cc",
+  "status": "pass",
+  "reason": "campaign_site_this_election",
+  "checked_capture_url": "https://web.archive.org/web/20251013175959/https://helenamorenola.com/cart",
+  "evidence": "\"Contact the campaign at: ... Helena Moreno for Our Future, PO Box 15155, New Orleans, LA 70175. Paid for by Helena Moreno for Our Future\"",
+  "note": "The model read the accomplishments page as a record of past service. The site footer names her campaign committee, and the capture is two days after the 2025-10-11 election. The accomplishments page is campaign record material. I did not read more archive pages. Some doubt remains because the sample has only 2 pages and no explicit 'for Mayor' text, but the committee footer and the 'Helena Wins for...' campaign style decide it."
+ },
+ {
+  "item_id": "release|0669000__2014-11-04__regular__c2cefd64eab3e3cf|stage3_9f337861f6018f26e1bbfcdb",
+  "status": "pass",
+  "reason": "campaign_site_this_election",
+  "checked_capture_url": "https://web.archive.org/web/20141119120955/http://mayorpulido2012.com/",
+  "evidence": "\"The Orange County Register has endorsed Mayor Miguel Pulido!\" ... \"Pulido for mayor in Santa Ana\"; endorsement posts say Pulido's \"re-election will make our community safer\"; another page: \"campaign breakfast reception\" Sept 30, 2014.",
+  "note": "Pulido's own re-election site in the 2014 campaign. The 2012 domain name does not matter. The model's reason is wrong."
+ },
+ {
+  "item_id": "release|0669000__2016-11-08__regular__c2cefd64eab3e3cf|stage3_a05c1322091faa1aac5e1c62",
+  "status": "exclude",
+  "reason": "other_election_only",
+  "checked_capture_url": "https://web.archive.org/web/20161110061645/http://mayorpulido2012.com/",
+  "evidence": "Newest posts are official news: \"Mayor Pulido runs in his third DTSA 5K Run\" (Sept 17, 2016). Campaign content is only the 2014 \"campaign breakfast reception\" post.",
+  "note": "Moderate doubt. A Donate link stays in the nav, but no 2016 mayoral campaign content is present. From memory (not checked in the archive), Santa Ana held no mayoral election in 2016."
+ },
+ {
+  "item_id": "release|0669000__2018-11-06__regular__c2cefd64eab3e3cf|stage3_3ba5a5dd919b1f5f56aaa40c",
+  "status": "exclude",
+  "reason": "other_election_only",
+  "checked_capture_url": "https://web.archive.org/web/20181113183824/http://mayorpulido2012.com/",
+  "evidence": "Home page unchanged from 2016: latest post \"Mayor Pulido runs in his third DTSA 5K Run\" (Sept 17, 2016); the only campaign text is the 2014 \"campaign breakfast reception\".",
+  "note": "Static site with only 2014 campaign content and no 2018 material. I read only the sample pages, not additional archive pages. From memory, Pulido did not run in 2018."
+ },
+ {
+  "item_id": "release|2404000__2024-11-05__regular__163b3b60440a6fcf|stage3_e19b3e65d82842dcf7d71040",
+  "status": "exclude",
+  "reason": "other_election_only",
+  "checked_capture_url": "https://web.archive.org/web/20240521195927/https://www.wright4maryland.com/after-2020",
+  "evidence": "\"The Election is over but the work is not\"; footer \"\u00a9 2019-2020 Campaigns by Indy\"; menu \"MEDIA FROM 2020\"",
+  "note": "Site is Shannon Wright's own 2020 mayoral campaign site. Captures from 2024 (Mar, May, Sep, Dec) show only unchanged 2020 content, with an added After 2020 page about a nonprofit. No 2024 election content found. Small doubt: I did not read the Nov 2024 captures (/blank, /general-7)."
+ },
+ {
+  "item_id": "release|2404000__2024-11-05__regular__b61f5f7f4853b375|stage3_cabb63b55665811dd0720f4b",
+  "status": "pass",
+  "reason": "campaign_site_this_election",
+  "checked_capture_url": "https://web.archive.org/web/20241122065422/https://www.brandonforbaltimore.com/",
+  "evidence": "\"By Authority: People for Brandon M. Scott\"; \"Donate\", \"Volunteer\", \"2024 Election Speech\", \"Let's keep fighting to move Baltimore forward.\"",
+  "note": "Incumbent's own campaign committee site, with donate and volunteer calls and a 2024 election speech link. The model's doubt is the usual incumbent error. Low doubt."
+ },
+ {
+  "item_id": "release|4055000__2026-02-10__regular__afb06641f95cde08|stage3_89a7282254509a5d26c03da0",
+  "status": "pass",
+  "reason": "campaign_site_this_election",
+  "checked_capture_url": "https://web.archive.org/web/20260117212610/https://holtformayor.com/",
+  "evidence": "Pre-election homepage with DONATE button and 'Why I'm Running: I believe Oklahoma City's best days still lie ahead...'; Feb 2026 capture footer: 'Authorized and paid for by Holt for OKC.'",
+  "note": "Incumbent David Holt's own campaign site (holtformayor.com). The model's 'no' rested on the post-election Feb 14 capture. A Jan 17, 2026 capture shows a donate call and 'Why I'm Running' before the Feb 10 election. Some carried-over 2021-2022 campaign posts exist, but the site is in active use for 2026."
+ },
+ {
+  "item_id": "release|4845000__2018-05-05__regular__6e08870ec6364b35|stage3_39303a37b1603a1d80b44341",
+  "status": "pass",
+  "reason": "campaign_site_this_election",
+  "checked_capture_url": "https://web.archive.org/web/20180308053837/http://mayordanpope.com/",
+  "evidence": "Home page 2018-03-08 has a DONATE link and the first-person pitch \"I will continue to be one of Lubbock's biggest cheerleaders. FOR A STRONGER WEST TEXAS. FOR A BETTER TOMORROW.\"",
+  "note": "Incumbent mayor Dan Pope, election 2018-05-05. The site is a personal-domain site with a donate page, a campaign slogan and an issues page, not a government site. The PO Box is not the city hall address. The model misread the incumbent's re-election site. Small doubt: the capture has no explicit 're-elect' wording."
+ },
+ {
+  "item_id": "release|4837000__2014-05-10__regular__fadc6df66e506ec9|stage3_4ab420edb61ac73d7b9c20aa",
+  "status": "pass",
+  "reason": "campaign_site_this_election",
+  "checked_capture_url": "https://web.archive.org/web/20140823191837/http://bethforirving.com/about",
+  "evidence": "Header \"Beth Van Duyne For Mayor of Irving\"; \"I am running for re-election because it is my continuing goal to further common-sense, well-planned growth\"; home page: \"I am asking for your vote and your support\".",
+  "note": "The site is the mayor's own re-election site, with Volunteer and Contribute pages, and it is in use in 2014 (captures 2014-05-17 and 2014-08-23, text says \"past three years\"). The model's claim that she ran for Congress in 2014 does not change that, since the site is a mayoral campaign site in Irving. Doubt: the election date 2014-05-10 may be a data issue, because Irving mayoral elections appear to be in May 2013 and May 2015. CDX shows the same site live from 2013-05 through 2015-06 with mayoral content, so it matches the 2013 and 2015 elections as well. Both sample captures fall after 2014-05-10, none before."
+ }
+]

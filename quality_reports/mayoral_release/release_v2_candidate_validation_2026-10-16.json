@@ -1,0 +1,28 @@
+{
+ "valid": true,
+ "errors": [],
+ "error_count": 0,
+ "eligible_finalists": 860,
+ "text_status": {
+  "text": 704,
+  "no_usable_pages": 15,
+  "check_incomplete": 11,
+  "no_url_lead": 75,
+  "site_not_archived": 37,
+  "site_rejected": 5,
+  "excluded_site_check": 13
+ },
+ "panel_rows": 704,
+ "page_drops": {
+  "pages": 38333,
+  "excluded_by_page_rule": 7964,
+  "duplicate_text": 10048,
+  "failed_site_check": 679,
+  "outside_window": 4226,
+  "usable": 21040
+ },
+ "drops_above_20_percent": {
+  "excluded_by_page_rule": 0.208,
+  "duplicate_text": 0.262
+ }
+}

@@ -8,7 +8,9 @@ export const meta = {
 // re-election sites as official pages, so its verdict alone excludes nothing.
 const REPO = '/Users/hanno/Documents/GitHub/candidate_website_extension'
 // args: either the city list (first round, review_args.json) or {file, cities} for a later round.
-const ARGS = REPO + '/data/municipal_discovery/top100_coverage/release_site_check/' + (args.file || 'review_args.json')
+// args.dir overrides the input folder. The October 16 round used a folder outside ~/Documents,
+// because macOS can refuse the agents access to ~/Documents.
+const ARGS = (args.dir || REPO + '/data/municipal_discovery/top100_coverage/release_site_check') + '/' + (args.file || 'review_args.json')
 const CITIES = args.cities || args
 const SCHEMA = {
   type: 'object',

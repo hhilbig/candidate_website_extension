@@ -88,6 +88,13 @@ def incomplete_checks() -> set[str]:
     sweep = DISCOVERY / "sweep_after_20261007" / "sweep_check_verdicts.json"
     if sweep.exists():
         out |= {v["candidate_election_id"] for v in json.loads(sweep.read_text()) if v["status"] == "incomplete"}
+    # Fourth pass (October 10-14): the latest search for its 99 finalists, so its status replaces the earlier ones.
+    for path in sorted((DISCOVERY / "pass4_20261010").glob("*_url_leads.json")):
+        for lead in json.loads(path.read_text()):
+            if lead["status"] == "incomplete":
+                out.add(lead["candidate_election_id"])
+            else:
+                out.discard(lead["candidate_election_id"])
     return out
 
 
