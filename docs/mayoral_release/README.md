@@ -73,10 +73,12 @@ A page is usable (`release_usable`) if it was archived within 365 days of the el
 
 Coverage is higher for winners than for runners-up (87 versus 76 percent), in larger cities (92 percent in the 25 largest, 74 percent in those ranked 76–100), and in later years (76 percent in 2010–2013, 87 percent in 2022–2026).
 
+In some elections the runner-up received very few votes, for example under 1 percent; `top_two_vote_share` identifies these contests.
+
 ## Limitations
 
 1. The Wayback Machine did not archive every site or every page, and sites built with tools such as Wix or Squarespace often keep little text in the archive.
-2. Menus and footers repeat across pages. The panel's `text_clean` keeps only sentence-like segments.
+2. Menus and footers repeat across pages, and text volume varies widely between finalists. The panel's `text_unique` keeps each segment once (62 percent of the characters of `text`), and `text_clean` keeps only sentence-like segments. Some sites repeat pages in a second language (for example `/en/` and `/es/`).
 3. `phase` comes from the archive date. A page archived after the election can contain victory messages, and a page archived before it can be older than the campaign. The panel's `text_before` holds only pages archived before election day.
 4. AI agents and a language model found and checked the websites. Nobody validated these checks by hand.
 

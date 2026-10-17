@@ -102,3 +102,9 @@ def test_pass4_status_replaces_earlier_incomplete(tmp_path, monkeypatch):
     monkeypatch.setattr(release, "DISCOVERY", tmp_path)
     monkeypatch.setattr(release, "REPO", tmp_path)
     assert release.incomplete_checks() == {"b", "c"}
+
+
+def test_unique_segments_keeps_first_occurrence():
+    from scripts.build_mayoral_release import unique_segments
+    assert unique_segments("Home#+#About#+#Plan text#+#Home #+#  About#+#Donate") == "Home#+#About#+#Plan text#+#Donate"
+    assert unique_segments("") == ""

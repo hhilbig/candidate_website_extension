@@ -109,10 +109,13 @@ One row per eligible finalist with at least one usable page.
 
 | Column | Definition |
 |---|---|
-| `candidate_election_id` … `official_result_role`, `person_id`, `incumbent` | As in `mayoral_finalists.csv` |
+| `candidate_election_id` … `official_result_role`, `person_id`, `election_type`, `top_two_vote_share`, `incumbent` | As in `mayoral_finalists.csv` |
+| `stage` | As in `mayoral_elections.csv` |
+| `population_2020` | As in `mayoral_cities.csv` |
 | `n_sites`, `n_pages`, `n_pages_before_election`, `n_pages_after_election` | Websites, usable pages, and usable pages archived before election day and on or after it |
 | `first_capture`, `last_capture` | Earliest and latest capture among the usable pages |
 | `text` | Text of all usable pages, ordered by website, address depth, address and capture time, joined by `#+#` |
 | `n_char`, `n_words`, `n_tags`, `n_clean_tags` | As in the corpus, for the joined text |
 | `text_clean` | `text` after the cleaning rule of ICPSR 226001: addresses and digits removed, and only segments of ten or more words with sentence punctuation and a capital letter kept. Digits are removed, including amounts and proposition numbers. Empty for 6 finalists |
 | `text_before`, `n_char_before`, `text_clean_before` | As `text`, `n_char` and `text_clean`, for the usable pages archived before election day only; empty if there are none (28 finalists) |
+| `text_unique` | `text` with each segment kept once, at its first occurrence (segments compared after collapsing white space). Menus, footers and other text repeated across pages count once |

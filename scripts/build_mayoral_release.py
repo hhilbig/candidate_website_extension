@@ -56,10 +56,11 @@ FINALIST_COLUMNS = ["candidate_election_id", "person_id", "election_id", "city_i
                     "top_two_vote_share", "incumbent", "result_source_url",
                     "eligible", "verification_status", "url_lead", "url_lead_basis", "campaign_urls", "text_status",
                     "n_sites", "n_pages_usable", "n_char_usable"]
-PANEL_COLUMNS = ["candidate_election_id", "person_id", "election_id", "city_id", "city_name", "state_abb", "year", "election_date",
-                 "candidate_name", "official_result_role", "incumbent", "n_sites", "n_pages", "n_pages_before_election", "n_pages_after_election",
+PANEL_COLUMNS = ["candidate_election_id", "person_id", "election_id", "city_id", "city_name", "state_abb", "population_2020",
+                 "year", "election_date", "election_type", "stage", "candidate_name", "official_result_role",
+                 "top_two_vote_share", "incumbent", "n_sites", "n_pages", "n_pages_before_election", "n_pages_after_election",
                  "first_capture", "last_capture", "n_char", "n_words", "n_tags", "n_clean_tags", "text", "text_clean",
-                 "n_char_before", "text_before", "text_clean_before"]
+                 "n_char_before", "text_before", "text_clean_before", "text_unique"]
 
 
 def read_csv(path: Path) -> list[dict]:
@@ -81,6 +82,18 @@ def add_counties(cities: list[dict]) -> list[dict]:
         out.append({**city, "county_fips": own[0][1], "county_fips_all": ";".join(f for _, f in own),
                     "county_population_share": round(own[0][0] / sum(p for p, _ in own), 4)})
     return out
+
+
+def unique_segments(text: str) -> str:
+    """Keep each text segment once, at its first occurrence: menus and footers repeated across a finalist's
+    pages then count once (approved October 16, 2026). Segments are compared after collapsing white space."""
+    seen, kept = set(), []
+    for segment in text.split("#+#"):
+        key = " ".join(segment.split())
+        if key and key not in seen:
+            seen.add(key)
+            kept.append(segment)
+    return "#+#".join(kept)
 
 
 def write_csv(path: Path, rows: list[dict], columns: list[str]) -> None:
@@ -176,6 +189,9 @@ def build(corpus_path: Path, site_check_path: Path, out_dir: Path) -> dict:
     out_dir.mkdir(parents=True)
     people = read_csv(COVERAGE / "candidate_coverage.csv")
     pids = person_ids(people)
+    # Election and city variables repeated in the panel, so users need no merge (approved October 16, 2026).
+    stage = {e["election_id"]: e["stage"] for e in read_csv(COVERAGE / "elections.csv")}
+    population = {c["city_id"]: c["population_2020"] for c in read_csv(COVERAGE / "cities.csv")}
     sites = {(r["candidate_election_id"], r["target_id"]): r for r in read_csv(site_check_path)}
     corpus = pq.read_table(corpus_path)
     def site_passes(finalist: str, target: str, stamp: str) -> bool:
@@ -269,7 +285,9 @@ def build(corpus_path: Path, site_check_path: Path, out_dir: Path) -> dict:
                           "first_capture": stamps[0], "last_capture": stamps[-1], "n_char": len(text),
                           "n_words": len(text.split()), "n_tags": clean["n_tags"], "n_clean_tags": clean["n_clean_tags"],
                           "text": text, "text_clean": clean["text"], "n_char_before": len(before),
-                          "text_before": before, "text_clean_before": icpsr_clean_text(before)["text"] if before else ""})
+                          "text_before": before, "text_clean_before": icpsr_clean_text(before)["text"] if before else "",
+                          "text_unique": unique_segments(text), "stage": stage[person["election_id"]],
+                          "population_2020": population[person["city_id"]]})
     write_csv(out_dir / "mayoral_finalists.csv", finalists, FINALIST_COLUMNS)
     write_csv(out_dir / "mayoral_finalist_panel.csv", panel, PANEL_COLUMNS)
     for name, source in (("mayoral_cities.csv", "cities.csv"), ("mayoral_city_years.csv", "city_year_audit.csv"),
