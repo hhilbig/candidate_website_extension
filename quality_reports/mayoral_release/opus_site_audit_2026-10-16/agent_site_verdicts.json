@@ -1,0 +1,478 @@
+[
+ {
+  "site": "R01",
+  "verdict": "unsure",
+  "reason": "",
+  "evidence": "The only capture is a favicon (2011-01-28, 95 days before). The CDX for the whole mayorbeutler.com domain in 2009-2012 holds only this favicon and two robots.txt files, so no HTML page exists to show the content of the site.",
+  "opened_archive": true
+ },
+ {
+  "site": "R02",
+  "verdict": "pass",
+  "reason": "",
+  "evidence": "Pages from 2013-10-18 (382 days before) say 'Councilwoman Mary Salas is the right candidate for Chula Vista City Mayor' and 'make check payable to Mary Salas for Mayor 2014'.",
+  "opened_archive": false
+ },
+ {
+  "site": "R03",
+  "verdict": "pass",
+  "reason": "",
+  "evidence": "The sitting mayor's site on 2018-03-08 (58 days before) has Issues, Donate and 'I will continue to be one of Lubbock's biggest cheerleaders', with '(c) 2018 Mayor Dan Pope'. This is a re-election campaign site for 2018.",
+  "opened_archive": false
+ },
+ {
+  "site": "R04",
+  "verdict": "pass",
+  "reason": "",
+  "evidence": "aftabformayor.com on 2025-11-05 (1 day after) shows 'Support our campaign', 'Donate to our ActBlue' and 'PAID FOR BY FRIENDS OF AFTAB PUREVAL', with text on his four years as mayor. This is his 2025 re-election site.",
+  "opened_archive": false
+ },
+ {
+  "site": "R05",
+  "verdict": "pass",
+  "reason": "",
+  "evidence": "daunhester.com in January 2010 (101-109 days before) is a campaign site: 'Meet the Candidate', Donate, Norfolk voting locations, and 'Work Election Day', with copyright 2010. The pages do not name the office, but her only 2010 race was for mayor against Paul Fraim (campaign kickoff in February 2010, per news and Wikipedia).",
+  "opened_archive": true
+ },
+ {
+  "site": "R06",
+  "verdict": "pass",
+  "reason": "",
+  "evidence": "mikebellfortoledo.com on 2013-06-13 (145 days before) says 'continue leading his hometown' and 'Let's continue working for progress in Toledo', with 'Paid for by Bell for Mayor' on 2013-10-11. This is the incumbent's 2013 re-election site.",
+  "opened_archive": false
+ },
+ {
+  "site": "R07",
+  "verdict": "pass",
+  "reason": "",
+  "evidence": "cherelleparker.com on 2023-10-31 and 2023-11-08 shows Donate, Endorsements, 'PHILADELPHIA The Right Voice & The Right Choice!' and 'Paid for by People for Parker'. This is her 2023 mayoral campaign site.",
+  "opened_archive": false
+ },
+ {
+  "site": "R08",
+  "verdict": "pass",
+  "reason": "",
+  "evidence": "The domain is mayorpulido2012.com, but the 2014-11-19 home page carries a post dated November 3, 2014: 'The OC Register endorses Mayor Miguel Pulido'. The September 2014 captures also show new 2014 posts, so the site shows activity for this race.",
+  "opened_archive": false
+ },
+ {
+  "site": "R09",
+  "verdict": "pass",
+  "reason": "",
+  "evidence": "ivytaylor.com on 2015-06-12 (1 day before) shows 'Copyright (c) 2015 Ivy Taylor for Mayor' with Priorities, Volunteer and Donate, and 'I will ensure that San Antonio continues to be a place where people want to come'.",
+  "opened_archive": false
+ },
+ {
+  "site": "R10",
+  "verdict": "pass",
+  "reason": "",
+  "evidence": "melvincarter.org on 2021-11-01 (1 day before) has Contribute, Lawn Sign Request and a 'Run Thru' first-term video: 'highlights the incredible work we've done together these past 4 years. Join us as we continue building a Saint Paul'. This is an active re-election site for 2021.",
+  "opened_archive": false
+ },
+ {
+  "site": "R11",
+  "verdict": "pass",
+  "reason": "",
+  "evidence": "yvettesimpson.com on 2017-11-07 (election day) reads 'Yvette Simpson For Cincinnati Mayor', with Contribute Now and event pages; pages from 2017-09 to 2017-11 are consistent.",
+  "opened_archive": false
+ },
+ {
+  "site": "R12",
+  "verdict": "pass",
+  "reason": "",
+  "evidence": "The 2019-05 pages are 2015 content ('Vote on November 3rd', 2015 news), but the homepage capture of 2019-12-21 shows the 2019 campaign: 'Vote November 5th ... Over the last four years, Mayor Joe has grown our police force'. November 5 is the 2019 election date, so the site was updated for this race.",
+  "opened_archive": false
+ },
+ {
+  "site": "R13",
+  "verdict": "pass",
+  "reason": "",
+  "evidence": "andreforatlanta.com on 2025-11-03 (1 day before) is titled 'Andre Dickens - For Atlanta Mayor', has 'JOIN OUR TEAM AND CONTRIBUTE NOW' and 'PAID FOR BY ANDRE FOR ATLANTA', and presents incumbent-era content ('the 61st Mayor of Atlanta', 'First Ever ATL DOT Announced'). The site is a 2021 site updated during his term for the 2025 re-election.",
+  "opened_archive": true
+ },
+ {
+  "site": "R14",
+  "verdict": "pass",
+  "reason": "",
+  "evidence": "andyhafen.com donations page on 2013-01-28 (64 days before): 'I am running an aggressive grassroots campaign to be re-elected the Mayor of Henderson.' Other pages present 'Mayor Andy Hafen's Record'.",
+  "opened_archive": false
+ },
+ {
+  "site": "R15",
+  "verdict": "pass",
+  "reason": "",
+  "evidence": "bibbforcle.com homepage on 2025-11-01 (3 days before): 'Re-elect Mayor Bibb ... I'm running because I see what's possible'. Some subpages keep 2021 text ('As your Mayor, I'll'), but the homepage shows the 2025 re-election campaign.",
+  "opened_archive": false
+ },
+ {
+  "site": "R16",
+  "verdict": "pass",
+  "reason": "",
+  "evidence": "The given pages date from after the election, so I opened the homepage of 2019-10-22 (14 days before). It shows 'Mayor Andrew J. Ginther for Columbus', 'Donate Today! Team Ginther needs your support', and a Facebook post 'Make a plan to vote early or in person on November 5th.'",
+  "opened_archive": true
+ },
+ {
+  "site": "R17",
+  "verdict": "pass",
+  "reason": "",
+  "evidence": "patspearman.com on 2022-11-04 (4 days before): 'North Las Vegas is the land of opportunity ... As Mayor, I'll pursue an opportunity agenda'. The issues page reads 'As Mayor I'll' about North Las Vegas.",
+  "opened_archive": false
+ },
+ {
+  "site": "R18",
+  "verdict": "pass",
+  "reason": "",
+  "evidence": "jimlaneformayor.com on 2011-04-09 (70 days before the June 18 runoff): 'would be honored to earn your vote for Mayor of Fort Worth in the upcoming May' election, plus the '2011 Jim Lane for Mayor' material and a March 23, 2011 kickoff. The May 2011 general election and the June 2011 runoff belong to the same race.",
+  "opened_archive": false
+ },
+ {
+  "site": "R19",
+  "verdict": "pass",
+  "reason": "",
+  "evidence": "The domain began as his 2018 Clark County treasurer site (Nov 2018 copy), but the 2019-04-18 copy has new text for this race: \"Phil decided to run for mayor of Las Vegas. On January 31, he filed for that race\" and \"Election day is April 2.\"",
+  "opened_archive": false
+ },
+ {
+  "site": "R20",
+  "verdict": "pass",
+  "reason": "",
+  "evidence": "jackberryformayor.com copies from 2016-10-10 to 2016-11-18 are Jack Berry's Richmond campaign site: \"Why I'm running for Mayor of Richmond\", \"Paid for by Jack Berry for Mayor\", and an Oct 10, 2016 endorsement post.",
+  "opened_archive": false
+ },
+ {
+  "site": "R21",
+  "verdict": "pass",
+  "reason": "",
+  "evidence": "colemanforcolumbus.com has Volunteer and Contribute pages and promotes the sitting mayor (\"Mayor Michael B. Coleman took office with a commitment...\"). Copies from 2011-07-25 and 2011-11-10 bracket the 2011 re-election and include 2010\u20132011 news items.",
+  "opened_archive": false
+ },
+ {
+  "site": "R22",
+  "verdict": "pass",
+  "reason": "",
+  "evidence": "The sampled Aug 2025 copies are an older Wix site (\"\u00a9 2023\"), but it is still a \"Stephen Sanders FOR MAYOR\" Lubbock site. The site was rebuilt for this race: the 2026-02-15 homepage title is \"Stephen Sanders for Mayor of Lubbock 2026\", and 2026-05-05 copies add issues, plan and vote pages. Sanders ran in the May 2, 2026 election.",
+  "opened_archive": true
+ },
+ {
+  "site": "R23",
+  "verdict": "pass",
+  "reason": "",
+  "evidence": "joemccomb.com copies from 2020-10-01 and 2020-10-20 are the sitting mayor's re-election site: \"McCOMB for MAYOR\" and \"the Best Choice for Mayor of Corpus Christi\", with a donate form. The 2021-03-05 copy is a hosting error page.",
+  "opened_archive": false
+ },
+ {
+  "site": "R24",
+  "verdict": "pass",
+  "reason": "",
+  "evidence": "The 2014-10-30 homepage is the campaign site: \"Paid for by Catania for Mayor\", with events \"Catania for Mayor Rally\" and \"Election Day 2014\".",
+  "opened_archive": false
+ },
+ {
+  "site": "R25",
+  "verdict": "pass",
+  "reason": "",
+  "evidence": "The reelectjimross.com copies from 2026-04-19 carry the \"Announcement for Re-Election ... for a third and final term this coming May\", plus endorsements, yard-sign and Work the Polls pages.",
+  "opened_archive": false
+ },
+ {
+  "site": "R26",
+  "verdict": "fail",
+  "reason": "not_campaign_site",
+  "evidence": "The 2018-11-24 copy is a hand-coded third-party page. It calls her \"the Republican candidate\" in a nonpartisan race, has no paid-for disclaimer, and its footer \"Donate to Cyndi\" link goes to \"#\". By 2019-08-16 the same domain hosts an attack site (\"Cyndi Lamm, Lincoln's leading homophobic activist, lost her bid for mayor\"). A 2019 Journal Star voter guide named CyndifortheCity.com as her campaign website.",
+  "opened_archive": true
+ },
+ {
+  "site": "R27",
+  "verdict": "pass",
+  "reason": "",
+  "evidence": "The 2011-02-02 copy is Rose Ferlita's Tampa campaign site: \"Our 'Rose Ferlita for Mayor' campaign continues to move forward\" and \"Political Advertisement Paid for and Approved by Rose Ferlita, Nonpartisan, for Mayor.\" The 2011-04-20 copy is a parked GoDaddy page after the domain expired.",
+  "opened_archive": false
+ },
+ {
+  "site": "R28",
+  "verdict": "pass",
+  "reason": "",
+  "evidence": "The capture on 2022-11-07, one day before the election, asks for 'your vote for Reno Mayor', and a 'Reno 2026 Plan' page captured on 2022-11-04 criticizes 'the current city council and mayor'. The site existed earlier with a 'Reno 2022 Plan' page in January 2022. The plan was updated for this race.",
+  "opened_archive": false
+ },
+ {
+  "site": "R29",
+  "verdict": "pass",
+  "reason": "",
+  "evidence": "The homepage captured on 2023-11-01, six days before the election, asks for money to 'fuel Mayor Ginther's grassroots campaign' and is 'PAID FOR BY FRIENDS FOR GINTHER'. It has a current issues page that includes reproductive rights.",
+  "opened_archive": false
+ },
+ {
+  "site": "R30",
+  "verdict": "pass",
+  "reason": "",
+  "evidence": "The capture on 2020-11-25, 17 days before the December 2020 runoff, says 'Support Our Mayor', 'Vote for More... more el paso' and 'Donate today'. It also has 2020 COVID-response news items.",
+  "opened_archive": false
+ },
+ {
+  "site": "R31",
+  "verdict": "pass",
+  "reason": "",
+  "evidence": "The capture on 2024-11-06 says Gallego 'is ready to continue the job' and is 'Paid for by Kate Gallego for Phoenix Mayor'. Pages captured from August to October 2024 show that the campaign site was active during the race.",
+  "opened_archive": false
+ },
+ {
+  "site": "R32",
+  "verdict": "pass",
+  "reason": "",
+  "evidence": "The captures on 2012-11-05, one day before the election, show 'Kip's Re-Election Campaign Kick-Off' on 'June 12th' and 2012 budget news. The events page lists the '2012 ... Re-Election Campaign Kick-Off'.",
+  "opened_archive": false
+ },
+ {
+  "site": "R33",
+  "verdict": "pass",
+  "reason": "",
+  "evidence": "The archived homepage from 2014-05-20 is titled 'Fraim for Mayor', calls Fraim 'CANDIDATE FOR MAYOR' and says it is 'Paid for and Authorized by Paul Fraim, Candidate for Mayor'. The site feed lists posts from March to May 2014, which include '\"Friday with Fraim\" set for April 11 at Campaign Headquarters'. The homepage capture is two weeks after the 2014-05-06 election.",
+  "opened_archive": true
+ },
+ {
+  "site": "R34",
+  "verdict": "pass",
+  "reason": "",
+  "evidence": "The issues page captured on 2017-07-06 says 'After I am elected Mayor of the City of Cleveland I will open City Hall every Saturday'. The homepage captured on 2017-09-12 has a 2017 copyright and a 'Paid for by' line.",
+  "opened_archive": false
+ },
+ {
+  "site": "R35",
+  "verdict": "pass",
+  "reason": "",
+  "evidence": "The homepage captured on 2024-02-05, 29 days before the March 2024 election, shows 'Mayoral Candidate Jerry Dyer' and 'DONATE TO JERRY DYER FOR MAYOR', with a 2024 copyright. An April 2024 capture says 'I would appreciate your vote to serve another four years.'",
+  "opened_archive": false
+ },
+ {
+  "site": "R36",
+  "verdict": "pass",
+  "reason": "",
+  "evidence": "The homepage captured on 2016-06-11, four days after the election, is 'Paid for by Faulconer for Mayor 2016' and asks visitors to 'Support Kevin'. The issues page from 2016-05-30 lists results from his term as mayor.",
+  "opened_archive": false
+ },
+ {
+  "site": "R37",
+  "verdict": "pass",
+  "reason": "",
+  "evidence": "Snapshot of 2020-11-01 (2 days before the election) shows the sitting mayor's campaign site with Donate and issue pages, '(c) 2020 Mayor Dan Pope' and 'I will continue to be one of Lubbock's biggest cheerleaders.'",
+  "opened_archive": false
+ },
+ {
+  "site": "R38",
+  "verdict": "pass",
+  "reason": "",
+  "evidence": "Issues page captured 2019-09-22 (44 days before) shows the 2019 platform: 'here are some of the priorities I will focus on as Mayor'. Steve Schewel was the incumbent seeking re-election in Durham.",
+  "opened_archive": false
+ },
+ {
+  "site": "R39",
+  "verdict": "fail",
+  "reason": "other_election_only",
+  "evidence": "All captured pages show the 2017 race against McFarlane ('Election Night Party November 7, 2017', '(c) Copyright 2017'). The homepage capture nearest October 2019 is dated 2019-01-09. A contact page captured 2019-06-16 still carries the 2017 copyright and no 2019 content.",
+  "opened_archive": true
+ },
+ {
+  "site": "R40",
+  "verdict": "pass",
+  "reason": "",
+  "evidence": "Pages captured 2025-10-13 (2 days after the primary) and 2025-04-30 show Helena Moreno's campaign site with 'It's time for a New Direction', 'Donate Today' and 'Join Us to Fight for New Orleans' Future'. This matches her 2025 mayoral campaign while she was Council President.",
+  "opened_archive": false
+ },
+ {
+  "site": "R41",
+  "verdict": "pass",
+  "reason": "",
+  "evidence": "Pages captured 2023-05-21/24 (5-8 days after the runoff) show the mayoral campaign: 'Thank you all for your support!' and a Gazette endorsement, 'we advocate Williams as mayor'. A Secretary of State record page from his earlier campaign is kept on the site as archive content.",
+  "opened_archive": false
+ },
+ {
+  "site": "R42",
+  "verdict": "pass",
+  "reason": "",
+  "evidence": "Pages captured 2018-04-24 (30 days before the special election) say 'sworn in as Mayor on March 6, 2018' and 'Get Involved with David's Campaign ... Paid for by David Briley for Mayor'.",
+  "opened_archive": false
+ },
+ {
+  "site": "R43",
+  "verdict": "pass",
+  "reason": "",
+  "evidence": "Homepage captured 2016-03-04 still shows the 2015 race: 'Vote for Dave Bieter for Boise Mayor this November 3rd, 2015', with Contribute and Volunteer pages.",
+  "opened_archive": false
+ },
+ {
+  "site": "R44",
+  "verdict": "fail",
+  "reason": "other_election_only",
+  "evidence": "Captures from 2016-12 to 2017-06 show the 2013 re-election site unchanged: the newest news item is from 'October 17 2013', and the endorsements list 2013-era officeholders. By 2017-07-12 the homepage redirected to a default hosting page, and no 2017 campaign content appears.",
+  "opened_archive": true
+ },
+ {
+  "site": "R45",
+  "verdict": "pass",
+  "reason": "",
+  "evidence": "Homepage captured 2024-11-04 (1 day before the election) says 'Join Daniel's campaign to build a better San Francisco ... Daniel is running for mayor'. The privacy policy names 'Daniel Lurie for Mayor 2024'.",
+  "opened_archive": false
+ },
+ {
+  "site": "R46",
+  "verdict": "pass",
+  "reason": "",
+  "evidence": "Snapshots 11 and 26 days before the 2020-12-05 election show an active Baton Rouge campaign site with yard-sign requests, donations and 'PAID FOR BY STEVE CARTER CAMPAIGN', asking about 'the biggest issues facing East Baton Rouge Parish'.",
+  "opened_archive": false
+ },
+ {
+  "site": "R47",
+  "verdict": "pass",
+  "reason": "",
+  "evidence": "Snapshots from 2025-03-30 to 2025-05-14 show 'Jean Stothert for Omaha' with 'Check Out Our Latest Ad', '\u00a9 2024' and a priorities page citing 2024 crime statistics ('17% reduction in crime rates in 2024'). The site was active for the 2025 race.",
+  "opened_archive": false
+ },
+ {
+  "site": "R48",
+  "verdict": "pass",
+  "reason": "",
+  "evidence": "The homepage 5 days before the 2024-03-05 election says 'Matt Mahan is the current Mayor of San Jose' and 'That's why Matt Mahan first ran for mayor', which shows the site was updated for re-election. The site belongs to 'Matt Mahan for San Jose Mayor'. The Ask Matt page still has text from 2022 about Cindy Chavez.",
+  "opened_archive": false
+ },
+ {
+  "site": "R49",
+  "verdict": "pass",
+  "reason": "",
+  "evidence": "The press release captured in Nov 2010 reads 'Bob Buckhorn Announces 2011 Run for Mayor's Seat'. A capture from 2011-03-04 (18 days before the election) shows the Times endorsement 'Times Recommends Bob Buckhorn for Mayor' of Tampa.",
+  "opened_archive": false
+ },
+ {
+  "site": "R50",
+  "verdict": "pass",
+  "reason": "",
+  "evidence": "The bio captured in 2022 says Hartke 'has served on City Council for 9 years and as Mayor for 3 years', which matches the 2022 re-election. The endorsement list includes current officials such as 'Gilbert Mayor Brigette Peterson'. The footer reads 'Paid for by Kevin Hartke for Chandler Mayor', although some older 2018 news posts remain on the site.",
+  "opened_archive": false
+ },
+ {
+  "site": "R51",
+  "verdict": "pass",
+  "reason": "",
+  "evidence": "The site was captured 2020-08-11, after the election, but its text belongs to the 2020-05-19 race: 'VOTE THIS TUESDAY MAY 19TH' and 'I ask for your support so I may continue to represent you as your Mayor'. It is paid for by Friends of Mayor Rick West.",
+  "opened_archive": false
+ },
+ {
+  "site": "R52",
+  "verdict": "pass",
+  "reason": "",
+  "evidence": "Snapshots from Feb 2020 to 2020-11-05 show 'Paid for by Kevin Lincoln for Mayor 2020', with Stockton vision and endorsement pages. A homepage capture is from 2 days before the 2020-11-03 election.",
+  "opened_archive": false
+ },
+ {
+  "site": "R53",
+  "verdict": "pass",
+  "reason": "",
+  "evidence": "The supplied snapshot from 2020-11-27 is Welch's Pinellas County Commission site. The archive capture from 2021-10-14 shows the same domain repurposed for this race: 'Ken Welch receives Tampa Bay Times endorsement' and 'paid for and approved by Ken Welch for Mayor of St. Petersburg'.",
+  "opened_archive": true
+ },
+ {
+  "site": "R54",
+  "verdict": "pass",
+  "reason": "",
+  "evidence": "The homepage captured 2026-06-14 reads 'Re-Elect Mayor Rex Richardson', 'Election Day is Tuesday, June 2, 2026' and 'Paid for by Rex Richardson for Mayor 2026'. The 2025 issue pages are older 2022 content on the same site.",
+  "opened_archive": false
+ },
+ {
+  "site": "R55",
+  "verdict": "pass",
+  "reason": "",
+  "evidence": "The homepage on 2025-04-28 (5 days before the 2025-05-03 election) has new navigation compared with the December 2024 capture. It shows 'KEEP FORT WORTH THRIVING', 'JOIN THE TEAM / DONATE TODAY' and 'Political ad paid for by Mattie Parker for Fort Worth Mayor'.",
+  "opened_archive": false
+ },
+ {
+  "site": "R56",
+  "verdict": "pass",
+  "reason": "",
+  "evidence": "The rickleads.com pages in April and May 2017 state 'Election Day is Saturday, May 6' and 'PICK RICK & LET'S BRING IRVING TOGETHER!'. They list priorities 'should I have the honor to serve you as the next Mayor of Irving'.",
+  "opened_archive": false
+ },
+ {
+  "site": "R57",
+  "verdict": "pass",
+  "reason": "",
+  "evidence": "The steinberg4sac.com header reads 'Darrell Steinberg - Sacramento Mayor 2020' on 2020-02-13, 19 days before the 2020-03-03 election. The page asks for contributions and says 'our work isn't done'. Some subpages are leftover WordPress sample pages, but the site is his 2020 campaign site.",
+  "opened_archive": false
+ },
+ {
+  "site": "R58",
+  "verdict": "pass",
+  "reason": "",
+  "evidence": "maryannforraleigh.com has a post dated July 6, 2022 titled 'I Filed for Re-Election!'. The homepage on 2022-11-04 shows 'My goal as mayor is to make Raleigh...' with Volunteer and Donate links and a tweet from 11/02/2022.",
+  "opened_archive": false
+ },
+ {
+  "site": "R59",
+  "verdict": "pass",
+  "reason": "",
+  "evidence": "The homepage on 2026-05-05 says 'WHY I AM RUNNING FOR RE-ELECTION AS YOUR MAYOR' and lists 'Election Day: Saturday, May 2'. Older captures from January and March 2026 still show 2024 runoff text and a District 3 page from an earlier campaign, but the site was updated for the 2026 race.",
+  "opened_archive": false
+ },
+ {
+  "site": "R60",
+  "verdict": "pass",
+  "reason": "",
+  "evidence": "The alexanderformayor.com homepage on 2024-11-15 shows 'VOTE! September 20-November 5' for Mayor Kenneth Cooper Alexander. These are the early-voting dates for the 2024-11-05 Norfolk election.",
+  "opened_archive": false
+ },
+ {
+  "site": "R61",
+  "verdict": "pass",
+  "reason": "",
+  "evidence": "The archived homepage of 2026-01-17 (24 days before the 2026-02-10 election) shows 'Why I'm Running' and a DONATE button. It also uses the 2025 detail 'currently serves as President of the United States Conference of Mayors', which shows that the text was updated for this race. On 2026-02-14 the page reports the result: 'In 2026 he became the fifth mayor in OKC history to be elected to a third term'. Most news posts are from the 2018 and 2022 campaigns.",
+  "opened_archive": true
+ },
+ {
+  "site": "R62",
+  "verdict": "pass",
+  "reason": "",
+  "evidence": "patti4mayor.com shows 'WE NEED BOLD ACTION TO MOVE STOCKTON FORWARD' from 2024-10-10 to 2024-11-28. It has Contribute, Make Endorsement and Volunteer links for the November 2024 Stockton mayoral race.",
+  "opened_archive": false
+ },
+ {
+  "site": "R63",
+  "verdict": "pass",
+  "reason": "",
+  "evidence": "brandonforbaltimore.com on 2024-11-04, one day before the general election, has a '2024 Election Speech' page. That page gives the text of his 2024 Democratic primary night speech: 'we are destined for a second term'. The homepage also has a campaign text-message signup form.",
+  "opened_archive": false
+ },
+ {
+  "site": "R64",
+  "verdict": "pass",
+  "reason": "",
+  "evidence": "mcleanforboise.com is the campaign site of the sitting mayor. On 2023-10-26 (12 days before the election) the vote page says \"Stay in the loop about the nov 7 election\", and the homepage says \"yes, I am running for another term as Boise's mayor\".",
+  "opened_archive": false
+ },
+ {
+  "site": "R65",
+  "verdict": "pass",
+  "reason": "",
+  "evidence": "neldamartinez.com is a #nelda4mayor campaign site with Donate, Volunteer and \"Vote For Nelda\" sections. A news item dated October 23, 2014 reads \"Participated in Early Voti[ng]\", so the site was active for the 2014-11-04 re-election.",
+  "opened_archive": false
+ },
+ {
+  "site": "R66",
+  "verdict": "pass",
+  "reason": "",
+  "evidence": "rasjbaraka.com is Baraka's re-election campaign site (Donate, Volunteer, Events; the footer still says \"Re-Elect Ras J. Baraka 2022\"). Its 2026-02-13 capture loads a \"baraka-2026-logo-FOR-LANDING-PAGE-GRAPHIC\" image and a \"2026-WEBSITE-favicon\", both uploaded 2025-12. The page title is \"Newark Forward\". This shows a refresh for the 2026-05-12 race, which Baraka entered and won. Most of the page text is old (2014-2022 bio and events).",
+  "opened_archive": true
+ },
+ {
+  "site": "R67",
+  "verdict": "pass",
+  "reason": "",
+  "evidence": "anthonyfoxx.com on 2011-11-09 shows a splash page that says \"Vote Tuesday Nov. 8th\" and \"Paid for by the Anthony Foxx Committee\". The September 2011 captures show Contribute and Volunteer links next to 2011 news, so the site was active for the 2011 re-election.",
+  "opened_archive": false
+ },
+ {
+  "site": "R68",
+  "verdict": "fail",
+  "reason": "not_campaign_site",
+  "evidence": "mtubbs.com is titled \"Michael D. Tubbs | Official Website\". Its 2020-11-01 capture shows a mayoral profile: the HBO documentary, the 2020 State of the City, COVID-19 alerts, speeches and op-eds. The page has no donate, vote, paid-for or 2020 re-election content.",
+  "opened_archive": true
+ }
+]

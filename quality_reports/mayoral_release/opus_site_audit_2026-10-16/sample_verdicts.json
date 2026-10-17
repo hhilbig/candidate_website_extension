@@ -1,0 +1,352 @@
+[
+ {
+  "site": "S01",
+  "verdict": "pass",
+  "reason": "",
+  "evidence": "Home page one day before the election reads \"Re-Elect Mayor Tim Keller on November 2, 2021\" with a Keep Keller treasurer disclaimer.",
+  "opened_archive": false
+ },
+ {
+  "site": "S02",
+  "verdict": "pass",
+  "reason": "",
+  "evidence": "Page 9 days before the election says \"Long Beach can do better\" and is \"Paid for by Friends of Damon Dunn for Mayor 2014\".",
+  "opened_archive": false
+ },
+ {
+  "site": "S03",
+  "verdict": "pass",
+  "reason": "",
+  "evidence": "mayorpulido2012.com, 12 days before the election, has Bio, Ballot Statement and Donate pages; the bio says \"Term Expires: November 2012\" for the sitting mayor of Santa Ana.",
+  "opened_archive": false
+ },
+ {
+  "site": "S04",
+  "verdict": "pass",
+  "reason": "",
+  "evidence": "Page 13 days before the election says \"Election Day is Tuesday, November 3\" and \"PICK RICK & LET'S BRING IRVING TOGETHER!\"; the about page names him president of the Metroplex Mayors council. The footer says \"Rick Stopfer for City Council Campaign\", which fits Irving, where the mayor holds a council seat; the archive could not be opened to confirm the word mayor on the site.",
+  "opened_archive": false
+ },
+ {
+  "site": "S05",
+  "verdict": "pass",
+  "reason": "",
+  "evidence": "Home page one day before the election says \"I'm running for re-election\" and the footer reads \"Patricia Lock Dawson for Riverside Mayor\".",
+  "opened_archive": false
+ },
+ {
+  "site": "S06",
+  "verdict": "pass",
+  "reason": "",
+  "evidence": "Home page five days before the December 2019 runoff reads \"Sylvester Turner for Mayor ... Join the campaign today\" with a Sylvester Turner Campaign political-advertising disclaimer.",
+  "opened_archive": false
+ },
+ {
+  "site": "S07",
+  "verdict": "fail",
+  "reason": "not_campaign_site",
+  "evidence": "The only page, 21 days after the election, is a personal business page: \"Marketing & Advertising Expert, Podcast & TV Host\" about NV Media, LLC, with no mention of a mayoral campaign.",
+  "opened_archive": false
+ },
+ {
+  "site": "S08",
+  "verdict": "pass",
+  "reason": "",
+  "evidence": "Home page five days before the election is \"Paid for by Steven Fulop for Mayor 2021\" and describes the Fulop Administration record in Jersey City.",
+  "opened_archive": false
+ },
+ {
+  "site": "S09",
+  "verdict": "fail",
+  "reason": "other_office",
+  "evidence": "All pages are for his 2014 Lancaster County Treasurer re-election: \"Paid for by Andy Stebbing for County Treasurer Committee\" and \"I will be seeking a second term\" as County Treasurer.",
+  "opened_archive": false
+ },
+ {
+  "site": "S10",
+  "verdict": "pass",
+  "reason": "",
+  "evidence": "Home page 12 days before the 2011 election has \"Endorsements for Mayor Ballard\", donate links and \"Paid for and authorized by the Greg Ballard for Mayor Committee\".",
+  "opened_archive": false
+ },
+ {
+  "site": "S11",
+  "verdict": "pass",
+  "reason": "",
+  "evidence": "Incumbent re-election site in July 2013 with police and firefighter endorsements and an 'Our Future' page: 'I am pleased to present my vision for St. Petersburg for the next four years.'",
+  "opened_archive": false
+ },
+ {
+  "site": "S12",
+  "verdict": "fail",
+  "reason": "other_election_only",
+  "evidence": "All pages are from 2013 and carry the 2011 campaign: the homepage is a victory letter ('voters of Irving chose to make a conservative change'), and the DMN endorsement backs her against incumbent Gears on the 'May 14 ballot' (2011). Nothing shown concerns the May 2014 race.",
+  "opened_archive": false
+ },
+ {
+  "site": "S13",
+  "verdict": "pass",
+  "reason": "",
+  "evidence": "The homepage 3 days before the election reads 'Lily Mei for Mayor ... I am running to lead this change'. The 2016 endorsement and letter pages come from her 2014 council campaign.",
+  "opened_archive": false
+ },
+ {
+  "site": "S14",
+  "verdict": "pass",
+  "reason": "",
+  "evidence": "The endorsements page reads 'Thank you for your support of my candidacy for Mayor of Columbus' and the vision page describes 'The Scott administration'. The homepage was already back to Sheriff text 36 days after the election.",
+  "opened_archive": false
+ },
+ {
+  "site": "S15",
+  "verdict": "pass",
+  "reason": "",
+  "evidence": "'David Straz for Mayor' homepage 9 days before the April 2019 Tampa runoff: 'I want you to join and be a part of my campaign', with early-voting videos.",
+  "opened_archive": false
+ },
+ {
+  "site": "S16",
+  "verdict": "fail",
+  "reason": "other_election_only",
+  "evidence": "The mayorpulido2012.com site shows only 2012-2014 content ('Term Expires: November 2012'). Its newest post is a September 2014 campaign breakfast, and nothing refers to the 2018 race. The Wayback Machine could not be opened to check for newer posts.",
+  "opened_archive": false
+ },
+ {
+  "site": "S17",
+  "verdict": "pass",
+  "reason": "",
+  "evidence": "The April 2013 issues page and the endorsements page belong to the 2013 re-election campaign: Codey says he is proud 'lending my support to his re-election as Mayor of Jersey City'.",
+  "opened_archive": false
+ },
+ {
+  "site": "S18",
+  "verdict": "pass",
+  "reason": "",
+  "evidence": "Campaign site 'Paid for by Jerry Dyer for Mayor 2020' with 'Request a Yard Sign' and a FCEA endorsement 'for Mayor of Fresno in the upcoming March 3 primary'.",
+  "opened_archive": false
+ },
+ {
+  "site": "S19",
+  "verdict": "pass",
+  "reason": "",
+  "evidence": "The homepage 1 day before the 2021 election reads 'That's why I'm running to be your mayor again', with the Protect Our Citizens Plan and a donate page 'so that we can get Carty elected'.",
+  "opened_archive": false
+ },
+ {
+  "site": "S20",
+  "verdict": "pass",
+  "reason": "",
+  "evidence": "'Vince Gray for Mayor' site active before the November 2010 general election, with the jobs and public-trust plans and a September 2010 primary victory post 'We did it! We won!'.",
+  "opened_archive": false
+ },
+ {
+  "site": "S21",
+  "verdict": "pass",
+  "reason": "",
+  "evidence": "Pulido's own campaign WordPress site (mayorpulido2012.com) with Donate and Ballot Statement links; the archived homepage at -20 days carries a new post 'Published on September 17, 2016' and a pingback from 'Santa Ana 2016 General Election Voter Guide', so it was active during the 2016 race. Weak point: the bio and ballot statement are left over from 2012 ('Term Expires: November 2012'), and no page says 2016 re-election explicitly.",
+  "opened_archive": true
+ },
+ {
+  "site": "S22",
+  "verdict": "pass",
+  "reason": "",
+  "evidence": "'Ellen Lee Zhou for Mayor 2019' with a San Francisco platform; the Chinese page says the election is '2019\u5e7411\u67085\u865f'.",
+  "opened_archive": false
+ },
+ {
+  "site": "S23",
+  "verdict": "fail",
+  "reason": "different_person",
+  "evidence": "The only page is for a 'Tim' running for mayor of West Milford (NJ): 'Tim is currently the Mayor of West Milford!'. It is not Donald Wagner of Irvine, CA.",
+  "opened_archive": false
+ },
+ {
+  "site": "S24",
+  "verdict": "pass",
+  "reason": "",
+  "evidence": "stevefordurham.com: 'Thank you for your interest in my campaign for Mayor!' and 'Member, Durham City Council, 2011-present', with 2017 issues pages (-62 days).",
+  "opened_archive": false
+ },
+ {
+  "site": "S25",
+  "verdict": "pass",
+  "reason": "",
+  "evidence": "voteron.com at -31 days: 'RE-ELECT RON FOR MAYOR!' and 'For the past 2 years, Mayor Nirenberg has been building the City You Deserve', so it is a re-election site for 2019 San Antonio.",
+  "opened_archive": false
+ },
+ {
+  "site": "S26",
+  "verdict": "pass",
+  "reason": "",
+  "evidence": "Homepage at -3 days: 'Nicole Malliotakis for Mayor', 'Pledge to Vote for Nicole on Nov. 7th', 'A NO NONSENSE MAYOR FOR NYC'. The earlier 2017 pages are her Assembly site on the same domain, but the pre-election pages are the mayoral campaign.",
+  "opened_archive": false
+ },
+ {
+  "site": "S27",
+  "verdict": "pass",
+  "reason": "",
+  "evidence": "Site operated by 'Barbara Bry for San Diego Mayor 2020'; the homepage at -2 days contrasts her with Todd Gloria: 'They're both Democrats. But only Barbara has the independence'.",
+  "opened_archive": false
+ },
+ {
+  "site": "S28",
+  "verdict": "pass",
+  "reason": "",
+  "evidence": "'Edwin Peacock for Mayor' in Charlotte, Oct 2013 posts; one page says he 'faces Democrat Patrick Cannon in the race for mayor'.",
+  "opened_archive": false
+ },
+ {
+  "site": "S29",
+  "verdict": "pass",
+  "reason": "",
+  "evidence": "steinberg4sac.com at -9 days: 'I am running for Mayor because I love Sacramento', with endorsements calling him 'Sacramento's next mayor' (May 2016).",
+  "opened_archive": false
+ },
+ {
+  "site": "S30",
+  "verdict": "pass",
+  "reason": "",
+  "evidence": "jackforhouston.com at -13 days: 'secure a better future for all of Houston... I respectfully ask for your vote in the November 8th election', which matches the 2011-11-08 date.",
+  "opened_archive": false
+ },
+ {
+  "site": "S31",
+  "verdict": "pass",
+  "reason": "",
+  "evidence": "October 2017 bio page calls him 'candidate for Saint Paul's next Mayor' and the vision page presents his 'Community-First Police Reform' plan a week before the election.",
+  "opened_archive": false
+ },
+ {
+  "site": "S32",
+  "verdict": "fail",
+  "reason": "other_election_only",
+  "evidence": "The July 2013 home page shows only 2011 race material ('Bell Leads Durham Mayor's race ... NBC17 - 10/12/11', 2011 endorsements) and no 2013 content. The election-week 2013 captures are French 'Parajumpers' spam, so the domain was no longer in campaign use.",
+  "opened_archive": false
+ },
+ {
+  "site": "S33",
+  "verdict": "pass",
+  "reason": "",
+  "evidence": "October 2024 pages ask 'Let's move Virginia Beach Forward together' and carry 'Paid for and authorized by the Wooten 2 Win Campaign \u00a9 Copyright 2024'.",
+  "opened_archive": false
+ },
+ {
+  "site": "S34",
+  "verdict": "pass",
+  "reason": "",
+  "evidence": "The 'For Garland Mayor' campaign site posts 'WE WON! ... I am humbled that you have elected me as your mayor', which refers to the 2018 special election. The capture is from after the election.",
+  "opened_archive": false
+ },
+ {
+  "site": "S35",
+  "verdict": "pass",
+  "reason": "",
+  "evidence": "The May 2019 home page reads 'Why I am running for Mayor ... I'd like to make a difference as Lincoln's next Mayor'. The September 2018 capture is from her earlier council campaign on the same domain.",
+  "opened_archive": false
+ },
+ {
+  "site": "S36",
+  "verdict": "pass",
+  "reason": "",
+  "evidence": "Pages from December 2010 to May 2011 are headed 'Chris Romer for Mayor of Denver' and list endorsements and issues for the 2011 race.",
+  "opened_archive": false
+ },
+ {
+  "site": "S37",
+  "verdict": "pass",
+  "reason": "",
+  "evidence": "The October 2024 home page reads 'Vote Nov. 5! ... Karen Keith is a principled, proven leader prepared to make a difference for Tulsa', with endorsements and mayoral policy plans.",
+  "opened_archive": false
+ },
+ {
+  "site": "S38",
+  "verdict": "pass",
+  "reason": "",
+  "evidence": "The 2013 captures show the Detroit mayoral campaign: endorsements, a 'Donate' link and issue pages. A December 2012 page reports his exploratory committee for the '13 Detroit mayoral run'.",
+  "opened_archive": false
+ },
+ {
+  "site": "S39",
+  "verdict": "pass",
+  "reason": "",
+  "evidence": "The September 2024 home page reads 'She's the right candidate for Baltimore - so vote Wright for Baltimore!' and labels older coverage 'MEDIA FROM 2020', so the site was in use for 2024. A web search confirmed she was the 2024 Republican nominee.",
+  "opened_archive": false
+ },
+ {
+  "site": "S40",
+  "verdict": "pass",
+  "reason": "",
+  "evidence": "The October 2020 re-election site of the sitting mayor asks visitors to 'See who endorses Mayor Bobby Dyer in 2020' and to 'Help Mayor Dyer with a contribution to his campaign'.",
+  "opened_archive": false
+ },
+ {
+  "site": "S41",
+  "verdict": "pass",
+  "reason": "",
+  "evidence": "Campaign site 'Eileen Higgins for Mayor' for Miami, 34 days before the 9 December 2025 runoff: 'Vote November 4, 2025 ... restore trust in City Hall.' The 4 November first round is part of the same 2025 mayoral election.",
+  "opened_archive": false
+ },
+ {
+  "site": "S42",
+  "verdict": "pass",
+  "reason": "",
+  "evidence": "Stanton re-election campaign site with 2015 content: 'Donate to the Campaign', 2015 news items, and 'This August, you will make a number of big choices ... Here's how Greg will be voting.'",
+  "opened_archive": false
+ },
+ {
+  "site": "S43",
+  "verdict": "pass",
+  "reason": "",
+  "evidence": "Re-election site 'Re-elect Nancy Vaughan Mayor of Greensboro' with 2017 primary news: 'Nancy Vaughan dominates Greensboro mayoral primary!' and 'elected Mayor in 2013 and again in 2015.'",
+  "opened_archive": false
+ },
+ {
+  "site": "S44",
+  "verdict": "pass",
+  "reason": "",
+  "evidence": "The pages 12 days before the election are 2023 re-election pages: 'Four years ago, Mayor Whipple promised to make Wichita a city that works for everyone' and 'In 2022, Whipple invested $31 million.' The pages 161 days before the election appear to hold 2019 platform text.",
+  "opened_archive": false
+ },
+ {
+  "site": "S45",
+  "verdict": "pass",
+  "reason": "",
+  "evidence": "Re-election site for the 2015 Las Vegas race: 'Host Committee to Re-Elect Mayor Carolyn Goodman', an 'Early Voting' menu item, and 'Let's build a stronger downtown core ... by re-electing Carolyn G. Goodman.'",
+  "opened_archive": false
+ },
+ {
+  "site": "S46",
+  "verdict": "pass",
+  "reason": "",
+  "evidence": "Duggan campaign site ('Donate', 'Join our campaign'). Most posts date from the 2017 cycle, but a post dated 23 March 2021 about Amazon jobs shows that the site was active in the 2021 cycle. The evidence for this election is weaker than for the other sites.",
+  "opened_archive": false
+ },
+ {
+  "site": "S47",
+  "verdict": "pass",
+  "reason": "",
+  "evidence": "'RUTH JONES FOR CHANDLER MAYOR' campaign site with Donate and Endorsements pages, captured 51 to 26 days before the August 2022 election. A media item says that she filed to challenge Mayor Kevin Hartke 'in this year's election.'",
+  "opened_archive": false
+ },
+ {
+  "site": "S48",
+  "verdict": "pass",
+  "reason": "",
+  "evidence": "'Mattie Parker for Mayor' campaign site for the 2021 Fort Worth race: 'I am running for Fort Worth Mayor ... as we face down COVID-19', with an endorsement list.",
+  "opened_archive": false
+ },
+ {
+  "site": "S49",
+  "verdict": "fail",
+  "reason": "different_person",
+  "evidence": "The site belongs to William A. Bell Sr., mayor of Birmingham, Alabama: 'sworn in on Tuesday January 26, 2010 as the 33rd Mayor of the City of Birmingham.' The Durham candidate is William V. (Bill) Bell. The page captured 63 days before the election has no text.",
+  "opened_archive": false
+ },
+ {
+  "site": "S50",
+  "verdict": "pass",
+  "reason": "",
+  "evidence": "Betsy Price re-election campaign site, captured 15 days before the May 2017 election: 'ways you can help her campaign', with a State of the City post dated 24 February 2017.",
+  "opened_archive": false
+ }
+]

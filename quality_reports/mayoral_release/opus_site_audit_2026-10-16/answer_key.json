@@ -1,0 +1,452 @@
+[
+ {
+  "site": "S01",
+  "candidate_election_id": "3502000__2021-11-02__regular__05682de6559d00d2",
+  "target_id": "stage3_52fa2e3c26a4d74f65ac5006",
+  "status": "pass",
+  "reason": "hive_yes",
+  "source": "hive_24731028",
+  "n_pages_shown": 4
+ },
+ {
+  "site": "S02",
+  "candidate_election_id": "0643000__2014-06-03__regular__2972355dc46bcb9b",
+  "target_id": "full_discovery_target_aca1533b24c4141b95ebe717",
+  "status": "pass",
+  "reason": "hive_yes",
+  "source": "hive_24714340",
+  "n_pages_shown": 2
+ },
+ {
+  "site": "S03",
+  "candidate_election_id": "0669000__2012-11-06__regular__c2cefd64eab3e3cf",
+  "target_id": "stage3_4d5a145ffb9b9bcdf5342e2e",
+  "status": "excluded",
+  "reason": "not_campaign_site",
+  "source": "agent_review_wf_5a06b8f6-8cf",
+  "n_pages_shown": 4
+ },
+ {
+  "site": "S04",
+  "candidate_election_id": "4837000__2020-11-03__regular__d17c066854fa72f3",
+  "target_id": "stage3_6a0daa0f449edf6bb7aef1df",
+  "status": "pass",
+  "reason": "campaign_site_this_election",
+  "source": "agent_review_wf_ce74850f-42c",
+  "n_pages_shown": 4
+ },
+ {
+  "site": "S05",
+  "candidate_election_id": "0662000__2024-03-05__regular__ac9e34243d83c970",
+  "target_id": "stage3_6540117965cf81e223f3b986",
+  "status": "pass",
+  "reason": "hive_yes",
+  "source": "hive_24714340",
+  "n_pages_shown": 4
+ },
+ {
+  "site": "S06",
+  "candidate_election_id": "4835000__2019-12-14__regular__38fe21ce89963c43",
+  "target_id": "covered_site_target_6906a858b96fcf52c81325f0",
+  "status": "pass",
+  "reason": "hive_yes",
+  "source": "hive_24714340",
+  "n_pages_shown": 4
+ },
+ {
+  "site": "S07",
+  "candidate_election_id": "0662000__2024-03-05__regular__ca6edc296235cbd6",
+  "target_id": "stage3_ee03a1dd8e512a54a179aedd",
+  "status": "excluded",
+  "reason": "not_campaign_site",
+  "source": "agent_review_wf_5a06b8f6-8cf",
+  "n_pages_shown": 1
+ },
+ {
+  "site": "S08",
+  "candidate_election_id": "3436000__2021-11-02__regular__7b49297de9b42eea",
+  "target_id": "full_discovery_target_66167d51dc14e625da33523f",
+  "status": "pass",
+  "reason": "hive_yes",
+  "source": "hive_24714340",
+  "n_pages_shown": 4
+ },
+ {
+  "site": "S09",
+  "candidate_election_id": "3128000__2015-05-05__regular__9e191f7f4746e391",
+  "target_id": "full_discovery_target_00891ab140cf0c4463e1c80d",
+  "status": "excluded",
+  "reason": "other_office",
+  "source": "agent_review_wf_5a06b8f6-8cf",
+  "n_pages_shown": 4
+ },
+ {
+  "site": "S10",
+  "candidate_election_id": "1836003__2011-11-08__regular__c425eeb7f91748d0",
+  "target_id": "stage3L_af8b97d8d8380792e57097e2",
+  "status": "pass",
+  "reason": "hive_yes",
+  "source": "hive_24714340",
+  "n_pages_shown": 4
+ },
+ {
+  "site": "S11",
+  "candidate_election_id": "1263000__2013-11-05__regular__3db73b6fd7cd37f5",
+  "target_id": "stage3L_dc1ec6085a34e8c3376ae781",
+  "status": "pass",
+  "reason": "hive_yes",
+  "source": "hive_24714340",
+  "n_pages_shown": 4
+ },
+ {
+  "site": "S12",
+  "candidate_election_id": "4837000__2014-05-10__regular__fadc6df66e506ec9",
+  "target_id": "stage3_4ab420edb61ac73d7b9c20aa",
+  "status": "pass",
+  "reason": "campaign_site_this_election",
+  "source": "agent_review_wf_8c813751-617",
+  "n_pages_shown": 4
+ },
+ {
+  "site": "S13",
+  "candidate_election_id": "0626000__2016-11-08__regular__a4a8cb98677a7c63",
+  "target_id": "full_discovery_target_6ad213c9e696794f16ea0108",
+  "status": "pass",
+  "reason": "hive_yes",
+  "source": "hive_24714340",
+  "n_pages_shown": 4
+ },
+ {
+  "site": "S14",
+  "candidate_election_id": "3918000__2015-11-03__regular__8fd1c41036d38579",
+  "target_id": "stage3_7ba576dd41c89f9d9b4dd089",
+  "status": "pass",
+  "reason": "campaign_site_this_election",
+  "source": "agent_review_wf_ce74850f-42c",
+  "n_pages_shown": 4
+ },
+ {
+  "site": "S15",
+  "candidate_election_id": "1271000__2019-04-23__regular__33ee3b3952cb8660",
+  "target_id": "stage3L_66ab39666d8db6df45312489",
+  "status": "pass",
+  "reason": "hive_yes",
+  "source": "hive_24714340",
+  "n_pages_shown": 2
+ },
+ {
+  "site": "S16",
+  "candidate_election_id": "0669000__2018-11-06__regular__c2cefd64eab3e3cf",
+  "target_id": "stage3_3ba5a5dd919b1f5f56aaa40c",
+  "status": "excluded",
+  "reason": "other_election_only",
+  "source": "agent_review_wf_8c813751-617",
+  "n_pages_shown": 4
+ },
+ {
+  "site": "S17",
+  "candidate_election_id": "3436000__2013-05-14__regular__ffe4e91b8d390902",
+  "target_id": "stage3_428e736394c5328dcbc56cff",
+  "status": "excluded",
+  "reason": "different_person",
+  "source": "agent_review_wf_5a06b8f6-8cf",
+  "n_pages_shown": 4
+ },
+ {
+  "site": "S18",
+  "candidate_election_id": "0627000__2020-03-03__regular__07506401be83e755",
+  "target_id": "stage3_e7eeda3b8968a9f55fa740b7",
+  "status": "pass",
+  "reason": "hive_yes",
+  "source": "hive_24714340",
+  "n_pages_shown": 4
+ },
+ {
+  "site": "S19",
+  "candidate_election_id": "3977000__2021-11-02__regular__f7d8a0ad40c986ae",
+  "target_id": "stage3_578bd09e53f7daf172dc8cd2",
+  "status": "pass",
+  "reason": "hive_yes",
+  "source": "hive_24794739",
+  "n_pages_shown": 4
+ },
+ {
+  "site": "S20",
+  "candidate_election_id": "1150000__2010-11-02__regular__fe5119e9577d187f",
+  "target_id": "stage3_d68834fb662f8078fe06c195",
+  "status": "pass",
+  "reason": "hive_yes",
+  "source": "hive_24714340",
+  "n_pages_shown": 4
+ },
+ {
+  "site": "S21",
+  "candidate_election_id": "0669000__2016-11-08__regular__c2cefd64eab3e3cf",
+  "target_id": "stage3_a05c1322091faa1aac5e1c62",
+  "status": "excluded",
+  "reason": "other_election_only",
+  "source": "agent_review_wf_8c813751-617",
+  "n_pages_shown": 4
+ },
+ {
+  "site": "S22",
+  "candidate_election_id": "0667000__2019-11-05__regular__e7b35ed0079171eb",
+  "target_id": "stage3_bc1d6a005229cd249308bf8a",
+  "status": "pass",
+  "reason": "hive_yes",
+  "source": "hive_24731028",
+  "n_pages_shown": 4
+ },
+ {
+  "site": "S23",
+  "candidate_election_id": "0636770__2018-11-06__regular__b3abb044aaf7af5e",
+  "target_id": "stage3_290091f00af5b233caa112d4",
+  "status": "excluded",
+  "reason": "different_person",
+  "source": "agent_review_wf_5a06b8f6-8cf",
+  "n_pages_shown": 1
+ },
+ {
+  "site": "S24",
+  "candidate_election_id": "3719000__2017-11-07__regular__c74991a3804b2db8",
+  "target_id": "full_discovery_target_fdd61461069c5135004b272e",
+  "status": "pass",
+  "reason": "hive_yes",
+  "source": "hive_24714340",
+  "n_pages_shown": 4
+ },
+ {
+  "site": "S25",
+  "candidate_election_id": "4865000__2019-06-08__regular__b2026ab9e757e6a1",
+  "target_id": "stage3_5fc24b6829783aa010378165",
+  "status": "pass",
+  "reason": "hive_yes",
+  "source": "hive_24731028",
+  "n_pages_shown": 4
+ },
+ {
+  "site": "S26",
+  "candidate_election_id": "3651000__2017-11-07__regular__0fd200f1b37db867",
+  "target_id": "stage3_f43abe9b6b584b5fc8eb3053",
+  "status": "pass",
+  "reason": "hive_yes",
+  "source": "hive_24731028",
+  "n_pages_shown": 4
+ },
+ {
+  "site": "S27",
+  "candidate_election_id": "0666000__2020-11-03__regular__e4ff2e34dbb8e972",
+  "target_id": "stage3_c9c1e1a989f8e963452c70e7",
+  "status": "pass",
+  "reason": "hive_yes",
+  "source": "hive_24794739",
+  "n_pages_shown": 4
+ },
+ {
+  "site": "S28",
+  "candidate_election_id": "3712000__2013-11-05__regular__9bc8613275a9ace1",
+  "target_id": "stage3_041c5c29f4cdeb65893687e8",
+  "status": "pass",
+  "reason": "hive_yes",
+  "source": "hive_24714340",
+  "n_pages_shown": 4
+ },
+ {
+  "site": "S29",
+  "candidate_election_id": "0664000__2016-06-07__regular__2873ec2e3da002e7",
+  "target_id": "stage3_067c8e6b7df5c91d9d221371",
+  "status": "pass",
+  "reason": "hive_yes",
+  "source": "hive_24794739",
+  "n_pages_shown": 4
+ },
+ {
+  "site": "S30",
+  "candidate_election_id": "4835000__2011-11-08__regular__766d746bf4299c8d",
+  "target_id": "stage3L_b60158bcc5c514ebfd8958af",
+  "status": "pass",
+  "reason": "hive_yes",
+  "source": "hive_24714340",
+  "n_pages_shown": 1
+ },
+ {
+  "site": "S31",
+  "candidate_election_id": "2758000__2017-11-07__regular__8a97bacd462a8d40",
+  "target_id": "stage3L_f3a085c7c1af2e8226052928",
+  "status": "pass",
+  "reason": "hive_yes",
+  "source": "hive_24714340",
+  "n_pages_shown": 4
+ },
+ {
+  "site": "S32",
+  "candidate_election_id": "3719000__2013-11-05__regular__3a34008d37ae09f9",
+  "target_id": "stage3_07a00d3fdb2afbb3c3db4ee9",
+  "status": "excluded",
+  "reason": "other_election_only",
+  "source": "agent_review_wf_5a06b8f6-8cf",
+  "n_pages_shown": 4
+ },
+ {
+  "site": "S33",
+  "candidate_election_id": "5182000__2024-11-05__regular__0130a1c8de500d58",
+  "target_id": "stage3_e795c8d566c5e4d524e0d449",
+  "status": "pass",
+  "reason": "hive_yes",
+  "source": "hive_24714340",
+  "n_pages_shown": 2
+ },
+ {
+  "site": "S34",
+  "candidate_election_id": "4829000__2018-05-05__special__a21dff0ad31202f4",
+  "target_id": "stage3_be7667aa50304b962cc5890c",
+  "status": "pass",
+  "reason": "hive_yes",
+  "source": "hive_24714340",
+  "n_pages_shown": 1
+ },
+ {
+  "site": "S35",
+  "candidate_election_id": "3128000__2019-05-07__regular__c7a6ad6d59136d2d",
+  "target_id": "stage3_a1dc3b70579fc1373e848360",
+  "status": "pass",
+  "reason": "hive_yes",
+  "source": "hive_24714340",
+  "n_pages_shown": 4
+ },
+ {
+  "site": "S36",
+  "candidate_election_id": "0820000__2011-06-07__regular__44e1bf6d3ba13832",
+  "target_id": "full_discovery_target_775bde0cf1f661fa45e08dab",
+  "status": "pass",
+  "reason": "hive_yes",
+  "source": "hive_24714340",
+  "n_pages_shown": 4
+ },
+ {
+  "site": "S37",
+  "candidate_election_id": "4075000__2024-11-05__regular__4445e5a80b3eb4a1",
+  "target_id": "stage3_95e5e1e6d3f0b5c9e89cc69e",
+  "status": "pass",
+  "reason": "hive_yes",
+  "source": "hive_24794739",
+  "n_pages_shown": 4
+ },
+ {
+  "site": "S38",
+  "candidate_election_id": "2622000__2013-11-05__regular__c06815e35316c6ab",
+  "target_id": "stage3_0483f01497bdc05e617522fe",
+  "status": "pass",
+  "reason": "hive_yes",
+  "source": "hive_24794739",
+  "n_pages_shown": 4
+ },
+ {
+  "site": "S39",
+  "candidate_election_id": "2404000__2024-11-05__regular__163b3b60440a6fcf",
+  "target_id": "stage3_e19b3e65d82842dcf7d71040",
+  "status": "excluded",
+  "reason": "other_election_only",
+  "source": "agent_review_wf_8c813751-617",
+  "n_pages_shown": 4
+ },
+ {
+  "site": "S40",
+  "candidate_election_id": "5182000__2020-11-03__regular__3b05c8a4f24d286c",
+  "target_id": "stage3_8cb627e85e92984073f74080",
+  "status": "pass",
+  "reason": "hive_yes",
+  "source": "hive_24731028",
+  "n_pages_shown": 4
+ },
+ {
+  "site": "S41",
+  "candidate_election_id": "1245000__2025-12-09__regular__9887b33867f487fc",
+  "target_id": "stage3_f136b6086281c574684a7e33",
+  "status": "pass",
+  "reason": "hive_yes",
+  "source": "hive_24714340",
+  "n_pages_shown": 4
+ },
+ {
+  "site": "S42",
+  "candidate_election_id": "0455000__2015-08-25__regular__6e6d3dc5085bfbff",
+  "target_id": "stage3_df179cc7c76dc6bad845a89d",
+  "status": "pass",
+  "reason": "hive_yes",
+  "source": "hive_24714340",
+  "n_pages_shown": 4
+ },
+ {
+  "site": "S43",
+  "candidate_election_id": "3728000__2017-11-07__regular__c18d9fdebf4a3e60",
+  "target_id": "stage3_786eca566f0c5d009b29a031",
+  "status": "pass",
+  "reason": "hive_yes",
+  "source": "hive_24714340",
+  "n_pages_shown": 2
+ },
+ {
+  "site": "S44",
+  "candidate_election_id": "2079000__2023-11-07__regular__7080967e2bec33a9",
+  "target_id": "stage3_10e68518c058afcabdb9d675",
+  "status": "pass",
+  "reason": "hive_yes",
+  "source": "hive_24714340",
+  "n_pages_shown": 4
+ },
+ {
+  "site": "S45",
+  "candidate_election_id": "3240000__2015-04-07__regular__5124cab58d06c308",
+  "target_id": "stage3_75a3d33329a4363c7bedbea4",
+  "status": "pass",
+  "reason": "hive_yes",
+  "source": "hive_24714340",
+  "n_pages_shown": 4
+ },
+ {
+  "site": "S46",
+  "candidate_election_id": "2622000__2021-11-02__regular__b0bccd2d54040251",
+  "target_id": "stage3_690e94128b3fbfde712d5601",
+  "status": "pass",
+  "reason": "hive_yes",
+  "source": "hive_24731028",
+  "n_pages_shown": 4
+ },
+ {
+  "site": "S47",
+  "candidate_election_id": "0412000__2022-08-02__regular__1fa625cda00ea955",
+  "target_id": "stage3_3dde029d3c8c7c988120e917",
+  "status": "pass",
+  "reason": "hive_yes",
+  "source": "hive_24714340",
+  "n_pages_shown": 4
+ },
+ {
+  "site": "S48",
+  "candidate_election_id": "4827000__2021-06-05__regular__a3fba50e7c62a956",
+  "target_id": "covered_site_target_1283004ff0f4296d1b3b6aab",
+  "status": "pass",
+  "reason": "hive_yes",
+  "source": "hive_24714340",
+  "n_pages_shown": 4
+ },
+ {
+  "site": "S49",
+  "candidate_election_id": "3719000__2011-11-08__regular__3a34008d37ae09f9",
+  "target_id": "stage3_01f786e59fc8bc8fd9f30fba",
+  "status": "excluded",
+  "reason": "different_person",
+  "source": "agent_review_wf_ce74850f-42c",
+  "n_pages_shown": 3
+ },
+ {
+  "site": "S50",
+  "candidate_election_id": "4827000__2017-05-06__regular__aa53c9e45ddddd05",
+  "target_id": "stage3L_8e7c2e6514d1ab53088269d5",
+  "status": "pass",
+  "reason": "campaign_site_this_election",
+  "source": "agent_review_wf_5a06b8f6-8cf",
+  "n_pages_shown": 4
+ }
+]

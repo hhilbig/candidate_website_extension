@@ -15,7 +15,7 @@ The dataset accompanies our archived campaign websites of US House and Senate ca
 | `mayoral_elections.csv` | 464 | A recorded mayoral election |
 | `mayoral_finalists.csv` | 882 | A winner or runner-up of a recorded election, with the status of their website text |
 | `mayoral_page_corpus.parquet` | 44,189 | An archived page of a finalist's campaign website |
-| `mayoral_finalist_panel.csv` | 704 | A finalist with usable text, with the text of all usable pages joined, and separately the text from before the election |
+| `mayoral_finalist_panel.csv` | 707 | A finalist with usable text, with the text of all usable pages joined, and separately the text from before the election |
 
 `CODEBOOK.md` defines every column and the keys that link the files. `manifest.json` gives each file's row and column counts, size and SHA-256 checksum.
 
@@ -55,23 +55,23 @@ We combined an older roster of candidate URLs with web searches by AI agents (Cl
 
 ## Usable pages
 
-A page is usable (`release_usable`) if it was archived within 365 days of the election, is not excluded by a page rule (empty, parked, spam, error, listing and non-HTML pages; see `exclusion_reason`), is not a duplicate, and its site passed the site check. Pages archived earlier or later stay in the corpus but are not usable. Of two copies of the same page, the kept copy is a usable one from before the election where one exists. For the site check, an open-weight language model (Qwen3.6-27B) read each site that had pages in the window, and an agent reviewed every site the model doubted; it excluded 14 sites. 21,220 of the 44,189 pages are usable, from 707 of the 735 sites, and 17,811 of the usable pages (84 percent) were archived before election day.
+A page is usable (`release_usable`) if it was archived within 365 days of the election, is not excluded by a page rule (empty, parked, spam, error, listing and non-HTML pages; see `exclusion_reason`), is not a duplicate, and its site passed the site check. Pages archived earlier or later stay in the corpus but are not usable. Of two copies of the same page, the kept copy is a usable one from before the election where one exists. For the site check, an open-weight language model (Qwen3.6-27B) read each site that had pages in the window, and an agent reviewed every site the model doubted. A second model (Claude Opus) then audited a random sample of 50 sites and re-reviewed every site the agent had decided, settling disagreements in the archive; it confirmed all 36 sampled sites that the language model had passed alone and changed 6 of the agent's 82 decisions. 10 sites are excluded. 21,344 of the 44,189 pages are usable, from 710 of the 735 sites, and 17,900 of the usable pages (84 percent) were archived before election day.
 
 ## Coverage
 
-704 of the 860 finalists (82 percent) have usable text, and 302 of the 430 elections (70 percent) have text for both finalists. `text_status` gives the reason when text is missing:
+707 of the 860 finalists (82 percent) have usable text, and 305 of the 430 elections (71 percent) have text for both finalists. `text_status` gives the reason when text is missing:
 
 | Status | Finalists | Meaning |
 |---|---:|---|
-| `text` | 704 | Usable pages exist |
+| `text` | 707 | Usable pages exist |
 | `no_url_lead` | 75 | No search found a campaign website |
-| `site_not_archived` | 37 | A website is known, but the archive holds no copy within a year of the election |
+| `site_not_archived` | 38 | A website is known, but the archive holds no copy within a year of the election |
 | `no_usable_pages` | 15 | Pages were downloaded, but none is usable |
-| `excluded_site_check` | 13 | The site check excluded every downloaded site |
+| `excluded_site_check` | 9 | The site check excluded every downloaded site |
 | `check_incomplete` | 11 | The last search could not finish because the search engine or the archive stopped responding |
 | `site_rejected` | 5 | The search rejected the only known site and found no other |
 
-Coverage is higher for winners than for runners-up (87 versus 76 percent), in larger cities (92 percent in the 25 largest, 74 percent in those ranked 76–100), and in later years (76 percent in 2010–2013, 87 percent in 2022–2026).
+Coverage is higher for winners than for runners-up (88 versus 77 percent), in larger cities (92 percent in the 25 largest, 74 percent in those ranked 76–100), and in later years (77 percent in 2010–2013, 87 percent in 2022–2026).
 
 In some elections the runner-up received very few votes, for example under 1 percent; `top_two_vote_share` identifies these contests.
 
@@ -80,7 +80,7 @@ In some elections the runner-up received very few votes, for example under 1 per
 1. The Wayback Machine did not archive every site or every page, and sites built with tools such as Wix or Squarespace often keep little text in the archive.
 2. Menus and footers repeat across pages, and text volume varies widely between finalists. The panel's `text_unique` keeps each segment once (62 percent of the characters of `text`), and `text_clean` keeps only sentence-like segments. Some sites repeat pages in a second language (for example `/en/` and `/es/`).
 3. `phase` comes from the archive date. A page archived after the election can contain victory messages, and a page archived before it can be older than the campaign. The panel's `text_before` holds only pages archived before election day.
-4. AI agents and a language model found and checked the websites. Nobody validated these checks by hand.
+4. AI agents and language models found and checked the websites, and a second model audited the checks. Nobody validated them by hand. The site check judges a site, not each page: a site reused across campaigns can contribute pages from an earlier race (see `other_year_only`).
 
 ## Terms of use
 
