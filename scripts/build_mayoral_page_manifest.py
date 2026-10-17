@@ -44,9 +44,18 @@ def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("--map", type=Path, required=True,
                         help="JSON {batch: {target_id: candidate_election_id}} from scripts/build_mayoral_target_map.py")
+    parser.add_argument("--extra-map", type=Path, nargs="*", default=[],
+                        help="further JSON maps of the same form, for sites credited after the coverage build")
     parser.add_argument("--output", type=Path, required=True)
     args = parser.parse_args()
     mapping = json.loads(args.map.read_text())
+    for extra in args.extra_map:
+        # Sites credited by a later check, outside the coverage build (Opus audit, October 16, 2026).
+        for batch, targets in json.loads(extra.read_text()).items():
+            for target, finalist in targets.items():
+                if mapping.get(batch, {}).get(target, finalist) != finalist:
+                    raise ValueError(f"{batch}/{target} credited to two finalists")
+                mapping.setdefault(batch, {})[target] = finalist
     batches = sorted(ACQ / b for b in mapping)
     per_finalist = defaultdict(lambda: {"pages": 0, "pages_in_window": 0, "chars_in_window": 0, "pages_capped_run": 0,
                                         "sites": set()})

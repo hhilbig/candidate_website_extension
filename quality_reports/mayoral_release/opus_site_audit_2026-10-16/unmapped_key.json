@@ -1,0 +1,170 @@
+[
+ {
+  "site": "U01",
+  "candidate_election_id": "0427820__2020-08-04__regular__5a47bf95a1f34dba",
+  "batch": "mayoral_stage3s_20261010",
+  "target_id": "stage3_3d1ed0e8367d10dc1a05cdb4",
+  "domain": "jerryweiers.com"
+ },
+ {
+  "site": "U02",
+  "candidate_election_id": "5157000__2014-05-06__regular__157c38d75327c9a4",
+  "batch": "mayoral_stage3s_20261010",
+  "target_id": "stage3_9fbe32f7555fab752f946ea0",
+  "domain": "fraimformayor.com"
+ },
+ {
+  "site": "U03",
+  "candidate_election_id": "2622000__2017-11-07__regular__55b8ad3872e1ce4f",
+  "batch": "mayoral_stage3L_20261004",
+  "target_id": "stage3L_006bdebd7dab1c0a976bd33f",
+  "domain": "theyoungmovement.com"
+ },
+ {
+  "site": "U04",
+  "candidate_election_id": "5157000__2014-05-06__regular__157c38d75327c9a4",
+  "batch": "mayoral_stage3L_20261004",
+  "target_id": "stage3L_21f480d290bf7608ed4de90b",
+  "domain": "mayorfraim.com"
+ },
+ {
+  "site": "U05",
+  "candidate_election_id": "4865000__2019-06-08__regular__b2026ab9e757e6a1",
+  "batch": "mayoral_stage3L_20261004",
+  "target_id": "stage3L_4fb7c667999c10667d8035ab",
+  "domain": "notfitformayor.com"
+ },
+ {
+  "site": "U06",
+  "candidate_election_id": "4805000__2018-11-06__regular__c277ac9842d67a77",
+  "batch": "mayoral_stage3L_20261004",
+  "target_id": "stage3L_6348f875483d5c77497f67bc",
+  "domain": "mayoradler.com"
+ },
+ {
+  "site": "U07",
+  "candidate_election_id": "4819000__2019-06-08__regular__f8260a4594d0d3c9",
+  "batch": "mayoral_stage3L_20261004",
+  "target_id": "stage3L_678c69e1218d667b55454c07",
+  "domain": "scottgriggsdallas.com"
+ },
+ {
+  "site": "U08",
+  "candidate_election_id": "2743000__2017-11-07__regular__7c5e0e9cdf9262ff",
+  "batch": "mayoral_stage3L_20261004",
+  "target_id": "stage3L_6b28f3e7d504b46e79d60fb6",
+  "domain": "raymonddehn.org"
+ },
+ {
+  "site": "U09",
+  "candidate_election_id": "3977000__2015-11-03__special__c749276208d84681",
+  "batch": "mayoral_stage3L_20261004",
+  "target_id": "stage3L_6dedff6eb99ea0f0216ca8d5",
+  "domain": "mikebellfortoledo.com"
+ },
+ {
+  "site": "U10",
+  "candidate_election_id": "3712000__2019-11-05__regular__4108bb9facc4a497",
+  "batch": "mayoral_stage3L_20261004",
+  "target_id": "stage3L_793fc60656b1df1c3204cca8",
+  "domain": "davidmichaelrice.com"
+ },
+ {
+  "site": "U11",
+  "candidate_election_id": "5548000__2019-04-02__regular__3c2be4488c1aad50",
+  "batch": "mayoral_stage3L_20261004",
+  "target_id": "stage3L_926c7d916c73e2bd44fb5292",
+  "domain": "paulsoglinforgovernor.com"
+ },
+ {
+  "site": "U12",
+  "candidate_election_id": "0636770__2020-11-03__regular__1efc765cf2a1d307",
+  "batch": "mayoral_stage3L_20261004",
+  "target_id": "stage3L_9c32bbe42ff5bd0adf3c6a3f",
+  "domain": "farrahnkhan.com"
+ },
+ {
+  "site": "U13",
+  "candidate_election_id": "1608830__2019-12-03__regular__1970d781edc1f18c",
+  "batch": "mayoral_stage3L_20261004",
+  "target_id": "stage3L_ac191675aa120eb41635bf66",
+  "domain": "bieter4boise.com"
+ },
+ {
+  "site": "U14",
+  "candidate_election_id": "0627000__2020-03-03__regular__2fa9831de2caf4c5",
+  "batch": "mayoral_stage3L_20261004",
+  "target_id": "stage3L_ad5b64f7c5882bd77f3ac742",
+  "domain": "andrewjanzforcongress.com"
+ },
+ {
+  "site": "U15",
+  "candidate_election_id": "4845000__2016-05-07__regular__6e08870ec6364b35",
+  "batch": "mayoral_stage3L_20261004",
+  "target_id": "stage3L_ad9124461ea987db95496d43",
+  "domain": "mayordanpope.com"
+ },
+ {
+  "site": "U16",
+  "candidate_election_id": "0427820__2020-08-04__regular__5a47bf95a1f34dba",
+  "batch": "mayoral_stage3L_20261004",
+  "target_id": "stage3L_ddc9f07b68edf3d98169e7f3",
+  "domain": "jerryweiers.com"
+ },
+ {
+  "site": "U17",
+  "candidate_election_id": "3916000__2013-11-05__regular__fc8343592436e3ac",
+  "batch": "mayoral_stage3L_20261004",
+  "target_id": "stage3L_e59007b96feb63ba5c57e27e",
+  "domain": "frankjacksonformayor.com"
+ },
+ {
+  "site": "U18",
+  "candidate_election_id": "2205000__2016-12-10__regular__432258e41dad5e7e",
+  "batch": "mayoral_stage3L_20261004",
+  "target_id": "stage3L_e78bb48fb7edd610512e0f1d",
+  "domain": "mackbodiwhite.com"
+ },
+ {
+  "site": "U19",
+  "candidate_election_id": "3977000__2015-11-03__special__c749276208d84681",
+  "batch": "mayoral_stage3L_20261004",
+  "target_id": "stage3L_f2c2da05a4f03b0bbc713e0d",
+  "domain": "friendsofmikebell.com"
+ },
+ {
+  "site": "U20",
+  "candidate_election_id": "3260600__2010-11-02__regular__4aa476f96bc965a5",
+  "batch": "mayoral_stage3x_20261014",
+  "target_id": "stage3_6b00cedbe884a925ece93d48",
+  "domain": "bobcashell.com"
+ },
+ {
+  "site": "U21",
+  "candidate_election_id": "3128000__2011-05-03__regular__eea76e01d9806765",
+  "batch": "mayoral_stage3b_20261003",
+  "target_id": "stage3_c87e0c6220fd45a752047592",
+  "domain": "chrisbeutler.com"
+ },
+ {
+  "site": "U22",
+  "candidate_election_id": "3436000__2013-05-14__regular__ffe4e91b8d390902",
+  "batch": "mayoral_stage3_20261002",
+  "target_id": "stage3_428e736394c5328dcbc56cff",
+  "domain": "electhealy.com"
+ },
+ {
+  "site": "U23",
+  "candidate_election_id": "0669000__2012-11-06__regular__c2cefd64eab3e3cf",
+  "batch": "mayoral_stage3_20261002",
+  "target_id": "stage3_4d5a145ffb9b9bcdf5342e2e",
+  "domain": "miguelpulido.com"
+ },
+ {
+  "site": "U24",
+  "candidate_election_id": "4865000__2017-06-10__regular__cbd73abebfc92d69",
+  "batch": "mayoral_stage3_20261002",
+  "target_id": "stage3_89f0eba6c1a9831874a15f34",
+  "domain": "ivytaylor.com"
+ }
+]
