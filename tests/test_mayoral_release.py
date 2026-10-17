@@ -5,6 +5,7 @@ import json
 import pyarrow as pa
 import pyarrow.parquet as pq
 
+from scripts.build_mayoral_ledb_crosswalk import match_basis
 from scripts.build_mayoral_release import text_status
 from scripts.validate_mayoral_release import validate, write_manifest
 
@@ -50,6 +51,9 @@ def release(tmp_path):
                   in_text_window=False, release_usable=False)]
     pq.write_table(pa.Table.from_pylist(pages), tmp_path / "mayoral_page_corpus.parquet")
     write(tmp_path / "mayoral_finalist_panel.csv", [{"candidate_election_id": "f1", "n_pages": "2", "text": "Vote A#+#Issues"}])
+    write(tmp_path / "mayoral_ledb_crosswalk.csv", [
+        {"candidate_election_id": "f1", "ledb_candid": "7", "ledb_contest": "k1", "ledb_match": "name_same_month"},
+        {"candidate_election_id": "f2", "ledb_candid": "8", "ledb_contest": "k1", "ledb_match": "last_name_same_month"}])
     write_manifest(tmp_path)
     return tmp_path
 
@@ -108,3 +112,22 @@ def test_unique_segments_keeps_first_occurrence():
     from scripts.build_mayoral_release import unique_segments
     assert unique_segments("Home#+#About#+#Plan text#+#Home #+#  About#+#Donate") == "Home#+#About#+#Plan text#+#Donate"
     assert unique_segments("") == ""
+
+
+def test_ledb_name_match():
+    assert match_basis("James 'Jim' Kenney", "james 'jim' kenney", False) == "name"
+    assert match_basis("Jim Kenney", "james kenney", False) == "name"
+    assert match_basis("Marty J Walsh", "martin walsh", False) == "name"
+    assert match_basis("Lily Bao", "leilei bao", True) == "last_name"
+    assert match_basis("Lily Bao", "leilei bao", False) == ""
+    assert match_basis("Joe Adame", "adame", True) == "last_name"
+    assert match_basis("John Smith", "jane doe", True) == ""
+
+
+def test_validator_rejects_split_ledb_contest(tmp_path):
+    root = release(tmp_path)
+    write(root / "mayoral_ledb_crosswalk.csv", [
+        {"candidate_election_id": "f1", "ledb_candid": "7", "ledb_contest": "k1", "ledb_match": "name_same_month"},
+        {"candidate_election_id": "f2", "ledb_candid": "8", "ledb_contest": "k2", "ledb_match": "name_same_month"}])
+    write_manifest(root)
+    assert any("different ALGED contests" in e for e in validate(root)["errors"])

@@ -29,13 +29,17 @@ from collections import defaultdict
 from pathlib import Path
 from urllib.parse import urlsplit
 
+import pandas as pd
+
 csv.field_size_limit(sys.maxsize)
 REPO = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO))
 
+from scripts.build_mayoral_ledb_crosswalk import crosswalk  # noqa: E402
 from scripts.icpsr_replicate_coding import icpsr_clean_text  # noqa: E402
 
 COVERAGE = REPO / "data/municipal_discovery/top100_coverage/outputs"
+LEDB = REPO / "data/municipal_discovery/top100_coverage/inputs/ledb_candidatelevel.csv"  # ALGED, OSF mv5e6, CC BY 4.0
 COUNTY_PARTS = REPO / "data/municipal_discovery/top100_coverage/inputs/city_county_parts_2020.csv"  # Census 2020 PL API
 DISCOVERY = REPO / "data/municipal_discovery/top100_coverage/url_discovery"
 STATUSES = ("text", "excluded_site_check", "no_usable_pages", "site_rejected", "site_not_archived", "check_incomplete",
@@ -290,6 +294,8 @@ def build(corpus_path: Path, site_check_path: Path, out_dir: Path) -> dict:
                           "population_2020": population[person["city_id"]]})
     write_csv(out_dir / "mayoral_finalists.csv", finalists, FINALIST_COLUMNS)
     write_csv(out_dir / "mayoral_finalist_panel.csv", panel, PANEL_COLUMNS)
+    links = crosswalk(pd.DataFrame(finalists, columns=FINALIST_COLUMNS).astype(str), LEDB)
+    links.to_csv(out_dir / "mayoral_ledb_crosswalk.csv", index=False)
     for name, source in (("mayoral_cities.csv", "cities.csv"), ("mayoral_city_years.csv", "city_year_audit.csv"),
                          ("mayoral_elections.csv", "elections.csv")):
         rows = read_csv(COVERAGE / source)

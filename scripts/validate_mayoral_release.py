@@ -27,7 +27,9 @@ csv.field_size_limit(sys.maxsize)
 STATUSES = {"text", "excluded_site_check", "no_usable_pages", "site_rejected", "site_not_archived", "check_incomplete",
             "no_url_lead"}
 DATA_FILES = ["mayoral_cities.csv", "mayoral_city_years.csv", "mayoral_elections.csv", "mayoral_finalists.csv",
-              "mayoral_finalist_panel.csv", "mayoral_page_corpus.parquet"]
+              "mayoral_finalist_panel.csv", "mayoral_ledb_crosswalk.csv", "mayoral_page_corpus.parquet"]
+LEDB_MATCH = {"name_same_month", "name_other_month", "last_name_same_month", "last_name_other_month",
+              "outside_ledb_years", "no_ledb_election", "no_ledb_candidate", "ambiguous"}
 
 
 def read(path: Path) -> list[dict]:
@@ -68,6 +70,17 @@ def validate(release: Path) -> dict:
     check({f["city_id"] for f in finalists} <= city_ids, "a finalist names an unknown city")
     check({f["election_id"] for f in finalists} <= election_ids, "a finalist names an unknown election")
     check(len({f["candidate_election_id"] for f in finalists}) == len(finalists), "candidate_election_id is not unique")
+    links = read(release / "mayoral_ledb_crosswalk.csv")
+    check(sorted(x["candidate_election_id"] for x in links) == sorted(f["candidate_election_id"] for f in finalists),
+          "the ALGED crosswalk does not have one row for each finalist")
+    check(all(x["ledb_match"] in LEDB_MATCH and bool(x["ledb_candid"]) == x["ledb_match"].startswith(("name", "last"))
+              for x in links), "the ALGED crosswalk has an unknown match type or IDs that disagree with it")
+    election_of = {f["candidate_election_id"]: f["election_id"] for f in finalists}
+    contests = defaultdict(set)
+    for x in links:
+        if x["ledb_contest"]:
+            contests[election_of[x["candidate_election_id"]]].add(x["ledb_contest"])
+    check(all(len(c) == 1 for c in contests.values()), "two finalists of one election link to different ALGED contests")
     eligible = [f for f in finalists if f["eligible"] == "True"]
     for f in finalists:
         if f["eligible"] == "True":

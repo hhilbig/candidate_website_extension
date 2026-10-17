@@ -20,6 +20,11 @@ Hanno set the target on October 4, 2026:
 
 ## Resume here
 
+**October 17, page check (Hive, Qwen3.6-27B-FP8 e89b16eb).** Job 24828287 (low) labeled all 21,361 usable v4 pages with prompt v1: 19,298 this_campaign, 574 unclear, 964 earlier_campaign, 276 not_campaign, 247 other_office, 2 parse errors. Labels: `quality_reports/mayoral_release/page_campaign_check_2026-10-17/labels_round1.jsonl.gz`; table `release_site_check/page_campaign_check.csv`.
+Blind Opus check of 60 pages (40 dropped, 20 kept; `sample_key.json`, `opus_part*.json`): all 20 kept pages confirmed; 35 of 40 drops confirmed.
+Blocker (repair attempt 1 of 2): v1 labels pages about the primary or first round of the same race as earlier_campaign (Emanuel 2015, Iannarone 2020, Higgins 2025). Correction: prompt v2 (script sha 742c5a96) relabels only the 964 earlier_campaign pages and the 2 parse errors; jobs 24833080 (low) and 24833081 (high), output `labels_v2_*.jsonl` in `/nfs/hive/scratch/hhilbig/mayoral_page_campaign/`. Return condition: a v2 sample check finds no same-race drops. Then rebuild the corpus on mac2 (`release_mayoral/v5_20261017/build_v5.sh`), label newly usable pages, build release v5.
+Hive SSH from the home network times out since October 17 morning; use the droplet as jump host (`ssh -J root@100.95.38.16 hhilbig@hive.hpc.ucdavis.edu`).
+
 **October 16 estimate.** About 90 percent of the release work is complete. Tracks 1 and 2 are complete. Track 3 (mayoral) is about 90 percent complete: release candidate v2 is built and valid; Hanno's review and the publication approval remain. Track 4 (2026) is about 87 percent complete; only the wait to November 17 and the final build remain.
 Remaining agent time about 2–4 hours (upload after approval, the 2026 final build after November 17). Hanno's time about 2 hours (review of the v2 README, codebook and files; publication decision). The November 17 endpoint controls the wall-clock finish.
 Largest uncertainty: what Hanno's review of v2 changes. Current mayoral state: see "Release rebuild v2" in section 3. The October 4 text below is history.

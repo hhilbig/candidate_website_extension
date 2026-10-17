@@ -8,6 +8,8 @@ another office (Opus audit, October 16, 2026). This check reads each usable page
   other_office      a campaign or office page for another office (council, county, Congress, governor)
   not_campaign      not about this candidate's campaign (spam, another person, business, hosting placeholder)
 The release keeps this_campaign and unclear (approved October 16, 2026).
+Prompt v2 (October 17, 2026): v1 labeled pages about the primary or first round of the same mayoral race as
+earlier_campaign (Opus sample check); v2 states that earlier rounds of this race belong to this campaign.
 
 Input:  JSONL, one page per line (item_id, candidate_name, city_name, state_abb, election_date, capture_date, url, text).
 Output: JSONL with item_id, label, quote, reason and run identity; written in chunks so a requeued job resumes.
@@ -21,7 +23,7 @@ import re
 import time
 from pathlib import Path
 
-PROMPT_VERSION = "mayoral-page-campaign-v1"
+PROMPT_VERSION = "mayoral-page-campaign-v2"
 MAX_PAGE_CHARS = 5000
 CHUNK = 1000
 LABELS = ["this_campaign", "unclear", "earlier_campaign", "other_office", "not_campaign"]
@@ -31,11 +33,11 @@ You receive one mayoral finalist (name, city, state, election date) and the text
 Labels:
 - "this_campaign": the page is part of this candidate's campaign for THIS mayoral election. Includes re-election pages that describe the candidate's record as mayor, issue and biography pages written for this race, donate, volunteer, event and endorsement pages for this race, and news posts from the campaign period.
 - "unclear": a generic page that fits the campaign but cannot be tied to one election (a contact form, an undated biography, a short donate page without dates). Use it when the page gives no sign of another race.
-- "earlier_campaign": the page is clearly about an earlier or later race of this candidate (other election year or date, a victory letter or endorsement for a previous election), with nothing for this election.
+- "earlier_campaign": the page is clearly about an earlier or later race of this candidate (an election in another cycle, a victory letter or endorsement for a previous election), with nothing for this election. A primary, first round or nonpartisan general of THIS mayoral race, held in the months before the election date given (for example a March first round before an April runoff, or a May primary before a November general), is part of this campaign, not an earlier race. A committee name, footer or copyright line with an earlier year alone does not make a page "earlier_campaign".
 - "other_office": the page is a campaign or office page for a different office (city council, county, state legislature, Congress, governor, school board), with nothing for this mayoral race.
 - "not_campaign": the page is not about this candidate's campaign at all (spam, another person, a business, a hosting or default page).
 
-Compare dates on the page with the election date. A page saved after the election can still be "this_campaign" if its content is for this race. Quote the shortest passage that supports your answer, copied exactly from the page text, or "" if there is none. Give a one-sentence reason."""
+Compare dates on the page with the election date. The election date given is the final round; earlier rounds of the same race come before it. A page saved after the election can still be "this_campaign" if its content is for this race. Quote the shortest passage that supports your answer, copied exactly from the page text, or "" if there is none. Give a one-sentence reason."""
 
 SCHEMA = {
     "type": "object",

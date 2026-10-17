@@ -12,6 +12,7 @@
 | `mayoral_finalists.csv` | `candidate_election_id` | `election_id` → elections; `city_id` → cities |
 | `mayoral_page_corpus.parquet` | `page_id` | `candidate_election_id` → finalists |
 | `mayoral_finalist_panel.csv` | `candidate_election_id` | `candidate_election_id` → finalists |
+| `mayoral_ledb_crosswalk.csv` | `candidate_election_id` | `candidate_election_id` → finalists; `ledb_candid`, `ledb_contest` → ALGED |
 
 `city_id` is the 2020 Census place GEOID. `election_id` combines `city_id`, the election date and the election type. `candidate_election_id` adds a hash of the candidate's normalized name. `person_id` links the elections of one person in one city. Read ID columns as text: `city_id` has a leading zero for some states. An empty cell (an empty string in the Parquet file) means "not applicable" or "not recorded", never zero.
 
@@ -99,7 +100,8 @@ One row per downloaded page. Excluded and duplicate pages stay in the file with 
 | `non_latin_text` | `True` if the page is mostly in a non-Latin script |
 | `duplicate_of` | `page_id` of the copy kept instead of this page: a page of the same finalist with the same text, or the same address after removing the scheme, "www.", a trailing slash and the query. The kept copy always passes the page rules inside the 365-day window: the copy from before the election where one exists, otherwise the copy nearest the election |
 | `also_in_election` | For a usable page, the other `candidate_election_id`s of the same person that have a usable page with the same text or the same `snap_url`, joined by `;`. A site reused across campaigns shows up here |
-| `excluded`, `exclusion_reason` | `True` if a page rule applies; reasons joined by `;`: `empty` (under 50 characters); `parked_or_placeholder` (a directory listing, or under 1,200 characters saying the domain is for sale, parked, expired, suspended or under construction); `spam` (platform profile spam, or five or more gambling, drug or loan terms on a page that does not name the candidate); `binary_or_garbled` (NUL bytes, or over 5 percent replacement or control characters); `error_or_challenge` (under 1,500 characters and a bot challenge, access-denied or "page not found" page); `listing_page` (an address that lists other pages: tag, author, category, feed, comments, search, paging, date archive or calendar view); `not_a_page` (a file or system address, not an HTML page: style sheets, scripts, images, documents, `robots.txt`, sitemaps, WordPress admin, login, theme and plugin addresses, CGI scripts and email-protection pages) |
+| `excluded`, `exclusion_reason` | `True` if a page rule applies; reasons joined by `;`: `empty` (under 50 characters); `parked_or_placeholder` (a directory listing, or under 1,200 characters saying the domain is for sale, parked, expired, suspended or under construction); `spam` (platform profile spam, or five or more gambling, drug or loan terms on a page that does not name the candidate); `binary_or_garbled` (NUL bytes, or over 5 percent replacement or control characters); `error_or_challenge` (under 1,500 characters and a bot challenge, access-denied or "page not found" page); `listing_page` (an address that lists other pages: tag, author, category, feed, comments, search, paging, date archive or calendar view); `not_a_page` (a file or system address, not an HTML page: style sheets, scripts, images, documents, `robots.txt`, sitemaps, WordPress admin, login, theme and plugin addresses, CGI scripts and email-protection pages); `not_this_campaign` (the page check labels the page `earlier_campaign`, `other_office` or `not_campaign`) |
+| `page_check` | Label of the page check for pages that were usable before it: `this_campaign` (part of this campaign, including earlier rounds of the same race); `unclear` (a generic page that cannot be tied to one election, such as a contact form); `earlier_campaign` (only about another race of the candidate); `other_office` (a campaign or office page for another office); `not_campaign` (not about the candidate's campaign). Empty for pages the check did not read |
 | `site_check_passed` | `True` if the site passed the site check; for the one site taken over after the election, only pages up to election day |
 | `release_usable` | `True` if `in_text_window`, not `excluded`, no `duplicate_of`, and `site_check_passed` |
 
@@ -119,3 +121,14 @@ One row per eligible finalist with at least one usable page.
 | `text_clean` | `text` after the cleaning rule of ICPSR 226001: addresses and digits removed, and only segments of ten or more words with sentence punctuation and a capital letter kept. Digits are removed, including amounts and proposition numbers. Empty for 6 finalists |
 | `text_before`, `n_char_before`, `text_clean_before` | As `text`, `n_char` and `text_clean`, for the usable pages archived before election day only; empty if there are none (28 finalists) |
 | `text_unique` | `text` with each segment kept once, at its first occurrence (segments compared after collapsing white space). Menus, footers and other text repeated across pages count once |
+
+## `mayoral_ledb_crosswalk.csv`
+
+Links each finalist to the American Local Government Elections Database (ALGED; de Benedictis-Kessner, Lee, Velez and Warshaw; OSF project mv5e6, file `ledb_candidatelevel.csv`, CC BY 4.0), which covers mayoral elections from 1989 to 2021. The file holds identifiers only; join ALGED for its party, incumbency, vote and candidate variables.
+
+| Column | Definition |
+|---|---|
+| `candidate_election_id` | Finalist |
+| `ledb_candid` | ALGED candidate ID of the same person; empty if there is no match |
+| `ledb_contest` | ALGED contest ID of the same election |
+| `ledb_match` | `name_same_month`: same city, year and election month, and the same name (a first name also matches its quoted nickname or long form, so Jim matches James); `last_name_same_month`: same city, year and month, and the same last name, which only one ALGED candidate in that city and year has; `outside_ledb_years`: election after 2021; `no_ledb_election`: ALGED has no mayoral election for the city in that year; `no_ledb_candidate`: ALGED has the election but not this person |
