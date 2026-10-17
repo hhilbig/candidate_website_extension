@@ -8,13 +8,13 @@
   "input": {
     "path": "data/municipal_archive_acquisition/mayoral_stage3y_20261016/candidate_site_targets.csv",
     "rows": 1,
-    "sha256": "39c2356d4bb10eae371e778e146616e01cb0386e3c8d84c229018ded29d1059f"
+    "sha256": "1236e729a3d7e49dd5504cacf555411bb47146cc4065465b5321b97bec34c7b4"
   },
   "key_definition": "target_id + U+001F + candidate_year_id + U+001F + registrable_domain",
   "max_pages_per_target": 150,
   "missing_election_months": 0,
   "output": {
-    "bytes": 1319,
+    "bytes": 1321,
     "columns": [
       "freeze_contract_version",
       "scrape_method_version",
@@ -47,7 +47,7 @@
     ],
     "path": "data/municipal_archive_acquisition/mayoral_stage3y_20261016/frozen/targets.csv",
     "rows": 1,
-    "sha256": "f6068131d30b4788612ac0c1386c072c75c22bce8a5a72010a2d41d5af058559"
+    "sha256": "32f3bd842558b05a2e33bfd77aa91e8293880dabe7ed998d6ef16d7ba611eb21"
   },
   "registrable_domains": 1,
   "scrape_method_version": "mayoral-wayback-site-scrape-v1",

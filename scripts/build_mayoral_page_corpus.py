@@ -22,6 +22,8 @@ rule-based flags. Three flags exclude a page from the finalist panel; the others
                                    search, paging (/page/2/), date archives without a post, calendar views
   excluded  not_a_page             an address of a file that is not a page (script, style, font, image, PDF, XML),
                                    or a platform, admin, theme, plugin, CGI, sitemap, mail-form or bot-check path
+  excluded  not_this_campaign      the Hive page check (--page-check) labels the page as another race, another
+                                   office, or not about the campaign; the label itself is in page_check
   flag      app_shell              fewer than 40 words and a request for JavaScript or a loading message
   flag      other_year_only        the page names years, but not the election year or the year before
   flag      names_candidate        the page names the candidate's last name
@@ -93,7 +95,10 @@ COLUMNS = ["page_id", "candidate_election_id", "target_id", "batch", "run", "sit
            "snap_url", "capture_timestamp", "days_from_election", "in_text_window", "page_type", "text",
            "n_char", "n_words", "n_tags", "n_clean_tags", "text_sha256", "raw_html_sha256",
            "names_candidate", "app_shell", "other_year_only", "non_latin_text", "duplicate_of", "excluded",
-           "exclusion_reason"]
+           "exclusion_reason", "page_check"]
+# Labels of the Hive page check (scripts/hive/classify_mayoral_page_campaign.py) that exclude a page: the page
+# belongs to another race, another office, or is not about the campaign (approved October 16, 2026).
+PAGE_CHECK_DROP = {"earlier_campaign", "other_office", "not_campaign"}
 
 
 def registrable(host: str) -> str:
@@ -154,7 +159,11 @@ def main() -> None:
     parser.add_argument("--candidates", type=Path, required=True, help="candidate_coverage.csv from the coverage build")
     parser.add_argument("--output", type=Path, required=True, help="parquet file")
     parser.add_argument("--status-id", default="mayoral-page-corpus")
+    parser.add_argument("--page-check", type=Path, help="CSV page_id,label from the Hive page check")
     args = parser.parse_args()
+    page_labels = {}
+    if args.page_check:
+        page_labels = {r["page_id"]: r["label"] for r in csv.DictReader(args.page_check.open())}
     import pyarrow as pa
     import pyarrow.parquet as pq
 
@@ -190,6 +199,9 @@ def main() -> None:
         text = text.replace("\x00", "")
         clean = icpsr_clean_text(text)
         reasons, info = flags(text, page, last_name(person["candidate_name"]), int(person["election_date"][:4]))
+        label = page_labels.get(page["capture_id"], "")
+        if label in PAGE_CHECK_DROP:
+            reasons.append("not_this_campaign")
         text_sha = hashlib.sha256(text.encode()).hexdigest()
         # Only a page that passes the page rules inside the text window can be the kept copy, so a duplicate never
         # points to an excluded or out-of-window copy (second first-user review, October 16, 2026).
@@ -212,7 +224,7 @@ def main() -> None:
             "text": text, "n_char": len(text), "n_words": len(text.split()), "n_tags": clean["n_tags"],
             "n_clean_tags": clean["n_clean_tags"], "text_sha256": text_sha, "raw_html_sha256": page["raw_html_sha256"],
             **info, "duplicate_of": "" if dup == page["capture_id"] else dup,
-            "excluded": bool(reasons), "exclusion_reason": ";".join(reasons)})
+            "excluded": bool(reasons), "exclusion_reason": ";".join(reasons), "page_check": label})
         if len(batch) == 2000 or i == len(pages):
             writer.write_table(pa.Table.from_pylist(batch, schema=schema))
             batch = []
@@ -226,7 +238,8 @@ def main() -> None:
                                       data["duplicate_of"]) if not e and w and not d}
     audit = {"pages": counts["pages"], "excluded_pages": counts["excluded_pages"],
              "exclusion_reasons": {k: v for k, v in counts.items() if k in {"off_domain", "empty", "parked_or_placeholder", "spam",
-                                                                     "binary_or_garbled", "error_or_challenge", "listing_page", "not_a_page"}},
+                                                                     "binary_or_garbled", "error_or_challenge", "listing_page", "not_a_page",
+                                                                     "not_this_campaign"}},
              "duplicate_pages": counts["duplicate_pages"], "finalists": len(set(data["candidate_election_id"])),
              "finalists_with_usable_in_window_pages": len(usable)}
     args.output.with_suffix(".audit.json").write_text(json.dumps(audit, indent=1) + "\n")

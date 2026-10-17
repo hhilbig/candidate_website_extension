@@ -138,5 +138,5 @@ export MAX_JOBS="${SLURM_CPUS_PER_TASK:-1}"
 export FLASHINFER_NVCC_THREADS=1
 
 cd "$PROJECT_ROOT"
-python classify_mayoral_page_campaign.py --input "$INPUT" --output "$OUTPUT" --model-path "$MODEL_PATH"
+python classify_mayoral_page_campaign.py --input "$INPUT" --output "$OUTPUT" --model-path "$MODEL_PATH" ${DONE_FROM:+--done-from $DONE_FROM}
 echo "=== done job=$SLURM_JOB_ID end=$(date -Is) ==="

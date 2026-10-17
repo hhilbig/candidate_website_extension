@@ -76,12 +76,15 @@ def main() -> None:
     parser.add_argument("--seed", type=int, default=20261016)
     parser.add_argument("--max-model-len", type=int, default=8192)
     parser.add_argument("--max-output-tokens", type=int, default=384)
+    parser.add_argument("--done-from", type=Path, nargs="*", default=[],
+                        help="other label files whose items count as done (a second job on another partition)")
     args = parser.parse_args()
     from vllm import LLM, SamplingParams
 
     done = set()
-    if args.output.exists():
-        done = {json.loads(line)["item_id"] for line in args.output.open() if line.strip()}
+    for path in [args.output, *args.done_from]:
+        if path.exists():
+            done |= {json.loads(line)["item_id"] for line in path.open() if line.strip()}
     items = [json.loads(line) for line in args.input.open() if line.strip()]
     items = [i for i in items if i["item_id"] not in done]
     print(json.dumps({"already_done": len(done), "to_do": len(items)}), flush=True)
