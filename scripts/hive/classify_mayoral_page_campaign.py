@@ -10,6 +10,9 @@ another office (Opus audit, October 16, 2026). This check reads each usable page
 The release keeps this_campaign and unclear (approved October 16, 2026).
 Prompt v2 (October 17, 2026): v1 labeled pages about the primary or first round of the same mayoral race as
 earlier_campaign (Opus sample check); v2 states that earlier rounds of this race belong to this campaign.
+Prompt v3 (October 17, 2026): v2 still labeled some first-round pages earlier_campaign. v3 also asks for race_year, the
+year of the election the page is about; the release rule keeps an earlier_campaign page whose race_year is the election
+year or the year before (an earlier round of the same race). The rule is applied when the labels are converted.
 
 Input:  JSONL, one page per line (item_id, candidate_name, city_name, state_abb, election_date, capture_date, url, text).
 Output: JSONL with item_id, label, quote, reason and run identity; written in chunks so a requeued job resumes.
@@ -23,7 +26,7 @@ import re
 import time
 from pathlib import Path
 
-PROMPT_VERSION = "mayoral-page-campaign-v2"
+PROMPT_VERSION = "mayoral-page-campaign-v3"
 MAX_PAGE_CHARS = 5000
 CHUNK = 1000
 LABELS = ["this_campaign", "unclear", "earlier_campaign", "other_office", "not_campaign"]
@@ -37,7 +40,7 @@ Labels:
 - "other_office": the page is a campaign or office page for a different office (city council, county, state legislature, Congress, governor, school board), with nothing for this mayoral race.
 - "not_campaign": the page is not about this candidate's campaign at all (spam, another person, a business, a hosting or default page).
 
-Compare dates on the page with the election date. The election date given is the final round; earlier rounds of the same race come before it. A page saved after the election can still be "this_campaign" if its content is for this race. Quote the shortest passage that supports your answer, copied exactly from the page text, or "" if there is none. Give a one-sentence reason."""
+Compare dates on the page with the election date. The election date given is the final round; earlier rounds of the same race come before it. A page saved after the election can still be "this_campaign" if its content is for this race. Also give "race_year": the calendar year of the election this page is about, read from the page (an election date, a year in a slogan or a dated post), or null if the page shows none. Quote the shortest passage that supports your answer, copied exactly from the page text, or "" if there is none. Give a one-sentence reason."""
 
 SCHEMA = {
     "type": "object",
@@ -45,8 +48,9 @@ SCHEMA = {
         "label": {"type": "string", "enum": LABELS},
         "quote": {"type": "string", "maxLength": 300},
         "reason": {"type": "string", "maxLength": 300},
+        "race_year": {"anyOf": [{"type": "integer"}, {"type": "null"}]},
     },
-    "required": ["label", "quote", "reason"],
+    "required": ["label", "race_year", "quote", "reason"],
     "additionalProperties": False,
 }
 
