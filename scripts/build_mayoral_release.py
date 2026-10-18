@@ -243,7 +243,8 @@ def build(corpus_path: Path, site_check_path: Path, out_dir: Path, primaries: bo
     corpus = corpus.append_column("also_in_election", pa.array(also))
     if primaries:
         corpus = corpus.append_column("campaign_period", pa.array(campaign_periods(
-            corpus.select(["candidate_election_id", "capture_timestamp"]).to_pylist(), people, primary_people)))
+            corpus.select(["candidate_election_id", "capture_timestamp"]).to_pylist(), people, primary_people,
+            {r["election_id"]: r for r in read_csv(COVERAGE / "first_round_dates.csv")})))
     (out_dir.parent / f"{out_dir.name}_round_names.json").write_text(json.dumps(rounds, indent=1))
     pq.write_table(corpus, out_dir / "mayoral_page_corpus.parquet", compression="zstd")
 
@@ -308,6 +309,10 @@ def build(corpus_path: Path, site_check_path: Path, out_dir: Path, primaries: bo
         rows = read_csv(COVERAGE / source)
         if name == "mayoral_cities.csv":
             rows = add_counties(rows)
+        if name == "mayoral_elections.csv" and primaries:
+            # v6: the first-round date behind campaign_period, with its source, for the eligible elections.
+            first = {r["election_id"]: r for r in read_csv(COVERAGE / "first_round_dates.csv")}
+            rows = [{**r, **{k: first.get(r["election_id"], {}).get(k, "") for k in FIRST_ROUND_COLUMNS}} for r in rows]
         write_csv(out_dir / name, rows, list(rows[0]))
     counts = defaultdict(int)
     for row in finalists:
@@ -328,27 +333,30 @@ def build(corpus_path: Path, site_check_path: Path, out_dir: Path, primaries: bo
     return report
 
 
-def campaign_periods(rows: list[dict], people: list[dict], primary_people: list[dict]) -> list[str]:
-    """primary_period: captured on or before the decisive primary; general_period: after it, for a finalist of a
-    general election with a recorded primary. Pages of a primary candidate who is not a finalist are primary_period
-    or after_primary. Empty where no primary is recorded (v6: first-round dates of nonpartisan cities are not in the
-    data)."""
-    primary_date = {p["general_election_id"]: p["election_date"].replace("-", "") for p in primary_people
-                    if p["general_election_id"]}
+def campaign_periods(rows: list[dict], people: list[dict], primary_people: list[dict],
+                     first_rounds: dict[str, dict]) -> list[str]:
+    """Campaign period of each page, from outputs/first_round_dates.csv (scripts/build_mayoral_first_round_dates.py).
+    Finalist pages: first_round (captured on or before the first round of a two-round race: the decisive primary or
+    the first general round), final_round (after it), single_round (the race had one round), or "" (first round not
+    dated). Pages of a primary candidate: first_round (on or before the candidate's primary) or after_primary."""
     general_of = {p["candidate_election_id"]: p["election_id"] for p in people}
     own_primary = {p["candidate_election_id"]: p["election_date"].replace("-", "") for p in primary_people}
     out = []
     for row in rows:
         cid, day = row["candidate_election_id"], row["capture_timestamp"][:8]
+        first = first_rounds.get(general_of.get(cid), {})
         if cid in own_primary:
-            out.append("primary_period" if day <= own_primary[cid] else "after_primary")
-        elif general_of.get(cid) in primary_date:
-            out.append("primary_period" if day <= primary_date[general_of[cid]] else "general_period")
+            out.append("first_round" if day <= own_primary[cid] else "after_primary")
+        elif first.get("rounds") == "two_rounds":
+            out.append("first_round" if day <= first["first_round_date"].replace("-", "") else "final_round")
+        elif first.get("rounds") == "single_round":
+            out.append("single_round")
         else:
             out.append("")
     return out
 
 
+FIRST_ROUND_COLUMNS = ["rounds", "first_round_date", "first_round_source", "first_round_source_url"]
 PRIMARY_LEADS = REPO / "data/municipal_discovery/top100_coverage/linkage/v6_primary_url_leads.csv"
 PRIMARY_CANDIDATE_COLUMNS = ["candidate_election_id", "person_id", "primary_election_id", "city_id", "city_name",
                              "state_abb", "year", "election_date", "primary_party", "general_election_id",

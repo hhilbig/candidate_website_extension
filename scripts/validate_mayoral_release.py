@@ -195,11 +195,20 @@ def validate_primaries(release: Path, corpus: list[dict], finalists: list[dict],
             pool[r["candidate_election_id"]].append(r)
     by_id = {p["candidate_election_id"]: p for p in people}
     own_dates = {p["candidate_election_id"]: p["election_date"].replace("-", "") for p in people}
+    first = {e["election_id"]: e for e in read(release / "mayoral_elections.csv")}
+    general_of = {f["candidate_election_id"]: f["election_id"] for f in finalists}
+    for e in first.values():
+        check(e["rounds"] in {"", "two_rounds", "single_round", "unknown"}, f"{e['election_id']}: rounds")
+        check(e["rounds"] != "two_rounds" or e["first_round_date"] < e["election_date"], f"{e['election_id']}: first round date")
     for r in corpus:
+        day = r["capture_timestamp"][:8]
         if r["candidate_election_id"] in own_dates:
-            want = "primary_period" if r["capture_timestamp"][:8] <= own_dates[r["candidate_election_id"]] else "after_primary"
-            check(r["campaign_period"] == want, f"{r['page_id']}: campaign_period of a primary candidate page")
-        check(r["campaign_period"] in {"", "primary_period", "general_period", "after_primary"}, f"{r['page_id']}: campaign_period")
+            want = "first_round" if day <= own_dates[r["candidate_election_id"]] else "after_primary"
+        else:
+            e = first.get(general_of.get(r["candidate_election_id"]), {})
+            want = {"two_rounds": "first_round" if day <= e.get("first_round_date", "").replace("-", "") else "final_round",
+                    "single_round": "single_round"}.get(e.get("rounds"), "")
+        check(r["campaign_period"] == want, f"{r['page_id']}: campaign_period")
     for p in panel:
         person = by_id[p["candidate_election_id"]]
         source = p["candidate_election_id"] if person["searched"] == "True" else person["finalist_candidate_election_id"]

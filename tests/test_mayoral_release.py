@@ -153,4 +153,7 @@ def test_campaign_periods():
             {"candidate_election_id": "f1", "capture_timestamp": "20250625000000"},
             {"candidate_election_id": "f2", "capture_timestamp": "20250101000000"},
             {"candidate_election_id": "p1", "capture_timestamp": "20250701000000"}]
-    assert campaign_periods(rows, people, primary) == ["primary_period", "general_period", "", "after_primary"]
+    first = {"g1": {"rounds": "two_rounds", "first_round_date": "2025-06-24"}, "g2": {"rounds": "unknown"}}
+    assert campaign_periods(rows, people, primary, first) == ["first_round", "final_round", "", "after_primary"]
+    first["g2"] = {"rounds": "single_round", "first_round_date": "2025-11-04"}
+    assert campaign_periods(rows, people, primary, first)[2] == "single_round"
