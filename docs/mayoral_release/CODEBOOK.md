@@ -1,6 +1,6 @@
 # Codebook: campaign websites of mayoral finalists, 100 largest US cities, 2010–2026
 
-**Draft for review, October 16, 2026.** `README.md` describes the population, the collection, the checks and the counts.
+**Draft for review, October 18, 2026 (version 6).** `README.md` describes the population, the collection, the checks and the counts.
 
 ## Keys
 
@@ -10,11 +10,14 @@
 | `mayoral_city_years.csv` | `city_id`, `year` | `city_id` → cities; `election_ids` → elections |
 | `mayoral_elections.csv` | `election_id` | `city_id` → cities |
 | `mayoral_finalists.csv` | `candidate_election_id` | `election_id` → elections; `city_id` → cities |
-| `mayoral_page_corpus.parquet` | `page_id` | `candidate_election_id` → finalists |
+| `mayoral_page_corpus.parquet` | `page_id` | `candidate_election_id` → finalists or primary candidates |
 | `mayoral_finalist_panel.csv` | `candidate_election_id` | `candidate_election_id` → finalists |
 | `mayoral_ledb_crosswalk.csv` | `candidate_election_id` | `candidate_election_id` → finalists; `ledb_candid`, `ledb_contest` → ALGED |
+| `mayoral_primary_elections.csv` | `primary_election_id` | `city_id` → cities; `general_election_id` → elections |
+| `mayoral_primary_candidates.csv` | `candidate_election_id` | `primary_election_id` → primary elections; `finalist_candidate_election_id` → finalists |
+| `mayoral_primary_panel.csv` | `candidate_election_id` | `candidate_election_id` → primary candidates |
 
-`city_id` is the 2020 Census place GEOID. `election_id` combines `city_id`, the election date and the election type. `candidate_election_id` adds a hash of the candidate's normalized name. `person_id` links the elections of one person in one city. Read ID columns as text: `city_id` has a leading zero for some states. An empty cell (an empty string in the Parquet file) means "not applicable" or "not recorded", never zero.
+`city_id` is the 2020 Census place GEOID. `election_id` combines `city_id`, the election date and the election type. `candidate_election_id` adds a hash of the candidate's normalized name. A primary candidate has a `candidate_election_id` of its own, built in the same way from `primary_election_id`; it never equals a finalist's ID. `person_id` links the elections of one person in one city. Read ID columns as text: `city_id` has a leading zero for some states. An empty cell (an empty string in the Parquet file) means "not applicable" or "not recorded", never zero.
 
 ## `mayoral_cities.csv`
 
@@ -53,6 +56,9 @@
 | `certification_status`, `certification_source_url` | Whether the result was certified, canvassed or checked against an official source, and that source |
 | `source_url`, `source_locator`, `verification_note` | Source of the result, the place in the source, and notes |
 | `legacy_contest_ids` | Contest IDs in the older roster |
+| `rounds` | For elections in the population: `two_rounds` (an earlier round of the same race, a primary or a first round, took place on `first_round_date`) or `single_round` (the race had one round) |
+| `first_round_date` | Date of the first round of the race; equals `election_date` for `single_round` |
+| `first_round_source`, `first_round_source_url` | Source of the first-round date: `primary_file` (the decisive partisan primary in `mayoral_primary_elections.csv`), `calendar_note` (the official election calendar of the city), `ballotpedia` (the archived Ballotpedia page of the election), `agent_search` (a web search by an AI agent; most sources are Wikipedia election pages), and the address of that source |
 
 ## `mayoral_finalists.csv`
 
@@ -81,7 +87,7 @@ One row per downloaded page. Excluded and duplicate pages stay in the file with 
 | Column | Definition |
 |---|---|
 | `page_id` | Page key (one archived capture) |
-| `candidate_election_id` | Finalist |
+| `candidate_election_id` | Finalist or primary candidate |
 | `target_id` | One finalist and one website |
 | `batch`, `run` | Download job that collected the page (`round_01` …; `first_150_pages`, `remaining_pages`, `supplementary_query`, `pre_election_copy`). Provenance only |
 | `site_domain` | Registrable domain of the website |
@@ -104,6 +110,7 @@ One row per downloaded page. Excluded and duplicate pages stay in the file with 
 | `page_check` | Label of the page check for pages that were usable before it: `this_campaign` (part of this campaign, including earlier rounds of the same race); `unclear` (a generic page that cannot be tied to one election, such as a contact form); `earlier_campaign` (only about another race of the candidate); `other_office` (a campaign or office page for another office); `not_campaign` (not about the candidate's campaign). Labels come from Qwen3.6-27B, except 71 pages that the model dated to the election year or the year before, which Claude Opus decided. A copy with the same text as a labeled page of the same finalist carries that page's label. Empty for pages the check did not read |
 | `site_check_passed` | `True` if the site passed the site check; for the one site taken over after the election, only pages up to election day |
 | `release_usable` | `True` if `in_text_window`, not `excluded`, no `duplicate_of`, and `site_check_passed` |
+| `campaign_period` | Period of the campaign at the capture date. For a finalist's page: `first_round` (on or before the first round of a two-round race), `final_round` (after the first round), or `single_round` (the race had one round). For a primary candidate's page: `first_round` (on or before the candidate's primary) or `after_primary`. The first-round dates are in `mayoral_elections.csv`. For pages of finalists outside the population, the value is empty |
 
 ## `mayoral_finalist_panel.csv`
 
@@ -132,3 +139,45 @@ Links each finalist to the American Local Government Elections Database (ALGED; 
 | `ledb_candid` | ALGED candidate ID of the same person; empty if there is no match |
 | `ledb_contest` | ALGED contest ID of the same election |
 | `ledb_match` | `name_same_month`: same city, year and election month, and the same name (a first name also matches its quoted nickname or long form, so Jim matches James); `last_name_same_month`: same city, year and month, and the same last name, which only one ALGED candidate in that city and year has; `outside_ledb_years`: election after 2021; `no_ledb_election`: ALGED has no mayoral election for the city in that year; `no_ledb_candidate`: ALGED has the election but not this person |
+
+## `mayoral_primary_elections.csv`
+
+One row per decisive partisan primary: the primary of the party whose nominee won the general election, in a city with partisan mayoral primaries.
+
+| Column | Definition |
+|---|---|
+| `primary_election_id`, `city_id`, `city_name`, `state_abb`, `year` | The primary |
+| `primary_date`, `primary_party` | Date and party of the primary |
+| `general_election_id` | The general election that followed; empty for the District of Columbia primary of June 16, 2026, whose general election is after the end of the data |
+| `unopposed` | `True` if the primary had one candidate |
+| `total_candidates_on_ballot` | Candidates on the primary ballot |
+| `source_url`, `second_source_url` | Official result source, and a second source where used |
+
+## `mayoral_primary_candidates.csv`
+
+One row per candidate who placed first or second in a decisive primary.
+
+| Column | Definition |
+|---|---|
+| `candidate_election_id`, `person_id` | Primary candidate key; person key, as in `mayoral_finalists.csv` (the same person as a finalist has the same `person_id`) |
+| `primary_election_id`, `city_id`, `city_name`, `state_abb`, `year`, `election_date`, `primary_party`, `general_election_id` | The primary; `election_date` is the primary date |
+| `candidate_name`, `primary_rank`, `votes`, `vote_share` | Name, place (1 or 2), votes and share of all primary votes, from the official result |
+| `unopposed` | `True` if the primary had one candidate |
+| `finalist_candidate_election_id`, `finalist_role_in_general` | The same person's row in `mayoral_finalists.csv` and role in the general election, if the candidate was also a finalist |
+| `searched` | `True` if the candidate is not a finalist, so a separate search looked for the website |
+| `url_lead_status` | Result of that search: `accepted`, `outside_window` (a website exists, but the archive has no copy within a year of the primary), `not_found`, `incomplete`; empty if the candidate was not searched |
+| `campaign_urls` | Known campaign website addresses (JSON list) |
+| `text_status` | `text`, `no_url_lead`, `site_not_archived`, `no_usable_pages`, `excluded_site_check`, `check_incomplete`; meanings as in `README.md` |
+| `n_sites`, `n_pages_usable`, `n_char_usable` | Websites, usable pages, and characters of the joined text of the primary period |
+| `source_url` | Official result source |
+
+## `mayoral_primary_panel.csv`
+
+One row per primary candidate with usable text from the primary period: pages that pass the page rules and the site check, archived in the 365 days up to and including the primary date. Of several copies with the same text or the same address, the copy nearest the primary is kept.
+
+| Column | Definition |
+|---|---|
+| `candidate_election_id` … `finalist_candidate_election_id` | As in `mayoral_primary_candidates.csv`; `population_2020` as in `mayoral_cities.csv` |
+| `text_source` | `own_search` (pages of the website found for the primary candidate) or `finalist_pages` (pages of the same person's finalist websites) |
+| `n_sites`, `n_pages`, `first_capture`, `last_capture` | Websites, pages, and earliest and latest capture |
+| `text`, `n_char`, `n_words`, `n_tags`, `n_clean_tags`, `text_clean`, `text_unique` | As in `mayoral_finalist_panel.csv`, for the primary-period pages |
