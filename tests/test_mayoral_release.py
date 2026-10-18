@@ -131,3 +131,26 @@ def test_validator_rejects_split_ledb_contest(tmp_path):
         {"candidate_election_id": "f2", "ledb_candid": "8", "ledb_contest": "k2", "ledb_match": "name_same_month"}])
     write_manifest(root)
     assert any("different ALGED contests" in e for e in validate(root)["errors"])
+
+
+def test_primary_pages_window_and_nearest_copy():
+    from scripts.build_mayoral_release import primary_pages
+    pool = [{"capture_timestamp": "20250601000000", "text_sha256": "a", "original_url": "https://x.com/"},
+            {"capture_timestamp": "20250301000000", "text_sha256": "b", "original_url": "https://www.x.com"},
+            {"capture_timestamp": "20250302000000", "text_sha256": "c", "original_url": "https://x.com/issues"},
+            {"capture_timestamp": "20250701000000", "text_sha256": "d", "original_url": "https://x.com/later"},
+            {"capture_timestamp": "20240101000000", "text_sha256": "e", "original_url": "https://x.com/old"}]
+    kept = primary_pages(pool, "2025-06-24")
+    # The June copy of the home page wins over the March copy; the July page is after the primary, the 2024 page too early.
+    assert [r["text_sha256"] for r in kept] == ["a", "c"]
+
+
+def test_campaign_periods():
+    from scripts.build_mayoral_release import campaign_periods
+    people = [{"candidate_election_id": "f1", "election_id": "g1"}, {"candidate_election_id": "f2", "election_id": "g2"}]
+    primary = [{"candidate_election_id": "p1", "general_election_id": "g1", "election_date": "2025-06-24"}]
+    rows = [{"candidate_election_id": "f1", "capture_timestamp": "20250624120000"},
+            {"candidate_election_id": "f1", "capture_timestamp": "20250625000000"},
+            {"candidate_election_id": "f2", "capture_timestamp": "20250101000000"},
+            {"candidate_election_id": "p1", "capture_timestamp": "20250701000000"}]
+    assert campaign_periods(rows, people, primary) == ["primary_period", "general_period", "", "after_primary"]

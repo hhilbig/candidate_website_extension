@@ -15,6 +15,8 @@ Outputs in --out-dir (which must not exist, so no earlier release is overwritten
   mayoral_finalists.csv         every recorded finalist; eligible ones carry a text status and reason
   mayoral_page_corpus.parquet   every fetched page of a credited site with flags and a release_usable column
   mayoral_finalist_panel.csv    one row per finalist with text: all usable in-window pages joined by "#+#"
+With --primaries (v6), also mayoral_primary_elections.csv, mayoral_primary_candidates.csv and
+mayoral_primary_panel.csv (see write_primaries), and a campaign_period column in the page corpus.
 
 A page is release_usable when it lies within 365 days of the election, is not excluded by a page rule, is
 not a duplicate text of an earlier page of the same finalist, and its site passed the site check.
@@ -183,7 +185,7 @@ def person_ids(people: list[dict]) -> dict[str, str]:
     return out
 
 
-def build(corpus_path: Path, site_check_path: Path, out_dir: Path) -> dict:
+def build(corpus_path: Path, site_check_path: Path, out_dir: Path, primaries: bool = False) -> dict:
     import pyarrow as pa
     import pyarrow.compute as pc
     import pyarrow.parquet as pq
@@ -192,7 +194,9 @@ def build(corpus_path: Path, site_check_path: Path, out_dir: Path) -> dict:
         raise FileExistsError(f"{out_dir} exists; choose a new release folder")
     out_dir.mkdir(parents=True)
     people = read_csv(COVERAGE / "candidate_coverage.csv")
-    pids = person_ids(people)
+    primary_people = read_csv(COVERAGE / "primary_candidates.csv") if primaries else []
+    # One person_id rule for finalists and primary candidates, so a primary winner shares the finalist's ID.
+    pids = person_ids(people + primary_people)
     # Election and city variables repeated in the panel, so users need no merge (approved October 16, 2026).
     stage = {e["election_id"]: e["stage"] for e in read_csv(COVERAGE / "elections.csv")}
     population = {c["city_id"]: c["population_2020"] for c in read_csv(COVERAGE / "cities.csv")}
@@ -237,6 +241,9 @@ def build(corpus_path: Path, site_check_path: Path, out_dir: Path) -> dict:
         other = (owners[(person, "text", row["text_sha256"])] | owners[(person, "capture", row["snap_url"])]) if ok else set()
         also.append(";".join(sorted(other - {row["candidate_election_id"]})))
     corpus = corpus.append_column("also_in_election", pa.array(also))
+    if primaries:
+        corpus = corpus.append_column("campaign_period", pa.array(campaign_periods(
+            corpus.select(["candidate_election_id", "capture_timestamp"]).to_pylist(), people, primary_people)))
     (out_dir.parent / f"{out_dir.name}_round_names.json").write_text(json.dumps(rounds, indent=1))
     pq.write_table(corpus, out_dir / "mayoral_page_corpus.parquet", compression="zstd")
 
@@ -305,8 +312,134 @@ def build(corpus_path: Path, site_check_path: Path, out_dir: Path) -> dict:
     counts = defaultdict(int)
     for row in finalists:
         counts[row["text_status"] or "not_eligible"] += 1
-    return {"finalists": len(finalists), "text_status": dict(counts), "panel_rows": len(panel),
-            "corpus_pages": corpus.num_rows, "usable_pages": int(pc.sum(usable).as_py())}
+    report = {"finalists": len(finalists), "text_status": dict(counts), "panel_rows": len(panel),
+              "corpus_pages": corpus.num_rows, "usable_pages": int(pc.sum(usable).as_py())}
+    if primaries:
+        # Primary-period pool: pages that pass the page rules and the site check. The primary panel applies its own
+        # window (365 days up to the primary) and duplicate rule, because the corpus window and duplicate rule refer
+        # to the general election (a finalist's copy nearest the general election is kept there).
+        eligible = pc.and_(pc.invert(corpus["excluded"]), pa.array(passed))
+        pool = defaultdict(list)
+        for row in corpus.filter(eligible).select(["candidate_election_id", "target_id", "original_url",
+                                                   "capture_timestamp", "text", "text_sha256"]).to_pylist():
+            pool[row["candidate_election_id"]].append(row)
+        report["primaries"] = write_primaries(out_dir, primary_people, pids, pool, site_states, population,
+                                              {r["candidate_election_id"] for r in keys})
+    return report
+
+
+def campaign_periods(rows: list[dict], people: list[dict], primary_people: list[dict]) -> list[str]:
+    """primary_period: captured on or before the decisive primary; general_period: after it, for a finalist of a
+    general election with a recorded primary. Pages of a primary candidate who is not a finalist are primary_period
+    or after_primary. Empty where no primary is recorded (v6: first-round dates of nonpartisan cities are not in the
+    data)."""
+    primary_date = {p["general_election_id"]: p["election_date"].replace("-", "") for p in primary_people
+                    if p["general_election_id"]}
+    general_of = {p["candidate_election_id"]: p["election_id"] for p in people}
+    own_primary = {p["candidate_election_id"]: p["election_date"].replace("-", "") for p in primary_people}
+    out = []
+    for row in rows:
+        cid, day = row["candidate_election_id"], row["capture_timestamp"][:8]
+        if cid in own_primary:
+            out.append("primary_period" if day <= own_primary[cid] else "after_primary")
+        elif general_of.get(cid) in primary_date:
+            out.append("primary_period" if day <= primary_date[general_of[cid]] else "general_period")
+        else:
+            out.append("")
+    return out
+
+
+PRIMARY_LEADS = REPO / "data/municipal_discovery/top100_coverage/linkage/v6_primary_url_leads.csv"
+PRIMARY_CANDIDATE_COLUMNS = ["candidate_election_id", "person_id", "primary_election_id", "city_id", "city_name",
+                             "state_abb", "year", "election_date", "primary_party", "general_election_id",
+                             "candidate_name", "primary_rank", "votes", "vote_share", "unopposed",
+                             "finalist_candidate_election_id", "finalist_role_in_general", "searched", "url_lead_status",
+                             "campaign_urls", "text_status", "n_sites", "n_pages_usable", "n_char_usable", "source_url"]
+PRIMARY_PANEL_COLUMNS = ["candidate_election_id", "person_id", "primary_election_id", "city_id", "city_name",
+                         "state_abb", "population_2020", "year", "election_date", "primary_party", "general_election_id",
+                         "candidate_name", "primary_rank", "vote_share", "unopposed", "finalist_candidate_election_id",
+                         "text_source", "n_sites", "n_pages", "first_capture", "last_capture", "n_char", "n_words",
+                         "n_tags", "n_clean_tags", "text", "text_clean", "text_unique"]
+
+
+def primary_text_status(searched: bool, lead_status: str, own: list, site_states: list[str], downloaded: bool) -> str:
+    """Text status of a primary candidate (statuses of the finalists; no_url_lead covers not_found)."""
+    if own:
+        return "text"
+    if site_states and all(s == "excluded" for s in site_states):
+        return "excluded_site_check"
+    if downloaded:
+        return "no_usable_pages"
+    if searched and lead_status == "incomplete":
+        return "check_incomplete"
+    if lead_status in {"accepted", "outside_window"}:
+        return "site_not_archived"
+    return "no_url_lead"
+
+
+def address_key(url: str) -> str:
+    """The address rule of scripts/build_mayoral_page_corpus.py (scheme, "www.", trailing slash and query removed)."""
+    parts = urlsplit(url)
+    return (parts.hostname or "").lower().removeprefix("www.") + (parts.path or "/").rstrip("/").lower()
+
+
+def primary_pages(pool: list[dict], primary_date: str) -> list[dict]:
+    """Pages of the primary period: captured in the 365 days up to and including the primary date, one copy per text
+    and per address, the copy nearest the primary date kept."""
+    from datetime import date, timedelta
+    end = date.fromisoformat(primary_date)
+    start = (end - timedelta(days=365)).strftime("%Y%m%d")
+    rows = sorted((r for r in pool if start <= r["capture_timestamp"][:8] <= end.strftime("%Y%m%d")),
+                  key=lambda r: r["capture_timestamp"], reverse=True)
+    seen, kept = set(), []
+    for r in rows:
+        keys = {("text", r["text_sha256"]), ("address", address_key(r["original_url"]))}
+        if not keys & seen:
+            kept.append(r)
+        seen |= keys
+    return kept
+
+
+def write_primaries(out_dir: Path, primary_people: list[dict], pids: dict, pool: dict, site_states: dict,
+                    population: dict, with_pages: set) -> dict:
+    """mayoral_primary_elections.csv, mayoral_primary_candidates.csv and mayoral_primary_panel.csv. The panel text of a
+    primary candidate is the primary-period pages (primary_pages) of the candidate's own searched site, or, for a
+    primary candidate who is also a finalist, of that finalist's credited sites."""
+    leads = {r["candidate_election_id"]: r for r in read_csv(PRIMARY_LEADS)}
+    elections = read_csv(COVERAGE / "primary_elections.csv")
+    write_csv(out_dir / "mayoral_primary_elections.csv", elections, list(elections[0]))
+    rows, panel = [], []
+    for person in primary_people:
+        cid, searched = person["candidate_election_id"], truth(person["searched"])
+        source = cid if searched else person["finalist_candidate_election_id"]
+        downloaded = cid in with_pages
+        own = sorted(primary_pages(pool.get(source, []), person["election_date"]),
+                     key=lambda p: (p["target_id"], depth(p["original_url"]), p["original_url"], p["capture_timestamp"]))
+        lead = leads.get(cid, {})
+        status = primary_text_status(searched, lead.get("final_status", ""), own, site_states.get(cid, []), downloaded)
+        if not searched and not own:
+            status = "no_usable_pages" if person["finalist_candidate_election_id"] else "no_url_lead"
+        text = "#+#".join(p["text"] for p in own)
+        row = {**person, "person_id": pids[cid], "url_lead_status": lead.get("final_status", ""),
+               "campaign_urls": json.dumps([lead["campaign_url"]] if lead.get("campaign_url") else []),
+               "text_status": status, "n_sites": len({p["target_id"] for p in own}), "n_pages_usable": len(own),
+               "n_char_usable": len(text)}
+        rows.append(row)
+        if own:
+            clean = icpsr_clean_text(text)
+            stamps = sorted(p["capture_timestamp"] for p in own)
+            panel.append({**row, "population_2020": population[person["city_id"]],
+                          "text_source": "own_search" if searched else "finalist_pages", "n_pages": len(own),
+                          "first_capture": stamps[0], "last_capture": stamps[-1], "n_char": len(text),
+                          "n_words": len(text.split()), "n_tags": clean["n_tags"], "n_clean_tags": clean["n_clean_tags"],
+                          "text": text, "text_clean": clean["text"], "text_unique": unique_segments(text)})
+    write_csv(out_dir / "mayoral_primary_candidates.csv", rows, PRIMARY_CANDIDATE_COLUMNS)
+    write_csv(out_dir / "mayoral_primary_panel.csv", panel, PRIMARY_PANEL_COLUMNS)
+    counts = defaultdict(int)
+    for row in rows:
+        counts[row["text_status"]] += 1
+    return {"primary_elections": len(elections), "primary_candidates": len(rows), "text_status": dict(counts),
+            "panel_rows": len(panel)}
 
 
 def main() -> None:
@@ -314,8 +447,10 @@ def main() -> None:
     parser.add_argument("--corpus", type=Path, required=True)
     parser.add_argument("--site-check", type=Path, required=True)
     parser.add_argument("--out-dir", type=Path, required=True)
+    parser.add_argument("--primaries", action="store_true",
+                        help="v6: add the decisive-primary files and the campaign_period page column")
     args = parser.parse_args()
-    print(json.dumps(build(args.corpus, args.site_check, args.out_dir), indent=1))
+    print(json.dumps(build(args.corpus, args.site_check, args.out_dir, args.primaries), indent=1))
 
 
 if __name__ == "__main__":

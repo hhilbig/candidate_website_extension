@@ -134,10 +134,12 @@ def validate(release: Path) -> dict:
                   f"{p['candidate_election_id']}: before/after page counts differ")
     check(set(usable) == with_text, "finalists with usable pages differ from finalists with text")
 
+    primary_report = validate_primaries(release, corpus, finalists, check) if (release / PRIMARY_FILES[1]).exists() else None
+
     manifest_path = release / "manifest.json"
     if manifest_path.exists():
         manifest = json.loads(manifest_path.read_text())
-        for name in DATA_FILES:
+        for name in data_files(release):
             entry = manifest["files"].get(name)
             check(entry is not None, f"manifest lacks {name}")
             if entry:
@@ -154,13 +156,65 @@ def validate(release: Path) -> dict:
     over = {k: round(v / len(corpus), 3) for k, v in drops.items() if k not in {"pages", "usable"} and v / len(corpus) > 0.2}
     return {"valid": not errors, "errors": errors[:50], "error_count": len(errors),
             "eligible_finalists": len(eligible), "text_status": dict(Counter(f["text_status"] for f in eligible)),
-            "panel_rows": len(panel), "page_drops": drops, "drops_above_20_percent": over}
+            "panel_rows": len(panel), "page_drops": drops, "drops_above_20_percent": over,
+            **({"primaries": primary_report} if primary_report else {})}
+
+
+PRIMARY_FILES = ["mayoral_primary_elections.csv", "mayoral_primary_candidates.csv", "mayoral_primary_panel.csv"]
+PRIMARY_STATUSES = {"text", "excluded_site_check", "no_usable_pages", "site_not_archived", "check_incomplete", "no_url_lead"}
+
+
+def data_files(release: Path) -> list[str]:
+    return DATA_FILES + [n for n in PRIMARY_FILES if (release / PRIMARY_FILES[1]).exists()]
+
+
+def validate_primaries(release: Path, corpus: list[dict], finalists: list[dict], check) -> dict:
+    """v6 primary files: keys and links, statuses, the campaign_period column, and the panel text recomputed with the
+    primary-period rule of scripts/build_mayoral_release.primary_pages."""
+    sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+    from scripts.build_mayoral_release import primary_pages
+    elections = read(release / PRIMARY_FILES[0])
+    people, panel = read(release / PRIMARY_FILES[1]), read(release / PRIMARY_FILES[2])
+    ids = {e["primary_election_id"] for e in elections}
+    check(len(ids) == len(elections), "primary_election_id is not unique")
+    check(len({p["candidate_election_id"] for p in people}) == len(people), "primary candidate ID is not unique")
+    check({p["primary_election_id"] for p in people} <= ids, "a primary candidate names an unknown primary")
+    finalist_ids = {f["candidate_election_id"] for f in finalists}
+    general_ids = {f["election_id"] for f in finalists}
+    check(all(not e["general_election_id"] or e["general_election_id"] in general_ids for e in elections),
+          "a primary names an unknown general election")
+    check(all(not p["finalist_candidate_election_id"] or p["finalist_candidate_election_id"] in finalist_ids
+              for p in people), "a primary candidate links to an unknown finalist")
+    check(not ({p["candidate_election_id"] for p in people} & finalist_ids), "a primary candidate ID is also a finalist ID")
+    check(all(p["text_status"] in PRIMARY_STATUSES for p in people), "a primary candidate has an unknown text status")
+    with_text = {p["candidate_election_id"] for p in people if p["text_status"] == "text"}
+    check({p["candidate_election_id"] for p in panel} == with_text, "primary panel rows differ from text_status text")
+    pool = defaultdict(list)
+    for r in corpus:
+        if not r["excluded"] and r["site_check_passed"]:
+            pool[r["candidate_election_id"]].append(r)
+    by_id = {p["candidate_election_id"]: p for p in people}
+    own_dates = {p["candidate_election_id"]: p["election_date"].replace("-", "") for p in people}
+    for r in corpus:
+        if r["candidate_election_id"] in own_dates:
+            want = "primary_period" if r["capture_timestamp"][:8] <= own_dates[r["candidate_election_id"]] else "after_primary"
+            check(r["campaign_period"] == want, f"{r['page_id']}: campaign_period of a primary candidate page")
+        check(r["campaign_period"] in {"", "primary_period", "general_period", "after_primary"}, f"{r['page_id']}: campaign_period")
+    for p in panel:
+        person = by_id[p["candidate_election_id"]]
+        source = p["candidate_election_id"] if person["searched"] == "True" else person["finalist_candidate_election_id"]
+        own = sorted(primary_pages(pool[source], person["election_date"]),
+                     key=lambda r: (r["target_id"], depth(r["original_url"]), r["original_url"], r["capture_timestamp"]))
+        check(int(p["n_pages"]) == len(own) == int(person["n_pages_usable"]), f"{p['candidate_election_id']}: primary page count")
+        check(p["text"] == "#+#".join(r["text"] for r in own), f"{p['candidate_election_id']}: primary panel text differs")
+    return {"primary_elections": len(elections), "primary_candidates": len(people),
+            "text_status": dict(Counter(p["text_status"] for p in people)), "panel_rows": len(panel)}
 
 
 def write_manifest(release: Path) -> dict:
     import pyarrow.parquet as pq
     files = {}
-    for name in DATA_FILES:
+    for name in data_files(release):
         path = release / name
         if path.suffix == ".parquet":
             meta = pq.ParquetFile(path).metadata
