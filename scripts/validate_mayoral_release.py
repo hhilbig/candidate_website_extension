@@ -132,7 +132,13 @@ def validate(release: Path) -> dict:
             check(int(p["n_pages_before_election"]) == len(before)
                   and int(p["n_pages_after_election"]) == len(own) - len(before),
                   f"{p['candidate_election_id']}: before/after page counts differ")
-    check(set(usable) == with_text, "finalists with usable pages differ from finalists with text")
+    # v6: the corpus also holds the pages of primary candidates, whose usable pages feed the primary files instead.
+    finalist_ids = {f["candidate_election_id"] for f in finalists}
+    primary_ids = set()
+    if (release / PRIMARY_FILES[1]).exists():
+        primary_ids = {p["candidate_election_id"] for p in read(release / PRIMARY_FILES[1])}
+    check(set(usable) <= finalist_ids | primary_ids, "a usable page names an unknown candidate")
+    check(set(usable) & finalist_ids == with_text, "finalists with usable pages differ from finalists with text")
 
     primary_report = validate_primaries(release, corpus, finalists, check) if (release / PRIMARY_FILES[1]).exists() else None
 
