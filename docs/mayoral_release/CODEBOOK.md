@@ -78,7 +78,7 @@ One row per winner or runner-up of a recorded election. Rows with `eligible` = `
 | `url_lead_basis` | Source of the website: `legacy_url_inventory` (older candidate roster, checked against archived pages); values starting with `agent_search`, `legacy_lead` or `checker_proposal` (web search by an AI agent); values starting with `domain_sweep` (common campaign domains tested in the Wayback Machine or Common Crawl). Sites from searches were confirmed by a second, independent agent |
 | `campaign_urls` | Known campaign website addresses (JSON list) |
 | `text_status` | Status of the website text for eligible finalists; values in `README.md` |
-| `n_sites`, `n_pages_usable`, `n_char_usable` | Websites, usable pages, and characters of the joined usable text |
+| `n_sites`, `n_pages_usable`, `n_char_usable` | Websites with usable pages, usable pages, and characters of the joined usable text. These are counts of usable material: 0 means no usable page, whatever the reason in `text_status`; they do not measure a candidate's campaign |
 
 ## `mayoral_page_corpus.parquet`
 
@@ -93,7 +93,7 @@ One row per downloaded page. Excluded and duplicate pages stay in the file with 
 | `site_domain` | Registrable domain of the website |
 | `original_url`, `snap_url` | Address of the page as archived, and the Wayback Machine address of the copy |
 | `capture_timestamp` | Archive time, `YYYYMMDDhhmmss` (UTC) |
-| `days_from_election`, `phase` | Days from the election to the capture (negative before it), and `before`, `election_day` or `after`, both from the archive date, not the date the page was written |
+| `days_from_election`, `phase` | Days from the election to the capture (negative before it; for a primary candidate's page, from the primary), and `before`, `election_day` or `after`, both from the archive date, not the date the page was written |
 | `in_text_window` | `True` if the capture is within 365 days of the election |
 | `page_type` | Type from the address: `homepage`, `issues`, `biography`, `endorsements`, `news`, `action` (donate, volunteer), `constituent_services`, `other` |
 | `text`, `n_char`, `n_words` | Visible text with segments joined by `#+#`, and its characters and words |
@@ -104,10 +104,10 @@ One row per downloaded page. Excluded and duplicate pages stay in the file with 
 | `app_shell` | `True` if the page has fewer than 40 words and asks for JavaScript or shows only a loading message |
 | `other_year_only` | `True` if the page names years, but not the election year or the year before |
 | `non_latin_text` | `True` if the page is mostly in a non-Latin script |
-| `duplicate_of` | `page_id` of the copy kept instead of this page: a page of the same finalist with the same text, or the same address after removing the scheme, "www.", a trailing slash and the query. The kept copy always passes the page rules inside the 365-day window: the copy from before the election where one exists, otherwise the copy nearest the election |
+| `duplicate_of` | `page_id` of the copy kept instead of this page: a page of the same finalist with the same text, or the same address after removing the scheme, "www.", a trailing slash and the query. The kept copy always passes the page rules inside the 365-day window: the copy from before the election where one exists, otherwise the copy nearest the election. A kept copy can still be unusable if its site failed the site check. Copies at the same address can differ in text (for example image-viewer addresses that differ only in the query); only the kept copy's text is usable |
 | `also_in_election` | For a usable page, the other `candidate_election_id`s of the same person that have a usable page with the same text or the same `snap_url`, joined by `;`. A site reused across campaigns shows up here |
 | `excluded`, `exclusion_reason` | `True` if a page rule applies; reasons joined by `;`: `empty` (under 50 characters); `parked_or_placeholder` (a directory listing, or under 1,200 characters saying the domain is for sale, parked, expired, suspended or under construction); `spam` (platform profile spam, or five or more gambling, drug or loan terms on a page that does not name the candidate); `binary_or_garbled` (NUL bytes, or over 5 percent replacement or control characters); `error_or_challenge` (under 1,500 characters and a bot challenge, access-denied or "page not found" page); `listing_page` (an address that lists other pages: tag, author, category, feed, comments, search, paging, date archive or calendar view); `not_a_page` (a file or system address, not an HTML page: style sheets, scripts, images, documents, `robots.txt`, sitemaps, WordPress admin, login, theme and plugin addresses, CGI scripts and email-protection pages); `not_this_campaign` (the page check labels the page `earlier_campaign`, `other_office` or `not_campaign`) |
-| `page_check` | Label of the page check for pages that were usable before it: `this_campaign` (part of this campaign, including earlier rounds of the same race); `unclear` (a generic page that cannot be tied to one election, such as a contact form); `earlier_campaign` (only about another race of the candidate); `other_office` (a campaign or office page for another office); `not_campaign` (not about the candidate's campaign). Labels come from Qwen3.6-27B, except 71 pages that the model dated to the election year or the year before, which Claude Opus decided. A copy with the same text as a labeled page of the same finalist carries that page's label. Empty for pages the check did not read |
+| `page_check` | Label of the page check for pages that were usable before it: `this_campaign` (part of this campaign, including earlier rounds of the same race); `unclear` (a generic page that cannot be tied to one election, such as a contact form); `earlier_campaign` (only about another race of the candidate); `other_office` (a campaign or office page for another office); `not_campaign` (not about the candidate's campaign). Labels come from Qwen3.6-27B, except 71 pages that the model dated to the election year or the year before, which Claude Opus decided. A copy with the same text as a labeled page of the same finalist carries that page's label, so an excluded page (for example a listing page) can carry a label; only `excluded` decides. Empty for pages the check did not read |
 | `site_check_passed` | `True` if the site passed the site check; for the one site taken over after the election, only pages up to election day |
 | `release_usable` | `True` if `in_text_window`, not `excluded`, no `duplicate_of`, and `site_check_passed` |
 | `campaign_period` | Period of the campaign at the capture date. For a finalist's page: `first_round` (on or before the first round of a two-round race), `final_round` (after the first round), or `single_round` (the race had one round). For a primary candidate's page: `first_round` (on or before the candidate's primary) or `after_primary`. The first-round dates are in `mayoral_elections.csv`. For pages of finalists outside the population, the value is empty |
@@ -126,7 +126,7 @@ One row per eligible finalist with at least one usable page.
 | `text` | Text of all usable pages, ordered by website, address depth, address and capture time, joined by `#+#` |
 | `n_char`, `n_words`, `n_tags`, `n_clean_tags` | As in the corpus, for the joined text |
 | `text_clean` | `text` after the cleaning rule of ICPSR 226001: addresses and digits removed, and only segments of ten or more words with sentence punctuation and a capital letter kept. Digits are removed, including amounts and proposition numbers. Empty for 6 finalists |
-| `text_before`, `n_char_before`, `text_clean_before` | As `text`, `n_char` and `text_clean`, for the usable pages archived before election day only; empty if there are none (28 finalists) |
+| `text_before`, `n_char_before`, `text_clean_before` | As `text`, `n_char` and `text_clean`, for the usable pages archived before election day only; empty if there are none (33 finalists) |
 | `text_unique` | `text` with each segment kept once, at its first occurrence (segments compared after collapsing white space). Menus, footers and other text repeated across pages count once |
 
 ## `mayoral_ledb_crosswalk.csv`
@@ -161,7 +161,7 @@ One row per candidate who placed first or second in a decisive primary.
 |---|---|
 | `candidate_election_id`, `person_id` | Primary candidate key; person key, as in `mayoral_finalists.csv` (the same person as a finalist has the same `person_id`) |
 | `primary_election_id`, `city_id`, `city_name`, `state_abb`, `year`, `election_date`, `primary_party`, `general_election_id` | The primary; `election_date` is the primary date |
-| `candidate_name`, `primary_rank`, `votes`, `vote_share` | Name, place (1 or 2), votes and share of all primary votes, from the official result |
+| `candidate_name`, `primary_rank`, `votes`, `vote_share` | Name, place (1 or 2), votes and share of all votes in the deciding round of the primary, from the official result; for the ranked-choice primaries of New York 2021 and 2025, the final round (share of continuing ballots), and for the Charlotte 2015 runoff, the runoff |
 | `unopposed` | `True` if the primary had one candidate |
 | `finalist_candidate_election_id`, `finalist_role_in_general` | The same person's row in `mayoral_finalists.csv` and role in the general election, if the candidate was also a finalist |
 | `searched` | `True` if the candidate is not a finalist, so a separate search looked for the website |
