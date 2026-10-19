@@ -31,6 +31,8 @@ rule-based flags. Three flags exclude a page from the finalist panel; the others
   flag      duplicate_of           a kept page of the same finalist has the same extracted text, or the same
                                    address after removing the scheme, "www.", a trailing slash and the query; only a
                                    page that passes the page rules inside the 365-day window can be the kept page
+                                   With --first-rounds (v6), copies on or before the first round of a two-round race
+                                   and copies after it are never duplicates of each other
 Days from the election are computed from the finalist's election date (October 10, 2026: the August batches'
 target files hold only the election month, which had shifted the August pages by up to two weeks).
 
@@ -160,7 +162,13 @@ def main() -> None:
     parser.add_argument("--output", type=Path, required=True, help="parquet file")
     parser.add_argument("--status-id", default="mayoral-page-corpus")
     parser.add_argument("--page-check", type=Path, help="CSV page_id,label from the Hive page check")
+    parser.add_argument("--first-rounds", type=Path,
+                        help="first_round_dates.csv (v6): copies from before and after the first round are never merged")
     args = parser.parse_args()
+    first_round = {}
+    if args.first_rounds:
+        first_round = {r["election_id"]: r["first_round_date"].replace("-", "")
+                       for r in csv.DictReader(args.first_rounds.open()) if r["rounds"] == "two_rounds"}
     page_labels = {}
     if args.page_check:
         page_labels = {r["page_id"]: r["label"] for r in csv.DictReader(args.page_check.open())}
@@ -205,15 +213,19 @@ def main() -> None:
         text_sha = hashlib.sha256(text.encode()).hexdigest()
         # Only a page that passes the page rules inside the text window can be the kept copy, so a duplicate never
         # points to an excluded or out-of-window copy (second first-user review, October 16, 2026).
-        text_key = (page["candidate_election_id"], text_sha)
-        address = (page["candidate_election_id"], address_key(page["original_url"]))
+        # v6 (Hanno, October 18, 2026): in a two-round race the duplicate check runs separately for the copies on or
+        # before the first round and those after it, so the first-round version of a page stays usable.
+        stamp = page["effective_timestamp"] or page["timestamp"]
+        cut = first_round.get(person.get("election_id", ""))
+        period = "" if not cut else "first" if stamp[:8] <= cut else "final"
+        text_key = (page["candidate_election_id"], period, text_sha)
+        address = (page["candidate_election_id"], period, address_key(page["original_url"]))
         dup = seen_text.get(text_key) or seen_address.get(address) or page["capture_id"]
         if dup == page["capture_id"] and not reasons and abs(page["days_from_election"]) <= 365:
             seen_text[text_key] = seen_address[address] = page["capture_id"]
         for r in reasons:
             counts[r] += 1
         counts["pages"] += 1
-        stamp = page["effective_timestamp"] or page["timestamp"]
         batch.append({
             "page_id": page["capture_id"], "candidate_election_id": page["candidate_election_id"],
             "target_id": page["target_id"], "batch": page["batch"], "run": page["run"],

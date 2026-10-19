@@ -61,3 +61,46 @@ def test_not_a_page_system_folders():
                 "https://a.com/cgi-bin/FormMail.pl"]:
         assert "not_a_page" in reasons(CAMPAIGN, url), url
     assert "not_a_page" not in reasons(CAMPAIGN, "https://a.com/content/plan/")
+
+
+def test_first_round_copies_are_not_duplicates_of_final_round_copies(tmp_path, monkeypatch):
+    import csv
+    import gzip
+    import hashlib
+    import json
+    import sys
+
+    import pyarrow.parquet as pq
+
+    from scripts import build_mayoral_page_corpus as corpus
+
+    def page(capture, stamp, body):
+        raw = gzip.compress(f"<html><body><p>{body}</p></body></html>".encode())
+        path = tmp_path / f"{capture}.html.gz"
+        path.write_bytes(raw)
+        return {"candidate_election_id": "f1", "target_id": "t1", "capture_id": capture, "batch": "b", "run": "production",
+                "registrable_domain": "x.com", "original_url": "https://x.com/issues", "timestamp": stamp,
+                "effective_replay_url": "", "effective_timestamp": "", "days_from_election": "", "in_text_window": "",
+                "text_path": "", "text_sha256": "", "text_characters": "1", "raw_html_path": str(path),
+                "raw_html_sha256": hashlib.sha256(gzip.decompress(raw)).hexdigest()}
+
+    body = "Smith for Mayor. Our plan for housing and safer streets in every neighborhood of the city. " * 3
+    rows = [page("c1", "20190201000000", body + "Vote February 26."), page("c2", "20190320000000", body + "Vote April 2."),
+            page("c3", "20190110000000", body + "Vote February 26.")]
+    manifest = tmp_path / "manifest.csv.gz"
+    with gzip.open(manifest, "wt", newline="") as handle:
+        writer = csv.DictWriter(handle, fieldnames=list(rows[0]))
+        writer.writeheader()
+        writer.writerows(rows)
+    people = tmp_path / "people.csv"
+    people.write_text("candidate_election_id,election_id,candidate_name,election_date\nf1,e1,Jane Smith,2019-04-02\n")
+    first = tmp_path / "first.csv"
+    first.write_text("election_id,rounds,first_round_date\ne1,two_rounds,2019-02-26\n")
+    out = tmp_path / "corpus.parquet"
+    monkeypatch.setattr(sys, "argv", ["x", "--manifest", str(manifest), "--candidates", str(people), "--output", str(out),
+                                      "--first-rounds", str(first)])
+    corpus.main()
+    dup = {r["page_id"]: r["duplicate_of"] for r in pq.read_table(out).to_pylist()}
+    # c1 and c2 share the address but lie on either side of the first round; c3 repeats c1's text in the first round.
+    assert dup == {"c1": "", "c2": "", "c3": "c1"}
+    assert json.loads(out.with_suffix(".audit.json").read_text())["duplicate_pages"] == 1

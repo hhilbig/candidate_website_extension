@@ -107,6 +107,8 @@ def validate(release: Path) -> dict:
             check(kept is not None and kept["candidate_election_id"] == r["candidate_election_id"]
                   and kept["in_text_window"] and not kept["excluded"] and not kept["duplicate_of"],
                   f"{r['page_id']}: duplicate_of does not point to a kept page of the same finalist")
+            if "campaign_period" in r and kept is not None and r["campaign_period"] in {"first_round", "final_round"}:
+                check(kept["campaign_period"] == r["campaign_period"], f"{r['page_id']}: duplicate_of crosses the first round")
         rule = r["in_text_window"] and not r["excluded"] and not r["duplicate_of"] and r["site_check_passed"]
         check(r["release_usable"] == rule, f"{r['page_id']}: release_usable differs from the rule")
         check(abs(r["days_from_election"]) <= 365 or not r["release_usable"], f"{r['page_id']}: usable outside window")
