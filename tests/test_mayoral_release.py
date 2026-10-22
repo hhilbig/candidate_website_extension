@@ -91,6 +91,11 @@ def test_site_rejected_status_and_person_matching():
               [("1", "Bill Bell"), ("2", "William V. (Bill) Bell"), ("3", "Anjanee Bell"), ("4", "Ed Lee"), ("5", "Edwin M. Lee")]]
     ids = person_ids(people)
     assert ids["1"] == ids["2"] != ids["3"] and ids["4"] == ids["5"]
+    people = [{"candidate_election_id": i, "city_id": "c", "candidate_name": n} for i, n in
+              [("6", "G T Bynum"), ("7", "GT Bynum"), ("8", "Eddie Lorton"), ("9", 'George "Eddie" Lorton'),
+               ("10", "Sylvester Williams"), ("11", "Leonardo (Leo) Williams")]]
+    ids = person_ids(people)
+    assert ids["6"] == ids["7"] and ids["8"] == ids["9"] and ids["10"] != ids["11"]
 
 
 def test_pass4_status_replaces_earlier_incomplete(tmp_path, monkeypatch):

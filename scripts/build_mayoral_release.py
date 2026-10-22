@@ -187,14 +187,46 @@ def name_parts(name: str) -> tuple[str, str]:
     return first, words[-1]
 
 
+def name_initials(name: str) -> set[str]:
+    """Canonical first initials a name can go by: the first word, kept when it is an initial ("G T Bynum" = "GT Bynum"),
+    and a nickname in parentheses or quotes ('George "Eddie" Lorton' = "Eddie Lorton")."""
+    import re
+    import unicodedata
+    plain = unicodedata.normalize("NFKD", name).encode("ascii", "ignore").decode().lower()
+    nicknames = re.findall(r"\((.*?)\)|\"(.*?)\"", plain)
+    words = [w.strip(".,") for w in re.sub(r"\(.*?\)|\".*?\"|'[^']*'", " ", plain).replace(",", " ").split()]
+    words = [w for w in words if w and w not in {"jr", "sr", "ii", "iii", "iv", "dr"}]
+    initials = {NICKNAMES.get(words[0], words[0])[:1]} if len(words) > 1 else set()
+    for nick in (a or b for a, b in nicknames):
+        if nick.split():
+            initials.add(NICKNAMES.get(nick.split()[0], nick.split()[0])[:1])
+    return initials
+
+
 def person_ids(people: list[dict]) -> dict[str, str]:
-    """One ID per person and city: same city, same last name, same canonical first initial (e.g. Ed Lee = Edwin M. Lee)."""
+    """One ID per person and city: same city, same last name, and a shared canonical first initial (e.g. Ed Lee =
+    Edwin M. Lee). Names linked through a shared initial form one person; the ID uses the group's first initial."""
     import hashlib
-    out = {}
+    groups = defaultdict(list)
     for p in people:
-        first, last = name_parts(p["candidate_name"])
-        key = f"{p['city_id']}|{last}|{first[:1]}"
-        out[p["candidate_election_id"]] = "person_" + hashlib.sha256(key.encode()).hexdigest()[:12]
+        groups[(p["city_id"], name_parts(p["candidate_name"])[1])].append(p)
+    out = {}
+    for (city, last), members in groups.items():
+        sets = [name_initials(p["candidate_name"]) for p in members]
+        parent = list(range(len(members)))
+
+        def root(i: int) -> int:
+            while parent[i] != i:
+                i = parent[i]
+            return i
+        for i in range(len(members)):
+            for j in range(i):
+                if sets[i] & sets[j]:
+                    parent[root(i)] = root(j)
+        for i, p in enumerate(members):
+            component = set().union(*(sets[k] for k in range(len(members)) if root(k) == root(i)))
+            key = f"{city}|{last}|{min(component) if component else ''}"
+            out[p["candidate_election_id"]] = "person_" + hashlib.sha256(key.encode()).hexdigest()[:12]
     return out
 
 

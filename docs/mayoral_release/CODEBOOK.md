@@ -66,7 +66,7 @@ One row per winner or runner-up of a recorded election. Rows with `eligible` = `
 
 | Column | Definition |
 |---|---|
-| `candidate_election_id`, `person_id` | Finalist key; person key (same city, same last name and same first initial after mapping common nicknames, so Ed Lee and Edwin M. Lee match) |
+| `candidate_election_id`, `person_id` | Finalist key; person key (same city, same last name and a shared first initial after mapping common nicknames, where a nickname in parentheses or quotes also counts, so Ed Lee and Edwin M. Lee, G T Bynum and GT Bynum, and Eddie Lorton and George "Eddie" Lorton match) |
 | `election_id`, `city_id`, `city_name`, `state_abb`, `year`, `election_date`, `election_type` | The election |
 | `candidate_name` | Name as in the official result |
 | `official_result_role` | `winner` or `runner_up` |
