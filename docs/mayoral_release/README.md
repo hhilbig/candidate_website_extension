@@ -16,7 +16,7 @@ The dataset accompanies our archived campaign websites of US House and Senate ca
 | `mayoral_finalists.csv` | 882 | A winner or runner-up of a recorded election, with the status of their website text |
 | `mayoral_page_corpus.parquet` | 46,466 | An archived page of a finalist's or primary candidate's campaign website |
 | `mayoral_ledb_crosswalk.csv` | 882 | A finalist, with the candidate and contest IDs of the same person in ALGED |
-| `mayoral_finalist_panel.csv` | 710 | A finalist with usable text, with the text of all usable pages joined, and separately the text from before the election |
+| `mayoral_finalist_panel.csv` | 710 | A finalist with usable text, with the text of all usable pages joined (each text once), and separately the text from before the election |
 | `mayoral_primary_elections.csv` | 56 | A decisive partisan primary |
 | `mayoral_primary_candidates.csv` | 105 | A first- or second-placed candidate of a decisive primary, with the status of their website text |
 | `mayoral_primary_panel.csv` | 63 | A primary candidate with usable text from the year before the primary |

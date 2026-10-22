@@ -125,8 +125,15 @@ def validate(release: Path) -> dict:
     for p in panel:
         own = sorted(usable[p["candidate_election_id"]],
                      key=lambda r: (r["target_id"], depth(r["original_url"]), r["original_url"], r["capture_timestamp"]))
-        check(int(p["n_pages"]) == len(own) == int(by_id[p["candidate_election_id"]]["n_pages_usable"]),
-              f"{p['candidate_election_id']}: page count differs between panel, finalists and corpus")
+        check(len(own) == int(by_id[p["candidate_election_id"]]["n_pages_usable"]),
+              f"{p['candidate_election_id']}: page count differs between finalists and corpus")
+        # One page per text in the panel: the pre-election copy nearest the election, else the copy nearest it.
+        best = {}
+        for r in own:
+            rank = (r.get("phase") != "before", abs(r["days_from_election"]), r["page_id"])
+            best[r["text_sha256"]] = min(best.get(r["text_sha256"], rank), rank)
+        own = [r for r in own if best[r["text_sha256"]][2] == r["page_id"]]
+        check(int(p["n_pages"]) == len(own), f"{p['candidate_election_id']}: panel page count differs")
         check(p["text"] == "#+#".join(r["text"] for r in own), f"{p['candidate_election_id']}: panel text differs")
         if "text_before" in p:
             before = [r for r in own if r["phase"] == "before"]

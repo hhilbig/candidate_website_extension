@@ -102,6 +102,19 @@ def unique_segments(text: str) -> str:
     return "#+#".join(kept)
 
 
+def panel_pages(own: list[dict]) -> list[dict]:
+    """The finalist panel keeps one usable page per text (Hanno, October 22, 2026). The corpus duplicate rule runs on
+    each side of the first round, so a first-round copy and a final-round copy can share their text. Kept: the copy
+    from before the election nearest to it where one exists, otherwise the copy nearest the election."""
+    best = {}
+    for p in own:
+        rank = (p["phase"] != "before", abs(p["days_from_election"]), p["page_id"])
+        if p["text_sha256"] not in best or rank < best[p["text_sha256"]][0]:
+            best[p["text_sha256"]] = (rank, p["page_id"])
+    kept = {page_id for _, page_id in best.values()}
+    return [p for p in own if p["page_id"] in kept]
+
+
 def write_csv(path: Path, rows: list[dict], columns: list[str]) -> None:
     with path.open("w", newline="") as handle:
         writer = csv.DictWriter(handle, fieldnames=columns, extrasaction="ignore")
@@ -249,8 +262,9 @@ def build(corpus_path: Path, site_check_path: Path, out_dir: Path, primaries: bo
     pq.write_table(corpus, out_dir / "mayoral_page_corpus.parquet", compression="zstd")
 
     pages = defaultdict(list)
-    for row in corpus.filter(usable).select(["candidate_election_id", "target_id", "original_url", "capture_timestamp",
-                                             "text", "phase"]).to_pylist():
+    for row in corpus.filter(usable).select(["page_id", "candidate_election_id", "target_id", "original_url",
+                                             "capture_timestamp", "days_from_election", "text", "text_sha256",
+                                             "phase"]).to_pylist():
         pages[row["candidate_election_id"]].append(row)
     site_states = defaultdict(list)
     for (finalist, _), row in sites.items():
@@ -288,6 +302,8 @@ def build(corpus_path: Path, site_check_path: Path, out_dir: Path, primaries: bo
         finalists.append({**person, "campaign_urls": json.dumps(urls), "text_status": status,
                           "n_sites": len({p["target_id"] for p in own}), "n_pages_usable": len(own), "n_char_usable": len(text)})
         if own and truth(person["eligible"]):
+            own = panel_pages(own)
+            text = "#+#".join(p["text"] for p in own)
             clean = icpsr_clean_text(text)
             before = "#+#".join(p["text"] for p in own if p["phase"] == "before")
             stamps = sorted(p["capture_timestamp"] for p in own)

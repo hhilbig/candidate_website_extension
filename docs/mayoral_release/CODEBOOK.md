@@ -121,9 +121,9 @@ One row per eligible finalist with at least one usable page.
 | `candidate_election_id` … `official_result_role`, `person_id`, `election_type`, `top_two_vote_share`, `incumbent` | As in `mayoral_finalists.csv` |
 | `stage` | As in `mayoral_elections.csv` |
 | `population_2020` | As in `mayoral_cities.csv` |
-| `n_sites`, `n_pages`, `n_pages_before_election`, `n_pages_after_election` | Websites, usable pages, and usable pages archived before election day and on or after it |
+| `n_sites`, `n_pages`, `n_pages_before_election`, `n_pages_after_election` | Websites, panel pages, and panel pages archived before election day and on or after it. The panel pages are the usable pages with one copy per text: where a first-round and a final-round copy have the same text, the panel keeps the copy from before the election nearest to it, otherwise the copy nearest the election. `n_pages` can therefore be lower than `n_pages_usable` in `mayoral_finalists.csv` |
 | `first_capture`, `last_capture` | Earliest and latest capture among the usable pages |
-| `text` | Text of all usable pages, ordered by website, address depth, address and capture time, joined by `#+#` |
+| `text` | Text of all panel pages, ordered by website, address depth, address and capture time, joined by `#+#` |
 | `n_char`, `n_words`, `n_tags`, `n_clean_tags` | As in the corpus, for the joined text |
 | `text_clean` | `text` after the cleaning rule of ICPSR 226001: addresses and digits removed, and only segments of ten or more words with sentence punctuation and a capital letter kept. Digits are removed, including amounts and proposition numbers. Empty for 6 finalists |
 | `text_before`, `n_char_before`, `text_clean_before` | As `text`, `n_char` and `text_clean`, for the usable pages archived before election day only; empty if there are none (33 finalists) |

@@ -45,10 +45,10 @@ def release(tmp_path):
     page = {"candidate_election_id": "f1", "target_id": "t", "capture_timestamp": "20200101000000",
             "days_from_election": -10, "in_text_window": True, "excluded": False, "duplicate_of": "",
             "site_check_passed": True, "release_usable": True}
-    pages = [dict(page, page_id="p1", original_url="https://a.test/", text="Vote A"),
-             dict(page, page_id="p2", original_url="https://a.test/issues/", text="Issues"),
-             dict(page, page_id="p3", original_url="https://a.test/old/", text="Old", days_from_election=-900,
-                  in_text_window=False, release_usable=False)]
+    pages = [dict(page, page_id="p1", original_url="https://a.test/", text="Vote A", text_sha256="a"),
+             dict(page, page_id="p2", original_url="https://a.test/issues/", text="Issues", text_sha256="i"),
+             dict(page, page_id="p3", original_url="https://a.test/old/", text="Old", text_sha256="o",
+                  days_from_election=-900, in_text_window=False, release_usable=False)]
     pq.write_table(pa.Table.from_pylist(pages), tmp_path / "mayoral_page_corpus.parquet")
     write(tmp_path / "mayoral_finalist_panel.csv", [{"candidate_election_id": "f1", "n_pages": "2", "text": "Vote A#+#Issues"}])
     write(tmp_path / "mayoral_ledb_crosswalk.csv", [
@@ -157,3 +157,23 @@ def test_campaign_periods():
     assert campaign_periods(rows, people, primary, first) == ["first_round", "final_round", "", "after_primary"]
     first["g2"] = {"rounds": "single_round", "first_round_date": "2025-11-04"}
     assert campaign_periods(rows, people, primary, first)[2] == "single_round"
+
+
+def test_panel_keeps_one_page_per_text():
+    from scripts.build_mayoral_release import panel_pages
+    own = [{"page_id": "a1", "text_sha256": "x", "phase": "before", "days_from_election": -200},
+           {"page_id": "a2", "text_sha256": "x", "phase": "after", "days_from_election": 5},
+           {"page_id": "b1", "text_sha256": "y", "phase": "after", "days_from_election": 30},
+           {"page_id": "b2", "text_sha256": "y", "phase": "election_day", "days_from_election": 0},
+           {"page_id": "c1", "text_sha256": "z", "phase": "before", "days_from_election": -3}]
+    # A pre-election copy wins over a nearer later copy; without one, the copy nearest the election wins; order kept.
+    assert [p["page_id"] for p in panel_pages(own)] == ["a1", "b2", "c1"]
+
+
+def test_validator_rejects_repeated_text_in_panel(tmp_path):
+    root = release(tmp_path)
+    table = pq.read_table(root / "mayoral_page_corpus.parquet").to_pylist()
+    table[1]["text_sha256"] = "a"
+    pq.write_table(pa.Table.from_pylist(table), root / "mayoral_page_corpus.parquet")
+    write_manifest(root)
+    assert any("panel page count differs" in e for e in validate(root)["errors"])
