@@ -136,7 +136,7 @@ Links each finalist to the American Local Government Elections Database (ALGED; 
 
 ## `mayoral_primary_elections.csv`
 
-One row per decisive partisan primary: the primary of the party whose nominee won the general election, in a city with partisan mayoral primaries.
+One row per decisive partisan primary: the primary of the party whose nominee won the general election, in a city with partisan mayoral primaries. One primary is listed although it was not decisive: in Indianapolis 2011 the Republican primary was unopposed, so the contested Democratic primary is also included.
 
 | Column | Definition |
 |---|---|
@@ -167,7 +167,7 @@ One row per candidate who placed first or second in a decisive primary.
 
 ## `mayoral_primary_panel.csv`
 
-One row per primary candidate with usable text from the primary period: pages that pass the page rules and the site check, archived in the 365 days up to and including the primary date. Of several copies with the same text or the same address, the copy nearest the primary is kept.
+One row per primary candidate with usable text from the primary period: pages that pass the page rules and the site check, archived in the 365 days up to and including the primary date. Of several copies with the same text or the same address, the copy nearest the primary is kept. For a candidate who is also a finalist, this text comes from the finalist's websites and largely repeats part of the finalist panel `text`, so stacking the two panels counts that text twice.
 
 | Column | Definition |
 |---|---|
