@@ -1,6 +1,6 @@
 # Campaign websites of mayoral finalists in the 100 largest US cities, 2010–2026
 
-**Draft for review, October 18, 2026 (version 6). Not yet published.** The citation is **TO DECIDE** until the Dataverse DOI exists.
+**Draft for review, October 23, 2026 (version 6). Not yet published.** The citation is **TO DECIDE** until the Dataverse DOI exists.
 
 This dataset holds the archived campaign websites of the winner and the runner-up of mayoral elections in the 100 largest US cities, from January 2010 to September 14, 2026. In the 13 of these cities that hold partisan mayoral primaries, it also holds the websites of the top two candidates of the decisive primary. All pages come from the Internet Archive's Wayback Machine. Each page keeps its archived address and archive date, so every record can be traced to its source.
 
