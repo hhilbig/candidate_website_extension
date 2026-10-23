@@ -1,6 +1,6 @@
 # Codebook: campaign websites of mayoral finalists, 100 largest US cities, 2010–2026
 
-**Draft for review, October 18, 2026 (version 6).** `README.md` describes the population, the collection, the checks and the counts.
+`README.md` describes the population, the collection, the checks and the counts.
 
 ## Keys
 
@@ -23,11 +23,9 @@
 
 | Column | Definition |
 |---|---|
-| `city_id`, `census_geoid` | 2020 Census place GEOID |
+| `city_id` | 2020 Census place GEOID |
 | `city_name`, `state_abb` | Census place name and two-letter state code |
 | `population_2020`, `population_rank_2020` | 2020 Census population and its rank among US incorporated places |
-| `roster_place_fips` | Place code in the older candidate roster, where it differs from the GEOID |
-| `crosswalk_status` | Match to the older roster: `exact_geoid`, `explicit_historical_alias`, or `missing_roster_city` (Santa Clarita, where the council selects the mayor) |
 | `jurisdiction_note`, `jurisdiction_source_url` | Note and source for consolidated city-county governments and similar cases |
 | `source_url` | Census source of the population figure |
 | `county_fips` | Five-digit FIPS code of the county that holds the largest part of the city's 2020 population |
@@ -40,7 +38,6 @@
 |---|---|
 | `city_id`, `city_name`, `state_abb`, `year` | City and calendar year (2026 up to September 14) |
 | `status` | `complete`: at least one mayoral election recorded; `no_election`: official sources show none; `earlier_round_only`: only a first round fell in the period; `indirect_selection`: the council or another body chose the mayor; `unresolved`: official sources could not settle the year |
-| `audit_complete` | `True` if the status rests on official sources; `False` for unresolved years |
 | `election_ids` | Recorded elections in the year (JSON list) |
 | `expected_election_dates` | Election dates from the city's election calendar, where known |
 | `source_url`, `audit_note` | Main official source and how the year was resolved |
@@ -55,7 +52,6 @@
 | `verification_status` | `verified_decisive`: decided who became mayor, with at least two candidates, so in the population; `uncontested`: one candidate; `legacy_results_unverified`: results only from the older roster; `unresolved`, `unresolved_final_pair`: the result could not be verified |
 | `certification_status`, `certification_source_url` | Whether the result was certified, canvassed or checked against an official source, and that source |
 | `source_url`, `source_locator`, `verification_note` | Source of the result, the place in the source, and notes |
-| `legacy_contest_ids` | Contest IDs in the older roster |
 | `rounds` | For elections in the population: `two_rounds` (an earlier round of the same race, a primary or a first round, took place on `first_round_date`) or `single_round` (the race had one round) |
 | `first_round_date` | Date of the first round of the race; equals `election_date` for `single_round` |
 | `first_round_source`, `first_round_source_url` | Source of the first-round date: `primary_file` (the decisive partisan primary in `mayoral_primary_elections.csv`), `calendar_note` (the official election calendar of the city), `ballotpedia` (the archived Ballotpedia page of the election), `agent_search` (a web search by an AI agent; most sources are Wikipedia election pages), and the address of that source |
@@ -82,14 +78,13 @@ One row per winner or runner-up of a recorded election. Rows with `eligible` = `
 
 ## `mayoral_page_corpus.parquet`
 
-One row per downloaded page. Excluded and duplicate pages stay in the file with their flags.
+One row per downloaded page. Excluded and duplicate pages stay in the file with their flags. The information flags `names_candidate`, `app_shell`, `other_year_only`, `non_latin_text` and `also_in_election` do not affect `release_usable`.
 
 | Column | Definition |
 |---|---|
 | `page_id` | Page key (one archived capture) |
 | `candidate_election_id` | Finalist or primary candidate |
 | `target_id` | One finalist and one website |
-| `batch`, `run` | Download job that collected the page (`round_01` …; `first_150_pages`, `remaining_pages`, `supplementary_query`, `pre_election_copy`). Provenance only |
 | `site_domain` | Registrable domain of the website |
 | `original_url`, `snap_url` | Address of the page as archived, and the Wayback Machine address of the copy |
 | `capture_timestamp` | Archive time, `YYYYMMDDhhmmss` (UTC) |
@@ -99,7 +94,6 @@ One row per downloaded page. Excluded and duplicate pages stay in the file with 
 | `text`, `n_char`, `n_words` | Visible text with segments joined by `#+#`, and its characters and words |
 | `n_tags`, `n_clean_tags` | Number of segments, and of segments kept by the cleaning rule (see `text_clean`) |
 | `text_sha256`, `raw_html_sha256` | SHA-256 of the text and of the archived HTML |
-| `names_candidate`, `app_shell`, `other_year_only`, `non_latin_text`, `also_in_election` | Information flags. They do not affect `release_usable` |
 | `names_candidate` | `True` if the page contains the candidate's last name |
 | `app_shell` | `True` if the page has fewer than 40 words and asks for JavaScript or shows only a loading message |
 | `other_year_only` | `True` if the page names years, but not the election year or the year before |
@@ -107,7 +101,7 @@ One row per downloaded page. Excluded and duplicate pages stay in the file with 
 | `duplicate_of` | `page_id` of the copy kept instead of this page: a page of the same finalist with the same text, or the same address after removing the scheme, "www.", a trailing slash and the query. The kept copy always passes the page rules inside the 365-day window: the copy from before the election where one exists, otherwise the copy nearest the election. Copies on different sides of the first round (`campaign_period` `first_round` versus `final_round`) are never duplicates of each other. A kept copy can still be unusable if its site failed the site check. Copies at the same address can differ in text (for example image-viewer addresses that differ only in the query); only the kept copy's text is usable |
 | `also_in_election` | For a usable page, the other `candidate_election_id`s of the same person that have a usable page with the same text or the same `snap_url`, joined by `;`. A site reused across campaigns shows up here |
 | `excluded`, `exclusion_reason` | `True` if a page rule applies; reasons joined by `;`: `empty` (under 50 characters); `parked_or_placeholder` (a directory listing, or under 1,200 characters saying the domain is for sale, parked, expired, suspended or under construction); `spam` (platform profile spam, or five or more gambling, drug or loan terms on a page that does not name the candidate); `binary_or_garbled` (NUL bytes, or over 5 percent replacement or control characters); `error_or_challenge` (under 1,500 characters and a bot challenge, access-denied or "page not found" page); `listing_page` (an address that lists other pages: tag, author, category, feed, comments, search, paging, date archive or calendar view); `not_a_page` (a file or system address, not an HTML page: style sheets, scripts, images, documents, `robots.txt`, sitemaps, WordPress admin, login, theme and plugin addresses, CGI scripts and email-protection pages); `not_this_campaign` (the page check labels the page `earlier_campaign`, `other_office` or `not_campaign`) |
-| `page_check` | Label of the page check for pages that were usable before it: `this_campaign` (part of this campaign, including earlier rounds of the same race); `unclear` (a generic page that cannot be tied to one election, such as a contact form); `earlier_campaign` (only about another race of the candidate); `other_office` (a campaign or office page for another office); `not_campaign` (not about the candidate's campaign). Labels come from Qwen3.6-27B, except 71 pages that the model dated to the election year or the year before, which Claude Opus decided. A copy with the same text as a labeled page of the same finalist carries that page's label, so an excluded page (for example a listing page) can carry a label; only `excluded` decides. Empty for pages the check did not read |
+| `page_check` | Label of the page check for pages that were usable before it: `this_campaign` (part of this campaign, including earlier rounds of the same race); `unclear` (a generic page that cannot be tied to one election, such as a contact form); `earlier_campaign` (only about another race of the candidate); `other_office` (a campaign or office page for another office); `not_campaign` (not about the candidate's campaign). Labels come from Qwen3.6-27B, except 125 pages that the model placed in an earlier race of the election year or the year before, which Claude Opus decided. A copy with the same text as a labeled page of the same finalist carries that page's label, so an excluded page (for example a listing page) can carry a label; only `excluded` decides. Empty for pages the check did not read |
 | `site_check_passed` | `True` if the site passed the site check; for the one site taken over after the election, only pages up to election day |
 | `release_usable` | `True` if `in_text_window`, not `excluded`, no `duplicate_of`, and `site_check_passed` |
 | `campaign_period` | Period of the campaign at the capture date. For a finalist's page: `first_round` (on or before the first round of a two-round race), `final_round` (after the first round), or `single_round` (the race had one round). For a primary candidate's page: `first_round` (on or before the candidate's primary) or `after_primary`. The first-round dates are in `mayoral_elections.csv`. For pages of finalists outside the population, the value is empty |

@@ -47,8 +47,10 @@ DISCOVERY = REPO / "data/municipal_discovery/top100_coverage/url_discovery"
 STATUSES = ("text", "excluded_site_check", "no_usable_pages", "site_rejected", "site_not_archived", "check_incomplete",
             "no_url_lead")
 REJECTIONS = REPO / "data/municipal_discovery/top100_coverage/release_site_check/roster_url_rejections.csv"
-RUN_NAMES = {"production": "first_150_pages", "uncapped": "remaining_pages", "carymoon_extra": "supplementary_query",
-             "prefetch": "pre_election_copy"}
+# Columns of our collection pipeline that mean nothing to users (Hanno, October 23, 2026): a duplicate of city_id,
+# a flag implied by status, older-roster codes, and the download job of each page.
+INTERNAL_COLUMNS = {"census_geoid", "audit_complete", "roster_place_fips", "crosswalk_status", "legacy_contest_ids",
+                    "batch", "run"}
 NICKNAMES = {"bill": "william", "billy": "william", "will": "william", "bob": "robert", "rob": "robert", "bobby": "robert",
              "jim": "james", "jimmy": "james", "mike": "michael", "tom": "thomas", "dave": "david", "joe": "joseph",
              "rick": "richard", "dick": "richard", "ed": "edward", "eddie": "edward", "steve": "steven", "chris": "christopher",
@@ -262,13 +264,7 @@ def build(corpus_path: Path, site_check_path: Path, out_dir: Path, primaries: bo
                      pc.and_(pc.equal(corpus["duplicate_of"], ""), pa.array(passed)))
     days = corpus["days_from_election"].to_pylist()
     phase = pa.array(["before" if d < 0 else "election_day" if d == 0 else "after" for d in days])
-    # Neutral provenance names: collection rounds in date order, and what each run collected.
-    rounds = {b: f"round_{i:02d}" for i, b in enumerate(sorted(set(corpus["batch"].to_pylist()),
-                                                                key=lambda b: (b.rsplit("_", 1)[-1], b)), 1)}
-    corpus = corpus.set_column(corpus.schema.get_field_index("batch"), "batch",
-                               pa.array([rounds[b] for b in corpus["batch"].to_pylist()]))
-    corpus = corpus.set_column(corpus.schema.get_field_index("run"), "run",
-                               pa.array([RUN_NAMES.get(r, r) for r in corpus["run"].to_pylist()]))
+    corpus = corpus.drop_columns([c for c in corpus.column_names if c in INTERNAL_COLUMNS])
     corpus = corpus.append_column("phase", phase)
     corpus = corpus.append_column("site_check_passed", pa.array(passed)).append_column("release_usable", usable)
     # A usable page whose text or capture also counts as usable for another election of the same person, for example
@@ -290,7 +286,6 @@ def build(corpus_path: Path, site_check_path: Path, out_dir: Path, primaries: bo
         corpus = corpus.append_column("campaign_period", pa.array(campaign_periods(
             corpus.select(["candidate_election_id", "capture_timestamp"]).to_pylist(), people, primary_people,
             {r["election_id"]: r for r in read_csv(COVERAGE / "first_round_dates.csv")})))
-    (out_dir.parent / f"{out_dir.name}_round_names.json").write_text(json.dumps(rounds, indent=1))
     pq.write_table(corpus, out_dir / "mayoral_page_corpus.parquet", compression="zstd")
 
     pages = defaultdict(list)
@@ -361,7 +356,7 @@ def build(corpus_path: Path, site_check_path: Path, out_dir: Path, primaries: bo
             # v6: the first-round date behind campaign_period, with its source, for the eligible elections.
             first = {r["election_id"]: r for r in read_csv(COVERAGE / "first_round_dates.csv")}
             rows = [{**r, **{k: first.get(r["election_id"], {}).get(k, "") for k in FIRST_ROUND_COLUMNS}} for r in rows]
-        write_csv(out_dir / name, rows, list(rows[0]))
+        write_csv(out_dir / name, rows, [c for c in rows[0] if c not in INTERNAL_COLUMNS])
     counts = defaultdict(int)
     for row in finalists:
         counts[row["text_status"] or "not_eligible"] += 1
