@@ -4,8 +4,6 @@
 
 This dataset holds the archived campaign websites of the winner and the runner-up of mayoral elections in the 100 largest US cities, from January 2010 to September 14, 2026. In the 13 of these cities that hold partisan mayoral primaries, it also holds the websites of the top two candidates of the decisive primary. All pages come from the Internet Archive's Wayback Machine. Each page keeps its archived address and archive date, so every record can be traced to its source.
 
-The dataset accompanies our archived campaign websites of US House and Senate candidates (Harvard Dataverse, doi:10.7910/DVN/BZ2JRS). Page text is extracted with the same code in both datasets. The House/Senate panel keeps one snapshot per candidate (the one with the most text), while this panel joins all usable pages. For a like-for-like comparison, build documents from the page corpus.
-
 ## Files
 
 | File | Rows | One row is |
@@ -63,7 +61,7 @@ Many races have two rounds: a primary or first round, then the general election 
 
 ## Collection
 
-We combined an older roster of candidate URLs with web searches by AI agents (Claude models with web access) and scripted searches of the Wayback Machine and Common Crawl. `url_lead_basis` records how each site was found. A site counts only if an archived page names the candidate and shows a mayoral campaign in that city for that election, and a second agent checked every site found by search. For each site we downloaded every HTML page the Wayback Machine holds, archived between 567 days before and 148 days after the election. For each page address we took the copy nearest the election and, where that copy is from election day or later, also the latest copy from the year before the election. Text is extracted with the House and Senate code. The sites of the 46 searched primary candidates were downloaded in the same way, with the primary as the reference date.
+We combined an older roster of candidate URLs with web searches by AI agents (Claude models with web access) and scripted searches of the Wayback Machine and Common Crawl. `url_lead_basis` records how each site was found. A site counts only if an archived page names the candidate and shows a mayoral campaign in that city for that election, and a second agent checked every site found by search. For each site we downloaded every HTML page the Wayback Machine holds, archived between 567 days before and 148 days after the election. For each page address we took the copy nearest the election and, where that copy is from election day or later, also the latest copy from the year before the election. The sites of the 46 searched primary candidates were downloaded in the same way, with the primary as the reference date.
 
 ## Usable pages
 
@@ -105,7 +103,7 @@ In some elections the runner-up received very few votes, for example under 1 per
 
 ## Terms of use
 
-The compilation and documentation are released under the Creative Commons Attribution 4.0 International license (CC BY 4.0), the same terms as the House and Senate dataset. Copyright in the campaign material stays with its authors. Each page row records its archived source address in `snap_url`. Rights holders may request removal by email to hhilbig@ucdavis.edu.
+The compilation and documentation are released under the Creative Commons Attribution 4.0 International license (CC BY 4.0). Copyright in the campaign material stays with its authors. Each page row records its archived source address in `snap_url`. Rights holders may request removal by email to hhilbig@ucdavis.edu.
 
 ## Citation
 
