@@ -73,7 +73,7 @@ One row per winner or runner-up of a recorded election. Rows with `eligible` = `
 | `url_lead` | `True` if a campaign website is known |
 | `url_lead_basis` | Source of the website: `legacy_url_inventory` (older candidate roster, checked against archived pages); values starting with `agent_search`, `legacy_lead` or `checker_proposal` (web search by an AI agent); values starting with `domain_sweep` (common campaign domains tested in the Wayback Machine or Common Crawl). Sites from searches were confirmed by a second, independent agent |
 | `campaign_urls` | Known campaign website addresses (JSON list) |
-| `text_status` | Status of the website text for eligible finalists; values in `README.md` |
+| `text_status` | Status of the website text for eligible finalists (counts of the 860): `text` (usable pages exist, 710); `no_url_lead` (no search found a campaign website, 75); `site_not_archived` (a website is known, but the archive holds no copy within a year of the election, 32); `no_usable_pages` (pages were downloaded, but none is usable, 16); `excluded_site_check` (the site check excluded every downloaded site, 11); `check_incomplete` (the last search could not finish because the search engine or the archive stopped responding, 11); `site_rejected` (the search rejected the only known site and found no other, 5) |
 | `n_sites`, `n_pages_usable`, `n_char_usable` | Websites with usable pages, usable pages, and characters of the joined usable text. These are counts of usable material: 0 means no usable page, whatever the reason in `text_status`; they do not measure a candidate's campaign |
 
 ## `mayoral_page_corpus.parquet`
@@ -161,7 +161,7 @@ One row per candidate who placed first or second in a decisive primary.
 | `searched` | `True` if the candidate is not a finalist, so a separate search looked for the website |
 | `url_lead_status` | Result of that search: `accepted`, `outside_window` (a website exists, but the archive has no copy within a year of the primary), `not_found`, `incomplete`; empty if the candidate was not searched |
 | `campaign_urls` | Known campaign website addresses (JSON list) |
-| `text_status` | `text`, `no_url_lead`, `site_not_archived`, `no_usable_pages`, `excluded_site_check`, `check_incomplete`; meanings as in `README.md` |
+| `text_status` | `text`, `no_url_lead`, `site_not_archived`, `no_usable_pages`, `excluded_site_check`, `check_incomplete`, as in `mayoral_finalists.csv`, for the year before the primary |
 | `n_sites`, `n_pages_usable`, `n_char_usable` | Websites, usable pages, and characters of the joined text of the primary period |
 | `source_url` | Official result source |
 
