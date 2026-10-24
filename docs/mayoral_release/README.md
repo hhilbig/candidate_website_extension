@@ -38,7 +38,28 @@ For each campaign website, we downloaded the pages that the Wayback Machine hold
 
 ## Coverage
 
-83 percent of the finalists have usable text, and 71 percent of the elections have text for both finalists. Coverage is higher for winners, in larger cities, and in more recent elections. When text is missing, `text_status` records the reason.
+The population contains 430 elections and 860 finalists. Of these finalists, 710 (83 percent) have usable text: 88 percent of winners and 77 percent of runners-up. For 71 percent of the elections, we have text for both finalists. Coverage is also higher in larger cities. When text is missing, `text_status` records the reason.
+
+| Year | Elections | Finalists with text | Winners (%) | Runners-up (%) | Both finalists (%) |
+|---|---:|---:|---:|---:|---:|
+| 2010 | 16 | 23 of 32 | 56 | 88 | 56 |
+| 2011 | 32 | 50 of 64 | 84 | 72 | 69 |
+| 2012 | 23 | 30 of 46 | 70 | 61 | 52 |
+| 2013 | 32 | 55 of 64 | 91 | 81 | 75 |
+| 2014 | 21 | 33 of 42 | 90 | 67 | 57 |
+| 2015 | 30 | 50 of 60 | 87 | 80 | 73 |
+| 2016 | 21 | 37 of 42 | 95 | 81 | 81 |
+| 2017 | 33 | 57 of 66 | 97 | 76 | 76 |
+| 2018 | 22 | 28 of 44 | 77 | 50 | 45 |
+| 2019 | 31 | 52 of 62 | 90 | 77 | 68 |
+| 2020 | 28 | 47 of 56 | 89 | 79 | 71 |
+| 2021 | 26 | 48 of 52 | 88 | 96 | 88 |
+| 2022 | 25 | 38 of 50 | 88 | 64 | 56 |
+| 2023 | 27 | 46 of 54 | 89 | 81 | 74 |
+| 2024 | 32 | 58 of 64 | 97 | 84 | 84 |
+| 2025 | 24 | 45 of 48 | 96 | 92 | 92 |
+| 2026 | 7 | 13 of 14 | 100 | 86 | 86 |
+| All | 430 | 710 of 860 | 88 | 77 | 71 |
 
 ## Limitations
 
