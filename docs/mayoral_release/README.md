@@ -67,11 +67,11 @@ Of the 860 finalists in the 430 elections, 710 (83 percent) have usable text –
 
 ## Limitations
 
-The main limitation is that the Wayback Machine did not archive every website, or every page of a website, so for some candidates little text is available – this is particularly so for the first round of two-round races, because for each page I downloaded the copy closest to the final election. The amount of text also differs a lot between candidates, and menus, footers and the like show up on many pages of the same site (`text_unique` keeps each segment once). A page archived before the election may also predate the campaign. Last, websites were identified and checked using AI models, and I did not hand-validate these decisions.
+The main limitation is that the Wayback Machine did not archive every website, or every page of a website, so for some candidates little text is available – this is particularly so for the first round of two-round races, because for each page I downloaded the copy closest to the final election. Some candidates have far more text than others, and menus and footers are repeated on many pages of a site, which is why `text_unique` keeps every segment only once. Also, a page archived before the election can be older than the campaign itself. Last, websites were identified and checked using AI models, and I did not hand-validate these decisions.
 
 ## Terms of use
 
-The compilation and documentation are released under the Creative Commons Attribution 4.0 International license (CC BY 4.0). Copyright in the campaign material remains with the authors. Every page comes with its archived source address (`snap_url`), and rights holders who want material removed can email me at hhilbig@ucdavis.edu.
+The compilation and documentation are released under the Creative Commons Attribution 4.0 International license (CC BY 4.0). Copyright in the campaign material remains with the authors. The archived source address of each page is in `snap_url`; if you hold rights to any of the material and want it removed, please email me at hhilbig@ucdavis.edu.
 
 ## Citation
 
