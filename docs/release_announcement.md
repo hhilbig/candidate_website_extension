@@ -9,7 +9,7 @@ Here is another dataset: archived campaign website text for US House and Senate 
 
 The data include extracted text from each page, along with a bunch of derived variables: FEC identifiers and measures of document length, lexical diversity, and topic attention for 31 topics. These measures follow Di Tella et al., so the two House panels can be combined and analyzed as one dataset.
 
-Coverage is incomplete because the Wayback Machine archives pages selectively. Of 9,848 candidates with a recorded URL attempt, 7,353 have archived text. Among candidates in official general election returns, House coverage ranges from 69 to 76 percent from 2018 to 2024. Senate coverage rises from 17 percent in 2002 to about 70 percent after 2008.
+Coverage is incomplete because the Wayback Machine archives pages selectively. Of 9,846 candidates with a recorded URL attempt, 7,348 have archived text. Among candidates in official general election returns, House coverage ranges from 69 to 78 percent from 2018 to 2024. Senate coverage rises from 17 percent in 2002 to about 70 percent after 2008.
 
 Comparisons across candidates or pooled observations are likely more reliable than analyses of changes within units such as party-district cells.
 
@@ -29,7 +29,7 @@ Here is another dataset: archived campaign website text for US House and Senate 
 
 The data include extracted text from each page, along with a bunch of derived variables: FEC identifiers and measures of document length, lexical diversity, and topic attention for 31 topics. These measures follow Di Tella et al., so the two House panels can be combined and analyzed as one dataset.
 
-Coverage is incomplete because the Wayback Machine archives pages selectively. Of 9,848 candidates with a recorded URL attempt, 7,353 have archived text. Among candidates in official general election returns, House coverage ranges from 69 to 76 percent from 2018 to 2024. Senate coverage rises from 17 percent in 2002 to about 70 percent after 2008.
+Coverage is incomplete because the Wayback Machine archives pages selectively. Of 9,846 candidates with a recorded URL attempt, 7,348 have archived text. Among candidates in official general election returns, House coverage ranges from 69 to 78 percent from 2018 to 2024. Senate coverage rises from 17 percent in 2002 to about 70 percent after 2008.
 
 ### 3/3
 
@@ -70,23 +70,23 @@ Documentation and findings: https://www.hannohilbig.com/candidatewebsites/
 - Topic measures capture attention, not policy positions.
 - The corpus is neither a census nor limited to candidates in general elections:
   3,032 captured candidate-years match an official Democratic or Republican
-  ballot and 4,321 do not.
+  ballot and 4,316 do not.
 - Appending the ICPSR data requires the replicated text filter described in the
   documentation.
 
 ## Verified figures
 
-Verified against the Version 2.0 build on 2026-08-20:
+Verified against the published Version 4.0 release on 2026-10-24:
 
 | Quantity | Value |
 |---|---:|
-| Captured candidate-years | 7,353 |
-| Candidate-years with a URL attempt | 9,848 |
-| Archived page rows | 799,058 |
+| Captured candidate-years | 7,348 |
+| Candidate-years with a URL attempt | 9,846 |
+| Archived page rows | 797,554 |
 | Captured general election candidates | 3,032 |
-| Captured other same-year FEC candidates | 4,321 |
-| Overall capture rate | 74.7% |
+| Captured other same-year FEC candidates | 4,316 |
+| Overall capture rate | 74.6% |
 | Ballot candidate capture rate | 83.7% |
-| Other same-year candidate capture rate | 69.4% |
-| Candidate-years with a DIME ID | 5,774 (78.5%) |
+| Other same-year candidate capture rate | 69.3% |
+| Candidate-years with a DIME ID | 5,774 (78.6%) |
 | Topic variables | 31 |

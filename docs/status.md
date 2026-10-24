@@ -41,6 +41,7 @@ These runs came after the September 30 fix for the `Invalid IPv6 URL` stop.
 2. After the end date only `--phase archive` may run, with no roster refresh (`scripts/collect_2026.py`; test `test_after_end_date_only_the_archive_phase_runs`). **Decision: one final archive pass in early December** for the post-general Wayback window (November 4 – December 3). Not scheduled yet; run it by hand, after December 3.
 3. The identity check needs the FEC first name, so nickname sites fail (about 206 of 410 rejected homepages name the surname; e.g. Tom Kean, Jerry Nadler). No data loss: unconfirmed sites are copied daily. **Decision: score identity again on stored text after November 17** and report the change before use. No collector change now.
 Not issues: the retryable backlog (5,645) is mostly one record per day for about 218 always-failing sites; disk (55 GiB free, about 0.35 GiB a day); time zones for the 50 states. The daily run stops at its 6-hour budget (`--max-run-seconds 21600` in `~/run_collect_2026.sh`) before the archive phase reaches all candidates.
+Extra runs (Hanno, October 24): on November 2 and 4 cron also starts the wrapper at 00:05 Pacific (run until 08:20), and the 09:00 run gets 12 hours (ends 05:00 UTC, Eastern midnight); the Monday refresh of November 2 moves to Sunday, November 1. The collector decides what is due at run start, so runs must not cross local midnight. Droplet wrapper `~/run_collect_2026.sh` (tracked copy `scripts/run_collect_2026_droplet.sh`; backups `~/run_collect_2026.sh.bak-20261024`, `~/crontab.bak-20261024`).
 Deployment: code for 1 and 2 is deployed to the droplet runtime after the October 24 run ends (backups `*.bak-20261024`); check the November 2 and 4 runs for live copies.
 
 **Action:** check the daily `rc` line and the free space once a week. Act only if a run fails. On November 3 and 5, confirm that the November 2 and 4 runs made live copies for most candidates with a confirmed site.
@@ -58,7 +59,7 @@ A check of `scripts/scrape_mayoral_wayback_batch.py` against the `wayback-scrapi
 
 Version 4.0 is published. These items do not block anything now.
 
-- Not yet decided: drop the rows on `anthonybrown.com` and `kateforcongress.com`, which serve pages under the wrong candidate.
+- **Decided October 24 (Hanno): drop the wrong-candidate rows in the next version.** A text check of v4.0 shows only `H0AL02160-2020` (Thomas William Brown Jr., Alabama; 803 page rows of Anthony Brown's Maryland site `anthonybrown.com`) is wrong. The Maryland rows are correct, and both `kateforcongress.com` rows are correct (Kate Schroder, Ohio 2020; Kate Monroe, California 2024; each page names its candidate). Drop only `H0AL02160-2020` from the core files; the extraction tables already exclude it.
 - The packager computes `manifest_entries` but does not write them.
 - In 17 of 60 sampled endorsement records, the evidence span crosses two list entries.
 
@@ -74,7 +75,7 @@ Version 4.0 is published. These items do not block anything now.
 - 57 finished endorsement development files moved to `scripts/archive/` and `tests/archive/`. pytest skips `archive/` and `scratch/`.
 - Root scratch files moved to the ignored folder `scratch/`. The August 23 validation workbooks moved to `validation/extraction_validation_2026-08-23/`.
 - Full test suite on October 4: 1,737 passed. Five tests in `tests/test_merge_municipal_temporal_validation.py` fail under the current pandas string dtype; this failure is older and known.
-- `data/deliverable` (1.7 GB, regenerable in about 8 minutes) stays. Hanno has not chosen between compressing and deleting it.
+- `data/deliverable` compressed October 24 (Hanno): `data/deliverable_2026-08-14.tar.gz` (1.1 GB; all four files verified by SHA-256 inside the archive), folder removed. Scripts that read `data/deliverable/` need `tar -xzf` first.
 
 ## Progress estimate, October 4, 2026 (approximate)
 
