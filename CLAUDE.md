@@ -3,6 +3,7 @@
 Finish the approved data releases using the checklist in `docs/status.md`.
 Historical House/Senate correction is complete. Do not reopen it without a demonstrated material error.
 Do not recollect House 2002–2016. Governor races remain outside scope.
+The mayoral data moved to the repository `~/Documents/GitHub/mayoral_campaign_websites` on October 24, 2026. Do mayoral work there.
 
 ## Start and resume
 
@@ -105,8 +106,6 @@ Check script arguments and current input manifests before any build or collectio
 | Work | Existing entry points |
 |---|---|
 | Extracted variables | `scripts/build_candidate_extraction_release.py`, `scripts/validate_candidate_extraction_release.py`, `tests/test_candidate_extraction_release.py` |
-| Mayoral population | `scripts/build_mayoral_top_two_coverage.py`, `tests/test_build_mayoral_top_two_coverage.py` |
-| Mayoral acquisition | `docs/mayoral_url_discovery.md` identifies the current approved runners and queues |
 | 2026 collection | `scripts/collect_2026.py`, `tests/test_collection_2026_*.py` |
 | Historical reproduction, only if required | `README.md` gives the locked environment, build, and validation commands |
 

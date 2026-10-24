@@ -1,7 +1,0 @@
-[
-  ["urlkey", "timestamp", "original", "mimetype", "statuscode", "digest"],
-  ["org,aliceformayor)/Issues/Plan.HTML", "20210301090000", "https://AliceForMayor.org/Issues/Plan.HTML?Ref=Mail", "text/html", "200", "digest-before"],
-  ["org,aliceformayor)/Issues/Plan.HTML", "20210614120000", "https://AliceForMayor.org/Issues/Plan.HTML?Ref=Mail", "text/html", "200", "digest-nearest"],
-  ["org,aliceformayor)/Issues/Plan.HTML", "20220401090000", "https://AliceForMayor.org/Issues/Plan.HTML?Ref=Mail", "text/html", "200", "digest-after"],
-  ["org,aliceformayor)/Issues/Plan.HTML", "20210614120100", "http://AliceForMayor.org/Issues/Plan.HTML?Ref=Mail", "-", "301", "redirect"]
-]

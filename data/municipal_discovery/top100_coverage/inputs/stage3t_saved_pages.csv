@@ -1,6 +1,0 @@
-candidate_election_id,target_id,registrable_domain,election_date,pages_fetched,pages_with_text,pages_with_text_in_window,text_characters_in_window,first_timestamp_in_window,last_timestamp_in_window,files_verified
-0636770__2020-11-03__regular__1efc765cf2a1d307,stage3_0e425af15c44136bce352973,farrahforirvine.com,2020-11-03,8,8,8,23672,20201108203658,20201122053325,True
-0668000__2014-11-04__regular__de2a6e1bda27d353,stage3_1bc5478687783d57ae91608c,davecorteseformayor.com,2014-11-04,2,2,2,580,20140518181257,20141217002542,True
-0636770__2016-11-08__regular__b3abb044aaf7af5e,stage3_51ddfb4e8832fb43defbc8c0,wagnerformayor.com,2016-11-08,16,16,16,32244,20161026023008,20161104225843,True
-4837000__2011-06-18__regular__fadc6df66e506ec9,stage3_fbdfd0af8fba95b97f5e1278,bethforirving.com,2011-06-18,16,16,16,35731,20101001194210,20110921090409,True
-1253000__2015-11-03__regular__16b926a0a383096b,stage3_ff5ddc226ae7ff4725991ad8,buddyfororlando.com,2015-11-03,25,25,25,66820,20151017000218,20151130110014,True

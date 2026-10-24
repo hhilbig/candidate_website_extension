@@ -1,5 +1,0 @@
-[
-  ["urlkey", "timestamp", "original", "mimetype", "statuscode", "digest"],
-  ["org,aliceformayor)/", "20210614120000", "https://aliceformayor.org/", "text/html", "200", "alice-campaign"],
-  ["org,aliceformayor)/", "20221201090000", "https://aliceformayor.org/", "text/html", "200", "reused-domain"]
-]

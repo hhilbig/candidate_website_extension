@@ -1,5 +1,0 @@
-candidate_election_id,target_id,registrable_domain,election_date,pages_fetched,pages_with_text,pages_with_text_in_window,text_characters_in_window,first_timestamp_in_window,last_timestamp_in_window,files_verified
-5116000__2024-11-05__regular__274eca882f4f52d4,stage3_2786fb1012c62e54f9cbf963,votedoncarey.com,2024-11-05,16,16,15,34944,20231107040330,20241024033823,True
-3728000__2017-11-07__regular__c18d9fdebf4a3e60,stage3_786eca566f0c5d009b29a031,nancyvaughangso.com,2017-11-07,2,2,2,9427,20170708190516,20180107144851,True
-3775000__2013-11-05__regular__bf6dd0b5fde826df,stage3_9c1549b05dbe96b1712e1d1d,allenjoinesformayor.wordpress.com,2013-11-05,8,8,8,22923,20130917213828,20131122095041,True
-3240000__2019-04-02__regular__5fd36b47cbf55509,stage3_a889fcac5d60cbe7ec48b8a3,philcollinsforclarkcounty.weebly.com,2019-04-02,3,3,3,6291,20181119023640,20190724092053,True
