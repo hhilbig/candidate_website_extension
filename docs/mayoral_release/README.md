@@ -1,6 +1,6 @@
 # Campaign websites of mayoral finalists in the 100 largest US cities, 2010–2026
 
-This dataset contains the archived campaign websites of mayoral candidates in the 100 largest US cities between January 2010 and September 2026. For each election, we include the winner and the runner-up. In cities with partisan mayoral primaries, we also include the top two candidates of the decisive primary. All pages come from the Internet Archive's Wayback Machine, and each page keeps its archived address and date.
+This dataset contains the archived campaign websites of mayoral candidates in the 100 largest US cities between January 2010 and September 2026. For each election, I include the winner and the runner-up. In cities with partisan mayoral primaries, I also include the top two candidates of the decisive primary. All pages come from the Internet Archive's Wayback Machine, and each page keeps its archived address and date.
 
 ## Files
 
@@ -30,15 +30,15 @@ usable = pages[pages["release_usable"]]
 
 ## Population
 
-We define the population as the elections that decided who became mayor and had at least two candidates. In cities with a runoff, this is the runoff. We take the winner and the runner-up of each election from official results (`eligible` = `True`). In cities with partisan primaries, the race is often decided in the primary of the dominant party. For these cities, we therefore add the primary of the party that won the general election and its top two candidates.
+I define the population as the elections that decided who became mayor and had at least two candidates. In cities with a runoff, this is the runoff. I take the winner and the runner-up of each election from official results (`eligible` = `True`). In cities with partisan primaries, the race is often decided in the primary of the dominant party. For these cities, I therefore add the primary of the party that won the general election and its top two candidates.
 
 ## Text
 
-For each campaign website, we downloaded the pages that the Wayback Machine holds from the period around the election. We consider a page usable (`release_usable`) if it was archived within a year of the election, contains campaign content, is not a duplicate, and belongs to the candidate's campaign for this election. Language models checked each website and each page against the last two conditions, and a second model audited a sample of these decisions. The two panels join the usable text of each candidate. Each page also records whether it was archived before or after election day (`phase`) and, in races with two rounds, before or after the first round (`campaign_period`).
+For each campaign website, I downloaded the pages that the Wayback Machine holds from the period around the election. I consider a page usable (`release_usable`) if it was archived within a year of the election, contains campaign content, is not a duplicate, and belongs to the candidate's campaign for this election. Language models checked each website and each page against the last two conditions, and a second model audited a sample of these decisions. The two panels join the usable text of each candidate. Each page also records whether it was archived before or after election day (`phase`) and, in races with two rounds, before or after the first round (`campaign_period`).
 
 ## Coverage
 
-The population contains 430 elections and 860 finalists. Of these finalists, 710 (83 percent) have usable text: 88 percent of winners and 77 percent of runners-up. For 71 percent of the elections, we have text for both finalists. Coverage is also higher in larger cities. When text is missing, `text_status` records the reason.
+The population contains 430 elections and 860 finalists. Of these finalists, 710 (83 percent) have usable text: 88 percent of winners and 77 percent of runners-up. For 71 percent of the elections, I have text for both finalists. Coverage is also higher in larger cities. When text is missing, `text_status` records the reason.
 
 | Year | Elections | Finalists with text | Winners (%) | Runners-up (%) | Both finalists (%) |
 |---|---:|---:|---:|---:|---:|
@@ -67,11 +67,11 @@ The population contains 430 elections and 860 finalists. Of these finalists, 710
 
 ## Limitations
 
-We note three limitations. First, the Wayback Machine did not archive every website or every page, and some websites keep little text in the archive. Text from the first round of a two-round race is particularly thin, because we downloaded the copy of each page that is closest to the final election. Second, text volume varies widely between candidates, and menus and footers repeat across pages (`text_unique` keeps each text segment once). A page archived before the election can also be older than the campaign. Third, AI models found and checked the websites, and we did not validate these decisions by hand.
+I note three limitations. First, the Wayback Machine did not archive every website or every page, and some websites keep little text in the archive. Text from the first round of a two-round race is particularly thin, because I downloaded the copy of each page that is closest to the final election. Second, text volume varies widely between candidates, and menus and footers repeat across pages (`text_unique` keeps each text segment once). A page archived before the election can also be older than the campaign. Third, AI models found and checked the websites, and I did not validate these decisions by hand.
 
 ## Terms of use
 
-We release the compilation and documentation under the Creative Commons Attribution 4.0 International license (CC BY 4.0). Copyright in the campaign material remains with its authors. Each page records its archived source address in `snap_url`. Rights holders may request removal by email to hhilbig@ucdavis.edu.
+I release the compilation and documentation under the Creative Commons Attribution 4.0 International license (CC BY 4.0). Copyright in the campaign material remains with its authors. Each page records its archived source address in `snap_url`. Rights holders may request removal by email to hhilbig@ucdavis.edu.
 
 ## Citation
 
