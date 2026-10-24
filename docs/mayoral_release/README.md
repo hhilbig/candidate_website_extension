@@ -34,11 +34,11 @@ The population consists of all elections that decided who became mayor (i.e. the
 
 ## Text
 
-For each campaign website, I downloaded all pages the Wayback Machine holds for the period around the election. Pages are counted as usable (`release_usable`) when they were archived within a year of the election, contain campaign content, are not duplicates of other pages, and are part of the candidate's campaign in this election rather than, e.g., an earlier campaign of the same candidate – the latter two I checked with language models for every website and page, and a second model then audited a sample of those decisions. The two panel files contain the joined usable text of each candidate. `phase` records whether a page was archived before or after election day, and `campaign_period` records, for races with two rounds, whether it was archived before or after the first round.
+For each campaign website, I downloaded all pages the Wayback Machine holds for the period around the election. Pages are counted as usable (`release_usable`) when they were archived within a year of the election, contain campaign content, are not duplicates of other pages, and are part of the candidate's campaign in this election rather than, e.g., an earlier campaign of the same candidate. I checked the last two conditions with language models for every website and page, and a second model then audited a sample of those decisions. The two panel files contain the joined usable text of each candidate. `phase` records whether a page was archived before or after election day, and `campaign_period` records, for races with two rounds, whether it was archived before or after the first round.
 
 ## Coverage
 
-Of the 860 finalists in the 430 elections, 710 (83 percent) have usable text – 88 percent of winners and 77 percent of runners-up – and for 71 percent of elections I have text for both finalists. Coverage is somewhat higher in larger cities, and where text is missing the reason is given in `text_status`.
+Of the 860 finalists in the 430 elections, 710 (83 percent) have usable text – 88 percent of winners and 77 percent of runners-up – and for 71 percent of elections I have text for both finalists. Coverage is somewhat higher in larger cities. Where text is missing, the reason is given in `text_status`.
 
 | Year | Elections | Finalists with text | Winners (%) | Runners-up (%) | Both finalists (%) |
 |---|---:|---:|---:|---:|---:|
@@ -67,7 +67,7 @@ Of the 860 finalists in the 430 elections, 710 (83 percent) have usable text –
 
 ## Limitations
 
-The main limitation is that the Wayback Machine did not archive every website, or every page of a website, so for some candidates only little text is available – this is particularly so for the first round of two-round races, as I downloaded for each page the copy closest to the final election. The amount of text also differs a lot between candidates, and menus, footers and the like show up on many pages of the same site (`text_unique` keeps each segment once). Pages archived before the election are not necessarily from the campaign itself, since a page may have been written well before. Last, websites were identified and checked using AI models, and I did not hand-validate these decisions.
+The main limitation is that the Wayback Machine did not archive every website, or every page of a website, so for some candidates little text is available – this is particularly so for the first round of two-round races, because for each page I downloaded the copy closest to the final election. The amount of text also differs a lot between candidates, and menus, footers and the like show up on many pages of the same site (`text_unique` keeps each segment once). A page archived before the election may also predate the campaign. Last, websites were identified and checked using AI models, and I did not hand-validate these decisions.
 
 ## Terms of use
 
