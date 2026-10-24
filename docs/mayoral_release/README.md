@@ -1,4 +1,4 @@
-# Campaign websites of mayoral finalists in the 100 largest US cities, 2010–2026
+# Archived campaign websites of U.S. mayoral candidates
 
 This dataset contains the archived campaign websites of mayoral candidates in the 100 largest US cities between January 2010 and September 2026. For each election, I include the winner and the runner-up. In cities with partisan mayoral primaries – where the race is often decided in the primary – the data also include the top two candidates of that primary. All pages were downloaded from the Internet Archive's Wayback Machine, and for each page I keep the archived address as well as the capture date.
 
