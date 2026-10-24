@@ -182,3 +182,24 @@ def test_validator_rejects_repeated_text_in_panel(tmp_path):
     pq.write_table(pa.Table.from_pylist(table), root / "mayoral_page_corpus.parquet")
     write_manifest(root)
     assert any("panel page count differs" in e for e in validate(root)["errors"])
+
+
+def test_crosswalk_carries_alged_values(tmp_path):
+    import pandas as pd
+    from scripts.build_mayoral_ledb_crosswalk import crosswalk
+    ledb = pd.DataFrame([
+        {"ledb_candid": 7, "full_name": "james kenney", "fips": 4260000, "office_consolidated": "Mayor", "year": 2015,
+         "month": 11, "contest": "k1", "pid_est": "D", "prob_democrat": 0.98, "incumbent": 0.0, "votes": 313000.0,
+         "vote_share": 0.85},
+        {"ledb_candid": 8, "full_name": "melissa bailey", "fips": 4260000, "office_consolidated": "Mayor", "year": 2015,
+         "month": 11, "contest": "k1", "pid_est": None, "prob_democrat": None, "incumbent": None, "votes": 55000.0,
+         "vote_share": 0.15}])
+    ledb.to_csv(tmp_path / "ledb.csv", index=False)
+    finalists = pd.DataFrame([
+        {"candidate_election_id": "f1", "city_id": "4260000", "election_date": "2015-11-03", "candidate_name": "Jim Kenney"},
+        {"candidate_election_id": "f2", "city_id": "4260000", "election_date": "2015-11-03", "candidate_name": "Melissa Bailey"},
+        {"candidate_election_id": "f3", "city_id": "4260000", "election_date": "2023-11-07", "candidate_name": "Cherelle Parker"}])
+    rows = crosswalk(finalists, tmp_path / "ledb.csv").set_index("candidate_election_id")
+    assert rows.loc["f1", ["ledb_party", "ledb_incumbent", "ledb_votes", "ledb_vote_share"]].tolist() == ["D", "0", "313000", "0.85"]
+    assert rows.loc["f2", "ledb_party"] == "" and rows.loc["f2", "ledb_votes"] == "55000"
+    assert rows.loc["f3", "ledb_match"] == "outside_ledb_years" and rows.loc["f3", "ledb_party"] == ""

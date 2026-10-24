@@ -75,6 +75,10 @@ def validate(release: Path) -> dict:
           "the ALGED crosswalk does not have one row for each finalist")
     check(all(x["ledb_match"] in LEDB_MATCH and bool(x["ledb_candid"]) == x["ledb_match"].startswith(("name", "last"))
               for x in links), "the ALGED crosswalk has an unknown match type or IDs that disagree with it")
+    carried = ["ledb_party", "ledb_prob_democrat", "ledb_incumbent", "ledb_votes", "ledb_vote_share"]
+    check(all(x.get("ledb_party", "") in {"D", "R", ""} and x.get("ledb_incumbent", "") in {"0", "1", ""}
+              and (x["ledb_candid"] or not any(x.get(c, "") for c in carried)) for x in links),
+          "the ALGED crosswalk has carried values without a match, or an unknown party or incumbency value")
     election_of = {f["candidate_election_id"]: f["election_id"] for f in finalists}
     contests = defaultdict(set)
     for x in links:

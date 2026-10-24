@@ -2,7 +2,8 @@
 
 ALGED (de Benedictis-Kessner, Lee, Velez and Warshaw; OSF project mv5e6, file ledb_candidatelevel.csv, CC BY 4.0)
 covers mayoral elections 1989-2021. The crosswalk gives, for each finalist, the ALGED candidate ID (ledb_candid) and
-contest ID of the same person in the same election. It copies no ALGED values; users join ALGED themselves.
+contest ID of the same person in the same election, and copies five ALGED variables of that row (Hanno, October 23,
+2026; CC BY 4.0 with attribution): ALGED's estimated party (pid_est, prob_democrat), incumbency, votes and vote share.
 
 Match rule: same place FIPS code (our city_id; three consolidated governments use ALGED's code, LEDB_CITY_CODE), same year, ALGED office Mayor, and the same person by name.
 A name matches ("name") when the last names agree after normalization and a first name agrees, where a first name
@@ -30,6 +31,8 @@ from rapidfuzz import fuzz
 
 LEDB_FIRST_YEAR, LEDB_LAST_YEAR = 1989, 2021
 # Our place codes for the census balance or CDP part of a consolidated government -> ALGED's code for the same city.
+CARRIED = {"pid_est": "ledb_party", "prob_democrat": "ledb_prob_democrat", "incumbent": "ledb_incumbent",
+           "votes": "ledb_votes", "vote_share": "ledb_vote_share"}
 LEDB_CITY_CODE = {"1571550": "1517000", "1836003": "1836000", "2148006": "2148000"}  # Honolulu, Indianapolis, Louisville
 SUFFIXES = {"jr", "sr", "ii", "iii", "iv", "md", "phd"}
 
@@ -73,8 +76,17 @@ def match_basis(ours: str, theirs: str, last_name_unique: bool) -> str:
     return "last_name" if last_name_unique else ""
 
 
+def carried_value(column: str, value) -> str:
+    """ALGED value as text: empty if missing, integers for votes and incumbency, ALGED's rounding otherwise."""
+    if pd.isna(value):
+        return ""
+    if column in {"votes", "incumbent"}:
+        return str(int(value))
+    return str(value)
+
+
 def crosswalk(finalists: pd.DataFrame, ledb_path: Path) -> pd.DataFrame:
-    """One row per finalist: candidate_election_id, ledb_candid, ledb_contest, ledb_match."""
+    """One row per finalist: candidate_election_id, ledb_candid, ledb_contest, ledb_match, and the carried variables."""
     ledb = pd.read_csv(ledb_path, low_memory=False)
     ledb = ledb[ledb["office_consolidated"] == "Mayor"].copy()
     ledb["city_id"] = ledb["fips"].astype(int).astype(str).str.zfill(7)
@@ -83,7 +95,7 @@ def crosswalk(finalists: pd.DataFrame, ledb_path: Path) -> pd.DataFrame:
     for f in finalists.itertuples():
         year, month = int(f.election_date[:4]), int(f.election_date[5:7])
         row = {"candidate_election_id": f.candidate_election_id, "ledb_candid": "", "ledb_contest": "",
-               "ledb_match": ""}
+               "ledb_match": "", **{c: "" for c in CARRIED.values()}}
         if not LEDB_FIRST_YEAR <= year <= LEDB_LAST_YEAR:
             row["ledb_match"] = "outside_ledb_years"
         elif (LEDB_CITY_CODE.get(f.city_id, f.city_id), year) not in groups:
@@ -107,6 +119,7 @@ def crosswalk(finalists: pd.DataFrame, ledb_path: Path) -> pd.DataFrame:
                 pick = pick if not pick.empty else hits.sort_values("month").head(1)
                 row.update(ledb_candid=str(int(pick["ledb_candid"].iloc[0])), ledb_contest=pick["contest"].iloc[0],
                            ledb_match=f"{kind}_{'same_month' if not exact.empty else 'other_month'}")
+                row.update({ours: carried_value(theirs, pick[theirs].iloc[0]) for theirs, ours in CARRIED.items()})
         rows.append(row)
     return pd.DataFrame(rows)
 

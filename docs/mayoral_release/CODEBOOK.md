@@ -125,7 +125,7 @@ One row per eligible finalist with at least one usable page.
 
 ## `mayoral_ledb_crosswalk.csv`
 
-Links each finalist to the American Local Government Elections Database (ALGED; de Benedictis-Kessner, Lee, Velez and Warshaw; OSF project mv5e6, file `ledb_candidatelevel.csv`, CC BY 4.0), which covers mayoral elections from 1989 to 2021. The file holds identifiers only; join ALGED for its party, incumbency, vote and candidate variables.
+Links each finalist to the American Local Government Elections Database (ALGED; de Benedictis-Kessner, Lee, Velez and Warshaw; OSF project mv5e6, file `ledb_candidatelevel.csv`, CC BY 4.0), which covers mayoral elections from 1989 to 2021. The file holds ALGED's identifiers and five of its variables for the matched row, so that the most common covariates need no second download. All other ALGED variables (for example campaign finance, gender and race estimates) require a join on `ledb_candid`. The carried values are ALGED's, not ours: for some finalists the ALGED contest is a different round of the race (for example, ALGED records the first round of Atlanta 2021 but not the runoff) or holds a different count, so ALGED's votes differ by more than 5 percent from `official_votes` for 31 of the 623 matched finalists. Use `official_votes` in `mayoral_finalists.csv` for votes. Finalists from 2022 onward have no ALGED values.
 
 | Column | Definition |
 |---|---|
@@ -133,6 +133,27 @@ Links each finalist to the American Local Government Elections Database (ALGED; 
 | `ledb_candid` | ALGED candidate ID of the same person; empty if there is no match |
 | `ledb_contest` | ALGED contest ID of the same election |
 | `ledb_match` | `name_same_month`: same city, year and election month, and the same name (a first name also matches its quoted nickname or long form, so Jim matches James); `last_name_same_month`: same city, year and month, and the same last name, which only one ALGED candidate in that city and year has; `outside_ledb_years`: election after 2021; `no_ledb_election`: ALGED has no mayoral election for the city in that year; `no_ledb_candidate`: ALGED has the election but not this person |
+| `ledb_party` | ALGED's estimated party, `D` or `R` (`pid_est`); empty if ALGED has no estimate or there is no match |
+| `ledb_prob_democrat` | ALGED's estimated probability that the candidate is a Democrat (`prob_democrat`) |
+| `ledb_incumbent` | ALGED's incumbency code, `1` or `0` (`incumbent`) |
+| `ledb_votes`, `ledb_vote_share` | Votes and vote share in the ALGED contest (`votes`, `vote_share`) |
+
+Join examples in Python:
+
+```python
+import pandas as pd
+
+finalists = pd.read_csv("mayoral_finalists.csv", dtype=str)
+links = pd.read_csv("mayoral_ledb_crosswalk.csv", dtype=str)
+alged = pd.read_csv("ledb_candidatelevel.csv", dtype={"ledb_candid": str})   # from OSF project mv5e6
+with_alged = (finalists.merge(links, on="candidate_election_id")              # one ALGED row per finalist:
+              .merge(alged, left_on=["ledb_candid", "ledb_contest"],          # join on candidate and contest
+                     right_on=["ledb_candid", "contest"], how="left"))
+
+cities = pd.read_csv("mayoral_cities.csv", dtype=str)                       # city_id is the Census place GEOID
+acs = pd.read_csv("acs_places.csv", dtype={"GEOID": str})                    # any Census place-level file
+with_census = finalists.merge(cities[["city_id", "county_fips"]], on="city_id").merge(acs, left_on="city_id", right_on="GEOID")
+```
 
 ## `mayoral_primary_elections.csv`
 

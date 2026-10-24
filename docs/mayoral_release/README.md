@@ -15,7 +15,7 @@ This dataset contains the archived campaign websites of mayoral candidates in th
 | `mayoral_primary_elections.csv` | 56 | A decisive partisan primary |
 | `mayoral_primary_candidates.csv` | 105 | A top-two candidate of a decisive primary |
 | `mayoral_primary_panel.csv` | 63 | A primary candidate with usable text, with that text joined |
-| `mayoral_ledb_crosswalk.csv` | 882 | A finalist, with the IDs of the same person in ALGED |
+| `mayoral_ledb_crosswalk.csv` | 882 | A finalist, with the IDs, estimated party and incumbency of the same person in ALGED |
 
 `CODEBOOK.md` defines every column and the keys that link the files. `manifest.json` gives each file's checksum.
 
@@ -60,6 +60,10 @@ The population contains 430 elections and 860 finalists. Of these finalists, 710
 | 2025 | 24 | 45 of 48 | 96 | 92 | 92 |
 | 2026 | 7 | 13 of 14 | 100 | 86 | 86 |
 | All | 430 | 710 of 860 | 88 | 77 | 71 |
+
+## Linking to other data
+
+`mayoral_ledb_crosswalk.csv` links each finalist to the American Local Government Elections Database (ALGED), which covers mayoral elections up to 2021. The crosswalk includes ALGED's estimated party and incumbency, and its IDs allow a join to all other ALGED variables. Because `city_id` is the Census place code, the files also join directly to Census data. `CODEBOOK.md` gives examples of both joins.
 
 ## Limitations
 
