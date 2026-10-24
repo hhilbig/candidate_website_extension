@@ -163,7 +163,7 @@ def test_empty_completed_archive_can_forecast_and_counts_html_text_metadata(tmp_
         'projected_ledger_export_bytes', 'projected_roster_version_bytes'))
 
 
-def test_forecast_does_not_add_daily_copies_near_general_election(tmp_path, monkeypatch):
+def test_forecast_adds_no_live_copies_after_a_post_general_copy(tmp_path, monkeypatch):
     store, config, _ = _forecast_store(tmp_path, monkeypatch)
     weekly = forecast(tmp_path, [CANDIDATE], [CANDIDATE], store, config)
     event = dict(EVENT, event_id='fixture-general', date='2026-11-03', state='CA', office='house',
@@ -422,3 +422,37 @@ def test_future_cdx_estimate_preserves_broad_response_storage(tmp_path, monkeypa
     assert report['future_cdx_server_filter'] is CDX_ASSET_MIME_FILTER is None
     assert report['base_estimate_components']['projected_inventory_body_bytes'] == (
         report['measured_cdx_body_bytes'] * report['planned_inventory_candidate_rounds'])
+
+
+def test_after_end_date_only_the_archive_phase_runs(tmp_path, monkeypatch, capsys):
+    """Hanno approved on 2026-10-24: one Wayback archive pass in December, no live copies after the end date."""
+    import json
+    import sys
+    import scripts.collect_2026 as command
+
+    class December(datetime):
+        @classmethod
+        def now(cls, tz=None):
+            return cls(2026, 12, 5, 16, tzinfo=timezone.utc)
+
+    config = tmp_path / 'config.json'
+    config.write_text(json.dumps({'collection_end_date': '2026-11-17'}))
+    calls = []
+    monkeypatch.setattr(command, 'datetime', December)
+    monkeypatch.setattr(command, 'roster', lambda root, pilot=False: [dict(CANDIDATE)])
+    monkeypatch.setattr(command, 'Client', lambda store, config: object())
+    monkeypatch.setattr(command, 'collect_live', lambda *a, **k: calls.append('live'))
+    monkeypatch.setattr(command, 'collect_archive', lambda *a, **k: calls.append('archive'))
+    monkeypatch.setattr(command, 'export', lambda *a, **k: {})
+    data = tmp_path / 'data'
+    for phase in ('all', 'live'):
+        monkeypatch.setattr(sys, 'argv', ['collect_2026.py', 'run', '--root', str(data), '--config', str(config),
+                                          '--phase', phase])
+        command.main()
+        assert json.loads(capsys.readouterr().out.strip().splitlines()[-1])['reason'] == 'collection_end_date_passed'
+    assert calls == []
+    monkeypatch.setattr(sys, 'argv', ['collect_2026.py', 'run', '--root', str(data), '--config', str(config),
+                                      '--phase', 'archive'])
+    command.main()
+    assert calls == ['archive']
+    assert not (data / 'rosters' / 'latest_refresh.json').exists()

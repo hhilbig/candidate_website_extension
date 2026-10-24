@@ -36,8 +36,15 @@ There are 1,964 pending work items and 0 unfinished attempts. The volume has 61 
 The daily log `/mnt/mayoral_wayback_full_snapshots/candidate_2026/runtime/logs/daily.log` shows `rc=0` for October 1 to 4.
 These runs came after the September 30 fix for the `Invalid IPv6 URL` stop.
 
-**Action:** check the daily `rc` line and the free space once a week. Act only if a run fails.
-After November 17, build the final outputs and run the coverage checks.
+**Strategy review, October 24 (Opus reviewer, major issues only; Hanno decided the same day):**
+1. The general election had no targeted copies, so about 95 percent of pairable candidates would have had no live copy after November 3 (next 30-day copy due November 20–24). **Decision: add copies on November 2 and 4** (`live_cadence_due` in `src/collection_2026_outputs.py`; test `test_general_election_gets_copies_on_the_day_before_and_after`).
+2. After the end date only `--phase archive` may run, with no roster refresh (`scripts/collect_2026.py`; test `test_after_end_date_only_the_archive_phase_runs`). **Decision: one final archive pass in early December** for the post-general Wayback window (November 4 – December 3). Not scheduled yet; run it by hand, after December 3.
+3. The identity check needs the FEC first name, so nickname sites fail (about 206 of 410 rejected homepages name the surname; e.g. Tom Kean, Jerry Nadler). No data loss: unconfirmed sites are copied daily. **Decision: score identity again on stored text after November 17** and report the change before use. No collector change now.
+Not issues: the retryable backlog (5,645) is mostly one record per day for about 218 always-failing sites; disk (55 GiB free, about 0.35 GiB a day); time zones for the 50 states. The daily run stops at its 6-hour budget (`--max-run-seconds 21600` in `~/run_collect_2026.sh`) before the archive phase reaches all candidates.
+Deployment: code for 1 and 2 is deployed to the droplet runtime after the October 24 run ends (backups `*.bak-20261024`); check the November 2 and 4 runs for live copies.
+
+**Action:** check the daily `rc` line and the free space once a week. Act only if a run fails. On November 3 and 5, confirm that the November 2 and 4 runs made live copies for most candidates with a confirmed site.
+After November 17, build the final outputs and run the coverage checks; then the identity re-scoring; then the December archive pass.
 
 ## Deferred: Wayback scraping skill audit, October 4, 2026
 

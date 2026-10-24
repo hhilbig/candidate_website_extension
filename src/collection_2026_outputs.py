@@ -222,12 +222,16 @@ def _regular_general_date(year: int) -> date:
 
 
 def live_cadence_due(events: list[dict], latest: datetime | None, stamp: datetime) -> bool:
-    """Monthly (30-day) copies plus one copy on each local day immediately around a primary/runoff."""
+    """Monthly (30-day) copies plus one copy on each local day immediately around a primary, runoff or general election.
+
+    Hanno added the general election on 2026-10-24: with only the 30-day cadence, most candidates' next copy
+    after their late-October copy fell after the 2026-11-17 end date, so they had no live post-general copy.
+    """
     if latest is None or stamp - latest >= timedelta(days=30):
         return True
     for event in events:
         kind = event.get("event_type", "")
-        if _participation(event) in NONPARTICIPANT or not ("primary" in kind or "runoff" in kind):
+        if _participation(event) in NONPARTICIPANT or not ("primary" in kind or "runoff" in kind or "general" in kind):
             continue
         election = _date(event.get("date"))
         if election is None:

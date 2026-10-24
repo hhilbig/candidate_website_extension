@@ -643,14 +643,17 @@ def main():
             from datetime import timedelta
             from datetime import date as _date
             end_date=_date.fromisoformat(config['collection_end_date']) if config.get('collection_end_date') else None
-            if end_date is not None and now.date()>end_date:
+            past_end=end_date is not None and now.date()>end_date
+            # Hanno approved on 2026-10-24: after the end date only the Wayback archive phase may run
+            # (one final pass in December for the post-general window); live copies stop on the end date.
+            if past_end and args.phase!='archive':
                 print(json.dumps({'status':'finished','reason':'collection_end_date_passed',
                                   'collection_end_date':end_date.isoformat()}),flush=True)
                 return
             refresh_path=root/'rosters/latest_refresh.json'
             latest=json.loads(refresh_path.read_text()) if refresh_path.exists() else {}
             refreshed_at=datetime.fromisoformat(latest.get('fetched_at') or '2000-01-01T00:00:00+00:00')
-            if now-refreshed_at>=timedelta(days=7):
+            if now-refreshed_at>=timedelta(days=7) and not past_end:
                 fresh=refresh_roster(root,lookup_limit=0)
                 if pilot:
                     current={r['candidate_id']:r for r in fresh}

@@ -258,3 +258,23 @@ def test_targeted_copies_before_after_and_no_same_day_repeat(candidate, event):
     assert due_live(candidate, [event], pages, datetime(2026, 6, 16, 19, tzinfo=timezone.utc))
     pages = [page("post", "2026-06-16T19:00:00Z", source="live")]
     assert not due_live(candidate, [event], pages, datetime(2026, 6, 17, 19, tzinfo=timezone.utc))
+
+
+def test_general_election_gets_copies_on_the_day_before_and_after(candidate, event):
+    """Hanno added the general election to the targeted copies on 2026-10-24."""
+    from datetime import date
+    general = dict(event, event_id="test-general", date="2026-11-03", event_type="general", round="general")
+    end = date(2026, 11, 17)
+    pages = [page("late_october", "2026-10-22T19:00:00Z", source="live")]
+    assert not due_live(candidate, [general], pages, datetime(2026, 11, 1, 19, tzinfo=timezone.utc), end)
+    assert due_live(candidate, [general], pages, datetime(2026, 11, 2, 19, tzinfo=timezone.utc), end)
+    pages = [page("pre", "2026-11-02T19:00:00Z", source="live")]
+    assert not due_live(candidate, [general], pages, datetime(2026, 11, 3, 19, tzinfo=timezone.utc), end)
+    assert due_live(candidate, [general], pages, datetime(2026, 11, 4, 19, tzinfo=timezone.utc), end)
+    pages = [page("post", "2026-11-04T19:00:00Z", source="live")]
+    assert not due_live(candidate, [general], pages, datetime(2026, 11, 5, 19, tzinfo=timezone.utc), end)
+    assert not due_live(candidate, [general], pages, datetime(2026, 11, 17, 19, tzinfo=timezone.utc), end)
+    candidate["event_participation"] = {general["event_id"]: {
+        "status": "not_on_ballot", "source_url": "https://authority.test/ballot"}}
+    pages = [page("late_october", "2026-10-22T19:00:00Z", source="live")]
+    assert not due_live(candidate, [general], pages, datetime(2026, 11, 2, 19, tzinfo=timezone.utc), end)
