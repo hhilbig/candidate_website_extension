@@ -1,7 +1,7 @@
 # Claude Code handoff
 
 Prepared September 15, 2026. Historical correction is complete.
-The remaining releases are extracted variables and the full mayoral extension. The separate 2026 collection uses the approved monthly schedule and awaits a capacity decision.
+The remaining releases were extracted variables and the full mayoral extension. On October 24 the mayoral work moved to `~/Documents/GitHub/mayoral_campaign_websites`; this file no longer covers it. The separate 2026 collection uses the approved monthly schedule and awaits a capacity decision.
 Read `CLAUDE.md` for persistent execution rules and `docs/status.md` for the controlling release checklist and current work table.
 This handoff preserves the task state. It does not transfer a running process or scheduler, or authorize new costs or publication.
 
@@ -34,7 +34,6 @@ Use the five steps per extension in [the checklist](docs/status.md). Each large 
 |---|---|---|
 | Historical correction | Complete | No new work without a demonstrated material error |
 | Extracted variables | Finalize implementation → full extraction → six-file package → existing human validation → release | Identify compatible route inputs and the remaining production integration work |
-| Full mayoral extension | Official population → saved evidence → remaining collection queues → integrated dataset → release | A verified batch of official city-year calendars and finalist results |
 | 2026 collection | Completed storage correction and monthly schedule → capacity decision → full collection → final outputs | Refresh available capacity against the current monthly forecast; enable full mode only when the existing storage check passes |
 
 The documentation request approves these instructions. Existing task approvals still govern execution.
@@ -55,18 +54,6 @@ Reuse these results. The context-radius experiment was not promoted. AI-coded la
 The six-file package and existing independent human validation remain unfinished.
 The [approved extraction plan](quality_reports/plans/2026-08-24_corrective-release-and-candidate-extraction-v2.md) retains the validation criteria and workload limits.
 
-**Mayoral population:** The target is official winners and runners-up in completed decisive elections for the 100 largest 2020 Census cities.
-The period is January 2010 through September 14, 2026.
-The [coverage build](quality_reports/mayoral_top_two_coverage_2026-09-14.md) verifies 25 elections and assesses 96 of 1,700 city-years.
-Its controlling manifest is `data/municipal_discovery/top100_coverage/outputs/manifest.json`.
-Unreviewed city-years remain open. Missing websites do not remove eligible finalists from the population.
-
-**Mayoral websites:** The [status record](docs/mayoral_url_discovery.md) identifies the reviewed URL table, source backlog, and bounded acquisition approvals.
-The [outstanding-work record](quality_reports/plans/2026-09-14_mayoral-outstanding-work.md) supplies queue details.
-The 259-capture batch is complete and hash-verified. The 214-request batch ended with 205 fetched responses and nine unsuccessful requests.
-Verify those saved files and outcomes before further collection. Reconcile the separate 439-capture proposal against existing stores; it is not an approved download.
-A URL lead, saved response, and accepted campaign website are distinct evidence states.
-
 **2026 collection:** The [approved plan](quality_reports/plans/2026-09-14_campaign-websites-pre-post-primary.md) controls the roster, cadence, date windows, and endpoint.
 The final September 15 decision is live HTML/text every 30 days, plus the local day before and after each applicable primary or runoff.
 A successful targeted copy resets the regular interval. Confirmed nonparticipants receive regular monthly copies only.
@@ -83,13 +70,12 @@ The [session log](quality_reports/session_logs/2026-09-14_campaign-websites-pre-
 ## Operational state at the last check
 
 The 2026 rows incorporate the later September 15 session log, monthly forecast, and saved automation configuration.
-The mayoral observation remains from around 15:06 UTC. Check current remote state before operational changes.
+Check current remote state before operational changes.
 Read `~/.codex/remote_machines.md` before connecting to any remote host.
 
 | Work | Location or owner | Last observed state |
 |---|---|---|
 | 2026 runtime on the droplet | `/mnt/mayoral_wayback_full_snapshots/candidate_2026/runtime`; data in `../data` | Session log records PID 1339730 finished; last request 15:27:42 UTC; monthly schedule deployed; full mode disabled |
-| Mayoral indexed batch on the droplet | `/mnt/mayoral_wayback_full_snapshots/indexed_capture_20260915/run/` | 214 outcomes: 205 fetched, four capture mismatches, five terminal HTTP results |
 | 2026 daily checks | Codex heartbeat `collect-2026-campaign-websites`, 09:00 America/Los_Angeles | Active; saved prompt uses monthly copies plus targeted pre/post copies; no Claude scheduler created |
 
 Preserve the existing scheduler until Hanno authorizes its replacement. Establish one owner before another scheduled collector starts.
@@ -107,8 +93,6 @@ A Claude session opened in this working directory can read the prepared files im
 | Earlier Codex task | Task ID |
 |---|---|
 | 2026 candidates | `01a0a10e-0f0e-7662-85da-553487bb25be` |
-| Mayoral election roster | `01a02ecb-5fd6-7840-8ba9-02a3a29b4c25` |
-| Mayoral website discovery | `01a08c8f-5d2e-7832-b030-93d1d4fa9626` |
 | Candidate endorsement coding | `01a07294-2a04-7c91-8021-b3ffbd5e49e3` |
 
 Use repository artifacts to resume. Retrieve old conversations only when a needed decision is absent from those records.

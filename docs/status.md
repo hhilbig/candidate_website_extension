@@ -8,21 +8,21 @@ The persistent execution rules are in [CLAUDE.md](../CLAUDE.md).
 
 Hanno set the target on October 4, 2026:
 
-1. Finish the mayoral website text collection with the highest possible coverage.
-2. Keep the 2026 House/Senate collection running to its endpoint. Only watch it; do not develop it further.
+1. Keep the 2026 House/Senate collection running to its endpoint. Only watch it; do not develop it further.
+
+The mayoral collection (the first target on October 4) moved to its own repository on October 24. This repository holds House and Senate work only.
 
 | Track | State | Finish condition |
 |---|---|---|
 | 1. Historical House/Senate correction | Complete. Public version 3.0 | None |
 | 2. Extracted variables | Complete. Harvard Dataverse published version 4.0 on October 2, 2026 (`doi:10.7910/DVN/BZ2JRS`) | None. Open items below are for a later version |
-| 3. Mayoral extension | Moved to `mayoral_campaign_websites` on October 24, 2026. Dataverse `doi:10.7910/DVN/IN9WCA` submitted for curator review | Tracked in that repository |
 | 4. 2026 House/Senate collection | Collecting each day. Endpoint November 17, 2026 | Collection ends, then final outputs and coverage checks |
 
 ## Resume here
 
-**October 24:** the mayoral work moved with its git history to `~/Documents/GitHub/mayoral_campaign_websites` (private GitHub repository `hhilbig/mayoral_campaign_websites`). Its status, including the full mayoral history from this file, is in that repository's `docs/status.md`. The release rebuilt there byte-identical to the deposited files. This repository keeps copies of the six shared files (`src/extract_text.py`, `src/utils.py`, `scripts/icpsr_replicate_coding.py`, `scripts/stage_dataverse_release.py`, `scripts/slack_status.sh`, `config/config.yaml`).
+**October 24:** the mayoral work moved to `~/Documents/GitHub/mayoral_campaign_websites`. Do not do mayoral work here. This repository keeps copies of six shared files (`src/extract_text.py`, `src/utils.py`, `scripts/icpsr_replicate_coding.py`, `scripts/stage_dataverse_release.py`, `scripts/slack_status.sh`, `config/config.yaml`).
 
-**Progress, October 24 (approximate):** tracks 1 and 2 complete; track 3 is tracked in the mayoral repository (curator review pending). Track 4 (2026 collection) runs to November 17, then final outputs and coverage checks (about 1 agent day). Largest uncertainty: the agent time for the 2026 final outputs.
+**Progress, October 24 (approximate):** tracks 1 and 2 complete. Track 3 (mayoral) left this repository. Track 4 (2026 collection) runs to November 17, then final outputs and coverage checks (about 1 agent day). Largest uncertainty: the agent time for the 2026 final outputs.
 
 ## 4. 2026 House/Senate collection
 
@@ -47,14 +47,6 @@ Deployment: code for 1 and 2 is deployed to the droplet runtime after the Octobe
 **Action:** check the daily `rc` line and the free space once a week. Act only if a run fails. On November 3 and 5, confirm that the November 2 and 4 runs made live copies for most candidates with a confirmed site.
 After November 17, build the final outputs and run the coverage checks; then the identity re-scoring; then the December archive pass.
 
-## Deferred: Wayback scraping skill audit, October 4, 2026
-
-A check of `scripts/scrape_mayoral_wayback_batch.py` against the `wayback-scraping` skill found these gaps. None blocks a release requirement now.
-
-- The fetch journal is deleted at each compaction, rows carry no attempt ID, and no attempt count is kept for each page. On a restart, failed pages are retried in queue order, not least-attempted first.
-- The backoff has no jitter. The CDX query has no explicit guard for a result that reaches the 50,000-row limit (the largest so far is 7,005).
-- Agent workflows that query the archive through mac2 share no rate limit with each other or with the scraper. Run such workflows at low concurrency and not alongside a scrape.
-
 ## 2. Extracted variables: open items for a later version
 
 Version 4.0 is published. These items do not block anything now.
@@ -76,14 +68,6 @@ Version 4.0 is published. These items do not block anything now.
 - Root scratch files moved to the ignored folder `scratch/`. The August 23 validation workbooks moved to `validation/extraction_validation_2026-08-23/`.
 - Full test suite on October 4: 1,737 passed. Five tests in `tests/test_merge_municipal_temporal_validation.py` fail under the current pandas string dtype; this failure is older and known.
 - `data/deliverable` compressed October 24 (Hanno): `data/deliverable_2026-08-14.tar.gz` (1.1 GB; all four files verified by SHA-256 inside the archive), folder removed. Scripts that read `data/deliverable/` need `tar -xzf` first.
-
-## Progress estimate, October 4, 2026 (approximate)
-
-About 70 percent of the release work is complete. Weights are the remaining steps per track:
-Track 1 is 20 of 20, Track 2 is 25 of 25, Track 3 is about 20 of 40, and Track 4 is about 8 of 15.
-Remaining agent time is about 15 to 25 hours, almost all on Track 3. Hanno needs less than one hour, for mayoral release decisions and option 3.
-The wall-clock floor is November 17 for Track 4, plus one to two days of exports.
-The largest uncertainty: how many old URL leads pass the Hive screen and the agent check, which decides the 2010–2021 coverage.
 
 ## Rules for the next agent
 

@@ -84,85 +84,10 @@ Methodological choices that matter for downstream identification:
 
 ## 4. Current state
 
-### 4.0 Mayoral full-inventory acquisition repair (2026-09-06)
-
-The production queue contains 291,044 unique archived captures. The original
-fetch loop copied the growing checkpoint after every request and stored all
-pending rows in memory. On the 2 GB droplet, the process reached 1.23 GB RSS
-and 1.50 GB swap.
-
-The repaired fetch loop streams queue rows and merges keyed updates only at
-checkpoints. The production checkpoint was backed up, compacted to 92,385
-unique rows, and verified against the queue. The droplet now has 2 vCPUs and
-4 GB RAM, with its 25 GB root disk unchanged. A live eight-capture benchmark
-selected two workers: 7.092 seconds versus 7.962 for one worker and 7.144 for
-four. Production resumed with one-second request spacing and 5,000-row
-checkpoint intervals. Initial RSS was about 325 MB with almost no swap use.
-The co-resident Arm A crawler then resumed. Both jobs used about 1.3 GB total,
-left about 2.5 GB available, and used less than 1 MB of swap. Arm A monitoring
-uses 2,401 eligible sites rather than the raw 2,627-site total because 226
-sites are quarantined.
-
 Status as of 2026-06-15 (verified live against droplet + mac2). Verify
 against `logs/scrape_queue.log` on the droplet before relying on these.
 
-The full fetch completed on 2026-09-09. A targeted pass on 2026-09-10 retried
-all 39 request errors and recovered 38 pages. One Oakland capture forms a
-reproducible two-path Wayback redirect loop, so the checkpoint records it as a
-terminal `redirect_loop`. The final checkpoint has 291,044 unique capture keys,
-284,954 fetched pages, zero retryable rows, and exact queue-key agreement.
-The obsolete House daily status cron entry was removed. Archived system journals
-were reduced from 2.0 GB to 278.5 MB, which increased root free space from
-1.5 GB to 3.3 GB.
-
-The finished mac2 mayoral source-expansion run output is preserved on the attached
-droplet volume at
-`/mnt/mayoral_wayback_full_snapshots/backups/mayoral_source_expansion_20260908/production_mac2_20260909.tar.zst`.
-The 6.36 GB archive passed its compression test, member-count check, and a full
-tar-stream SHA-256 comparison with mac2. The primary Mac holds only an 8.4 MB
-review bundle under
-`data/municipal_discovery/exhaustive_source_expansion_20260908/mac2_completion_20260909/`.
-After archive verification and separate user approval, the full source was
-deleted from mac2. Free space on mac2 increased from 11 GB to 19 GB.
-The source pass is incomplete: it processed 11,900 of 58,463 source rows,
-with 43,961 never attempted and 415 still retryable. Do not resume it without
-a storage plan; extrapolating the observed byte rate implies about 30 GB of
-additional raw data before parser and database overhead.
-
-A 2026-09-10 audit shows that the 225 source-expansion URL proposals are not
-validated coverage. A frozen 60-row sample produced a change-type-weighted
-exact-URL precision estimate of 44.8 percent. The sampled alternative URLs for
-already known candidate sites were all supported, but most sampled new-candidate
-and additional-site rows were news or reference pages. The original 225 rows
-remain a frozen audit input. The audit is in
-`quality_reports/mayoral_source_expansion_url_audit_2026-09-10.md`.
-
-The ownership repair reduces the proposals to 120 and the new candidate-year
-leads from 87 to 55. Active candidate-years with leads total 1,093. All 65,683
-source claims remain saved. The repair preserves acquisition records and passes
-108 focused tests. Thirty original accepts remain; Andrew Jones's 2017 URL
-needs date review because its source is a 2021 election page. The corrected
-compact outputs are under `ownership_repair_20260910/` in the same discovery
-directory. See `quality_reports/mayoral_ownership_repair_2026-09-10.md`.
-
-Historical validation of those 120 proposals supports campaign evidence for
-73 URLs across 70 candidate-years. Forty-three clear all programmed checks;
-30 retain review flags, and 47 lack sufficient evidence. The saved corpus
-corrects 12 availability-service false negatives. Content inspection removes
-one résumé false positive. All 120 keys and evidence hashes verify, 92 tests
-pass, and no human approvals are added. The final table and report are under
-`quality_reports/mayoral_archive_validation_2026-09-10/` and
-`quality_reports/mayoral_archive_validation_2026-09-10.md`. This validation uses
-about 5.7 MB on the droplet and 0.6 MB in compact local audit outputs.
-
-The follow-up assesses all 36 previously flagged proposals using saved evidence.
-Six text-rule corrections clear their checks. Six later domains contain unrelated
-commercial content. Three proposals have archive rate-limit responses, which
-the previous parser mistook for historical HTML. The remaining warnings concern
-insufficient content or an incomplete archive inventory. The current table is
-`quality_reports/mayoral_archive_validation_2026-09-10/reuse_resolution/validation.csv`.
-The report is `quality_reports/mayoral_validation_flags_2026-09-10.md`.
-This follow-up adds about 0.8 MB of local audit outputs and makes no archive requests.
+The mayoral notes formerly in section 4.0 are in `~/Documents/GitHub/mayoral_campaign_websites/docs/knowledge_base_mayoral.md`.
 
 ### 4.1 Code components
 
