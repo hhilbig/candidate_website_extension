@@ -1,6 +1,6 @@
 # Campaign websites of mayoral finalists in the 100 largest US cities, 2010–2026
 
-This dataset contains the archived campaign websites of mayoral candidates in the 100 largest US cities between January 2010 and September 2026. For each election, I include the winner and the runner-up. In cities with partisan mayoral primaries, I also include the top two candidates of the decisive primary. All pages come from the Internet Archive's Wayback Machine, and each page keeps its archived address and date.
+This dataset contains the archived campaign websites of mayoral candidates in the 100 largest US cities between January 2010 and September 2026. For each election, I include the winner and the runner-up. In cities with partisan mayoral primaries – where the race is often decided in the primary – the data also include the top two candidates of that primary. All pages were downloaded from the Internet Archive's Wayback Machine, and for each page I keep the archived address as well as the capture date.
 
 ## Files
 
@@ -17,7 +17,7 @@ This dataset contains the archived campaign websites of mayoral candidates in th
 | `mayoral_primary_panel.csv` | 63 | A primary candidate with usable text, with that text joined |
 | `mayoral_ledb_crosswalk.csv` | 882 | A finalist, with the IDs, estimated party and incumbency of the same person in ALGED |
 
-`CODEBOOK.md` defines every column and the keys that link the files. `manifest.json` gives each file's checksum.
+Column definitions and the keys that link the files are in `CODEBOOK.md`; checksums for each file are in `manifest.json`.
 
 ```python
 import pandas as pd
@@ -30,15 +30,15 @@ usable = pages[pages["release_usable"]]
 
 ## Population
 
-I define the population as the elections that decided who became mayor and had at least two candidates. In cities with a runoff, this is the runoff. I take the winner and the runner-up of each election from official results (`eligible` = `True`). In cities with partisan primaries, the race is often decided in the primary of the dominant party. For these cities, I therefore add the primary of the party that won the general election and its top two candidates.
+The population consists of all elections that decided who became mayor (i.e. the runoff in cities that hold one) and in which at least two candidates ran. Winners and runners-up are taken from official results (`eligible` = `True`). Because the race in cities with partisan primaries is often effectively settled in the primary of the dominant party, I also include, for these cities, the primary of the party that went on to win the general election, along with its top two candidates.
 
 ## Text
 
-For each campaign website, I downloaded the pages that the Wayback Machine holds from the period around the election. I consider a page usable (`release_usable`) if it was archived within a year of the election, contains campaign content, is not a duplicate, and belongs to the candidate's campaign for this election. Language models checked each website and each page against the last two conditions, and a second model audited a sample of these decisions. The two panels join the usable text of each candidate. Each page also records whether it was archived before or after election day (`phase`) and, in races with two rounds, before or after the first round (`campaign_period`).
+For each campaign website, I downloaded all pages the Wayback Machine holds for the period around the election. Pages are counted as usable (`release_usable`) when they were archived within a year of the election, contain campaign content, are not duplicates of other pages, and are part of the candidate's campaign in this election rather than, e.g., an earlier campaign of the same candidate – the latter two I checked with language models for every website and page, and a second model then audited a sample of those decisions. The two panel files contain the joined usable text of each candidate. `phase` records whether a page was archived before or after election day, and `campaign_period` records, for races with two rounds, whether it was archived before or after the first round.
 
 ## Coverage
 
-The population contains 430 elections and 860 finalists. Of these finalists, 710 (83 percent) have usable text: 88 percent of winners and 77 percent of runners-up. For 71 percent of the elections, I have text for both finalists. Coverage is also higher in larger cities. When text is missing, `text_status` records the reason.
+Of the 860 finalists in the 430 elections, 710 (83 percent) have usable text – 88 percent of winners and 77 percent of runners-up – and for 71 percent of elections I have text for both finalists. Coverage is somewhat higher in larger cities, and where text is missing the reason is given in `text_status`.
 
 | Year | Elections | Finalists with text | Winners (%) | Runners-up (%) | Both finalists (%) |
 |---|---:|---:|---:|---:|---:|
@@ -63,15 +63,15 @@ The population contains 430 elections and 860 finalists. Of these finalists, 710
 
 ## Linking to other data
 
-`mayoral_ledb_crosswalk.csv` links each finalist to the American Local Government Elections Database (ALGED), which covers mayoral elections up to 2021. The crosswalk includes ALGED's estimated party and incumbency, and its IDs allow a join to all other ALGED variables. Because `city_id` is the Census place code, the files also join directly to Census data. `CODEBOOK.md` gives examples of both joins.
+`mayoral_ledb_crosswalk.csv` links each finalist to the American Local Government Elections Database (ALGED), which covers mayoral elections up to 2021, and carries over ALGED's estimated party and incumbency; the ALGED IDs in the file can be used to join any other ALGED variable. Because `city_id` is simply the Census place code, merging with Census data is straightforward; `CODEBOOK.md` has examples of both joins.
 
 ## Limitations
 
-I note three limitations. First, the Wayback Machine did not archive every website or every page, and some websites keep little text in the archive. Text from the first round of a two-round race is particularly thin, because I downloaded the copy of each page that is closest to the final election. Second, text volume varies widely between candidates, and menus and footers repeat across pages (`text_unique` keeps each text segment once). A page archived before the election can also be older than the campaign. Third, AI models found and checked the websites, and I did not validate these decisions by hand.
+The main limitation is that the Wayback Machine did not archive every website, or every page of a website, so for some candidates only little text is available – this is particularly so for the first round of two-round races, as I downloaded for each page the copy closest to the final election. The amount of text also differs a lot between candidates, and menus, footers and the like show up on many pages of the same site (`text_unique` keeps each segment once). Pages archived before the election are not necessarily from the campaign itself, since a page may have been written well before. Last, websites were identified and checked using AI models, and I did not hand-validate these decisions.
 
 ## Terms of use
 
-I release the compilation and documentation under the Creative Commons Attribution 4.0 International license (CC BY 4.0). Copyright in the campaign material remains with its authors. Each page records its archived source address in `snap_url`. Rights holders may request removal by email to hhilbig@ucdavis.edu.
+The compilation and documentation are released under the Creative Commons Attribution 4.0 International license (CC BY 4.0). Copyright in the campaign material remains with the authors. Every page comes with its archived source address (`snap_url`), and rights holders who want material removed can email me at hhilbig@ucdavis.edu.
 
 ## Citation
 
