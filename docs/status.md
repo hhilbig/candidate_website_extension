@@ -1,6 +1,6 @@
 # Project status and release checklist
 
-Updated October 4, 2026. This file controls the order of remaining work.
+Updated November 4, 2026. This file controls the order of remaining work.
 The full history to October 4 is in [archive/status_history_2026-10-04.md](archive/status_history_2026-10-04.md).
 The persistent execution rules are in [CLAUDE.md](../CLAUDE.md).
 
@@ -8,15 +8,15 @@ The persistent execution rules are in [CLAUDE.md](../CLAUDE.md).
 
 Hanno set the target on October 4, 2026:
 
-1. Keep the 2026 House/Senate collection running to its endpoint. Only watch it; do not develop it further.
+1. Keep the 2026 House/Senate collection running to its endpoint (November 5, 2026; changed on November 4). Only watch it; do not develop it further.
 
-The mayoral collection (the first target on October 4) moved to its own repository on October 24. This repository holds House and Senate work only.
+The mayoral collection (the first target on October 4) moved to its own repository on October 24: `~/Documents/GitHub/mayoral_campaign_websites` (private GitHub `hhilbig/mayoral_campaign_websites`). Mayoral status, data, and notes are there. This repository holds House and Senate work only.
 
 | Track | State | Finish condition |
 |---|---|---|
 | 1. Historical House/Senate correction | Complete. Public version 3.0 | None |
 | 2. Extracted variables | Complete. Harvard Dataverse published version 4.0 on October 2, 2026 (`doi:10.7910/DVN/BZ2JRS`) | None. Open items below are for a later version |
-| 4. 2026 House/Senate collection | Collecting each day. Endpoint November 17, 2026 | Collection ends, then final outputs and coverage checks |
+| 4. 2026 House/Senate collection | Collecting each day. Endpoint November 5, 2026 | Collection ends, then final outputs and coverage checks |
 
 ## Resume here
 
@@ -24,12 +24,22 @@ The mayoral collection (the first target on October 4) moved to its own reposito
 
 **Progress, October 24 (approximate):** tracks 1 and 2 complete. Track 3 (mayoral) left this repository. Track 4 (2026 collection) runs to November 17, then final outputs and coverage checks (about 1 agent day). Largest uncertainty: the agent time for the 2026 final outputs.
 
+**Progress, November 4 (approximate):** about 90 percent of the release work is complete (track 1 and track 2 about 33 points each, track 4 about 23 of 33). Remaining: about 1 agent day and about 1 hour of Hanno's time; wall clock to after December 3 (collection to November 5, then the archive pass). Largest uncertainty: the agent time for the 2026 final outputs. All remaining work waits on a machine or a date; no decision is open.
+
+**End date moved, November 4 (Hanno):** collection ends on November 5, not November 17. `collection_end_date` is `2026-11-05` in `config/collection_2026.json` and in the droplet runtime (backup `collection_2026.json.bak-20261104`). The last run starts at 09:00 Pacific on November 5 and ends by about 23:00 UTC. The collector stops `run` after that date by UTC date, but the wrapper still runs the Monday `refresh`, so the 09:00 cron line now fires only through November 5 (backup `~/crontab.bak-20261104`). Next action: on November 6, confirm the last `rc` line and that no collector runs.
+
+**November 4 check (droplet, 20:00 UTC):** at this check the end date was still November 17. All runs since October 15 show `rc=0`; 52 GiB free. `logs/status_20261104.json` (16:38 UTC): 185,581 pages, 85,843 snapshots, 3,695 candidates, 0 unfinished attempts. General election, `exports/candidate_event_pairs.csv`, 90 events, 3,651 candidate rows: 1,159 paired, 66 pre_only, 2 post_only, 2,424 uncovered. This export is from before the 09:00 Pacific run of November 4, which runs to about 05:00 UTC on November 5. Next check: November 5, after that run.
+
+**November 9 check (droplet, 00:35 UTC November 10): the collection ended.** The last run finished on November 5 at 23:09 UTC with `rc=0`. No collector runs, and the 09:00 cron line stops after November 5. All runs from October 17 to November 5 show `rc=0`; 52 GiB free. `logs/status_20261105.json`: 188,989 pages (103,599 usable), 87,724 snapshots, 3,695 candidates, 0 unfinished attempts. General election, `exports/candidate_event_pairs.parquet`, 90 events, 3,651 candidate rows (2,460 with a website): 1,171 paired (all live copies), 54 pre_only, 3 post_only, 2,423 uncovered. Post copy missing: 1,191 no website, 728 failed requests, 425 identity unresolved, 131 unusable content. Next action: build the final outputs and run the coverage checks; then the identity re-scoring; then the archive pass after December 3.
+
+**Progress, November 9 (approximate):** about 92 percent of the release work is complete (track 1 and track 2 about 33 points each, track 4 about 26 of 33). Remaining: about 1 agent day and about 1 hour of Hanno's time; wall clock to after December 3 (the archive pass). Largest uncertainty: the agent time for the 2026 final outputs. No decision is open.
+
 ## 4. 2026 House/Senate collection
 
 The droplet cron `~/run_collect_2026.sh` runs at 09:00 America/Los_Angeles. It is the only scheduler for this collection.
 The schedule: a live copy every 30 days, plus the local day before and after each applicable primary or runoff.
 Rosters and URLs refresh each week. The rules are in [collection_2026.md](collection_2026.md).
-Hanno set the endpoint to November 17, 2026 on September 30 (`collection_end_date` in `config/collection_2026.json`).
+Hanno set the endpoint to November 17, 2026 on September 30, then to November 5, 2026 on November 4 (`collection_end_date` in `config/collection_2026.json`).
 
 Status on October 4, 2026 (`logs/status_20261004.json` on the droplet): 57,904 pages, 22,357 snapshots, 3,689 candidates.
 There are 1,964 pending work items and 0 unfinished attempts. The volume has 61 GiB free of 100 GiB.
@@ -39,13 +49,13 @@ These runs came after the September 30 fix for the `Invalid IPv6 URL` stop.
 **Strategy review, October 24 (Opus reviewer, major issues only; Hanno decided the same day):**
 1. The general election had no targeted copies, so about 95 percent of pairable candidates would have had no live copy after November 3 (next 30-day copy due November 20–24). **Decision: add copies on November 2 and 4** (`live_cadence_due` in `src/collection_2026_outputs.py`; test `test_general_election_gets_copies_on_the_day_before_and_after`).
 2. After the end date only `--phase archive` may run, with no roster refresh (`scripts/collect_2026.py`; test `test_after_end_date_only_the_archive_phase_runs`). **Decision: one final archive pass in early December** for the post-general Wayback window (November 4 – December 3). Not scheduled yet; run it by hand, after December 3.
-3. The identity check needs the FEC first name, so nickname sites fail (about 206 of 410 rejected homepages name the surname; e.g. Tom Kean, Jerry Nadler). No data loss: unconfirmed sites are copied daily. **Decision: score identity again on stored text after November 17** and report the change before use. No collector change now.
+3. The identity check needs the FEC first name, so nickname sites fail (about 206 of 410 rejected homepages name the surname; e.g. Tom Kean, Jerry Nadler). No data loss: unconfirmed sites are copied daily. **Decision: score identity again on stored text after the collection ends** and report the change before use. No collector change now.
 Not issues: the retryable backlog (5,645) is mostly one record per day for about 218 always-failing sites; disk (55 GiB free, about 0.35 GiB a day); time zones for the 50 states. The daily run stops at its 6-hour budget (`--max-run-seconds 21600` in `~/run_collect_2026.sh`) before the archive phase reaches all candidates.
 Extra runs (Hanno, October 24): on November 2 and 4 cron also starts the wrapper at 00:05 Pacific (run until 08:20), and the 09:00 run gets 12 hours (ends 05:00 UTC, Eastern midnight); the Monday refresh of November 2 moves to Sunday, November 1. The collector decides what is due at run start, so runs must not cross local midnight. Droplet wrapper `~/run_collect_2026.sh` (tracked copy `scripts/run_collect_2026_droplet.sh`; backups `~/run_collect_2026.sh.bak-20261024`, `~/crontab.bak-20261024`).
 Deployment: code for 1 and 2 is deployed to the droplet runtime after the October 24 run ends (backups `*.bak-20261024`); check the November 2 and 4 runs for live copies.
 
-**Action:** check the daily `rc` line and the free space once a week. Act only if a run fails. On November 3 and 5, confirm that the November 2 and 4 runs made live copies for most candidates with a confirmed site.
-After November 17, build the final outputs and run the coverage checks; then the identity re-scoring; then the December archive pass.
+**Action:** check the daily `rc` line and the free space once a week. Act only if a run fails. On November 6, confirm that the November 4 run made live copies for most candidates with a confirmed site.
+After November 5, build the final outputs and run the coverage checks; then the identity re-scoring; then the December archive pass.
 
 ## 2. Extracted variables: open items for a later version
 
@@ -54,6 +64,7 @@ Version 4.0 is published. These items do not block anything now.
 - **Decided October 24 (Hanno): drop the wrong-candidate rows in the next version.** A text check of v4.0 shows only `H0AL02160-2020` (Thomas William Brown Jr., Alabama; 803 page rows of Anthony Brown's Maryland site `anthonybrown.com`) is wrong. The Maryland rows are correct, and both `kateforcongress.com` rows are correct (Kate Schroder, Ohio 2020; Kate Monroe, California 2024; each page names its candidate). Drop only `H0AL02160-2020` from the core files; the extraction tables already exclude it.
 - The packager computes `manifest_entries` but does not write them.
 - In 17 of 60 sampled endorsement records, the evidence span crosses two list entries.
+- **Human validation by an RA (Hanno approved October 30).** The v4.0 extraction has only the model-coded check; `human_validation.json` in the bundle is `pending`. The RA codes an Excel workbook. Precision sheets show one released record in a short passage, with the evidence marked. The coder does not see the model's kind, field, or entity type. Recall sheets split passages into sentences or lines, and the coder sees no model output. Builder: `scripts/build_ra_validation_workbook.py` (release `release_20260930_v22_model`, seed 20261030). Pilot output: `validation/ra_validation_pilot_2026-10-30/` (10 rows per precision sheet, 2 passages per recall sheet; the answer key stays with Hanno). October 30: a test reader (an agent in the role of an undergraduate) coded the pilot. The guide now takes its rules from the extraction prompt (`PROMPTS_V2_1`) and the September 27 review questions. Biography Q1 has a new option for a non-biographical fact. Two rules are not in the prompt, and I set them: proposal means a specific plan, and a fact that fits two types gets one type plus a note. October 31: guide shortened to about 440 words. Hanno decided that the RA's coding is the ground truth (no second coder). Next: the RA codes the pilot; then build the full workbook and a scoring script. Then build the full workbook (proposed: 150 issues, 100 biography, 100 endorsements, about 40 passages per recall sheet) and a scoring script.
 
 ## Repository housekeeping, October 4, 2026
 

@@ -4,7 +4,7 @@
   "window_days": 30,
   "targeted_event_offsets_days": [-1, 1],
   "live_interval_days": 30,
-  "collection_end_date": "2026-11-17",
+  "collection_end_date": "2026-11-05",
   "max_depth": 2,
   "max_pages_per_snapshot": 60,
   "max_response_bytes": 10000000,
