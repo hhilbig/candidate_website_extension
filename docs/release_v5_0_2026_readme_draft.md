@@ -1,6 +1,6 @@
 # Draft for version 5.0: README text for the 2026 data
 
-Status: draft for Hanno's approval. All counts are from the corpus of November 9, 2026.
+Status: draft for Hanno's approval. All counts are from the corpus of November 10, 2026.
 The archive pass after December 3 changes them; the build fills the final counts.
 The draft assumes that the 2026 rows go into the existing files, with the new columns empty for earlier years.
 
@@ -26,7 +26,7 @@ do not occur before 2026: `no_url_found`, `valid_url_no_usable_capture` (with th
 in `collection_failure_reason`), and `captured_under_other_fec_id`.
 
 The 2026 population has 3,656 candidate-years. 2,459 have a website URL, and 1,735 have
-usable text (105,259 page rows). Of the 954 general-election candidates, 706 have usable
+usable text (105,020 page rows). Of the 954 general-election candidates, 706 have usable
 text.
 
 ## Changes to existing sections
@@ -51,7 +51,7 @@ only.
 **Identity.** A 2026 page is in the corpus only if its text names the candidate
 (family name and given name, or a listed short form of the given name).
 
-**Limitations.** Add: (1) direct copies can fail when a website blocks automatic
+**Limitations.** Add: (0) the 2026 corpus omits 242 archived pages whose stored body was compressed data, not text; (1) direct copies can fail when a website blocks automatic
 requests; `collection_failure_reason` records this; (2) the validation of the extracted
 2026 records is model-coded, as in version 4.0; (3) `bonica_rid` in 2026 is carried
 from an earlier year of the same FEC ID and is missing for new candidates.
