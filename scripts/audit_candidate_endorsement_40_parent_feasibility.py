@@ -21,13 +21,20 @@ if str(REPO) not in sys.path:
     sys.path.insert(0, str(REPO))
 
 from scripts.build_candidate_endorsement_line_ledger import PILOT_PARENT_IDS
+from src.candidate_extraction_bundle import bound  # noqa: E402
 from src.candidate_endorsement_line_ledger import (
     LINE_DECISION_SLOT_COUNT, LINE_INVENTORY_SPEC_SHA256,
     _compound_anchor_expected_names,
     reconstruct_parent_inventory,
 )
 
-FULL = REPO / "build/hive_candidate_extraction/v2_1_full_export_20260824p"
+FULL = REPO / bound(
+    "source_export_dir", "build/hive_candidate_extraction/v2_1_full_export_20260824p"
+)
+FULL_MANIFEST_SHA256 = bound(
+    "source_manifest_sha256",
+    "f5e6545a2d2ec35a83f4184e0d328635e5fba9d3c80cd4c8a7466178b7d9172c",
+)
 LEGACY = REPO / "build/hive_candidate_extraction/full_segmented_imported/full_parent_extractions.jsonl.gz"
 VALIDATION = REPO / "build/hive_candidate_extraction/human_validation_completed"
 SEED = 20260827
@@ -42,7 +49,7 @@ def sha(path: Path) -> str:
 
 def authenticated_full_rows() -> tuple[list[dict], str]:
     manifest_path = FULL / "manifest.json"
-    if sha(manifest_path) != "f5e6545a2d2ec35a83f4184e0d328635e5fba9d3c80cd4c8a7466178b7d9172c":
+    if sha(manifest_path) != FULL_MANIFEST_SHA256:
         raise ValueError("full-export manifest bytes differ")
     manifest = json.loads(manifest_path.read_text())
     expected = manifest["chunks"]

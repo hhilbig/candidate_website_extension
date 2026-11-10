@@ -26,6 +26,7 @@ REPO = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(REPO))
 
 import scripts.audit_candidate_endorsement_40_parent_feasibility as base
+from src.candidate_extraction_bundle import bound  # noqa: E402
 from src.candidate_endorsement_round4 import (
     STAGE_A_SLOT_COUNT,
     STAGE_B_SLOT_COUNT,
@@ -42,12 +43,17 @@ from src.candidate_endorsement_round4_release import (
     parent_inventory_from_export_rows,
 )
 
-SOURCE_EXPORT = "build/hive_candidate_extraction/v2_1_full_export_20260824p"
-FROZEN_SOURCE_MANIFEST_SHA256 = (
-    "f5e6545a2d2ec35a83f4184e0d328635e5fba9d3c80cd4c8a7466178b7d9172c"
+# The literals are the values of the 2002-2024 export. Another corpus gives its
+# values in a bundle file (src/candidate_extraction_bundle.py).
+SOURCE_EXPORT = bound(
+    "source_export_dir", "build/hive_candidate_extraction/v2_1_full_export_20260824p"
 )
-EXPECTED_ENDORSEMENT_PARENTS = 2_583
-EXPECTED_ENDORSEMENT_SEGMENTS = 6_096
+FROZEN_SOURCE_MANIFEST_SHA256 = bound(
+    "source_manifest_sha256",
+    "f5e6545a2d2ec35a83f4184e0d328635e5fba9d3c80cd4c8a7466178b7d9172c",
+)
+EXPECTED_ENDORSEMENT_PARENTS = bound("endorsement_parents", 2_583)
+EXPECTED_ENDORSEMENT_SEGMENTS = bound("endorsement_segments", 6_096)
 
 
 def endorsement_rows_by_parent() -> dict[str, list[dict]]:

@@ -21,6 +21,7 @@ from typing import Any, Iterable, Iterator, Mapping, Sequence
 REPO = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO))
 
+from src.candidate_extraction_bundle import bound  # noqa: E402
 from src.candidate_extraction import (  # noqa: E402
     ALIGNMENT_METHOD_UNIQUE,
     ARRAY_ITEM_CAP_REACHED_STATUS,
@@ -171,14 +172,16 @@ PRE_STAGE_A3_LINE_LEDGER_CONTRACT_SHA256 = (
 # Each stage carries exactly one generation identity across its shards, verified
 # over all four Stage-A and all eight Stage-B run-metadata files. The Stage-A
 # input manifest hash also matches the value the Stage-B build command asserted.
-FROZEN_ROUND4_PRODUCTION_STAGE_A_INPUT_MANIFEST_SHA256 = (
-    "032a6694a27457ea93ea944e2f71a2eb1dade564c32e2749dd0ed46fce8fa477"
+FROZEN_ROUND4_PRODUCTION_STAGE_A_INPUT_MANIFEST_SHA256 = bound(
+    "round4_stage_a_input_manifest_sha256",
+    "032a6694a27457ea93ea944e2f71a2eb1dade564c32e2749dd0ed46fce8fa477",
 )
 FROZEN_ROUND4_PRODUCTION_STAGE_A_GENERATION_CONFIG_SHA256 = (
     "159517b984d31e8cc5deee394d978556d83191fda03ffde5662c6e5753fa7840"
 )
-FROZEN_ROUND4_PRODUCTION_STAGE_B_INPUT_MANIFEST_SHA256 = (
-    "13bba4688d63fc665b42911519a8c414dd9c766e7628ed2734234536c4daff98"
+FROZEN_ROUND4_PRODUCTION_STAGE_B_INPUT_MANIFEST_SHA256 = bound(
+    "round4_stage_b_input_manifest_sha256",
+    "13bba4688d63fc665b42911519a8c414dd9c766e7628ed2734234536c4daff98",
 )
 FROZEN_ROUND4_PRODUCTION_STAGE_B_GENERATION_CONFIG_SHA256 = (
     "cd309252f5231a929594924e29020584e69d3d36b89e37c8a1ddb022cab2cfac"
@@ -311,22 +314,27 @@ FROZEN_V2_1_GENERATION_CONFIG_SHA256 = (
 EXPECTED_GENERATION_SEED = 20260824
 EXPECTED_MAX_MODEL_LEN = 32_768
 EXPECTED_MAX_OUTPUT_TOKENS = 24_576
-FROZEN_SUFFIX_P_FULL_SOURCE_MANIFEST_SHA256 = (
-    "f5e6545a2d2ec35a83f4184e0d328635e5fba9d3c80cd4c8a7466178b7d9172c"
+# The four values below belong to one export. The literals are the values of the
+# 2002-2024 export; another corpus gives its values in a bundle file.
+FROZEN_SUFFIX_P_FULL_SOURCE_MANIFEST_SHA256 = bound(
+    "source_manifest_sha256",
+    "f5e6545a2d2ec35a83f4184e0d328635e5fba9d3c80cd4c8a7466178b7d9172c",
 )
-FROZEN_SUFFIX_P_SOURCE_CORPUS_SHA256 = (
-    "c53d36b24b293ac5d47706aa67731f1c107d6a679cb948c9ad71a70b5c8ce7c3"
+FROZEN_SUFFIX_P_SOURCE_CORPUS_SHA256 = bound(
+    "source_corpus_sha256",
+    "c53d36b24b293ac5d47706aa67731f1c107d6a679cb948c9ad71a70b5c8ce7c3",
 )
-FROZEN_SUFFIX_P_SOURCE_DOCUMENT_IDS_SHA256 = (
-    "826f3b4d6622c06e03448beff2d20b59437d51bce04630ec520c36b4d461ba21"
+FROZEN_SUFFIX_P_SOURCE_DOCUMENT_IDS_SHA256 = bound(
+    "source_document_ids_sha256",
+    "826f3b4d6622c06e03448beff2d20b59437d51bce04630ec520c36b4d461ba21",
 )
-FROZEN_SUFFIX_P_COMPLETE_LINE_CENSUS = {
+FROZEN_SUFFIX_P_COMPLETE_LINE_CENSUS = bound("complete_line_census", {
     "endorsement_segments": 6_096,
     "segments_with_complete_line": 6_055,
     "segments_without_complete_line": 41,
     "first_source_display_boundary_differs": 169,
     "last_source_display_boundary_differs": 988,
-}
+})
 EXPECTED_STRUCTURED_DECODING = {
     "mode": STRUCTURED_DECODING_MODE,
     "backend": STRUCTURED_DECODING_BACKEND,
@@ -6196,7 +6204,7 @@ def pending_human_validation() -> dict[str, Any]:
         },
         "recall": {"biography": None, "issues": None, "endorsements": None},
         "known_omission_human_confirmation": {
-            "expected_n": 11,
+            "expected_n": bound("known_omission_count", 11),
             "confirmed_n": 0,
             "all_confirmed": False,
             "items": [],

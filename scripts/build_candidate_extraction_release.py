@@ -62,6 +62,7 @@ from scripts.import_candidate_extraction_v2 import (  # noqa: E402
     validate_run_metadata_against_all_output,
     validate_run_metadata_accounting,
 )
+from src.candidate_extraction_bundle import bound  # noqa: E402
 from src.candidate_endorsement_line_ledger import (  # noqa: E402
     get_line_ledger_contract,
 )
@@ -133,9 +134,12 @@ PUBLIC_FILES = (
     "candidate_endorsements.parquet",
 )
 
+# The corpus hash and the counts below are the values of the 2002-2024 corpus.
+# Another corpus gives its values in a bundle file (src/candidate_extraction_bundle.py).
 EXPECTED_CORE_RAW_SHA256 = (
     "c53d36b24b293ac5d47706aa67731f1c107d6a679cb948c9ad71a70b5c8ce7c3"
 )
+EXPECTED_CORE_RAW_SHA256 = bound("source_corpus_sha256", EXPECTED_CORE_RAW_SHA256)
 EXPECTED_MODEL_ID = "Qwen/Qwen3.6-27B-FP8"
 EXPECTED_MODEL_REVISION = "e89b16ebf1988b3d6befa7de50abc2d76f26eb09"
 EXPECTED_RUNTIME_LOCK_SHA256 = (
@@ -155,7 +159,7 @@ EXPECTED_EXTRACTION_CONTRACT_SHA256 = APPROVED_EXTRACTION_CONTRACT_SHA256[
 # The official-government-host rule removes this many parent documents from the
 # approved corpus. Asserting it means a change in the corpus or the rule fails
 # closed rather than quietly shipping a different population.
-EXPECTED_EXCLUDED_PARENT_DOCUMENTS = 654
+EXPECTED_EXCLUDED_PARENT_DOCUMENTS = bound("excluded_parent_documents", 654)
 # Hanno approved on 2026-09-28 dropping candidate-years whose archived site is
 # another candidate's. Only one case is confirmed: Thomas Brown (AL, 2020) has
 # 803 rows from anthonybrown.com, Anthony Brown's Maryland site. The pages name
@@ -172,20 +176,20 @@ WRONG_CANDIDATE_SITES = frozenset({
     ("H8IN07291-2018", "borderlessu.com"),
 })
 WRONG_CANDIDATE_RULE_ID = "archived_site_is_not_this_candidates_site_v1"
-EXPECTED_WRONG_CANDIDATE_PARENT_DOCUMENTS = 40
+EXPECTED_WRONG_CANDIDATE_PARENT_DOCUMENTS = bound("wrong_candidate_parent_documents", 40)
 EXTENSION_MANIFEST_FILENAME = "candidate_extraction_manifest.json"
-EXPECTED_PARENT_COUNTS = {
+EXPECTED_PARENT_COUNTS = bound("parent_counts", {
     "issues": 14_326,
     "biography": 6_962,
     "endorsements": 2_583,
-}
-EXPECTED_SEGMENT_COUNTS = {
+})
+EXPECTED_SEGMENT_COUNTS = bound("segment_counts", {
     "issues": 20_673,
     "biography": 8_444,
     "endorsements": 6_096,
-}
-EXPECTED_UNIVERSE_ROWS = 15_041
-EXPECTED_TRANSFORMED_PARENT_DOCUMENTS = 23_856
+})
+EXPECTED_UNIVERSE_ROWS = bound("universe_rows", 15_041)
+EXPECTED_TRANSFORMED_PARENT_DOCUMENTS = bound("transformed_parent_documents", 23_856)
 
 HEX64 = re.compile(r"^[0-9a-f]{64}$")
 WAYBACK_TARGET = re.compile(r"^/web/[^/]+/(https?://.+)$", re.IGNORECASE)
@@ -503,8 +507,8 @@ def _load_human_validation(
         "human validation lacks known-omission confirmation",
     )
     _require(
-        omission_confirmation.get("expected_n") == 11
-        and omission_confirmation.get("confirmed_n") == 11
+        omission_confirmation.get("expected_n") == EXPECTED_KNOWN_OMISSIONS
+        and omission_confirmation.get("confirmed_n") == EXPECTED_KNOWN_OMISSIONS
         and omission_confirmation.get("all_confirmed") is True,
         "not all 11 known omissions received human confirmation",
     )
@@ -514,7 +518,7 @@ def _load_human_validation(
     }
     confirmed_items = omission_confirmation.get("items")
     _require(
-        isinstance(confirmed_items, list) and len(confirmed_items) == 11,
+        isinstance(confirmed_items, list) and len(confirmed_items) == EXPECTED_KNOWN_OMISSIONS,
         "known-omission confirmation items differ",
     )
     _require(
@@ -604,7 +608,8 @@ def _load_human_validation(
 # the column decision is Hanno's and is recorded with the column lists.
 MODEL_CODED_VALIDATION_FORMAT = "candidate-extraction-model-coded-validation-v1"
 MODEL_CODED_RECORD_RECALL_MINIMUM = 0.90
-MODEL_CODED_EXPECTED_OMISSIONS = 11
+EXPECTED_KNOWN_OMISSIONS = bound("known_omission_count", 11)
+MODEL_CODED_EXPECTED_OMISSIONS = EXPECTED_KNOWN_OMISSIONS
 # The validated dimensions that describe a released column.
 RELEASED_DIMENSIONS = {
     "issues": (
@@ -805,10 +810,10 @@ def load_bundle(
     )
     omission_report = json.loads(omission_path.read_text(encoding="utf-8"))
     omission_items = omission_report.get("items") if isinstance(omission_report, dict) else None
-    _require(int(omission_spec.get("rows", -1)) == 11, "known omission manifest count is not 11")
-    _require(isinstance(omission_items, list) and len(omission_items) == 11, "known omission report does not contain 11 items")
-    _require(omission_report.get("known_omissions") == 11, "known omission report count differs")
-    _require(omission_report.get("recovered") == 11, "known omission recovery count differs")
+    _require(int(omission_spec.get("rows", -1)) == EXPECTED_KNOWN_OMISSIONS, "known omission manifest count is not 11")
+    _require(isinstance(omission_items, list) and len(omission_items) == EXPECTED_KNOWN_OMISSIONS, "known omission report does not contain 11 items")
+    _require(omission_report.get("known_omissions") == EXPECTED_KNOWN_OMISSIONS, "known omission report count differs")
+    _require(omission_report.get("recovered") == EXPECTED_KNOWN_OMISSIONS, "known omission recovery count differs")
     _require(omission_report.get("all_recovered") is True, "known omission gate did not pass")
     _require(
         omission_report.get("matching_spec") == KNOWN_OMISSION_MATCHING_SPEC
@@ -825,7 +830,7 @@ def load_bundle(
         "known omission report does not preserve the separate human gate",
     )
     omission_ids = [str(item.get("omission_id") or "") for item in omission_items]
-    _require(all(omission_ids) and len(set(omission_ids)) == 11, "known omission IDs are missing or duplicated")
+    _require(all(omission_ids) and len(set(omission_ids)) == EXPECTED_KNOWN_OMISSIONS, "known omission IDs are missing or duplicated")
     resolved_ids = {
         str(record.get("record_id"))
         for row in rows
