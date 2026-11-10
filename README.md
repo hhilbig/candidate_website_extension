@@ -1,5 +1,8 @@
 # Candidate Website Extension
 
+The mayoral campaign website data moved to a separate repository on October 24, 2026:
+`hhilbig/mayoral_campaign_websites`. This repository holds House and Senate work only.
+
 This repository builds a dataset of archived US congressional campaign
 websites. It extends the House candidate corpus assembled by Di Tella, Kotti,
 Le Pennec, and Pons (2025) from 2018 through 2024 and adds Senate candidates

@@ -3,6 +3,8 @@
 Append `[LEARN:category] YYYY-MM-DD -- note` entries when corrected. Keep
 terse — this file is loaded into context every session.
 
+Mayoral work moved to `~/Documents/GitHub/mayoral_campaign_websites` on 2026-10-24. Mayoral examples in this file are history; do mayoral work there.
+
 ## Tagging convention
 
 - `[LEARN:claude] YYYY-MM-DD -- title` — Claude Code session
