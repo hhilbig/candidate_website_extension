@@ -2,7 +2,7 @@
 
 One output row is one usable page of one candidate at one copy time. The
 columns are the 28 columns of the published raw_corpus.parquet, plus three
-columns that the 2026 data needs:
+columns that the 2026 data needs (and two page type columns, see page_types):
 
   capture_source  'live' (copied from the campaign server) or 'wayback'
   snapshot_id     one crawl of one site; the pair table refers to it
@@ -21,9 +21,12 @@ import argparse
 import gzip
 import hashlib
 import json
+import re
 import sys
+from collections import Counter
 from datetime import datetime, timezone
 from pathlib import Path
+from urllib.parse import urlsplit
 
 import pandas as pd
 import pyarrow as pa
@@ -32,6 +35,7 @@ import pyarrow.parquet as pq
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from scripts.harmonize_deliverable import district_id, icpsr_name, name_key, norm_district  # noqa: E402
 from scripts.icpsr_replicate_coding import icpsr_clean_text  # noqa: E402
+from src.extract_text import classify_page_type  # noqa: E402
 
 PARTY = {'D': 'democrat', 'R': 'republican'}
 SCHEMA = pa.schema([
@@ -44,7 +48,32 @@ SCHEMA = pa.schema([
     ('text_snap_content', pa.string()), ('candidate_cycle_id', pa.string()), ('cand_election_yr', pa.string()),
     ('cand_status', pa.string()), ('universe_source', pa.string()), ('on_ballot', pa.bool_()),
     ('capture_source', pa.string()), ('snapshot_id', pa.string()), ('page_id', pa.string()),
+    ('page_type_context', pa.string()), ('extraction_route', pa.string()),
 ])
+
+
+NON_CONTENT = re.compile(
+    r'/(privacy|terms|cart|shop|store|checkout|donate|contribute|volunteer|contact|login|sign-?up|subscribe|'
+    r'sitemap|cdn-cgi|events?|join[^/]*|search|tag|category|author|feed|wp-[a-z]+)(/|$|[-_.?])', re.I)
+
+
+def page_types(collector_type, url):
+    """Return (page_type, extraction_route) for one 2026 page.
+
+    Decision of November 9, 2026 (Hanno). `page_type` follows the URL rule of the
+    published files; the collector's homepage stays `homepage`. The collector's own
+    type uses the link context (a page reached from the issues page is `issues`) and
+    stays in `page_type_context`. The extraction reads issue and biography pages by
+    context when the URL rule says `other` and the URL is not a service page.
+    Endorsements use the URL rule only, because the endorsement contract requires it.
+    """
+    by_url = 'homepage' if collector_type == 'homepage' else classify_page_type(url)
+    route = None
+    if by_url in ('issues', 'biography', 'endorsements'):
+        route = by_url
+    elif by_url == 'other' and collector_type in ('issues', 'biography') and not NON_CONTENT.search(urlsplit(url).path):
+        route = collector_type
+    return by_url, route
 
 
 def stamp(captured_at):
@@ -96,6 +125,7 @@ def main():
 
     writer = pq.ParquetWriter(out / 'raw_corpus_2026.parquet', SCHEMA, compression='zstd')
     n_rows, text_cache_hits = 0, 0
+    type_counts = Counter()
     for cid, group in usable.groupby('candidate_id', sort=True):
         r = roster.loc[cid]
         district = norm_district(r.district) if r.office == 'house' else float('nan')
@@ -118,10 +148,12 @@ def main():
                 text_cache_hits += 1
             text, n_char, n_words, n_tags, n_clean = cache[page.text_path]
             live = page.source == 'live'
+            by_url, route = page_types(page.page_type, page.original_url)
+            type_counts[(page.page_type, by_url, route or '')] += 1
             rows.append(dict(
                 fixed, date=page.date, urlkey=page.original_url,
                 snap_url=None if live else f'https://web.archive.org/web/{page.date}/{page.original_url}',
-                page_type=page.page_type, n_char=n_char, n_words=n_words, n_tags=n_tags, n_clean_tags=n_clean,
+                page_type=by_url, page_type_context=page.page_type, extraction_route=route, n_char=n_char, n_words=n_words, n_tags=n_tags, n_clean_tags=n_clean,
                 text_snap_content=text, capture_source=page.source, snapshot_id=page.snapshot_id,
                 page_id=page.page_id))
         writer.write_table(pa.Table.from_pylist(rows, schema=SCHEMA))
@@ -131,7 +163,7 @@ def main():
     report = dict(usable_pages=n_usable, wayback_duplicates_removed=int(duplicate.sum()), rows_written=n_rows,
                   candidates=int(usable.candidate_id.nunique()),
                   rows_by_source=usable.source.value_counts().to_dict(),
-                  rows_by_page_type=usable.page_type.value_counts().to_dict(),
+                  rows_by_context_type_url_type_route={' | '.join(k): v for k, v in sorted(type_counts.items())},
                   repeated_text_rows=text_cache_hits,
                   input_coverage_report_generated_at=json.loads(
                       (src / 'exports/coverage_report.json').read_text()).get('generated_at'))

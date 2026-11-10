@@ -291,13 +291,23 @@ def main() -> int:
     parser.add_argument("--segment-overlap-chars", type=int, default=600)
     parser.add_argument("--endorsements-segment-max-chars", type=int, default=3_000)
     parser.add_argument("--endorsements-segment-overlap-chars", type=int, default=300)
+    # 2026 rows (decision of November 9, 2026): the route comes from the corpus column
+    # `extraction_route`, and a live page has no Wayback URL, so its page URL is the source URL.
+    # The defaults reproduce the export of the earlier years.
+    parser.add_argument("--route-column", default="page_type")
+    parser.add_argument("--url-fallback-column", default=None)
     args = parser.parse_args()
 
     parquet = pq.ParquetFile(args.corpus)
-    missing = REQUIRED_COLUMNS - set(parquet.schema_arrow.names)
+    extra_columns = {args.route_column} | ({args.url_fallback_column} if args.url_fallback_column else set())
+    missing = (REQUIRED_COLUMNS | extra_columns) - set(parquet.schema_arrow.names)
     if missing:
         raise ValueError(f"raw corpus lacks required columns: {sorted(missing)}")
-    frame = pq.read_table(args.corpus, columns=sorted(REQUIRED_COLUMNS)).to_pandas()
+    frame = pq.read_table(args.corpus, columns=sorted(REQUIRED_COLUMNS | extra_columns)).to_pandas()
+    if args.route_column != "page_type":
+        frame["page_type"] = frame[args.route_column]
+    if args.url_fallback_column:
+        frame["snap_url"] = frame["snap_url"].fillna(frame[args.url_fallback_column])
     all_records = deduplicate_target_pages(frame)
     parent_records = (
         all_records
@@ -359,6 +369,8 @@ def main() -> int:
         "schema_version": "1.4",
         "created_utc": datetime.now(timezone.utc).isoformat(timespec="seconds"),
         "mode": "full" if args.full else "pilot",
+        "route_column": args.route_column,
+        "url_fallback_column": args.url_fallback_column,
         "seed": args.seed,
         "pilot_per_route": None if args.full else args.pilot_per_route,
         "chunk_size": args.chunk_size,
