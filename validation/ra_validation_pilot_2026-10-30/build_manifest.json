@@ -1,0 +1,9 @@
+{
+  "release_dir": "build/hive_candidate_extraction/release_20260930_v22_model",
+  "release_manifest_sha256": "a4978c2ff449cc94a92b40bd43876ecc22d3225c6cb4382017ca2ff749df2abf",
+  "seed": 20261030,
+  "n_precision": 10,
+  "n_recall_passages": 2,
+  "recall_min_words": 4,
+  "context_chars": 250
+}
