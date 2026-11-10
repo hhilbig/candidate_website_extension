@@ -300,7 +300,7 @@ def build(args):
     matched = []
     for i, row in ballot[ballot.party.isin(['D', 'R'])].iterrows():
         pool = roster[(roster.state == row.state) & (roster.office == row.office)]
-        if row.office == 'house':
+        if row.office == 'house' and row.state not in AT_LARGE:  # FEC files some at-large candidates in district 01
             pool = pool[pool.district_number == row.district]
         name_tokens = tokens(ALIASES.get((row.state, row.candidate), row.candidate))
         best, best_score, best_kind = None, 0, ''
