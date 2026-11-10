@@ -57,6 +57,16 @@ NON_CONTENT = re.compile(
     r'sitemap|cdn-cgi|events?|join[^/]*|search|tag|category|author|feed|wp-[a-z]+)(/|$|[-_.?])', re.I)
 
 
+# An archived body that the collector did not decompress (zstd) is binary data, not page
+# text. In such a row more than half of the characters are control or replacement
+# characters; in each other row of the November 9 corpus the share is below 2 percent.
+NOT_TEXT = re.compile('[\ufffd\x00-\x08\x0b\x0c\x0e-\x1f]')
+
+
+def undecoded(text):
+    return len(NOT_TEXT.findall(text)) > 0.25 * max(len(text), 1)
+
+
 def page_types(collector_type, url):
     """Return (page_type, extraction_route) for one 2026 page.
 
@@ -125,6 +135,7 @@ def main():
 
     writer = pq.ParquetWriter(out / 'raw_corpus_2026.parquet', SCHEMA, compression='zstd')
     n_rows, text_cache_hits = 0, 0
+    removed_undecoded = []
     type_counts = Counter()
     for cid, group in usable.groupby('candidate_id', sort=True):
         r = roster.loc[cid]
@@ -147,6 +158,10 @@ def main():
             else:
                 text_cache_hits += 1
             text, n_char, n_words, n_tags, n_clean = cache[page.text_path]
+            if undecoded(text):
+                removed_undecoded.append(dict(cand_id=cid, page_id=page.page_id, date=page.date, url=page.original_url,
+                                              source=page.source, in_pairs=bool(page.in_pairs)))
+                continue
             live = page.source == 'live'
             by_url, route = page_types(page.page_type, page.original_url)
             type_counts[(page.page_type, by_url, route or '')] += 1
@@ -156,11 +171,17 @@ def main():
                 page_type=by_url, page_type_context=page.page_type, extraction_route=route, n_char=n_char, n_words=n_words, n_tags=n_tags, n_clean_tags=n_clean,
                 text_snap_content=text, capture_source=page.source, snapshot_id=page.snapshot_id,
                 page_id=page.page_id))
+        assert rows, f'{cid} has no decoded page'
+        n_snap = len({row['snapshot_id'] for row in rows})
+        for row in rows:
+            row['n_snap'] = n_snap
         writer.write_table(pa.Table.from_pylist(rows, schema=SCHEMA))
         n_rows += len(rows)
     writer.close()
 
-    report = dict(usable_pages=n_usable, wayback_duplicates_removed=int(duplicate.sum()), rows_written=n_rows,
+    pd.DataFrame(removed_undecoded).to_csv(out / 'undecoded_pages_removed_2026.csv', index=False)
+    report = dict(usable_pages=n_usable, undecoded_pages_removed=len(removed_undecoded),
+                  undecoded_pages_removed_in_pairs=sum(r['in_pairs'] for r in removed_undecoded), wayback_duplicates_removed=int(duplicate.sum()), rows_written=n_rows,
                   candidates=int(usable.candidate_id.nunique()),
                   rows_by_source=usable.source.value_counts().to_dict(),
                   rows_by_context_type_url_type_route={' | '.join(k): v for k, v in sorted(type_counts.items())},
