@@ -1,0 +1,30 @@
+{
+  "candidates_with_unresolved_homepage": 636,
+  "never_confirmed": 396,
+  "verdict_counts": {
+    "no_surname": 368,
+    "given_variant": 187,
+    "host_surname": 47,
+    "surname_only": 34
+  },
+  "verdict_counts_never_confirmed": {
+    "no_surname": 172,
+    "given_variant": 159,
+    "host_surname": 41,
+    "surname_only": 24
+  },
+  "unresolved_homepage_rows_by_class": {
+    "given_variant": 12935,
+    "host_surname": 2406,
+    "surname_only": 1682,
+    "no_surname": 15160,
+    "collector_rule": 0,
+    "text_missing": 0
+  },
+  "pair_rows_blocked_only_by_identity": 654,
+  "general_pair_rows_blocked_only_by_identity": 424,
+  "max_new_pairs_given_variant": 256,
+  "max_new_general_pairs_given_variant": 152,
+  "max_new_pairs_given_variant_or_host_surname": 323,
+  "max_new_general_pairs_given_variant_or_host_surname": 198
+}

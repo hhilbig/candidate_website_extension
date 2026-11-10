@@ -105,7 +105,69 @@ def identity_match(candidate, text):
         surname_words = words(tokens[-1]) if tokens else set()
         given_words = words(tokens[0]) if len(tokens) > 1 else set()
     observed = words(text)
-    return bool(surname_words and surname_words <= observed and given_words & observed)
+    if not (surname_words and surname_words <= observed):
+        return False
+    if given_words & observed:
+        return True
+    return short_form_match(surname_words, given_words, text)
+
+
+# Formal given name -> usual short forms (approved by Hanno, November 9, 2026).
+GIVEN_NAME_SHORT_FORMS = {
+    'abigail': 'abby abbie', 'albert': 'al bert', 'alexander': 'al alex sandy', 'alexandra': 'alex sandy',
+    'alexandria': 'alex', 'alfred': 'al fred', 'allen': 'al', 'alan': 'al', 'andrew': 'andy drew',
+    'anthony': 'tony', 'antonio': 'tony', 'barbara': 'barb', 'benjamin': 'ben', 'bernard': 'bernie',
+    'bradley': 'brad', 'catherine': 'cathy kate katie', 'katherine': 'kathy kate katie kat',
+    'kathleen': 'kathy kate katie', 'charles': 'charlie chuck chip', 'christopher': 'chris',
+    'christine': 'chris chrissy', 'christina': 'chris tina', 'cynthia': 'cindy', 'daniel': 'dan danny',
+    'david': 'dave', 'deborah': 'deb debbie', 'debra': 'deb debbie', 'dennis': 'denny', 'donald': 'don donnie',
+    'douglas': 'doug', 'edward': 'ed eddie ted', 'edwin': 'ed', 'elizabeth': 'liz beth betsy lizzie eliza',
+    'eugene': 'gene', 'francis': 'frank', 'franklin': 'frank', 'frederick': 'fred', 'gerald': 'jerry gerry',
+    'gregory': 'greg', 'harold': 'hal harry', 'henry': 'hank harry', 'jacob': 'jake', 'james': 'jim jimmy jamie',
+    'jeffrey': 'jeff', 'jennifer': 'jen jenn jenny', 'jerome': 'jerry', 'jerrold': 'jerry', 'jessica': 'jess',
+    'john': 'jack johnny', 'jonathan': 'jon', 'joseph': 'joe joey', 'joshua': 'josh', 'judith': 'judy',
+    'kenneth': 'ken kenny', 'kimberly': 'kim', 'lawrence': 'larry', 'leonard': 'len lenny', 'louis': 'lou',
+    'margaret': 'maggie meg peggy marge', 'matthew': 'matt', 'michael': 'mike mikey', 'michelle': 'shelly',
+    'mitchell': 'mitch', 'nathaniel': 'nate nat', 'nathan': 'nate', 'nicholas': 'nick', 'pamela': 'pam',
+    'patricia': 'pat patty tricia trish', 'patrick': 'pat paddy', 'peter': 'pete', 'philip': 'phil',
+    'phillip': 'phil', 'randall': 'randy', 'randolph': 'randy', 'raymond': 'ray', 'rebecca': 'becky becca',
+    'richard': 'rick rich dick ricky', 'robert': 'bob rob bobby robby', 'rodney': 'rod', 'ronald': 'ron ronnie',
+    'russell': 'russ', 'samuel': 'sam', 'samantha': 'sam', 'stephen': 'steve', 'steven': 'steve',
+    'susan': 'sue susie', 'suzanne': 'sue', 'terrence': 'terry', 'terence': 'terry', 'theodore': 'ted teddy',
+    'thomas': 'tom tommy', 'timothy': 'tim', 'victoria': 'vicky tori', 'vincent': 'vince', 'walter': 'walt',
+    'william': 'bill billy will willie liam', 'zachary': 'zach zack',
+}
+# Short forms that are also ordinary words. They count only directly before the family name.
+ORDINARY_WORDS = {'will', 'bill', 'can', 'don', 'rich', 'pat', 'art', 'sue', 'ray', 'rob', 'may', 'mark', 'jack',
+                  'chip', 'gene', 'frank', 'drew', 'hank', 'bob', 'rod', 'ken', 'tim', 'sam', 'tom', 'dan', 'ben',
+                  'jon', 'jen', 'nat', 'deb', 'pam', 'ron', 'lou', 'len', 'hal', 'meg', 'kat', 'beth', 'pete',
+                  'dick', 'rick', 'nick', 'walt', 'the', 'and', 'for', 'her', 'his', 'man', 'mar', 'mic', 'con',
+                  'sen', 'rep', 'cha', 'chr', 'ste', 'jam', 'joh', 'tho', 'eli', 'ale', 'kim', 'bar', 'car', 'mat'}
+
+
+def short_form_match(surname_words, given_words, text):
+    """True if the text has a short form of a given name (nickname rule).
+
+    A short form is a listed nickname, or the first three or more letters of a
+    given name. Call this only when the family name is in the text.
+    """
+    value = unicodedata.normalize('NFKD', text).encode('ascii', 'ignore').decode().lower()
+    value = re.sub(r"['’]s\b", '', value.replace('’', "'"))
+    tokens = re.findall(r"[a-z]+(?:'[a-z]+)*", value)
+    listed = {v for g in given_words for v in GIVEN_NAME_SHORT_FORMS.get(g, '').split()}
+
+    def is_short_form(token):
+        return token in listed or (len(token) >= 3 and any(
+            len(g) > len(token) and g.startswith(token) for g in given_words))
+    for index, token in enumerate(tokens):
+        if token in given_words or not is_short_form(token):
+            continue
+        if token not in ORDINARY_WORDS:
+            return True
+        # An ordinary word counts only if the family name follows within two words.
+        if any(following in surname_words for following in tokens[index + 1:index + 3]):
+            return True
+    return False
 
 
 # A MIME-only server filter would also remove redirects with misleading MIME.

@@ -260,3 +260,19 @@ def test_memento_header_controls_actual_capture_date(tmp_path,config,candidate,e
     assert row['captured_at'].startswith('2026-06-03')
     assert row['effective_url_timestamp']=='20260601120000'
     assert row['timestamp_source']=='memento_header'
+
+
+def test_identity_accepts_short_forms_of_the_given_name():
+    # Nickname rule, approved November 9, 2026.
+    def cand(raw):
+        return dict(fec_raw_name=raw, candidate='')
+    assert identity_match(cand('CASE, EDWARD'), "ABOUT ED#+#ED’S AGENDA#+#Paid for by Case for Congress")
+    assert identity_match(cand('MCGOVERN, JAMES P'), 'Jim McGovern for Congress')
+    assert identity_match(cand('HAZEN, ALEXANDER'), 'Alex Hazen. People first.')
+    # The family name must be in the text.
+    assert not identity_match(cand('CASE, EDWARD'), 'About Ed. Site by RUN!')
+    # An ordinary word is not a nickname unless the family name follows it.
+    assert not identity_match(cand('TIFFANY, WILLIAM'), 'Tiffany 4 Wisconsin. This paint will last.')
+    assert not identity_match(cand('BACON, DONALD J'), "Bacon recipes. Don't burn it.")
+    assert identity_match(cand('BACON, DONALD J'), 'Congressman Don Bacon has served Nebraska')
+    assert identity_match(cand('TIFFANY, WILLIAM'), 'Meet Bill Tiffany')
