@@ -8,6 +8,8 @@ with an FEC record outside that population enter as `ballot_override` rows.
 `on_ballot` comes from the provisional list of build_2026_ballot_list.py.
 `general_votes` stays missing for 2026: the available counts are not final.
 
+Run build_2026_release_corpus.py first each time: this script removes corpus rows.
+
 Usage:
   python scripts/build_2026_release_universe.py \
       --input data/collection_2026/final_20261109 --out build/release_v5_0_2026 \
@@ -136,6 +138,31 @@ def main():
     assert captured <= set(u.cand_id) | set(roster.candidate_id[outside.reindex(roster.index, fill_value=False)])
     u['captured'] = u.cand_id.isin(captured)
     u['capture_status'] = u.captured.map({True: 'captured', False: 'not_captured'})
+
+    # One person can have two FEC IDs in one year. The published files keep both IDs in the
+    # universe and attach the text to one ID. Rule for 2026: same FEC name, state, office,
+    # party, and website domain. The text stays with the ID on the ballot list; if none,
+    # with the ID that has more page rows; then with the lower ID.
+    page_rows = pd.Series(pq.read_table(corpus_path, columns=['cand_id']).column('cand_id').to_pylist()).value_counts()
+    u['person_key'] = (u.fec_raw_name.str.upper().str.replace(r'[^A-Z, ]', '', regex=True).str.strip()
+                       + '|' + u.state + '|' + u.office + '|' + u.party + '|' + u.website_domain.fillna(''))
+    duplicates = []
+    for _, group in u[u.captured].groupby('person_key'):
+        if len(group) < 2:
+            continue
+        ranked = group.assign(rows=group.cand_id.map(page_rows)).sort_values(
+            ['on_ballot', 'rows', 'cand_id'], ascending=[False, False, True])
+        keep = ranked.cand_id.iloc[0]
+        for other in ranked.cand_id.iloc[1:]:
+            duplicates.append(dict(cand_id=other, text_kept_under_cand_id=keep, fec_raw_name=group.fec_raw_name.iloc[0],
+                                   state=group.state.iloc[0], office=group.office.iloc[0],
+                                   website_domain=group.website_domain.iloc[0], page_rows_removed=int(page_rows[other])))
+    duplicates = pd.DataFrame(duplicates, columns=['cand_id', 'text_kept_under_cand_id', 'fec_raw_name', 'state',
+                                                   'office', 'website_domain', 'page_rows_removed'])
+    duplicates.to_csv(out / 'duplicate_fec_id_2026.csv', index=False)
+    moved = u.cand_id.isin(duplicates.cand_id)
+    u.loc[moved, 'captured'] = False
+    u.loc[moved, 'capture_status'] = 'captured_under_other_fec_id'
     u = u.sort_values(['office', 'year', 'state', 'district', 'candidate_cycle_id'], na_position='last')
     u[UNIVERSE_COLUMNS].to_csv(out / 'candidate_year_universe_2026.csv', index=False)
     pd.DataFrame(extra)[['cand_id', 'fec_raw_name', 'state', 'office', 'party', 'override_reason']].to_csv(
@@ -161,17 +188,20 @@ def main():
     x['candidate_year_stage'] = [f'{n}_2026_2' if b else '' for n, b in zip(x.candidate_icpsr, x.on_ballot)]
     x[CROSSWALK_COLUMNS].to_csv(out / 'candidate_crosswalk_2026.csv', index=False)
 
-    # Fill the ballot fields of the corpus rows. Rows of Senate candidates outside the population are removed.
+    # Fill the ballot fields of the corpus rows. Rows of an ID with no crosswalk row are removed
+    # (the second FEC ID of one person).
     fields = x.set_index('cand_id')[['on_ballot', 'stage', 'data_source', 'candidate_year_stage']]
     source = pq.ParquetFile(corpus_path)
     temporary = out / 'raw_corpus_2026.tmp.parquet'
     writer = pq.ParquetWriter(temporary, source.schema_arrow, compression='zstd')
     kept, removed = 0, 0
-    for batch in source.iter_batches(batch_size=5000):
-        frame = batch.to_pandas()
+    for group in range(source.num_row_groups):  # one row group holds one candidate; keep that layout
+        frame = source.read_row_group(group).to_pandas()
         inside = frame.cand_id.isin(fields.index)
         removed += int((~inside).sum())
         frame = frame[inside].copy()
+        if frame.empty:
+            continue
         frame['on_ballot'] = frame.cand_id.map(fields.on_ballot).astype(bool)
         frame['stage'] = frame.cand_id.map(fields.stage).astype('Int64')
         frame['data_source'] = frame.cand_id.map(fields.data_source)
@@ -184,6 +214,7 @@ def main():
     summary = dict(
         fec_file=fec_zip.name, roster_rows=n_roster, senate_rows_outside_election_states=int(outside.sum()),
         ballot_override_rows=len(extra), universe_rows=int(len(u)),
+        duplicate_fec_ids_text_moved=int(moved.sum()),
         by_office=u.office.value_counts().to_dict(), by_party=u.party.value_counts().to_dict(),
         geography_status=u.geography_status.value_counts().to_dict(),
         on_ballot=int(u.on_ballot.sum()), has_url=int(u.has_url.sum()), captured=int(u.captured.sum()),
