@@ -100,8 +100,10 @@ whom the earlier match did not find (most at-large House seats, and the
 Minnesota and North Dakota party labels in the returns). It removes the flag
 from 7 candidates who had the votes of a namesake, and from 46 further FEC IDs
 where one returns row had flagged two or three IDs; the flag stays with one ID.
-The returns do not cover the territorial delegates, so these contests have no
-flagged candidate.
+The returns do not cover the territorial delegates (the District of Columbia
+in part), so most of these contests have no flagged candidate before 2026. A
+contest can have more than one flagged candidate of one party (Louisiana,
+California and Washington top-two contests, Alaska).
 
 For 2026, official returns are not yet published. `on_ballot` comes from the
 general-election candidate lists of the English Wikipedia state pages;
@@ -111,7 +113,10 @@ flag as provisional. `general_votes` is missing for 2026, and `data_source` is
 replaces this source with official returns. Five 2026 general-election
 candidates whose FEC record is outside the population rule enter as reviewed
 additions. Fifteen persons have two FEC IDs in 2026; the text is under one ID,
-and the other ID has `capture_status = captured_under_other_fec_id`.
+and the other ID has `capture_status = captured_under_other_fec_id`. The rule
+requires the same name, state, office, party, and website. A person who has
+IDs for two states or two offices, or two spellings of the name, keeps text
+under each ID.
 
 ## What was observed
 
@@ -154,17 +159,21 @@ address.
 **Frequency.** From September 14, each 2026 website has a direct copy about
 every 30 days, and a copy on the day before and the day after an election of
 the candidate's state. In practice these are the days around the general
-election of November 3. Copies around the primaries, which took place before
-September 14, come from the Internet Archive, at the dates the archive holds.
-A candidate has several dated copies (median 6).
+election of November 3. Copies around the primaries come from the Internet
+Archive, at the dates the archive holds; all primaries but one (Delaware,
+September 15) took place before September 14. A candidate has several dated
+copies (median 6). For 147 candidates the project also copied the homepage
+alone on most days, until the name check passed; count copies with more than
+one page if the number of copies matters.
 `snapshot_id` identifies one copy of one website, and `date` is the time of
 each page. `panel_snapshot_day.parquet` holds the measures for each copy day.
 `panel_candidate_year.csv` keeps the copy with the most text, as in the
 earlier years; `sel_snapshot_id` names that copy. `event_pairs_2026.csv` names,
 for each candidate and election event, the nearest complete copy within 30
 days before and after the event. Of the 2,371 candidate-events with a copy on
-both sides, 1,270 are general-election pairs (direct copies) and 710 are
-primary pairs (archived copies).
+both sides, 1,270 are general-election pairs (almost all direct copies), 710
+are primary pairs (almost all archived copies), and 391 are pairs for another
+event type (runoff, nonpartisan primary, convention, special election).
 
 **Search record.** For 2026, the project searched for a website for each
 candidate and recorded each failed copy. The provenance file therefore uses
@@ -172,8 +181,9 @@ three status values that do not occur before 2026: `no_url_found`,
 `valid_url_no_usable_capture` (with the cause in `collection_failure_reason`),
 and `captured_under_other_fec_id`.
 
-A 2026 page is in the corpus only if its text names the candidate (family name
-and given name, or a listed short form of the given name). The corpus omits
+A 2026 copy is in the corpus only if its homepage text names the candidate
+(family name and given name, or a listed short form of the given name). The
+other pages of the copy are not checked one by one. The corpus omits
 three kinds of pages: pages on a host that is not a campaign website (a news
 article, a social profile, or an office page that the FEC record names),
 archived addresses with a query string that the collection stored as a
@@ -283,13 +293,14 @@ and `R`; the crosswalk also includes `party_full`.
 - 2026: the archive continues to add copies of 2026 pages. A later version adds
   them, replaces the `on_ballot` source, and can change 2026 counts.
 - 2026: `bonica_rid` is carried from an earlier year of the same FEC ID and is
-  missing for new candidates. `cfscore` and `dwnom1` are missing for each 2026
-  row.
+  missing for new candidates. The other DIME fields of the crosswalk (`cfscore`,
+  `cfscore_dyn`, `dwnom1`, `dwnom2`, `ICPSR`, `NID`, `seat`, `dime_district`,
+  `dime_ico`, `lname`, `fname`) are missing for each 2026 row.
 - 2026: a direct copy holds more pages than an archived copy. Text length and
   page counts are therefore not comparable between 2026 and the earlier years
   without a restriction on the pages.
 - 2026: the pages of one archived copy can have different archive dates. In
-  `event_pairs_2026.csv`, 640 of 5,620 copies span more than 24 hours;
+  `event_pairs_2026.csv`, 627 of 5,489 distinct copies span more than 24 hours;
   `pre_page_span_hours` and `post_page_span_hours` give the span.
 - 2026: the selected copy in `panel_candidate_year.csv` is from after Election
   Day for 46 percent of the 2026 rows (37 percent in 2024).

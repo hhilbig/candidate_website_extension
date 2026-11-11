@@ -71,7 +71,7 @@ every field in this table:
 | `cand_status` | FEC candidate status code; metadata only |
 | `universe_source` | `same_year_fec` or reviewed `ballot_override` |
 | `on_ballot` | Match to a Democratic or Republican official general-election return (name, state, district, and party). One returns row flags one FEC ID. The returns do not cover the territorial delegates |
-| `general_votes` | Candidate votes in the matched general-election return; missing when `on_ballot` is false |
+| `general_votes` | Candidate votes in the matched general-election return; missing when `on_ballot` is false. The value is the returns value: for an unopposed candidate it can be 1 or -1 (10 rows), and for a contest with a later runoff it is the first-round count |
 | `stage` | `2` for matched general-election candidates; missing otherwise |
 | `data_source` | `general_wayback` for matched general-election candidates and `election_year_wayback` otherwise |
 | `candidate_year_stage` | ICPSR-compatible candidate/year/stage key; populated only for matched general-election candidates |
@@ -534,7 +534,7 @@ collection" describes the collection.
 `general_votes` is missing for 2026 in each file.
 
 `panel_snapshot_day.parquet` has no `capture_source` or `snapshot_id`. A 2026 candidate-day can
-hold more than one copy, and 229 candidate-days hold live and archived pages.
+hold more than one copy, and 224 candidate-days (UTC) hold live and archived pages.
 
 ### `panel_candidate_year.csv`
 
