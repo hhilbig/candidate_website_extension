@@ -17,6 +17,12 @@ For each shard file of the 2.1 folder the script:
 No inference runs. The script fails if the new generation config hash is not
 the hash that the importer expects for schema 2.2.
 
+With `--repair-attempt N` the folders are seed-vary repair folders. The script
+then writes `run_metadata.json` with the 2.2 repair identity of attempt N, and
+`repair_manifest.json` with the 2.2 identity and with the file hash and the
+generation hash of each re-aligned target row. The run totals stay: they
+describe the last Slurm job of the attempt, not the rows.
+
 Usage:
   CANDIDATE_EXTRACTION_SCHEMA_VERSION=2.2 python scripts/realign_run_metadata_v2_2.py \
       --source-dir <2.1 output folder> --destination <2.2 output folder>
@@ -71,10 +77,56 @@ def shard_totals(paths: list[Path]) -> dict:
     }
 
 
+def repair_folder(args, importer, new) -> int:
+    attempt = args.repair_attempt
+    expected_hash = importer.EXPECTED_REPAIR_GENERATION_CONFIG_SHA256S[attempt]
+    row = json.loads((args.source_dir / "run_metadata.json").read_text())
+    if row.get("schema_version") != "2.1":
+        raise SystemExit("run_metadata.json: not a 2.1 run metadata file")
+    row["realigned_from_schema_version"] = "2.1"
+    row["realigned_from_generation_config_sha256"] = row["generation_config_sha256"]
+    row["realignment_note"] = NOTE
+    for holder in (row, row["generation_config"]):
+        holder["schema_version"] = "2.2"
+        holder["extraction_contract_sha256"] = new["extraction_contract_sha256"]
+        holder["alignment_spec_sha256"] = new["alignment_spec_sha256"]
+    row["alignment_id"] = new["alignment_id"]
+    row["generation_config_sha256"] = importer.sha256_text(importer.canonical_json(row["generation_config"]))
+    if row["generation_config_sha256"] != expected_hash:
+        raise SystemExit("run_metadata.json: the 2.2 repair generation config hash differs from the importer")
+    (args.destination / "run_metadata.json").write_text(json.dumps(row, indent=2, sort_keys=True) + "\n")
+
+    manifest = json.loads((args.source_dir / "repair_manifest.json").read_text())
+    if manifest.get("schema_version") != "2.1" or manifest.get("attempt_index") != attempt:
+        raise SystemExit("repair_manifest.json: not the 2.1 manifest of this attempt")
+    manifest["realigned_from_schema_version"] = "2.1"
+    manifest["realigned_from_repair_generation_config_sha256"] = manifest["repair_generation_config_sha256"]
+    manifest["realignment_note"] = NOTE
+    manifest["schema_version"] = "2.2"
+    manifest["extraction_contract_sha256"] = new["extraction_contract_sha256"]
+    manifest["primary_generation_config_sha256"] = importer.EXPECTED_GENERATION_CONFIG_SHA256
+    manifest["repair_generation_config_sha256"] = expected_hash
+    for entry in manifest["targets"]:
+        path = args.destination / entry["repair_output_file"]
+        entry["repair_output_sha256"] = importer.sha256_file(path)
+        rows = {r["document_id"]: r for r in importer.read_jsonl_gz(path)}
+        target = rows[entry["document_id"]]
+        for field in ("finish_reason", "parse_status", "output_tokens"):
+            if target.get(field) != entry[field]:
+                raise SystemExit(f"{entry['document_id']}: {field} changed in the re-alignment")
+        if target["generation_config_sha256"] != expected_hash:
+            raise SystemExit(f"{entry['document_id']}: row generation hash is not the 2.2 repair hash")
+        entry["generation_config_sha256"] = expected_hash
+    (args.destination / "repair_manifest.json").write_text(json.dumps(manifest, indent=2, sort_keys=True) + "\n")
+    print(json.dumps({key: manifest[key] for key in ("attempt_index", "target_count", "repaired_count", "unrepaired_count")}))
+    return 0
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--source-dir", type=Path, required=True)
     parser.add_argument("--destination", type=Path, required=True)
+    parser.add_argument("--repair-attempt", type=int, choices=(2, 3))
     args = parser.parse_args()
     if os.environ.get("CANDIDATE_EXTRACTION_SCHEMA_VERSION") != "2.2":
         raise SystemExit("set CANDIDATE_EXTRACTION_SCHEMA_VERSION=2.2")
@@ -82,6 +134,8 @@ def main() -> int:
     from src.candidate_extraction import get_extraction_contract
 
     new = get_extraction_contract("2.2")
+    if args.repair_attempt:
+        return repair_folder(args, importer, new)
     chunks = sorted(args.destination.glob("chunk_*.out.jsonl.gz"))
     if not chunks or len(chunks) != len(list(args.source_dir.glob("chunk_*.out.jsonl.gz"))):
         raise SystemExit("the two folders do not hold the same chunks")

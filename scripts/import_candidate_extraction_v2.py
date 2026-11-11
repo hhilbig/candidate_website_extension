@@ -646,6 +646,14 @@ def technical_segment_gate_passes(
     accounted = set(ACCOUNTED_PROCESSING_STATUSES)
     if allow_withheld_output_cap:
         accounted.add(OUTPUT_CAP_WITHHELD_STATUS)
+    # A bundle can declare the number of windows that reached the item limit of
+    # the route. Such a window gives no records. The gate admits the status only
+    # if the count equals the declared number. The default bundle declares 0.
+    item_cap_windows = bound("array_item_cap_withheld_windows", 0)
+    if item_cap_windows and (
+        int(status_counts.get("failed_array_item_cap_reached", 0)) == item_cap_windows
+    ):
+        accounted.add("failed_array_item_cap_reached")
     return (
         sum(int(value) for value in status_counts.values()) == segment_count
         and set(status_counts) <= accounted

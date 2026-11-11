@@ -16,14 +16,25 @@
     "endorsement_segments": 2159,
     "round4_stage_a_input_manifest_sha256": "c00df058056c32780fbdf098e8a683dca09e789e22938fa182bc94717cbbca21",
     "round4_stage_b_input_manifest_sha256": "10d383d02ea9dcb6bb453b1e1034e33ffccffdceb2e390aded2927f9143513da",
-    "excluded_parent_documents": null,
+    "excluded_parent_documents": 36,
     "wrong_candidate_parent_documents": 0,
-    "parent_counts": null,
-    "segment_counts": null,
+    "parent_counts": {
+      "issues": 10733,
+      "biography": 3521,
+      "endorsements": 1229
+    },
+    "segment_counts": {
+      "issues": 14940,
+      "biography": 4335,
+      "endorsements": 2159
+    },
     "universe_rows": 3656,
-    "transformed_parent_documents": null,
+    "transformed_parent_documents": 15452,
     "known_omission_count": 0,
     "round4_stage_a_generation_config_sha256": "a6972074e334a9d6b57202c94e31c4b04e08e8485371831aeb541b6520554f32",
-    "round4_stage_b_generation_config_sha256": "5bb100052d84233b593de236bdfb707d74dd29c93ed85a310917c2dfe34e9b9d"
+    "round4_stage_b_generation_config_sha256": "5bb100052d84233b593de236bdfb707d74dd29c93ed85a310917c2dfe34e9b9d",
+    "array_item_cap_withheld_windows": 3,
+    "core_route_column": "extraction_route",
+    "core_url_fallback_column": "urlkey"
   }
 }

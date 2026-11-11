@@ -40,6 +40,9 @@ BOUND_NAMES = frozenset({
     # The generation config of a stage includes its input manifest hash.
     "round4_stage_a_generation_config_sha256",
     "round4_stage_b_generation_config_sha256",
+    "array_item_cap_withheld_windows",
+    "core_route_column",
+    "core_url_fallback_column",
     # release build
     "excluded_parent_documents",
     "wrong_candidate_parent_documents",

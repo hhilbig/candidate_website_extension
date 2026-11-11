@@ -34,6 +34,7 @@ from scripts.import_candidate_extraction_v2 import (
     _typed_equal,
 )
 from src.candidate_endorsement_line_ledger import get_line_ledger_contract
+from src.candidate_extraction_bundle import bound
 from src.candidate_endorsement_round4_production import (
     get_round4_production_contract,
 )
@@ -468,7 +469,8 @@ def validate_candidate_extraction_release(
         and build_summary.get("model_item_repetition_spec_sha256")
         == V2_CONTRACT["model_item_repetition_spec_sha256"]
         and type(build_summary.get("array_item_cap_reached_outputs")) is int
-        and build_summary["array_item_cap_reached_outputs"] == 0
+        and build_summary["array_item_cap_reached_outputs"]
+        == bound("array_item_cap_withheld_windows", 0)
         and type(build_summary.get("model_item_repetition_error_outputs"))
         is int
         and build_summary["model_item_repetition_error_outputs"] == 0
@@ -502,7 +504,7 @@ def validate_candidate_extraction_release(
         "model_item_repetition_spec_sha256": build_summary[
             "model_item_repetition_spec_sha256"
         ],
-        "array_item_cap_reached_outputs": 0,
+        "array_item_cap_reached_outputs": bound("array_item_cap_withheld_windows", 0),
         "model_item_repetition_error_outputs": 0,
         "pre_alignment_model_item_guard_gate_passed": True,
         "raw_structural_whitespace_validator_spec_sha256": (

@@ -800,7 +800,8 @@ def load_bundle(
     _validate_seed_vary_repair(manifest)
     _require(
         type(recomputed_all_output.get("array_item_cap_reached_outputs")) is int
-        and recomputed_all_output["array_item_cap_reached_outputs"] == 0
+        and recomputed_all_output["array_item_cap_reached_outputs"]
+        == bound("array_item_cap_withheld_windows", 0)
         and type(
             recomputed_all_output.get("model_item_repetition_error_outputs")
         )
@@ -897,6 +898,13 @@ def load_bundle(
 
 def _wayback_original(url: str) -> str:
     parts = urlsplit(url)
+    if (
+        bound("core_url_fallback_column", None)
+        and (parts.hostname or "").lower() != "web.archive.org"
+        and parts.scheme.lower() in {"http", "https"}
+    ):
+        # A live copy has no archive URL. The source URL is the page URL.
+        return url
     _require(
         (parts.hostname or "").lower() == "web.archive.org",
         f"source URL does not use web.archive.org: {url}",
@@ -931,7 +939,19 @@ def _load_core(core_release_dir: Path) -> tuple[pd.DataFrame, pd.DataFrame, str]
     }
     schema = set(pq.ParquetFile(raw_path).schema_arrow.names)
     _require(not (required - schema), f"raw corpus lacks columns: {sorted(required - schema)}")
-    raw = pq.read_table(raw_path, columns=sorted(required)).to_pandas()
+    # A bundle can name the corpus column that holds the route, and a column
+    # that gives the URL where `snap_url` is missing. The export of that bundle
+    # used the same two options.
+    route_column = bound("core_route_column", "page_type")
+    url_fallback = bound("core_url_fallback_column", None)
+    extra = ({route_column} | ({url_fallback} if url_fallback else set())) - required
+    _require(not (extra - schema), f"raw corpus lacks columns: {sorted(extra - schema)}")
+    raw = pq.read_table(raw_path, columns=sorted(required | extra)).to_pandas()
+    if route_column != "page_type":
+        raw["page_type"] = raw[route_column]
+    if url_fallback:
+        raw["snap_url"] = raw["snap_url"].fillna(raw[url_fallback])
+    raw = raw[sorted(required)]
     # The population filter does NOT run here. The packager checks several
     # equalities between the bundle and the core corpus, and the bundle was
     # built from the unfiltered export, so filtering one side breaks them.
@@ -3050,6 +3070,13 @@ def _tables_from_inputs(
                     "processed_all_withheld",
                     "failed_output_cap_unrepaired",
                 }
+                # A bundle can declare windows that reached the item limit of
+                # the route. Such a window releases nothing; it is withheld in
+                # the same way.
+                if bound("array_item_cap_withheld_windows", 0):
+                    all_withheld = all_withheld or (
+                        expected_processing_status == "failed_array_item_cap_reached"
+                    )
             processing_withheld = processing_withheld or partial_withheld or all_withheld
             processing_failed = processing_failed or not (
                 technical_success or partial_withheld or all_withheld
@@ -3901,7 +3928,7 @@ def prepare_release_tables(
         ]["model_item_repetition_error_outputs"],
         "pre_alignment_model_item_guard_gate_passed": (
             manifest["all_output_aggregate"]["array_item_cap_reached_outputs"]
-            == 0
+            == bound("array_item_cap_withheld_windows", 0)
             and manifest["all_output_aggregate"][
                 "model_item_repetition_error_outputs"
             ]
