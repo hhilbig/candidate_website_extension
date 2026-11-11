@@ -33,6 +33,9 @@ CORE_DATA_FILES = {
     "candidate_year_universe.csv",
     "candidate_year_provenance.csv",
     "panel_snapshot_day.parquet",
+    # Version 5.0 adds the 2026 election and these two files (approved 2026-11-11).
+    "event_pairs_2026.csv",
+    "on_ballot_2026_sources.csv",
 }
 # Version 4.0 adds the candidate-extraction extension. Hanno approved its
 # publication on 2026-09-28. The core files stay byte-identical to version 3.0.
@@ -55,7 +58,7 @@ PACKAGE_FILES = (
 DATA_FILES = CORE_DATA_FILES | EXTENSION_DATA_FILES
 DEFAULT_SERVER = "https://dataverse.harvard.edu"
 DEFAULT_PID = "doi:10.7910/DVN/BZ2JRS"
-EXPECTED_PUBLISHED_VERSION = (3, 0)
+EXPECTED_PUBLISHED_VERSION = (4, 0)
 
 
 def md5(path: Path) -> str:

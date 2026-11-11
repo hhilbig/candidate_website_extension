@@ -76,7 +76,7 @@ def _remote_version(directory: Path) -> dict:
 def test_local_package_manifest_must_match_bytes(tmp_path: Path) -> None:
     package = tmp_path / "release"
     _write_package(package)
-    assert len(validate_local_package(package)) == 8
+    assert len(validate_local_package(package)) == 10
     with (package / "panel_candidate_year.csv").open("a") as handle:
         handle.write("3,c\n")
     with pytest.raises(ValueError, match="manifest.json"):
@@ -120,7 +120,7 @@ def test_download_verification_checks_sha_shapes_and_no_ingest(tmp_path: Path) -
     report = verify_downloaded_package(release, downloaded, version, mimes)
     assert report["version_state"] == "DRAFT"
     assert report["published"] is False
-    assert len(report["files"]) == 19
+    assert len(report["files"]) == 21
     assert report["regenerated_manifest"] == json.loads(
         (release / "manifest.json").read_text()
     )
