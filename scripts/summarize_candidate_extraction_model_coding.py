@@ -56,7 +56,12 @@ SUBTYPE_GATE = 0.80
 RECORD_RECALL_GATE = 0.90
 ALL_DIMENSION_REFERENCE = 0.90
 COMPLETE_PAGE_RECALL_REFERENCE = 0.90
-EXPECTED_OMISSIONS = 11
+import sys
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+from src.candidate_extraction_bundle import bound  # noqa: E402
+
+EXPECTED_OMISSIONS = bound("known_omission_count", 11)
 
 
 def load_answers(validation_dir: Path, task_id: str) -> dict[str, dict[str, Any]]:

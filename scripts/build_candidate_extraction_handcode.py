@@ -57,6 +57,11 @@ from scripts.import_candidate_extraction_v2 import (
     validate_run_metadata_against_all_output,
 )
 from src.candidate_endorsement_line_ledger import get_line_ledger_contract
+from src.candidate_extraction_bundle import active_bundle, bound
+
+# The default bundle has 11 known omissions and no window at the item limit.
+KNOWN_OMISSION_COUNT = bound("known_omission_count", 11)
+ITEM_CAP_WINDOWS = bound("array_item_cap_withheld_windows", 0)
 from src.candidate_endorsement_round4_release import (
     ROUND4_RECORD_RESOLUTION_METHOD,
     ROUND4_RECORD_RESOLUTION_STATUS,
@@ -239,6 +244,10 @@ def _is_cap_limited(row: Mapping[str, Any]) -> bool:
     Such a window has no parsed output and no extraction, so every replay that
     reads a complete answer has to skip it. Its page is ineligible for sampling.
     """
+    if ITEM_CAP_WINDOWS and row.get("processing_status") == "failed_array_item_cap_reached":
+        # A declared window at the item limit of the route gives no records
+        # either. Its page is ineligible in the same way.
+        return True
     return (
         row.get("parse_status") == TRUNCATED_PARSE_STATUS
         and row.get("finish_reason") == "length"
@@ -455,7 +464,7 @@ def build_parent_pages(
         _require(
             type(recomputed_all_output["array_item_cap_reached_outputs"])
             is int
-            and recomputed_all_output["array_item_cap_reached_outputs"] == 0
+            and recomputed_all_output["array_item_cap_reached_outputs"] == ITEM_CAP_WINDOWS
             and type(recomputed_all_output[
                 "model_item_repetition_error_outputs"
             ])
@@ -592,9 +601,12 @@ def build_parent_pages(
                 # The stored validation records that outcome and the page is
                 # already ineligible for sampling.
                 _require(
-                    (row.get("validation") or {}).get("status")
-                    == TRUNCATED_PARSE_STATUS
-                    and row.get("extraction") is None,
+                    row.get("processing_status") == "failed_array_item_cap_reached"
+                    or (
+                        (row.get("validation") or {}).get("status")
+                        == TRUNCATED_PARSE_STATUS
+                        and row.get("extraction") is None
+                    ),
                     f"{segment_id} is cap limited but carries an extraction",
                 )
             else:
@@ -957,8 +969,8 @@ def load_known_omission_recovery(
     _require(isinstance(report, dict), "known-omission report is not an object")
     items = report.get("items")
     _require(isinstance(items, list), "known-omission report has no items")
-    _require(report.get("known_omissions") == 11, "known-omission report does not declare 11 items")
-    _require(report.get("recovered") == 11, "known-omission report does not recover all 11 items")
+    _require(report.get("known_omissions") == KNOWN_OMISSION_COUNT, "known-omission report does not declare 11 items")
+    _require(report.get("recovered") == KNOWN_OMISSION_COUNT, "known-omission report does not recover all 11 items")
     _require(report.get("all_recovered") is True, "known-omission automated gate did not pass")
     _require(
         report.get("matching_spec") == KNOWN_OMISSION_MATCHING_SPEC
@@ -966,7 +978,7 @@ def load_known_omission_recovery(
         == KNOWN_OMISSION_MATCHING_SPEC_SHA256,
         "known-omission matching policy provenance differs",
     )
-    _require(len(items) == 11, "known-omission report does not contain 11 items")
+    _require(len(items) == KNOWN_OMISSION_COUNT, "known-omission report does not contain 11 items")
 
     pages_by_id = {page["parent_document_id"]: page for page in pages}
     records_by_id = {
@@ -1018,8 +1030,8 @@ def load_known_omission_recovery(
     return omissions, {
         "file": path.name,
         "sha256": sha256_file(path),
-        "known_omissions": 11,
-        "automated_recovered": 11,
+        "known_omissions": KNOWN_OMISSION_COUNT,
+        "automated_recovered": KNOWN_OMISSION_COUNT,
     }
 
 
@@ -1089,7 +1101,7 @@ def load_frozen_bundle(bundle_dir: Path) -> tuple[list[dict[str, Any]], dict[str
     _require(
         isinstance(guard_aggregate, dict)
         and type(guard_aggregate.get("array_item_cap_reached_outputs")) is int
-        and guard_aggregate["array_item_cap_reached_outputs"] == 0
+        and guard_aggregate["array_item_cap_reached_outputs"] == ITEM_CAP_WINDOWS
         and type(guard_aggregate.get("model_item_repetition_error_outputs"))
         is int
         and guard_aggregate["model_item_repetition_error_outputs"] == 0,
@@ -2649,8 +2661,10 @@ def prepare_handcode_selection(
     }
     sampling_excluded_ids = set(excluded_parent_ids) | cap_limited_parent_ids
     available_ids = {page["parent_document_id"] for page in pages}
+    # The tuning pages are pages of the default bundle. Another bundle (a later
+    # corpus) holds none of them, so the overlap check applies to the default only.
     _require(
-        bool(available_ids & excluded_parent_ids),
+        active_bundle() is not None or bool(available_ids & excluded_parent_ids),
         "none of the supplied tuning parent IDs occur in the bundle",
     )
     pool_observed_levels = precision_pool_observed_levels(
