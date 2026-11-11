@@ -128,8 +128,9 @@ of adjudication.
 ## 2026 collection
 
 The 2026 population has 3,656 candidate-years. 2,459 have a website URL, and
-1,735 have usable text (105,020 page rows). Of the 954 general-election
-candidates, 706 have usable text. The 2026 rows differ from the earlier years
+1,735 have page text in the corpus (105,020 page rows; 1,693 of them have
+`text_quality = usable` in the candidate-year panel). Of the 954
+general-election candidates, 706 have page text. The 2026 rows differ from the earlier years
 in three ways.
 
 **Source.** For 2002 through 2024, all text comes from the Internet Archive.
@@ -140,15 +141,20 @@ for a direct copy and `wayback` for an archived copy. `snap_url` is missing for
 a live row, because no archived copy exists for it; `urlkey` gives the page
 address.
 
-**Frequency.** Each 2026 website has a direct copy about every 30 days, and a
-copy on the day before and the day after each primary or runoff of the
-candidate's state. A candidate therefore has several dated copies (median 6).
+**Frequency.** From September 14, each 2026 website has a direct copy about
+every 30 days, and a copy on the day before and the day after an election of
+the candidate's state. In practice these are the days around the general
+election of November 3. Copies around the primaries, which took place before
+September 14, come from the Internet Archive, at the dates the archive holds.
+A candidate has several dated copies (median 6).
 `snapshot_id` identifies one copy of one website, and `date` is the time of
 each page. `panel_snapshot_day.parquet` holds the measures for each copy day.
 `panel_candidate_year.csv` keeps the copy with the most text, as in the
 earlier years; `sel_snapshot_id` names that copy. `event_pairs_2026.csv` names,
 for each candidate and election event, the nearest complete copy within 30
-days before and after the event.
+days before and after the event. Of the 2,512 candidate-events with a copy on
+both sides, 1,271 are general-election pairs (direct copies) and 824 are
+primary pairs (archived copies).
 
 **Search record.** For 2026, the project searched for a website for each
 candidate and recorded each failed copy. The provenance file therefore uses
@@ -263,7 +269,16 @@ and `R`; the crosswalk also includes `party_full`.
 - 2026: the archive continues to add copies of 2026 pages. A later version adds
   them, replaces the `on_ballot` source, and can change 2026 counts.
 - 2026: `bonica_rid` is carried from an earlier year of the same FEC ID and is
-  missing for new candidates.
+  missing for new candidates. `cfscore` and `dwnom1` are missing for each 2026
+  row.
+- 2026: a direct copy holds more pages than an archived copy. Text length and
+  page counts are therefore not comparable between 2026 and the earlier years
+  without a restriction on the pages.
+- 2026: the pages of one archived copy can have different archive dates. In
+  `event_pairs_2026.csv`, 663 of 5,884 copies span more than 24 hours;
+  `pre_page_span_hours` and `post_page_span_hours` give the span.
+- 2026: the selected copy in `panel_candidate_year.csv` is from after Election
+  Day for 42 percent of the 2026 rows (37 percent in 2024).
 - 2026: the extracted records were checked by a model coder, as in version 4.0.
   Two coded fields are less accurate in 2026 than in the earlier years; see the
   extraction codebook.

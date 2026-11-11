@@ -526,12 +526,15 @@ collection" describes the collection.
 | `date` | Time of the page copy (UTC, `YYYYMMDDhhmmss`). Pages of one `snapshot_id` have different times |
 | `snap_url` | Internet Archive URL for a `wayback` row; missing for a `live` row |
 | `urlkey` | URL of the page |
-| `n_snap` | Number of distinct `snapshot_id` values of the candidate |
+| `n_snap` | Number of distinct `snapshot_id` values of the candidate. An archived page with a query string in its address (for example `?p=12`) has type `homepage` and can be a copy of its own, so `n_snap` is large for some candidates (maximum 1,174) |
 | `on_ballot` | Candidate is in the general-election candidate list of the English Wikipedia state page (`on_ballot_2026_sources.csv`) |
 | `data_source` | `general_2026_collection` if `on_ballot`, else `election_year_2026_collection` |
 | `bonica_rid` | Carried from an earlier year of the same `cand_id`; missing for a new candidate |
 
 `general_votes` is missing for 2026 in each file.
+
+`panel_snapshot_day.parquet` has no `capture_source` or `snapshot_id`. A 2026 candidate-day can
+hold more than one copy, and 229 candidate-days hold live and archived pages.
 
 ### `panel_candidate_year.csv`
 
@@ -544,6 +547,9 @@ collection" describes the collection.
 | Field | 2026 values |
 |---|---|
 | `capture_status` | Adds `captured_under_other_fec_id`: the person has two FEC IDs in 2026, and the text is under the other ID |
+| `url_discovery_status` | `url_recorded`, `search_found_no_url` (the project searched and found no website), or `not_searched` (the five reviewed additions) |
+| `url_source` | `openfec`, `wikidata`, or `historical_fec_id_lead` (URL of the same FEC ID in an earlier year); empty if no URL |
+| `n_observed_snapshot_timestamps` | Number of distinct page times. Use `snapshot_id` in `raw_corpus.parquet` to count copies |
 | `observability_status` | Adds `no_url_found`, `valid_url_no_usable_capture`, and `captured_under_other_fec_id` |
 | `collection_failure_reason` | For `valid_url_no_usable_capture`: most frequent result of the homepage copies. `identity_unresolved` (text does not name the candidate), `blocked` (the server refused automatic requests), `request_error`, `http_error`, `no_content`. Else `not_applicable` |
 | `collection_method_version` | `collection_2026_live_and_wayback` |
@@ -551,17 +557,18 @@ collection" describes the collection.
 
 ## `event_pairs_2026.csv`
 
-One row for each 2026 candidate and election event of the candidate's state and office
-(primary, runoff, convention, special election, general election). Key: `cand_id`, `event_id`.
+One row for each 2026 candidate of the FEC roster (3,651 candidates) and election event of the
+candidate's state and office (primary, runoff, convention, special election, general election).
+The five reviewed additions to the population have no rows. Key: `cand_id`, `event_id`.
 The file names the nearest complete website copy within 30 days before the event (`pre_*`)
 and after it (`post_*`). Election day is excluded in each time zone of the jurisdiction.
 
 | Field | Definition |
 |---|---|
 | `cand_id`, `candidate_cycle_id` | Keys to the other files |
-| `event_id`, `event_date`, `event_type`, `event_round`, `event_status` | The event. `event_status` is `held`, `scheduled`, or `conditional` (a runoff that occurs only if required) at the time of the collection |
+| `event_id`, `event_date`, `event_type`, `event_round`, `event_status` | The event. `event_round` values with the prefix `replacement_` are events for a seat whose first nomination was vacated. `event_status` is the value of the election calendar when the project recorded the event: `held`, `scheduled`, or `conditional` (a runoff that occurs only if required). The project did not update it; a `scheduled` event with an `event_date` before November 5, 2026 took place. The file does not show if a `conditional` runoff took place |
 | `event_source_url`, `event_verified_source_url`, `event_verification_status` | Source of the event date, and whether a state, local, or party source confirms the FEC date |
-| `participation_status`, `participation_source_url` | `confirmed` if a source shows that the candidate took part in the event; else `unknown` |
+| `participation_status`, `participation_source_url` | `confirmed` if a source shows that the candidate took part in the event; else `unknown`. Only 8 rows are `confirmed`. A row therefore means that the event applies to the candidate's state, office, and party, not that the candidate was on that ballot |
 | `coverage_status` | `paired`, `pre_only`, `post_only`, or `uncovered` |
 | `pre_available`, `post_available` | A copy exists on that side |
 | `pre_missing_reason`, `post_missing_reason` | Why no copy exists: `missing_website`, `failed_requests`, `no_eligible_capture`, `identity_unresolved`, `unusable_content`, `missing_archives`, `timestamp_mismatch`, `incomplete_snapshot`, `captured_under_other_fec_id` |
@@ -578,7 +585,10 @@ and after it (`post_*`). Election day is excluded in each time zone of the juris
 The remaining fields (`*_local_date_min`, `*_local_date_max`, `*_page_types`, `*_page_sources`,
 `*_page_time_min`, `*_page_time_max`, `*_page_span_hours`, `*_snapshot_complete`, `timezones`,
 `date_policy`, `homepage_required`, `comparison_eligible`, and the candidate fields) describe
-the copy and the selection rule.
+the copy and the selection rule. `*_page_types` lists the `page_type_context` values of the pages,
+not `page_type`. `*_local_date_min` and `*_local_date_max` refer to the homepage.
+`*_page_time_min`, `*_page_time_max`, and `*_page_span_hours` refer to all pages of the copy; the
+pages of an archived copy can be days apart.
 
 ## `on_ballot_2026_sources.csv`
 
