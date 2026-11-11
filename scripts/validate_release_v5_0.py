@@ -101,6 +101,30 @@ def main():
     stated = status.set_index(['candidate_cycle_id', 'route']).n_documents.astype(int)
     check((stated[stated > 0].sort_index() == counts.sort_index()).all() and len(counts) == (stated > 0).sum(),
           'status document counts equal the documents table')
+    source = column(base / 'candidate_extraction_documents.parquet', ['candidate_cycle_id', 'route', 'route_source'])
+    early = ~source.candidate_cycle_id.str.endswith('-2026')
+    check((source.route_source[early] == 'url').all(), 'route_source is url before 2026')
+    check(source.route_source.isin(['url', 'link_context']).all(), 'route_source has the two defined values')
+    check((source.route_source[source.route == 'endorsements'] == 'url').all(), 'endorsement documents enter by URL')
+
+    # Decisions of November 11, 2026: flag corrections and omitted 2026 pages.
+    flagged = universe[(universe.on_ballot.str.lower() == 'true') & (universe.year != '2026')]
+    check(not flagged.duplicated(['year', 'office', 'state', 'district', 'party', 'general_votes']).any(),
+          'one returns row flags one FEC ID before 2026')
+    check((flagged.general_votes != '').all(), 'each flagged candidate before 2026 has a vote total')
+    check((coded.icpsr_compatible.str.lower() == coded.on_ballot.str.lower()).all(), 'icpsr_compatible equals on_ballot')
+    at_large = universe[(universe.office == 'house') & (universe.year != '2026') & universe.state.isin(['ND', 'SD'])]
+    check((at_large.groupby('year').on_ballot.apply(lambda v: (v.str.lower() == 'true').sum()) >= 1).all(),
+          'North Dakota and South Dakota have a flagged House candidate in each year')
+    hosts = corpus.snap_url[new].fillna('').str.cat(
+        column(base / 'raw_corpus.parquet', ['urlkey']).urlkey[new], sep=' ')
+    check(not hosts.str.contains(r'//(?:www\.)?(?:linktr\.ee|foxnews\.com|linkedin\.com|fedscoop\.com|chicagotribune\.com)/|\.gov/').any(),
+          'no 2026 page of a host that is not a campaign website')
+    context = column(base / 'raw_corpus.parquet', ['page_type_context', 'urlkey', 'n_char'])
+    check(not ((context.page_type_context == 'homepage') & context.urlkey.str.contains('?', regex=False))[new].any(),
+          'no 2026 homepage copy with a query string')
+    check((context.n_char[new] <= 500_000).all(), 'no 2026 page above 500,000 characters')
+
     record_ids = []
     for name in RECORD_FILES:
         records = column(base / name, ['record_id', 'parent_document_id', 'segment_id', 'candidate_cycle_id'])

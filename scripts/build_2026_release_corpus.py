@@ -67,6 +67,77 @@ def undecoded(text):
     return len(NOT_TEXT.findall(text)) > 0.25 * max(len(text), 1)
 
 
+# Hosts that are not a campaign website (decision of November 11, 2026, Hanno). The FEC
+# record of a few candidates names a news article, a social profile, or an office page.
+NOT_CAMPAIGN_HOSTS = {'linktr.ee', 'foxnews.com', 'linkedin.com', 'fedscoop.com', 'chicagotribune.com'}
+# No campaign page has more than 140,000 characters. Two pages of one hacked site hold
+# 1.9 million characters of injected link text each.
+MAX_PAGE_CHARS = 500_000
+
+
+def removal_reason(page):
+    """Return why the release omits a usable page, or None."""
+    host = urlsplit(page.original_url).netloc.lower().removeprefix('www.')
+    if host in NOT_CAMPAIGN_HOSTS or host.endswith('.gov'):
+        return 'not_campaign_host'
+    # The archive pass stored each archived address below the site root as a homepage.
+    # An address with a query string (`/?p=12`) is a post or a tracking link, not the homepage.
+    if page.page_type == 'homepage' and '?' in page.original_url:
+        return 'query_string_homepage'
+    if int(page.n_char) > MAX_PAGE_CHARS:
+        return 'injected_text'
+    return None
+
+
+SIDE_FIELDS = ('snapshot_id', 'homepage_page_id', 'captured_at', 'source', 'distance_days', 'local_date_min',
+               'local_date_max', 'page_ids', 'n_pages', 'page_types', 'page_sources', 'page_time_min',
+               'page_time_max', 'page_span_hours', 'snapshot_complete')
+
+
+def release_pairs(pairs, pages, removed):
+    """Select each pair side again without the removed pages.
+
+    The selection is the collector's own (`_snapshot_choice`). With no removed page it
+    returns the collector's table; the function checks this for each row it does not change.
+    """
+    from src.collection_2026_outputs import _datetime, _missing_reason, _snapshot_choice
+    by_candidate = {}
+    for record in pages.to_dict('records'):
+        if record['page_id'] in removed:
+            record['status'] = 'removed_from_release'
+        by_candidate.setdefault(record['candidate_id'], []).append(record)
+    pairs = pairs.fillna('').copy()
+    changed = 0
+    for i, row in pairs.iterrows():
+        event = dict(event_id=row.event_id, date=row.event_date, timezones=json.loads(row.timezones))
+        candidate_pages = by_candidate.get(row.candidate_id, [])
+        choices = {}
+        for side in ('pre', 'post'):
+            choice = _snapshot_choice(candidate_pages, event, side)
+            choices[side] = choice
+            same = (str(bool(choice)) == row[f'{side}_available']
+                    and (not choice or (choice['homepage_page_id'] == row[f'{side}_homepage_page_id']
+                                        and choice['page_ids'] == json.loads(row[f'{side}_page_ids']))))
+            if same:
+                continue
+            changed += 1
+            pairs.at[i, f'{side}_available'] = str(bool(choice))
+            pairs.at[i, f'{side}_missing_reason'] = '' if choice else _missing_reason(
+                dict(candidate_id=row.candidate_id, website_url=row.website_url), candidate_pages, event, side)
+            for field in SIDE_FIELDS:
+                value = choice.get(field, '')
+                pairs.at[i, f'{side}_{field}'] = json.dumps(value) if isinstance(value, list) else str(value)
+        pre, post = choices['pre'], choices['post']
+        status = 'paired' if pre and post else 'pre_only' if pre else 'post_only' if post else 'uncovered'
+        if status != row.coverage_status or (pre and post and (
+                pre['homepage_page_id'] != row.pre_homepage_page_id or post['homepage_page_id'] != row.post_homepage_page_id)):
+            pairs.at[i, 'coverage_status'] = status
+            pairs.at[i, 'mixed_source_pair'] = str(bool(pre and post and len(set(pre['page_sources'] + post['page_sources'])) > 1))
+            pairs.at[i, 'pair_homepage_span_days'] = str(
+                (_datetime(post['captured_at']) - _datetime(pre['captured_at'])).total_seconds() / 86400) if pre and post else ''
+    return pairs, changed
+
+
 def page_types(collector_type, url):
     """Return (page_type, extraction_route) for one 2026 page.
 
@@ -112,7 +183,16 @@ def main():
     # The collector made a new crawl for each retry. For Wayback, two rows with the
     # same candidate, capture time, URL and text are one archived capture. Keep the first.
     # A row that the pair table uses is the one that stays.
-    pairs = pd.read_parquet(src / 'exports/candidate_event_pairs.parquet')
+    reasons = {page.page_id: reason for page in usable.itertuples() if (reason := removal_reason(page))}
+    removed_pages = usable[usable.page_id.isin(reasons)][['candidate_id', 'page_id', 'date', 'original_url', 'source', 'n_char']].copy()
+    removed_pages['reason'] = removed_pages.page_id.map(reasons)
+    removed_pages.rename(columns={'candidate_id': 'cand_id', 'original_url': 'url'}).to_csv(
+        out / 'pages_removed_2026.csv', index=False)
+    pairs, pair_sides_changed = release_pairs(
+        pd.read_parquet(src / 'exports/candidate_event_pairs.parquet'), pages, set(reasons))
+    pairs.to_parquet(out / 'candidate_event_pairs_release.parquet', index=False)
+    candidates_before = usable.candidate_id.nunique()
+    usable = usable[~usable.page_id.isin(reasons)]
     in_pairs = set()
     for column in ('pre_page_ids', 'post_page_ids'):
         for value in pairs[column]:
@@ -180,7 +260,9 @@ def main():
     writer.close()
 
     pd.DataFrame(removed_undecoded).to_csv(out / 'undecoded_pages_removed_2026.csv', index=False)
-    report = dict(usable_pages=n_usable, undecoded_pages_removed=len(removed_undecoded),
+    report = dict(usable_pages=n_usable, pages_removed_by_rule=removed_pages.reason.value_counts().to_dict(),
+                  candidates_with_no_page_after_rules=int(candidates_before - usable.candidate_id.nunique()),
+                  pair_sides_selected_again=pair_sides_changed, undecoded_pages_removed=len(removed_undecoded),
                   undecoded_pages_removed_in_pairs=sum(r['in_pairs'] for r in removed_undecoded), wayback_duplicates_removed=int(duplicate.sum()), rows_written=n_rows,
                   candidates=int(usable.candidate_id.nunique()),
                   rows_by_source=usable.source.value_counts().to_dict(),

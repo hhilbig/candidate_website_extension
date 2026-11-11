@@ -1,0 +1,114 @@
+candidate_cycle_id,candidate,office,year,state,district,party,captured,change,kept_cand_id,votes
+H6AK00045-2018,Donald E Young,house,2018,AK,0.0,R,True,added_match_in_returns,,149779.0
+H8CA08120-2018,Timothy M. Donnelly,house,2018,CA,8.0,R,True,removed_other_fec_id_of_one_returns_row,H6CA08207,
+H8CA10167-2018,Terrance John (Tj) Cox,house,2018,CA,21.0,D,True,removed_other_fec_id_of_one_returns_row,H6CA19113,
+H6DE00206-2018,Lisa Blunt Rochester,house,2018,DE,0.0,D,True,added_match_in_returns,,227353.0
+H8FL17079-2018,Allen L Ellison,house,2018,FL,17.0,D,False,removed_other_fec_id_of_one_returns_row,H4FL17037,
+H8ID01215-2018,Ana Mcneil,house,2018,ID,1.0,D,False,removed_returns_row_of_other_candidate,,
+H8IL09208-2018,John D. Elleson,house,2018,IL,9.0,R,False,removed_other_fec_id_of_one_returns_row,H8IL09224,
+H8KS04187-2018,Ron M. Estes,house,2018,KS,4.0,R,True,removed_other_fec_id_of_one_returns_row,H8KS04112,
+H8LA06147-2018,Jason Dewitt,house,2018,LA,6.0,D,False,removed_other_fec_id_of_one_returns_row,H8LA06154,
+H8MN01279-2018,Daniel Feehan,house,2018,MN,1.0,D,True,added_match_in_returns,,144885.0
+H6MN02131-2018,Angela Dawn Craig,house,2018,MN,2.0,D,True,added_match_in_returns,,177958.0
+H8MN03143-2018,Dean Phillips,house,2018,MN,3.0,D,True,added_match_in_returns,,202404.0
+H0MN04049-2018,Betty Mccollum,house,2018,MN,4.0,D,True,added_match_in_returns,,216865.0
+H8MN05239-2018,Ilhan Omar,house,2018,MN,5.0,D,True,added_match_in_returns,,267703.0
+H8MN06096-2018,Ian Andrew Todd,house,2018,MN,6.0,D,True,added_match_in_returns,,122332.0
+H2MN07014-2018,Collin Clark Peterson,house,2018,MN,7.0,D,True,added_match_in_returns,,146672.0
+H8MN08068-2018,Joseph Radinovich,house,2018,MN,8.0,D,True,added_match_in_returns,,141950.0
+H8MT01182-2018,Greg Gianforte,house,2018,MT,0.0,R,True,added_match_in_returns,,256661.0
+H8MT01232-2018,Kathleen Williams,house,2018,MT,0.0,D,True,added_match_in_returns,,233284.0
+H8ND00096-2018,Kelly Armstrong,house,2018,ND,0.0,R,True,added_match_in_returns,,193568.0
+H8ND00112-2018,Mac Schneider Schneider,house,2018,ND,0.0,D,False,added_match_in_returns,,114377.0
+H2OH09122-2018,Steven Wayne Kraus,house,2018,OH,9.0,R,False,removed_other_fec_id_of_one_returns_row,H8OH09111,
+H8SD01055-2018,Dusty Johnson,house,2018,SD,0.0,R,True,added_match_in_returns,,202446.0
+H8SD01097-2018,Timothy W Mr. Bjorkman,house,2018,SD,0.0,D,True,added_match_in_returns,,120816.0
+H6VT00160-2018,Peter Welch,house,2018,VT,0.0,D,True,added_match_in_returns,,188547.0
+H6AK00045-2020,Donald E Young,house,2020,AK,0.0,R,True,added_match_in_returns,,192126.0
+H0CA25253-2020,Christopher C Smith,house,2020,CA,25.0,D,False,removed_other_fec_id_of_one_returns_row,H0CA25154,
+H0CA36177-2020,Raul Ruiz,house,2020,CA,36.0,R,True,removed_returns_row_of_other_candidate,,
+H8CA51062-2020,Juan M Sgtmaj Jr Hidalgo,house,2020,CA,51.0,R,False,removed_other_fec_id_of_one_returns_row,H6CA51066,
+H6DE00206-2020,Lisa Blunt Rochester,house,2020,DE,0.0,D,True,added_match_in_returns,,281382.0
+H8DE01044-2020,Lee Murphy,house,2020,DE,0.0,R,True,added_match_in_returns,,196392.0
+H0GA12059-2020,Elizabeth (Liz) Johnson,house,2020,GA,12.0,D,True,added_match_in_returns,,129061.0
+H8MN01279-2020,Daniel Feehan,house,2020,MN,1.0,D,True,added_match_in_returns,,167890.0
+H0MN06150-2020,Tawnja Zahradka,house,2020,MN,6.0,D,True,added_match_in_returns,,140853.0
+H0MN08156-2020,Quinn Reabe Nystrom,house,2020,MN,8.0,D,True,added_match_in_returns,,147853.0
+H4MT00050-2020,Matt Mr. Rosendale,house,2020,MT,0.0,R,True,added_match_in_returns,,339169.0
+H0NC11183-2020,"James (Jim) Wayland Dds, Ms Davis",house,2020,NC,11.0,R,True,removed_returns_row_of_other_candidate,,
+H0ND01042-2020,Zachary Raknerud,house,2020,ND,0.0,D,True,added_match_in_returns,,97970.0
+H8ND00096-2020,Kelly Armstrong,house,2020,ND,0.0,R,True,added_match_in_returns,,245229.0
+H0NY27157-2020,Nate Mcmurray,house,2020,NY,27.0,D,False,removed_other_fec_id_of_one_returns_row,H8NY27176,
+H8SD01055-2020,Dusty Johnson,house,2020,SD,0.0,R,True,added_match_in_returns,,321984.0
+H8TN06169-2020,Christopher Martin Finley,house,2020,TN,6.0,D,False,removed_other_fec_id_of_one_returns_row,H0TN06364,
+H0TX10208-2020,Mike Siegel,house,2020,TX,10.0,D,False,removed_other_fec_id_of_one_returns_row,H8TX10110,
+H8TX29110-2020,Jaimy Annette Zouboulikos-Blanco,house,2020,TX,29.0,R,False,removed_returns_row_of_other_candidate,,
+H6VT00160-2020,Peter Welch,house,2020,VT,0.0,D,True,added_match_in_returns,,238827.0
+H6WA09025-2020,D. Adam Smith,house,2020,WA,9.0,D,True,added_match_in_returns,,258771.0
+H0WY01036-2020,Lynnette Grey Bull,house,2020,WY,0.0,D,True,added_match_in_returns,,66576.0
+H2AK00226-2022,Sarah Palin,house,2022,AK,0.0,R,True,added_match_in_returns,,67866.0
+H2AK01083-2022,Nicholas Iii Begich,house,2022,AK,0.0,R,True,added_match_in_returns,,61513.0
+H2AK01158-2022,Mary Peltola,house,2022,AK,0.0,D,True,added_match_in_returns,,128553.0
+H4CA24175-2022,Brad Dr Allen,house,2022,CA,24.0,R,False,removed_other_fec_id_of_one_returns_row,H2CA24229,
+H6DE00206-2022,Lisa Blunt Rochester,house,2022,DE,0.0,D,True,added_match_in_returns,,178416.0
+H8DE01044-2022,Lee Murphy,house,2022,DE,0.0,R,True,added_match_in_returns,,138201.0
+H2IL15091-2022,Paul J Lange,house,2022,IL,15.0,D,False,removed_other_fec_id_of_one_returns_row,H2IL15109,
+H8IN04231-2022,Roger Day,house,2022,IN,4.0,D,False,removed_other_fec_id_of_one_returns_row,H2IN04184,
+H2MN01249-2022,Jeffrey M. Ettinger,house,2022,MN,1.0,D,True,added_match_in_returns,,125457.0
+H2MN06214-2022,Jeanne Hendricks,house,2022,MN,6.0,D,False,added_match_in_returns,,120852.0
+H2MN07162-2022,Jill Abahsain,house,2022,MN,7.0,D,False,added_match_in_returns,,84455.0
+H2MN08152-2022,Jennifer Schultz,house,2022,MN,8.0,D,False,added_match_in_returns,,141009.0
+H2NC02238-2022,Erica Danette Smith,house,2022,NC,1.0,D,True,removed_returns_row_of_other_candidate,,
+H8ND00096-2022,Kelly Armstrong,house,2022,ND,0.0,R,True,added_match_in_returns,,148399.0
+H2OH12134-2022,Amy Rippel Elton,house,2022,OH,12.0,D,False,removed_other_fec_id_of_one_returns_row,H2OH12126,
+H2OH15269-2022,Gary Josephson,house,2022,OH,15.0,D,False,removed_other_fec_id_of_one_returns_row,H2OH15277,
+H8SD01055-2022,Dusty Johnson,house,2022,SD,0.0,R,True,added_match_in_returns,,253821.0
+H2TX09149-2022,Jimmy I Leon,house,2022,TX,9.0,R,False,removed_other_fec_id_of_one_returns_row,H2TX09156,
+H2TX17084-2022,Marshall J Woods,house,2022,TX,17.0,D,False,removed_other_fec_id_of_one_returns_row,H2TX17118,
+H2VT01076-2022,Rebecca Balint,house,2022,VT,0.0,D,True,added_match_in_returns,,176494.0
+H6WA09025-2022,D. Adam Smith,house,2022,WA,9.0,D,False,added_match_in_returns,,171746.0
+H0WY01036-2022,Lynnette Greybull,house,2022,WY,0.0,D,True,added_match_in_returns,,47250.0
+H4CT04163-2024,Michael Goldstein,house,2024,CT,4.0,R,False,removed_other_fec_id_of_one_returns_row,H0CT04229,
+H4FL16161-2024,Jan Schneider,house,2024,FL,16.0,D,False,removed_other_fec_id_of_one_returns_row,H2FL13139,
+H4FL23142-2024,Joseph Joe Kaufman,house,2024,FL,23.0,R,False,removed_other_fec_id_of_one_returns_row,H2FL20043,
+H4FL24058-2024,Jesus Navarro,house,2024,FL,24.0,R,False,removed_other_fec_id_of_one_returns_row,H2FL24078,
+H8FL01107-2024,Phillip Ehr,house,2024,FL,28.0,D,False,removed_other_fec_id_of_one_returns_row,H4FL28042,
+H4KS02206-2024,Nancy E Boyda,house,2024,KS,2.0,D,False,removed_other_fec_id_of_one_returns_row,H4KS02107,
+H4KY03277-2024,Michael Andrew Craven,house,2024,KY,3.0,R,False,removed_other_fec_id_of_one_returns_row,H8KY03187,
+H4LA06237-2024,Elbert Lee Guillory,house,2024,LA,6.0,R,False,removed_other_fec_id_of_one_returns_row,H4LA06229,
+H6LA04112-2024,Elbert Guillory,house,2024,LA,6.0,R,True,removed_other_fec_id_of_one_returns_row,H4LA06229,
+H4MD02265-2024,Kimberly Klacik,house,2024,MD,2.0,R,False,removed_other_fec_id_of_one_returns_row,H0MD07197,
+H4MN01179-2024,Rachel Bohman,house,2024,MN,1.0,D,False,added_match_in_returns,,156375.0
+H4MN03118-2024,Kelly Louise Morrison,house,2024,MN,3.0,D,True,added_match_in_returns,,240209.0
+H4MN03159-2024,Tad Jude,house,2024,MN,3.0,R,False,removed_other_fec_id_of_one_returns_row,H0MN06051,
+H4MN05113-2024,Dalia Al-Aqidi,house,2024,MN,5.0,R,False,removed_other_fec_id_of_one_returns_row,H0MN05251,
+H2MN06214-2024,Jeanne Marie Hendricks,house,2024,MN,6.0,D,True,added_match_in_returns,,155836.0
+H4MN07093-2024,Alvin John 3205946498 Peters,house,2024,MN,7.0,D,False,added_match_in_returns,,114979.0
+H4MN07101-2024,Aj (John) Peters,house,2024,MN,7.0,D,False,removed_other_fec_id_of_one_returns_row,H4MN07093,
+H2MN08152-2024,Jennifer Schultz,house,2024,MN,8.0,D,False,added_match_in_returns,,176724.0
+H4NC07142-2024,Marlando Pridgen,house,2024,NC,7.0,D,False,removed_other_fec_id_of_one_returns_row,H4NC07134,
+H4NC10187-2024,Ralph R Mr. Jr. Scott,house,2024,NC,10.0,D,False,removed_other_fec_id_of_one_returns_row,H4NC10161,
+H4NC14023-2024,Pamela Genant,house,2024,NC,14.0,D,False,added_match_in_returns,,168269.0
+H4ND00061-2024,Julie Fedorchak,house,2024,ND,0.0,R,True,added_match_in_returns,,249101.0
+H4ND01044-2024,Trygve Hammer,house,2024,ND,0.0,D,True,added_match_in_returns,,109231.0
+H4NH01243-2024,Russell Prescott,house,2024,NH,1.0,R,False,removed_other_fec_id_of_one_returns_row,H2NH01304,
+H6NY14202-2024,Michael K Zumbluskas,house,2024,NY,12.0,R,False,removed_other_fec_id_of_one_returns_row,H2NY12221,
+H4OR03218-2024,Joanna Harbour,house,2024,OR,3.0,R,False,removed_other_fec_id_of_one_returns_row,H0OR03174,
+H4RI01141-2024,Allen Waters,house,2024,RI,1.0,R,False,removed_other_fec_id_of_one_returns_row,H2RI01202,
+H4SC02089-2024,Roger David Jr Robinson,house,2024,SC,2.0,D,True,removed_returns_row_of_other_candidate,,
+H4SD00064-2024,Sheryl Johnson,house,2024,SD,0.0,D,True,added_match_in_returns,,117818.0
+H8SD01055-2024,Dusty Johnson,house,2024,SD,0.0,R,True,added_match_in_returns,,303630.0
+H2VT01076-2024,Rebecca Balint,house,2024,VT,0.0,D,True,added_match_in_returns,,218398.0
+H4VT01056-2024,C. Mark Mr Coester,house,2024,VT,0.0,R,True,added_match_in_returns,,104451.0
+H6WA09025-2024,D. Adam Smith,house,2024,WA,9.0,D,True,added_match_in_returns,,182780.0
+H2WA10063-2024,Don Hewett,house,2024,WA,10.0,R,False,removed_other_fec_id_of_one_returns_row,H0WA10067,
+H4WA10044-2024,Don Mr Hewett,house,2024,WA,10.0,R,False,removed_other_fec_id_of_one_returns_row,H0WA10067,
+H4WI01197-2024,Peter Barca,house,2024,WI,1.0,D,False,removed_other_fec_id_of_one_returns_row,H4WI01056,
+H4WI03169-2024,Rebecca Cooke,house,2024,WI,3.0,D,False,removed_other_fec_id_of_one_returns_row,H2WI03130,
+H8WI04069-2024,Tim Rogers,house,2024,WI,4.0,R,False,removed_other_fec_id_of_one_returns_row,H4WI04274,
+H2WY00166-2024,Harriet Hageman,house,2024,WY,0.0,R,True,added_match_in_returns,,184680.0
+H4WY00196-2024,Kyle G. Cameron,house,2024,WY,0.0,D,True,added_match_in_returns,,60778.0
+S4IA11126-2004,Arthur Small,senate,2004,IA,,D,False,removed_other_fec_id_of_one_returns_row,S4IA00046,
+S8OK00241-2010,Evelyn L Rogers,senate,2010,OK,,R,True,removed_returns_row_of_other_candidate,,
+S0KS00315-2020,Roger W Marshall,senate,2020,KS,,R,False,removed_other_fec_id_of_one_returns_row,H6KS01179,
+S4WI00256-2024,Eric Hovde,senate,2024,WI,,R,False,removed_other_fec_id_of_one_returns_row,S2WI00268,

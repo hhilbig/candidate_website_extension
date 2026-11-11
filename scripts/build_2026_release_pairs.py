@@ -36,7 +36,8 @@ def main():
     ap.add_argument('--release', required=True)
     args = ap.parse_args()
     release = Path(args.release)
-    pairs = pd.read_parquet(Path(args.input) / 'exports/candidate_event_pairs.parquet').fillna('')
+    # build_2026_release_corpus.py selects each side again without the pages that the release omits.
+    pairs = pd.read_parquet(release / 'candidate_event_pairs_release.parquet').fillna('')
     corpus = pd.read_parquet(release / 'raw_corpus_2026.parquet', columns=['cand_id', 'page_id', 'snapshot_id'])
     universe = pd.read_csv(release / 'candidate_year_universe_2026.csv', dtype=str)
     provenance = pd.read_csv(release / 'candidate_year_provenance_2026.csv', dtype=str)

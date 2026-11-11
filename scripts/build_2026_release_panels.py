@@ -116,6 +116,13 @@ def main():
     provenance['collection_failure_reason'] = 'not_applicable'
     provenance.loc[failed, 'collection_failure_reason'] = (
         provenance.loc[failed, 'cand_id'].map(reason).fillna('no_copy_attempt_recorded'))
+    # A candidate whose usable pages the release omits (build_2026_release_corpus.py) gets the rule as the reason.
+    omitted = pd.read_csv(out / 'pages_removed_2026.csv', dtype=str).groupby('cand_id').reason.agg(
+        lambda v: v.value_counts().index[0])
+    by_rule = failed & provenance.collection_failure_reason.eq('usable')
+    provenance.loc[by_rule, 'collection_failure_reason'] = provenance.loc[by_rule, 'cand_id'].map(omitted)
+    assert provenance.loc[failed, 'collection_failure_reason'].notna().all()
+    assert not provenance.collection_failure_reason.eq('usable').any()
     provenance.to_csv(out / 'candidate_year_provenance_2026.csv', index=False)
     summary = dict(panel_rows=len(panel), coded_rows=len(coded), coded_columns=coded.shape[1],
                    snapshot_day=day_counts, provenance_rows=len(provenance), provenance_columns=provenance.shape[1],

@@ -1,12 +1,12 @@
 # Codebook: U.S. House (2018–2026) and Senate (2002–2026) candidate websites
 
-This codebook describes the corrected and extended local staging build. It does
-not claim that an existing Dataverse version or DOI has been updated.
+This codebook describes the data files of version 5.0. The section "2026 rows"
+gives the fields that differ for the 2026 election.
 
 ## File relationships, keys, and missing values
 
 The release contains a full population of 18,697 candidate-years and observed
-website text for 9,083 of them.
+website text for 9,081 of them.
 
 `candidate_cycle_id` links the data files. It combines the canonical FEC
 candidate ID and election year. It identifies a candidacy-year, not a person
@@ -70,7 +70,7 @@ every field in this table:
 | `cand_election_yr` | Candidate election year recorded in the FEC candidate file |
 | `cand_status` | FEC candidate status code; metadata only |
 | `universe_source` | `same_year_fec` or reviewed `ballot_override` |
-| `on_ballot` | Match to a Democratic or Republican official general-election return |
+| `on_ballot` | Match to a Democratic or Republican official general-election return (name, state, district, and party). One returns row flags one FEC ID. The returns do not cover the territorial delegates |
 | `general_votes` | Candidate votes in the matched general-election return; missing when `on_ballot` is false |
 | `stage` | `2` for matched general-election candidates; missing otherwise |
 | `data_source` | `general_wayback` for matched general-election candidates and `election_year_wayback` otherwise |
@@ -215,7 +215,7 @@ that current policy.
 
 ## `raw_corpus.parquet`
 
-The file has 902,574 rows and 33 columns. One row is one extracted archived
+The file has 898,565 rows and 33 columns. One row is one extracted archived
 page at one retained timestamp. It is the only data file that stores page text.
 
 ### Identity and population fields
@@ -251,9 +251,9 @@ panel for day-level counts.
 
 ## `panel_snapshot_day.parquet`
 
-The file has 354,444 rows and 84 columns. Its unique key is
-`candidate_cycle_id × snap_day × page_scope`. It contains 92,063 `all` rows,
-one for every observed candidate-day, and 262,381 detail rows for page types
+The file has 354,195 rows and 84 columns. Its unique key is
+`candidate_cycle_id × snap_day × page_scope`. It contains 91,974 `all` rows,
+one for every observed candidate-day, and 262,221 detail rows for page types
 observed on those days. It does not duplicate page text.
 
 `page_scope` is `all` or one of the eight page types. The `all` row aggregates
@@ -328,7 +328,7 @@ probabilities. Daily topic probabilities should not be averaged to reconstruct
 
 ## `panel_candidate_year.csv`
 
-The file has 9,083 rows and 26 columns. One row is one captured candidate-year
+The file has 9,081 rows and 26 columns. One row is one captured candidate-year
 at one selected full timestamp. `party` uses `D` and `R`.
 
 It carries `candidate`, `state`, `district`, `office`, `year`, `party`,
@@ -424,7 +424,7 @@ the non-topic measures.
 
 ## `panel_icpsr_compat.csv`
 
-The file has 9,083 rows and 114 columns. One row is one captured candidate-year.
+The file has 9,081 rows and 114 columns. One row is one captured candidate-year.
 `party` uses `democrat` and `republican`; `icpsr_compatible` is identical to
 `on_ballot`.
 
@@ -478,7 +478,7 @@ The 31 topic names are:
 
 ## `candidate_crosswalk.csv`
 
-The file has 9,083 rows and 36 columns. One row is one captured candidate-year.
+The file has 9,081 rows and 36 columns. One row is one captured candidate-year.
 It carries the shared candidate, contest, ballot, stage, source, and canonical
 identifier fields. `party` uses `D` and `R`; `party_full` supplies `democrat` or
 `republican`.
@@ -526,7 +526,7 @@ collection" describes the collection.
 | `date` | Time of the page copy (UTC, `YYYYMMDDhhmmss`). Pages of one `snapshot_id` have different times |
 | `snap_url` | Internet Archive URL for a `wayback` row; missing for a `live` row |
 | `urlkey` | URL of the page |
-| `n_snap` | Number of distinct `snapshot_id` values of the candidate. An archived page with a query string in its address (for example `?p=12`) has type `homepage` and can be a copy of its own, so `n_snap` is large for some candidates (maximum 1,174) |
+| `n_snap` | Number of distinct `snapshot_id` values of the candidate |
 | `on_ballot` | Candidate is in the general-election candidate list of the English Wikipedia state page (`on_ballot_2026_sources.csv`) |
 | `data_source` | `general_2026_collection` if `on_ballot`, else `election_year_2026_collection` |
 | `bonica_rid` | Carried from an earlier year of the same `cand_id`; missing for a new candidate |
@@ -571,7 +571,7 @@ and after it (`post_*`). Election day is excluded in each time zone of the juris
 | `participation_status`, `participation_source_url` | `confirmed` if a source shows that the candidate took part in the event; else `unknown`. Only 8 rows are `confirmed`. A row therefore means that the event applies to the candidate's state, office, and party, not that the candidate was on that ballot |
 | `coverage_status` | `paired`, `pre_only`, `post_only`, or `uncovered` |
 | `pre_available`, `post_available` | A copy exists on that side |
-| `pre_missing_reason`, `post_missing_reason` | Why no copy exists: `missing_website`, `failed_requests`, `no_eligible_capture`, `identity_unresolved`, `unusable_content`, `missing_archives`, `timestamp_mismatch`, `incomplete_snapshot`, `captured_under_other_fec_id` |
+| `pre_missing_reason`, `post_missing_reason` | Why no copy exists: `missing_website`, `failed_requests`, `no_eligible_capture`, `identity_unresolved`, `unusable_content`, `missing_archives`, `timestamp_mismatch`, `incomplete_snapshot`, `subpage_only` (the copies on that side have no homepage), `captured_under_other_fec_id` |
 | `pre_snapshot_id`, `post_snapshot_id` | `snapshot_id` of the copy in `raw_corpus.parquet` |
 | `pre_homepage_page_id`, `post_homepage_page_id` | `page_id` of the homepage of the copy |
 | `pre_page_ids`, `post_page_ids` | JSON list of the `page_id` values of the copy |

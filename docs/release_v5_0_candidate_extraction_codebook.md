@@ -11,9 +11,9 @@ Most variables reproduce what the page says: a paraphrased claim and the sentenc
 | File | One row is | Rows |
 |---|---|---:|
 | `candidate_extraction_status.csv` | A candidate-year and route (issues, biography, endorsements) | 56,091 |
-| `candidate_extraction_documents.parquet` | A distinct page text for one candidate-year and route | 38,624 |
-| `candidate_extraction_segments.parquet` | One model input window within a page | 55,702 |
-| `candidate_issue_statements.parquet` | An issue statement on one page | 461,120 |
+| `candidate_extraction_documents.parquet` | A distinct page text for one candidate-year and route | 38,492 |
+| `candidate_extraction_segments.parquet` | One model input window within a page | 55,077 |
+| `candidate_issue_statements.parquet` | An issue statement on one page | 460,957 |
 | `candidate_biography_facts.parquet` | A biography fact on one page | 138,650 |
 | `candidate_endorsements.parquet` | An endorser named on one page | 213,956 |
 
@@ -23,7 +23,7 @@ Most variables reproduce what the page says: a paraphrased claim and the sentenc
 
 Each distinct version of a page is its own document, and a page that changed only a date or a banner produces the same records again. About half of all rows repeat a record already present for the same candidate-year: 47 percent of issue rows, 45 percent of biography rows, and 59 percent of endorsement rows. Candidates whose sites were archived often carry the most repeats.
 
-`candidate_record_key` identifies a record within a candidate-year across page versions. It hashes `candidate_cycle_id`, the route, and the record's text after case folding and whitespace collapse: `evidence` for issues, `field` and `value` for biography, and `endorser_name` for endorsements. Keep one row per key before counting anything per candidate. The rows of one key can differ in a coded field (about 6 percent of issue keys have more than one `statement_kind`), so fix a rule, for example the row of the earliest document. After this step the files hold 243,585 issue statements for 3,387 candidate-years, 75,811 biography facts for 3,614 candidate-years, and 86,758 endorsers for 1,318 candidate-years. Paraphrases of one fact ("Born in Joplin" and "Born in Joplin, Missouri") remain separate records.
+`candidate_record_key` identifies a record within a candidate-year across page versions. It hashes `candidate_cycle_id`, the route, and the record's text after case folding and whitespace collapse: `evidence` for issues, `field` and `value` for biography, and `endorser_name` for endorsements. Keep one row per key before counting anything per candidate. The rows of one key can differ in a coded field (about 6 percent of issue keys have more than one `statement_kind`), so fix a rule, for example the row of the earliest document. After this step the files hold 243,582 issue statements for 3,387 candidate-years, 75,811 biography facts for 3,614 candidate-years, and 86,758 endorsers for 1,318 candidate-years. Paraphrases of one fact ("Born in Joplin" and "Born in Joplin, Missouri") remain separate records.
 
 ## Joins
 
@@ -38,12 +38,12 @@ The status table separates a candidate who said nothing from a page we never saw
 | `extraction_status` | Meaning | Rows |
 |---|---|---:|
 | `observed_positive` | At least one record was released | 8,319 |
-| `observed_zero` | Pages were read and no record was found | 553 |
-| `not_extracted_no_source` | The corpus has no page of this type for the candidate-year | 47,152 |
+| `observed_zero` | Pages were read and no record was found | 552 |
+| `not_extracted_no_source` | The corpus has no page of this type for the candidate-year | 47,155 |
 | `withheld_validation` | Pages were read, but no record could be matched exactly to the page text | 30 |
-| `excluded_not_campaign_site` | All pages were excluded (see below) | 37 |
+| `excluded_not_campaign_site` | All pages were excluded (see below) | 35 |
 
-`not_extracted_no_source` is not a zero. Most candidate-years have no page of a given type, because the site had none, the Wayback Machine did not archive it, or the crawler did not reach it. Among the 9,083 captured candidate-years, the share with at least one record is as follows.
+`not_extracted_no_source` is not a zero. Most candidate-years have no page of a given type, because the site had none, the Wayback Machine did not archive it, or the crawler did not reach it. Among the 9,081 captured candidate-years, the share with at least one record is as follows.
 
 | Office and years | Captured | Issues | Biography | Endorsements |
 |---|---:|---:|---:|---:|
@@ -51,14 +51,14 @@ The status table separates a candidate who said nothing from a page we never saw
 | Senate 2002–2010 | 403 | 0.14 | 0.14 | 0.04 |
 | Senate 2012–2016 | 449 | 0.31 | 0.30 | 0.06 |
 | Senate 2018–2024 | 709 | 0.36 | 0.37 | 0.11 |
-| House 2026 | 1,539 | 0.63 | 0.67 | 0.24 |
+| House 2026 | 1,537 | 0.63 | 0.67 | 0.24 |
 | Senate 2026 | 196 | 0.61 | 0.69 | 0.22 |
 
 For 2002 through 2024, coverage is similar by party for issues and biography, and endorsement records are more common for Democrats (15 percent) than Republicans (10 percent). Senate 2002 and 2004 are nearly empty. Coverage is higher in 2026 because the direct copies hold more pages for each website, and because the 2026 route also uses the link to a page (see "2026 rows").
 
 ## Excluded pages
 
-We excluded pages that are not the candidate's campaign site. Official government pages (`.gov` hosts) account for 654 documents in 2002 through 2024 and 36 documents in 2026 (`H2GU01031-2026`). Three candidate-years were archived from another site: `H0AL02160-2020` points to `anthonybrown.com`, a different candidate's site in Maryland; `S2GA00167-2022` points to the Georgia Republican Party; and `H8IN07291-2018` points to a web studio's placeholder page. These three account for 40 documents. The status table keeps their rows; `n_documents`, `n_segments`, and `n_records` count only released documents, and `n_raw_pages` still counts all pages in the core corpus.
+We excluded pages that are not the candidate's campaign site. Official government pages (`.gov` hosts) account for 654 documents in 2002 through 2024. The 2026 corpus holds no such page. Three candidate-years were archived from another site: `H0AL02160-2020` points to `anthonybrown.com`, a different candidate's site in Maryland; `S2GA00167-2022` points to the Georgia Republican Party; and `H8IN07291-2018` points to a web studio's placeholder page. These three account for 40 documents. The status table keeps their rows; `n_documents`, `n_segments`, and `n_records` count only released documents, and `n_raw_pages` still counts all pages in the core corpus.
 
 ## Variables
 
@@ -141,11 +141,11 @@ The sample is stratified by statement kind, field, and endorser category, so the
 
 The 2026 rows come from the same model, prompts, schemas, and alignment rule as the earlier rows. Four points differ.
 
-**Pages read.** For the earlier years, a page enters a route by its `page_type`. For 2026, a page enters by `extraction_route` in `raw_corpus.parquet`, which also uses the type that the link to the page implies (`page_type_context`). Endorsement pages use the URL rule only. The link rule adds many pages: 61 percent of the 2026 issue documents and 52 percent of the 2026 biography documents enter only through the link. Some of these pages are not issue or biography pages (for example an accessibility notice). To compare 2026 with the earlier years on equal terms, keep the documents whose corpus rows have `page_type` equal to the route.
+**Pages read.** For the earlier years, a page enters a route by its `page_type`. For 2026, a page enters by `extraction_route` in `raw_corpus.parquet`, which also uses the type that the link to the page implies (`page_type_context`). Endorsement pages use the URL rule only. The link rule adds many pages: 60 percent of the 2026 issue documents and 51 percent of the 2026 biography documents enter only through the link. Some of these pages are not issue or biography pages (for example an accessibility notice). The column `route_source` in the documents table is `url` if a page of the document has `page_type` equal to the route, else `link_context`; each document before 2026 is `url`. To compare 2026 with the earlier years on equal terms, keep the documents with `route_source = url`.
 
-**Sources.** A 2026 document can come from a direct copy. Its page address is then in `original_urls`, and `wayback_urls` lists that page address next to any archived address; 38 percent of the 2026 documents have no archived address. A 2026 candidate has several dated copies, so a record often repeats across copies; keep one row for each `candidate_record_key`. The documents table gives the first and last copy time of each document; 2026 documents can be from after Election Day. After this step the 2026 rows hold 106,471 issue statements for 1,083 candidate-years, 23,446 biography facts for 1,160 candidate-years, and 25,859 endorsers for 416 candidate-years.
+**Sources.** A 2026 document can come from a direct copy. Its page address is then in `original_urls`, and `wayback_urls` lists that page address next to any archived address; 38 percent of the 2026 documents have no archived address. A 2026 candidate has several dated copies, so a record often repeats across copies; keep one row for each `candidate_record_key`. The documents table gives the first and last copy time of each document; 2026 documents can be from after Election Day. After this step the 2026 rows hold 106,468 issue statements for 1,083 candidate-years, 23,446 biography facts for 1,160 candidate-years, and 25,859 endorsers for 416 candidate-years.
 
-**Windows without records.** Sixteen of the 14,940 issue windows of 2026 gave no records: the model output reached the length limit in 13 windows after three attempts, and reached the limit of 128 records in 3 windows. These windows have `processing_status = withheld_validation` in the segments table, with the other windows whose records could not be matched to the page text.
+**Windows without records.** Sixteen of the 14,449 issue windows of 2026 gave no records: the model output reached the length limit in 13 windows after three attempts, and reached the limit of 128 records in 3 windows. These windows have `processing_status = withheld_validation` in the segments table, with the other windows whose records could not be matched to the page text.
 
 **Validation.** A separate language model (Claude Opus) coded a 2026 sample with the rules of the earlier check: 60 records for each route and 20 complete pages for each route. Each route had to capture at least 90 percent of the records on the sampled pages. All three routes met this condition. 2026 has no list of known missed facts.
 
