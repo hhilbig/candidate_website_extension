@@ -71,6 +71,9 @@ def geography(frame):
     return frame
 
 
+SAME_PERSON = [('H6FL23139', 'H6GA23012'), ('S6KY00260', 'S6KY00278')]
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--input', required=True)
@@ -146,6 +149,10 @@ def main():
     page_rows = pd.Series(pq.read_table(corpus_path, columns=['cand_id']).column('cand_id').to_pylist()).value_counts()
     u['person_key'] = (u.fec_raw_name.str.upper().str.replace(r'[^A-Z, ]', '', regex=True).str.strip()
                        + '|' + u.state + '|' + u.office + '|' + u.party + '|' + u.website_domain.fillna(''))
+    # Decision of November 11, 2026 (Hanno): two persons whom the rule does not join, because
+    # the FEC records differ in state or in name form. Each pair has one campaign website.
+    for first, second in SAME_PERSON:
+        u.loc[u.cand_id == second, 'person_key'] = u.loc[u.cand_id == first, 'person_key'].iloc[0]
     duplicates = []
     for _, group in u[u.captured].groupby('person_key'):
         if len(group) < 2:

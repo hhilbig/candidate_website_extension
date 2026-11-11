@@ -64,7 +64,8 @@ def main():
     args = ap.parse_args()
     out = Path(args.out)
     corpus = out / 'raw_corpus_2026.parquet'
-    universe = pd.read_csv(out / 'candidate_year_universe_2026.csv', dtype={'cand_id': str, 'source_cand_id': str})
+    universe = pd.read_csv(out / 'candidate_year_universe_2026.csv',
+                           dtype={'cand_id': str, 'source_cand_id': str, 'source_district': str})
     crosswalk = pd.read_csv(out / 'candidate_crosswalk_2026.csv', dtype={'cand_id': str})
 
     panel = candidate_year_panel(corpus, universe)
@@ -88,6 +89,7 @@ def main():
     coded = coded.merge(add, on=['year', 'cand_id'], how='inner', validate='one_to_one')
     assert len(coded) == len(panel), (len(coded), len(panel))
     coded['icpsr_compatible'] = coded.on_ballot
+    coded['stage'] = coded.stage.astype('Int64')
     coded = _blank_unsupported_topics(coded)
     coded.to_csv(out / 'panel_icpsr_compat_2026.csv', index=False)
     print('coded panel', coded.shape, flush=True)

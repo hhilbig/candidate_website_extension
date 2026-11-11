@@ -13,7 +13,8 @@ has three defects:
 
 The script matches the universe to the MIT returns again, with the party in the key and
 with the party labels above. It adds each new match (1), removes each flag that has no
-match (2), and keeps one FEC ID for each returns row (3). Order for (3): the ID with
+match (2), and keeps one FEC ID for each returns row (3). It also flags the candidates
+in `config/on_ballot_name_matches_v5_0.csv`, whose name form in the returns differs from the FEC name. Order for (3): the ID with
 text in the corpus; then the given name that equals the name in the returns; then more
 page rows; then FEC status C; then the lower ID. Each other flag stays as published.
 
@@ -45,6 +46,7 @@ PARTY_LABELS = {
 CSV_FILES = ['candidate_year_universe.csv', 'release_roster.csv', 'candidate_year_provenance.csv',
              'panel_candidate_year.csv', 'panel_icpsr_compat.csv', 'candidate_crosswalk.csv']
 PARQUET_FILES = ['raw_corpus.parquet', 'panel_snapshot_day.parquet']
+NAME_MATCHES = Path(__file__).resolve().parent.parent / 'config/on_ballot_name_matches_v5_0.csv'
 
 
 def ballot():
@@ -104,6 +106,17 @@ def decide(universe, page_rows):
     old.loc[removed, 'change'] = 'removed_returns_row_of_other_candidate'
     old.loc[added, 'votes'] = old.loc[added, 'new_votes']
     old['final'] = (old.flag | added) & ~removed
+
+    # Second pass (decision of November 11, 2026, Hanno): returns rows that no flagged
+    # candidate holds and that one universe row of the same year, office, state, and party
+    # matches by family name and one more name part. The name forms differ (married name,
+    # double family name, name order, district of an earlier map). The list is reviewed.
+    listed = pd.read_csv(NAME_MATCHES, dtype=str, keep_default_na=False).set_index('candidate_cycle_id')
+    by_id = old.candidate_cycle_id.isin(listed.index)
+    assert by_id.sum() == len(listed) and not old.loc[by_id, 'final'].any()
+    old.loc[by_id, 'votes'] = old.loc[by_id, 'candidate_cycle_id'].map(listed.votes).astype(float)
+    old.loc[by_id, 'final'] = True
+    old.loc[by_id, 'change'] = 'added_name_variant_match'
 
     # One returns row, several FEC IDs.
     old['first'] = work['first'].values

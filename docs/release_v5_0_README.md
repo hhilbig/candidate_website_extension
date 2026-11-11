@@ -8,7 +8,7 @@ endorsements extracted from the same pages.
 
 Version 5.0 adds the 2026 election to each file. The rows for 2002 through 2024
 are unchanged from version 4.0, with one exception: version 5.0 corrects the
-general-election flag `on_ballot` for 113 candidate-years (see "Population").
+general-election flag `on_ballot` for 158 candidate-years (see "Population").
 The 2026 rows differ from the earlier years in
 their source, their frequency, and their search record; see "2026 collection"
 below. The 2026 data are a first version, collected through November 5, 2026.
@@ -24,17 +24,17 @@ value is or is not observed.
 | `candidate_year_universe.csv` | 18,697 | 29 | One candidate in one election year, whether or not a URL or capture was recorded |
 | `release_roster.csv` | 18,697 | 29 | An identical compatibility alias of `candidate_year_universe.csv` |
 | `candidate_year_provenance.csv` | 18,697 | 68 | One universe candidate-year with collection, capture, adjudication, and measure-availability evidence |
-| `raw_corpus.parquet` | 898,565 | 33 | One page at one copy time |
-| `panel_snapshot_day.parquet` | 354,195 | 84 | One candidate-day and page scope, without page text |
-| `panel_candidate_year.csv` | 9,081 | 26 | One captured candidate-year at its selected snapshot timestamp, with concatenated text |
-| `panel_icpsr_compat.csv` | 9,081 | 114 | One captured candidate-year with ICPSR-compatible derived measures |
-| `candidate_crosswalk.csv` | 9,081 | 36 | One captured candidate-year with FEC, ballot, DIME, and ICPSR-compatible identifiers |
+| `raw_corpus.parquet` | 896,487 | 33 | One page at one copy time |
+| `panel_snapshot_day.parquet` | 353,798 | 84 | One candidate-day and page scope, without page text |
+| `panel_candidate_year.csv` | 9,074 | 26 | One captured candidate-year at its selected snapshot timestamp, with concatenated text |
+| `panel_icpsr_compat.csv` | 9,074 | 114 | One captured candidate-year with ICPSR-compatible derived measures |
+| `candidate_crosswalk.csv` | 9,074 | 36 | One captured candidate-year with FEC, ballot, DIME, and ICPSR-compatible identifiers |
 | `event_pairs_2026.csv` | 8,611 | 60 | One 2026 candidate and one election event of the candidate's state and office, with the nearest website copy before and after the event |
 | `on_ballot_2026_sources.csv` | 92 | 6 | One Wikipedia page and revision used for `on_ballot` in 2026 |
 
-The snapshot-day panel consists of 91,974 `all`-scope candidate-days and
-262,221 rows for observed page-type scopes. The captured files contain 3,779
-candidate-years of general-election candidates (`on_ballot`). The other 5,302
+The snapshot-day panel consists of 91,898 `all`-scope candidate-days and
+261,900 rows for observed page-type scopes. The captured files contain 3,808
+candidate-years of general-election candidates (`on_ballot`). The other 5,266
 captured candidate-years are same-year federal FEC candidates without that
 match.
 
@@ -49,11 +49,11 @@ Six files hold the extracted variables. They are described in
 | File | Rows | Columns | One row represents |
 |---|---:|---:|---|
 | `candidate_extraction_status.csv` | 56,091 | 9 | One candidate-year and route (issues, biography, endorsements) |
-| `candidate_extraction_documents.parquet` | 38,492 | 48 | One distinct page text for a candidate-year and route |
-| `candidate_extraction_segments.parquet` | 55,077 | 76 | One model input window within a page |
-| `candidate_issue_statements.parquet` | 460,957 | 26 | One issue statement on one page |
-| `candidate_biography_facts.parquet` | 138,650 | 20 | One biography fact on one page |
-| `candidate_endorsements.parquet` | 213,956 | 45 | One endorser named on one page |
+| `candidate_extraction_documents.parquet` | 38,216 | 48 | One distinct page text for a candidate-year and route |
+| `candidate_extraction_segments.parquet` | 54,691 | 76 | One model input window within a page |
+| `candidate_issue_statements.parquet` | 460,913 | 26 | One issue statement on one page |
+| `candidate_biography_facts.parquet` | 138,402 | 20 | One biography fact on one page |
+| `candidate_endorsements.parquet` | 213,917 | 45 | One endorser named on one page |
 
 Every extracted record quotes the page it comes from. The records were checked
 by a model coder, not by hand, and about half of all rows repeat a record from
@@ -95,11 +95,17 @@ Use `on_ballot`, not FEC candidate status, to select the general-election
 sample. The universe, roster, and provenance files expose `on_ballot` directly
 and do not duplicate `stage` or `data_source`.
 
-Version 5.0 corrects this flag for 2002 through 2024. It adds 60 candidates
-whom the earlier match did not find (most at-large House seats, and the
-Minnesota and North Dakota party labels in the returns). It removes the flag
-from 7 candidates who had the votes of a namesake, and from 46 further FEC IDs
+Version 5.0 corrects this flag for 2002 through 2024. It adds 106 candidates
+whom the earlier match did not find: 60 through a corrected match (most
+at-large House seats, and the Minnesota and North Dakota party labels in the
+returns), and 46 whose name in the returns differs from the FEC name (a
+married name, a double family name, or the name order). It removes the flag
+from 7 candidates who had the votes of a namesake, and from 45 further FEC IDs
 where one returns row had flagged two or three IDs; the flag stays with one ID.
+For 49 major-party candidates in the returns of 2018 through 2024, no
+candidate has the flag: 48 have no row in the population, and one name fits
+two rows. The population also has no candidate for the Connecticut Senate
+election of 2022.
 The returns do not cover the territorial delegates (the District of Columbia
 in part), so most of these contests have no flagged candidate before 2026. A
 contest can have more than one flagged candidate of one party (Louisiana,
@@ -112,16 +118,17 @@ flag as provisional. `general_votes` is missing for 2026, and `data_source` is
 `general_2026_collection` or `election_year_2026_collection`. A later version
 replaces this source with official returns. Five 2026 general-election
 candidates whose FEC record is outside the population rule enter as reviewed
-additions. Fifteen persons have two FEC IDs in 2026; the text is under one ID,
+additions. Seventeen persons have two FEC IDs in 2026; the text is under one ID,
 and the other ID has `capture_status = captured_under_other_fec_id`. The rule
-requires the same name, state, office, party, and website. A person who has
-IDs for two states or two offices, or two spellings of the name, keeps text
-under each ID.
+requires the same name, state, office, party, and website; two more persons
+with one website were joined after review. Another person who has IDs for two
+states or two offices, or two spellings of the name, can keep text under each
+ID.
 
 ## What was observed
 
 The full population contains 18,697 candidate-years. The corpus contains
-substantive page rows for 9,081 of them. Absence from the corpus does
+substantive page rows for 9,074 of them. Absence from the corpus does
 not by itself show that the campaign lacked a website, that the Internet
 Archive had no captures, or that a collection attempt failed. The historical
 source only preserves URL evidence for part of the population.
@@ -143,15 +150,15 @@ of adjudication.
 ## 2026 collection
 
 The 2026 population has 3,656 candidate-years. 2,459 have a website URL, and
-1,733 have page text in the corpus (101,011 page rows; 1,689 of them have
+1,726 have page text in the corpus (98,933 page rows; 1,682 of them have
 `text_quality = usable` in the candidate-year panel). Of the 954
 general-election candidates, 705 have page text. The 2026 rows differ from the earlier years
 in three ways.
 
 **Source.** For 2002 through 2024, all text comes from the Internet Archive.
 For 2026, the project also copied each campaign website directly, from
-September 14, 2026 through November 5, 2026 (69,017 page rows). Archived copies
-of 2026 start in January 2026 (31,994 page rows). `capture_source` is `live`
+September 14, 2026 through November 5, 2026 (67,463 page rows). Archived copies
+of 2026 start in January 2026 (31,470 page rows). `capture_source` is `live`
 for a direct copy and `wayback` for an archived copy. `snap_url` is missing for
 a live row, because no archived copy exists for it; `urlkey` gives the page
 address.
@@ -162,7 +169,7 @@ the candidate's state. In practice these are the days around the general
 election of November 3. Copies around the primaries come from the Internet
 Archive, at the dates the archive holds; all primaries but one (Delaware,
 September 15) took place before September 14. A candidate has several dated
-copies (median 6). For 147 candidates the project also copied the homepage
+copies (median 6). For about 150 candidates the project also copied the homepage
 alone on most days, until the name check passed; count copies with more than
 one page if the number of copies matters.
 `snapshot_id` identifies one copy of one website, and `date` is the time of
@@ -170,9 +177,9 @@ each page. `panel_snapshot_day.parquet` holds the measures for each copy day.
 `panel_candidate_year.csv` keeps the copy with the most text, as in the
 earlier years; `sel_snapshot_id` names that copy. `event_pairs_2026.csv` names,
 for each candidate and election event, the nearest complete copy within 30
-days before and after the event. Of the 2,371 candidate-events with a copy on
-both sides, 1,270 are general-election pairs (almost all direct copies), 710
-are primary pairs (almost all archived copies), and 391 are pairs for another
+days before and after the event. Of the 2,359 candidate-events with a copy on
+both sides, 1,265 are general-election pairs (almost all direct copies), 707
+are primary pairs (almost all archived copies), and 387 are pairs for another
 event type (runoff, nonpartisan primary, convention, special election).
 
 **Search record.** For 2026, the project searched for a website for each
@@ -184,10 +191,16 @@ and `captured_under_other_fec_id`.
 A 2026 copy is in the corpus only if its homepage text names the candidate
 (family name and given name, or a listed short form of the given name). The
 other pages of the copy are not checked one by one. The corpus omits
-three kinds of pages: pages on a host that is not a campaign website (a news
-article, a social profile, or an office page that the FEC record names),
-archived addresses with a query string that the collection stored as a
-homepage, and two pages of one site that held injected link text.
+five kinds of pages: pages on a host that is not a campaign website (a news
+article, a social profile, a business website, or an office page that the FEC
+record names); archived addresses with a query string that the collection
+stored as a homepage; two pages of one site that held injected link text;
+gambling advertisements on a lapsed or compromised campaign address; and
+pages without campaign text (the bot check of a host, account pages of a
+site builder, and shop carts). A page that holds campaign text and a few
+advertisement links stays. Seven candidates have no page left after these
+rules and are not in the corpus; `collection_failure_reason` names the rule
+for five of them.
 
 `page_type` follows the same URL rule as the earlier years. For 2026,
 `page_type_context` adds the type that the link to the page implies (a page
@@ -300,7 +313,7 @@ and `R`; the crosswalk also includes `party_full`.
   page counts are therefore not comparable between 2026 and the earlier years
   without a restriction on the pages.
 - 2026: the pages of one archived copy can have different archive dates. In
-  `event_pairs_2026.csv`, 627 of 5,489 distinct copies span more than 24 hours;
+  `event_pairs_2026.csv`, 618 of 5,464 distinct copies span more than 24 hours;
   `pre_page_span_hours` and `post_page_span_hours` give the span.
 - 2026: the selected copy in `panel_candidate_year.csv` is from after Election
   Day for 46 percent of the 2026 rows (37 percent in 2024).

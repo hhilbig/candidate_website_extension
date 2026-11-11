@@ -215,7 +215,7 @@ that current policy.
 
 ## `raw_corpus.parquet`
 
-The file has 898,565 rows and 33 columns. One row is one extracted archived
+The file has 896,487 rows and 33 columns. One row is one extracted archived
 page at one retained timestamp. It is the only data file that stores page text.
 
 ### Identity and population fields
@@ -251,9 +251,9 @@ panel for day-level counts.
 
 ## `panel_snapshot_day.parquet`
 
-The file has 354,195 rows and 84 columns. Its unique key is
-`candidate_cycle_id × snap_day × page_scope`. It contains 91,974 `all` rows,
-one for every observed candidate-day, and 262,221 detail rows for page types
+The file has 353,798 rows and 84 columns. Its unique key is
+`candidate_cycle_id × snap_day × page_scope`. It contains 91,898 `all` rows,
+one for every observed candidate-day, and 261,900 detail rows for page types
 observed on those days. It does not duplicate page text.
 
 `page_scope` is `all` or one of the eight page types. The `all` row aggregates
@@ -328,7 +328,7 @@ probabilities. Daily topic probabilities should not be averaged to reconstruct
 
 ## `panel_candidate_year.csv`
 
-The file has 9,081 rows and 26 columns. One row is one captured candidate-year
+The file has 9,074 rows and 26 columns. One row is one captured candidate-year
 at one selected full timestamp. `party` uses `D` and `R`.
 
 It carries `candidate`, `state`, `district`, `office`, `year`, `party`,
@@ -424,7 +424,7 @@ the non-topic measures.
 
 ## `panel_icpsr_compat.csv`
 
-The file has 9,081 rows and 114 columns. One row is one captured candidate-year.
+The file has 9,074 rows and 114 columns. One row is one captured candidate-year.
 `party` uses `democrat` and `republican`; `icpsr_compatible` is identical to
 `on_ballot`.
 
@@ -478,7 +478,7 @@ The 31 topic names are:
 
 ## `candidate_crosswalk.csv`
 
-The file has 9,081 rows and 36 columns. One row is one captured candidate-year.
+The file has 9,074 rows and 36 columns. One row is one captured candidate-year.
 It carries the shared candidate, contest, ballot, stage, source, and canonical
 identifier fields. `party` uses `D` and `R`; `party_full` supplies `democrat` or
 `republican`.
@@ -534,7 +534,7 @@ collection" describes the collection.
 `general_votes` is missing for 2026 in each file.
 
 `panel_snapshot_day.parquet` has no `capture_source` or `snapshot_id`. A 2026 candidate-day can
-hold more than one copy, and 224 candidate-days (UTC) hold live and archived pages.
+hold more than one copy, and 223 candidate-days (UTC) hold live and archived pages.
 
 ### `panel_candidate_year.csv`
 
@@ -551,7 +551,7 @@ hold more than one copy, and 224 candidate-days (UTC) hold live and archived pag
 | `url_source` | `openfec`, `wikidata`, or `historical_fec_id_lead` (URL of the same FEC ID in an earlier year); empty if no URL |
 | `n_observed_snapshot_timestamps` | Number of distinct page times. Use `snapshot_id` in `raw_corpus.parquet` to count copies |
 | `observability_status` | Adds `no_url_found`, `valid_url_no_usable_capture`, and `captured_under_other_fec_id` |
-| `collection_failure_reason` | For `valid_url_no_usable_capture`: most frequent result of the homepage copies. `identity_unresolved` (text does not name the candidate), `blocked` (the server refused automatic requests), `request_error`, `http_error`, `no_content`. Else `not_applicable` |
+| `collection_failure_reason` | For `valid_url_no_usable_capture`: most frequent result of the homepage copies. `identity_unresolved` (text does not name the candidate), `blocked` (the server refused automatic requests), `request_error`, `http_error`, `no_content`; `gambling_spam` or `not_campaign_host` if the release omits each page of the candidate. Else `not_applicable` |
 | `collection_method_version` | `collection_2026_live_and_wayback` |
 | `provenance_evidence_scope` | `released_usable_pages_and_2026_collection_roster` |
 

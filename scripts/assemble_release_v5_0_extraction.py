@@ -119,8 +119,13 @@ def status_2026(add, out, pages):
         elif new.at[i, 'n_records'] != '0':
             new.at[i, 'extraction_status'] = 'observed_positive'
         else:
-            # Pages remain and no record remains. Only a row that had this state before can keep its status.
-            assert add.at[i, 'n_records'] == '0' and new.at[i, 'n_documents'] == add.at[i, 'n_documents'], new.loc[i].to_dict()
+            # Pages remain and no record remains. A row with no record before keeps its status.
+            # A row that lost each document with a record has extracted documents with no record.
+            # In both cases the row must still have a document, or the document count of before.
+            assert new.at[i, 'n_documents'] != '0' or new.at[i, 'n_documents'] == add.at[i, 'n_documents'], new.loc[i].to_dict()
+            if add.at[i, 'n_records'] != '0':
+                print('status changes to observed_zero:', new.at[i, 'candidate_cycle_id'], new.at[i, 'route'], flush=True)
+                new.at[i, 'extraction_status'] = 'observed_zero'
     return new, int((~same).sum())
 
 

@@ -15,8 +15,13 @@ import json
 import sys
 from pathlib import Path
 
+from urllib.parse import urlsplit
+
 import pandas as pd
 import pyarrow.parquet as pq
+
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+from scripts import build_2026_release_corpus as rules  # noqa: E402
 
 RECORD_FILES = ['candidate_issue_statements.parquet', 'candidate_biography_facts.parquet',
                 'candidate_endorsements.parquet']
@@ -118,12 +123,32 @@ def main():
           'North Dakota and South Dakota have a flagged House candidate in each year')
     hosts = corpus.snap_url[new].fillna('').str.cat(
         column(base / 'raw_corpus.parquet', ['urlkey']).urlkey[new], sep=' ')
-    check(not hosts.str.contains(r'//(?:www\.)?(?:linktr\.ee|foxnews\.com|linkedin\.com|fedscoop\.com|chicagotribune\.com)/|\.gov/').any(),
+    listed = '|'.join(host.replace('.', r'\.') for host in sorted(rules.NOT_CAMPAIGN_HOSTS))
+    check(not hosts.str.contains(rf'//(?:www\.)?(?:{listed})(?:/|$| )|\.gov/').any(),
           'no 2026 page of a host that is not a campaign website')
     context = column(base / 'raw_corpus.parquet', ['page_type_context', 'urlkey', 'n_char'])
     check(not ((context.page_type_context == 'homepage') & context.urlkey.str.contains('?', regex=False))[new].any(),
           'no 2026 homepage copy with a query string')
     check((context.n_char[new] <= 500_000).all(), 'no 2026 page above 500,000 characters')
+
+    # Second decisions of November 11, 2026: spam and pages without campaign text, two persons
+    # with two FEC IDs, value formats.
+    import pyarrow.dataset as ds
+    recent = ds.dataset(base / 'raw_corpus.parquet').to_table(
+        columns=['urlkey', 'text_snap_content'], filter=ds.field('year') == 2026).to_pandas()
+    path = recent.urlkey.map(lambda url: urlsplit(url).path)
+    check(not recent.text_snap_content.map(rules.text_rule).notna().any(), 'no 2026 page with a text removal rule')
+    check(not path.map(lambda v: bool(rules.SPAM_PATH.search(v) or rules.ACCOUNT_PATH.search(v) or rules.CART_PATH.search(v))).any(),
+          'no 2026 page with an address removal rule')
+    del recent
+    state = universe.set_index('cand_id').capture_status
+    for first, second in (('H6FL23139', 'H6GA23012'), ('S6KY00260', 'S6KY00278')):
+        check(sorted([state[first], state[second]]) == ['captured', 'captured_under_other_fec_id'],
+              f'{first} and {second} have text under one ID')
+    check(coded.stage.isin(['', '2']).all(), 'stage in the coded panel is 2 or missing')
+    check((provenance.source_district == universe.source_district).all(), 'source_district in provenance equals the universe')
+    check((universe.loc[universe.year != '2026', 'on_ballot'].str.lower() == 'true').sum() == 4_216,
+          'flagged candidate-years before 2026')
 
     record_ids = []
     for name in RECORD_FILES:

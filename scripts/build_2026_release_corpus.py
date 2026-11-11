@@ -69,14 +69,42 @@ def undecoded(text):
 
 # Hosts that are not a campaign website (decision of November 11, 2026, Hanno). The FEC
 # record of a few candidates names a news article, a social profile, or an office page.
-NOT_CAMPAIGN_HOSTS = {'linktr.ee', 'foxnews.com', 'linkedin.com', 'fedscoop.com', 'chicagotribune.com'}
+NOT_CAMPAIGN_HOSTS = {'linktr.ee', 'foxnews.com', 'linkedin.com', 'fedscoop.com', 'chicagotribune.com',
+                      'news-usa.today', 'caplanfinancial.com', 'battleprovenleadership.com', 'engageyall.com',
+                      'denney.group', 'stateoflocnation.com'}
+# Gambling advertisements on a lapsed or compromised campaign address. A page is spam if its
+# address names a gambling term or its text holds three or more of the terms. One or two
+# terms occur in comment spam and footer links of real campaign pages; the release keeps those.
+SPAM_TERMS = re.compile(
+    r'\b(togel|gacor|sbobet|slot online|situs slot|slot88|rtp live|rtp slot|agen slot|link slot|toto macau|'
+    r'situs toto|pragmatic play|paris sportif|casino en ligne|online casinos?|casino online|live casino|'
+    r'sportsbook|maxwin)\b', re.I)
+SPAM_PATH = re.compile(r'casino|togel|/category/slot|sports-betting|slot-innovations', re.I)
+MIN_SPAM_TERMS = 3
+# Pages without campaign text: the bot check of the host, the account pages of the GoDaddy
+# site builder, and the shop cart.
+BOT_CHECK_TEXT = 'request is being verified'
+ACCOUNT_PATH = re.compile(r'^/m/(?:account|create-account|bookings|orders)(?:/|$)')
+CART_PATH = re.compile(r'/cart/?$')
 # No campaign page has more than 140,000 characters. Two pages of one hacked site hold
 # 1.9 million characters of injected link text each.
 MAX_PAGE_CHARS = 500_000
 
 
-def removal_reason(page):
-    """Return why the release omits a usable page, or None."""
+def text_rule(text):
+    """Return the removal reason that the page text gives, or None."""
+    if len(SPAM_TERMS.findall(text)) >= MIN_SPAM_TERMS:
+        return 'gambling_spam'
+    if BOT_CHECK_TEXT in text:
+        return 'no_campaign_text'
+    return None
+
+
+def removal_reason(page, by_text):
+    """Return why the release omits a usable page, or None.
+
+    `by_text` maps a text file to the reason that its text gives.
+    """
     host = urlsplit(page.original_url).netloc.lower().removeprefix('www.')
     if host in NOT_CAMPAIGN_HOSTS or host.endswith('.gov'):
         return 'not_campaign_host'
@@ -86,7 +114,12 @@ def removal_reason(page):
         return 'query_string_homepage'
     if int(page.n_char) > MAX_PAGE_CHARS:
         return 'injected_text'
-    return None
+    path = urlsplit(page.original_url).path
+    if SPAM_PATH.search(path):
+        return 'gambling_spam'
+    if ACCOUNT_PATH.search(path) or CART_PATH.search(path):
+        return 'no_campaign_text'
+    return by_text.get(page.text_path)
 
 
 SIDE_FIELDS = ('snapshot_id', 'homepage_page_id', 'captured_at', 'source', 'distance_days', 'local_date_min',
@@ -183,7 +216,11 @@ def main():
     # The collector made a new crawl for each retry. For Wayback, two rows with the
     # same candidate, capture time, URL and text are one archived capture. Keep the first.
     # A row that the pair table uses is the one that stays.
-    reasons = {page.page_id: reason for page in usable.itertuples() if (reason := removal_reason(page))}
+    by_text = {}
+    for text_path in usable.text_path.unique():
+        if reason := text_rule(gzip.open(src / text_path, 'rt', encoding='utf-8').read()):
+            by_text[text_path] = reason
+    reasons = {page.page_id: reason for page in usable.itertuples() if (reason := removal_reason(page, by_text))}
     removed_pages = usable[usable.page_id.isin(reasons)][['candidate_id', 'page_id', 'date', 'original_url', 'source', 'n_char']].copy()
     removed_pages['reason'] = removed_pages.page_id.map(reasons)
     removed_pages.rename(columns={'candidate_id': 'cand_id', 'original_url': 'url'}).to_csv(
