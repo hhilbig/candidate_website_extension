@@ -1,0 +1,674 @@
+{
+ "task_id": "candidate_extraction_v2_recall_endorsements_3c2ed612ddc3_b001",
+ "format": "handcode-results-v1",
+ "exported_at": "2026-11-11T09:41:07Z",
+ "n_items": 20,
+ "n_complete": 20,
+ "responses": [
+  {
+   "item_id": "6361d73eae14a04dc6313577c1d781adcda4bfd12368692e8b9aaa20917a8f85",
+   "status": "complete",
+   "answers": {
+    "all_requested_records_captured": "yes"
+   }
+  },
+  {
+   "item_id": "e7648dc8a78e8300b05ef59dec67dd884cacacbf75c0bd8b390d0e0c94e469b4",
+   "status": "complete",
+   "answers": {
+    "all_requested_records_captured": "yes"
+   }
+  },
+  {
+   "item_id": "17c02ad7a99900088862fd568b64b1a6c38f97ac0a81fdb3363daa97a9df69a4",
+   "status": "complete",
+   "answers": {
+    "all_requested_records_captured": "yes"
+   }
+  },
+  {
+   "item_id": "4ee74627f92c16ec56f1cca9cf2e82a2ef2f5aee050f7ee5e6f51f1de0adc459",
+   "status": "complete",
+   "answers": {
+    "all_requested_records_captured": "yes"
+   }
+  },
+  {
+   "item_id": "aae46fcc93fae5463b717b4a5b228a7a3459b2a78aca103cbb3d82a3281c9a4a",
+   "status": "complete",
+   "answers": {
+    "all_requested_records_captured": "no",
+    "missed_records": [
+     {
+      "type": "government_official",
+      "value": "Thomas Huff (Kentucky State Representative, R-HD-49)",
+      "evidence": "Today, Kentucky State Representative Thomas Huff (R-HD-49) endorsed Andy Barr to be the next U.S Senator from Kentucky."
+     },
+     {
+      "type": "government_official",
+      "value": "President Trump",
+      "evidence": "Huff joins President Trump and more than 170 other major endorsers in backing Barr."
+     }
+    ]
+   }
+  },
+  {
+   "item_id": "d013a51bf2dbec4d8a43225eaf18b9a3dda5aced87bc340780c1c9ca70776b96",
+   "status": "complete",
+   "answers": {
+    "all_requested_records_captured": "no",
+    "missed_records": [
+     {
+      "type": "individual endorsement",
+      "value": "Lakshmi Sharma",
+      "evidence": "Lakshmi Sharma\nCA Democratic Party Delegate & Arts Commissioner, Saratoga"
+     }
+    ]
+   }
+  },
+  {
+   "item_id": "3a78a84053cb1cadeeb8c3c8e55cd878764416fa2090be01b4934a05aa033838",
+   "status": "complete",
+   "answers": {
+    "all_requested_records_captured": "yes"
+   }
+  },
+  {
+   "item_id": "1bbf4047cc2180742bad9306a25af341ce51cd5542800c5758fa1eacad8e9ead",
+   "status": "complete",
+   "answers": {
+    "all_requested_records_captured": "yes"
+   }
+  },
+  {
+   "item_id": "0811c97069066eeb027749c7bd2147c55d118abcad0eccee1d46be665db9fa37",
+   "status": "complete",
+   "answers": {
+    "all_requested_records_captured": "no",
+    "missed_records": [
+     {
+      "type": "individual endorsement",
+      "value": "Jeff McCabe",
+      "evidence": "Jeff McCabe,\nformer State House Majority Leader"
+     }
+    ]
+   }
+  },
+  {
+   "item_id": "9c183d74c64d5928f11f242b392ae5d6ffe0c8b10fab7c4be54962a3b129a044",
+   "status": "complete",
+   "answers": {
+    "all_requested_records_captured": "yes"
+   }
+  },
+  {
+   "item_id": "ffd5bc9424e752855750fae5edbfc1279646c91dfaba95e40b5161b1d2186d92",
+   "status": "complete",
+   "answers": {
+    "all_requested_records_captured": "no",
+    "missed_records": [
+     {
+      "type": "government_official",
+      "value": "Donald J. Trump",
+      "evidence": "Mayor Taylor joins President Donald J. Trump and a multitude of others in endorsing Barr\u2019s campaign."
+     }
+    ]
+   }
+  },
+  {
+   "item_id": "378a4ab83a579e2031f4407d1ad9cf8c0ca1cd5738c52727ae4bfafcebf27fe9",
+   "status": "complete",
+   "answers": {
+    "all_requested_records_captured": "no",
+    "missed_records": [
+     {
+      "type": "individual endorsement",
+      "value": "Jeff Hague",
+      "evidence": "Jeff Hague\nNew\nPresident, Delaware State Sportsmen\u2019s Association (DSSA)"
+     }
+    ]
+   }
+  },
+  {
+   "item_id": "e4b618a427e03d1ff47df20f8d1072a966aa6934c9ea6bc42c45f88feea40784",
+   "status": "complete",
+   "answers": {
+    "all_requested_records_captured": "no",
+    "missed_records": [
+     {
+      "type": "government_official",
+      "value": "Mike Bost",
+      "evidence": "Congressman Mike Bost\nUS Congress 12th District"
+     },
+     {
+      "type": "government_official",
+      "value": "Mary Miller",
+      "evidence": "Congresswoman Mary Miller\nUS Congress 15th District"
+     },
+     {
+      "type": "government_official",
+      "value": "Darin LaHood",
+      "evidence": "Congressman Darin LaHood\nUS Congress 16th District"
+     },
+     {
+      "type": "organization",
+      "value": "STAND FOR HEALTH FREEDOM",
+      "evidence": "STAND FOR HEALTH FREEDOM"
+     },
+     {
+      "type": "other_individual",
+      "value": "Diane Harris",
+      "evidence": "Diane Harris\nCandidate for Secretary of State"
+     },
+     {
+      "type": "party_official",
+      "value": "Jan Jahorski",
+      "evidence": "Jan Jahorski\nJoliet PC # 26"
+     },
+     {
+      "type": "other_individual",
+      "value": "Mike Krempski",
+      "evidence": "Mike and Molly Krempski"
+     },
+     {
+      "type": "other_individual",
+      "value": "David DeWar",
+      "evidence": "David DeWar\nPresident of Restore American Liberty, Candidate for Illinois House District 35 (Cook County)"
+     },
+     {
+      "type": "other_individual",
+      "value": "Christian Maxwell",
+      "evidence": "Christian Maxwell\nCongressional Candidate in the 1st Illinois Congressional district"
+     },
+     {
+      "type": "other_individual",
+      "value": "Max Solomon",
+      "evidence": "Max Solomon\nCandidate for State Treasurer  (Cook County)"
+     },
+     {
+      "type": "other_individual",
+      "value": "Stephanie Trussell",
+      "evidence": "Stephanie Trussell\nCandidate for Illinois House District 42 (DuPage County)"
+     },
+     {
+      "type": "other_individual",
+      "value": "Brian Scopa",
+      "evidence": "Brian Scopa\nCandidate for Illinois House District 84 (DuPage County)"
+     },
+     {
+      "type": "other_individual",
+      "value": "Laura Hois",
+      "evidence": "Laura Hois\nCandidate for Illinois House District Dist 81 (DuPage County)"
+     },
+     {
+      "type": "other_individual",
+      "value": "Ajay Gupta",
+      "evidence": "Ajay Gupta\nCandidate for Illinois House District 41 (DuPage County)"
+     },
+     {
+      "type": "other_individual",
+      "value": "Jesse Rodriguez",
+      "evidence": "Jesse Rodriguez\nCandidate for Illinois House District 83, Chair of the Aurora Township Republicans (Kane County)"
+     },
+     {
+      "type": "other_individual",
+      "value": "Eddie Perez",
+      "evidence": "Eddie Perez\nCandidate for State senate District 42 (Kane County)"
+     }
+    ]
+   }
+  },
+  {
+   "item_id": "88a55802d33a39fa58e29f0e7e7685387e8d2883e196dc38a4416dc06d432b00",
+   "status": "complete",
+   "answers": {
+    "all_requested_records_captured": "no",
+    "missed_records": [
+     {
+      "type": "organization",
+      "value": "Elect Democratic Women",
+      "evidence": "Elect Democratic Women"
+     }
+    ]
+   }
+  },
+  {
+   "item_id": "2e6ff3c02b139844b94f7f4078d4fb30b142ec5a6bd9ae70c98485579dc7b673",
+   "status": "complete",
+   "answers": {
+    "all_requested_records_captured": "yes"
+   }
+  },
+  {
+   "item_id": "160ebfa4a2d64a660f302ac17302774fd1f3cebbd41cc8aa0fa09fd41cbea2c9",
+   "status": "complete",
+   "answers": {
+    "all_requested_records_captured": "yes"
+   }
+  },
+  {
+   "item_id": "fa96527275f5bb527c087de0fb0ae95333a7b36a8d97203a692a1df4b10d1402",
+   "status": "complete",
+   "answers": {
+    "all_requested_records_captured": "no",
+    "missed_records": [
+     {
+      "type": "organization",
+      "value": "Kentucky State House Republicans",
+      "evidence": "Kentucky State House Republicans Unite Behind Andy Barr for U.S. Senate"
+     },
+     {
+      "type": "individual",
+      "value": "Steven Rudy",
+      "evidence": "District 1: Steven Rudy"
+     },
+     {
+      "type": "individual",
+      "value": "Randy Bridges",
+      "evidence": "District 3: Randy Bridges"
+     },
+     {
+      "type": "individual",
+      "value": "Wade WIlliams",
+      "evidence": "District 4: Wade WIlliams"
+     },
+     {
+      "type": "individual",
+      "value": "Mary Beth Imes",
+      "evidence": "District 5: Mary Beth Imes"
+     },
+     {
+      "type": "individual",
+      "value": "Chris Freeland",
+      "evidence": "District 6: Chris Freeland"
+     },
+     {
+      "type": "individual",
+      "value": "Suzanne Miles",
+      "evidence": "District 7: Suzanne Miles"
+     },
+     {
+      "type": "individual",
+      "value": "Walker Thomas",
+      "evidence": "District 8: Walker Thomas"
+     },
+     {
+      "type": "individual",
+      "value": "Myron Dossett",
+      "evidence": "District 9: Myron Dossett"
+     },
+     {
+      "type": "individual",
+      "value": "J.T. Payne",
+      "evidence": "District 11: J.T. Payne"
+     },
+     {
+      "type": "individual",
+      "value": "Jim Gooch",
+      "evidence": "District 12: Jim Gooch"
+     },
+     {
+      "type": "individual",
+      "value": "DJ Johnson",
+      "evidence": "District 13: DJ Johnson"
+     },
+     {
+      "type": "individual",
+      "value": "Scott Lewis",
+      "evidence": "District 14: Scott Lewis"
+     },
+     {
+      "type": "individual",
+      "value": "Rebecca Raymer",
+      "evidence": "District 15: Rebecca Raymer"
+     },
+     {
+      "type": "individual",
+      "value": "Jason Petrie",
+      "evidence": "District 16: Jason Petrie"
+     },
+     {
+      "type": "individual",
+      "value": "Robert Duvall",
+      "evidence": "District 17: Robert Duvall"
+     },
+     {
+      "type": "individual",
+      "value": "Samara Heavrin",
+      "evidence": "District 18: Samara Heavrin"
+     },
+     {
+      "type": "individual",
+      "value": "Michael Meredith",
+      "evidence": "District 19: Michael Meredith"
+     },
+     {
+      "type": "individual",
+      "value": "Kevin Jackson",
+      "evidence": "District 20: Kevin Jackson"
+     },
+     {
+      "type": "individual",
+      "value": "Amy Neighbors",
+      "evidence": "District 21: Amy Neighbors"
+     },
+     {
+      "type": "individual",
+      "value": "Shawn McPherson",
+      "evidence": "District 22: Shawn McPherson"
+     },
+     {
+      "type": "individual",
+      "value": "Steve Riley",
+      "evidence": "District 23: Steve Riley"
+     },
+     {
+      "type": "individual",
+      "value": "Ryan Bivens",
+      "evidence": "District 24: Ryan Bivens"
+     },
+     {
+      "type": "individual",
+      "value": "Steve Bratcher",
+      "evidence": "District 25: Steve Bratcher"
+     },
+     {
+      "type": "individual",
+      "value": "Peyton Griffee",
+      "evidence": "District 26: Peyton Griffee"
+     },
+     {
+      "type": "individual",
+      "value": "Nancy Tate",
+      "evidence": "District 27: Nancy Tate"
+     },
+     {
+      "type": "individual",
+      "value": "Jared Bauman",
+      "evidence": "District 28: Jared Bauman"
+     },
+     {
+      "type": "individual",
+      "value": "Chris Lewis",
+      "evidence": "District 29: Chris Lewis"
+     },
+     {
+      "type": "individual",
+      "value": "Susan Tyler Witten",
+      "evidence": "District 31: Susan Tyler Witten"
+     },
+     {
+      "type": "individual",
+      "value": "Jason Nemes",
+      "evidence": "District 33: Jason Nemes"
+     },
+     {
+      "type": "individual",
+      "value": "John Hodgson",
+      "evidence": "District 36: John Hodgson"
+     },
+     {
+      "type": "individual",
+      "value": "Emily Callaway",
+      "evidence": "District 37: Emily Callaway"
+     },
+     {
+      "type": "individual",
+      "value": "Matt Lockett",
+      "evidence": "District 39: Matt Lockett"
+     },
+     {
+      "type": "individual",
+      "value": "Ken Fleming",
+      "evidence": "District 48: Ken Fleming"
+     },
+     {
+      "type": "individual",
+      "value": "Thomas Huff",
+      "evidence": "District 49: Thomas Huff"
+     },
+     {
+      "type": "individual",
+      "value": "Candy Massaroni",
+      "evidence": "District 50: Candy Massaroni"
+     },
+     {
+      "type": "individual",
+      "value": "Sarge Pollock",
+      "evidence": "District 51: Sarge Pollock"
+     },
+     {
+      "type": "individual",
+      "value": "Ken Upchurch",
+      "evidence": "District 52: Ken Upchurch"
+     },
+     {
+      "type": "individual",
+      "value": "James Tipton",
+      "evidence": "District 53: James Tipton"
+     },
+     {
+      "type": "individual",
+      "value": "Daniel Elliott",
+      "evidence": "District 54: Daniel Elliott"
+     },
+     {
+      "type": "individual",
+      "value": "Kim King",
+      "evidence": "District 55: Kim King"
+     },
+     {
+      "type": "individual",
+      "value": "Daniel Fister",
+      "evidence": "District 56: Daniel Fister"
+     },
+     {
+      "type": "individual",
+      "value": "Jennifer Decker",
+      "evidence": "District 58: Jennifer Decker"
+     },
+     {
+      "type": "individual",
+      "value": "Tony Hampton",
+      "evidence": "District 62: Tony Hampton"
+     },
+     {
+      "type": "individual",
+      "value": "Kim Banta",
+      "evidence": "District 63: Kim Banta"
+     },
+     {
+      "type": "individual",
+      "value": "Kim Moser",
+      "evidence": "District 64: Kim Moser"
+     },
+     {
+      "type": "individual",
+      "value": "Stephanie Dietz",
+      "evidence": "District 65 Stephanie Dietz"
+     },
+     {
+      "type": "individual",
+      "value": "T.J. Roberts",
+      "evidence": "District 66: T.J. Roberts"
+     },
+     {
+      "type": "individual",
+      "value": "Mike Clines",
+      "evidence": "District 68: Mike Clines"
+     },
+     {
+      "type": "individual",
+      "value": "Steve Doan",
+      "evidence": "District 69: Steve Doan"
+     },
+     {
+      "type": "individual",
+      "value": "William Lawrence",
+      "evidence": "District 70: William Lawrence"
+     },
+     {
+      "type": "individual",
+      "value": "Josh Bray",
+      "evidence": "District 71: Josh Bray"
+     },
+     {
+      "type": "individual",
+      "value": "Matt Koch",
+      "evidence": "District 72: Matt Koch"
+     },
+     {
+      "type": "individual",
+      "value": "David Hale",
+      "evidence": "District 74: David Hale"
+     },
+     {
+      "type": "individual",
+      "value": "Josh Branscum",
+      "evidence": "District 83: Josh Branscum"
+     },
+     {
+      "type": "individual",
+      "value": "Chris Fugate",
+      "evidence": "District 84: Chris Fugate"
+     },
+     {
+      "type": "individual",
+      "value": "Shane Baker",
+      "evidence": "District 85: Shane Baker"
+     },
+     {
+      "type": "individual",
+      "value": "Tom O\u2019Dell Smith",
+      "evidence": "District 86: Tom O\u2019Dell Smith"
+     },
+     {
+      "type": "individual",
+      "value": "Adam Bowling",
+      "evidence": "District 87: Adam Bowling"
+     },
+     {
+      "type": "individual",
+      "value": "Vanessa Grossl",
+      "evidence": "District 88: Vanessa Grossl"
+     },
+     {
+      "type": "individual",
+      "value": "Timmy Truett",
+      "evidence": "District 89: Timmy Truett"
+     },
+     {
+      "type": "individual",
+      "value": "Derek Lewis",
+      "evidence": "District 90: Derek Lewis"
+     },
+     {
+      "type": "individual",
+      "value": "John Blanton",
+      "evidence": "District 92: John Blanton"
+     },
+     {
+      "type": "individual",
+      "value": "Mitch Whitaker",
+      "evidence": "District 94: Mitch Whitaker"
+     },
+     {
+      "type": "individual",
+      "value": "Patrick Flannery",
+      "evidence": "District 96: Patrick Flannery"
+     },
+     {
+      "type": "individual",
+      "value": "Bobby McCool",
+      "evidence": "District 97: Bobby McCool"
+     },
+     {
+      "type": "individual",
+      "value": "Aaron Thompson",
+      "evidence": "District 98: Aaron Thompson"
+     },
+     {
+      "type": "individual",
+      "value": "Richard White",
+      "evidence": "District 99: Richard White"
+     },
+     {
+      "type": "individual",
+      "value": "Scott Sharp",
+      "evidence": "District 100: Scott Sharp"
+     }
+    ]
+   }
+  },
+  {
+   "item_id": "2e27e17dfa3f80b7941450d42fcc4929f2c1d8f99d0ffb2812253baf8d1ae7fe",
+   "status": "complete",
+   "answers": {
+    "all_requested_records_captured": "no",
+    "missed_records": [
+     {
+      "type": "organization",
+      "value": "Federation of Asian American Voters",
+      "evidence": "On behalf of the Federation of Asian American Voters, we\u2019re proud to endorse Trinh Ha for the U.S. Congressional House, District 8, Washington, for her vision, dedication, and leadership."
+     }
+    ]
+   }
+  },
+  {
+   "item_id": "5932ad9bb885d360dcd1f9a3608da2539072a07d1b2a275f7cf664a4de952354",
+   "status": "complete",
+   "answers": {
+    "all_requested_records_captured": "yes"
+   }
+  },
+  {
+   "item_id": "f043610dadf819109e7bf87d9c503e498c08461f95ee428581498f88233d60a4",
+   "status": "complete",
+   "answers": {
+    "all_requested_records_captured": "no",
+    "missed_records": [
+     {
+      "type": "elected official (state delegate)",
+      "value": "David Reid",
+      "evidence": "David Reid\nHD-28"
+     },
+     {
+      "type": "elected official (state delegate)",
+      "value": "Marty Martinez",
+      "evidence": "Marty Martinez\nHD-29"
+     },
+     {
+      "type": "elected official (state delegate)",
+      "value": "John McAuliff",
+      "evidence": "John McAuliff\nHD-30"
+     },
+     {
+      "type": "elected official (state delegate)",
+      "value": "Lily Franklin",
+      "evidence": "Lily Franklin\nHD-41"
+     },
+     {
+      "type": "elected official (local)",
+      "value": "Kathleen Campbell",
+      "evidence": "Kathleen Campbell\nMount Crawford Town Council"
+     },
+     {
+      "type": "elected official (local)",
+      "value": "Kacey Cunningham",
+      "evidence": "Kacey Cunningham"
+     },
+     {
+      "type": "elected official (local)",
+      "value": "Madison Irving",
+      "evidence": "Madison Irving\nHenrico School Board"
+     },
+     {
+      "type": "elected official (local)",
+      "value": "LaKeesha S. \"Klu\" Atkinson",
+      "evidence": "LaKeesha S. \"Klu\" Atkinson\nPortsmouth School Board Vice Chair"
+     }
+    ]
+   }
+  }
+ ]
+}

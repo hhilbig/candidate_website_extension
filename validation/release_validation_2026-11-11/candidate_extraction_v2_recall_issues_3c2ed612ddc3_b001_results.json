@@ -1,0 +1,343 @@
+{
+ "task_id": "candidate_extraction_v2_recall_issues_3c2ed612ddc3_b001",
+ "format": "handcode-results-v1",
+ "exported_at": "2026-11-11T09:41:06Z",
+ "n_items": 20,
+ "n_complete": 20,
+ "responses": [
+  {
+   "item_id": "6bbf8c232b9dec52e11414795831d974bab205d136c3ad07439d763354297c5f",
+   "status": "complete",
+   "answers": {
+    "all_requested_records_captured": "yes"
+   }
+  },
+  {
+   "item_id": "f2ceefff2f95cd79a16a8776cbd09c1e6be829c6fa245d1d63f993af007c6c11",
+   "status": "complete",
+   "answers": {
+    "all_requested_records_captured": "no",
+    "missed_records": [
+     {
+      "type": "proposal",
+      "value": "Champion permitting reform to put a clock on federal review",
+      "evidence": "Alexander will champion permitting reform to put a clock on federal review"
+     },
+     {
+      "type": "proposal",
+      "value": "Restore judicial deference to agency approvals",
+      "evidence": "restore judicial deference to agency approvals,"
+     }
+    ]
+   }
+  },
+  {
+   "item_id": "a594c4d793d6e177486cdd72f766c86355898fd12494b088e92ca2e5fdbe7891",
+   "status": "complete",
+   "answers": {
+    "all_requested_records_captured": "yes"
+   }
+  },
+  {
+   "item_id": "ef7d51601c344fb59bda0d0a7778e5bc13f2d0a7539660091a1467ddb621eaa2",
+   "status": "complete",
+   "answers": {
+    "all_requested_records_captured": "yes"
+   }
+  },
+  {
+   "item_id": "50953d6700da2cd3615ae2b40bd0c3cd32f5fcdbe52e654c0be0ee3386da4f55",
+   "status": "complete",
+   "answers": {
+    "all_requested_records_captured": "yes"
+   }
+  },
+  {
+   "item_id": "035343f3bc6b776ff8bb2e3212388adc157df9d72c5592910dcacff73425d9c5",
+   "status": "complete",
+   "answers": {
+    "all_requested_records_captured": "yes"
+   }
+  },
+  {
+   "item_id": "dbe5d1dcffec42e607cacf1a550c81945286ad427991ff81eaee5498631a11bf",
+   "status": "complete",
+   "answers": {
+    "all_requested_records_captured": "yes"
+   }
+  },
+  {
+   "item_id": "125fa2ccf7583786a6be26ee763ea454112defa49ddea46986c81147b9da99ad",
+   "status": "complete",
+   "answers": {
+    "all_requested_records_captured": "yes"
+   }
+  },
+  {
+   "item_id": "79f5c8874186523189eada0aba7b64d2c2ce898f3001e5d20ff1926d0d8a8743",
+   "status": "complete",
+   "answers": {
+    "all_requested_records_captured": "no",
+    "missed_records": [
+     {
+      "type": "proposal",
+      "value": "Protect family unity in legal immigration",
+      "evidence": "I will work to streamline lawful immigration, modernize processing and fraud detection, reduce unnecessary bureaucratic delays, and protect family unity."
+     },
+     {
+      "type": "proposal",
+      "value": "Remove VA obstacles and protect veteran benefits and care",
+      "evidence": "Every day that I am in Congress, I will fight to remove obstacles and ensure our veteran benefits are protected and that veterans receive the care and attention they have earned."
+     },
+     {
+      "type": "proposal",
+      "value": "Dedicated veteran staff member to serve veteran constituents",
+      "evidence": "Back home in Oregon, I will have a veteran on my congressional staff who is dedicated 100 percent to working with me to serve all of my veteran constituents, including our forgotten homeless veterans."
+     },
+     {
+      "type": "support",
+      "value": "Move the revised BLM Western Oregon plan forward",
+      "evidence": "Supports moving the revised plan forward to improve forest health, increase responsible harvests, and stabilize rural counties."
+     },
+     {
+      "type": "support",
+      "value": "All-of-the-above energy strategy with scientifically based, cleaner energy choices",
+      "evidence": "the government should pursue an \u201call of the above\u201d energy strategy that strives to develop scientifically based, cleaner energy choices"
+     },
+     {
+      "type": "support",
+      "value": "Protect energy infrastructure",
+      "evidence": "protects our energy infrastructure"
+     },
+     {
+      "type": "support",
+      "value": "End reliance on energy from hostile and unreliable nations",
+      "evidence": "ends reliance on sources of energy from hostile and unreliable nations."
+     },
+     {
+      "type": "support",
+      "value": "America stands with Israel and against terrorism",
+      "evidence": "When elected, I will ensure that Israel and its enemies never doubt that America will stand for Israel and against terrorism."
+     }
+    ]
+   }
+  },
+  {
+   "item_id": "8add2fce1d5c641d30284a5dea311aae50820c2773eea39eb9919820ff3ff9e1",
+   "status": "complete",
+   "answers": {
+    "all_requested_records_captured": "no",
+    "missed_records": [
+     {
+      "type": "proposal",
+      "value": "Keep and enforce background checks",
+      "evidence": "Keep and enforce background checks"
+     },
+     {
+      "type": "proposal",
+      "value": "Highlight the importance of gun storage",
+      "evidence": "Highlight the importance of gun storage"
+     },
+     {
+      "type": "proposal",
+      "value": "Document gun sales and owner changes",
+      "evidence": "Document gun sales and owner changes of deadly weapons"
+     },
+     {
+      "type": "proposal",
+      "value": "Fund gun violence research",
+      "evidence": "Fund gun violence research"
+     },
+     {
+      "type": "proposal",
+      "value": "Stop illegal access to guns",
+      "evidence": "Stop illegal access to guns"
+     },
+     {
+      "type": "proposal",
+      "value": "Registration requirements for 3D-printed guns",
+      "evidence": "Create registration requirements for 3D-printed guns"
+     },
+     {
+      "type": "proposal",
+      "value": "Reduce violence in high-crime communities",
+      "evidence": "Reduce violence in high-crime communities"
+     }
+    ]
+   }
+  },
+  {
+   "item_id": "8b62aa9711c0b99165a40bc3347618bd4fd312184a32012dfaaa71ad7c4721d5",
+   "status": "complete",
+   "answers": {
+    "all_requested_records_captured": "yes"
+   }
+  },
+  {
+   "item_id": "93a68c64b4641debcce5b436f7ef70198118667d274eec32135a1f043f261e75",
+   "status": "complete",
+   "answers": {
+    "all_requested_records_captured": "no",
+    "missed_records": [
+     {
+      "type": "support",
+      "value": "Restrict firearm ownership by suspected terrorists (separate object from the seriously mentally ill; model holds one combined record)",
+      "evidence": "Restrict ownership by the seriously mentally ill and suspected terrorists"
+     },
+     {
+      "type": "support",
+      "value": "Close gun-show loopholes (separate object from internet loopholes; model holds one combined record)",
+      "evidence": "Close internet and gun-show loopholes"
+     }
+    ]
+   }
+  },
+  {
+   "item_id": "6d560056865ed96df92313d45d40a7d9f1390ff675d8e9ee5e7e91203924f1bd",
+   "status": "complete",
+   "answers": {
+    "all_requested_records_captured": "yes"
+   }
+  },
+  {
+   "item_id": "d8487dac7d5f54aa52aa6da9bbc0d24c38ca1e01f756d1c70eae04eb72e40f3a",
+   "status": "complete",
+   "answers": {
+    "all_requested_records_captured": "no",
+    "missed_records": [
+     {
+      "type": "current_action",
+      "value": "Fighting for safer streets",
+      "evidence": "Here on the Treasure Coast and in the Palm Beaches, we are fighting for clean water, safer streets, lower taxes, secure borders, veterans who are treated with the honor they earned, and an America First agenda that puts working families ahead of Washington insiders."
+     },
+     {
+      "type": "current_action",
+      "value": "Fighting for lower taxes",
+      "evidence": "Here on the Treasure Coast and in the Palm Beaches, we are fighting for clean water, safer streets, lower taxes, secure borders, veterans who are treated with the honor they earned, and an America First agenda that puts working families ahead of Washington insiders."
+     },
+     {
+      "type": "current_action",
+      "value": "Fighting for secure borders",
+      "evidence": "Here on the Treasure Coast and in the Palm Beaches, we are fighting for clean water, safer streets, lower taxes, secure borders, veterans who are treated with the honor they earned, and an America First agenda that puts working families ahead of Washington insiders."
+     },
+     {
+      "type": "current_action",
+      "value": "Fighting for veterans treated with the honor they earned",
+      "evidence": "Here on the Treasure Coast and in the Palm Beaches, we are fighting for clean water, safer streets, lower taxes, secure borders, veterans who are treated with the honor they earned, and an America First agenda that puts working families ahead of Washington insiders."
+     },
+     {
+      "type": "current_action",
+      "value": "Fighting for an America First agenda that puts working families ahead of Washington insiders",
+      "evidence": "Here on the Treasure Coast and in the Palm Beaches, we are fighting for clean water, safer streets, lower taxes, secure borders, veterans who are treated with the honor they earned, and an America First agenda that puts working families ahead of Washington insiders."
+     }
+    ]
+   }
+  },
+  {
+   "item_id": "7dec88a954165bbd113fd62a52088f0001c61a9600532e9bd6fa9b638fc5ed03",
+   "status": "complete",
+   "answers": {
+    "all_requested_records_captured": "yes"
+   }
+  },
+  {
+   "item_id": "ded62b928efdb7611043d3816e7495982e90db328e37207e69606dacb022df9a",
+   "status": "complete",
+   "answers": {
+    "all_requested_records_captured": "yes"
+   }
+  },
+  {
+   "item_id": "c76c8076e39db85e852dc22a5c19007600f3adaaef8530cbc49f29054b2fd921",
+   "status": "complete",
+   "answers": {
+    "all_requested_records_captured": "no",
+    "missed_records": [
+     {
+      "type": "proposal",
+      "value": "Expand federal funding for Post Critical Incident Seminar programs, trauma retreats, EMDR therapy, counseling, and other evidence-based treatment for first responders",
+      "evidence": "Expand federal funding for Post Critical Incident Seminar programs, trauma retreats, Eye Movement Desensitization and Reprocessing therapy, counseling, and other evidence-based treatment designed for first responders."
+     },
+     {
+      "type": "proposal",
+      "value": "Cover treatment, travel, lodging, and temporary staffing costs so rural officers can access specialized programs",
+      "evidence": "Cover treatment, travel, lodging, and temporary staffing costs so officers from rural departments can access specialized programs without placing additional strain on their agencies."
+     },
+     {
+      "type": "proposal",
+      "value": "Encourage routine mental-health care and post-critical-incident treatment for officers",
+      "evidence": "Encourage routine mental-health care and post-critical-incident treatment before trauma develops into severe burnout, substance misuse, family problems, or suicide risk."
+     },
+     {
+      "type": "proposal",
+      "value": "Expand mobile crisis response (distinct program; model holds one combined record with co-responder teams)",
+      "evidence": "Expand co-responder teams, mobile crisis response, and 24-hour on-call or telehealth access so clinicians can assist officers during mental-health and substance-use crises."
+     },
+     {
+      "type": "proposal",
+      "value": "Expand 24-hour on-call or telehealth clinician access (distinct program; model holds one combined record)",
+      "evidence": "Expand co-responder teams, mobile crisis response, and 24-hour on-call or telehealth access so clinicians can assist officers during mental-health and substance-use crises."
+     },
+     {
+      "type": "proposal",
+      "value": "Expand family-support programs for officer families (distinct from counseling; model holds one combined record)",
+      "evidence": "Expand confidential counseling, family-support programs, and educational resources for spouses and children dealing with the effects of shift work, trauma, critical incidents, and unpredictable schedules."
+     },
+     {
+      "type": "proposal",
+      "value": "Expand educational resources for spouses and children of officers (distinct from counseling; model holds one combined record)",
+      "evidence": "Expand confidential counseling, family-support programs, and educational resources for spouses and children dealing with the effects of shift work, trauma, critical incidents, and unpredictable schedules."
+     }
+    ]
+   }
+  },
+  {
+   "item_id": "957854383d66e6e2c2656ee9843ab7f304cce3dd300f1d7e6408f1e9da437ffb",
+   "status": "complete",
+   "answers": {
+    "all_requested_records_captured": "yes"
+   }
+  },
+  {
+   "item_id": "9a9b24dd75b98f5b224916cb9e663a73d4df5551a4dc1621d084953a3d853408",
+   "status": "complete",
+   "answers": {
+    "all_requested_records_captured": "yes"
+   }
+  },
+  {
+   "item_id": "116f8a3bba1b5a6cf8739c977ee743e19a3c58c78a4b097971e1b902d156eb57",
+   "status": "complete",
+   "answers": {
+    "all_requested_records_captured": "no",
+    "missed_records": [
+     {
+      "type": "support",
+      "value": "Make voting more accessible",
+      "evidence": "Make voting more accessible"
+     },
+     {
+      "type": "support",
+      "value": "Make healthcare more accessible for veterans",
+      "evidence": "Make accessing healthcare more accessible for veterans"
+     },
+     {
+      "type": "support",
+      "value": "Expand the House of Representatives",
+      "evidence": "Expand the House of Representatives and make the democratic process more democratic"
+     },
+     {
+      "type": "support",
+      "value": "Restrict private insurance companies' ability to deny claims",
+      "evidence": "Restrict private insurance companies ability to deny claims"
+     },
+     {
+      "type": "support",
+      "value": "Increase access to women's reproductive healthcare",
+      "evidence": "Increase access to women\u2019s reproductive healthcare"
+     }
+    ]
+   }
+  }
+ ]
+}

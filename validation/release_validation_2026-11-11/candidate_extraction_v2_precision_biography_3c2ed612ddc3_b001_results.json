@@ -1,0 +1,751 @@
+{
+ "task_id": "candidate_extraction_v2_precision_biography_3c2ed612ddc3_b001",
+ "format": "handcode-results-v1",
+ "exported_at": "2026-11-11T09:43:19Z",
+ "n_items": 60,
+ "n_complete": 60,
+ "responses": [
+  {
+   "item_id": "1fb9600077076d30845f4e875e8d8cf2080a0cdeed7832c85442a7b2e6733be1",
+   "status": "complete",
+   "answers": {
+    "fact_present": "yes",
+    "value_faithful": "yes",
+    "field_correct": "yes",
+    "timing_correct": "yes",
+    "relationship_correct": "yes",
+    "evidence_supports_fact": "yes"
+   }
+  },
+  {
+   "item_id": "e75bfbf0a0ce5d2b0f070df3066065f55f5737b60cd914bef7ad4df170aa95ab",
+   "status": "complete",
+   "answers": {
+    "fact_present": "yes",
+    "value_faithful": "yes",
+    "field_correct": "yes",
+    "timing_correct": "yes",
+    "relationship_correct": "yes",
+    "evidence_supports_fact": "yes"
+   }
+  },
+  {
+   "item_id": "a96a404fff8804b33c4736efdfb51db25dc506f5b219ad7012884144e08dc5df",
+   "status": "complete",
+   "answers": {
+    "fact_present": "yes",
+    "value_faithful": "yes",
+    "field_correct": "yes",
+    "timing_correct": "yes",
+    "relationship_correct": "yes",
+    "evidence_supports_fact": "yes"
+   }
+  },
+  {
+   "item_id": "869341450540d65d82850c788dbf1fd44a690723dceb6a36e198db48f4f1596a",
+   "status": "complete",
+   "answers": {
+    "fact_present": "yes",
+    "value_faithful": "yes",
+    "field_correct": "yes",
+    "timing_correct": "no",
+    "relationship_correct": "yes",
+    "evidence_supports_fact": "yes",
+    "notes": "Birth in Kingston is a past event stated in past tense; timing current is wrong (former or unclear fits)."
+   }
+  },
+  {
+   "item_id": "fad08354c8741f26ab466812e6fd870687a98e2dd52cafefedafba090b76052d",
+   "status": "complete",
+   "answers": {
+    "fact_present": "yes",
+    "value_faithful": "yes",
+    "field_correct": "yes",
+    "timing_correct": "yes",
+    "relationship_correct": "yes",
+    "evidence_supports_fact": "yes"
+   }
+  },
+  {
+   "item_id": "90d9356d480f566e9c4afdba946ff80955b105e5667165920803f3a31d7af437",
+   "status": "complete",
+   "answers": {
+    "fact_present": "yes",
+    "value_faithful": "yes",
+    "field_correct": "no",
+    "timing_correct": "yes",
+    "relationship_correct": "yes",
+    "evidence_supports_fact": "yes",
+    "notes": "Leading re-election campaigns for a sheriff is political campaign work, not public service experience; the public service fact is the PIO role."
+   }
+  },
+  {
+   "item_id": "df173c517459ca08bf838ddeb405fcd9cd25f4b5343cd21e41156fc274462945",
+   "status": "complete",
+   "answers": {
+    "fact_present": "yes",
+    "value_faithful": "yes",
+    "field_correct": "yes",
+    "timing_correct": "yes",
+    "relationship_correct": "yes",
+    "evidence_supports_fact": "yes"
+   }
+  },
+  {
+   "item_id": "109d14c46f961d0eddeda2e80a4dbe799d625cc28d141cc3bb46f25e556d98e6",
+   "status": "complete",
+   "answers": {
+    "fact_present": "yes",
+    "value_faithful": "yes",
+    "field_correct": "yes",
+    "timing_correct": "yes",
+    "relationship_correct": "yes",
+    "evidence_supports_fact": "yes"
+   }
+  },
+  {
+   "item_id": "8ec4a38f0c3de977243aadb261fe2c903b986174c916d2f815d1351f6a93e9f2",
+   "status": "complete",
+   "answers": {
+    "fact_present": "yes",
+    "value_faithful": "yes",
+    "field_correct": "yes",
+    "timing_correct": "yes",
+    "relationship_correct": "yes",
+    "evidence_supports_fact": "yes"
+   }
+  },
+  {
+   "item_id": "cb669d5d22e416c8f0fab899c4f49872450782134cb72d8c8dcbdefa6a22151a",
+   "status": "complete",
+   "answers": {
+    "fact_present": "yes",
+    "value_faithful": "yes",
+    "field_correct": "no",
+    "timing_correct": "yes",
+    "relationship_correct": "yes",
+    "evidence_supports_fact": "no",
+    "notes": "A policy priority, not a biographical fact; it fits no allowed field (the eligible fact would be his committee chair role). The span omits who leads the fight and only names the policy."
+   }
+  },
+  {
+   "item_id": "947829b519113ab46cfda753b05a422761402cf8e2c648fc2813a511864a31c8",
+   "status": "complete",
+   "answers": {
+    "fact_present": "yes",
+    "value_faithful": "yes",
+    "field_correct": "yes",
+    "timing_correct": "yes",
+    "relationship_correct": "yes",
+    "evidence_supports_fact": "yes"
+   }
+  },
+  {
+   "item_id": "b44d716705ec0682e822bbafd7afa509f1e21aac93eeb6f9eb5cf4c5a20bc7a6",
+   "status": "complete",
+   "answers": {
+    "fact_present": "yes",
+    "value_faithful": "yes",
+    "field_correct": "yes",
+    "timing_correct": "yes",
+    "relationship_correct": "yes",
+    "evidence_supports_fact": "yes"
+   }
+  },
+  {
+   "item_id": "595bedde05f42b99feb24c2954e0930b681b99cad5ac7e1ff69aaa33fe1e441f",
+   "status": "complete",
+   "answers": {
+    "fact_present": "yes",
+    "value_faithful": "yes",
+    "field_correct": "yes",
+    "timing_correct": "yes",
+    "relationship_correct": "yes",
+    "evidence_supports_fact": "yes"
+   }
+  },
+  {
+   "item_id": "bb4892fefe001e68e5904f615e9ceb0d4d992aa8f6212584d0bf8b38d621b8e7",
+   "status": "complete",
+   "answers": {
+    "fact_present": "yes",
+    "value_faithful": "yes",
+    "field_correct": "yes",
+    "timing_correct": "yes",
+    "relationship_correct": "yes",
+    "evidence_supports_fact": "yes"
+   }
+  },
+  {
+   "item_id": "36ce6ed1b18688daeb12e92ac1a11f6f304c6ca331a4a68b7cd3c2ad72d9c5ec",
+   "status": "complete",
+   "answers": {
+    "fact_present": "yes",
+    "value_faithful": "yes",
+    "field_correct": "yes",
+    "timing_correct": "yes",
+    "relationship_correct": "yes",
+    "evidence_supports_fact": "yes"
+   }
+  },
+  {
+   "item_id": "2b549792b4b04eb6007608700fd12e439eba4237b4d87c0e2ebae1edd0f65000",
+   "status": "complete",
+   "answers": {
+    "fact_present": "yes",
+    "value_faithful": "yes",
+    "field_correct": "yes",
+    "timing_correct": "yes",
+    "relationship_correct": "yes",
+    "evidence_supports_fact": "yes"
+   }
+  },
+  {
+   "item_id": "7def8700188454a6df375f68766f6541a23967ca46191842a580c766ad1592f3",
+   "status": "complete",
+   "answers": {
+    "fact_present": "yes",
+    "value_faithful": "yes",
+    "field_correct": "yes",
+    "timing_correct": "yes",
+    "relationship_correct": "yes",
+    "evidence_supports_fact": "yes"
+   }
+  },
+  {
+   "item_id": "00dcf613181ef7e527c2fb6a24dc5448d53a13e85dfb9cab6e08674bd377beea",
+   "status": "complete",
+   "answers": {
+    "fact_present": "yes",
+    "value_faithful": "yes",
+    "field_correct": "no",
+    "timing_correct": "yes",
+    "relationship_correct": "yes",
+    "evidence_supports_fact": "yes",
+    "notes": "The page presents maple syrup making as a pursuit he finds joy in, beside his business work, not as an occupation."
+   }
+  },
+  {
+   "item_id": "1591cbf6bfb1294248b5c9ccbd10887229ebf51ba26209365a29e9e7824b5965",
+   "status": "complete",
+   "answers": {
+    "fact_present": "yes",
+    "value_faithful": "yes",
+    "field_correct": "yes",
+    "timing_correct": "yes",
+    "relationship_correct": "yes",
+    "evidence_supports_fact": "yes"
+   }
+  },
+  {
+   "item_id": "7d8ce53f9971480b8233d452997d3dd98d962aa7624437c086378b225ab21e75",
+   "status": "complete",
+   "answers": {
+    "fact_present": "yes",
+    "value_faithful": "yes",
+    "field_correct": "yes",
+    "timing_correct": "yes",
+    "relationship_correct": "yes",
+    "evidence_supports_fact": "yes"
+   }
+  },
+  {
+   "item_id": "e81b78c1cbea7d48a44a3d27b66b7b610db96af0eaf8c45140f1c48069af6540",
+   "status": "complete",
+   "answers": {
+    "fact_present": "yes",
+    "value_faithful": "yes",
+    "field_correct": "no",
+    "timing_correct": "yes",
+    "relationship_correct": "yes",
+    "evidence_supports_fact": "yes",
+    "notes": "A political stance taken as a member of Congress, not public service experience; at most it belongs to elected_office_experience (House Judiciary Committee)."
+   }
+  },
+  {
+   "item_id": "0a793b24d31ca1f892f085d4a2c7c3c00dcfa7997b77886227bb429bf84ef94c",
+   "status": "complete",
+   "answers": {
+    "fact_present": "yes",
+    "value_faithful": "yes",
+    "field_correct": "yes",
+    "timing_correct": "yes",
+    "relationship_correct": "yes",
+    "evidence_supports_fact": "yes"
+   }
+  },
+  {
+   "item_id": "55843c6402451ef5aea3cfea53d1be6f629d5a20db2866d65acaffbb5228c225",
+   "status": "complete",
+   "answers": {
+    "fact_present": "yes",
+    "value_faithful": "yes",
+    "field_correct": "yes",
+    "timing_correct": "yes",
+    "relationship_correct": "yes",
+    "evidence_supports_fact": "yes"
+   }
+  },
+  {
+   "item_id": "d3293614169649c5e1168bc1c119689620c4bf77ca71e4018691a2613b852743",
+   "status": "complete",
+   "answers": {
+    "fact_present": "yes",
+    "value_faithful": "yes",
+    "field_correct": "yes",
+    "timing_correct": "yes",
+    "relationship_correct": "yes",
+    "evidence_supports_fact": "yes"
+   }
+  },
+  {
+   "item_id": "09a2faa8abbeffc1ae92a88bfd64d40738c16df7b42debfa3489ee54981f0436",
+   "status": "complete",
+   "answers": {
+    "fact_present": "yes",
+    "value_faithful": "yes",
+    "field_correct": "yes",
+    "timing_correct": "yes",
+    "relationship_correct": "yes",
+    "evidence_supports_fact": "yes"
+   }
+  },
+  {
+   "item_id": "bbb3b7c1c77e9c26a09bcb51c1dc04c01bb351f48ac00da402ee22d150e495eb",
+   "status": "complete",
+   "answers": {
+    "fact_present": "yes",
+    "value_faithful": "yes",
+    "field_correct": "yes",
+    "timing_correct": "yes",
+    "relationship_correct": "yes",
+    "evidence_supports_fact": "yes"
+   }
+  },
+  {
+   "item_id": "2b9ecb36e93f2757f58a8aab81f36abfae09588847df3ac62ca42a8a30ddb907",
+   "status": "complete",
+   "answers": {
+    "fact_present": "yes",
+    "value_faithful": "yes",
+    "field_correct": "yes",
+    "timing_correct": "no",
+    "relationship_correct": "yes",
+    "evidence_supports_fact": "yes",
+    "notes": "The page dates the committee seat to the 118th Congress (2023-2024); at a 2026 capture the timing is former or unclear, not current."
+   }
+  },
+  {
+   "item_id": "4cb35b6fb9a46a7cc095ba7f815a087f65a3c2159d1531c2d643116fe661e4ae",
+   "status": "complete",
+   "answers": {
+    "fact_present": "yes",
+    "value_faithful": "yes",
+    "field_correct": "yes",
+    "timing_correct": "yes",
+    "relationship_correct": "yes",
+    "evidence_supports_fact": "yes"
+   }
+  },
+  {
+   "item_id": "108da757974fd216de177829e47f258e024ccc3e16a067d6c2c3daca714c2aaf",
+   "status": "complete",
+   "answers": {
+    "fact_present": "yes",
+    "value_faithful": "yes",
+    "field_correct": "yes",
+    "timing_correct": "yes",
+    "relationship_correct": "yes",
+    "evidence_supports_fact": "no",
+    "notes": "The span does not name the Marine Corps, which the value states; that link is only in the previous sentence."
+   }
+  },
+  {
+   "item_id": "0c49bc8e8dd27adf0623b992f442a8ac9cfa93bc1508c405bc2b9d01d449c1d9",
+   "status": "complete",
+   "answers": {
+    "fact_present": "yes",
+    "value_faithful": "yes",
+    "field_correct": "no",
+    "timing_correct": "yes",
+    "relationship_correct": "yes",
+    "evidence_supports_fact": "yes",
+    "notes": "A primary victory is a campaign result, not elected office experience; the eligible fact would be service in Congress."
+   }
+  },
+  {
+   "item_id": "123671f7c7549ccd7eafcaacbc3227394639f70171effa9bfadd1203c7f6ab4d",
+   "status": "complete",
+   "answers": {
+    "fact_present": "yes",
+    "value_faithful": "yes",
+    "field_correct": "no",
+    "timing_correct": "yes",
+    "relationship_correct": "yes",
+    "evidence_supports_fact": "yes",
+    "notes": "This is a legislative accomplishment from his time as Assemblyman, so it belongs to elected_office_experience, not public_service_experience."
+   }
+  },
+  {
+   "item_id": "1bc5f52cf3abcf696b4927e9b849db5566feac775c744661359bd2848ffb7611",
+   "status": "complete",
+   "answers": {
+    "fact_present": "no",
+    "value_faithful": "no",
+    "field_correct": "no",
+    "timing_correct": "yes",
+    "relationship_correct": "yes",
+    "evidence_supports_fact": "no",
+    "notes": "The span is a reference entry for an Outstanding Alumni Award from this department, not a statement of her education. Her stated degree is a Penn State B.A. in Latin American Studies and Criminal Justice; the page does not say she studied in this department."
+   }
+  },
+  {
+   "item_id": "bef1ac2af84619ef5be1932ed90ce9cc7172cdc12533091fac71e282558510d5",
+   "status": "complete",
+   "answers": {
+    "fact_present": "yes",
+    "value_faithful": "yes",
+    "field_correct": "yes",
+    "timing_correct": "yes",
+    "relationship_correct": "yes",
+    "evidence_supports_fact": "yes"
+   }
+  },
+  {
+   "item_id": "a4b1616f0c8e91d8caa1c55f06d9c76d6f9cb2902593267828a26c81ef8ece57",
+   "status": "complete",
+   "answers": {
+    "fact_present": "yes",
+    "value_faithful": "yes",
+    "field_correct": "yes",
+    "timing_correct": "yes",
+    "relationship_correct": "yes",
+    "evidence_supports_fact": "yes"
+   }
+  },
+  {
+   "item_id": "1f8db40518e35b8a7ac0208d3eb5c6d5750dffab170b8a14ff50ad39eca77433",
+   "status": "complete",
+   "answers": {
+    "fact_present": "yes",
+    "value_faithful": "yes",
+    "field_correct": "yes",
+    "timing_correct": "yes",
+    "relationship_correct": "yes",
+    "evidence_supports_fact": "yes"
+   }
+  },
+  {
+   "item_id": "3ca078b39c55ef6f4c5af75384bc40258aa58837754f96d34a4cac7e12e7ab78",
+   "status": "complete",
+   "answers": {
+    "fact_present": "yes",
+    "value_faithful": "yes",
+    "field_correct": "yes",
+    "timing_correct": "yes",
+    "relationship_correct": "yes",
+    "evidence_supports_fact": "no",
+    "notes": "The span \"and MATC\" names only the institution; the statement that he studied there is outside the span (\"went on to study at UW-Parkside and MATC\")."
+   }
+  },
+  {
+   "item_id": "dc02d7af39bdf9f4e53e182db56f5d9f3a4907178a1181d6e23afd264bfb2564",
+   "status": "complete",
+   "answers": {
+    "fact_present": "yes",
+    "value_faithful": "yes",
+    "field_correct": "yes",
+    "timing_correct": "yes",
+    "relationship_correct": "yes",
+    "evidence_supports_fact": "yes"
+   }
+  },
+  {
+   "item_id": "4e590ee76fb40337d547439f162f5849073c9943bdbd82cebbc9e6842e81cc6f",
+   "status": "complete",
+   "answers": {
+    "fact_present": "yes",
+    "value_faithful": "yes",
+    "field_correct": "no",
+    "timing_correct": "yes",
+    "relationship_correct": "yes",
+    "evidence_supports_fact": "yes",
+    "notes": "These laws were authored as a State Senator, so the fact is elected_office_experience, not public_service_experience."
+   }
+  },
+  {
+   "item_id": "f27c3096a08cc1065d597a1af83016989b5110cef20b2bacfac3a5cf7a57d190",
+   "status": "complete",
+   "answers": {
+    "fact_present": "yes",
+    "value_faithful": "yes",
+    "field_correct": "no",
+    "timing_correct": "no",
+    "relationship_correct": "yes",
+    "evidence_supports_fact": "yes",
+    "notes": "A ham radio license is a hobby credential, not military service or any other allowed field. The page says he has the license and is still active in ham radio, so former is wrong."
+   }
+  },
+  {
+   "item_id": "b1b3607b48d531562e572378a91911729c51772a6f0d729a4531d7702dadb746",
+   "status": "complete",
+   "answers": {
+    "fact_present": "yes",
+    "value_faithful": "yes",
+    "field_correct": "yes",
+    "timing_correct": "yes",
+    "relationship_correct": "yes",
+    "evidence_supports_fact": "yes"
+   }
+  },
+  {
+   "item_id": "4c48b49b41f222e3ab5413c1c6ee16c09147535df1a2449675793ad5f66a6741",
+   "status": "complete",
+   "answers": {
+    "fact_present": "yes",
+    "value_faithful": "yes",
+    "field_correct": "no",
+    "timing_correct": "yes",
+    "relationship_correct": "yes",
+    "evidence_supports_fact": "yes",
+    "notes": "A past run for Congress is a candidacy, not elected office experience; the page does not say he won."
+   }
+  },
+  {
+   "item_id": "2cd6518e991379cc92669015c95ef799719b27019928afedf1dc2f1431d61b48",
+   "status": "complete",
+   "answers": {
+    "fact_present": "yes",
+    "value_faithful": "yes",
+    "field_correct": "yes",
+    "timing_correct": "yes",
+    "relationship_correct": "yes",
+    "evidence_supports_fact": "yes"
+   }
+  },
+  {
+   "item_id": "384ee0b080dc3ebb73612916ea1e245a085ae0718b805b3188227b06f9be29d3",
+   "status": "complete",
+   "answers": {
+    "fact_present": "yes",
+    "value_faithful": "yes",
+    "field_correct": "yes",
+    "timing_correct": "yes",
+    "relationship_correct": "yes",
+    "evidence_supports_fact": "no",
+    "notes": "The span says only \"city council\"; the San Diego part of the value comes from outside the span (San Diego Fire-Rescue Department, San Diego firefighters)."
+   }
+  },
+  {
+   "item_id": "235a70aa7f5465993b91ed17f8a4933778dcd303c797f4604d51d53903fe462e",
+   "status": "complete",
+   "answers": {
+    "fact_present": "yes",
+    "value_faithful": "yes",
+    "field_correct": "yes",
+    "timing_correct": "yes",
+    "relationship_correct": "yes",
+    "evidence_supports_fact": "yes"
+   }
+  },
+  {
+   "item_id": "87cb4f40a1d003ea3869d9054d741ba0aedc578ac13ce6db2a74c0d4656d154a",
+   "status": "complete",
+   "answers": {
+    "fact_present": "yes",
+    "value_faithful": "no",
+    "field_correct": "yes",
+    "timing_correct": "yes",
+    "relationship_correct": "yes",
+    "evidence_supports_fact": "no",
+    "notes": "The page says only \"I used the GI Bill\"; it names no school, degree, or purpose, so \"for education\" is an addition that the span does not support."
+   }
+  },
+  {
+   "item_id": "f179ba174be263dc75888cf144be5d6fd571246bddfd656fc58ce074af3b41c0",
+   "status": "complete",
+   "answers": {
+    "fact_present": "yes",
+    "value_faithful": "yes",
+    "field_correct": "yes",
+    "timing_correct": "yes",
+    "relationship_correct": "yes",
+    "evidence_supports_fact": "yes"
+   }
+  },
+  {
+   "item_id": "c2c18c8697ad009163f56b51c4d088236ffaacff761500c1605759eb089f7cfe",
+   "status": "complete",
+   "answers": {
+    "fact_present": "yes",
+    "value_faithful": "yes",
+    "field_correct": "no",
+    "timing_correct": "yes",
+    "relationship_correct": "yes",
+    "evidence_supports_fact": "yes",
+    "notes": "Attending the State of the Union as a guest is an honor or event, not public service experience or any other allowed field."
+   }
+  },
+  {
+   "item_id": "e23f5323c4daf96a102106c00304cd64913edb83ac0c7375a871e96152c64008",
+   "status": "complete",
+   "answers": {
+    "fact_present": "yes",
+    "value_faithful": "yes",
+    "field_correct": "yes",
+    "timing_correct": "yes",
+    "relationship_correct": "yes",
+    "evidence_supports_fact": "yes"
+   }
+  },
+  {
+   "item_id": "15a2164f61eb16bbbfc867a3cdb96d62828cdfbcc0fa9d5713b0f4716f635c97",
+   "status": "complete",
+   "answers": {
+    "fact_present": "yes",
+    "value_faithful": "yes",
+    "field_correct": "yes",
+    "timing_correct": "yes",
+    "relationship_correct": "yes",
+    "evidence_supports_fact": "yes"
+   }
+  },
+  {
+   "item_id": "37ef0f797fd52d13dbbed36417f3d6177c5e167079c827b20ad124d3df84ed68",
+   "status": "complete",
+   "answers": {
+    "fact_present": "yes",
+    "value_faithful": "yes",
+    "field_correct": "yes",
+    "timing_correct": "yes",
+    "relationship_correct": "yes",
+    "evidence_supports_fact": "yes"
+   }
+  },
+  {
+   "item_id": "17f0fc7ec74bb9a6306588b04563151e1e30a25a1d057f71091540986129f1a0",
+   "status": "complete",
+   "answers": {
+    "fact_present": "yes",
+    "value_faithful": "yes",
+    "field_correct": "yes",
+    "timing_correct": "yes",
+    "relationship_correct": "yes",
+    "evidence_supports_fact": "yes"
+   }
+  },
+  {
+   "item_id": "76ecce4cf43799b6a70deb723e1ea9c3b4abb15ab2fd727b77b1bd3a3d42577f",
+   "status": "complete",
+   "answers": {
+    "fact_present": "yes",
+    "value_faithful": "yes",
+    "field_correct": "yes",
+    "timing_correct": "no",
+    "relationship_correct": "yes",
+    "evidence_supports_fact": "yes",
+    "notes": "She returned to Pensacola and the page gives no later move away; it calls her an activist in Pensacola. Former is wrong; current or at most unclear fits the page."
+   }
+  },
+  {
+   "item_id": "0f687c1f55f0a9cf331530fc37150bc4e91f0f094b1c665972f8dea746ac577b",
+   "status": "complete",
+   "answers": {
+    "fact_present": "yes",
+    "value_faithful": "yes",
+    "field_correct": "no",
+    "timing_correct": "yes",
+    "relationship_correct": "yes",
+    "evidence_supports_fact": "yes",
+    "notes": "This is his record in the Oklahoma State Senate, so it belongs to elected_office_experience, not public_service_experience."
+   }
+  },
+  {
+   "item_id": "6d2d57f7ba574c7b82e5724fa6c34d0c7a3f5e53456451ebc6ad0ecfcae9dd34",
+   "status": "complete",
+   "answers": {
+    "fact_present": "yes",
+    "value_faithful": "yes",
+    "field_correct": "yes",
+    "timing_correct": "yes",
+    "relationship_correct": "yes",
+    "evidence_supports_fact": "yes"
+   }
+  },
+  {
+   "item_id": "97fbaa4178c7598a51ed12e2b4be2e855af2ca4c9305005036165df16903c7bb",
+   "status": "complete",
+   "answers": {
+    "fact_present": "yes",
+    "value_faithful": "yes",
+    "field_correct": "yes",
+    "timing_correct": "yes",
+    "relationship_correct": "yes",
+    "evidence_supports_fact": "yes"
+   }
+  },
+  {
+   "item_id": "ee617e23df56c050758aec5a2f59f17c75ffa4e75d151591a14da7c581f8d74e",
+   "status": "complete",
+   "answers": {
+    "fact_present": "yes",
+    "value_faithful": "yes",
+    "field_correct": "yes",
+    "timing_correct": "yes",
+    "relationship_correct": "yes",
+    "evidence_supports_fact": "yes"
+   }
+  },
+  {
+   "item_id": "5bb80e4db2ef6ae4827105e254c2ee7ebff7c8dd456d524111b45930be1cbf1e",
+   "status": "complete",
+   "answers": {
+    "fact_present": "yes",
+    "value_faithful": "yes",
+    "field_correct": "yes",
+    "timing_correct": "yes",
+    "relationship_correct": "yes",
+    "evidence_supports_fact": "yes"
+   }
+  },
+  {
+   "item_id": "8ff6ae59d90f6e96ea326f0b76453c64e8a3d21c001069fcb9c80134084bd2dd",
+   "status": "complete",
+   "answers": {
+    "fact_present": "yes",
+    "value_faithful": "yes",
+    "field_correct": "no",
+    "timing_correct": "no",
+    "relationship_correct": "yes",
+    "evidence_supports_fact": "yes",
+    "notes": "A 2024 campaign or advocacy speech listed as a video title is not public service experience or any other allowed field. The speech was a past event in 2024, so current is wrong."
+   }
+  },
+  {
+   "item_id": "be6a01a5516b3fb9fb798b384ef452f4ffe12b28328e867ce75742af2fdf181b",
+   "status": "complete",
+   "answers": {
+    "fact_present": "yes",
+    "value_faithful": "yes",
+    "field_correct": "no",
+    "timing_correct": "yes",
+    "relationship_correct": "yes",
+    "evidence_supports_fact": "yes",
+    "notes": "The page describes private advocacy as a constituent, not service in a public office or agency, so public_service_experience is wrong."
+   }
+  },
+  {
+   "item_id": "0b54c2fa474dabe43542b5e4c7f78654faa6a88a8ba8d289fb2a973aa15df466",
+   "status": "complete",
+   "answers": {
+    "fact_present": "yes",
+    "value_faithful": "no",
+    "field_correct": "yes",
+    "timing_correct": "yes",
+    "relationship_correct": "yes",
+    "evidence_supports_fact": "no",
+    "notes": "The page says he attended and graduated from University of Detroit Mercy law school; it never names a Juris Doctor, so the degree name is an addition that the span does not support."
+   }
+  }
+ ]
+}

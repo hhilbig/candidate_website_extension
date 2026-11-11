@@ -1,0 +1,699 @@
+{
+ "task_id": "candidate_extraction_v2_precision_issues_3c2ed612ddc3_b001",
+ "format": "handcode-results-v1",
+ "exported_at": "2026-11-11T09:43:19Z",
+ "n_items": 60,
+ "n_complete": 60,
+ "responses": [
+  {
+   "item_id": "cd22b99eb6d88485960fe4b7d83301a5c98522a2ff1dc43cb04cfa886c47192c",
+   "status": "complete",
+   "answers": {
+    "statement_present": "yes",
+    "claim_faithful": "yes",
+    "kind_correct": "yes",
+    "heading_correct": "yes",
+    "evidence_supports_statement": "yes"
+   }
+  },
+  {
+   "item_id": "68d37412a77cbb00d0691717982106a67a640683e42fc79419af386e974264ed",
+   "status": "complete",
+   "answers": {
+    "statement_present": "no",
+    "claim_faithful": "no",
+    "kind_correct": "yes",
+    "heading_correct": "yes",
+    "evidence_supports_statement": "no",
+    "notes": "Veterans Affairs is a bare topic link title in a priorities list; the page states no position on it. The claim asserts a position that the page does not state."
+   }
+  },
+  {
+   "item_id": "272f2b7261d8674a4e55f8ac66a25762fbdcbdb02f18d532eb12e59b8af52034",
+   "status": "complete",
+   "answers": {
+    "statement_present": "yes",
+    "claim_faithful": "yes",
+    "kind_correct": "no",
+    "heading_correct": "yes",
+    "evidence_supports_statement": "yes",
+    "notes": "Strongly advocates for a bill is a preference, so the kind is support, not current_action."
+   }
+  },
+  {
+   "item_id": "155300e7b5432b9f35b8204357b6a35f634a14ad7e99abca02bb4f02e1cda98b",
+   "status": "complete",
+   "answers": {
+    "statement_present": "yes",
+    "claim_faithful": "yes",
+    "kind_correct": "yes",
+    "heading_correct": "yes",
+    "evidence_supports_statement": "yes"
+   }
+  },
+  {
+   "item_id": "8068d540794ff7b4915209e708902642525118b62b6325df9a328d1716c06cc0",
+   "status": "complete",
+   "answers": {
+    "statement_present": "yes",
+    "claim_faithful": "yes",
+    "kind_correct": "no",
+    "heading_correct": "yes",
+    "evidence_supports_statement": "yes",
+    "notes": "I fight endlessly for America First policies expresses a preference for policies, so the kind is support, not current_action."
+   }
+  },
+  {
+   "item_id": "1ddefc455cd7a8e35aa8af662405e630775822fdba4ee7009d3b723d3936c01e",
+   "status": "complete",
+   "answers": {
+    "statement_present": "yes",
+    "claim_faithful": "yes",
+    "kind_correct": "yes",
+    "heading_correct": "yes",
+    "evidence_supports_statement": "yes"
+   }
+  },
+  {
+   "item_id": "19d10954c430dcba0cb33c0cd941b5af16b417bd080fcd7f186ab61a845a625b",
+   "status": "complete",
+   "answers": {
+    "statement_present": "no",
+    "claim_faithful": "no",
+    "kind_correct": "yes",
+    "heading_correct": "yes",
+    "evidence_supports_statement": "no",
+    "notes": "Water is a bare topic link title in a priorities list; the page states no position on it. The claim asserts a position that the page does not state."
+   }
+  },
+  {
+   "item_id": "078e0ab54b35cd83708547dd910eb84546136280892dce657c368fb9c86208fd",
+   "status": "complete",
+   "answers": {
+    "statement_present": "yes",
+    "claim_faithful": "yes",
+    "kind_correct": "yes",
+    "heading_correct": "no",
+    "evidence_supports_statement": "yes",
+    "notes": "The nearest heading above the evidence is Lowering the Cost of Living, which occurs once; WHAT DON TRACY IS FIGHTING FOR. is a higher section heading."
+   }
+  },
+  {
+   "item_id": "5a28e4ca7498beb4c6700e17a4ac2e296c6076996a6231aee51aacf16b003f75",
+   "status": "complete",
+   "answers": {
+    "statement_present": "yes",
+    "claim_faithful": "yes",
+    "kind_correct": "yes",
+    "heading_correct": "yes",
+    "evidence_supports_statement": "yes"
+   }
+  },
+  {
+   "item_id": "258a2e1ddfdcc28a177e6e361644f29000232db470b5ffabf5409a0b6e64ed9b",
+   "status": "complete",
+   "answers": {
+    "statement_present": "yes",
+    "claim_faithful": "yes",
+    "kind_correct": "yes",
+    "heading_correct": "yes",
+    "evidence_supports_statement": "yes"
+   }
+  },
+  {
+   "item_id": "ebf0af26fc1b62f23ef6b47d60af6996d15599a7a224d01356c2a8da75a2e3cb",
+   "status": "complete",
+   "answers": {
+    "statement_present": "yes",
+    "claim_faithful": "yes",
+    "kind_correct": "yes",
+    "heading_correct": "yes",
+    "evidence_supports_statement": "yes"
+   }
+  },
+  {
+   "item_id": "40c62f827bf1ce039610b243d11e8d620d7afd4db590d778da57e85ee863871d",
+   "status": "complete",
+   "answers": {
+    "statement_present": "yes",
+    "claim_faithful": "yes",
+    "kind_correct": "yes",
+    "heading_correct": "yes",
+    "evidence_supports_statement": "yes"
+   }
+  },
+  {
+   "item_id": "c3002ec9f7d714e3c12b6714eb4e18a89a83adfbb617b825836708f3352e4460",
+   "status": "complete",
+   "answers": {
+    "statement_present": "no",
+    "claim_faithful": "yes",
+    "kind_correct": "no",
+    "heading_correct": "yes",
+    "evidence_supports_statement": "yes",
+    "notes": "The sentence is an economic statistic that states no position, proposal, or action of the candidate. A factual comparison is not current_action conduct."
+   }
+  },
+  {
+   "item_id": "437c421ea7835d2402046a2ce6e0a976f930fe60a229b64e6ab0ed89df46046d",
+   "status": "complete",
+   "answers": {
+    "statement_present": "yes",
+    "claim_faithful": "yes",
+    "kind_correct": "yes",
+    "heading_correct": "yes",
+    "evidence_supports_statement": "yes"
+   }
+  },
+  {
+   "item_id": "6865cc3be86ee374ed0fa507f7674b0a7c09dcf04ed6145ab27c3f268140f322",
+   "status": "complete",
+   "answers": {
+    "statement_present": "yes",
+    "claim_faithful": "yes",
+    "kind_correct": "yes",
+    "heading_correct": "yes",
+    "evidence_supports_statement": "yes"
+   }
+  },
+  {
+   "item_id": "4f374870b165c102540b2f76475ddc1993a365a969de27f46973c02d62c49e94",
+   "status": "complete",
+   "answers": {
+    "statement_present": "yes",
+    "claim_faithful": "yes",
+    "kind_correct": "yes",
+    "heading_correct": "no",
+    "evidence_supports_statement": "yes",
+    "notes": "The nearest heading above the evidence is End Citizens United and Get Big Money Out of Politics, which occurs once; What Elizabeth Will Do is a higher heading."
+   }
+  },
+  {
+   "item_id": "b968d0806cf05d2b857a3642d6e441f39b67883ab156073da667e923a71eb1f7",
+   "status": "complete",
+   "answers": {
+    "statement_present": "yes",
+    "claim_faithful": "yes",
+    "kind_correct": "yes",
+    "heading_correct": "yes",
+    "evidence_supports_statement": "yes"
+   }
+  },
+  {
+   "item_id": "cdfdfca3e732d3c7b066dc92e883e5d34ef2edfd01223da0676dee44e6bafb9d",
+   "status": "complete",
+   "answers": {
+    "statement_present": "no",
+    "claim_faithful": "yes",
+    "kind_correct": "no",
+    "heading_correct": "no",
+    "evidence_supports_statement": "yes",
+    "notes": "The record is a prediction about AI harms, not a stated position; the claim does not name anything the candidate opposes, so oppose does not fit. The nearest heading above the evidence is Democratize AI; Protect People Not Big Tech, not Technology & AI."
+   }
+  },
+  {
+   "item_id": "737f5ddf29ed62de7ebf6af504be57ce50f33a399c4a8f590eb19fcaa86c8c40",
+   "status": "complete",
+   "answers": {
+    "statement_present": "yes",
+    "claim_faithful": "yes",
+    "kind_correct": "yes",
+    "heading_correct": "yes",
+    "evidence_supports_statement": "yes"
+   }
+  },
+  {
+   "item_id": "1412c7fb814258f097d78030f4dcd11e3cfbf36262a48790004447f7ecb5c7d5",
+   "status": "complete",
+   "answers": {
+    "statement_present": "yes",
+    "claim_faithful": "yes",
+    "kind_correct": "no",
+    "heading_correct": "yes",
+    "evidence_supports_statement": "yes",
+    "notes": "The sentence is a clear disapproval of how ICE operates, followed by a call to stop ICE violence, so the kind is oppose, not unclear."
+   }
+  },
+  {
+   "item_id": "a2d213c7fb1dc55a52055f218659d194347e90c08f99977a2536af30370efb0f",
+   "status": "complete",
+   "answers": {
+    "statement_present": "yes",
+    "claim_faithful": "yes",
+    "kind_correct": "yes",
+    "heading_correct": "yes",
+    "evidence_supports_statement": "yes"
+   }
+  },
+  {
+   "item_id": "a1fbda7ef35cb2572a0b6e6c4b2169bdf3c6d8d5b8a124b8cd8bdf3e7ab8436a",
+   "status": "complete",
+   "answers": {
+    "statement_present": "yes",
+    "claim_faithful": "yes",
+    "kind_correct": "yes",
+    "heading_correct": "no",
+    "evidence_supports_statement": "yes",
+    "notes": "The nearest heading above the evidence is \"Regulations\", which occurs twice, so null is correct; \"Where I Stand\" is not the nearest heading."
+   }
+  },
+  {
+   "item_id": "db7b1bfd2856266b87a5c58794fd9b09f1734b236fd3908f13092a4f758e147a",
+   "status": "complete",
+   "answers": {
+    "statement_present": "no",
+    "claim_faithful": "yes",
+    "kind_correct": "yes",
+    "heading_correct": "yes",
+    "evidence_supports_statement": "yes",
+    "notes": "The sentence states uncertainty about the cause of climate change; it does not say what the candidate supports, opposes, proposes, or does."
+   }
+  },
+  {
+   "item_id": "7bda337f14dd29507280ad9dcbb08892ee13d4b9a4eebec690e2139f84d16b72",
+   "status": "complete",
+   "answers": {
+    "statement_present": "yes",
+    "claim_faithful": "yes",
+    "kind_correct": "yes",
+    "heading_correct": "yes",
+    "evidence_supports_statement": "yes"
+   }
+  },
+  {
+   "item_id": "58ae2dd21960208ff8efd37d00c15378425f4902f33806bda664c4b4f383be96",
+   "status": "complete",
+   "answers": {
+    "statement_present": "yes",
+    "claim_faithful": "yes",
+    "kind_correct": "no",
+    "heading_correct": "yes",
+    "evidence_supports_statement": "yes",
+    "notes": "The statement is a clear disapproval of the current state of ICE, so oppose is the correct kind, not unclear."
+   }
+  },
+  {
+   "item_id": "a0c2ee8588424da57c9ffb00fe0d3f913d9ce31202eb2fa74b937691b62f8075",
+   "status": "complete",
+   "answers": {
+    "statement_present": "no",
+    "claim_faithful": "yes",
+    "kind_correct": "no",
+    "heading_correct": "yes",
+    "evidence_supports_statement": "yes",
+    "notes": "The span is a write-in voting instruction, not a policy statement; proposal is therefore also wrong."
+   }
+  },
+  {
+   "item_id": "6052fd0c2f37faa546ad0c16c99af6bab837a0de5cd36a1f0e6bb6314aaa971a",
+   "status": "complete",
+   "answers": {
+    "statement_present": "yes",
+    "claim_faithful": "yes",
+    "kind_correct": "yes",
+    "heading_correct": "yes",
+    "evidence_supports_statement": "yes"
+   }
+  },
+  {
+   "item_id": "77b53ba3f6050bf338034a160fd02ad91eed4f9825314ab89a2ba86d29a2396d",
+   "status": "complete",
+   "answers": {
+    "statement_present": "no",
+    "claim_faithful": "yes",
+    "kind_correct": "yes",
+    "heading_correct": "yes",
+    "evidence_supports_statement": "yes",
+    "notes": "The sentence is a rebuttal about his own website content in a dispute with a rival candidate; it states no policy position or policy conduct."
+   }
+  },
+  {
+   "item_id": "8f5e40c99ee6e49ed426992a0511b0ffabc9a0053fe6b8fa1472b107c7aa446e",
+   "status": "complete",
+   "answers": {
+    "statement_present": "no",
+    "claim_faithful": "no",
+    "kind_correct": "no",
+    "heading_correct": "no",
+    "evidence_supports_statement": "yes",
+    "notes": "The span describes the opponent Onder's silence, not the candidate's position or conduct; the claim and past_action label attribute it to the candidate. Nearer unique headings (\"Art. III \u2014 Court Order Defied\", \"Stephen Miller (Deputy Chief of Staff) Did\") sit between \"Issue 5\" and the evidence."
+   }
+  },
+  {
+   "item_id": "8bb3474319cc7b7550bf30bbb121300cc1731e9189bd23488e42236035af11a1",
+   "status": "complete",
+   "answers": {
+    "statement_present": "yes",
+    "claim_faithful": "yes",
+    "kind_correct": "yes",
+    "heading_correct": "yes",
+    "evidence_supports_statement": "yes"
+   }
+  },
+  {
+   "item_id": "f4dc4455972d81e709560b173a4a1bb70638483ed6428639d63f68fa9eb8f537",
+   "status": "complete",
+   "answers": {
+    "statement_present": "yes",
+    "claim_faithful": "yes",
+    "kind_correct": "yes",
+    "heading_correct": "yes",
+    "evidence_supports_statement": "yes"
+   }
+  },
+  {
+   "item_id": "c00ce179341d9533cf14753c29f95972ddb4d01db373e475f320ec87c004036b",
+   "status": "complete",
+   "answers": {
+    "statement_present": "no",
+    "claim_faithful": "no",
+    "kind_correct": "no",
+    "heading_correct": "yes",
+    "evidence_supports_statement": "yes",
+    "notes": "The page is a GitHub error page with no candidate statement; the record describes absence of content rather than a policy statement, so no statement kind applies."
+   }
+  },
+  {
+   "item_id": "9a890525a6f875c9039439a176b9e8c4e45fd56ee2dfeb80f7168a19e9422ae5",
+   "status": "complete",
+   "answers": {
+    "statement_present": "yes",
+    "claim_faithful": "yes",
+    "kind_correct": "yes",
+    "heading_correct": "yes",
+    "evidence_supports_statement": "yes"
+   }
+  },
+  {
+   "item_id": "147c872a287cec3c66dbbeb0e23a92bc1bca4248115d51c7c3cc0d49789d8b9f",
+   "status": "complete",
+   "answers": {
+    "statement_present": "yes",
+    "claim_faithful": "yes",
+    "kind_correct": "yes",
+    "heading_correct": "yes",
+    "evidence_supports_statement": "no",
+    "notes": "The evidence span is a trailing fragment that does not name the subject or the savings of millions; the claim needs the preceding part of the sentence."
+   }
+  },
+  {
+   "item_id": "7c651aa4c6c5c288d6b905af26bbb5e38ea38ea601c9c1e5812fc552464d5815",
+   "status": "complete",
+   "answers": {
+    "statement_present": "no",
+    "claim_faithful": "no",
+    "kind_correct": "no",
+    "heading_correct": "yes",
+    "evidence_supports_statement": "no",
+    "notes": "The evidence is from the opponent's column of the comparison table (Chevalier's position), not a statement by the candidate; the page never states that the candidate opposes that claim in this span."
+   }
+  },
+  {
+   "item_id": "e535c20367b96bbbab35437edb2308904fcc041dfa7b4ac673a726f20be5d271",
+   "status": "complete",
+   "answers": {
+    "statement_present": "yes",
+    "claim_faithful": "yes",
+    "kind_correct": "no",
+    "heading_correct": "yes",
+    "evidence_supports_statement": "no",
+    "notes": "\"Will fight back\" is a future commitment (oppose), not current conduct. The evidence is only the trailing fragment \"and marginalize LGBTQIA+ youth.\", which does not show the candidate fighting back."
+   }
+  },
+  {
+   "item_id": "69ae610e34d9597f6a9d4fa69fd82c63636551fba4c4d847cc5ea399f90cb36b",
+   "status": "complete",
+   "answers": {
+    "statement_present": "yes",
+    "claim_faithful": "yes",
+    "kind_correct": "yes",
+    "heading_correct": "yes",
+    "evidence_supports_statement": "yes"
+   }
+  },
+  {
+   "item_id": "bbc4e3186c22058a50886549327a77a30219c358079c6e368d18e2f4bed7604d",
+   "status": "complete",
+   "answers": {
+    "statement_present": "no",
+    "claim_faithful": "yes",
+    "kind_correct": "no",
+    "heading_correct": "yes",
+    "evidence_supports_statement": "yes",
+    "notes": "The span is a factual teaser line for an op-ed; it states no position, so support is not a correct kind."
+   }
+  },
+  {
+   "item_id": "165e7a04d78ce1d3166ebdb53faae0094b06c3fdff31a5c866cfca1f9bbb7864",
+   "status": "complete",
+   "answers": {
+    "statement_present": "yes",
+    "claim_faithful": "yes",
+    "kind_correct": "yes",
+    "heading_correct": "yes",
+    "evidence_supports_statement": "yes"
+   }
+  },
+  {
+   "item_id": "bccd57088ef84bdc72c5f2b2887dc21820526e36bad49f54cd6b21a5e9899767",
+   "status": "complete",
+   "answers": {
+    "statement_present": "no",
+    "claim_faithful": "yes",
+    "kind_correct": "no",
+    "heading_correct": "yes",
+    "evidence_supports_statement": "yes",
+    "notes": "The span is a truncated Instagram preview of general readiness with no policy content; current_action does not fit because no conduct is stated."
+   }
+  },
+  {
+   "item_id": "c6d25f3667ce292fd06a8948190aa75c20939516fe98ad9c3ffb8b5f600f8c32",
+   "status": "complete",
+   "answers": {
+    "statement_present": "yes",
+    "claim_faithful": "yes",
+    "kind_correct": "yes",
+    "heading_correct": "yes",
+    "evidence_supports_statement": "yes"
+   }
+  },
+  {
+   "item_id": "97ebf08185fc3f1089baedc393d48c89d9a5a54368d3e30f2cc3004a379e5134",
+   "status": "complete",
+   "answers": {
+    "statement_present": "yes",
+    "claim_faithful": "yes",
+    "kind_correct": "yes",
+    "heading_correct": "yes",
+    "evidence_supports_statement": "yes"
+   }
+  },
+  {
+   "item_id": "73af4fabe3561dc9bb13779a85803a47e231da1e17d8dffccdc3b03a2edae579",
+   "status": "complete",
+   "answers": {
+    "statement_present": "yes",
+    "claim_faithful": "yes",
+    "kind_correct": "yes",
+    "heading_correct": "yes",
+    "evidence_supports_statement": "yes"
+   }
+  },
+  {
+   "item_id": "13235e29850beacc7fe731c787c65e8095b298c15409763c8ceecb769287e2df",
+   "status": "complete",
+   "answers": {
+    "statement_present": "yes",
+    "claim_faithful": "yes",
+    "kind_correct": "yes",
+    "heading_correct": "yes",
+    "evidence_supports_statement": "yes"
+   }
+  },
+  {
+   "item_id": "a075712844bc5eba089d72675d505b6dd2ca463af75e7d2e9f9033c16b8f3abb",
+   "status": "complete",
+   "answers": {
+    "statement_present": "no",
+    "claim_faithful": "yes",
+    "kind_correct": "yes",
+    "heading_correct": "yes",
+    "evidence_supports_statement": "yes",
+    "notes": "Sitting down with a family to celebrate the end of Ramadan is a personal activity; it states no policy support, opposition, proposal, or policy conduct."
+   }
+  },
+  {
+   "item_id": "13f376c21cc560b7d48444c3ee841b98013621c21f834f614bf3c9db68cd6a54",
+   "status": "complete",
+   "answers": {
+    "statement_present": "yes",
+    "claim_faithful": "yes",
+    "kind_correct": "no",
+    "heading_correct": "no",
+    "evidence_supports_statement": "yes",
+    "notes": "Kind: \"will push for\" is a future preference/promise, not conduct; support or proposal is correct. Heading: the nearest heading above the evidence is \"Tax Relief for Working Families\" (unique), not the section heading \"Affordability\"."
+   }
+  },
+  {
+   "item_id": "a6c158d7f011025b52e5f1739ae48d0b3ffc94d437de92d89c103f570050a92f",
+   "status": "complete",
+   "answers": {
+    "statement_present": "yes",
+    "claim_faithful": "yes",
+    "kind_correct": "yes",
+    "heading_correct": "yes",
+    "evidence_supports_statement": "yes"
+   }
+  },
+  {
+   "item_id": "9d901b1b262f5f03ab3bdad1156b6bce634533fa641fe2006a0c0f61f08de88d",
+   "status": "complete",
+   "answers": {
+    "statement_present": "yes",
+    "claim_faithful": "yes",
+    "kind_correct": "no",
+    "heading_correct": "yes",
+    "evidence_supports_statement": "yes",
+    "notes": "Kind: \"Abteen will: back law enforcement\" is a future pledge (support/proposal), not current conduct."
+   }
+  },
+  {
+   "item_id": "7b2eb62f52763c90d19449c115c4d527b5e8ef092689e83d576576a356a16552",
+   "status": "complete",
+   "answers": {
+    "statement_present": "no",
+    "claim_faithful": "yes",
+    "kind_correct": "yes",
+    "heading_correct": "no",
+    "evidence_supports_statement": "yes",
+    "notes": "Present: the page explicitly says \"No position \u2014 your call\" on Question 2; the sentence states no support or opposition. Heading: the nearest heading is \"Collective Bargaining for CPCS Employees\", which occurs twice, so null is correct, not \"Question 2\"."
+   }
+  },
+  {
+   "item_id": "617f26bdb98e5e6b6471af82a53347c66674002a06ff19dd3a478190585ec62a",
+   "status": "complete",
+   "answers": {
+    "statement_present": "yes",
+    "claim_faithful": "yes",
+    "kind_correct": "yes",
+    "heading_correct": "no",
+    "evidence_supports_statement": "no",
+    "notes": "The evidence is an option in the voter survey list \"What Issues Are Most Important To You?\", not a candidate statement; the support is stated elsewhere (\"I\u2019m a strong supporter of the right to life\"). The heading copies the evidence string itself; it is not a heading above the evidence."
+   }
+  },
+  {
+   "item_id": "59f53c2c20032b68a74d2e52078596e82dce62255bb1f3158c90919e41172c5a",
+   "status": "complete",
+   "answers": {
+    "statement_present": "yes",
+    "claim_faithful": "yes",
+    "kind_correct": "yes",
+    "heading_correct": "yes",
+    "evidence_supports_statement": "yes"
+   }
+  },
+  {
+   "item_id": "fd54ad9108400b0c9c65b939058359c94acaba92c6ab06f9e4c2deb7575267f7",
+   "status": "complete",
+   "answers": {
+    "statement_present": "yes",
+    "claim_faithful": "yes",
+    "kind_correct": "yes",
+    "heading_correct": "yes",
+    "evidence_supports_statement": "yes"
+   }
+  },
+  {
+   "item_id": "001e4dcd1685d4805402a9190ec561a42216f0924bf1aeb603361fb05c9aa52c",
+   "status": "complete",
+   "answers": {
+    "statement_present": "no",
+    "claim_faithful": "yes",
+    "kind_correct": "yes",
+    "heading_correct": "yes",
+    "evidence_supports_statement": "yes",
+    "notes": "The span is an op-ed teaser that questions the opponent's political identity; it states no candidate policy position or conduct."
+   }
+  },
+  {
+   "item_id": "2e2a9c7a1b75538799bb313030850698f8b681acfb2bd5dc004dbf44fe1231b3",
+   "status": "complete",
+   "answers": {
+    "statement_present": "no",
+    "claim_faithful": "no",
+    "kind_correct": "yes",
+    "heading_correct": "yes",
+    "evidence_supports_statement": "no",
+    "notes": "\"Public Health\" is a bare link title in a list of priority pages; it states no position. The claim asserts a position that the shown text does not state."
+   }
+  },
+  {
+   "item_id": "8e50662e28ba0ff8385f84ec75ee0f83ec82620d5cf7f6fee959befc48a3e318",
+   "status": "complete",
+   "answers": {
+    "statement_present": "yes",
+    "claim_faithful": "yes",
+    "kind_correct": "yes",
+    "heading_correct": "yes",
+    "evidence_supports_statement": "yes"
+   }
+  },
+  {
+   "item_id": "b5f8066bac9bd206ca7292f36d07d106b51c64676ae6b08947f5e564d53a1287",
+   "status": "complete",
+   "answers": {
+    "statement_present": "yes",
+    "claim_faithful": "yes",
+    "kind_correct": "yes",
+    "heading_correct": "yes",
+    "evidence_supports_statement": "yes"
+   }
+  },
+  {
+   "item_id": "7864a17edd20f60c91bdb484a871087c44329d46652ebd0b50487ce36c37414d",
+   "status": "complete",
+   "answers": {
+    "statement_present": "no",
+    "claim_faithful": "yes",
+    "kind_correct": "yes",
+    "heading_correct": "yes",
+    "evidence_supports_statement": "yes",
+    "notes": "The sentence says the role of government in fixing climate change is unclear; it states no support, opposition, or proposal."
+   }
+  },
+  {
+   "item_id": "e7a8e0b3dd43cfe13a7b7670c1f470819ddd91e51f764bc356f5d7cf7046d839",
+   "status": "complete",
+   "answers": {
+    "statement_present": "yes",
+    "claim_faithful": "yes",
+    "kind_correct": "yes",
+    "heading_correct": "yes",
+    "evidence_supports_statement": "yes"
+   }
+  },
+  {
+   "item_id": "f5f5885c7f921b1886e3e598780bcce288fbb59b30baf258d7f120697d3716dc",
+   "status": "complete",
+   "answers": {
+    "statement_present": "no",
+    "claim_faithful": "yes",
+    "kind_correct": "yes",
+    "heading_correct": "yes",
+    "evidence_supports_statement": "yes",
+    "notes": "The sentence describes where the campaign goals come from; it states no policy support, opposition, proposal, or policy conduct."
+   }
+  },
+  {
+   "item_id": "bf760bf871c120e8669f4755a95e80f6d6eac7176624d78df88ae1c3d437a460",
+   "status": "complete",
+   "answers": {
+    "statement_present": "yes",
+    "claim_faithful": "yes",
+    "kind_correct": "yes",
+    "heading_correct": "yes",
+    "evidence_supports_statement": "yes"
+   }
+  }
+ ]
+}
