@@ -4826,6 +4826,10 @@ def load_repair_windows(
             raise ValueError(f"{document_id}: repair acceptance flag differs")
         if repaired:
             repaired_count += 1
+        elif str(entry["parse_status"]) == MODEL_ITEM_REPETITION_ERROR_STATUS:
+            # The retry ended, but the guard against repeated items rejected
+            # the answer. The window is unrepaired; the primary row stays.
+            pass
         elif (
             str(entry["finish_reason"]) != "length"
             or str(entry["parse_status"]) != TRUNCATED_PARSE_STATUS
