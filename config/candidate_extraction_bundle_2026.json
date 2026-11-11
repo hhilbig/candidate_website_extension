@@ -22,6 +22,8 @@
     "segment_counts": null,
     "universe_rows": 3656,
     "transformed_parent_documents": null,
-    "known_omission_count": 0
+    "known_omission_count": 0,
+    "round4_stage_a_generation_config_sha256": "a6972074e334a9d6b57202c94e31c4b04e08e8485371831aeb541b6520554f32",
+    "round4_stage_b_generation_config_sha256": "5bb100052d84233b593de236bdfb707d74dd29c93ed85a310917c2dfe34e9b9d"
   }
 }
