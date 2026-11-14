@@ -4,13 +4,15 @@ HTML-to-text extraction for Wayback Machine snapshots.
 Strips Wayback toolbar, extracts visible text, handles frames/iframes.
 """
 
+from __future__ import annotations
+
 import logging
 import re
-from typing import Optional
+from typing import TYPE_CHECKING, Optional
 from urllib.parse import urljoin, urlparse
 
-from bs4 import BeautifulSoup
-from bs4.element import Comment
+if TYPE_CHECKING:
+    from bs4 import BeautifulSoup
 
 logger = logging.getLogger(__name__)
 
@@ -169,6 +171,8 @@ def is_wayback_page(html: str) -> bool:
 
 def _tag_visible(element) -> bool:
     """Filter for visible text elements (exclude scripts, styles, etc.)."""
+    from bs4.element import Comment
+
     if element.parent.name in ["style", "script", "head", "title", "meta", "[document]"]:
         return False
     if isinstance(element, Comment):

@@ -1,77 +1,35 @@
-# Candidate Website Extension
+# U.S. House and Senate candidate websites
 
-This repository builds a dataset of archived US congressional campaign
-websites. It extends the House candidate corpus assembled by Di Tella, Kotti,
-Le Pennec, and Pons (2025) from 2018 through 2024 and adds Senate candidates
-from 2002 through 2024. The release contains 7,353 captured candidate-years
-drawn from 799,058 archived pages.
+This repository contains the code for the dataset "U.S. House (2018–2026) and Senate (2002–2026) Candidate Websites" (Hanno Hilbig). The dataset holds the text of campaign websites of Democratic and Republican candidates. It extends the House corpus of Di Tella, Kotti, Le Pennec, and Pons (2025; ICPSR 226001) through 2026 and adds Senate candidates from 2002.
 
-The candidate population consists of Democratic and Republican House and
-Senate candidates whose election year recorded by the FEC equals the target
-year, plus reviewed general election ballot exceptions. The collection did not
-scrape House years already covered by ICPSR 226001.
+The data are on Harvard Dataverse: https://doi.org/10.7910/DVN/BZ2JRS (version 5.0, November 2026). Coverage and validation results are at https://www.hannohilbig.com/candidatewebsites/.
 
-## Release documentation
+Version 5.0 covers 18,697 candidate-years from FEC records. For 9,074 of them the data hold website text, 896,487 pages in total. Pages for 2002–2024 come from the Internet Archive. For 2026, they come from the Internet Archive and from copies the project made of the campaign websites between September 14 and November 5, 2026. Six further files hold issue statements, biography facts, and endorsements extracted from the pages with language models.
 
-- [Release README](docs/RELEASE_README.md): population, inventory of five files,
-  construction, limitations, terms of use, and reproduction commands
-- [Codebook](docs/deliverable_codebook.md): fields, keys, and missing values
-- [Website](https://www.hannohilbig.com/candidatewebsites/): coverage and
-  validation results
+Download the data from Dataverse. This repository does not include the data or the intermediate files from collection, so most scripts will not run on their own.
 
-The repository supports the release but is not part of the Dataverse deposit.
+## Contents
 
-## Rebuild and validate the release
+- `docs/RELEASE_README.md`, `docs/codebook.md`, `docs/candidate_extraction_codebook.md`: the documentation published with version 5.0 (population, files, variables, limitations).
+- `docs/collection_2026.md`: how the 2026 websites were collected.
+- `src/`: roster building, Wayback collection, text extraction, and the 2026 collection.
+- `scripts/`: release builds (`rebuild_release.py`, `assemble_release_v5_0.py`), validation (`validate_release.py`), and the extraction and validation steps.
+- `scripts/hive/`: language-model jobs run on a university GPU cluster.
+- `config/`: build inputs and reviewed adjudications.
+- `tests/`: unit tests. Tests that read the collected data are not included.
 
-The release build uses CPython 3.14.3 and the locked packages in
-`requirements-release.txt`. Source archives and public source files must be at
-the paths documented in the build configuration.
+## Setup
 
-```bash
-python3 -m venv .venv-release
-.venv-release/bin/python -m pip install -r requirements-release.txt
-.venv-release/bin/python scripts/rebuild_release.py --out-dir build/release_candidate
-.venv-release/bin/python scripts/validate_release.py build/release_candidate
+```
+python3 -m venv .venv
+.venv/bin/pip install -r requirements-release.txt
+.venv/bin/python -m pytest -q
 ```
 
-The build writes the five data products and `manifest.json` to a separate
-staging directory. It does not overwrite an existing release.
+The collection scripts call the OpenFEC API. Copy `.env.example` to `.env` and add a free key from https://api.open.fec.gov/signup/.
 
-## Run the collection pipeline
+## Terms of use
 
-The collection commands use public data services and may make live network
-requests. Install their dependencies with:
+The compilation, derived variables, and documentation are released under CC BY 4.0. Copyright in the campaign material remains with its authors. To request removal of material you hold rights to, use the contact form on the Dataverse record.
 
-```bash
-pip install -r requirements.txt
-```
-
-Build a candidate roster:
-
-```bash
-python -m src.build_candidate_roster --office house --year 2022
-python -m src.build_candidate_roster --office senate --years 2002-2024
-```
-
-Retrieve archived sites from the Wayback Machine:
-
-```bash
-python -m src.scrape_wayback --office house --year 2022
-python -m src.scrape_wayback --roster data/rosters/roster_senate_2020.csv
-```
-
-`config/config.yaml` controls offices and years, rate limits, retry behavior, crawl
-depth, URL sources, and output paths. [SPEC.md](SPEC.md) documents the
-collection schema and rules.
-
-## Citation
-
-Please cite this release and the original dataset that it extends:
-
-> Hilbig, Hanno. 2026. “U.S. House (2018–2024) and Senate (2002–2024)
-> Candidate Websites.” Version 2.0. Harvard Dataverse.
-> <https://doi.org/10.7910/DVN/BZ2JRS>
-
-> Di Tella, Rafael, Randy Kotti, Caroline Le Pennec, and Vincent Pons. 2025.
-> “Keep Your Enemies Closer: Strategic Platform Adjustments during U.S. and
-> French Elections.” openICPSR 226001. <https://doi.org/10.3886/E226001V1>
+Please cite the dataset as shown on its Dataverse page.

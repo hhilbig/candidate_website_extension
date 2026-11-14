@@ -1,0 +1,83 @@
+{
+  "schema_version": "1.0",
+  "biography_fields_excluded_from_release": [
+    "family",
+    "other"
+  ],
+  "biography_field_release_mapping": {
+    "prior_elected_office": {
+      "release_field": "elected_office_experience",
+      "required_companion_field": "office_timing",
+      "allowed_timing_values": [
+        "current",
+        "former",
+        "unclear"
+      ]
+    },
+    "prior_public_service": {
+      "release_field": "public_service_experience",
+      "required_companion_field": "service_timing",
+      "allowed_timing_values": [
+        "current",
+        "former",
+        "unclear"
+      ]
+    }
+  },
+  "endorsement_release_scope": {
+    "released_fields": [
+      "name",
+      "endorser_type",
+      "evidence"
+    ],
+    "withheld_fields": [
+      "organization"
+    ],
+    "evidence_context_rule": "A bare name or title in an endorsement list does not, by itself, state endorsement. Released evidence must retain page-level endorsement context or be marked context-dependent.",
+    "organization_redesign": "Re-extract affiliation, title, and jurisdiction as separate fields before releasing them."
+  },
+  "decisions": [
+    {
+      "field": "family",
+      "decision": "exclude",
+      "date": "2026-08-24",
+      "reason": "The extraction can be technically valid, but family details are not substantively relevant to the intended public dataset. Retain them only in internal extraction artifacts and exclude them from released tables and release-validation metrics."
+    },
+    {
+      "field": "local_roots",
+      "decision": "retain_with_interpretation_rule",
+      "date": "2026-08-24",
+      "reason": "A historical geographic connection must not be presented as current residence. Released values must retain the stated relationship and any timing; bare normalized place names are not release-valid."
+    },
+    {
+      "field": "occupation",
+      "decision": "retain_with_interpretation_rule",
+      "date": "2026-08-24",
+      "reason": "Historical occupations must retain former or past-tense status. A previously held role must not be normalized in a way that users could read as a current occupation."
+    },
+    {
+      "field": "other",
+      "decision": "exclude",
+      "date": "2026-08-24",
+      "reason": "The residual field combines heterogeneous and often irrelevant facts and can duplicate other extraction families. Retain it only in internal extraction artifacts and exclude it from released tables and release-validation metrics."
+    },
+    {
+      "field": "prior_elected_office",
+      "decision": "rename_and_add_timing",
+      "date": "2026-08-24",
+      "reason": "The extracted field mixes current and former offices. Release it as elected_office_experience and require office_timing to be current, former, or unclear."
+    },
+    {
+      "field": "prior_public_service",
+      "decision": "rename_and_add_timing",
+      "date": "2026-08-24",
+      "reason": "The extracted field mixes current and former service. Release it as public_service_experience and require service_timing to be current, former, or unclear."
+    },
+    {
+      "field": "endorsements.organization",
+      "decision": "withhold_pending_redesign",
+      "date": "2026-08-24",
+      "reason": "The current field conflates organizations, affiliations, titles, and jurisdictions. Release endorser name and type, but re-extract these concepts separately before release."
+    }
+  ]
+}

@@ -35,7 +35,16 @@ Thumbs.db
 # Outputs
 *.csv
 !config/*.yaml
+!config/candidate_universe_adjudication.csv
+!config/capture_date_adjudication.csv
+!quality_reports/capture_validity_audit_2026-08-22/capture_validity_review_queue.csv
 
 # Agent instructions (keep local, contain operational/infra details)
 CLAUDE.md
 AGENTS.md
+
+# Share the root Claude release instructions; keep other local instructions ignored.
+!/CLAUDE.md
+
+# Local scratch files (not part of the project)
+scratch/

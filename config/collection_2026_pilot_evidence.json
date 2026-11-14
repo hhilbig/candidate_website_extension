@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "verified_at": "2026-09-14",
+  "purpose": "Operational pilot cases for collection of public campaign websites. Election records do not filter the FEC population.",
+  "selection": "Ten candidates per office and party. Include these sourced cases, a missing-URL case per group when available, then a deterministic cross-section of existing URL leads.",
+  "candidate_id_source": "https://www.fec.gov/files/bulk-downloads/2026/cn26.zip",
+  "operational_cases": {
+    "missing_archives": "unverified_until_successful_empty_archive_inventory",
+    "redirects": "verify_from_collector_request_history",
+    "javascript": "verify_from_static_and_isolated_browser_content"
+  },
+  "operational_observations": [
+    {
+      "candidate_id": "H4TX09095", "observed_date": "2026-09-14", "observation": "live_http_redirect",
+      "requested_url": "https://algreen.org", "effective_url": "https://www.algreen.org/",
+      "redirect_statuses": [301], "final_http_status": 200,
+      "source_url": "https://algreen.org", "note": "Direct HTTP probe confirms a live redirect. The collector must save content and check identity."
+    },
+    {
+      "candidate_id": "S2TX00106", "observed_date": "2026-09-14", "observation": "live_http_404",
+      "requested_url": "https://www.johncornyn.com", "effective_url": "https://www.johncornyn.com/",
+      "redirect_statuses": [], "final_http_status": 404,
+      "source_url": "https://www.johncornyn.com", "note": "A failed live homepage does not establish missing archives or absence of other campaign URLs."
+    }
+  ],
+  "candidates": [
+    {
+      "candidate_id": "S2TX00106", "candidate": "John Cornyn", "office": "senate", "party": "R", "state": "TX",
+      "event_date": "2026-05-26", "election_round": "primary_runoff", "participation_status": "confirmed",
+      "outcome": "lost", "fact": "Texas Secretary of State reports John Cornyn as a candidate with fewer ballots than Ken Paxton in the two-candidate Senate runoff.",
+      "source_url": "https://electionresults.sos.state.tx.us/results.html", "source_status": "SOS results updated 2026-05-27; all polling locations reported"
+    },
+    {
+      "candidate_id": "S6TX00388", "candidate": "Ken Paxton", "office": "senate", "party": "R", "state": "TX",
+      "event_date": "2026-05-26", "election_round": "primary_runoff", "participation_status": "confirmed",
+      "outcome": "won", "fact": "Texas Secretary of State reports Ken Paxton as a candidate with more ballots than John Cornyn in the two-candidate Senate runoff.",
+      "source_url": "https://electionresults.sos.state.tx.us/results.html", "source_status": "SOS results updated 2026-05-27; all polling locations reported"
+    },
+    {
+      "candidate_id": "H4TX09095", "candidate": "Al Green", "office": "house", "party": "D", "state": "TX", "district": "18",
+      "event_date": "2026-05-26", "election_round": "primary_runoff", "participation_status": "confirmed",
+      "outcome": "lost", "fact": "Texas Secretary of State lists Al Green and Christian Dashaun Menefee in the district 18 runoff; Green has fewer ballots.",
+      "source_url": "https://electionresults.sos.state.tx.us/results.html", "source_status": "SOS results updated 2026-05-27; all polling locations reported"
+    },
+    {
+      "candidate_id": "H6TX18232", "candidate": "Christian Menefee", "office": "house", "party": "D", "state": "TX", "district": "18",
+      "event_date": "2026-05-26", "election_round": "primary_runoff", "participation_status": "confirmed",
+      "outcome": "won", "fact": "Texas Secretary of State lists Christian Dashaun Menefee and Al Green in the district 18 runoff; Menefee has more ballots.",
+      "source_url": "https://electionresults.sos.state.tx.us/results.html", "source_status": "SOS results updated 2026-05-27; all polling locations reported"
+    },
+    {
+      "candidate_id": "H6TX09124", "candidate": "Briscoe Cain", "office": "house", "party": "R", "state": "TX", "district": "09",
+      "event_date": "2026-05-26", "election_round": "primary_runoff", "participation_status": "confirmed",
+      "outcome": "lost", "fact": "Texas Secretary of State lists Briscoe Cain and Alex Mealer in the district 9 runoff; Cain has fewer ballots.",
+      "source_url": "https://electionresults.sos.state.tx.us/results.html", "source_status": "SOS results updated 2026-05-27; all polling locations reported"
+    },
+    {
+      "candidate_id": "H6TX09140", "candidate": "Alex Mealer", "office": "house", "party": "R", "state": "TX", "district": "09",
+      "event_date": "2026-05-26", "election_round": "primary_runoff", "participation_status": "confirmed",
+      "outcome": "won", "fact": "Texas Secretary of State lists Alex Mealer and Briscoe Cain in the district 9 runoff; Mealer has more ballots.",
+      "source_url": "https://electionresults.sos.state.tx.us/results.html", "source_status": "SOS results updated 2026-05-27; all polling locations reported"
+    },
+    {
+      "candidate_id": "S6TX00479", "candidate": "James Talarico", "office": "senate", "party": "D", "state": "TX",
+      "event_date": "2026-03-03", "election_round": "primary", "participation_status": "confirmed",
+      "outcome": "not_recorded", "fact": "Brazos County's official March 3 primary report records Democratic US Senate votes for James Talarico. County returns establish participation, not the statewide result.",
+      "source_url": "https://elections.brazoscountytx.gov/wp-content/uploads/2026/04/Cumulative-Results-3-12-2026-04-47-19-PM-official-accessible.pdf", "source_status": "Official county returns"
+    },
+    {
+      "candidate_id": "S6TX00552", "candidate": "Jasmine Crockett", "office": "senate", "party": "D", "state": "TX",
+      "event_date": "2026-03-03", "election_round": "primary", "participation_status": "confirmed",
+      "outcome": "not_recorded", "fact": "Brazos County's official March 3 primary report records Democratic US Senate votes for Jasmine Crockett. County returns establish participation, not the statewide result.",
+      "source_url": "https://elections.brazoscountytx.gov/wp-content/uploads/2026/04/Cumulative-Results-3-12-2026-04-47-19-PM-official-accessible.pdf", "source_status": "Official county returns"
+    }
+  ]
+}
